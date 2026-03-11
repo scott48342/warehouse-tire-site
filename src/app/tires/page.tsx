@@ -59,7 +59,15 @@ const TIRES: Tire[] = [
   },
 ];
 
-export default function TiresPage() {
+export default async function TiresPage({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const sp = (await searchParams) ?? {};
+  const zipRaw = Array.isArray(sp.zip) ? sp.zip[0] : sp.zip;
+  const zip = (zipRaw ?? "").trim();
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -73,15 +81,30 @@ export default function TiresPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
-            <label className="text-xs font-semibold text-neutral-600">Sort</label>
-            <select className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold">
-              <option>Best Match</option>
-              <option>Price Low to High</option>
-              <option>Price High to Low</option>
-              <option>Highest Rated</option>
-              <option>Most Popular</option>
-            </select>
+          <div className="flex flex-wrap items-center gap-3">
+            <form className="flex items-center gap-2" action="/tires" method="get">
+              <label className="text-xs font-semibold text-neutral-600">ZIP</label>
+              <input
+                name="zip"
+                defaultValue={zip}
+                placeholder="48342"
+                className="h-10 w-28 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+              />
+              <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
+                Update
+              </button>
+            </form>
+
+            <div className="flex items-center gap-2">
+              <label className="text-xs font-semibold text-neutral-600">Sort</label>
+              <select className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold">
+                <option>Best Match</option>
+                <option>Price Low to High</option>
+                <option>Price High to Low</option>
+                <option>Highest Rated</option>
+                <option>Most Popular</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -226,7 +249,7 @@ export default function TiresPage() {
             <div className="flex flex-wrap gap-2">
               <Chip>All-season</Chip>
               <Chip>225/65R17</Chip>
-              <Chip>In stock near you</Chip>
+              <Chip>{zip ? `In stock near ${zip}` : "In stock near you"}</Chip>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -267,7 +290,9 @@ export default function TiresPage() {
                     <div className="text-xs text-neutral-600">each</div>
                   </div>
 
-                  <div className="mt-3 text-xs text-neutral-600">{t.availability}</div>
+                  <div className="mt-3 text-xs text-neutral-600">
+                    {zip ? `${t.availability} • near ${zip}` : t.availability}
+                  </div>
 
                   <div className="mt-4 grid gap-2">
                     <Link
@@ -276,26 +301,33 @@ export default function TiresPage() {
                     >
                       Schedule Install
                     </Link>
-                    <div className="grid grid-cols-2 gap-2">
+
+                    <div className="flex items-center justify-between gap-3 text-xs">
                       <a
                         href={BRAND.links.tel}
-                        className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-center text-xs font-extrabold text-neutral-900"
+                        className="font-extrabold text-neutral-900 hover:underline"
                       >
                         Call
                       </a>
                       <a
                         href={BRAND.links.sms}
-                        className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-center text-xs font-extrabold text-neutral-900"
+                        className="font-extrabold text-neutral-900 hover:underline"
                       >
                         Text
                       </a>
+                      <a
+                        href={BRAND.links.whatsapp}
+                        className="font-extrabold text-neutral-900 hover:underline"
+                      >
+                        WhatsApp
+                      </a>
+                      <Link
+                        href={`/tires/${t.slug}`}
+                        className="ml-auto font-semibold text-neutral-600 hover:underline"
+                      >
+                        Details →
+                      </Link>
                     </div>
-                    <Link
-                      href={`/tires/${t.slug}`}
-                      className="rounded-xl bg-[var(--brand-red)] px-3 py-2 text-center text-xs font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                    >
-                      View details
-                    </Link>
                   </div>
                 </article>
               ))}
@@ -321,7 +353,8 @@ function Chip({ children }: { children: React.ReactNode }) {
 
 function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-amber-100 px-2 py-1 text-xs font-extrabold text-neutral-900">
+    <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
       {children}
     </span>
   );
