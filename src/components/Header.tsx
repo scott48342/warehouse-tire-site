@@ -56,6 +56,18 @@ export function Header() {
         </div>
 
         <nav className="ml-auto hidden items-center gap-2 md:flex">
+          <Link
+            href="/tires"
+            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+          >
+            Tires
+          </Link>
+          <Link
+            href="/schedule"
+            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+          >
+            Schedule
+          </Link>
           <PillLink href={BRAND.links.tel}>Call</PillLink>
           <PillLink href={BRAND.links.sms}>Text</PillLink>
           <PillLink href={BRAND.links.whatsapp}>WhatsApp</PillLink>
