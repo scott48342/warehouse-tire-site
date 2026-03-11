@@ -27,6 +27,12 @@ export default function Home() {
               >
                 Schedule Install
               </Link>
+              <Link
+                href="/tires"
+                className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+              >
+                Browse Tires
+              </Link>
               <a
                 href={BRAND.links.tel}
                 className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
