@@ -10,6 +10,38 @@ type Wheel = {
   price?: number;
 };
 
+type WheelProsBrand = {
+  code?: string;
+  description?: string;
+  parent?: string;
+};
+
+type WheelProsImage = {
+  imageUrlOriginal?: string;
+  imageUrlSmall?: string;
+  imageUrlMedium?: string;
+  imageUrlLarge?: string;
+};
+
+type WheelProsPrice = {
+  currencyAmount?: string;
+  currencyCode?: string;
+};
+
+type WheelProsItem = {
+  sku?: string;
+  title?: string;
+  brand?: WheelProsBrand | string;
+  properties?: {
+    model?: string;
+    finish?: string;
+  };
+  prices?: {
+    msrp?: WheelProsPrice[];
+  };
+  images?: WheelProsImage[];
+};
+
 function getBaseUrl() {
   // On Vercel, prefer the deployment URL.
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
@@ -63,9 +95,37 @@ export default async function WheelsPage({
     currencyCode: "USD",
   });
 
-  const items: Wheel[] =
+  const maybeData = data as { items?: unknown[]; results?: unknown[] };
+
+  const rawItems: unknown[] =
     // common patterns: { items: [] } or { results: [] }
-    (data?.items as Wheel[]) || (data?.results as Wheel[]) || [];
+    (Array.isArray(maybeData?.items) ? maybeData.items : []) ||
+    (Array.isArray(maybeData?.results) ? maybeData.results : []);
+
+  const items: Wheel[] = rawItems.map((itUnknown) => {
+    const it = itUnknown as WheelProsItem;
+
+    const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
+    const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
+    const finish = it?.properties?.finish;
+    const model = it?.properties?.model || it?.title;
+
+    const msrp = it?.prices?.msrp;
+    const firstPrice = Array.isArray(msrp) ? msrp[0] : undefined;
+    const price = firstPrice?.currencyAmount != null ? Number(firstPrice.currencyAmount) : undefined;
+
+    const img0 = Array.isArray(it?.images) ? it.images[0] : undefined;
+    const imageUrl = img0?.imageUrlLarge || img0?.imageUrlMedium || img0?.imageUrlOriginal || undefined;
+
+    return {
+      sku: it?.sku,
+      brand,
+      model,
+      finish,
+      imageUrl,
+      price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
+    };
+  });
 
   return (
     <main className="bg-neutral-50">
@@ -125,13 +185,23 @@ export default async function WheelsPage({
                   </div>
                 ) : null}
 
-                <div className="mt-3 rounded-xl border border-neutral-200 bg-neutral-50 p-3 text-xs text-neutral-700">
-                  Image placeholder
+                <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+                  {w.imageUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={w.imageUrl}
+                      alt={w.model || w.sku || "Wheel"}
+                      className="h-40 w-full object-contain bg-white"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="p-3 text-xs text-neutral-700">No image</div>
+                  )}
                 </div>
 
                 <div className="mt-4">
                   <div className="text-2xl font-extrabold text-neutral-900">
-                    {w.price ? `$${w.price}` : "Call for price"}
+                    {typeof w.price === "number" ? `$${w.price.toFixed(2)}` : "Call for price"}
                   </div>
                   <div className="text-xs text-neutral-600">each</div>
                 </div>

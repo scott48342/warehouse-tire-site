@@ -28,7 +28,13 @@ export function FitmentSelector() {
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState<Fitment>(fitment);
 
-  useEffect(() => setDraft(fitment), [fitment]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setDraft((d) => {
+      const same = d.year === fitment.year && d.make === fitment.make && d.model === fitment.model && d.trim === fitment.trim;
+      return same ? d : fitment;
+    });
+  }, [fitment]);
 
   useEffect(() => {
     // persist last fitment
@@ -142,7 +148,7 @@ export function FitmentSelector() {
               label="Year"
               value={draft.year ?? ""}
               onChange={(v) =>
-                setDraft((d) => ({ year: v || undefined, make: undefined, model: undefined, trim: undefined }))
+                setDraft(() => ({ year: v || undefined, make: undefined, model: undefined, trim: undefined }))
               }
               options={["", ...YEARS]}
             />
