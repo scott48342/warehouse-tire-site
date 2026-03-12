@@ -271,7 +271,7 @@ export default async function TiresPage({
 
                     <div className="mt-4">
                       <div className="text-3xl font-extrabold text-neutral-900">
-                        {typeof t.cost === "number" ? `$${t.cost.toFixed(2)}` : "Call for price"}
+                        {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
                       </div>
                       <div className="text-xs text-neutral-600">each</div>
                     </div>
