@@ -54,10 +54,12 @@ export default async function TiresPage({
     ? await fetchFitment({ year, make, model, modification: modification || undefined })
     : null;
 
-  const tireSizes: string[] = Array.isArray(fitment?.tireSizes) ? fitment.tireSizes : [];
-  const tireSize = tireSizes[0] ? String(tireSizes[0]) : "";
+  const tireSizes: string[] = Array.isArray(fitment?.tireSizes) ? fitment.tireSizes.map(String) : [];
 
-  const km = tireSize ? await fetchKmTires(tireSize) : null;
+  const selectedSizeRaw = (Array.isArray(sp.size) ? sp.size[0] : sp.size) || "";
+  const selectedSize = selectedSizeRaw ? String(selectedSizeRaw) : (tireSizes[0] || "");
+
+  const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const items: Tire[] = Array.isArray(km?.items) ? km.items : [];
 
   return (
@@ -73,8 +75,26 @@ export default async function TiresPage({
                 ? `Showing tires for ${year} ${make} ${model}${trim ? ` ${trim}` : ""}.`
                 : "Select your vehicle in the header to filter tires."}
             </p>
-            {tireSize ? (
-              <p className="mt-1 text-xs text-neutral-600">OEM size: {tireSize}</p>
+            {tireSizes.length ? (
+              <div className="mt-2 flex flex-wrap gap-2">
+                {tireSizes.map((s) => {
+                  const active = s === selectedSize;
+                  const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}&size=${encodeURIComponent(s)}`;
+                  return (
+                    <Link
+                      key={s}
+                      href={href}
+                      className={
+                        active
+                          ? "rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
+                          : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                      }
+                    >
+                      {s}
+                    </Link>
+                  );
+                })}
+              </div>
             ) : null}
           </div>
 
@@ -116,13 +136,23 @@ export default async function TiresPage({
 
             <FilterGroup title="Vehicle / Size">
               <div className="grid gap-2">
-                <input
-                  placeholder="ZIP (optional)"
-                  className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-                />
-                <button className="h-10 rounded-xl bg-neutral-900 text-sm font-extrabold text-white">
-                  Check fitment
-                </button>
+                <form className="grid gap-2" action="/tires" method="get">
+                  <input type="hidden" name="year" value={year} />
+                  <input type="hidden" name="make" value={make} />
+                  <input type="hidden" name="model" value={model} />
+                  <input type="hidden" name="trim" value={trim} />
+                  <input type="hidden" name="modification" value={modification} />
+
+                  <input
+                    name="size"
+                    defaultValue={selectedSize}
+                    placeholder="Search by size (e.g. 245/50R18)"
+                    className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                  />
+                  <button className="h-10 rounded-xl bg-neutral-900 text-sm font-extrabold text-white">
+                    Search size
+                  </button>
+                </form>
               </div>
             </FilterGroup>
 
@@ -314,7 +344,7 @@ export default async function TiresPage({
               ) : (
                 <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
                   {year && make && model ? (
-                    tireSize
+                    tireSizes.length
                       ? "No tire results yet."
                       : "No OEM tire size returned for this vehicle/trim yet."
                   ) : (
