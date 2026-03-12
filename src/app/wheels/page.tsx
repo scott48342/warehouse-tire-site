@@ -118,12 +118,7 @@ export default async function WheelsPage({
   const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
     ? fitment.wheelDiameterRangeIn
     : [null, null];
-  const widthRange: [number | null, number | null] = Array.isArray(fitment?.wheelWidthRangeIn)
-    ? fitment.wheelWidthRangeIn
-    : [null, null];
-  const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
-    ? fitment.offsetRangeMm
-    : [null, null];
+  // Width/offset ranges available in fitment, but we are not filtering on them yet.
 
   // WheelPros expects a single diameter/width.
   // Use the max wheel diameter (more common for OEM packages) and omit width/offset initially,

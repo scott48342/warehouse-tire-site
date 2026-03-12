@@ -2,62 +2,38 @@ import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 
 type Tire = {
-  slug: string;
-  brand: string;
-  model: string;
-  category: string;
-  price: number;
-  rebateBadge?: string;
-  rating: number;
-  reviews: number;
-  availability: string;
+  partNumber?: string;
+  mfgPartNumber?: string;
+  brand?: string;
+  description?: string;
+  cost?: number;
+  quantity?: { primary?: number; alternate?: number; national?: number };
 };
 
-const TIRES: Tire[] = [
-  {
-    slug: "all-season-touring-1",
-    brand: "Warehouse",
-    model: "All-Season Touring",
-    category: "Comfort • Daily Driver",
-    price: 149,
-    rebateBadge: "$100 rebate",
-    rating: 4.7,
-    reviews: 842,
-    availability: "In stock near you • install this week",
-  },
-  {
-    slug: "lt-all-terrain-1",
-    brand: "Warehouse",
-    model: "LT All-Terrain",
-    category: "Truck • Off-road",
-    price: 219,
-    rating: 4.6,
-    reviews: 512,
-    availability: "Check fitment to confirm availability",
-  },
-  {
-    slug: "performance-summer-1",
-    brand: "Warehouse",
-    model: "Performance Summer",
-    category: "Sport • Handling",
-    price: 189,
-    rebateBadge: "Special",
-    rating: 4.5,
-    reviews: 214,
-    availability: "Ships fast • install options available",
-  },
-  {
-    slug: "winter-3pmsf-1",
-    brand: "Warehouse",
-    model: "Winter 3PMSF",
-    category: "Snow • Ice",
-    price: 175,
-    rebateBadge: "3PMSF",
-    rating: 4.8,
-    reviews: 391,
-    availability: "Limited stock • call/text to confirm",
-  },
-];
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+}
+
+async function fetchFitment(params: Record<string, string | undefined>) {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v) sp.set(k, v);
+  }
+
+  const res = await fetch(`${getBaseUrl()}/api/vehicles/search?${sp.toString()}`, { cache: "no-store" });
+  if (!res.ok) return { error: await res.text() };
+  return res.json();
+}
+
+async function fetchKmTires(tireSize: string) {
+  const res = await fetch(`${getBaseUrl()}/api/km/tiresizesearch?tireSize=${encodeURIComponent(tireSize)}&minQty=4`, {
+    cache: "no-store",
+  });
+  if (!res.ok) return { error: await res.text() };
+  return res.json();
+}
 
 export default async function TiresPage({
   searchParams,
@@ -68,6 +44,22 @@ export default async function TiresPage({
   const zipRaw = Array.isArray(sp.zip) ? sp.zip[0] : sp.zip;
   const zip = (zipRaw ?? "").trim();
 
+  const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
+  const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
+  const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
+  const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
+  const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
+
+  const fitment = year && make && model
+    ? await fetchFitment({ year, make, model, modification: modification || undefined })
+    : null;
+
+  const tireSizes: string[] = Array.isArray(fitment?.tireSizes) ? fitment.tireSizes : [];
+  const tireSize = tireSizes[0] ? String(tireSizes[0]) : "";
+
+  const km = tireSize ? await fetchKmTires(tireSize) : null;
+  const items: Tire[] = Array.isArray(km?.items) ? km.items : [];
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -77,8 +69,13 @@ export default async function TiresPage({
               Tires
             </h1>
             <p className="mt-1 text-sm text-neutral-700">
-              Filter, compare, and schedule install. (Data is placeholder for now.)
+              {year && make && model
+                ? `Showing tires for ${year} ${make} ${model}${trim ? ` ${trim}` : ""}.`
+                : "Select your vehicle in the header to filter tires."}
             </p>
+            {tireSize ? (
+              <p className="mt-1 text-xs text-neutral-600">OEM size: {tireSize}</p>
+            ) : null}
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -253,84 +250,78 @@ export default async function TiresPage({
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {TIRES.map((t) => (
-                <article
-                  key={t.slug}
-                  className="rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="text-xs font-semibold text-neutral-600">
-                        {t.brand}
-                      </div>
-                      <h3 className="mt-0.5 truncate text-sm font-extrabold text-neutral-900">
-                        {t.model}
-                      </h3>
-                      <div className="mt-1 text-xs text-neutral-600">
-                        {t.category}
-                      </div>
+              {km?.error ? (
+                <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+                  Tire search error: {String(km.error).slice(0, 500)}
+                </div>
+              ) : null}
+
+              {items.length ? (
+                items.map((t, idx) => (
+                  <article
+                    key={t.partNumber || t.mfgPartNumber || idx}
+                    className="rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
+                  >
+                    <div className="text-xs font-semibold text-neutral-600">
+                      {t.brand || "Tire"}
                     </div>
-                    {t.rebateBadge ? <Badge>{t.rebateBadge}</Badge> : null}
-                  </div>
+                    <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
+                      {t.description || t.partNumber || "Tire"}
+                    </h3>
 
-                  <div className="mt-3 rounded-xl border border-neutral-200 bg-neutral-50 p-3 text-xs text-neutral-700">
-                    Image placeholder
-                  </div>
-
-                  <div className="mt-3 flex items-center gap-2 text-xs text-neutral-700">
-                    <span className="font-extrabold">{t.rating.toFixed(1)}</span>
-                    <span className="text-amber-500">★★★★★</span>
-                    <span className="text-neutral-500">({t.reviews})</span>
-                  </div>
-
-                  <div className="mt-4">
-                    <div className="text-3xl font-extrabold text-neutral-900">
-                      ${t.price}
+                    <div className="mt-4">
+                      <div className="text-3xl font-extrabold text-neutral-900">
+                        {typeof t.cost === "number" ? `$${t.cost.toFixed(2)}` : "Call for price"}
+                      </div>
+                      <div className="text-xs text-neutral-600">each</div>
                     </div>
-                    <div className="text-xs text-neutral-600">each</div>
-                  </div>
 
-                  <div className="mt-3 text-xs text-neutral-600">
-                    {zip ? `${t.availability} • near ${zip}` : t.availability}
-                  </div>
+                    <div className="mt-3 text-xs text-neutral-700">
+                      Qty: {t.quantity?.primary ?? 0} primary • {t.quantity?.alternate ?? 0} alt • {t.quantity?.national ?? 0} nat
+                    </div>
 
-                  <div className="mt-4 grid gap-2">
-                    <Link
-                      href="/schedule"
-                      className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
-                    >
-                      Schedule Install
-                    </Link>
-
-                    <div className="flex items-center justify-between gap-3 text-xs">
-                      <a
-                        href={BRAND.links.tel}
-                        className="font-extrabold text-neutral-900 hover:underline"
-                      >
-                        Call
-                      </a>
-                      <a
-                        href={BRAND.links.sms}
-                        className="font-extrabold text-neutral-900 hover:underline"
-                      >
-                        Text
-                      </a>
-                      <a
-                        href={BRAND.links.whatsapp}
-                        className="font-extrabold text-neutral-900 hover:underline"
-                      >
-                        WhatsApp
-                      </a>
+                    <div className="mt-4 grid gap-2">
                       <Link
-                        href={`/tires/${t.slug}`}
-                        className="ml-auto font-semibold text-neutral-600 hover:underline"
+                        href="/schedule"
+                        className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
                       >
-                        Details →
+                        Schedule Install
                       </Link>
+
+                      <div className="flex items-center justify-between gap-3 text-xs">
+                        <a
+                          href={BRAND.links.tel}
+                          className="font-extrabold text-neutral-900 hover:underline"
+                        >
+                          Call
+                        </a>
+                        <a
+                          href={BRAND.links.sms}
+                          className="font-extrabold text-neutral-900 hover:underline"
+                        >
+                          Text
+                        </a>
+                        <a
+                          href={BRAND.links.whatsapp}
+                          className="font-extrabold text-neutral-900 hover:underline"
+                        >
+                          WhatsApp
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                ))
+              ) : (
+                <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+                  {year && make && model ? (
+                    tireSize
+                      ? "No tire results yet."
+                      : "No OEM tire size returned for this vehicle/trim yet."
+                  ) : (
+                    "Select a vehicle in the header to see tires."
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
@@ -351,14 +342,7 @@ function Chip({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Badge({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-      {children}
-    </span>
-  );
-}
+// Badge removed (placeholder UI no longer uses it)
 
 function FilterGroup({
   title,
