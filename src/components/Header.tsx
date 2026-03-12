@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { FitmentSelector } from "@/components/FitmentSelector";
 
@@ -17,7 +18,15 @@ function PillLink({ href, children }: { href: string; children: React.ReactNode 
   );
 }
 
+function withFitmentParams(href: string, sp: URLSearchParams) {
+  const next = new URLSearchParams(sp.toString());
+  const qs = next.toString();
+  return qs ? `${href}?${qs}` : href;
+}
+
 export function Header() {
+  const sp = useSearchParams();
+
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
@@ -47,7 +56,7 @@ export function Header() {
                 <FitmentSelector />
               </Suspense>
               <Link
-                href="/wheels"
+                href={withFitmentParams("/wheels", sp)}
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
               >
                 Browse Wheels
@@ -64,7 +73,7 @@ export function Header() {
             Tires
           </Link>
           <Link
-            href="/wheels"
+            href={withFitmentParams("/wheels", sp)}
             className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
           >
             Wheels
