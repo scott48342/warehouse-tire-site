@@ -128,7 +128,8 @@ export default async function WheelsPage({
   // WheelPros expects a single diameter/width.
   // Use the max wheel diameter (more common for OEM packages) and omit width/offset initially,
   // then tighten once we confirm the catalog data lines up.
-  const diameter = diaRange?.[1] != null ? String(diaRange[1]) : (diaRange?.[0] != null ? String(diaRange[0]) : undefined);
+  const diameterNum = diaRange?.[1] != null ? Number(diaRange[1]) : (diaRange?.[0] != null ? Number(diaRange[0]) : NaN);
+  const diameter = Number.isFinite(diameterNum) ? diameterNum.toFixed(1) : undefined;
   const width = undefined;
   const minOffset = undefined;
   const maxOffset = undefined;
