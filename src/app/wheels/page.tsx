@@ -273,18 +273,6 @@ export default async function WheelsPage({
                     >
                       Call
                     </a>
-                    <a
-                      href={BRAND.links.sms}
-                      className="font-extrabold text-neutral-900 hover:underline"
-                    >
-                      Text
-                    </a>
-                    <a
-                      href={BRAND.links.whatsapp}
-                      className="font-extrabold text-neutral-900 hover:underline"
-                    >
-                      WhatsApp
-                    </a>
                   </div>
                 </div>
               </article>
