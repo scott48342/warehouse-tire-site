@@ -10,6 +10,14 @@ type Wheel = {
   price?: number;
 };
 
+function getBaseUrl() {
+  // On Vercel, prefer the deployment URL.
+  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  // Local dev fallback
+  return "http://localhost:3000";
+}
+
 async function fetchWheels(params: Record<string, string | undefined>) {
   const sp = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) {
@@ -17,9 +25,10 @@ async function fetchWheels(params: Record<string, string | undefined>) {
   }
 
   // NOTE: We intentionally call our own API route.
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ""}/api/wheelpros/wheels/search?${sp.toString()}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `${getBaseUrl()}/api/wheelpros/wheels/search?${sp.toString()}`,
+    { cache: "no-store" }
+  );
 
   if (!res.ok) {
     return { error: await res.text() };
