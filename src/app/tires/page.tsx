@@ -43,6 +43,8 @@ export default async function TiresPage({
   const sp = (await searchParams) ?? {};
   const zipRaw = Array.isArray(sp.zip) ? sp.zip[0] : sp.zip;
   const zip = (zipRaw ?? "").trim();
+  const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
+  const sort = (sortRaw ?? "best").trim();
 
   const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
@@ -60,7 +62,29 @@ export default async function TiresPage({
   const selectedSize = selectedSizeRaw ? String(selectedSizeRaw) : (tireSizes[0] || "");
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
-  const items: Tire[] = Array.isArray(km?.items) ? km.items : [];
+  const itemsRaw: Tire[] = Array.isArray(km?.items) ? km.items : [];
+
+  const items: Tire[] = [...itemsRaw].sort((a, b) => {
+    const aPrice = typeof a.cost === "number" ? a.cost + 50 : Number.POSITIVE_INFINITY;
+    const bPrice = typeof b.cost === "number" ? b.cost + 50 : Number.POSITIVE_INFINITY;
+    const aBrand = (a.brand || "").toLowerCase();
+    const bBrand = (b.brand || "").toLowerCase();
+    const aStock = (a.quantity?.primary ?? 0) + (a.quantity?.alternate ?? 0) + (a.quantity?.national ?? 0);
+    const bStock = (b.quantity?.primary ?? 0) + (b.quantity?.alternate ?? 0) + (b.quantity?.national ?? 0);
+
+    switch (sort) {
+      case "price_asc":
+        return aPrice - bPrice;
+      case "price_desc":
+        return bPrice - aPrice;
+      case "brand_asc":
+        return aBrand.localeCompare(bBrand);
+      case "stock_desc":
+        return bStock - aStock;
+      default:
+        return 0;
+    }
+  });
 
   return (
     <main className="bg-neutral-50">
@@ -99,7 +123,14 @@ export default async function TiresPage({
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <form className="flex items-center gap-2" action="/tires" method="get">
+            <form className="flex flex-wrap items-center gap-2" action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+
               <label className="text-xs font-semibold text-neutral-600">ZIP</label>
               <input
                 name="zip"
@@ -107,21 +138,24 @@ export default async function TiresPage({
                 placeholder="48342"
                 className="h-10 w-28 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
               />
+
+              <label className="ml-2 text-xs font-semibold text-neutral-600">Sort</label>
+              <select
+                name="sort"
+                defaultValue={sort}
+                className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+              >
+                <option value="best">Best Match</option>
+                <option value="price_asc">Price Low to High</option>
+                <option value="price_desc">Price High to Low</option>
+                <option value="brand_asc">Brand A–Z</option>
+                <option value="stock_desc">Most Stock</option>
+              </select>
+
               <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
                 Update
               </button>
             </form>
-
-            <div className="flex items-center gap-2">
-              <label className="text-xs font-semibold text-neutral-600">Sort</label>
-              <select className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold">
-                <option>Best Match</option>
-                <option>Price Low to High</option>
-                <option>Price High to Low</option>
-                <option>Highest Rated</option>
-                <option>Most Popular</option>
-              </select>
-            </div>
           </div>
         </div>
 
