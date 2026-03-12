@@ -16,11 +16,35 @@ export async function GET(req: Request) {
   url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
 
   const res = await fetch(upstream, { cache: "no-store" });
+
+  const ct = res.headers.get("content-type") || "";
+  if (res.ok && ct.includes("application/json")) {
+    const data = (await res.json()) as unknown;
+    const raw = Array.isArray((data as { results?: unknown[] })?.results)
+      ? ((data as { results?: unknown[] }).results as unknown[])
+      : [];
+
+    const results = raw
+      .map((it) => {
+        if (typeof it === "string") return it;
+        if (!it || typeof it !== "object") return null;
+        const o = it as Record<string, unknown>;
+        const baseLabel = o.trimLevel || o.trim || o.modification;
+        if (!baseLabel) return null;
+        // Add engine to reduce duplicates when trimLevel repeats.
+        const engine = o.engine ? String(o.engine) : "";
+        return engine ? `${baseLabel} (${engine})` : String(baseLabel);
+      })
+      .filter(Boolean);
+
+    return NextResponse.json({ results });
+  }
+
   const text = await res.text();
   return new NextResponse(text, {
     status: res.status,
     headers: {
-      "content-type": res.headers.get("content-type") || "application/json",
+      "content-type": ct || "application/json",
     },
   });
 }
