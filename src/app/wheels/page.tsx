@@ -112,7 +112,8 @@ export default async function WheelsPage({
     : null;
 
   const bp: string | undefined = fitment?.boltPattern || undefined;
-  const cb: string | undefined = fitment?.centerBoreMm != null ? String(fitment.centerBoreMm) : undefined;
+  // centerbore on WheelPros can be finicky; don't hard-filter on it yet.
+  const cb: string | undefined = undefined;
 
   const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
     ? fitment.wheelDiameterRangeIn
@@ -124,11 +125,13 @@ export default async function WheelsPage({
     ? fitment.offsetRangeMm
     : [null, null];
 
-  // WheelPros expects a single diameter/width; pick the min of each range for now.
-  const diameter = diaRange?.[0] != null ? String(diaRange[0]) : undefined;
-  const width = widthRange?.[0] != null ? String(widthRange[0]) : undefined;
-  const minOffset = offRange?.[0] != null ? String(offRange[0]) : undefined;
-  const maxOffset = offRange?.[1] != null ? String(offRange[1]) : undefined;
+  // WheelPros expects a single diameter/width.
+  // Use the max wheel diameter (more common for OEM packages) and omit width/offset initially,
+  // then tighten once we confirm the catalog data lines up.
+  const diameter = diaRange?.[1] != null ? String(diaRange[1]) : (diaRange?.[0] != null ? String(diaRange[0]) : undefined);
+  const width = undefined;
+  const minOffset = undefined;
+  const maxOffset = undefined;
 
   // 2) Query WheelPros using fitment-derived filters
   const data = await fetchWheels({
