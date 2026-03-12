@@ -135,24 +135,8 @@ export default async function TiresPage({
             </div>
 
             <FilterGroup title="Vehicle / Size">
-              <div className="grid gap-2">
-                <form className="grid gap-2" action="/tires" method="get">
-                  <input type="hidden" name="year" value={year} />
-                  <input type="hidden" name="make" value={make} />
-                  <input type="hidden" name="model" value={model} />
-                  <input type="hidden" name="trim" value={trim} />
-                  <input type="hidden" name="modification" value={modification} />
-
-                  <input
-                    name="size"
-                    defaultValue={selectedSize}
-                    placeholder="Search by size (e.g. 245/50R18)"
-                    className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-                  />
-                  <button className="h-10 rounded-xl bg-neutral-900 text-sm font-extrabold text-white">
-                    Search size
-                  </button>
-                </form>
+              <div className="text-xs text-neutral-600">
+                Select an OEM size chip above to change results.
               </div>
             </FilterGroup>
 
@@ -274,8 +258,17 @@ export default async function TiresPage({
 
           <section className="grid gap-4">
             <div className="flex flex-wrap gap-2">
-              <Chip>All-season</Chip>
-              <Chip>225/65R17</Chip>
+              {tireSizes.length
+                ? tireSizes.map((s) => {
+                    const active = s === selectedSize;
+                    const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}&size=${encodeURIComponent(s)}`;
+                    return (
+                      <Link key={s} href={href} className="no-underline">
+                        <Chip active={active}>{s}</Chip>
+                      </Link>
+                    );
+                  })
+                : null}
               <Chip>{zip ? `In stock near ${zip}` : "In stock near you"}</Chip>
             </div>
 
@@ -364,9 +357,21 @@ export default async function TiresPage({
   );
 }
 
-function Chip({ children }: { children: React.ReactNode }) {
+function Chip({
+  children,
+  active,
+}: {
+  children: React.ReactNode;
+  active?: boolean;
+}) {
   return (
-    <span className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-800">
+    <span
+      className={
+        active
+          ? "inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
+          : "inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-800"
+      }
+    >
       {children}
     </span>
   );
