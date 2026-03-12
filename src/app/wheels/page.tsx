@@ -110,13 +110,19 @@ export default async function WheelsPage({
                 className="rounded-2xl border border-neutral-200 bg-white p-4"
               >
                 <div className="text-xs font-semibold text-neutral-600">
-                  {w.brand || "Wheel"}
+                  {typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
                 </div>
                 <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
-                  {w.model || w.sku || "Wheel"}
+                  {typeof w.model === "string"
+                    ? w.model
+                    : w.model != null
+                      ? String(w.model)
+                      : w.sku || "Wheel"}
                 </h3>
                 {w.finish ? (
-                  <div className="mt-1 text-xs text-neutral-600">{w.finish}</div>
+                  <div className="mt-1 text-xs text-neutral-600">
+                    {typeof w.finish === "string" ? w.finish : String(w.finish)}
+                  </div>
                 ) : null}
 
                 <div className="mt-3 rounded-xl border border-neutral-200 bg-neutral-50 p-3 text-xs text-neutral-700">
