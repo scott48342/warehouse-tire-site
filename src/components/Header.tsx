@@ -28,16 +28,65 @@ function FitmentLink({
   href,
   className,
   children,
+  disabled,
 }: {
   href: string;
   className: string;
   children: React.ReactNode;
+  disabled?: boolean;
 }) {
   const sp = useSearchParams();
+  const target = withFitmentParams(href, sp);
+  if (disabled) {
+    return (
+      <span className={`${className} pointer-events-none opacity-50`}>
+        {children}
+      </span>
+    );
+  }
   return (
-    <Link href={withFitmentParams(href, sp)} className={className}>
+    <Link href={target} className={className}>
       {children}
     </Link>
+  );
+}
+
+function hasVehicle(sp: URLSearchParams) {
+  return !!(sp.get("year") && sp.get("make") && sp.get("model"));
+}
+
+function FitmentTabs() {
+  const sp = useSearchParams();
+  const enabled = hasVehicle(sp);
+
+  const base = "inline-flex h-11 items-center justify-center rounded-xl px-4 text-sm font-extrabold";
+  const pill = "border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50";
+  const active = "bg-[var(--brand-red)] text-white hover:bg-[var(--brand-red-700)]";
+
+  const path = typeof window !== "undefined" ? window.location.pathname : "";
+  const isTires = path.startsWith("/tires");
+  const isWheels = path.startsWith("/wheels");
+
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      <FitmentLink
+        href="/tires"
+        disabled={!enabled}
+        className={`${base} ${isTires ? active : pill}`}
+      >
+        Tires
+      </FitmentLink>
+      <FitmentLink
+        href="/wheels"
+        disabled={!enabled}
+        className={`${base} ${isWheels ? active : pill}`}
+      >
+        Wheels
+      </FitmentLink>
+      <span className={`${base} ${pill} pointer-events-none opacity-50`}>
+        Packages
+      </span>
+    </div>
   );
 }
 
@@ -59,7 +108,7 @@ export function Header() {
         <div className="hidden flex-1 items-center justify-center md:flex">
           <div className="w-full max-w-xl rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2">
             <div className="text-xs font-semibold text-neutral-700">Find wheels & tires that fit</div>
-            <div className="mt-2 grid gap-2 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="mt-2 grid gap-2">
               <Suspense
                 fallback={
                   <div className="h-11 rounded-xl border border-neutral-200 bg-white px-3 py-2">
@@ -70,22 +119,8 @@ export function Header() {
               >
                 <FitmentSelector />
               </Suspense>
-              <Suspense
-                fallback={
-                  <Link
-                    href="/wheels"
-                    className="inline-flex h-11 items-center justify-center rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                  >
-                    Browse Wheels
-                  </Link>
-                }
-              >
-                <FitmentLink
-                  href="/wheels"
-                  className="inline-flex h-11 items-center justify-center rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                >
-                  Browse Wheels
-                </FitmentLink>
+              <Suspense fallback={null}>
+                <FitmentTabs />
               </Suspense>
             </div>
           </div>
