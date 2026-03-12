@@ -139,7 +139,8 @@ export default async function WheelsPage({
     pageSize: "24",
     fields: "inventory,price,images",
     priceType: "msrp",
-    company: "1500",
+    // NOTE: WheelPros docs say company is required for pricing, but in practice passing
+    // company can zero results for some accounts/environments. Omit for now.
     currencyCode: "USD",
 
     boltPattern: bp,
