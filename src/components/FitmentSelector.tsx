@@ -144,9 +144,9 @@ export function FitmentSelector() {
       {open ? (
         <div
           role="dialog"
-          className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 rounded-2xl border border-neutral-200 bg-white p-4 shadow-xl"
+          className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 max-w-[min(520px,calc(100vw-2rem))] rounded-2xl border border-neutral-200 bg-white p-4 shadow-xl"
         >
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid gap-3 grid-cols-2">
             <Select
               label="Year"
               value={draft.year ?? ""}
