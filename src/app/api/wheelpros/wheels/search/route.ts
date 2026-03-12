@@ -4,10 +4,12 @@ export const runtime = "nodejs";
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const base = process.env.WHEELPROS_WRAPPER_URL;
+  const base =
+    process.env.WHEELPROS_WRAPPER_URL ||
+    process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
   if (!base) {
     return NextResponse.json(
-      { error: "Missing WHEELPROS_WRAPPER_URL" },
+      { error: "Missing WHEELPROS_WRAPPER_URL (or NEXT_PUBLIC_WHEELPROS_API_BASE_URL)" },
       { status: 500 }
     );
   }

@@ -5,23 +5,12 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { fitmentLabel, type Fitment } from "@/lib/fitment";
 
 const YEARS = Array.from({ length: 26 }, (_, i) => String(new Date().getFullYear() - i));
-const MAKES = ["Ford", "Chevrolet", "GMC", "Ram", "Jeep", "Toyota", "Honda"]; // placeholder
-const MODELS_BY_MAKE: Record<string, string[]> = {
-  Ford: ["F-150", "Explorer", "Escape", "Mustang"],
-  Chevrolet: ["Silverado 1500", "Equinox", "Tahoe"],
-  GMC: ["Sierra 1500", "Yukon"],
-  Ram: ["1500"],
-  Jeep: ["Wrangler", "Grand Cherokee"],
-  Toyota: ["Camry", "RAV4", "Tacoma"],
-  Honda: ["Civic", "CR-V", "Accord"],
-};
-const TRIMS_BY_MODEL: Record<string, string[]> = {
-  "F-150": ["XL", "XLT", "Lariat", "Platinum"],
-  "Silverado 1500": ["WT", "LT", "RST", "High Country"],
-  Wrangler: ["Sport", "Sahara", "Rubicon"],
-  Camry: ["LE", "SE", "XSE"],
-  Civic: ["LX", "Sport", "Touring"],
-};
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return (await res.json()) as T;
+}
 
 export function FitmentSelector() {
   const sp = useSearchParams();
@@ -59,8 +48,71 @@ export function FitmentSelector() {
     router.push(`${pathname}?${params.toString()}`);
   }
 
-  const models = draft.make ? MODELS_BY_MAKE[draft.make] ?? [] : [];
-  const trims = draft.model ? TRIMS_BY_MODEL[draft.model] ?? [] : [];
+  const [makes, setMakes] = useState<string[]>([]);
+  const [models, setModels] = useState<string[]>([]);
+  const [trims, setTrims] = useState<string[]>([]);
+
+  // Load makes when year changes
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!draft.year) {
+        setMakes([]);
+        return;
+      }
+      try {
+        const data = await fetchJson<{ results: string[] }>(`/api/vehicles/makes?year=${encodeURIComponent(draft.year)}`);
+        if (!cancelled) setMakes(Array.isArray(data?.results) ? data.results : []);
+      } catch {
+        if (!cancelled) setMakes([]);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [draft.year]);
+
+  // Load models when make changes
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!draft.year || !draft.make) {
+        setModels([]);
+        return;
+      }
+      try {
+        const qs = new URLSearchParams({ year: draft.year, make: draft.make });
+        const data = await fetchJson<{ results: string[] }>(`/api/vehicles/models?${qs.toString()}`);
+        if (!cancelled) setModels(Array.isArray(data?.results) ? data.results : []);
+      } catch {
+        if (!cancelled) setModels([]);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [draft.year, draft.make]);
+
+  // Load trims when model changes
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!draft.year || !draft.make || !draft.model) {
+        setTrims([]);
+        return;
+      }
+      try {
+        const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
+        const data = await fetchJson<{ results: string[] }>(`/api/vehicles/trims?${qs.toString()}`);
+        if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
+      } catch {
+        if (!cancelled) setTrims([]);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [draft.year, draft.make, draft.model]);
 
   return (
     <div className="relative">
@@ -100,7 +152,7 @@ export function FitmentSelector() {
               onChange={(v) =>
                 setDraft((d) => ({ ...d, make: v || undefined, model: undefined, trim: undefined }))
               }
-              options={["", ...MAKES]}
+              options={["", ...makes]}
               disabled={!draft.year}
             />
             <Select
