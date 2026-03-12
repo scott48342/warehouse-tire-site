@@ -155,10 +155,10 @@ export default async function WheelsPage({
 
   const maybeData = data as { items?: unknown[]; results?: unknown[] };
 
-  const rawItems: unknown[] =
-    // common patterns: { items: [] } or { results: [] }
-    (Array.isArray(maybeData?.items) ? maybeData.items : []) ||
-    (Array.isArray(maybeData?.results) ? maybeData.results : []);
+  // common patterns: { items: [] } or { results: [] }
+  const rawItems: unknown[] = Array.isArray(maybeData?.items)
+    ? maybeData.items
+    : (Array.isArray(maybeData?.results) ? maybeData.results : []);
 
   const items: Wheel[] = rawItems.map((itUnknown) => {
     const it = itUnknown as WheelProsItem;
