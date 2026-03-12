@@ -3,6 +3,8 @@ export type Fitment = {
   make?: string;
   model?: string;
   trim?: string;
+  // Wheel-Size modification id/slug (trim-specific fitment)
+  modification?: string;
 };
 
 export function fitmentLabel(f: Fitment) {

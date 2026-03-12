@@ -26,14 +26,15 @@ export async function GET(req: Request) {
 
     const results = raw
       .map((it) => {
-        if (typeof it === "string") return it;
         if (!it || typeof it !== "object") return null;
         const o = it as Record<string, unknown>;
+        const value = o.modification ? String(o.modification) : "";
         const baseLabel = o.trimLevel || o.trim || o.modification;
-        if (!baseLabel) return null;
+        if (!value || !baseLabel) return null;
         // Add engine to reduce duplicates when trimLevel repeats.
         const engine = o.engine ? String(o.engine) : "";
-        return engine ? `${baseLabel} (${engine})` : String(baseLabel);
+        const label = engine ? `${String(baseLabel)} (${engine})` : String(baseLabel);
+        return { value, label };
       })
       .filter(Boolean);
 

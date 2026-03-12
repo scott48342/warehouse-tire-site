@@ -22,7 +22,8 @@ export function FitmentSelector() {
     const make = sp.get("make") ?? undefined;
     const model = sp.get("model") ?? undefined;
     const trim = sp.get("trim") ?? undefined;
-    return { year, make, model, trim };
+    const modification = sp.get("modification") ?? undefined;
+    return { year, make, model, trim, modification };
   }, [sp]);
 
   const [open, setOpen] = useState(false);
@@ -45,7 +46,7 @@ export function FitmentSelector() {
 
   function apply(next: Fitment) {
     const params = new URLSearchParams(sp.toString());
-    for (const k of ["year", "make", "model", "trim"] as const) {
+    for (const k of ["year", "make", "model", "trim", "modification"] as const) {
       params.delete(k);
       const v = next[k];
       if (v) params.set(k, v);
@@ -56,7 +57,7 @@ export function FitmentSelector() {
 
   const [makes, setMakes] = useState<string[]>([]);
   const [models, setModels] = useState<string[]>([]);
-  const [trims, setTrims] = useState<string[]>([]);
+  const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
 
   // Load makes when year changes
   useEffect(() => {
@@ -109,7 +110,9 @@ export function FitmentSelector() {
       }
       try {
         const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
-        const data = await fetchJson<{ results: string[] }>(`/api/vehicles/trims?${qs.toString()}`);
+        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
+          `/api/vehicles/trims?${qs.toString()}`
+        );
         if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
       } catch {
         if (!cancelled) setTrims([]);
@@ -148,7 +151,7 @@ export function FitmentSelector() {
               label="Year"
               value={draft.year ?? ""}
               onChange={(v) =>
-                setDraft(() => ({ year: v || undefined, make: undefined, model: undefined, trim: undefined }))
+                setDraft(() => ({ year: v || undefined, make: undefined, model: undefined, trim: undefined, modification: undefined }))
               }
               options={["", ...YEARS]}
             />
@@ -156,7 +159,7 @@ export function FitmentSelector() {
               label="Make"
               value={draft.make ?? ""}
               onChange={(v) =>
-                setDraft((d) => ({ ...d, make: v || undefined, model: undefined, trim: undefined }))
+                setDraft((d) => ({ ...d, make: v || undefined, model: undefined, trim: undefined, modification: undefined }))
               }
               options={["", ...makes]}
               disabled={!draft.year}
@@ -165,16 +168,23 @@ export function FitmentSelector() {
               label="Model"
               value={draft.model ?? ""}
               onChange={(v) =>
-                setDraft((d) => ({ ...d, model: v || undefined, trim: undefined }))
+                setDraft((d) => ({ ...d, model: v || undefined, trim: undefined, modification: undefined }))
               }
               options={["", ...models]}
               disabled={!draft.make}
             />
             <Select
               label="Trim"
-              value={draft.trim ?? ""}
-              onChange={(v) => setDraft((d) => ({ ...d, trim: v || undefined }))}
-              options={["", ...trims]}
+              value={draft.modification ?? ""}
+              onChange={(v) => {
+                const sel = trims.find((t) => t.value === v);
+                setDraft((d) => ({
+                  ...d,
+                  modification: v || undefined,
+                  trim: sel?.label || undefined,
+                }));
+              }}
+              options={[{ value: "", label: "" }, ...trims]}
               disabled={!draft.model}
               hint={draft.model && trims.length === 0 ? "Trim list coming soon" : undefined}
             />
@@ -232,7 +242,7 @@ function Select({
   label: string;
   value: string;
   onChange: (v: string) => void;
-  options: string[];
+  options: Array<string | { value: string; label: string }>;
   disabled?: boolean;
   hint?: string;
 }) {
@@ -245,11 +255,14 @@ function Select({
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
       >
-        {options.map((o) => (
-          <option key={o} value={o}>
-            {o || `Select ${label}`}
-          </option>
-        ))}
+        {options.map((o) => {
+          const opt = typeof o === "string" ? { value: o, label: o } : o;
+          return (
+            <option key={opt.value} value={opt.value}>
+              {opt.label || `Select ${label}`}
+            </option>
+          );
+        })}
       </select>
       {hint ? <span className="text-[11px] text-neutral-500">{hint}</span> : null}
     </label>

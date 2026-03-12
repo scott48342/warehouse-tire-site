@@ -50,6 +50,23 @@ function getBaseUrl() {
   return "http://localhost:3000";
 }
 
+async function fetchFitment(params: Record<string, string | undefined>) {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v) sp.set(k, v);
+  }
+
+  const res = await fetch(`${getBaseUrl()}/api/vehicles/search?${sp.toString()}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    return { error: await res.text() };
+  }
+
+  return res.json();
+}
+
 async function fetchWheels(params: Record<string, string | undefined>) {
   const sp = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) {
@@ -79,20 +96,56 @@ export default async function WheelsPage({
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
+  const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
 
   // Wheel Pros search params are vendor-specific.
   // We’ll start by passing these through; if WP expects different keys,
   // we’ll adapt once we confirm their schema.
+  // 1) Resolve fitment (bolt pattern, width/offset ranges, etc.)
+  const fitment = year && make && model
+    ? await fetchFitment({
+        year,
+        make,
+        model,
+        modification: modification || undefined,
+      })
+    : null;
+
+  const bp: string | undefined = fitment?.boltPattern || undefined;
+  const cb: string | undefined = fitment?.centerBoreMm != null ? String(fitment.centerBoreMm) : undefined;
+
+  const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
+    ? fitment.wheelDiameterRangeIn
+    : [null, null];
+  const widthRange: [number | null, number | null] = Array.isArray(fitment?.wheelWidthRangeIn)
+    ? fitment.wheelWidthRangeIn
+    : [null, null];
+  const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
+    ? fitment.offsetRangeMm
+    : [null, null];
+
+  // WheelPros expects a single diameter/width; pick the min of each range for now.
+  const diameter = diaRange?.[0] != null ? String(diaRange[0]) : undefined;
+  const width = widthRange?.[0] != null ? String(widthRange[0]) : undefined;
+  const minOffset = offRange?.[0] != null ? String(offRange[0]) : undefined;
+  const maxOffset = offRange?.[1] != null ? String(offRange[1]) : undefined;
+
+  // 2) Query WheelPros using fitment-derived filters
   const data = await fetchWheels({
-    year,
-    make,
-    model,
-    trim,
     page: "1",
     pageSize: "24",
     fields: "inventory,price,images",
     priceType: "msrp",
+    company: "1500",
     currencyCode: "USD",
+
+    boltPattern: bp,
+    centerbore: cb,
+    diameter,
+    width,
+    minOffset,
+    maxOffset,
+    offsetType: minOffset || maxOffset ? "RANGE" : undefined,
   });
 
   const maybeData = data as { items?: unknown[]; results?: unknown[] };
