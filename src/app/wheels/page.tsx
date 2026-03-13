@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
+import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 
 type Wheel = {
   sku?: string;
@@ -289,95 +290,16 @@ export default async function WheelsPage({
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.length ? (
             items.map((w, idx) => (
-              <div
+              <WheelsStyleCard
                 key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
-                className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
-              >
-                <Link
-                  href={w.sku ? `/wheels/${encodeURIComponent(w.sku)}` : "/wheels"}
-                  className="block"
-                >
-                <div className="text-xs font-semibold text-neutral-600">
-                  {typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
-                </div>
-                <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
-                  {typeof w.model === "string"
-                    ? w.model
-                    : w.model != null
-                      ? String(w.model)
-                      : w.sku || "Wheel"}
-                </h3>
-                {w.finish ? (
-                  <div className="mt-1 text-xs text-neutral-600">
-                    {typeof w.finish === "string" ? w.finish : String(w.finish)}
-                  </div>
-                ) : null}
-
-                <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
-                  {w.imageUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={w.imageUrl}
-                      alt={w.model || w.sku || "Wheel"}
-                      className="h-40 w-full object-contain bg-white"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="p-3 text-xs text-neutral-700">No image</div>
-                  )}
-                </div>
-
-                {w.finishThumbs?.length ? (
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {w.finishThumbs.slice(0, 6).map((t) => (
-                      <Link
-                        key={t.sku}
-                        href={`/wheels/${encodeURIComponent(t.sku)}`}
-                        className="overflow-hidden rounded-lg border border-neutral-200 bg-white"
-                        title={t.finish}
-                      >
-                        {t.imageUrl ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
-                            src={t.imageUrl}
-                            alt={t.finish}
-                            className="h-10 w-10 object-contain"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="h-10 w-10 bg-neutral-50" />
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                ) : null}
-
-                <div className="mt-4">
-                  <div className="text-2xl font-extrabold text-neutral-900">
-                    {typeof w.price === "number" ? `$${w.price.toFixed(2)}` : "Call for price"}
-                  </div>
-                  <div className="text-xs text-neutral-600">each</div>
-                </div>
-
-                </Link>
-
-                <div className="mt-4 grid gap-2">
-                  <Link
-                    href="/schedule"
-                    className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
-                  >
-                    Schedule Install
-                  </Link>
-                  <div className="flex items-center justify-between gap-3 text-xs">
-                    <a
-                      href={BRAND.links.tel}
-                      className="font-extrabold text-neutral-900 hover:underline"
-                    >
-                      Call
-                    </a>
-                  </div>
-                </div>
-              </div>
+                brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
+                title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
+                baseSku={String(w.sku || "")}
+                baseFinish={w.finish ? String(w.finish) : undefined}
+                baseImageUrl={w.imageUrl}
+                price={w.price}
+                finishThumbs={w.finishThumbs}
+              />
             ))
           ) : (
             <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
