@@ -37,6 +37,31 @@ export function FitmentSelector() {
     });
   }, [fitment]);
 
+  // If the URL has no fitment params but we have a saved fitment, restore it into the URL.
+  // This prevents /wheels from showing an essentially "unfiltered" WheelPros list.
+  useEffect(() => {
+    try {
+      const hasUrlFitment = Boolean(fitment.year || fitment.make || fitment.model || fitment.modification);
+      if (hasUrlFitment) return;
+
+      const raw = localStorage.getItem("wt_fitment");
+      if (!raw) return;
+      const saved = JSON.parse(raw) as Partial<Fitment>;
+      if (!saved?.year || !saved?.make || !saved?.model) return;
+
+      apply({
+        year: String(saved.year),
+        make: String(saved.make),
+        model: String(saved.model),
+        trim: saved.trim ? String(saved.trim) : undefined,
+        modification: saved.modification ? String(saved.modification) : undefined,
+      });
+    } catch {
+      // ignore
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     // persist last fitment
     try {
@@ -52,7 +77,8 @@ export function FitmentSelector() {
       if (v) params.set(k, v);
     }
 
-    router.push(`${pathname}?${params.toString()}`);
+    const qs = params.toString();
+    router.push(qs ? `${pathname}?${qs}` : pathname);
   }
 
   const [makes, setMakes] = useState<string[]>([]);
