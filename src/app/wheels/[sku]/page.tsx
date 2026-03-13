@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
+import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
 
 type WheelProsBrand = {
@@ -195,6 +196,21 @@ export default async function WheelDetailPage({
   const tfSelf = await getTechfeedWheelBySku(sku);
   const styleKey = tfSelf?.style || tfSelf?.display_style_no || "";
   const tfStyleRows = styleKey ? await getTechfeedWheelsByStyle(styleKey) : null;
+
+  const finishThumbs = Array.isArray(tfStyleRows)
+    ? (() => {
+        const seen = new Set<string>();
+        const thumbs: { finish: string; sku: string; imageUrl?: string }[] = [];
+        for (const r of tfStyleRows) {
+          const fin = String(r.abbreviated_finish_desc || r.fancy_finish_desc || r.box_label_desc || "").trim();
+          if (!fin || seen.has(fin)) continue;
+          seen.add(fin);
+          const img = Array.isArray(r.images) && r.images.length ? r.images[0] : undefined;
+          thumbs.push({ finish: fin, sku: r.sku, imageUrl: img });
+        }
+        return thumbs;
+      })()
+    : [];
   const tfVariants: WheelVariant[] = Array.isArray(tfStyleRows)
     ? tfStyleRows
         .map((r) => ({
@@ -271,6 +287,10 @@ export default async function WheelDetailPage({
                       finish: finish || undefined,
                     }}
                   />
+
+                  {finishThumbs.length > 1 ? (
+                    <FinishThumbnailStrip items={finishThumbs} selectedFinish={finish || undefined} />
+                  ) : null}
                 </div>
               </div>
 
