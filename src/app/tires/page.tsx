@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 
@@ -50,8 +50,8 @@ export default async function TiresPage({
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sp = (await searchParams) ?? {};
-  const zipRaw = Array.isArray(sp.zip) ? sp.zip[0] : sp.zip;
-  const zip = (zipRaw ?? "").trim();
+  // ZIP temporarily removed from UI; keep a placeholder to avoid touching too many links.
+  const zip = "";
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
   const sort = (sortRaw ?? "price_asc").trim();
 
@@ -336,13 +336,7 @@ export default async function TiresPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
 
-              <label className="text-xs font-semibold text-neutral-600">ZIP</label>
-              <input
-                name="zip"
-                defaultValue={zip}
-                placeholder="48342"
-                className="h-10 w-28 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-              />
+              {/* ZIP filter temporarily removed */}
 
               <label className="ml-2 text-xs font-semibold text-neutral-600">Sort</label>
               <AutoSubmitSelect
@@ -386,8 +380,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
 
@@ -448,8 +441,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               {/* keep brands */}
               {brands.map((b) => (
                 <input key={b} type="hidden" name="brand" value={b} />
@@ -484,8 +476,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               {/* keep brands */}
               {brands.map((b) => (
                 <input key={b} type="hidden" name="brand" value={b} />
@@ -534,8 +525,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               {/* keep brands */}
               {brands.map((b) => (
                 <input key={b} type="hidden" name="brand" value={b} />
@@ -578,8 +568,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               {/* keep brands */}
               {brands.map((b) => (
                 <input key={b} type="hidden" name="brand" value={b} />
@@ -615,8 +604,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               {/* keep brands */}
               {brands.map((b) => (
                 <input key={b} type="hidden" name="brand" value={b} />
@@ -653,8 +641,7 @@ export default async function TiresPage({
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="zip" value={zip} />
-              <input type="hidden" name="sort" value={sort} />
+                            <input type="hidden" name="sort" value={sort} />
               {/* keep brands */}
               {brands.map((b) => (
                 <input key={b} type="hidden" name="brand" value={b} />
@@ -862,3 +849,4 @@ function Check({
     </label>
   );
 }
+
