@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
+import { FilterGroup } from "./FilterGroup";
 
 type Wheel = {
   sku?: string;
@@ -103,16 +104,21 @@ export default async function WheelsPage({
   const sp = (await searchParams) ?? {};
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
   const sort = (sortRaw ?? "price_asc").trim();
+  const pageRaw = Array.isArray(sp.page) ? sp.page[0] : sp.page;
+  const page = Math.max(1, Number(pageRaw || "1") || 1);
+
   const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
   const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
 
-  // Optional user-supplied wheel filters (prefer these over auto-restricting).
+  // Optional user-supplied wheel filters.
   const diameterParam = (Array.isArray(sp.diameter) ? sp.diameter[0] : sp.diameter) || "";
   const widthParam = (Array.isArray(sp.width) ? sp.width[0] : sp.width) || "";
   const boltPatternParam = (Array.isArray(sp.boltPattern) ? sp.boltPattern[0] : sp.boltPattern) || "";
+  const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || "";
+  const finish = (Array.isArray(sp.finish) ? sp.finish[0] : sp.finish) || "";
 
   // Wheel Pros search params are vendor-specific.
   // We’ll start by passing these through; if WP expects different keys,
@@ -153,11 +159,12 @@ export default async function WheelsPage({
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
+  const upstreamPageSize = 120;
   const data = await fetchWheels({
-    page: "1",
-    // We group by styleKey client-side. Fetch more SKUs so grouping doesn't collapse
-    // the results list down to only a handful of cards.
-    pageSize: "200",
+    page: String(page),
+    // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
+    // but keep it reasonable for performance.
+    pageSize: String(upstreamPageSize),
     fields: "inventory,price,images",
     priceType: "msrp",
     // NOTE: WheelPros docs say company is required for pricing, but in practice passing
@@ -168,12 +175,22 @@ export default async function WheelsPage({
     centerbore: cb,
     diameter: diameterParam ? diameter : undefined,
     width: widthParam ? width : undefined,
+
+    // Facet filters (WheelPros taxonomy)
+    brand_cd: brandCd || undefined,
+    abbreviated_finish_desc: finish || undefined,
+
     minOffset,
     maxOffset,
     offsetType: minOffset || maxOffset ? "RANGE" : undefined,
   });
 
-  const maybeData = data as { items?: unknown[]; results?: unknown[] };
+  const maybeData = data as {
+    items?: unknown[];
+    results?: unknown[];
+    totalCount?: number;
+    facets?: any;
+  };
 
   // common patterns: { items: [] } or { results: [] }
   const rawItems: unknown[] = Array.isArray(maybeData?.items)
@@ -262,6 +279,27 @@ export default async function WheelsPage({
     }
   });
 
+  const totalCount = typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length;
+  const totalPages = Math.max(1, Math.ceil(totalCount / upstreamPageSize));
+  const itemsPage: Wheel[] = items.slice(0, 24);
+
+  const facets = (maybeData as any)?.facets || {};
+  const buckets = (k: string): Array<{ value: string; count?: number }> => {
+    const f = facets?.[k];
+    const arr = Array.isArray(f?.buckets) ? f.buckets : [];
+    return arr
+      .map((b: any) => ({ value: String(b?.value ?? "").trim(), count: b?.count != null ? Number(b.count) : undefined }))
+      .filter((b: any) => b.value);
+  };
+
+  const brandBuckets = buckets("brand_cd");
+  const finishBuckets = buckets("abbreviated_finish_desc");
+  const diameterBuckets = buckets("wheel_diameter");
+  const widthBuckets = buckets("width");
+  const boltPatternBuckets = buckets("bolt_pattern_metric");
+
+  const qBase = `/wheels?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -301,26 +339,261 @@ export default async function WheelsPage({
           </div>
         ) : null}
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.length ? (
-            items.map((w, idx) => (
-              <WheelsStyleCard
-                key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
-                brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
-                title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
-                baseSku={String(w.sku || "")}
-                baseFinish={w.finish ? String(w.finish) : undefined}
-                baseImageUrl={w.imageUrl}
-                price={w.price}
-                finishThumbs={w.finishThumbs}
-              />
-            ))
-          ) : (
-            <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-              No wheel results yet. Select a vehicle (with trim) in the header and
-              try again.
+        <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-extrabold">Filters</h2>
+              <a href={qBase} className="text-xs font-semibold text-neutral-600 hover:underline">
+                Clear all
+              </a>
             </div>
-          )}
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
+              {/* keep other filters */}
+              <input type="hidden" name="finish" value={finish} />
+              <input type="hidden" name="diameter" value={diameterParam} />
+              <input type="hidden" name="width" value={widthParam} />
+              <input type="hidden" name="boltPattern" value={boltPatternParam} />
+
+              <FilterGroup title="Brand">
+                <select
+                  name="brand_cd"
+                  defaultValue={brandCd}
+                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                >
+                  <option value="">All brands</option>
+                  {brandBuckets.slice(0, 80).map((b) => (
+                    <option key={b.value} value={b.value}>
+                      {b.value}{b.count != null ? ` (${b.count})` : ""}
+                    </option>
+                  ))}
+                </select>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply brand
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
+              <input type="hidden" name="brand_cd" value={brandCd} />
+              <input type="hidden" name="diameter" value={diameterParam} />
+              <input type="hidden" name="width" value={widthParam} />
+              <input type="hidden" name="boltPattern" value={boltPatternParam} />
+
+              <FilterGroup title="Finish">
+                <select
+                  name="finish"
+                  defaultValue={finish}
+                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                >
+                  <option value="">All finishes</option>
+                  {finishBuckets.slice(0, 80).map((b) => (
+                    <option key={b.value} value={b.value}>
+                      {b.value}{b.count != null ? ` (${b.count})` : ""}
+                    </option>
+                  ))}
+                </select>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply finish
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
+              <input type="hidden" name="brand_cd" value={brandCd} />
+              <input type="hidden" name="finish" value={finish} />
+              <input type="hidden" name="width" value={widthParam} />
+              <input type="hidden" name="boltPattern" value={boltPatternParam} />
+
+              <FilterGroup title="Diameter">
+                <select
+                  name="diameter"
+                  defaultValue={diameterParam}
+                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                >
+                  <option value="">All diameters</option>
+                  {diameterBuckets.slice(0, 80).map((b) => (
+                    <option key={b.value} value={b.value}>
+                      {b.value}{b.count != null ? ` (${b.count})` : ""}
+                    </option>
+                  ))}
+                </select>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply diameter
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
+              <input type="hidden" name="brand_cd" value={brandCd} />
+              <input type="hidden" name="finish" value={finish} />
+              <input type="hidden" name="diameter" value={diameterParam} />
+              <input type="hidden" name="boltPattern" value={boltPatternParam} />
+
+              <FilterGroup title="Width">
+                <select
+                  name="width"
+                  defaultValue={widthParam}
+                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                >
+                  <option value="">All widths</option>
+                  {widthBuckets.slice(0, 80).map((b) => (
+                    <option key={b.value} value={b.value}>
+                      {b.value}{b.count != null ? ` (${b.count})` : ""}
+                    </option>
+                  ))}
+                </select>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply width
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
+              <input type="hidden" name="brand_cd" value={brandCd} />
+              <input type="hidden" name="finish" value={finish} />
+              <input type="hidden" name="diameter" value={diameterParam} />
+              <input type="hidden" name="width" value={widthParam} />
+
+              <FilterGroup title="Bolt pattern">
+                <select
+                  name="boltPattern"
+                  defaultValue={boltPatternParam}
+                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                >
+                  <option value="">Vehicle bolt pattern</option>
+                  {boltPatternBuckets.slice(0, 80).map((b) => (
+                    <option key={b.value} value={b.value}>
+                      {b.value}{b.count != null ? ` (${b.count})` : ""}
+                    </option>
+                  ))}
+                </select>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply bolt pattern
+                </button>
+              </FilterGroup>
+            </form>
+          </aside>
+
+          <section>
+            <div className="text-xs font-semibold text-neutral-600">
+              Showing {itemsPage.length} styles (page {page} of {totalPages})
+            </div>
+
+            <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {itemsPage.length ? (
+                itemsPage.map((w, idx) => (
+                  <WheelsStyleCard
+                    key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
+                    brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
+                    title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
+                    baseSku={String(w.sku || "")}
+                    baseFinish={w.finish ? String(w.finish) : undefined}
+                    baseImageUrl={w.imageUrl}
+                    price={w.price}
+                    finishThumbs={w.finishThumbs}
+                  />
+                ))
+              ) : (
+                <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+                  No wheel results. Try clearing filters.
+                </div>
+              )}
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+              <div className="text-xs font-semibold text-neutral-600">
+                Total SKUs: {totalCount}
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                {page > 1 ? (
+                  <a
+                    className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${page - 1}`}
+                  >
+                    Prev
+                  </a>
+                ) : null}
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                  .filter((p) => p === 1 || p === totalPages || Math.abs(p - page) <= 2)
+                  .map((p, i, arr) => {
+                    const prev = arr[i - 1];
+                    const gap = prev != null && p - prev > 1;
+                    const href = `${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${p}`;
+                    return (
+                      <span key={p} className="flex items-center gap-2">
+                        {gap ? <span className="px-1 text-xs text-neutral-500">…</span> : null}
+                        <a
+                          href={href}
+                          className={
+                            p === page
+                              ? "rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
+                              : "rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                          }
+                        >
+                          {p}
+                        </a>
+                      </span>
+                    );
+                  })}
+
+                {page < totalPages ? (
+                  <a
+                    className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${page + 1}`}
+                  >
+                    Next
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
