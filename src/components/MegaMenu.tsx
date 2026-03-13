@@ -58,7 +58,7 @@ export function MegaMenu({
       <div
         onMouseEnter={() => cancelClose()}
         onMouseLeave={() => scheduleClose()}
-        className="absolute left-0 right-0 top-full z-[70] border-b border-neutral-200 bg-white shadow-xl"
+        className="fixed left-0 right-0 top-[72px] z-[70] border-b border-neutral-200 bg-white shadow-xl"
         role="menu"
       >
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-6 md:grid-cols-[200px_1fr]">
