@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
+import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
 
 type WheelProsBrand = {
   code?: string;
@@ -190,12 +191,33 @@ export default async function WheelDetailPage({
   const offset = it?.properties?.offset != null ? String(it.properties.offset) : "";
   const finish = it?.properties?.finish != null ? String(it.properties.finish) : "";
 
-  const brandCode = brandObj?.code || (typeof it?.brand === "object" ? (it.brand as WheelProsBrand | undefined)?.code : undefined);
+  // Prefer TechFeed for variant grouping (stable style id + complete data).
+  const tfSelf = await getTechfeedWheelBySku(sku);
+  const styleKey = tfSelf?.style || tfSelf?.display_style_no || "";
+  const tfStyleRows = styleKey ? await getTechfeedWheelsByStyle(styleKey) : null;
+  const tfVariants: WheelVariant[] = Array.isArray(tfStyleRows)
+    ? tfStyleRows
+        .map((r) => ({
+          sku: r.sku,
+          diameter: r.diameter || undefined,
+          width: r.width || undefined,
+          boltPattern: r.bolt_pattern_metric || r.bolt_pattern_standard || undefined,
+          offset: r.offset || undefined,
+          finish: r.abbreviated_finish_desc || r.fancy_finish_desc || r.box_label_desc || undefined,
+        }))
+        .filter((v) => v.sku)
+    : [];
+
+  const brandCode =
+    brandObj?.code || (typeof it?.brand === "object" ? (it.brand as WheelProsBrand | undefined)?.code : undefined);
   const modelToken = extractModelToken(String(it?.title || ""));
-  const variants = await fetchVariants({ brandCode, modelToken });
-  const variantsForSelector = variants.length
-    ? variants
-    : ([{ sku, diameter, width, boltPattern, offset, finish }].filter((v) => v.sku) as WheelVariant[]);
+  const wpVariants = tfVariants.length ? [] : await fetchVariants({ brandCode, modelToken });
+
+  const variantsForSelector = tfVariants.length
+    ? tfVariants
+    : (wpVariants.length
+        ? wpVariants
+        : ([{ sku, diameter, width, boltPattern, offset, finish }].filter((v) => v.sku) as WheelVariant[]));
 
   return (
     <main className="bg-neutral-50">

@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "techfeed:wheels": "node scripts/build-techfeed-wheels.mjs"
   },
   "dependencies": {
+    "csv-parse": "^5.6.0",
     "fast-xml-parser": "^4.5.4",
     "next": "16.1.6",
     "react": "19.2.3",
