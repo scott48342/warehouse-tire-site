@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
+import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 
 type Wheel = {
   sku?: string;
@@ -212,28 +213,19 @@ export default async function WheelsPage({
             </p>
           </div>
 
-          <form className="flex items-center gap-2" action="/wheels" method="get">
-            <input type="hidden" name="year" value={year} />
-            <input type="hidden" name="make" value={make} />
-            <input type="hidden" name="model" value={model} />
-            <input type="hidden" name="trim" value={trim} />
-            <input type="hidden" name="modification" value={modification} />
-
+          <div className="flex items-center gap-2">
             <label className="text-xs font-semibold text-neutral-600">Sort</label>
-            <select
+            <AutoSubmitSelect
               name="sort"
               defaultValue={sort}
               className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-            >
-              <option value="price_asc">Price Low to High</option>
-              <option value="price_desc">Price High to Low</option>
-              <option value="brand_asc">Brand A–Z</option>
-            </select>
-
-            <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
-              Update
-            </button>
-          </form>
+              options={[
+                { value: "price_asc", label: "Price Low to High" },
+                { value: "price_desc", label: "Price High to Low" },
+                { value: "brand_asc", label: "Brand A–Z" },
+              ]}
+            />
+          </div>
         </div>
 
         {data?.error ? (

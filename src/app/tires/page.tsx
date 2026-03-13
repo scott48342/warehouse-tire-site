@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
+import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 
 type Tire = {
   partNumber?: string;
@@ -344,21 +345,18 @@ export default async function TiresPage({
               />
 
               <label className="ml-2 text-xs font-semibold text-neutral-600">Sort</label>
-              <select
+              <AutoSubmitSelect
                 name="sort"
                 defaultValue={sort}
                 className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-              >
-                <option value="price_asc">Price Low to High</option>
-                <option value="best">Best Match</option>
-                <option value="price_desc">Price High to Low</option>
-                <option value="brand_asc">Brand A–Z</option>
-                <option value="stock_desc">Most Stock</option>
-              </select>
-
-              <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
-                Update
-              </button>
+                options={[
+                  { value: "price_asc", label: "Price Low to High" },
+                  { value: "best", label: "Best Match" },
+                  { value: "price_desc", label: "Price High to Low" },
+                  { value: "brand_asc", label: "Brand A–Z" },
+                  { value: "stock_desc", label: "Most Stock" },
+                ]}
+              />
             </form>
           </div>
         </div>
