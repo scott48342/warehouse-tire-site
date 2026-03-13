@@ -47,7 +47,7 @@ function getBaseUrl() {
 async function fetchWheelBySku(sku: string) {
   // Best-effort: WheelPros search supports sku as a filter in our wrapper.
   const res = await fetch(
-    `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`,
+    `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images,properties&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`,
     { cache: "no-store" }
   );
   if (!res.ok) return { error: await res.text() };
@@ -84,7 +84,7 @@ async function fetchVariants({
   if (!brandCode || !modelToken) return [] as WheelVariant[];
 
   const res = await fetch(
-    `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images&page=1&pageSize=200&brand_cd=${encodeURIComponent(brandCode)}&q=${encodeURIComponent(modelToken)}`,
+    `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images,properties&page=1&pageSize=200&brand_cd=${encodeURIComponent(brandCode)}&q=${encodeURIComponent(modelToken)}`,
     { cache: "no-store" }
   );
   if (!res.ok) return [] as WheelVariant[];

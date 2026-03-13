@@ -69,7 +69,7 @@ export function WheelVariantSelector({
           >
             {options.diameters.map((d) => (
               <option key={d} value={d}>
-                {d}"
+                {d}
               </option>
             ))}
           </select>
@@ -88,7 +88,7 @@ export function WheelVariantSelector({
           >
             {options.widths.map((w) => (
               <option key={w} value={w}>
-                {w}"
+                {w}
               </option>
             ))}
           </select>
