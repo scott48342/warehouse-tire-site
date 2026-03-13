@@ -240,9 +240,9 @@ export default async function WheelsPage({
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.length ? (
             items.map((w, idx) => (
-              <article
-                key={w.sku || idx}
-                className="rounded-2xl border border-neutral-200 bg-white p-4"
+              <Link
+                href={w.sku ? `/wheels/${encodeURIComponent(w.sku)}` : "/wheels"}
+                className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
               >
                 <div className="text-xs font-semibold text-neutral-600">
                   {typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
@@ -297,7 +297,7 @@ export default async function WheelsPage({
                     </a>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))
           ) : (
             <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">

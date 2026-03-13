@@ -251,11 +251,15 @@ export default async function Home() {
               </div>
 
               <div className="rounded-2xl bg-white/10 p-4">
-                <div className="text-xs font-semibold text-white/70">Wheels</div>
+                <div className="text-xs font-semibold text-white/70">Featured wheels</div>
                 <div className="mt-1 text-sm font-extrabold">Lowest price picks</div>
                 <div className="mt-3 grid gap-2">
                   {wheels.slice(0, 2).map((w, idx) => (
-                    <div key={w.sku || idx} className="flex items-center justify-between gap-3">
+                    <Link
+                      key={w.sku || idx}
+                      href={w.sku ? `/wheels/${encodeURIComponent(w.sku)}` : "/wheels"}
+                      className="flex items-center justify-between gap-3 rounded-xl px-2 py-1 hover:bg-white/10"
+                    >
                       <div className="flex min-w-0 items-center gap-3">
                         <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white">
                           {w.imageUrl ? (
@@ -274,7 +278,7 @@ export default async function Home() {
                         </div>
                       </div>
                       <div className="shrink-0 text-sm font-extrabold">{typeof w.price === "number" ? `$${w.price.toFixed(2)}` : "Call"}</div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
                 <div className="mt-3">
