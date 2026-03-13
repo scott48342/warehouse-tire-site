@@ -220,7 +220,7 @@ export default async function WheelDetailPage({
               </div>
             </div>
 
-            <div className="mt-4 text-xs text-neutral-600">SKU: {sku}</div>
+            <div className="mt-4 text-xs text-neutral-600">Part / SKU: {sku}</div>
           </div>
         </div>
       </div>

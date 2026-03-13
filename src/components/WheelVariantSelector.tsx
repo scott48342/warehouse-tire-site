@@ -28,11 +28,27 @@ export function WheelVariantSelector({
 
   const options = useMemo(() => {
     const diameters = uniqSorted(variants.map((v) => v.diameter || ""));
-    const widths = uniqSorted(variants.map((v) => v.width || ""));
-    const offsets = uniqSorted(variants.map((v) => v.offset || ""));
-    const finishes = uniqSorted(variants.map((v) => v.finish || ""));
+
+    const byDiameter = selected.diameter
+      ? variants.filter((v) => v.diameter === selected.diameter)
+      : variants;
+
+    const widths = uniqSorted(byDiameter.map((v) => v.width || ""));
+
+    const byDiameterWidth = selected.width
+      ? byDiameter.filter((v) => v.width === selected.width)
+      : byDiameter;
+
+    const offsets = uniqSorted(byDiameterWidth.map((v) => v.offset || ""));
+
+    const byDiameterWidthOffset = selected.offset
+      ? byDiameterWidth.filter((v) => v.offset === selected.offset)
+      : byDiameterWidth;
+
+    const finishes = uniqSorted(byDiameterWidthOffset.map((v) => v.finish || ""));
+
     return { diameters, widths, offsets, finishes };
-  }, [variants]);
+  }, [variants, selected.diameter, selected.width, selected.offset]);
 
   function pickSku(nextSel: { diameter?: string; width?: string; offset?: string; finish?: string }) {
     const exact = variants.find(
@@ -44,13 +60,33 @@ export function WheelVariantSelector({
     );
     if (exact?.sku) return exact.sku;
 
-    // Fallback: keep finish + diameter, then anything
+    // Fallback: try to keep the most specific filters first
     const soft = variants.find(
       (v) =>
-        (!nextSel.finish || v.finish === nextSel.finish) &&
-        (!nextSel.diameter || v.diameter === nextSel.diameter)
+        (!nextSel.diameter || v.diameter === nextSel.diameter) &&
+        (!nextSel.width || v.width === nextSel.width) &&
+        (!nextSel.offset || v.offset === nextSel.offset)
     );
     return soft?.sku || currentSku;
+  }
+
+  function coerce(nextSel: { diameter?: string; width?: string; offset?: string; finish?: string }) {
+    // If a dependent selection no longer exists under the current constraints, clear it.
+    const byDiameter = nextSel.diameter ? variants.filter((v) => v.diameter === nextSel.diameter) : variants;
+    const widths = uniqSorted(byDiameter.map((v) => v.width || ""));
+    if (nextSel.width && !widths.includes(nextSel.width)) nextSel.width = undefined;
+
+    const byDiameterWidth = nextSel.width ? byDiameter.filter((v) => v.width === nextSel.width) : byDiameter;
+    const offsets = uniqSorted(byDiameterWidth.map((v) => v.offset || ""));
+    if (nextSel.offset && !offsets.includes(nextSel.offset)) nextSel.offset = undefined;
+
+    const byDiameterWidthOffset = nextSel.offset
+      ? byDiameterWidth.filter((v) => v.offset === nextSel.offset)
+      : byDiameterWidth;
+    const finishes = uniqSorted(byDiameterWidthOffset.map((v) => v.finish || ""));
+    if (nextSel.finish && !finishes.includes(nextSel.finish)) nextSel.finish = undefined;
+
+    return nextSel;
   }
 
   return (
@@ -61,7 +97,10 @@ export function WheelVariantSelector({
           <select
             value={selected.diameter || ""}
             onChange={(e) => {
-              const next = { ...selected, diameter: e.currentTarget.value || undefined };
+              const next = coerce({
+                ...selected,
+                diameter: e.currentTarget.value || undefined,
+              });
               const sku = pickSku(next);
               router.push(`/wheels/${encodeURIComponent(sku)}`);
             }}
@@ -80,7 +119,10 @@ export function WheelVariantSelector({
           <select
             value={selected.width || ""}
             onChange={(e) => {
-              const next = { ...selected, width: e.currentTarget.value || undefined };
+              const next = coerce({
+                ...selected,
+                width: e.currentTarget.value || undefined,
+              });
               const sku = pickSku(next);
               router.push(`/wheels/${encodeURIComponent(sku)}`);
             }}
@@ -99,7 +141,10 @@ export function WheelVariantSelector({
           <select
             value={selected.offset || ""}
             onChange={(e) => {
-              const next = { ...selected, offset: e.currentTarget.value || undefined };
+              const next = coerce({
+                ...selected,
+                offset: e.currentTarget.value || undefined,
+              });
               const sku = pickSku(next);
               router.push(`/wheels/${encodeURIComponent(sku)}`);
             }}
@@ -118,7 +163,10 @@ export function WheelVariantSelector({
           <select
             value={selected.finish || ""}
             onChange={(e) => {
-              const next = { ...selected, finish: e.currentTarget.value || undefined };
+              const next = coerce({
+                ...selected,
+                finish: e.currentTarget.value || undefined,
+              });
               const sku = pickSku(next);
               router.push(`/wheels/${encodeURIComponent(sku)}`);
             }}
