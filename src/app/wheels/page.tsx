@@ -155,7 +155,9 @@ export default async function WheelsPage({
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
   const data = await fetchWheels({
     page: "1",
-    pageSize: "24",
+    // We group by styleKey client-side. Fetch more SKUs so grouping doesn't collapse
+    // the results list down to only a handful of cards.
+    pageSize: "200",
     fields: "inventory,price,images",
     priceType: "msrp",
     // NOTE: WheelPros docs say company is required for pricing, but in practice passing
