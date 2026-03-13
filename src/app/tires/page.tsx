@@ -67,6 +67,25 @@ export default async function TiresPage({
   const priceMin = priceMinRaw ? Number(String(priceMinRaw)) : null;
   const priceMax = priceMaxRaw ? Number(String(priceMaxRaw)) : null;
 
+  const seasonsRaw = sp.season;
+  const seasons = Array.isArray(seasonsRaw)
+    ? seasonsRaw.map(String).map((s) => s.trim()).filter(Boolean)
+    : seasonsRaw
+      ? [String(seasonsRaw).trim()].filter(Boolean)
+      : [];
+
+  const speedsRaw = sp.speed;
+  const speeds = Array.isArray(speedsRaw)
+    ? speedsRaw.map(String).map((s) => s.trim()).filter(Boolean)
+    : speedsRaw
+      ? [String(speedsRaw).trim()].filter(Boolean)
+      : [];
+
+  const runFlat = (Array.isArray(sp.runFlat) ? sp.runFlat[0] : sp.runFlat) === "1";
+  const snowRated = (Array.isArray(sp.snowRated) ? sp.snowRated[0] : sp.snowRated) === "1";
+  const allWeather = (Array.isArray(sp.allWeather) ? sp.allWeather[0] : sp.allWeather) === "1";
+  const xlOnly = (Array.isArray(sp.xl) ? sp.xl[0] : sp.xl) === "1";
+
   const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
@@ -134,6 +153,33 @@ export default async function TiresPage({
     };
   });
 
+  function parseFromDescription(desc: string) {
+    const d = String(desc || "").toUpperCase();
+
+    // Run flat markers commonly present in KM descriptions
+    const isRunFlat = /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/.test(d);
+
+    // XL marker
+    const isXL = /\bXL\b/.test(d);
+
+    // Speed rating (very rough): look for patterns like " 95V" or "99Y" near end
+    // We intentionally allow a trailing space and ignore load index.
+    const speedMatch = d.match(/\b\d{2,3}([A-Z])\b(?!.*\b\d{2,3}[A-Z]\b)/);
+    const speed = speedMatch ? speedMatch[1] : undefined;
+
+    // Season (heuristic)
+    let season: "All-season" | "Winter" | "Summer" | "All-terrain" | undefined;
+    if (/\b(BLIZZAK|WS\d+|X-ICE|ICE|WINTER|SNOW)\b/.test(d)) season = "Winter";
+    else if (/\b(A\/?S|AS\b|ALL\s*-?SEASON)\b/.test(d)) season = "All-season";
+    else if (/\b(A\/T|AT\b|ALL\s*-?TERRAIN)\b/.test(d)) season = "All-terrain";
+    else if (/\b(SUMMER|MAX\s*-?PERFORMANCE)\b/.test(d)) season = "Summer";
+
+    const isAllWeather = /\bALL\s*-?WEATHER\b/.test(d);
+    const isSnowRated = /\b(3PMSF|\b3\s*PEAK\b|M\+S|M\s*\+\s*S)\b/.test(d);
+
+    return { isRunFlat, isXL, speed, season, isAllWeather, isSnowRated };
+  }
+
   // Brand facet list (from current result set)
   const brandCounts = new Map<string, number>();
   for (const t of itemsEnriched) {
@@ -152,13 +198,53 @@ export default async function TiresPage({
     .map(([b]) => b)
     .sort((a, b) => a.localeCompare(b));
 
+  // Derived facets from description
+  const seasonCounts = new Map<string, number>();
+  const speedCounts = new Map<string, number>();
+  let runFlatCount = 0;
+  let snowRatedCount = 0;
+  let allWeatherCount = 0;
+  let xlCount = 0;
+
+  for (const t of itemsEnriched) {
+    const parsed = parseFromDescription(String(t.description || ""));
+    if (parsed.season) seasonCounts.set(parsed.season, (seasonCounts.get(parsed.season) || 0) + 1);
+    if (parsed.speed) speedCounts.set(parsed.speed, (speedCounts.get(parsed.speed) || 0) + 1);
+    if (parsed.isRunFlat) runFlatCount++;
+    if (parsed.isSnowRated) snowRatedCount++;
+    if (parsed.isAllWeather) allWeatherCount++;
+    if (parsed.isXL) xlCount++;
+  }
+
+  const seasonsAvailable = Array.from(seasonCounts.entries()).sort((a, b) => b[1] - a[1]).map(([s]) => s);
+  const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
+
   const itemsFiltered: Tire[] = itemsEnriched.filter((t) => {
+    const parsed = parseFromDescription(String(t.description || ""));
+
     // Brand filter
     if (brands.length) {
       const b = String(t.brand || "").toLowerCase();
       const ok = brands.some((x) => b === String(x).toLowerCase());
       if (!ok) return false;
     }
+
+    // Season filter (heuristic)
+    if (seasons.length) {
+      const s = parsed.season || "";
+      if (!seasons.includes(s)) return false;
+    }
+
+    // Speed rating filter (heuristic)
+    if (speeds.length) {
+      const spd = parsed.speed || "";
+      if (!speeds.includes(spd)) return false;
+    }
+
+    if (runFlat && !parsed.isRunFlat) return false;
+    if (snowRated && !parsed.isSnowRated) return false;
+    if (allWeather && !parsed.isAllWeather) return false;
+    if (xlOnly && !parsed.isXL) return false;
 
     // Price filter (based on displayed price = cost + 50)
     const p = typeof t.cost === "number" ? t.cost + 50 : null;
@@ -393,60 +479,226 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            <FilterGroup title="Season">
-              <Check label="All-season" />
-              <Check label="All-terrain" />
-              <Check label="Winter" />
-              <Check label="Summer" />
-            </FilterGroup>
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              {/* keep brands */}
+              {brands.map((b) => (
+                <input key={b} type="hidden" name="brand" value={b} />
+              ))}
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+              {/* keep other filters */}
+              {speeds.map((s) => (
+                <input key={s} type="hidden" name="speed" value={s} />
+              ))}
+              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
+              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
+              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
+
+              <FilterGroup title="Season">
+                {seasonsAvailable.length ? (
+                  seasonsAvailable.map((s) => (
+                    <div key={s} className="flex items-center justify-between gap-2">
+                      <Check label={s} name="season" value={s} defaultChecked={seasons.includes(s)} />
+                      <span className="text-xs font-semibold text-neutral-500">
+                        {seasonCounts.get(s) || 0}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="text-xs text-neutral-600">No season data yet.</div>
+                )}
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply season
+                </button>
+              </FilterGroup>
+            </form>
 
             <FilterGroup title="Mileage Warranty">
-              <Check label="40,000+" />
-              <Check label="60,000+" />
-              <Check label="80,000+" />
+              <div className="text-xs text-neutral-600">
+                Coming soon (K&M feed doesn’t provide warranty fields yet).
+              </div>
             </FilterGroup>
 
-            <FilterGroup title="Speed Rating">
-              <Check label="S" />
-              <Check label="T" />
-              <Check label="H" />
-              <Check label="V" />
-              <Check label="W" />
-            </FilterGroup>
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              {/* keep brands */}
+              {brands.map((b) => (
+                <input key={b} type="hidden" name="brand" value={b} />
+              ))}
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+              {/* keep other filters */}
+              {seasons.map((s) => (
+                <input key={s} type="hidden" name="season" value={s} />
+              ))}
+              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
+              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
+              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
 
-            <FilterGroup title="Load Range">
-              <Check label="SL" />
-              <Check label="XL" />
-              <Check label="C" />
-              <Check label="D" />
-              <Check label="E" />
-            </FilterGroup>
+              <FilterGroup title="Speed Rating">
+                {speedsAvailable.length ? (
+                  speedsAvailable.slice(0, 12).map((s) => (
+                    <div key={s} className="flex items-center justify-between gap-2">
+                      <Check label={s} name="speed" value={s} defaultChecked={speeds.includes(s)} />
+                      <span className="text-xs font-semibold text-neutral-500">
+                        {speedCounts.get(s) || 0}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="text-xs text-neutral-600">No speed rating data yet.</div>
+                )}
 
-            <FilterGroup title="Run Flat">
-              <Check label="Run-flat" />
-            </FilterGroup>
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply speed rating
+                </button>
+              </FilterGroup>
+            </form>
 
-            <FilterGroup title="Snow Rated / All Weather">
-              <Check label="3PMSF (Snow rated)" />
-              <Check label="All Weather" />
-            </FilterGroup>
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              {/* keep brands */}
+              {brands.map((b) => (
+                <input key={b} type="hidden" name="brand" value={b} />
+              ))}
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+              {/* keep other filters */}
+              {seasons.map((s) => (
+                <input key={s} type="hidden" name="season" value={s} />
+              ))}
+              {speeds.map((s) => (
+                <input key={s} type="hidden" name="speed" value={s} />
+              ))}
+              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
+              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+
+              <FilterGroup title="Load / Extra Load">
+                <div className="flex items-center justify-between gap-2">
+                  <Check label="XL only" name="xl" value="1" defaultChecked={xlOnly} />
+                  <span className="text-xs font-semibold text-neutral-500">{xlCount}</span>
+                </div>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply load
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              {/* keep brands */}
+              {brands.map((b) => (
+                <input key={b} type="hidden" name="brand" value={b} />
+              ))}
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+              {/* keep other filters */}
+              {seasons.map((s) => (
+                <input key={s} type="hidden" name="season" value={s} />
+              ))}
+              {speeds.map((s) => (
+                <input key={s} type="hidden" name="speed" value={s} />
+              ))}
+              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
+              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
+
+              <FilterGroup title="Run Flat">
+                <div className="flex items-center justify-between gap-2">
+                  <Check label="Run-flat" name="runFlat" value="1" defaultChecked={runFlat} />
+                  <span className="text-xs font-semibold text-neutral-500">{runFlatCount}</span>
+                </div>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply run-flat
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              {/* keep brands */}
+              {brands.map((b) => (
+                <input key={b} type="hidden" name="brand" value={b} />
+              ))}
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+              {/* keep other filters */}
+              {seasons.map((s) => (
+                <input key={s} type="hidden" name="season" value={s} />
+              ))}
+              {speeds.map((s) => (
+                <input key={s} type="hidden" name="speed" value={s} />
+              ))}
+              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
+              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
+
+              <FilterGroup title="Snow Rated / All Weather">
+                <div className="flex items-center justify-between gap-2">
+                  <Check label="Snow rated (3PMSF/M+S)" name="snowRated" value="1" defaultChecked={snowRated} />
+                  <span className="text-xs font-semibold text-neutral-500">{snowRatedCount}</span>
+                </div>
+                <div className="flex items-center justify-between gap-2">
+                  <Check label="All Weather" name="allWeather" value="1" defaultChecked={allWeather} />
+                  <span className="text-xs font-semibold text-neutral-500">{allWeatherCount}</span>
+                </div>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply
+                </button>
+              </FilterGroup>
+            </form>
 
             <FilterGroup title="UTQG Rating">
-              <div className="grid grid-cols-2 gap-2">
-                <input
-                  placeholder="Treadwear min"
-                  className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-                />
-                <input
-                  placeholder="Treadwear max"
-                  className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-                />
+              <div className="text-xs text-neutral-600">
+                Coming soon (K&M feed doesn’t expose UTQG fields yet; we’ll add this when we add a richer supplier).
               </div>
             </FilterGroup>
 
             <FilterGroup title="Rebates / Specials">
-              <Check label="Rebate available" />
-              <Check label="Specials" />
+              <div className="text-xs text-neutral-600">
+                Coming soon (needs supplier merchandising fields).
+              </div>
             </FilterGroup>
 
             <div className="mt-4 rounded-2xl bg-amber-50 p-3 text-xs text-neutral-800">
