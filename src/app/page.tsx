@@ -257,9 +257,22 @@ export default async function Home() {
                 <div className="mt-3 grid gap-2">
                   {wheels.slice(0, 2).map((w, idx) => (
                     <div key={w.sku || idx} className="flex items-center justify-between gap-3">
-                      <div className="min-w-0">
-                        <div className="truncate text-sm font-extrabold">{w.brand || "Wheel"}</div>
-                        <div className="truncate text-[11px] font-semibold text-white/70">{w.model || w.sku}</div>
+                      <div className="flex min-w-0 items-center gap-3">
+                        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white">
+                          {w.imageUrl ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={w.imageUrl}
+                              alt={w.model || w.sku || "Wheel"}
+                              className="h-12 w-12 object-contain"
+                              loading="lazy"
+                            />
+                          ) : null}
+                        </div>
+                        <div className="min-w-0">
+                          <div className="truncate text-sm font-extrabold">{w.brand || "Wheel"}</div>
+                          <div className="truncate text-[11px] font-semibold text-white/70">{w.model || w.sku}</div>
+                        </div>
                       </div>
                       <div className="shrink-0 text-sm font-extrabold">{typeof w.price === "number" ? `$${w.price.toFixed(2)}` : "Call"}</div>
                     </div>
