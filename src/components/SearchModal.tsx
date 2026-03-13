@@ -1,10 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FitmentSelector } from "@/components/FitmentSelector";
 
-type Mode = "vehicle" | "size";
+export type Mode = "vehicle" | "size";
 
 function buildUrl(pathname: string, sp: URLSearchParams) {
   const qs = sp.toString();
@@ -22,17 +22,19 @@ function normalizeTireSize(width: string, aspect: string, diameter: string) {
 export function SearchModal({
   open,
   type,
+  defaultMode,
   onClose,
 }: {
   open: boolean;
   type: "tires" | "wheels";
+  defaultMode?: Mode;
   onClose: () => void;
 }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const [mode, setMode] = useState<Mode>("vehicle");
+  const [mode, setMode] = useState<Mode>(defaultMode || "vehicle");
 
   // Tires by size
   const [tireWidth, setTireWidth] = useState("245");
@@ -49,6 +51,11 @@ export function SearchModal({
   const title = isTires ? "Shop Tires" : "Shop Wheels";
 
   const currentSp = useMemo(() => new URLSearchParams(searchParams.toString()), [searchParams]);
+
+  // Reset mode when reopened, so menu actions can choose the starting tab.
+  useEffect(() => {
+    if (open) setMode(defaultMode || "vehicle");
+  }, [open, defaultMode]);
 
   if (!open) return null;
 

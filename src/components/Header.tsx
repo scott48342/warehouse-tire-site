@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { BRAND } from "@/lib/brand";
-import { FitmentSelector } from "@/components/FitmentSelector";
-import { SearchModal } from "@/components/SearchModal";
+// FitmentSelector now lives inside the search modal / mega menu flow
+import { SearchModal, type Mode } from "@/components/SearchModal";
+import { MegaMenu } from "@/components/MegaMenu";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -92,7 +93,7 @@ function FitmentTabs() {
 }
 
 export function Header() {
-  const [modal, setModal] = useState<null | "tires" | "wheels">(null);
+  const [modal, setModal] = useState<null | { type: "tires" | "wheels"; mode?: Mode }>(null);
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
@@ -108,79 +109,35 @@ export function Header() {
           />
         </Link>
 
-        <div className="hidden flex-1 items-center justify-center md:flex">
-          <div className="w-full max-w-xl rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2">
-            <div className="text-xs font-semibold text-neutral-700">Find wheels & tires that fit</div>
-            <div className="mt-2 grid gap-2">
-              <Suspense
-                fallback={
-                  <div className="h-11 rounded-xl border border-neutral-200 bg-white px-3 py-2">
-                    <div className="text-[11px] font-semibold text-neutral-600">Vehicle</div>
-                    <div className="text-sm font-extrabold text-neutral-900">Select vehicle</div>
-                  </div>
-                }
-              >
-                <FitmentSelector />
-              </Suspense>
-              <Suspense fallback={null}>
-                <FitmentTabs />
-              </Suspense>
-            </div>
-          </div>
-        </div>
+        {/* Desktop selector removed in favor of DiscountTire-style mega menu */}
 
-        {/* Mobile vehicle selector (was missing on phones) */}
+        {/* Mobile: use tap-based modals via the action bar / simple buttons below */}
         <div className="w-full md:hidden">
-          <div className="mt-2 rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2">
-            <div className="text-xs font-semibold text-neutral-700">Find wheels & tires that fit</div>
-            <div className="mt-2 grid gap-2">
-              <Suspense
-                fallback={
-                  <div className="h-11 rounded-xl border border-neutral-200 bg-white px-3 py-2">
-                    <div className="text-[11px] font-semibold text-neutral-600">Vehicle</div>
-                    <div className="text-sm font-extrabold text-neutral-900">Select vehicle</div>
-                  </div>
-                }
-              >
-                <FitmentSelector />
-              </Suspense>
-              <Suspense fallback={null}>
-                <FitmentTabs />
-              </Suspense>
-            </div>
-          </div>
-        </div>
-
-        <nav className="ml-auto hidden items-center gap-2 md:flex">
-          <button
-            onClick={() => setModal("tires")}
-            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-          >
-            Tires
-          </button>
-          <Suspense
-            fallback={
-              <Link
-                href="/wheels"
-                className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-              >
-                Wheels
-              </Link>
-            }
-          >
+          <div className="grid grid-cols-2 gap-2">
             <button
-              onClick={() => setModal("wheels")}
-              className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+              type="button"
+              onClick={() => setModal({ type: "tires", mode: "vehicle" })}
+              className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900"
+            >
+              Tires
+            </button>
+            <button
+              type="button"
+              onClick={() => setModal({ type: "wheels", mode: "vehicle" })}
+              className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900"
             >
               Wheels
             </button>
-          </Suspense>
-          <Link
-            href="/schedule"
-            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-          >
-            Schedule
-          </Link>
+          </div>
+        </div>
+
+        <nav className="ml-auto hidden items-center gap-4 md:flex">
+          <MegaMenu
+            onOpenSearch={(type, mode) => {
+              setModal({ type, mode });
+            }}
+          />
+
           <PillLink href={BRAND.links.tel}>Call</PillLink>
           <Link
             href="/schedule"
@@ -191,8 +148,18 @@ export function Header() {
         </nav>
       </div>
 
-      <SearchModal open={modal === "tires"} type="tires" onClose={() => setModal(null)} />
-      <SearchModal open={modal === "wheels"} type="wheels" onClose={() => setModal(null)} />
+      <SearchModal
+        open={modal?.type === "tires"}
+        type="tires"
+        defaultMode={modal?.type === "tires" ? modal.mode : undefined}
+        onClose={() => setModal(null)}
+      />
+      <SearchModal
+        open={modal?.type === "wheels"}
+        type="wheels"
+        defaultMode={modal?.type === "wheels" ? modal.mode : undefined}
+        onClose={() => setModal(null)}
+      />
     </header>
   );
 }
