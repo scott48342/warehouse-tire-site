@@ -218,12 +218,25 @@ export default async function Home() {
                     const tags = parseFromDescription(String(t.description || ""));
                     return (
                       <div key={t.partNumber || idx} className="flex items-center justify-between gap-3">
-                        <div className="min-w-0">
-                          <div className="truncate text-sm font-extrabold">{t.displayName || t.description || t.partNumber}</div>
-                          <div className="mt-0.5 flex flex-wrap gap-2 text-[11px] font-semibold text-white/70">
-                            {tags.season ? <span className="rounded-full bg-white/10 px-2 py-0.5">{tags.season}</span> : null}
-                            {tags.runFlat ? <span className="rounded-full bg-white/10 px-2 py-0.5">Run-flat</span> : null}
-                            {tags.xl ? <span className="rounded-full bg-white/10 px-2 py-0.5">XL</span> : null}
+                        <div className="flex min-w-0 items-center gap-3">
+                          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white">
+                            {t.imageUrl ? (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
+                                src={t.imageUrl}
+                                alt={t.displayName || t.description || t.partNumber || "Tire"}
+                                className="h-12 w-12 object-contain"
+                                loading="lazy"
+                              />
+                            ) : null}
+                          </div>
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-extrabold">{t.displayName || t.description || t.partNumber}</div>
+                            <div className="mt-0.5 flex flex-wrap gap-2 text-[11px] font-semibold text-white/70">
+                              {tags.season ? <span className="rounded-full bg-white/10 px-2 py-0.5">{tags.season}</span> : null}
+                              {tags.runFlat ? <span className="rounded-full bg-white/10 px-2 py-0.5">Run-flat</span> : null}
+                              {tags.xl ? <span className="rounded-full bg-white/10 px-2 py-0.5">XL</span> : null}
+                            </div>
                           </div>
                         </div>
                         <div className="shrink-0 text-sm font-extrabold">{p != null ? `$${p.toFixed(2)}` : "Call"}</div>
@@ -264,6 +277,30 @@ export default async function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-8">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-neutral-200 bg-white p-4">
+          <div className="text-sm font-extrabold text-neutral-900">Shop popular sizes</div>
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href={`/tires?size=${encodeURIComponent(tireSizeA)}&sort=price_asc`}
+              className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+            >
+              {tireSizeA}
+            </Link>
+            <Link
+              href={`/tires?size=${encodeURIComponent(tireSizeB)}&sort=price_asc`}
+              className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+            >
+              {tireSizeB}
+            </Link>
+            <Link
+              href="/wheels?sort=price_asc"
+              className="rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white hover:bg-neutral-800"
+            >
+              Wheels (low to high)
+            </Link>
+          </div>
+        </div>
+
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-3xl border border-neutral-200 bg-white p-6">
             <div className="text-xs font-semibold text-neutral-600">Shop Tires</div>
