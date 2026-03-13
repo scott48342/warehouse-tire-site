@@ -92,6 +92,8 @@ export default async function WheelsPage({
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sp = (await searchParams) ?? {};
+  const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
+  const sort = (sortRaw ?? "price_asc").trim();
   const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
@@ -155,7 +157,7 @@ export default async function WheelsPage({
     ? maybeData.items
     : (Array.isArray(maybeData?.results) ? maybeData.results : []);
 
-  const items: Wheel[] = rawItems.map((itUnknown) => {
+  const itemsUnsorted: Wheel[] = rawItems.map((itUnknown) => {
     const it = itUnknown as WheelProsItem;
 
     const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
@@ -180,6 +182,21 @@ export default async function WheelsPage({
     };
   });
 
+  const items: Wheel[] = [...itemsUnsorted].sort((a, b) => {
+    const aPrice = typeof a.price === "number" ? a.price : Number.POSITIVE_INFINITY;
+    const bPrice = typeof b.price === "number" ? b.price : Number.POSITIVE_INFINITY;
+
+    switch (sort) {
+      case "price_desc":
+        return bPrice - aPrice;
+      case "brand_asc":
+        return String(a.brand || "").localeCompare(String(b.brand || ""));
+      case "price_asc":
+      default:
+        return aPrice - bPrice;
+    }
+  });
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -195,15 +212,28 @@ export default async function WheelsPage({
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
+          <form className="flex items-center gap-2" action="/wheels" method="get">
+            <input type="hidden" name="year" value={year} />
+            <input type="hidden" name="make" value={make} />
+            <input type="hidden" name="model" value={model} />
+            <input type="hidden" name="trim" value={trim} />
+            <input type="hidden" name="modification" value={modification} />
+
             <label className="text-xs font-semibold text-neutral-600">Sort</label>
-            <select className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold">
-              <option>Best Match</option>
-              <option>Price Low to High</option>
-              <option>Price High to Low</option>
-              <option>Most Popular</option>
+            <select
+              name="sort"
+              defaultValue={sort}
+              className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+            >
+              <option value="price_asc">Price Low to High</option>
+              <option value="price_desc">Price High to Low</option>
+              <option value="brand_asc">Brand A–Z</option>
             </select>
-          </div>
+
+            <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
+              Update
+            </button>
+          </form>
         </div>
 
         {data?.error ? (

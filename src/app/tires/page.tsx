@@ -52,7 +52,7 @@ export default async function TiresPage({
   const zipRaw = Array.isArray(sp.zip) ? sp.zip[0] : sp.zip;
   const zip = (zipRaw ?? "").trim();
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
-  const sort = (sortRaw ?? "best").trim();
+  const sort = (sortRaw ?? "price_asc").trim();
 
   // Filters (querystring-driven)
   const brandsRaw = sp.brand;
@@ -263,8 +263,8 @@ export default async function TiresPage({
                 defaultValue={sort}
                 className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
               >
-                <option value="best">Best Match</option>
                 <option value="price_asc">Price Low to High</option>
+                <option value="best">Best Match</option>
                 <option value="price_desc">Price High to Low</option>
                 <option value="brand_asc">Brand A–Z</option>
                 <option value="stock_desc">Most Stock</option>
@@ -278,7 +278,7 @@ export default async function TiresPage({
         </div>
 
         <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
-          <aside className="sticky top-24 hidden h-fit rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-extrabold">Filters</h2>
               <Link
