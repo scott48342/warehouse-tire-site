@@ -142,9 +142,15 @@ export default async function TiresPage({
     brandCounts.set(b, (brandCounts.get(b) || 0) + 1);
   }
 
-  const brandsAvailable = Array.from(brandCounts.entries())
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .map(([b]) => b);
+  const brandsByCount = Array.from(brandCounts.entries())
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+  const topBrands = brandsByCount.slice(0, 6).map(([b]) => b);
+
+  const restBrands = brandsByCount
+    .slice(6)
+    .map(([b]) => b)
+    .sort((a, b) => a.localeCompare(b));
 
   const itemsFiltered: Tire[] = itemsEnriched.filter((t) => {
     // Brand filter
@@ -302,9 +308,9 @@ export default async function TiresPage({
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
 
               <FilterGroup title="Brand">
-                {brandsAvailable.length ? (
+                {topBrands.length ? (
                   <div className="grid gap-2">
-                    {brandsAvailable.slice(0, 20).map((b) => (
+                    {topBrands.map((b) => (
                       <div key={b} className="flex items-center justify-between gap-2">
                         <Check
                           label={b}
@@ -318,13 +324,13 @@ export default async function TiresPage({
                       </div>
                     ))}
 
-                    {brandsAvailable.length > 20 ? (
+                    {restBrands.length ? (
                       <details className="rounded-xl border border-neutral-200 bg-white p-2">
                         <summary className="cursor-pointer select-none text-xs font-extrabold text-neutral-900">
-                          Show all brands ({brandsAvailable.length})
+                          More brands ({restBrands.length})
                         </summary>
                         <div className="mt-2 grid gap-2">
-                          {brandsAvailable.slice(20).map((b) => (
+                          {restBrands.map((b) => (
                             <div key={b} className="flex items-center justify-between gap-2">
                               <Check
                                 label={b}
