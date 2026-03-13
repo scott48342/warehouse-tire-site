@@ -134,7 +134,17 @@ export async function GET(req: Request) {
       sp.has("maxOffset") ||
       sp.has("centerbore");
 
-    data.results = shouldFilterNoImage ? enriched.filter((it) => hasAnyImage(it)) : enriched;
+    if (shouldFilterNoImage) {
+      const filtered = enriched.filter((it) => hasAnyImage(it));
+
+      // Heuristic: don't let the "hide no-image" filter collapse a page to only a couple
+      // of results (WheelPros sometimes omits image fields even for valid SKUs).
+      // If filtering would leave too few items, keep the unfiltered enriched list.
+      const minKeep = Math.min(8, enriched.length);
+      data.results = filtered.length >= minKeep ? filtered : enriched;
+    } else {
+      data.results = enriched;
+    }
   }
 
   return NextResponse.json(data, {
