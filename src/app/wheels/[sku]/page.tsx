@@ -58,17 +58,19 @@ async function fetchWheelBySku(sku: string) {
 function extractModelToken(title: string) {
   // Titles often look like:
   // "BR ALISO 18X9 6X5.5 G-BRONZE 12MM"
-  // We want the model name portion, which may be multiple words, stopping before the size token.
+  // But some titles begin with size: "18X8 P33 5X120.7 ..."
+  // We only want a model token when it's clearly a name (letters), otherwise return "".
   const parts = String(title || "").trim().split(/\s+/).filter(Boolean);
   if (parts.length < 2) return "";
 
-  // parts[0] is often the brand code (e.g. BR)
   const rest = parts.slice(1);
-
   const sizeIdx = rest.findIndex((p) => /^\d+(\.\d+)?X\d+(\.\d+)?$/i.test(p));
   const modelParts = sizeIdx >= 0 ? rest.slice(0, sizeIdx) : rest.slice(0, 2);
+  const token = modelParts.join(" ").trim();
 
-  return modelParts.join(" ").trim();
+  // If the token doesn't contain any letters, it's not a model name.
+  if (!/[A-Z]/i.test(token)) return "";
+  return token;
 }
 
 function parseVariant(it: WheelProsItem): WheelVariant | null {
@@ -76,14 +78,27 @@ function parseVariant(it: WheelProsItem): WheelVariant | null {
   if (!sku) return null;
 
   const p = it?.properties || {};
-  const diameter = p?.diameter != null ? String(p.diameter) : undefined;
-  const width = p?.width != null ? String(p.width) : undefined;
-  const offset = p?.offset != null ? String(p.offset) : undefined;
+  const title = String(it?.title || "");
+
+  // Fallback parsing from title when WheelPros leaves properties blank.
+  const sizeMatch = title.toUpperCase().match(/\b(\d+(?:\.\d+)?)X(\d+(?:\.\d+)?)\b/);
+  const diameterFromTitle = sizeMatch ? sizeMatch[1] : undefined;
+  const widthFromTitle = sizeMatch ? sizeMatch[2] : undefined;
+
+  const boltMatch = title.toUpperCase().match(/\b(\d{4,5}|\d)X(\d+(?:\.\d+)?)\b/);
+  const boltFromTitle = boltMatch ? `${boltMatch[1]}X${boltMatch[2]}` : undefined;
+
+  const offsetMatch = title.toUpperCase().match(/\b(-?\d+(?:\.\d+)?)\s*MM\b/);
+  const offsetFromTitle = offsetMatch ? offsetMatch[1] : undefined;
+
+  const diameter = p?.diameter != null ? String(p.diameter) : diameterFromTitle;
+  const width = p?.width != null ? String(p.width) : widthFromTitle;
+  const offset = p?.offset != null ? String(p.offset) : offsetFromTitle;
   const finish = p?.finish != null ? String(p.finish) : undefined;
   const boltPattern =
     p?.boltPatternMetric != null
       ? String(p.boltPatternMetric)
-      : (p?.boltPattern != null ? String(p.boltPattern) : undefined);
+      : (p?.boltPattern != null ? String(p.boltPattern) : boltFromTitle);
 
   return { sku, diameter, width, boltPattern, offset, finish };
 }
@@ -95,7 +110,8 @@ async function fetchVariants({
   brandCode?: string;
   modelToken?: string;
 }) {
-  if (!brandCode || !modelToken) return [] as WheelVariant[];
+  // Only attempt variant grouping when we have a clear model token.
+  if (!brandCode || !modelToken || modelToken.length < 2) return [] as WheelVariant[];
 
   const res = await fetch(
     `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images,properties&page=1&pageSize=200&brand_cd=${encodeURIComponent(brandCode)}&q=${encodeURIComponent(modelToken)}`,
