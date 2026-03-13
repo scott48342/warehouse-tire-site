@@ -215,13 +215,13 @@ export default async function WheelsPage({
     for (const [k, arr] of map.entries()) {
       // representative: first with image, else first.
       const rep = arr.find((x) => x.imageUrl) || arr[0];
-      const thumbs: { finish: string; sku: string; imageUrl?: string }[] = [];
+      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number }[] = [];
       const seen = new Set<string>();
       for (const x of arr) {
         const fin = String(x.finish || "").trim();
         if (!fin || seen.has(fin)) continue;
         seen.add(fin);
-        thumbs.push({ finish: fin, sku: x.sku || "", imageUrl: x.imageUrl });
+        thumbs.push({ finish: fin, sku: x.sku || "", imageUrl: x.imageUrl, price: x.price });
       }
       out.push({
         ...rep,

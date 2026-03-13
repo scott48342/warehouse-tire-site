@@ -8,6 +8,7 @@ export type WheelFinishThumb = {
   finish: string;
   sku: string;
   imageUrl?: string;
+  price?: number;
 };
 
 export function WheelsStyleCard({
@@ -32,6 +33,7 @@ export function WheelsStyleCard({
   const [selectedSku, setSelectedSku] = useState<string>(baseSku);
   const [selectedImage, setSelectedImage] = useState<string | undefined>(baseImageUrl);
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
+  const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
 
   const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}`;
 
@@ -70,6 +72,7 @@ export function WheelsStyleCard({
                   setSelectedSku(t.sku);
                   setSelectedFinish(t.finish);
                   if (t.imageUrl) setSelectedImage(t.imageUrl);
+                  if (typeof t.price === "number") setSelectedPrice(t.price);
                 }}
                 className={
                   "overflow-hidden rounded-lg border bg-white " +
@@ -92,7 +95,7 @@ export function WheelsStyleCard({
 
       <div className="mt-4">
         <div className="text-2xl font-extrabold text-neutral-900">
-          {typeof price === "number" ? `$${price.toFixed(2)}` : "Call for price"}
+          {typeof selectedPrice === "number" ? `$${selectedPrice.toFixed(2)}` : "Call for price"}
         </div>
         <div className="text-xs text-neutral-600">each</div>
       </div>
