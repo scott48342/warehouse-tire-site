@@ -9,6 +9,8 @@ type Wheel = {
   finish?: string;
   imageUrl?: string;
   price?: number;
+  styleKey?: string;
+  finishThumbs?: { finish: string; sku: string; imageUrl?: string }[];
 };
 
 type WheelProsBrand = {
@@ -41,6 +43,11 @@ type WheelProsItem = {
     msrp?: WheelProsPrice[];
   };
   images?: WheelProsImage[];
+  techfeed?: {
+    style?: string;
+    finish?: string;
+    images?: string[];
+  };
 };
 
 function getBaseUrl() {
@@ -163,7 +170,7 @@ export default async function WheelsPage({
 
     const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
     const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
-    const finish = it?.properties?.finish;
+    const finish = it?.techfeed?.finish || it?.properties?.finish;
     const model = it?.properties?.model || it?.title;
 
     const msrp = it?.prices?.msrp;
@@ -173,6 +180,8 @@ export default async function WheelsPage({
     const img0 = Array.isArray(it?.images) ? it.images[0] : undefined;
     const imageUrl = img0?.imageUrlLarge || img0?.imageUrlMedium || img0?.imageUrlOriginal || undefined;
 
+    const styleKey = it?.techfeed?.style || undefined;
+
     return {
       sku: it?.sku,
       brand,
@@ -180,10 +189,50 @@ export default async function WheelsPage({
       finish,
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
+      styleKey,
     };
   });
 
-  const items: Wheel[] = [...itemsUnsorted].sort((a, b) => {
+  // Group wheels by styleKey so multiple finishes show as one block.
+  const grouped: Wheel[] = (() => {
+    const map = new Map<string, Wheel[]>();
+    const singles: Wheel[] = [];
+
+    for (const w of itemsUnsorted) {
+      const k = w.styleKey || "";
+      if (!k) {
+        singles.push(w);
+        continue;
+      }
+      const arr = map.get(k) || [];
+      arr.push(w);
+      map.set(k, arr);
+    }
+
+    const out: Wheel[] = [];
+
+    for (const [k, arr] of map.entries()) {
+      // representative: first with image, else first.
+      const rep = arr.find((x) => x.imageUrl) || arr[0];
+      const thumbs: { finish: string; sku: string; imageUrl?: string }[] = [];
+      const seen = new Set<string>();
+      for (const x of arr) {
+        const fin = String(x.finish || "").trim();
+        if (!fin || seen.has(fin)) continue;
+        seen.add(fin);
+        thumbs.push({ finish: fin, sku: x.sku || "", imageUrl: x.imageUrl });
+      }
+      out.push({
+        ...rep,
+        styleKey: k,
+        finishThumbs: thumbs.filter((t) => t.sku),
+      });
+    }
+
+    return [...out, ...singles];
+  })();
+
+  const items: Wheel[] = [...grouped].sort((a, b) => {
     const aPrice = typeof a.price === "number" ? a.price : Number.POSITIVE_INFINITY;
     const bPrice = typeof b.price === "number" ? b.price : Number.POSITIVE_INFINITY;
 
@@ -240,10 +289,14 @@ export default async function WheelsPage({
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.length ? (
             items.map((w, idx) => (
-              <Link
-                href={w.sku ? `/wheels/${encodeURIComponent(w.sku)}` : "/wheels"}
+              <div
+                key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
                 className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
               >
+                <Link
+                  href={w.sku ? `/wheels/${encodeURIComponent(w.sku)}` : "/wheels"}
+                  className="block"
+                >
                 <div className="text-xs font-semibold text-neutral-600">
                   {typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
                 </div>
@@ -274,12 +327,39 @@ export default async function WheelsPage({
                   )}
                 </div>
 
+                {w.finishThumbs?.length ? (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {w.finishThumbs.slice(0, 6).map((t) => (
+                      <Link
+                        key={t.sku}
+                        href={`/wheels/${encodeURIComponent(t.sku)}`}
+                        className="overflow-hidden rounded-lg border border-neutral-200 bg-white"
+                        title={t.finish}
+                      >
+                        {t.imageUrl ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={t.imageUrl}
+                            alt={t.finish}
+                            className="h-10 w-10 object-contain"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="h-10 w-10 bg-neutral-50" />
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+
                 <div className="mt-4">
                   <div className="text-2xl font-extrabold text-neutral-900">
                     {typeof w.price === "number" ? `$${w.price.toFixed(2)}` : "Call for price"}
                   </div>
                   <div className="text-xs text-neutral-600">each</div>
                 </div>
+
+                </Link>
 
                 <div className="mt-4 grid gap-2">
                   <Link
@@ -297,7 +377,7 @@ export default async function WheelsPage({
                     </a>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))
           ) : (
             <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">

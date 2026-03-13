@@ -73,6 +73,18 @@ export async function GET(req: Request) {
         const tf = await getTechfeedWheelBySku(sku);
         if (!tf) return it;
 
+        // Attach techfeed metadata for UI grouping.
+        (it as any).techfeed = {
+          style: tf.style || tf.display_style_no || "",
+          finish:
+            tf.abbreviated_finish_desc ||
+            tf.fancy_finish_desc ||
+            tf.box_label_desc ||
+            tf.product_desc ||
+            "",
+          images: tf.images || [],
+        };
+
         // Ensure properties are populated (WheelPros API sometimes returns blanks).
         it.properties = it.properties || {};
         if (tf.diameter && !it.properties.diameter) it.properties.diameter = tf.diameter;
