@@ -60,14 +60,30 @@ export default async function TiresPage({
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
   const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
 
-  const fitment = year && make && model
+  // Option B (aggregate OEM sizes): we still fetch "strict" sizes for the selected modification,
+  // but we *display* the union of sizes across all modifications for the model.
+  const fitmentStrict = year && make && model
     ? await fetchFitment({ year, make, model, modification: modification || undefined })
     : null;
 
-  const tireSizes: string[] = Array.isArray(fitment?.tireSizes) ? fitment.tireSizes.map(String) : [];
+  const fitmentAgg = year && make && model
+    ? await fetchFitment({ year, make, model })
+    : null;
+
+  const tireSizesStrict: string[] = Array.isArray(fitmentStrict?.tireSizes)
+    ? fitmentStrict.tireSizes.map(String)
+    : [];
+
+  const tireSizesAgg: string[] = Array.isArray(fitmentAgg?.tireSizes)
+    ? fitmentAgg.tireSizes.map(String)
+    : [];
+
+  const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
 
   const selectedSizeRaw = (Array.isArray(sp.size) ? sp.size[0] : sp.size) || "";
-  const selectedSize = selectedSizeRaw ? String(selectedSizeRaw) : (tireSizes[0] || "");
+  const selectedSize = selectedSizeRaw
+    ? String(selectedSizeRaw)
+    : (tireSizesStrict[0] || tireSizes[0] || "");
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const itemsRaw: Tire[] = Array.isArray(km?.items) ? km.items : [];
@@ -140,11 +156,16 @@ export default async function TiresPage({
                 ? `Showing tires for ${year} ${make} ${model}${trim ? ` ${trim}` : ""}.`
                 : "Select your vehicle in the header to filter tires."}
             </p>
+            {/* OEM sizes are rendered as buttons above the search controls */}
+          </div>
+
+          <div className="flex flex-wrap items-center justify-end gap-3">
             {tireSizes.length ? (
-              <div className="mt-2 flex flex-wrap gap-2">
+              <div className="flex w-full flex-wrap justify-end gap-2">
                 {tireSizes.map((s) => {
                   const active = s === selectedSize;
-                  const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}&size=${encodeURIComponent(s)}`;
+                  const isStrict = tireSizesStrict.includes(s);
+                  const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
                   return (
                     <Link
                       key={s}
@@ -152,7 +173,14 @@ export default async function TiresPage({
                       className={
                         active
                           ? "rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
-                          : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                          : isStrict
+                            ? "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                            : "rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-extrabold text-amber-900"
+                      }
+                      title={
+                        isStrict
+                          ? "OEM size for selected modification"
+                          : "OEM size on other modifications (aggregate)"
                       }
                     >
                       {s}
@@ -161,9 +189,7 @@ export default async function TiresPage({
                 })}
               </div>
             ) : null}
-          </div>
 
-          <div className="flex flex-wrap items-center gap-3">
             <form className="flex flex-wrap items-center gap-2" action="/tires" method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
@@ -333,17 +359,7 @@ export default async function TiresPage({
 
           <section className="grid gap-4">
             <div className="flex flex-wrap gap-2">
-              {tireSizes.length
-                ? tireSizes.map((s) => {
-                    const active = s === selectedSize;
-                    const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}&size=${encodeURIComponent(s)}`;
-                    return (
-                      <Link key={s} href={href} className="no-underline">
-                        <Chip active={active}>{s}</Chip>
-                      </Link>
-                    );
-                  })
-                : null}
+              {selectedSize ? <Chip active>{selectedSize}</Chip> : null}
               <Chip>{zip ? `In stock near ${zip}` : "In stock near you"}</Chip>
             </div>
 
