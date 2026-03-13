@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { MobileActionBar } from "@/components/MobileActionBar";
+import { Suspense } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${oswald.variable} antialiased`}>
-        <Header />
+        <Suspense fallback={<div className="h-16" />}>
+          <Header />
+        </Suspense>
         {children}
         <MobileActionBar />
       </body>

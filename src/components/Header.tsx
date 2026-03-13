@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { FitmentSelector } from "@/components/FitmentSelector";
+import { SearchModal } from "@/components/SearchModal";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -91,6 +92,8 @@ function FitmentTabs() {
 }
 
 export function Header() {
+  const [modal, setModal] = useState<null | "tires" | "wheels">(null);
+
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center">
@@ -149,12 +152,12 @@ export function Header() {
         </div>
 
         <nav className="ml-auto hidden items-center gap-2 md:flex">
-          <Link
-            href="/tires"
+          <button
+            onClick={() => setModal("tires")}
             className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
           >
             Tires
-          </Link>
+          </button>
           <Suspense
             fallback={
               <Link
@@ -165,12 +168,12 @@ export function Header() {
               </Link>
             }
           >
-            <FitmentLink
-              href="/wheels"
+            <button
+              onClick={() => setModal("wheels")}
               className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
             >
               Wheels
-            </FitmentLink>
+            </button>
           </Suspense>
           <Link
             href="/schedule"
@@ -187,6 +190,9 @@ export function Header() {
           </Link>
         </nav>
       </div>
+
+      <SearchModal open={modal === "tires"} type="tires" onClose={() => setModal(null)} />
+      <SearchModal open={modal === "wheels"} type="wheels" onClose={() => setModal(null)} />
     </header>
   );
 }
