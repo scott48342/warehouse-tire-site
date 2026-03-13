@@ -97,15 +97,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:gap-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/warehouse-tire-logo.jpg"
             alt={BRAND.name}
-            width={180}
-            height={48}
+            width={220}
+            height={58}
             priority
-            className="h-10 w-auto"
+            className="h-12 w-auto"
           />
         </Link>
 
@@ -131,7 +131,7 @@ export function Header() {
           </div>
         </div>
 
-        <nav className="ml-auto hidden items-center gap-4 md:flex">
+        <nav className="hidden items-center gap-4 md:flex">
           <MegaMenu
             onOpenSearch={(type, mode) => {
               setModal({ type, mode });
