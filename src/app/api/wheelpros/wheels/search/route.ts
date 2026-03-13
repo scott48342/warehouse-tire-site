@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 type WheelProsSearchResponse = {
   results?: any[];
