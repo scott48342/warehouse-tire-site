@@ -19,6 +19,19 @@ function toWheelProsImages(urls: string[]) {
     }));
 }
 
+function hasAnyImage(it: any) {
+  const imgs = Array.isArray(it?.images) ? it.images : [];
+  return imgs.some((img: any) => {
+    const u =
+      img?.imageUrlLarge ||
+      img?.imageUrlMedium ||
+      img?.imageUrlOriginal ||
+      img?.imageUrlSmall ||
+      img?.imageUrlThumbnail;
+    return typeof u === "string" && u.trim().length > 0;
+  });
+}
+
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const base =
@@ -52,7 +65,7 @@ export async function GET(req: Request) {
   }
 
   if (res.ok && data?.results?.length) {
-    data.results = await Promise.all(
+    const enriched = await Promise.all(
       data.results.map(async (it) => {
         const sku = it?.sku ? String(it.sku) : "";
         if (!sku) return it;
@@ -92,6 +105,9 @@ export async function GET(req: Request) {
         return it;
       })
     );
+
+    // Remove products that have no images at all.
+    data.results = enriched.filter((it) => hasAnyImage(it));
   }
 
   return NextResponse.json(data, {
