@@ -38,6 +38,7 @@ export async function GET(req: Request) {
   const tireSizeRaw = url.searchParams.get("tireSize") || url.searchParams.get("size") || "";
   const tireSize = toTireSizeCompact(tireSizeRaw);
   const minQty = url.searchParams.get("minQty") || "";
+  const debug = (url.searchParams.get("debug") || "").trim() === "1";
 
   if (!tireSize) {
     return NextResponse.json(
@@ -94,12 +95,46 @@ export async function GET(req: Request) {
   const d = data as any;
   const resp = d?.InventoryResponse || d?.inventoryresponse || d;
   const itemsRaw = resp?.Item;
+
+  function pick(it: any, keys: string[]) {
+    for (const k of keys) {
+      const v = it?.[k];
+      if (v == null) continue;
+      const cdata = typeof v === "object" && v?.__cdata != null ? v.__cdata : null;
+      return cdata != null ? cdata : v;
+    }
+    return undefined;
+  }
+
+  function toBool(v: unknown): boolean | undefined {
+    if (v == null) return undefined;
+    const s = String(v).trim().toLowerCase();
+    if (["y", "yes", "true", "1"].includes(s)) return true;
+    if (["n", "no", "false", "0"].includes(s)) return false;
+    return undefined;
+  }
+
   const items = (Array.isArray(itemsRaw) ? itemsRaw : itemsRaw ? [itemsRaw] : []).map((it) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const anyIt = it as any;
     const qty = anyIt?.Quantity || {};
-    const brand = anyIt?.BrandName?.__cdata || anyIt?.VendorName?.__cdata || anyIt?.VendorName || anyIt?.BrandName;
-    const desc = anyIt?.Description?.__cdata || anyIt?.Description;
+    const brand = pick(anyIt, ["BrandName", "VendorName", "Brand", "Vendor"]);
+    const desc = pick(anyIt, ["Description", "Desc"]);
+
+    const season = pick(anyIt, ["Season", "TireType", "Category"]);
+    const speedRating = pick(anyIt, ["SpeedRating", "Speed_Rating", "Speed"]);
+    const loadRange = pick(anyIt, ["LoadRange", "Load_Range", "LoadRangeCode"]);
+    const runFlat = toBool(pick(anyIt, ["RunFlat", "Runflat", "IsRunFlat", "RunFlatIndicator"]));
+    const snowRated = toBool(pick(anyIt, ["SnowRated", "Snow_Rated", "ThreePeak", "3PMSF", "Is3PMSF"]));
+    const allWeather = toBool(pick(anyIt, ["AllWeather", "All_Weather", "IsAllWeather"]));
+
+    const utqgTreadwear = pick(anyIt, ["UTQGTreadwear", "UTQG_Treadwear", "Treadwear"]);
+    const utqgTraction = pick(anyIt, ["UTQGTraction", "UTQG_Traction", "Traction"]);
+    const utqgTemperature = pick(anyIt, ["UTQGTemperature", "UTQG_Temperature", "Temperature"]);
+
+    const mileageWarranty = pick(anyIt, ["MileageWarranty", "Mileage_Warranty", "WarrantyMiles"]);
+    const rebate = toBool(pick(anyIt, ["Rebate", "RebateAvailable", "HasRebate"]));
+    const special = toBool(pick(anyIt, ["Special", "OnSpecial", "Promo"]));
 
     return {
       partNumber: anyIt?.PartNumber,
@@ -115,6 +150,28 @@ export async function GET(req: Request) {
         national: qty?.National != null ? Number(qty.National) : undefined,
       },
       code: anyIt?.Code != null ? String(anyIt.Code) : undefined,
+
+      // Extended merchandising/fitment fields (best-effort; keys depend on K&M schema)
+      season: season != null ? String(season).trim() : undefined,
+      speedRating: speedRating != null ? String(speedRating).trim() : undefined,
+      loadRange: loadRange != null ? String(loadRange).trim() : undefined,
+      runFlat,
+      snowRated,
+      allWeather,
+      utqg: {
+        treadwear: utqgTreadwear != null ? String(utqgTreadwear).trim() : undefined,
+        traction: utqgTraction != null ? String(utqgTraction).trim() : undefined,
+        temperature: utqgTemperature != null ? String(utqgTemperature).trim() : undefined,
+      },
+      mileageWarranty: mileageWarranty != null ? String(mileageWarranty).trim() : undefined,
+      rebateAvailable: rebate,
+      special,
+
+      ...(debug
+        ? {
+            _debugKeys: Object.keys(anyIt || {}).slice(0, 200),
+          }
+        : null),
     };
   });
 
@@ -123,5 +180,13 @@ export async function GET(req: Request) {
     resultCode: resp?.ResultCode != null ? String(resp.ResultCode) : undefined,
     resultMessage: resp?.ResultMessage != null ? String(resp.ResultMessage) : undefined,
     items,
+    ...(debug
+      ? {
+          debug: {
+            itemCount: items.length,
+            firstItemKeys: items[0] && (items[0] as any)._debugKeys ? (items[0] as any)._debugKeys : [],
+          },
+        }
+      : null),
   });
 }
