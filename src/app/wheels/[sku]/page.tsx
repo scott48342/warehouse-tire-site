@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
 
 type WheelProsBrand = {
   code?: string;
@@ -44,13 +45,60 @@ function getBaseUrl() {
 }
 
 async function fetchWheelBySku(sku: string) {
-  // Best-effort: WheelPros search may support sku as a filter.
+  // Best-effort: WheelPros search supports sku as a filter in our wrapper.
   const res = await fetch(
     `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`,
     { cache: "no-store" }
   );
   if (!res.ok) return { error: await res.text() };
   return res.json();
+}
+
+function extractModelToken(title: string) {
+  // Titles often look like: "BR ALISO 18X9 6X5.5 G-BRONZE 12MM"
+  const parts = String(title || "").trim().split(/\s+/);
+  if (parts.length >= 2) return parts[1];
+  return "";
+}
+
+function parseVariant(it: WheelProsItem): WheelVariant | null {
+  const sku = it?.sku ? String(it.sku) : "";
+  if (!sku) return null;
+
+  const p = it?.properties || {};
+  const diameter = p?.diameter != null ? String(p.diameter) : undefined;
+  const width = p?.width != null ? String(p.width) : undefined;
+  const offset = p?.offset != null ? String(p.offset) : undefined;
+  const finish = p?.finish != null ? String(p.finish) : undefined;
+
+  return { sku, diameter, width, offset, finish };
+}
+
+async function fetchVariants({
+  brandCode,
+  modelToken,
+}: {
+  brandCode?: string;
+  modelToken?: string;
+}) {
+  if (!brandCode || !modelToken) return [] as WheelVariant[];
+
+  const res = await fetch(
+    `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images&page=1&pageSize=200&brand_cd=${encodeURIComponent(brandCode)}&q=${encodeURIComponent(modelToken)}`,
+    { cache: "no-store" }
+  );
+  if (!res.ok) return [] as WheelVariant[];
+
+  const data = (await res.json()) as { items?: unknown[]; results?: unknown[] };
+  const raw: unknown[] = Array.isArray(data?.items) ? data.items : Array.isArray(data?.results) ? data.results : [];
+
+  const parsed = raw
+    .map((u) => parseVariant(u as WheelProsItem))
+    .filter((v): v is WheelVariant => !!v);
+
+  // Filter down to titles that actually include the token to avoid huge unrelated sets.
+  // (Still best-effort.)
+  return parsed;
 }
 
 export default async function WheelDetailPage({
@@ -98,10 +146,15 @@ export default async function WheelDetailPage({
   const img0 = Array.isArray(it?.images) ? it.images[0] : undefined;
   const imageUrl = img0?.imageUrlLarge || img0?.imageUrlMedium || img0?.imageUrlOriginal || undefined;
 
-  const diameter = it?.properties?.diameter;
-  const width = it?.properties?.width;
-  const offset = it?.properties?.offset;
-  const finish = it?.properties?.finish;
+  const diameter = it?.properties?.diameter != null ? String(it.properties.diameter) : "";
+  const width = it?.properties?.width != null ? String(it.properties.width) : "";
+  const offset = it?.properties?.offset != null ? String(it.properties.offset) : "";
+  const finish = it?.properties?.finish != null ? String(it.properties.finish) : "";
+
+  const brandCode = brandObj?.code || (typeof it?.brand === "object" ? (it.brand as WheelProsBrand | undefined)?.code : undefined);
+  const modelToken = extractModelToken(String(it?.title || ""));
+  const variants = await fetchVariants({ brandCode, modelToken });
+  const variantsForSelector = variants.length ? variants : [{ sku, diameter, width, offset, finish }].filter((v) => v.sku) as WheelVariant[];
 
   return (
     <main className="bg-neutral-50">
@@ -142,23 +195,18 @@ export default async function WheelDetailPage({
 
             <div className="mt-5 grid gap-3">
               <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                <div className="text-xs font-extrabold text-neutral-900">Options (coming next)</div>
-                <div className="mt-2 grid gap-2 text-sm text-neutral-800">
-                  <div>
-                    <span className="font-semibold text-neutral-600">Diameter:</span> {diameter || "—"}
-                  </div>
-                  <div>
-                    <span className="font-semibold text-neutral-600">Width:</span> {width || "—"}
-                  </div>
-                  <div>
-                    <span className="font-semibold text-neutral-600">Offset:</span> {offset || "—"}
-                  </div>
-                  <div>
-                    <span className="font-semibold text-neutral-600">Finish:</span> {finish || "—"}
-                  </div>
-                </div>
-                <div className="mt-2 text-xs text-neutral-600">
-                  Next step: populate dropdowns for size/offset/finish by querying WheelPros for all variants of this model.
+                <div className="text-xs font-extrabold text-neutral-900">Options</div>
+                <div className="mt-3">
+                  <WheelVariantSelector
+                    variants={variantsForSelector}
+                    currentSku={sku}
+                    selected={{
+                      diameter: diameter || undefined,
+                      width: width || undefined,
+                      offset: offset || undefined,
+                      finish: finish || undefined,
+                    }}
+                  />
                 </div>
               </div>
 
