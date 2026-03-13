@@ -107,7 +107,22 @@ export async function GET(req: Request) {
     );
 
     // Remove products that have no images at all.
-    data.results = enriched.filter((it) => hasAnyImage(it));
+    // NOTE: Only do this when the caller is applying some kind of search/filter.
+    // A completely unfiltered WheelPros browse can legitimately return many items
+    // without images (or omit image fields), which would otherwise yield 0 results.
+    const sp = url.searchParams;
+    const shouldFilterNoImage =
+      sp.has("sku") ||
+      sp.has("q") ||
+      sp.has("brand_cd") ||
+      sp.has("boltPattern") ||
+      sp.has("diameter") ||
+      sp.has("width") ||
+      sp.has("minOffset") ||
+      sp.has("maxOffset") ||
+      sp.has("centerbore");
+
+    data.results = shouldFilterNoImage ? enriched.filter((it) => hasAnyImage(it)) : enriched;
   }
 
   return NextResponse.json(data, {
