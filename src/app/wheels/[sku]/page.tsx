@@ -30,6 +30,7 @@ type WheelProsItem = {
     diameter?: string;
     offset?: string;
     boltPattern?: string;
+    boltPatternMetric?: string;
     centerbore?: string;
   };
   prices?: {
@@ -70,8 +71,12 @@ function parseVariant(it: WheelProsItem): WheelVariant | null {
   const width = p?.width != null ? String(p.width) : undefined;
   const offset = p?.offset != null ? String(p.offset) : undefined;
   const finish = p?.finish != null ? String(p.finish) : undefined;
+  const boltPattern =
+    p?.boltPatternMetric != null
+      ? String(p.boltPatternMetric)
+      : (p?.boltPattern != null ? String(p.boltPattern) : undefined);
 
-  return { sku, diameter, width, offset, finish };
+  return { sku, diameter, width, boltPattern, offset, finish };
 }
 
 async function fetchVariants({
@@ -148,13 +153,18 @@ export default async function WheelDetailPage({
 
   const diameter = it?.properties?.diameter != null ? String(it.properties.diameter) : "";
   const width = it?.properties?.width != null ? String(it.properties.width) : "";
+  const boltPattern = it?.properties?.boltPatternMetric != null
+    ? String(it.properties.boltPatternMetric)
+    : (it?.properties?.boltPattern != null ? String(it.properties.boltPattern) : "");
   const offset = it?.properties?.offset != null ? String(it.properties.offset) : "";
   const finish = it?.properties?.finish != null ? String(it.properties.finish) : "";
 
   const brandCode = brandObj?.code || (typeof it?.brand === "object" ? (it.brand as WheelProsBrand | undefined)?.code : undefined);
   const modelToken = extractModelToken(String(it?.title || ""));
   const variants = await fetchVariants({ brandCode, modelToken });
-  const variantsForSelector = variants.length ? variants : [{ sku, diameter, width, offset, finish }].filter((v) => v.sku) as WheelVariant[];
+  const variantsForSelector = variants.length
+    ? variants
+    : ([{ sku, diameter, width, boltPattern, offset, finish }].filter((v) => v.sku) as WheelVariant[]);
 
   return (
     <main className="bg-neutral-50">
@@ -203,6 +213,7 @@ export default async function WheelDetailPage({
                     selected={{
                       diameter: diameter || undefined,
                       width: width || undefined,
+                      boltPattern: boltPattern || undefined,
                       offset: offset || undefined,
                       finish: finish || undefined,
                     }}

@@ -7,6 +7,7 @@ export type WheelVariant = {
   sku: string;
   diameter?: string;
   width?: string;
+  boltPattern?: string;
   offset?: string;
   finish?: string;
 };
@@ -22,7 +23,7 @@ export function WheelVariantSelector({
 }: {
   variants: WheelVariant[];
   currentSku: string;
-  selected: { diameter?: string; width?: string; offset?: string; finish?: string };
+  selected: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string };
 }) {
   const router = useRouter();
 
@@ -39,18 +40,24 @@ export function WheelVariantSelector({
       ? byDiameter.filter((v) => v.width === selected.width)
       : byDiameter;
 
-    const offsets = uniqSorted(byDiameterWidth.map((v) => v.offset || ""));
+    const boltPatterns = uniqSorted(byDiameterWidth.map((v) => v.boltPattern || ""));
 
-    const byDiameterWidthOffset = selected.offset
-      ? byDiameterWidth.filter((v) => v.offset === selected.offset)
+    const byDiameterWidthBolt = selected.boltPattern
+      ? byDiameterWidth.filter((v) => v.boltPattern === selected.boltPattern)
       : byDiameterWidth;
 
-    const finishes = uniqSorted(byDiameterWidthOffset.map((v) => v.finish || ""));
+    const offsets = uniqSorted(byDiameterWidthBolt.map((v) => v.offset || ""));
 
-    return { diameters, widths, offsets, finishes };
-  }, [variants, selected.diameter, selected.width, selected.offset]);
+    const byDiameterWidthBoltOffset = selected.offset
+      ? byDiameterWidthBolt.filter((v) => v.offset === selected.offset)
+      : byDiameterWidthBolt;
 
-  function pickSku(nextSel: { diameter?: string; width?: string; offset?: string; finish?: string }) {
+    const finishes = uniqSorted(byDiameterWidthBoltOffset.map((v) => v.finish || ""));
+
+    return { diameters, widths, boltPatterns, offsets, finishes };
+  }, [variants, selected.diameter, selected.width, selected.boltPattern, selected.offset]);
+
+  function pickSku(nextSel: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string }) {
     const exact = variants.find(
       (v) =>
         (!nextSel.diameter || v.diameter === nextSel.diameter) &&
@@ -65,25 +72,33 @@ export function WheelVariantSelector({
       (v) =>
         (!nextSel.diameter || v.diameter === nextSel.diameter) &&
         (!nextSel.width || v.width === nextSel.width) &&
+        (!nextSel.boltPattern || v.boltPattern === nextSel.boltPattern) &&
         (!nextSel.offset || v.offset === nextSel.offset)
     );
     return soft?.sku || currentSku;
   }
 
-  function coerce(nextSel: { diameter?: string; width?: string; offset?: string; finish?: string }) {
+  function coerce(nextSel: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string }) {
     // If a dependent selection no longer exists under the current constraints, clear it.
     const byDiameter = nextSel.diameter ? variants.filter((v) => v.diameter === nextSel.diameter) : variants;
     const widths = uniqSorted(byDiameter.map((v) => v.width || ""));
     if (nextSel.width && !widths.includes(nextSel.width)) nextSel.width = undefined;
 
     const byDiameterWidth = nextSel.width ? byDiameter.filter((v) => v.width === nextSel.width) : byDiameter;
-    const offsets = uniqSorted(byDiameterWidth.map((v) => v.offset || ""));
+    const boltPatterns = uniqSorted(byDiameterWidth.map((v) => v.boltPattern || ""));
+    if (nextSel.boltPattern && !boltPatterns.includes(nextSel.boltPattern)) nextSel.boltPattern = undefined;
+
+    const byDiameterWidthBolt = nextSel.boltPattern
+      ? byDiameterWidth.filter((v) => v.boltPattern === nextSel.boltPattern)
+      : byDiameterWidth;
+
+    const offsets = uniqSorted(byDiameterWidthBolt.map((v) => v.offset || ""));
     if (nextSel.offset && !offsets.includes(nextSel.offset)) nextSel.offset = undefined;
 
-    const byDiameterWidthOffset = nextSel.offset
-      ? byDiameterWidth.filter((v) => v.offset === nextSel.offset)
-      : byDiameterWidth;
-    const finishes = uniqSorted(byDiameterWidthOffset.map((v) => v.finish || ""));
+    const byDiameterWidthBoltOffset = nextSel.offset
+      ? byDiameterWidthBolt.filter((v) => v.offset === nextSel.offset)
+      : byDiameterWidthBolt;
+    const finishes = uniqSorted(byDiameterWidthBoltOffset.map((v) => v.finish || ""));
     if (nextSel.finish && !finishes.includes(nextSel.finish)) nextSel.finish = undefined;
 
     return nextSel;
@@ -131,6 +146,28 @@ export function WheelVariantSelector({
             {options.widths.map((w) => (
               <option key={w} value={w}>
                 {w}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="grid gap-1">
+          <span className="text-xs font-extrabold text-neutral-900">Bolt pattern</span>
+          <select
+            value={selected.boltPattern || ""}
+            onChange={(e) => {
+              const next = coerce({
+                ...selected,
+                boltPattern: e.currentTarget.value || undefined,
+              });
+              const sku = pickSku(next);
+              router.push(`/wheels/${encodeURIComponent(sku)}`);
+            }}
+            className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+          >
+            {options.boltPatterns.map((bp) => (
+              <option key={bp} value={bp}>
+                {bp}
               </option>
             ))}
           </select>
