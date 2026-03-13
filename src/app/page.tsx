@@ -126,11 +126,14 @@ async function fetchWheelsSample() {
     };
   });
 
-  // low to high
-  return mapped
-    .filter((w) => w.brand || w.model)
-    .sort((a, b) => (a.price ?? Number.POSITIVE_INFINITY) - (b.price ?? Number.POSITIVE_INFINITY))
-    .slice(0, 6);
+  // Prefer items that actually have images so the homepage doesn't look empty.
+  // Still sort low-to-high within each group.
+  const withImg = mapped.filter((w) => (w.brand || w.model) && !!w.imageUrl);
+  const noImg = mapped.filter((w) => (w.brand || w.model) && !w.imageUrl);
+
+  const sortByPrice = (a: Wheel, b: Wheel) => (a.price ?? Number.POSITIVE_INFINITY) - (b.price ?? Number.POSITIVE_INFINITY);
+
+  return [...withImg.sort(sortByPrice), ...noImg.sort(sortByPrice)].slice(0, 6);
 }
 
 export default async function Home() {
