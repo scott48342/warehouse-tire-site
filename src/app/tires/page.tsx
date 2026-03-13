@@ -134,6 +134,18 @@ export default async function TiresPage({
     };
   });
 
+  // Brand facet list (from current result set)
+  const brandCounts = new Map<string, number>();
+  for (const t of itemsEnriched) {
+    const b = String(t.brand || "").trim();
+    if (!b) continue;
+    brandCounts.set(b, (brandCounts.get(b) || 0) + 1);
+  }
+
+  const brandsAvailable = Array.from(brandCounts.entries())
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([b]) => b);
+
   const itemsFiltered: Tire[] = itemsEnriched.filter((t) => {
     // Brand filter
     if (brands.length) {
@@ -290,11 +302,31 @@ export default async function TiresPage({
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
 
               <FilterGroup title="Brand">
-                <Check label="Michelin" name="brand" value="Michelin" defaultChecked={brands.includes("Michelin")} />
-                <Check label="Goodyear" name="brand" value="Goodyear" defaultChecked={brands.includes("Goodyear")} />
-                <Check label="Bridgestone" name="brand" value="Bridgestone" defaultChecked={brands.includes("Bridgestone")} />
-                <Check label="Continental" name="brand" value="Continental" defaultChecked={brands.includes("Continental")} />
-                <Check label="Pirelli" name="brand" value="Pirelli" defaultChecked={brands.includes("Pirelli")} />
+                {brandsAvailable.length ? (
+                  <div className="grid gap-2">
+                    {brandsAvailable.slice(0, 20).map((b) => (
+                      <div key={b} className="flex items-center justify-between gap-2">
+                        <Check
+                          label={b}
+                          name="brand"
+                          value={b}
+                          defaultChecked={brands.includes(b)}
+                        />
+                        <span className="text-xs font-semibold text-neutral-500">
+                          {brandCounts.get(b) || 0}
+                        </span>
+                      </div>
+                    ))}
+
+                    {brandsAvailable.length > 20 ? (
+                      <div className="text-xs font-semibold text-neutral-500">
+                        Showing top 20 brands for this size.
+                      </div>
+                    ) : null}
+                  </div>
+                ) : (
+                  <div className="text-xs text-neutral-600">No brand data yet.</div>
+                )}
 
                 <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply brand
