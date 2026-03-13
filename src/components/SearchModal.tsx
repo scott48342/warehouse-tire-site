@@ -201,7 +201,7 @@ export function SearchModal({
                       >
                         {[15,16,17,18,19,20,21,22,23,24].map((n) => (
                           <option key={n} value={String(n)}>
-                            {n}"
+                            {n}
                           </option>
                         ))}
                       </select>
@@ -212,7 +212,7 @@ export function SearchModal({
                       >
                         {[6.5,7,7.5,8,8.5,9,9.5,10,10.5,11,12].map((n) => (
                           <option key={String(n)} value={String(n)}>
-                            {n}"
+                            {n}
                           </option>
                         ))}
                       </select>
