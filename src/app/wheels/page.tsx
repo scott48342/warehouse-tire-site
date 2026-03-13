@@ -279,9 +279,15 @@ export default async function WheelsPage({
     }
   });
 
+  // Prefer hiding styles with no images, but don't collapse to an unusably small list.
+  const itemsWithImages = items.filter(
+    (w) => Boolean(w.imageUrl) || Boolean(w.finishThumbs?.some((t) => Boolean(t.imageUrl)))
+  );
+  const itemsFinal = itemsWithImages.length >= Math.min(12, items.length) ? itemsWithImages : items;
+
   const totalCount = typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length;
   const totalPages = Math.max(1, Math.ceil(totalCount / upstreamPageSize));
-  const itemsPage: Wheel[] = items.slice(0, 24);
+  const itemsPage: Wheel[] = itemsFinal.slice(0, 24);
 
   const facets = (maybeData as any)?.facets || {};
   const buckets = (k: string): Array<{ value: string; count?: number }> => {
