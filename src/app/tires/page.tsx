@@ -319,9 +319,26 @@ export default async function TiresPage({
                     ))}
 
                     {brandsAvailable.length > 20 ? (
-                      <div className="text-xs font-semibold text-neutral-500">
-                        Showing top 20 brands for this size.
-                      </div>
+                      <details className="rounded-xl border border-neutral-200 bg-white p-2">
+                        <summary className="cursor-pointer select-none text-xs font-extrabold text-neutral-900">
+                          Show all brands ({brandsAvailable.length})
+                        </summary>
+                        <div className="mt-2 grid gap-2">
+                          {brandsAvailable.slice(20).map((b) => (
+                            <div key={b} className="flex items-center justify-between gap-2">
+                              <Check
+                                label={b}
+                                name="brand"
+                                value={b}
+                                defaultChecked={brands.includes(b)}
+                              />
+                              <span className="text-xs font-semibold text-neutral-500">
+                                {brandCounts.get(b) || 0}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </details>
                     ) : null}
                   </div>
                 ) : (
