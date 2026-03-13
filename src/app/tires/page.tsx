@@ -54,6 +54,19 @@ export default async function TiresPage({
   const sortRaw = Array.isArray(sp.sort) ? sp.sort[0] : sp.sort;
   const sort = (sortRaw ?? "best").trim();
 
+  // Filters (querystring-driven)
+  const brandsRaw = sp.brand;
+  const brands = Array.isArray(brandsRaw)
+    ? brandsRaw.map(String).map((s) => s.trim()).filter(Boolean)
+    : brandsRaw
+      ? [String(brandsRaw).trim()].filter(Boolean)
+      : [];
+
+  const priceMinRaw = Array.isArray(sp.priceMin) ? sp.priceMin[0] : sp.priceMin;
+  const priceMaxRaw = Array.isArray(sp.priceMax) ? sp.priceMax[0] : sp.priceMax;
+  const priceMin = priceMinRaw ? Number(String(priceMinRaw)) : null;
+  const priceMax = priceMaxRaw ? Number(String(priceMaxRaw)) : null;
+
   const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
@@ -121,7 +134,27 @@ export default async function TiresPage({
     };
   });
 
-  const items: Tire[] = [...itemsEnriched].sort((a, b) => {
+  const itemsFiltered: Tire[] = itemsEnriched.filter((t) => {
+    // Brand filter
+    if (brands.length) {
+      const b = String(t.brand || "").toLowerCase();
+      const ok = brands.some((x) => b === String(x).toLowerCase());
+      if (!ok) return false;
+    }
+
+    // Price filter (based on displayed price = cost + 50)
+    const p = typeof t.cost === "number" ? t.cost + 50 : null;
+    if (typeof priceMin === "number" && Number.isFinite(priceMin)) {
+      if (p == null || p < priceMin) return false;
+    }
+    if (typeof priceMax === "number" && Number.isFinite(priceMax)) {
+      if (p == null || p > priceMax) return false;
+    }
+
+    return true;
+  });
+
+  const items: Tire[] = [...itemsFiltered].sort((a, b) => {
     const aPrice = typeof a.cost === "number" ? a.cost + 50 : Number.POSITIVE_INFINITY;
     const bPrice = typeof b.cost === "number" ? b.cost + 50 : Number.POSITIVE_INFINITY;
     const aBrand = (a.brand || "").toLowerCase();
@@ -230,9 +263,12 @@ export default async function TiresPage({
           <aside className="sticky top-24 hidden h-fit rounded-2xl border border-neutral-200 bg-white p-4 md:block">
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-extrabold">Filters</h2>
-              <button className="text-xs font-semibold text-neutral-600 hover:underline">
+              <Link
+                href={`/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
+                className="text-xs font-semibold text-neutral-600 hover:underline"
+              >
                 Clear all
-              </button>
+              </Link>
             </div>
 
             <FilterGroup title="Vehicle / Size">
@@ -241,56 +277,66 @@ export default async function TiresPage({
               </div>
             </FilterGroup>
 
-            <FilterGroup title="Brand">
-              <Check label="Michelin" />
-              <Check label="Goodyear" />
-              <Check label="Bridgestone" />
-              <Check label="Continental" />
-              <Check label="Pirelli" />
-              <Check label="Budget" />
-            </FilterGroup>
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
 
-            <FilterGroup title="Price">
-              <div className="grid grid-cols-2 gap-2">
-                <input
-                  placeholder="$ min"
-                  className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-                />
-                <input
-                  placeholder="$ max"
-                  className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-                />
-              </div>
-            </FilterGroup>
+              <FilterGroup title="Brand">
+                <Check label="Michelin" name="brand" value="Michelin" defaultChecked={brands.includes("Michelin")} />
+                <Check label="Goodyear" name="brand" value="Goodyear" defaultChecked={brands.includes("Goodyear")} />
+                <Check label="Bridgestone" name="brand" value="Bridgestone" defaultChecked={brands.includes("Bridgestone")} />
+                <Check label="Continental" name="brand" value="Continental" defaultChecked={brands.includes("Continental")} />
+                <Check label="Pirelli" name="brand" value="Pirelli" defaultChecked={brands.includes("Pirelli")} />
 
-            <FilterGroup title="Tire Size">
-              <div className="grid grid-cols-3 gap-2">
-                <select className="h-10 rounded-xl border border-neutral-200 bg-white px-2 text-sm">
-                  <option>Width</option>
-                  <option>205</option>
-                  <option>215</option>
-                  <option>225</option>
-                  <option>235</option>
-                  <option>245</option>
-                </select>
-                <select className="h-10 rounded-xl border border-neutral-200 bg-white px-2 text-sm">
-                  <option>Aspect</option>
-                  <option>45</option>
-                  <option>50</option>
-                  <option>55</option>
-                  <option>60</option>
-                  <option>65</option>
-                </select>
-                <select className="h-10 rounded-xl border border-neutral-200 bg-white px-2 text-sm">
-                  <option>Diameter</option>
-                  <option>16</option>
-                  <option>17</option>
-                  <option>18</option>
-                  <option>20</option>
-                  <option>22</option>
-                </select>
-              </div>
-            </FilterGroup>
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply brand
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/tires" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="zip" value={zip} />
+              <input type="hidden" name="sort" value={sort} />
+              {/* keep brands */}
+              {brands.map((b) => (
+                <input key={b} type="hidden" name="brand" value={b} />
+              ))}
+
+              <FilterGroup title="Price">
+                <div className="grid grid-cols-2 gap-2">
+                  <input
+                    name="priceMin"
+                    defaultValue={priceMinRaw ? String(priceMinRaw) : ""}
+                    placeholder="$ min"
+                    className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                  />
+                  <input
+                    name="priceMax"
+                    defaultValue={priceMaxRaw ? String(priceMaxRaw) : ""}
+                    placeholder="$ max"
+                    className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                  />
+                </div>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply price
+                </button>
+              </FilterGroup>
+            </form>
 
             <FilterGroup title="Season">
               <Check label="All-season" />
@@ -487,10 +533,26 @@ function FilterGroup({
   );
 }
 
-function Check({ label }: { label: string }) {
+function Check({
+  label,
+  name,
+  value,
+  defaultChecked,
+}: {
+  label: string;
+  name?: string;
+  value?: string;
+  defaultChecked?: boolean;
+}) {
   return (
     <label className="flex items-center gap-2 text-sm text-neutral-800">
-      <input type="checkbox" className="h-4 w-4 rounded border-neutral-300" />
+      <input
+        type="checkbox"
+        name={name}
+        value={value}
+        defaultChecked={defaultChecked}
+        className="h-4 w-4 rounded border-neutral-300"
+      />
       <span className="text-sm">{label}</span>
     </label>
   );
