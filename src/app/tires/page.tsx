@@ -8,6 +8,14 @@ type Tire = {
   description?: string;
   cost?: number;
   quantity?: { primary?: number; alternate?: number; national?: number };
+  imageUrl?: string;
+  displayName?: string;
+};
+
+type TireAsset = {
+  km_description?: string;
+  display_name?: string;
+  image_url?: string;
 };
 
 function getBaseUrl() {
@@ -64,7 +72,40 @@ export default async function TiresPage({
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const itemsRaw: Tire[] = Array.isArray(km?.items) ? km.items : [];
 
-  const items: Tire[] = [...itemsRaw].sort((a, b) => {
+  // Attach cached displayName/imageUrl from package engine (best-effort)
+  const assets = await Promise.all(
+    itemsRaw.slice(0, 60).map(async (t) => {
+      const km = t.description ? String(t.description) : "";
+      if (!km) return null;
+      try {
+        const res = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(km)}`, { cache: "no-store" });
+        if (!res.ok) return null;
+        const data = (await res.json()) as { results?: TireAsset[] };
+        const hit = Array.isArray(data?.results) ? data.results[0] : null;
+        if (!hit) return null;
+        return { km, asset: hit };
+      } catch {
+        return null;
+      }
+    })
+  );
+
+  const assetByKm = new Map<string, TireAsset>();
+  for (const a of assets) {
+    if (a?.km) assetByKm.set(a.km, a.asset);
+  }
+
+  const itemsEnriched: Tire[] = itemsRaw.map((t) => {
+    const km = t.description ? String(t.description) : "";
+    const asset = km ? assetByKm.get(km) : undefined;
+    return {
+      ...t,
+      displayName: asset?.display_name || undefined,
+      imageUrl: asset?.image_url || undefined,
+    };
+  });
+
+  const items: Tire[] = [...itemsEnriched].sort((a, b) => {
     const aPrice = typeof a.cost === "number" ? a.cost + 50 : Number.POSITIVE_INFINITY;
     const bPrice = typeof b.cost === "number" ? b.cost + 50 : Number.POSITIVE_INFINITY;
     const aBrand = (a.brand || "").toLowerCase();
@@ -323,8 +364,22 @@ export default async function TiresPage({
                       {t.brand || "Tire"}
                     </div>
                     <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
-                      {t.description || t.partNumber || "Tire"}
+                      {t.displayName || t.description || t.partNumber || "Tire"}
                     </h3>
+
+                    <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+                      {t.imageUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={t.imageUrl}
+                          alt={t.displayName || t.description || t.partNumber || "Tire"}
+                          className="h-36 w-full object-contain bg-white"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="p-3 text-xs text-neutral-700">No image</div>
+                      )}
+                    </div>
 
                     <div className="mt-4">
                       <div className="text-3xl font-extrabold text-neutral-900">
