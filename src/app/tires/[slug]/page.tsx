@@ -32,12 +32,6 @@ export default async function TireDetailPage({
             >
               Call
             </a>
-            <a
-              href={BRAND.links.sms}
-              className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-sm font-extrabold"
-            >
-              Text
-            </a>
             <Link
               href="/schedule"
               className="rounded-full bg-[var(--brand-red)] px-4 py-2 text-sm font-extrabold text-white"
@@ -109,8 +103,8 @@ export default async function TireDetailPage({
                     Will these fit my vehicle?
                   </summary>
                   <p className="mt-2 text-sm text-neutral-700">
-                    We’ll confirm fitment before install. Use the vehicle selector
-                    or call/text us.
+                    We’ll confirm fitment before install. Use the vehicle selector or
+                    call us.
                   </p>
                 </details>
                 <details className="rounded-2xl border border-neutral-200 bg-white p-4">
@@ -152,18 +146,6 @@ export default async function TireDetailPage({
                 className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm font-extrabold text-neutral-900"
               >
                 Call {BRAND.phone.callDisplay}
-              </a>
-              <a
-                href={BRAND.links.sms}
-                className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm font-extrabold text-neutral-900"
-              >
-                Text {BRAND.phone.textDisplay}
-              </a>
-              <a
-                href={BRAND.links.whatsapp}
-                className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm font-extrabold text-neutral-900"
-              >
-                WhatsApp
               </a>
             </div>
 

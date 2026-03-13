@@ -157,8 +157,6 @@ export function Header() {
             Schedule
           </Link>
           <PillLink href={BRAND.links.tel}>Call</PillLink>
-          <PillLink href={BRAND.links.sms}>Text</PillLink>
-          <PillLink href={BRAND.links.whatsapp}>WhatsApp</PillLink>
           <Link
             href="/schedule"
             className="inline-flex items-center justify-center rounded-full bg-[var(--brand-red)] px-4 py-2 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
