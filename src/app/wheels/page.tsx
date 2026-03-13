@@ -109,6 +109,11 @@ export default async function WheelsPage({
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
   const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
 
+  // Optional user-supplied wheel filters (prefer these over auto-restricting).
+  const diameterParam = (Array.isArray(sp.diameter) ? sp.diameter[0] : sp.diameter) || "";
+  const widthParam = (Array.isArray(sp.width) ? sp.width[0] : sp.width) || "";
+  const boltPatternParam = (Array.isArray(sp.boltPattern) ? sp.boltPattern[0] : sp.boltPattern) || "";
+
   // Wheel Pros search params are vendor-specific.
   // We’ll start by passing these through; if WP expects different keys,
   // we’ll adapt once we confirm their schema.
@@ -122,7 +127,7 @@ export default async function WheelsPage({
       })
     : null;
 
-  const bp: string | undefined = fitment?.boltPattern || undefined;
+  const bp: string | undefined = boltPatternParam || fitment?.boltPattern || undefined;
   // centerbore on WheelPros can be finicky; don't hard-filter on it yet.
   const cb: string | undefined = undefined;
 
@@ -135,12 +140,19 @@ export default async function WheelsPage({
   // Use the max wheel diameter (more common for OEM packages) and omit width/offset initially,
   // then tighten once we confirm the catalog data lines up.
   const diameterNum = diaRange?.[1] != null ? Number(diaRange[1]) : (diaRange?.[0] != null ? Number(diaRange[0]) : NaN);
-  const diameter = Number.isFinite(diameterNum) ? diameterNum.toFixed(1) : undefined;
-  const width = undefined;
+  const diameter = diameterParam
+    ? Number.isFinite(Number(diameterParam))
+      ? Number(diameterParam).toFixed(1)
+      : diameterParam
+    : (Number.isFinite(diameterNum) ? diameterNum.toFixed(1) : undefined);
+
+  const width = widthParam || undefined;
   const minOffset = undefined;
   const maxOffset = undefined;
 
-  // 2) Query WheelPros using fitment-derived filters
+  // 2) Query WheelPros using fitment-derived filters.
+  // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
+  // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
   const data = await fetchWheels({
     page: "1",
     pageSize: "24",
@@ -152,8 +164,8 @@ export default async function WheelsPage({
 
     boltPattern: bp,
     centerbore: cb,
-    diameter,
-    width,
+    diameter: diameterParam ? diameter : undefined,
+    width: widthParam ? width : undefined,
     minOffset,
     maxOffset,
     offsetType: minOffset || maxOffset ? "RANGE" : undefined,
