@@ -56,10 +56,19 @@ async function fetchWheelBySku(sku: string) {
 }
 
 function extractModelToken(title: string) {
-  // Titles often look like: "BR ALISO 18X9 6X5.5 G-BRONZE 12MM"
-  const parts = String(title || "").trim().split(/\s+/);
-  if (parts.length >= 2) return parts[1];
-  return "";
+  // Titles often look like:
+  // "BR ALISO 18X9 6X5.5 G-BRONZE 12MM"
+  // We want the model name portion, which may be multiple words, stopping before the size token.
+  const parts = String(title || "").trim().split(/\s+/).filter(Boolean);
+  if (parts.length < 2) return "";
+
+  // parts[0] is often the brand code (e.g. BR)
+  const rest = parts.slice(1);
+
+  const sizeIdx = rest.findIndex((p) => /^\d+(\.\d+)?X\d+(\.\d+)?$/i.test(p));
+  const modelParts = sizeIdx >= 0 ? rest.slice(0, sizeIdx) : rest.slice(0, 2);
+
+  return modelParts.join(" ").trim();
 }
 
 function parseVariant(it: WheelProsItem): WheelVariant | null {
@@ -98,12 +107,18 @@ async function fetchVariants({
   const raw: unknown[] = Array.isArray(data?.items) ? data.items : Array.isArray(data?.results) ? data.results : [];
 
   const parsed = raw
-    .map((u) => parseVariant(u as WheelProsItem))
-    .filter((v): v is WheelVariant => !!v);
+    .map((u) => ({ it: u as WheelProsItem, v: parseVariant(u as WheelProsItem) }))
+    .filter((x): x is { it: WheelProsItem; v: WheelVariant } => !!x.v);
 
-  // Filter down to titles that actually include the token to avoid huge unrelated sets.
-  // (Still best-effort.)
-  return parsed;
+  const prefix = `${String(brandCode).toUpperCase()} ${String(modelToken).toUpperCase()}`.trim();
+  const narrowed = parsed
+    .filter(({ it }) => {
+      const t = String(it?.title || "").toUpperCase();
+      return t.startsWith(prefix);
+    })
+    .map(({ v }) => v);
+
+  return narrowed.length ? narrowed : parsed.map(({ v }) => v);
 }
 
 export default async function WheelDetailPage({
