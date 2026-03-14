@@ -211,7 +211,7 @@ export function FitmentSelector({
               disabled={!draft.make}
             />
             <Select
-              label="Trim"
+              label="Trim / Option"
               value={draft.modification ?? ""}
               onChange={(v) => {
                 const sel = trims.find((t) => t.value === v);
@@ -239,7 +239,7 @@ export function FitmentSelector({
               }}
               options={[{ value: "", label: "" }, ...trims]}
               disabled={!draft.model}
-              hint={draft.model && trims.length === 0 ? "Trim list coming soon" : undefined}
+              hint={draft.model && trims.length === 0 ? "Options list coming soon" : undefined}
             />
           </div>
 

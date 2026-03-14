@@ -101,7 +101,7 @@ export default async function TiresPage({
         <div className="mx-auto max-w-6xl px-4 py-8">
           <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires</h1>
           <p className="mt-2 text-sm text-neutral-700">
-            Select your vehicle <span className="font-semibold">trim</span> to show tires that fit.
+            Select your vehicle <span className="font-semibold">trim / option</span> to show tires that fit.
           </p>
           <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
             Current selection: <span className="font-semibold">{year} {make} {model}</span>
