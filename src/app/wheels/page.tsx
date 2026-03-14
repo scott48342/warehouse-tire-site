@@ -335,26 +335,11 @@ export default async function WheelsPage({
     if (diameterParam) {
       const d = String(w.diameter || "").trim();
       if (d && d !== String(diameterParam).trim()) return false;
-    } else {
-      // if no explicit diameter filter, constrain to fitment range when known
-      const minD = diaRange?.[0] != null ? Number(diaRange[0]) : NaN;
-      const maxD = diaRange?.[1] != null ? Number(diaRange[1]) : NaN;
-      const d = Number(String(w.diameter || "").trim());
-      if (Number.isFinite(minD) && Number.isFinite(maxD) && Number.isFinite(d)) {
-        if (d < minD || d > maxD) return false;
-      }
     }
 
     if (widthParam) {
       const ww = String(w.width || "").trim();
       if (ww && ww !== String(widthParam).trim()) return false;
-    } else {
-      const minW = widthRange?.[0] != null ? Number(widthRange[0]) : NaN;
-      const maxW = widthRange?.[1] != null ? Number(widthRange[1]) : NaN;
-      const ww = Number(String(w.width || "").trim());
-      if (Number.isFinite(minW) && Number.isFinite(maxW) && Number.isFinite(ww)) {
-        if (ww < minW || ww > maxW) return false;
-      }
     }
 
     return true;
