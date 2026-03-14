@@ -351,16 +351,14 @@ export default async function WheelsPage({
   const itemsFilteredOffset = Number.isFinite(minOff) && Number.isFinite(maxOff)
     ? itemsFilteredBasic.filter((w) => {
         const raw = String(w.offset || "").trim();
-        if (!raw) return true; // don't exclude unknown
+        if (!raw) return false; // if we know the vehicle offset range, require wheel offset
         const n = Number(raw);
-        if (!Number.isFinite(n)) return true;
+        if (!Number.isFinite(n)) return false;
         return n >= minOff && n <= maxOff;
       })
     : itemsFilteredBasic;
 
-  const itemsFinal = itemsFilteredOffset.length >= Math.min(12, itemsFilteredBasic.length)
-    ? itemsFilteredOffset
-    : itemsFilteredBasic;
+  const itemsFinal = itemsFilteredOffset;
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
