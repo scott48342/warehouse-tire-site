@@ -14,8 +14,10 @@ async function fetchJson<T>(url: string): Promise<T> {
 
 export function FitmentSelector({
   onComplete,
+  provider,
 }: {
   onComplete?: (fitment: Fitment) => void;
+  provider?: "wheelsize" | "wheelpros";
 } = {}) {
   const sp = useSearchParams();
   const pathname = usePathname();
@@ -147,9 +149,8 @@ export function FitmentSelector({
       }
       try {
         const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
-        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
-          `/api/vehicles/trims?${qs.toString()}`
-        );
+        const url = provider === "wheelpros" ? `/api/wp/vehicles/submodels?${qs.toString()}` : `/api/vehicles/trims?${qs.toString()}`;
+        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(url);
         if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
       } catch {
         if (!cancelled) setTrims([]);
@@ -217,7 +218,8 @@ export function FitmentSelector({
                 const sel = trims.find((t) => t.value === v);
                 const next: Fitment = {
                   ...draft,
-                  modification: v || undefined,
+                  // For WheelPros submodels, store as a special modification token so downstream can detect it.
+                  modification: v ? (provider === "wheelpros" ? `wp:${v}` : v) : undefined,
                   trim: sel?.label || undefined,
                 };
                 setDraft(next);

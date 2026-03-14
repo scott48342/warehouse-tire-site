@@ -148,28 +148,34 @@ export default async function WheelsPage({
   }
 
   // 1) Resolve fitment (bolt pattern, width/offset ranges, etc.)
+  const isWpSubmodel = modification.startsWith("wp:");
+  const wpSubmodel = isWpSubmodel ? modification.slice(3) : "";
+
   const fitment = year && make && model
-    ? await fetchFitment({
-        year,
-        make,
-        model,
-        modification: modification || undefined,
-      })
+    ? (isWpSubmodel
+        ? await fetch(`${getBaseUrl()}/api/wp/vehicles/fitment?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&submodel=${encodeURIComponent(wpSubmodel)}`, { cache: "no-store" }).then((r) => r.json())
+        : await fetchFitment({
+            year,
+            make,
+            model,
+            modification: modification || undefined,
+          }))
     : null;
 
-  const bp: string | undefined = boltPatternParam || fitment?.boltPattern || undefined;
+  const fit = (fitment as any)?.fitment ? (fitment as any).fitment : fitment;
+  const bp: string | undefined = boltPatternParam || fit?.boltPattern || undefined;
 
   // Centerbore: WheelPros properties/filters are inconsistent; don't hard-filter on it upstream.
   const cb: string | undefined = undefined;
 
-  const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
-    ? fitment.wheelDiameterRangeIn
+  const diaRange: [number | null, number | null] = Array.isArray(fit?.wheelDiameterRangeIn)
+    ? fit.wheelDiameterRangeIn
     : [null, null];
-  const widthRange: [number | null, number | null] = Array.isArray(fitment?.wheelWidthRangeIn)
-    ? fitment.wheelWidthRangeIn
+  const widthRange: [number | null, number | null] = Array.isArray(fit?.wheelWidthRangeIn)
+    ? fit.wheelWidthRangeIn
     : [null, null];
-  const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
-    ? (fitment.offsetRangeMm as any)
+  const offRange: [number | null, number | null] = Array.isArray(fit?.offsetRangeMm)
+    ? (fit.offsetRangeMm as any)
     : [null, null];
 
   // Option 2: OEM + tolerance (improves results while staying sane).

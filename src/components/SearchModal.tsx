@@ -225,6 +225,7 @@ export function SearchModal({
 
                 <div className="mt-2">
                   <FitmentSelector
+                    provider={isTires ? "wheelsize" : "wheelpros"}
                     onComplete={(fitment) => {
                       // After trim is selected, immediately navigate (SEO/sharable) and close.
                       const next = new URLSearchParams();
