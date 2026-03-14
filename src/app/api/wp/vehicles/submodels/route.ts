@@ -14,9 +14,8 @@ export async function GET(req: Request) {
   }
 
   try {
-    // Vehicle API: /vehicles/v1/years/{year}/makes/{make}/models/{model}/submodels
-    const path = `/vehicles/v1/years/${encodeURIComponent(year)}/makes/${encodeURIComponent(make)}/models/${encodeURIComponent(model)}/submodels`;
-    const data = await wpVehicleGetJson<string[]>(path);
+    // Vehicle API (as confirmed in Postman): /vehicle/v1/submodels?year=YYYY&make=...&model=...
+    const data = await wpVehicleGetJson<string[]>("/vehicle/v1/submodels", { year, make, model });
     const results = Array.isArray(data) ? data.map((s) => ({ value: String(s), label: String(s) })) : [];
     return NextResponse.json({ results });
   } catch (e: any) {

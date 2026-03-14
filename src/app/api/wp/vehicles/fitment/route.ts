@@ -15,10 +15,21 @@ export async function GET(req: Request) {
   }
 
   try {
-    // Vehicle API: GET Vehicle - Sub-Model Info
-    const path = `/vehicles/v1/years/${encodeURIComponent(year)}/makes/${encodeURIComponent(make)}/models/${encodeURIComponent(model)}/submodels/${encodeURIComponent(submodel)}`;
-    const data = await wpVehicleGetJson<any>(path);
-    const fitment = normalizeWpVehicleInfoToFitment(data);
+    // Vehicle details (as confirmed in Postman)
+    // /vehicle/v1/details?year=YYYY&make=...&model=...&subModel=...
+    const data = await wpVehicleGetJson<any>("/vehicle/v1/details", { year, make, model, subModel: submodel });
+
+    // Map minimal details into our fitment schema.
+    const boltPattern = data?.boltPattern ? String(data.boltPattern) : undefined;
+    const hub = data?.hub != null ? Number(data.hub) : NaN;
+    const offset = data?.offset != null ? Number(data.offset) : NaN;
+
+    const fitment = {
+      boltPattern,
+      centerBoreMm: Number.isFinite(hub) ? hub : undefined,
+      offsetRangeMm: Number.isFinite(offset) ? [offset, offset] : undefined,
+    };
+
     return NextResponse.json({ raw: data, fitment });
   } catch (e: any) {
     return NextResponse.json({ error: e?.message || String(e) }, { status: 500 });
