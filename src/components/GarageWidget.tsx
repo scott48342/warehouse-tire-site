@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 type Fitment = {
   year?: string;
@@ -61,8 +61,12 @@ export function GarageWidget({
   type: "tires" | "wheels";
 }) {
   const router = useRouter();
-  const pathname = usePathname();
   const sp = useSearchParams();
+
+  const [garage, setGarage] = useState<GarageItem[]>([]);
+  useEffect(() => {
+    setGarage(readGarage().sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0)).slice(0, MAX));
+  }, []);
 
   const current = useMemo<Fitment>(() => {
     const fromUrl: Fitment = {
@@ -110,10 +114,11 @@ export function GarageWidget({
             const items = readGarage();
             const item: GarageItem = { ...current, savedAt: Date.now() };
             const k = fitmentKey(item);
-            const next = [item, ...items.filter((x) => fitmentKey(x) !== k)].slice(0, MAX);
+            const next = [item, ...items.filter((x) => fitmentKey(x) !== k)]
+              .sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0))
+              .slice(0, MAX);
             writeGarage(next);
-            // re-render by soft refresh
-            router.refresh();
+            setGarage(next);
           }}
           className={
             "h-9 rounded-xl px-3 text-xs font-extrabold " +
@@ -127,16 +132,17 @@ export function GarageWidget({
       </div>
 
       <GarageList
+        items={garage}
         onSelect={(f) => {
           const target = type === "tires" ? "/tires" : "/wheels";
           const next = buildVehicleParams(f);
           router.push(`${target}?${next.toString()}`);
         }}
         onRemove={(f) => {
-          const items = readGarage();
           const k = fitmentKey(f);
-          writeGarage(items.filter((x) => fitmentKey(x) !== k));
-          router.refresh();
+          const next = garage.filter((x) => fitmentKey(x) !== k);
+          writeGarage(next);
+          setGarage(next);
         }}
       />
 
@@ -148,16 +154,14 @@ export function GarageWidget({
 }
 
 function GarageList({
+  items,
   onSelect,
   onRemove,
 }: {
+  items: GarageItem[];
   onSelect: (f: Fitment) => void;
   onRemove: (f: Fitment) => void;
 }) {
-  const items = useMemo(() => {
-    const raw = readGarage();
-    return [...raw].sort((a, b) => b.savedAt - a.savedAt).slice(0, MAX);
-  }, []);
 
   if (!items.length) {
     return <div className="text-xs text-neutral-600">No saved vehicles yet.</div>;
