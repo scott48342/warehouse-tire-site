@@ -138,6 +138,14 @@ export function Header() {
             }}
           />
 
+          <button
+            type="button"
+            onClick={() => setModal({ type: "wheels", mode: "vehicle" })}
+            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+          >
+            My Garage
+          </button>
+
           <PillLink href={BRAND.links.tel}>Call</PillLink>
           <Link
             href="/schedule"

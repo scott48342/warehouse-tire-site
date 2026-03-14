@@ -19,6 +19,70 @@ function normalizeTireSize(width: string, aspect: string, diameter: string) {
   return `${w}/${a}R${d}`;
 }
 
+type GarageItem = {
+  year?: string;
+  make?: string;
+  model?: string;
+  trim?: string;
+  modification?: string;
+  savedAt?: number;
+};
+
+function buildVehicleParams(f: GarageItem) {
+  const sp = new URLSearchParams();
+  for (const k of ["year", "make", "model", "trim", "modification"] as const) {
+    const v = (f as any)?.[k];
+    if (v) sp.set(k, String(v));
+  }
+  return sp;
+}
+
+function garageLabel(f: GarageItem) {
+  return [f.year, f.make, f.model, f.trim].filter(Boolean).join(" ");
+}
+
+function GarageQuickPick({
+  type,
+  onPick,
+}: {
+  type: "tires" | "wheels";
+  onPick: (sp: URLSearchParams) => void;
+}) {
+  const [items, setItems] = useState<GarageItem[]>([]);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("wt_garage");
+      const data = raw ? JSON.parse(raw) : [];
+      const arr = Array.isArray(data) ? (data as GarageItem[]) : [];
+      setItems([...arr].sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0)).slice(0, 5));
+    } catch {
+      setItems([]);
+    }
+  }, []);
+
+  if (!items.length) return null;
+
+  return (
+    <div className="rounded-2xl border border-neutral-200 bg-white p-3">
+      <div className="text-xs font-extrabold text-neutral-900">My Garage</div>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {items.map((it, idx) => (
+          <button
+            key={`${it.modification || idx}`}
+            type="button"
+            onClick={() => onPick(buildVehicleParams(it))}
+            className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+            title={`Search ${type} for ${garageLabel(it)}`}
+          >
+            {garageLabel(it)}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function SearchModal({
   open,
   type,
@@ -110,6 +174,15 @@ export function SearchModal({
             {mode === "vehicle" ? (
               <div>
                 <div className="text-xs font-semibold text-neutral-700">Vehicle</div>
+                <GarageQuickPick
+                  type={isTires ? "tires" : "wheels"}
+                  onPick={(sp) => {
+                    const target = isTires ? "/tires" : "/wheels";
+                    router.push(buildUrl(target, sp));
+                    onClose();
+                  }}
+                />
+
                 <div className="mt-2">
                   <FitmentSelector
                     onComplete={(fitment) => {

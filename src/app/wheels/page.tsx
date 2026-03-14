@@ -181,7 +181,7 @@ export default async function WheelsPage({
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
-  const upstreamPageSize = 120;
+  const upstreamPageSize = 60;
   const data = await fetchWheels({
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
