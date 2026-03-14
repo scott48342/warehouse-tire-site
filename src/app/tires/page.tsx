@@ -2,6 +2,7 @@
 import { GarageWidget } from "@/components/GarageWidget";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
+import { FavoritesButton } from "@/components/FavoritesButton";
 
 type Tire = {
   partNumber?: string;
@@ -747,8 +748,19 @@ export default async function TiresPage({
                     key={t.partNumber || t.mfgPartNumber || idx}
                     className="rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
                   >
-                    <div className="text-xs font-semibold text-neutral-600">
-                      {t.brand || "Tire"}
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="text-xs font-semibold text-neutral-600">
+                        {t.brand || "Tire"}
+                      </div>
+                      {t.mfgPartNumber ? (
+                        <FavoritesButton
+                          type="tire"
+                          sku={t.mfgPartNumber}
+                          label={`${t.brand || "Tire"} ${t.displayName || t.description || t.mfgPartNumber}`}
+                          href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`}
+                          imageUrl={t.imageUrl}
+                        />
+                      ) : null}
                     </div>
                     <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
                       {t.displayName || t.description || t.partNumber || "Tire"}
