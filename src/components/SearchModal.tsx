@@ -112,22 +112,14 @@ export function SearchModal({
                 <div className="text-xs font-semibold text-neutral-700">Vehicle</div>
                 <div className="mt-2">
                   <FitmentSelector
-                    onComplete={() => {
+                    onComplete={(fitment) => {
                       // After trim is selected, immediately navigate (SEO/sharable) and close.
                       const target = isTires ? "/tires" : "/wheels";
                       const next = new URLSearchParams();
-                      try {
-                        const raw =
-                          localStorage.getItem("wt_fitment_draft") ||
-                          localStorage.getItem("wt_fitment");
-                        if (raw) {
-                          const saved = JSON.parse(raw) as any;
-                          for (const k of ["year", "make", "model", "trim", "modification"] as const) {
-                            const v = saved?.[k];
-                            if (v) next.set(k, String(v));
-                          }
-                        }
-                      } catch {}
+                      for (const k of ["year", "make", "model", "trim", "modification"] as const) {
+                        const v = (fitment as any)?.[k];
+                        if (v) next.set(k, String(v));
+                      }
                       router.push(buildUrl(target, next));
                       onClose();
                     }}

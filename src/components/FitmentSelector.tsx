@@ -222,12 +222,20 @@ export function FitmentSelector({
                 };
                 setDraft(next);
 
-                // UX: once trim/modification is selected, immediately apply (updates URL)
-                // and optionally let the parent navigate/close.
+                // UX: once trim/modification is selected, immediately complete.
+                // If parent provided onComplete, let it handle navigation (e.g. SearchModal -> /wheels?...).
+                // Otherwise, apply to the current URL.
                 if (next.modification) {
-                  apply(next);
+                  try {
+                    localStorage.setItem("wt_fitment", JSON.stringify(next));
+                  } catch {}
+
                   setOpen(false);
-                  onComplete?.(next);
+                  if (onComplete) {
+                    onComplete(next);
+                  } else {
+                    apply(next);
+                  }
                 }
               }}
               options={[{ value: "", label: "" }, ...trims]}
