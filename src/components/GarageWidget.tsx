@@ -165,46 +165,28 @@ function GarageList({
     <div className="flex flex-wrap gap-2">
       {items.map((it) => {
         const k = fitmentKey(it);
-        const qs = buildVehicleParams(it).toString();
+        const target = buildVehicleParams(it).toString();
         return (
-          <div
-            key={k}
-            className="flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2"
-          >
-            <div className="mr-auto text-xs font-extrabold text-neutral-900">
+          <div key={k} className="flex items-center gap-2 rounded-full border border-neutral-200 bg-white pl-3">
+            <button
+              type="button"
+              onClick={() => {
+                const base = typeof window !== "undefined" && window.location.pathname.startsWith("/tires") ? "/tires" : "/wheels";
+                router.push(`${base}?${target}`);
+              }}
+              className="py-1 text-xs font-extrabold text-neutral-900 hover:underline"
+              title="Search with this vehicle"
+            >
               {label(it)}
-            </div>
-
-            <button
-              type="button"
-              onClick={() => router.push(`/tires?${qs}`)}
-              className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-            >
-              Tires
             </button>
-            <button
-              type="button"
-              onClick={() => router.push(`/wheels?${qs}`)}
-              className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-            >
-              Wheels
-            </button>
-            <button
-              type="button"
-              onClick={() => router.push(`/favorites`)}
-              className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-            >
-              Favorites
-            </button>
-
             <button
               type="button"
               onClick={() => onRemove(it)}
-              className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900"
+              className="rounded-full px-2 py-1 text-xs font-extrabold text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900"
               title="Remove"
               aria-label={`Remove ${label(it)}`}
             >
-              Remove
+              ×
             </button>
           </div>
         );
