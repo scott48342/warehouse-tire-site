@@ -506,11 +506,14 @@ export default async function WheelsPage({
                   className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
                 >
                   <option value="">All diameters</option>
-                  {diameterBuckets.slice(0, 80).map((b) => (
-                    <option key={b.value} value={b.value}>
-                      {b.value}{b.count != null ? ` (${b.count})` : ""}
-                    </option>
-                  ))}
+                  {diameterBuckets.slice(0, 80).map((b) => {
+                    const label = String(b.value).replace(/\.0$/, "");
+                    return (
+                      <option key={b.value} value={b.value}>
+                        {label}{b.count != null ? ` (${b.count})` : ""}
+                      </option>
+                    );
+                  })}
                 </select>
 
                 <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
