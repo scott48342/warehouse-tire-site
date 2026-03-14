@@ -94,6 +94,25 @@ export default async function TiresPage({
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
   const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
 
+  if (year && make && model && !modification) {
+    return (
+      <main className="bg-neutral-50">
+        <div className="mx-auto max-w-6xl px-4 py-8">
+          <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires</h1>
+          <p className="mt-2 text-sm text-neutral-700">
+            Select your vehicle <span className="font-semibold">trim</span> to show tires that fit.
+          </p>
+          <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+            Current selection: <span className="font-semibold">{year} {make} {model}</span>
+            <div className="mt-2 text-xs text-neutral-500">
+              Tip: Open the vehicle picker and choose a trim (it will auto-search).
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   // Option B (aggregate OEM sizes): we still fetch "strict" sizes for the selected modification,
   // but we *display* the union of sizes across all modifications for the model.
   const fitmentStrict = year && make && model

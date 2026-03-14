@@ -126,9 +126,25 @@ export default async function WheelsPage({
   const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || "";
   const finish = (Array.isArray(sp.finish) ? sp.finish[0] : sp.finish) || "";
 
-  // Wheel Pros search params are vendor-specific.
-  // We’ll start by passing these through; if WP expects different keys,
-  // we’ll adapt once we confirm their schema.
+  if (year && make && model && !modification) {
+    return (
+      <main className="bg-neutral-50">
+        <div className="mx-auto max-w-6xl px-4 py-8">
+          <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Wheels</h1>
+          <p className="mt-2 text-sm text-neutral-700">
+            Select your vehicle <span className="font-semibold">trim</span> to show wheels that fit.
+          </p>
+          <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+            Current selection: <span className="font-semibold">{year} {make} {model}</span>
+            <div className="mt-2 text-xs text-neutral-500">
+              Tip: Open the vehicle picker and choose a trim (it will auto-search).
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   // 1) Resolve fitment (bolt pattern, width/offset ranges, etc.)
   const fitment = year && make && model
     ? await fetchFitment({
