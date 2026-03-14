@@ -1,7 +1,8 @@
 let tokenCache: { token: string; expiresAt: number } | null = null;
 
 function baseUrl() {
-  return process.env.WHEELPROS_VEHICLE_API_BASE_URL || "https://api.wheelpros.com/vehicles";
+  // Base host for WheelPros Vehicle API
+  return process.env.WHEELPROS_VEHICLE_API_BASE_URL || "https://api.wheelpros.com";
 }
 
 async function getToken(): Promise<string> {
@@ -30,8 +31,8 @@ async function getToken(): Promise<string> {
   if (!res.ok) throw new Error(`WheelPros auth failed: HTTP ${res.status}`);
   const data = (await res.json()) as any;
 
-  const token = data?.accessToken || data?.token || data?.access_token;
-  const expiresIn = Number(data?.expiresIn || data?.expires_in || 3600);
+  const token = data?.accessToken || data?.token || data?.access_token || data?.tokenString;
+  const expiresIn = Number(data?.expiresIn || data?.expires_in || data?.expiresInSeconds || 3600);
   if (!token) throw new Error("WheelPros auth: missing token in response");
 
   tokenCache = { token: String(token), expiresAt: now + Math.max(60, expiresIn) * 1000 };
