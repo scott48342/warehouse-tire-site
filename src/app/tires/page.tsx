@@ -294,6 +294,16 @@ export default async function TiresPage({
                 ? `Showing tires for ${year} ${make} ${model}${trim ? ` ${trim}` : ""}.`
                 : "Select your vehicle in the header to filter tires."}
             </p>
+
+            {year && make && model ? (
+              <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
+                <span className="text-neutral-500">Vehicle:</span>
+                <span className="font-extrabold text-neutral-900">
+                  {year} {make} {model}
+                  {trim ? ` ${trim}` : ""}
+                </span>
+              </div>
+            ) : null}
             {/* OEM sizes are rendered as buttons above the search controls */}
           </div>
 

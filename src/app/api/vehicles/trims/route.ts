@@ -31,8 +31,18 @@ export async function GET(req: Request) {
         const value = o.modification ? String(o.modification) : "";
         const baseLabel = o.trimLevel || o.trim || o.modification;
         if (!value || !baseLabel) return null;
-        // Add engine to reduce duplicates when trimLevel repeats.
-        const engine = o.engine ? String(o.engine) : "";
+        // Add engine to reduce duplicates when trimLevel repeats, but drop fuel words like "Petrol".
+        const engineRaw = o.engine ? String(o.engine) : "";
+        const engine = engineRaw
+          .replace(/\bPetrol\b/gi, "")
+          .replace(/\bDiesel\b/gi, "")
+          .replace(/\bGasoline\b/gi, "")
+          .replace(/\bGas\b/gi, "")
+          .replace(/\bHybrid\b/gi, "")
+          .replace(/\bElectric\b/gi, "")
+          .replace(/\s+/g, " ")
+          .trim();
+
         const label = engine ? `${String(baseLabel)} (${engine})` : String(baseLabel);
         return { value, label };
       })

@@ -117,9 +117,15 @@ export function SearchModal({
                 <div className="mt-3 flex flex-wrap gap-2">
                   <button
                     onClick={() => {
-                      // Keep current fitment params in the URL; user uses FitmentSelector which updates querystring.
+                      // Keep current fitment params in the URL (SEO + sharable link).
+                      // Only carry the vehicle selection keys.
                       const target = isTires ? "/tires" : "/wheels";
-                      router.push(buildUrl(target, new URLSearchParams(currentSp.toString())));
+                      const next = new URLSearchParams();
+                      for (const k of ["year", "make", "model", "trim", "modification"] as const) {
+                        const v = currentSp.get(k);
+                        if (v) next.set(k, v);
+                      }
+                      router.push(buildUrl(target, next));
                       onClose();
                     }}
                     className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
