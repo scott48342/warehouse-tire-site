@@ -65,13 +65,33 @@ export function GarageWidget({
   const sp = useSearchParams();
 
   const current = useMemo<Fitment>(() => {
-    return {
+    const fromUrl: Fitment = {
       year: sp.get("year") ?? undefined,
       make: sp.get("make") ?? undefined,
       model: sp.get("model") ?? undefined,
       trim: sp.get("trim") ?? undefined,
       modification: sp.get("modification") ?? undefined,
     };
+
+    // If modification isn't present in the URL yet, fall back to saved fitment from localStorage.
+    // This can happen when navigation/search happened before the URL was fully populated.
+    if (!fromUrl.modification) {
+      try {
+        const raw = localStorage.getItem("wt_fitment") || localStorage.getItem("wt_fitment_draft");
+        if (raw) {
+          const saved = JSON.parse(raw) as any;
+          return {
+            year: fromUrl.year || saved?.year,
+            make: fromUrl.make || saved?.make,
+            model: fromUrl.model || saved?.model,
+            trim: fromUrl.trim || saved?.trim,
+            modification: saved?.modification,
+          };
+        }
+      } catch {}
+    }
+
+    return fromUrl;
   }, [sp]);
 
   const hasVehicle = Boolean(current.year && current.make && current.model && current.modification);
