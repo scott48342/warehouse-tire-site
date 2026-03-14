@@ -80,6 +80,9 @@ export function GarageWidget({
     <div className="mt-3 flex flex-col gap-2 rounded-2xl border border-neutral-200 bg-white p-3">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="text-xs font-extrabold text-neutral-900">My Garage</div>
+        <a href="/favorites" className="text-xs font-semibold text-neutral-600 hover:underline">
+          Favorites
+        </a>
         <button
           type="button"
           disabled={!hasVehicle}

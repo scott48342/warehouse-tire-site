@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { BRAND } from "@/lib/brand";
+import { FavoritesButton } from "@/components/FavoritesButton";
 
 export type WheelFinishThumb = {
   finish: string;
@@ -41,7 +42,16 @@ export function WheelsStyleCard({
 
   return (
     <div className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300">
-      <div className="text-xs font-semibold text-neutral-600">{brand}</div>
+      <div className="flex items-start justify-between gap-2">
+        <div className="text-xs font-semibold text-neutral-600">{brand}</div>
+        <FavoritesButton
+          type="wheel"
+          sku={selectedSku || baseSku}
+          label={`${brand} ${title}${selectedFinish ? ` - ${selectedFinish}` : ""}`}
+          href={viewHref}
+          imageUrl={selectedImage}
+        />
+      </div>
 
       <Link href={viewHref} className="block">
         <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">{title}</h3>
