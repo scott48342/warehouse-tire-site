@@ -651,9 +651,12 @@ export default async function WheelsPage({
                     price={w.price}
                     sizeLabel={
                       diameterParam || widthParam
-                        ? `${diameterParam || ""}${diameterParam && widthParam ? "x" : ""}${widthParam || ""}`.trim() || undefined
-                        : w.diameter && w.width
-                          ? `${w.diameter}x${w.width}`
+                        ? {
+                            diameter: diameterParam || w.diameter,
+                            width: widthParam || w.width,
+                          }
+                        : w.diameter || w.width
+                          ? { diameter: w.diameter, width: w.width }
                           : undefined
                     }
                     finishThumbs={w.finishThumbs}

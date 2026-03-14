@@ -12,6 +12,15 @@ export type WheelFinishThumb = {
   price?: number;
 };
 
+function fmtSizePart(v: string) {
+  const s = String(v || "").trim();
+  if (!s) return "";
+  const n = Number(s);
+  if (!Number.isFinite(n)) return s;
+  // trim trailing zeros like 20.0 -> 20, 11.00 -> 11
+  return n.toString();
+}
+
 export function WheelsStyleCard({
   brand,
   title,
@@ -28,7 +37,7 @@ export function WheelsStyleCard({
   baseFinish?: string;
   baseImageUrl?: string;
   price?: number;
-  sizeLabel?: string;
+  sizeLabel?: { diameter?: string; width?: string };
   finishThumbs?: WheelFinishThumb[];
 }) {
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -56,7 +65,13 @@ export function WheelsStyleCard({
       <Link href={viewHref} className="block">
         <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">{title}</h3>
         {selectedFinish ? <div className="mt-1 text-xs text-neutral-600">{selectedFinish}</div> : null}
-        {sizeLabel ? <div className="mt-0.5 text-xs font-semibold text-neutral-700">{sizeLabel}</div> : null}
+        {sizeLabel?.diameter || sizeLabel?.width ? (
+          <div className="mt-0.5 text-xs font-semibold text-neutral-700">
+            {fmtSizePart(sizeLabel.diameter || "")}
+            {sizeLabel.diameter && sizeLabel.width ? "x" : ""}
+            {fmtSizePart(sizeLabel.width || "")}
+          </div>
+        ) : null}
 
         <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
           {selectedImage ? (
