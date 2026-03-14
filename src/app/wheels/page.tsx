@@ -7,6 +7,7 @@ import { FilterGroup } from "./FilterGroup";
 type Wheel = {
   sku?: string;
   brand?: string;
+  brandCode?: string;
   model?: string;
   finish?: string;
   imageUrl?: string;
@@ -146,12 +147,12 @@ export default async function WheelsPage({
   // Use the max wheel diameter (more common for OEM packages) and omit width/offset initially,
   // then tighten once we confirm the catalog data lines up.
   const diameterNum = diaRange?.[1] != null ? Number(diaRange[1]) : (diaRange?.[0] != null ? Number(diaRange[0]) : NaN);
+  // If user picked a diameter filter, pass it through exactly as given (facet values are canonical).
   const diameter = diameterParam
-    ? Number.isFinite(Number(diameterParam))
-      ? Number(diameterParam).toFixed(1)
-      : diameterParam
+    ? diameterParam
     : (Number.isFinite(diameterNum) ? diameterNum.toFixed(1) : undefined);
 
+  // Same idea for width: pass facet value through exactly.
   const width = widthParam || undefined;
   const minOffset = undefined;
   const maxOffset = undefined;
@@ -201,6 +202,7 @@ export default async function WheelsPage({
     const it = itUnknown as WheelProsItem;
 
     const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
+    const brandCode = brandObj?.code || undefined;
     const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
     const finish = it?.techfeed?.finish || it?.properties?.finish;
     const model = it?.properties?.model || it?.title;
@@ -217,6 +219,7 @@ export default async function WheelsPage({
     return {
       sku: it?.sku,
       brand,
+      brandCode,
       model,
       finish,
       imageUrl,
@@ -285,9 +288,15 @@ export default async function WheelsPage({
   );
   const itemsFinal = itemsWithImages.length >= Math.min(12, items.length) ? itemsWithImages : items;
 
+  // Paginate styles client-side (we group SKUs into styles).
+  const stylesPerPage = 24;
+  const totalPages = Math.max(1, Math.ceil(itemsFinal.length / stylesPerPage));
+  const safePage = Math.min(page, totalPages);
+  const start = (safePage - 1) * stylesPerPage;
+  const itemsPage: Wheel[] = itemsFinal.slice(start, start + stylesPerPage);
+
+  // Still show raw SKU count for reference.
   const totalCount = typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length;
-  const totalPages = Math.max(1, Math.ceil(totalCount / upstreamPageSize));
-  const itemsPage: Wheel[] = itemsFinal.slice(0, 24);
 
   const facets = (maybeData as any)?.facets || {};
   const buckets = (k: string): Array<{ value: string; count?: number }> => {
@@ -538,7 +547,7 @@ export default async function WheelsPage({
 
           <section>
             <div className="text-xs font-semibold text-neutral-600">
-              Showing {itemsPage.length} styles (page {page} of {totalPages})
+              Showing {itemsPage.length} styles (page {safePage} of {totalPages})
             </div>
 
             <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -546,7 +555,7 @@ export default async function WheelsPage({
                 itemsPage.map((w, idx) => (
                   <WheelsStyleCard
                     key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
-                    brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : "Wheel"}
+                    brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
                     title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
                     baseSku={String(w.sku || "")}
                     baseFinish={w.finish ? String(w.finish) : undefined}
@@ -567,10 +576,10 @@ export default async function WheelsPage({
                 Total SKUs: {totalCount}
               </div>
               <div className="flex flex-wrap items-center gap-2">
-                {page > 1 ? (
+                {safePage > 1 ? (
                   <a
                     className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${page - 1}`}
+                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${safePage - 1}`}
                   >
                     Prev
                   </a>
@@ -588,7 +597,7 @@ export default async function WheelsPage({
                         <a
                           href={href}
                           className={
-                            p === page
+                            p === safePage
                               ? "rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
                               : "rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
                           }
@@ -599,10 +608,10 @@ export default async function WheelsPage({
                     );
                   })}
 
-                {page < totalPages ? (
+                {safePage < totalPages ? (
                   <a
                     className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${page + 1}`}
+                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&page=${safePage + 1}`}
                   >
                     Next
                   </a>
