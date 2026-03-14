@@ -230,12 +230,11 @@ export function FitmentSelector({
                     localStorage.setItem("wt_fitment", JSON.stringify(next));
                   } catch {}
 
+                  // Always apply to the current URL (keeps state consistent even if parent navigation fails).
+                  apply(next);
+
                   setOpen(false);
-                  if (onComplete) {
-                    onComplete(next);
-                  } else {
-                    apply(next);
-                  }
+                  onComplete?.(next);
                 }
               }}
               options={[{ value: "", label: "" }, ...trims]}
