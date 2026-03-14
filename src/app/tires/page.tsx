@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import { GarageWidget } from "@/components/GarageWidget";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 
@@ -296,13 +297,16 @@ export default async function TiresPage({
             </p>
 
             {year && make && model ? (
-              <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
-                <span className="text-neutral-500">Vehicle:</span>
-                <span className="font-extrabold text-neutral-900">
-                  {year} {make} {model}
-                  {trim ? ` ${trim}` : ""}
-                </span>
-              </div>
+              <>
+                <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
+                  <span className="text-neutral-500">Vehicle:</span>
+                  <span className="font-extrabold text-neutral-900">
+                    {year} {make} {model}
+                    {trim ? ` ${trim}` : ""}
+                  </span>
+                </div>
+                <GarageWidget type="tires" />
+              </>
             ) : null}
             {/* OEM sizes are rendered as buttons above the search controls */}
           </div>

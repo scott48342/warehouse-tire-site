@@ -3,6 +3,7 @@ import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { FilterGroup } from "./FilterGroup";
+import { GarageWidget } from "@/components/GarageWidget";
 
 type Wheel = {
   sku?: string;
@@ -373,13 +374,16 @@ export default async function WheelsPage({
             </p>
 
             {year && make && model ? (
-              <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
-                <span className="text-neutral-500">Vehicle:</span>
-                <span className="font-extrabold text-neutral-900">
-                  {year} {make} {model}
-                  {trim ? ` ${trim}` : ""}
-                </span>
-              </div>
+              <>
+                <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
+                  <span className="text-neutral-500">Vehicle:</span>
+                  <span className="font-extrabold text-neutral-900">
+                    {year} {make} {model}
+                    {trim ? ` ${trim}` : ""}
+                  </span>
+                </div>
+                <GarageWidget type="wheels" />
+              </>
             ) : null}
           </div>
 
