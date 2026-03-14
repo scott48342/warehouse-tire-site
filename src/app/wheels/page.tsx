@@ -159,9 +159,8 @@ export default async function WheelsPage({
 
   const bp: string | undefined = boltPatternParam || fitment?.boltPattern || undefined;
 
-  // Centerbore: WheelPros expects a value that matches its facet strings (often 2 decimals).
-  const cbMm = fitment?.centerBoreMm != null ? Number(fitment.centerBoreMm) : NaN;
-  const cb: string | undefined = Number.isFinite(cbMm) ? cbMm.toFixed(2) : undefined;
+  // Centerbore: WheelPros properties/filters are inconsistent; don't hard-filter on it upstream.
+  const cb: string | undefined = undefined;
 
   const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
     ? fitment.wheelDiameterRangeIn
