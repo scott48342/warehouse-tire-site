@@ -164,11 +164,13 @@ export default async function WheelsPage({
   const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
     ? fitment.wheelDiameterRangeIn
     : [null, null];
-  // Width/offset ranges available in fitment, but we are not filtering on them yet.
+  const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
+    ? (fitment.offsetRangeMm as any)
+    : [null, null];
+  const minOff = offRange?.[0] != null ? String(offRange[0]) : undefined;
+  const maxOff = offRange?.[1] != null ? String(offRange[1]) : undefined;
 
   // WheelPros expects a single diameter/width.
-  // Use the max wheel diameter (more common for OEM packages) and omit width/offset initially,
-  // then tighten once we confirm the catalog data lines up.
   const diameterNum = diaRange?.[1] != null ? Number(diaRange[1]) : (diaRange?.[0] != null ? Number(diaRange[0]) : NaN);
   // If user picked a diameter filter, pass it through exactly as given (facet values are canonical).
   const diameter = diameterParam
@@ -177,8 +179,8 @@ export default async function WheelsPage({
 
   // Same idea for width: pass facet value through exactly.
   const width = widthParam || undefined;
-  const minOffset = undefined;
-  const maxOffset = undefined;
+  const minOffset = minOff;
+  const maxOffset = maxOff;
 
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
@@ -341,20 +343,16 @@ export default async function WheelsPage({
   });
 
   // Fitment offset filter (important for passenger cars like Altima: +50ish).
-  // Only apply when we have a fitment offset range and it won't collapse the list too hard.
-  const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
-    ? (fitment.offsetRangeMm as any)
-    : [null, null];
-  const minOff = offRange?.[0] != null ? Number(offRange[0]) : NaN;
-  const maxOff = offRange?.[1] != null ? Number(offRange[1]) : NaN;
+  const minOffN = typeof minOffset === "string" ? Number(minOffset) : NaN;
+  const maxOffN = typeof maxOffset === "string" ? Number(maxOffset) : NaN;
 
-  const itemsFilteredOffset = Number.isFinite(minOff) && Number.isFinite(maxOff)
+  const itemsFilteredOffset = Number.isFinite(minOffN) && Number.isFinite(maxOffN)
     ? itemsFilteredBasic.filter((w) => {
         const raw = String(w.offset || "").trim();
         if (!raw) return false; // if we know the vehicle offset range, require wheel offset
         const n = Number(raw);
         if (!Number.isFinite(n)) return false;
-        return n >= minOff && n <= maxOff;
+        return n >= minOffN && n <= maxOffN;
       })
     : itemsFilteredBasic;
 
