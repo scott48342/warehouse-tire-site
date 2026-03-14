@@ -121,10 +121,27 @@ export function SearchModal({
                       // Only carry the vehicle selection keys.
                       const target = isTires ? "/tires" : "/wheels";
                       const next = new URLSearchParams();
-                      for (const k of ["year", "make", "model", "trim", "modification"] as const) {
-                        const v = currentSp.get(k);
-                        if (v) next.set(k, v);
+
+                      // Prefer the saved fitment from the selector (user may not have applied it to the URL yet).
+                      try {
+                        const raw = localStorage.getItem("wt_fitment");
+                        if (raw) {
+                          const saved = JSON.parse(raw) as any;
+                          for (const k of ["year", "make", "model", "trim", "modification"] as const) {
+                            const v = saved?.[k];
+                            if (v) next.set(k, String(v));
+                          }
+                        }
+                      } catch {}
+
+                      // Fallback to whatever is already in the URL.
+                      if (!["year", "make", "model"].every((k) => next.get(k))) {
+                        for (const k of ["year", "make", "model", "trim", "modification"] as const) {
+                          const v = currentSp.get(k);
+                          if (v) next.set(k, v);
+                        }
                       }
+
                       router.push(buildUrl(target, next));
                       onClose();
                     }}
