@@ -158,11 +158,16 @@ export default async function WheelsPage({
     : null;
 
   const bp: string | undefined = boltPatternParam || fitment?.boltPattern || undefined;
-  // centerbore on WheelPros can be finicky; don't hard-filter on it yet.
-  const cb: string | undefined = undefined;
+
+  // Centerbore: WheelPros expects a value that matches its facet strings (often 2 decimals).
+  const cbMm = fitment?.centerBoreMm != null ? Number(fitment.centerBoreMm) : NaN;
+  const cb: string | undefined = Number.isFinite(cbMm) ? cbMm.toFixed(2) : undefined;
 
   const diaRange: [number | null, number | null] = Array.isArray(fitment?.wheelDiameterRangeIn)
     ? fitment.wheelDiameterRangeIn
+    : [null, null];
+  const widthRange: [number | null, number | null] = Array.isArray(fitment?.wheelWidthRangeIn)
+    ? fitment.wheelWidthRangeIn
     : [null, null];
   const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
     ? (fitment.offsetRangeMm as any)
@@ -185,7 +190,7 @@ export default async function WheelsPage({
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
-  const upstreamPageSize = 60;
+  const upstreamPageSize = 120;
   const data = await fetchWheels({
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
@@ -331,12 +336,26 @@ export default async function WheelsPage({
     if (diameterParam) {
       const d = String(w.diameter || "").trim();
       if (d && d !== String(diameterParam).trim()) return false;
-      // if diameter is missing, don't exclude (avoid collapsing too hard)
+    } else {
+      // if no explicit diameter filter, constrain to fitment range when known
+      const minD = diaRange?.[0] != null ? Number(diaRange[0]) : NaN;
+      const maxD = diaRange?.[1] != null ? Number(diaRange[1]) : NaN;
+      const d = Number(String(w.diameter || "").trim());
+      if (Number.isFinite(minD) && Number.isFinite(maxD) && Number.isFinite(d)) {
+        if (d < minD || d > maxD) return false;
+      }
     }
 
     if (widthParam) {
       const ww = String(w.width || "").trim();
       if (ww && ww !== String(widthParam).trim()) return false;
+    } else {
+      const minW = widthRange?.[0] != null ? Number(widthRange[0]) : NaN;
+      const maxW = widthRange?.[1] != null ? Number(widthRange[1]) : NaN;
+      const ww = Number(String(w.width || "").trim());
+      if (Number.isFinite(minW) && Number.isFinite(maxW) && Number.isFinite(ww)) {
+        if (ww < minW || ww > maxW) return false;
+      }
     }
 
     return true;

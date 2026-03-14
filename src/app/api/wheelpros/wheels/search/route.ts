@@ -5,6 +5,14 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+// Simple in-memory cache (best-effort; per-server instance).
+// Helps a lot because WheelPros responses are relatively static.
+const CACHE_TTL_MS = 10 * 60 * 1000;
+const cache = new Map<
+  string,
+  { expiresAt: number; status: number; headers: Record<string, string>; data: any }
+>();
+
 type WheelProsSearchResponse = {
   results?: any[];
   [k: string]: any;
@@ -52,6 +60,18 @@ export async function GET(req: Request) {
   const headers: Record<string, string> = { Accept: "application/json" };
   if (process.env.WHEELPROS_WRAPPER_API_KEY) {
     headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
+  }
+
+  const cacheKey = upstream.toString();
+  const cached = cache.get(cacheKey);
+  if (cached && cached.expiresAt > Date.now()) {
+    return NextResponse.json(cached.data, {
+      status: cached.status,
+      headers: {
+        "content-type": cached.headers["content-type"] || "application/json",
+        "x-wt-cache": "HIT",
+      },
+    });
   }
 
   const res = await fetch(upstream.toString(), { headers, cache: "no-store" });
@@ -149,8 +169,26 @@ export async function GET(req: Request) {
     }
   }
 
-  return NextResponse.json(data, {
+  const out = NextResponse.json(data, {
     status: res.status,
-    headers: { "content-type": "application/json" },
+    headers: { "content-type": "application/json", "x-wt-cache": "MISS" },
   });
+
+  // Cache only successful JSON bodies.
+  if (res.ok && data) {
+    cache.set(cacheKey, {
+      expiresAt: Date.now() + CACHE_TTL_MS,
+      status: res.status,
+      headers: { "content-type": "application/json" },
+      data,
+    });
+
+    // basic cap
+    if (cache.size > 200) {
+      const firstKey = cache.keys().next().value;
+      if (firstKey) cache.delete(firstKey);
+    }
+  }
+
+  return out;
 }
