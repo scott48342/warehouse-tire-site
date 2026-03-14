@@ -13,6 +13,7 @@ type Wheel = {
   finish?: string;
   diameter?: string;
   width?: string;
+  offset?: string;
   imageUrl?: string;
   price?: number;
   styleKey?: string;
@@ -46,6 +47,7 @@ type WheelProsItem = {
     finish?: string;
     diameter?: string;
     width?: string;
+    offset?: string;
   };
   prices?: {
     msrp?: WheelProsPrice[];
@@ -229,6 +231,7 @@ export default async function WheelsPage({
     const model = it?.properties?.model || it?.title;
     const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
     const width = it?.properties?.width ? String(it.properties.width) : undefined;
+    const offset = it?.properties?.offset ? String(it.properties.offset) : undefined;
 
     const msrp = it?.prices?.msrp;
     const firstPrice = Array.isArray(msrp) ? msrp[0] : undefined;
@@ -247,6 +250,7 @@ export default async function WheelsPage({
       finish,
       diameter,
       width,
+      offset,
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
       styleKey,
@@ -314,7 +318,7 @@ export default async function WheelsPage({
   const itemsFinal0 = itemsWithImages.length >= Math.min(12, items.length) ? itemsWithImages : items;
 
   // Client-side filters (WheelPros wrapper does not reliably support facet filtering).
-  const itemsFinal = itemsFinal0.filter((w) => {
+  const itemsFilteredBasic = itemsFinal0.filter((w) => {
     if (brandCd && String(w.brandCode || "") !== String(brandCd)) return false;
 
     if (finish) {
@@ -335,6 +339,28 @@ export default async function WheelsPage({
 
     return true;
   });
+
+  // Fitment offset filter (important for passenger cars like Altima: +50ish).
+  // Only apply when we have a fitment offset range and it won't collapse the list too hard.
+  const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
+    ? (fitment.offsetRangeMm as any)
+    : [null, null];
+  const minOff = offRange?.[0] != null ? Number(offRange[0]) : NaN;
+  const maxOff = offRange?.[1] != null ? Number(offRange[1]) : NaN;
+
+  const itemsFilteredOffset = Number.isFinite(minOff) && Number.isFinite(maxOff)
+    ? itemsFilteredBasic.filter((w) => {
+        const raw = String(w.offset || "").trim();
+        if (!raw) return true; // don't exclude unknown
+        const n = Number(raw);
+        if (!Number.isFinite(n)) return true;
+        return n >= minOff && n <= maxOff;
+      })
+    : itemsFilteredBasic;
+
+  const itemsFinal = itemsFilteredOffset.length >= Math.min(12, itemsFilteredBasic.length)
+    ? itemsFilteredOffset
+    : itemsFilteredBasic;
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
