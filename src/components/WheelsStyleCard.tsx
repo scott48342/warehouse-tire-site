@@ -18,6 +18,7 @@ export function WheelsStyleCard({
   baseFinish,
   baseImageUrl,
   price,
+  sizeLabel,
   finishThumbs,
 }: {
   brand: string;
@@ -26,6 +27,7 @@ export function WheelsStyleCard({
   baseFinish?: string;
   baseImageUrl?: string;
   price?: number;
+  sizeLabel?: string;
   finishThumbs?: WheelFinishThumb[];
 }) {
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -44,6 +46,7 @@ export function WheelsStyleCard({
       <Link href={viewHref} className="block">
         <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">{title}</h3>
         {selectedFinish ? <div className="mt-1 text-xs text-neutral-600">{selectedFinish}</div> : null}
+        {sizeLabel ? <div className="mt-0.5 text-xs font-semibold text-neutral-700">{sizeLabel}</div> : null}
 
         <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
           {selectedImage ? (

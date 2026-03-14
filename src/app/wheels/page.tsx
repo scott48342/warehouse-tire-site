@@ -10,6 +10,8 @@ type Wheel = {
   brandCode?: string;
   model?: string;
   finish?: string;
+  diameter?: string;
+  width?: string;
   imageUrl?: string;
   price?: number;
   styleKey?: string;
@@ -41,6 +43,8 @@ type WheelProsItem = {
   properties?: {
     model?: string;
     finish?: string;
+    diameter?: string;
+    width?: string;
   };
   prices?: {
     msrp?: WheelProsPrice[];
@@ -206,6 +210,8 @@ export default async function WheelsPage({
     const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
     const finish = it?.techfeed?.finish || it?.properties?.finish;
     const model = it?.properties?.model || it?.title;
+    const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
+    const width = it?.properties?.width ? String(it.properties.width) : undefined;
 
     const msrp = it?.prices?.msrp;
     const firstPrice = Array.isArray(msrp) ? msrp[0] : undefined;
@@ -222,6 +228,8 @@ export default async function WheelsPage({
       brandCode,
       model,
       finish,
+      diameter,
+      width,
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
       styleKey,
@@ -561,6 +569,13 @@ export default async function WheelsPage({
                     baseFinish={w.finish ? String(w.finish) : undefined}
                     baseImageUrl={w.imageUrl}
                     price={w.price}
+                    sizeLabel={
+                      diameterParam || widthParam
+                        ? `${diameterParam || ""}${diameterParam && widthParam ? "x" : ""}${widthParam || ""}`.trim() || undefined
+                        : w.diameter && w.width
+                          ? `${w.diameter}x${w.width}`
+                          : undefined
+                    }
                     finishThumbs={w.finishThumbs}
                   />
                 ))
