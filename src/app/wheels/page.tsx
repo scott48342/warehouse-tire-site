@@ -171,8 +171,16 @@ export default async function WheelsPage({
   const offRange: [number | null, number | null] = Array.isArray(fitment?.offsetRangeMm)
     ? (fitment.offsetRangeMm as any)
     : [null, null];
-  const minOff = offRange?.[0] != null ? String(offRange[0]) : undefined;
-  const maxOff = offRange?.[1] != null ? String(offRange[1]) : undefined;
+
+  // Option 2: OEM + tolerance (improves results while staying sane).
+  const OFFSET_TOLERANCE_MM = 5;
+  const minOffN0 = offRange?.[0] != null ? Number(offRange[0]) : NaN;
+  const maxOffN0 = offRange?.[1] != null ? Number(offRange[1]) : NaN;
+  const minOffN = Number.isFinite(minOffN0) ? minOffN0 - OFFSET_TOLERANCE_MM : NaN;
+  const maxOffN = Number.isFinite(maxOffN0) ? maxOffN0 + OFFSET_TOLERANCE_MM : NaN;
+
+  const minOff = Number.isFinite(minOffN) ? String(minOffN) : undefined;
+  const maxOff = Number.isFinite(maxOffN) ? String(maxOffN) : undefined;
 
   // WheelPros expects a single diameter/width.
   const diameterNum = diaRange?.[1] != null ? Number(diaRange[1]) : (diaRange?.[0] != null ? Number(diaRange[0]) : NaN);
@@ -346,16 +354,16 @@ export default async function WheelsPage({
   });
 
   // Fitment offset filter (important for passenger cars like Altima: +50ish).
-  const minOffN = typeof minOffset === "string" ? Number(minOffset) : NaN;
-  const maxOffN = typeof maxOffset === "string" ? Number(maxOffset) : NaN;
+  const minOffN2 = typeof minOffset === "string" ? Number(minOffset) : NaN;
+  const maxOffN2 = typeof maxOffset === "string" ? Number(maxOffset) : NaN;
 
-  const itemsFilteredOffset = Number.isFinite(minOffN) && Number.isFinite(maxOffN)
+  const itemsFilteredOffset = Number.isFinite(minOffN2) && Number.isFinite(maxOffN2)
     ? itemsFilteredBasic.filter((w) => {
         const raw = String(w.offset || "").trim();
         if (!raw) return false; // if we know the vehicle offset range, require wheel offset
         const n = Number(raw);
         if (!Number.isFinite(n)) return false;
-        return n >= minOffN && n <= maxOffN;
+        return n >= minOffN2 && n <= maxOffN2;
       })
     : itemsFilteredBasic;
 
