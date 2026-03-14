@@ -12,7 +12,11 @@ async function fetchJson<T>(url: string): Promise<T> {
   return (await res.json()) as T;
 }
 
-export function FitmentSelector() {
+export function FitmentSelector({
+  onComplete,
+}: {
+  onComplete?: (fitment: Fitment) => void;
+} = {}) {
   const sp = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -63,11 +67,18 @@ export function FitmentSelector() {
   }, []);
 
   useEffect(() => {
-    // persist last fitment
+    // persist last fitment (URL-applied)
     try {
       localStorage.setItem("wt_fitment", JSON.stringify(fitment));
     } catch {}
   }, [fitment]);
+
+  useEffect(() => {
+    // also persist draft as the user is selecting (so SearchModal can navigate without needing "Apply")
+    try {
+      localStorage.setItem("wt_fitment_draft", JSON.stringify(draft));
+    } catch {}
+  }, [draft]);
 
   function apply(next: Fitment) {
     const params = new URLSearchParams(sp.toString());
@@ -204,11 +215,20 @@ export function FitmentSelector() {
               value={draft.modification ?? ""}
               onChange={(v) => {
                 const sel = trims.find((t) => t.value === v);
-                setDraft((d) => ({
-                  ...d,
+                const next: Fitment = {
+                  ...draft,
                   modification: v || undefined,
                   trim: sel?.label || undefined,
-                }));
+                };
+                setDraft(next);
+
+                // UX: once trim/modification is selected, immediately apply (updates URL)
+                // and optionally let the parent navigate/close.
+                if (next.modification) {
+                  apply(next);
+                  setOpen(false);
+                  onComplete?.(next);
+                }
               }}
               options={[{ value: "", label: "" }, ...trims]}
               disabled={!draft.model}

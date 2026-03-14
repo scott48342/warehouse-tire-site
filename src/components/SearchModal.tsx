@@ -111,20 +111,15 @@ export function SearchModal({
               <div>
                 <div className="text-xs font-semibold text-neutral-700">Vehicle</div>
                 <div className="mt-2">
-                  <FitmentSelector />
-                </div>
-
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <button
-                    onClick={() => {
-                      // Keep current fitment params in the URL (SEO + sharable link).
-                      // Only carry the vehicle selection keys.
+                  <FitmentSelector
+                    onComplete={() => {
+                      // After trim is selected, immediately navigate (SEO/sharable) and close.
                       const target = isTires ? "/tires" : "/wheels";
                       const next = new URLSearchParams();
-
-                      // Prefer the saved fitment from the selector (user may not have applied it to the URL yet).
                       try {
-                        const raw = localStorage.getItem("wt_fitment");
+                        const raw =
+                          localStorage.getItem("wt_fitment_draft") ||
+                          localStorage.getItem("wt_fitment");
                         if (raw) {
                           const saved = JSON.parse(raw) as any;
                           for (const k of ["year", "make", "model", "trim", "modification"] as const) {
@@ -133,22 +128,13 @@ export function SearchModal({
                           }
                         }
                       } catch {}
-
-                      // Fallback to whatever is already in the URL.
-                      if (!["year", "make", "model"].every((k) => next.get(k))) {
-                        for (const k of ["year", "make", "model", "trim", "modification"] as const) {
-                          const v = currentSp.get(k);
-                          if (v) next.set(k, v);
-                        }
-                      }
-
                       router.push(buildUrl(target, next));
                       onClose();
                     }}
-                    className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                  >
-                    Search
-                  </button>
+                  />
+                </div>
+
+                <div className="mt-3 flex flex-wrap gap-2">
                   <button
                     onClick={() => {
                       router.push(isTires ? "/tires" : "/wheels");
