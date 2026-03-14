@@ -42,11 +42,11 @@ function garageLabel(f: GarageItem) {
 }
 
 function GarageQuickPick({
-  type,
-  onPick,
+  onPickTires,
+  onPickWheels,
 }: {
-  type: "tires" | "wheels";
-  onPick: (sp: URLSearchParams) => void;
+  onPickTires: (sp: URLSearchParams) => void;
+  onPickWheels: (sp: URLSearchParams) => void;
 }) {
   const [items, setItems] = useState<GarageItem[]>([]);
 
@@ -65,19 +65,48 @@ function GarageQuickPick({
 
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-3">
-      <div className="text-xs font-extrabold text-neutral-900">My Garage</div>
-      <div className="mt-2 flex flex-wrap gap-2">
-        {items.map((it, idx) => (
-          <button
-            key={`${it.modification || idx}`}
-            type="button"
-            onClick={() => onPick(buildVehicleParams(it))}
-            className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
-            title={`Search ${type} for ${garageLabel(it)}`}
-          >
-            {garageLabel(it)}
-          </button>
-        ))}
+      <div className="flex items-center justify-between gap-2">
+        <div className="text-xs font-extrabold text-neutral-900">My Garage</div>
+        <a href="/favorites" className="text-xs font-semibold text-neutral-600 hover:underline">
+          Favorites
+        </a>
+      </div>
+
+      <div className="mt-3 grid gap-2">
+        {items.map((it, idx) => {
+          const key = `${it.modification || idx}`;
+          const vehicleSp = buildVehicleParams(it);
+          const label = garageLabel(it);
+          return (
+            <div key={key} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-neutral-200 bg-white p-2">
+              <div className="text-xs font-extrabold text-neutral-900">{label}</div>
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => onPickTires(vehicleSp)}
+                  className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                  title={`Search tires for ${label}`}
+                >
+                  Tires
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onPickWheels(vehicleSp)}
+                  className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                  title={`Search wheels for ${label}`}
+                >
+                  Wheels
+                </button>
+                <a
+                  href="/favorites"
+                  className="rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-xs font-extrabold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Favorites
+                </a>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -175,10 +204,12 @@ export function SearchModal({
               <div>
                 <div className="text-xs font-semibold text-neutral-700">Vehicle</div>
                 <GarageQuickPick
-                  type={isTires ? "tires" : "wheels"}
-                  onPick={(sp) => {
-                    const target = isTires ? "/tires" : "/wheels";
-                    router.push(buildUrl(target, sp));
+                  onPickTires={(sp) => {
+                    router.push(buildUrl("/tires", sp));
+                    onClose();
+                  }}
+                  onPickWheels={(sp) => {
+                    router.push(buildUrl("/wheels", sp));
                     onClose();
                   }}
                 />
