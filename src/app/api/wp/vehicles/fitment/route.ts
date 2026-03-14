@@ -15,9 +15,10 @@ export async function GET(req: Request) {
   }
 
   try {
-    // Vehicle details (as confirmed in Postman)
-    // /vehicle/v1/details?year=YYYY&make=...&model=...&subModel=...
-    const data = await wpVehicleGetJson<any>("/vehicle/v1/details", { year, make, model, subModel: submodel });
+    // Vehicle API (per WheelPros Vehicle OpenAPI):
+    // GET https://api.wheelpros.com/vehicles/v1/years/{year}/makes/{make}/models/{model}/submodels/{submodel}
+    const path = `/v1/years/${encodeURIComponent(year)}/makes/${encodeURIComponent(make)}/models/${encodeURIComponent(model)}/submodels/${encodeURIComponent(submodel)}`;
+    const data = await wpVehicleGetJson<any>(path);
 
     // Map minimal details into our fitment schema.
     const boltPattern = data?.boltPattern ? String(data.boltPattern) : undefined;

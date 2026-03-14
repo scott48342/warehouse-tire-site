@@ -1,8 +1,8 @@
 let tokenCache: { token: string; expiresAt: number } | null = null;
 
 function baseUrl() {
-  // Base host for WheelPros Vehicle API
-  return process.env.WHEELPROS_VEHICLE_API_BASE_URL || "https://api.wheelpros.com";
+  // Base URL for WheelPros Vehicle API (per their OpenAPI spec)
+  return process.env.WHEELPROS_VEHICLE_API_BASE_URL || "https://api.wheelpros.com/vehicles";
 }
 
 async function getToken(): Promise<string> {
