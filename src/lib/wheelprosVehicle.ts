@@ -50,12 +50,18 @@ export async function wpVehicleGetJson<T>(path: string, qs?: Record<string, stri
 
   const res = await fetch(url.toString(), {
     headers: {
-      accept: "application/json",
-      authorization: `Bearer ${token}`,
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
     },
     cache: "no-store",
   });
-  if (!res.ok) throw new Error(`WheelPros vehicle API failed: ${url.pathname} HTTP ${res.status}`);
+  if (!res.ok) {
+    let detail = "";
+    try {
+      detail = (await res.text()).slice(0, 300);
+    } catch {}
+    throw new Error(`WheelPros vehicle API failed: ${url.pathname} HTTP ${res.status}${detail ? ` :: ${detail}` : ""}`);
+  }
   return (await res.json()) as T;
 }
 
