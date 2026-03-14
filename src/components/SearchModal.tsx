@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FitmentSelector } from "@/components/FitmentSelector";
+import { vehicleSlug } from "@/lib/vehicleSlug";
 
 export type Mode = "vehicle" | "size";
 
@@ -205,11 +206,19 @@ export function SearchModal({
                 <div className="text-xs font-semibold text-neutral-700">Vehicle</div>
                 <GarageQuickPick
                   onPickTires={(sp) => {
-                    router.push(buildUrl("/tires", sp));
+                    const year = sp.get("year") || "";
+                    const make = sp.get("make") || "";
+                    const model = sp.get("model") || "";
+                    const slug = year && make && model ? vehicleSlug(year, make, model) : "";
+                    router.push(slug ? buildUrl(`/tires/v/${slug}`, sp) : buildUrl("/tires", sp));
                     onClose();
                   }}
                   onPickWheels={(sp) => {
-                    router.push(buildUrl("/wheels", sp));
+                    const year = sp.get("year") || "";
+                    const make = sp.get("make") || "";
+                    const model = sp.get("model") || "";
+                    const slug = year && make && model ? vehicleSlug(year, make, model) : "";
+                    router.push(slug ? buildUrl(`/wheels/v/${slug}`, sp) : buildUrl("/wheels", sp));
                     onClose();
                   }}
                 />
@@ -218,12 +227,21 @@ export function SearchModal({
                   <FitmentSelector
                     onComplete={(fitment) => {
                       // After trim is selected, immediately navigate (SEO/sharable) and close.
-                      const target = isTires ? "/tires" : "/wheels";
                       const next = new URLSearchParams();
                       for (const k of ["year", "make", "model", "trim", "modification"] as const) {
                         const v = (fitment as any)?.[k];
                         if (v) next.set(k, String(v));
                       }
+
+                      const year = next.get("year") || "";
+                      const make = next.get("make") || "";
+                      const model = next.get("model") || "";
+                      const slug = year && make && model ? vehicleSlug(year, make, model) : "";
+
+                      const target = isTires
+                        ? (slug ? `/tires/v/${slug}` : "/tires")
+                        : (slug ? `/wheels/v/${slug}` : "/wheels");
+
                       router.push(buildUrl(target, next));
                       onClose();
                     }}
