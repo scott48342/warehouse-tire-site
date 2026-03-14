@@ -294,7 +294,30 @@ export default async function WheelsPage({
   const itemsWithImages = items.filter(
     (w) => Boolean(w.imageUrl) || Boolean(w.finishThumbs?.some((t) => Boolean(t.imageUrl)))
   );
-  const itemsFinal = itemsWithImages.length >= Math.min(12, items.length) ? itemsWithImages : items;
+  const itemsFinal0 = itemsWithImages.length >= Math.min(12, items.length) ? itemsWithImages : items;
+
+  // Client-side filters (WheelPros wrapper does not reliably support facet filtering).
+  const itemsFinal = itemsFinal0.filter((w) => {
+    if (brandCd && String(w.brandCode || "") !== String(brandCd)) return false;
+
+    if (finish) {
+      const f = String(w.finish || "").toLowerCase();
+      if (!f.includes(String(finish).toLowerCase())) return false;
+    }
+
+    if (diameterParam) {
+      const d = String(w.diameter || "").trim();
+      if (d && d !== String(diameterParam).trim()) return false;
+      // if diameter is missing, don't exclude (avoid collapsing too hard)
+    }
+
+    if (widthParam) {
+      const ww = String(w.width || "").trim();
+      if (ww && ww !== String(widthParam).trim()) return false;
+    }
+
+    return true;
+  });
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
@@ -315,7 +338,19 @@ export default async function WheelsPage({
       .filter((b: any) => b.value);
   };
 
-  const brandBuckets = buckets("brand_cd");
+  // Brand options: prefer actual brand names from the results we have.
+  const brandOptions = (() => {
+    const map = new Map<string, string>();
+    for (const w of itemsUnsorted) {
+      const code = String(w.brandCode || "").trim();
+      const desc = String(w.brand || "").trim();
+      if (!code) continue;
+      if (desc) map.set(code, desc);
+    }
+    return Array.from(map.entries())
+      .map(([code, desc]) => ({ code, desc }))
+      .sort((a, b) => a.desc.localeCompare(b.desc));
+  })();
   const finishBuckets = buckets("abbreviated_finish_desc");
   const diameterBuckets = buckets("wheel_diameter");
   const widthBuckets = buckets("width");
@@ -403,9 +438,9 @@ export default async function WheelsPage({
                   className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
                 >
                   <option value="">All brands</option>
-                  {brandBuckets.slice(0, 80).map((b) => (
-                    <option key={b.value} value={b.value}>
-                      {b.value}{b.count != null ? ` (${b.count})` : ""}
+                  {brandOptions.slice(0, 120).map((b) => (
+                    <option key={b.code} value={b.code}>
+                      {b.desc}
                     </option>
                   ))}
                 </select>
