@@ -388,7 +388,7 @@ export default async function TiresPage({
                 {tireSizes.map((s) => {
                   const active = s === selectedSize;
                   const isStrict = tireSizesStrict.includes(s);
-                  const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
+                  const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
                   return (
                     <Link
                       key={s}
@@ -419,6 +419,11 @@ export default async function TiresPage({
               <input type="hidden" name="model" value={model} />
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="wheelSku" value={wheelSku} />
+              <input type="hidden" name="wheelName" value={wheelName} />
+              <input type="hidden" name="wheelUnit" value={wheelUnit} />
+              <input type="hidden" name="wheelQty" value={wheelQty} />
+              <input type="hidden" name="wheelDia" value={wheelDia} />
               <input type="hidden" name="size" value={selectedSize} />
 
               {/* ZIP filter temporarily removed */}
@@ -445,7 +450,7 @@ export default async function TiresPage({
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-extrabold">Filters</h2>
               <Link
-                href={`${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
+                href={`${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
                 className="text-xs font-semibold text-neutral-600 hover:underline"
               >
                 Clear all
@@ -464,8 +469,13 @@ export default async function TiresPage({
               <input type="hidden" name="model" value={model} />
               <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="wheelSku" value={wheelSku} />
+              <input type="hidden" name="wheelName" value={wheelName} />
+              <input type="hidden" name="wheelUnit" value={wheelUnit} />
+              <input type="hidden" name="wheelQty" value={wheelQty} />
+              <input type="hidden" name="wheelDia" value={wheelDia} />
               <input type="hidden" name="size" value={selectedSize} />
-                            <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
 
