@@ -46,6 +46,14 @@ async function fetchKmTires(tireSize: string) {
   return res.json();
 }
 
+async function fetchWpTires(tireSize: string) {
+  const res = await fetch(`${getBaseUrl()}/api/wp/tires/search?size=${encodeURIComponent(tireSize)}&minQty=4`, {
+    cache: "no-store",
+  });
+  if (!res.ok) return { error: await res.text() };
+  return res.json();
+}
+
 export default async function TiresPage({
   searchParams,
 }: {
@@ -140,7 +148,21 @@ export default async function TiresPage({
     : (tireSizesStrict[0] || tireSizes[0] || "");
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
-  const itemsRaw: Tire[] = Array.isArray(km?.items) ? km.items : [];
+  const wp = selectedSize ? await fetchWpTires(selectedSize) : null;
+
+  const itemsKm: Tire[] = Array.isArray(km?.items) ? km.items : [];
+  const itemsWp: Tire[] = Array.isArray(wp?.items) ? wp.items : [];
+
+  // Blend silently; dedupe by SKU/part number.
+  const seenSku = new Set<string>();
+  const itemsRaw: Tire[] = [];
+  for (const t of [...itemsKm, ...itemsWp]) {
+    const sku = String(t.mfgPartNumber || t.partNumber || "").trim();
+    const k = sku || JSON.stringify(t);
+    if (seenSku.has(k)) continue;
+    seenSku.add(k);
+    itemsRaw.push(t);
+  }
 
   // Attach cached displayName/imageUrl from package engine (best-effort)
   const assets = await Promise.all(
@@ -739,6 +761,12 @@ export default async function TiresPage({
               {km?.error ? (
                 <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
                   Tire search error: {String(km.error).slice(0, 500)}
+                </div>
+              ) : null}
+
+              {wp?.error ? (
+                <div className="mt-3 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+                  Tire search error (WheelPros feed): {String(wp.error).slice(0, 500)}
                 </div>
               ) : null}
 
