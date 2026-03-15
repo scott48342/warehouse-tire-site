@@ -182,9 +182,7 @@ export default async function AdminCatalogPage({
                     >
                       Edit
                     </a>
-                    <form action="/api/admin/catalog/delete" method="post" onSubmit={(e) => {
-                      if (!confirm(`Delete '${it.name}'?`)) e.preventDefault();
-                    }}>
+                    <form action="/api/admin/catalog/delete" method="post">
                       <input type="hidden" name="id" value={it.id} />
                       <button className="text-xs font-extrabold text-red-700 hover:underline">Delete</button>
                     </form>
