@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getPool as getQuotePool, defaultLinesFromCatalog } from "@/lib/quotes";
 import { listCatalogItems } from "@/lib/quoteCatalog";
+import { AddTiresModal } from "@/components/AddTiresModal";
 
 export const runtime = "nodejs";
 
@@ -12,6 +13,22 @@ function s(v: any) {
 function money(v: any) {
   const n = Number(v);
   return Number.isFinite(n) ? n.toFixed(2) : "0.00";
+}
+
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+}
+
+async function fetchFitment(params: Record<string, string | undefined>) {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v) sp.set(k, v);
+  }
+  const res = await fetch(`${getBaseUrl()}/api/vehicles/search?${sp.toString()}`, { cache: "no-store" });
+  if (!res.ok) return { error: await res.text() };
+  return res.json();
 }
 
 export default async function NewQuotePage({
@@ -41,6 +58,14 @@ export default async function NewQuotePage({
   const db = getQuotePool();
   const catalog = await listCatalogItems(db);
   const defaultLines = defaultLinesFromCatalog(catalog, wheelQty, tireQty);
+
+  const fitmentStrict = year && make && model
+    ? await fetchFitment({ year, make, model, trim: trim || undefined, modification: modification || undefined })
+    : null;
+
+  const oemTireSizesAll: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
+    ? (fitmentStrict as any).tireSizes.map(String)
+    : [];
 
   const lines = [
     ...(wheelSku && wheelQty
@@ -140,9 +165,28 @@ export default async function NewQuotePage({
               <div className="text-xs text-neutral-600">
                 Tax is applied to taxable parts only.
               </div>
-              <button className="h-11 rounded-xl bg-[var(--brand-red)] px-5 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]">
-                Save quote
-              </button>
+              <div className="flex flex-wrap items-center gap-2">
+                {wheelSku ? (
+                  <AddTiresModal
+                    sizes={oemTireSizesAll}
+                    baseParams={{
+                      year,
+                      make,
+                      model,
+                      trim,
+                      modification,
+                      wheelSku,
+                      wheelName,
+                      wheelUnit,
+                      wheelQty: String(wheelQty || 4),
+                    }}
+                    disabledReason={year && make && model ? undefined : "Select a vehicle first"}
+                  />
+                ) : null}
+                <button className="h-11 rounded-xl bg-[var(--brand-red)] px-5 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]">
+                  Save quote
+                </button>
+              </div>
             </div>
           </div>
 
