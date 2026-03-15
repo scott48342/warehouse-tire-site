@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { BRAND } from "@/lib/brand";
-import { getPool as getQuotePool, defaultLinesFromCatalog } from "@/lib/quotes";
-import { listCatalogItems } from "@/lib/quoteCatalog";
-import { AddTiresModal } from "@/components/AddTiresModal";
-import { SaveQuoteModal } from "@/components/SaveQuoteModal";
+import { getPool as getQuotePool } from "@/lib/quotes";
+import { listCatalogItems, getTaxRate } from "@/lib/quoteCatalog";
 import { cookieName, verifyAdminToken } from "@/lib/adminAuth";
+import { QuoteBuilder } from "@/components/QuoteBuilder";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -64,7 +63,7 @@ export default async function NewQuotePage({
 
   const db = getQuotePool();
   const catalog = await listCatalogItems(db);
-  const defaultLines = defaultLinesFromCatalog(catalog, wheelQty, tireQty);
+  const taxRate = await getTaxRate(db);
 
   // Use a *loose* vehicle fitment lookup here (no trim) so we still get OEM tire sizes even
   // when the trim label doesn't match the upstream catalog perfectly.
@@ -118,15 +117,29 @@ export default async function NewQuotePage({
   const adminToken = ck.get(cookieName())?.value;
   const isAdmin = await verifyAdminToken(adminToken);
 
-  const lines = [
-    ...(wheelSku && wheelQty
-      ? [{ kind: "product", name: wheelName || wheelSku, sku: wheelSku, unitPriceUsd: Number(wheelUnit || 0), qty: wheelQty, taxable: true, meta: { productType: "wheel" } }]
-      : []),
-    ...(tireSku && tireQty
-      ? [{ kind: "product", name: tireName || tireSku, sku: tireSku, unitPriceUsd: Number(tireUnit || 0), qty: tireQty, taxable: true, meta: { productType: "tire" } }]
-      : []),
-    ...defaultLines,
-  ];
+  const wheelLine = wheelSku && wheelQty
+    ? ({
+        kind: "product",
+        name: wheelName || wheelSku,
+        sku: wheelSku,
+        unitPriceUsd: Number(wheelUnit || 0),
+        qty: wheelQty,
+        taxable: true,
+        meta: { productType: "wheel", wheelDia: wheelDia ? Number(wheelDia) : undefined },
+      } as const)
+    : undefined;
+
+  const tireLine = tireSku && tireQty
+    ? ({
+        kind: "product",
+        name: tireName || tireSku,
+        sku: tireSku,
+        unitPriceUsd: Number(tireUnit || 0),
+        qty: tireQty,
+        taxable: true,
+        meta: { productType: "tire" },
+      } as const)
+    : undefined;
 
   return (
     <main className="bg-neutral-50">
@@ -143,68 +156,18 @@ export default async function NewQuotePage({
           <span className="ml-2 text-[11px] text-neutral-500">(build {process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) || "local"})</span>
         </div>
 
-        <div className="mt-6 grid gap-4">
-          <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-            <div className="text-sm font-extrabold text-neutral-900">Vehicle</div>
-            <div className="mt-2 text-sm text-neutral-700">
-              {[year, make, model, trim].filter(Boolean).join(" ") || "No vehicle selected"}
-            </div>
-            {modification ? <div className="mt-1 text-[11px] text-neutral-600">{modification}</div> : null}
-          </div>
+        <div className="mt-6">
+          <QuoteBuilder
+            vehicleLabel={[year, make, model, trim].filter(Boolean).join(" ")}
+            vehicle={{ year, make, model, trim, modification }}
+            wheel={wheelLine}
+            tire={tireLine}
+            catalog={catalog}
+            oemTireSizes={oemTireSizes}
+            taxRate={taxRate}
+          />
 
-          <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-            <div className="text-sm font-extrabold text-neutral-900">Items</div>
-            <div className="mt-3 grid gap-2">
-              {lines.map((l, idx) => (
-                <div key={idx} className="grid grid-cols-[1fr_90px_120px] items-center gap-2 rounded-xl border border-neutral-200 bg-white p-3">
-                  <div>
-                    <div className="text-sm font-extrabold text-neutral-900">{l.name}</div>
-                    <div className="text-[11px] text-neutral-600">
-                      {l.kind === "product"
-                        ? `${(l.meta as any)?.productType || "product"}${l.sku ? ` • ${l.sku}` : ""}`
-                        : (((l.meta as any)?.category as string | undefined) || l.kind)}
-                      {l.taxable ? " • taxable" : ""}
-                    </div>
-                  </div>
-                  <div className="text-xs font-semibold text-neutral-700">Qty {l.qty}</div>
-                  <div className="text-xs font-extrabold text-neutral-900">${money(l.unitPriceUsd)}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-              <div className="text-xs text-neutral-600">
-                Tax is applied to taxable parts only.
-              </div>
-              <div className="flex flex-wrap items-center gap-2">
-                {wheelSku ? (
-                  <AddTiresModal
-                    sizes={oemTireSizes}
-                    baseParams={{
-                      year,
-                      make,
-                      model,
-                      trim,
-                      modification,
-                      wheelSku,
-                      wheelName,
-                      wheelUnit,
-                      wheelQty: String(wheelQty || 4),
-                      wheelDia,
-                    }}
-                    disabledReason={year && make && model ? undefined : "Select a vehicle first"}
-                  />
-                ) : null}
-
-                <SaveQuoteModal
-                  linesJson={JSON.stringify(lines)}
-                  vehicle={{ year, make, model, trim, modification }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+          <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
             {BRAND.name} • {BRAND.phone.callDisplay} • {BRAND.email}
           </div>
 

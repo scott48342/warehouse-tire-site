@@ -91,6 +91,10 @@ export default async function AdminCatalogPage({
                   Default checked
                 </label>
                 <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700">
+                  <input type="checkbox" name="required" value="1" />
+                  Required service
+                </label>
+                <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700">
                   <input type="checkbox" name="active" value="1" defaultChecked />
                   Active
                 </label>
@@ -104,18 +108,19 @@ export default async function AdminCatalogPage({
         </div>
 
         <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white">
-          <div className="grid grid-cols-[1fr_110px_120px_110px_110px] gap-0 border-b border-neutral-200 bg-neutral-50 p-3 text-xs font-extrabold text-neutral-700">
+          <div className="grid grid-cols-[1fr_110px_120px_110px_110px_110px] gap-0 border-b border-neutral-200 bg-neutral-50 p-3 text-xs font-extrabold text-neutral-700">
             <div>Item</div>
             <div>Applies</div>
             <div>Unit price</div>
             <div>Taxable</div>
             <div>Default</div>
+            <div>Required</div>
           </div>
 
           {items.length ? (
             <div className="divide-y divide-neutral-200">
               {items.map((it) => (
-                <div key={it.id} className="grid grid-cols-[1fr_110px_120px_110px_110px] gap-0 p-3">
+                <div key={it.id} className="grid grid-cols-[1fr_110px_120px_110px_110px_110px] gap-0 p-3">
                   <div>
                     <div className="text-sm font-extrabold text-neutral-900">{it.name}</div>
                     <div className="text-[11px] text-neutral-600">{it.category || "—"} • sort {it.sort_order}</div>
@@ -124,6 +129,7 @@ export default async function AdminCatalogPage({
                   <div className="text-xs font-extrabold text-neutral-900">${it.unit_price_usd.toFixed(2)}</div>
                   <div className="text-xs font-semibold text-neutral-700">{it.taxable ? "Yes" : "No"}</div>
                   <div className="text-xs font-semibold text-neutral-700">{it.default_checked ? "Yes" : "No"}</div>
+                  <div className="text-xs font-semibold text-neutral-700">{it.required ? "Yes" : "No"}</div>
                 </div>
               ))}
             </div>

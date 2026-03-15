@@ -22,6 +22,7 @@ export async function POST(req: Request) {
 
     const taxable = body.taxable === true || body.taxable === "1" || body.taxable === 1;
     const defaultChecked = body.defaultChecked === true || body.defaultChecked === "1" || body.defaultChecked === 1;
+    const required = body.required === true || body.required === "1" || body.required === 1;
     const active = body.active === true || body.active === "1" || body.active === 1;
 
     if (!name) return NextResponse.json({ ok: false, error: "name_required" }, { status: 400 });
@@ -34,6 +35,7 @@ export async function POST(req: Request) {
       applies_to: appliesTo,
       taxable,
       default_checked: defaultChecked,
+      required,
       sort_order: Number.isFinite(sortOrder) ? Math.trunc(sortOrder) : 0,
       category: category || null,
       active,

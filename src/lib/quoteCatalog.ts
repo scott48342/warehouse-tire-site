@@ -26,6 +26,7 @@ export type CatalogItem = {
   applies_to: "tire" | "wheel" | "vehicle" | "flat";
   taxable: boolean;
   default_checked: boolean;
+  required: boolean;
   sort_order: number;
   category: string | null;
   active: boolean;
@@ -46,13 +47,16 @@ export async function ensureQuoteTables(db: pg.Pool) {
       applies_to text not null,
       taxable boolean not null default false,
       default_checked boolean not null default false,
+      required boolean not null default false,
       sort_order int not null default 0,
       category text,
       active boolean not null default true,
       updated_at timestamptz not null default now()
     );
 
-    create index if not exists quote_catalog_items_active_idx on quote_catalog_items (active, sort_order);
+    create index if not exists quote_catalog_items_active_idx on quote_catalog_items (active, required, sort_order);
+
+    alter table quote_catalog_items add column if not exists required boolean not null default false;
   `);
 
   // Default tax rate if not set
@@ -91,9 +95,9 @@ export async function listCatalogItems(db: pg.Pool): Promise<CatalogItem[]> {
   await ensureQuoteTables(db);
   const { rows } = await db.query({
     text: `
-      select id, name, unit_price_usd, applies_to, taxable, default_checked, sort_order, category, active
+      select id, name, unit_price_usd, applies_to, taxable, default_checked, required, sort_order, category, active
       from quote_catalog_items
-      order by active desc, sort_order asc, name asc
+      order by active desc, required desc, sort_order asc, name asc
       limit 500
     `,
     values: [],
@@ -101,6 +105,7 @@ export async function listCatalogItems(db: pg.Pool): Promise<CatalogItem[]> {
   return rows.map((r: any) => ({
     ...r,
     unit_price_usd: Number(r.unit_price_usd),
+    required: !!r.required,
   })) as CatalogItem[];
 }
 
@@ -110,14 +115,15 @@ export async function upsertCatalogItem(db: pg.Pool, item: Omit<CatalogItem, "id
 
   await db.query({
     text: `
-      insert into quote_catalog_items (id, name, unit_price_usd, applies_to, taxable, default_checked, sort_order, category, active)
-      values ($1,$2,$3,$4,$5,$6,$7,$8,$9)
+      insert into quote_catalog_items (id, name, unit_price_usd, applies_to, taxable, default_checked, required, sort_order, category, active)
+      values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
       on conflict (id) do update set
         name = excluded.name,
         unit_price_usd = excluded.unit_price_usd,
         applies_to = excluded.applies_to,
         taxable = excluded.taxable,
         default_checked = excluded.default_checked,
+        required = excluded.required,
         sort_order = excluded.sort_order,
         category = excluded.category,
         active = excluded.active,
@@ -130,6 +136,7 @@ export async function upsertCatalogItem(db: pg.Pool, item: Omit<CatalogItem, "id
       item.applies_to,
       !!item.taxable,
       !!item.default_checked,
+      !!item.required,
       Math.trunc(item.sort_order || 0),
       item.category || null,
       item.active !== false,
