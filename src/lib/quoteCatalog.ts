@@ -54,9 +54,9 @@ export async function ensureQuoteTables(db: pg.Pool) {
       updated_at timestamptz not null default now()
     );
 
-    create index if not exists quote_catalog_items_active_idx on quote_catalog_items (active, required, sort_order);
-
     alter table quote_catalog_items add column if not exists required boolean not null default false;
+
+    create index if not exists quote_catalog_items_active_idx on quote_catalog_items (active, required, sort_order);
   `);
 
   // Default tax rate if not set
