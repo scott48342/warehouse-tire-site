@@ -62,8 +62,10 @@ export default async function NewQuotePage({
   const catalog = await listCatalogItems(db);
   const defaultLines = defaultLinesFromCatalog(catalog, wheelQty, tireQty);
 
+  // Use a *loose* vehicle fitment lookup here (no trim) so we still get OEM tire sizes even
+  // when the trim label doesn't match the upstream catalog perfectly.
   const fitmentStrict = year && make && model
-    ? await fetchFitment({ year, make, model, trim: trim || undefined, modification: modification || undefined })
+    ? await fetchFitment({ year, make, model, modification: modification || undefined })
     : null;
 
   const oemTireSizesAll: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
@@ -93,9 +95,13 @@ export default async function NewQuotePage({
   }
 
   const wheelDiaN = parseWheelDia();
-  const oemTireSizes = wheelDiaN
+  const oemTireSizesFiltered = wheelDiaN
     ? oemTireSizesAll.filter((s) => rimFromTireSize(s) === wheelDiaN)
     : oemTireSizesAll;
+
+  // If the strict filter yields nothing (common when OEM sizing data is missing or trimmed),
+  // fall back to the unfiltered list so customers can still proceed.
+  const oemTireSizes = oemTireSizesFiltered.length ? oemTireSizesFiltered : oemTireSizesAll;
 
   const lines = [
     ...(wheelSku && wheelQty
