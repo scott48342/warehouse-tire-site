@@ -4,6 +4,7 @@ import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
+import { vehicleSlug } from "@/lib/vehicleSlug";
 
 type Wheel = {
   sku?: string;
@@ -432,7 +433,9 @@ export default async function WheelsPage({
   const widthBuckets = buckets("width");
   const boltPatternBuckets = buckets("bolt_pattern_metric");
 
-  const qBase = `/wheels?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
+  const basePath = year && make && model ? `/wheels/v/${vehicleSlug(year, make, model)}` : "/wheels";
+
+  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
 
   return (
     <main className="bg-neutral-50">
@@ -495,7 +498,7 @@ export default async function WheelsPage({
               </a>
             </div>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -534,7 +537,7 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -573,7 +576,7 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -612,7 +615,7 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -646,7 +649,7 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -683,7 +686,7 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -717,7 +720,7 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action="/wheels" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />

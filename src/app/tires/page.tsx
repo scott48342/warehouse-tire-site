@@ -3,6 +3,7 @@ import { GarageWidget } from "@/components/GarageWidget";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
+import { vehicleSlug } from "@/lib/vehicleSlug";
 
 type Tire = {
   partNumber?: string;
@@ -102,6 +103,8 @@ export default async function TiresPage({
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
   const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
+
+  const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
 
   if (year && make && model && !modification) {
     return (
@@ -385,7 +388,7 @@ export default async function TiresPage({
               </div>
             ) : null}
 
-            <form className="flex flex-wrap items-center gap-2" action="/tires" method="get">
+            <form className="flex flex-wrap items-center gap-2" action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -417,7 +420,7 @@ export default async function TiresPage({
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-extrabold">Filters</h2>
               <Link
-                href={`/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
+                href={`${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
                 className="text-xs font-semibold text-neutral-600 hover:underline"
               >
                 Clear all
@@ -430,7 +433,7 @@ export default async function TiresPage({
               </div>
             </FilterGroup>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -491,7 +494,7 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -526,7 +529,7 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -575,7 +578,7 @@ export default async function TiresPage({
               </div>
             </FilterGroup>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -618,7 +621,7 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -654,7 +657,7 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
@@ -691,7 +694,7 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            <form action="/tires" method="get">
+            <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
