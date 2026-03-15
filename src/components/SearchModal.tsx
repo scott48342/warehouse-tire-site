@@ -206,19 +206,25 @@ export function SearchModal({
                 <div className="text-xs font-semibold text-neutral-700">Vehicle</div>
                 <GarageQuickPick
                   onPickTires={(sp) => {
-                    const year = sp.get("year") || "";
-                    const make = sp.get("make") || "";
-                    const model = sp.get("model") || "";
+                    const merged = new URLSearchParams(currentSp);
+                    sp.forEach((v, k) => merged.set(k, v));
+
+                    const year = merged.get("year") || "";
+                    const make = merged.get("make") || "";
+                    const model = merged.get("model") || "";
                     const slug = year && make && model ? vehicleSlug(year, make, model) : "";
-                    router.push(slug ? buildUrl(`/tires/v/${slug}`, sp) : buildUrl("/tires", sp));
+                    router.push(slug ? buildUrl(`/tires/v/${slug}`, merged) : buildUrl("/tires", merged));
                     onClose();
                   }}
                   onPickWheels={(sp) => {
-                    const year = sp.get("year") || "";
-                    const make = sp.get("make") || "";
-                    const model = sp.get("model") || "";
+                    const merged = new URLSearchParams(currentSp);
+                    sp.forEach((v, k) => merged.set(k, v));
+
+                    const year = merged.get("year") || "";
+                    const make = merged.get("make") || "";
+                    const model = merged.get("model") || "";
                     const slug = year && make && model ? vehicleSlug(year, make, model) : "";
-                    router.push(slug ? buildUrl(`/wheels/v/${slug}`, sp) : buildUrl("/wheels", sp));
+                    router.push(slug ? buildUrl(`/wheels/v/${slug}`, merged) : buildUrl("/wheels", merged));
                     onClose();
                   }}
                 />
@@ -228,7 +234,8 @@ export function SearchModal({
                     provider="wheelsize"
                     onComplete={(fitment) => {
                       // After trim is selected, immediately navigate (SEO/sharable) and close.
-                      const next = new URLSearchParams();
+                      // Preserve any existing params (e.g. quote carry-over like wheelSku).
+                      const next = new URLSearchParams(currentSp);
                       for (const k of ["year", "make", "model", "trim", "modification"] as const) {
                         const v = (fitment as any)?.[k];
                         if (v) next.set(k, String(v));
