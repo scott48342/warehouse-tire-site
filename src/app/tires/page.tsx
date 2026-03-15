@@ -177,20 +177,17 @@ export default async function TiresPage({
   const itemsKm: Tire[] = Array.isArray(km?.items) ? km.items : [];
   const itemsWp: Tire[] = Array.isArray(wp?.items) ? wp.items : [];
 
-  // Blend silently; dedupe by SKU/part number.
-  const seenSku = new Set<string>();
-  const itemsRaw: Tire[] = [];
-  for (const t of [...itemsKm, ...itemsWp]) {
-    const sku = String(t.mfgPartNumber || t.partNumber || "").trim();
-    const k = sku || JSON.stringify(t);
-    if (seenSku.has(k)) continue;
-    seenSku.add(k);
-    itemsRaw.push(t);
-  }
+  // IMPORTANT: Tire detail pages (/tires/[sku]) currently read from our wp_tires table.
+  // KM-style SKUs may not exist in wp_tires, causing "Tire not found" on click.
+  // Until we add a unified tire detail resolver, prefer WP-backed items only.
+  const itemsRaw: Tire[] = itemsWp;
+
+  // If WP returns nothing, fall back to KM so users still see something.
+  const itemsFallback: Tire[] = itemsRaw.length ? itemsRaw : itemsKm;
 
   // Attach cached displayName/imageUrl from package engine (best-effort)
   const assets = await Promise.all(
-    itemsRaw.slice(0, 60).map(async (t) => {
+    itemsFallback.slice(0, 60).map(async (t) => {
       const km = t.description ? String(t.description) : "";
       if (!km) return null;
       try {
@@ -211,7 +208,7 @@ export default async function TiresPage({
     if (a?.km) assetByKm.set(a.km, a.asset);
   }
 
-  const itemsEnriched: Tire[] = itemsRaw.map((t) => {
+  const itemsEnriched: Tire[] = itemsFallback.map((t) => {
     const km = t.description ? String(t.description) : "";
     const asset = km ? assetByKm.get(km) : undefined;
     return {
