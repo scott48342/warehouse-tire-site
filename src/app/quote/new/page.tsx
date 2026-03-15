@@ -87,9 +87,17 @@ export default async function NewQuotePage({
   }
 
   function rimFromTireSize(size: string): number | null {
-    // Matches common formats like 265/65R18 or LT275/70R17
-    const m = String(size || "").toUpperCase().match(/R(\d{2})\b/);
+    const s = String(size || "").toUpperCase().trim();
+
+    // Common formats:
+    // - 265/65R18
+    // - LT275/70R17
+    // - 275/65-20
+    // - 275/65/20
+    let m = s.match(/R(\d{2})\b/);
+    if (!m?.[1]) m = s.match(/[-/](\d{2})\b/);
     if (!m?.[1]) return null;
+
     const r = Number(m[1]);
     return Number.isFinite(r) ? r : null;
   }
