@@ -68,6 +68,13 @@ export default async function TireDetailPage({
   const model = String((sp as any).model || "");
   const trim = String((sp as any).trim || "");
   const modification = String((sp as any).modification || "");
+
+  // Quote carry-over (wheel selected on quote -> keep it when adding tires)
+  const wheelSku = String((sp as any).wheelSku || "");
+  const wheelName = String((sp as any).wheelName || "");
+  const wheelUnit = String((sp as any).wheelUnit || "");
+  const wheelQty = String((sp as any).wheelQty || "");
+  const wheelDia = String((sp as any).wheelDia || "");
   const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
 
   if (!safeSku) {
@@ -250,6 +257,11 @@ export default async function TireDetailPage({
                         model,
                         trim,
                         modification,
+                        wheelSku,
+                        wheelName,
+                        wheelUnit,
+                        wheelQty,
+                        wheelDia,
                         tireSku: safeSku,
                         tireName: title,
                         tireUnit: typeof displayPrice === "number" && Number.isFinite(displayPrice) ? String(displayPrice) : "",

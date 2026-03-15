@@ -117,6 +117,13 @@ export default async function TiresPage({
   const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
   const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
 
+  // Quote carry-over (so wheel stays on quote when selecting tires)
+  const wheelSku = (Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku) || "";
+  const wheelName = (Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName) || "";
+  const wheelUnit = (Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit) || "";
+  const wheelQty = (Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty) || "";
+  const wheelDia = (Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia) || "";
+
   const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
 
   if (year && make && model && !modification) {
@@ -800,7 +807,20 @@ export default async function TiresPage({
                   >
                     {t.mfgPartNumber ? (
                       <Link
-                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`}
+                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
+                          year,
+                          make,
+                          model,
+                          trim,
+                          modification,
+                          size: selectedSize,
+                          sort,
+                          wheelSku,
+                          wheelName,
+                          wheelUnit,
+                          wheelQty,
+                          wheelDia,
+                        }).toString()}`}
                         className="absolute inset-0 z-0"
                         aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
                       />
@@ -815,7 +835,20 @@ export default async function TiresPage({
                           type="tire"
                           sku={t.mfgPartNumber}
                           label={`${t.brand || "Tire"} ${t.displayName || t.description || t.mfgPartNumber}`}
-                          href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`}
+                          href={`/tires?${new URLSearchParams({
+                            year,
+                            make,
+                            model,
+                            trim,
+                            modification,
+                            size: selectedSize,
+                            sort,
+                            wheelSku,
+                            wheelName,
+                            wheelUnit,
+                            wheelQty,
+                            wheelDia,
+                          }).toString()}`}
                           imageUrl={t.imageUrl}
                         />
                       ) : null}
