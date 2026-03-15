@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
 import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
+import { QuoteRequest } from "@/components/QuoteRequest";
 
 type WheelProsBrand = {
   code?: string;
@@ -336,12 +337,7 @@ export default async function WheelDetailPage({
               </div>
 
               <div className="grid gap-2">
-                <Link
-                  href="/schedule"
-                  className="h-11 rounded-xl bg-[var(--brand-red)] px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                >
-                  Schedule Install
-                </Link>
+                <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
               </div>
             </div>
 

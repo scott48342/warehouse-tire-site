@@ -2,6 +2,7 @@ import Link from "next/link";
 import { NextResponse } from "next/server";
 import pg from "pg";
 import { BRAND } from "@/lib/brand";
+import { QuoteRequest } from "@/components/QuoteRequest";
 
 export const runtime = "nodejs";
 
@@ -170,21 +171,11 @@ export default async function TireDetailPage({
               </div>
 
               <div className="grid gap-2">
-                {displayPrice != null ? (
-                  <Link
-                    href="/schedule"
-                    className="h-11 rounded-xl bg-[var(--brand-red)] px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                  >
-                    Schedule Install
-                  </Link>
-                ) : (
-                  <a
-                    href={BRAND.links.tel}
-                    className="h-11 rounded-xl bg-[var(--brand-red)] px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                  >
-                    Call for price
-                  </a>
-                )}
+                <QuoteRequest
+                  productType="tire"
+                  sku={safeSku}
+                  productName={title}
+                />
 
                 <div className="flex items-center justify-between gap-3 text-xs">
                   <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
