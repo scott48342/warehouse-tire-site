@@ -177,6 +177,46 @@ export default async function WheelDetailPage({
   const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
   const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
 
+  function fmt(v: string) {
+    const s = String(v || "").trim();
+    if (!s) return "";
+    const n = Number(s);
+    return Number.isFinite(n) ? n.toString() : s;
+  }
+
+  function buildWheelDescription() {
+    const tfBrand = tfSelf?.brand_desc ? String(tfSelf.brand_desc).trim() : "";
+    const b = String(brand || tfBrand || "Wheel").trim();
+
+    const title = String(it?.title || "").trim();
+    const modelTok = extractModelToken(title);
+    const modelName = String(tfSelf?.product_desc || modelTok || title || sku).trim();
+
+    const dia = fmt(tfSelf?.diameter || diameter);
+    const wid = fmt(tfSelf?.width || width);
+    const bp2 = String(tfSelf?.bolt_pattern_metric || boltPattern || "").trim();
+    const off = fmt(tfSelf?.offset || offset);
+    const cb2 = fmt(tfSelf?.centerbore || (it?.properties?.centerbore ? String(it.properties.centerbore) : ""));
+
+    const finishName = String(tfSelf?.abbreviated_finish_desc || finish || "").trim();
+
+    const parts: string[] = [];
+    const size = dia && wid ? `${dia}x${wid}` : dia ? `${dia}"` : "";
+
+    parts.push(`${b} ${modelName}${size ? ` in ${size}` : ""}.`);
+
+    const bullets: string[] = [];
+    if (finishName) bullets.push(`Finish: ${finishName}`);
+    if (bp2) bullets.push(`Bolt pattern: ${bp2}`);
+    if (off) bullets.push(`Offset: ${off} mm`);
+    if (cb2) bullets.push(`Center bore: ${cb2} mm`);
+
+    const desc = String(tfSelf?.product_desc || "").trim();
+    const paragraph = desc && desc !== modelName ? desc : parts.join(" ");
+
+    return { paragraph, bullets };
+  }
+
   const msrp = it?.prices?.msrp;
   const firstPrice = Array.isArray(msrp) ? msrp[0] : undefined;
   const price = firstPrice?.currencyAmount != null ? Number(firstPrice.currencyAmount) : undefined;
@@ -194,6 +234,7 @@ export default async function WheelDetailPage({
 
   // Prefer TechFeed for variant grouping (stable style id + complete data).
   const tfSelf = await getTechfeedWheelBySku(sku);
+  const generated = buildWheelDescription();
   const styleKey = tfSelf?.style || tfSelf?.display_style_no || "";
   const tfStyleRows = styleKey ? await getTechfeedWheelsByStyle(styleKey) : null;
 
@@ -302,6 +343,21 @@ export default async function WheelDetailPage({
                   Schedule Install
                 </Link>
               </div>
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-neutral-200 bg-white p-4">
+              <div className="text-xs font-extrabold text-neutral-900">About this wheel</div>
+              <p className="mt-2 text-sm text-neutral-700">
+                {generated.paragraph}
+              </p>
+
+              {generated.bullets.length ? (
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-neutral-700">
+                  {generated.bullets.slice(0, 6).map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
 
             <div className="mt-4 text-xs text-neutral-600">Part / SKU: {sku}</div>
