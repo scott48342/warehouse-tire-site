@@ -33,11 +33,7 @@ type Wheel = {
   price?: number;
 };
 
-function getBaseUrl() {
-  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return "http://localhost:3000";
-}
+// Use relative fetches for internal APIs so prerender/build doesn't depend on localhost/VERCEL_URL.
 
 function parseFromDescription(desc: string) {
   const d = String(desc || "").toUpperCase();
@@ -54,8 +50,9 @@ function parseFromDescription(desc: string) {
 }
 
 async function fetchKm(size: string) {
-  const res = await fetch(`${getBaseUrl()}/api/km/tiresizesearch?tireSize=${encodeURIComponent(size)}&minQty=4`, {
-    cache: "no-store",
+  const res = await fetch(`/api/km/tiresizesearch?tireSize=${encodeURIComponent(size)}&minQty=4`, {
+    // Homepage doesn't need second-by-second freshness; cache to speed up TTFB.
+    next: { revalidate: 300 },
   });
   if (!res.ok) return { items: [] as KmItem[] };
   const data = (await res.json()) as { items?: KmItem[] };
@@ -68,7 +65,10 @@ async function enrichTires(items: KmItem[]) {
       const km = t.description ? String(t.description) : "";
       if (!km) return null;
       try {
-        const res = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(km)}`, { cache: "no-store" });
+        const res = await fetch(`/api/assets/tire?km=${encodeURIComponent(km)}`, {
+          // Asset lookups can be cached longer.
+          next: { revalidate: 60 * 60 },
+        });
         if (!res.ok) return null;
         const data = (await res.json()) as { results?: TireAsset[] };
         const hit = Array.isArray(data?.results) ? data.results[0] : null;
@@ -98,8 +98,11 @@ async function enrichTires(items: KmItem[]) {
 
 async function fetchWheelsSample() {
   const res = await fetch(
-    `${getBaseUrl()}/api/wheelpros/wheels/search?page=1&pageSize=12&fields=images,price&priceType=msrp&currencyCode=USD`,
-    { cache: "no-store" }
+    `/api/wheelpros/wheels/search?page=1&pageSize=12&fields=images,price&priceType=msrp&currencyCode=USD`,
+    {
+      // Cache for a bit; these are just homepage samples.
+      next: { revalidate: 300 },
+    }
   );
   if (!res.ok) return [] as Wheel[];
   const data = (await res.json()) as { items?: unknown[]; results?: unknown[] };
@@ -132,6 +135,8 @@ async function fetchWheelsSample() {
   return withImg.sort(sortByPrice).slice(0, 6);
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const tireSizeA = "225/65R17";
   const tireSizeB = "275/60R20";
@@ -142,16 +147,18 @@ export default async function Home() {
     fetchWheelsSample(),
   ]);
 
-  const tiresA = await enrichTires(
-    [...a.items]
-      .sort((x, y) => ((x.cost ?? 1e9) + 50) - ((y.cost ?? 1e9) + 50))
-      .slice(0, 6)
-  );
-  const tiresB = await enrichTires(
-    [...b.items]
-      .sort((x, y) => ((x.cost ?? 1e9) + 50) - ((y.cost ?? 1e9) + 50))
-      .slice(0, 6)
-  );
+  const [tiresA, tiresB] = await Promise.all([
+    enrichTires(
+      [...a.items]
+        .sort((x, y) => ((x.cost ?? 1e9) + 50) - ((y.cost ?? 1e9) + 50))
+        .slice(0, 6)
+    ),
+    enrichTires(
+      [...b.items]
+        .sort((x, y) => ((x.cost ?? 1e9) + 50) - ((y.cost ?? 1e9) + 50))
+        .slice(0, 6)
+    ),
+  ]);
 
   return (
     <main className="bg-neutral-50">
