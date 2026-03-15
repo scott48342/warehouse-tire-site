@@ -168,7 +168,7 @@ export async function upsertCatalogItem(db: pg.Pool, item: Omit<CatalogItem, "id
         unit_price_tire_usd, unit_price_wheel_usd, unit_price_package_usd,
         applies_to, taxable, default_checked, required, sort_order, category, active
       )
-      values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)
+      values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16)
       on conflict (id) do update set
         name = excluded.name,
         unit_price_usd = excluded.unit_price_usd,
