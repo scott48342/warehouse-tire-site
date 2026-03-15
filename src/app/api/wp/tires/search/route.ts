@@ -36,7 +36,9 @@ function i(v: any): number {
 export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
-    const size = (url.searchParams.get("size") || url.searchParams.get("tireSize") || "").trim();
+    const sizeRaw = (url.searchParams.get("size") || url.searchParams.get("tireSize") || "").trim();
+    const digits = sizeRaw.replace(/\D/g, "");
+    const size = digits || sizeRaw;
     const minQty = i(url.searchParams.get("minQty"));
     const limit = Math.min(Math.max(i(url.searchParams.get("limit")) || 50, 1), 200);
 
