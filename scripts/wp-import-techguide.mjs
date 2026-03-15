@@ -3,7 +3,7 @@ import path from "node:path";
 import { parse } from "csv-parse/sync";
 import pg from "pg";
 
-import { buildValuesPlaceholders, inTransaction } from "./_pg-batch.mjs";
+import { buildValuesPlaceholders } from "./_pg-batch.mjs";
 
 const { Client } = pg;
 
@@ -41,8 +41,54 @@ for (const p of [wheelCsv, tireCsv, mapCsv]) {
   if (!fs.existsSync(p)) throw new Error(`Missing file: ${p}`);
 }
 
-const client = new Client({ connectionString: DATABASE_URL, ssl: { rejectUnauthorized: false } });
-await client.connect();
+let client;
+
+async function connectClient() {
+  const c = new Client({
+    connectionString: DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+    keepAlive: true,
+  });
+
+  // Prevent unhandled error event crashing the process without context.
+  c.on("error", (err) => {
+    console.error("PG client error event:", err?.message || err);
+  });
+
+  await c.connect();
+  return c;
+}
+
+async function ensureClient() {
+  if (client) return client;
+  client = await connectClient();
+  return client;
+}
+
+async function safeQuery(sql, params, attempt = 1) {
+  const c = await ensureClient();
+  try {
+    return await c.query(sql, params);
+  } catch (err) {
+    const msg = String(err?.message || "");
+    const terminated = msg.includes("Connection terminated unexpectedly") || msg.includes("ECONNRESET");
+
+    if (terminated && attempt <= 2) {
+      console.warn("PG connection dropped; reconnecting and retrying query...");
+      try {
+        await c.end();
+      } catch {
+        // ignore
+      }
+      client = await connectClient();
+      return safeQuery(sql, params, attempt + 1);
+    }
+
+    throw err;
+  }
+}
+
+await ensureClient();
 
 console.log("Loading MAP prices...");
 const mapRows = parse(fs.readFileSync(mapCsv, "utf8"), { columns: true, skip_empty_lines: true });
@@ -107,7 +153,7 @@ async function importWheels() {
       updated_at=now()`;
 
     try {
-      await client.query(sql, batch.flat());
+      await safeQuery(sql, batch.flat());
     } catch (err) {
       const pos = err?.position ? Number(err.position) : null;
       if (pos && Number.isFinite(pos)) {
@@ -216,7 +262,7 @@ async function importTires() {
       updated_at=now()`;
 
     try {
-      await client.query(sql, batch.flat());
+      await safeQuery(sql, batch.flat());
     } catch (err) {
       const pos = err?.position ? Number(err.position) : null;
       if (pos && Number.isFinite(pos)) {
@@ -276,10 +322,12 @@ async function importTires() {
   console.log(`Tires imported: ${tireCount}`);
 }
 
-await inTransaction(client, async () => {
-  await importWheels();
-  await importTires();
-});
+await importWheels();
+await importTires();
 
-await client.end();
+try {
+  await client?.end();
+} catch {
+  // ignore
+}
 console.log("Done.");
