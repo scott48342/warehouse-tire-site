@@ -36,13 +36,13 @@ export default async function RebatesAdminPage({
           <div>
             <h1 className="text-2xl font-extrabold text-neutral-900">Rebates</h1>
             <p className="mt-1 text-sm text-neutral-700">
-              Sync offers from Tire Rack, then enable the ones you want to show on the site.
+              Sync offers from Discount Tire (preferred), then enable the ones you want to show on the site.
             </p>
           </div>
 
           <form action="/api/admin/rebates/refresh" method="post" className="flex items-center gap-2">
             <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
-              Refresh from Tire Rack
+              Refresh promos
             </button>
           </form>
         </div>
