@@ -470,7 +470,28 @@ export default async function WheelDetailPage({
                   We’ll confirm pricing, availability, and the right fit before you commit.
                 </div>
                 <div className="mt-3 grid gap-2">
-                  <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
+                  <div className="flex flex-wrap gap-2">
+                    <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
+                    <Link
+                      href={
+                        `/quote/new?${new URLSearchParams({
+                          year,
+                          make,
+                          model,
+                          trim,
+                          modification,
+                          wheelSku: sku,
+                          wheelName: String(it?.title || sku),
+                          wheelUnit: typeof price === "number" && Number.isFinite(price) ? String(price) : "",
+                          wheelQty: "4",
+                        }).toString()}`
+                      }
+                      className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+                    >
+                      Build quote
+                    </Link>
+                  </div>
+
                   <div className="flex flex-wrap items-center gap-2 text-[11px] text-neutral-600">
                     <span>Fitment verified before install</span>
                     <span className="text-neutral-300">•</span>

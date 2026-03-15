@@ -240,7 +240,27 @@ export default async function TireDetailPage({
               </div>
 
               <div className="mt-3 grid gap-2">
-                <QuoteRequest productType="tire" sku={safeSku} productName={title} />
+                <div className="flex flex-wrap gap-2">
+                  <QuoteRequest productType="tire" sku={safeSku} productName={title} />
+                  <Link
+                    href={
+                      `/quote/new?${new URLSearchParams({
+                        year,
+                        make,
+                        model,
+                        trim,
+                        modification,
+                        tireSku: safeSku,
+                        tireName: title,
+                        tireUnit: typeof displayPrice === "number" && Number.isFinite(displayPrice) ? String(displayPrice) : "",
+                        tireQty: "4",
+                      }).toString()}`
+                    }
+                    className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+                  >
+                    Build quote
+                  </Link>
+                </div>
 
                 <div className="flex flex-wrap items-center gap-2 text-[11px] text-neutral-600">
                   <span>Fitment verified before install</span>
