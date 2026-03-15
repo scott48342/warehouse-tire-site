@@ -56,7 +56,7 @@ console.log(`MAP rows: ${mapBySku.size}`);
 
 function withNow(valuesSql) {
   // Convert: ($1,$2),($3,$4) -> ($1,$2, now()),($3,$4, now())
-  return valuesSql.replace(/\)\s*(,|$)/g, ", now())$2");
+  return valuesSql.replace(/\)\s*(,|$)/g, ", now())$1");
 }
 
 async function importWheels() {
