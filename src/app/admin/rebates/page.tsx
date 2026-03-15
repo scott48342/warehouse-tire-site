@@ -18,6 +18,7 @@ export default async function RebatesAdminPage({
   const sp = (await searchParams) ?? {};
   const refreshed = (Array.isArray((sp as any).refreshed) ? (sp as any).refreshed[0] : (sp as any).refreshed) || "";
   const count = (Array.isArray((sp as any).count) ? (sp as any).count[0] : (sp as any).count) || "";
+  const saved = (Array.isArray((sp as any).saved) ? (sp as any).saved[0] : (sp as any).saved) || "";
 
   let rebates: Awaited<ReturnType<typeof listRebates>> = [];
   let dbError: string | null = null;
@@ -58,6 +59,64 @@ export default async function RebatesAdminPage({
             Refreshed. Imported {count || "0"} offers.
           </div>
         ) : null}
+
+        {saved ? (
+          <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900">
+            Saved.
+          </div>
+        ) : null}
+
+        <div className="mt-6 rounded-2xl border border-neutral-200 bg-white p-4">
+          <div className="text-sm font-extrabold text-neutral-900">Add / Update brand rebate</div>
+          <div className="mt-1 text-xs text-neutral-600">
+            Brand-level only. One active manual rebate per brand.
+          </div>
+
+          <form action="/api/admin/rebates/upsert" method="post" className="mt-3 grid gap-2">
+            <div className="grid gap-2 md:grid-cols-2">
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Brand
+                <input name="brand" required className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="Goodyear" />
+              </label>
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Ends (text)
+                <input name="endsText" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="March 1 – June 30" />
+              </label>
+            </div>
+
+            <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+              Headline
+              <input
+                name="headline"
+                required
+                className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                placeholder="Get $80 back via prepaid card on select sets of tires"
+              />
+            </label>
+
+            <div className="grid gap-2 md:grid-cols-2">
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Learn more URL
+                <input name="learnMoreUrl" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="https://..." />
+              </label>
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Form / Submit URL
+                <input name="formUrl" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="https://..." />
+              </label>
+            </div>
+
+            <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700">
+              <input type="checkbox" name="enabled" value="1" />
+              Enabled
+            </label>
+
+            <div className="flex flex-wrap gap-2">
+              <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
+                Save rebate
+              </button>
+            </div>
+          </form>
+        </div>
 
         <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white">
           <div className="grid grid-cols-[110px_1fr_140px_140px] gap-0 border-b border-neutral-200 bg-neutral-50 p-3 text-xs font-extrabold text-neutral-700">

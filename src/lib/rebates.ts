@@ -67,6 +67,58 @@ export async function listRebates(db: pg.Pool): Promise<SiteRebate[]> {
   return rows as SiteRebate[];
 }
 
+export async function upsertManualRebate(
+  db: pg.Pool,
+  {
+    brand,
+    headline,
+    learnMoreUrl,
+    formUrl,
+    endsText,
+    enabled,
+  }: {
+    brand: string;
+    headline: string;
+    learnMoreUrl?: string;
+    formUrl?: string;
+    endsText?: string;
+    enabled?: boolean;
+  }
+) {
+  await ensureRebatesTable(db);
+
+  const b = String(brand || "").trim();
+  const h = String(headline || "").trim();
+  const lm = learnMoreUrl ? String(learnMoreUrl).trim() : null;
+  const fu = formUrl ? String(formUrl).trim() : null;
+  const et = endsText ? String(endsText).trim() : null;
+  const en = enabled === true;
+
+  if (!b) throw new Error("brand_required");
+  if (!h) throw new Error("headline_required");
+
+  // Brand-level ID: one manual rebate per brand (you can update it).
+  const id = `manual:${b.toLowerCase()}`;
+
+  await db.query({
+    text: `
+      insert into site_rebates (id, source, brand, headline, learn_more_url, form_url, ends_text, enabled)
+      values ($1,'manual',$2,$3,$4,$5,$6,$7)
+      on conflict (id) do update set
+        brand = excluded.brand,
+        headline = excluded.headline,
+        learn_more_url = excluded.learn_more_url,
+        form_url = excluded.form_url,
+        ends_text = excluded.ends_text,
+        enabled = excluded.enabled,
+        updated_at = now()
+    `,
+    values: [id, b, h, lm, fu, et, en],
+  });
+
+  return { id };
+}
+
 export async function listActiveRebates(db: pg.Pool): Promise<SiteRebate[]> {
   await ensureRebatesTable(db);
   const { rows } = await db.query({
