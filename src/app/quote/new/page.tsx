@@ -6,6 +6,7 @@ import { AddTiresModal } from "@/components/AddTiresModal";
 import { SaveQuoteModal } from "@/components/SaveQuoteModal";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 function s(v: any) {
   return typeof v === "string" ? v.trim() : "";
@@ -118,6 +119,7 @@ export default async function NewQuotePage({
 
         <div className="mt-2 text-sm text-neutral-700">
           Well verify fitment and confirm pricing before install.
+          <span className="ml-2 text-[11px] text-neutral-500">(build {process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) || "local"})</span>
         </div>
 
         <div className="mt-6 grid gap-4">
