@@ -3,6 +3,7 @@ import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVaria
 import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
 import { QuoteRequest } from "@/components/QuoteRequest";
+import { BRAND } from "@/lib/brand";
 
 type WheelProsBrand = {
   code?: string;
@@ -307,6 +308,14 @@ export default async function WheelDetailPage({
             <div className="text-xs font-semibold text-neutral-600">{brand || "Wheel"}</div>
             <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{it?.title || sku}</h1>
 
+            <div className="mt-3 flex flex-wrap gap-2">
+              {diameter ? <Badge>{diameter}"</Badge> : null}
+              {width ? <Badge>{width} wide</Badge> : null}
+              {boltPattern ? <Badge>{boltPattern}</Badge> : null}
+              {offset ? <Badge>Offset {offset}mm</Badge> : null}
+              {finish ? <Badge>{finish}</Badge> : null}
+            </div>
+
             <div className="mt-4">
               <div className="text-3xl font-extrabold text-neutral-900">
                 {typeof price === "number" && Number.isFinite(price) ? `$${price.toFixed(2)}` : "Call for price"}
@@ -314,9 +323,18 @@ export default async function WheelDetailPage({
               <div className="text-xs text-neutral-600">each</div>
             </div>
 
+            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
+              <div className="text-xs font-extrabold text-neutral-900">Why youll like it</div>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
+                {(generated.bullets.length ? generated.bullets : [generated.paragraph]).slice(0, 5).map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+            </div>
+
             <div className="mt-5 grid gap-3">
               <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                <div className="text-xs font-extrabold text-neutral-900">Options</div>
+                <div className="text-xs font-extrabold text-neutral-900">Pick your setup</div>
                 <div className="mt-3">
                   <WheelVariantSelector
                     variants={variantsForSelector}
@@ -336,30 +354,61 @@ export default async function WheelDetailPage({
                 </div>
               </div>
 
-              <div className="grid gap-2">
-                <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
+              <div id="quote" className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
+                <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>
+                <div className="mt-1 text-xs text-neutral-600">
+                  Well confirm pricing, availability, and the right fit before you commit.
+                </div>
+                <div className="mt-3 grid gap-2">
+                  <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] text-neutral-600">
+                    <span>Fitment verified before install</span>
+                    <span className="text-neutral-300">•</span>
+                    <span>Local install scheduling</span>
+                    <span className="text-neutral-300">•</span>
+                    <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
+                      Prefer to talk? Call us
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="mt-6 rounded-2xl border border-neutral-200 bg-white p-4">
               <div className="text-xs font-extrabold text-neutral-900">About this wheel</div>
-              <p className="mt-2 text-sm text-neutral-700">
-                {generated.paragraph}
-              </p>
-
-              {generated.bullets.length ? (
-                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-neutral-700">
-                  {generated.bullets.slice(0, 6).map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
-              ) : null}
+              <p className="mt-2 text-sm text-neutral-700">{generated.paragraph}</p>
             </div>
 
             <div className="mt-4 text-xs text-neutral-600">Part / SKU: {sku}</div>
           </div>
         </div>
+
+        {/* Mobile sticky CTA */}
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 p-3 backdrop-blur md:hidden">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-1">
+            <div>
+              <div className="text-sm font-extrabold text-neutral-900">
+                {typeof price === "number" && Number.isFinite(price) ? `$${price.toFixed(2)}` : "Call for price"}
+              </div>
+              <div className="text-[11px] text-neutral-600">Per wheel • Quote in minutes</div>
+            </div>
+            <a
+              href="#quote"
+              className="h-10 rounded-xl bg-[var(--brand-red)] px-4 py-2 text-center text-sm font-extrabold text-white"
+            >
+              Request quote
+            </a>
+          </div>
+        </div>
       </div>
     </main>
+  );
+}
+
+function Badge({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900">
+      {children}
+    </span>
   );
 }
