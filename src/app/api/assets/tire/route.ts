@@ -12,12 +12,27 @@ export async function GET(req: Request) {
   const upstream = new URL("/v1/assets/tire", base);
   url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
 
-  const res = await fetch(upstream, { cache: "no-store" });
-  const text = await res.text();
-  return new NextResponse(text, {
-    status: res.status,
-    headers: {
-      "content-type": res.headers.get("content-type") || "application/json",
-    },
-  });
+  // Vercel functions hard-timeout at 300s; fail fast so the whole page doesn't hang
+  // if the package engine is slow/unreachable.
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+
+  try {
+    const res = await fetch(upstream, { cache: "no-store", signal: controller.signal });
+    const text = await res.text();
+    return new NextResponse(text, {
+      status: res.status,
+      headers: {
+        "content-type": res.headers.get("content-type") || "application/json",
+      },
+    });
+  } catch (err) {
+    // Fail-open: UI can load without images.
+    return NextResponse.json(
+      { error: "tire_asset_upstream_unavailable" },
+      { status: 200, headers: { "cache-control": "no-store" } }
+    );
+  } finally {
+    clearTimeout(timeout);
+  }
 }
