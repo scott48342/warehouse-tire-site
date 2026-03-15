@@ -128,6 +128,16 @@ export default async function WheelsPage({
   const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || "";
   const finish = (Array.isArray(sp.finish) ? sp.finish[0] : sp.finish) || "";
 
+  const priceMinRaw = (Array.isArray(sp.priceMin) ? sp.priceMin[0] : sp.priceMin) || "";
+  const priceMaxRaw = (Array.isArray(sp.priceMax) ? sp.priceMax[0] : sp.priceMax) || "";
+  const priceMin = priceMinRaw ? Number(String(priceMinRaw)) : null;
+  const priceMax = priceMaxRaw ? Number(String(priceMaxRaw)) : null;
+
+  const offsetMinRaw = (Array.isArray(sp.offsetMin) ? sp.offsetMin[0] : sp.offsetMin) || "";
+  const offsetMaxRaw = (Array.isArray(sp.offsetMax) ? sp.offsetMax[0] : sp.offsetMax) || "";
+  const offsetMinUser = offsetMinRaw ? Number(String(offsetMinRaw)) : null;
+  const offsetMaxUser = offsetMaxRaw ? Number(String(offsetMaxRaw)) : null;
+
   if (year && make && model && !modification) {
     return (
       <main className="bg-neutral-50">
@@ -197,8 +207,8 @@ export default async function WheelsPage({
 
   // Same idea for width: pass facet value through exactly.
   const width = widthParam || undefined;
-  const minOffset = minOff;
-  const maxOffset = maxOff;
+  const minOffset = Number.isFinite(offsetMinUser as number) ? String(offsetMinUser) : minOff;
+  const maxOffset = Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : maxOff;
 
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
@@ -373,7 +383,17 @@ export default async function WheelsPage({
       })
     : itemsFilteredBasic;
 
-  const itemsFinal = itemsFilteredOffset;
+  const itemsFilteredPrice = Number.isFinite(priceMin as number) || Number.isFinite(priceMax as number)
+    ? itemsFilteredOffset.filter((w) => {
+        const p = typeof w.price === "number" ? w.price : null;
+        if (p == null) return false;
+        if (Number.isFinite(priceMin as number) && p < (priceMin as number)) return false;
+        if (Number.isFinite(priceMax as number) && p > (priceMax as number)) return false;
+        return true;
+      })
+    : itemsFilteredOffset;
+
+  const itemsFinal = itemsFilteredPrice;
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
@@ -484,11 +504,93 @@ export default async function WheelsPage({
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
 
+              <input type="hidden" name="brand_cd" value={brandCd} />
+              <input type="hidden" name="finish" value={finish} />
+              <input type="hidden" name="diameter" value={diameterParam} />
+              <input type="hidden" name="width" value={widthParam} />
+              <input type="hidden" name="boltPattern" value={boltPatternParam} />
+              <input type="hidden" name="offsetMin" value={offsetMinRaw} />
+              <input type="hidden" name="offsetMax" value={offsetMaxRaw} />
+
+              <FilterGroup title="Price">
+                <div className="grid grid-cols-2 gap-2">
+                  <input
+                    name="priceMin"
+                    defaultValue={priceMinRaw}
+                    placeholder="$ min"
+                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  />
+                  <input
+                    name="priceMax"
+                    defaultValue={priceMaxRaw}
+                    placeholder="$ max"
+                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  />
+                </div>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply price
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
+              <input type="hidden" name="brand_cd" value={brandCd} />
+              <input type="hidden" name="finish" value={finish} />
+              <input type="hidden" name="diameter" value={diameterParam} />
+              <input type="hidden" name="width" value={widthParam} />
+              <input type="hidden" name="boltPattern" value={boltPatternParam} />
+              <input type="hidden" name="priceMin" value={priceMinRaw} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw} />
+
+              <FilterGroup title="Offset (mm)">
+                <div className="grid grid-cols-2 gap-2">
+                  <input
+                    name="offsetMin"
+                    defaultValue={offsetMinRaw}
+                    placeholder="min"
+                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  />
+                  <input
+                    name="offsetMax"
+                    defaultValue={offsetMaxRaw}
+                    placeholder="max"
+                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  />
+                </div>
+
+                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                  Apply offset
+                </button>
+              </FilterGroup>
+            </form>
+
+            <form action="/wheels" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="sort" value={sort} />
+              <input type="hidden" name="page" value={"1"} />
+
               {/* keep other filters */}
               <input type="hidden" name="finish" value={finish} />
               <input type="hidden" name="diameter" value={diameterParam} />
               <input type="hidden" name="width" value={widthParam} />
               <input type="hidden" name="boltPattern" value={boltPatternParam} />
+              <input type="hidden" name="priceMin" value={priceMinRaw} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw} />
+              <input type="hidden" name="offsetMin" value={offsetMinRaw} />
+              <input type="hidden" name="offsetMax" value={offsetMaxRaw} />
 
               <FilterGroup title="Brand">
                 <select
