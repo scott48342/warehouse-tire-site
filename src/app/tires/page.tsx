@@ -192,8 +192,9 @@ export default async function TiresPage({
     const asset = km ? assetByKm.get(km) : undefined;
     return {
       ...t,
-      displayName: asset?.display_name || undefined,
-      imageUrl: asset?.image_url || undefined,
+      // Prefer cached asset display name/image, but don't wipe existing values
+      displayName: asset?.display_name || t.displayName || undefined,
+      imageUrl: asset?.image_url || t.imageUrl || undefined,
     };
   });
 
