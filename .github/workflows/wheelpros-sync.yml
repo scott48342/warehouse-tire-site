@@ -61,7 +61,8 @@ jobs:
           quit
           EOF
 
-          sshpass -e sftp -oBatchMode=no -oStrictHostKeyChecking=no "$WP_SFTP_USER@$WP_SFTP_HOST" -b batch.sftp
+          # NOTE: sftp requires options (like -b) BEFORE the destination.
+          sshpass -e sftp -oBatchMode=no -oStrictHostKeyChecking=no -b batch.sftp "$WP_SFTP_USER@$WP_SFTP_HOST"
 
           ls -lah
 
