@@ -484,6 +484,7 @@ export default async function WheelDetailPage({
                           wheelName: String(it?.title || sku),
                           wheelUnit: typeof price === "number" && Number.isFinite(price) ? String(price) : "",
                           wheelQty: "4",
+                          wheelDia: diameter || "",
                         }).toString()}`
                       }
                       className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"

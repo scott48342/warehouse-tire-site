@@ -47,6 +47,7 @@ export default async function NewQuotePage({
   const wheelSku = s(Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku);
   const wheelName = s(Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName);
   const wheelUnit = s(Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit);
+  const wheelDia = s(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
 
   const tireSku = s(Array.isArray((sp as any).tireSku) ? (sp as any).tireSku[0] : (sp as any).tireSku);
   const tireName = s(Array.isArray((sp as any).tireName) ? (sp as any).tireName[0] : (sp as any).tireName);
@@ -66,6 +67,33 @@ export default async function NewQuotePage({
   const oemTireSizesAll: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
     ? (fitmentStrict as any).tireSizes.map(String)
     : [];
+
+  function parseWheelDia(): number | null {
+    // Prefer explicit param.
+    const explicit = Number(wheelDia);
+    if (Number.isFinite(explicit) && explicit > 0) return explicit;
+
+    // Fallback: try to read from wheel name like "AR901 20X9 ...".
+    const m = String(wheelName || "").toUpperCase().match(/\b(\d+(?:\.\d+)?)\s*X\s*(\d+(?:\.\d+)?)\b/);
+    if (m?.[1]) {
+      const d = Number(m[1]);
+      if (Number.isFinite(d) && d > 0) return d;
+    }
+    return null;
+  }
+
+  function rimFromTireSize(size: string): number | null {
+    // Matches common formats like 265/65R18 or LT275/70R17
+    const m = String(size || "").toUpperCase().match(/R(\d{2})\b/);
+    if (!m?.[1]) return null;
+    const r = Number(m[1]);
+    return Number.isFinite(r) ? r : null;
+  }
+
+  const wheelDiaN = parseWheelDia();
+  const oemTireSizes = wheelDiaN
+    ? oemTireSizesAll.filter((s) => rimFromTireSize(s) === wheelDiaN)
+    : oemTireSizesAll;
 
   const lines = [
     ...(wheelSku && wheelQty
@@ -168,7 +196,7 @@ export default async function NewQuotePage({
               <div className="flex flex-wrap items-center gap-2">
                 {wheelSku ? (
                   <AddTiresModal
-                    sizes={oemTireSizesAll}
+                    sizes={oemTireSizes}
                     baseParams={{
                       year,
                       make,
