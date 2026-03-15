@@ -821,12 +821,21 @@ export default async function TiresPage({
                     </div>
 
                     <div className="mt-4 grid gap-2">
-                      <Link
-                        href="/schedule"
-                        className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
-                      >
-                        Schedule Install
-                      </Link>
+                      {typeof t.cost === "number" ? (
+                        <Link
+                          href="/schedule"
+                          className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+                        >
+                          Schedule Install
+                        </Link>
+                      ) : (
+                        <a
+                          href={BRAND.links.tel}
+                          className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+                        >
+                          Call for price
+                        </a>
+                      )}
 
                       <div className="flex items-center justify-between gap-3 text-xs">
                         <a

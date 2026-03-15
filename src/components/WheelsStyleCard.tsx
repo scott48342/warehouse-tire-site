@@ -129,12 +129,22 @@ export function WheelsStyleCard({
       </div>
 
       <div className="mt-4 grid gap-2">
-        <Link
-          href={viewHref}
-          className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
-        >
-          View details
-        </Link>
+        {typeof selectedPrice === "number" ? (
+          <Link
+            href={viewHref}
+            className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+          >
+            View details
+          </Link>
+        ) : (
+          <a
+            href={BRAND.links.tel}
+            className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+          >
+            Call for price
+          </a>
+        )}
+
         <div className="flex items-center justify-between gap-3 text-xs">
           <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
             Call
