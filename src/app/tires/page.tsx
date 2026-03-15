@@ -791,9 +791,18 @@ export default async function TiresPage({
                         />
                       ) : null}
                     </div>
-                    <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
-                      {t.displayName || t.description || t.partNumber || "Tire"}
-                    </h3>
+                    {t.mfgPartNumber ? (
+                      <Link
+                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}`}
+                        className="mt-0.5 block text-sm font-extrabold text-neutral-900 hover:underline"
+                      >
+                        {t.displayName || t.description || t.partNumber || "Tire"}
+                      </Link>
+                    ) : (
+                      <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
+                        {t.displayName || t.description || t.partNumber || "Tire"}
+                      </h3>
+                    )}
 
                     <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
                       {t.imageUrl ? (
@@ -816,9 +825,7 @@ export default async function TiresPage({
                       <div className="text-xs text-neutral-600">each</div>
                     </div>
 
-                    <div className="mt-3 text-xs text-neutral-700">
-                      Qty: {t.quantity?.primary ?? 0} primary • {t.quantity?.alternate ?? 0} alt • {t.quantity?.national ?? 0} nat
-                    </div>
+                    {/* Qty hidden */}
 
                     <div className="mt-4 grid gap-2">
                       {typeof t.cost === "number" ? (
