@@ -15,12 +15,21 @@ export async function GET(req: Request) {
   const upstream = new URL("/v1/vehicles/models", base);
   url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
 
-  const res = await fetch(upstream, { cache: "no-store" });
-  const text = await res.text();
-  return new NextResponse(text, {
-    status: res.status,
-    headers: {
-      "content-type": res.headers.get("content-type") || "application/json",
-    },
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+
+  try {
+    const res = await fetch(upstream, { cache: "no-store", signal: controller.signal });
+    const text = await res.text();
+    return new NextResponse(text, {
+      status: res.status,
+      headers: {
+        "content-type": res.headers.get("content-type") || "application/json",
+      },
+    });
+  } catch {
+    return NextResponse.json({ results: [] }, { status: 200, headers: { "cache-control": "no-store" } });
+  } finally {
+    clearTimeout(timeout);
+  }
 }

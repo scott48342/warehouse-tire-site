@@ -15,7 +15,17 @@ export async function GET(req: Request) {
   const upstream = new URL("/v1/vehicles/trims", base);
   url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
 
-  const res = await fetch(upstream, { cache: "no-store" });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+
+  let res: Response;
+  try {
+    res = await fetch(upstream, { cache: "no-store", signal: controller.signal });
+  } catch {
+    return NextResponse.json({ results: [] }, { status: 200, headers: { "cache-control": "no-store" } });
+  } finally {
+    clearTimeout(timeout);
+  }
 
   const ct = res.headers.get("content-type") || "";
   if (res.ok && ct.includes("application/json")) {
