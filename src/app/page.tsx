@@ -105,7 +105,7 @@ export default async function Home() {
       <section className="mx-auto max-w-6xl px-4 pb-12">
         <div className="flex items-end justify-between gap-3">
           <h2 className="text-xl font-extrabold text-neutral-900">Explore</h2>
-          <div className="text-xs text-neutral-600">Fast links (no live inventory here)</div>
+          <div className="text-xs text-neutral-600">Quick shortcuts</div>
         </div>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
