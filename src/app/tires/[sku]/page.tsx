@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import pg from "pg";
 import { BRAND } from "@/lib/brand";
 import { QuoteRequest } from "@/components/QuoteRequest";
+import { ImageGallery } from "@/components/ImageGallery";
 
 export const runtime = "nodejs";
 
@@ -53,11 +54,20 @@ function Badge({ children }: { children: React.ReactNode }) {
 
 export default async function TireDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ sku: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { sku } = await params;
+  const sp = (await searchParams) || {};
   const safeSku = String(sku || "").trim();
+
+  const year = String((sp as any).year || "");
+  const make = String((sp as any).make || "");
+  const model = String((sp as any).model || "");
+  const trim = String((sp as any).trim || "");
+  const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
 
   if (!safeSku) {
     return (
@@ -169,21 +179,9 @@ export default async function TireDetailPage({
           <div className="rounded-3xl border border-neutral-200 bg-white p-4">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div className="text-xs font-semibold text-neutral-600">Product photo</div>
-              <div className="text-[11px] text-neutral-500">Image may vary by size</div>
+              <div className="text-[11px] text-neutral-500">Click to zoom</div>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
-              {t.image_url ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={String(t.image_url)}
-                  alt={title}
-                  className="h-[360px] w-full object-contain"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="p-6 text-sm text-neutral-700">No image</div>
-              )}
-            </div>
+            <ImageGallery images={t.image_url ? [String(t.image_url)] : []} alt={title} note="Image may vary by size" />
           </div>
 
           </div>
@@ -214,6 +212,29 @@ export default async function TireDetailPage({
                   <li key={h}>{h}</li>
                 ))}
               </ul>
+            </div>
+
+            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
+              <div className="text-xs font-extrabold text-neutral-900">Fitment</div>
+              <div className="mt-1 text-xs text-neutral-600">
+                {vehicleLabel ? (
+                  <>
+                    Checking for: <span className="font-extrabold text-neutral-900">{vehicleLabel}</span> (we confirm before install)
+                  </>
+                ) : (
+                  <>
+                    Select your vehicle on the Tires page to confirm exact fitment.
+                  </>
+                )}
+              </div>
+              <div className="mt-3">
+                <Link
+                  href={vehicleLabel ? "/tires" : "/tires"}
+                  className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+                >
+                  {vehicleLabel ? "Change vehicle" : "Select vehicle"}
+                </Link>
+              </div>
             </div>
 
             <div id="quote" className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4">

@@ -3,6 +3,7 @@ import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVaria
 import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
 import { QuoteRequest } from "@/components/QuoteRequest";
+import { ImageGallery } from "@/components/ImageGallery";
 import { BRAND } from "@/lib/brand";
 
 type WheelProsBrand = {
@@ -143,10 +144,19 @@ async function fetchVariants({
 
 export default async function WheelDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ sku: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { sku } = await params;
+  const sp = (await searchParams) || {};
+  const year = String((sp as any).year || "");
+  const make = String((sp as any).make || "");
+  const model = String((sp as any).model || "");
+  const trim = String((sp as any).trim || "");
+  const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
+
   const data = await fetchWheelBySku(sku);
 
   const maybeData = data as { items?: unknown[]; results?: unknown[]; error?: unknown };
@@ -223,8 +233,20 @@ export default async function WheelDetailPage({
   const firstPrice = Array.isArray(msrp) ? msrp[0] : undefined;
   const price = firstPrice?.currencyAmount != null ? Number(firstPrice.currencyAmount) : undefined;
 
-  const img0 = Array.isArray(it?.images) ? it.images[0] : undefined;
-  const imageUrl = img0?.imageUrlLarge || img0?.imageUrlMedium || img0?.imageUrlOriginal || undefined;
+  // Prefer TechFeed for variant grouping (stable style id + complete data).
+  const tfSelf = await getTechfeedWheelBySku(sku);
+
+  const wpImgs = Array.isArray(it?.images)
+    ? it.images
+        .map((im) => im?.imageUrlLarge || im?.imageUrlMedium || im?.imageUrlOriginal || im?.imageUrlSmall)
+        .filter(Boolean)
+        .map(String)
+    : [];
+
+  const tfImgs = Array.isArray(tfSelf?.images) ? tfSelf.images.map(String) : [];
+
+  const galleryImages = Array.from(new Set([...wpImgs, ...tfImgs]));
+  const imageUrl = galleryImages[0] || undefined;
 
   const diameter = it?.properties?.diameter != null ? String(it.properties.diameter) : "";
   const width = it?.properties?.width != null ? String(it.properties.width) : "";
@@ -234,8 +256,6 @@ export default async function WheelDetailPage({
   const offset = it?.properties?.offset != null ? String(it.properties.offset) : "";
   const finish = it?.properties?.finish != null ? String(it.properties.finish) : "";
 
-  // Prefer TechFeed for variant grouping (stable style id + complete data).
-  const tfSelf = await getTechfeedWheelBySku(sku);
   const generated = buildWheelDescription();
   const styleKey = tfSelf?.style || tfSelf?.display_style_no || "";
   const tfStyleRows = styleKey ? await getTechfeedWheelsByStyle(styleKey) : null;
@@ -293,19 +313,11 @@ export default async function WheelDetailPage({
               <div className="text-xs font-semibold text-neutral-600">Product photo</div>
               <div className="text-[11px] text-neutral-500">Finish may vary by lighting</div>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
-              {imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={imageUrl}
-                  alt={it?.title || sku}
-                  className="h-[360px] w-full object-contain"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="p-6 text-sm text-neutral-700">No image</div>
-              )}
-            </div>
+            <ImageGallery
+              images={galleryImages}
+              alt={String(it?.title || sku)}
+              note="Finish may vary by lighting"
+            />
           </div>
 
           <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
@@ -355,6 +367,27 @@ export default async function WheelDetailPage({
                   {finishThumbs.length > 1 ? (
                     <FinishThumbnailStrip items={finishThumbs} selectedFinish={finish || undefined} />
                   ) : null}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-neutral-200 bg-white p-4">
+                <div className="text-xs font-extrabold text-neutral-900">Fitment</div>
+                <div className="mt-1 text-xs text-neutral-600">
+                  {vehicleLabel ? (
+                    <>
+                      Checking for: <span className="font-extrabold text-neutral-900">{vehicleLabel}</span> (we confirm before install)
+                    </>
+                  ) : (
+                    <>Select your vehicle on the Wheels page to confirm exact fitment.</>
+                  )}
+                </div>
+                <div className="mt-3">
+                  <Link
+                    href="/wheels"
+                    className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+                  >
+                    {vehicleLabel ? "Change vehicle" : "Select vehicle"}
+                  </Link>
                 </div>
               </div>
 
