@@ -778,7 +778,7 @@ export default async function TiresPage({
                 items.map((t, idx) => (
                   <article
                     key={t.partNumber || t.mfgPartNumber || idx}
-                    className="relative rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
+                    className="group relative rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
                   >
                     {t.mfgPartNumber ? (
                       <Link
@@ -802,9 +802,22 @@ export default async function TiresPage({
                         />
                       ) : null}
                     </div>
-                    <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
+                    <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900 group-hover:underline">
                       {t.displayName || t.description || t.partNumber || "Tire"}
                     </h3>
+
+                    <div className="mt-1 flex flex-wrap gap-1.5">
+                      {selectedSize ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+                          {selectedSize}
+                        </span>
+                      ) : null}
+                      {t.brand ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+                          {t.brand}
+                        </span>
+                      ) : null}
+                    </div>
 
                     <div className="relative z-10 mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
                       {t.imageUrl ? (
@@ -812,11 +825,16 @@ export default async function TiresPage({
                         <img
                           src={t.imageUrl}
                           alt={t.displayName || t.description || t.partNumber || "Tire"}
-                          className="h-36 w-full object-contain bg-white"
+                          className="h-36 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
                           loading="lazy"
                         />
                       ) : (
-                        <div className="p-3 text-xs text-neutral-700">No image</div>
+                        <div className="grid h-36 place-items-center bg-white p-3 text-center">
+                          <div>
+                            <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+                            <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
+                          </div>
+                        </div>
                       )}
                     </div>
 
@@ -825,6 +843,7 @@ export default async function TiresPage({
                         {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
                       </div>
                       <div className="text-xs text-neutral-600">each</div>
+                      <div className="mt-1 text-[11px] text-neutral-600">Fast quote • Fitment confirmed before install</div>
                     </div>
 
                     {/* Qty hidden */}
