@@ -11,6 +11,12 @@ export function MegaMenu({
   const [open, setOpen] = useState<null | "tires" | "wheels">(null);
   const closeTimer = useRef<number | null>(null);
 
+  function closeNow() {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = null;
+    setOpen(null);
+  }
+
   function scheduleClose() {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
     closeTimer.current = window.setTimeout(() => setOpen(null), 120);
@@ -22,7 +28,23 @@ export function MegaMenu({
   }
 
   useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") closeNow();
+    }
+    function onClick(e: MouseEvent) {
+      // close when clicking outside the panel/trigger area
+      const el = e.target as HTMLElement | null;
+      if (!el) return;
+      if (el.closest('[data-megamenu-root="1"]')) return;
+      closeNow();
+    }
+
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("click", onClick);
+
     return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("click", onClick);
       if (closeTimer.current) window.clearTimeout(closeTimer.current);
     };
   }, []);
@@ -66,20 +88,27 @@ export function MegaMenu({
           <div className="grid gap-2">
             <button
               type="button"
-              onClick={() => onOpenSearch(type, "vehicle")}
+              onClick={() => {
+                closeNow();
+                onOpenSearch(type, "vehicle");
+              }}
               className="h-12 rounded-xl bg-neutral-100 px-3 text-left text-xs font-extrabold text-neutral-900 hover:bg-neutral-200"
             >
               SHOP BY VEHICLE
             </button>
             <button
               type="button"
-              onClick={() => onOpenSearch(type, "size")}
+              onClick={() => {
+                closeNow();
+                onOpenSearch(type, "size");
+              }}
               className="h-12 rounded-xl bg-neutral-100 px-3 text-left text-xs font-extrabold text-neutral-900 hover:bg-neutral-200"
             >
               SHOP BY SIZE
             </button>
             <Link
               href={isTires ? "/tires" : "/wheels"}
+              onClick={() => closeNow()}
               className="h-12 rounded-xl bg-neutral-100 px-3 text-left text-xs font-extrabold text-neutral-900 hover:bg-neutral-200 flex items-center"
             >
               SHOP {isTires ? "TIRES" : "WHEELS"}
@@ -134,7 +163,7 @@ export function MegaMenu({
   }
 
   return (
-    <div className="relative">
+    <div className="relative" data-megamenu-root="1">
       <div className="flex items-center gap-4">
         <Trigger type="tires" label="TIRES" />
         <Trigger type="wheels" label="WHEELS" />
