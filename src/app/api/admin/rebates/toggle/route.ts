@@ -27,6 +27,13 @@ export async function POST(req: Request) {
       values: [id, enabled],
     });
 
+    const accept = req.headers.get("accept") || "";
+    if (accept.includes("text/html")) {
+      const u = new URL("/admin/rebates", req.url);
+      u.searchParams.set("toggled", "1");
+      return NextResponse.redirect(u, { status: 303 });
+    }
+
     return NextResponse.json({ ok: true }, { status: 200, headers: { "cache-control": "no-store" } });
   } catch (e: any) {
     return NextResponse.json({ ok: false, error: e?.message || String(e) }, { status: 500 });

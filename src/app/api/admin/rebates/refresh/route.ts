@@ -43,7 +43,7 @@ function makeId(parts: Record<string, any>) {
   return crypto.createHash("sha1").update(raw).digest("hex");
 }
 
-export async function POST() {
+export async function POST(req: Request) {
   try {
     const res = await fetch("https://www.tirerack.com/specialoffers/specialoffers.jsp", {
       cache: "no-store",
@@ -140,6 +140,15 @@ export async function POST() {
         `,
         values: [o.id, o.source, o.brand, o.headline, o.learnMoreUrl, o.formUrl, o.endsText],
       });
+    }
+
+    // If this was triggered from the admin UI (HTML form), redirect back.
+    const accept = req.headers.get("accept") || "";
+    if (accept.includes("text/html")) {
+      const u = new URL("/admin/rebates", req.url);
+      u.searchParams.set("refreshed", "1");
+      u.searchParams.set("count", String(upserts.length));
+      return NextResponse.redirect(u, { status: 303 });
     }
 
     return NextResponse.json({ ok: true, count: upserts.length }, { status: 200, headers: { "cache-control": "no-store" } });

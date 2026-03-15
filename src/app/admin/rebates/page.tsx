@@ -10,7 +10,15 @@ function fmtTime(s: string) {
   }
 }
 
-export default async function RebatesAdminPage() {
+export default async function RebatesAdminPage({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const sp = (await searchParams) ?? {};
+  const refreshed = (Array.isArray((sp as any).refreshed) ? (sp as any).refreshed[0] : (sp as any).refreshed) || "";
+  const count = (Array.isArray((sp as any).count) ? (sp as any).count[0] : (sp as any).count) || "";
+
   let rebates: Awaited<ReturnType<typeof listRebates>> = [];
   let dbError: string | null = null;
 
@@ -42,6 +50,12 @@ export default async function RebatesAdminPage() {
         {dbError ? (
           <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
             Rebates admin unavailable: {dbError}
+          </div>
+        ) : null}
+
+        {refreshed ? (
+          <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900">
+            Refreshed. Imported {count || "0"} offers.
           </div>
         ) : null}
 
