@@ -175,9 +175,13 @@ export default async function WheelDetailPage({
     ? await fetchFitment({ year, make, model, modification: modification || undefined })
     : null;
 
-  const oemTireSizes: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
+  const oemTireSizesAll: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
     ? (fitmentStrict as any).tireSizes.map(String)
     : [];
+
+  // We'll filter OEM tire sizes to match the wheel diameter after we parse the wheel's size.
+  let wheelDiaN: number | null = null;
+  let oemTireSizes = oemTireSizesAll;
 
   const data = await fetchWheelBySku(sku);
 
@@ -272,6 +276,19 @@ export default async function WheelDetailPage({
 
   const diameter = it?.properties?.diameter != null ? String(it.properties.diameter) : "";
   const width = it?.properties?.width != null ? String(it.properties.width) : "";
+
+  wheelDiaN = (() => {
+    const n = Number(String(diameter || "").replace(/[^0-9.]/g, ""));
+    return Number.isFinite(n) ? n : null;
+  })();
+
+  oemTireSizes = wheelDiaN
+    ? oemTireSizesAll.filter((s) => {
+        const m = String(s).toUpperCase().match(/R(\d{2})\b/);
+        const rim = m ? Number(m[1]) : NaN;
+        return Number.isFinite(rim) && rim === wheelDiaN;
+      })
+    : oemTireSizesAll;
   const boltPattern = it?.properties?.boltPatternMetric != null
     ? String(it.properties.boltPatternMetric)
     : (it?.properties?.boltPattern != null ? String(it.properties.boltPattern) : "");
@@ -342,13 +359,15 @@ export default async function WheelDetailPage({
                 <div className="text-xs font-extrabold text-neutral-900">Add tires</div>
                 <div className="mt-1 text-xs text-neutral-600">
                   {vehicleLabel
-                    ? "Choose an OEM tire size for your vehicle."
+                    ? (wheelDiaN
+                        ? `Choose an OEM tire size that fits ${wheelDiaN}" wheels.`
+                        : "Choose an OEM tire size for your vehicle.")
                     : "Select a vehicle to see OEM tire sizes."}
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {vehicleLabel && oemTireSizes.length ? (
-                    oemTireSizes.slice(0, 4).map((s) => (
+                  {vehicleLabel && (oemTireSizes.length || oemTireSizesAll.length) ? (
+                    (oemTireSizes.length ? oemTireSizes : oemTireSizesAll).slice(0, 4).map((s) => (
                       <Link
                         key={s}
                         href={
