@@ -103,8 +103,10 @@ export default async function TireDetailPage({
     );
   }
 
-  const mapUsd = n(t.map_usd);
-  const msrpUsd = n(t.msrp_usd);
+  const mapUsd0 = n(t.map_usd);
+  const msrpUsd0 = n(t.msrp_usd);
+  const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+  const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
   const displayPrice = mapUsd ?? (msrpUsd != null ? msrpUsd + 50 : null);
 
   const title = String(t.tire_description || t.tire_size || t.simple_size || t.sku);

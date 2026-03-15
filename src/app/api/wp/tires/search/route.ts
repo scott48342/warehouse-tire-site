@@ -74,12 +74,17 @@ export async function GET(req: Request) {
     });
 
     const items = rows.map((r) => {
-      const mapUsd = n(r.map_usd);
-      const msrpUsd = n(r.msrp_usd);
+      const mapUsd0 = n(r.map_usd);
+      const msrpUsd0 = n(r.msrp_usd);
 
-      // The UI displays price as (cost + 50). To show MAP directly, set cost = MAP - 50.
+      // Treat 0/blank as missing (some feeds use 0 when price not available)
+      const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+      const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
+
+      // The UI displays price as (cost + 50).
+      // To show MAP directly, set cost = MAP - 50.
       // Otherwise, show MSRP + 50 by setting cost = MSRP.
-      const cost = mapUsd != null ? Math.max(0, mapUsd - 50) : msrpUsd;
+      const cost = mapUsd != null ? Math.max(0.01, mapUsd - 50) : msrpUsd;
 
       return {
         partNumber: String(r.sku),
