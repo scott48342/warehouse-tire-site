@@ -13,6 +13,7 @@ export type SiteRebate = {
 };
 
 export const REBATE_SOURCE_TIRERACK = "tirerack";
+export const REBATE_SOURCE_DISCOUNTTIRE = "discounttire";
 
 const { Pool } = pg;
 

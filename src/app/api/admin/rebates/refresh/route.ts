@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import crypto from "node:crypto";
 import * as cheerio from "cheerio";
-import { getPool, ensureRebatesTable, REBATE_SOURCE_TIRERACK } from "@/lib/rebates";
+import { getPool, ensureRebatesTable, REBATE_SOURCE_DISCOUNTTIRE, REBATE_SOURCE_TIRERACK } from "@/lib/rebates";
 
 export const runtime = "nodejs";
 
@@ -45,18 +45,35 @@ function makeId(parts: Record<string, any>) {
 
 export async function POST(req: Request) {
   try {
-    const res = await fetch("https://www.tirerack.com/specialoffers/specialoffers.jsp", {
-      cache: "no-store",
-      headers: {
-        "user-agent": "warehouse-tire-site/1.0 (rebate sync)",
-      },
-    });
+    // Preferred source: Discount Tire promotions (more dealer-aligned).
+    // Fallback: Tire Rack specials.
+    const urls = [
+      { url: "https://www.discounttire.com/promotions", source: REBATE_SOURCE_DISCOUNTTIRE },
+      { url: "https://www.tirerack.com/specialoffers/specialoffers.jsp", source: REBATE_SOURCE_TIRERACK },
+    ];
 
-    if (!res.ok) {
-      return NextResponse.json({ ok: false, error: `Fetch failed (${res.status})` }, { status: 500 });
+    let html = "";
+    let pickedSource = "";
+    let res: Response | null = null;
+
+    for (const u of urls) {
+      res = await fetch(u.url, {
+        cache: "no-store",
+        headers: {
+          "user-agent": "warehouse-tire-site/1.0 (rebate sync)",
+        },
+      });
+      if (!res.ok) continue;
+      html = await res.text();
+      pickedSource = u.source;
+      // accept the first successful fetch
+      break;
     }
 
-    const html = await res.text();
+    if (!res || !res.ok) {
+      return NextResponse.json({ ok: false, error: `Fetch failed` }, { status: 500 });
+    }
+
     const $ = cheerio.load(html);
 
     const offers: Array<{
@@ -69,50 +86,102 @@ export async function POST(req: Request) {
       endsText: string | null;
     }> = [];
 
-    $("a").each((_, el) => {
-      const a = $(el);
-      const txt = a.text().trim();
-      if (txt !== "Learn More") return;
-
-      const box = a.closest("li, .specialOffer, .offer, .promo, .deal, div");
-      const links = box
-        .find("a")
-        .toArray()
-        .map((x) => {
-          const $x = $(x);
-          return { text: $x.text().trim(), href: $x.attr("href") || "" };
-        });
-
-      const headlineLink = links.find((l) => l.text && l.text !== "Learn More" && !/Form$/i.test(l.text));
-      if (!headlineLink?.text) return;
-
-      const learnMore = links.find((l) => l.text === "Learn More")?.href || "";
-      const form = links.find((l) => /Form$/i.test(l.text))?.href || "";
-
-      const endsText = box.text().includes("Ends")
-        ? (box.text().match(/Ends[^\n\r]+/i)?.[0]?.trim() || null)
-        : null;
-
+    if (pickedSource === REBATE_SOURCE_DISCOUNTTIRE) {
       const abs = (u: string) => {
         if (!u) return null;
         if (u.startsWith("http")) return u;
-        return `https://www.tirerack.com${u.startsWith("/") ? "" : "/"}${u}`;
+        return `https://www.discounttire.com${u.startsWith("/") ? "" : "/"}${u}`;
       };
 
-      const headline = headlineLink.text;
-      const brand = normBrand(headline);
+      $("h1,h2,h3").each((_, el) => {
+        const h = $(el);
+        const headline = h.text().trim();
+        if (!headline || !/rebate/i.test(headline)) return;
 
-      const id = makeId({ source: REBATE_SOURCE_TIRERACK, headline, learnMore: abs(learnMore), form: abs(form) });
-      offers.push({
-        id,
-        source: REBATE_SOURCE_TIRERACK,
-        brand,
-        headline,
-        learnMoreUrl: abs(learnMore),
-        formUrl: abs(form),
-        endsText,
+        const box = h.closest("section, article, li, div");
+        const linkEls = box.find("a").toArray();
+        const links = linkEls
+          .map((x) => {
+            const a = $(x);
+            return { text: a.text().trim(), href: a.attr("href") || "" };
+          })
+          .filter((l) => l.href);
+
+        const learnMore = links.find((l) => /get details|see details|view offer details/i.test(l.text))?.href || "";
+        const form = links.find((l) => /download form|rebate form|claim form/i.test(l.text))?.href || "";
+        const submit = links.find((l) => /submit online/i.test(l.text))?.href || "";
+
+        // Prefer the explicit form/submission links.
+        const formUrl = abs(form || submit);
+        const learnMoreUrl = abs(learnMore);
+
+        const endsText = (() => {
+          const t = box.text();
+          const m = t.match(/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}\s*\u2013\s*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}/i);
+          return m ? m[0] : null;
+        })();
+
+        const imgAlt = box.find("img").first().attr("alt") || "";
+        const brand = normBrand(headline) || normBrand(imgAlt) || null;
+
+        const id = makeId({ source: pickedSource, headline, learnMore: learnMoreUrl, form: formUrl });
+        offers.push({
+          id,
+          source: pickedSource,
+          brand,
+          headline,
+          learnMoreUrl,
+          formUrl,
+          endsText,
+        });
       });
-    });
+    } else {
+      // Tire Rack parser
+      $("a").each((_, el) => {
+        const a = $(el);
+        const txt = a.text().trim();
+        if (txt !== "Learn More") return;
+
+        const box = a.closest("li, .specialOffer, .offer, .promo, .deal, div");
+        const links = box
+          .find("a")
+          .toArray()
+          .map((x) => {
+            const $x = $(x);
+            return { text: $x.text().trim(), href: $x.attr("href") || "" };
+          });
+
+        const headlineLink = links.find((l) => l.text && l.text !== "Learn More" && !/Form$/i.test(l.text));
+        if (!headlineLink?.text) return;
+
+        const learnMore = links.find((l) => l.text === "Learn More")?.href || "";
+        const form = links.find((l) => /Form$/i.test(l.text))?.href || "";
+
+        const endsText = box.text().includes("Ends")
+          ? (box.text().match(/Ends[^\n\r]+/i)?.[0]?.trim() || null)
+          : null;
+
+        const abs = (u: string) => {
+          if (!u) return null;
+          if (u.startsWith("http")) return u;
+          return `https://www.tirerack.com${u.startsWith("/") ? "" : "/"}${u}`;
+        };
+
+        const headline = headlineLink.text;
+        const brand = normBrand(headline);
+
+        const id = makeId({ source: pickedSource, headline, learnMore: abs(learnMore), form: abs(form) });
+        offers.push({
+          id,
+          source: pickedSource,
+          brand,
+          headline,
+          learnMoreUrl: abs(learnMore),
+          formUrl: abs(form),
+          endsText,
+        });
+      });
+    }
 
     const uniq = new Map<string, (typeof offers)[number]>();
     for (const o of offers) {
