@@ -93,11 +93,51 @@ create index if not exists wp_tires_filter_idx on wp_tires (simple_size, rim_dia
 create index if not exists wp_inventory_sku_idx on wp_inventory (sku, product_type);
 `;
 
-const client = new Client({ connectionString: DATABASE_URL, ssl: { rejectUnauthorized: false } });
+async function sleep(ms) {
+  await new Promise((r) => setTimeout(r, ms));
+}
 
-console.log("Connecting...");
-await client.connect();
-console.log("Creating tables...");
-await client.query(ddl);
-console.log("Done.");
-await client.end();
+async function runWithRetries(fn, { tries = 5, baseDelayMs = 500 } = {}) {
+  let lastErr;
+  for (let i = 1; i <= tries; i++) {
+    try {
+      return await fn(i);
+    } catch (err) {
+      lastErr = err;
+      const msg = String(err?.message || "");
+      const transient = msg.includes("ECONNRESET") || msg.includes("Connection terminated unexpectedly");
+      if (!transient || i === tries) throw err;
+      const delay = baseDelayMs * Math.pow(2, i - 1);
+      console.warn(`Transient DB error (${msg}); retrying in ${delay}ms...`);
+      await sleep(delay);
+    }
+  }
+  throw lastErr;
+}
+
+await runWithRetries(async () => {
+  const client = new Client({
+    connectionString: DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+    keepAlive: true,
+  });
+
+  client.on("error", (err) => {
+    console.error("PG client error event:", err?.message || err);
+  });
+
+  console.log("Connecting...");
+  await client.connect();
+
+  try {
+    console.log("Creating tables...");
+    await client.query(ddl);
+    console.log("Done.");
+  } finally {
+    try {
+      await client.end();
+    } catch {
+      // ignore
+    }
+  }
+});
