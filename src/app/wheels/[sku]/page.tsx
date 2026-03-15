@@ -5,6 +5,7 @@ import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/
 import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { BRAND } from "@/lib/brand";
+import { vehicleSlug } from "@/lib/vehicleSlug";
 
 type WheelProsBrand = {
   code?: string;
@@ -56,6 +57,16 @@ async function fetchWheelBySku(sku: string) {
     `${getBaseUrl()}/api/wheelpros/wheels/search?fields=inventory,price,images,properties&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(sku)}`,
     { cache: "no-store" }
   );
+  if (!res.ok) return { error: await res.text() };
+  return res.json();
+}
+
+async function fetchFitment(params: Record<string, string | undefined>) {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v) sp.set(k, v);
+  }
+  const res = await fetch(`${getBaseUrl()}/api/vehicles/search?${sp.toString()}`, { cache: "no-store" });
   if (!res.ok) return { error: await res.text() };
   return res.json();
 }
@@ -157,6 +168,16 @@ export default async function WheelDetailPage({
   const trim = String((sp as any).trim || "");
   const modification = String((sp as any).modification || "");
   const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
+
+  const vehicleSlugStr = year && make && model ? vehicleSlug(year, make, model) : "";
+
+  const fitmentStrict = year && make && model
+    ? await fetchFitment({ year, make, model, modification: modification || undefined })
+    : null;
+
+  const oemTireSizes: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
+    ? (fitmentStrict as any).tireSizes.map(String)
+    : [];
 
   const data = await fetchWheelBySku(sku);
 
@@ -316,6 +337,42 @@ export default async function WheelDetailPage({
                 <div className="text-[11px] text-neutral-500">Finish may vary by lighting</div>
               </div>
               <ImageGallery images={galleryImages} alt={String(it?.title || sku)} note="Finish may vary by lighting" />
+
+              <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
+                <div className="text-xs font-extrabold text-neutral-900">Add tires</div>
+                <div className="mt-1 text-xs text-neutral-600">
+                  {vehicleLabel
+                    ? "Choose an OEM tire size for your vehicle."
+                    : "Select a vehicle to see OEM tire sizes."}
+                </div>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {vehicleLabel && oemTireSizes.length ? (
+                    oemTireSizes.slice(0, 4).map((s) => (
+                      <Link
+                        key={s}
+                        href={
+                          vehicleSlugStr
+                            ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ year, make, model, trim, modification, size: s }).toString()}`
+                            : `/tires?${new URLSearchParams({ year, make, model, trim, modification, size: s }).toString()}`
+                        }
+                        className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                      >
+                        {s}
+                      </Link>
+                    ))
+                  ) : (
+                    <Link
+                      href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                      className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
+                    >
+                      Select vehicle
+                    </Link>
+                  )}
+                </div>
+
+                <div className="mt-2 text-[11px] text-neutral-600">Well verify fitment before install.</div>
+              </div>
             </div>
 
             {/* Space reserved for future modules under the photo (tire matching, accessories, etc.) */}
