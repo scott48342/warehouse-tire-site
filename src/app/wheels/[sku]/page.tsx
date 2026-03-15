@@ -287,8 +287,12 @@ export default async function WheelDetailPage({
           </Link>
         </div>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_420px]">
           <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <div className="text-xs font-semibold text-neutral-600">Product photo</div>
+              <div className="text-[11px] text-neutral-500">Finish may vary by lighting</div>
+            </div>
             <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
               {imageUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -304,7 +308,7 @@ export default async function WheelDetailPage({
             </div>
           </div>
 
-          <div className="rounded-3xl border border-neutral-200 bg-white p-6">
+          <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
             <div className="text-xs font-semibold text-neutral-600">{brand || "Wheel"}</div>
             <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{it?.title || sku}</h1>
 
@@ -324,7 +328,7 @@ export default async function WheelDetailPage({
             </div>
 
             <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Why youll like it</div>
+              <div className="text-xs font-extrabold text-neutral-900">Why you’ll like it</div>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
                 {(generated.bullets.length ? generated.bullets : [generated.paragraph]).slice(0, 5).map((b) => (
                   <li key={b}>{b}</li>
@@ -357,7 +361,7 @@ export default async function WheelDetailPage({
               <div id="quote" className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
                 <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>
                 <div className="mt-1 text-xs text-neutral-600">
-                  Well confirm pricing, availability, and the right fit before you commit.
+                  We’ll confirm pricing, availability, and the right fit before you commit.
                 </div>
                 <div className="mt-3 grid gap-2">
                   <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />

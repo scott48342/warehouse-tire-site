@@ -35,6 +35,14 @@ function fmtMoney(v: number) {
   return `$${v.toFixed(2)}`;
 }
 
+function priceFromRow(r: any): number | null {
+  const mapUsd0 = n(r?.map_usd);
+  const msrpUsd0 = n(r?.msrp_usd);
+  const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+  const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
+  return mapUsd ?? (msrpUsd != null ? msrpUsd + 50 : null);
+}
+
 function Badge({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900">
@@ -95,6 +103,22 @@ export default async function TireDetailPage({
   });
 
   const t = rows[0] || null;
+
+  // Related tires (same simple size)
+  const related = t
+    ? await db.query({
+        text: `
+          select sku, brand_desc, tire_description, tire_size, simple_size, image_url, map_usd, msrp_usd
+          from wp_tires
+          where simple_size = $1
+            and sku <> $2
+          order by brand_desc nulls last, tire_description nulls last
+          limit 8
+        `,
+        values: [String(t.simple_size || ""), safeSku],
+      })
+    : { rows: [] as any[] };
+
   if (!t) {
     return (
       <main className="bg-neutral-50">
@@ -112,11 +136,7 @@ export default async function TireDetailPage({
     );
   }
 
-  const mapUsd0 = n(t.map_usd);
-  const msrpUsd0 = n(t.msrp_usd);
-  const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
-  const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
-  const displayPrice = mapUsd ?? (msrpUsd != null ? msrpUsd + 50 : null);
+  const displayPrice = priceFromRow(t);
 
   const title = String(t.tire_description || t.tire_size || t.simple_size || t.sku);
 
@@ -144,8 +164,13 @@ export default async function TireDetailPage({
           </Link>
         </div>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_420px]">
+          <div className="grid gap-6">
           <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <div className="text-xs font-semibold text-neutral-600">Product photo</div>
+              <div className="text-[11px] text-neutral-500">Image may vary by size</div>
+            </div>
             <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
               {t.image_url ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -161,7 +186,9 @@ export default async function TireDetailPage({
             </div>
           </div>
 
-          <div className="rounded-3xl border border-neutral-200 bg-white p-6">
+          </div>
+
+          <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
             <div className="text-xs font-semibold text-neutral-600">{String(t.brand_desc || "Tire")}</div>
             <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{title}</h1>
 
@@ -181,7 +208,7 @@ export default async function TireDetailPage({
             </div>
 
             <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Why youll like it</div>
+              <div className="text-xs font-extrabold text-neutral-900">Why you’ll like it</div>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
                 {(highlights.length ? highlights : ["Fitment and availability confirmed before install."]).slice(0, 6).map((h) => (
                   <li key={h}>{h}</li>
@@ -192,7 +219,7 @@ export default async function TireDetailPage({
             <div id="quote" className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
               <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>
               <div className="mt-1 text-xs text-neutral-600">
-                Well confirm pricing, availability, and the right fit before you commit.
+                We’ll confirm pricing, availability, and the right fit before you commit.
               </div>
 
               <div className="mt-3 grid gap-2">
@@ -228,6 +255,55 @@ export default async function TireDetailPage({
             <div className="mt-4 text-xs text-neutral-600">Part / SKU: {safeSku}</div>
           </div>
         </div>
+
+        {related.rows?.length ? (
+          <section className="mt-10">
+            <div className="flex items-end justify-between gap-3">
+              <h2 className="text-lg font-extrabold text-neutral-900">More options in this size</h2>
+              <Link href="/tires" className="text-xs font-extrabold text-neutral-900 hover:underline">
+                Browse all tires
+              </Link>
+            </div>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {related.rows.slice(0, 8).map((r: any) => {
+                const rp = priceFromRow(r);
+                const name = String(r.tire_description || r.tire_size || r.simple_size || r.sku);
+                return (
+                  <Link
+                    key={r.sku}
+                    href={`/tires/${encodeURIComponent(String(r.sku))}`}
+                    className="group rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
+                  >
+                    <div className="text-[11px] font-semibold text-neutral-600">{String(r.brand_desc || "Tire")}</div>
+                    <div className="mt-1 line-clamp-2 text-sm font-extrabold text-neutral-900 group-hover:underline">
+                      {name}
+                    </div>
+
+                    <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+                      {r.image_url ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={String(r.image_url)}
+                          alt={name}
+                          className="h-28 w-full bg-white object-contain"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="p-3 text-xs text-neutral-700">Image coming soon</div>
+                      )}
+                    </div>
+
+                    <div className="mt-3 text-lg font-extrabold text-neutral-900">
+                      {rp != null ? fmtMoney(rp) : "Call for price"}
+                    </div>
+                    <div className="text-[11px] text-neutral-600">each</div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
 
         {/* Mobile sticky CTA */}
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 p-3 backdrop-blur md:hidden">
