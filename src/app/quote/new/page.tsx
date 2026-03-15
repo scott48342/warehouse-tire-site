@@ -4,7 +4,7 @@ import { BRAND } from "@/lib/brand";
 import { getPool as getQuotePool } from "@/lib/quotes";
 import { listCatalogItems, getTaxRate } from "@/lib/quoteCatalog";
 import { cookieName, verifyAdminToken } from "@/lib/adminAuth";
-import { QuoteBuilder } from "@/components/QuoteBuilder";
+import { QuoteBuilder, type ProductDetails } from "@/components/QuoteBuilder";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -32,6 +32,65 @@ async function fetchFitment(params: Record<string, string | undefined>) {
   const res = await fetch(`${getBaseUrl()}/api/vehicles/search?${sp.toString()}`, { cache: "no-store" });
   if (!res.ok) return { error: await res.text() };
   return res.json();
+}
+
+async function fetchWheelDetails(sku: string): Promise<ProductDetails | null> {
+  if (!sku) return null;
+  try {
+    const res = await fetch(
+      `${getBaseUrl()}/api/wheelpros/wheels/search?fields=images,properties,price&priceType=msrp&currencyCode=USD&page=1&pageSize=1&sku=${encodeURIComponent(
+        sku
+      )}`,
+      { cache: "no-store" }
+    );
+    if (!res.ok) return null;
+    const data: any = await res.json();
+    const it = (Array.isArray(data?.items) ? data.items[0] : Array.isArray(data?.results) ? data.results[0] : null) as any;
+    const img = Array.isArray(it?.images) && it.images.length
+      ? (it.images[0]?.imageUrlLarge || it.images[0]?.imageUrlMedium || it.images[0]?.imageUrlOriginal || it.images[0]?.imageUrlSmall)
+      : null;
+
+    const p = it?.properties || {};
+    const specs: Array<{ k: string; v: string }> = [];
+    if (p?.diameter) specs.push({ k: "Diameter", v: `${String(p.diameter)}\"` });
+    if (p?.width) specs.push({ k: "Width", v: `${String(p.width)}\"` });
+    if (p?.boltPatternMetric || p?.boltPattern) specs.push({ k: "Bolt pattern", v: String(p.boltPatternMetric || p.boltPattern) });
+    if (p?.offset) specs.push({ k: "Offset", v: `${String(p.offset)} mm` });
+    if (p?.finish) specs.push({ k: "Finish", v: String(p.finish) });
+
+    return { imageUrl: img ? String(img) : undefined, specs };
+  } catch {
+    return null;
+  }
+}
+
+async function fetchTireDetails(db: any, sku: string): Promise<ProductDetails | null> {
+  if (!sku) return null;
+  try {
+    const { rows } = await db.query({
+      text: `
+        select sku, tire_size, terrain, construction_type, mileage_warranty, load_index, speed_rating, image_url
+        from wp_tires
+        where sku = $1
+        limit 1
+      `,
+      values: [sku],
+    });
+    const t = rows[0];
+    if (!t) return null;
+
+    const specs: Array<{ k: string; v: string }> = [];
+    if (t.tire_size) specs.push({ k: "Size", v: String(t.tire_size) });
+    if (t.terrain) specs.push({ k: "Terrain", v: String(t.terrain) });
+    if (t.construction_type) specs.push({ k: "Construction", v: String(t.construction_type) });
+    if (t.mileage_warranty) specs.push({ k: "Warranty", v: `${String(t.mileage_warranty)} miles` });
+    if (t.load_index) specs.push({ k: "Load", v: String(t.load_index) });
+    if (t.speed_rating) specs.push({ k: "Speed", v: String(t.speed_rating) });
+
+    return { imageUrl: t.image_url ? String(t.image_url) : undefined, specs };
+  } catch {
+    return null;
+  }
 }
 
 export default async function NewQuotePage({
@@ -142,6 +201,11 @@ export default async function NewQuotePage({
       } as const)
     : undefined;
 
+  const [wheelDetails, tireDetails] = await Promise.all([
+    wheelSku ? fetchWheelDetails(wheelSku) : Promise.resolve(null),
+    tireSku ? fetchTireDetails(db, tireSku) : Promise.resolve(null),
+  ]);
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-5xl px-4 py-10">
@@ -226,6 +290,8 @@ export default async function NewQuotePage({
                 tireRemoveHref={`/quote/new?${removeTireParams.toString()}`}
                 wheelChangeHref={`/wheels?${wheelChangeParams.toString()}`}
                 tireChangeHref={`/tires?${tireChangeParams.toString()}`}
+                wheelDetails={wheelDetails || undefined}
+                tireDetails={tireDetails || undefined}
               />
             );
           })()}

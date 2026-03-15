@@ -16,6 +16,11 @@ export type ProductLine = {
   meta?: Record<string, any>;
 };
 
+export type ProductDetails = {
+  imageUrl?: string;
+  specs?: Array<{ k: string; v: string }>;
+};
+
 type QuoteLine = {
   kind: "product" | "catalog" | "custom";
   name: string;
@@ -94,6 +99,8 @@ export function QuoteBuilder({
   wheelRemoveHref,
   tireChangeHref,
   tireRemoveHref,
+  wheelDetails,
+  tireDetails,
 }: {
   vehicleLabel: string;
   vehicle: { year?: string; make?: string; model?: string; trim?: string; modification?: string };
@@ -106,6 +113,8 @@ export function QuoteBuilder({
   wheelRemoveHref?: string;
   tireChangeHref?: string;
   tireRemoveHref?: string;
+  wheelDetails?: ProductDetails;
+  tireDetails?: ProductDetails;
 }) {
   const wheelQty = wheel?.qty || 0;
   const tireQty = tire?.qty || 0;
@@ -184,6 +193,7 @@ export function QuoteBuilder({
           total={ext(wheel)}
           changeHref={wheelChangeHref || `/wheels?${new URLSearchParams(vehicle as any).toString()}`}
           removeHref={wheelRemoveHref}
+          details={wheelDetails}
         />
       ) : null}
 
@@ -197,6 +207,7 @@ export function QuoteBuilder({
           total={ext(tire)}
           changeHref={tireChangeHref || `/tires?${new URLSearchParams(vehicle as any).toString()}`}
           removeHref={tireRemoveHref}
+          details={tireDetails}
         />
       ) : null}
 
@@ -298,6 +309,7 @@ function ProductCard({
   total,
   changeHref,
   removeHref,
+  details,
 }: {
   title: string;
   name: string;
@@ -307,14 +319,38 @@ function ProductCard({
   total: number;
   changeHref: string;
   removeHref?: string;
+  details?: ProductDetails;
 }) {
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-      <div className="flex items-start justify-between gap-3">
+      <div className="grid gap-4 md:grid-cols-[140px_1fr_180px] md:items-start">
+        <div className="rounded-xl border border-neutral-200 bg-white p-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={details?.imageUrl || "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="}
+            alt={name}
+            className={"h-[120px] w-full rounded-lg object-contain " + (details?.imageUrl ? "bg-white" : "bg-neutral-50")}
+          />
+        </div>
+
         <div>
           <div className="text-xs font-extrabold text-neutral-900">{title}</div>
           <div className="mt-1 text-sm font-extrabold text-neutral-900">{name}</div>
           <div className="mt-1 text-[11px] text-neutral-600">SKU: {sku}</div>
+
+          {details?.specs?.length ? (
+            <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200">
+              <div className="divide-y divide-neutral-200">
+                {details.specs.slice(0, 8).map((s) => (
+                  <div key={s.k} className="grid grid-cols-[140px_1fr] gap-2 bg-white px-3 py-2 text-xs">
+                    <div className="font-semibold text-neutral-600">{s.k}</div>
+                    <div className="font-extrabold text-neutral-900">{s.v}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           <div className="mt-3 flex flex-wrap items-center gap-3">
             <Link href={changeHref} className="text-xs font-extrabold text-blue-700 hover:underline">
               Change {title.toLowerCase()}
@@ -326,6 +362,7 @@ function ProductCard({
             ) : null}
           </div>
         </div>
+
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3 text-right">
           <div className="text-[11px] font-semibold text-neutral-600">QTY</div>
           <div className="text-sm font-extrabold text-neutral-900">{qty}</div>
