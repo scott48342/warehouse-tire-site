@@ -58,7 +58,16 @@ export async function GET(req: Request) {
 
     if (terrain) {
       if (terrain === "all-terrain") {
-        where.push(`lower(coalesce(t.terrain,'')) like '%all%terrain%'`);
+        // Some feeds don't populate terrain consistently. Fall back to description token matches.
+        where.push(
+          `(
+            lower(coalesce(t.terrain,'')) like '%all%terrain%'
+            or lower(coalesce(t.tire_description,'')) like '% a/t %'
+            or lower(coalesce(t.tire_description,'')) like '%a/t%'
+            or lower(coalesce(t.tire_description,'')) like '% all terrain %'
+            or lower(coalesce(t.tire_description,'')) like '%all-terrain%'
+          )`
+        );
       } else {
         values.push(terrain.toLowerCase());
         where.push(`lower(coalesce(t.terrain,'')) = $${values.length}`);
