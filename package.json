@@ -7,12 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "techfeed:wheels": "node scripts/build-techfeed-wheels.mjs"
+    "techfeed:wheels": "node scripts/build-techfeed-wheels.mjs",
+    "wp:init-db": "node scripts/wp-init-db.mjs",
+    "wp:import:techguide": "node scripts/wp-import-techguide.mjs",
+    "wp:import:inventory": "node scripts/wp-import-inventory.mjs"
   },
   "dependencies": {
     "csv-parse": "^5.6.0",
     "fast-xml-parser": "^4.5.4",
     "next": "16.1.6",
+    "pg": "^8.20.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

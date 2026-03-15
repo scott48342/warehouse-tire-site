@@ -1,0 +1,78 @@
+name: WheelPros feed sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly (WheelPros SFTP feed setting) — Mondays at 06:15 UTC
+    - cron: "15 6 * * 1"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      WP_SFTP_HOST: ${{ secrets.WP_SFTP_HOST }}
+      WP_SFTP_USER: ${{ secrets.WP_SFTP_USER }}
+      WP_SFTP_PASSWORD: ${{ secrets.WP_SFTP_PASSWORD }}
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: warehouse-tire-site/package-lock.json
+
+      - name: Install deps
+        working-directory: warehouse-tire-site
+        run: npm ci
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Pull WheelPros feeds via SFTP
+        working-directory: warehouse-tire-site
+        run: |
+          mkdir -p wheelpros-feed
+          cd wheelpros-feed
+
+          # Use sshpass for password-based SFTP. We disable strict host key checking for non-interactive runs.
+          export SSHPASS="$WP_SFTP_PASSWORD"
+
+          cat > batch.sftp <<'EOF'
+          cd /TechFeed/WHEEL
+          get Wheel_TechGuide.csv
+          cd /TechFeed/TIRE
+          get Tire_TechGuide.csv
+          cd /TechFeed/MAP_PRICE
+          get MapPrice_TechGuide.csv
+          cd /CommonFeed/USD/WHEEL
+          get wheelInvPriceData.json
+          cd /CommonFeed/USD/TIRE
+          get tireInvPriceData.json
+          cd /CommonFeed/USD/ACCESSORIES
+          get accessoriesInvPriceData.json
+          quit
+          EOF
+
+          sshpass -e sftp -oBatchMode=no -oStrictHostKeyChecking=no "$WP_SFTP_USER@$WP_SFTP_HOST" -b batch.sftp
+
+          ls -lah
+
+      - name: Init DB (idempotent)
+        working-directory: warehouse-tire-site
+        run: node scripts/wp-init-db.mjs
+
+      - name: Import TechGuide
+        working-directory: warehouse-tire-site
+        run: node scripts/wp-import-techguide.mjs wheelpros-feed
+
+      - name: Import Inventory (TotalQOH only)
+        working-directory: warehouse-tire-site
+        run: node scripts/wp-import-inventory.mjs wheelpros-feed

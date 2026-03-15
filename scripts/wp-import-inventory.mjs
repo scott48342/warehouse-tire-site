@@ -18,7 +18,9 @@ function intish(v) {
 const DATABASE_URL = required("DATABASE_URL");
 
 const argv = process.argv.slice(2);
-const dataDir = argv[0] ? path.resolve(argv[0]) : path.resolve(process.cwd(), "..", "..");
+// Directory containing WheelPros inventory feed files (wheelInvPriceData.json, tireInvPriceData.json, accessoriesInvPriceData.json)
+// Default: current working directory.
+const dataDir = argv[0] ? path.resolve(argv[0]) : path.resolve(process.cwd());
 
 const wheelJson = path.join(dataDir, "wheelInvPriceData.json");
 const tireJson = path.join(dataDir, "tireInvPriceData.json");
