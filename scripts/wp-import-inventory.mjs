@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import pg from "pg";
 
+import { inTransaction } from "./_pg-batch.mjs";
+
 const { Client } = pg;
 
 function required(name) {
@@ -38,42 +40,65 @@ async function importFile(filePath, productType) {
   const rows = JSON.parse(fs.readFileSync(filePath, "utf8"));
   console.log(`Rows: ${rows.length}`);
 
+  const BATCH = 5000;
   let count = 0;
+
+  let skus = [];
+  let qohs = [];
+  let runDates = [];
+
+  async function flush() {
+    if (!skus.length) return;
+
+    // Use UNNEST to upsert many rows in one round-trip.
+    // run_date is text->timestamptz cast; nulls are ok.
+    await client.query(
+      `insert into wp_inventory (sku, product_type, location_id, qoh, run_date, updated_at)
+       select sku, $1::text, 'TOTAL', qoh, run_date::timestamptz, now()
+       from unnest($2::text[], $3::int4[], $4::text[]) as t(sku, qoh, run_date)
+       on conflict (sku, product_type, location_id) do update set
+         qoh=excluded.qoh,
+         run_date=excluded.run_date,
+         updated_at=now()`,
+      [productType, skus, qohs, runDates]
+    );
+
+    skus = [];
+    qohs = [];
+    runDates = [];
+  }
+
   for (const r of rows) {
     const sku = String(r.PartNumber || r.sku || r.SKU || "").trim();
     if (!sku) continue;
 
     // Determine run date (may be like "03/14/2026 10:10:00 PM")
-    // We'll store null if parsing fails; better than crashing.
-    let runDate = null;
+    let runDate = "";
     if (r.RunDate) {
       const d = new Date(r.RunDate);
       if (!Number.isNaN(d.getTime())) runDate = d.toISOString();
     }
 
-    // Scott confirmed we only need total available.
-    const total = intish(r.TotalQOH);
-    await client.query(
-      `insert into wp_inventory (sku, product_type, location_id, qoh, run_date, updated_at)
-       values ($1,$2,'TOTAL',$3,$4, now())
-       on conflict (sku, product_type, location_id) do update set
-         qoh=excluded.qoh,
-         run_date=excluded.run_date,
-         updated_at=now()
-      `,
-      [sku, productType, total, runDate]
-    );
+    skus.push(sku);
+    qohs.push(intish(r.TotalQOH));
+    runDates.push(runDate);
 
     count++;
-    if (count % 5000 === 0) console.log(`  ${productType}: ${count}`);
+    if (skus.length >= BATCH) {
+      await flush();
+      console.log(`  ${productType}: ${count}`);
+    }
   }
 
+  await flush();
   console.log(`${productType} SKUs processed: ${count}`);
 }
 
-await importFile(wheelJson, "wheel");
-await importFile(tireJson, "tire");
-await importFile(accJson, "accessory");
+await inTransaction(client, async () => {
+  await importFile(wheelJson, "wheel");
+  await importFile(tireJson, "tire");
+  await importFile(accJson, "accessory");
+});
 
 await client.end();
 console.log("Done.");

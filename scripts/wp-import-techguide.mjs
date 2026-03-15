@@ -3,6 +3,8 @@ import path from "node:path";
 import { parse } from "csv-parse/sync";
 import pg from "pg";
 
+import { buildValuesPlaceholders, inTransaction } from "./_pg-batch.mjs";
+
 const { Client } = pg;
 
 function required(name) {
@@ -52,18 +54,26 @@ for (const r of mapRows) {
 }
 console.log(`MAP rows: ${mapBySku.size}`);
 
-console.log("Importing wheels tech guide...");
-const wheelRows = parse(fs.readFileSync(wheelCsv, "utf8"), { columns: true, skip_empty_lines: true });
-let wheelCount = 0;
-for (const r of wheelRows) {
-  const sku = (r.sku || r.SKU || "").trim();
-  if (!sku) continue;
-  const mp = mapBySku.get(sku);
+function withNow(valuesSql) {
+  // Convert: ($1,$2),($3,$4) -> ($1,$2, now()),($3,$4, now())
+  return valuesSql.replace(/\)\s*(,|$)/g, ", now())$2");
+}
 
-  const image_urls = [r.image_url1, r.image_url2, r.image_url3, r.image_url4].filter(Boolean);
+async function importWheels() {
+  console.log("Importing wheels tech guide...");
+  const wheelRows = parse(fs.readFileSync(wheelCsv, "utf8"), { columns: true, skip_empty_lines: true });
 
-  await client.query(
-    `insert into wp_wheels (
+  const COLS = 22; // excluding updated_at which is now()
+  const BATCH = 200;
+
+  let wheelCount = 0;
+  let batch = [];
+
+  async function flush() {
+    if (!batch.length) return;
+
+    const valuesSql = withNow(buildValuesPlaceholders(batch.length, COLS));
+    const sql = `insert into wp_wheels (
       sku, brand_desc, brand_code_3, style, display_style_no, product_desc,
       diameter_in, width_in, lug_count,
       bolt_pattern_standard, bolt_pattern_metric,
@@ -71,15 +81,7 @@ for (const r of wheelRows) {
       load_rating_lb, image_url, image_urls,
       msrp_usd, map_usd,
       inv_order_type, division, raw, updated_at
-    ) values (
-      $1,$2,$3,$4,$5,$6,
-      $7,$8,$9,
-      $10,$11,
-      $12,$13,$14,
-      $15,$16,$17,
-      $18,$19,
-      $20,$21,$22, now()
-    )
+    ) values\n${valuesSql}
     on conflict (sku) do update set
       brand_desc=excluded.brand_desc,
       brand_code_3=excluded.brand_code_3,
@@ -102,9 +104,20 @@ for (const r of wheelRows) {
       inv_order_type=excluded.inv_order_type,
       division=excluded.division,
       raw=excluded.raw,
-      updated_at=now()
-    `,
-    [
+      updated_at=now()`;
+
+    await client.query(sql, batch.flat());
+    batch = [];
+  }
+
+  for (const r of wheelRows) {
+    const sku = (r.sku || r.SKU || "").trim();
+    if (!sku) continue;
+
+    const mp = mapBySku.get(sku);
+    const image_urls = [r.image_url1, r.image_url2, r.image_url3, r.image_url4].filter(Boolean);
+
+    batch.push([
       sku,
       r.brand_desc || null,
       r.brand_code_3 || null,
@@ -127,25 +140,34 @@ for (const r of wheelRows) {
       r.inv_order_type || null,
       r.division || null,
       r,
-    ]
-  );
+    ]);
 
-  wheelCount++;
-  if (wheelCount % 2000 === 0) console.log(`  wheels: ${wheelCount}`);
+    wheelCount++;
+    if (batch.length >= BATCH) {
+      await flush();
+      if (wheelCount % 2000 === 0) console.log(`  wheels: ${wheelCount}`);
+    }
+  }
+
+  await flush();
+  console.log(`Wheels imported: ${wheelCount}`);
 }
-console.log(`Wheels imported: ${wheelCount}`);
 
-console.log("Importing tires tech guide...");
-const tireRows = parse(fs.readFileSync(tireCsv, "utf8"), { columns: true, skip_empty_lines: true });
-let tireCount = 0;
-for (const r of tireRows) {
-  const sku = (r.sku || r.SKU || "").trim();
-  if (!sku) continue;
+async function importTires() {
+  console.log("Importing tires tech guide...");
+  const tireRows = parse(fs.readFileSync(tireCsv, "utf8"), { columns: true, skip_empty_lines: true });
 
-  const mp = mapBySku.get(sku);
+  const COLS = 25; // excluding updated_at which is now()
+  const BATCH = 200;
 
-  await client.query(
-    `insert into wp_tires (
+  let tireCount = 0;
+  let batch = [];
+
+  async function flush() {
+    if (!batch.length) return;
+
+    const valuesSql = withNow(buildValuesPlaceholders(batch.length, COLS));
+    const sql = `insert into wp_tires (
       sku, brand_desc, brand_code_3, tire_size, simple_size, tire_description,
       load_index, speed_rating,
       section_width, series, rim_diameter_in, tire_diameter_in,
@@ -153,15 +175,7 @@ for (const r of tireRows) {
       terrain, construction_type, mileage_warranty,
       msrp_usd, map_usd,
       inv_order_type, division, raw, updated_at
-    ) values (
-      $1,$2,$3,$4,$5,$6,
-      $7,$8,
-      $9,$10,$11,$12,
-      $13,$14,$15,$16,$17,
-      $18,$19,$20,
-      $21,$22,
-      $23,$24,$25, now()
-    )
+    ) values\n${valuesSql}
     on conflict (sku) do update set
       brand_desc=excluded.brand_desc,
       brand_code_3=excluded.brand_code_3,
@@ -187,9 +201,19 @@ for (const r of tireRows) {
       inv_order_type=excluded.inv_order_type,
       division=excluded.division,
       raw=excluded.raw,
-      updated_at=now()
-    `,
-    [
+      updated_at=now()`;
+
+    await client.query(sql, batch.flat());
+    batch = [];
+  }
+
+  for (const r of tireRows) {
+    const sku = (r.sku || r.SKU || "").trim();
+    if (!sku) continue;
+
+    const mp = mapBySku.get(sku);
+
+    batch.push([
       sku,
       r.brand_desc || null,
       r.brand_code_3 || null,
@@ -215,13 +239,23 @@ for (const r of tireRows) {
       r.inv_order_type || null,
       r.division || null,
       r,
-    ]
-  );
+    ]);
 
-  tireCount++;
-  if (tireCount % 2000 === 0) console.log(`  tires: ${tireCount}`);
+    tireCount++;
+    if (batch.length >= BATCH) {
+      await flush();
+      if (tireCount % 2000 === 0) console.log(`  tires: ${tireCount}`);
+    }
+  }
+
+  await flush();
+  console.log(`Tires imported: ${tireCount}`);
 }
-console.log(`Tires imported: ${tireCount}`);
+
+await inTransaction(client, async () => {
+  await importWheels();
+  await importTires();
+});
 
 await client.end();
 console.log("Done.");
