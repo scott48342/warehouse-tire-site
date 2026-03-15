@@ -57,6 +57,7 @@ export default async function NewQuotePage({
   const tireSku = s(Array.isArray((sp as any).tireSku) ? (sp as any).tireSku[0] : (sp as any).tireSku);
   const tireName = s(Array.isArray((sp as any).tireName) ? (sp as any).tireName[0] : (sp as any).tireName);
   const tireUnit = s(Array.isArray((sp as any).tireUnit) ? (sp as any).tireUnit[0] : (sp as any).tireUnit);
+  const size = s(Array.isArray((sp as any).size) ? (sp as any).size[0] : (sp as any).size);
 
   const wheelQty = Math.max(0, Math.min(6, Number(s((sp as any).wheelQty) || "4") || 0));
   const tireQty = Math.max(0, Math.min(6, Number(s((sp as any).tireQty) || "4") || 0));
@@ -157,15 +158,77 @@ export default async function NewQuotePage({
         </div>
 
         <div className="mt-6">
-          <QuoteBuilder
-            vehicleLabel={[year, make, model, trim].filter(Boolean).join(" ")}
-            vehicle={{ year, make, model, trim, modification }}
-            wheel={wheelLine}
-            tire={tireLine}
-            catalog={catalog}
-            oemTireSizes={oemTireSizes}
-            taxRate={taxRate}
-          />
+          {(() => {
+            const keep = {
+              year,
+              make,
+              model,
+              trim,
+              modification,
+              size,
+              wheelSku,
+              wheelName,
+              wheelUnit,
+              wheelQty: String(wheelQty || ""),
+              wheelDia,
+              tireSku,
+              tireName,
+              tireUnit,
+              tireQty: String(tireQty || ""),
+            };
+
+            const removeWheelParams = new URLSearchParams();
+            for (const [k, v] of Object.entries(keep)) {
+              if (!v) continue;
+              if (["wheelSku", "wheelName", "wheelUnit", "wheelQty", "wheelDia"].includes(k)) continue;
+              removeWheelParams.set(k, String(v));
+            }
+
+            const removeTireParams = new URLSearchParams();
+            for (const [k, v] of Object.entries(keep)) {
+              if (!v) continue;
+              if (["tireSku", "tireName", "tireUnit", "tireQty"].includes(k)) continue;
+              removeTireParams.set(k, String(v));
+            }
+
+            const wheelChangeParams = new URLSearchParams({ year, make, model, trim, modification } as any);
+            const tireChangeParams = new URLSearchParams({ year, make, model, trim, modification, size } as any);
+
+            // preserve quote carry-over while changing the other product
+            for (const [k, v] of Object.entries({
+              wheelSku,
+              wheelName,
+              wheelUnit,
+              wheelQty: String(wheelQty || ""),
+              wheelDia,
+            })) {
+              if (v) tireChangeParams.set(k, v);
+            }
+            for (const [k, v] of Object.entries({
+              tireSku,
+              tireName,
+              tireUnit,
+              tireQty: String(tireQty || ""),
+            })) {
+              if (v) wheelChangeParams.set(k, v);
+            }
+
+            return (
+              <QuoteBuilder
+                vehicleLabel={[year, make, model, trim].filter(Boolean).join(" ")}
+                vehicle={{ year, make, model, trim, modification }}
+                wheel={wheelLine}
+                tire={tireLine}
+                catalog={catalog}
+                oemTireSizes={oemTireSizes}
+                taxRate={taxRate}
+                wheelRemoveHref={`/quote/new?${removeWheelParams.toString()}`}
+                tireRemoveHref={`/quote/new?${removeTireParams.toString()}`}
+                wheelChangeHref={`/wheels?${wheelChangeParams.toString()}`}
+                tireChangeHref={`/tires?${tireChangeParams.toString()}`}
+              />
+            );
+          })()}
 
           <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
             {BRAND.name} • {BRAND.phone.callDisplay} • {BRAND.email}

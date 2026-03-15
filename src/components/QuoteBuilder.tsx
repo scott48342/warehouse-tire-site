@@ -90,6 +90,10 @@ export function QuoteBuilder({
   catalog,
   oemTireSizes,
   taxRate,
+  wheelChangeHref,
+  wheelRemoveHref,
+  tireChangeHref,
+  tireRemoveHref,
 }: {
   vehicleLabel: string;
   vehicle: { year?: string; make?: string; model?: string; trim?: string; modification?: string };
@@ -98,6 +102,10 @@ export function QuoteBuilder({
   catalog: CatalogItem[];
   oemTireSizes: string[];
   taxRate: number;
+  wheelChangeHref?: string;
+  wheelRemoveHref?: string;
+  tireChangeHref?: string;
+  tireRemoveHref?: string;
 }) {
   const wheelQty = wheel?.qty || 0;
   const tireQty = tire?.qty || 0;
@@ -172,8 +180,10 @@ export function QuoteBuilder({
           name={wheel.name}
           sku={wheel.sku}
           qty={wheel.qty}
+          unit={wheel.unitPriceUsd}
           total={ext(wheel)}
-          changeHref={`/wheels?${new URLSearchParams(vehicle as any).toString()}`}
+          changeHref={wheelChangeHref || `/wheels?${new URLSearchParams(vehicle as any).toString()}`}
+          removeHref={wheelRemoveHref}
         />
       ) : null}
 
@@ -183,8 +193,10 @@ export function QuoteBuilder({
           name={tire.name}
           sku={tire.sku}
           qty={tire.qty}
+          unit={tire.unitPriceUsd}
           total={ext(tire)}
-          changeHref={`/tires?${new URLSearchParams(vehicle as any).toString()}`}
+          changeHref={tireChangeHref || `/tires?${new URLSearchParams(vehicle as any).toString()}`}
+          removeHref={tireRemoveHref}
         />
       ) : null}
 
@@ -282,15 +294,19 @@ function ProductCard({
   name,
   sku,
   qty,
+  unit,
   total,
   changeHref,
+  removeHref,
 }: {
   title: string;
   name: string;
   sku: string;
   qty: number;
+  unit: number;
   total: number;
   changeHref: string;
+  removeHref?: string;
 }) {
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-4">
@@ -299,10 +315,15 @@ function ProductCard({
           <div className="text-xs font-extrabold text-neutral-900">{title}</div>
           <div className="mt-1 text-sm font-extrabold text-neutral-900">{name}</div>
           <div className="mt-1 text-[11px] text-neutral-600">SKU: {sku}</div>
-          <div className="mt-3">
+          <div className="mt-3 flex flex-wrap items-center gap-3">
             <Link href={changeHref} className="text-xs font-extrabold text-blue-700 hover:underline">
               Change {title.toLowerCase()}
             </Link>
+            {removeHref ? (
+              <Link href={removeHref} className="text-xs font-extrabold text-red-700 hover:underline">
+                Remove {title.toLowerCase()}
+              </Link>
+            ) : null}
           </div>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3 text-right">
@@ -310,6 +331,7 @@ function ProductCard({
           <div className="text-sm font-extrabold text-neutral-900">{qty}</div>
           <div className="mt-2 text-[11px] font-semibold text-neutral-600">TOTAL</div>
           <div className="text-sm font-extrabold text-neutral-900">{money(total)}</div>
+          <div className="mt-0.5 text-[11px] text-neutral-600">({money(unit)} × {qty})</div>
         </div>
       </div>
     </div>
