@@ -34,7 +34,7 @@ export async function GET(req: Request) {
       ? ((data as { results?: unknown[] }).results as unknown[])
       : [];
 
-    const results = raw
+    const mapped = raw
       .map((it) => {
         if (!it || typeof it !== "object") return null;
         const o = it as Record<string, unknown>;
@@ -46,28 +46,26 @@ export async function GET(req: Request) {
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/^-+|-+$/g, "");
 
-        // Use a composite value so the dropdown has unique option values even when Wheel-Size returns
-        // the same `modification` token for multiple trims (common when token represents engine).
+        // Composite value (still useful downstream), but we may dedupe by label below.
         const value = mod
           ? `${mod}__${String(baseLabel).replace(/\s+/g, "-").toLowerCase()}__${engineCode}`
           : "";
-        if (!value || !baseLabel) return null;
-        // Add engine to reduce duplicates when trimLevel repeats, but drop fuel words like "Petrol".
-        const engineRaw = o.engine ? String(o.engine) : "";
-        const engine = engineRaw
-          .replace(/\bPetrol\b/gi, "")
-          .replace(/\bDiesel\b/gi, "")
-          .replace(/\bGasoline\b/gi, "")
-          .replace(/\bGas\b/gi, "")
-          .replace(/\bHybrid\b/gi, "")
-          .replace(/\bElectric\b/gi, "")
-          .replace(/\s+/g, " ")
-          .trim();
 
-        const label = String(baseLabel);
+        const label = baseLabel ? String(baseLabel) : "";
+        if (!value || !label) return null;
         return { value, label };
       })
-      .filter(Boolean);
+      .filter(Boolean) as Array<{ value: string; label: string }>;
+
+    // Deduplicate labels (keep first returned)
+    const seen = new Set<string>();
+    const results: Array<{ value: string; label: string }> = [];
+    for (const r of mapped) {
+      const k = r.label.trim().toLowerCase();
+      if (seen.has(k)) continue;
+      seen.add(k);
+      results.push(r);
+    }
 
     return NextResponse.json({ results });
   }
