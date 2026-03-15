@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
 import { BRAND } from "@/lib/brand";
 import { getPool as getQuotePool, defaultLinesFromCatalog } from "@/lib/quotes";
 import { listCatalogItems } from "@/lib/quoteCatalog";
 import { AddTiresModal } from "@/components/AddTiresModal";
 import { SaveQuoteModal } from "@/components/SaveQuoteModal";
+import { cookieName, verifyAdminToken } from "@/lib/adminAuth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -39,6 +41,8 @@ export default async function NewQuotePage({
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sp = (await searchParams) ?? {};
+
+  const debug = s(Array.isArray((sp as any).debug) ? (sp as any).debug[0] : (sp as any).debug) === "1";
 
   const year = s(Array.isArray((sp as any).year) ? (sp as any).year[0] : (sp as any).year);
   const make = s(Array.isArray((sp as any).make) ? (sp as any).make[0] : (sp as any).make);
@@ -107,9 +111,12 @@ export default async function NewQuotePage({
     ? oemTireSizesAll.filter((s) => rimFromTireSize(s) === wheelDiaN)
     : oemTireSizesAll;
 
-  // If the strict filter yields nothing (common when OEM sizing data is missing or trimmed),
-  // fall back to the unfiltered list so customers can still proceed.
+  // If the strict filter yields nothing, fall back to the unfiltered list so customers can still proceed.
   const oemTireSizes = oemTireSizesFiltered.length ? oemTireSizesFiltered : oemTireSizesAll;
+
+  const ck = await cookies();
+  const adminToken = ck.get(cookieName())?.value;
+  const isAdmin = await verifyAdminToken(adminToken);
 
   const lines = [
     ...(wheelSku && wheelQty
@@ -200,6 +207,39 @@ export default async function NewQuotePage({
           <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
             {BRAND.name} • {BRAND.phone.callDisplay} • {BRAND.email}
           </div>
+
+          {debug && isAdmin ? (
+            <details className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-950">
+              <summary className="cursor-pointer font-extrabold">Debug: OEM tire sizes + wheel diameter filter</summary>
+              <div className="mt-3 grid gap-2">
+                <div>
+                  <div className="font-extrabold">Detected wheel diameter</div>
+                  <div className="mt-0.5">wheelDia param: {wheelDia || "(none)"}</div>
+                  <div className="mt-0.5">parsed from wheelName: {wheelDiaN ? String(wheelDiaN) : "(none)"}</div>
+                </div>
+
+                <div>
+                  <div className="font-extrabold">Vehicle query</div>
+                  <pre className="mt-1 overflow-auto rounded-xl border border-amber-200 bg-white p-2">{JSON.stringify({ year, make, model, trim, modification }, null, 2)}</pre>
+                </div>
+
+                <div>
+                  <div className="font-extrabold">Raw OEM tireSizes (from /api/vehicles/search)</div>
+                  <pre className="mt-1 overflow-auto rounded-xl border border-amber-200 bg-white p-2">{JSON.stringify(oemTireSizesAll, null, 2)}</pre>
+                </div>
+
+                <div>
+                  <div className="font-extrabold">After diameter filter</div>
+                  <pre className="mt-1 overflow-auto rounded-xl border border-amber-200 bg-white p-2">{JSON.stringify(oemTireSizesFiltered, null, 2)}</pre>
+                </div>
+
+                <div>
+                  <div className="font-extrabold">Fitment response (truncated)</div>
+                  <pre className="mt-1 max-h-[240px] overflow-auto rounded-xl border border-amber-200 bg-white p-2">{JSON.stringify(fitmentStrict, null, 2)?.slice(0, 4000)}</pre>
+                </div>
+              </div>
+            </details>
+          ) : null}
         </div>
       </div>
     </main>
