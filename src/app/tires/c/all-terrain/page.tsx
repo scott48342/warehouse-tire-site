@@ -3,11 +3,7 @@ import { BRAND } from "@/lib/brand";
 
 export const runtime = "nodejs";
 
-function getBaseUrl() {
-  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return "http://localhost:3000";
-}
+// Use relative fetches for internal API routes.
 
 function money(n: number | null) {
   if (n == null) return "Call";
@@ -45,7 +41,7 @@ async function fetchItems({
   if (rim) sp.set("rim", rim);
   if (sort) sp.set("sort", sort);
 
-  const res = await fetch(`${getBaseUrl()}/api/wp/tires/browse?${sp.toString()}`, { cache: "no-store" });
+  const res = await fetch(`/api/wp/tires/browse?${sp.toString()}`, { cache: "no-store" });
   if (!res.ok) return { items: [] as Item[] };
   return (await res.json()) as { items: Item[] };
 }
