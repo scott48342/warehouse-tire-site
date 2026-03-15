@@ -14,6 +14,7 @@ export async function POST(req: Request) {
       ? await req.json().catch(() => ({} as any))
       : Object.fromEntries(await req.formData());
 
+    const id = s(body.id);
     const name = s(body.name);
     const unitPrice = Number(s(body.unitPrice));
     const unitPriceTire = s(body.unitPriceTire);
@@ -44,6 +45,7 @@ export async function POST(req: Request) {
     };
 
     await upsertCatalogItem(db, {
+      id: id || undefined,
       name,
       unit_price_usd: unitPrice,
 
