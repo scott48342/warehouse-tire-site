@@ -309,7 +309,8 @@ export default async function WheelDetailPage({
         </div>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_420px]">
-          <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+          <div className="grid gap-6">
+            <div className="rounded-3xl border border-neutral-200 bg-white p-4">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div className="text-xs font-semibold text-neutral-600">Product photo</div>
               <div className="text-[11px] text-neutral-500">Finish may vary by lighting</div>
@@ -319,6 +320,28 @@ export default async function WheelDetailPage({
               alt={String(it?.title || sku)}
               note="Finish may vary by lighting"
             />
+          </div>
+
+          <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+            <div className="text-xs font-extrabold text-neutral-900">Fitment</div>
+            <div className="mt-1 text-xs text-neutral-600">
+              {vehicleLabel ? (
+                <>
+                  Checking for: <span className="font-extrabold text-neutral-900">{vehicleLabel}</span> (we confirm before install)
+                </>
+              ) : (
+                <>Select your vehicle on the Wheels page to confirm exact fitment.</>
+              )}
+            </div>
+            <div className="mt-3">
+              <Link
+                href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+              >
+                {vehicleLabel ? "Change vehicle" : "Select vehicle"}
+              </Link>
+            </div>
+          </div>
           </div>
 
           <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
@@ -371,26 +394,7 @@ export default async function WheelDetailPage({
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-                <div className="text-xs font-extrabold text-neutral-900">Fitment</div>
-                <div className="mt-1 text-xs text-neutral-600">
-                  {vehicleLabel ? (
-                    <>
-                      Checking for: <span className="font-extrabold text-neutral-900">{vehicleLabel}</span> (we confirm before install)
-                    </>
-                  ) : (
-                    <>Select your vehicle on the Wheels page to confirm exact fitment.</>
-                  )}
-                </div>
-                <div className="mt-3">
-                  <Link
-                    href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
-                    className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
-                  >
-                    {vehicleLabel ? "Change vehicle" : "Select vehicle"}
-                  </Link>
-                </div>
-              </div>
+              {/* Fitment moved under photo */}
 
               <div id="quote" className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
                 <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>

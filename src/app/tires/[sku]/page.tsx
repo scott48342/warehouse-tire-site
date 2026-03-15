@@ -177,7 +177,7 @@ export default async function TireDetailPage({
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_420px]">
           <div className="grid gap-6">
-          <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+            <div className="rounded-3xl border border-neutral-200 bg-white p-4">
             <div className="mb-3 flex items-center justify-between gap-3">
               <div className="text-xs font-semibold text-neutral-600">Product photo</div>
               <div className="text-[11px] text-neutral-500">Click to zoom</div>
@@ -185,7 +185,27 @@ export default async function TireDetailPage({
             <ImageGallery images={t.image_url ? [String(t.image_url)] : []} alt={title} note="Image may vary by size" />
           </div>
 
+          <div className="rounded-3xl border border-neutral-200 bg-white p-4">
+            <div className="text-xs font-extrabold text-neutral-900">Fitment</div>
+            <div className="mt-1 text-xs text-neutral-600">
+              {vehicleLabel ? (
+                <>
+                  Checking for: <span className="font-extrabold text-neutral-900">{vehicleLabel}</span> (we confirm before install)
+                </>
+              ) : (
+                <>Select your vehicle on the Tires page to confirm exact fitment.</>
+              )}
+            </div>
+            <div className="mt-3">
+              <Link
+                href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+              >
+                {vehicleLabel ? "Change vehicle" : "Select vehicle"}
+              </Link>
+            </div>
           </div>
+        </div>
 
           <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
             <div className="text-xs font-semibold text-neutral-600">{String(t.brand_desc || "Tire")}</div>
@@ -215,28 +235,7 @@ export default async function TireDetailPage({
               </ul>
             </div>
 
-            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Fitment</div>
-              <div className="mt-1 text-xs text-neutral-600">
-                {vehicleLabel ? (
-                  <>
-                    Checking for: <span className="font-extrabold text-neutral-900">{vehicleLabel}</span> (we confirm before install)
-                  </>
-                ) : (
-                  <>
-                    Select your vehicle on the Tires page to confirm exact fitment.
-                  </>
-                )}
-              </div>
-              <div className="mt-3">
-                <Link
-                  href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
-                  className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
-                >
-                  {vehicleLabel ? "Change vehicle" : "Select vehicle"}
-                </Link>
-              </div>
-            </div>
+            {/* Fitment moved under photo */}
 
             <div id="quote" className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
               <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>
