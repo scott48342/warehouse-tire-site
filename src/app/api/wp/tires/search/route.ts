@@ -56,6 +56,11 @@ export async function GET(req: Request) {
           t.tire_description,
           t.tire_size,
           t.simple_size,
+          t.terrain,
+          t.construction_type,
+          t.mileage_warranty,
+          t.load_index,
+          t.speed_rating,
           t.image_url,
           t.map_usd,
           t.msrp_usd,
@@ -94,6 +99,13 @@ export async function GET(req: Request) {
         cost: cost != null && Number.isFinite(cost) ? cost : null,
         quantity: { primary: 0, alternate: 0, national: i(r.qoh) },
         imageUrl: r.image_url || null,
+        badges: {
+          terrain: r.terrain || null,
+          construction: r.construction_type || null,
+          warrantyMiles: r.mileage_warranty != null ? i(r.mileage_warranty) : null,
+          loadIndex: r.load_index || null,
+          speedRating: r.speed_rating || null,
+        },
       };
     });
 

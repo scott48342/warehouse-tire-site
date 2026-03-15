@@ -14,6 +14,13 @@ type Tire = {
   quantity?: { primary?: number; alternate?: number; national?: number };
   imageUrl?: string;
   displayName?: string;
+  badges?: {
+    terrain?: string | null;
+    construction?: string | null;
+    warrantyMiles?: number | null;
+    loadIndex?: string | null;
+    speedRating?: string | null;
+  };
 };
 
 type TireAsset = {
@@ -812,9 +819,19 @@ export default async function TiresPage({
                           {selectedSize}
                         </span>
                       ) : null}
-                      {t.brand ? (
+                      {t.badges?.terrain ? (
                         <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
-                          {t.brand}
+                          {String(t.badges.terrain)}
+                        </span>
+                      ) : null}
+                      {t.badges?.warrantyMiles ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+                          {t.badges.warrantyMiles.toLocaleString()} mi
+                        </span>
+                      ) : null}
+                      {t.badges?.loadIndex && t.badges?.speedRating ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+                          {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
                         </span>
                       ) : null}
                     </div>
