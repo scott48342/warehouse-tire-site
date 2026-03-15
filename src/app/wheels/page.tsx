@@ -781,6 +781,10 @@ export default async function WheelsPage({
                           ? { diameter: w.diameter, width: w.width }
                           : undefined
                     }
+                    specLabel={{
+                      boltPattern: (w as any).boltPattern,
+                      offset: (w as any).offset,
+                    }}
                     finishThumbs={w.finishThumbs}
                     viewParams={{
                       year,

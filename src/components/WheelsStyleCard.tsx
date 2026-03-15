@@ -31,6 +31,7 @@ export function WheelsStyleCard({
   sizeLabel,
   finishThumbs,
   viewParams,
+  specLabel,
 }: {
   brand: string;
   title: string;
@@ -41,6 +42,7 @@ export function WheelsStyleCard({
   sizeLabel?: { diameter?: string; width?: string };
   finishThumbs?: WheelFinishThumb[];
   viewParams?: Record<string, string | undefined>;
+  specLabel?: { boltPattern?: string; offset?: string };
 }) {
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
@@ -48,6 +50,15 @@ export function WheelsStyleCard({
   const [selectedImage, setSelectedImage] = useState<string | undefined>(baseImageUrl);
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
+
+  // Visual-only: show "from" pricing when we have multiple finishes.
+  const fromPrice = useMemo(() => {
+    const ps = (finishThumbs || [])
+      .map((t) => (typeof t?.price === "number" ? t.price : null))
+      .filter((v): v is number => typeof v === "number" && Number.isFinite(v));
+    if (!ps.length) return undefined;
+    return Math.min(...ps);
+  }, [finishThumbs]);
 
   const qs = useMemo(() => {
     const sp = new URLSearchParams();
@@ -67,6 +78,9 @@ export function WheelsStyleCard({
   }, [viewParams]);
 
   const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
+
+  const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
+  const off = specLabel?.offset ? String(specLabel.offset).trim() : "";
 
   return (
     <div className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300">
@@ -92,17 +106,37 @@ export function WheelsStyleCard({
           </div>
         ) : null}
 
+        {bolt || off ? (
+          <div className="mt-1 flex flex-wrap gap-1.5">
+            {bolt ? (
+              <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+                {bolt}
+              </span>
+            ) : null}
+            {off ? (
+              <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+                Offset {off}mm
+              </span>
+            ) : null}
+          </div>
+        ) : null}
+
         <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
           {selectedImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={selectedImage}
               alt={title}
-              className="h-40 w-full object-contain bg-white"
+              className="h-40 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
               loading="lazy"
             />
           ) : (
-            <div className="p-3 text-xs text-neutral-700">No image</div>
+            <div className="grid h-40 place-items-center bg-white p-3 text-center">
+              <div>
+                <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+                <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
+              </div>
+            </div>
           )}
         </div>
       </Link>
@@ -142,7 +176,9 @@ export function WheelsStyleCard({
 
       <div className="mt-4">
         <div className="text-2xl font-extrabold text-neutral-900">
-          {typeof selectedPrice === "number" ? `$${selectedPrice.toFixed(2)}` : "Call for price"}
+          {typeof selectedPrice === "number"
+            ? `$${selectedPrice.toFixed(2)}`
+            : (typeof fromPrice === "number" ? `From $${fromPrice.toFixed(2)}` : "Call for price")}
         </div>
         <div className="text-xs text-neutral-600">each</div>
       </div>
