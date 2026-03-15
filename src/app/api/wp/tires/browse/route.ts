@@ -42,6 +42,7 @@ export async function GET(req: Request) {
 
     const terrain = s(url.searchParams.get("terrain"));
     const brand = s(url.searchParams.get("brand"));
+    const debug = url.searchParams.get("debug") === "1";
 
     const priceMin = n(url.searchParams.get("priceMin"));
     const priceMax = n(url.searchParams.get("priceMax"));
@@ -62,10 +63,12 @@ export async function GET(req: Request) {
         where.push(
           `(
             lower(coalesce(t.terrain,'')) like '%all%terrain%'
-            or lower(coalesce(t.tire_description,'')) like '% a/t %'
             or lower(coalesce(t.tire_description,'')) like '%a/t%'
-            or lower(coalesce(t.tire_description,'')) like '% all terrain %'
+            or lower(coalesce(t.tire_description,'')) like '%all terrain%'
             or lower(coalesce(t.tire_description,'')) like '%all-terrain%'
+            or lower(coalesce(t.tire_description,'')) like '%allterrain%'
+            or lower(coalesce(t.tire_description,'')) like '% at %'
+            or lower(coalesce(t.tire_description,'')) ~ '(^|[^a-z0-9])at([^a-z0-9]|$)'
           )`
         );
       } else {
@@ -112,6 +115,32 @@ export async function GET(req: Request) {
           : `coalesce(nullif(t.map_usd,0), nullif(t.msrp_usd,0)) asc nulls last, t.brand_desc asc, t.sku asc`;
 
     const db = getPool();
+
+    if (debug) {
+      const { rows: sample } = await db.query({
+        text: `
+          select terrain, tire_description
+          from wp_tires
+          where tire_description is not null
+          order by random()
+          limit 25
+        `,
+        values: [],
+      });
+
+      const { rows: counts } = await db.query({
+        text: `
+          select
+            sum(case when lower(coalesce(terrain,'')) like '%all%terrain%' then 1 else 0 end)::int as terrain_matches,
+            sum(case when lower(coalesce(tire_description,'')) like '%a/t%' then 1 else 0 end)::int as desc_at_slash,
+            sum(case when lower(coalesce(tire_description,'')) ~ '(^|[^a-z0-9])at([^a-z0-9]|$)' then 1 else 0 end)::int as desc_at_word
+          from wp_tires
+        `,
+        values: [],
+      });
+
+      return NextResponse.json({ ok: true, counts: counts?.[0] || null, sample }, { status: 200 });
+    }
 
     const { rows } = await db.query({
       text: `
