@@ -22,8 +22,22 @@ export function getPool() {
 export type CatalogItem = {
   id: string;
   name: string;
+  // Legacy single price (kept for backward compat + simple admin entry)
   unit_price_usd: number;
+
+  // Context applicability (what kind of quote should include this line)
+  applies_tire: boolean;
+  applies_wheel: boolean;
+  applies_package: boolean;
+
+  // Context prices (if null/blank, we can fall back to unit_price_usd)
+  unit_price_tire_usd: number | null;
+  unit_price_wheel_usd: number | null;
+  unit_price_package_usd: number | null;
+
+  // Quantity basis
   applies_to: "tire" | "wheel" | "vehicle" | "flat";
+
   taxable: boolean;
   default_checked: boolean;
   required: boolean;
@@ -44,6 +58,15 @@ export async function ensureQuoteTables(db: pg.Pool) {
       id text primary key,
       name text not null,
       unit_price_usd numeric(12,2) not null,
+
+      applies_tire boolean not null default true,
+      applies_wheel boolean not null default true,
+      applies_package boolean not null default true,
+
+      unit_price_tire_usd numeric(12,2),
+      unit_price_wheel_usd numeric(12,2),
+      unit_price_package_usd numeric(12,2),
+
       applies_to text not null,
       taxable boolean not null default false,
       default_checked boolean not null default false,
@@ -55,6 +78,21 @@ export async function ensureQuoteTables(db: pg.Pool) {
     );
 
     alter table quote_catalog_items add column if not exists required boolean not null default false;
+
+    alter table quote_catalog_items add column if not exists applies_tire boolean not null default true;
+    alter table quote_catalog_items add column if not exists applies_wheel boolean not null default true;
+    alter table quote_catalog_items add column if not exists applies_package boolean not null default true;
+
+    alter table quote_catalog_items add column if not exists unit_price_tire_usd numeric(12,2);
+    alter table quote_catalog_items add column if not exists unit_price_wheel_usd numeric(12,2);
+    alter table quote_catalog_items add column if not exists unit_price_package_usd numeric(12,2);
+
+    -- Best-effort: for existing rows, copy legacy price into context prices if missing.
+    update quote_catalog_items
+       set unit_price_tire_usd = coalesce(unit_price_tire_usd, unit_price_usd),
+           unit_price_wheel_usd = coalesce(unit_price_wheel_usd, unit_price_usd),
+           unit_price_package_usd = coalesce(unit_price_package_usd, unit_price_usd)
+     where unit_price_usd is not null;
 
     create index if not exists quote_catalog_items_active_idx on quote_catalog_items (active, required, sort_order);
   `);
@@ -95,7 +133,10 @@ export async function listCatalogItems(db: pg.Pool): Promise<CatalogItem[]> {
   await ensureQuoteTables(db);
   const { rows } = await db.query({
     text: `
-      select id, name, unit_price_usd, applies_to, taxable, default_checked, required, sort_order, category, active
+      select id, name, unit_price_usd,
+             applies_tire, applies_wheel, applies_package,
+             unit_price_tire_usd, unit_price_wheel_usd, unit_price_package_usd,
+             applies_to, taxable, default_checked, required, sort_order, category, active
       from quote_catalog_items
       order by active desc, required desc, sort_order asc, name asc
       limit 500
@@ -106,6 +147,12 @@ export async function listCatalogItems(db: pg.Pool): Promise<CatalogItem[]> {
     ...r,
     unit_price_usd: Number(r.unit_price_usd),
     required: !!r.required,
+    applies_tire: r.applies_tire !== false,
+    applies_wheel: r.applies_wheel !== false,
+    applies_package: r.applies_package !== false,
+    unit_price_tire_usd: r.unit_price_tire_usd != null ? Number(r.unit_price_tire_usd) : null,
+    unit_price_wheel_usd: r.unit_price_wheel_usd != null ? Number(r.unit_price_wheel_usd) : null,
+    unit_price_package_usd: r.unit_price_package_usd != null ? Number(r.unit_price_package_usd) : null,
   })) as CatalogItem[];
 }
 
@@ -115,11 +162,22 @@ export async function upsertCatalogItem(db: pg.Pool, item: Omit<CatalogItem, "id
 
   await db.query({
     text: `
-      insert into quote_catalog_items (id, name, unit_price_usd, applies_to, taxable, default_checked, required, sort_order, category, active)
-      values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+      insert into quote_catalog_items (
+        id, name, unit_price_usd,
+        applies_tire, applies_wheel, applies_package,
+        unit_price_tire_usd, unit_price_wheel_usd, unit_price_package_usd,
+        applies_to, taxable, default_checked, required, sort_order, category, active
+      )
+      values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)
       on conflict (id) do update set
         name = excluded.name,
         unit_price_usd = excluded.unit_price_usd,
+        applies_tire = excluded.applies_tire,
+        applies_wheel = excluded.applies_wheel,
+        applies_package = excluded.applies_package,
+        unit_price_tire_usd = excluded.unit_price_tire_usd,
+        unit_price_wheel_usd = excluded.unit_price_wheel_usd,
+        unit_price_package_usd = excluded.unit_price_package_usd,
         applies_to = excluded.applies_to,
         taxable = excluded.taxable,
         default_checked = excluded.default_checked,
@@ -133,6 +191,12 @@ export async function upsertCatalogItem(db: pg.Pool, item: Omit<CatalogItem, "id
       id,
       item.name,
       item.unit_price_usd,
+      (item as any).applies_tire !== false,
+      (item as any).applies_wheel !== false,
+      (item as any).applies_package !== false,
+      (item as any).unit_price_tire_usd != null ? Number((item as any).unit_price_tire_usd) : null,
+      (item as any).unit_price_wheel_usd != null ? Number((item as any).unit_price_wheel_usd) : null,
+      (item as any).unit_price_package_usd != null ? Number((item as any).unit_price_package_usd) : null,
       item.applies_to,
       !!item.taxable,
       !!item.default_checked,

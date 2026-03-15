@@ -63,6 +63,25 @@ function qtyFor(item: CatalogItem, wheelQty: number, tireQty: number) {
   return 1;
 }
 
+function unitPriceForContext(item: CatalogItem, ctx: "tire" | "wheel" | "package") {
+  const legacy = Number(item.unit_price_usd);
+
+  const tire = item.unit_price_tire_usd != null ? Number(item.unit_price_tire_usd) : null;
+  const wheel = item.unit_price_wheel_usd != null ? Number(item.unit_price_wheel_usd) : null;
+  const pack = item.unit_price_package_usd != null ? Number(item.unit_price_package_usd) : null;
+
+  if (ctx === "package") return pack ?? tire ?? wheel ?? (Number.isFinite(legacy) ? legacy : 0);
+  if (ctx === "wheel") return wheel ?? tire ?? pack ?? (Number.isFinite(legacy) ? legacy : 0);
+  return tire ?? wheel ?? pack ?? (Number.isFinite(legacy) ? legacy : 0);
+}
+
+function appliesInContext(item: CatalogItem, hasWheel: boolean, hasTire: boolean) {
+  if (hasWheel && hasTire) return item.applies_package !== false;
+  if (hasWheel) return item.applies_wheel !== false;
+  if (hasTire) return item.applies_tire !== false;
+  return false;
+}
+
 export function QuoteBuilder({
   vehicleLabel,
   vehicle,
@@ -82,14 +101,17 @@ export function QuoteBuilder({
 }) {
   const wheelQty = wheel?.qty || 0;
   const tireQty = tire?.qty || 0;
+  const hasWheel = !!wheel?.sku;
+  const hasTire = !!tire?.sku;
+  const ctx: "tire" | "wheel" | "package" = hasWheel && hasTire ? "package" : hasWheel ? "wheel" : "tire";
 
   const requiredItems = useMemo(
-    () => catalog.filter((c) => c.active && c.required),
-    [catalog]
+    () => catalog.filter((c) => c.active && c.required && appliesInContext(c, hasWheel, hasTire)),
+    [catalog, hasWheel, hasTire]
   );
   const optionalItems = useMemo(
-    () => catalog.filter((c) => c.active && !c.required),
-    [catalog]
+    () => catalog.filter((c) => c.active && !c.required && appliesInContext(c, hasWheel, hasTire)),
+    [catalog, hasWheel, hasTire]
   );
 
   const [enabledOptional, setEnabledOptional] = useState<Record<string, boolean>>(() => {
@@ -109,10 +131,10 @@ export function QuoteBuilder({
       out.push({
         kind: "catalog",
         name: it.name,
-        unitPriceUsd: Number(it.unit_price_usd),
+        unitPriceUsd: unitPriceForContext(it, ctx),
         qty,
         taxable: !!it.taxable,
-        meta: { catalogId: it.id, category: it.category, required: true, appliesTo: it.applies_to },
+        meta: { catalogId: it.id, category: it.category, required: true, appliesTo: it.applies_to, ctx },
       });
     }
 
@@ -123,10 +145,10 @@ export function QuoteBuilder({
       out.push({
         kind: "catalog",
         name: it.name,
-        unitPriceUsd: Number(it.unit_price_usd),
+        unitPriceUsd: unitPriceForContext(it, ctx),
         qty,
         taxable: !!it.taxable,
-        meta: { catalogId: it.id, category: it.category, required: false, appliesTo: it.applies_to },
+        meta: { catalogId: it.id, category: it.category, required: false, appliesTo: it.applies_to, ctx },
       });
     }
 

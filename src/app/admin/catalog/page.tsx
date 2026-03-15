@@ -57,14 +57,14 @@ export default async function AdminCatalogPage({
                 <input name="name" required className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="Mount & balance" />
               </label>
               <label className="grid gap-1 text-xs font-semibold text-neutral-700">
-                Unit price (USD)
+                Default unit price (USD)
                 <input name="unitPrice" required className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="25.00" />
               </label>
             </div>
 
             <div className="grid gap-2 md:grid-cols-4">
               <label className="grid gap-1 text-xs font-semibold text-neutral-700">
-                Applies to
+                Qty basis
                 <select name="appliesTo" defaultValue="tire" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm">
                   <option value="tire">Per tire</option>
                   <option value="wheel">Per wheel</option>
@@ -97,6 +97,39 @@ export default async function AdminCatalogPage({
                 <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700">
                   <input type="checkbox" name="active" value="1" defaultChecked />
                   Active
+                </label>
+              </div>
+            </div>
+
+            <div className="grid gap-2 md:grid-cols-3">
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Tire price (USD)
+                <input name="unitPriceTire" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="(optional)" />
+              </label>
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Wheel price (USD)
+                <input name="unitPriceWheel" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="(optional)" />
+              </label>
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Package price (USD)
+                <input name="unitPricePackage" className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="(optional)" />
+              </label>
+            </div>
+
+            <div className="grid gap-1">
+              <div className="text-xs font-semibold text-neutral-700">Include in quotes</div>
+              <div className="flex flex-wrap gap-4 text-xs font-semibold text-neutral-700">
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" name="appliesTire" value="1" defaultChecked />
+                  Tires
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" name="appliesWheel" value="1" defaultChecked />
+                  Wheels
+                </label>
+                <label className="flex items-center gap-2">
+                  <input type="checkbox" name="appliesPackage" value="1" defaultChecked />
+                  Package
                 </label>
               </div>
             </div>
