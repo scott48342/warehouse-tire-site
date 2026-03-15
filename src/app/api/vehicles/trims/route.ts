@@ -38,8 +38,12 @@ export async function GET(req: Request) {
       .map((it) => {
         if (!it || typeof it !== "object") return null;
         const o = it as Record<string, unknown>;
-        const value = o.modification ? String(o.modification) : "";
+        const mod = o.modification ? String(o.modification) : "";
         const baseLabel = o.trimLevel || o.trim || o.modification;
+        const engineCode = o.engineCode ? String(o.engineCode) : "";
+        // Use a composite value so the dropdown has unique option values even when Wheel-Size returns
+        // the same `modification` token for multiple trims (common when token represents engine).
+        const value = mod ? `${mod}__${String(baseLabel).replace(/\s+/g, "-").toLowerCase()}__${engineCode}` : "";
         if (!value || !baseLabel) return null;
         // Add engine to reduce duplicates when trimLevel repeats, but drop fuel words like "Petrol".
         const engineRaw = o.engine ? String(o.engine) : "";

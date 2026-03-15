@@ -10,7 +10,14 @@ export async function GET(req: Request) {
   }
 
   const upstream = new URL("/v1/vehicles/search", base);
-  url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
+  url.searchParams.forEach((v, k) => {
+    // FitmentSelector may store a composite modification value to keep trim options unique.
+    if (k === "modification" && typeof v === "string" && v.includes("__")) {
+      upstream.searchParams.set(k, v.split("__")[0]);
+      return;
+    }
+    upstream.searchParams.set(k, v);
+  });
 
   const res = await fetch(upstream, { cache: "no-store" });
   const text = await res.text();
