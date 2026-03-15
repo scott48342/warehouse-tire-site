@@ -17,6 +17,8 @@ jobs:
       WP_SFTP_USER: ${{ secrets.WP_SFTP_USER }}
       WP_SFTP_PASSWORD: ${{ secrets.WP_SFTP_PASSWORD }}
       NODE_TLS_REJECT_UNAUTHORIZED: "0"
+      # Pre-empt the GitHub Actions Node 20 deprecation warnings.
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
       - name: Checkout
@@ -27,17 +29,15 @@ jobs:
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: warehouse-tire-site/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install deps
-        working-directory: warehouse-tire-site
         run: npm ci
 
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Pull WheelPros feeds via SFTP
-        working-directory: warehouse-tire-site
         run: |
           mkdir -p wheelpros-feed
           cd wheelpros-feed
@@ -66,13 +66,10 @@ jobs:
           ls -lah
 
       - name: Init DB (idempotent)
-        working-directory: warehouse-tire-site
         run: node scripts/wp-init-db.mjs
 
       - name: Import TechGuide
-        working-directory: warehouse-tire-site
         run: node scripts/wp-import-techguide.mjs wheelpros-feed
 
       - name: Import Inventory (TotalQOH only)
-        working-directory: warehouse-tire-site
         run: node scripts/wp-import-inventory.mjs wheelpros-feed
