@@ -106,7 +106,19 @@ async function importWheels() {
       raw=excluded.raw,
       updated_at=now()`;
 
-    await client.query(sql, batch.flat());
+    try {
+      await client.query(sql, batch.flat());
+    } catch (err) {
+      const pos = err?.position ? Number(err.position) : null;
+      if (pos && Number.isFinite(pos)) {
+        const start = Math.max(0, pos - 200);
+        const end = Math.min(sql.length, pos + 200);
+        console.error("DB error at position", pos);
+        console.error(sql.slice(start, end));
+      }
+      console.error("DB error:", err?.message || err);
+      throw err;
+    }
     batch = [];
   }
 
@@ -203,7 +215,19 @@ async function importTires() {
       raw=excluded.raw,
       updated_at=now()`;
 
-    await client.query(sql, batch.flat());
+    try {
+      await client.query(sql, batch.flat());
+    } catch (err) {
+      const pos = err?.position ? Number(err.position) : null;
+      if (pos && Number.isFinite(pos)) {
+        const start = Math.max(0, pos - 200);
+        const end = Math.min(sql.length, pos + 200);
+        console.error("DB error at position", pos);
+        console.error(sql.slice(start, end));
+      }
+      console.error("DB error:", err?.message || err);
+      throw err;
+    }
     batch = [];
   }
 
