@@ -25,7 +25,7 @@ export default async function AdminHomePage() {
           <Card title="Quote catalog" desc="Services/add-ons, unit pricing, taxable flags." href="/admin/catalog" />
           <Card title="Rebates" desc="Brand-level rebates you choose to show." href="/admin/rebates" />
           <Card title="Tire assets" desc="Manage tire images/names cache." href="/admin/tire-assets" />
-          <Card title="Quotes" desc="(Coming soon) View saved customer quotes." href="#" disabled />
+          <Card title="Quotes" desc="View saved customer quotes." href="/admin/quotes" />
         </div>
 
         <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
