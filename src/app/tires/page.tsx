@@ -62,6 +62,12 @@ async function fetchWpTires(tireSize: string) {
   return res.json();
 }
 
+async function fetchActiveRebates() {
+  const res = await fetch(`${getBaseUrl()}/api/rebates/active`, { cache: "no-store" });
+  if (!res.ok) return { items: [] as any[] };
+  return res.json();
+}
+
 export default async function TiresPage({
   searchParams,
 }: {
@@ -159,6 +165,14 @@ export default async function TiresPage({
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const wp = selectedSize ? await fetchWpTires(selectedSize) : null;
+  const rebates = await fetchActiveRebates();
+
+  const rebatesByBrand = new Map<string, any>();
+  for (const r of (rebates as any)?.items || []) {
+    const b = String(r?.brand || "").trim().toLowerCase();
+    if (!b) continue;
+    if (!rebatesByBrand.has(b)) rebatesByBrand.set(b, r);
+  }
 
   const itemsKm: Tire[] = Array.isArray(km?.items) ? km.items : [];
   const itemsWp: Tire[] = Array.isArray(wp?.items) ? wp.items : [];
@@ -814,21 +828,28 @@ export default async function TiresPage({
                     </h3>
 
                     <div className="mt-1 flex flex-wrap gap-1.5">
-                      {t.badges?.terrain ? (
-                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
-                          {String(t.badges.terrain)}
-                        </span>
-                      ) : null}
-                      {t.badges?.warrantyMiles ? (
-                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
-                          {t.badges.warrantyMiles.toLocaleString()} mi
-                        </span>
-                      ) : null}
-                      {t.badges?.loadIndex && t.badges?.speedRating ? (
-                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
-                          {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
-                        </span>
-                      ) : null}
+                      {(() => {
+                        const brandKey = String(t.brand || "").trim().toLowerCase();
+                        const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
+                        const headline = reb?.headline ? String(reb.headline) : "";
+                        const amt = headline.match(/\$(\d{2,4})/);
+                        const rebateLabel = amt ? `$${amt[1]} rebate` : (reb ? "Rebate" : "");
+
+                        const out: Array<{ key: string; label: string }> = [];
+                        if (rebateLabel) out.push({ key: "rebate", label: rebateLabel });
+                        if (t.badges?.terrain) out.push({ key: "terrain", label: String(t.badges.terrain) });
+                        if (t.badges?.warrantyMiles) out.push({ key: "warranty", label: `${t.badges.warrantyMiles.toLocaleString()} mi` });
+                        if (t.badges?.loadIndex && t.badges?.speedRating) out.push({ key: "ls", label: `${String(t.badges.loadIndex)}${String(t.badges.speedRating)}` });
+
+                        return out.slice(0, 3).map((b) => (
+                          <span
+                            key={b.key}
+                            className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900"
+                          >
+                            {b.label}
+                          </span>
+                        ));
+                      })()}
                     </div>
 
                     <div className="relative z-10 mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
