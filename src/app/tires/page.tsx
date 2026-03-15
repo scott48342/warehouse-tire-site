@@ -814,11 +814,6 @@ export default async function TiresPage({
                     </h3>
 
                     <div className="mt-1 flex flex-wrap gap-1.5">
-                      {selectedSize ? (
-                        <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
-                          {selectedSize}
-                        </span>
-                      ) : null}
                       {t.badges?.terrain ? (
                         <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
                           {String(t.badges.terrain)}
