@@ -775,9 +775,17 @@ export default async function TiresPage({
                 items.map((t, idx) => (
                   <article
                     key={t.partNumber || t.mfgPartNumber || idx}
-                    className="rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
+                    className="relative rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
                   >
-                    <div className="flex items-start justify-between gap-2">
+                    {t.mfgPartNumber ? (
+                      <Link
+                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}`}
+                        className="absolute inset-0 z-0"
+                        aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
+                      />
+                    ) : null}
+
+                    <div className="relative z-10 flex items-start justify-between gap-2">
                       <div className="text-xs font-semibold text-neutral-600">
                         {t.brand || "Tire"}
                       </div>
@@ -791,20 +799,11 @@ export default async function TiresPage({
                         />
                       ) : null}
                     </div>
-                    {t.mfgPartNumber ? (
-                      <Link
-                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}`}
-                        className="mt-0.5 block text-sm font-extrabold text-neutral-900 hover:underline"
-                      >
-                        {t.displayName || t.description || t.partNumber || "Tire"}
-                      </Link>
-                    ) : (
-                      <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
-                        {t.displayName || t.description || t.partNumber || "Tire"}
-                      </h3>
-                    )}
+                    <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">
+                      {t.displayName || t.description || t.partNumber || "Tire"}
+                    </h3>
 
-                    <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+                    <div className="relative z-10 mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
                       {t.imageUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
@@ -818,7 +817,7 @@ export default async function TiresPage({
                       )}
                     </div>
 
-                    <div className="mt-4">
+                    <div className="relative z-10 mt-4">
                       <div className="text-3xl font-extrabold text-neutral-900">
                         {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
                       </div>
@@ -827,7 +826,7 @@ export default async function TiresPage({
 
                     {/* Qty hidden */}
 
-                    <div className="mt-4 grid gap-2">
+                    <div className="relative z-10 mt-4 grid gap-2">
                       {typeof t.cost === "number" ? (
                         <Link
                           href="/schedule"
