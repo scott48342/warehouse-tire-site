@@ -57,7 +57,7 @@ export async function GET(req: Request) {
           .replace(/\s+/g, " ")
           .trim();
 
-        const label = engine ? `${String(baseLabel)} (${engine})` : String(baseLabel);
+        const label = String(baseLabel);
         return { value, label };
       })
       .filter(Boolean);

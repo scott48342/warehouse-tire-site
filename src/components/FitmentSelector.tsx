@@ -212,7 +212,7 @@ export function FitmentSelector({
               disabled={!draft.make}
             />
             <Select
-              label="Trim / Option"
+              label="Submodel"
               value={draft.modification ?? ""}
               onChange={(v) => {
                 const sel = trims.find((t) => t.value === v);
