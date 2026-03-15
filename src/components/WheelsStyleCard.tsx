@@ -30,6 +30,7 @@ export function WheelsStyleCard({
   price,
   sizeLabel,
   finishThumbs,
+  viewParams,
 }: {
   brand: string;
   title: string;
@@ -39,6 +40,7 @@ export function WheelsStyleCard({
   price?: number;
   sizeLabel?: { diameter?: string; width?: string };
   finishThumbs?: WheelFinishThumb[];
+  viewParams?: Record<string, string | undefined>;
 }) {
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
@@ -47,7 +49,24 @@ export function WheelsStyleCard({
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
 
-  const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}`;
+  const qs = useMemo(() => {
+    const sp = new URLSearchParams();
+    for (const [k, v] of Object.entries(viewParams || {})) {
+      if (v) sp.set(k, v);
+    }
+    // Keep links clean if no vehicle selected.
+    if (!sp.get("year") || !sp.get("make") || !sp.get("model")) {
+      sp.delete("year");
+      sp.delete("make");
+      sp.delete("model");
+      sp.delete("trim");
+      sp.delete("modification");
+    }
+    const s = sp.toString();
+    return s ? `?${s}` : "";
+  }, [viewParams]);
+
+  const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
 
   return (
     <div className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300">

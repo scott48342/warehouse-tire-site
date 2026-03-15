@@ -779,6 +779,15 @@ export default async function WheelsPage({
                           : undefined
                     }
                     finishThumbs={w.finishThumbs}
+                    viewParams={{
+                      year,
+                      make,
+                      model,
+                      trim,
+                      modification,
+                      sort,
+                      page: String(page),
+                    }}
                   />
                 ))
               ) : (

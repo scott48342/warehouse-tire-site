@@ -67,6 +67,7 @@ export default async function TireDetailPage({
   const make = String((sp as any).make || "");
   const model = String((sp as any).model || "");
   const trim = String((sp as any).trim || "");
+  const modification = String((sp as any).modification || "");
   const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
 
   if (!safeSku) {
@@ -229,7 +230,7 @@ export default async function TireDetailPage({
               </div>
               <div className="mt-3">
                 <Link
-                  href={vehicleLabel ? "/tires" : "/tires"}
+                  href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
                   className="inline-flex h-10 items-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
                 >
                   {vehicleLabel ? "Change vehicle" : "Select vehicle"}

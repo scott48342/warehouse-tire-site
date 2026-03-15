@@ -779,7 +779,7 @@ export default async function TiresPage({
                   >
                     {t.mfgPartNumber ? (
                       <Link
-                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}`}
+                        href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`}
                         className="absolute inset-0 z-0"
                         aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
                       />
