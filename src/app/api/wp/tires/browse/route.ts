@@ -87,6 +87,18 @@ export async function GET(req: Request) {
             or lower(coalesce(t.tire_description,'')) ~ '(^|[^a-z0-9])as([^a-z0-9]|$)'
           )`
         );
+      } else if (terrain === "winter") {
+        where.push(
+          `(
+            lower(coalesce(t.terrain,'')) like '%winter%'
+            or lower(coalesce(t.terrain,'')) like '%snow%'
+            or lower(coalesce(t.tire_description,'')) like '%winter%'
+            or lower(coalesce(t.tire_description,'')) like '%snow%'
+            or lower(coalesce(t.tire_description,'')) like '%blizzak%'
+            or lower(coalesce(t.tire_description,'')) like '%x-ice%'
+            or lower(coalesce(t.tire_description,'')) like '%xice%'
+          )`
+        );
       } else {
         values.push(terrain.toLowerCase());
         where.push(`lower(coalesce(t.terrain,'')) = $${values.length}`);

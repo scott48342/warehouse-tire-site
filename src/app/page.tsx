@@ -110,7 +110,7 @@ export default async function Home() {
 
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <Tile title="All-season tires" desc="Daily drivers, comfort, long tread life." href="/tires/c/all-season" />
-          <Tile title="Winter tires" desc="Cold weather traction and braking." href="/tires" />
+          <Tile title="Winter tires" desc="Cold weather traction and braking." href="/tires/c/winter" />
           <Tile title="All-terrain tires" desc="A/T traction for trucks and SUVs." href="/tires/c/all-terrain" />
           <Tile title='20" wheels' desc="Browse popular 20-inch wheel styles." href="/wheels" />
           <Tile title='18" wheels' desc="Popular size for trucks and SUVs." href="/wheels" />
