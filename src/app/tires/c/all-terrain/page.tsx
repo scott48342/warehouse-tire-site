@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 import { BRAND } from "@/lib/brand";
+import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -102,6 +103,13 @@ export default async function AllTerrainTiresPage({
   searchParams?: Record<string, string | string[] | undefined> | Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sp = (await Promise.resolve(searchParams ?? {})) as Record<string, string | string[] | undefined>;
+
+  const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
+  const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
+  const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
+  const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
+  const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
+
   const brand = (Array.isArray(sp.brand) ? sp.brand[0] : sp.brand) || "";
   const rim = (Array.isArray(sp.rim) ? sp.rim[0] : sp.rim) || "";
   const sort = (Array.isArray(sp.sort) ? sp.sort[0] : sp.sort) || "price_asc";
@@ -133,51 +141,77 @@ export default async function AllTerrainTiresPage({
           </div>
         </div>
 
-        <form className="mt-6 flex flex-wrap items-end gap-2" action="/tires/c/all-terrain" method="get">
-          <label className="grid gap-1 text-xs font-semibold text-neutral-700">
-            Brand
-            <select name="brand" defaultValue={brand} className="h-10 w-[260px] rounded-xl border border-neutral-200 bg-white px-3 text-sm">
-              <option value="">All brands</option>
-              {brands.map((b) => (
-                <option key={b.value} value={b.value}>
-                  {b.value} ({b.count})
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="grid gap-1 text-xs font-semibold text-neutral-700">
-            Rim (in)
-            <select name="rim" defaultValue={rim} className="h-10 w-[160px] rounded-xl border border-neutral-200 bg-white px-3 text-sm">
-              <option value="">All</option>
-              {rims.map((r) => (
-                <option key={String(r.value)} value={String(r.value)}>
-                  {String(r.value).replace(/\.0$/, "")}\" ({r.count})
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="grid gap-1 text-xs font-semibold text-neutral-700">
-            Sort
-            <select name="sort" defaultValue={sort} className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm">
-              <option value="price_asc">Price Low to High</option>
-              <option value="price_desc">Price High to Low</option>
-              <option value="stock_desc">Most Stock</option>
-            </select>
-          </label>
-          <button className="h-10 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white">
-            Apply
-          </button>
-          <Link href="/tires/c/all-terrain" className="h-10 rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold">
-            Clear
-          </Link>
-        </form>
+        <div className="mt-6 grid gap-6 md:grid-cols-[280px_1fr]">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+            {year && make && model ? (
+              <div className="mb-4">
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+              </div>
+            ) : null}
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-extrabold">Filters</h2>
+              <Link
+                href={`/tires/c/all-terrain?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                className="text-xs font-semibold text-neutral-600 hover:underline"
+              >
+                Clear all
+              </Link>
+            </div>
+
+            <form className="mt-3 grid gap-3" action="/tires/c/all-terrain" method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Brand
+                <select name="brand" defaultValue={brand} className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm">
+                  <option value="">All brands</option>
+                  {brands.map((b) => (
+                    <option key={b.value} value={b.value}>
+                      {b.value} ({b.count})
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Rim (in)
+                <select name="rim" defaultValue={rim} className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm">
+                  <option value="">All</option>
+                  {rims.map((r) => (
+                    <option key={String(r.value)} value={String(r.value)}>
+                      {String(r.value).replace(/\.0$/, "")}\" ({r.count})
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Sort
+                <select name="sort" defaultValue={sort} className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm">
+                  <option value="price_asc">Price Low to High</option>
+                  <option value="price_desc">Price High to Low</option>
+                  <option value="stock_desc">Most Stock</option>
+                </select>
+              </label>
+
+              <button className="h-10 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white">
+                Apply
+              </button>
+            </form>
+          </aside>
+
+          <div>
+            <div className="mt-0 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.length ? (
             items.map((t) => (
               <Link
                 key={t.sku}
-                href={`/tires/${encodeURIComponent(t.sku)}`}
+                href={`/tires/${encodeURIComponent(t.sku)}?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
                 className="group rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
               >
                 <div className="flex items-start justify-between gap-3">
@@ -220,6 +254,8 @@ export default async function AllTerrainTiresPage({
               No all-terrain tires found. Try clearing brand/rim filters.
             </div>
           )}
+            </div>
+          </div>
         </div>
       </div>
     </main>
