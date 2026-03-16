@@ -199,15 +199,20 @@ export default async function WheelsPage({
   const minOff = Number.isFinite(minOffN) ? String(minOffN) : undefined;
   const maxOff = Number.isFinite(maxOffN) ? String(maxOffN) : undefined;
 
+  function fmtOneDecimal(v: string) {
+    const x = Number(String(v || "").trim());
+    return Number.isFinite(x) ? x.toFixed(1) : String(v || "").trim();
+  }
+
   // WheelPros expects a single diameter/width.
   const diameterNum = diaRange?.[1] != null ? Number(diaRange[1]) : (diaRange?.[0] != null ? Number(diaRange[0]) : NaN);
-  // If user picked a diameter filter, pass it through exactly as given (facet values are canonical).
+  // If user picked a diameter filter, normalize to WheelPros format (often "20.0").
   const diameter = diameterParam
-    ? diameterParam
+    ? fmtOneDecimal(diameterParam)
     : (Number.isFinite(diameterNum) ? diameterNum.toFixed(1) : undefined);
 
-  // Same idea for width: pass facet value through exactly.
-  const width = widthParam || undefined;
+  // Same idea for width.
+  const width = widthParam ? fmtOneDecimal(widthParam) : undefined;
   const minOffset = Number.isFinite(offsetMinUser as number) ? String(offsetMinUser) : minOff;
   const maxOffset = Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : maxOff;
 
