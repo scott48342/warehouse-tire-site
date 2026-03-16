@@ -174,7 +174,8 @@ export default async function WheelsPage({
     : null;
 
   const fit = (fitment as any)?.fitment ? (fitment as any).fitment : fitment;
-  const bp: string | undefined = boltPatternParam || fit?.boltPattern || undefined;
+  const hasVehicle = Boolean(year && make && model);
+  const bp: string | undefined = hasVehicle ? (boltPatternParam || fit?.boltPattern || undefined) : undefined;
 
   // Centerbore: WheelPros properties/filters are inconsistent; don't hard-filter on it upstream.
   const cb: string | undefined = undefined;
@@ -213,8 +214,8 @@ export default async function WheelsPage({
 
   // Same idea for width.
   const width = widthParam ? fmtOneDecimal(widthParam) : undefined;
-  const minOffset = Number.isFinite(offsetMinUser as number) ? String(offsetMinUser) : minOff;
-  const maxOffset = Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : maxOff;
+  const minOffset = hasVehicle ? (Number.isFinite(offsetMinUser as number) ? String(offsetMinUser) : minOff) : undefined;
+  const maxOffset = hasVehicle ? (Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : maxOff) : undefined;
 
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
@@ -234,10 +235,9 @@ export default async function WheelsPage({
 
     boltPattern: bp,
     centerbore: cb,
-    // WheelPros often collapses to 0 results if you pass diameter without width.
-    // If the user only picked a diameter shortcut (e.g. homepage 18"/20"), fetch broad and filter client-side.
-    diameter: diameterParam && widthParam ? diameter : undefined,
-    width: widthParam ? width : undefined,
+    // For size-only searches (no vehicle), WheelPros filters are unreliable; fetch broad and filter client-side.
+    diameter: hasVehicle && diameterParam && widthParam ? diameter : undefined,
+    width: hasVehicle && widthParam ? width : undefined,
 
     // Facet filters (WheelPros taxonomy)
     brand_cd: brandCd || undefined,
@@ -257,7 +257,7 @@ export default async function WheelsPage({
     (Array.isArray(data?.items) && data.items.length === 0) ||
     (Array.isArray(data?.results) && data.results.length === 0);
 
-  if (emptyFirstPass && year && make && model) {
+  if (emptyFirstPass && hasVehicle) {
     data = await fetchWheels({
       ...baseWheelProsParams,
       boltPattern: undefined,
