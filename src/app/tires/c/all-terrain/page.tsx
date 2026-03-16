@@ -38,6 +38,11 @@ type Item = {
   qoh: number;
 };
 
+type Facets = {
+  brands: { value: string; count: number }[];
+  rims: { value: number; count: number }[];
+};
+
 async function fetchItems({
   brand,
   rim,
@@ -64,6 +69,32 @@ async function fetchItems({
   }
 }
 
+async function fetchFacets({
+  brand,
+  rim,
+}: {
+  brand?: string;
+  rim?: string;
+}): Promise<Facets> {
+  const sp = new URLSearchParams();
+  sp.set("terrain", "all-terrain");
+  if (brand) sp.set("brand", brand);
+  if (rim) sp.set("rim", rim);
+
+  try {
+    const baseUrl = await getBaseUrl();
+    const res = await fetch(`${baseUrl}/api/wp/tires/facets?${sp.toString()}`, { cache: "no-store" });
+    if (!res.ok) return { brands: [], rims: [] };
+    const j = (await res.json()) as Partial<Facets>;
+    return {
+      brands: Array.isArray(j.brands) ? (j.brands as any) : [],
+      rims: Array.isArray(j.rims) ? (j.rims as any) : [],
+    };
+  } catch {
+    return { brands: [], rims: [] };
+  }
+}
+
 export default async function AllTerrainTiresPage({
   searchParams,
 }: {
@@ -74,8 +105,13 @@ export default async function AllTerrainTiresPage({
   const rim = (Array.isArray(sp.rim) ? sp.rim[0] : sp.rim) || "";
   const sort = (Array.isArray(sp.sort) ? sp.sort[0] : sp.sort) || "price_asc";
 
-  const data = await fetchItems({ brand: brand || undefined, rim: rim || undefined, sort });
+  const [data, facets] = await Promise.all([
+    fetchItems({ brand: brand || undefined, rim: rim || undefined, sort }),
+    fetchFacets({ brand: brand || undefined, rim: rim || undefined }),
+  ]);
   const items = Array.isArray(data?.items) ? data.items : [];
+  const brands = Array.isArray(facets?.brands) ? facets.brands : [];
+  const rims = Array.isArray(facets?.rims) ? facets.rims : [];
 
   return (
     <main className="bg-neutral-50">
@@ -99,11 +135,25 @@ export default async function AllTerrainTiresPage({
         <form className="mt-6 flex flex-wrap items-end gap-2" action="/tires/c/all-terrain" method="get">
           <label className="grid gap-1 text-xs font-semibold text-neutral-700">
             Brand
-            <input name="brand" defaultValue={brand} className="h-10 w-[220px] rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="(optional)" />
+            <select name="brand" defaultValue={brand} className="h-10 w-[260px] rounded-xl border border-neutral-200 bg-white px-3 text-sm">
+              <option value="">All brands</option>
+              {brands.map((b) => (
+                <option key={b.value} value={b.value}>
+                  {b.value} ({b.count})
+                </option>
+              ))}
+            </select>
           </label>
           <label className="grid gap-1 text-xs font-semibold text-neutral-700">
             Rim (in)
-            <input name="rim" defaultValue={rim} className="h-10 w-[120px] rounded-xl border border-neutral-200 bg-white px-3 text-sm" placeholder="20" />
+            <select name="rim" defaultValue={rim} className="h-10 w-[160px] rounded-xl border border-neutral-200 bg-white px-3 text-sm">
+              <option value="">All</option>
+              {rims.map((r) => (
+                <option key={String(r.value)} value={String(r.value)}>
+                  {String(r.value).replace(/\.0$/, "")}\" ({r.count})
+                </option>
+              ))}
+            </select>
           </label>
           <label className="grid gap-1 text-xs font-semibold text-neutral-700">
             Sort
