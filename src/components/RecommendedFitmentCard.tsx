@@ -11,10 +11,123 @@ type NormalizedFitment = {
   offsetRangeMm?: [number, number];
 };
 
+type AxleFitment = {
+  front?: NormalizedFitment;
+  rear?: NormalizedFitment;
+};
+
 function fmtRange(a?: number, b?: number, unit?: string) {
   if (a == null || b == null) return "";
   if (a === b) return `${a}${unit ?? ""}`;
   return `${a}–${b}${unit ?? ""}`;
+}
+
+function minMax(vals: number[]): [number, number] | undefined {
+  const xs = vals.filter((n) => Number.isFinite(n));
+  if (!xs.length) return undefined;
+  return [Math.min(...xs), Math.max(...xs)];
+}
+
+function parseTireSizeBasic(s: string): { widthMm?: number; rimIn?: number } {
+  const str = String(s || "").trim();
+  // Examples:
+  // 245/40ZR18 88Y
+  // 285/30R19
+  const m = str.match(/\b(\d{3})\/(\d{2})\s*[A-Z]*R(\d{2})\b/i);
+  if (!m) return {};
+  const widthMm = Number(m[1]);
+  const rimIn = Number(m[3]);
+  return {
+    widthMm: Number.isFinite(widthMm) ? widthMm : undefined,
+    rimIn: Number.isFinite(rimIn) ? rimIn : undefined,
+  };
+}
+
+function wheelWidthRangeForTireWidthConservative(widthMm: number): [number, number] | undefined {
+  // Conservative mapping (approximate) from tire section width → acceptable wheel width range.
+  // This is intentionally wide to avoid false negatives.
+  if (!Number.isFinite(widthMm)) return undefined;
+
+  if (widthMm <= 225) return [6.0, 8.5];
+  if (widthMm <= 235) return [7.0, 9.0];
+  if (widthMm <= 245) return [7.5, 9.5];
+  if (widthMm <= 255) return [8.0, 10.0];
+  if (widthMm <= 265) return [8.5, 10.5];
+  if (widthMm <= 275) return [9.0, 11.0];
+  if (widthMm <= 285) return [9.5, 11.5];
+  if (widthMm <= 295) return [10.0, 12.0];
+  if (widthMm <= 305) return [10.0, 12.0];
+  if (widthMm <= 315) return [10.5, 12.5];
+  if (widthMm <= 325) return [10.5, 12.5];
+  if (widthMm <= 335) return [11.0, 13.0];
+  return [11.0, 13.0];
+}
+
+function axleFitmentFromOemTireSizesConservative(
+  tireSizes: string[],
+  fallback: NormalizedFitment | null
+): AxleFitment | null {
+  const parsed = tireSizes
+    .map((s) => ({ raw: s, ...parseTireSizeBasic(s) }))
+    .filter((x) => x.widthMm && x.rimIn) as Array<{ raw: string; widthMm: number; rimIn: number }>;
+
+  if (parsed.length < 2) return null;
+
+  const widths = parsed.map((p) => p.widthMm);
+  const wMin = Math.min(...widths);
+  const wMax = Math.max(...widths);
+
+  // If widths are basically the same, treat as square.
+  if (wMax - wMin < 30) return null;
+
+  // Split by midpoint; smaller widths = front, larger = rear.
+  const mid = (wMin + wMax) / 2;
+  const front = parsed.filter((p) => p.widthMm <= mid);
+  const rear = parsed.filter((p) => p.widthMm > mid);
+  if (!front.length || !rear.length) return null;
+
+  const frontRims = minMax(front.map((p) => p.rimIn));
+  const rearRims = minMax(rear.map((p) => p.rimIn));
+
+  const frontWheelWidths = front
+    .map((p) => wheelWidthRangeForTireWidthConservative(p.widthMm))
+    .filter(Boolean) as Array<[number, number]>;
+  const rearWheelWidths = rear
+    .map((p) => wheelWidthRangeForTireWidthConservative(p.widthMm))
+    .filter(Boolean) as Array<[number, number]>;
+
+  const frontW = frontWheelWidths.length
+    ? ([
+        Math.min(...frontWheelWidths.map((r) => r[0])),
+        Math.max(...frontWheelWidths.map((r) => r[1])),
+      ] as [number, number])
+    : undefined;
+
+  const rearW = rearWheelWidths.length
+    ? ([
+        Math.min(...rearWheelWidths.map((r) => r[0])),
+        Math.max(...rearWheelWidths.map((r) => r[1])),
+      ] as [number, number])
+    : undefined;
+
+  const common = fallback || {};
+
+  return {
+    front: {
+      boltPattern: common.boltPattern,
+      centerBoreMm: common.centerBoreMm,
+      offsetRangeMm: common.offsetRangeMm,
+      wheelDiameterRangeIn: frontRims,
+      wheelWidthRangeIn: frontW,
+    },
+    rear: {
+      boltPattern: common.boltPattern,
+      centerBoreMm: common.centerBoreMm,
+      offsetRangeMm: common.offsetRangeMm,
+      wheelDiameterRangeIn: rearRims,
+      wheelWidthRangeIn: rearW,
+    },
+  };
 }
 
 function fmtMaybe(v: unknown, unit?: string) {
@@ -38,6 +151,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
   }, [fitment?.modification]);
 
   const [details, setDetails] = useState<NormalizedFitment | null>(null);
+  const [axles, setAxles] = useState<AxleFitment | null>(null);
   const [oemTireSizes, setOemTireSizes] = useState<string[]>([]);
   const [error, setError] = useState<string>("");
 
@@ -46,6 +160,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
     (async () => {
       // reset
       setDetails(null);
+      setAxles(null);
       setOemTireSizes([]);
       setError("");
 
@@ -101,16 +216,25 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
         if (cancelled) return;
 
         // Set wheel fitment ranges (if present) so the UI matches CustomOffsets-style ranges.
-        setDetails({
+        const fallbackDetails: NormalizedFitment = {
           boltPattern: data?.boltPattern,
           centerBoreMm: data?.centerBoreMm,
-          wheelDiameterRangeIn: Array.isArray((data as any)?.wheelDiameterRangeIn) ? ((data as any).wheelDiameterRangeIn as any) : undefined,
-          wheelWidthRangeIn: Array.isArray((data as any)?.wheelWidthRangeIn) ? ((data as any).wheelWidthRangeIn as any) : undefined,
+          wheelDiameterRangeIn: Array.isArray((data as any)?.wheelDiameterRangeIn)
+            ? ((data as any).wheelDiameterRangeIn as any)
+            : undefined,
+          wheelWidthRangeIn: Array.isArray((data as any)?.wheelWidthRangeIn)
+            ? ((data as any).wheelWidthRangeIn as any)
+            : undefined,
           offsetRangeMm: Array.isArray((data as any)?.offsetRangeMm) ? ((data as any).offsetRangeMm as any) : undefined,
-        });
+        };
+        setDetails(fallbackDetails);
 
         const sizes = Array.isArray(data?.tireSizes) ? data.tireSizes.map(String) : [];
         setOemTireSizes(sizes);
+
+        // Best-effort stagger detection + front/rear ranges derived from OEM tire sizes.
+        const derivedAxles = axleFitmentFromOemTireSizesConservative(sizes, fallbackDetails);
+        if (derivedAxles) setAxles(derivedAxles);
       } catch {
         // best-effort only
       }
@@ -134,7 +258,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
 
       <div className="mt-3 rounded-xl border border-neutral-200 bg-neutral-50 p-3">
         <div className="text-xs font-extrabold text-neutral-900">Recommended Fitment</div>
-        <div className="mt-2 grid gap-1 text-[12px] text-neutral-800">
+        <div className="mt-2 grid gap-2 text-[12px] text-neutral-800">
           {details?.boltPattern ? (
             <div className="flex items-center justify-between gap-3">
               <span className="text-neutral-600">Bolt pattern</span>
@@ -142,26 +266,80 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
             </div>
           ) : null}
 
-          {details?.wheelDiameterRangeIn ? (
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-neutral-600">Diameter</span>
-              <span className="font-semibold">{fmtRange(details.wheelDiameterRangeIn[0], details.wheelDiameterRangeIn[1], "\"")}</span>
-            </div>
-          ) : null}
+          {axles?.front && axles?.rear ? (
+            <div className="grid gap-2">
+              <div className="rounded-xl border border-neutral-200 bg-white p-2">
+                <div className="text-[11px] font-extrabold text-neutral-900">Front sizes</div>
+                <div className="mt-1 grid gap-1">
+                  {axles.front.wheelDiameterRangeIn ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-neutral-600">Diameter</span>
+                      <span className="font-semibold">{fmtRange(axles.front.wheelDiameterRangeIn[0], axles.front.wheelDiameterRangeIn[1], "\"")}</span>
+                    </div>
+                  ) : null}
+                  {axles.front.wheelWidthRangeIn ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-neutral-600">Width</span>
+                      <span className="font-semibold">{fmtRange(axles.front.wheelWidthRangeIn[0], axles.front.wheelWidthRangeIn[1], "\"")}</span>
+                    </div>
+                  ) : null}
+                  {axles.front.offsetRangeMm ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-neutral-600">Offset</span>
+                      <span className="font-semibold">{fmtRange(axles.front.offsetRangeMm[0], axles.front.offsetRangeMm[1], "mm")}</span>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
 
-          {details?.wheelWidthRangeIn ? (
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-neutral-600">Width</span>
-              <span className="font-semibold">{fmtRange(details.wheelWidthRangeIn[0], details.wheelWidthRangeIn[1], "\"")}</span>
+              <div className="rounded-xl border border-neutral-200 bg-white p-2">
+                <div className="text-[11px] font-extrabold text-neutral-900">Rear sizes</div>
+                <div className="mt-1 grid gap-1">
+                  {axles.rear.wheelDiameterRangeIn ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-neutral-600">Diameter</span>
+                      <span className="font-semibold">{fmtRange(axles.rear.wheelDiameterRangeIn[0], axles.rear.wheelDiameterRangeIn[1], "\"")}</span>
+                    </div>
+                  ) : null}
+                  {axles.rear.wheelWidthRangeIn ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-neutral-600">Width</span>
+                      <span className="font-semibold">{fmtRange(axles.rear.wheelWidthRangeIn[0], axles.rear.wheelWidthRangeIn[1], "\"")}</span>
+                    </div>
+                  ) : null}
+                  {axles.rear.offsetRangeMm ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-neutral-600">Offset</span>
+                      <span className="font-semibold">{fmtRange(axles.rear.offsetRangeMm[0], axles.rear.offsetRangeMm[1], "mm")}</span>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
             </div>
-          ) : null}
+          ) : (
+            <>
+              {details?.wheelDiameterRangeIn ? (
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-neutral-600">Diameter</span>
+                  <span className="font-semibold">{fmtRange(details.wheelDiameterRangeIn[0], details.wheelDiameterRangeIn[1], "\"")}</span>
+                </div>
+              ) : null}
 
-          {details?.offsetRangeMm ? (
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-neutral-600">Offset</span>
-              <span className="font-semibold">{fmtRange(details.offsetRangeMm[0], details.offsetRangeMm[1], "mm")}</span>
-            </div>
-          ) : null}
+              {details?.wheelWidthRangeIn ? (
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-neutral-600">Width</span>
+                  <span className="font-semibold">{fmtRange(details.wheelWidthRangeIn[0], details.wheelWidthRangeIn[1], "\"")}</span>
+                </div>
+              ) : null}
+
+              {details?.offsetRangeMm ? (
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-neutral-600">Offset</span>
+                  <span className="font-semibold">{fmtRange(details.offsetRangeMm[0], details.offsetRangeMm[1], "mm")}</span>
+                </div>
+              ) : null}
+            </>
+          )}
 
           {details?.centerBoreMm ? (
             <div className="flex items-center justify-between gap-3">
