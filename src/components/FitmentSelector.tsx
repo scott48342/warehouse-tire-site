@@ -15,37 +15,46 @@ async function fetchJson<T>(url: string): Promise<T> {
 export function FitmentSelector({
   onComplete,
   provider,
+  blank,
 }: {
   onComplete?: (fitment: Fitment) => void;
   provider?: "wheelsize" | "wheelpros";
+  /**
+   * When true, the selector UI starts blank and ignores URL/localStorage prepopulation.
+   * Intended for the mega menu SearchModal where we want an empty picker each time.
+   */
+  blank?: boolean;
 } = {}) {
   const sp = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
 
   const fitment = useMemo<Fitment>(() => {
+    if (blank) return {};
     const year = sp.get("year") ?? undefined;
     const make = sp.get("make") ?? undefined;
     const model = sp.get("model") ?? undefined;
     const trim = sp.get("trim") ?? undefined;
     const modification = sp.get("modification") ?? undefined;
     return { year, make, model, trim, modification };
-  }, [sp]);
+  }, [sp, blank]);
 
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState<Fitment>(fitment);
 
   useEffect(() => {
+    if (blank) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setDraft((d) => {
       const same = d.year === fitment.year && d.make === fitment.make && d.model === fitment.model && d.trim === fitment.trim;
       return same ? d : fitment;
     });
-  }, [fitment]);
+  }, [fitment, blank]);
 
   // If the URL has no fitment params but we have a saved fitment, restore it into the URL.
   // This prevents /wheels from showing an essentially "unfiltered" WheelPros list.
   useEffect(() => {
+    if (blank) return;
     try {
       const hasUrlFitment = Boolean(fitment.year || fitment.make || fitment.model || fitment.modification);
       if (hasUrlFitment) return;
@@ -66,21 +75,23 @@ export function FitmentSelector({
       // ignore
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [blank]);
 
   useEffect(() => {
+    if (blank) return;
     // persist last fitment (URL-applied)
     try {
       localStorage.setItem("wt_fitment", JSON.stringify(fitment));
     } catch {}
-  }, [fitment]);
+  }, [fitment, blank]);
 
   useEffect(() => {
+    if (blank) return;
     // also persist draft as the user is selecting (so SearchModal can navigate without needing "Apply")
     try {
       localStorage.setItem("wt_fitment_draft", JSON.stringify(draft));
     } catch {}
-  }, [draft]);
+  }, [draft, blank]);
 
   function apply(next: Fitment) {
     const params = new URLSearchParams(sp.toString());

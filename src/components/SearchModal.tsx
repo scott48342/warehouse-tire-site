@@ -246,6 +246,7 @@ export function SearchModal({
                 <div className="mt-2">
                   <FitmentSelector
                     provider="wheelsize"
+                    blank
                     onComplete={(fitment) => {
                       // After trim is selected, immediately navigate (SEO/sharable) and close.
                       // Preserve any existing params (e.g. quote carry-over like wheelSku).
