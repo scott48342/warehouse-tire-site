@@ -228,7 +228,9 @@ export default async function WheelsPage({
 
     boltPattern: bp,
     centerbore: cb,
-    diameter: diameterParam ? diameter : undefined,
+    // WheelPros often collapses to 0 results if you pass diameter without width.
+    // If the user only picked a diameter shortcut (e.g. homepage 18"/20"), fetch broad and filter client-side.
+    diameter: diameterParam && widthParam ? diameter : undefined,
     width: widthParam ? width : undefined,
 
     // Facet filters (WheelPros taxonomy)
