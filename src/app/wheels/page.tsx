@@ -215,7 +215,8 @@ export default async function WheelsPage({
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
   const upstreamPageSize = 120;
-  const data = await fetchWheels({
+
+  const baseWheelProsParams: Record<string, string | undefined> = {
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
     // but keep it reasonable for performance.
@@ -240,7 +241,26 @@ export default async function WheelsPage({
     minOffset,
     maxOffset,
     offsetType: minOffset || maxOffset ? "RANGE" : undefined,
-  });
+  };
+
+  // First pass: strict fitment filters (bolt pattern + offset range).
+  let data: any = await fetchWheels(baseWheelProsParams);
+
+  // If we get zero results for a vehicle-based search, relax filters.
+  // This avoids a bad UX where a valid vehicle selection yields an empty wheels page.
+  const emptyFirstPass =
+    (Array.isArray(data?.items) && data.items.length === 0) ||
+    (Array.isArray(data?.results) && data.results.length === 0);
+
+  if (emptyFirstPass && year && make && model) {
+    data = await fetchWheels({
+      ...baseWheelProsParams,
+      boltPattern: undefined,
+      minOffset: undefined,
+      maxOffset: undefined,
+      offsetType: undefined,
+    });
+  }
 
   const maybeData = data as {
     items?: unknown[];
