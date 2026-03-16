@@ -32,7 +32,10 @@ function i(v: any) {
 }
 
 function n(v: any): number | null {
-  const x = Number(v);
+  if (v == null) return null;
+  const s0 = typeof v === "string" ? v.trim() : String(v);
+  if (!s0) return null;
+  const x = Number(s0);
   return Number.isFinite(x) ? x : null;
 }
 
