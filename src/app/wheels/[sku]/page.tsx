@@ -4,6 +4,7 @@ import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
 import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
+import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { BRAND } from "@/lib/brand";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 
@@ -398,20 +399,32 @@ export default async function WheelDetailPage({
           </div>
 
           <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
-            <div className="rounded-2xl border border-neutral-200 bg-white p-3">
-              <div className="text-[11px] font-semibold text-neutral-600">Vehicle</div>
-              <div className="mt-0.5 text-sm font-extrabold text-neutral-900">
-                {vehicleLabel || "Select vehicle to verify fitment"}
+            {year && make && model ? (
+              <div className="mb-4">
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+                <div className="mt-2">
+                  <Link
+                    href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                    className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                  >
+                    Change vehicle
+                  </Link>
+                </div>
               </div>
-              <div className="mt-2">
-                <Link
-                  href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
-                  className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
-                >
-                  {vehicleLabel ? "Change vehicle" : "Select vehicle"}
-                </Link>
+            ) : (
+              <div className="mb-4 rounded-2xl border border-neutral-200 bg-white p-3">
+                <div className="text-[11px] font-semibold text-neutral-600">Vehicle</div>
+                <div className="mt-0.5 text-sm font-extrabold text-neutral-900">Select vehicle to verify fitment</div>
+                <div className="mt-2">
+                  <Link
+                    href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                    className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                  >
+                    Select vehicle
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="mt-4 text-xs font-semibold text-neutral-600">{brand || "Wheel"}</div>
             <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{it?.title || sku}</h1>

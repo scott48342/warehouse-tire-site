@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { GarageWidget } from "@/components/GarageWidget";
+import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
@@ -447,6 +448,12 @@ export default async function TiresPage({
 
         <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+            {year && make && model ? (
+              <div className="mb-4">
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+              </div>
+            ) : null}
+
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-extrabold">Filters</h2>
               <Link
