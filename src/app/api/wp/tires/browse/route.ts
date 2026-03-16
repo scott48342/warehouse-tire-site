@@ -75,6 +75,18 @@ export async function GET(req: Request) {
             or lower(coalesce(t.tire_description,'')) ~ '(^|[^a-z0-9])at([^a-z0-9]|$)'
           )`
         );
+      } else if (terrain === "all-season") {
+        // All-season appears inconsistently in the feed; fall back to common tokens.
+        where.push(
+          `(
+            lower(coalesce(t.terrain,'')) like '%all%season%'
+            or lower(coalesce(t.tire_description,'')) like '%all season%'
+            or lower(coalesce(t.tire_description,'')) like '%all-season%'
+            or lower(coalesce(t.tire_description,'')) like '%allseason%'
+            or lower(coalesce(t.tire_description,'')) like '%a/s%'
+            or lower(coalesce(t.tire_description,'')) ~ '(^|[^a-z0-9])as([^a-z0-9]|$)'
+          )`
+        );
       } else {
         values.push(terrain.toLowerCase());
         where.push(`lower(coalesce(t.terrain,'')) = $${values.length}`);
