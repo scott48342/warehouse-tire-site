@@ -1,11 +1,20 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import { BRAND } from "@/lib/brand";
 
 export const runtime = "nodejs";
 
-function getBaseUrl() {
+async function getBaseUrl() {
+  // Prefer explicit base URL if set.
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+
+  // Otherwise derive from the incoming request (works on Railway/Render/Fly/etc.).
+  const h = await headers();
+  const proto = h.get("x-forwarded-proto") || "https";
+  const host = h.get("x-forwarded-host") || h.get("host");
+  if (host) return `${proto}://${host}`;
+
   return "http://localhost:3000";
 }
 
@@ -45,9 +54,14 @@ async function fetchItems({
   if (rim) sp.set("rim", rim);
   if (sort) sp.set("sort", sort);
 
-  const res = await fetch(`${getBaseUrl()}/api/wp/tires/browse?${sp.toString()}`, { cache: "no-store" });
-  if (!res.ok) return { items: [] as Item[] };
-  return (await res.json()) as { items: Item[] };
+  try {
+    const baseUrl = await getBaseUrl();
+    const res = await fetch(`${baseUrl}/api/wp/tires/browse?${sp.toString()}`, { cache: "no-store" });
+    if (!res.ok) return { items: [] as Item[] };
+    return (await res.json()) as { items: Item[] };
+  } catch {
+    return { items: [] as Item[] };
+  }
 }
 
 export default async function AllTerrainTiresPage({
