@@ -113,6 +113,19 @@ function GarageQuickPick({
   );
 }
 
+function applyPendingWheelDiameter(next: URLSearchParams) {
+  try {
+    const raw = localStorage.getItem("wt_pending_wheel_diameter");
+    const d = raw ? String(raw).trim() : "";
+    if (!d) return;
+    if (!next.get("diameter")) next.set("diameter", d);
+    if (!next.get("page")) next.set("page", "1");
+    localStorage.removeItem("wt_pending_wheel_diameter");
+  } catch {
+    // ignore
+  }
+}
+
 export function SearchModal({
   open,
   type,
@@ -224,6 +237,7 @@ export function SearchModal({
                     const make = merged.get("make") || "";
                     const model = merged.get("model") || "";
                     const slug = year && make && model ? vehicleSlug(year, make, model) : "";
+                    applyPendingWheelDiameter(merged);
                     router.push(slug ? buildUrl(`/wheels/v/${slug}`, merged) : buildUrl("/wheels", merged));
                     onClose();
                   }}
@@ -250,6 +264,7 @@ export function SearchModal({
                         ? (slug ? `/tires/v/${slug}` : "/tires")
                         : (slug ? `/wheels/v/${slug}` : "/wheels");
 
+                      if (!isTires) applyPendingWheelDiameter(next);
                       router.push(buildUrl(target, next));
                       onClose();
                     }}
@@ -369,6 +384,7 @@ export function SearchModal({
                           next.set("diameter", wheelDiameter);
                           next.set("width", wheelWidth);
                           next.set("boltPattern", boltPattern);
+                          applyPendingWheelDiameter(next);
                           router.push(`/wheels?${next.toString()}`);
                           onClose();
                         }}

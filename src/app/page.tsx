@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
 
 export const runtime = "nodejs";
 
@@ -112,8 +113,8 @@ export default async function Home() {
           <Tile title="All-season tires" desc="Daily drivers, comfort, long tread life." href="/tires/c/all-season" />
           <Tile title="Winter tires" desc="Cold weather traction and braking." href="/tires/c/winter" />
           <Tile title="All-terrain tires" desc="A/T traction for trucks and SUVs." href="/tires/c/all-terrain" />
-          <Tile title='20" wheels' desc="Browse popular 20-inch wheel styles." href="/wheels" />
-          <Tile title='18" wheels' desc="Popular size for trucks and SUVs." href="/wheels" />
+          <HomeWheelShortcut title='20" wheels' desc="Browse 20-inch wheels that fit your vehicle." diameter={20} />
+          <HomeWheelShortcut title='18" wheels' desc="Browse 18-inch wheels that fit your vehicle." diameter={18} />
           <Tile title="Package quote" desc="Build a wheel + tire quote fast." href="/wheels" />
         </div>
       </section>
