@@ -385,13 +385,25 @@ export default async function WheelsPage({
     }
 
     if (diameterParam) {
-      const d = String(w.diameter || "").trim();
-      if (d && d !== String(diameterParam).trim()) return false;
+      const want = Number(String(diameterParam).trim());
+      const have = Number(String(w.diameter || "").trim());
+      if (Number.isFinite(want) && Number.isFinite(have)) {
+        if (Math.abs(have - want) > 0.05) return false;
+      } else {
+        const d = String(w.diameter || "").trim();
+        if (d && d !== String(diameterParam).trim()) return false;
+      }
     }
 
     if (widthParam) {
-      const ww = String(w.width || "").trim();
-      if (ww && ww !== String(widthParam).trim()) return false;
+      const want = Number(String(widthParam).trim());
+      const have = Number(String(w.width || "").trim());
+      if (Number.isFinite(want) && Number.isFinite(have)) {
+        if (Math.abs(have - want) > 0.05) return false;
+      } else {
+        const ww = String(w.width || "").trim();
+        if (ww && ww !== String(widthParam).trim()) return false;
+      }
     }
 
     return true;
