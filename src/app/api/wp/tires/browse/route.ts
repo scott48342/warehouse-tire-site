@@ -42,7 +42,8 @@ export async function GET(req: Request) {
 
     const terrain = s(url.searchParams.get("terrain"));
     const brand = s(url.searchParams.get("brand"));
-    const debug = url.searchParams.get("debug") === "1";
+    const debugMode = s(url.searchParams.get("debug"));
+    const debug = debugMode === "1";
 
     const priceMin = n(url.searchParams.get("priceMin"));
     const priceMax = n(url.searchParams.get("priceMax"));
@@ -115,6 +116,54 @@ export async function GET(req: Request) {
           : `coalesce(nullif(t.map_usd,0), nullif(t.msrp_usd,0)) asc nulls last, t.brand_desc asc, t.sku asc`;
 
     const db = getPool();
+
+    if (debugMode === "2") {
+      const { rows: info } = await db.query({
+        text: `
+          select
+            count(*)::int as total,
+            count(*) filter (where map_usd is not null and map_usd > 0)::int as map_count,
+            count(*) filter (where msrp_usd is not null and msrp_usd > 0)::int as msrp_count
+          from wp_tires
+        `,
+        values: [],
+      });
+
+      const whereSql = where.length ? `where ${where.join(" and ")}` : "";
+      const { rows: matches } = await db.query({
+        text: `
+          select count(*)::int as matches
+          from wp_tires t
+          ${whereSql}
+        `,
+        values,
+      });
+
+      const { rows: skus } = await db.query({
+        text: `
+          select t.sku, t.terrain, t.tire_description, t.map_usd, t.msrp_usd
+          from wp_tires t
+          ${whereSql}
+          order by t.sku asc
+          limit 10
+        `,
+        values,
+      });
+
+      return NextResponse.json(
+        {
+          ok: true,
+          debug: "2",
+          input: { terrain, brand, rim, load, speed, priceMin, priceMax, sort, limit },
+          whereSql,
+          values,
+          info: info?.[0] || null,
+          matches: matches?.[0] || null,
+          skus,
+        },
+        { status: 200 }
+      );
+    }
 
     if (debug) {
       const { rows: sample } = await db.query({
