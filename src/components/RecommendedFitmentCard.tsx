@@ -38,47 +38,74 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
   }, [fitment?.modification]);
 
   const [details, setDetails] = useState<NormalizedFitment | null>(null);
+  const [oemTireSizes, setOemTireSizes] = useState<string[]>([]);
   const [error, setError] = useState<string>("");
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      if (!hasVehicle || !wpSubmodel) {
-        setDetails(null);
-        setError("");
-        return;
+      // reset
+      setDetails(null);
+      setOemTireSizes([]);
+      setError("");
+
+      if (!hasVehicle) return;
+
+      // 1) If we have a WheelPros submodel, show WheelPros vehicle fitment details.
+      if (wpSubmodel) {
+        try {
+          const qs = new URLSearchParams({
+            year: String(fitment.year || ""),
+            make: String(fitment.make || ""),
+            model: String(fitment.model || ""),
+            submodel: String(wpSubmodel),
+          });
+
+          const data = await fetchJson<{ fitment?: NormalizedFitment; error?: string }>(
+            `/api/wp/vehicles/fitment?${qs.toString()}`
+          );
+          if (cancelled) return;
+
+          if (data?.error) {
+            setError(String(data.error));
+            setDetails(null);
+            return;
+          }
+
+          setDetails(data?.fitment || null);
+          return;
+        } catch (e: any) {
+          if (cancelled) return;
+          setError(e?.message ? String(e.message) : "Failed to load fitment");
+          return;
+        }
       }
 
+      // 2) Otherwise, fall back to our package engine vehicle search (OEM tire sizes).
       try {
         const qs = new URLSearchParams({
           year: String(fitment.year || ""),
           make: String(fitment.make || ""),
           model: String(fitment.model || ""),
-          submodel: String(wpSubmodel),
         });
 
-        const data = await fetchJson<{ fitment?: NormalizedFitment; error?: string }>(`/api/wp/vehicles/fitment?${qs.toString()}`);
+        const mod = fitment.modification ? String(fitment.modification) : "";
+        if (mod) qs.set("modification", mod);
+
+        const data = await fetchJson<{ tireSizes?: string[]; error?: string }>(`/api/vehicles/search?${qs.toString()}`);
         if (cancelled) return;
 
-        if (data?.error) {
-          setError(String(data.error));
-          setDetails(null);
-          return;
-        }
-
-        setError("");
-        setDetails(data?.fitment || null);
-      } catch (e: any) {
-        if (cancelled) return;
-        setDetails(null);
-        setError(e?.message ? String(e.message) : "Failed to load fitment");
+        const sizes = Array.isArray(data?.tireSizes) ? data.tireSizes.map(String) : [];
+        setOemTireSizes(sizes);
+      } catch {
+        // best-effort only
       }
     })();
 
     return () => {
       cancelled = true;
     };
-  }, [hasVehicle, wpSubmodel, fitment.year, fitment.make, fitment.model]);
+  }, [hasVehicle, wpSubmodel, fitment.year, fitment.make, fitment.model, fitment.modification]);
 
   if (!hasVehicle) return null;
 
@@ -129,13 +156,30 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
             </div>
           ) : null}
 
-          {!details && !error ? (
+          {!details && oemTireSizes.length ? (
+            <div className="pt-1">
+              <div className="text-[11px] font-semibold text-neutral-600">OEM tire sizes</div>
+              <div className="mt-1 flex flex-wrap gap-1">
+                {oemTireSizes.slice(0, 4).map((s) => (
+                  <span
+                    key={s}
+                    className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-semibold text-neutral-800"
+                  >
+                    {s}
+                  </span>
+                ))}
+                {oemTireSizes.length > 4 ? (
+                  <span className="text-[11px] font-semibold text-neutral-600">+{oemTireSizes.length - 4} more</span>
+                ) : null}
+              </div>
+            </div>
+          ) : null}
+
+          {!details && !oemTireSizes.length && !error ? (
             <div className="text-[11px] text-neutral-600">Select a trim/submodel to see fitment details.</div>
           ) : null}
 
-          {error ? (
-            <div className="text-[11px] text-neutral-600">Fitment details unavailable.</div>
-          ) : null}
+          {error ? <div className="text-[11px] text-neutral-600">Fitment details unavailable.</div> : null}
         </div>
 
         <div className="mt-3 text-[11px] text-neutral-500">
