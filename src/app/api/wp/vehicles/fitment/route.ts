@@ -20,15 +20,20 @@ export async function GET(req: Request) {
     const path = `/v1/years/${encodeURIComponent(year)}/makes/${encodeURIComponent(make)}/models/${encodeURIComponent(model)}/submodels/${encodeURIComponent(submodel)}`;
     const data = await wpVehicleGetJson<any>(path);
 
-    // Map minimal details into our fitment schema.
+    // Normalize as much as possible (axle ranges if present).
+    const normalized = normalizeWpVehicleInfoToFitment(data);
+
+    // Also map some common "flat" keys many accounts return.
     const boltPattern = data?.boltPattern ? String(data.boltPattern) : undefined;
     const hub = data?.hub != null ? Number(data.hub) : NaN;
     const offset = data?.offset != null ? Number(data.offset) : NaN;
 
     const fitment = {
-      boltPattern,
-      centerBoreMm: Number.isFinite(hub) ? hub : undefined,
-      offsetRangeMm: Number.isFinite(offset) ? [offset, offset] : undefined,
+      ...normalized,
+      boltPattern: normalized.boltPattern || boltPattern,
+      centerBoreMm: normalized.centerBoreMm || (Number.isFinite(hub) ? hub : undefined),
+      offsetRangeMm:
+        normalized.offsetRangeMm || (Number.isFinite(offset) ? ([offset, offset] as [number, number]) : undefined),
     };
 
     return NextResponse.json({ raw: data, fitment });
