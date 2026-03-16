@@ -81,7 +81,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
         }
       }
 
-      // 2) Otherwise, fall back to our package engine vehicle search (OEM tire sizes).
+      // 2) Otherwise, fall back to our package engine vehicle search (OEM tires + wheel ranges).
       try {
         const qs = new URLSearchParams({
           year: String(fitment.year || ""),
@@ -92,8 +92,22 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
         const mod = fitment.modification ? String(fitment.modification) : "";
         if (mod) qs.set("modification", mod);
 
-        const data = await fetchJson<{ tireSizes?: string[]; error?: string }>(`/api/vehicles/search?${qs.toString()}`);
+        const data = await fetchJson<
+          Partial<NormalizedFitment> & {
+            tireSizes?: string[];
+            error?: string;
+          }
+        >(`/api/vehicles/search?${qs.toString()}`);
         if (cancelled) return;
+
+        // Set wheel fitment ranges (if present) so the UI matches CustomOffsets-style ranges.
+        setDetails({
+          boltPattern: data?.boltPattern,
+          centerBoreMm: data?.centerBoreMm,
+          wheelDiameterRangeIn: Array.isArray((data as any)?.wheelDiameterRangeIn) ? ((data as any).wheelDiameterRangeIn as any) : undefined,
+          wheelWidthRangeIn: Array.isArray((data as any)?.wheelWidthRangeIn) ? ((data as any).wheelWidthRangeIn as any) : undefined,
+          offsetRangeMm: Array.isArray((data as any)?.offsetRangeMm) ? ((data as any).offsetRangeMm as any) : undefined,
+        });
 
         const sizes = Array.isArray(data?.tireSizes) ? data.tireSizes.map(String) : [];
         setOemTireSizes(sizes);
