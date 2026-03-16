@@ -99,9 +99,9 @@ async function fetchFacets({
 export default async function AllTerrainTiresPage({
   searchParams,
 }: {
-  searchParams?: Record<string, string | string[] | undefined>;
+  searchParams?: Record<string, string | string[] | undefined> | Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const sp = searchParams ?? {};
+  const sp = (await Promise.resolve(searchParams ?? {})) as Record<string, string | string[] | undefined>;
   const brand = (Array.isArray(sp.brand) ? sp.brand[0] : sp.brand) || "";
   const rim = (Array.isArray(sp.rim) ? sp.rim[0] : sp.rim) || "";
   const sort = (Array.isArray(sp.sort) ? sp.sort[0] : sp.sort) || "price_asc";
