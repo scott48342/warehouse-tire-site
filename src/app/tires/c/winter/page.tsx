@@ -143,11 +143,25 @@ export default async function WinterTiresPage({
 
         <div className="mt-6 grid gap-6 md:grid-cols-[280px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
-            {year && make && model ? (
-              <div className="mb-4">
+            <div className="mb-4">
+              {year && make && model ? (
                 <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
-              </div>
-            ) : null}
+              ) : (
+                <section className="rounded-2xl border border-neutral-200 bg-white p-4">
+                  <div className="text-[11px] font-semibold text-neutral-600">Search by Vehicle</div>
+                  <div className="mt-0.5 text-sm font-extrabold text-neutral-900">Select vehicle</div>
+                  <div className="mt-2 text-[11px] text-neutral-600">Select a vehicle to see recommended fitment.</div>
+                  <div className="mt-3">
+                    <Link
+                      href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                      className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                    >
+                      Select vehicle
+                    </Link>
+                  </div>
+                </section>
+              )}
+            </div>
 
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-extrabold">Filters</h2>
@@ -206,6 +220,36 @@ export default async function WinterTiresPage({
           </aside>
 
           <div>
+            <div className="mb-4 md:hidden">
+              {year && make && model ? (
+                <div>
+                  <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+                  <div className="mt-2">
+                    <Link
+                      href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                      className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                    >
+                      Change vehicle
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <section className="rounded-2xl border border-neutral-200 bg-white p-4">
+                  <div className="text-[11px] font-semibold text-neutral-600">Search by Vehicle</div>
+                  <div className="mt-0.5 text-sm font-extrabold text-neutral-900">Select vehicle</div>
+                  <div className="mt-2 text-[11px] text-neutral-600">Select a vehicle to see recommended fitment.</div>
+                  <div className="mt-3">
+                    <Link
+                      href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                      className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                    >
+                      Select vehicle
+                    </Link>
+                  </div>
+                </section>
+              )}
+            </div>
+
             <div className="mt-0 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.length ? (
             items.map((t) => (
