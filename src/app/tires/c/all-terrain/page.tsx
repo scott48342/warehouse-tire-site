@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { BRAND } from "@/lib/brand";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 async function getBaseUrl() {
   // Prefer explicit base URL if set.
