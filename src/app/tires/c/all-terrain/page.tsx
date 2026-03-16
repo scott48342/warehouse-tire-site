@@ -3,7 +3,11 @@ import { BRAND } from "@/lib/brand";
 
 export const runtime = "nodejs";
 
-// Use relative fetches for internal API routes.
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+}
 
 function money(n: number | null) {
   if (n == null) return "Call";
@@ -41,7 +45,7 @@ async function fetchItems({
   if (rim) sp.set("rim", rim);
   if (sort) sp.set("sort", sort);
 
-  const res = await fetch(`/api/wp/tires/browse?${sp.toString()}`, { cache: "no-store" });
+  const res = await fetch(`${getBaseUrl()}/api/wp/tires/browse?${sp.toString()}`, { cache: "no-store" });
   if (!res.ok) return { items: [] as Item[] };
   return (await res.json()) as { items: Item[] };
 }
@@ -49,9 +53,9 @@ async function fetchItems({
 export default async function AllTerrainTiresPage({
   searchParams,
 }: {
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+  searchParams?: Record<string, string | string[] | undefined>;
 }) {
-  const sp = (await searchParams) ?? {};
+  const sp = searchParams ?? {};
   const brand = (Array.isArray(sp.brand) ? sp.brand[0] : sp.brand) || "";
   const rim = (Array.isArray(sp.rim) ? sp.rim[0] : sp.rim) || "";
   const sort = (Array.isArray(sp.sort) ? sp.sort[0] : sp.sort) || "price_asc";
