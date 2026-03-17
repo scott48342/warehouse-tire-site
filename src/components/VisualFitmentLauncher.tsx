@@ -241,7 +241,8 @@ export function VisualFitmentLauncher({
             // (no pre-filled saved vehicle; garage handles saved vehicles).
             resetAll();
             if (startMode) setMode(startMode);
-            setStep("entry");
+            // Scott preference: go straight into the Year step (skip the entry tiles)
+            setStep("year");
             setIsOpen(true);
           }}
           className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
