@@ -824,8 +824,8 @@ export default async function TiresPage({
                     key={t.partNumber || t.mfgPartNumber || idx}
                     className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm"
                   >
-                    <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-600" />
-                    <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-600" />
+                    <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-500" />
+                    <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-500" />
                     {t.mfgPartNumber ? (
                       <Link
                         href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
@@ -905,7 +905,7 @@ export default async function TiresPage({
                               className={
                                 "rounded-full border px-2.5 py-1 text-xs font-extrabold " +
                                 (accent
-                                  ? "border-red-200 bg-red-50 text-red-900"
+                                  ? "border-red-200 bg-white text-red-900"
                                   : "border-neutral-200 bg-white text-neutral-900")
                               }
                             >

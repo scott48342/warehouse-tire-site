@@ -84,8 +84,8 @@ export function WheelsStyleCard({
 
   return (
     <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm">
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-600" />
-      <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-600" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-500" />
+      <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-500" />
 
       <div className="flex items-start justify-between gap-2">
         <div className="text-sm font-semibold text-neutral-600">{brand}</div>
@@ -103,10 +103,10 @@ export function WheelsStyleCard({
         {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
 
         <div className="mt-2 flex flex-wrap gap-2">
-          <span className="rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-xs font-extrabold text-red-900">
+          <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
             Fast shipping
           </span>
-          <span className="rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-xs font-extrabold text-red-900">
+          <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
             Fitment checked
           </span>
           {thumbs.length > 1 ? (
