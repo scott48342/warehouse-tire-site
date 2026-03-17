@@ -127,6 +127,7 @@ export default async function TiresPage({
   const wheelUnit = (Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit) || "";
   const wheelQty = (Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty) || "";
   const wheelDia = (Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia) || "";
+  const wheelWidth = (Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth) || "";
 
   const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
 
@@ -171,10 +172,71 @@ export default async function TiresPage({
 
   const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
 
+  function rimDiaFromSize(s: string) {
+    const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
+    return m ? Number(m[1]) : null;
+  }
+
+  function overallDiameterMmFromSize(s: string) {
+    // Ex: 265/35R22
+    const m = String(s || "").toUpperCase().match(/(\d{3})\/(\d{2})R(\d{2})/);
+    if (!m) return null;
+    const w = Number(m[1]);
+    const ar = Number(m[2]);
+    const rim = Number(m[3]);
+    if (![w, ar, rim].every((n) => Number.isFinite(n) && n > 0)) return null;
+    const sidewall = (w * ar) / 100;
+    return rim * 25.4 + 2 * sidewall;
+  }
+
+  const wheelDiaNum = wheelDia ? Number(String(wheelDia)) : NaN;
+  const wheelWidthNum = wheelWidth ? Number(String(wheelWidth)) : NaN;
+
+  const oemWheelMatchedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
+    ? tireSizes.filter((s) => rimDiaFromSize(s) === wheelDiaNum)
+    : [];
+
+  // If no OEM size matches the selected wheel diameter, generate a couple of plus-size suggestions.
+  const plusSizeSuggestions = (() => {
+    if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return [] as string[];
+    if (oemWheelMatchedSizes.length) return [] as string[];
+
+    const baseline = (tireSizesStrict[0] || tireSizes[0] || "").trim();
+    const targetOd = overallDiameterMmFromSize(baseline);
+    if (!targetOd) return [] as string[];
+
+    const widths = Number.isFinite(wheelWidthNum) && wheelWidthNum > 0
+      ? [Math.round(wheelWidthNum * 25.4) + 10, Math.round(wheelWidthNum * 25.4) + 20, Math.round(wheelWidthNum * 25.4) + 30]
+          .map((n) => Math.round(n / 5) * 5)
+      : [265, 275, 285];
+
+    const aspects = [25, 30, 35, 40, 45, 50];
+
+    const out: string[] = [];
+    for (const w of widths) {
+      let best: { ar: number; od: number; diff: number } | null = null;
+      for (const ar of aspects) {
+        const od = wheelDiaNum * 25.4 + 2 * (w * ar) / 100;
+        const diff = Math.abs(od - targetOd);
+        if (!best || diff < best.diff) best = { ar, od, diff };
+      }
+      if (!best) continue;
+
+      const pct = Math.abs(best.od - targetOd) / targetOd;
+      if (pct <= 0.035) {
+        out.push(`${w}/${best.ar}R${wheelDiaNum}`);
+      }
+    }
+
+    // Deduplicate while keeping order.
+    return Array.from(new Set(out)).slice(0, 4);
+  })();
+
   const selectedSizeRaw = (Array.isArray(sp.size) ? sp.size[0] : sp.size) || "";
+
   const selectedSize = selectedSizeRaw
     ? String(selectedSizeRaw)
-    : (tireSizesStrict[0] || tireSizes[0] || "");
+    : (oemWheelMatchedSizes[0] || plusSizeSuggestions[0] || tireSizesStrict[0] || tireSizes[0] || "");
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const wp = selectedSize ? await fetchWpTires(selectedSize) : null;
@@ -390,32 +452,52 @@ export default async function TiresPage({
 
           <div className="flex flex-wrap items-center justify-end gap-3">
             {tireSizes.length ? (
-              <div className="flex w-full flex-wrap justify-end gap-2">
-                {tireSizes.map((s) => {
-                  const active = s === selectedSize;
-                  const isStrict = tireSizesStrict.includes(s);
-                  const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
-                  return (
-                    <Link
-                      key={s}
-                      href={href}
-                      className={
-                        active
-                          ? "rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
-                          : isStrict
-                            ? "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
-                            : "rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-extrabold text-amber-900"
-                      }
-                      title={
-                        isStrict
-                          ? "OEM size for selected modification"
-                          : "OEM size on other modifications (aggregate)"
-                      }
-                    >
-                      {s}
-                    </Link>
-                  );
-                })}
+              <div className="flex w-full flex-col items-end gap-2">
+                {wheelSku && wheelDia && plusSizeSuggestions.length ? (
+                  <div className="w-full rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+                    <div className="font-extrabold">Selected wheel is {wheelDia}\"</div>
+                    <div className="mt-1">No OEM tire size was returned for {wheelDia}\" on this vehicle. Here are suggested plus-sizes:</div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {plusSizeSuggestions.map((sug) => (
+                        <Link
+                          key={sug}
+                          href={`/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${wheelWidth ? `&wheelWidth=${encodeURIComponent(wheelWidth)}` : ""}&size=${encodeURIComponent(sug)}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
+                          className="rounded-full border border-amber-300 bg-white px-3 py-1 text-xs font-extrabold text-amber-950"
+                        >
+                          {sug}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                <div className="flex w-full flex-wrap justify-end gap-2">
+                    {tireSizes.map((s) => {
+                    const active = s === selectedSize;
+                    const isStrict = tireSizesStrict.includes(s);
+                    const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${wheelWidth ? `&wheelWidth=${encodeURIComponent(wheelWidth)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
+                    return (
+                      <Link
+                        key={s}
+                        href={href}
+                        className={
+                          active
+                            ? "rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
+                            : isStrict
+                              ? "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                              : "rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-extrabold text-amber-900"
+                        }
+                        title={
+                          isStrict
+                            ? "OEM size for selected modification"
+                            : "OEM size on other modifications (aggregate)"
+                        }
+                      >
+                        {s}
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
             ) : null}
 
@@ -430,6 +512,7 @@ export default async function TiresPage({
               <input type="hidden" name="wheelUnit" value={wheelUnit} />
               <input type="hidden" name="wheelQty" value={wheelQty} />
               <input type="hidden" name="wheelDia" value={wheelDia} />
+              <input type="hidden" name="wheelWidth" value={wheelWidth} />
               <input type="hidden" name="size" value={selectedSize} />
 
               {/* ZIP filter temporarily removed */}

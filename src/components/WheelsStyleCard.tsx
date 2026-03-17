@@ -120,6 +120,8 @@ export function WheelsStyleCard({
     }
 
     sp.set("wheelSku", sku);
+    if (sizeLabel?.diameter) sp.set("wheelDia", String(sizeLabel.diameter));
+    if (sizeLabel?.width) sp.set("wheelWidth", String(sizeLabel.width));
     router.push(`/tires?${sp.toString()}`);
   }
 
