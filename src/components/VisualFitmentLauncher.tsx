@@ -169,11 +169,27 @@ export function VisualFitmentLauncher({
         setTrims([]);
         return;
       }
+
+      const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
+
+      // Prefer WheelPros submodels when available (best for wheel fitment + offset ranges).
+      // If WheelPros doesn't have coverage for this Y/M/M, fall back to the generic trims endpoint.
       try {
-        // Use WheelPros submodels where available so downstream /wheels can do fitment-driven searches.
-        const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
-        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
+        const wp = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
           `/api/wp/vehicles/submodels?${qs.toString()}`
+        );
+        const wpResults = Array.isArray(wp?.results) ? wp.results : [];
+        if (wpResults.length) {
+          if (!cancelled) setTrims(wpResults);
+          return;
+        }
+      } catch {
+        // fall through
+      }
+
+      try {
+        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
+          `/api/vehicles/trims?${qs.toString()}`
         );
         if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
       } catch {
@@ -409,7 +425,8 @@ export function VisualFitmentLauncher({
                       const next: Fitment = {
                         ...draft,
                         trim: t.label,
-                        modification: `wp:${t.value}`,
+                        // If this list came from WheelPros, use wp: token. Otherwise keep the raw trim value.
+                        modification: t.value ? (String(t.value).startsWith("wp:") ? String(t.value) : (String(t.value).startsWith("wp_") ? `wp:${t.value}` : t.value)) : undefined,
                       };
                       setDraft(next);
                       close();
@@ -428,7 +445,23 @@ export function VisualFitmentLauncher({
                 ))}
                 {!trims.length ? (
                   <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
-                    No trim data yet. Try a different model.
+                    <div className="font-extrabold text-neutral-900">No trim list available for this vehicle.</div>
+                    <div className="mt-1">You can continue without trim, or go back and pick a different model.</div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const next: Fitment = {
+                          ...draft,
+                          trim: undefined,
+                          modification: undefined,
+                        };
+                        close();
+                        complete(next);
+                      }}
+                      className="mt-3 h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white"
+                    >
+                      Continue
+                    </button>
                   </div>
                 ) : null}
               </div>
