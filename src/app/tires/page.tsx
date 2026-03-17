@@ -51,15 +51,25 @@ async function fetchFitment(params: Record<string, string | undefined>) {
 }
 
 async function fetchKmTires(tireSize: string) {
-  const res = await fetch(`${getBaseUrl()}/api/km/tiresizesearch?tireSize=${encodeURIComponent(tireSize)}&minQty=4`, {
+  const sizeQ = normalizeTireSizeForQuery(tireSize);
+  const res = await fetch(`${getBaseUrl()}/api/km/tiresizesearch?tireSize=${encodeURIComponent(sizeQ)}&minQty=4`, {
     cache: "no-store",
   });
   if (!res.ok) return { error: await res.text() };
   return res.json();
 }
 
+function normalizeTireSizeForQuery(s: string) {
+  // Reduce things like "245/40ZR18 88Y" -> "245/40R18" (WP + KM endpoints can parse).
+  const v = String(s || "").trim().toUpperCase();
+  const m = v.match(/\b(\d{3}\/\d{2})(?:ZR|R)(\d{2})\b/);
+  if (m) return `${m[1]}R${m[2]}`;
+  return String(s || "").trim();
+}
+
 async function fetchWpTires(tireSize: string) {
-  const res = await fetch(`${getBaseUrl()}/api/wp/tires/search?size=${encodeURIComponent(tireSize)}&minQty=4`, {
+  const sizeQ = normalizeTireSizeForQuery(tireSize);
+  const res = await fetch(`${getBaseUrl()}/api/wp/tires/search?size=${encodeURIComponent(sizeQ)}&minQty=4`, {
     cache: "no-store",
   });
   if (!res.ok) return { error: await res.text() };

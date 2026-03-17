@@ -37,8 +37,22 @@ export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
     const sizeRaw = (url.searchParams.get("size") || url.searchParams.get("tireSize") || "").trim();
-    const digits = sizeRaw.replace(/\D/g, "");
-    const size = digits || sizeRaw;
+
+    function toSimpleSize(s: string) {
+      // Accept formats like:
+      // - 245/50R18
+      // - 245/40ZR20 95Y
+      // - 2455018
+      const v = String(s || "").trim().toUpperCase();
+      const m = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})/i);
+      if (m) return `${m[1]}${m[2]}${m[3]}`;
+      const m2 = v.match(/^(\d{7})$/);
+      if (m2) return m2[1];
+      return "";
+    }
+
+    const simple = toSimpleSize(sizeRaw);
+    const size = simple || sizeRaw;
     const minQty = i(url.searchParams.get("minQty"));
     const limit = Math.min(Math.max(i(url.searchParams.get("limit")) || 50, 1), 200);
 
