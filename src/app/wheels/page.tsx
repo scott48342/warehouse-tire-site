@@ -350,17 +350,49 @@ export default async function WheelsPage({
         }))
         .filter((v) => v.sku && Number.isFinite(v.d) && Number.isFinite(v.w));
 
-      // Prefer pairing within the largest available diameter for the style.
+      function rimDiaFromTireSize(s: string) {
+        const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
+        return m ? Number(m[1]) : NaN;
+      }
+
+      // Use tire sizes (when present) to infer stagger-capable diameter targets.
+      // Example: Corvette Z06 often uses 19" front / 20" rear.
+      const tireDias = Array.isArray(fit?.tireSizes)
+        ? (fit.tireSizes as any[]).map((x) => rimDiaFromTireSize(String(x))).filter((n) => Number.isFinite(n))
+        : [];
+      const inferredFrontDia = tireDias.length ? Math.min(...tireDias) : NaN;
+      const inferredRearDia = tireDias.length ? Math.max(...tireDias) : NaN;
+
+      // If we inferred a front/rear diameter spread, allow mixed diameters.
+      // Otherwise, fall back to pairing within the largest available diameter.
+      const useMixedDia =
+        Number.isFinite(inferredFrontDia) &&
+        Number.isFinite(inferredRearDia) &&
+        inferredRearDia - inferredFrontDia >= 1;
+
       const maxDia = variants.length ? Math.max(...variants.map((v) => v.d)) : NaN;
-      const sameDia = Number.isFinite(maxDia) ? variants.filter((v) => Math.abs(v.d - maxDia) < 0.06) : [];
-      const pool = sameDia.length ? sameDia : variants;
+
+      const frontPool = useMixedDia
+        ? variants.filter((v) => Math.abs(v.d - inferredFrontDia) < 0.11)
+        : (Number.isFinite(maxDia) ? variants.filter((v) => Math.abs(v.d - maxDia) < 0.06) : []);
+
+      const rearPool = useMixedDia
+        ? variants.filter((v) => Math.abs(v.d - inferredRearDia) < 0.11)
+        : frontPool;
+
+      const poolFront = frontPool.length ? frontPool : variants;
+      const poolRear = rearPool.length ? rearPool : variants;
 
       let pair: Wheel["pair"] | undefined = undefined;
-      if (pool.length) {
-        const sortedByWidth = [...pool].sort((a, b) => a.w - b.w);
-        const frontV = sortedByWidth[0];
-        const rearV = sortedByWidth[sortedByWidth.length - 1];
-        const staggered = rearV && frontV && rearV.sku !== frontV.sku && rearV.w - frontV.w >= 1.0;
+      if (poolFront.length) {
+        const frontV = [...poolFront].sort((a, b) => a.w - b.w)[0];
+        const rearV = [...poolRear].sort((a, b) => b.w - a.w)[0];
+
+        const staggered =
+          Boolean(rearV && frontV) &&
+          (useMixedDia
+            ? (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0)
+            : (rearV.sku !== frontV.sku && rearV.w - frontV.w >= 1.0));
 
         pair = {
           staggered,
