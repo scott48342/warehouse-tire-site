@@ -532,7 +532,7 @@ export default async function TiresPage({
                   <div className="text-xs text-neutral-600">No brand data yet.</div>
                 )}
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply brand
                 </button>
               </FilterGroup>
@@ -567,7 +567,7 @@ export default async function TiresPage({
                   />
                 </div>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply price
                 </button>
               </FilterGroup>
@@ -610,7 +610,7 @@ export default async function TiresPage({
                   <div className="text-xs text-neutral-600">No season data yet.</div>
                 )}
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply season
                 </button>
               </FilterGroup>
@@ -659,7 +659,7 @@ export default async function TiresPage({
                   <div className="text-xs text-neutral-600">No speed rating data yet.</div>
                 )}
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply speed rating
                 </button>
               </FilterGroup>
@@ -695,7 +695,7 @@ export default async function TiresPage({
                   <span className="text-xs font-semibold text-neutral-500">{xlCount}</span>
                 </div>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply load
                 </button>
               </FilterGroup>
@@ -732,7 +732,7 @@ export default async function TiresPage({
                   <span className="text-xs font-semibold text-neutral-500">{runFlatCount}</span>
                 </div>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply run-flat
                 </button>
               </FilterGroup>
@@ -772,7 +772,7 @@ export default async function TiresPage({
                   <span className="text-xs font-semibold text-neutral-500">{allWeatherCount}</span>
                 </div>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply
                 </button>
               </FilterGroup>

@@ -22,6 +22,13 @@ body {
   color: var(--foreground);
 }
 
+@layer components {
+  /* White button with brand-red outline (use alongside your sizing classes) */
+  .btn-outline-red {
+    @apply border border-[var(--brand-red)] bg-white text-[var(--brand-red)] hover:bg-red-50 hover:border-[var(--brand-red-700)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-red)]/30;
+  }
+}
+
 /* give room for the mobile action bar */
 @media (max-width: 767px) {
   body {

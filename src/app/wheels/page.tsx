@@ -579,7 +579,7 @@ export default async function WheelsPage({
                   />
                 </div>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply price
                 </button>
               </FilterGroup>
@@ -618,7 +618,7 @@ export default async function WheelsPage({
                   />
                 </div>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply offset
                 </button>
               </FilterGroup>
@@ -657,7 +657,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply brand
                 </button>
               </FilterGroup>
@@ -691,7 +691,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply finish
                 </button>
               </FilterGroup>
@@ -728,7 +728,7 @@ export default async function WheelsPage({
                   })}
                 </select>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply diameter
                 </button>
               </FilterGroup>
@@ -762,7 +762,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply width
                 </button>
               </FilterGroup>
@@ -796,7 +796,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
                   Apply bolt pattern
                 </button>
               </FilterGroup>
