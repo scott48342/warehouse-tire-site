@@ -147,6 +147,10 @@ export default async function WheelsPage({
 
   const needsTrimNotice = Boolean(year && make && model && !modification);
 
+  // View filter: staggered vs square. If vehicle is inferred staggered, default to staggered-only.
+  const fitViewRaw = (Array.isArray((sp as any).fitView) ? (sp as any).fitView[0] : (sp as any).fitView) || "";
+  const fitView = String(fitViewRaw || "").trim();
+
   // 1) Resolve fitment (bolt pattern, width/offset ranges, etc.)
   const isWpSubmodel = modification.startsWith("wp:");
   const wpSubmodel = isWpSubmodel ? modification.slice(3) : "";
@@ -165,6 +169,18 @@ export default async function WheelsPage({
   const fit = (fitment as any)?.fitment ? (fitment as any).fitment : fitment;
   const hasVehicle = Boolean(year && make && model);
   const bp: string | undefined = hasVehicle ? (boltPatternParam || fit?.boltPattern || undefined) : undefined;
+
+  function rimDiaFromTireSize(s: string) {
+    const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
+    return m ? Number(m[1]) : NaN;
+  }
+
+  const tireDias = Array.isArray(fit?.tireSizes)
+    ? (fit.tireSizes as any[]).map((x) => rimDiaFromTireSize(String(x))).filter((n) => Number.isFinite(n))
+    : [];
+  const vehicleCallsForStaggered = tireDias.length ? Math.max(...tireDias) - Math.min(...tireDias) >= 1 : false;
+
+  const effectiveFitView = fitView || (vehicleCallsForStaggered ? "staggered" : "");
 
   // Centerbore: WheelPros properties/filters are inconsistent; don't hard-filter on it upstream.
   const cb: string | undefined = undefined;
@@ -504,7 +520,11 @@ export default async function WheelsPage({
       })
     : itemsFilteredOffset;
 
-  const itemsFinal = itemsFilteredPrice;
+  const itemsFinal = effectiveFitView === "staggered"
+    ? itemsFilteredPrice.filter((w) => Boolean(w.pair?.staggered))
+    : effectiveFitView === "square"
+      ? itemsFilteredPrice.filter((w) => !w.pair?.staggered)
+      : itemsFilteredPrice;
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
@@ -545,7 +565,7 @@ export default async function WheelsPage({
 
   const basePath = year && make && model ? `/wheels/v/${vehicleSlug(year, make, model)}` : "/wheels";
 
-  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
+  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}`;
 
   return (
     <main className="bg-neutral-50">
@@ -933,8 +953,41 @@ export default async function WheelsPage({
               </div>
             ) : null}
 
-            <div className="text-sm font-semibold text-neutral-600">
-              Showing {itemsPage.length} styles (page {safePage} of {totalPages})
+            <div className="flex flex-wrap items-center justify-between gap-2 text-sm font-semibold text-neutral-600">
+              <div>
+                Showing {itemsPage.length} styles (page {safePage} of {totalPages})
+              </div>
+
+              {hasVehicle ? (
+                <div className="flex flex-wrap items-center gap-2">
+                  {vehicleCallsForStaggered ? (
+                    <>
+                      <span className="text-xs font-semibold text-neutral-500">View:</span>
+                      {effectiveFitView === "staggered" ? (
+                        <span className="rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white">Staggered</span>
+                      ) : (
+                        <Link
+                          href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&fitView=staggered&page=1`}
+                          className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                        >
+                          Staggered
+                        </Link>
+                      )}
+
+                      {effectiveFitView === "square" ? (
+                        <span className="rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white">Square</span>
+                      ) : (
+                        <Link
+                          href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&fitView=square&page=1`}
+                          className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                        >
+                          Square
+                        </Link>
+                      )}
+                    </>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
 
             <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
