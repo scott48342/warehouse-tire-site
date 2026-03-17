@@ -19,7 +19,12 @@ type Wheel = {
   imageUrl?: string;
   price?: number;
   styleKey?: string;
-  finishThumbs?: { finish: string; sku: string; imageUrl?: string }[];
+  finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number }[];
+  pair?: {
+    staggered: boolean;
+    front: { sku: string; diameter?: string; width?: string; offset?: string };
+    rear?: { sku: string; diameter?: string; width?: string; offset?: string };
+  };
 };
 
 type WheelProsBrand = {
@@ -328,10 +333,59 @@ export default async function WheelsPage({
         seen.add(fin);
         thumbs.push({ finish: fin, sku: x.sku || "", imageUrl: x.imageUrl, price: x.price });
       }
+      function n(v: any) {
+        const x = Number(String(v || "").trim());
+        return Number.isFinite(x) ? x : NaN;
+      }
+
+      // Tireweb-like pairing: if this style has multiple widths on the same diameter, treat as staggered.
+      const variants = arr
+        .map((x) => ({
+          sku: String(x.sku || ""),
+          diameter: x.diameter,
+          width: x.width,
+          offset: x.offset,
+          d: n(x.diameter),
+          w: n(x.width),
+        }))
+        .filter((v) => v.sku && Number.isFinite(v.d) && Number.isFinite(v.w));
+
+      // Prefer pairing within the largest available diameter for the style.
+      const maxDia = variants.length ? Math.max(...variants.map((v) => v.d)) : NaN;
+      const sameDia = Number.isFinite(maxDia) ? variants.filter((v) => Math.abs(v.d - maxDia) < 0.06) : [];
+      const pool = sameDia.length ? sameDia : variants;
+
+      let pair: Wheel["pair"] | undefined = undefined;
+      if (pool.length) {
+        const sortedByWidth = [...pool].sort((a, b) => a.w - b.w);
+        const frontV = sortedByWidth[0];
+        const rearV = sortedByWidth[sortedByWidth.length - 1];
+        const staggered = rearV && frontV && rearV.sku !== frontV.sku && rearV.w - frontV.w >= 1.0;
+
+        pair = {
+          staggered,
+          front: {
+            sku: frontV.sku,
+            diameter: frontV.diameter,
+            width: frontV.width,
+            offset: frontV.offset,
+          },
+          rear: staggered
+            ? {
+                sku: rearV.sku,
+                diameter: rearV.diameter,
+                width: rearV.width,
+                offset: rearV.offset,
+              }
+            : undefined,
+        };
+      }
+
       out.push({
         ...rep,
         styleKey: k,
         finishThumbs: thumbs.filter((t) => t.sku),
+        pair,
       });
     }
 
@@ -872,6 +926,7 @@ export default async function WheelsPage({
                           ? { diameter: w.diameter, width: w.width }
                           : undefined
                     }
+                    pair={w.pair}
                     specLabel={{
                       boltPattern: (w as any).boltPattern,
                       offset: (w as any).offset,

@@ -13,6 +13,19 @@ export type WheelFinishThumb = {
   price?: number;
 };
 
+export type WheelPick = {
+  sku: string;
+  diameter?: string;
+  width?: string;
+  offset?: string;
+};
+
+export type WheelPair = {
+  staggered: boolean;
+  front: WheelPick;
+  rear?: WheelPick;
+};
+
 function fmtSizePart(v: string) {
   const s = String(v || "").trim();
   if (!s) return "";
@@ -34,6 +47,7 @@ export function WheelsStyleCard({
   viewParams,
   specLabel,
   selectToTires,
+  pair,
 }: {
   brand: string;
   title: string;
@@ -47,6 +61,8 @@ export function WheelsStyleCard({
   specLabel?: { boltPattern?: string; offset?: string };
   /** When true, clicking the card selects the wheel and navigates to /tires automatically. */
   selectToTires?: boolean;
+  /** Optional recommended front/rear pairing (Tireweb-style staggered support). */
+  pair?: WheelPair;
 }) {
   const router = useRouter();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -86,20 +102,29 @@ export function WheelsStyleCard({
 
   function selectAndGoToTires() {
     const sku = selectedSku || baseSku;
+
+    const front = pair?.front?.sku ? pair.front : { sku, diameter: sizeLabel?.diameter, width: sizeLabel?.width, offset: specLabel?.offset };
+    const rear = pair?.staggered && pair?.rear?.sku ? pair.rear : undefined;
+
     try {
       localStorage.setItem(
         "wt_selected_wheel",
         JSON.stringify({
-          sku,
+          sku: front.sku,
           brand,
           title,
           finish: selectedFinish,
           price: selectedPrice,
           imageUrl: selectedImage,
-          diameter: sizeLabel?.diameter,
-          width: sizeLabel?.width,
+          diameter: front.diameter ?? sizeLabel?.diameter,
+          width: front.width ?? sizeLabel?.width,
           boltPattern: specLabel?.boltPattern,
-          offset: specLabel?.offset,
+          offset: front.offset ?? specLabel?.offset,
+          rearSku: rear?.sku,
+          rearDiameter: rear?.diameter,
+          rearWidth: rear?.width,
+          rearOffset: rear?.offset,
+          staggered: Boolean(rear?.sku),
         })
       );
     } catch {
@@ -119,9 +144,19 @@ export function WheelsStyleCard({
       sp.delete("modification");
     }
 
-    sp.set("wheelSku", sku);
-    if (sizeLabel?.diameter) sp.set("wheelDia", String(sizeLabel.diameter));
-    if (sizeLabel?.width) sp.set("wheelWidth", String(sizeLabel.width));
+    sp.set("wheelSku", front.sku);
+    sp.set("wheelSkuFront", front.sku);
+    if (rear?.sku) sp.set("wheelSkuRear", rear.sku);
+
+    const dia = front.diameter ?? sizeLabel?.diameter;
+    const wFront = front.width ?? sizeLabel?.width;
+    const wRear = rear?.width;
+
+    if (dia) sp.set("wheelDia", String(dia));
+    if (wFront) sp.set("wheelWidth", String(wFront));
+    if (wFront) sp.set("wheelWidthFront", String(wFront));
+    if (wRear) sp.set("wheelWidthRear", String(wRear));
+
     router.push(`/tires?${sp.toString()}`);
   }
 
@@ -167,11 +202,22 @@ export function WheelsStyleCard({
           ) : null}
         </div>
 
-        {sizeLabel?.diameter || sizeLabel?.width ? (
-          <div className="mt-1 text-sm font-semibold text-neutral-700">
-            {fmtSizePart(sizeLabel.diameter || "")}
-            {sizeLabel.diameter && sizeLabel.width ? "x" : ""}
-            {fmtSizePart(sizeLabel.width || "")}
+        {pair?.front?.diameter || pair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
+          <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
+            <div>
+              Front: {fmtSizePart(pair?.front?.diameter || sizeLabel?.diameter || "")}
+              {(pair?.front?.diameter || sizeLabel?.diameter) && (pair?.front?.width || sizeLabel?.width) ? "x" : ""}
+              {fmtSizePart(pair?.front?.width || sizeLabel?.width || "")}
+              {pair?.front?.offset ? <span className="text-neutral-500"> • ET {String(pair.front.offset)}</span> : null}
+            </div>
+            {pair?.staggered && pair?.rear?.sku ? (
+              <div>
+                Rear: {fmtSizePart(pair?.rear?.diameter || pair?.front?.diameter || "")}
+                {(pair?.rear?.diameter || pair?.front?.diameter) && pair?.rear?.width ? "x" : ""}
+                {fmtSizePart(pair?.rear?.width || "")}
+                {pair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(pair.rear.offset)}</span> : null}
+              </div>
+            ) : null}
           </div>
         ) : null}
 
@@ -228,11 +274,22 @@ export function WheelsStyleCard({
             ) : null}
           </div>
 
-          {sizeLabel?.diameter || sizeLabel?.width ? (
-            <div className="mt-1 text-sm font-semibold text-neutral-700">
-              {fmtSizePart(sizeLabel.diameter || "")}
-              {sizeLabel.diameter && sizeLabel.width ? "x" : ""}
-              {fmtSizePart(sizeLabel.width || "")}
+          {pair?.front?.diameter || pair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
+            <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
+              <div>
+                Front: {fmtSizePart(pair?.front?.diameter || sizeLabel?.diameter || "")}
+                {(pair?.front?.diameter || sizeLabel?.diameter) && (pair?.front?.width || sizeLabel?.width) ? "x" : ""}
+                {fmtSizePart(pair?.front?.width || sizeLabel?.width || "")}
+                {pair?.front?.offset ? <span className="text-neutral-500"> • ET {String(pair.front.offset)}</span> : null}
+              </div>
+              {pair?.staggered && pair?.rear?.sku ? (
+                <div>
+                  Rear: {fmtSizePart(pair?.rear?.diameter || pair?.front?.diameter || "")}
+                  {(pair?.rear?.diameter || pair?.front?.diameter) && pair?.rear?.width ? "x" : ""}
+                  {fmtSizePart(pair?.rear?.width || "")}
+                  {pair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(pair.rear.offset)}</span> : null}
+                </div>
+              ) : null}
             </div>
           ) : null}
 
@@ -323,6 +380,7 @@ export function WheelsStyleCard({
               className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
             >
               Select wheel
+              {pair?.staggered && pair?.rear?.sku ? " (staggered)" : ""}
             </button>
           ) : (
             <Link
