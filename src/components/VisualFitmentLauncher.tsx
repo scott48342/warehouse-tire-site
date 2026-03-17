@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fitmentLabel, type Fitment } from "@/lib/fitment";
 
@@ -90,10 +90,16 @@ export function VisualFitmentLauncher({
   const [mode, setMode] = useState<EntryMode>(startMode || "vehicles");
   const [step, setStep] = useState<Step>("entry");
 
+  const wasOpen = useRef(false);
+
   useEffect(() => {
-    // When opened externally, keep the mode in sync.
-    if (!isOpen) return;
-    if (startMode) setMode(startMode);
+    // When opened externally (e.g. HomeFitmentEntry), start a fresh flow and skip the entry tiles.
+    if (isOpen && !wasOpen.current) {
+      resetAll();
+      if (startMode) setMode(startMode);
+      setStep("year");
+    }
+    wasOpen.current = isOpen;
   }, [isOpen, startMode]);
 
   const [draft, setDraft] = useState<Fitment>({});
