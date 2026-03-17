@@ -237,6 +237,9 @@ export function VisualFitmentLauncher({
         <button
           type="button"
           onClick={() => {
+            // Scott preference: clicking Shop by vehicle should always start a fresh search
+            // (no pre-filled saved vehicle; garage handles saved vehicles).
+            resetAll();
             if (startMode) setMode(startMode);
             setStep("entry");
             setIsOpen(true);
