@@ -5,6 +5,7 @@ import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { TiresWorkspaceHeader } from "@/components/TiresWorkspaceHeader";
 
 type Tire = {
   partNumber?: string;
@@ -800,6 +801,15 @@ export default async function TiresPage({
           </aside>
 
           <section className="grid gap-4">
+            <TiresWorkspaceHeader
+              year={year}
+              make={make}
+              model={model}
+              trim={trim}
+              modification={modification}
+              wheelSku={wheelSku}
+            />
+
             <div className="flex flex-wrap gap-2">
               {selectedSize ? <Chip active>{selectedSize}</Chip> : null}
               <Chip>{zip ? `In stock near ${zip}` : "In stock near you"}</Chip>
@@ -947,12 +957,38 @@ export default async function TiresPage({
 
                     <div className="relative z-10 mt-5 grid gap-3">
                       {typeof t.cost === "number" ? (
-                        <Link
-                          href="/schedule"
-                          className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-                        >
-                          Schedule Install
-                        </Link>
+                        (() => {
+                          const tireSku = String(t.partNumber || t.mfgPartNumber || "").trim();
+                          const toQuote = wheelSku && tireSku;
+
+                          const qs = new URLSearchParams({
+                            year,
+                            make,
+                            model,
+                            trim,
+                            modification,
+                            size: selectedSize,
+                            sort,
+                          });
+                          if (wheelSku) qs.set("wheelSku", String(wheelSku));
+                          if (tireSku) qs.set("tireSku", tireSku);
+
+                          return toQuote ? (
+                            <Link
+                              href={`/quote/new?${qs.toString()}`}
+                              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+                            >
+                              Build Quote
+                            </Link>
+                          ) : (
+                            <Link
+                              href="/schedule"
+                              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+                            >
+                              Schedule Install
+                            </Link>
+                          );
+                        })()
                       ) : (
                         <a
                           href={BRAND.links.tel}
