@@ -373,8 +373,37 @@ export default async function TiresPage({
   const seasonsAvailable = Array.from(seasonCounts.entries()).sort((a, b) => b[1] - a[1]).map(([s]) => s);
   const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
 
+  function normalizeSizeKey(s: string) {
+    return String(s || "")
+      .toUpperCase()
+      .replace(/\s+/g, "")
+      .replace(/ZR/g, "R")
+      .replace(/-/g, "");
+  }
+
+  function extractSizeFromText(s: string) {
+    const m = String(s || "").toUpperCase().match(/\b(\d{3}\/\d{2}(?:ZR|R)\d{2})\b/);
+    return m ? m[1].replace("ZR", "R") : "";
+  }
+
+  const selectedSizeKey = normalizeSizeKey(selectedSize);
+
   const itemsFiltered: Tire[] = itemsEnriched.filter((t) => {
-    const parsed = parseFromDescription(String(t.description || ""));
+    const desc0 = String(t.description || "");
+    const parsed = parseFromDescription(desc0);
+
+    // If a wheel is selected and sizes are locked, keep results consistent with selected rim size/size.
+    if (lockedSizes.length) {
+      const sizeInDesc = extractSizeFromText(desc0);
+      const rim = rimDiaFromSize(sizeInDesc);
+      if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
+        if (rim !== wheelDiaNum) return false;
+      }
+      // If we can detect a size in the description, require it to match the selected size.
+      if (sizeInDesc) {
+        if (normalizeSizeKey(sizeInDesc) !== selectedSizeKey) return false;
+      }
+    }
 
     // Brand filter
     if (brands.length) {
