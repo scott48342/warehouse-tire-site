@@ -310,8 +310,9 @@ export default async function WheelsPage({
     const singles: Wheel[] = [];
 
     for (const w of itemsUnsorted) {
-      const k = w.styleKey || "";
-      if (!k) {
+      const fallbackKey = `${String(w.brandCode || w.brand || "").trim()}::${String(w.model || "").trim()}`;
+      const k = String(w.styleKey || "").trim() || (fallbackKey.includes("::") ? fallbackKey : "");
+      if (!k || k === "::") {
         singles.push(w);
         continue;
       }
