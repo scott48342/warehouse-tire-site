@@ -854,6 +854,7 @@ export default async function WheelsPage({
               {itemsPage.length ? (
                 itemsPage.map((w, idx) => (
                   <WheelsStyleCard
+                    selectToTires
                     key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
                     brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
                     title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}

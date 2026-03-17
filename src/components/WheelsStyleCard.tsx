@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { BRAND } from "@/lib/brand";
 import { FavoritesButton } from "@/components/FavoritesButton";
@@ -32,6 +33,7 @@ export function WheelsStyleCard({
   finishThumbs,
   viewParams,
   specLabel,
+  selectToTires,
 }: {
   brand: string;
   title: string;
@@ -43,7 +45,10 @@ export function WheelsStyleCard({
   finishThumbs?: WheelFinishThumb[];
   viewParams?: Record<string, string | undefined>;
   specLabel?: { boltPattern?: string; offset?: string };
+  /** When true, clicking the card selects the wheel and navigates to /tires automatically. */
+  selectToTires?: boolean;
 }) {
+  const router = useRouter();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
   const [selectedSku, setSelectedSku] = useState<string>(baseSku);
@@ -79,6 +84,41 @@ export function WheelsStyleCard({
 
   const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
 
+  function selectAndGoToTires() {
+    const sku = selectedSku || baseSku;
+    try {
+      localStorage.setItem(
+        "wt_selected_wheel",
+        JSON.stringify({
+          sku,
+          brand,
+          title,
+          finish: selectedFinish,
+          price: selectedPrice,
+          imageUrl: selectedImage,
+        })
+      );
+    } catch {
+      // ignore
+    }
+
+    const sp = new URLSearchParams();
+    for (const [k, v] of Object.entries(viewParams || {})) {
+      if (v) sp.set(k, v);
+    }
+    // Keep links clean if no vehicle selected.
+    if (!sp.get("year") || !sp.get("make") || !sp.get("model")) {
+      sp.delete("year");
+      sp.delete("make");
+      sp.delete("model");
+      sp.delete("trim");
+      sp.delete("modification");
+    }
+
+    sp.set("wheelSku", sku);
+    router.push(`/tires?${sp.toString()}`);
+  }
+
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
   const off = specLabel?.offset ? String(specLabel.offset).trim() : "";
 
@@ -98,8 +138,13 @@ export function WheelsStyleCard({
         />
       </div>
 
-      <Link href={viewHref} className="block">
-        <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
+      {selectToTires ? (
+        <button
+          type="button"
+          onClick={() => selectAndGoToTires()}
+          className="block w-full text-left"
+        >
+          <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
         {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
 
         <div className="mt-2 flex flex-wrap gap-2">
@@ -157,7 +202,69 @@ export function WheelsStyleCard({
             </div>
           )}
         </div>
-      </Link>
+        </button>
+      ) : (
+        <Link href={viewHref} className="block">
+          <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
+          {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
+
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
+              Fast shipping
+            </span>
+            <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
+              Fitment checked
+            </span>
+            {thumbs.length > 1 ? (
+              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                {thumbs.length} finishes
+              </span>
+            ) : null}
+          </div>
+
+          {sizeLabel?.diameter || sizeLabel?.width ? (
+            <div className="mt-1 text-sm font-semibold text-neutral-700">
+              {fmtSizePart(sizeLabel.diameter || "")}
+              {sizeLabel.diameter && sizeLabel.width ? "x" : ""}
+              {fmtSizePart(sizeLabel.width || "")}
+            </div>
+          ) : null}
+
+          {bolt || off ? (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {bolt ? (
+                <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                  {bolt}
+                </span>
+              ) : null}
+              {off ? (
+                <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                  Offset {off}mm
+                </span>
+              ) : null}
+            </div>
+          ) : null}
+
+          <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+            {selectedImage ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={selectedImage}
+                alt={title}
+                className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            ) : (
+              <div className="grid h-56 place-items-center bg-white p-3 text-center">
+                <div>
+                  <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+                  <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </Link>
+      )}
 
       {thumbs.length ? (
         <div className="mt-2 flex flex-wrap gap-2">
@@ -203,12 +310,22 @@ export function WheelsStyleCard({
 
       <div className="mt-5 grid gap-3">
         {typeof selectedPrice === "number" ? (
-          <Link
-            href={viewHref}
-            className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-          >
-            View details
-          </Link>
+          selectToTires ? (
+            <button
+              type="button"
+              onClick={() => selectAndGoToTires()}
+              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+            >
+              Select wheel
+            </button>
+          ) : (
+            <Link
+              href={viewHref}
+              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+            >
+              View details
+            </Link>
+          )
         ) : (
           <a
             href={BRAND.links.tel}
