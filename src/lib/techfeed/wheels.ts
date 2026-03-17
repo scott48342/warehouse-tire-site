@@ -65,6 +65,18 @@ export async function getTechfeedWheelBySku(sku: string): Promise<TechfeedWheel 
   return bySkuCache.bySku[sku] || null;
 }
 
+/**
+ * Best-effort warmup so first real user request after deploy doesn't pay the gunzip+parse cost.
+ * Returns a sample SKU when available.
+ */
+export async function warmTechfeedWheelCache(): Promise<{ loaded: boolean; firstSku?: string }> {
+  if (!bySkuCache) {
+    bySkuCache = await loadGzJson<WheelsBySkuFile>("src/techfeed/wheels_by_sku.json.gz");
+  }
+  const keys = bySkuCache?.bySku ? Object.keys(bySkuCache.bySku) : [];
+  return { loaded: Boolean(keys.length), firstSku: keys[0] };
+}
+
 export async function getTechfeedWheelsByStyle(style: string): Promise<TechfeedWheel[] | null> {
   if (!style) return null;
   if (!byStyleCache) {
