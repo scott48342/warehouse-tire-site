@@ -4,6 +4,7 @@ import { normalizeWpVehicleInfoToFitment, wpVehicleGetJson } from "@/lib/wheelpr
 export const runtime = "nodejs";
 
 export async function GET(req: Request) {
+  const t0 = Date.now();
   const url = new URL(req.url);
   const year = url.searchParams.get("year") || "";
   const make = url.searchParams.get("make") || "";
@@ -18,7 +19,10 @@ export async function GET(req: Request) {
     // Vehicle API (per WheelPros Vehicle OpenAPI):
     // GET https://api.wheelpros.com/vehicles/v1/years/{year}/makes/{make}/models/{model}/submodels/{submodel}
     const path = `/v1/years/${encodeURIComponent(year)}/makes/${encodeURIComponent(make)}/models/${encodeURIComponent(model)}/submodels/${encodeURIComponent(submodel)}`;
+
+    const tUp0 = Date.now();
     const data = await wpVehicleGetJson<any>(path);
+    const upstreamMs = Date.now() - tUp0;
 
     // Normalize as much as possible (axle ranges if present).
     const normalized = normalizeWpVehicleInfoToFitment(data);
@@ -36,8 +40,35 @@ export async function GET(req: Request) {
         normalized.offsetRangeMm || (Number.isFinite(offset) ? ([offset, offset] as [number, number]) : undefined),
     };
 
-    return NextResponse.json({ raw: data, fitment });
+    const totalMs = Date.now() - t0;
+    console.info("[api wp/vehicles/fitment] OK", {
+      upstreamMs,
+      totalMs,
+      year,
+      make,
+      model,
+      submodel,
+    });
+
+    return NextResponse.json(
+      { raw: data, fitment },
+      {
+        headers: {
+          "x-wt-upstream-ms": String(upstreamMs),
+          "x-wt-total-ms": String(totalMs),
+        },
+      }
+    );
   } catch (e: any) {
+    const totalMs = Date.now() - t0;
+    console.info("[api wp/vehicles/fitment] ERR", {
+      totalMs,
+      year,
+      make,
+      model,
+      submodel,
+      error: e?.message || String(e),
+    });
     return NextResponse.json({ error: e?.message || String(e) }, { status: 500 });
   }
 }

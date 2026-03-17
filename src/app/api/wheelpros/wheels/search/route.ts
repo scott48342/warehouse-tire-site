@@ -43,6 +43,7 @@ function hasAnyImage(it: any) {
 }
 
 export async function GET(req: Request) {
+  const t0 = Date.now();
   const url = new URL(req.url);
   const base =
     process.env.WHEELPROS_WRAPPER_URL ||
@@ -65,16 +66,32 @@ export async function GET(req: Request) {
   const cacheKey = upstream.toString();
   const cached = cache.get(cacheKey);
   if (cached && cached.expiresAt > Date.now()) {
+    const totalMs = Date.now() - t0;
+    console.info("[api wheelpros/wheels/search] HIT", {
+      totalMs,
+      q: url.searchParams.get("q") || "",
+      sku: url.searchParams.get("sku") || "",
+      brand_cd: url.searchParams.get("brand_cd") || "",
+      boltPattern: url.searchParams.get("boltPattern") || "",
+      diameter: url.searchParams.get("diameter") || "",
+      width: url.searchParams.get("width") || "",
+      page: url.searchParams.get("page") || "",
+      pageSize: url.searchParams.get("pageSize") || "",
+    });
+
     return NextResponse.json(cached.data, {
       status: cached.status,
       headers: {
         "content-type": cached.headers["content-type"] || "application/json",
         "x-wt-cache": "HIT",
+        "x-wt-total-ms": String(totalMs),
       },
     });
   }
 
+  const tUp0 = Date.now();
   const res = await fetch(upstream.toString(), { headers, cache: "no-store" });
+  const upstreamMs = Date.now() - tUp0;
   const ct = res.headers.get("content-type") || "application/json";
 
   let data: WheelProsSearchResponse | null = null;
@@ -86,7 +103,9 @@ export async function GET(req: Request) {
     return new NextResponse(text, { status: res.status, headers: { "content-type": ct } });
   }
 
+  let enrichMs = 0;
   if (res.ok && data?.results?.length) {
+    const tEn0 = Date.now();
     const enriched = await Promise.all(
       data.results.map(async (it) => {
         const sku = it?.sku ? String(it.sku) : "";
@@ -156,6 +175,8 @@ export async function GET(req: Request) {
       sp.has("maxOffset") ||
       sp.has("centerbore");
 
+    enrichMs = Date.now() - tEn0;
+
     if (shouldFilterNoImage) {
       const filtered = enriched.filter((it) => hasAnyImage(it));
 
@@ -169,9 +190,33 @@ export async function GET(req: Request) {
     }
   }
 
+  const totalMs = Date.now() - t0;
+
+  console.info("[api wheelpros/wheels/search] MISS", {
+    status: res.status,
+    upstreamMs,
+    enrichMs,
+    totalMs,
+    q: url.searchParams.get("q") || "",
+    sku: url.searchParams.get("sku") || "",
+    brand_cd: url.searchParams.get("brand_cd") || "",
+    boltPattern: url.searchParams.get("boltPattern") || "",
+    diameter: url.searchParams.get("diameter") || "",
+    width: url.searchParams.get("width") || "",
+    page: url.searchParams.get("page") || "",
+    pageSize: url.searchParams.get("pageSize") || "",
+    results: Array.isArray(data?.results) ? data.results.length : null,
+  });
+
   const out = NextResponse.json(data, {
     status: res.status,
-    headers: { "content-type": "application/json", "x-wt-cache": "MISS" },
+    headers: {
+      "content-type": "application/json",
+      "x-wt-cache": "MISS",
+      "x-wt-upstream-ms": String(upstreamMs),
+      "x-wt-enrich-ms": String(enrichMs),
+      "x-wt-total-ms": String(totalMs),
+    },
   });
 
   // Cache only successful JSON bodies.
