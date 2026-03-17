@@ -342,20 +342,12 @@ export default async function WheelsPage({
     for (const [k, arr] of map.entries()) {
       // representative: first with image, else first.
       const rep = arr.find((x) => x.imageUrl) || arr[0];
-      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number }[] = [];
-      const seen = new Set<string>();
-      for (const x of arr) {
-        const fin = String(x.finish || "").trim();
-        if (!fin || seen.has(fin)) continue;
-        seen.add(fin);
-        thumbs.push({ finish: fin, sku: x.sku || "", imageUrl: x.imageUrl, price: x.price });
-      }
+
       function n(v: any) {
         const x = Number(String(v || "").trim());
         return Number.isFinite(x) ? x : NaN;
       }
 
-      // Tireweb-like pairing: if this style has multiple widths on the same diameter, treat as staggered.
       const variants = arr
         .map((x) => ({
           sku: String(x.sku || ""),
@@ -373,19 +365,78 @@ export default async function WheelsPage({
       }
 
       // Use tire sizes (when present) to infer stagger-capable diameter targets.
-      // Example: Corvette Z06 often uses 19" front / 20" rear.
       const tireDias = Array.isArray(fit?.tireSizes)
         ? (fit.tireSizes as any[]).map((x) => rimDiaFromTireSize(String(x))).filter((n) => Number.isFinite(n))
         : [];
       const inferredFrontDia = tireDias.length ? Math.min(...tireDias) : NaN;
       const inferredRearDia = tireDias.length ? Math.max(...tireDias) : NaN;
 
-      // If we inferred a front/rear diameter spread, allow mixed diameters.
-      // Otherwise, fall back to pairing within the largest available diameter.
       const useMixedDia =
         Number.isFinite(inferredFrontDia) &&
         Number.isFinite(inferredRearDia) &&
         inferredRearDia - inferredFrontDia >= 1;
+
+      // Finish dropdown options (also carries a finish-specific pair so selecting a finish updates both axles).
+      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; pair?: Wheel["pair"] }[] = [];
+      const seen = new Set<string>();
+      for (const x of arr) {
+        const fin = String(x.finish || "").trim();
+        if (!fin || seen.has(fin)) continue;
+        seen.add(fin);
+
+        const arrFin = arr.filter((z) => String(z.finish || "").trim() === fin);
+        const variantsFin = arrFin
+          .map((z) => ({
+            sku: String(z.sku || ""),
+            diameter: z.diameter,
+            width: z.width,
+            offset: z.offset,
+            d: n(z.diameter),
+            w: n(z.width),
+          }))
+          .filter((v) => v.sku && Number.isFinite(v.d) && Number.isFinite(v.w));
+
+        const maxDiaFin = variantsFin.length ? Math.max(...variantsFin.map((v) => v.d)) : NaN;
+
+        const frontPoolFin = useMixedDia
+          ? variantsFin.filter((v) => Math.abs(v.d - inferredFrontDia) < 0.11)
+          : (Number.isFinite(maxDiaFin) ? variantsFin.filter((v) => Math.abs(v.d - maxDiaFin) < 0.06) : []);
+
+        const rearPoolFin = useMixedDia
+          ? variantsFin.filter((v) => Math.abs(v.d - inferredRearDia) < 0.11)
+          : frontPoolFin;
+
+        const poolFrontFin = frontPoolFin.length ? frontPoolFin : variantsFin;
+        const poolRearFin = rearPoolFin.length ? rearPoolFin : variantsFin;
+
+        let pairFin: Wheel["pair"] | undefined = undefined;
+        if (poolFrontFin.length) {
+          const frontV = [...poolFrontFin].sort((a, b) => a.w - b.w)[0];
+          const rearV = [...poolRearFin].sort((a, b) => b.w - a.w)[0];
+
+          const staggered =
+            Boolean(rearV && frontV) &&
+            (useMixedDia
+              ? (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0)
+              : (rearV.sku !== frontV.sku && rearV.w - frontV.w >= 1.0));
+
+          pairFin = {
+            staggered,
+            front: { sku: frontV.sku, diameter: frontV.diameter, width: frontV.width, offset: frontV.offset },
+            rear: staggered
+              ? { sku: rearV.sku, diameter: rearV.diameter, width: rearV.width, offset: rearV.offset }
+              : undefined,
+          };
+        }
+
+        thumbs.push({
+          finish: fin,
+          sku: pairFin?.front?.sku || x.sku || "",
+          imageUrl: x.imageUrl,
+          price: x.price,
+          pair: pairFin,
+        });
+      }
 
       const maxDia = variants.length ? Math.max(...variants.map((v) => v.d)) : NaN;
 

@@ -11,6 +11,7 @@ export type WheelFinishThumb = {
   sku: string;
   imageUrl?: string;
   price?: number;
+  pair?: WheelPair;
 };
 
 export type WheelPick = {
@@ -71,6 +72,7 @@ export function WheelsStyleCard({
   const [selectedImage, setSelectedImage] = useState<string | undefined>(baseImageUrl);
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
+  const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
 
   // Visual-only: show "from" pricing when we have multiple finishes.
   const fromPrice = useMemo(() => {
@@ -103,8 +105,9 @@ export function WheelsStyleCard({
   function selectAndGoToTires() {
     const sku = selectedSku || baseSku;
 
-    const front = pair?.front?.sku ? pair.front : { sku, diameter: sizeLabel?.diameter, width: sizeLabel?.width, offset: specLabel?.offset };
-    const rear = pair?.staggered && pair?.rear?.sku ? pair.rear : undefined;
+    const p = selectedPair;
+    const front = p?.front?.sku ? p.front : { sku, diameter: sizeLabel?.diameter, width: sizeLabel?.width, offset: specLabel?.offset };
+    const rear = p?.staggered && p?.rear?.sku ? p.rear : undefined;
 
     try {
       localStorage.setItem(
@@ -179,6 +182,31 @@ export function WheelsStyleCard({
         />
       </div>
 
+      {thumbs.length > 1 ? (
+        <div className="mt-3">
+          <label className="text-[11px] font-semibold text-neutral-600">Finish</label>
+          <select
+            value={selectedFinish || ""}
+            onChange={(e) => {
+              const fin = e.target.value;
+              const hit = thumbs.find((t) => String(t.finish) === fin);
+              setSelectedFinish(fin);
+              if (hit?.sku) setSelectedSku(hit.sku);
+              if (hit?.imageUrl) setSelectedImage(hit.imageUrl);
+              if (typeof hit?.price === "number") setSelectedPrice(hit.price);
+              if (hit?.pair) setSelectedPair(hit.pair);
+            }}
+            className="mt-1 h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+          >
+            {thumbs.map((t) => (
+              <option key={t.sku || t.finish} value={t.finish}>
+                {t.finish}
+              </option>
+            ))}
+          </select>
+        </div>
+      ) : null}
+
       {selectToTires ? (
         <button
           type="button"
@@ -195,27 +223,23 @@ export function WheelsStyleCard({
           <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
             Fitment checked
           </span>
-          {thumbs.length > 1 ? (
-            <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-              {thumbs.length} finishes
-            </span>
-          ) : null}
+          {thumbs.length > 1 ? null : null}
         </div>
 
-        {pair?.front?.diameter || pair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
+        {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
           <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
             <div>
-              Front: {fmtSizePart(pair?.front?.diameter || sizeLabel?.diameter || "")}
-              {(pair?.front?.diameter || sizeLabel?.diameter) && (pair?.front?.width || sizeLabel?.width) ? "x" : ""}
-              {fmtSizePart(pair?.front?.width || sizeLabel?.width || "")}
-              {pair?.front?.offset ? <span className="text-neutral-500"> • ET {String(pair.front.offset)}</span> : null}
+              Front: {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
+              {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "x" : ""}
+              {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
+              {selectedPair?.front?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.front.offset)}</span> : null}
             </div>
-            {pair?.staggered && pair?.rear?.sku ? (
+            {selectedPair?.staggered && selectedPair?.rear?.sku ? (
               <div>
-                Rear: {fmtSizePart(pair?.rear?.diameter || pair?.front?.diameter || "")}
-                {(pair?.rear?.diameter || pair?.front?.diameter) && pair?.rear?.width ? "x" : ""}
-                {fmtSizePart(pair?.rear?.width || "")}
-                {pair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(pair.rear.offset)}</span> : null}
+                Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
+                {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "x" : ""}
+                {fmtSizePart(selectedPair?.rear?.width || "")}
+                {selectedPair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.rear.offset)}</span> : null}
               </div>
             ) : null}
           </div>
@@ -267,27 +291,23 @@ export function WheelsStyleCard({
             <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
               Fitment checked
             </span>
-            {thumbs.length > 1 ? (
-              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                {thumbs.length} finishes
-              </span>
-            ) : null}
+            {thumbs.length > 1 ? null : null}
           </div>
 
-          {pair?.front?.diameter || pair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
+          {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
             <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
               <div>
-                Front: {fmtSizePart(pair?.front?.diameter || sizeLabel?.diameter || "")}
-                {(pair?.front?.diameter || sizeLabel?.diameter) && (pair?.front?.width || sizeLabel?.width) ? "x" : ""}
-                {fmtSizePart(pair?.front?.width || sizeLabel?.width || "")}
-                {pair?.front?.offset ? <span className="text-neutral-500"> • ET {String(pair.front.offset)}</span> : null}
+                Front: {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
+                {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "x" : ""}
+                {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
+                {selectedPair?.front?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.front.offset)}</span> : null}
               </div>
-              {pair?.staggered && pair?.rear?.sku ? (
+              {selectedPair?.staggered && selectedPair?.rear?.sku ? (
                 <div>
-                  Rear: {fmtSizePart(pair?.rear?.diameter || pair?.front?.diameter || "")}
-                  {(pair?.rear?.diameter || pair?.front?.diameter) && pair?.rear?.width ? "x" : ""}
-                  {fmtSizePart(pair?.rear?.width || "")}
-                  {pair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(pair.rear.offset)}</span> : null}
+                  Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
+                  {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "x" : ""}
+                  {fmtSizePart(selectedPair?.rear?.width || "")}
+                  {selectedPair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.rear.offset)}</span> : null}
                 </div>
               ) : null}
             </div>

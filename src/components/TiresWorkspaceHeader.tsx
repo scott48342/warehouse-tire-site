@@ -14,6 +14,11 @@ type SelectedWheel = {
   width?: string;
   boltPattern?: string;
   offset?: string;
+  staggered?: boolean;
+  rearSku?: string;
+  rearDiameter?: string;
+  rearWidth?: string;
+  rearOffset?: string;
 };
 
 type SelectedTire = {
@@ -146,31 +151,53 @@ export function TiresWorkspaceHeader({
                 selectedWheel?.width ||
                 selectedWheel?.boltPattern ||
                 selectedWheel?.offset ||
+                selectedWheel?.rearWidth ||
+                selectedWheel?.rearDiameter ||
+                selectedWheel?.rearOffset ||
                 wheelSpec?.diameter ||
                 wheelSpec?.width ||
                 wheelSpec?.boltPattern ||
                 wheelSpec?.offset ? (
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {selectedWheel?.diameter || selectedWheel?.width || wheelSpec?.diameter || wheelSpec?.width ? (
-                      <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                        {(selectedWheel?.diameter || wheelSpec?.diameter || "") as string}
-                        {(selectedWheel?.diameter || wheelSpec?.diameter) &&
-                        (selectedWheel?.width || wheelSpec?.width)
-                          ? "x"
-                          : ""}
-                        {(selectedWheel?.width || wheelSpec?.width || "") as string}
-                      </span>
-                    ) : null}
-                    {selectedWheel?.boltPattern || wheelSpec?.boltPattern ? (
-                      <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                        {(selectedWheel?.boltPattern || wheelSpec?.boltPattern) as string}
-                      </span>
-                    ) : null}
-                    {selectedWheel?.offset || wheelSpec?.offset ? (
-                      <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                        Offset {(selectedWheel?.offset || wheelSpec?.offset) as string}mm
-                      </span>
-                    ) : null}
+                  <div className="mt-2 grid gap-2">
+                    <div className="flex flex-wrap gap-2">
+                      {(selectedWheel?.diameter || selectedWheel?.width || wheelSpec?.diameter || wheelSpec?.width) ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                          Front {(selectedWheel?.diameter || wheelSpec?.diameter || "") as string}
+                          {(selectedWheel?.diameter || wheelSpec?.diameter) && (selectedWheel?.width || wheelSpec?.width)
+                            ? "x"
+                            : ""}
+                          {(selectedWheel?.width || wheelSpec?.width || "") as string}
+                        </span>
+                      ) : null}
+
+                      {selectedWheel?.staggered && (selectedWheel?.rearDiameter || selectedWheel?.rearWidth) ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                          Rear {(selectedWheel?.rearDiameter || selectedWheel?.diameter || wheelSpec?.diameter || "") as string}
+                          {(selectedWheel?.rearDiameter || selectedWheel?.diameter || wheelSpec?.diameter) && selectedWheel?.rearWidth
+                            ? "x"
+                            : ""}
+                          {(selectedWheel?.rearWidth || "") as string}
+                        </span>
+                      ) : null}
+
+                      {selectedWheel?.boltPattern || wheelSpec?.boltPattern ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                          {(selectedWheel?.boltPattern || wheelSpec?.boltPattern) as string}
+                        </span>
+                      ) : null}
+
+                      {selectedWheel?.offset || wheelSpec?.offset ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                          Front Offset {(selectedWheel?.offset || wheelSpec?.offset) as string}mm
+                        </span>
+                      ) : null}
+
+                      {selectedWheel?.staggered && selectedWheel?.rearOffset ? (
+                        <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                          Rear Offset {String(selectedWheel.rearOffset)}mm
+                        </span>
+                      ) : null}
+                    </div>
                   </div>
                 ) : null}
 
