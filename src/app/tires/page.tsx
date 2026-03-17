@@ -457,7 +457,9 @@ export default async function TiresPage({
     return m ? m[1].replace("ZR", "R") : "";
   }
 
-  const selectedSizeKey = normalizeSizeKey(selectedSize);
+  // Compare only the core size (ignore load/speed suffixes like "88Y").
+  const selectedSizeCore = extractSizeFromText(String(selectedSize || "")) || String(selectedSize || "");
+  const selectedSizeKey = normalizeSizeKey(selectedSizeCore);
 
   const itemsFiltered: Tire[] = itemsEnriched.filter((t) => {
     const desc0 = String(t.description || "");
