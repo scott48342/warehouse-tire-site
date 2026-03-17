@@ -44,6 +44,8 @@ function hasAnyImage(it: any) {
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
+  const debug = url.searchParams.get("debug") === "1" || process.env.WT_DIAGNOSTICS === "1";
+  const t0 = debug ? Date.now() : 0;
   const base =
     process.env.WHEELPROS_WRAPPER_URL ||
     process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
@@ -65,16 +67,43 @@ export async function GET(req: Request) {
   const cacheKey = upstream.toString();
   const cached = cache.get(cacheKey);
   if (cached && cached.expiresAt > Date.now()) {
+    const totalMs = debug ? Date.now() - t0 : 0;
+    if (debug) {
+      try {
+        console.info("[api wheelpros/wheels/search] HIT", {
+          totalMs,
+          q: url.searchParams.get("q") || "",
+          sku: url.searchParams.get("sku") || "",
+          brand_cd: url.searchParams.get("brand_cd") || "",
+          boltPattern: url.searchParams.get("boltPattern") || "",
+          diameter: url.searchParams.get("diameter") || "",
+          width: url.searchParams.get("width") || "",
+          page: url.searchParams.get("page") || "",
+          pageSize: url.searchParams.get("pageSize") || "",
+        });
+      } catch {
+        // ignore
+      }
+    }
+
     return NextResponse.json(cached.data, {
       status: cached.status,
       headers: {
         "content-type": cached.headers["content-type"] || "application/json",
         "x-wt-cache": "HIT",
+        ...(debug
+          ? {
+              "x-wt-total-ms": String(totalMs),
+              "server-timing": `total;dur=${totalMs}`,
+            }
+          : null),
       },
     });
   }
 
+  const tUp0 = debug ? Date.now() : 0;
   const res = await fetch(upstream.toString(), { headers, cache: "no-store" });
+  const upstreamMs = debug ? Date.now() - tUp0 : 0;
   const ct = res.headers.get("content-type") || "application/json";
 
   let data: WheelProsSearchResponse | null = null;
@@ -86,7 +115,9 @@ export async function GET(req: Request) {
     return new NextResponse(text, { status: res.status, headers: { "content-type": ct } });
   }
 
+  let enrichMs = debug ? 0 : 0;
   if (res.ok && data?.results?.length) {
+    const tEn0 = debug ? Date.now() : 0;
     const enriched = await Promise.all(
       data.results.map(async (it) => {
         const sku = it?.sku ? String(it.sku) : "";
@@ -144,6 +175,8 @@ export async function GET(req: Request) {
     // NOTE: Only do this when the caller is applying some kind of search/filter.
     // A completely unfiltered WheelPros browse can legitimately return many items
     // without images (or omit image fields), which would otherwise yield 0 results.
+    enrichMs = debug ? Date.now() - tEn0 : 0;
+
     const sp = url.searchParams;
     const shouldFilterNoImage =
       sp.has("sku") ||
@@ -169,9 +202,44 @@ export async function GET(req: Request) {
     }
   }
 
+  const totalMs = debug ? Date.now() - t0 : 0;
+
+  if (debug) {
+    try {
+      console.info("[api wheelpros/wheels/search] MISS", {
+        status: res.status,
+        upstreamMs,
+        enrichMs,
+        totalMs,
+        q: url.searchParams.get("q") || "",
+        sku: url.searchParams.get("sku") || "",
+        brand_cd: url.searchParams.get("brand_cd") || "",
+        boltPattern: url.searchParams.get("boltPattern") || "",
+        diameter: url.searchParams.get("diameter") || "",
+        width: url.searchParams.get("width") || "",
+        page: url.searchParams.get("page") || "",
+        pageSize: url.searchParams.get("pageSize") || "",
+        results: Array.isArray(data?.results) ? data.results.length : null,
+      });
+    } catch {
+      // ignore
+    }
+  }
+
   const out = NextResponse.json(data, {
     status: res.status,
-    headers: { "content-type": "application/json", "x-wt-cache": "MISS" },
+    headers: {
+      "content-type": "application/json",
+      "x-wt-cache": "MISS",
+      ...(debug
+        ? {
+            "x-wt-upstream-ms": String(upstreamMs),
+            "x-wt-enrich-ms": String(enrichMs),
+            "x-wt-total-ms": String(totalMs),
+            "server-timing": `upstream;dur=${upstreamMs}, enrich;dur=${enrichMs}, total;dur=${totalMs}`,
+          }
+        : null),
+    },
   });
 
   // Cache only successful JSON bodies.
