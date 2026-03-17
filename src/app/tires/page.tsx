@@ -820,7 +820,7 @@ export default async function TiresPage({
                 items.map((t, idx) => (
                   <article
                     key={t.partNumber || t.mfgPartNumber || idx}
-                    className="group relative rounded-2xl border border-neutral-200 bg-white p-5 hover:border-neutral-300"
+                    className="group relative rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm"
                   >
                     {t.mfgPartNumber ? (
                       <Link
@@ -893,14 +893,22 @@ export default async function TiresPage({
                         if (t.badges?.warrantyMiles) out.push({ key: "warranty", label: `${t.badges.warrantyMiles.toLocaleString()} mi` });
                         if (t.badges?.loadIndex && t.badges?.speedRating) out.push({ key: "ls", label: `${String(t.badges.loadIndex)}${String(t.badges.speedRating)}` });
 
-                        return out.slice(0, 4).map((b) => (
-                          <span
-                            key={b.key}
-                            className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900"
-                          >
-                            {b.label}
-                          </span>
-                        ));
+                        return out.slice(0, 4).map((b) => {
+                          const accent = b.key === "ship" || b.key === "fit" || b.key === "rebate";
+                          return (
+                            <span
+                              key={b.key}
+                              className={
+                                "rounded-full border px-2.5 py-1 text-xs font-extrabold " +
+                                (accent
+                                  ? "border-red-200 bg-red-50 text-red-900"
+                                  : "border-neutral-200 bg-white text-neutral-900")
+                              }
+                            >
+                              {b.label}
+                            </span>
+                          );
+                        });
                       })()}
                     </div>
 
@@ -937,14 +945,14 @@ export default async function TiresPage({
                       {typeof t.cost === "number" ? (
                         <Link
                           href="/schedule"
-                          className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
+                          className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
                         >
                           Schedule Install
                         </Link>
                       ) : (
                         <a
                           href={BRAND.links.tel}
-                          className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
+                          className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
                         >
                           Call for price
                         </a>

@@ -83,7 +83,7 @@ export function WheelsStyleCard({
   const off = specLabel?.offset ? String(specLabel.offset).trim() : "";
 
   return (
-    <div className="block rounded-2xl border border-neutral-200 bg-white p-5 hover:border-neutral-300">
+    <div className="block rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm">
       <div className="flex items-start justify-between gap-2">
         <div className="text-sm font-semibold text-neutral-600">{brand}</div>
         <FavoritesButton
@@ -100,10 +100,10 @@ export function WheelsStyleCard({
         {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
 
         <div className="mt-2 flex flex-wrap gap-2">
-          <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+          <span className="rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-xs font-extrabold text-red-900">
             Fast shipping
           </span>
-          <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+          <span className="rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-xs font-extrabold text-red-900">
             Fitment checked
           </span>
           {thumbs.length > 1 ? (
@@ -202,14 +202,14 @@ export function WheelsStyleCard({
         {typeof selectedPrice === "number" ? (
           <Link
             href={viewHref}
-            className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
+            className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
           >
             View details
           </Link>
         ) : (
           <a
             href={BRAND.links.tel}
-            className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
+            className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
           >
             Call for price
           </a>
