@@ -232,11 +232,24 @@ export default async function TiresPage({
     return Array.from(new Set(out)).slice(0, 4);
   })();
 
-  const selectedSizeRaw = (Array.isArray(sp.size) ? sp.size[0] : sp.size) || "";
+  // When a wheel is selected, lock sizes to the selected wheel diameter.
+  const lockedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
+    ? (oemWheelMatchedSizes.length
+        ? oemWheelMatchedSizes
+        : (plusSizeSuggestions.length ? plusSizeSuggestions : []))
+    : [];
 
-  const selectedSize = selectedSizeRaw
+  const displayedSizes = lockedSizes.length ? lockedSizes : tireSizes;
+
+  const selectedSizeRaw = (Array.isArray(sp.size) ? sp.size[0] : sp.size) || "";
+  const selectedSizeCandidate = selectedSizeRaw
     ? String(selectedSizeRaw)
-    : (oemWheelMatchedSizes[0] || plusSizeSuggestions[0] || tireSizesStrict[0] || tireSizes[0] || "");
+    : (displayedSizes[0] || tireSizesStrict[0] || tireSizes[0] || "");
+
+  // If user has a wheel selected, ensure size stays within the locked set.
+  const selectedSize = lockedSizes.length
+    ? (lockedSizes.includes(selectedSizeCandidate) ? selectedSizeCandidate : (lockedSizes[0] || ""))
+    : selectedSizeCandidate;
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const wp = selectedSize ? await fetchWpTires(selectedSize) : null;
@@ -451,28 +464,24 @@ export default async function TiresPage({
           </div>
 
           <div className="flex flex-wrap items-center justify-end gap-3">
-            {tireSizes.length ? (
+            {displayedSizes.length ? (
               <div className="flex w-full flex-col items-end gap-2">
-                {wheelSku && wheelDia && plusSizeSuggestions.length ? (
-                  <div className="w-full rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
-                    <div className="font-extrabold">Selected wheel is {wheelDia}\"</div>
-                    <div className="mt-1">No OEM tire size was returned for {wheelDia}\" on this vehicle. Here are suggested plus-sizes:</div>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {plusSizeSuggestions.map((sug) => (
-                        <Link
-                          key={sug}
-                          href={`/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${wheelWidth ? `&wheelWidth=${encodeURIComponent(wheelWidth)}` : ""}&size=${encodeURIComponent(sug)}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
-                          className="rounded-full border border-amber-300 bg-white px-3 py-1 text-xs font-extrabold text-amber-950"
-                        >
-                          {sug}
-                        </Link>
-                      ))}
+                {wheelSku && wheelDia ? (
+                  plusSizeSuggestions.length ? (
+                    <div className="w-full rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
+                      <div className="font-extrabold">Locked to {wheelDia}\" wheel</div>
+                      <div className="mt-1">No OEM tire size was returned for {wheelDia}\" on this vehicle. Showing suggested plus-sizes:</div>
                     </div>
-                  </div>
+                  ) : (
+                    <div className="w-full rounded-2xl border border-neutral-200 bg-white p-3 text-xs text-neutral-700">
+                      <div className="font-extrabold text-neutral-900">Locked to {wheelDia}\" wheel</div>
+                      <div className="mt-1">Showing only sizes that match the selected wheel diameter.</div>
+                    </div>
+                  )
                 ) : null}
 
                 <div className="flex w-full flex-wrap justify-end gap-2">
-                    {tireSizes.map((s) => {
+                  {displayedSizes.map((s) => {
                     const active = s === selectedSize;
                     const isStrict = tireSizesStrict.includes(s);
                     const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${wheelWidth ? `&wheelWidth=${encodeURIComponent(wheelWidth)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
