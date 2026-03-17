@@ -248,15 +248,18 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
   if (!hasVehicle) return null;
 
   return (
-    <section className="rounded-2xl border border-neutral-200 bg-white p-4">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <div className="text-[11px] font-semibold text-neutral-600">Search by Vehicle</div>
-          <div className="text-sm font-extrabold text-neutral-900">{fitmentLabel(fitment)}</div>
+    <section className="overflow-hidden rounded-2xl border border-red-200 bg-white p-0">
+      <div className="border-b border-red-100 bg-gradient-to-r from-red-50 via-white to-white p-4">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <div className="text-xs font-extrabold text-red-700">Search by Vehicle</div>
+            <div className="mt-0.5 text-sm font-extrabold text-neutral-900">{fitmentLabel(fitment)}</div>
+          </div>
         </div>
       </div>
 
-      <div className="mt-3 rounded-xl border border-neutral-200 bg-neutral-50 p-3">
+      <div className="p-4">
+        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3">
         <div className="text-xs font-extrabold text-neutral-900">Recommended Fitment</div>
         <div className="mt-2 grid gap-2 text-[12px] text-neutral-800">
           {details?.boltPattern ? (
@@ -376,6 +379,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
 
         <div className="mt-3 text-[11px] text-neutral-500">
           Informational only — verify fitment before purchase.
+        </div>
         </div>
       </div>
     </section>

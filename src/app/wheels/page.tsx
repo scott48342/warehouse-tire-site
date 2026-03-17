@@ -144,14 +144,16 @@ export default async function WheelsPage({
     return (
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
-          <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Wheels</h1>
-          <p className="mt-2 text-sm text-neutral-700">
+          <div className="rounded-3xl border border-red-100 bg-gradient-to-r from-red-50 via-white to-white p-6">
+            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Wheels</h1>
+            <p className="mt-2 text-sm text-neutral-700">
             Select your vehicle <span className="font-semibold">trim / option</span> to show wheels that fit.
           </p>
-          <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-            Current selection: <span className="font-semibold">{year} {make} {model}</span>
-            <div className="mt-2 text-xs text-neutral-500">
-              Tip: Open the vehicle picker and choose a trim (it will auto-search).
+            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
+              Current selection: <span className="font-semibold">{year} {make} {model}</span>
+              <div className="mt-2 text-xs text-neutral-500">
+                Tip: Open the vehicle picker and choose a trim (it will auto-search).
+              </div>
             </div>
           </div>
         </div>

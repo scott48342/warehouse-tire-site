@@ -83,7 +83,10 @@ export function WheelsStyleCard({
   const off = specLabel?.offset ? String(specLabel.offset).trim() : "";
 
   return (
-    <div className="block rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm">
+    <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm">
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-600" />
+      <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-600" />
+
       <div className="flex items-start justify-between gap-2">
         <div className="text-sm font-semibold text-neutral-600">{brand}</div>
         <FavoritesButton
