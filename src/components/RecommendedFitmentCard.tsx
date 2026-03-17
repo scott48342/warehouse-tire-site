@@ -378,7 +378,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
         </div>
 
         <div className="mt-3 text-[11px] text-neutral-500">
-          Informational only — verify fitment before purchase.
+          Sizing ranges are informational — final fitment is confirmed before purchase/installation.
         </div>
         </div>
       </div>
