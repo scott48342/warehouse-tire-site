@@ -7,6 +7,7 @@ import { FavoritesButton } from "@/components/FavoritesButton";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { TiresWorkspaceHeader } from "@/components/TiresWorkspaceHeader";
 import { SelectTireButton } from "@/components/SelectTireButton";
+import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 
 type Tire = {
   partNumber?: string;
@@ -122,12 +123,31 @@ export default async function TiresPage({
 
   // Quote carry-over (so wheel stays on quote when selecting tires)
   const wheelSku = (Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku) || "";
+  const axleRaw = (Array.isArray((sp as any).axle) ? (sp as any).axle[0] : (sp as any).axle) || "";
+  const axle = (String(axleRaw).trim() === "rear" ? "rear" : "front") as "front" | "rear";
+
   const tireSku = (Array.isArray((sp as any).tireSku) ? (sp as any).tireSku[0] : (sp as any).tireSku) || "";
+  const tireSkuFront = (Array.isArray((sp as any).tireSkuFront) ? (sp as any).tireSkuFront[0] : (sp as any).tireSkuFront) || "";
+  const tireSkuRear = (Array.isArray((sp as any).tireSkuRear) ? (sp as any).tireSkuRear[0] : (sp as any).tireSkuRear) || "";
+
+  const wheelSkuRear = (Array.isArray((sp as any).wheelSkuRear) ? (sp as any).wheelSkuRear[0] : (sp as any).wheelSkuRear) || "";
+  const wheelDiaFront = (Array.isArray((sp as any).wheelDiaFront) ? (sp as any).wheelDiaFront[0] : (sp as any).wheelDiaFront) || "";
+  const wheelDiaRear = (Array.isArray((sp as any).wheelDiaRear) ? (sp as any).wheelDiaRear[0] : (sp as any).wheelDiaRear) || "";
+  const wheelWidthFront = (Array.isArray((sp as any).wheelWidthFront) ? (sp as any).wheelWidthFront[0] : (sp as any).wheelWidthFront) || "";
+  const wheelWidthRear = (Array.isArray((sp as any).wheelWidthRear) ? (sp as any).wheelWidthRear[0] : (sp as any).wheelWidthRear) || "";
+
+  const sizeFrontRaw = (Array.isArray((sp as any).sizeFront) ? (sp as any).sizeFront[0] : (sp as any).sizeFront) || "";
+  const sizeRearRaw = (Array.isArray((sp as any).sizeRear) ? (sp as any).sizeRear[0] : (sp as any).sizeRear) || "";
+
   const wheelName = (Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName) || "";
   const wheelUnit = (Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit) || "";
   const wheelQty = (Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty) || "";
   const wheelDia = (Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia) || "";
   const wheelWidth = (Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth) || "";
+
+  const isStaggered = Boolean(String(wheelSkuRear || "").trim());
+  const wheelDiaActive = axle === "rear" ? (wheelDiaRear || wheelDia) : (wheelDiaFront || wheelDia);
+  const wheelWidthActive = axle === "rear" ? (wheelWidthRear || wheelWidth) : (wheelWidthFront || wheelWidth);
 
   const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
 
@@ -189,8 +209,8 @@ export default async function TiresPage({
     return rim * 25.4 + 2 * sidewall;
   }
 
-  const wheelDiaNum = wheelDia ? Number(String(wheelDia)) : NaN;
-  const wheelWidthNum = wheelWidth ? Number(String(wheelWidth)) : NaN;
+  const wheelDiaNum = wheelDiaActive ? Number(String(wheelDiaActive)) : NaN;
+  const wheelWidthNum = wheelWidthActive ? Number(String(wheelWidthActive)) : NaN;
 
   const oemWheelMatchedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
     ? tireSizes.filter((s) => rimDiaFromSize(s) === wheelDiaNum)
@@ -278,7 +298,8 @@ export default async function TiresPage({
 
   const displayedSizes = lockedSizes.length ? lockedSizes : tireSizes;
 
-  const selectedSizeRaw = (Array.isArray(sp.size) ? sp.size[0] : sp.size) || "";
+  // Per-axle selected size
+  const selectedSizeRaw = (axle === "rear" ? sizeRearRaw : sizeFrontRaw) || ((Array.isArray(sp.size) ? sp.size[0] : sp.size) || "");
   const selectedSizeCandidate = selectedSizeRaw
     ? String(selectedSizeRaw)
     : (displayedSizes[0] || tireSizesStrict[0] || tireSizes[0] || "");
@@ -287,6 +308,9 @@ export default async function TiresPage({
   const selectedSize = lockedSizes.length
     ? (lockedSizes.includes(selectedSizeCandidate) ? selectedSizeCandidate : (lockedSizes[0] || ""))
     : selectedSizeCandidate;
+
+  const sizeFront = axle === "front" ? selectedSize : (sizeFrontRaw || "");
+  const sizeRear = axle === "rear" ? selectedSize : (sizeRearRaw || "");
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
   const wp = selectedSize ? await fetchWpTires(selectedSize) : null;
@@ -532,15 +556,15 @@ export default async function TiresPage({
           <div className="flex flex-wrap items-center justify-end gap-3">
             {displayedSizes.length ? (
               <div className="flex w-full flex-col items-end gap-2">
-                {wheelSku && wheelDia ? (
+                {wheelSku && wheelDiaActive ? (
                   plusSizeSuggestions.length ? (
                     <div className="w-full rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
-                      <div className="font-extrabold">Locked to {wheelDia}\" wheel</div>
-                      <div className="mt-1">No OEM tire size was returned for {wheelDia}\" on this vehicle. Showing suggested plus-sizes:</div>
+                      <div className="font-extrabold">Locked to {wheelDiaActive}\" wheel ({axle})</div>
+                      <div className="mt-1">No OEM tire size was returned for {wheelDiaActive}\" on this vehicle. Showing suggested plus-sizes:</div>
                     </div>
                   ) : (
                     <div className="w-full rounded-2xl border border-neutral-200 bg-white p-3 text-xs text-neutral-700">
-                      <div className="font-extrabold text-neutral-900">Locked to {wheelDia}\" wheel</div>
+                      <div className="font-extrabold text-neutral-900">Locked to {wheelDiaActive}\" wheel ({axle})</div>
                       <div className="mt-1">Showing only sizes that match the selected wheel diameter.</div>
                     </div>
                   )
@@ -550,7 +574,7 @@ export default async function TiresPage({
                   {displayedSizes.map((s) => {
                     const active = s === selectedSize;
                     const isStrict = tireSizesStrict.includes(s);
-                    const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${wheelWidth ? `&wheelWidth=${encodeURIComponent(wheelWidth)}` : ""}&size=${encodeURIComponent(s)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
+                    const href = `/tires?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelSkuRear ? `&wheelSkuRear=${encodeURIComponent(wheelSkuRear)}` : ""}${wheelDiaFront ? `&wheelDiaFront=${encodeURIComponent(wheelDiaFront)}` : ""}${wheelDiaRear ? `&wheelDiaRear=${encodeURIComponent(wheelDiaRear)}` : ""}${wheelWidthFront ? `&wheelWidthFront=${encodeURIComponent(wheelWidthFront)}` : ""}${wheelWidthRear ? `&wheelWidthRear=${encodeURIComponent(wheelWidthRear)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${wheelWidth ? `&wheelWidth=${encodeURIComponent(wheelWidth)}` : ""}&axle=${encodeURIComponent(axle)}&sizeFront=${encodeURIComponent(axle === "front" ? s : sizeFront)}&sizeRear=${encodeURIComponent(axle === "rear" ? s : sizeRear)}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`;
                     return (
                       <Link
                         key={s}
@@ -971,6 +995,68 @@ export default async function TiresPage({
               tireSku={tireSku}
             />
 
+            {isStaggered ? (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-semibold text-neutral-500">Selecting:</span>
+                <a
+                  href={(() => {
+                    const p = new URLSearchParams();
+                    p.set("year", year);
+                    p.set("make", make);
+                    p.set("model", model);
+                    if (trim) p.set("trim", trim);
+                    if (modification) p.set("modification", modification);
+                    if (wheelSku) p.set("wheelSku", wheelSku);
+                    if (wheelSkuRear) p.set("wheelSkuRear", wheelSkuRear);
+                    if (wheelDiaFront) p.set("wheelDiaFront", wheelDiaFront);
+                    if (wheelDiaRear) p.set("wheelDiaRear", wheelDiaRear);
+                    if (wheelWidthFront) p.set("wheelWidthFront", wheelWidthFront);
+                    if (wheelWidthRear) p.set("wheelWidthRear", wheelWidthRear);
+                    if (sizeFront) p.set("sizeFront", sizeFront);
+                    if (sizeRear) p.set("sizeRear", sizeRear);
+                    if (sort) p.set("sort", sort);
+                    p.set("axle", "front");
+                    return `/tires?${p.toString()}`;
+                  })()}
+                  className={
+                    axle === "front"
+                      ? "rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
+                      : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                  }
+                >
+                  Front tires
+                </a>
+                <a
+                  href={(() => {
+                    const p = new URLSearchParams();
+                    p.set("year", year);
+                    p.set("make", make);
+                    p.set("model", model);
+                    if (trim) p.set("trim", trim);
+                    if (modification) p.set("modification", modification);
+                    if (wheelSku) p.set("wheelSku", wheelSku);
+                    if (wheelSkuRear) p.set("wheelSkuRear", wheelSkuRear);
+                    if (wheelDiaFront) p.set("wheelDiaFront", wheelDiaFront);
+                    if (wheelDiaRear) p.set("wheelDiaRear", wheelDiaRear);
+                    if (wheelWidthFront) p.set("wheelWidthFront", wheelWidthFront);
+                    if (wheelWidthRear) p.set("wheelWidthRear", wheelWidthRear);
+                    if (sizeFront) p.set("sizeFront", sizeFront);
+                    if (sizeRear) p.set("sizeRear", sizeRear);
+                    if (sort) p.set("sort", sort);
+                    p.set("axle", "rear");
+                    return `/tires?${p.toString()}`;
+                  })()}
+                  className={
+                    axle === "rear"
+                      ? "rounded-full bg-neutral-900 px-3 py-1 text-xs font-extrabold text-white"
+                      : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-extrabold text-neutral-900"
+                  }
+                >
+                  Rear tires
+                </a>
+              </div>
+            ) : null}
+
             <div className="flex flex-wrap gap-2">
               {selectedSize ? <Chip active>{selectedSize}</Chip> : null}
               <Chip>{zip ? `In stock near ${zip}` : "In stock near you"}</Chip>
@@ -1135,22 +1221,42 @@ export default async function TiresPage({
                           if (tireSku) qs.set("tireSku", tireSku);
 
                           return toQuote ? (
-                            <SelectTireButton
-                              wheelSku={String(wheelSku)}
-                              tire={{
-                                sku: tireSku,
-                                brand: String(t.brand || ""),
-                                title: String(t.displayName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
-                                size: String(selectedSize || ""),
-                                price: typeof t.cost === "number" ? t.cost + 50 : undefined,
-                                imageUrl: t.imageUrl,
-                                speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
-                                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
-                                season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
-                                runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
-                                xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
-                              }}
-                            />
+                            isStaggered ? (
+                              <SelectTireButtonAxle
+                                wheelSku={String(wheelSku)}
+                                axle={axle}
+                                tire={{
+                                  sku: tireSku,
+                                  brand: String(t.brand || ""),
+                                  title: String(t.displayName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                  size: String(selectedSize || ""),
+                                  price: typeof t.cost === "number" ? t.cost + 50 : undefined,
+                                  imageUrl: t.imageUrl,
+                                  speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                                  loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                                  season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                                  runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                                  xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                                }}
+                              />
+                            ) : (
+                              <SelectTireButton
+                                wheelSku={String(wheelSku)}
+                                tire={{
+                                  sku: tireSku,
+                                  brand: String(t.brand || ""),
+                                  title: String(t.displayName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                  size: String(selectedSize || ""),
+                                  price: typeof t.cost === "number" ? t.cost + 50 : undefined,
+                                  imageUrl: t.imageUrl,
+                                  speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                                  loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                                  season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                                  runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                                  xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                                }}
+                              />
+                            )
                           ) : (
                             <Link
                               href="/schedule"

@@ -156,6 +156,9 @@ export function WheelsStyleCard({
     const wRear = rear?.width;
 
     if (dia) sp.set("wheelDia", String(dia));
+    if (dia) sp.set("wheelDiaFront", String(dia));
+    if (rear?.diameter) sp.set("wheelDiaRear", String(rear.diameter));
+
     if (wFront) sp.set("wheelWidth", String(wFront));
     if (wFront) sp.set("wheelWidthFront", String(wFront));
     if (wRear) sp.set("wheelWidthRear", String(wRear));

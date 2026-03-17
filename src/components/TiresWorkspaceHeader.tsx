@@ -72,6 +72,8 @@ export function TiresWorkspaceHeader({
   const [selectedWheel, setSelectedWheel] = useState<SelectedWheel | null>(null);
   const [wheelSpec, setWheelSpec] = useState<WheelSpec | null>(null);
   const [selectedTire, setSelectedTire] = useState<SelectedTire | null>(null);
+  const [selectedFrontTire, setSelectedFrontTire] = useState<SelectedTire | null>(null);
+  const [selectedRearTire, setSelectedRearTire] = useState<SelectedTire | null>(null);
 
   useEffect(() => {
     if (!wheelSku) return;
@@ -128,6 +130,24 @@ export function TiresWorkspaceHeader({
       // ignore
     }
   }, [tireSku]);
+
+  useEffect(() => {
+    try {
+      const rawF = localStorage.getItem("wt_selected_tire_front");
+      if (rawF) {
+        const obj = JSON.parse(rawF);
+        if (obj && typeof obj.sku === "string") setSelectedFrontTire(obj);
+      }
+    } catch {}
+
+    try {
+      const rawR = localStorage.getItem("wt_selected_tire_rear");
+      if (rawR) {
+        const obj = JSON.parse(rawR);
+        if (obj && typeof obj.sku === "string") setSelectedRearTire(obj);
+      }
+    } catch {}
+  }, [wheelSku, tireSku]);
 
   if (!year || !make || !model) return null;
 
