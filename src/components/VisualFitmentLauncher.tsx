@@ -60,17 +60,41 @@ function TileButton({ title, subtitle, onClick }: { title: string; subtitle?: st
 
 export function VisualFitmentLauncher({
   initialOpen = false,
+  open,
+  onOpenChange,
+  startMode,
+  showTrigger = true,
   onNavigateToWheels,
 }: {
   initialOpen?: boolean;
+  /** Controlled open (optional). */
+  open?: boolean;
+  /** Controlled open setter (optional). */
+  onOpenChange?: (open: boolean) => void;
+  /** When opening from outside, set the launcher to this initial mode. */
+  startMode?: EntryMode;
+  /** When false, renders only the modal (no trigger button). */
+  showTrigger?: boolean;
   /** Optional override for navigation (useful for special pages) */
   onNavigateToWheels?: (fitment: Fitment) => void;
 }) {
   const router = useRouter();
 
-  const [open, setOpen] = useState(initialOpen);
-  const [mode, setMode] = useState<EntryMode>("vehicles");
+  const [openInternal, setOpenInternal] = useState(initialOpen);
+  const isOpen = open ?? openInternal;
+  const setIsOpen = (v: boolean) => {
+    onOpenChange?.(v);
+    if (open === undefined) setOpenInternal(v);
+  };
+
+  const [mode, setMode] = useState<EntryMode>(startMode || "vehicles");
   const [step, setStep] = useState<Step>("entry");
+
+  useEffect(() => {
+    // When opened externally, keep the mode in sync.
+    if (!isOpen) return;
+    if (startMode) setMode(startMode);
+  }, [isOpen, startMode]);
 
   const [draft, setDraft] = useState<Fitment>({});
 
@@ -87,11 +111,11 @@ export function VisualFitmentLauncher({
   function resetAll() {
     setDraft({});
     setStep("entry");
-    setMode("vehicles");
+    setMode(startMode || "vehicles");
   }
 
   function close() {
-    setOpen(false);
+    setIsOpen(false);
   }
 
   // Data for steps
@@ -185,16 +209,22 @@ export function VisualFitmentLauncher({
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-      >
-        Shop by vehicle
-      </button>
+      {showTrigger ? (
+        <button
+          type="button"
+          onClick={() => {
+            if (startMode) setMode(startMode);
+            setStep("entry");
+            setIsOpen(true);
+          }}
+          className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+        >
+          Shop by vehicle
+        </button>
+      ) : null}
 
       <Modal
-        open={open}
+        open={isOpen}
         onClose={() => {
           close();
         }}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
-import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
+import { HomeFitmentEntry } from "@/components/HomeFitmentEntry";
 
 export const runtime = "nodejs";
 
@@ -49,7 +49,6 @@ export default async function Home() {
               >
                 Schedule Install
               </Link>
-              <VisualFitmentLauncher />
               <Link
                 href="/tires"
                 className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
@@ -106,6 +105,7 @@ export default async function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-12">
+        <HomeFitmentEntry />
         <div className="flex items-end justify-between gap-3">
           <h2 className="text-xl font-extrabold text-neutral-900">Explore</h2>
           <div className="text-xs text-neutral-600">Quick shortcuts</div>
