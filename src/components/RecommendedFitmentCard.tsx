@@ -260,7 +260,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
 
       <div className="p-4">
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3">
-        <div className="text-xs font-extrabold text-neutral-900">Recommended Fitment</div>
+        <div className="text-xs font-extrabold text-neutral-900">Sizing guide</div>
         <div className="mt-2 grid gap-2 text-[12px] text-neutral-800">
           {details?.boltPattern ? (
             <div className="flex items-center justify-between gap-3">
