@@ -130,7 +130,7 @@ export default async function TiresPage({
   if (year && make && model && !modification) {
     return (
       <main className="bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-8">
+        <div className="mx-auto max-w-screen-2xl px-4 py-8">
           <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">Tires</h1>
           <p className="mt-2 text-sm text-neutral-700">
             Select your vehicle <span className="font-semibold">trim / option</span> to show tires that fit.
@@ -356,7 +356,7 @@ export default async function TiresPage({
 
   return (
     <main className="bg-neutral-50">
-      <div className="mx-auto max-w-6xl px-4 py-8">
+      <div className="mx-auto max-w-screen-2xl px-4 py-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">
@@ -446,7 +446,7 @@ export default async function TiresPage({
           </div>
         </div>
 
-        <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
+        <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
             {year && make && model ? (
               <div className="mb-4">

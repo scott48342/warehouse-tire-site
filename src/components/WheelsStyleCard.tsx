@@ -127,11 +127,11 @@ export function WheelsStyleCard({
             <img
               src={selectedImage}
               alt={title}
-              className="h-40 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
+              className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
               loading="lazy"
             />
           ) : (
-            <div className="grid h-40 place-items-center bg-white p-3 text-center">
+            <div className="grid h-56 place-items-center bg-white p-3 text-center">
               <div>
                 <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
                 <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
