@@ -83,9 +83,9 @@ export function WheelsStyleCard({
   const off = specLabel?.offset ? String(specLabel.offset).trim() : "";
 
   return (
-    <div className="block rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300">
+    <div className="block rounded-2xl border border-neutral-200 bg-white p-5 hover:border-neutral-300">
       <div className="flex items-start justify-between gap-2">
-        <div className="text-xs font-semibold text-neutral-600">{brand}</div>
+        <div className="text-sm font-semibold text-neutral-600">{brand}</div>
         <FavoritesButton
           type="wheel"
           sku={selectedSku || baseSku}
@@ -96,10 +96,10 @@ export function WheelsStyleCard({
       </div>
 
       <Link href={viewHref} className="block">
-        <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900">{title}</h3>
-        {selectedFinish ? <div className="mt-1 text-xs text-neutral-600">{selectedFinish}</div> : null}
+        <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
+        {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
         {sizeLabel?.diameter || sizeLabel?.width ? (
-          <div className="mt-0.5 text-xs font-semibold text-neutral-700">
+          <div className="mt-1 text-sm font-semibold text-neutral-700">
             {fmtSizePart(sizeLabel.diameter || "")}
             {sizeLabel.diameter && sizeLabel.width ? "x" : ""}
             {fmtSizePart(sizeLabel.width || "")}
@@ -107,14 +107,14 @@ export function WheelsStyleCard({
         ) : null}
 
         {bolt || off ? (
-          <div className="mt-1 flex flex-wrap gap-1.5">
+          <div className="mt-2 flex flex-wrap gap-2">
             {bolt ? (
-              <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
                 {bolt}
               </span>
             ) : null}
             {off ? (
-              <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900">
+              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
                 Offset {off}mm
               </span>
             ) : null}
@@ -174,27 +174,27 @@ export function WheelsStyleCard({
         </div>
       ) : null}
 
-      <div className="mt-4">
-        <div className="text-2xl font-extrabold text-neutral-900">
+      <div className="mt-5">
+        <div className="text-3xl font-extrabold text-neutral-900">
           {typeof selectedPrice === "number"
             ? `$${selectedPrice.toFixed(2)}`
             : (typeof fromPrice === "number" ? `From $${fromPrice.toFixed(2)}` : "Call for price")}
         </div>
-        <div className="text-xs text-neutral-600">each</div>
+        <div className="text-sm text-neutral-600">each</div>
       </div>
 
-      <div className="mt-4 grid gap-2">
+      <div className="mt-5 grid gap-3">
         {typeof selectedPrice === "number" ? (
           <Link
             href={viewHref}
-            className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+            className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
           >
             View details
           </Link>
         ) : (
           <a
             href={BRAND.links.tel}
-            className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+            className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
           >
             Call for price
           </a>

@@ -803,7 +803,7 @@ export default async function TiresPage({
               <Chip>{zip ? `In stock near ${zip}` : "In stock near you"}</Chip>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {km?.error ? (
                 <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
                   Tire search error: {String(km.error).slice(0, 500)}
