@@ -196,7 +196,8 @@ export default async function TiresPage({
     ? tireSizes.filter((s) => rimDiaFromSize(s) === wheelDiaNum)
     : [];
 
-  // If no OEM size matches the selected wheel diameter, generate a couple of plus-size suggestions.
+  // If no OEM size matches the selected wheel diameter, generate plus-size suggestions.
+  // Goal: keep overall diameter close to OEM (speedometer accuracy), but prefer common/real sizes.
   const plusSizeSuggestions = (() => {
     if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return [] as string[];
     if (oemWheelMatchedSizes.length) return [] as string[];
@@ -205,39 +206,75 @@ export default async function TiresPage({
     const targetOd = overallDiameterMmFromSize(baseline);
     if (!targetOd) return [] as string[];
 
-    const widths = Number.isFinite(wheelWidthNum) && wheelWidthNum > 0
-      ? [Math.round(wheelWidthNum * 25.4) + 10, Math.round(wheelWidthNum * 25.4) + 20, Math.round(wheelWidthNum * 25.4) + 30]
+    const widthsMm = (() => {
+      // Use wheel width (in) as a hint, but keep to common widths.
+      if (Number.isFinite(wheelWidthNum) && wheelWidthNum > 0) {
+        const wmm = wheelWidthNum * 25.4;
+        const guess = [wmm + 10, wmm + 20, wmm + 30, wmm + 40]
           .map((n) => Math.round(n / 5) * 5)
-      : [265, 275, 285];
+          .map((n) => Math.max(225, Math.min(355, n)));
+        return Array.from(new Set(guess));
+      }
+      // Reasonable defaults when we don't know wheel width.
+      return [245, 255, 265, 275, 285, 295];
+    })();
 
-    const aspects = [25, 30, 35, 40, 45, 50];
+    // Common aspect ratios for large diameters.
+    const aspects = [25, 30, 35, 40];
 
-    const out: string[] = [];
-    for (const w of widths) {
-      let best: { ar: number; od: number; diff: number } | null = null;
+    const candidates: Array<{ size: string; od: number; diff: number }> = [];
+
+    for (const w of widthsMm) {
       for (const ar of aspects) {
         const od = wheelDiaNum * 25.4 + 2 * (w * ar) / 100;
         const diff = Math.abs(od - targetOd);
-        if (!best || diff < best.diff) best = { ar, od, diff };
-      }
-      if (!best) continue;
+        const pct = diff / targetOd;
 
-      const pct = Math.abs(best.od - targetOd) / targetOd;
-      if (pct <= 0.035) {
-        out.push(`${w}/${best.ar}R${wheelDiaNum}`);
+        // Keep within ~4% overall diameter change.
+        if (pct > 0.04) continue;
+
+        // Avoid super-thin sidewalls on big wheels.
+        const sidewallMm = (w * ar) / 100;
+        if (sidewallMm < 65) continue;
+
+        candidates.push({ size: `${w}/${ar}R${wheelDiaNum}`, od, diff });
       }
     }
 
+    candidates.sort((a, b) => a.diff - b.diff);
+
     // Deduplicate while keeping order.
-    return Array.from(new Set(out)).slice(0, 4);
+    const out = Array.from(new Set(candidates.map((c) => c.size)));
+    return out.slice(0, 8);
   })();
 
+  async function wpHasSize(size: string) {
+    try {
+      const res = await fetch(
+        `${getBaseUrl()}/api/wp/tires/search?size=${encodeURIComponent(size)}&minQty=4&limit=1`,
+        { cache: "no-store" }
+      );
+      if (!res.ok) return false;
+      const data = await res.json();
+      const items = Array.isArray(data?.items) ? data.items : [];
+      return items.length > 0;
+    } catch {
+      return false;
+    }
+  }
+
   // When a wheel is selected, lock sizes to the selected wheel diameter.
-  const lockedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
-    ? (oemWheelMatchedSizes.length
-        ? oemWheelMatchedSizes
-        : (plusSizeSuggestions.length ? plusSizeSuggestions : []))
-    : [];
+  // If we have to generate plus-sizes, validate which sizes actually have inventory.
+  let lockedSizes: string[] = [];
+  if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
+    if (oemWheelMatchedSizes.length) {
+      lockedSizes = oemWheelMatchedSizes;
+    } else if (plusSizeSuggestions.length) {
+      const checks = await Promise.all(plusSizeSuggestions.slice(0, 8).map(async (s) => ({ s, ok: await wpHasSize(s) })));
+      const available = checks.filter((x) => x.ok).map((x) => x.s);
+      lockedSizes = available.length ? available : plusSizeSuggestions.slice(0, 4);
+    }
+  }
 
   const displayedSizes = lockedSizes.length ? lockedSizes : tireSizes;
 
