@@ -8,9 +8,9 @@ export function FilterGroup({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mt-4">
-      <div className="text-xs font-extrabold text-neutral-900">{title}</div>
-      <div className="mt-2 grid gap-2">{children}</div>
+    <div className="mt-6">
+      <div className="text-sm font-extrabold text-neutral-900">{title}</div>
+      <div className="mt-3 grid gap-3">{children}</div>
     </div>
   );
 }

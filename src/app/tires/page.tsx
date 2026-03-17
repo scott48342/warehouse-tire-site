@@ -429,11 +429,11 @@ export default async function TiresPage({
 
               {/* ZIP filter temporarily removed */}
 
-              <label className="ml-2 text-xs font-semibold text-neutral-600">Sort</label>
+              <label className="ml-2 text-sm font-semibold text-neutral-600">Sort</label>
               <AutoSubmitSelect
                 name="sort"
                 defaultValue={sort}
-                className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                 options={[
                   { value: "price_asc", label: "Price Low to High" },
                   { value: "best", label: "Best Match" },
@@ -447,7 +447,7 @@ export default async function TiresPage({
         </div>
 
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
             {year && make && model ? (
               <div className="mb-4">
                 <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
@@ -455,10 +455,10 @@ export default async function TiresPage({
             ) : null}
 
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-extrabold">Filters</h2>
+              <h2 className="text-base font-extrabold">Filters</h2>
               <Link
                 href={`${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelName ? `&wheelName=${encodeURIComponent(wheelName)}` : ""}${wheelUnit ? `&wheelUnit=${encodeURIComponent(wheelUnit)}` : ""}${wheelQty ? `&wheelQty=${encodeURIComponent(wheelQty)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
-                className="text-xs font-semibold text-neutral-600 hover:underline"
+                className="text-sm font-semibold text-neutral-600 hover:underline"
               >
                 Clear all
               </Link>
@@ -530,7 +530,7 @@ export default async function TiresPage({
                   <div className="text-xs text-neutral-600">No brand data yet.</div>
                 )}
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply brand
                 </button>
               </FilterGroup>
@@ -555,17 +555,17 @@ export default async function TiresPage({
                     name="priceMin"
                     defaultValue={priceMinRaw ? String(priceMinRaw) : ""}
                     placeholder="$ min"
-                    className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                    className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                   />
                   <input
                     name="priceMax"
                     defaultValue={priceMaxRaw ? String(priceMaxRaw) : ""}
                     placeholder="$ max"
-                    className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                    className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                   />
                 </div>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply price
                 </button>
               </FilterGroup>
@@ -608,7 +608,7 @@ export default async function TiresPage({
                   <div className="text-xs text-neutral-600">No season data yet.</div>
                 )}
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply season
                 </button>
               </FilterGroup>
@@ -657,7 +657,7 @@ export default async function TiresPage({
                   <div className="text-xs text-neutral-600">No speed rating data yet.</div>
                 )}
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply speed rating
                 </button>
               </FilterGroup>
@@ -693,7 +693,7 @@ export default async function TiresPage({
                   <span className="text-xs font-semibold text-neutral-500">{xlCount}</span>
                 </div>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply load
                 </button>
               </FilterGroup>
@@ -730,7 +730,7 @@ export default async function TiresPage({
                   <span className="text-xs font-semibold text-neutral-500">{runFlatCount}</span>
                 </div>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply run-flat
                 </button>
               </FilterGroup>
@@ -770,7 +770,7 @@ export default async function TiresPage({
                   <span className="text-xs font-semibold text-neutral-500">{allWeatherCount}</span>
                 </div>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply
                 </button>
               </FilterGroup>
@@ -820,7 +820,7 @@ export default async function TiresPage({
                 items.map((t, idx) => (
                   <article
                     key={t.partNumber || t.mfgPartNumber || idx}
-                    className="group relative rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
+                    className="group relative rounded-2xl border border-neutral-200 bg-white p-5 hover:border-neutral-300"
                   >
                     {t.mfgPartNumber ? (
                       <Link
@@ -844,7 +844,7 @@ export default async function TiresPage({
                     ) : null}
 
                     <div className="relative z-10 flex items-start justify-between gap-2">
-                      <div className="text-xs font-semibold text-neutral-600">
+                      <div className="text-sm font-semibold text-neutral-600">
                         {t.brand || "Tire"}
                       </div>
                       {t.mfgPartNumber ? (
@@ -870,11 +870,11 @@ export default async function TiresPage({
                         />
                       ) : null}
                     </div>
-                    <h3 className="mt-0.5 text-sm font-extrabold text-neutral-900 group-hover:underline">
+                    <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
                       {t.displayName || t.description || t.partNumber || "Tire"}
                     </h3>
 
-                    <div className="mt-1 flex flex-wrap gap-1.5">
+                    <div className="mt-2 flex flex-wrap gap-2">
                       {(() => {
                         const brandKey = String(t.brand || "").trim().toLowerCase();
                         const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
@@ -891,7 +891,7 @@ export default async function TiresPage({
                         return out.slice(0, 3).map((b) => (
                           <span
                             key={b.key}
-                            className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[11px] font-extrabold text-neutral-900"
+                            className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900"
                           >
                             {b.label}
                           </span>
@@ -905,11 +905,11 @@ export default async function TiresPage({
                         <img
                           src={t.imageUrl}
                           alt={t.displayName || t.description || t.partNumber || "Tire"}
-                          className="h-36 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
+                          className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
                           loading="lazy"
                         />
                       ) : (
-                        <div className="grid h-36 place-items-center bg-white p-3 text-center">
+                        <div className="grid h-56 place-items-center bg-white p-3 text-center">
                           <div>
                             <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
                             <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
@@ -918,28 +918,28 @@ export default async function TiresPage({
                       )}
                     </div>
 
-                    <div className="relative z-10 mt-4">
+                    <div className="relative z-10 mt-5">
                       <div className="text-3xl font-extrabold text-neutral-900">
                         {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
                       </div>
-                      <div className="text-xs text-neutral-600">each</div>
+                      <div className="text-sm text-neutral-600">each</div>
                       <div className="mt-1 text-[11px] text-neutral-600">Fast quote • Fitment confirmed before install</div>
                     </div>
 
                     {/* Qty hidden */}
 
-                    <div className="relative z-10 mt-4 grid gap-2">
+                    <div className="relative z-10 mt-5 grid gap-3">
                       {typeof t.cost === "number" ? (
                         <Link
                           href="/schedule"
-                          className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+                          className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
                         >
                           Schedule Install
                         </Link>
                       ) : (
                         <a
                           href={BRAND.links.tel}
-                          className="rounded-xl bg-neutral-900 px-3 py-2 text-center text-xs font-extrabold text-white"
+                          className="rounded-xl bg-neutral-900 px-4 py-3 text-center text-sm font-extrabold text-white"
                         >
                           Call for price
                         </a>

@@ -506,11 +506,11 @@ export default async function WheelsPage({
           </div>
 
           <div className="flex items-center gap-2">
-            <label className="text-xs font-semibold text-neutral-600">Sort</label>
+            <label className="text-sm font-semibold text-neutral-600">Sort</label>
             <AutoSubmitSelect
               name="sort"
               defaultValue={sort}
-              className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
               options={[
                 { value: "price_asc", label: "Price Low to High" },
                 { value: "price_desc", label: "Price High to Low" },
@@ -530,7 +530,7 @@ export default async function WheelsPage({
         ) : null}
 
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
             {year && make && model ? (
               <div className="mb-4">
                 <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
@@ -538,8 +538,8 @@ export default async function WheelsPage({
             ) : null}
 
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-extrabold">Filters</h2>
-              <a href={qBase} className="text-xs font-semibold text-neutral-600 hover:underline">
+              <h2 className="text-base font-extrabold">Filters</h2>
+              <a href={qBase} className="text-sm font-semibold text-neutral-600 hover:underline">
                 Clear all
               </a>
             </div>
@@ -567,17 +567,17 @@ export default async function WheelsPage({
                     name="priceMin"
                     defaultValue={priceMinRaw}
                     placeholder="$ min"
-                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                   />
                   <input
                     name="priceMax"
                     defaultValue={priceMaxRaw}
                     placeholder="$ max"
-                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                   />
                 </div>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply price
                 </button>
               </FilterGroup>
@@ -606,17 +606,17 @@ export default async function WheelsPage({
                     name="offsetMin"
                     defaultValue={offsetMinRaw}
                     placeholder="min"
-                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                   />
                   <input
                     name="offsetMax"
                     defaultValue={offsetMaxRaw}
                     placeholder="max"
-                    className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                   />
                 </div>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply offset
                 </button>
               </FilterGroup>
@@ -655,7 +655,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply brand
                 </button>
               </FilterGroup>
@@ -679,7 +679,7 @@ export default async function WheelsPage({
                 <select
                   name="finish"
                   defaultValue={finish}
-                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                 >
                   <option value="">All finishes</option>
                   {finishBuckets.slice(0, 80).map((b) => (
@@ -689,7 +689,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply finish
                 </button>
               </FilterGroup>
@@ -713,7 +713,7 @@ export default async function WheelsPage({
                 <select
                   name="diameter"
                   defaultValue={diameterParam}
-                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                 >
                   <option value="">All diameters</option>
                   {diameterBuckets.slice(0, 80).map((b) => {
@@ -726,7 +726,7 @@ export default async function WheelsPage({
                   })}
                 </select>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply diameter
                 </button>
               </FilterGroup>
@@ -750,7 +750,7 @@ export default async function WheelsPage({
                 <select
                   name="width"
                   defaultValue={widthParam}
-                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                 >
                   <option value="">All widths</option>
                   {widthBuckets.slice(0, 80).map((b) => (
@@ -760,7 +760,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply width
                 </button>
               </FilterGroup>
@@ -784,7 +784,7 @@ export default async function WheelsPage({
                 <select
                   name="boltPattern"
                   defaultValue={boltPatternParam}
-                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                 >
                   <option value="">Vehicle bolt pattern</option>
                   {boltPatternBuckets.slice(0, 80).map((b) => (
@@ -794,7 +794,7 @@ export default async function WheelsPage({
                   ))}
                 </select>
 
-                <button className="mt-2 h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50">
+                <button className="mt-3 h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-extrabold text-neutral-900 hover:bg-neutral-50">
                   Apply bolt pattern
                 </button>
               </FilterGroup>
@@ -802,7 +802,7 @@ export default async function WheelsPage({
           </aside>
 
           <section>
-            <div className="text-xs font-semibold text-neutral-600">
+            <div className="text-sm font-semibold text-neutral-600">
               Showing {itemsPage.length} styles (page {safePage} of {totalPages})
             </div>
 
@@ -851,7 +851,7 @@ export default async function WheelsPage({
             </div>
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-              <div className="text-xs font-semibold text-neutral-600">
+              <div className="text-sm font-semibold text-neutral-600">
                 Total SKUs: {totalCount}
               </div>
               <div className="flex flex-wrap items-center gap-2">
