@@ -483,16 +483,13 @@ export default async function WheelsPage({
                     {trim ? ` ${trim}` : ""}
                   </span>
                 </div>
-                <GarageWidget type="wheels" />
-
                 {/* Workspace header (Tireweb-style guided flow) */}
-                <div className="mt-4 grid gap-3 rounded-3xl border border-neutral-200 bg-white p-4 md:grid-cols-2">
+                <div className="mt-4 md:hidden grid gap-3 rounded-3xl border border-neutral-200 bg-white p-4">
                   <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                     <div className="text-xs font-semibold text-neutral-600">Step 1</div>
                     <div className="mt-1 text-sm font-extrabold text-neutral-900">Select a wheel to load details</div>
                     <div className="mt-1 text-xs text-neutral-600">Pick a style below—details will appear on the wheel page.</div>
                   </div>
-
                   <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                     <div className="text-xs font-semibold text-neutral-600">Step 2</div>
                     <div className="mt-1 text-sm font-extrabold text-neutral-900">Add tires</div>
@@ -506,13 +503,13 @@ export default async function WheelsPage({
                       </Link>
                     </div>
                   </div>
-                </div>
 
-                {needsTrimNotice ? (
-                  <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-                    Tip: picking a trim/submodel usually improves results (bolt pattern + offset).
-                  </div>
-                ) : null}
+                  {needsTrimNotice ? (
+                    <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                      Tip: picking a trim/submodel usually improves results (bolt pattern + offset).
+                    </div>
+                  ) : null}
+                </div>
               </>
             ) : null}
           </div>
@@ -814,6 +811,41 @@ export default async function WheelsPage({
           </aside>
 
           <section>
+            {/* Sticky workspace header (desktop): stays visible while scrolling results */}
+            {year && make && model ? (
+              <div className="sticky top-24 z-30 hidden md:block">
+                <div className="mx-auto max-w-[980px] rounded-3xl border border-neutral-200 bg-white/95 p-4 backdrop-blur">
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
+                      <div className="text-xs font-semibold text-neutral-600">Step 1</div>
+                      <div className="mt-1 text-sm font-extrabold text-neutral-900">Select a wheel to load details</div>
+                      <div className="mt-1 text-xs text-neutral-600">Pick a style below—details will appear on the wheel page.</div>
+                    </div>
+
+                    <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
+                      <div className="text-xs font-semibold text-neutral-600">Step 2</div>
+                      <div className="mt-1 text-sm font-extrabold text-neutral-900">Add tires</div>
+                      <div className="mt-1 text-xs text-neutral-600">We’ll show OEM sizes and options that match your vehicle.</div>
+                      <div className="mt-3">
+                        <Link
+                          href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                          className="inline-flex h-10 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white"
+                        >
+                          Click here to select tires
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  {needsTrimNotice ? (
+                    <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                      Tip: picking a trim/submodel usually improves results (bolt pattern + offset).
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
+
             <div className="text-sm font-semibold text-neutral-600">
               Showing {itemsPage.length} styles (page {safePage} of {totalPages})
             </div>
