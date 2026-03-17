@@ -466,12 +466,14 @@ export default async function TiresPage({
     // If a wheel is selected and sizes are locked, keep results consistent with selected rim size/size.
     if (lockedSizes.length) {
       const sizeInDesc = extractSizeFromText(desc0);
-      const rim = rimDiaFromSize(sizeInDesc);
-      if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
-        if (rim !== wheelDiaNum) return false;
-      }
-      // If we can detect a size in the description, require it to match the selected size.
+
+      // Only enforce rim/size matching when we can actually detect a size in the text.
+      // Some feeds (esp. KM) omit the size string in the description, which would otherwise hide all results.
       if (sizeInDesc) {
+        const rim = rimDiaFromSize(sizeInDesc);
+        if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
+          if (rim !== wheelDiaNum) return false;
+        }
         if (normalizeSizeKey(sizeInDesc) !== selectedSizeKey) return false;
       }
     }
