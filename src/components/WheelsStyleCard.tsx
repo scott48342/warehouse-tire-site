@@ -96,6 +96,10 @@ export function WheelsStyleCard({
           finish: selectedFinish,
           price: selectedPrice,
           imageUrl: selectedImage,
+          diameter: sizeLabel?.diameter,
+          width: sizeLabel?.width,
+          boltPattern: specLabel?.boltPattern,
+          offset: specLabel?.offset,
         })
       );
     } catch {

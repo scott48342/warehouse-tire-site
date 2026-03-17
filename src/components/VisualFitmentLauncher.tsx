@@ -212,6 +212,9 @@ export function VisualFitmentLauncher({
       localStorage.setItem("wt_fitment_draft", JSON.stringify(next));
     } catch {}
 
+    // Close the modal before navigating so the user doesn't see the entry tiles again.
+    close();
+
     if (onNavigateToWheels) {
       onNavigateToWheels(next);
       return;

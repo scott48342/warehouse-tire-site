@@ -10,6 +10,10 @@ type SelectedWheel = {
   finish?: string;
   price?: number;
   imageUrl?: string;
+  diameter?: string;
+  width?: string;
+  boltPattern?: string;
+  offset?: string;
 };
 
 type SelectedTire = {
@@ -86,14 +90,16 @@ export function TiresWorkspaceHeader({
         if (!res.ok) return;
         const data = await res.json();
 
-        const w = Array.isArray(data?.items) ? data.items[0] : data?.item;
+        const w = Array.isArray(data?.results) ? data.results[0] : data?.result || data?.item || null;
         if (!w) return;
 
+        const props = w?.properties || {};
+
         setWheelSpec({
-          boltPattern: w?.boltPattern || w?.bolt_pattern,
-          offset: w?.offset != null ? String(w.offset) : w?.offsetMm != null ? String(w.offsetMm) : undefined,
-          diameter: w?.diameter != null ? String(w.diameter) : undefined,
-          width: w?.width != null ? String(w.width) : undefined,
+          boltPattern: props?.boltPatternMetric || props?.boltPattern || w?.boltPattern || w?.bolt_pattern,
+          offset: props?.offset != null ? String(props.offset) : w?.offset != null ? String(w.offset) : undefined,
+          diameter: props?.diameter != null ? String(props.diameter) : w?.diameter != null ? String(w.diameter) : undefined,
+          width: props?.width != null ? String(props.width) : w?.width != null ? String(w.width) : undefined,
         });
       } catch {
         // ignore
@@ -136,23 +142,33 @@ export function TiresWorkspaceHeader({
                 </div>
                 {selectedWheel?.finish ? <div className="text-xs text-neutral-600">{selectedWheel.finish}</div> : null}
 
-                {wheelSpec?.diameter || wheelSpec?.width || wheelSpec?.boltPattern || wheelSpec?.offset ? (
+                {selectedWheel?.diameter ||
+                selectedWheel?.width ||
+                selectedWheel?.boltPattern ||
+                selectedWheel?.offset ||
+                wheelSpec?.diameter ||
+                wheelSpec?.width ||
+                wheelSpec?.boltPattern ||
+                wheelSpec?.offset ? (
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {wheelSpec?.diameter || wheelSpec?.width ? (
+                    {selectedWheel?.diameter || selectedWheel?.width || wheelSpec?.diameter || wheelSpec?.width ? (
                       <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                        {wheelSpec?.diameter || ""}
-                        {wheelSpec?.diameter && wheelSpec?.width ? "x" : ""}
-                        {wheelSpec?.width || ""}
+                        {(selectedWheel?.diameter || wheelSpec?.diameter || "") as string}
+                        {(selectedWheel?.diameter || wheelSpec?.diameter) &&
+                        (selectedWheel?.width || wheelSpec?.width)
+                          ? "x"
+                          : ""}
+                        {(selectedWheel?.width || wheelSpec?.width || "") as string}
                       </span>
                     ) : null}
-                    {wheelSpec?.boltPattern ? (
+                    {selectedWheel?.boltPattern || wheelSpec?.boltPattern ? (
                       <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                        {wheelSpec.boltPattern}
+                        {(selectedWheel?.boltPattern || wheelSpec?.boltPattern) as string}
                       </span>
                     ) : null}
-                    {wheelSpec?.offset ? (
+                    {selectedWheel?.offset || wheelSpec?.offset ? (
                       <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                        Offset {wheelSpec.offset}mm
+                        Offset {(selectedWheel?.offset || wheelSpec?.offset) as string}mm
                       </span>
                     ) : null}
                   </div>
