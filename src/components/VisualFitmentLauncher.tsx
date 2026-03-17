@@ -180,7 +180,12 @@ export function VisualFitmentLauncher({
         );
         const wpResults = Array.isArray(wp?.results) ? wp.results : [];
         if (wpResults.length) {
-          if (!cancelled) setTrims(wpResults);
+          // Normalize WheelPros submodels into our expected wp: token format.
+          const normalized = wpResults.map((r) => ({
+            value: `wp:${String(r.value)}`,
+            label: String(r.label),
+          }));
+          if (!cancelled) setTrims(normalized);
           return;
         }
       } catch {
@@ -425,8 +430,7 @@ export function VisualFitmentLauncher({
                       const next: Fitment = {
                         ...draft,
                         trim: t.label,
-                        // If this list came from WheelPros, use wp: token. Otherwise keep the raw trim value.
-                        modification: t.value ? (String(t.value).startsWith("wp:") ? String(t.value) : (String(t.value).startsWith("wp_") ? `wp:${t.value}` : t.value)) : undefined,
+                        modification: t.value || undefined,
                       };
                       setDraft(next);
                       close();
