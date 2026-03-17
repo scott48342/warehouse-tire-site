@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
+import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
 
 export const runtime = "nodejs";
 
@@ -48,6 +49,7 @@ export default async function Home() {
               >
                 Schedule Install
               </Link>
+              <VisualFitmentLauncher />
               <Link
                 href="/tires"
                 className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"

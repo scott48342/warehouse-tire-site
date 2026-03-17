@@ -1,0 +1,415 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
+import { fitmentLabel, type Fitment } from "@/lib/fitment";
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return (await res.json()) as T;
+}
+
+type Step = "entry" | "year" | "make" | "model" | "trim";
+
+type EntryMode = "vehicles" | "tires" | "wheels";
+
+const THIS_YEAR = new Date().getFullYear();
+const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR - i));
+
+function Modal({ open, onClose, children }: { open: boolean; onClose: () => void; children: React.ReactNode }) {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-[80]">
+      <button
+        type="button"
+        className="absolute inset-0 bg-black/40"
+        aria-label="Close"
+        onClick={onClose}
+      />
+      <div className="absolute left-1/2 top-6 w-[min(980px,calc(100%-1.5rem))] -translate-x-1/2 rounded-3xl border border-neutral-200 bg-white shadow-2xl">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function Crumb({ label, value }: { label: string; value?: string }) {
+  return (
+    <div className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-700">
+      <span className="text-neutral-500">{label}: </span>
+      <span className="font-extrabold text-neutral-900">{value || "—"}</span>
+    </div>
+  );
+}
+
+function TileButton({ title, subtitle, onClick }: { title: string; subtitle?: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="group relative overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-50 p-6 text-left hover:border-neutral-300"
+    >
+      <div className="text-[11px] font-extrabold tracking-widest text-neutral-500">SHOP BY</div>
+      <div className="mt-1 text-2xl font-extrabold text-neutral-900 group-hover:underline">{title}</div>
+      {subtitle ? <div className="mt-1 text-sm text-neutral-600">{subtitle}</div> : null}
+      <div className="pointer-events-none absolute right-6 top-6 h-10 w-10 rounded-2xl border border-neutral-200 bg-white" />
+    </button>
+  );
+}
+
+export function VisualFitmentLauncher({
+  initialOpen = false,
+  onNavigateToWheels,
+}: {
+  initialOpen?: boolean;
+  /** Optional override for navigation (useful for special pages) */
+  onNavigateToWheels?: (fitment: Fitment) => void;
+}) {
+  const router = useRouter();
+
+  const [open, setOpen] = useState(initialOpen);
+  const [mode, setMode] = useState<EntryMode>("vehicles");
+  const [step, setStep] = useState<Step>("entry");
+
+  const [draft, setDraft] = useState<Fitment>({});
+
+  const crumbs = useMemo(
+    () => [
+      { label: "Year", value: draft.year },
+      { label: "Make", value: draft.make },
+      { label: "Model", value: draft.model },
+      { label: "Trim", value: draft.trim },
+    ],
+    [draft]
+  );
+
+  function resetAll() {
+    setDraft({});
+    setStep("entry");
+    setMode("vehicles");
+  }
+
+  function close() {
+    setOpen(false);
+  }
+
+  // Data for steps
+  const [makes, setMakes] = useState<string[]>([]);
+  const [models, setModels] = useState<string[]>([]);
+  const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!draft.year) {
+        setMakes([]);
+        return;
+      }
+      try {
+        const data = await fetchJson<{ results: string[] }>(`/api/vehicles/makes?year=${encodeURIComponent(draft.year)}`);
+        if (!cancelled) setMakes(Array.isArray(data?.results) ? data.results : []);
+      } catch {
+        if (!cancelled) setMakes([]);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [draft.year]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!draft.year || !draft.make) {
+        setModels([]);
+        return;
+      }
+      try {
+        const qs = new URLSearchParams({ year: draft.year, make: draft.make });
+        const data = await fetchJson<{ results: string[] }>(`/api/vehicles/models?${qs.toString()}`);
+        if (!cancelled) setModels(Array.isArray(data?.results) ? data.results : []);
+      } catch {
+        if (!cancelled) setModels([]);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [draft.year, draft.make]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!draft.year || !draft.make || !draft.model) {
+        setTrims([]);
+        return;
+      }
+      try {
+        // Use WheelPros submodels where available so downstream /wheels can do fitment-driven searches.
+        const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
+        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
+          `/api/wp/vehicles/submodels?${qs.toString()}`
+        );
+        if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
+      } catch {
+        if (!cancelled) setTrims([]);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [draft.year, draft.make, draft.model]);
+
+  function complete(next: Fitment) {
+    try {
+      localStorage.setItem("wt_fitment", JSON.stringify(next));
+      localStorage.setItem("wt_fitment_draft", JSON.stringify(next));
+    } catch {}
+
+    if (onNavigateToWheels) {
+      onNavigateToWheels(next);
+      return;
+    }
+
+    const qs = new URLSearchParams();
+    if (next.year) qs.set("year", String(next.year));
+    if (next.make) qs.set("make", String(next.make));
+    if (next.model) qs.set("model", String(next.model));
+    if (next.trim) qs.set("trim", String(next.trim));
+    if (next.modification) qs.set("modification", String(next.modification));
+
+    // Part 1: always land in /wheels workspace after YMM selection.
+    router.push(`/wheels?${qs.toString()}`);
+  }
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+      >
+        Shop by vehicle
+      </button>
+
+      <Modal
+        open={open}
+        onClose={() => {
+          close();
+        }}
+      >
+        <div className="flex items-center justify-between gap-3 border-b border-neutral-200 p-4">
+          <div>
+            <div className="text-xs font-semibold text-neutral-600">Vehicle selector</div>
+            <div className="text-lg font-extrabold text-neutral-900">{fitmentLabel(draft)}</div>
+          </div>
+          <div className="flex items-center gap-2">
+            {step !== "entry" ? (
+              <button
+                type="button"
+                onClick={() => {
+                  // simple back chain
+                  setStep((s) => {
+                    if (s === "trim") return "model";
+                    if (s === "model") return "make";
+                    if (s === "make") return "year";
+                    if (s === "year") return "entry";
+                    return "entry";
+                  });
+                }}
+                className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+              >
+                Back
+              </button>
+            ) : null}
+            <button
+              type="button"
+              onClick={() => {
+                resetAll();
+              }}
+              className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                close();
+              }}
+              className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+
+        <div className="p-5">
+          <div className="flex flex-wrap items-center gap-2">
+            {crumbs.map((c) => (
+              <Crumb key={c.label} label={c.label} value={c.value} />
+            ))}
+          </div>
+
+          {step === "entry" ? (
+            <div className="mt-5 grid gap-4 md:grid-cols-3">
+              <TileButton
+                title="Vehicles"
+                subtitle="Start with your vehicle"
+                onClick={() => {
+                  setMode("vehicles");
+                  setStep("year");
+                }}
+              />
+              <TileButton
+                title="Tires"
+                subtitle="Browse tires that fit"
+                onClick={() => {
+                  setMode("tires");
+                  setStep("year");
+                }}
+              />
+              <TileButton
+                title="Wheels"
+                subtitle="Browse wheels that fit"
+                onClick={() => {
+                  setMode("wheels");
+                  setStep("year");
+                }}
+              />
+              <div className="md:col-span-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
+                <div className="font-extrabold text-neutral-900">How it works</div>
+                <div className="mt-1">
+                  Pick a starting point, then choose <span className="font-semibold">Year</span>, <span className="font-semibold">Make</span>,
+                  <span className="font-semibold"> Model</span> and <span className="font-semibold">Trim</span>.
+                </div>
+              </div>
+            </div>
+          ) : null}
+
+          {step === "year" ? (
+            <div className="mt-5">
+              <div className="text-xs font-extrabold text-neutral-900">Select Year</div>
+              <div className="mt-3 flex max-h-[420px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                {YEARS.map((y) => (
+                  <button
+                    key={y}
+                    type="button"
+                    onClick={() => {
+                      setDraft({ year: y, make: undefined, model: undefined, trim: undefined, modification: undefined });
+                      setStep("make");
+                    }}
+                    className={
+                      "rounded-full border px-3 py-1 text-xs font-extrabold " +
+                      (draft.year === y
+                        ? "border-[var(--brand-red)] bg-red-50 text-[var(--brand-red)]"
+                        : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50")
+                    }
+                  >
+                    {y}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {step === "make" ? (
+            <div className="mt-5">
+              <div className="text-xs font-extrabold text-neutral-900">Select Make</div>
+              <div className="mt-3 grid max-h-[460px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-3 md:grid-cols-4">
+                {makes.map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    onClick={() => {
+                      setDraft((d) => ({ ...d, make: m, model: undefined, trim: undefined, modification: undefined }));
+                      setStep("model");
+                    }}
+                    className={
+                      "rounded-2xl border p-3 text-left " +
+                      (draft.make === m
+                        ? "border-[var(--brand-red)] bg-red-50"
+                        : "border-neutral-200 bg-white hover:bg-neutral-50")
+                    }
+                  >
+                    <div className="text-sm font-extrabold text-neutral-900">{m}</div>
+                    <div className="mt-1 text-[11px] text-neutral-600">Tap to choose</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {step === "model" ? (
+            <div className="mt-5">
+              <div className="text-xs font-extrabold text-neutral-900">Select Model</div>
+              <div className="mt-3 grid max-h-[460px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-3 md:grid-cols-4">
+                {models.map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    onClick={() => {
+                      setDraft((d) => ({ ...d, model: m, trim: undefined, modification: undefined }));
+                      setStep("trim");
+                    }}
+                    className={
+                      "rounded-2xl border p-3 text-left " +
+                      (draft.model === m
+                        ? "border-[var(--brand-red)] bg-red-50"
+                        : "border-neutral-200 bg-white hover:bg-neutral-50")
+                    }
+                  >
+                    <div className="text-sm font-extrabold text-neutral-900">{m}</div>
+                    <div className="mt-1 text-[11px] text-neutral-600">Tap to choose</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {step === "trim" ? (
+            <div className="mt-5">
+              <div className="text-xs font-extrabold text-neutral-900">Select Trim</div>
+              <div className="mt-3 grid max-h-[460px] grid-cols-1 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-2">
+                {trims.map((t) => (
+                  <button
+                    key={t.value}
+                    type="button"
+                    onClick={() => {
+                      const next: Fitment = {
+                        ...draft,
+                        trim: t.label,
+                        modification: `wp:${t.value}`,
+                      };
+                      setDraft(next);
+                      close();
+                      complete(next);
+                    }}
+                    className={
+                      "rounded-2xl border p-3 text-left " +
+                      (draft.modification === `wp:${t.value}`
+                        ? "border-[var(--brand-red)] bg-red-50"
+                        : "border-neutral-200 bg-white hover:bg-neutral-50")
+                    }
+                  >
+                    <div className="text-sm font-extrabold text-neutral-900">{t.label}</div>
+                    <div className="mt-1 text-[11px] text-neutral-600">Tap to select</div>
+                  </button>
+                ))}
+                {!trims.length ? (
+                  <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
+                    No trim data yet. Try a different model.
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          ) : null}
+
+          <div className="mt-5 text-[11px] text-neutral-500">
+            Mode: <span className="font-semibold text-neutral-700">{mode}</span> (we’ll wire mode-specific landing actions after the core flow is done).
+          </div>
+        </div>
+      </Modal>
+    </>
+  );
+}
