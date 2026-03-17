@@ -883,12 +883,17 @@ export default async function TiresPage({
                         const rebateLabel = amt ? `$${amt[1]} rebate` : (reb ? "Rebate" : "");
 
                         const out: Array<{ key: string; label: string }> = [];
+                        // UI-forward badges (data-light)
+                        out.push({ key: "ship", label: "Fast shipping" });
+                        out.push({ key: "fit", label: "Fitment checked" });
+
+                        // Data-backed badges
                         if (rebateLabel) out.push({ key: "rebate", label: rebateLabel });
                         if (t.badges?.terrain) out.push({ key: "terrain", label: String(t.badges.terrain) });
                         if (t.badges?.warrantyMiles) out.push({ key: "warranty", label: `${t.badges.warrantyMiles.toLocaleString()} mi` });
                         if (t.badges?.loadIndex && t.badges?.speedRating) out.push({ key: "ls", label: `${String(t.badges.loadIndex)}${String(t.badges.speedRating)}` });
 
-                        return out.slice(0, 3).map((b) => (
+                        return out.slice(0, 4).map((b) => (
                           <span
                             key={b.key}
                             className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900"
@@ -923,7 +928,7 @@ export default async function TiresPage({
                         {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
                       </div>
                       <div className="text-sm text-neutral-600">each</div>
-                      <div className="mt-1 text-[11px] text-neutral-600">Fast quote • Fitment confirmed before install</div>
+                      <div className="mt-1 text-sm text-neutral-600">Fast quote • Fitment confirmed before install</div>
                     </div>
 
                     {/* Qty hidden */}

@@ -98,6 +98,21 @@ export function WheelsStyleCard({
       <Link href={viewHref} className="block">
         <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
         {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
+
+        <div className="mt-2 flex flex-wrap gap-2">
+          <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+            Fast shipping
+          </span>
+          <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+            Fitment checked
+          </span>
+          {thumbs.length > 1 ? (
+            <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+              {thumbs.length} finishes
+            </span>
+          ) : null}
+        </div>
+
         {sizeLabel?.diameter || sizeLabel?.width ? (
           <div className="mt-1 text-sm font-semibold text-neutral-700">
             {fmtSizePart(sizeLabel.diameter || "")}
