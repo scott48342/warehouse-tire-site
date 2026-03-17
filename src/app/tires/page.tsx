@@ -6,6 +6,7 @@ import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { TiresWorkspaceHeader } from "@/components/TiresWorkspaceHeader";
+import { SelectTireButton } from "@/components/SelectTireButton";
 
 type Tire = {
   partNumber?: string;
@@ -121,6 +122,7 @@ export default async function TiresPage({
 
   // Quote carry-over (so wheel stays on quote when selecting tires)
   const wheelSku = (Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku) || "";
+  const tireSku = (Array.isArray((sp as any).tireSku) ? (sp as any).tireSku[0] : (sp as any).tireSku) || "";
   const wheelName = (Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName) || "";
   const wheelUnit = (Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit) || "";
   const wheelQty = (Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty) || "";
@@ -808,6 +810,7 @@ export default async function TiresPage({
               trim={trim}
               modification={modification}
               wheelSku={wheelSku}
+              tireSku={tireSku}
             />
 
             <div className="flex flex-wrap gap-2">
@@ -974,12 +977,22 @@ export default async function TiresPage({
                           if (tireSku) qs.set("tireSku", tireSku);
 
                           return toQuote ? (
-                            <Link
-                              href={`/quote/new?${qs.toString()}`}
-                              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-                            >
-                              Build Quote
-                            </Link>
+                            <SelectTireButton
+                              wheelSku={String(wheelSku)}
+                              tire={{
+                                sku: tireSku,
+                                brand: String(t.brand || ""),
+                                title: String(t.displayName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                size: String(selectedSize || ""),
+                                price: typeof t.cost === "number" ? t.cost + 50 : undefined,
+                                imageUrl: t.imageUrl,
+                                speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+                                loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+                                season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
+                                runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
+                                xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                              }}
+                            />
                           ) : (
                             <Link
                               href="/schedule"

@@ -12,6 +12,20 @@ type SelectedWheel = {
   imageUrl?: string;
 };
 
+type SelectedTire = {
+  sku: string;
+  brand?: string;
+  title?: string;
+  size?: string;
+  price?: number;
+  imageUrl?: string;
+  speed?: string;
+  loadIndex?: string;
+  season?: string;
+  runFlat?: boolean;
+  xl?: boolean;
+};
+
 type WheelSpec = {
   boltPattern?: string;
   offset?: string;
@@ -26,6 +40,7 @@ export function TiresWorkspaceHeader({
   trim,
   modification,
   wheelSku,
+  tireSku,
 }: {
   year: string;
   make: string;
@@ -33,6 +48,7 @@ export function TiresWorkspaceHeader({
   trim: string;
   modification: string;
   wheelSku?: string;
+  tireSku?: string;
 }) {
   const fitmentQs = useMemo(() => {
     const sp = new URLSearchParams();
@@ -46,6 +62,7 @@ export function TiresWorkspaceHeader({
 
   const [selectedWheel, setSelectedWheel] = useState<SelectedWheel | null>(null);
   const [wheelSpec, setWheelSpec] = useState<WheelSpec | null>(null);
+  const [selectedTire, setSelectedTire] = useState<SelectedTire | null>(null);
 
   useEffect(() => {
     if (!wheelSku) return;
@@ -83,6 +100,23 @@ export function TiresWorkspaceHeader({
       }
     })();
   }, [wheelSku]);
+
+  useEffect(() => {
+    if (!tireSku) {
+      setSelectedTire(null);
+      return;
+    }
+
+    try {
+      const raw = localStorage.getItem("wt_selected_tire");
+      if (raw) {
+        const obj = JSON.parse(raw);
+        if (obj && typeof obj.sku === "string") setSelectedTire(obj);
+      }
+    } catch {
+      // ignore
+    }
+  }, [tireSku]);
 
   if (!year || !make || !model) return null;
 
@@ -150,8 +184,71 @@ export function TiresWorkspaceHeader({
 
           <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
             <div className="text-xs font-semibold text-neutral-600">Step 2</div>
-            <div className="mt-1 text-sm font-extrabold text-neutral-900">Select tires to build your quote</div>
-            <div className="mt-1 text-xs text-neutral-600">Choose a tire below. We’ll take you to the quote builder with your wheel + tire selection.</div>
+            <div className="mt-1 text-sm font-extrabold text-neutral-900">
+              {tireSku ? "Tire selected" : "Select tires to build your quote"}
+            </div>
+            <div className="mt-1 text-xs text-neutral-600">
+              {tireSku
+                ? "Review your selection and continue to the quote builder."
+                : "Select a tire below, then click Add to quote."}
+            </div>
+
+            {tireSku ? (
+              <div className="mt-2">
+                <div className="text-sm font-extrabold text-neutral-900">
+                  {selectedTire?.brand ? `${selectedTire.brand} ` : ""}
+                  {selectedTire?.title || tireSku}
+                </div>
+                {selectedTire?.size ? <div className="text-xs text-neutral-600">Size {selectedTire.size}</div> : null}
+
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {selectedTire?.season ? (
+                    <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                      {selectedTire.season}
+                    </span>
+                  ) : null}
+                  {selectedTire?.speed ? (
+                    <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                      Speed {selectedTire.speed}
+                    </span>
+                  ) : null}
+                  {selectedTire?.loadIndex ? (
+                    <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                      Load {selectedTire.loadIndex}
+                    </span>
+                  ) : null}
+                  {selectedTire?.runFlat ? (
+                    <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                      Run Flat
+                    </span>
+                  ) : null}
+                  {selectedTire?.xl ? (
+                    <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                      XL
+                    </span>
+                  ) : null}
+                </div>
+
+                {wheelSku ? (
+                  <div className="mt-3">
+                    <Link
+                      href={`/quote/new?${new URLSearchParams({
+                        year,
+                        make,
+                        model,
+                        trim,
+                        modification,
+                        wheelSku,
+                        tireSku,
+                      }).toString()}`}
+                      className="inline-flex h-10 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
+                    >
+                      Add to quote
+                    </Link>
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
