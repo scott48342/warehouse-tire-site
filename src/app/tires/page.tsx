@@ -10,6 +10,7 @@ import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 
 type Tire = {
+  source?: "wp" | "km";
   partNumber?: string;
   mfgPartNumber?: string;
   brand?: string;
@@ -333,16 +334,23 @@ export default async function TiresPage({
     if (!rebatesByBrand.has(b)) rebatesByBrand.set(b, r);
   }
 
-  const itemsKm: Tire[] = Array.isArray(km?.items) ? km.items : [];
-  const itemsWp: Tire[] = Array.isArray(wp?.items) ? wp.items : [];
+  const itemsKm: Tire[] = (Array.isArray(km?.items) ? km.items : []).map((t: Tire) => ({ ...t, source: "km" as const }));
+  const itemsWp: Tire[] = (Array.isArray(wp?.items) ? wp.items : []).map((t: Tire) => ({ ...t, source: "wp" as const }));
 
-  // IMPORTANT: Tire detail pages (/tires/[sku]) currently read from our wp_tires table.
-  // KM-style SKUs may not exist in wp_tires, causing "Tire not found" on click.
-  // Until we add a unified tire detail resolver, prefer WP-backed items only.
-  const itemsRaw: Tire[] = itemsWp;
+  // Merge suppliers (WP + KM). Prefer WP when duplicate IDs exist.
+  const byId = new Map<string, Tire>();
+  for (const t of itemsKm) {
+    const id = t.partNumber ? `km:${String(t.partNumber)}` : t.mfgPartNumber ? `km:${String(t.mfgPartNumber)}` : "";
+    if (!id) continue;
+    byId.set(id, t);
+  }
+  for (const t of itemsWp) {
+    const id = t.mfgPartNumber ? `wp:${String(t.mfgPartNumber)}` : t.partNumber ? `wp:${String(t.partNumber)}` : "";
+    if (!id) continue;
+    byId.set(id, t);
+  }
 
-  // If WP returns nothing, fall back to KM so users still see something.
-  const itemsFallback: Tire[] = itemsRaw.length ? itemsRaw : itemsKm;
+  const itemsFallback: Tire[] = Array.from(byId.values());
 
   // Attach cached displayName/imageUrl from package engine (best-effort)
   const assets = await Promise.all(
@@ -1097,7 +1105,7 @@ export default async function TiresPage({
                   >
                     <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-500" />
                     <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-500" />
-                    {t.mfgPartNumber ? (
+                    {t.source === "wp" && t.mfgPartNumber ? (
                       <Link
                         href={`/tires/${encodeURIComponent(String(t.mfgPartNumber))}?${new URLSearchParams({
                           year,
@@ -1116,13 +1124,27 @@ export default async function TiresPage({
                         className="absolute inset-0 z-0"
                         aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
                       />
+                    ) : t.source === "km" && t.partNumber ? (
+                      <Link
+                        href={`/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
+                          year,
+                          make,
+                          model,
+                          trim,
+                          modification,
+                          size: selectedSize,
+                          sort,
+                        }).toString()}`}
+                        className="absolute inset-0 z-0"
+                        aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
+                      />
                     ) : null}
 
                     <div className="relative z-10 flex items-start justify-between gap-2">
                       <div className="text-sm font-semibold text-neutral-600">
                         {t.brand || "Tire"}
                       </div>
-                      {t.mfgPartNumber ? (
+                      {t.source === "wp" && t.mfgPartNumber ? (
                         <FavoritesButton
                           type="tire"
                           sku={t.mfgPartNumber}
