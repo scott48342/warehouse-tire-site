@@ -1,9 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
-
-type EntryMode = "vehicles" | "tires" | "wheels";
+import { useRouter } from "next/navigation";
 
 function EntryTile({
   title,
@@ -29,12 +26,10 @@ function EntryTile({
 }
 
 export function HomeFitmentEntry() {
-  const [open, setOpen] = useState(false);
-  const [startMode, setStartMode] = useState<EntryMode>("vehicles");
+  const router = useRouter();
 
-  function launch(mode: EntryMode) {
-    setStartMode(mode);
-    setOpen(true);
+  function launch(open: "tires" | "wheels", mode: "vehicle" | "size") {
+    router.push(`/?open=${open}&mode=${mode}`);
   }
 
   return (
@@ -44,12 +39,22 @@ export function HomeFitmentEntry() {
       <div className="mt-1 text-sm text-neutral-700">Select your year, make, model and trim.</div>
 
       <div className="mt-5 grid gap-4 md:grid-cols-3">
-        <EntryTile title="Vehicles" subtitle="Find options that fit your vehicle." onClick={() => launch("vehicles")} />
-        <EntryTile title="Tires" subtitle="Browse tires after selecting your vehicle." onClick={() => launch("tires")} />
-        <EntryTile title="Wheels" subtitle="Browse wheels after selecting your vehicle." onClick={() => launch("wheels")} />
+        <EntryTile
+          title="Shop by vehicle"
+          subtitle="Pick year/make/model to see what fits."
+          onClick={() => launch("tires", "vehicle")}
+        />
+        <EntryTile
+          title="Shop tires"
+          subtitle="Search tires (vehicle-based fitment)."
+          onClick={() => launch("tires", "vehicle")}
+        />
+        <EntryTile
+          title="Shop wheels"
+          subtitle="Search wheels (vehicle-based fitment)."
+          onClick={() => launch("wheels", "vehicle")}
+        />
       </div>
-
-      <VisualFitmentLauncher open={open} onOpenChange={setOpen} startMode={startMode} showTrigger={false} />
     </div>
   );
 }
