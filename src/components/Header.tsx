@@ -124,6 +124,28 @@ export function Header() {
     };
   }, []);
 
+  // Allow any page to open the same SearchModal via query params.
+  // Example: /?open=tires&mode=vehicle
+  useEffect(() => {
+    const open = (sp.get("open") || "").trim();
+    const mode = (sp.get("mode") || "").trim() as Mode;
+    if (open !== "tires" && open !== "wheels") return;
+    if (mode !== "vehicle" && mode !== "size") return;
+
+    setModal({ type: open, mode });
+
+    // Clean the URL so refresh/back doesn't keep popping it.
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("open");
+      url.searchParams.delete("mode");
+      window.history.replaceState({}, "", url.toString());
+    } catch {
+      // ignore
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sp]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:flex-row md:items-center md:gap-6">

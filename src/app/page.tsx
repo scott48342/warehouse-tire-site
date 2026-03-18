@@ -50,13 +50,13 @@ export default async function Home() {
                 Schedule Install
               </Link>
               <Link
-                href="/tires"
+                href="/?open=tires&mode=vehicle"
                 className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
               >
                 Shop Tires
               </Link>
               <Link
-                href="/wheels"
+                href="/?open=wheels&mode=vehicle"
                 className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
               >
                 Shop Wheels
@@ -83,15 +83,15 @@ export default async function Home() {
             </p>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <Link href="/tires" className="rounded-2xl bg-white/10 p-4 hover:bg-white/15">
+              <Link href="/?open=tires&mode=vehicle" className="rounded-2xl bg-white/10 p-4 hover:bg-white/15">
                 <div className="text-sm font-extrabold">Shop by vehicle</div>
                 <div className="mt-1 text-xs text-white/80">Find OEM sizes and options that fit.</div>
               </Link>
-              <Link href="/tires" className="rounded-2xl bg-white/10 p-4 hover:bg-white/15">
+              <Link href="/?open=tires&mode=size" className="rounded-2xl bg-white/10 p-4 hover:bg-white/15">
                 <div className="text-sm font-extrabold">Shop by size</div>
                 <div className="mt-1 text-xs text-white/80">If you already know your size.</div>
               </Link>
-              <Link href="/wheels" className="rounded-2xl bg-white/10 p-4 hover:bg-white/15">
+              <Link href="/?open=wheels&mode=vehicle" className="rounded-2xl bg-white/10 p-4 hover:bg-white/15">
                 <div className="text-sm font-extrabold">Wheels</div>
                 <div className="mt-1 text-xs text-white/80">Browse styles and finishes.</div>
               </Link>
