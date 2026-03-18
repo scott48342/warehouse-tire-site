@@ -37,6 +37,7 @@ export async function GET(req: Request) {
 
   const partNumberRaw = url.searchParams.get("partNumber") || url.searchParams.get("pn") || "";
   const partNumber = String(partNumberRaw || "").trim();
+  const vendorName = String(url.searchParams.get("vendor") || url.searchParams.get("vendorName") || "").trim();
   const minQty = String(url.searchParams.get("minQty") || "").trim();
   const debug = (url.searchParams.get("debug") || "").trim() === "1";
 
@@ -47,14 +48,10 @@ export async function GET(req: Request) {
     );
   }
 
-  // KM told Scott TPMS can be looked up by part number.
-  // The portal docs vary; to keep us unblocked, we try a small set of plausible endpoints.
+  // KM confirmed TPMS lookup works via the inventory endpoint using PartNumber.
+  // Example (from Scott's Postman): POST https://api.kmtire.com/v1/inventory
   const candidates = [
-    "https://api.kmtire.com/v1/partnumbersearch",
-    "https://api.kmtire.com/v1/partsearch",
-    "https://api.kmtire.com/v1/itemsearch",
-    "https://api.kmtire.com/v1/accessorysearch",
-    "https://api.kmtire.com/v1/tpmssearch",
+    "https://api.kmtire.com/v1/inventory",
   ];
 
   const parser = new XMLParser({
@@ -67,6 +64,7 @@ export async function GET(req: Request) {
     `<Credentials><APIKey>${apiKey}</APIKey></Credentials>` +
     `<Item>` +
     `<PartNumber>${partNumber}</PartNumber>` +
+    (vendorName ? `<VendorName>${vendorName}</VendorName>` : ``) +
     (minQty ? `<MinQty>${minQty}</MinQty>` : ``) +
     `</Item>` +
     `</InventoryRequest>`;
