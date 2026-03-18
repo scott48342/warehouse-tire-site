@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+
 import { BRAND } from "@/lib/brand";
-// FitmentSelector now lives inside the search modal
-import { SearchModal, type Mode } from "@/components/SearchModal";
+
+type LauncherMode = "vehicles" | "tires" | "wheels";
+import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -95,7 +97,14 @@ export function Header() {
   const sp = useSearchParams();
   const tiresMenuRef = useRef<HTMLDetailsElement | null>(null);
   const wheelsMenuRef = useRef<HTMLDetailsElement | null>(null);
-  const [modal, setModal] = useState<null | { type: "tires" | "wheels"; mode?: Mode }>(null);
+  const [launcherOpen, setLauncherOpen] = useState(false);
+  const [launcherMode, setLauncherMode] = useState<LauncherMode>("vehicles");
+
+  function openLauncher(mode: LauncherMode) {
+    closeMenus();
+    setLauncherMode(mode);
+    setLauncherOpen(true);
+  }
 
   function closeMenus() {
     if (tiresMenuRef.current) tiresMenuRef.current.open = false;
@@ -124,15 +133,13 @@ export function Header() {
     };
   }, []);
 
-  // Allow any page to open the same SearchModal via query params.
-  // Example: /?open=tires&mode=vehicle
+  // Allow any page to open the VisualFitmentLauncher via query params.
+  // Example: /?open=tires
   useEffect(() => {
     const open = (sp.get("open") || "").trim();
-    const mode = (sp.get("mode") || "").trim() as Mode;
-    if (open !== "tires" && open !== "wheels") return;
-    if (mode !== "vehicle" && mode !== "size") return;
+    if (open !== "tires" && open !== "wheels" && open !== "vehicles") return;
 
-    setModal({ type: open, mode });
+    openLauncher(open as LauncherMode);
 
     // Clean the URL so refresh/back doesn't keep popping it.
     try {
@@ -167,14 +174,14 @@ export function Header() {
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              onClick={() => setModal({ type: "tires", mode: "vehicle" })}
+              onClick={() => openLauncher("tires")}
               className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900"
             >
               Tires
             </button>
             <button
               type="button"
-              onClick={() => setModal({ type: "wheels", mode: "vehicle" })}
+              onClick={() => openLauncher("wheels")}
               className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900"
             >
               Wheels
@@ -194,7 +201,7 @@ export function Header() {
                   type="button"
                   onClick={() => {
                     closeMenus();
-                    setModal({ type: "tires", mode: "vehicle" });
+                    openLauncher("tires");
                   }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
@@ -204,7 +211,8 @@ export function Header() {
                   type="button"
                   onClick={() => {
                     closeMenus();
-                    setModal({ type: "tires", mode: "size" });
+                    // VisualFitmentLauncher is vehicle-based; keep this as vehicle for now.
+                    openLauncher("tires");
                   }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
@@ -237,7 +245,7 @@ export function Header() {
                   type="button"
                   onClick={() => {
                     closeMenus();
-                    setModal({ type: "wheels", mode: "vehicle" });
+                    openLauncher("wheels");
                   }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
@@ -247,7 +255,8 @@ export function Header() {
                   type="button"
                   onClick={() => {
                     closeMenus();
-                    setModal({ type: "wheels", mode: "size" });
+                    // VisualFitmentLauncher is vehicle-based; keep this as vehicle for now.
+                    openLauncher("wheels");
                   }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
@@ -278,7 +287,7 @@ export function Header() {
 
           <button
             type="button"
-            onClick={() => setModal({ type: "wheels", mode: "vehicle" })}
+            onClick={() => openLauncher("wheels")}
             className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
           >
             My Garage
@@ -294,17 +303,11 @@ export function Header() {
         </nav>
       </div>
 
-      <SearchModal
-        open={modal?.type === "tires"}
-        type="tires"
-        defaultMode={modal?.type === "tires" ? modal.mode : undefined}
-        onClose={() => setModal(null)}
-      />
-      <SearchModal
-        open={modal?.type === "wheels"}
-        type="wheels"
-        defaultMode={modal?.type === "wheels" ? modal.mode : undefined}
-        onClose={() => setModal(null)}
+      <VisualFitmentLauncher
+        open={launcherOpen}
+        onOpenChange={setLauncherOpen}
+        startMode={launcherMode}
+        showTrigger={false}
       />
     </header>
   );

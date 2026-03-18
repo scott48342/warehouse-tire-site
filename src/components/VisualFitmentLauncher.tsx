@@ -233,7 +233,17 @@ export function VisualFitmentLauncher({
     if (next.trim) qs.set("trim", String(next.trim));
     if (next.modification) qs.set("modification", String(next.modification));
 
-    // Part 1: always land in /wheels workspace after YMM selection.
+    // Navigate based on entry mode
+    if (mode === "tires") {
+      router.push(`/tires?${qs.toString()}`);
+      return;
+    }
+    if (mode === "wheels") {
+      router.push(`/wheels?${qs.toString()}`);
+      return;
+    }
+
+    // Vehicles: default to wheels workspace for now
     router.push(`/wheels?${qs.toString()}`);
   }
 
