@@ -116,7 +116,11 @@ export default function TpmsAccessoriesPage() {
 
           <div className="mt-4 grid gap-4">
             {data.items.map((it, idx) => (
-              <div key={idx} className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
+              <a
+                key={idx}
+                href={`/accessories/tpms/${encodeURIComponent(it.partNumber || "")}`}
+                className="block rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm hover:bg-neutral-50"
+              >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <div className="text-base font-extrabold text-neutral-900">
@@ -155,7 +159,7 @@ export default function TpmsAccessoriesPage() {
                     <div className="font-extrabold">{it.quantity?.national ?? "—"}</div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>
