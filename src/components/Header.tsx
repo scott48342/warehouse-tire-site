@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 // FitmentSelector now lives inside the search modal
@@ -93,7 +93,36 @@ function FitmentTabs() {
 
 export function Header() {
   const sp = useSearchParams();
+  const tiresMenuRef = useRef<HTMLDetailsElement | null>(null);
+  const wheelsMenuRef = useRef<HTMLDetailsElement | null>(null);
   const [modal, setModal] = useState<null | { type: "tires" | "wheels"; mode?: Mode }>(null);
+
+  function closeMenus() {
+    if (tiresMenuRef.current) tiresMenuRef.current.open = false;
+    if (wheelsMenuRef.current) wheelsMenuRef.current.open = false;
+  }
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") closeMenus();
+    }
+
+    function onClick(e: MouseEvent) {
+      const el = e.target as HTMLElement | null;
+      if (!el) return;
+      // If click is inside either details element, ignore.
+      if (tiresMenuRef.current && tiresMenuRef.current.contains(el)) return;
+      if (wheelsMenuRef.current && wheelsMenuRef.current.contains(el)) return;
+      closeMenus();
+    }
+
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("click", onClick);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("click", onClick);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur">
@@ -134,27 +163,34 @@ export function Header() {
         <nav className="hidden items-center gap-4 md:flex">
           {/* Simple menus (replace the old mega menu) */}
           <div className="flex items-center gap-4">
-            <details className="group relative">
+            <details ref={tiresMenuRef} className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
                 TIRES <span className="text-xs">▾</span>
               </summary>
               <div className="absolute left-0 top-full z-[80] mt-2 w-64 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
                 <button
                   type="button"
-                  onClick={() => setModal({ type: "tires", mode: "vehicle" })}
+                  onClick={() => {
+                    closeMenus();
+                    setModal({ type: "tires", mode: "vehicle" });
+                  }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Shop by vehicle
                 </button>
                 <button
                   type="button"
-                  onClick={() => setModal({ type: "tires", mode: "size" })}
+                  onClick={() => {
+                    closeMenus();
+                    setModal({ type: "tires", mode: "size" });
+                  }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Shop by size
                 </button>
                 <Link
                   href={withFitmentParams("/tires", sp)}
+                  onClick={() => closeMenus()}
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Shop tires
@@ -162,6 +198,7 @@ export function Header() {
                 <div className="my-2 h-px bg-neutral-200" />
                 <Link
                   href="/wheels?package=1"
+                  onClick={() => closeMenus()}
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Wheel & tire packages
@@ -169,27 +206,34 @@ export function Header() {
               </div>
             </details>
 
-            <details className="group relative">
+            <details ref={wheelsMenuRef} className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
                 WHEELS <span className="text-xs">▾</span>
               </summary>
               <div className="absolute left-0 top-full z-[80] mt-2 w-64 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
                 <button
                   type="button"
-                  onClick={() => setModal({ type: "wheels", mode: "vehicle" })}
+                  onClick={() => {
+                    closeMenus();
+                    setModal({ type: "wheels", mode: "vehicle" });
+                  }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Shop by vehicle
                 </button>
                 <button
                   type="button"
-                  onClick={() => setModal({ type: "wheels", mode: "size" })}
+                  onClick={() => {
+                    closeMenus();
+                    setModal({ type: "wheels", mode: "size" });
+                  }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Shop by size
                 </button>
                 <Link
                   href={withFitmentParams("/wheels", sp)}
+                  onClick={() => closeMenus()}
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Shop wheels
@@ -197,6 +241,7 @@ export function Header() {
                 <div className="my-2 h-px bg-neutral-200" />
                 <Link
                   href="/wheels?package=1"
+                  onClick={() => closeMenus()}
                   className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
                   Wheel & tire packages
