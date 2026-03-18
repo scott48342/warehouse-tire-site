@@ -8,22 +8,13 @@ type TpmsItem = {
   mfgPartNumber?: string;
   size?: string;
   description?: string;
-  vendorName?: string;
-  brand?: string;
-  cost?: number;
-  fet?: number;
-  quantity?: {
-    primary?: number;
-    alternate?: number;
-    national?: number;
-  };
-  code?: string | number;
+  inStock?: boolean;
+  price?: number;
+  isHamaton?: boolean;
 };
 
 type ApiOk = {
   partNumber: string;
-  vendor?: string;
-  upstream: string;
   count: number;
   items: TpmsItem[];
 };
@@ -59,13 +50,9 @@ export default async function TpmsProductPage({
   }
 
   const item = data?.items?.[0];
-  const cost = typeof item?.cost === "number" ? item.cost : undefined;
-  const markup = getMarkupAmount();
-  const price = typeof cost === "number" ? Number((cost + markup).toFixed(2)) : undefined;
+  const price = typeof item?.price === "number" ? item.price : undefined;
 
-  const vendorText = String(item?.vendorName || item?.brand || "");
-  const isHamaton = /hamaton/i.test(vendorText);
-  const hamaton = isHamaton ? await fetchHamatonEnrichment(partNumber) : null;
+  const hamaton = item?.isHamaton ? await fetchHamatonEnrichment(partNumber) : null;
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-10">
@@ -96,11 +83,6 @@ export default async function TpmsProductPage({
             )}
 
             <div className="mt-4 grid gap-2 text-sm text-neutral-700">
-              {item?.vendorName ? (
-                <div>
-                  Vendor: <span className="font-semibold">{item.vendorName}</span>
-                </div>
-              ) : null}
               {item?.size ? (
                 <div>
                   Type: <span className="font-semibold">{item.size}</span>
@@ -149,16 +131,9 @@ export default async function TpmsProductPage({
             <div className="mt-1 text-3xl font-extrabold text-neutral-900">
               {typeof price === "number" ? money(price) : "—"}
             </div>
-            {typeof cost === "number" ? (
-              <div className="mt-2 text-xs text-neutral-600">
-                Based on KM cost {money(cost)} + {money(markup)}
-              </div>
-            ) : (
-              <div className="mt-2 text-xs text-neutral-600">Unable to load cost from KM.</div>
-            )}
-
-            <div className="mt-3 text-sm font-extrabold text-green-800">In stock</div>
-            <div className="text-xs text-neutral-600">(Inventory available via KM)</div>
+            <div className="mt-3 text-sm font-extrabold text-green-800">
+              {item?.inStock === false ? "Out of stock" : "In stock"}
+            </div>
 
             <button
               type="button"

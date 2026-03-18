@@ -4,25 +4,14 @@ import { useMemo, useState } from "react";
 
 type TpmsItem = {
   partNumber?: string;
-  mfgPartNumber?: string;
   size?: string;
   description?: string;
-  vendorName?: string;
-  brand?: string;
-  cost?: number;
-  fet?: number;
-  quantity?: {
-    primary?: number;
-    alternate?: number;
-    national?: number;
-  };
-  code?: string | number;
+  inStock?: boolean;
+  price?: number;
 };
 
 type ApiOk = {
   partNumber: string;
-  vendor?: string;
-  upstream: string;
   count: number;
   items: TpmsItem[];
 };
@@ -105,15 +94,6 @@ export default function TpmsAccessoriesPage() {
 
       {data ? (
         <section className="mt-8">
-          <div className="text-sm text-neutral-600">
-            Source: <span className="font-mono text-xs">{data.upstream}</span>
-            {data.vendor ? (
-              <>
-                {" "}• Vendor used: <span className="font-semibold">{data.vendor}</span>
-              </>
-            ) : null}
-          </div>
-
           <div className="mt-4 grid gap-4">
             {data.items.map((it, idx) => (
               <a
@@ -121,7 +101,7 @@ export default function TpmsAccessoriesPage() {
                 href={`/accessories/tpms/${encodeURIComponent(it.partNumber || "")}`}
                 className="block rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm hover:bg-neutral-50"
               >
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <div className="text-base font-extrabold text-neutral-900">
                       {it.partNumber || "(no part number)"}
@@ -130,33 +110,15 @@ export default function TpmsAccessoriesPage() {
                     {it.description ? (
                       <div className="mt-1 text-sm font-semibold text-neutral-700">{it.description}</div>
                     ) : null}
-                    <div className="mt-2 text-sm text-neutral-600">
-                      {it.vendorName ? <>Vendor: <span className="font-semibold">{it.vendorName}</span></> : null}
-                    </div>
                   </div>
 
-                  <div className="text-sm">
-                    {typeof it.cost === "number" ? (
-                      <div className="text-right">
-                        <div className="text-xs font-semibold text-neutral-500">Cost</div>
-                        <div className="text-lg font-extrabold text-neutral-900">${it.cost.toFixed(2)}</div>
-                      </div>
+                  <div className="text-right">
+                    {typeof it.price === "number" ? (
+                      <div className="text-lg font-extrabold text-neutral-900">${it.price.toFixed(2)}</div>
                     ) : null}
-                  </div>
-                </div>
-
-                <div className="mt-4 grid gap-3 rounded-xl bg-neutral-50 p-4 text-sm text-neutral-700 sm:grid-cols-3">
-                  <div>
-                    <div className="text-xs font-semibold text-neutral-500">Primary</div>
-                    <div className="font-extrabold">{it.quantity?.primary ?? "—"}</div>
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold text-neutral-500">Alternate</div>
-                    <div className="font-extrabold">{it.quantity?.alternate ?? "—"}</div>
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold text-neutral-500">National</div>
-                    <div className="font-extrabold">{it.quantity?.national ?? "—"}</div>
+                    <div className="text-sm font-extrabold text-green-800">
+                      {it.inStock === false ? "Out of stock" : "In stock"}
+                    </div>
                   </div>
                 </div>
               </a>

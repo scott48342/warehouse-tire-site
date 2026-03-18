@@ -25,6 +25,12 @@ function coerceArray<T>(v: T | T[] | undefined | null): T[] {
   return Array.isArray(v) ? v : [v];
 }
 
+function getMarkupAmount() {
+  const raw = (process.env.ACCESSORIES_TPMS_MARKUP_AMOUNT || process.env.TPMS_MARKUP_AMOUNT || "45").trim();
+  const n = Number(raw);
+  return Number.isFinite(n) ? n : 45;
+}
+
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const apiKey = getKmApiKey();
@@ -139,34 +145,54 @@ export async function GET(req: Request) {
         return v;
       }
 
+      const markup = getMarkupAmount();
+
       const normalized = items.map((it: any) => {
         const qty = it?.Quantity || it?.quantity || {};
-        return {
+        const qPrimary = qty?.Primary != null ? Number(qty.Primary) : 0;
+        const qAlternate = qty?.Alternate != null ? Number(qty.Alternate) : 0;
+        const qNational = qty?.National != null ? Number(qty.National) : 0;
+        const inStock = [qPrimary, qAlternate, qNational].some((n) => Number.isFinite(n) && n > 0);
+
+        const vendor = String(unwrap(it?.VendorName ?? it?.vendorName) || "");
+        const isHamaton = /hamaton/i.test(vendor);
+
+        const cost = it?.Cost != null ? Number(it.Cost) : undefined;
+        const price = typeof cost === "number" && Number.isFinite(cost) ? Number((cost + markup).toFixed(2)) : undefined;
+
+        const base = {
           partNumber: unwrap(it?.PartNumber ?? it?.partNumber),
           mfgPartNumber: unwrap(it?.MfgPartNumber ?? it?.mfgPartNumber),
           size: unwrap(it?.Size ?? it?.size),
           description: unwrap(it?.Description ?? it?.description),
-          vendorName: unwrap(it?.VendorName ?? it?.vendorName),
-          brand: unwrap(it?.BrandName ?? it?.VendorName ?? it?.brand),
-          cost: it?.Cost != null ? Number(it.Cost) : undefined,
+          inStock,
+          price,
+          isHamaton,
+        };
+
+        if (!debug) return base;
+
+        return {
+          ...base,
+          // debug-only supplier fields
+          vendorName: vendor || undefined,
+          cost,
           fet: it?.FET != null ? Number(it.FET) : undefined,
           quantity: {
-            primary: qty?.Primary != null ? Number(qty.Primary) : undefined,
-            alternate: qty?.Alternate != null ? Number(qty.Alternate) : undefined,
-            national: qty?.National != null ? Number(qty.National) : undefined,
+            primary: qPrimary,
+            alternate: qAlternate,
+            national: qNational,
           },
           code: unwrap(it?.Code ?? it?.code),
-          _raw: debug ? it : undefined,
+          _raw: it,
         };
       });
 
       return NextResponse.json({
         partNumber,
-        vendor: usedVendor || undefined,
-        upstream,
         count: normalized.length,
         items: normalized,
-        ...(debug ? { attempts } : null),
+        ...(debug ? { upstream, vendor: usedVendor || undefined, attempts } : null),
       });
     } catch (e: any) {
       attempts.push({ upstream, error: String(e?.message || e) });
