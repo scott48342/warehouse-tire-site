@@ -147,6 +147,11 @@ export default async function WheelsPage({
 
   const needsTrimNotice = Boolean(year && make && model && !modification);
 
+  // Only show the guided wheel+tire package UI when explicitly requested.
+  // (Wheels-only browsing shouldn't show "Step 1/Step 2" package cards.)
+  const packageRaw = (Array.isArray((sp as any).package) ? (sp as any).package[0] : (sp as any).package) || "";
+  const isPackageFlow = String(packageRaw).trim() === "1";
+
   // View filter: staggered vs square. If vehicle is inferred staggered, default to staggered-only.
   const fitViewRaw = (Array.isArray((sp as any).fitView) ? (sp as any).fitView[0] : (sp as any).fitView) || "";
   const fitView = String(fitViewRaw || "").trim();
@@ -642,7 +647,8 @@ export default async function WheelsPage({
                   </span>
                 </div>
                 {/* Workspace header (Tireweb-style guided flow) */}
-                <div className="mt-4 md:hidden grid gap-3 rounded-3xl border border-neutral-200 bg-white p-4">
+                {isPackageFlow ? (
+                  <div className="mt-4 md:hidden grid gap-3 rounded-3xl border border-neutral-200 bg-white p-4">
                   <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                     <div className="text-xs font-semibold text-neutral-600">Step 1</div>
                     <div className="mt-1 text-sm font-extrabold text-neutral-900">Select a wheel to load details</div>
@@ -662,12 +668,13 @@ export default async function WheelsPage({
                     </div>
                   </div>
 
-                  {needsTrimNotice ? (
-                    <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-                      Tip: picking a trim/submodel usually improves results (bolt pattern + offset).
-                    </div>
-                  ) : null}
-                </div>
+                    {needsTrimNotice ? (
+                      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                        Tip: picking a trim/submodel usually improves results (bolt pattern + offset).
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
               </>
             ) : null}
           </div>

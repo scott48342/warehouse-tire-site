@@ -151,6 +151,10 @@ export function TiresWorkspaceHeader({
 
   if (!year || !make || !model) return null;
 
+  // Only show this guided "package" header when the user is actually in a package/quote flow.
+  // If neither a wheel nor a tire is selected, hide it so tires-only browsing stays clean.
+  if (!wheelSku && !tireSku) return null;
+
   return (
     <div className="sticky top-24 z-30 hidden md:block">
       <div className="mx-auto max-w-[980px] rounded-3xl border border-neutral-200 bg-white/95 p-4 backdrop-blur">
