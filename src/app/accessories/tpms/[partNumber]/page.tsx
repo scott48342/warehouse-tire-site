@@ -31,11 +31,11 @@ function money(n: number) {
   return n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 }
 
-function getMarkupMultiplier() {
-  // Default: 45% over cost (cost * 1.45)
-  const raw = (process.env.ACCESSORIES_TPMS_MARKUP || process.env.TPMS_MARKUP || "1.45").trim();
+function getMarkupAmount() {
+  // Default: $45.00 over cost (cost + 45)
+  const raw = (process.env.ACCESSORIES_TPMS_MARKUP_AMOUNT || process.env.TPMS_MARKUP_AMOUNT || "45").trim();
   const n = Number(raw);
-  return Number.isFinite(n) && n > 0 ? n : 1.45;
+  return Number.isFinite(n) ? n : 45;
 }
 
 export default async function TpmsProductPage({
@@ -59,8 +59,8 @@ export default async function TpmsProductPage({
 
   const item = data?.items?.[0];
   const cost = typeof item?.cost === "number" ? item.cost : undefined;
-  const multiplier = getMarkupMultiplier();
-  const price = typeof cost === "number" ? Number((cost * multiplier).toFixed(2)) : undefined;
+  const markup = getMarkupAmount();
+  const price = typeof cost === "number" ? Number((cost + markup).toFixed(2)) : undefined;
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-10">
@@ -104,7 +104,7 @@ export default async function TpmsProductPage({
             </div>
             {typeof cost === "number" ? (
               <div className="mt-2 text-xs text-neutral-600">
-                Based on KM cost {money(cost)} × {multiplier}
+                Based on KM cost {money(cost)} + {money(markup)}
               </div>
             ) : (
               <div className="mt-2 text-xs text-neutral-600">Unable to load cost from KM.</div>
