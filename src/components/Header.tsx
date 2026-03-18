@@ -5,9 +5,8 @@ import Link from "next/link";
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { BRAND } from "@/lib/brand";
-// FitmentSelector now lives inside the search modal / mega menu flow
+// FitmentSelector now lives inside the search modal
 import { SearchModal, type Mode } from "@/components/SearchModal";
-import { MegaMenu } from "@/components/MegaMenu";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -93,6 +92,7 @@ function FitmentTabs() {
 }
 
 export function Header() {
+  const sp = useSearchParams();
   const [modal, setModal] = useState<null | { type: "tires" | "wheels"; mode?: Mode }>(null);
 
   return (
@@ -132,11 +132,82 @@ export function Header() {
         </div>
 
         <nav className="hidden items-center gap-4 md:flex">
-          <MegaMenu
-            onOpenSearch={(type, mode) => {
-              setModal({ type, mode });
-            }}
-          />
+          {/* Simple menus (replace the old mega menu) */}
+          <div className="flex items-center gap-4">
+            <details className="group relative">
+              <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
+                TIRES <span className="text-xs">▾</span>
+              </summary>
+              <div className="absolute left-0 top-full z-[80] mt-2 w-64 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
+                <button
+                  type="button"
+                  onClick={() => setModal({ type: "tires", mode: "vehicle" })}
+                  className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Shop by vehicle
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setModal({ type: "tires", mode: "size" })}
+                  className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Shop by size
+                </button>
+                <Link
+                  href={withFitmentParams("/tires", sp)}
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Shop tires
+                </Link>
+                <div className="my-2 h-px bg-neutral-200" />
+                <Link
+                  href="/wheels?package=1"
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Wheel & tire packages
+                </Link>
+              </div>
+            </details>
+
+            <details className="group relative">
+              <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
+                WHEELS <span className="text-xs">▾</span>
+              </summary>
+              <div className="absolute left-0 top-full z-[80] mt-2 w-64 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
+                <button
+                  type="button"
+                  onClick={() => setModal({ type: "wheels", mode: "vehicle" })}
+                  className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Shop by vehicle
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setModal({ type: "wheels", mode: "size" })}
+                  className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Shop by size
+                </button>
+                <Link
+                  href={withFitmentParams("/wheels", sp)}
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Shop wheels
+                </Link>
+                <div className="my-2 h-px bg-neutral-200" />
+                <Link
+                  href="/wheels?package=1"
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Wheel & tire packages
+                </Link>
+              </div>
+            </details>
+
+            <Link href="/schedule" className="px-2 py-2 text-sm font-extrabold text-neutral-900 hover:underline">
+              SCHEDULE
+            </Link>
+          </div>
 
           <button
             type="button"
