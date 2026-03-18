@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { fetchHamatonEnrichment } from "@/lib/hamaton";
 
 export const runtime = "nodejs";
 
@@ -62,6 +63,10 @@ export default async function TpmsProductPage({
   const markup = getMarkupAmount();
   const price = typeof cost === "number" ? Number((cost + markup).toFixed(2)) : undefined;
 
+  const vendorText = String(item?.vendorName || item?.brand || "");
+  const isHamaton = /hamaton/i.test(vendorText);
+  const hamaton = isHamaton ? await fetchHamatonEnrichment(partNumber) : null;
+
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-10">
       <Link href="/accessories/tpms" className="text-sm font-semibold text-neutral-700 hover:underline">
@@ -71,7 +76,19 @@ export default async function TpmsProductPage({
       <div className="mt-6 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
+            {hamaton?.imageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={hamaton.imageUrl}
+                alt={hamaton.title || partNumber}
+                className="mb-5 w-full max-w-[360px] rounded-2xl border border-neutral-200 bg-white p-3"
+              />
+            ) : null}
+
             <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">{partNumber}</h1>
+            {hamaton?.title ? (
+              <p className="mt-2 text-base font-extrabold text-neutral-900">{hamaton.title}</p>
+            ) : null}
             {item?.description ? (
               <p className="mt-2 text-sm font-semibold text-neutral-700">{item.description}</p>
             ) : (
@@ -94,7 +111,37 @@ export default async function TpmsProductPage({
                   Mfg part #: <span className="font-semibold">{item.mfgPartNumber}</span>
                 </div>
               ) : null}
+
+              {hamaton?.nutTorque ? (
+                <div>
+                  Nut torque: <span className="font-semibold">{hamaton.nutTorque}</span>
+                </div>
+              ) : null}
+              {hamaton?.screwTorque ? (
+                <div>
+                  Screw torque: <span className="font-semibold">{hamaton.screwTorque}</span>
+                </div>
+              ) : null}
             </div>
+
+            {hamaton?.bullets?.length ? (
+              <div className="mt-5">
+                <div className="text-sm font-extrabold text-neutral-900">Highlights</div>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
+                  {hamaton.bullets.slice(0, 8).map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+
+            {hamaton?.sourceUrl ? (
+              <div className="mt-4 text-sm">
+                <a href={hamaton.sourceUrl} target="_blank" rel="noreferrer" className="font-semibold text-blue-700 hover:underline">
+                  Manufacturer details
+                </a>
+              </div>
+            ) : null}
           </div>
 
           <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5 md:w-[320px]">
@@ -109,6 +156,9 @@ export default async function TpmsProductPage({
             ) : (
               <div className="mt-2 text-xs text-neutral-600">Unable to load cost from KM.</div>
             )}
+
+            <div className="mt-3 text-sm font-extrabold text-green-800">In stock</div>
+            <div className="text-xs text-neutral-600">(Inventory available via KM)</div>
 
             <button
               type="button"
