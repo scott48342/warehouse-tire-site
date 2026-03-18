@@ -38,6 +38,7 @@ export async function GET(req: Request) {
   const partNumberRaw = url.searchParams.get("partNumber") || url.searchParams.get("pn") || "";
   const partNumber = String(partNumberRaw || "").trim();
   const vendorName = String(url.searchParams.get("vendor") || url.searchParams.get("vendorName") || "").trim();
+  const vendorFallback = String(url.searchParams.get("vendorFallback") || "Hamaton").trim();
   const minQty = String(url.searchParams.get("minQty") || "").trim();
   const debug = (url.searchParams.get("debug") || "").trim() === "1";
 
@@ -59,36 +60,60 @@ export async function GET(req: Request) {
     cdataPropName: "__cdata",
   });
 
-  const xml = `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n` +
-    `<InventoryRequest>` +
-    `<Credentials><APIKey>${apiKey}</APIKey></Credentials>` +
-    `<Item>` +
-    `<PartNumber>${partNumber}</PartNumber>` +
-    (vendorName ? `<VendorName>${vendorName}</VendorName>` : ``) +
-    (minQty ? `<MinQty>${minQty}</MinQty>` : ``) +
-    `</Item>` +
-    `</InventoryRequest>`;
+  function buildXml(vendor: string) {
+    return (
+      `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n` +
+      `<InventoryRequest>` +
+      `<Credentials><APIKey>${apiKey}</APIKey></Credentials>` +
+      `<Item>` +
+      `<PartNumber>${partNumber}</PartNumber>` +
+      (vendor ? `<VendorName>${vendor}</VendorName>` : ``) +
+      (minQty ? `<MinQty>${minQty}</MinQty>` : ``) +
+      `</Item>` +
+      `</InventoryRequest>`
+    );
+  }
 
   const attempts: any[] = [];
 
+  async function postXml(upstream: string, vendor: string) {
+    const res = await fetch(upstream, {
+      method: "POST",
+      headers: {
+        "content-type": "application/xml",
+        accept: "application/xml, text/xml, */*",
+      },
+      body: buildXml(vendor),
+      cache: "no-store",
+    });
+    const text = await res.text();
+    return { res, text };
+  }
+
+  function isVendorRequiredBug(text: string) {
+    return String(text || "").includes("str_repeat(): Argument #2");
+  }
+
   for (const upstream of candidates) {
     try {
-      const res = await fetch(upstream, {
-        method: "POST",
-        headers: {
-          "content-type": "application/xml",
-          accept: "application/xml, text/xml, */*",
-        },
-        body: xml,
-        cache: "no-store",
-      });
+      // First attempt: use provided vendorName (may be blank)
+      let usedVendor = vendorName;
+      let { res, text } = await postXml(upstream, usedVendor);
 
-      const text = await res.text();
+      // KM bug/workaround: inventory endpoint may 500 when VendorName is omitted.
+      // If that happens, retry with a fallback vendor.
+      if (!usedVendor && res.status === 500 && isVendorRequiredBug(text)) {
+        usedVendor = vendorFallback;
+        const retry = await postXml(upstream, usedVendor);
+        res = retry.res;
+        text = retry.text;
+      }
 
       attempts.push({
         upstream,
         status: res.status,
         ok: res.ok,
+        vendor: usedVendor || undefined,
         sample: text.slice(0, 240),
       });
 
@@ -108,24 +133,36 @@ export async function GET(req: Request) {
       const items = coerceArray(itemsRaw);
 
       // Best-effort normalization. We don't know TPMS schema yet.
+      function unwrap(v: any) {
+        if (v == null) return undefined;
+        if (typeof v === "object" && v.__cdata != null) return v.__cdata;
+        return v;
+      }
+
       const normalized = items.map((it: any) => {
         const qty = it?.Quantity || it?.quantity || {};
         return {
-          partNumber: it?.PartNumber ?? it?.partNumber,
-          description: it?.Description ?? it?.description,
-          brand: it?.BrandName ?? it?.brand,
+          partNumber: unwrap(it?.PartNumber ?? it?.partNumber),
+          mfgPartNumber: unwrap(it?.MfgPartNumber ?? it?.mfgPartNumber),
+          size: unwrap(it?.Size ?? it?.size),
+          description: unwrap(it?.Description ?? it?.description),
+          vendorName: unwrap(it?.VendorName ?? it?.vendorName),
+          brand: unwrap(it?.BrandName ?? it?.VendorName ?? it?.brand),
           cost: it?.Cost != null ? Number(it.Cost) : undefined,
+          fet: it?.FET != null ? Number(it.FET) : undefined,
           quantity: {
             primary: qty?.Primary != null ? Number(qty.Primary) : undefined,
             alternate: qty?.Alternate != null ? Number(qty.Alternate) : undefined,
             national: qty?.National != null ? Number(qty.National) : undefined,
           },
+          code: unwrap(it?.Code ?? it?.code),
           _raw: debug ? it : undefined,
         };
       });
 
       return NextResponse.json({
         partNumber,
+        vendor: usedVendor || undefined,
         upstream,
         count: normalized.length,
         items: normalized,
