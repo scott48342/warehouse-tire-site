@@ -178,16 +178,11 @@ export async function GET(req: Request) {
     enrichMs = debug ? Date.now() - tEn0 : 0;
 
     const sp = url.searchParams;
-    const shouldFilterNoImage =
-      sp.has("sku") ||
-      sp.has("q") ||
-      sp.has("brand_cd") ||
-      sp.has("boltPattern") ||
-      sp.has("diameter") ||
-      sp.has("width") ||
-      sp.has("minOffset") ||
-      sp.has("maxOffset") ||
-      sp.has("centerbore");
+    // Only hide no-image items for explicitly targeted searches.
+    // If we hide no-image items for fitment-derived filters (bolt pattern/diameter/offset),
+    // we can drastically undercount results vs DealerLineX because WheelPros often omits
+    // image fields even for valid SKUs.
+    const shouldFilterNoImage = sp.has("sku") || sp.has("q") || sp.has("brand_cd");
 
     if (shouldFilterNoImage) {
       const filtered = enriched.filter((it) => hasAnyImage(it));
