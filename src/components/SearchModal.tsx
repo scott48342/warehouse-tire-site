@@ -147,7 +147,6 @@ export function SearchModal({
   const [mode, setMode] = useState<Mode>(defaultMode || "vehicle");
 
   // Tires by size (stepped, limited to real sizes)
-  const [tireStyle, setTireStyle] = useState<"metric" | "flotation">("metric");
   const [tireStep, setTireStep] = useState<"w" | "a" | "r">("w");
   const [tireAspect, setTireAspect] = useState<number | null>(null);
   const [tireWidth, setTireWidth] = useState<number | null>(null);
@@ -177,7 +176,6 @@ export function SearchModal({
       setMode(defaultMode || "vehicle");
 
       // Reset size picker state each time.
-      setTireStyle("metric");
       setTireStep("w");
       setTireAspect(null);
       setTireWidth(null);
@@ -312,54 +310,6 @@ export function SearchModal({
               <div>
                 {isTires ? (
                   <div>
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <div className="text-xs font-semibold text-neutral-700">Tire size</div>
-                        <div className="mt-1 text-[11px] text-neutral-600">
-                          Choose from real sizes only.
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setTireStyle("metric");
-                            setTireStep("a");
-                            setTireAspect(null);
-                            setTireWidth(null);
-                            setTireRim(null);
-                          }}
-                          className={
-                            tireStyle === "metric"
-                              ? "rounded-full bg-neutral-900 px-3 py-1 text-[11px] font-extrabold text-white"
-                              : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-[11px] font-extrabold text-neutral-900"
-                          }
-                          title="Example: 245/45R17"
-                        >
-                          245/45R17
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setTireStyle("flotation");
-                            setFloatStep("d");
-                            setFloatDia(null);
-                            setFloatWidth(null);
-                            setFloatRim(null);
-                          }}
-                          className={
-                            tireStyle === "flotation"
-                              ? "rounded-full bg-neutral-900 px-3 py-1 text-[11px] font-extrabold text-white"
-                              : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-[11px] font-extrabold text-neutral-900"
-                          }
-                          title="Example: 33x12.50R20"
-                        >
-                          33x12.50R20
-                        </button>
-                      </div>
-                    </div>
-
                     <div className="mt-3 rounded-2xl border border-neutral-200 bg-white p-3">
                       <label className="flex items-center justify-between gap-3">
                         <div>
@@ -373,7 +323,8 @@ export function SearchModal({
                       </label>
                     </div>
 
-                    {tireStyle === "metric" ? (
+                    <>
+                      <div className="text-xs font-extrabold text-neutral-900">Metric sizes</div>
                       <div className="mt-3">
                         <div className="text-xs font-extrabold text-neutral-900">
                           {tireStep === "w" ? "Select Width" : tireStep === "a" ? "Select Aspect" : "Select Rim"}
@@ -530,8 +481,11 @@ export function SearchModal({
                           );
                         })()}
                       </div>
-                    ) : (
+
+                      <div className="mt-6 h-px bg-neutral-200" />
+
                       <div className="mt-3">
+                        <div className="text-xs font-extrabold text-neutral-900">Flotation sizes</div>
                         <div className="text-xs font-extrabold text-neutral-900">
                           {floatStep === "d" ? "Select Diameter" : floatStep === "w" ? "Select Width" : "Select Rim"}
                         </div>
@@ -688,7 +642,7 @@ export function SearchModal({
                           );
                         })()}
                       </div>
-                    )}
+                    </>
                   </div>
                 ) : (
                   <div>
