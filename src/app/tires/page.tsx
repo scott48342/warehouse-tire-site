@@ -1235,10 +1235,32 @@ export default async function TiresPage({
                         {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
                       </div>
                       <div className="text-sm text-neutral-600">each</div>
+
+                      {(() => {
+                        const q = t.quantity || {};
+                        const primary = typeof q.primary === "number" ? q.primary : 0;
+                        const alternate = typeof q.alternate === "number" ? q.alternate : 0;
+                        const national = typeof q.national === "number" ? q.national : 0;
+                        const maxQty = Math.max(primary, alternate, national, 0);
+                        const minNeeded = 4;
+                        const inStock = maxQty >= minNeeded;
+                        return (
+                          <div className="mt-2 flex items-center gap-2 text-sm font-extrabold">
+                            <span
+                              className={
+                                "inline-block h-2.5 w-2.5 rounded-full " +
+                                (inStock ? "bg-green-500" : "bg-red-500")
+                              }
+                            />
+                            <span className={inStock ? "text-green-800" : "text-red-800"}>
+                              {inStock ? "In stock" : "Backordered"}
+                            </span>
+                          </div>
+                        );
+                      })()}
+
                       <div className="mt-1 text-sm text-neutral-600">Fast quote • Fitment confirmed before install</div>
                     </div>
-
-                    {/* Qty hidden */}
 
                     <div className="relative z-10 mt-5 grid gap-3">
                       {typeof t.cost === "number" ? (
