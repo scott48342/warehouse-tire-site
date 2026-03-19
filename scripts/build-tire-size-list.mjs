@@ -33,8 +33,8 @@ function parseMetricSizes(sectionHtml) {
 }
 
 function parseFlotationSizes(sectionHtml) {
-  // Examples: 31X10.50R15LT, 33X12.50R20
-  const re = /\b(\d{2})\s*[Xx]\s*(\d{1,2}\.\d{2})\s*R\s*(\d{2})\s*(?:LT)?\b/g;
+  // Examples: 31X10.50R15LT, 33X12.50R20, 37X12.50R16.5LT
+  const re = /\b(\d{2})\s*[Xx]\s*(\d{1,2}\.\d{2})\s*R\s*(\d{2}(?:\.5)?)\s*(?:LT)?\b/g;
   const out = [];
   let m;
   while ((m = re.exec(sectionHtml))) {

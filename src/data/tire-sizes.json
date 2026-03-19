@@ -1,7 +1,7 @@
 {
   "source": {
     "url": "https://www.wheel-size.com/tire/",
-    "fetchedAt": "2026-03-19T17:32:53.767Z",
+    "fetchedAt": "2026-03-19T18:06:47.124Z",
     "note": "Generated from wheel-size.com/tire/ sections: ISO metric + LT-metric (normalized to ###/##R##), and LT-high flotation (##x##.##R##)."
   },
   "metric": [
@@ -699,14 +699,20 @@
     {
       "dia": 37,
       "width": 12.5,
-      "rim": 16,
-      "label": "37x12.50R16"
+      "rim": 16.5,
+      "label": "37x12.50R16.5"
     },
     {
       "dia": 37,
       "width": 12.5,
       "rim": 17,
       "label": "37x12.50R17"
+    },
+    {
+      "dia": 37,
+      "width": 12.5,
+      "rim": 17.5,
+      "label": "37x12.50R17.5"
     },
     {
       "dia": 37,
