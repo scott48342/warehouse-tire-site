@@ -52,8 +52,9 @@ export default function TpmsAccessoriesPage() {
         return;
       }
       setData(json as ApiOk);
-    } catch (err: any) {
-      setError(String(err?.message || err));
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(msg);
     } finally {
       setLoading(false);
     }
@@ -101,15 +102,26 @@ export default function TpmsAccessoriesPage() {
                 href={`/accessories/tpms/${encodeURIComponent(it.partNumber || "")}`}
                 className="block rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm hover:bg-neutral-50"
               >
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <div className="text-base font-extrabold text-neutral-900">
-                      {it.partNumber || "(no part number)"}
-                      {it.size ? <span className="ml-2 text-sm font-bold text-neutral-500">{it.size}</span> : null}
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex gap-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/placeholders/tpms-sensor.svg"
+                      alt="TPMS sensor"
+                      className="h-20 w-20 flex-none rounded-xl border border-neutral-200 bg-white p-2"
+                    />
+
+                    <div>
+                      <div className="text-base font-extrabold text-neutral-900">
+                        {it.partNumber || "(no part number)"}
+                        {it.size ? (
+                          <span className="ml-2 text-sm font-bold text-neutral-500">{it.size}</span>
+                        ) : null}
+                      </div>
+                      {it.description ? (
+                        <div className="mt-1 text-sm font-semibold text-neutral-700">{it.description}</div>
+                      ) : null}
                     </div>
-                    {it.description ? (
-                      <div className="mt-1 text-sm font-semibold text-neutral-700">{it.description}</div>
-                    ) : null}
                   </div>
 
                   <div className="text-right">
