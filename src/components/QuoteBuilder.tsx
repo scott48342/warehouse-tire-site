@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { CatalogItem } from "@/lib/quoteCatalog";
 import { AddTiresModal } from "@/components/AddTiresModal";
 import { SaveQuoteModal } from "@/components/SaveQuoteModal";
@@ -13,7 +13,7 @@ export type ProductLine = {
   unitPriceUsd: number;
   qty: number;
   taxable: boolean;
-  meta?: Record<string, any>;
+  meta?: Record<string, unknown>;
 };
 
 export type ProductDetails = {
@@ -28,7 +28,7 @@ type QuoteLine = {
   unitPriceUsd: number;
   qty: number;
   taxable: boolean;
-  meta?: Record<string, any>;
+  meta?: Record<string, unknown>;
 };
 
 function money(n: number) {
@@ -137,10 +137,80 @@ export function QuoteBuilder({
     return m;
   });
 
+  const [tpmsOn, setTpmsOn] = useState(false);
+  const [tpmsPartNumber, setTpmsPartNumber] = useState("");
+  const [tpmsUnit, setTpmsUnit] = useState<number | null>(null);
+  const [tpmsLoading, setTpmsLoading] = useState(false);
+  const [tpmsError, setTpmsError] = useState<string | null>(null);
+
+  const tpmsQty = hasWheel ? wheelQty : 0;
+
+  async function lookupTpmsPrice(partNumberRaw: string) {
+    const pn = String(partNumberRaw || "").trim();
+    if (!pn) {
+      setTpmsUnit(null);
+      setTpmsError("Enter a TPMS part number.");
+      return;
+    }
+
+    setTpmsLoading(true);
+    setTpmsError(null);
+
+    try {
+      const res = await fetch(`/api/km/partlookup?partNumber=${encodeURIComponent(pn)}`, { cache: "no-store" });
+      const json = (await res.json()) as unknown;
+      const obj = json && typeof json === "object" ? (json as Record<string, unknown>) : null;
+
+      if (!res.ok) {
+        const msg = obj && typeof obj.error === "string" ? obj.error : `TPMS lookup failed (${res.status}).`;
+        setTpmsError(msg);
+        setTpmsUnit(null);
+        return;
+      }
+
+      const itemsRaw = obj && Array.isArray(obj.items) ? (obj.items as unknown[]) : [];
+      const first = itemsRaw[0] && typeof itemsRaw[0] === "object" ? (itemsRaw[0] as Record<string, unknown>) : null;
+      const price = first && typeof first.price === "number" ? (first.price as number) : null;
+      if (price == null) {
+        setTpmsError("TPMS price not available for that part.");
+        setTpmsUnit(null);
+        return;
+      }
+
+      setTpmsUnit(price);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setTpmsError(msg);
+      setTpmsUnit(null);
+    } finally {
+      setTpmsLoading(false);
+    }
+  }
+
+  // If TPMS is turned off, clear state so we don't accidentally save it.
+  useEffect(() => {
+    if (!tpmsOn) {
+      setTpmsUnit(null);
+      setTpmsError(null);
+    }
+  }, [tpmsOn]);
+
   const lines: QuoteLine[] = useMemo(() => {
     const out: QuoteLine[] = [];
     if (wheel?.sku) out.push(wheel);
     if (tire?.sku) out.push(tire);
+
+    if (tpmsOn && hasWheel && tpmsQty > 0 && typeof tpmsUnit === "number") {
+      out.push({
+        kind: "custom",
+        name: `TPMS Sensor${tpmsPartNumber.trim() ? ` (${tpmsPartNumber.trim()})` : ""}`,
+        sku: tpmsPartNumber.trim() || undefined,
+        unitPriceUsd: tpmsUnit,
+        qty: tpmsQty,
+        taxable: true,
+        meta: { type: "tpms", source: "km", partNumber: tpmsPartNumber.trim() || undefined },
+      });
+    }
 
     for (const it of requiredItems) {
       const qty = qtyFor(it, wheelQty, tireQty);
@@ -170,7 +240,7 @@ export function QuoteBuilder({
     }
 
     return out;
-  }, [wheel, tire, requiredItems, optionalItems, enabledOptional, wheelQty, tireQty]);
+  }, [wheel, tire, requiredItems, optionalItems, enabledOptional, wheelQty, tireQty, tpmsOn, tpmsUnit, tpmsPartNumber, hasWheel, tpmsQty]);
 
   const totals = useMemo(() => computeTotals(lines, taxRate), [lines, taxRate]);
 
@@ -246,6 +316,61 @@ export function QuoteBuilder({
           )}
         </div>
       </div>
+
+      {hasWheel ? (
+        <div className="rounded-2xl border border-neutral-200 bg-white p-4">
+          <div className="text-sm font-extrabold text-neutral-900">TPMS sensors</div>
+          <div className="mt-1 text-xs text-neutral-600">
+            Optional add-on. Enter a part number (e.g. HTS-A78ED) and we’ll include {tpmsQty || 4} sensor(s) on the quote.
+          </div>
+
+          <div className="mt-3 grid gap-3">
+            <label className="flex items-center justify-between gap-3 rounded-xl border border-neutral-200 bg-white p-3">
+              <div>
+                <div className="text-sm font-extrabold text-neutral-900">Include TPMS sensors</div>
+                <div className="mt-0.5 text-[11px] text-neutral-600">
+                  {tpmsOn
+                    ? tpmsLoading
+                      ? "Looking up price…"
+                      : tpmsError
+                        ? tpmsError
+                        : typeof tpmsUnit === "number"
+                          ? `${money(tpmsUnit)} each × ${tpmsQty || 4}`
+                          : "Enter a part number and click Lookup"
+                    : "Off"}
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-xs font-extrabold text-neutral-900">
+                <input type="checkbox" checked={tpmsOn} onChange={(e) => setTpmsOn(e.target.checked)} />
+                {tpmsOn ? "ON" : "OFF"}
+              </div>
+            </label>
+
+            {tpmsOn ? (
+              <div className="grid gap-2 sm:grid-cols-[1fr_140px]">
+                <input
+                  value={tpmsPartNumber}
+                  onChange={(e) => setTpmsPartNumber(e.target.value)}
+                  placeholder="TPMS part number"
+                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold text-neutral-900"
+                />
+                <button
+                  type="button"
+                  onClick={() => lookupTpmsPrice(tpmsPartNumber)}
+                  disabled={tpmsLoading}
+                  className="h-11 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white disabled:opacity-60"
+                >
+                  {tpmsLoading ? "Looking…" : "Lookup"}
+                </button>
+              </div>
+            ) : null}
+
+            <div className="text-[11px] text-neutral-500">
+              Tip: You can search TPMS parts here: <Link className="font-semibold text-blue-700 hover:underline" href="/accessories/tpms">TPMS lookup</Link>
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       <div className="rounded-2xl border border-neutral-200 bg-white p-4">
         <div className="text-sm font-extrabold text-neutral-900">Optional services</div>
