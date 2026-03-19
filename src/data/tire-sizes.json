@@ -1,7 +1,7 @@
 {
   "source": {
     "url": "https://www.wheel-size.com/tire/",
-    "fetchedAt": "2026-03-19T18:06:47.124Z",
+    "fetchedAt": "2026-03-19T18:16:05.830Z",
     "note": "Generated from wheel-size.com/tire/ sections: ISO metric + LT-metric (normalized to ###/##R##), and LT-high flotation (##x##.##R##)."
   },
   "metric": [
@@ -673,6 +673,42 @@
       "label": "32x10.00R15"
     },
     {
+      "dia": 33,
+      "width": 10.5,
+      "rim": 15,
+      "label": "33x10.50R15"
+    },
+    {
+      "dia": 33,
+      "width": 12.5,
+      "rim": 15,
+      "label": "33x12.50R15"
+    },
+    {
+      "dia": 33,
+      "width": 12.5,
+      "rim": 17,
+      "label": "33x12.50R17"
+    },
+    {
+      "dia": 33,
+      "width": 12.5,
+      "rim": 18,
+      "label": "33x12.50R18"
+    },
+    {
+      "dia": 33,
+      "width": 12.5,
+      "rim": 20,
+      "label": "33x12.50R20"
+    },
+    {
+      "dia": 33,
+      "width": 12.5,
+      "rim": 22,
+      "label": "33x12.50R22"
+    },
+    {
       "dia": 34,
       "width": 12.5,
       "rim": 17,
@@ -683,6 +719,24 @@
       "width": 12.5,
       "rim": 18,
       "label": "34x12.50R18"
+    },
+    {
+      "dia": 35,
+      "width": 12.5,
+      "rim": 18,
+      "label": "35x12.50R18"
+    },
+    {
+      "dia": 35,
+      "width": 12.5,
+      "rim": 20,
+      "label": "35x12.50R20"
+    },
+    {
+      "dia": 35,
+      "width": 12.5,
+      "rim": 22,
+      "label": "35x12.50R22"
     },
     {
       "dia": 35,
@@ -719,6 +773,18 @@
       "width": 12.5,
       "rim": 18,
       "label": "37x12.50R18"
+    },
+    {
+      "dia": 37,
+      "width": 12.5,
+      "rim": 20,
+      "label": "37x12.50R20"
+    },
+    {
+      "dia": 37,
+      "width": 12.5,
+      "rim": 22,
+      "label": "37x12.50R22"
     },
     {
       "dia": 37,

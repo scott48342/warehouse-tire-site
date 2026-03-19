@@ -32,6 +32,22 @@ function parseMetricSizes(sectionHtml) {
   return Array.from(by.values()).sort((a, b) => (a.aspect - b.aspect) || (a.width - b.width) || (a.rim - b.rim));
 }
 
+const EXTRA_FLOTATION = [
+  // Common modern flotation sizes that may not appear in the Wheel-Size list but show up in real inventory.
+  // Format: ##x##.##R##
+  { dia: 33, width: 10.5, rim: 15 },
+  { dia: 33, width: 12.5, rim: 15 },
+  { dia: 33, width: 12.5, rim: 17 },
+  { dia: 33, width: 12.5, rim: 18 },
+  { dia: 33, width: 12.5, rim: 20 },
+  { dia: 33, width: 12.5, rim: 22 },
+  { dia: 35, width: 12.5, rim: 18 },
+  { dia: 35, width: 12.5, rim: 20 },
+  { dia: 35, width: 12.5, rim: 22 },
+  { dia: 37, width: 12.5, rim: 20 },
+  { dia: 37, width: 12.5, rim: 22 },
+];
+
 function parseFlotationSizes(sectionHtml) {
   // Examples: 31X10.50R15LT, 33X12.50R20, 37X12.50R16.5LT
   const re = /\b(\d{2})\s*[Xx]\s*(\d{1,2}\.\d{2})\s*R\s*(\d{2}(?:\.5)?)\s*(?:LT)?\b/g;
@@ -68,7 +84,14 @@ async function main() {
     ...parseMetricSizes(lt).map((x) => x.label),
   ]).sort();
 
-  const flotation = parseFlotationSizes(hf);
+  const flotation = [
+    ...parseFlotationSizes(hf),
+    ...EXTRA_FLOTATION.map((x) => ({ ...x, label: `${x.dia}x${Number(x.width).toFixed(2)}R${x.rim}` })),
+  ];
+
+  // Dedup flotation by label
+  const flotationBy = new Map(flotation.map((x) => [x.label, x]));
+  const flotationDeduped = Array.from(flotationBy.values()).sort((a, b) => (a.dia - b.dia) || (a.width - b.width) || (a.rim - b.rim));
 
   const out = {
     source: {
@@ -77,7 +100,7 @@ async function main() {
       note: "Generated from wheel-size.com/tire/ sections: ISO metric + LT-metric (normalized to ###/##R##), and LT-high flotation (##x##.##R##).",
     },
     metric, // string[] like 245/45R17
-    flotation, // objects
+    flotation: flotationDeduped, // objects
   };
 
   const outPath = path.join(process.cwd(), "src", "data", "tire-sizes.json");
