@@ -391,14 +391,20 @@ export default async function TiresPage({
     const s = String(name || "");
     if (!s) return "";
 
-    // Remove metric sizes like 245/50R18
-    let out = s.replace(/\b\d{3}\/\d{2}(?:ZR|R)\d{2}\b/gi, "");
+    // Remove metric sizes like 245/50R18 (and LT/P prefixes)
+    let out = s.replace(/\b(?:LT|P)?\d{3}\/\d{2}(?:ZR|R)-?\d{2}\b/gi, "");
+
+    // Remove KM "rawSize" tokens like 33/1250r20/f (slashes, trailing ply/speed letter)
+    out = out.replace(/\b\d{2}\/\d{4}r\d{2}(?:\/[a-z])?\b/gi, "");
 
     // Remove flotation sizes like 37x13.50R22 (and allow spaces)
     out = out.replace(/\b\d{2}\s*[xX]\s*\d{1,2}\.\d{2}\s*R\s*\d{2}(?:\.5)?\b/gi, "");
 
     // Remove compact sizes: 2455018 (7) or rawSize flotation digits (8)
     out = out.replace(/\b\d{7}\b/g, "").replace(/\b\d{8}\b/g, "");
+
+    // Remove trailing overall-diameter fragments like "33.2"
+    out = out.replace(/\b\d{2}\.\d\b/g, "");
 
     // Collapse whitespace
     out = out.replace(/\s+/g, " ").trim();
@@ -425,7 +431,10 @@ export default async function TiresPage({
     const cleaned = tokens
       .slice(start)
       .filter((t) => !/^\d{3}\/\d{2}R\d{2}$/.test(t) && !/^\d{3}\/\d{2}ZR\d{2}$/.test(t))
-      .filter((t) => !/^\d{7}$/.test(t) && !/^\d{8}$/.test(t));
+      .filter((t) => !/^(?:LT|P)?\d{3}\/\d{2}R\d{2}$/.test(t) && !/^(?:LT|P)?\d{3}\/\d{2}ZR\d{2}$/.test(t))
+      .filter((t) => !/^\d{2}\/\d{4}R\d{2}(?:\/[A-Z])?$/.test(t))
+      .filter((t) => !/^\d{7}$/.test(t) && !/^\d{8}$/.test(t))
+      .filter((t) => !/^\d{2}\.\d$/.test(t));
 
     const map: Record<string, string> = {
       AS: "All Season",
