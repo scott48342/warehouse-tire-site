@@ -67,7 +67,7 @@ export default async function TpmsProductPage({
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={hamaton?.imageUrl || "/images/placeholders/tpms-sensor.svg"}
+                src={hamaton?.imageUrl || "/images/placeholders/tpms-sensor.png"}
                 alt={hamaton?.title || partNumber}
                 className="mb-5 w-full max-w-[360px] rounded-2xl border border-neutral-200 bg-white p-3"
               />

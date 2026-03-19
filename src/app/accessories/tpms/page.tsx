@@ -106,7 +106,7 @@ export default function TpmsAccessoriesPage() {
                   <div className="flex gap-4">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/images/placeholders/tpms-sensor.svg"
+                      src="/images/placeholders/tpms-sensor.png"
                       alt="TPMS sensor"
                       className="h-20 w-20 flex-none rounded-xl border border-neutral-200 bg-white p-2"
                     />
