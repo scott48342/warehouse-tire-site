@@ -224,8 +224,11 @@ export default async function WheelsPage({
 
   // Same idea for width.
   const width = widthParam ? fmtOneDecimal(widthParam) : undefined;
-  const minOffset = hasVehicle ? (Number.isFinite(offsetMinUser as number) ? String(offsetMinUser) : minOff) : undefined;
-  const maxOffset = hasVehicle ? (Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : maxOff) : undefined;
+  // IMPORTANT: don't auto-restrict offset to the exact OEM range.
+  // WheelPros/DealerLineX commonly show many valid fitments across a wide offset range.
+  // Only apply offset range when the user explicitly filters it.
+  const minOffset = hasVehicle && Number.isFinite(offsetMinUser as number) ? String(offsetMinUser) : undefined;
+  const maxOffset = hasVehicle && Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : undefined;
 
   // 2) Query WheelPros using fitment-derived filters.
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
