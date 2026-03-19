@@ -41,38 +41,6 @@ export default async function Home() {
             <p className="mt-4 max-w-prose text-base text-neutral-700">
               Shop tires and wheels with vehicle-based fitment, then schedule your install.
             </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/schedule"
-                className="inline-flex items-center justify-center rounded-xl bg-[var(--brand-red)] px-5 py-3 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-              >
-                Schedule Install
-              </Link>
-              <Link
-                href="/?open=tires&mode=vehicle"
-                className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-              >
-                Shop Tires
-              </Link>
-              <Link
-                href="/?open=wheels&mode=vehicle"
-                className="inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-              >
-                Shop Wheels
-              </Link>
-            </div>
-
-            <div className="mt-6 grid gap-3 text-sm text-neutral-700 sm:grid-cols-2">
-              <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                <div className="text-xs font-semibold text-neutral-600">Start with your vehicle</div>
-                <div className="mt-1 font-semibold">Use the header garage / vehicle picker.</div>
-              </div>
-              <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                <div className="text-xs font-semibold text-neutral-600">Need help?</div>
-                <div className="mt-1 font-semibold">Schedule install or call us.</div>
-              </div>
-            </div>
           </div>
 
           <div className="rounded-3xl border border-neutral-200 bg-neutral-900 p-6 text-white">
