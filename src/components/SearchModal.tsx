@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FitmentSelector } from "@/components/FitmentSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import tireSizes from "@/data/tire-sizes.json";
 
 export type Mode = "vehicle" | "size";
 
@@ -12,12 +13,14 @@ function buildUrl(pathname: string, sp: URLSearchParams) {
   return qs ? `${pathname}?${qs}` : pathname;
 }
 
-function normalizeTireSize(width: string, aspect: string, diameter: string) {
-  const w = String(width || "").trim();
-  const a = String(aspect || "").trim();
-  const d = String(diameter || "").trim();
-  if (!w || !a || !d) return "";
-  return `${w}/${a}R${d}`;
+function normalizeTireSize(width: number | null, aspect: number | null, rim: number | null) {
+  if (!width || !aspect || !rim) return "";
+  return `${width}/${aspect}R${rim}`;
+}
+
+function normalizeFlotationSize(dia: number | null, width: number | null, rim: number | null) {
+  if (!dia || !width || !rim) return "";
+  return `${dia}x${Number(width).toFixed(2)}R${rim}`;
 }
 
 type GarageItem = {
@@ -143,10 +146,19 @@ export function SearchModal({
 
   const [mode, setMode] = useState<Mode>(defaultMode || "vehicle");
 
-  // Tires by size
-  const [tireWidth, setTireWidth] = useState("245");
-  const [tireAspect, setTireAspect] = useState("45");
-  const [tireDiameter, setTireDiameter] = useState("17");
+  // Tires by size (stepped, limited to real sizes)
+  const [tireStyle, setTireStyle] = useState<"metric" | "flotation">("metric");
+  const [tireStep, setTireStep] = useState<"a" | "w" | "r">("a");
+  const [tireAspect, setTireAspect] = useState<number | null>(null);
+  const [tireWidth, setTireWidth] = useState<number | null>(null);
+  const [tireRim, setTireRim] = useState<number | null>(null);
+
+  const [floatStep, setFloatStep] = useState<"d" | "w" | "r">("d");
+  const [floatDia, setFloatDia] = useState<number | null>(null);
+  const [floatWidth, setFloatWidth] = useState<number | null>(null);
+  const [floatRim, setFloatRim] = useState<number | null>(null);
+
+  const [tenPly, setTenPly] = useState(false);
 
   // Wheels by size (diameter/width + bolt pattern)
   const [wheelDiameter, setWheelDiameter] = useState("20");
@@ -161,7 +173,23 @@ export function SearchModal({
 
   // Reset mode when reopened, so menu actions can choose the starting tab.
   useEffect(() => {
-    if (open) setMode(defaultMode || "vehicle");
+    if (open) {
+      setMode(defaultMode || "vehicle");
+
+      // Reset size picker state each time.
+      setTireStyle("metric");
+      setTireStep("a");
+      setTireAspect(null);
+      setTireWidth(null);
+      setTireRim(null);
+
+      setFloatStep("d");
+      setFloatDia(null);
+      setFloatWidth(null);
+      setFloatRim(null);
+
+      setTenPly(false);
+    }
   }, [open, defaultMode]);
 
   if (!open) return null;
@@ -288,61 +316,384 @@ export function SearchModal({
               <div>
                 {isTires ? (
                   <div>
-                    <div className="text-xs font-semibold text-neutral-700">Tire size</div>
-                    <div className="mt-2 grid gap-2 sm:grid-cols-3">
-                      <select
-                        value={tireWidth}
-                        onChange={(e) => setTireWidth(e.currentTarget.value)}
-                        className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                      >
-                        {[175,185,195,205,215,225,235,245,255,265,275,285,295,305,315].map((n) => (
-                          <option key={n} value={String(n)}>
-                            {n}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        value={tireAspect}
-                        onChange={(e) => setTireAspect(e.currentTarget.value)}
-                        className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                      >
-                        {[30,35,40,45,50,55,60,65,70,75].map((n) => (
-                          <option key={n} value={String(n)}>
-                            {n}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        value={tireDiameter}
-                        onChange={(e) => setTireDiameter(e.currentTarget.value)}
-                        className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                      >
-                        {[14,15,16,17,18,19,20,21,22,23,24].map((n) => (
-                          <option key={n} value={String(n)}>
-                            {n}
-                          </option>
-                        ))}
-                      </select>
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <div className="text-xs font-semibold text-neutral-700">Tire size</div>
+                        <div className="mt-1 text-[11px] text-neutral-600">
+                          Choose from real sizes only.
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setTireStyle("metric");
+                            setTireStep("a");
+                            setTireAspect(null);
+                            setTireWidth(null);
+                            setTireRim(null);
+                          }}
+                          className={
+                            tireStyle === "metric"
+                              ? "rounded-full bg-neutral-900 px-3 py-1 text-[11px] font-extrabold text-white"
+                              : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-[11px] font-extrabold text-neutral-900"
+                          }
+                          title="Example: 245/45R17"
+                        >
+                          245/45R17
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setTireStyle("flotation");
+                            setFloatStep("d");
+                            setFloatDia(null);
+                            setFloatWidth(null);
+                            setFloatRim(null);
+                          }}
+                          className={
+                            tireStyle === "flotation"
+                              ? "rounded-full bg-neutral-900 px-3 py-1 text-[11px] font-extrabold text-white"
+                              : "rounded-full border border-neutral-200 bg-white px-3 py-1 text-[11px] font-extrabold text-neutral-900"
+                          }
+                          title="Example: 33x12.50R20"
+                        >
+                          33x12.50R20
+                        </button>
+                      </div>
                     </div>
 
-                    <div className="mt-3 text-sm font-extrabold text-neutral-900">
-                      {normalizeTireSize(tireWidth, tireAspect, tireDiameter) || "Select size"}
+                    <div className="mt-3 rounded-2xl border border-neutral-200 bg-white p-3">
+                      <label className="flex items-center justify-between gap-3">
+                        <div>
+                          <div className="text-sm font-extrabold text-neutral-900">10‑ply (E‑load) preference</div>
+                          <div className="mt-0.5 text-[11px] text-neutral-600">Default is standard load.</div>
+                        </div>
+                        <div className="flex items-center gap-2 text-xs font-extrabold text-neutral-900">
+                          <input type="checkbox" checked={tenPly} onChange={(e) => setTenPly(e.target.checked)} />
+                          {tenPly ? "ON" : "OFF"}
+                        </div>
+                      </label>
                     </div>
 
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      <button
-                        onClick={() => {
-                          const size = normalizeTireSize(tireWidth, tireAspect, tireDiameter);
-                          const next = new URLSearchParams();
-                          next.set("size", size);
-                          router.push(`/tires?${next.toString()}`);
-                          onClose();
-                        }}
-                        className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
-                      >
-                        Search tires
-                      </button>
-                    </div>
+                    {tireStyle === "metric" ? (
+                      <div className="mt-3">
+                        <div className="text-xs font-extrabold text-neutral-900">
+                          {tireStep === "a" ? "Select Aspect" : tireStep === "w" ? "Select Width" : "Select Rim"}
+                        </div>
+
+                        {(() => {
+                          const metric = Array.isArray((tireSizes as any)?.metric) ? ((tireSizes as any).metric as string[]) : [];
+                          const parsed = metric
+                            .map((s) => {
+                              const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2})$/);
+                              if (!m) return null;
+                              return { width: Number(m[1]), aspect: Number(m[2]), rim: Number(m[3]), label: s };
+                            })
+                            .filter(Boolean) as Array<{ width: number; aspect: number; rim: number; label: string }>;
+
+                          const aspects = Array.from(new Set(parsed.map((x) => x.aspect))).sort((a, b) => a - b);
+                          const widths = Array.from(
+                            new Set(parsed.filter((x) => (tireAspect ? x.aspect === tireAspect : true)).map((x) => x.width))
+                          ).sort((a, b) => a - b);
+                          const rims = Array.from(
+                            new Set(
+                              parsed
+                                .filter((x) => (tireAspect ? x.aspect === tireAspect : true))
+                                .filter((x) => (tireWidth ? x.width === tireWidth : true))
+                                .map((x) => x.rim)
+                            )
+                          ).sort((a, b) => a - b);
+
+                          const selected = normalizeTireSize(tireWidth, tireAspect, tireRim);
+
+                          function Btn({ n, active, onClick }: { n: number; active: boolean; onClick: () => void }) {
+                            return (
+                              <button
+                                type="button"
+                                onClick={onClick}
+                                className={
+                                  "rounded-full border px-3 py-1 text-xs font-extrabold " +
+                                  (active
+                                    ? "border-[var(--brand-red)] bg-red-50 text-[var(--brand-red)]"
+                                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50")
+                                }
+                              >
+                                {n}
+                              </button>
+                            );
+                          }
+
+                          return (
+                            <>
+                              {tireStep === "a" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {aspects.map((a) => (
+                                    <Btn
+                                      key={a}
+                                      n={a}
+                                      active={tireAspect === a}
+                                      onClick={() => {
+                                        setTireAspect(a);
+                                        setTireWidth(null);
+                                        setTireRim(null);
+                                        setTireStep("w");
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              {tireStep === "w" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {widths.map((w) => (
+                                    <Btn
+                                      key={w}
+                                      n={w}
+                                      active={tireWidth === w}
+                                      onClick={() => {
+                                        setTireWidth(w);
+                                        setTireRim(null);
+                                        setTireStep("r");
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              {tireStep === "r" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {rims.map((r) => (
+                                    <Btn
+                                      key={r}
+                                      n={r}
+                                      active={tireRim === r}
+                                      onClick={() => {
+                                        setTireRim(r);
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              <div className="mt-3 text-sm font-extrabold text-neutral-900">
+                                {selected || "Select size"}
+                              </div>
+
+                              <div className="mt-3 flex flex-wrap gap-2">
+                                {tireStep !== "a" ? (
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      if (tireStep === "r") {
+                                        setTireStep("w");
+                                        setTireRim(null);
+                                        return;
+                                      }
+                                      if (tireStep === "w") {
+                                        setTireStep("a");
+                                        setTireWidth(null);
+                                        setTireAspect(null);
+                                      }
+                                    }}
+                                    className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+                                  >
+                                    Back
+                                  </button>
+                                ) : null}
+
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setTireStep("a");
+                                    setTireAspect(null);
+                                    setTireWidth(null);
+                                    setTireRim(null);
+                                  }}
+                                  className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+                                >
+                                  Reset
+                                </button>
+
+                                <button
+                                  type="button"
+                                  disabled={!selected}
+                                  onClick={() => {
+                                    const next = new URLSearchParams();
+                                    next.set("size", selected);
+                                    if (tenPly) next.set("load", "10ply");
+                                    router.push(`/tires?${next.toString()}`);
+                                    onClose();
+                                  }}
+                                  className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)] disabled:opacity-60"
+                                >
+                                  Search tires
+                                </button>
+                              </div>
+                            </>
+                          );
+                        })()}
+                      </div>
+                    ) : (
+                      <div className="mt-3">
+                        <div className="text-xs font-extrabold text-neutral-900">
+                          {floatStep === "d" ? "Select Diameter" : floatStep === "w" ? "Select Width" : "Select Rim"}
+                        </div>
+
+                        {(() => {
+                          const rows = Array.isArray((tireSizes as any)?.flotation) ? ((tireSizes as any).flotation as any[]) : [];
+                          const parsed = rows
+                            .map((x) => ({
+                              dia: Number(x?.dia),
+                              width: Number(x?.width),
+                              rim: Number(x?.rim),
+                            }))
+                            .filter((x) => [x.dia, x.width, x.rim].every((n) => Number.isFinite(n) && n > 0));
+
+                          const dias = Array.from(new Set(parsed.map((x) => x.dia))).sort((a, b) => a - b);
+                          const widths = Array.from(
+                            new Set(parsed.filter((x) => (floatDia ? x.dia === floatDia : true)).map((x) => x.width))
+                          ).sort((a, b) => a - b);
+                          const rims = Array.from(
+                            new Set(
+                              parsed
+                                .filter((x) => (floatDia ? x.dia === floatDia : true))
+                                .filter((x) => (floatWidth ? x.width === floatWidth : true))
+                                .map((x) => x.rim)
+                            )
+                          ).sort((a, b) => a - b);
+
+                          const selected = normalizeFlotationSize(floatDia, floatWidth, floatRim);
+
+                          function Btn({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+                            return (
+                              <button
+                                type="button"
+                                onClick={onClick}
+                                className={
+                                  "rounded-full border px-3 py-1 text-xs font-extrabold " +
+                                  (active
+                                    ? "border-[var(--brand-red)] bg-red-50 text-[var(--brand-red)]"
+                                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50")
+                                }
+                              >
+                                {label}
+                              </button>
+                            );
+                          }
+
+                          return (
+                            <>
+                              {floatStep === "d" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {dias.map((d) => (
+                                    <Btn
+                                      key={d}
+                                      label={String(d)}
+                                      active={floatDia === d}
+                                      onClick={() => {
+                                        setFloatDia(d);
+                                        setFloatWidth(null);
+                                        setFloatRim(null);
+                                        setFloatStep("w");
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              {floatStep === "w" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {widths.map((w) => (
+                                    <Btn
+                                      key={w}
+                                      label={w.toFixed(2)}
+                                      active={floatWidth === w}
+                                      onClick={() => {
+                                        setFloatWidth(w);
+                                        setFloatRim(null);
+                                        setFloatStep("r");
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              {floatStep === "r" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {rims.map((r) => (
+                                    <Btn
+                                      key={r}
+                                      label={String(r)}
+                                      active={floatRim === r}
+                                      onClick={() => {
+                                        setFloatRim(r);
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              <div className="mt-3 text-sm font-extrabold text-neutral-900">
+                                {selected || "Select size"}
+                              </div>
+
+                              <div className="mt-3 flex flex-wrap gap-2">
+                                {floatStep !== "d" ? (
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      if (floatStep === "r") {
+                                        setFloatStep("w");
+                                        setFloatRim(null);
+                                        return;
+                                      }
+                                      if (floatStep === "w") {
+                                        setFloatStep("d");
+                                        setFloatWidth(null);
+                                        setFloatDia(null);
+                                      }
+                                    }}
+                                    className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+                                  >
+                                    Back
+                                  </button>
+                                ) : null}
+
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setFloatStep("d");
+                                    setFloatDia(null);
+                                    setFloatWidth(null);
+                                    setFloatRim(null);
+                                  }}
+                                  className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+                                >
+                                  Reset
+                                </button>
+
+                                <button
+                                  type="button"
+                                  disabled={!selected}
+                                  onClick={() => {
+                                    const next = new URLSearchParams();
+                                    next.set("size", selected);
+                                    if (tenPly) next.set("load", "10ply");
+                                    router.push(`/tires?${next.toString()}`);
+                                    onClose();
+                                  }}
+                                  className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)] disabled:opacity-60"
+                                >
+                                  Search tires
+                                </button>
+                              </div>
+                            </>
+                          );
+                        })()}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div>
