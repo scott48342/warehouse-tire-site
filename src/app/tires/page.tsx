@@ -126,6 +126,13 @@ export default async function TiresPage({
   const allWeather = (Array.isArray(sp.allWeather) ? sp.allWeather[0] : sp.allWeather) === "1";
   const xlOnly = (Array.isArray(sp.xl) ? sp.xl[0] : sp.xl) === "1";
 
+  const loadRangesRaw = (sp as any).loadRange;
+  const loadRanges = Array.isArray(loadRangesRaw)
+    ? loadRangesRaw.map(String).map((s) => s.trim().toUpperCase()).filter(Boolean)
+    : loadRangesRaw
+      ? [String(loadRangesRaw).trim().toUpperCase()].filter(Boolean)
+      : [];
+
   const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
   const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
   const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
@@ -440,6 +447,7 @@ export default async function TiresPage({
   let snowRatedCount = 0;
   let allWeatherCount = 0;
   let xlCount = 0;
+  const loadRangeCounts = new Map<string, number>();
 
   for (const t of itemsEnriched) {
     const parsed = parseFromDescription(String(t.description || ""));
@@ -449,6 +457,10 @@ export default async function TiresPage({
     if (parsed.isSnowRated) snowRatedCount++;
     if (parsed.isAllWeather) allWeatherCount++;
     if (parsed.isXL) xlCount++;
+
+    const lrRaw = (t as any)?.loadRange;
+    const lr = lrRaw != null ? String(lrRaw).trim().toUpperCase() : "";
+    if (lr) loadRangeCounts.set(lr, (loadRangeCounts.get(lr) || 0) + 1);
   }
 
   const seasonsAvailable = Array.from(seasonCounts.entries()).sort((a, b) => b[1] - a[1]).map(([s]) => s);
@@ -513,6 +525,13 @@ export default async function TiresPage({
     if (snowRated && !parsed.isSnowRated) return false;
     if (allWeather && !parsed.isAllWeather) return false;
     if (xlOnly && !parsed.isXL) return false;
+
+    // Load range filter (KM raw field; best-effort)
+    if (loadRanges.length) {
+      const lrRaw = (t as any)?.loadRange;
+      const lr = lrRaw != null ? String(lrRaw).trim().toUpperCase() : "";
+      if (!lr || !loadRanges.includes(lr)) return false;
+    }
 
     // Price filter (based on displayed price = cost + 50)
     const p = typeof t.cost === "number" ? t.cost + 50 : null;
@@ -897,11 +916,26 @@ export default async function TiresPage({
               ))}
               <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
               <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+              {loadRanges.map((lr) => (
+                <input key={lr} type="hidden" name="loadRange" value={lr} />
+              ))}
 
               <FilterGroup title="Load / Extra Load">
-                <div className="flex items-center justify-between gap-2">
-                  <Check label="XL only" name="xl" value="1" defaultChecked={xlOnly} />
-                  <span className="text-xs font-semibold text-neutral-500">{xlCount}</span>
+                <div className="grid gap-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <Check label="XL only" name="xl" value="1" defaultChecked={xlOnly} />
+                    <span className="text-xs font-semibold text-neutral-500">{xlCount}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2">
+                    <Check label="Load Range E" name="loadRange" value="E" defaultChecked={loadRanges.includes("E")} />
+                    <span className="text-xs font-semibold text-neutral-500">{loadRangeCounts.get("E") || 0}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2">
+                    <Check label="Load Range F" name="loadRange" value="F" defaultChecked={loadRanges.includes("F")} />
+                    <span className="text-xs font-semibold text-neutral-500">{loadRangeCounts.get("F") || 0}</span>
+                  </div>
                 </div>
 
                 <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
