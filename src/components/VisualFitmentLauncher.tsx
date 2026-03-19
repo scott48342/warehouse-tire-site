@@ -43,6 +43,37 @@ function Crumb({ label, value }: { label: string; value?: string }) {
   );
 }
 
+function makeInitials(make: string) {
+  const cleaned = String(make || "").trim();
+  if (!cleaned) return "";
+  const parts = cleaned.split(/\s+/g).filter(Boolean);
+  const letters = parts.slice(0, 2).map((p) => p[0]?.toUpperCase() || "");
+  const out = letters.join("");
+  return out.length ? out : cleaned.slice(0, 2).toUpperCase();
+}
+
+function makeHue(make: string) {
+  // Deterministic hue so each make gets a stable badge color without needing official logos.
+  let h = 0;
+  for (let i = 0; i < make.length; i++) h = (h * 31 + make.charCodeAt(i)) >>> 0;
+  return h % 360;
+}
+
+function MakeBadge({ make }: { make: string }) {
+  const initials = makeInitials(make);
+  const hue = makeHue(make);
+  return (
+    <div
+      aria-hidden
+      className="grid h-10 w-10 place-items-center rounded-2xl border border-neutral-200 text-xs font-extrabold text-neutral-900"
+      style={{ background: `hsla(${hue}, 70%, 92%, 1)` }}
+      title={make}
+    >
+      {initials}
+    </div>
+  );
+}
+
 function TileButton({ title, subtitle, onClick }: { title: string; subtitle?: string; onClick: () => void }) {
   return (
     <button
@@ -406,8 +437,13 @@ export function VisualFitmentLauncher({
                         : "border-neutral-200 bg-white hover:bg-neutral-50")
                     }
                   >
-                    <div className="text-sm font-extrabold text-neutral-900">{m}</div>
-                    <div className="mt-1 text-[11px] text-neutral-600">Tap to choose</div>
+                    <div className="flex items-center gap-3">
+                      <MakeBadge make={m} />
+                      <div className="min-w-0">
+                        <div className="truncate text-sm font-extrabold text-neutral-900">{m}</div>
+                        <div className="mt-1 text-[11px] text-neutral-600">Tap to choose</div>
+                      </div>
+                    </div>
                   </button>
                 ))}
               </div>
