@@ -23,6 +23,36 @@ function normalizeFlotationSize(dia: number | null, width: number | null, rim: n
   return `${dia}x${Number(width).toFixed(2)}R${rim}`;
 }
 
+function odMmFromMetric(width: number, aspect: number, rim: number) {
+  return rim * 25.4 + 2 * (width * (aspect / 100));
+}
+
+function bestMetricForFlotation({
+  flotation,
+  metric,
+}: {
+  flotation: { dia: number; width: number; rim: number };
+  metric: Array<{ width: number; aspect: number; rim: number; label: string }>;
+}) {
+  const targetOd = flotation.dia * 25.4;
+  const targetWidthMm = flotation.width * 25.4;
+
+  // Only consider metric sizes with same rim.
+  const sameRim = metric.filter((m) => m.rim === flotation.rim);
+  if (!sameRim.length) return null;
+
+  let best: { label: string; score: number } | null = null;
+  for (const m of sameRim) {
+    const od = odMmFromMetric(m.width, m.aspect, m.rim);
+    const odDiff = Math.abs(od - targetOd);
+    const wDiff = Math.abs(m.width - targetWidthMm);
+    // Heavily weight OD (fitment/speedo), lightly weight width.
+    const score = odDiff * 2 + wDiff * 0.5;
+    if (!best || score < best.score) best = { label: m.label, score };
+  }
+  return best?.label || null;
+}
+
 type GarageItem = {
   year?: string;
   make?: string;
@@ -417,7 +447,16 @@ export function SearchModal({
                                       n={r}
                                       active={tireRim === r}
                                       onClick={() => {
-                                        setTireRim(r);
+                                        const nextSize = normalizeTireSize(tireWidth, tireAspect, r);
+                                        if (!nextSize) {
+                                          setTireRim(r);
+                                          return;
+                                        }
+                                        const next = new URLSearchParams();
+                                        next.set("size", nextSize);
+                                        if (tenPly) next.set("load", "10ply");
+                                        router.push(`/tires?${next.toString()}`);
+                                        onClose();
                                       }}
                                     />
                                   ))}
@@ -515,6 +554,16 @@ export function SearchModal({
 
                           const selected = normalizeFlotationSize(floatDia, floatWidth, floatRim);
 
+                          // Pre-parse metric sizes so we can map flotation -> closest metric for supplier search.
+                          const metricRaw = Array.isArray((tireSizes as any)?.metric) ? ((tireSizes as any).metric as string[]) : [];
+                          const metricParsed = metricRaw
+                            .map((s) => {
+                              const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2})$/);
+                              if (!m) return null;
+                              return { width: Number(m[1]), aspect: Number(m[2]), rim: Number(m[3]), label: s };
+                            })
+                            .filter(Boolean) as Array<{ width: number; aspect: number; rim: number; label: string }>;
+
                           function Btn({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
                             return (
                               <button
@@ -577,7 +626,26 @@ export function SearchModal({
                                       label={String(r)}
                                       active={floatRim === r}
                                       onClick={() => {
-                                        setFloatRim(r);
+                                        const final = normalizeFlotationSize(floatDia, floatWidth, r);
+                                        if (!final) {
+                                          setFloatRim(r);
+                                          return;
+                                        }
+
+                                        const mapped = bestMetricForFlotation({
+                                          flotation: { dia: floatDia as number, width: floatWidth as number, rim: r },
+                                          metric: metricParsed,
+                                        });
+
+                                        const next = new URLSearchParams();
+                                        // We currently have supplier search only for metric sizes.
+                                        // Keep the original flotation selection for UI/debug.
+                                        next.set("flotation", final);
+                                        next.set("size", mapped || final);
+                                        if (tenPly) next.set("load", "10ply");
+
+                                        router.push(`/tires?${next.toString()}`);
+                                        onClose();
                                       }}
                                     />
                                   ))}
