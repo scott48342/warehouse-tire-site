@@ -26,6 +26,9 @@ type Tire = {
     loadIndex?: string | null;
     speedRating?: string | null;
   };
+
+  // KM sometimes only provides abbreviated descriptions; this is a best-effort human label.
+  prettyName?: string;
 };
 
 type TireAsset = {
@@ -384,14 +387,101 @@ export default async function TiresPage({
     if (a?.km) assetByKm.set(a.km, a.asset);
   }
 
+  function prettyKmName(brand: string, description: string) {
+    const b = String(brand || "").trim();
+    const d = String(description || "").trim();
+    if (!d) return "";
+
+    // Example KM desc: "PI 245/50R18 CINT P7 AS 100V RFT"
+    // Goal: "Pirelli Cinturato P7 All Season Run Flat"
+    const tokens = d
+      .toUpperCase()
+      .replace(/\s+/g, " ")
+      .split(" ")
+      .filter(Boolean);
+
+    // Remove leading brand code if present (often first token is 2-3 letters).
+    const start = tokens.length && /^[A-Z]{2,4}$/.test(tokens[0]) ? 1 : 0;
+
+    // Remove embedded size token
+    const cleaned = tokens.slice(start).filter((t) => !/^\d{3}\/\d{2}R\d{2}$/.test(t) && !/^\d{3}\/\d{2}ZR\d{2}$/.test(t));
+
+    const map: Record<string, string> = {
+      AS: "All Season",
+      "A/": "All Season",
+      "A/S": "All Season",
+      AW: "All Weather",
+      AT: "All Terrain",
+      "A/T": "All Terrain",
+      MT: "Mud Terrain",
+      "M/T": "Mud Terrain",
+      HT: "Highway Terrain",
+      "H/T": "Highway Terrain",
+      WIN: "Winter",
+      WTR: "Winter",
+      SNOW: "Winter",
+      TOUR: "Touring",
+      PERF: "Performance",
+      HP: "Performance",
+      UHP: "Ultra High Performance",
+      RFT: "Run Flat",
+      RF: "Run Flat",
+
+      CINT: "Cinturato",
+      EAG: "Eagle",
+      SPRT: "Sport",
+      ASSUR: "Assurance",
+      WRAN: "Wrangler",
+      DEST: "Destination",
+      DUEL: "Dueler",
+      DEF: "Defender",
+      PILOT: "Pilot",
+      PRIM: "Primacy",
+      LAT: "Latitude",
+      ENERGY: "Energy",
+    };
+
+    const words: string[] = [];
+    for (const t of cleaned) {
+      // Strip obvious load/speed token at end like 100V, 121/118S
+      if (/^\d{2,3}(?:\/\d{2,3})?[A-Z]$/.test(t)) continue;
+      if (/^\d{2,3}$/.test(t)) continue;
+      const v = map[t] || map[t.replace(/[^A-Z0-9/]/g, "")] || "";
+      words.push(v || t);
+    }
+
+    const joined = words.join(" ").replace(/\s+/g, " ").trim();
+    if (!joined) return "";
+
+    // If brand already appears in the joined text, don't duplicate.
+    const out = b && !joined.toLowerCase().startsWith(b.toLowerCase()) ? `${b} ${joined}` : joined;
+    // Light title-casing
+    return out
+      .split(" ")
+      .map((w) => (w.length <= 2 ? w : w[0].toUpperCase() + w.slice(1).toLowerCase()))
+      .join(" ")
+      .replace(/\bRft\b/g, "RFT")
+      .replace(/\bUhp\b/g, "UHP")
+      .replace(/\bHp\b/g, "HP")
+      .replace(/\bAt\b/g, "AT")
+      .replace(/\bMt\b/g, "MT")
+      .replace(/\bHt\b/g, "HT");
+  }
+
   const itemsEnriched: Tire[] = itemsFallback.map((t) => {
     const km = t.description ? String(t.description) : "";
     const asset = km ? assetByKm.get(km) : undefined;
+    const prettyName =
+      !asset?.display_name && t.source === "km" && t.brand && t.description
+        ? prettyKmName(String(t.brand), String(t.description))
+        : undefined;
+
     return {
       ...t,
       // Prefer cached asset display name/image, but don't wipe existing values
       displayName: asset?.display_name || t.displayName || undefined,
       imageUrl: asset?.image_url || t.imageUrl || undefined,
+      prettyName,
     };
   });
 
@@ -1158,7 +1248,7 @@ export default async function TiresPage({
                           wheelDia,
                         }).toString()}`}
                         className="absolute inset-0 z-0"
-                        aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
+                        aria-label={`Open ${t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
                       />
                     ) : t.source === "km" && t.partNumber ? (
                       <Link
@@ -1172,7 +1262,7 @@ export default async function TiresPage({
                           sort,
                         }).toString()}`}
                         className="absolute inset-0 z-0"
-                        aria-label={`Open ${t.displayName || t.description || t.partNumber || "Tire"}`}
+                        aria-label={`Open ${t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
                       />
                     ) : null}
 
@@ -1184,7 +1274,7 @@ export default async function TiresPage({
                         <FavoritesButton
                           type="tire"
                           sku={t.mfgPartNumber}
-                          label={`${t.brand || "Tire"} ${t.displayName || t.description || t.mfgPartNumber}`}
+                          label={`${t.brand || "Tire"} ${t.displayName || t.prettyName || t.description || t.mfgPartNumber}`}
                           href={`/tires?${new URLSearchParams({
                             year,
                             make,
@@ -1204,7 +1294,7 @@ export default async function TiresPage({
                       ) : null}
                     </div>
                     <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
-                      {t.displayName || t.description || t.partNumber || "Tire"}
+                      {t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}
                     </h3>
 
                     <div className="mt-2 flex flex-wrap gap-2">
@@ -1250,7 +1340,7 @@ export default async function TiresPage({
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={t.imageUrl}
-                          alt={t.displayName || t.description || t.partNumber || "Tire"}
+                          alt={t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}
                           className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
                           loading="lazy"
                         />
@@ -1322,7 +1412,7 @@ export default async function TiresPage({
                                 tire={{
                                   sku: tireSku,
                                   brand: String(t.brand || ""),
-                                  title: String(t.displayName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                  title: String(t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
                                   size: String(selectedSize || ""),
                                   price: typeof t.cost === "number" ? t.cost + 50 : undefined,
                                   imageUrl: t.imageUrl,
@@ -1339,7 +1429,7 @@ export default async function TiresPage({
                                 tire={{
                                   sku: tireSku,
                                   brand: String(t.brand || ""),
-                                  title: String(t.displayName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                  title: String(t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
                                   size: String(selectedSize || ""),
                                   price: typeof t.cost === "number" ? t.cost + 50 : undefined,
                                   imageUrl: t.imageUrl,
