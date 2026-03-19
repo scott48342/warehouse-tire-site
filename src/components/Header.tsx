@@ -9,6 +9,7 @@ import { BRAND } from "@/lib/brand";
 
 type LauncherMode = "vehicles" | "tires" | "wheels";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
+import { SearchModal } from "@/components/SearchModal";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -100,10 +101,21 @@ export function Header() {
   const [launcherOpen, setLauncherOpen] = useState(false);
   const [launcherMode, setLauncherMode] = useState<LauncherMode>("vehicles");
 
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchType, setSearchType] = useState<"tires" | "wheels">("tires");
+  const [searchMode, setSearchMode] = useState<"vehicle" | "size">("vehicle");
+
   function openLauncher(mode: LauncherMode) {
     closeMenus();
     setLauncherMode(mode);
     setLauncherOpen(true);
+  }
+
+  function openSearch(type: "tires" | "wheels", mode: "vehicle" | "size") {
+    closeMenus();
+    setSearchType(type);
+    setSearchMode(mode);
+    setSearchOpen(true);
   }
 
   function closeMenus() {
@@ -137,9 +149,16 @@ export function Header() {
   // Example: /?open=tires
   useEffect(() => {
     const open = (sp.get("open") || "").trim();
+    const mode = (sp.get("mode") || "").trim();
     if (open !== "tires" && open !== "wheels" && open !== "vehicles") return;
 
-    openLauncher(open as LauncherMode);
+    // Support opening the DiscountTire-style search modal directly.
+    // Example: /?open=tires&mode=size
+    if ((open === "tires" || open === "wheels") && mode === "size") {
+      openSearch(open, "size");
+    } else {
+      openLauncher(open as LauncherMode);
+    }
 
     // Clean the URL so refresh/back doesn't keep popping it.
     try {
@@ -211,8 +230,7 @@ export function Header() {
                   type="button"
                   onClick={() => {
                     closeMenus();
-                    // VisualFitmentLauncher is vehicle-based; keep this as vehicle for now.
-                    openLauncher("tires");
+                    openSearch("tires", "size");
                   }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
@@ -255,8 +273,7 @@ export function Header() {
                   type="button"
                   onClick={() => {
                     closeMenus();
-                    // VisualFitmentLauncher is vehicle-based; keep this as vehicle for now.
-                    openLauncher("wheels");
+                    openSearch("wheels", "size");
                   }}
                   className="w-full rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
                 >
@@ -317,6 +334,13 @@ export function Header() {
           </Link>
         </nav>
       </div>
+
+      <SearchModal
+        open={searchOpen}
+        type={searchType}
+        defaultMode={searchMode}
+        onClose={() => setSearchOpen(false)}
+      />
 
       <VisualFitmentLauncher
         open={launcherOpen}
