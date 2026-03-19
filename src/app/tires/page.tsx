@@ -387,6 +387,24 @@ export default async function TiresPage({
     if (a?.km) assetByKm.set(a.km, a.asset);
   }
 
+  function stripSizeFromName(name: string) {
+    const s = String(name || "");
+    if (!s) return "";
+
+    // Remove metric sizes like 245/50R18
+    let out = s.replace(/\b\d{3}\/\d{2}(?:ZR|R)\d{2}\b/gi, "");
+
+    // Remove flotation sizes like 37x13.50R22 (and allow spaces)
+    out = out.replace(/\b\d{2}\s*[xX]\s*\d{1,2}\.\d{2}\s*R\s*\d{2}(?:\.5)?\b/gi, "");
+
+    // Remove compact sizes: 2455018 (7) or rawSize flotation digits (8)
+    out = out.replace(/\b\d{7}\b/g, "").replace(/\b\d{8}\b/g, "");
+
+    // Collapse whitespace
+    out = out.replace(/\s+/g, " ").trim();
+    return out;
+  }
+
   function prettyKmName(brand: string, description: string) {
     const b = String(brand || "").trim();
     const d = String(description || "").trim();
@@ -404,7 +422,10 @@ export default async function TiresPage({
     const start = tokens.length && /^[A-Z]{2,4}$/.test(tokens[0]) ? 1 : 0;
 
     // Remove embedded size token
-    const cleaned = tokens.slice(start).filter((t) => !/^\d{3}\/\d{2}R\d{2}$/.test(t) && !/^\d{3}\/\d{2}ZR\d{2}$/.test(t));
+    const cleaned = tokens
+      .slice(start)
+      .filter((t) => !/^\d{3}\/\d{2}R\d{2}$/.test(t) && !/^\d{3}\/\d{2}ZR\d{2}$/.test(t))
+      .filter((t) => !/^\d{7}$/.test(t) && !/^\d{8}$/.test(t));
 
     const map: Record<string, string> = {
       AS: "All Season",
@@ -1248,7 +1269,7 @@ export default async function TiresPage({
                           wheelDia,
                         }).toString()}`}
                         className="absolute inset-0 z-0"
-                        aria-label={`Open ${t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
+                        aria-label={`Open ${stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
                       />
                     ) : t.source === "km" && t.partNumber ? (
                       <Link
@@ -1262,7 +1283,7 @@ export default async function TiresPage({
                           sort,
                         }).toString()}`}
                         className="absolute inset-0 z-0"
-                        aria-label={`Open ${t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
+                        aria-label={`Open ${stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
                       />
                     ) : null}
 
@@ -1294,7 +1315,12 @@ export default async function TiresPage({
                       ) : null}
                     </div>
                     <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
-                      {t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}
+                      {stripSizeFromName(t.displayName || t.prettyName || t.description || "") ||
+                        t.displayName ||
+                        t.prettyName ||
+                        t.description ||
+                        t.partNumber ||
+                        "Tire"}
                     </h3>
 
                     <div className="mt-2 flex flex-wrap gap-2">
@@ -1340,7 +1366,7 @@ export default async function TiresPage({
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={t.imageUrl}
-                          alt={t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}
+                          alt={stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}
                           className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
                           loading="lazy"
                         />
@@ -1412,8 +1438,8 @@ export default async function TiresPage({
                                 tire={{
                                   sku: tireSku,
                                   brand: String(t.brand || ""),
-                                  title: String(t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
-                                  size: String(selectedSize || ""),
+                                  title: String(stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                  size: "",
                                   price: typeof t.cost === "number" ? t.cost + 50 : undefined,
                                   imageUrl: t.imageUrl,
                                   speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
@@ -1429,8 +1455,8 @@ export default async function TiresPage({
                                 tire={{
                                   sku: tireSku,
                                   brand: String(t.brand || ""),
-                                  title: String(t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
-                                  size: String(selectedSize || ""),
+                                  title: String(stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                                  size: "",
                                   price: typeof t.cost === "number" ? t.cost + 50 : undefined,
                                   imageUrl: t.imageUrl,
                                   speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
