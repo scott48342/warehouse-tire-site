@@ -157,21 +157,28 @@ export function VisualFitmentLauncher({
 
   // Data for steps
   const [makes, setMakes] = useState<string[]>([]);
+  const [makesLoading, setMakesLoading] = useState(false);
   const [models, setModels] = useState<string[]>([]);
+  const [modelsLoading, setModelsLoading] = useState(false);
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
+  const [trimsLoading, setTrimsLoading] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       if (!draft.year) {
         setMakes([]);
+        setMakesLoading(false);
         return;
       }
       try {
+        if (!cancelled) setMakesLoading(true);
         const data = await fetchJson<{ results: string[] }>(`/api/vehicles/makes?year=${encodeURIComponent(draft.year)}`);
         if (!cancelled) setMakes(Array.isArray(data?.results) ? data.results : []);
       } catch {
         if (!cancelled) setMakes([]);
+      } finally {
+        if (!cancelled) setMakesLoading(false);
       }
     })();
     return () => {
@@ -184,14 +191,18 @@ export function VisualFitmentLauncher({
     (async () => {
       if (!draft.year || !draft.make) {
         setModels([]);
+        setModelsLoading(false);
         return;
       }
       try {
+        if (!cancelled) setModelsLoading(true);
         const qs = new URLSearchParams({ year: draft.year, make: draft.make });
         const data = await fetchJson<{ results: string[] }>(`/api/vehicles/models?${qs.toString()}`);
         if (!cancelled) setModels(Array.isArray(data?.results) ? data.results : []);
       } catch {
         if (!cancelled) setModels([]);
+      } finally {
+        if (!cancelled) setModelsLoading(false);
       }
     })();
     return () => {
@@ -204,6 +215,7 @@ export function VisualFitmentLauncher({
     (async () => {
       if (!draft.year || !draft.make || !draft.model) {
         setTrims([]);
+        setTrimsLoading(false);
         return;
       }
 
@@ -212,6 +224,8 @@ export function VisualFitmentLauncher({
       // Prefer WheelPros submodels when available (best for wheel fitment + offset ranges).
       // If WheelPros doesn't have coverage for this Y/M/M, fall back to the generic trims endpoint.
       try {
+        if (!cancelled) setTrimsLoading(true);
+
         const wp = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
           `/api/wp/vehicles/submodels?${qs.toString()}`
         );
@@ -236,6 +250,8 @@ export function VisualFitmentLauncher({
         if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
       } catch {
         if (!cancelled) setTrims([]);
+      } finally {
+        if (!cancelled) setTrimsLoading(false);
       }
     })();
     return () => {
@@ -421,6 +437,9 @@ export function VisualFitmentLauncher({
           {step === "make" ? (
             <div className="mt-5">
               <div className="text-xs font-extrabold text-neutral-900">Select Make</div>
+              <div className="mt-1 text-[11px] text-neutral-500">
+                {makesLoading ? "Loading makes…" : !draft.year ? "Pick a year first." : makes.length ? "" : "No makes found."}
+              </div>
               <div className="mt-3 grid max-h-[460px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-3 md:grid-cols-4">
                 {makes.map((m) => (
                   <button
@@ -453,6 +472,9 @@ export function VisualFitmentLauncher({
           {step === "model" ? (
             <div className="mt-5">
               <div className="text-xs font-extrabold text-neutral-900">Select Model</div>
+              <div className="mt-1 text-[11px] text-neutral-500">
+                {modelsLoading ? "Loading models…" : !draft.make ? "Pick a make first." : models.length ? "" : "No models found."}
+              </div>
               <div className="mt-3 grid max-h-[460px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-3 md:grid-cols-4">
                 {models.map((m) => (
                   <button
@@ -480,6 +502,9 @@ export function VisualFitmentLauncher({
           {step === "trim" ? (
             <div className="mt-5">
               <div className="text-xs font-extrabold text-neutral-900">Select Trim</div>
+              <div className="mt-1 text-[11px] text-neutral-500">
+                {trimsLoading ? "Loading trims…" : !draft.model ? "Pick a model first." : trims.length ? "" : "No trims found."}
+              </div>
               <div className="mt-3 grid max-h-[460px] grid-cols-1 gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3 sm:grid-cols-2">
                 {trims.map((t) => (
                   <button
