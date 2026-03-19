@@ -17,11 +17,29 @@ function toTireSizeCompact(size: string) {
   // - 245/50R18
   // - 245/40ZR20 95Y
   // - 2455018
-  const s = String(size || "").trim();
+  // - 37135022 (flotation rawSize: 37x13.50R22 -> 37135022)
+  // - 37x13.50R22
+  const s = String(size || "").trim().toUpperCase();
+
+  // Flotation string -> rawSize digits
+  // 37x13.50R22 -> 37135022
+  const f = s.match(/^(\d{2})\s*[X]\s*(\d{1,2}\.\d{2})\s*R\s*(\d{2}(?:\.5)?)\s*(?:LT)?$/i);
+  if (f) {
+    const dia = f[1];
+    const width = f[2].replace(".", "");
+    const rim = f[3].replace(".", "");
+    return `${dia}${width}${rim}`;
+  }
+
   const m = s.match(/(\d{3})\s*\/?\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})/i);
   if (m) return `${m[1]}${m[2]}${m[3]}`;
-  const m2 = s.match(/^(\d{7})$/);
-  if (m2) return m2[1];
+
+  const m2 = s.match(/^\d{7}$/);
+  if (m2) return s;
+
+  const m3 = s.match(/^\d{8}$/);
+  if (m3) return s;
+
   return "";
 }
 

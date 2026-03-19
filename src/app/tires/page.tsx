@@ -311,6 +311,7 @@ export default async function TiresPage({
 
   // Per-axle selected size
   const selectedSizeRaw = (axle === "rear" ? sizeRearRaw : sizeFrontRaw) || ((Array.isArray(sp.size) ? sp.size[0] : sp.size) || "");
+  const metricSizeOverride = (Array.isArray((sp as any).metricSize) ? (sp as any).metricSize[0] : (sp as any).metricSize) || "";
   const selectedSizeCandidate = selectedSizeRaw
     ? String(selectedSizeRaw)
     : (displayedSizes[0] || tireSizesStrict[0] || tireSizes[0] || "");
@@ -324,7 +325,8 @@ export default async function TiresPage({
   const sizeRear = axle === "rear" ? selectedSize : (sizeRearRaw || "");
 
   const km = selectedSize ? await fetchKmTires(selectedSize) : null;
-  const wp = selectedSize ? await fetchWpTires(selectedSize) : null;
+  const wpSize = metricSizeOverride || selectedSize;
+  const wp = wpSize ? await fetchWpTires(wpSize) : null;
   const rebates = await fetchActiveRebates();
 
   const rebatesByBrand = new Map<string, any>();

@@ -637,11 +637,25 @@ export function SearchModal({
                                           metric: metricParsed,
                                         });
 
+                                        // Build rawSize digits (TireConnect style): 37x13.50R22 -> 37135022
+                                        const rawSize = (() => {
+                                          const m = final.match(/^(\d{2})x(\d{1,2}\.\d{2})R(\d{2}(?:\.5)?)$/i);
+                                          if (!m) return "";
+                                          const dia = m[1];
+                                          const w = m[2].replace(".", "");
+                                          const rim = m[3].replace(".", "");
+                                          return `${dia}${w}${rim}`;
+                                        })();
+
                                         const next = new URLSearchParams();
-                                        // We currently have supplier search only for metric sizes.
                                         // Keep the original flotation selection for UI/debug.
                                         next.set("flotation", final);
-                                        next.set("size", mapped || final);
+
+                                        // For KM, use rawSize digits if available.
+                                        // For WP, keep a best-effort metric mapping.
+                                        if (rawSize) next.set("size", rawSize);
+                                        if (mapped) next.set("metricSize", mapped);
+
                                         if (tenPly) next.set("load", "10ply");
 
                                         router.push(`/tires?${next.toString()}`);
