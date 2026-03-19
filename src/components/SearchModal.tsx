@@ -148,7 +148,7 @@ export function SearchModal({
 
   // Tires by size (stepped, limited to real sizes)
   const [tireStyle, setTireStyle] = useState<"metric" | "flotation">("metric");
-  const [tireStep, setTireStep] = useState<"a" | "w" | "r">("a");
+  const [tireStep, setTireStep] = useState<"w" | "a" | "r">("w");
   const [tireAspect, setTireAspect] = useState<number | null>(null);
   const [tireWidth, setTireWidth] = useState<number | null>(null);
   const [tireRim, setTireRim] = useState<number | null>(null);
@@ -178,7 +178,7 @@ export function SearchModal({
 
       // Reset size picker state each time.
       setTireStyle("metric");
-      setTireStep("a");
+      setTireStep("w");
       setTireAspect(null);
       setTireWidth(null);
       setTireRim(null);
@@ -204,43 +204,39 @@ export function SearchModal({
             <div className="text-xs font-semibold text-neutral-600">Find products that fit</div>
             <div className="text-lg font-extrabold text-neutral-900">{title}</div>
           </div>
-          <button
-            onClick={onClose}
-            className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
-          >
-            Close
-          </button>
-        </div>
-
-        <div className="grid gap-4 p-4 md:grid-cols-[220px_1fr]">
-          <div className="grid gap-2">
+          <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={() => setMode("vehicle")}
               className={
                 mode === "vehicle"
-                  ? "h-12 rounded-xl bg-neutral-900 px-3 text-left text-sm font-extrabold text-white"
-                  : "h-12 rounded-xl border border-neutral-200 bg-white px-3 text-left text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+                  ? "h-10 rounded-xl bg-neutral-900 px-3 text-sm font-extrabold text-white"
+                  : "h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
               }
             >
-              Shop by vehicle
+              Vehicle
             </button>
-
             <button
+              type="button"
               onClick={() => setMode("size")}
               className={
                 mode === "size"
-                  ? "h-12 rounded-xl bg-neutral-900 px-3 text-left text-sm font-extrabold text-white"
-                  : "h-12 rounded-xl border border-neutral-200 bg-white px-3 text-left text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+                  ? "h-10 rounded-xl bg-neutral-900 px-3 text-sm font-extrabold text-white"
+                  : "h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
               }
             >
-              Shop by size
+              Size
             </button>
-
-            <div className="mt-2 text-xs text-neutral-600">
-              This is a first-pass DiscountTire-style menu. We’ll refine options as we add suppliers.
-            </div>
+            <button
+              onClick={onClose}
+              className="h-10 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+            >
+              Close
+            </button>
           </div>
+        </div>
 
+        <div className="p-4">
           <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-3">
             {mode === "vehicle" ? (
               <div>
@@ -380,7 +376,7 @@ export function SearchModal({
                     {tireStyle === "metric" ? (
                       <div className="mt-3">
                         <div className="text-xs font-extrabold text-neutral-900">
-                          {tireStep === "a" ? "Select Aspect" : tireStep === "w" ? "Select Width" : "Select Rim"}
+                          {tireStep === "w" ? "Select Width" : tireStep === "a" ? "Select Aspect" : "Select Rim"}
                         </div>
 
                         {(() => {
@@ -393,15 +389,15 @@ export function SearchModal({
                             })
                             .filter(Boolean) as Array<{ width: number; aspect: number; rim: number; label: string }>;
 
-                          const aspects = Array.from(new Set(parsed.map((x) => x.aspect))).sort((a, b) => a - b);
-                          const widths = Array.from(
-                            new Set(parsed.filter((x) => (tireAspect ? x.aspect === tireAspect : true)).map((x) => x.width))
+                          const aspects = Array.from(
+                            new Set(parsed.filter((x) => (tireWidth ? x.width === tireWidth : true)).map((x) => x.aspect))
                           ).sort((a, b) => a - b);
+                          const widths = Array.from(new Set(parsed.map((x) => x.width))).sort((a, b) => a - b);
                           const rims = Array.from(
                             new Set(
                               parsed
-                                .filter((x) => (tireAspect ? x.aspect === tireAspect : true))
                                 .filter((x) => (tireWidth ? x.width === tireWidth : true))
+                                .filter((x) => (tireAspect ? x.aspect === tireAspect : true))
                                 .map((x) => x.rim)
                             )
                           ).sort((a, b) => a - b);
@@ -427,24 +423,6 @@ export function SearchModal({
 
                           return (
                             <>
-                              {tireStep === "a" ? (
-                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
-                                  {aspects.map((a) => (
-                                    <Btn
-                                      key={a}
-                                      n={a}
-                                      active={tireAspect === a}
-                                      onClick={() => {
-                                        setTireAspect(a);
-                                        setTireWidth(null);
-                                        setTireRim(null);
-                                        setTireStep("w");
-                                      }}
-                                    />
-                                  ))}
-                                </div>
-                              ) : null}
-
                               {tireStep === "w" ? (
                                 <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
                                   {widths.map((w) => (
@@ -454,6 +432,24 @@ export function SearchModal({
                                       active={tireWidth === w}
                                       onClick={() => {
                                         setTireWidth(w);
+                                        setTireAspect(null);
+                                        setTireRim(null);
+                                        setTireStep("a");
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              ) : null}
+
+                              {tireStep === "a" ? (
+                                <div className="mt-2 flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+                                  {aspects.map((a) => (
+                                    <Btn
+                                      key={a}
+                                      n={a}
+                                      active={tireAspect === a}
+                                      onClick={() => {
+                                        setTireAspect(a);
                                         setTireRim(null);
                                         setTireStep("r");
                                       }}
@@ -482,18 +478,17 @@ export function SearchModal({
                               </div>
 
                               <div className="mt-3 flex flex-wrap gap-2">
-                                {tireStep !== "a" ? (
+                                {tireStep !== "w" ? (
                                   <button
                                     type="button"
                                     onClick={() => {
                                       if (tireStep === "r") {
-                                        setTireStep("w");
+                                        setTireStep("a");
                                         setTireRim(null);
                                         return;
                                       }
-                                      if (tireStep === "w") {
-                                        setTireStep("a");
-                                        setTireWidth(null);
+                                      if (tireStep === "a") {
+                                        setTireStep("w");
                                         setTireAspect(null);
                                       }
                                     }}
@@ -506,7 +501,7 @@ export function SearchModal({
                                 <button
                                   type="button"
                                   onClick={() => {
-                                    setTireStep("a");
+                                    setTireStep("w");
                                     setTireAspect(null);
                                     setTireWidth(null);
                                     setTireRim(null);
