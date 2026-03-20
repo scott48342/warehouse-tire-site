@@ -214,7 +214,9 @@ export default async function WheelsPage({
   // Only treat as staggered if fitment data explicitly indicates it
   // (e.g., fit.staggered === true or separate front/rear specs).
   // Multiple tire size OPTIONS (17", 18", 20") does NOT mean staggered.
-  const vehicleCallsForStaggered = Boolean(fit?.staggered);
+  // NOTE: The actual staggered determination now comes from fitment-search response
+  //       (after we call fetchWheels below). This initial value is a fallback.
+  let vehicleCallsForStaggered = Boolean(fit?.staggered?.isStaggered || fit?.staggered === true);
 
   // Default to showing all wheels (no fitView filter). User can opt into staggered view.
   const effectiveFitView = fitView || "";
@@ -376,7 +378,15 @@ export default async function WheelsPage({
         offsetType: undefined,
       });
     }
+
+    // Extract staggered info from fitment-search response (authoritative source)
+    if (data?.fitment?.staggered) {
+      vehicleCallsForStaggered = Boolean(data.fitment.staggered.isStaggered);
+    }
   }
+
+  // Capture staggered debug info from fitment-search response
+  const staggeredDebug = data?.fitment?.staggered || null;
 
   // If using fast browse, convert directly to final format (skip all the WheelPros processing)
   let fastItems: Wheel[] = [];
@@ -806,7 +816,25 @@ export default async function WheelsPage({
                     {year} {make} {model}
                     {trim ? ` ${trim}` : ""}
                   </span>
+                  {/* Only show staggered badge if vehicle fitment profile indicates staggered */}
+                  {vehicleCallsForStaggered ? (
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">
+                      STAGGERED
+                    </span>
+                  ) : null}
                 </div>
+                {/* Debug: show staggered fitment info */}
+                {staggeredDebug && process.env.NODE_ENV === "development" ? (
+                  <div className="mt-2 rounded-lg bg-neutral-100 px-3 py-2 text-[10px] font-mono text-neutral-600">
+                    <span className="font-bold">Staggered:</span> {staggeredDebug.isStaggered ? "YES" : "NO"} — {staggeredDebug.reason}
+                    {staggeredDebug.frontSpec ? (
+                      <> | Front: {staggeredDebug.frontSpec.diameter}&quot;×{staggeredDebug.frontSpec.width}&quot; ET{staggeredDebug.frontSpec.offset}</>
+                    ) : null}
+                    {staggeredDebug.rearSpec ? (
+                      <> | Rear: {staggeredDebug.rearSpec.diameter}&quot;×{staggeredDebug.rearSpec.width}&quot; ET{staggeredDebug.rearSpec.offset}</>
+                    ) : null}
+                  </div>
+                ) : null}
                 {/* Workspace header (Tireweb-style guided flow) */}
                 {isPackageFlow ? (
                   <div className="mt-4 md:hidden grid gap-3 rounded-3xl border border-neutral-200 bg-white p-4">

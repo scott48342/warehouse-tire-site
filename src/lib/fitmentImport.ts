@@ -244,12 +244,23 @@ export async function importVehicleFitment(
       console.log(`[fitmentImport] Fitment stored: ${tech.bolt_pattern}, CB ${centerBore}mm`);
     }
 
-    // Step 7: Store wheel specs
+    // Step 7: Store wheel specs with axle information
     let wheelSpecsCount = 0;
     if (wsData.wheels && wsData.wheels.length > 0) {
       await clearVehicleWheelSpecs(db, vehicle.id);
 
       for (const setup of wsData.wheels) {
+        // Check if front and rear are different (staggered)
+        const hasRear = setup.rear && !setup.showing_fp_only && 
+                        setup.rear.rim_diameter && setup.rear.rim_width;
+        
+        const isDifferent = hasRear && (
+          setup.rear.rim_diameter !== setup.front?.rim_diameter ||
+          setup.rear.rim_width !== setup.front?.rim_width ||
+          setup.rear.rim_offset !== setup.front?.rim_offset ||
+          setup.rear.tire !== setup.front?.tire
+        );
+
         // Front wheel/tire
         if (setup.front && setup.front.rim_diameter) {
           await insertVehicleWheelSpec(db, vehicle.id, {
@@ -257,29 +268,25 @@ export async function importVehicleFitment(
             rimWidth: setup.front.rim_width,
             offset: setup.front.rim_offset,
             tireSize: setup.front.tire,
+            // If different front/rear, mark as "front"; otherwise "both"
+            axle: isDifferent ? "front" : "both",
             isStock: setup.is_stock,
           });
           wheelSpecsCount++;
         }
 
         // Rear wheel/tire (only if staggered - different from front)
-        if (setup.rear && !setup.showing_fp_only && 
-            setup.rear.rim_diameter && setup.rear.rim_width) {
-          const isDifferent =
-            setup.rear.rim_diameter !== setup.front.rim_diameter ||
-            setup.rear.rim_width !== setup.front.rim_width ||
-            setup.rear.rim_offset !== setup.front.rim_offset;
-
-          if (isDifferent) {
-            await insertVehicleWheelSpec(db, vehicle.id, {
-              rimDiameter: setup.rear.rim_diameter,
-              rimWidth: setup.rear.rim_width,
-              offset: setup.rear.rim_offset,
-              tireSize: setup.rear.tire,
-              isStock: setup.is_stock,
-            });
-            wheelSpecsCount++;
-          }
+        if (isDifferent && hasRear) {
+          await insertVehicleWheelSpec(db, vehicle.id, {
+            rimDiameter: setup.rear.rim_diameter,
+            rimWidth: setup.rear.rim_width,
+            offset: setup.rear.rim_offset,
+            tireSize: setup.rear.tire,
+            axle: "rear",
+            isStock: setup.is_stock,
+          });
+          wheelSpecsCount++;
+          console.log(`[fitmentImport] Staggered setup detected: F=${setup.front.rim_diameter}x${setup.front.rim_width} R=${setup.rear.rim_diameter}x${setup.rear.rim_width}`);
         }
       }
       console.log(`[fitmentImport] Stored ${wheelSpecsCount} wheel specs`);

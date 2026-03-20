@@ -262,6 +262,8 @@ export async function GET(req: Request) {
           model: profile.vehicle.model,
           trim: profile.vehicle.trim,
         },
+        // Staggered fitment info (based on vehicle's actual front/rear specs)
+        staggered: profile.staggered,
       },
       summary: {
         fromWheelPros: wpResults.length,

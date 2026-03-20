@@ -42,9 +42,27 @@ export type VehicleWheelSpec = {
   rimWidth: number;          // inches, e.g., 7.5
   offset: number | null;     // mm, e.g., 44 (can be null for some plus sizes)
   tireSize: string | null;   // e.g., "265/70R17"
+  axle: "front" | "rear" | "both";  // which axle this spec is for
   isStock: boolean;
   createdAt: Date;
   updatedAt: Date;
+};
+
+export type StaggeredInfo = {
+  isStaggered: boolean;
+  reason: string;
+  frontSpec?: {
+    diameter: number;
+    width: number;
+    offset: number | null;
+    tireSize: string | null;
+  };
+  rearSpec?: {
+    diameter: number;
+    width: number;
+    offset: number | null;
+    tireSize: string | null;
+  };
 };
 
 export type FitmentProfile = {
@@ -57,6 +75,8 @@ export type FitmentProfile = {
   allowedOffsets: number[];
   boltPattern: string;
   centerBore: number;
+  // Staggered fitment info
+  staggered: StaggeredInfo;
 };
 
 export type FitmentClass = "surefit" | "specfit" | "excluded";
@@ -144,6 +164,7 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
       rim_width DECIMAL(4,2) NOT NULL,
       "offset" INTEGER,
       tire_size VARCHAR(30),
+      axle VARCHAR(10) DEFAULT 'both',  -- front, rear, or both
       is_stock BOOLEAN DEFAULT true,
       imported_at TIMESTAMP WITH TIME ZONE,
       created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
@@ -168,6 +189,7 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
 
     ALTER TABLE vehicle_fitment ADD COLUMN IF NOT EXISTS imported_at TIMESTAMP WITH TIME ZONE;
     ALTER TABLE vehicle_wheel_specs ADD COLUMN IF NOT EXISTS imported_at TIMESTAMP WITH TIME ZONE;
+    ALTER TABLE vehicle_wheel_specs ADD COLUMN IF NOT EXISTS axle VARCHAR(10) DEFAULT 'both';
 
     -- Ensure uniqueness for caching: year/make/model/modification_slug (vehicles.slug)
     DO $$
@@ -385,12 +407,13 @@ export async function insertVehicleWheelSpec(
     rimWidth: number;
     offset: number | null | undefined;
     tireSize?: string;
+    axle?: "front" | "rear" | "both";
     isStock?: boolean;
   }
 ): Promise<VehicleWheelSpec> {
   const result = await db.query<VehicleWheelSpec>(
-    `INSERT INTO vehicle_wheel_specs (vehicle_id, rim_diameter, rim_width, "offset", tire_size, is_stock, imported_at)
-     VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, NOW()))
+    `INSERT INTO vehicle_wheel_specs (vehicle_id, rim_diameter, rim_width, "offset", tire_size, axle, is_stock, imported_at)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, COALESCE($8, NOW()))
      RETURNING *`,
     [
       vehicleId,
@@ -398,6 +421,7 @@ export async function insertVehicleWheelSpec(
       spec.rimWidth,
       spec.offset ?? null,
       spec.tireSize || null,
+      spec.axle || "both",
       spec.isStock ?? true,
       new Date(),
     ]
@@ -408,12 +432,103 @@ export async function insertVehicleWheelSpec(
 export async function getVehicleWheelSpecs(db: pg.Pool, vehicleId: number): Promise<VehicleWheelSpec[]> {
   const result = await db.query<VehicleWheelSpec>(
     `SELECT id, vehicle_id as "vehicleId", rim_diameter as "rimDiameter", 
-            rim_width as "rimWidth", "offset", tire_size as "tireSize", 
+            rim_width as "rimWidth", "offset", tire_size as "tireSize",
+            COALESCE(axle, 'both') as "axle",
             is_stock as "isStock", created_at as "createdAt", updated_at as "updatedAt"
      FROM vehicle_wheel_specs WHERE vehicle_id = $1`,
     [vehicleId]
   );
   return result.rows;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STAGGERED FITMENT DETECTION
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Analyze wheel specs to determine if vehicle supports staggered fitment
+ * Only returns true if there are DIFFERENT front vs rear specs
+ */
+export function detectStaggeredFitment(wheelSpecs: VehicleWheelSpec[]): StaggeredInfo {
+  // Get specs by axle
+  const frontSpecs = wheelSpecs.filter(s => s.axle === "front");
+  const rearSpecs = wheelSpecs.filter(s => s.axle === "rear");
+  const bothSpecs = wheelSpecs.filter(s => s.axle === "both" || !s.axle);
+
+  // If we have explicit front AND rear specs, compare them
+  if (frontSpecs.length > 0 && rearSpecs.length > 0) {
+    // Find the primary (stock) front and rear specs
+    const front = frontSpecs.find(s => s.isStock) || frontSpecs[0];
+    const rear = rearSpecs.find(s => s.isStock) || rearSpecs[0];
+
+    const diameterDiff = Number(rear.rimDiameter) !== Number(front.rimDiameter);
+    const widthDiff = Number(rear.rimWidth) !== Number(front.rimWidth);
+    const offsetDiff = rear.offset !== null && front.offset !== null && rear.offset !== front.offset;
+    const tireSizeDiff = rear.tireSize && front.tireSize && rear.tireSize !== front.tireSize;
+
+    if (diameterDiff || widthDiff || offsetDiff || tireSizeDiff) {
+      const reasons: string[] = [];
+      if (diameterDiff) reasons.push(`diameter (F:${front.rimDiameter}" R:${rear.rimDiameter}")`);
+      if (widthDiff) reasons.push(`width (F:${front.rimWidth}" R:${rear.rimWidth}")`);
+      if (offsetDiff) reasons.push(`offset (F:${front.offset}mm R:${rear.offset}mm)`);
+      if (tireSizeDiff) reasons.push(`tire size (F:${front.tireSize} R:${rear.tireSize})`);
+
+      return {
+        isStaggered: true,
+        reason: `Different front/rear: ${reasons.join(", ")}`,
+        frontSpec: {
+          diameter: Number(front.rimDiameter),
+          width: Number(front.rimWidth),
+          offset: front.offset,
+          tireSize: front.tireSize,
+        },
+        rearSpec: {
+          diameter: Number(rear.rimDiameter),
+          width: Number(rear.rimWidth),
+          offset: rear.offset,
+          tireSize: rear.tireSize,
+        },
+      };
+    }
+
+    return {
+      isStaggered: false,
+      reason: "Front and rear specs are identical",
+      frontSpec: {
+        diameter: Number(front.rimDiameter),
+        width: Number(front.rimWidth),
+        offset: front.offset,
+        tireSize: front.tireSize,
+      },
+      rearSpec: {
+        diameter: Number(rear.rimDiameter),
+        width: Number(rear.rimWidth),
+        offset: rear.offset,
+        tireSize: rear.tireSize,
+      },
+    };
+  }
+
+  // If all specs are "both" (same front and rear), not staggered
+  if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
+    const sample = bothSpecs.find(s => s.isStock) || bothSpecs[0];
+    return {
+      isStaggered: false,
+      reason: "All wheel specs apply to both axles (square fitment)",
+      frontSpec: {
+        diameter: Number(sample.rimDiameter),
+        width: Number(sample.rimWidth),
+        offset: sample.offset,
+        tireSize: sample.tireSize,
+      },
+    };
+  }
+
+  // Fallback: not enough data to determine staggered
+  return {
+    isStaggered: false,
+    reason: "Insufficient axle-specific data (defaulting to square fitment)",
+  };
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -440,6 +555,9 @@ export async function buildFitmentProfile(
   const allowedWidths = [...new Set(wheelSpecs.map((s) => Number(s.rimWidth)))].sort((a, b) => a - b);
   const allowedOffsets = [...new Set(wheelSpecs.map((s) => Number(s.offset)))].sort((a, b) => a - b);
 
+  // Detect staggered fitment from wheel specs
+  const staggered = detectStaggeredFitment(wheelSpecs);
+
   return {
     vehicle,
     fitment,
@@ -449,6 +567,7 @@ export async function buildFitmentProfile(
     allowedOffsets,
     boltPattern: fitment.boltPattern,
     centerBore: Number(fitment.centerBore),
+    staggered,
   };
 }
 
