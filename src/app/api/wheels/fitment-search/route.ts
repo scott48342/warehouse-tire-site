@@ -29,6 +29,7 @@ export const maxDuration = 60;
  * - mode: "oem" | "aftermarket_safe" | "aggressive" (default: aftermarket_safe)
  * - page, pageSize: Pagination
  * - brand_cd, finish, diameter, width: Additional filters
+ * - offsetMin, offsetMax: User offset range filter (applied after fitment validation)
  * - debug: Include validation details
  */
 export async function GET(req: Request) {
@@ -142,6 +143,11 @@ export async function GET(req: Request) {
     const finish = url.searchParams.get("finish");
     const diameter = url.searchParams.get("diameter");
     const width = url.searchParams.get("width");
+    const offsetMinParam = url.searchParams.get("offsetMin");
+    const offsetMaxParam = url.searchParams.get("offsetMax");
+
+    const offsetMinUser = offsetMinParam != null && String(offsetMinParam).trim() !== "" ? Number(offsetMinParam) : null;
+    const offsetMaxUser = offsetMaxParam != null && String(offsetMaxParam).trim() !== "" ? Number(offsetMaxParam) : null;
 
     const wpParams = new URLSearchParams({
       boltPattern: profile.boltPattern,
@@ -188,6 +194,16 @@ export async function GET(req: Request) {
 
       // Only include non-excluded wheels
       if (validation.fitmentClass !== "excluded") {
+        // Optional user offset range filter (applied AFTER fitment validation)
+        if (offsetMinUser != null || offsetMaxUser != null) {
+          const off = wheelSpec.offset;
+          if (off == null || !Number.isFinite(off)) {
+            continue; // if user is filtering offset, require offset to be present
+          }
+          if (offsetMinUser != null && off < offsetMinUser) continue;
+          if (offsetMaxUser != null && off > offsetMaxUser) continue;
+        }
+
         passingWheels.push({
           ...wpWheel,
           fitmentValidation: {
@@ -278,6 +294,17 @@ function buildFacets(wheels: any[]) {
   const finishes = new Map<string, number>();
   const diameters = new Map<string, number>();
   const widths = new Map<string, number>();
+  const offsets = new Map<string, number>();
+  const boltPatterns = new Map<string, number>();
+
+  // Local helpers (avoid importing lib here)
+  const normalizeBp = (bp: string) => String(bp || "").toLowerCase().replace(/[x×-]/g, "x").trim();
+  const parseBps = (bp: string) => {
+    const raw = String(bp || "").trim();
+    if (!raw) return [] as string[];
+    const parts = raw.split(/[\/,]/).map((p) => normalizeBp(p.trim())).filter(Boolean);
+    return parts.length ? parts : [normalizeBp(raw)];
+  };
 
   for (const w of wheels) {
     // Brand
@@ -300,23 +327,60 @@ function buildFacets(wheels: any[]) {
 
     // Diameter
     const dia = w.properties?.diameter;
-    if (dia) {
+    if (dia != null && String(dia).trim() !== "") {
       const diaKey = String(dia);
       diameters.set(diaKey, (diameters.get(diaKey) || 0) + 1);
     }
 
     // Width
     const wid = w.properties?.width;
-    if (wid) {
+    if (wid != null && String(wid).trim() !== "") {
       const widKey = String(wid);
       widths.set(widKey, (widths.get(widKey) || 0) + 1);
+    }
+
+    // Offset
+    const off = w.properties?.offset;
+    if (off != null && String(off).trim() !== "") {
+      const offKey = String(off);
+      offsets.set(offKey, (offsets.get(offKey) || 0) + 1);
+    }
+
+    // Bolt pattern (from returned wheels ONLY)
+    const bpRaw = w.properties?.boltPatternMetric || w.properties?.boltPattern || "";
+    const patterns = parseBps(bpRaw);
+    for (const p of patterns) {
+      if (!p) continue;
+      boltPatterns.set(p, (boltPatterns.get(p) || 0) + 1);
     }
   }
 
   return {
     brand_cd: { buckets: Array.from(brands.values()).sort((a, b) => b.count - a.count) },
-    abbreviated_finish_desc: { buckets: Array.from(finishes.entries()).map(([value, count]) => ({ value, count })).sort((a, b) => b.count - a.count) },
-    wheel_diameter: { buckets: Array.from(diameters.entries()).map(([value, count]) => ({ value, count })).sort((a, b) => Number(a.value) - Number(b.value)) },
-    width: { buckets: Array.from(widths.entries()).map(([value, count]) => ({ value, count })).sort((a, b) => Number(a.value) - Number(b.value)) },
+    abbreviated_finish_desc: {
+      buckets: Array.from(finishes.entries())
+        .map(([value, count]) => ({ value, count }))
+        .sort((a, b) => b.count - a.count),
+    },
+    wheel_diameter: {
+      buckets: Array.from(diameters.entries())
+        .map(([value, count]) => ({ value, count }))
+        .sort((a, b) => Number(a.value) - Number(b.value)),
+    },
+    width: {
+      buckets: Array.from(widths.entries())
+        .map(([value, count]) => ({ value, count }))
+        .sort((a, b) => Number(a.value) - Number(b.value)),
+    },
+    offset: {
+      buckets: Array.from(offsets.entries())
+        .map(([value, count]) => ({ value, count }))
+        .sort((a, b) => Number(a.value) - Number(b.value)),
+    },
+    bolt_pattern_metric: {
+      buckets: Array.from(boltPatterns.entries())
+        .map(([value, count]) => ({ value, count }))
+        .sort((a, b) => b.count - a.count),
+    },
   };
 }

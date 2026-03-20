@@ -99,8 +99,12 @@ async function fetchWheels(params: Record<string, string | undefined>) {
   }
 
   // NOTE: We intentionally call our own API route.
+  // For vehicle-based browsing, prefer fitment-aware search so facets reflect ONLY current results.
+  const hasVehicle = Boolean(params.year && params.make && params.model);
+  const path = hasVehicle ? "/api/wheels/fitment-search" : "/api/wheelpros/wheels/search";
+
   const res = await fetch(
-    `${getBaseUrl()}/api/wheelpros/wheels/search?${sp.toString()}`,
+    `${getBaseUrl()}${path}?${sp.toString()}`,
     { cache: "no-store" }
   );
 
@@ -279,6 +283,12 @@ export default async function WheelsPage({
   const upstreamPageSize = 120;
 
   const baseWheelProsParams: Record<string, string | undefined> = {
+    // Vehicle info (triggers fitment-search endpoint when present)
+    year: year || undefined,
+    make: make || undefined,
+    model: model || undefined,
+    trim: trim || undefined,
+
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
     // but keep it reasonable for performance.
@@ -292,13 +302,18 @@ export default async function WheelsPage({
     boltPattern: bp,
     centerbore: cb,
     // For size-only searches (no vehicle), WheelPros filters are unreliable; fetch broad and filter client-side.
-    diameter: hasVehicle && diameterParam && widthParam ? diameter : undefined,
+    diameter: hasVehicle && diameterParam ? diameter : (hasVehicle && widthParam ? diameter : undefined),
     width: hasVehicle && widthParam ? width : undefined,
 
     // Facet filters (WheelPros taxonomy)
     brand_cd: brandCd || undefined,
     abbreviated_finish_desc: finish || undefined,
 
+    // For fitment-search endpoint (we'll filter offsets server-side so facets match)
+    offsetMin: minOffsetFinal,
+    offsetMax: maxOffsetFinal,
+
+    // Legacy WP params (still used when browsing without a vehicle)
     minOffset: minOffsetFinal,
     maxOffset: maxOffsetFinal,
     offsetType: minOffsetFinal || maxOffsetFinal ? "RANGE" : undefined,
@@ -1142,12 +1157,19 @@ export default async function WheelsPage({
               <input type="hidden" name="width" value={widthParam} />
 
               <FilterGroup title="Bolt pattern">
+                {/* Show vehicle bolt pattern when available */}
+                {hasVehicle && bp ? (
+                  <div className="mb-2 rounded-lg bg-neutral-100 px-3 py-2 text-xs">
+                    <span className="text-neutral-500">Vehicle spec:</span>{" "}
+                    <span className="font-bold text-neutral-800">{bp}</span>
+                  </div>
+                ) : null}
                 <select
                   name="boltPattern"
                   defaultValue={boltPatternParam}
                   className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
                 >
-                  <option value="">Vehicle bolt pattern</option>
+                  <option value="">{hasVehicle && bp ? `All matching (${bp})` : "All bolt patterns"}</option>
                   {boltPatternBuckets.slice(0, 80).map((b) => (
                     <option key={b.value} value={b.value}>
                       {b.value}{b.count != null ? ` (${b.count})` : ""}
