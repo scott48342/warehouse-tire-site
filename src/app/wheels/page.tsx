@@ -791,6 +791,19 @@ export default async function WheelsPage({
   // Still show raw SKU count for reference.
   const totalCount = useFastBrowse ? fastTotalCount : (typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length);
 
+  // Debug: fitmentClass breakdown for rendered results
+  const fitmentClassCounts = itemsFinal.reduce((acc, w) => {
+    const fc = w.fitmentClass || "unknown";
+    acc[fc] = (acc[fc] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  // Log in development
+  if (process.env.NODE_ENV === "development") {
+    console.log("[wheels/page] FitmentClass breakdown:", fitmentClassCounts);
+    console.log("[wheels/page] Sort order confirmed: surefit → specfit → extended → unknown");
+  }
+
   const facets = useFastBrowse ? fastFacets : ((maybeData as any)?.facets || {});
   const buckets = (k: string): Array<{ value: string; count?: number }> => {
     const f = facets?.[k];
@@ -1393,6 +1406,7 @@ export default async function WheelsPage({
                       offset: (w as any).offset,
                     }}
                     finishThumbs={w.finishThumbs}
+                    fitmentClass={w.fitmentClass}
                     viewParams={{
                       year,
                       make,

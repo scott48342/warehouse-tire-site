@@ -36,6 +36,31 @@ function fmtSizePart(v: string) {
   return n.toString();
 }
 
+// Fitment badge configuration
+const FITMENT_BADGES = {
+  surefit: {
+    label: "Best Fit",
+    helper: "Direct fit for your vehicle",
+    bgColor: "bg-green-100",
+    textColor: "text-green-800",
+    borderColor: "border-green-200",
+  },
+  specfit: {
+    label: "Good Fit",
+    helper: "Aftermarket fitment",
+    bgColor: "bg-blue-100",
+    textColor: "text-blue-800",
+    borderColor: "border-blue-200",
+  },
+  extended: {
+    label: "Aggressive Fit",
+    helper: "Aggressive/custom fitment",
+    bgColor: "bg-orange-100",
+    textColor: "text-orange-800",
+    borderColor: "border-orange-200",
+  },
+} as const;
+
 export function WheelsStyleCard({
   brand,
   title,
@@ -49,6 +74,7 @@ export function WheelsStyleCard({
   specLabel,
   selectToTires,
   pair,
+  fitmentClass,
 }: {
   brand: string;
   title: string;
@@ -64,6 +90,8 @@ export function WheelsStyleCard({
   selectToTires?: boolean;
   /** Optional recommended front/rear pairing (Tireweb-style staggered support). */
   pair?: WheelPair;
+  /** Fitment classification from validation engine */
+  fitmentClass?: "surefit" | "specfit" | "extended";
 }) {
   const router = useRouter();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -175,7 +203,20 @@ export function WheelsStyleCard({
       <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-500" />
 
       <div className="flex items-start justify-between gap-2">
-        <div className="text-sm font-semibold text-neutral-600">{brand}</div>
+        <div>
+          <div className="text-sm font-semibold text-neutral-600">{brand}</div>
+          {/* Fitment badge */}
+          {fitmentClass && FITMENT_BADGES[fitmentClass] ? (
+            <div className="mt-1">
+              <span className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-bold ${FITMENT_BADGES[fitmentClass].bgColor} ${FITMENT_BADGES[fitmentClass].textColor} ${FITMENT_BADGES[fitmentClass].borderColor}`}>
+                {FITMENT_BADGES[fitmentClass].label}
+              </span>
+              <div className="mt-0.5 text-[10px] text-neutral-500">
+                {FITMENT_BADGES[fitmentClass].helper}
+              </div>
+            </div>
+          ) : null}
+        </div>
         <FavoritesButton
           type="wheel"
           sku={selectedSku || baseSku}
