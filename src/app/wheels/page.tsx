@@ -206,9 +206,14 @@ export default async function WheelsPage({
   const tireDias = Array.isArray(fit?.tireSizes)
     ? (fit.tireSizes as any[]).map((x) => rimDiaFromTireSize(String(x))).filter((n) => Number.isFinite(n))
     : [];
-  const vehicleCallsForStaggered = tireDias.length ? Math.max(...tireDias) - Math.min(...tireDias) >= 1 : false;
+  
+  // Only treat as staggered if fitment data explicitly indicates it
+  // (e.g., fit.staggered === true or separate front/rear specs).
+  // Multiple tire size OPTIONS (17", 18", 20") does NOT mean staggered.
+  const vehicleCallsForStaggered = Boolean(fit?.staggered);
 
-  const effectiveFitView = fitView || (vehicleCallsForStaggered ? "staggered" : "");
+  // Default to showing all wheels (no fitView filter). User can opt into staggered view.
+  const effectiveFitView = fitView || "";
 
   // Centerbore: WheelPros properties/filters are inconsistent; don't hard-filter on it upstream.
   const cb: string | undefined = undefined;
