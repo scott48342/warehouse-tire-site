@@ -71,24 +71,32 @@ export type WheelSpec = {
   offset?: number;
 };
 
+export type FitmentClass = "surefit" | "specfit" | "extended" | "excluded";
+
 export type FitmentValidation = {
   sku: string;
   
-  // Hard rule results (never relaxed)
+  // Hard rule results (MUST pass or excluded)
   boltPatternPass: boolean;
   centerBorePass: boolean;
   
-  // Soft rule results (mode-dependent)
+  // Soft rule results (used for classification, NOT exclusion)
+  diameterInRange: boolean;    // within preferred range
+  widthInRange: boolean;       // within preferred range
+  offsetInRange: boolean;      // within preferred range
+  
+  // Legacy compat (true if hard rules pass)
   diameterPass: boolean;
   widthPass: boolean;
   offsetPass: boolean;
   
   // Overall classification
   fitmentMode: FitmentMode;
-  fitmentClass: "surefit" | "specfit" | "excluded";
+  fitmentClass: FitmentClass;
   
   // Debug info
   exclusionReasons: string[];
+  classificationReasons: string[];  // why not surefit
   
   // Values checked (for debugging)
   checked: {
@@ -413,15 +421,26 @@ export function centerBoreCompatible(wheelBore: number, vehicleHub: number): boo
 
 /**
  * Validate a wheel against the fitment envelope
+ * 
+ * NEW CLASSIFICATION SYSTEM:
+ * - HARD RULES: bolt pattern, center bore → failure = EXCLUDED
+ * - SOFT RULES: diameter, width, offset → used for classification only, NOT exclusion
+ * 
+ * Classification:
+ * - surefit: passes hard rules + within OEM/preferred ranges
+ * - specfit: passes hard rules + minor deviations OR missing data
+ * - extended: passes hard rules + larger deviations (truck aftermarket style)
+ * - excluded: fails any hard rule
  */
 export function validateWheel(
   wheel: WheelSpec,
   envelope: FitmentEnvelope
 ): FitmentValidation {
   const exclusionReasons: string[] = [];
+  const classificationReasons: string[] = [];
   
   // ─────────────────────────────────────────────────────────────────────────
-  // HARD RULES (never relaxed)
+  // HARD RULES (failure = EXCLUDED)
   // ─────────────────────────────────────────────────────────────────────────
   
   // Bolt pattern - REQUIRED; supports dual-pattern wheels (e.g., "6x135/6x139.7")
@@ -451,8 +470,8 @@ export function validateWheel(
     exclusionReasons.push("Missing bolt pattern data");
   }
   
-  // Center bore - wheel must be >= vehicle hub
-  let centerBorePass = true; // Default to pass if no data (specfit)
+  // Center bore - wheel must be >= vehicle hub (STRICT - no relaxation)
+  let centerBorePass = true; // Default to pass if no data
   if (wheel.centerBore !== undefined && wheel.centerBore > 0) {
     centerBorePass = centerBoreCompatible(wheel.centerBore, envelope.centerBore);
     if (!centerBorePass) {
@@ -463,87 +482,115 @@ export function validateWheel(
   }
   
   // ─────────────────────────────────────────────────────────────────────────
-  // SOFT RULES (mode-dependent)
+  // SOFT RULES (for classification only - DO NOT EXCLUDE)
   // ─────────────────────────────────────────────────────────────────────────
   
-  // Diameter
-  let diameterPass = true; // Default to pass if no data (specfit)
+  // Diameter classification
+  let diameterInRange = true;
+  let diameterDeviation: "none" | "minor" | "major" = "none";
   if (wheel.diameter !== undefined && wheel.diameter > 0) {
-    diameterPass = 
-      wheel.diameter >= envelope.allowedMinDiameter &&
-      wheel.diameter <= envelope.allowedMaxDiameter;
-    if (!diameterPass) {
-      exclusionReasons.push(
-        `Diameter out of range: wheel=${wheel.diameter}", allowed=${envelope.allowedMinDiameter}-${envelope.allowedMaxDiameter}" (OEM: ${envelope.oemMinDiameter}-${envelope.oemMaxDiameter}")`
-      );
+    const inOemRange = wheel.diameter >= envelope.oemMinDiameter && wheel.diameter <= envelope.oemMaxDiameter;
+    const inAllowedRange = wheel.diameter >= envelope.allowedMinDiameter && wheel.diameter <= envelope.allowedMaxDiameter;
+    
+    diameterInRange = inOemRange;
+    
+    if (!inOemRange && inAllowedRange) {
+      diameterDeviation = "minor";
+      classificationReasons.push(`Diameter ${wheel.diameter}" outside OEM range (${envelope.oemMinDiameter}-${envelope.oemMaxDiameter}")`);
+    } else if (!inAllowedRange) {
+      diameterDeviation = "major";
+      classificationReasons.push(`Diameter ${wheel.diameter}" outside preferred range (${envelope.allowedMinDiameter}-${envelope.allowedMaxDiameter}")`);
     }
   }
   
-  // Width
-  let widthPass = true; // Default to pass if no data (specfit)
+  // Width classification
+  let widthInRange = true;
+  let widthDeviation: "none" | "minor" | "major" = "none";
   if (wheel.width !== undefined && wheel.width > 0) {
-    widthPass = 
-      wheel.width >= envelope.allowedMinWidth &&
-      wheel.width <= envelope.allowedMaxWidth;
-    if (!widthPass) {
-      exclusionReasons.push(
-        `Width out of range: wheel=${wheel.width}", allowed=${envelope.allowedMinWidth}-${envelope.allowedMaxWidth}" (OEM: ${envelope.oemMinWidth}-${envelope.oemMaxWidth}")`
-      );
+    const inOemRange = wheel.width >= envelope.oemMinWidth && wheel.width <= envelope.oemMaxWidth;
+    const inAllowedRange = wheel.width >= envelope.allowedMinWidth && wheel.width <= envelope.allowedMaxWidth;
+    
+    widthInRange = inOemRange;
+    
+    if (!inOemRange && inAllowedRange) {
+      widthDeviation = "minor";
+      classificationReasons.push(`Width ${wheel.width}" outside OEM range (${envelope.oemMinWidth}-${envelope.oemMaxWidth}")`);
+    } else if (!inAllowedRange) {
+      widthDeviation = "major";
+      classificationReasons.push(`Width ${wheel.width}" outside preferred range (${envelope.allowedMinWidth}-${envelope.allowedMaxWidth}")`);
     }
   }
   
-  // Offset
-  let offsetPass = true; // Default to pass if no data (specfit)
+  // Offset classification
+  let offsetInRange = true;
+  let offsetDeviation: "none" | "minor" | "major" = "none";
   if (wheel.offset !== undefined) {
-    offsetPass = 
-      wheel.offset >= envelope.allowedMinOffset &&
-      wheel.offset <= envelope.allowedMaxOffset;
-    if (!offsetPass) {
-      exclusionReasons.push(
-        `Offset out of range: wheel=${wheel.offset}mm, allowed=${envelope.allowedMinOffset}-${envelope.allowedMaxOffset}mm (OEM: ${envelope.oemMinOffset}-${envelope.oemMaxOffset}mm)`
-      );
+    const inOemRange = wheel.offset >= envelope.oemMinOffset && wheel.offset <= envelope.oemMaxOffset;
+    const inAllowedRange = wheel.offset >= envelope.allowedMinOffset && wheel.offset <= envelope.allowedMaxOffset;
+    
+    offsetInRange = inOemRange;
+    
+    if (!inOemRange && inAllowedRange) {
+      offsetDeviation = "minor";
+      classificationReasons.push(`Offset ${wheel.offset}mm outside OEM range (${envelope.oemMinOffset}-${envelope.oemMaxOffset}mm)`);
+    } else if (!inAllowedRange) {
+      offsetDeviation = "major";
+      classificationReasons.push(`Offset ${wheel.offset}mm outside preferred range (${envelope.allowedMinOffset}-${envelope.allowedMaxOffset}mm)`);
     }
   }
   
   // ─────────────────────────────────────────────────────────────────────────
-  // CLASSIFICATION
+  // CLASSIFICATION (soft rules inform class, don't exclude)
   // ─────────────────────────────────────────────────────────────────────────
   
-  // Hard rule failure = excluded
   const hardRulesPass = boltPatternPass && centerBorePass;
   
-  // Soft rule check
-  const softRulesPass = diameterPass && widthPass && offsetPass;
-  
-  // Check for missing data (specfit case)
+  // Check for missing data
   const hasMissingData = 
     wheel.centerBore === undefined ||
     wheel.diameter === undefined ||
     wheel.width === undefined ||
     wheel.offset === undefined;
   
-  let fitmentClass: "surefit" | "specfit" | "excluded";
+  // Determine worst deviation level
+  const hasMinorDeviation = diameterDeviation === "minor" || widthDeviation === "minor" || offsetDeviation === "minor";
+  const hasMajorDeviation = diameterDeviation === "major" || widthDeviation === "major" || offsetDeviation === "major";
+  
+  let fitmentClass: FitmentClass;
   
   if (!hardRulesPass) {
+    // Hard rule failure = EXCLUDED (this is the ONLY way to be excluded)
     fitmentClass = "excluded";
-  } else if (!softRulesPass) {
-    fitmentClass = "excluded";
-  } else if (hasMissingData) {
+  } else if (hasMajorDeviation) {
+    // Major deviation in soft rules = extended (truck aftermarket style)
+    fitmentClass = "extended";
+  } else if (hasMinorDeviation || hasMissingData) {
+    // Minor deviation or missing data = specfit
     fitmentClass = "specfit";
   } else {
+    // All rules pass within OEM ranges = surefit
     fitmentClass = "surefit";
   }
+  
+  // Legacy compat: soft rule "pass" means not excluded (always true if hard rules pass)
+  const softRulesLegacyPass = hardRulesPass;
   
   return {
     sku: wheel.sku,
     boltPatternPass,
     centerBorePass,
-    diameterPass,
-    widthPass,
-    offsetPass,
+    // New: range checks
+    diameterInRange,
+    widthInRange,
+    offsetInRange,
+    // Legacy compat: these are always true if hard rules pass
+    diameterPass: softRulesLegacyPass,
+    widthPass: softRulesLegacyPass,
+    offsetPass: softRulesLegacyPass,
     fitmentMode: envelope.mode,
     fitmentClass,
     exclusionReasons,
+    classificationReasons,
     checked: {
       boltPattern: wheel.boltPattern,
       centerBore: wheel.centerBore,
@@ -572,15 +619,20 @@ export function validateWheels(
 
 /**
  * Filter wheels to only those that pass fitment
+ * 
+ * By default includes: surefit, specfit, extended
+ * Only excludes: excluded (hard rule failures)
  */
 export function filterFittingWheels<T extends WheelSpec>(
   wheels: T[],
   envelope: FitmentEnvelope,
   options?: {
-    includeSpecfit?: boolean;  // Include wheels with missing data (default: true)
+    includeSpecfit?: boolean;   // Include specfit wheels (default: true)
+    includeExtended?: boolean;  // Include extended wheels (default: true)
   }
 ): { wheel: T; validation: FitmentValidation }[] {
   const includeSpecfit = options?.includeSpecfit ?? true;
+  const includeExtended = options?.includeExtended ?? true;
   
   return wheels
     .map(wheel => ({
@@ -590,6 +642,7 @@ export function filterFittingWheels<T extends WheelSpec>(
     .filter(({ validation }) => {
       if (validation.fitmentClass === "excluded") return false;
       if (validation.fitmentClass === "specfit" && !includeSpecfit) return false;
+      if (validation.fitmentClass === "extended" && !includeExtended) return false;
       return true;
     });
 }
@@ -602,16 +655,27 @@ export function filterFittingWheels<T extends WheelSpec>(
  * Format validation result for logging
  */
 export function formatValidation(v: FitmentValidation): string {
-  const checks = [
+  const hardChecks = [
     `BP:${v.boltPatternPass ? "✓" : "✗"}`,
     `CB:${v.centerBorePass ? "✓" : "✗"}`,
-    `DIA:${v.diameterPass ? "✓" : "✗"}`,
-    `W:${v.widthPass ? "✓" : "✗"}`,
-    `OFF:${v.offsetPass ? "✓" : "✗"}`,
   ].join(" ");
   
-  return `[${v.fitmentClass.toUpperCase()}] ${v.sku} | ${checks} | mode=${v.fitmentMode}` +
-    (v.exclusionReasons.length > 0 ? ` | reasons: ${v.exclusionReasons.join("; ")}` : "");
+  const softChecks = [
+    `DIA:${v.diameterInRange ? "✓" : "~"}`,
+    `W:${v.widthInRange ? "✓" : "~"}`,
+    `OFF:${v.offsetInRange ? "✓" : "~"}`,
+  ].join(" ");
+  
+  let result = `[${v.fitmentClass.toUpperCase()}] ${v.sku} | Hard: ${hardChecks} | Soft: ${softChecks} | mode=${v.fitmentMode}`;
+  
+  if (v.exclusionReasons.length > 0) {
+    result += ` | excluded: ${v.exclusionReasons.join("; ")}`;
+  }
+  if (v.classificationReasons && v.classificationReasons.length > 0) {
+    result += ` | class: ${v.classificationReasons.join("; ")}`;
+  }
+  
+  return result;
 }
 
 /**
@@ -621,6 +685,7 @@ export function summarizeValidations(validations: FitmentValidation[]): {
   total: number;
   surefit: number;
   specfit: number;
+  extended: number;
   excluded: number;
   exclusionBreakdown: Record<string, number>;
 } {
@@ -628,6 +693,7 @@ export function summarizeValidations(validations: FitmentValidation[]): {
     total: validations.length,
     surefit: 0,
     specfit: 0,
+    extended: 0,
     excluded: 0,
     exclusionBreakdown: {} as Record<string, number>,
   };
