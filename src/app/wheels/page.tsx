@@ -1458,20 +1458,28 @@ export default async function WheelsPage({
               ) : null}
             </div>
 
-            {/* Recommended wheels section - curated top picks */}
+            {/* Top Picks section - curated recommendations */}
             {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
-              <div className="mt-4 mb-6">
-                <div className="flex items-center justify-between mb-3">
+              <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-blue-50 to-white border border-blue-100 p-5">
+                <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h2 className="text-lg font-extrabold text-neutral-900">
-                      Recommended for your {year} {make} {model}
-                    </h2>
-                    <p className="text-sm text-neutral-600">Top picks based on your vehicle</p>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">⭐</span>
+                      <h2 className="text-xl font-extrabold text-neutral-900">
+                        Top Picks for Your {year} {make} {model}
+                      </h2>
+                    </div>
+                    <p className="mt-1 text-sm text-neutral-600">
+                      Hand-picked based on fitment, popularity, and value
+                    </p>
                   </div>
+                  <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-800">
+                    Staff Picks
+                  </span>
                 </div>
                 
-                {/* Grid layout - no horizontal scroll */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {/* Featured grid */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {recommendedWheels.slice(0, 4).map((w, idx) => (
                     <WheelsStyleCard
                       key={`rec-${w.sku || idx}`}
@@ -1502,11 +1510,14 @@ export default async function WheelsPage({
                     />
                   ))}
                 </div>
-                
-                <div className="mt-6 border-t border-neutral-200 pt-4">
-                  <h3 className="text-base font-extrabold text-neutral-900">All Wheels</h3>
-                  <p className="text-sm text-neutral-600">Browse all {itemsFinal.length} styles that fit your vehicle</p>
-                </div>
+              </div>
+            ) : null}
+
+            {/* All Wheels section header */}
+            {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
+              <div className="mb-4">
+                <h3 className="text-lg font-extrabold text-neutral-900">All Wheels</h3>
+                <p className="text-sm text-neutral-600">Browse all {itemsFinal.length} styles that fit your vehicle</p>
               </div>
             ) : null}
 
