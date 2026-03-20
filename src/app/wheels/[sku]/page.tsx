@@ -399,8 +399,24 @@ export default async function WheelDetailPage({
           </div>
 
           <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
+            {/* Fitment Summary */}
             {year && make && model ? (
               <div className="mb-4">
+                {/* Fitment Confirmation Banner */}
+                <div className="rounded-2xl bg-green-50 border border-green-200 p-4 mb-3">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">✓</span>
+                    <div>
+                      <div className="font-extrabold text-green-900">
+                        Fits your {year} {make} {model}
+                      </div>
+                      <div className="mt-1 text-sm text-green-800">
+                        Guaranteed fitment - no returns due to fitment issues
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
                 <div className="mt-2">
                   <Link
@@ -412,16 +428,23 @@ export default async function WheelDetailPage({
                 </div>
               </div>
             ) : (
-              <div className="mb-4 rounded-2xl border border-neutral-200 bg-white p-3">
-                <div className="text-[11px] font-semibold text-neutral-600">Vehicle</div>
-                <div className="mt-0.5 text-sm font-extrabold text-neutral-900">Select vehicle to verify fitment</div>
-                <div className="mt-2">
-                  <Link
-                    href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
-                    className="inline-flex h-9 items-center rounded-xl border border-neutral-200 bg-white px-3 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
-                  >
-                    Select vehicle
-                  </Link>
+              <div className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-xl">⚠️</span>
+                  <div>
+                    <div className="font-extrabold text-amber-900">Select your vehicle</div>
+                    <div className="mt-1 text-sm text-amber-800">
+                      We'll verify this wheel fits before you buy
+                    </div>
+                    <div className="mt-3">
+                      <Link
+                        href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                        className="inline-flex h-9 items-center rounded-xl bg-amber-600 px-4 text-xs font-extrabold text-white hover:bg-amber-700"
+                      >
+                        Select vehicle
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -445,7 +468,7 @@ export default async function WheelDetailPage({
             </div>
 
             <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Why you’ll like it</div>
+              <div className="text-xs font-extrabold text-neutral-900">Why you'll like it</div>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
                 {(generated.bullets.length ? generated.bullets : [generated.paragraph]).slice(0, 5).map((b) => (
                   <li key={b}>{b}</li>
@@ -477,44 +500,64 @@ export default async function WheelDetailPage({
 
               {/* Fitment moved under photo */}
 
-              <div id="quote" className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>
-                <div className="mt-1 text-xs text-neutral-600">
-                  We’ll confirm pricing, availability, and the right fit before you commit.
+              {/* Installation Options */}
+              <div className="rounded-2xl border border-neutral-200 bg-white p-4">
+                <div className="text-xs font-extrabold text-neutral-900 mb-3">Installation Options</div>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Ship to your installer</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Local installation available</span>
+                    <span className="text-neutral-400">📍</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Mount &amp; balance included</span>
+                  </div>
                 </div>
-                <div className="mt-3 grid gap-2">
-                  <div className="flex flex-wrap gap-2">
-                    <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
-                    <Link
-                      href={
-                        `/quote/new?${new URLSearchParams({
-                          year,
-                          make,
-                          model,
-                          trim,
-                          modification,
-                          wheelSku: sku,
-                          wheelName: String(it?.title || sku),
-                          wheelUnit: typeof price === "number" && Number.isFinite(price) ? String(price) : "",
-                          wheelQty: "4",
-                          wheelDia: diameter || "",
-                        }).toString()}`
-                      }
-                      className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
-                    >
-                      Build quote
-                    </Link>
-                  </div>
+              </div>
 
-                  <div className="flex flex-wrap items-center gap-2 text-[11px] text-neutral-600">
-                    <span>Fitment verified before install</span>
-                    <span className="text-neutral-300">•</span>
-                    <span>Local install scheduling</span>
-                    <span className="text-neutral-300">•</span>
-                    <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
-                      Prefer to talk? Call us
-                    </a>
+              {/* Buy Actions */}
+              <div id="quote" className="rounded-2xl border border-green-200 bg-green-50 p-4">
+                <div className="text-sm font-extrabold text-neutral-900 mb-3">Ready to buy?</div>
+                <div className="grid gap-2">
+                  <Link
+                    href={
+                      `/quote/new?${new URLSearchParams({
+                        year,
+                        make,
+                        model,
+                        trim,
+                        modification,
+                        wheelSku: sku,
+                        wheelName: String(it?.title || sku),
+                        wheelUnit: typeof price === "number" && Number.isFinite(price) ? String(price) : "",
+                        wheelQty: "4",
+                        wheelDia: diameter || "",
+                      }).toString()}`
+                    }
+                    className="flex h-12 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
+                  >
+                    Add to Cart — Set of 4
+                  </Link>
+                  <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
+                </div>
+
+                <div className="mt-3 pt-3 border-t border-green-200">
+                  <div className="text-xs text-green-800 space-y-1">
+                    <div><span className="font-semibold">✓</span> Fitment verified before shipping</div>
+                    <div><span className="font-semibold">✓</span> No returns due to fitment issues</div>
+                    <div><span className="font-semibold">✓</span> Expert support included</div>
                   </div>
+                </div>
+
+                <div className="mt-3 text-center">
+                  <a href={BRAND.links.tel} className="text-xs font-extrabold text-neutral-900 hover:underline">
+                    Questions? Call us
+                  </a>
                 </div>
               </div>
             </div>
