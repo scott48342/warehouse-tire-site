@@ -804,6 +804,74 @@ export default async function WheelsPage({
     console.log("[wheels/page] Sort order confirmed: surefit → specfit → extended → unknown");
   }
 
+  // Recommended wheels selection: curated top picks for the vehicle
+  const recommendedWheels: Wheel[] = (() => {
+    if (!hasVehicle || itemsFinal.length === 0) return [];
+
+    // Common diameters for trucks (18-22) - adjust based on vehicle type
+    const preferredDiameters = [18, 19, 20, 21, 22];
+    
+    // Score each wheel for recommendation
+    const scored = itemsFinal
+      .filter((w) => w.imageUrl) // Only recommend wheels with images
+      .map((w) => {
+        let score = 0;
+        
+        // Fitment class priority (higher = better)
+        if (w.fitmentClass === "surefit") score += 100;
+        else if (w.fitmentClass === "specfit") score += 50;
+        else if (w.fitmentClass === "extended") score += 10;
+        
+        // Prefer common diameters
+        const dia = Number(String(w.diameter || "").trim());
+        if (Number.isFinite(dia) && preferredDiameters.includes(Math.round(dia))) {
+          score += 20;
+        }
+        
+        // Prefer mid-range price ($200-$600 sweet spot)
+        const price = typeof w.price === "number" ? w.price : 0;
+        if (price >= 200 && price <= 600) score += 15;
+        else if (price >= 100 && price <= 800) score += 5;
+        
+        // Slight bonus for having multiple finishes (popular styles)
+        if (w.finishThumbs && w.finishThumbs.length > 2) score += 5;
+        
+        return { wheel: w, score };
+      })
+      .sort((a, b) => b.score - a.score);
+
+    // Take top 8, ensuring variety (avoid same brand twice in a row)
+    const picks: Wheel[] = [];
+    const usedBrands = new Set<string>();
+    
+    for (const { wheel } of scored) {
+      if (picks.length >= 8) break;
+      
+      const brand = String(wheel.brand || wheel.brandCode || "").toLowerCase();
+      
+      // Allow same brand only if we have fewer than 4 picks or it's been used only once
+      const brandCount = picks.filter(p => 
+        String(p.brand || p.brandCode || "").toLowerCase() === brand
+      ).length;
+      
+      if (brandCount < 2) {
+        picks.push(wheel);
+      }
+    }
+    
+    // If we don't have enough, fill with remaining top scored
+    if (picks.length < 6) {
+      for (const { wheel } of scored) {
+        if (picks.length >= 8) break;
+        if (!picks.includes(wheel)) {
+          picks.push(wheel);
+        }
+      }
+    }
+    
+    return picks;
+  })();
+
   const facets = useFastBrowse ? fastFacets : ((maybeData as any)?.facets || {});
   const buckets = (k: string): Array<{ value: string; count?: number }> => {
     const f = facets?.[k];
@@ -1377,6 +1445,58 @@ export default async function WheelsPage({
                 </div>
               ) : null}
             </div>
+
+            {/* Recommended wheels section - curated top picks */}
+            {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
+              <div className="mt-4 mb-6">
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <h2 className="text-lg font-extrabold text-neutral-900">
+                      Recommended for your {year} {make} {model}
+                    </h2>
+                    <p className="text-sm text-neutral-600">Top picks based on your vehicle</p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-thin scrollbar-thumb-neutral-300">
+                  {recommendedWheels.map((w, idx) => (
+                    <div key={`rec-${w.sku || idx}`} className="flex-shrink-0 w-[280px]">
+                      <WheelsStyleCard
+                        selectToTires
+                        brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
+                        title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
+                        baseSku={String(w.sku || "")}
+                        baseFinish={w.finish ? String(w.finish) : undefined}
+                        baseImageUrl={w.imageUrl}
+                        price={w.price}
+                        sizeLabel={w.diameter || w.width ? { diameter: w.diameter, width: w.width } : undefined}
+                        pair={w.pair}
+                        specLabel={{
+                          boltPattern: (w as any).boltPattern,
+                          offset: (w as any).offset,
+                        }}
+                        finishThumbs={w.finishThumbs}
+                        fitmentClass={w.fitmentClass}
+                        viewParams={{
+                          year,
+                          make,
+                          model,
+                          trim,
+                          modification,
+                          sort,
+                          page: String(page),
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-4 border-t border-neutral-200 pt-4">
+                  <h3 className="text-base font-extrabold text-neutral-900">All Wheels</h3>
+                  <p className="text-sm text-neutral-600">Browse all {itemsFinal.length} styles that fit your vehicle</p>
+                </div>
+              </div>
+            ) : null}
 
             <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {itemsPage.length ? (
