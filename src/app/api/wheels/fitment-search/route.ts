@@ -3,19 +3,28 @@ import {
   getPool, 
   buildFitmentProfile, 
   ensureFitmentTables,
-  evaluateWheel,
-  type WheelToValidate,
-  type FitmentProfile,
 } from "@/lib/vehicleFitment";
+import {
+  buildFitmentEnvelope,
+  validateWheel,
+  summarizeValidations,
+  type FitmentMode,
+  type WheelSpec,
+  type OEMSpecs,
+  type FitmentValidation,
+  EXPANSION_PRESETS,
+} from "@/lib/aftermarketFitment";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 /**
  * GET /api/wheels/fitment-search
- * Search wheels with strict fitment validation using Wheel-Size data
+ * Search wheels with aftermarket-aware fitment validation
  * 
  * Query params:
  * - year, make, model, trim: Vehicle selection
+ * - mode: "oem" | "aftermarket_safe" | "aggressive" (default: aftermarket_safe)
  * - page, pageSize: Pagination
  * - brand_cd, finish, diameter, width: Additional filters
  * - debug: Include validation details
@@ -29,10 +38,18 @@ export async function GET(req: Request) {
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
   const trim = url.searchParams.get("trim") || undefined;
+  const mode = (url.searchParams.get("mode") || "aftermarket_safe") as FitmentMode;
 
   if (!year || !make || !model) {
     return NextResponse.json(
       { error: "Missing required params: year, make, model" },
+      { status: 400 }
+    );
+  }
+
+  if (!["oem", "aftermarket_safe", "aggressive"].includes(mode)) {
+    return NextResponse.json(
+      { error: `Invalid mode: ${mode}. Must be oem, aftermarket_safe, or aggressive` },
       { status: 400 }
     );
   }
@@ -54,14 +71,30 @@ export async function GET(req: Request) {
 
     const profileMs = Date.now() - t0;
 
-    // Step 2: Query Wheel Pros for wheels matching bolt pattern
+    // Step 2: Build aftermarket fitment envelope
+    const oemSpecs: OEMSpecs = {
+      boltPattern: profile.boltPattern,
+      centerBore: profile.centerBore,
+      studHoles: profile.fitment.studHoles,
+      pcd: profile.fitment.pcd,
+      wheelSpecs: profile.wheelSpecs.map((ws) => ({
+        rimDiameter: Number(ws.rimDiameter),
+        rimWidth: Number(ws.rimWidth),
+        offset: ws.offset,
+      })),
+    };
+
+    const envelope = buildFitmentEnvelope(oemSpecs, mode);
+    const envelopeMs = Date.now() - t0 - profileMs;
+
+    // Step 3: Query Wheel Pros for wheels matching bolt pattern
     const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
     if (!wheelProsBase) {
       return NextResponse.json({ error: "Missing WHEELPROS_WRAPPER_URL" }, { status: 500 });
     }
 
     const page = url.searchParams.get("page") || "1";
-    const pageSize = url.searchParams.get("pageSize") || "100"; // Fetch more since we'll filter
+    const pageSize = url.searchParams.get("pageSize") || "200"; // Fetch more since we'll filter
     const brandCd = url.searchParams.get("brand_cd");
     const finish = url.searchParams.get("finish");
     const diameter = url.searchParams.get("diameter");
@@ -89,25 +122,16 @@ export async function GET(req: Request) {
 
     const wpRes = await fetch(wpUrl.toString(), { headers, cache: "no-store" });
     const wpData = await wpRes.json();
-    const wpMs = Date.now() - t0 - profileMs;
+    const wpMs = Date.now() - t0 - profileMs - envelopeMs;
 
     const wpResults = wpData?.results || wpData?.items || [];
 
-    // Step 3: Validate each wheel against fitment profile
-    const validationResults: Array<{
-      wheel: any;
-      validation: ReturnType<typeof evaluateWheel>;
-    }> = [];
-
-    const summary = {
-      fromWheelPros: wpResults.length,
-      surefit: 0,
-      specfit: 0,
-      excluded: 0,
-    };
+    // Step 4: Validate each wheel against fitment envelope
+    const allValidations: FitmentValidation[] = [];
+    const passingWheels: any[] = [];
 
     for (const wpWheel of wpResults) {
-      const wheelToValidate: WheelToValidate = {
+      const wheelSpec: WheelSpec = {
         sku: wpWheel.sku || "",
         boltPattern: wpWheel.properties?.boltPatternMetric || wpWheel.properties?.boltPattern || "",
         centerBore: wpWheel.properties?.centerbore ? Number(wpWheel.properties.centerbore) : undefined,
@@ -116,29 +140,34 @@ export async function GET(req: Request) {
         offset: wpWheel.properties?.offset ? Number(wpWheel.properties.offset) : undefined,
       };
 
-      const validation = evaluateWheel(wheelToValidate, profile);
-      summary[validation.fitmentClass]++;
-
-      if (debug) {
-        console.log(`[fitment-search] ${wheelToValidate.sku}:`, validation);
-      }
+      const validation = validateWheel(wheelSpec, envelope);
+      allValidations.push(validation);
 
       // Only include non-excluded wheels
       if (validation.fitmentClass !== "excluded") {
-        validationResults.push({
-          wheel: {
-            ...wpWheel,
-            fitmentValidation: debug ? validation : { fitmentClass: validation.fitmentClass },
+        passingWheels.push({
+          ...wpWheel,
+          fitmentValidation: {
+            fitmentClass: validation.fitmentClass,
+            fitmentMode: validation.fitmentMode,
+            ...(debug ? {
+              boltPatternPass: validation.boltPatternPass,
+              centerBorePass: validation.centerBorePass,
+              diameterPass: validation.diameterPass,
+              widthPass: validation.widthPass,
+              offsetPass: validation.offsetPass,
+              exclusionReasons: validation.exclusionReasons,
+              checked: validation.checked,
+            } : {}),
           },
-          validation,
         });
       }
     }
 
-    const validateMs = Date.now() - t0 - profileMs - wpMs;
+    const validateMs = Date.now() - t0 - profileMs - envelopeMs - wpMs;
 
-    // Step 4: Build response
-    const passingWheels = validationResults.map((r) => r.wheel);
+    // Step 5: Build summary stats
+    const summary = summarizeValidations(allValidations);
 
     // Build facets from passing wheels only
     const facets = buildFacets(passingWheels);
@@ -149,20 +178,44 @@ export async function GET(req: Request) {
       page: Number(page),
       pageSize: Number(pageSize),
       facets,
-      fitmentProfile: {
-        boltPattern: profile.boltPattern,
-        centerBore: profile.centerBore,
-        allowedDiameters: profile.allowedDiameters,
-        allowedWidths: profile.allowedWidths,
-        allowedOffsets: profile.allowedOffsets,
+      fitment: {
+        mode,
+        envelope: {
+          boltPattern: envelope.boltPattern,
+          centerBore: envelope.centerBore,
+          oem: {
+            diameter: [envelope.oemMinDiameter, envelope.oemMaxDiameter],
+            width: [envelope.oemMinWidth, envelope.oemMaxWidth],
+            offset: [envelope.oemMinOffset, envelope.oemMaxOffset],
+          },
+          allowed: {
+            diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
+            width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
+            offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
+          },
+        },
+        vehicle: {
+          year: profile.vehicle.year,
+          make: profile.vehicle.make,
+          model: profile.vehicle.model,
+          trim: profile.vehicle.trim,
+        },
       },
-      summary,
+      summary: {
+        fromWheelPros: wpResults.length,
+        afterFitmentFilter: passingWheels.length,
+        ...summary,
+      },
       timing: debug ? {
         totalMs: Date.now() - t0,
         profileMs,
+        envelopeMs,
         wpMs,
         validateMs,
       } : undefined,
+      ...(debug ? {
+        expansionRules: EXPANSION_PRESETS[mode],
+      } : {}),
     });
 
   } catch (err: any) {
