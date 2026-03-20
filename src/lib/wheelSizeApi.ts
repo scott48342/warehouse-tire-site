@@ -123,17 +123,28 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
     }
   }
 
+  console.log(`[wheelSizeApi] GET ${url.toString().replace(/user_key=[^&]+/, "user_key=***")}`);
+  
   const res = await fetch(url.toString(), {
     headers: { Accept: "application/json" },
     cache: "no-store",
   });
 
+  const text = await res.text();
+  
   if (!res.ok) {
-    const text = await res.text().catch(() => "");
+    console.error(`[wheelSizeApi] Error ${res.status}: ${text.slice(0, 500)}`);
     throw new Error(`Wheel-Size API error: ${res.status} ${text.slice(0, 200)}`);
   }
 
-  return res.json() as Promise<T>;
+  console.log(`[wheelSizeApi] Response (${text.length} bytes): ${text.slice(0, 300)}...`);
+  
+  try {
+    return JSON.parse(text) as T;
+  } catch (e) {
+    console.error(`[wheelSizeApi] JSON parse error: ${text.slice(0, 500)}`);
+    throw e;
+  }
 }
 
 /**
