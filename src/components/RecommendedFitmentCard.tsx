@@ -154,6 +154,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
   const [axles, setAxles] = useState<AxleFitment | null>(null);
   const [oemTireSizes, setOemTireSizes] = useState<string[]>([]);
   const [error, setError] = useState<string>("");
+  const [vehicleIsStaggered, setVehicleIsStaggered] = useState<boolean>(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -163,8 +164,76 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
       setAxles(null);
       setOemTireSizes([]);
       setError("");
+      setVehicleIsStaggered(false);
 
       if (!hasVehicle) return;
+
+      // First, check our fitment-search endpoint for actual staggered info
+      try {
+        const fitmentQs = new URLSearchParams({
+          year: String(fitment.year || ""),
+          make: String(fitment.make || ""),
+          model: String(fitment.model || ""),
+          pageSize: "1", // Just need fitment info, not wheels
+        });
+        const fitmentData = await fetchJson<{
+          fitment?: {
+            staggered?: {
+              isStaggered?: boolean;
+              frontSpec?: { diameter: number; width: number; offset: number | null; tireSize: string | null };
+              rearSpec?: { diameter: number; width: number; offset: number | null; tireSize: string | null };
+            };
+            envelope?: {
+              boltPattern?: string;
+              centerBore?: number;
+              oem?: { diameter: [number, number]; width: [number, number]; offset: [number, number] };
+            };
+          };
+        }>(`/api/wheels/fitment-search?${fitmentQs.toString()}`);
+
+        if (cancelled) return;
+
+        // If we got staggered info from fitment-search, use it
+        if (fitmentData?.fitment?.staggered) {
+          const staggered = fitmentData.fitment.staggered;
+          setVehicleIsStaggered(Boolean(staggered.isStaggered));
+
+          // Use envelope for basic details
+          const envelope = fitmentData.fitment.envelope;
+          if (envelope) {
+            setDetails({
+              boltPattern: envelope.boltPattern,
+              centerBoreMm: envelope.centerBore,
+              wheelDiameterRangeIn: envelope.oem?.diameter,
+              wheelWidthRangeIn: envelope.oem?.width,
+              offsetRangeMm: envelope.oem?.offset,
+            });
+          }
+
+          // Only set axles if vehicle actually supports staggered
+          if (staggered.isStaggered && staggered.frontSpec && staggered.rearSpec) {
+            setAxles({
+              front: {
+                boltPattern: envelope?.boltPattern,
+                centerBoreMm: envelope?.centerBore,
+                wheelDiameterRangeIn: [staggered.frontSpec.diameter, staggered.frontSpec.diameter],
+                wheelWidthRangeIn: [staggered.frontSpec.width, staggered.frontSpec.width],
+                offsetRangeMm: staggered.frontSpec.offset != null ? [staggered.frontSpec.offset, staggered.frontSpec.offset] : undefined,
+              },
+              rear: {
+                boltPattern: envelope?.boltPattern,
+                centerBoreMm: envelope?.centerBore,
+                wheelDiameterRangeIn: [staggered.rearSpec.diameter, staggered.rearSpec.diameter],
+                wheelWidthRangeIn: [staggered.rearSpec.width, staggered.rearSpec.width],
+                offsetRangeMm: staggered.rearSpec.offset != null ? [staggered.rearSpec.offset, staggered.rearSpec.offset] : undefined,
+              },
+            });
+          }
+          return; // We have good data from fitment-search, no need to continue
+        }
+      } catch {
+        // Fitment-search failed, fall through to legacy logic
+      }
 
       // 1) If we have a WheelPros submodel, show WheelPros vehicle fitment details.
       if (wpSubmodel) {
@@ -232,9 +301,9 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
         const sizes = Array.isArray(data?.tireSizes) ? data.tireSizes.map(String) : [];
         setOemTireSizes(sizes);
 
-        // Best-effort stagger detection + front/rear ranges derived from OEM tire sizes.
-        const derivedAxles = axleFitmentFromOemTireSizesConservative(sizes, fallbackDetails);
-        if (derivedAxles) setAxles(derivedAxles);
+        // NOTE: We no longer infer staggered from tire size options.
+        // Staggered detection is now done by fitment-search using actual front/rear wheel specs.
+        // If fitment-search failed above, we just show the basic fitment info without axle split.
       } catch {
         // best-effort only
       }

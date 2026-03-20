@@ -219,7 +219,9 @@ export default async function WheelsPage({
   let vehicleCallsForStaggered = Boolean(fit?.staggered?.isStaggered || fit?.staggered === true);
 
   // Default to showing all wheels (no fitView filter). User can opt into staggered view.
-  const effectiveFitView = fitView || "";
+  // NOTE: The actual effectiveFitView is determined AFTER we know if vehicle supports staggered.
+  // We'll update this after fetching wheel data.
+  let effectiveFitView = fitView || "";
 
   // Centerbore: WheelPros properties/filters are inconsistent; don't hard-filter on it upstream.
   const cb: string | undefined = undefined;
@@ -387,6 +389,12 @@ export default async function WheelsPage({
 
   // Capture staggered debug info from fitment-search response
   const staggeredDebug = data?.fitment?.staggered || null;
+
+  // Clear staggered fitView if vehicle doesn't support staggered
+  // (prevents confusion when someone shares a URL with fitView=staggered for a non-staggered vehicle)
+  if (!vehicleCallsForStaggered && effectiveFitView === "staggered") {
+    effectiveFitView = "";
+  }
 
   // If using fast browse, convert directly to final format (skip all the WheelPros processing)
   let fastItems: Wheel[] = [];
@@ -567,11 +575,11 @@ export default async function WheelsPage({
           const frontV = [...poolFrontFin].sort((a, b) => a.w - b.w)[0];
           const rearV = [...poolRearFin].sort((a, b) => b.w - a.w)[0];
 
-          const staggered =
+          // IMPORTANT: Only allow staggered pairs if the VEHICLE supports staggered fitment.
+          // Don't infer staggered from wheel style variants (different widths available).
+          const staggered = vehicleCallsForStaggered &&
             Boolean(rearV && frontV) &&
-            (useMixedDia
-              ? (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0)
-              : (rearV.sku !== frontV.sku && rearV.w - frontV.w >= 1.0));
+            (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0);
 
           pairFin = {
             staggered,
@@ -609,11 +617,11 @@ export default async function WheelsPage({
         const frontV = [...poolFront].sort((a, b) => a.w - b.w)[0];
         const rearV = [...poolRear].sort((a, b) => b.w - a.w)[0];
 
-        const staggered =
+        // IMPORTANT: Only allow staggered pairs if the VEHICLE supports staggered fitment.
+        // Don't infer staggered from wheel style variants (different widths available).
+        const staggered = vehicleCallsForStaggered &&
           Boolean(rearV && frontV) &&
-          (useMixedDia
-            ? (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0)
-            : (rearV.sku !== frontV.sku && rearV.w - frontV.w >= 1.0));
+          (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0);
 
         pair = {
           staggered,
