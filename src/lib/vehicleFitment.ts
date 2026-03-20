@@ -286,9 +286,9 @@ export async function getVehicle(
      FROM vehicles
      WHERE year = $1 AND make = $2 AND model = $3 
        AND (
-         CASE WHEN $4::text IS NULL THEN trim IS NULL
-         ELSE (trim = $4 OR search_trim = $4)
-         END
+         $4::text IS NULL OR -- no trim specified = match any
+         trim = $4 OR 
+         search_trim = $4
        )
      ORDER BY imported_at DESC NULLS LAST, updated_at DESC
      LIMIT 1`,
