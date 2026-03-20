@@ -9,6 +9,7 @@ import {
   buildFitmentEnvelope,
   validateWheel,
   summarizeValidations,
+  autoDetectFitmentMode,
   type FitmentMode,
   type WheelSpec,
   type OEMSpecs,
@@ -39,7 +40,7 @@ export async function GET(req: Request) {
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
   const trim = url.searchParams.get("trim") || undefined;
-  const mode = (url.searchParams.get("mode") || "aftermarket_safe") as FitmentMode;
+  const modeParam = url.searchParams.get("mode"); // may be null for auto-detect
 
   if (!year || !make || !model) {
     return NextResponse.json(
@@ -48,9 +49,10 @@ export async function GET(req: Request) {
     );
   }
 
-  if (!["oem", "aftermarket_safe", "aggressive", "truck"].includes(mode)) {
+  // Validate mode if explicitly provided (null = auto-detect)
+  if (modeParam && !["oem", "aftermarket_safe", "aggressive", "truck", "auto"].includes(modeParam)) {
     return NextResponse.json(
-      { error: `Invalid mode: ${mode}. Must be oem, aftermarket_safe, aggressive, or truck` },
+      { error: `Invalid mode: ${modeParam}. Must be oem, aftermarket_safe, aggressive, truck, or auto` },
       { status: 400 }
     );
   }
@@ -92,7 +94,27 @@ export async function GET(req: Request) {
 
     const profileMs = Date.now() - t0;
 
-    // Step 2: Build aftermarket fitment envelope
+    // Step 2: Determine fitment mode (auto-detect if not specified)
+    let mode: FitmentMode;
+    let modeAutoDetected = false;
+    let vehicleType: "truck" | "suv" | "car" | undefined;
+
+    if (modeParam && modeParam !== "auto") {
+      mode = modeParam as FitmentMode;
+    } else {
+      // Auto-detect based on vehicle model and specs
+      const autoResult = autoDetectFitmentMode(model!, {
+        boltPattern: profile.boltPattern,
+        minDiameter: profile.allowedDiameters.length > 0 ? Math.min(...profile.allowedDiameters) : undefined,
+        maxWidth: profile.allowedWidths.length > 0 ? Math.max(...profile.allowedWidths) : undefined,
+      });
+      mode = autoResult.recommendedMode;
+      vehicleType = autoResult.vehicleType;
+      modeAutoDetected = true;
+      console.log(`[fitment-search] Auto-detected: vehicleType=${vehicleType}, mode=${mode} for ${model}`);
+    }
+
+    // Step 3: Build aftermarket fitment envelope
     const oemSpecs: OEMSpecs = {
       boltPattern: profile.boltPattern,
       centerBore: profile.centerBore,
@@ -179,6 +201,7 @@ export async function GET(req: Request) {
               offsetPass: validation.offsetPass,
               exclusionReasons: validation.exclusionReasons,
               checked: validation.checked,
+              boltPatternDebug: validation.boltPatternDebug,
             } : {}),
           },
         });
@@ -201,6 +224,8 @@ export async function GET(req: Request) {
       facets,
       fitment: {
         mode,
+        modeAutoDetected,
+        vehicleType,
         envelope: {
           boltPattern: envelope.boltPattern,
           centerBore: envelope.centerBore,

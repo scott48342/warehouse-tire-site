@@ -99,6 +99,13 @@ export type FitmentValidation = {
     offset?: number;
   };
   
+  // Bolt pattern debug (for dual-pattern wheels)
+  boltPatternDebug?: {
+    parsedPatterns: string[];
+    matchedPattern?: string;
+    vehiclePattern: string;
+  };
+  
   // Envelope used
   envelope?: {
     allowedDiameterRange: [number, number];
@@ -106,6 +113,119 @@ export type FitmentValidation = {
     allowedOffsetRange: [number, number];
   };
 };
+
+// ─────────────────────────────────────────────────────────────────────────────
+// VEHICLE TYPE DETECTION (for auto mode selection)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Detect if a vehicle is likely a truck/SUV based on model name or specs
+ * Used to auto-select fitment mode
+ */
+export function detectVehicleType(
+  model: string,
+  options?: {
+    boltPattern?: string;
+    tireType?: string;
+    body?: string;
+    minDiameter?: number;
+    maxWidth?: number;
+  }
+): "truck" | "suv" | "car" {
+  const modelLower = model.toLowerCase();
+  
+  // Explicit truck model names
+  const truckPatterns = [
+    /f[-\s]?150/i, /f[-\s]?250/i, /f[-\s]?350/i, // Ford F-series
+    /silverado/i, /sierra/i, /colorado/i, /canyon/i, // GM trucks
+    /ram\s*\d+/i, // Ram
+    /tacoma/i, /tundra/i, // Toyota trucks
+    /frontier/i, /titan/i, // Nissan trucks
+    /ranger/i, /maverick/i, // Ford smaller trucks
+    /ridgeline/i, // Honda
+    /gladiator/i, // Jeep
+    /raptor/i, /tremor/i, // Performance truck trims
+  ];
+  
+  // SUV model names
+  const suvPatterns = [
+    /wrangler/i, /cherokee/i, /grand cherokee/i, /4runner/i, /sequoia/i,
+    /tahoe/i, /suburban/i, /yukon/i, /expedition/i, /navigator/i,
+    /explorer/i, /bronco/i, /defender/i, /range rover/i, /discovery/i,
+    /land cruiser/i, /gx/i, /lx/i, /pilot/i, /passport/i,
+    /highlander/i, /pathfinder/i, /armada/i, /telluride/i, /palisade/i,
+    /escalade/i, /blazer/i, /trailblazer/i, /traverse/i,
+    /durango/i, /4x4/i, /off[-\s]?road/i,
+  ];
+  
+  // Check explicit truck patterns
+  for (const pattern of truckPatterns) {
+    if (pattern.test(modelLower)) return "truck";
+  }
+  
+  // Check SUV patterns
+  for (const pattern of suvPatterns) {
+    if (pattern.test(modelLower)) return "suv";
+  }
+  
+  // Heuristics from specs
+  if (options) {
+    // 6-lug bolt patterns are almost always trucks/SUVs
+    if (options.boltPattern?.startsWith("6x")) return "truck";
+    if (options.boltPattern?.startsWith("8x")) return "truck";
+    
+    // Tire type hints
+    if (options.tireType?.toLowerCase() === "suv") return "suv";
+    if (options.tireType?.toLowerCase() === "light truck") return "truck";
+    
+    // Body type hints
+    const body = options.body?.toLowerCase() || "";
+    if (body.includes("pickup") || body.includes("truck")) return "truck";
+    if (body.includes("suv") || body.includes("crossover")) return "suv";
+    
+    // Large wheel specs hint at truck/SUV
+    if (options.minDiameter && options.minDiameter >= 17 && options.maxWidth && options.maxWidth >= 8.5) {
+      return "suv";
+    }
+  }
+  
+  return "car";
+}
+
+/**
+ * Get the recommended default fitment mode for a vehicle
+ */
+export function getDefaultFitmentMode(
+  vehicleType: "truck" | "suv" | "car"
+): FitmentMode {
+  switch (vehicleType) {
+    case "truck":
+      return "truck";
+    case "suv":
+      return "aggressive"; // SUVs often get aftermarket but not as extreme as trucks
+    case "car":
+    default:
+      return "aftermarket_safe";
+  }
+}
+
+/**
+ * Auto-detect fitment mode from vehicle info
+ */
+export function autoDetectFitmentMode(
+  model: string,
+  options?: {
+    boltPattern?: string;
+    tireType?: string;
+    body?: string;
+    minDiameter?: number;
+    maxWidth?: number;
+  }
+): { vehicleType: "truck" | "suv" | "car"; recommendedMode: FitmentMode } {
+  const vehicleType = detectVehicleType(model, options);
+  const recommendedMode = getDefaultFitmentMode(vehicleType);
+  return { vehicleType, recommendedMode };
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EXPANSION RULE PRESETS
@@ -250,10 +370,35 @@ export function normalizeBoltPattern(bp: string): string {
 }
 
 /**
- * Check if wheel bolt pattern matches vehicle
+ * Parse dual/multi bolt patterns (e.g., "6x135/6x139.7" or "5x114.3/5x120")
+ * Returns an array of normalized patterns
  */
-export function boltPatternMatches(wheelBp: string, vehicleBp: string): boolean {
-  return normalizeBoltPattern(wheelBp) === normalizeBoltPattern(vehicleBp);
+export function parseBoltPatterns(bp: string): string[] {
+  if (!bp) return [];
+  // Split on "/" or "," which are common dual-pattern separators
+  const parts = bp.split(/[\/,]/).map(p => normalizeBoltPattern(p.trim())).filter(p => p.length > 0);
+  return parts.length > 0 ? parts : [normalizeBoltPattern(bp)];
+}
+
+/**
+ * Check if wheel bolt pattern matches vehicle
+ * Supports dual-pattern wheels (e.g., "6x135/6x139.7")
+ * Returns { matches: boolean, matchedPattern?: string, parsedPatterns: string[] }
+ */
+export function boltPatternMatches(
+  wheelBp: string, 
+  vehicleBp: string
+): { matches: boolean; matchedPattern?: string; parsedPatterns: string[] } {
+  const vehicleNorm = normalizeBoltPattern(vehicleBp);
+  const wheelPatterns = parseBoltPatterns(wheelBp);
+  
+  for (const pattern of wheelPatterns) {
+    if (pattern === vehicleNorm) {
+      return { matches: true, matchedPattern: pattern, parsedPatterns: wheelPatterns };
+    }
+  }
+  
+  return { matches: false, parsedPatterns: wheelPatterns };
 }
 
 /**
@@ -279,13 +424,25 @@ export function validateWheel(
   // HARD RULES (never relaxed)
   // ─────────────────────────────────────────────────────────────────────────
   
-  // Bolt pattern - REQUIRED and must match exactly
+  // Bolt pattern - REQUIRED; supports dual-pattern wheels (e.g., "6x135/6x139.7")
   let boltPatternPass = false;
+  let boltPatternDebug: FitmentValidation["boltPatternDebug"] | undefined;
+  
   if (wheel.boltPattern) {
-    boltPatternPass = boltPatternMatches(wheel.boltPattern, envelope.boltPattern);
+    const bpResult = boltPatternMatches(wheel.boltPattern, envelope.boltPattern);
+    boltPatternPass = bpResult.matches;
+    boltPatternDebug = {
+      parsedPatterns: bpResult.parsedPatterns,
+      matchedPattern: bpResult.matchedPattern,
+      vehiclePattern: normalizeBoltPattern(envelope.boltPattern),
+    };
+    
     if (!boltPatternPass) {
+      const patternsStr = bpResult.parsedPatterns.length > 1 
+        ? `[${bpResult.parsedPatterns.join(", ")}]` 
+        : wheel.boltPattern;
       exclusionReasons.push(
-        `Bolt pattern mismatch: wheel=${wheel.boltPattern}, vehicle=${envelope.boltPattern}`
+        `Bolt pattern mismatch: wheel=${patternsStr}, vehicle=${envelope.boltPattern}`
       );
     }
   } else {
@@ -394,6 +551,7 @@ export function validateWheel(
       width: wheel.width,
       offset: wheel.offset,
     },
+    boltPatternDebug,
     envelope: {
       allowedDiameterRange: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
       allowedWidthRange: [envelope.allowedMinWidth, envelope.allowedMaxWidth],

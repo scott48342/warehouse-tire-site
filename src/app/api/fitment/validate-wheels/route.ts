@@ -67,9 +67,9 @@ export async function POST(req: Request) {
     }
 
     // Validate mode
-    if (!["oem", "aftermarket_safe", "aggressive", "truck"].includes(mode)) {
+    if (!["oem", "aftermarket_safe", "aggressive", "truck", "auto"].includes(mode)) {
       return NextResponse.json(
-        { error: `Invalid mode: ${mode}. Must be oem, aftermarket_safe, aggressive, or truck` },
+        { error: `Invalid mode: ${mode}. Must be oem, aftermarket_safe, aggressive, truck, or auto` },
         { status: 400 }
       );
     }
