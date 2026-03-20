@@ -230,31 +230,6 @@ export function WheelsStyleCard({
         />
       </div>
 
-      {thumbs.length > 1 ? (
-        <div className="mt-3">
-          <label className="text-[11px] font-semibold text-neutral-600">Finish</label>
-          <select
-            value={selectedFinish || ""}
-            onChange={(e) => {
-              const fin = e.target.value;
-              const hit = thumbs.find((t) => String(t.finish) === fin);
-              setSelectedFinish(fin);
-              if (hit?.sku) setSelectedSku(hit.sku);
-              if (hit?.imageUrl) setSelectedImage(hit.imageUrl);
-              if (typeof hit?.price === "number") setSelectedPrice(hit.price);
-              if (hit?.pair) setSelectedPair(hit.pair);
-            }}
-            className="mt-1 h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-          >
-            {thumbs.map((t) => (
-              <option key={t.sku || t.finish} value={t.finish}>
-                {t.finish}
-              </option>
-            ))}
-          </select>
-        </div>
-      ) : null}
-
       {selectToTires ? (
         <button
           type="button"
@@ -393,6 +368,32 @@ export function WheelsStyleCard({
               </button>
             );
           })}
+        </div>
+      ) : null}
+
+      {/* Finish dropdown - shown when multiple finishes available */}
+      {thumbs.length > 1 ? (
+        <div className="mt-3">
+          <label className="text-[11px] font-semibold text-neutral-600">Finish</label>
+          <select
+            value={selectedFinish || ""}
+            onChange={(e) => {
+              const fin = e.target.value;
+              const hit = thumbs.find((t) => String(t.finish) === fin);
+              setSelectedFinish(fin);
+              if (hit?.sku) setSelectedSku(hit.sku);
+              if (hit?.imageUrl) setSelectedImage(hit.imageUrl);
+              if (typeof hit?.price === "number") setSelectedPrice(hit.price);
+              if (hit?.pair) setSelectedPair(hit.pair);
+            }}
+            className="mt-1 h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+          >
+            {thumbs.map((t) => (
+              <option key={t.sku || t.finish} value={t.finish}>
+                {t.finish}
+              </option>
+            ))}
+          </select>
         </div>
       ) : null}
 
