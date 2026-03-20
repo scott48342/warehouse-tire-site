@@ -152,7 +152,8 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
  * Get all makes
  */
 export async function getMakes(): Promise<WheelSizeMake[]> {
-  const data = await apiGet<{ data: WheelSizeMake[] }>("/makes/");
+  // Try without trailing slash
+  const data = await apiGet<{ data: WheelSizeMake[] }>("/makes");
   return data.data || [];
 }
 
@@ -160,7 +161,7 @@ export async function getMakes(): Promise<WheelSizeMake[]> {
  * Get models for a make
  */
 export async function getModels(make: string): Promise<WheelSizeModel[]> {
-  const data = await apiGet<{ data: WheelSizeModel[] }>("/models/", { make });
+  const data = await apiGet<{ data: WheelSizeModel[] }>("/models", { make });
   return data.data || [];
 }
 
@@ -168,7 +169,7 @@ export async function getModels(make: string): Promise<WheelSizeModel[]> {
  * Get years for a make/model
  */
 export async function getYears(make: string, model: string): Promise<WheelSizeYear[]> {
-  const data = await apiGet<{ data: WheelSizeYear[] }>("/years/", { make, model });
+  const data = await apiGet<{ data: WheelSizeYear[] }>("/years", { make, model });
   return data.data || [];
 }
 
@@ -180,7 +181,7 @@ export async function getModifications(
   model: string,
   year: number
 ): Promise<WheelSizeModification[]> {
-  const data = await apiGet<{ data: WheelSizeModification[] }>("/modifications/", {
+  const data = await apiGet<{ data: WheelSizeModification[] }>("/modifications", {
     make,
     model,
     year: String(year),
@@ -206,7 +207,7 @@ export async function getVehicleData(
     };
     if (modification) params.modification = modification;
 
-    const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_model/", params);
+    const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_model", params);
     
     // Return first matching result
     return data.data?.[0] || null;
@@ -220,7 +221,7 @@ export async function getVehicleData(
  * Search by tire size to get potential wheel/tire combinations
  */
 export async function searchByTire(tireSize: string): Promise<WheelSizeVehicleData[]> {
-  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_tire/", {
+  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_tire", {
     tire: tireSize,
   });
   return data.data || [];
@@ -240,6 +241,6 @@ export async function searchByRim(
   };
   if (offset !== undefined) params.offset = String(offset);
 
-  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_rim/", params);
+  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_rim", params);
   return data.data || [];
 }
