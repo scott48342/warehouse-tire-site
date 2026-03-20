@@ -297,7 +297,38 @@ export async function browseWheels(
     return pa - pb;
   });
   
-  // Build facets from filtered results
+  // Helper to check if a SKU matches the current filters
+  function skuMatchesFilters(sku: WheelStyle["skus"][0]): boolean {
+    if (filters.boltPattern) {
+      const bp = filters.boltPattern.toUpperCase().replace(/\s/g, "");
+      const skuBp = sku.boltPattern.toUpperCase().replace(/\s/g, "");
+      if (!(skuBp === bp || skuBp.includes(bp))) return false;
+    }
+    if (filters.diameter) {
+      const d = parseFloat(filters.diameter);
+      const skuD = parseFloat(sku.diameter);
+      if (Math.abs(skuD - d) >= 0.1) return false;
+    }
+    if (filters.width) {
+      const w = parseFloat(filters.width);
+      const skuW = parseFloat(sku.width);
+      if (Math.abs(skuW - w) >= 0.1) return false;
+    }
+    if (filters.offsetMin !== undefined || filters.offsetMax !== undefined) {
+      const o = parseFloat(sku.offset);
+      if (!Number.isFinite(o)) return false;
+      if (filters.offsetMin !== undefined && o < filters.offsetMin) return false;
+      if (filters.offsetMax !== undefined && o > filters.offsetMax) return false;
+    }
+    if (filters.centerbore) {
+      const cb = parseFloat(filters.centerbore);
+      const skuCb = parseFloat(sku.centerbore);
+      if (skuCb < cb - 0.5) return false;
+    }
+    return true;
+  }
+
+  // Build facets from filtered results, only counting SKUs that match filters
   const brandCounts = new Map<string, { name: string; count: number }>();
   const finishCounts = new Map<string, number>();
   const diameterCounts = new Map<string, number>();
@@ -315,18 +346,23 @@ export async function browseWheels(
       }
     }
     
-    // Finishes
-    for (const f of s.finishes) {
-      if (f.finish) {
-        finishCounts.set(f.finish, (finishCounts.get(f.finish) || 0) + 1);
+    // Only count SKUs that actually match the filters for size/bolt facets
+    const matchingSkus = s.skus.filter(skuMatchesFilters);
+    
+    // Finishes (only from matching SKUs)
+    const seenFinish = new Set<string>();
+    for (const sku of matchingSkus) {
+      if (sku.finish && !seenFinish.has(sku.finish)) {
+        seenFinish.add(sku.finish);
+        finishCounts.set(sku.finish, (finishCounts.get(sku.finish) || 0) + 1);
       }
     }
     
-    // Diameters/widths/bolt patterns from SKUs
+    // Diameters/widths/bolt patterns from matching SKUs only
     const seenD = new Set<string>();
     const seenW = new Set<string>();
     const seenBp = new Set<string>();
-    for (const sku of s.skus) {
+    for (const sku of matchingSkus) {
       if (sku.diameter && !seenD.has(sku.diameter)) {
         seenD.add(sku.diameter);
         diameterCounts.set(sku.diameter, (diameterCounts.get(sku.diameter) || 0) + 1);
@@ -344,7 +380,30 @@ export async function browseWheels(
   
   // Paginate
   const start = (page - 1) * pageSize;
-  const pageStyles = finalFiltered.slice(start, start + pageSize);
+  const pageStylesRaw = finalFiltered.slice(start, start + pageSize);
+  
+  // Filter SKUs and finishes in returned styles to only show matching ones
+  const pageStyles = pageStylesRaw.map(s => {
+    const matchingSkus = s.skus.filter(skuMatchesFilters);
+    const matchingFinishes = s.finishes.filter(f => 
+      matchingSkus.some(sku => sku.finish === f.finish)
+    );
+    // Update price to lowest matching SKU
+    const lowestPrice = matchingSkus.reduce((min, sku) => {
+      if (sku.price !== undefined && (min === undefined || sku.price < min)) return sku.price;
+      return min;
+    }, undefined as number | undefined);
+    // Pick image from matching finish/sku if available
+    const matchingImage = matchingFinishes[0]?.imageUrl || matchingSkus[0]?.sku ? s.imageUrl : s.imageUrl;
+    
+    return {
+      ...s,
+      skus: matchingSkus,
+      finishes: matchingFinishes.length > 0 ? matchingFinishes : s.finishes.slice(0, 1),
+      price: lowestPrice ?? s.price,
+      imageUrl: matchingImage,
+    };
+  });
   
   const filterMs = Date.now() - t1;
   
