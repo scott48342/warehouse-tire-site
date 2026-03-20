@@ -10,6 +10,7 @@ import { BRAND } from "@/lib/brand";
 type LauncherMode = "vehicles" | "tires" | "wheels" | "packages";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
 import { SearchModal } from "@/components/SearchModal";
+import { CartIcon } from "@/components/CartIcon";
 
 function PillLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -324,6 +325,8 @@ export function Header() {
           >
             My Garage
           </button>
+
+          <CartIcon />
 
           <PillLink href={BRAND.links.tel}>Call</PillLink>
           <Link

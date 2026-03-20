@@ -5,6 +5,7 @@ import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/
 import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
+import { AddToCartButton } from "@/components/AddToCartButton";
 import { BRAND } from "@/lib/brand";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 
@@ -524,25 +525,34 @@ export default async function WheelDetailPage({
               <div id="quote" className="rounded-2xl border border-green-200 bg-green-50 p-4">
                 <div className="text-sm font-extrabold text-neutral-900 mb-3">Ready to buy?</div>
                 <div className="grid gap-2">
-                  <Link
-                    href={
-                      `/quote/new?${new URLSearchParams({
-                        year,
-                        make,
-                        model,
-                        trim,
-                        modification,
-                        wheelSku: sku,
-                        wheelName: String(it?.title || sku),
-                        wheelUnit: typeof price === "number" && Number.isFinite(price) ? String(price) : "",
-                        wheelQty: "4",
-                        wheelDia: diameter || "",
-                      }).toString()}`
-                    }
-                    className="flex h-12 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
-                  >
-                    Add to Cart — Set of 4
-                  </Link>
+                  {typeof price === "number" && Number.isFinite(price) ? (
+                    <AddToCartButton
+                      sku={sku}
+                      brand={brand || "Wheel"}
+                      model={String(it?.title || sku)}
+                      finish={finish || undefined}
+                      diameter={diameter || undefined}
+                      width={width || undefined}
+                      offset={offset || undefined}
+                      boltPattern={boltPattern || undefined}
+                      imageUrl={imageUrl}
+                      unitPrice={price}
+                      quantity={4}
+                      vehicle={
+                        year && make && model
+                          ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
+                          : undefined
+                      }
+                      className="w-full"
+                    />
+                  ) : (
+                    <a
+                      href={BRAND.links.tel}
+                      className="flex h-12 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
+                    >
+                      Call for Price
+                    </a>
+                  )}
                   <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
                 </div>
 

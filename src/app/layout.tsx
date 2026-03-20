@@ -3,6 +3,8 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { MobileActionBar } from "@/components/MobileActionBar";
+import { CartProvider } from "@/lib/cart/CartContext";
+import { CartSlideout } from "@/components/CartSlideout";
 import { Suspense } from "react";
 
 const inter = Inter({
@@ -28,11 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${oswald.variable} antialiased`}>
-        <Suspense fallback={<div className="h-16" />}>
-          <Header />
-        </Suspense>
-        {children}
-        <MobileActionBar />
+        <CartProvider>
+          <Suspense fallback={<div className="h-16" />}>
+            <Header />
+          </Suspense>
+          {children}
+          <MobileActionBar />
+          <CartSlideout />
+        </CartProvider>
       </body>
     </html>
   );
