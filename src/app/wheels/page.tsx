@@ -655,12 +655,12 @@ export default async function WheelsPage({
                   <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                     <div className="text-xs font-semibold text-neutral-600">Step 1</div>
                     <div className="mt-1 text-sm font-extrabold text-neutral-900">Select a wheel to load details</div>
-                    <div className="mt-1 text-xs text-neutral-600">Pick a style below—details will appear on the wheel page.</div>
+                    <div className="mt-1 text-xs text-neutral-600">Pick a style below-details will appear on the wheel page.</div>
                   </div>
                   <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                     <div className="text-xs font-semibold text-neutral-600">Step 2</div>
                     <div className="mt-1 text-sm font-extrabold text-neutral-900">Add tires</div>
-                    <div className="mt-1 text-xs text-neutral-600">We’ll show OEM sizes and options that match your vehicle.</div>
+                    <div className="mt-1 text-xs text-neutral-600">We'll show OEM sizes and options that match your vehicle.</div>
                     <div className="mt-3">
                       <Link
                         href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
@@ -691,7 +691,7 @@ export default async function WheelsPage({
               options={[
                 { value: "price_asc", label: "Price Low to High" },
                 { value: "price_desc", label: "Price High to Low" },
-                { value: "brand_asc", label: "Brand A–Z" },
+                { value: "brand_asc", label: "Brand A-Z" },
               ]}
             />
           </div>
@@ -980,7 +980,8 @@ export default async function WheelsPage({
 
           <section>
             {/* Sticky workspace header (desktop): stays visible while scrolling results */}
-            {year && make && model ? (
+            {/* Only show Step 1/Step 2 package flow when explicitly requested via ?package=1 */}
+            {year && make && model && isPackageFlow ? (
               <div className="sticky top-24 z-30 hidden md:block">
                 <div className="mx-auto max-w-[980px] rounded-3xl border border-neutral-200 bg-white/95 p-4 backdrop-blur">
                   <div className="grid gap-3 md:grid-cols-2">
@@ -993,7 +994,7 @@ export default async function WheelsPage({
                     <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                       <div className="text-xs font-semibold text-neutral-600">Step 2</div>
                       <div className="mt-1 text-sm font-extrabold text-neutral-900">Add tires</div>
-                      <div className="mt-1 text-xs text-neutral-600">We’ll show OEM sizes and options that match your vehicle.</div>
+                      <div className="mt-1 text-xs text-neutral-600">We'll show OEM sizes and options that match your vehicle.</div>
                       <div className="mt-3">
                         <Link
                           href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
