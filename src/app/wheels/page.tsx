@@ -280,7 +280,8 @@ export default async function WheelsPage({
 
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
-  const upstreamPageSize = 120;
+  // Fetch enough results to show all valid wheels (fitment engine already filters to ~200-300 for most vehicles)
+  const upstreamPageSize = 500;
 
   const baseWheelProsParams: Record<string, string | undefined> = {
     // Vehicle info (triggers fitment-search endpoint when present)
