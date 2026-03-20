@@ -164,6 +164,10 @@ export default async function WheelsPage({
   const offsetMinUser = offsetMinRaw ? Number(String(offsetMinRaw)) : null;
   const offsetMaxUser = offsetMaxRaw ? Number(String(offsetMaxRaw)) : null;
 
+  // Fitment level: "oem" (default, strict offset) vs "lifted" (show all offsets for modified vehicles)
+  const fitLevelRaw = (Array.isArray(sp.fitLevel) ? sp.fitLevel[0] : sp.fitLevel) || "";
+  const fitLevel = String(fitLevelRaw || "oem").trim();
+
   const needsTrimNotice = Boolean(year && make && model && !modification);
 
   // Only show the guided wheel+tire package UI when explicitly requested.
@@ -250,6 +254,21 @@ export default async function WheelsPage({
   const maxOffset = hasVehicle && Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : undefined;
 
   // 2) Query WheelPros using fitment-derived filters.
+  // Apply OEM offset filtering by default (fitLevel=oem), unless user explicitly wants lifted/modified fitments
+  // or has manually set offset filters.
+  const autoApplyOemOffset = hasVehicle && fitLevel !== "lifted" && offsetMinUser == null && offsetMaxUser == null;
+  
+  // Use OEM offset range when auto-applying (with tolerance for aftermarket wheels)
+  const OEM_OFFSET_TOLERANCE_MM = 5;
+  const minOffOem = autoApplyOemOffset && Number.isFinite(minOffN0) ? minOffN0 - OEM_OFFSET_TOLERANCE_MM : NaN;
+  const maxOffOem = autoApplyOemOffset && Number.isFinite(maxOffN0) ? maxOffN0 + OEM_OFFSET_TOLERANCE_MM : NaN;
+
+  // Final offset values: user explicit > OEM auto > none
+  const minOffsetFinal = offsetMinUser != null ? String(offsetMinUser) 
+    : (Number.isFinite(minOffOem) ? String(minOffOem) : undefined);
+  const maxOffsetFinal = offsetMaxUser != null ? String(offsetMaxUser)
+    : (Number.isFinite(maxOffOem) ? String(maxOffOem) : undefined);
+
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
   const upstreamPageSize = 120;
@@ -275,9 +294,9 @@ export default async function WheelsPage({
     brand_cd: brandCd || undefined,
     abbreviated_finish_desc: finish || undefined,
 
-    minOffset,
-    maxOffset,
-    offsetType: minOffset || maxOffset ? "RANGE" : undefined,
+    minOffset: minOffsetFinal,
+    maxOffset: maxOffsetFinal,
+    offsetType: minOffsetFinal || maxOffsetFinal ? "RANGE" : undefined,
   };
 
   // Use fast local techfeed browse API instead of slow WheelPros API
@@ -294,8 +313,8 @@ export default async function WheelsPage({
       boltPattern: bp,
       diameter: diameterParam || undefined,
       width: widthParam || undefined,
-      offsetMin: minOffset,
-      offsetMax: maxOffset,
+      offsetMin: minOffsetFinal,
+      offsetMax: maxOffsetFinal,
       brand_cd: brandCd || undefined,
       finish: finish || undefined,
       priceMin: priceMin != null ? String(priceMin) : undefined,
@@ -657,8 +676,9 @@ export default async function WheelsPage({
   });
 
   // Fitment offset filter (important for passenger cars like Altima: +50ish).
-  const minOffN2 = typeof minOffset === "string" ? Number(minOffset) : NaN;
-  const maxOffN2 = typeof maxOffset === "string" ? Number(maxOffset) : NaN;
+  // Use the final calculated offset range (OEM auto-applied or user-specified).
+  const minOffN2 = typeof minOffsetFinal === "string" ? Number(minOffsetFinal) : NaN;
+  const maxOffN2 = typeof maxOffsetFinal === "string" ? Number(maxOffsetFinal) : NaN;
 
   const itemsFilteredOffset = Number.isFinite(minOffN2) && Number.isFinite(maxOffN2)
     ? itemsFilteredBasic.filter((w) => {
@@ -712,11 +732,11 @@ export default async function WheelsPage({
   };
 
   // Brand options: prefer actual brand names from the results we have.
-  const brandOptions = (() => {
+  const brandOptions: Array<{ code: string; desc: string }> = (() => {
     if (useFastBrowse && fastBrowseData?.facets?.brands) {
       return fastBrowseData.facets.brands.map((b: any) => ({
-        code: b.code,
-        desc: b.name,
+        code: String(b.code || ""),
+        desc: String(b.name || ""),
       }));
     }
     const map = new Map<string, string>();
@@ -731,13 +751,23 @@ export default async function WheelsPage({
       .sort((a, b) => a.desc.localeCompare(b.desc));
   })();
   const finishBuckets = buckets("abbreviated_finish_desc");
-  const diameterBuckets = buckets("wheel_diameter");
-  const widthBuckets = buckets("width");
+  // Sort diameter buckets numerically (smallest to largest)
+  const diameterBuckets = buckets("wheel_diameter").sort((a: { value: string; count?: number }, b: { value: string; count?: number }) => {
+    const aNum = parseFloat(a.value);
+    const bNum = parseFloat(b.value);
+    return aNum - bNum;
+  });
+  // Sort width buckets numerically (smallest to largest)
+  const widthBuckets = buckets("width").sort((a: { value: string; count?: number }, b: { value: string; count?: number }) => {
+    const aNum = parseFloat(a.value);
+    const bNum = parseFloat(b.value);
+    return aNum - bNum;
+  });
   const boltPatternBuckets = buckets("bolt_pattern_metric");
 
   const basePath = year && make && model ? `/wheels/v/${vehicleSlug(year, make, model)}` : "/wheels";
 
-  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}`;
+  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}${fitLevel !== "oem" ? `&fitLevel=${encodeURIComponent(fitLevel)}` : ""}`;
 
   return (
     <main className="bg-neutral-50">
@@ -834,6 +864,40 @@ export default async function WheelsPage({
               </a>
             </div>
 
+            {/* Fitment Level Toggle - OEM vs Lifted/Modified */}
+            {hasVehicle && offRange?.[0] != null && offRange?.[1] != null ? (
+              <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-3">
+                <div className="text-xs font-semibold text-neutral-600 mb-2">Fitment Type</div>
+                <div className="flex gap-2">
+                  <a
+                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&fitLevel=oem&page=1`}
+                    className={`flex-1 rounded-lg px-3 py-2 text-center text-xs font-extrabold transition-colors ${
+                      fitLevel === "oem"
+                        ? "bg-neutral-900 text-white"
+                        : "bg-white border border-neutral-200 text-neutral-700 hover:bg-neutral-100"
+                    }`}
+                  >
+                    OEM Fit
+                  </a>
+                  <a
+                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&fitLevel=lifted&page=1`}
+                    className={`flex-1 rounded-lg px-3 py-2 text-center text-xs font-extrabold transition-colors ${
+                      fitLevel === "lifted"
+                        ? "bg-neutral-900 text-white"
+                        : "bg-white border border-neutral-200 text-neutral-700 hover:bg-neutral-100"
+                    }`}
+                  >
+                    Lifted/Modified
+                  </a>
+                </div>
+                <div className="mt-2 text-xs text-neutral-500">
+                  {fitLevel === "oem" 
+                    ? `Showing wheels with offset ${offRange[0]}–${offRange[1]}mm (±${OEM_OFFSET_TOLERANCE_MM}mm tolerance)`
+                    : "Showing all wheels regardless of offset"}
+                </div>
+              </div>
+            ) : null}
+
             <form action={basePath} method="get">
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
@@ -842,6 +906,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               <input type="hidden" name="brand_cd" value={brandCd} />
               <input type="hidden" name="finish" value={finish} />
@@ -881,6 +946,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               <input type="hidden" name="brand_cd" value={brandCd} />
               <input type="hidden" name="finish" value={finish} />
@@ -920,6 +986,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               {/* keep other filters */}
               <input type="hidden" name="finish" value={finish} />
@@ -959,6 +1026,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               <input type="hidden" name="brand_cd" value={brandCd} />
               <input type="hidden" name="diameter" value={diameterParam} />
@@ -993,6 +1061,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               <input type="hidden" name="brand_cd" value={brandCd} />
               <input type="hidden" name="finish" value={finish} />
@@ -1030,6 +1099,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               <input type="hidden" name="brand_cd" value={brandCd} />
               <input type="hidden" name="finish" value={finish} />
@@ -1064,6 +1134,7 @@ export default async function WheelsPage({
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
+              <input type="hidden" name="fitLevel" value={fitLevel} />
 
               <input type="hidden" name="brand_cd" value={brandCd} />
               <input type="hidden" name="finish" value={finish} />
