@@ -232,34 +232,27 @@ export function WheelsStyleCard({
         {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
           <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
             <div>
-              Front: {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
+              {/* Only show "Front:" label for staggered fitments */}
+              {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
+              {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
               {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "x" : ""}
               {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
-              {selectedPair?.front?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.front.offset)}</span> : null}
             </div>
             {selectedPair?.staggered && selectedPair?.rear?.sku ? (
               <div>
                 Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
                 {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "x" : ""}
                 {fmtSizePart(selectedPair?.rear?.width || "")}
-                {selectedPair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.rear.offset)}</span> : null}
               </div>
             ) : null}
           </div>
         ) : null}
 
-        {bolt || off ? (
+        {bolt ? (
           <div className="mt-2 flex flex-wrap gap-2">
-            {bolt ? (
-              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                {bolt}
-              </span>
-            ) : null}
-            {off ? (
-              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                Offset {off}mm
-              </span>
-            ) : null}
+            <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+              {bolt}
+            </span>
           </div>
         ) : null}
 
@@ -300,34 +293,27 @@ export function WheelsStyleCard({
           {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
             <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
               <div>
-                Front: {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
+                {/* Only show "Front:" label for staggered fitments */}
+                {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
+                {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
                 {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "x" : ""}
                 {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
-                {selectedPair?.front?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.front.offset)}</span> : null}
               </div>
               {selectedPair?.staggered && selectedPair?.rear?.sku ? (
                 <div>
                   Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
                   {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "x" : ""}
                   {fmtSizePart(selectedPair?.rear?.width || "")}
-                  {selectedPair?.rear?.offset ? <span className="text-neutral-500"> • ET {String(selectedPair.rear.offset)}</span> : null}
                 </div>
               ) : null}
             </div>
           ) : null}
 
-          {bolt || off ? (
+          {bolt ? (
             <div className="mt-2 flex flex-wrap gap-2">
-              {bolt ? (
-                <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                  {bolt}
-                </span>
-              ) : null}
-              {off ? (
-                <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                  Offset {off}mm
-                </span>
-              ) : null}
+              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
+                {bolt}
+              </span>
             </div>
           ) : null}
 
