@@ -5,8 +5,9 @@
  * Used to fetch authoritative vehicle fitment data
  */
 
-// Try v1 - v2 returned "No Mapping Rule matched"
-const BASE_URL = "https://api.wheel-size.com/v1";
+// API v2 per https://developer.wheel-size.com/
+// Trailing slash is REQUIRED for URL() constructor to preserve the /v2/ path
+const BASE_URL = "https://api.wheel-size.com/v2/";
 
 function getApiKey(): string {
   const key = process.env.WHEELSIZE_API_KEY;
@@ -153,7 +154,7 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
  */
 export async function getMakes(): Promise<WheelSizeMake[]> {
   // Try without trailing slash
-  const data = await apiGet<{ data: WheelSizeMake[] }>("/makes");
+  const data = await apiGet<{ data: WheelSizeMake[] }>("makes/");
   return data.data || [];
 }
 
@@ -161,7 +162,7 @@ export async function getMakes(): Promise<WheelSizeMake[]> {
  * Get models for a make
  */
 export async function getModels(make: string): Promise<WheelSizeModel[]> {
-  const data = await apiGet<{ data: WheelSizeModel[] }>("/models", { make });
+  const data = await apiGet<{ data: WheelSizeModel[] }>("models/", { make });
   return data.data || [];
 }
 
@@ -169,7 +170,7 @@ export async function getModels(make: string): Promise<WheelSizeModel[]> {
  * Get years for a make/model
  */
 export async function getYears(make: string, model: string): Promise<WheelSizeYear[]> {
-  const data = await apiGet<{ data: WheelSizeYear[] }>("/years", { make, model });
+  const data = await apiGet<{ data: WheelSizeYear[] }>("years/", { make, model });
   return data.data || [];
 }
 
@@ -181,7 +182,7 @@ export async function getModifications(
   model: string,
   year: number
 ): Promise<WheelSizeModification[]> {
-  const data = await apiGet<{ data: WheelSizeModification[] }>("/modifications", {
+  const data = await apiGet<{ data: WheelSizeModification[] }>("modifications/", {
     make,
     model,
     year: String(year),
@@ -207,7 +208,7 @@ export async function getVehicleData(
     };
     if (modification) params.modification = modification;
 
-    const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_model", params);
+    const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_model/", params);
     
     // Return first matching result
     return data.data?.[0] || null;
@@ -221,7 +222,7 @@ export async function getVehicleData(
  * Search by tire size to get potential wheel/tire combinations
  */
 export async function searchByTire(tireSize: string): Promise<WheelSizeVehicleData[]> {
-  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_tire", {
+  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_tire/", {
     tire: tireSize,
   });
   return data.data || [];
@@ -241,6 +242,6 @@ export async function searchByRim(
   };
   if (offset !== undefined) params.offset = String(offset);
 
-  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("/search/by_rim", params);
+  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_rim/", params);
   return data.data || [];
 }
