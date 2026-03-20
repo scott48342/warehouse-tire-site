@@ -299,8 +299,9 @@ export default async function WheelsPage({
     offsetType: minOffsetFinal || maxOffsetFinal ? "RANGE" : undefined,
   };
 
-  // Use fast local techfeed browse API instead of slow WheelPros API
-  const useFastBrowse = true; // Feature flag - can disable if needed
+  // Use WheelPros API for accurate fitment and full inventory
+  // (Local techfeed browse was showing wrong bolt patterns in facets)
+  const useFastBrowse = false;
   
   let data: any;
   let fastBrowseData: any = null;
