@@ -699,11 +699,9 @@ export default async function WheelsPage({
     }
   });
 
-  // Prefer hiding styles with no images, but don't collapse to an unusably small list.
-  const itemsWithImages = items.filter(
-    (w) => Boolean(w.imageUrl) || Boolean(w.finishThumbs?.some((t) => Boolean(t.imageUrl)))
-  );
-  const itemsFinal0 = itemsWithImages.length >= Math.min(12, items.length) ? itemsWithImages : items;
+  // Show ALL non-excluded results (don't filter by image availability).
+  // Wheels without images will show a placeholder; fitmentClass controls sort order, not visibility.
+  const itemsFinal0 = items;
 
   // Client-side filters (WheelPros wrapper does not reliably support facet filtering).
   const itemsFilteredBasic = itemsFinal0.filter((w) => {
@@ -1414,7 +1412,7 @@ export default async function WheelsPage({
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
               <div className="text-sm font-semibold text-neutral-600">
-                Total SKUs: {totalCount}
+                {itemsFinal.length} styles ({totalCount} SKUs)
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 {safePage > 1 ? (
