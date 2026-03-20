@@ -47,9 +47,9 @@ export async function GET(req: Request) {
     );
   }
 
-  if (!["oem", "aftermarket_safe", "aggressive"].includes(mode)) {
+  if (!["oem", "aftermarket_safe", "aggressive", "truck"].includes(mode)) {
     return NextResponse.json(
-      { error: `Invalid mode: ${mode}. Must be oem, aftermarket_safe, or aggressive` },
+      { error: `Invalid mode: ${mode}. Must be oem, aftermarket_safe, aggressive, or truck` },
       { status: 400 }
     );
   }

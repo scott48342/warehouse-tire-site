@@ -19,7 +19,7 @@
 // TYPES
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type FitmentMode = "oem" | "aftermarket_safe" | "aggressive";
+export type FitmentMode = "oem" | "aftermarket_safe" | "aggressive" | "truck";
 
 export type ExpansionRules = {
   // Diameter expansion (inches above OEM max)
@@ -132,13 +132,25 @@ export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
   },
   
   aggressive: {
-    // Truck/enthusiast fitment: +4" diameter, +3" width, wide offset range
+    // Truck/enthusiast fitment: +4" diameter, +3" width, very wide offset range
+    // Allows aggressive poke/stance for lifted trucks
     diameterPlusMin: -1,   // allow 1" smaller too
     diameterPlusMax: 4,
-    widthPlusMin: 0,
+    widthPlusMin: -0.5,    // allow slightly narrower too
     widthPlusMax: 3,
-    offsetExpandLow: 30,   // allow much lower offset (more poke)
-    offsetExpandHigh: 15,  // allow some higher offset
+    offsetExpandLow: 60,   // allow VERY low offset (aggressive poke, -26mm etc)
+    offsetExpandHigh: 20,  // allow higher offset (tucked)
+  },
+  
+  truck: {
+    // Maximum flexibility for truck/SUV builds - matches Wheel Pros YMM behavior
+    // Essentially allows any wheel with correct bolt pattern and center bore
+    diameterPlusMin: -2,   // allow 2" smaller
+    diameterPlusMax: 6,    // allow up to +6" (26" on 20" OEM)
+    widthPlusMin: -1,      // allow narrower
+    widthPlusMax: 5,       // allow up to 14" wide wheels
+    offsetExpandLow: 100,  // allow extreme negative offset (-56mm etc)
+    offsetExpandHigh: 30,  // allow higher offset
   },
 };
 
