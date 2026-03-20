@@ -40,7 +40,7 @@ export type VehicleWheelSpec = {
   vehicleId: number;
   rimDiameter: number;       // inches, e.g., 17
   rimWidth: number;          // inches, e.g., 7.5
-  offset: number;            // mm, e.g., 44
+  offset: number | null;     // mm, e.g., 44 (can be null for some plus sizes)
   tireSize: string | null;   // e.g., "265/70R17"
   isStock: boolean;
   createdAt: Date;
@@ -134,7 +134,7 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
       vehicle_id INTEGER NOT NULL REFERENCES vehicles(id) ON DELETE CASCADE,
       rim_diameter DECIMAL(4,1) NOT NULL,
       rim_width DECIMAL(4,2) NOT NULL,
-      "offset" INTEGER NOT NULL,
+      "offset" INTEGER,
       tire_size VARCHAR(30),
       is_stock BOOLEAN DEFAULT true,
       created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
@@ -143,6 +143,9 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
 
     CREATE INDEX IF NOT EXISTS idx_vehicles_year_make_model ON vehicles(year, make, model);
     CREATE INDEX IF NOT EXISTS idx_vehicle_wheel_specs_vehicle_id ON vehicle_wheel_specs(vehicle_id);
+
+    -- Allow NULL offset for existing tables
+    ALTER TABLE vehicle_wheel_specs ALTER COLUMN "offset" DROP NOT NULL;
   `);
 }
 
@@ -246,7 +249,7 @@ export async function insertVehicleWheelSpec(
   spec: {
     rimDiameter: number;
     rimWidth: number;
-    offset: number;
+    offset: number | null | undefined;
     tireSize?: string;
     isStock?: boolean;
   }
@@ -259,7 +262,7 @@ export async function insertVehicleWheelSpec(
       vehicleId,
       spec.rimDiameter,
       spec.rimWidth,
-      spec.offset,
+      spec.offset ?? null,
       spec.tireSize || null,
       spec.isStock ?? true,
     ]
