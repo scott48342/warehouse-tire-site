@@ -209,7 +209,8 @@ export async function importVehicleFitment(
         }
 
         // Rear wheel/tire (only if staggered - different from front)
-        if (setup.rear && !setup.showing_fp_only && setup.rear.rim_diameter) {
+        if (setup.rear && !setup.showing_fp_only && 
+            setup.rear.rim_diameter && setup.rear.rim_width) {
           const isDifferent =
             setup.rear.rim_diameter !== setup.front.rim_diameter ||
             setup.rear.rim_width !== setup.front.rim_width ||

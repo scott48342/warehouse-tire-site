@@ -40,7 +40,16 @@ export async function GET(req: Request) {
       case "vehicle":
         if (!make || !model || !year) return NextResponse.json({ error: "Missing make/model/year params" }, { status: 400 });
         const mod = url.searchParams.get("mod");
-        result = await wheelSizeApi.getVehicleData(make, model, Number(year), mod || undefined);
+        if (!mod) {
+          // Get first USDM modification automatically
+          const mods = await wheelSizeApi.getUSModifications(make, model, Number(year));
+          if (mods.length === 0) {
+            return NextResponse.json({ error: "No modifications found for this vehicle" }, { status: 404 });
+          }
+          result = await wheelSizeApi.getVehicleData(make, model, Number(year), mods[0].slug);
+          return NextResponse.json({ action, make, model, year, mod: mods[0].slug, autoSelected: true, data: result });
+        }
+        result = await wheelSizeApi.getVehicleData(make, model, Number(year), mod);
         return NextResponse.json({ action, make, model, year, mod, data: result });
 
       default:
