@@ -5,7 +5,8 @@
  * Used to fetch authoritative vehicle fitment data
  */
 
-const BASE_URL = "https://api.wheel-size.com/v2";
+// Try v1 - v2 returned "No Mapping Rule matched"
+const BASE_URL = "https://api.wheel-size.com/v1";
 
 function getApiKey(): string {
   const key = process.env.WHEELSIZE_API_KEY;
