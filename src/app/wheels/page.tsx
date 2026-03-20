@@ -19,6 +19,7 @@ type Wheel = {
   imageUrl?: string;
   price?: number;
   styleKey?: string;
+  fitmentClass?: "surefit" | "specfit" | "extended"; // Fitment classification from validation engine
   finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number }[];
   pair?: {
     staggered: boolean;
@@ -267,20 +268,15 @@ export default async function WheelsPage({
   const maxOffset = hasVehicle && Number.isFinite(offsetMaxUser as number) ? String(offsetMaxUser) : undefined;
 
   // 2) Query WheelPros using fitment-derived filters.
-  // Apply OEM offset filtering by default (fitLevel=oem), unless user explicitly wants lifted/modified fitments
-  // or has manually set offset filters.
-  const autoApplyOemOffset = hasVehicle && fitLevel !== "lifted" && offsetMinUser == null && offsetMaxUser == null;
+  // NOTE: The fitment engine (fitment-search endpoint) now handles all offset validation
+  // through the surefit/specfit/extended classification. We only pass offset filters
+  // when the USER explicitly sets them (via offset filter UI or fitLevel=lifted).
+  // This ensures we show ALL valid wheels (specfit + extended + surefit) instead of
+  // only those within the narrow OEM offset range.
   
-  // Use OEM offset range when auto-applying (with tolerance for aftermarket wheels)
-  const OEM_OFFSET_TOLERANCE_MM = 5;
-  const minOffOem = autoApplyOemOffset && Number.isFinite(minOffN0) ? minOffN0 - OEM_OFFSET_TOLERANCE_MM : NaN;
-  const maxOffOem = autoApplyOemOffset && Number.isFinite(maxOffN0) ? maxOffN0 + OEM_OFFSET_TOLERANCE_MM : NaN;
-
-  // Final offset values: user explicit > OEM auto > none
-  const minOffsetFinal = offsetMinUser != null ? String(offsetMinUser) 
-    : (Number.isFinite(minOffOem) ? String(minOffOem) : undefined);
-  const maxOffsetFinal = offsetMaxUser != null ? String(offsetMaxUser)
-    : (Number.isFinite(maxOffOem) ? String(maxOffOem) : undefined);
+  // Only pass user-explicit offset filters (not auto-derived OEM range)
+  const minOffsetFinal = offsetMinUser != null ? String(offsetMinUser) : undefined;
+  const maxOffsetFinal = offsetMaxUser != null ? String(offsetMaxUser) : undefined;
 
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
@@ -475,6 +471,10 @@ export default async function WheelsPage({
 
     const styleKey = it?.techfeed?.style || undefined;
 
+    // Extract fitmentClass from validation engine (from fitment-search endpoint)
+    const fitmentValidation = (it as any)?.fitmentValidation;
+    const fitmentClass = fitmentValidation?.fitmentClass as Wheel["fitmentClass"] | undefined;
+
     return {
       sku: it?.sku,
       brand,
@@ -487,6 +487,7 @@ export default async function WheelsPage({
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
       styleKey,
+      fitmentClass,
     };
   });
 
@@ -645,18 +646,45 @@ export default async function WheelsPage({
         };
       }
 
+      // Determine best fitmentClass for this style (prioritize surefit > specfit > extended)
+      const fitmentPriority = (fc: string | undefined) => {
+        if (fc === "surefit") return 0;
+        if (fc === "specfit") return 1;
+        if (fc === "extended") return 2;
+        return 3; // unknown
+      };
+      const bestFitmentClass = arr.reduce((best, w) => {
+        if (!best) return w.fitmentClass;
+        if (fitmentPriority(w.fitmentClass) < fitmentPriority(best)) return w.fitmentClass;
+        return best;
+      }, undefined as Wheel["fitmentClass"]);
+
       out.push({
         ...rep,
         styleKey: k,
         finishThumbs: thumbs.filter((t) => t.sku),
         pair,
+        fitmentClass: bestFitmentClass,
       });
     }
 
     return [...out, ...singles];
   })();
 
+  // Sort by fitmentClass first (surefit > specfit > extended), then by user's sort preference
+  const fitmentClassRank = (fc: Wheel["fitmentClass"]) => {
+    if (fc === "surefit") return 0;
+    if (fc === "specfit") return 1;
+    if (fc === "extended") return 2;
+    return 3; // unknown
+  };
+
   const items: Wheel[] = [...grouped].sort((a, b) => {
+    // Primary sort: fitmentClass (surefit first, then specfit, then extended)
+    const fitRankDiff = fitmentClassRank(a.fitmentClass) - fitmentClassRank(b.fitmentClass);
+    if (fitRankDiff !== 0) return fitRankDiff;
+
+    // Secondary sort: user's preference (price, brand, etc.)
     const aPrice = typeof a.price === "number" ? a.price : Number.POSITIVE_INFINITY;
     const bPrice = typeof b.price === "number" ? b.price : Number.POSITIVE_INFINITY;
 
@@ -711,15 +739,21 @@ export default async function WheelsPage({
     return true;
   });
 
-  // Fitment offset filter (important for passenger cars like Altima: +50ish).
-  // Use the final calculated offset range (OEM auto-applied or user-specified).
+  // NOTE: Offset filtering is now handled by the fitment engine (fitment-search endpoint).
+  // The engine classifies wheels as surefit/specfit/extended based on offset and other specs.
+  // We only apply client-side offset filtering when the USER explicitly sets offset filters.
+  // This ensures specfit and extended wheels are shown (not just surefit/OEM-range).
   const minOffN2 = typeof minOffsetFinal === "string" ? Number(minOffsetFinal) : NaN;
   const maxOffN2 = typeof maxOffsetFinal === "string" ? Number(maxOffsetFinal) : NaN;
 
-  const itemsFilteredOffset = Number.isFinite(minOffN2) && Number.isFinite(maxOffN2)
+  // Only apply offset filter if user EXPLICITLY set offset range (offsetMinUser/offsetMaxUser)
+  const shouldApplyOffsetFilter = hasVehicle && (offsetMinUser != null || offsetMaxUser != null) && 
+    Number.isFinite(minOffN2) && Number.isFinite(maxOffN2);
+
+  const itemsFilteredOffset = shouldApplyOffsetFilter
     ? itemsFilteredBasic.filter((w) => {
         const raw = String(w.offset || "").trim();
-        if (!raw) return false; // if we know the vehicle offset range, require wheel offset
+        if (!raw) return false;
         const n = Number(raw);
         if (!Number.isFinite(n)) return false;
         return n >= minOffN2 && n <= maxOffN2;
@@ -946,7 +980,7 @@ export default async function WheelsPage({
                 </div>
                 <div className="mt-2 text-xs text-neutral-500">
                   {fitLevel === "oem" 
-                    ? `Showing wheels with offset ${offRange[0]}–${offRange[1]}mm (±${OEM_OFFSET_TOLERANCE_MM}mm tolerance)`
+                    ? `Showing all validated wheels (OEM offset: ${offRange[0]}–${offRange[1]}mm)`
                     : "Showing all wheels regardless of offset"}
                 </div>
               </div>

@@ -193,17 +193,10 @@ export async function GET(req: Request) {
       allValidations.push(validation);
 
       // Only include non-excluded wheels
+      // NOTE: We no longer apply additional offset filtering here - the fitment envelope
+      // already handles offset validation through surefit/specfit/extended classification.
+      // Client-side sorting by fitmentClass prioritizes surefit while still showing all valid options.
       if (validation.fitmentClass !== "excluded") {
-        // Optional user offset range filter (applied AFTER fitment validation)
-        if (offsetMinUser != null || offsetMaxUser != null) {
-          const off = wheelSpec.offset;
-          if (off == null || !Number.isFinite(off)) {
-            continue; // if user is filtering offset, require offset to be present
-          }
-          if (offsetMinUser != null && off < offsetMinUser) continue;
-          if (offsetMaxUser != null && off > offsetMaxUser) continue;
-        }
-
         passingWheels.push({
           ...wpWheel,
           fitmentValidation: {
