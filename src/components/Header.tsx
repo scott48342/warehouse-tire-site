@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 import { BRAND } from "@/lib/brand";
 
-type LauncherMode = "vehicles" | "tires" | "wheels";
+type LauncherMode = "vehicles" | "tires" | "wheels" | "packages";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
 import { SearchModal } from "@/components/SearchModal";
 
@@ -146,11 +146,11 @@ export function Header() {
   }, []);
 
   // Allow any page to open the VisualFitmentLauncher via query params.
-  // Example: /?open=tires
+  // Example: /?open=tires or /?open=packages
   useEffect(() => {
     const open = (sp.get("open") || "").trim();
     const mode = (sp.get("mode") || "").trim();
-    if (open !== "tires" && open !== "wheels" && open !== "vehicles") return;
+    if (open !== "tires" && open !== "wheels" && open !== "vehicles" && open !== "packages") return;
 
     // Support opening the DiscountTire-style search modal directly.
     // Example: /?open=tires&mode=size

@@ -12,7 +12,7 @@ async function fetchJson<T>(url: string): Promise<T> {
 
 type Step = "entry" | "year" | "make" | "model" | "trim";
 
-type EntryMode = "vehicles" | "tires" | "wheels";
+type EntryMode = "vehicles" | "tires" | "wheels" | "packages";
 
 const THIS_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR - i));
@@ -289,8 +289,14 @@ export function VisualFitmentLauncher({
       router.push(`/wheels?${qs.toString()}`);
       return;
     }
+    if (mode === "packages") {
+      qs.set("package", "1");
+      router.push(`/wheels?${qs.toString()}`);
+      return;
+    }
 
-    // Vehicles: default to wheels workspace for now
+    // Vehicles: default to packages flow (wheel + tire)
+    qs.set("package", "1");
     router.push(`/wheels?${qs.toString()}`);
   }
 
@@ -373,12 +379,12 @@ export function VisualFitmentLauncher({
           </div>
 
           {step === "entry" ? (
-            <div className="mt-5 grid gap-4 md:grid-cols-3">
+            <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               <TileButton
-                title="Vehicles"
-                subtitle="Start with your vehicle"
+                title="Packages"
+                subtitle="Wheel + tire packages"
                 onClick={() => {
-                  setMode("vehicles");
+                  setMode("packages");
                   setStep("year");
                 }}
               />
@@ -398,7 +404,15 @@ export function VisualFitmentLauncher({
                   setStep("year");
                 }}
               />
-              <div className="md:col-span-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
+              <TileButton
+                title="All products"
+                subtitle="Start with your vehicle"
+                onClick={() => {
+                  setMode("vehicles");
+                  setStep("year");
+                }}
+              />
+              <div className="md:col-span-2 lg:col-span-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
                 <div className="font-extrabold text-neutral-900">How it works</div>
                 <div className="mt-1">
                   Pick a starting point, then choose <span className="font-semibold">Year</span>, <span className="font-semibold">Make</span>,

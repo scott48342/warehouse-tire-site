@@ -28,8 +28,9 @@ function EntryTile({
 export function HomeFitmentEntry() {
   const router = useRouter();
 
-  function launch(open: "tires" | "wheels", mode: "vehicle" | "size") {
-    router.push(`/?open=${open}&mode=${mode}`);
+  function launch(open: "tires" | "wheels" | "packages", mode?: "vehicle" | "size") {
+    const modeParam = mode ? `&mode=${mode}` : "";
+    router.push(`/?open=${open}${modeParam}`);
   }
 
   return (
@@ -40,9 +41,9 @@ export function HomeFitmentEntry() {
 
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         <EntryTile
-          title="Shop by vehicle"
-          subtitle="Pick year/make/model to see what fits."
-          onClick={() => launch("tires", "vehicle")}
+          title="Wheel & tire packages"
+          subtitle="Pick year/make/model to build a package."
+          onClick={() => launch("packages")}
         />
         <EntryTile
           title="Shop tires"
