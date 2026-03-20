@@ -406,10 +406,16 @@ export function WheelsStyleCard({
         <div className="text-sm text-neutral-600">each</div>
       </div>
 
-      {/* Install messaging */}
-      <div className="mt-3 text-xs text-neutral-600 space-y-0.5">
-        <div><span className="text-green-600">✓</span> Ships to your installer</div>
-        <div><span className="text-green-600">✓</span> Local installation available</div>
+      {/* Install & Trust messaging */}
+      <div className="mt-3 rounded-lg bg-neutral-50 px-3 py-2 text-xs space-y-1">
+        <div className="flex items-center gap-1.5 text-neutral-700">
+          <span className="text-green-600">✓</span>
+          <span>Install available near you</span>
+          <span className="text-neutral-400">📍</span>
+        </div>
+        <div className="text-neutral-500">
+          Guaranteed fitment for your vehicle
+        </div>
       </div>
 
       {/* CTA */}

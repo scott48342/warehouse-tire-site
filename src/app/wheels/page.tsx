@@ -1458,6 +1458,26 @@ export default async function WheelsPage({
               ) : null}
             </div>
 
+            {/* Install & Trust Strip */}
+            {hasVehicle ? (
+              <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-100 px-4 py-3">
+                <div className="flex flex-wrap items-center gap-4 text-sm">
+                  <span className="flex items-center gap-1.5 text-green-800 font-medium">
+                    <span className="text-green-600">✓</span> Ship to your installer
+                  </span>
+                  <span className="flex items-center gap-1.5 text-green-800 font-medium">
+                    <span className="text-green-600">✓</span> Local installation available
+                  </span>
+                  <span className="flex items-center gap-1.5 text-green-800 font-medium">
+                    <span className="text-green-600">✓</span> Mount &amp; balance included
+                  </span>
+                </div>
+                <div className="text-xs text-green-700 font-semibold">
+                  No guesswork — guaranteed fitment
+                </div>
+              </div>
+            ) : null}
+
             {/* Top Picks section - curated recommendations */}
             {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
               <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-5">
