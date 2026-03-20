@@ -498,17 +498,11 @@ export default async function WheelsPage({
         return m ? Number(m[1]) : NaN;
       }
 
-      // Use tire sizes (when present) to infer stagger-capable diameter targets.
-      const tireDias = Array.isArray(fit?.tireSizes)
-        ? (fit.tireSizes as any[]).map((x) => rimDiaFromTireSize(String(x))).filter((n) => Number.isFinite(n))
-        : [];
-      const inferredFrontDia = tireDias.length ? Math.min(...tireDias) : NaN;
-      const inferredRearDia = tireDias.length ? Math.max(...tireDias) : NaN;
-
-      const useMixedDia =
-        Number.isFinite(inferredFrontDia) &&
-        Number.isFinite(inferredRearDia) &&
-        inferredRearDia - inferredFrontDia >= 1;
+      // Only compute staggered pairs for vehicles that explicitly support staggered fitment.
+      // Multiple tire size OPTIONS does not mean staggered (e.g., F-150 has 17/18/20" options but not staggered).
+      const useMixedDia = vehicleCallsForStaggered;
+      const inferredFrontDia = NaN;
+      const inferredRearDia = NaN;
 
       // Finish dropdown options (also carries a finish-specific pair so selecting a finish updates both axles).
       const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; pair?: Wheel["pair"] }[] = [];
