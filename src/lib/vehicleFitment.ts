@@ -284,14 +284,15 @@ export async function getVehicle(
   const result = await db.query<Vehicle>(
     `SELECT id, year, make, model, trim, slug, created_at, updated_at
      FROM vehicles
-     WHERE year = $1 AND make = $2 AND model = $3 AND (
-       ($4 IS NULL AND trim IS NULL) OR
-       (trim = $4) OR
-       (search_trim = $4)
-     )
+     WHERE year = $1 AND make = $2 AND model = $3 
+       AND (
+         CASE WHEN $4::text IS NULL THEN trim IS NULL
+         ELSE (trim = $4 OR search_trim = $4)
+         END
+       )
      ORDER BY imported_at DESC NULLS LAST, updated_at DESC
      LIMIT 1`,
-    [year, make, model, trim || null]
+    [year, make, model, trim ?? null]
   );
   return result.rows[0] || null;
 }
