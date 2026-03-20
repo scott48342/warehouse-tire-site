@@ -77,6 +77,7 @@ export function WheelsStyleCard({
   selectToTires,
   pair,
   fitmentClass,
+  isPopular,
 }: {
   brand: string;
   title: string;
@@ -91,6 +92,7 @@ export function WheelsStyleCard({
   selectToTires?: boolean;
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
+  isPopular?: boolean;
 }) {
   const router = useRouter();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -197,6 +199,15 @@ export function WheelsStyleCard({
     <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:shadow-md transition-shadow">
       {/* Fitment-based left accent bar */}
       <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${accentColor}`} />
+
+      {/* Popular badge - absolute positioned */}
+      {isPopular ? (
+        <div className="absolute top-3 right-3 z-10">
+          <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-800">
+            🔥 Popular
+          </span>
+        </div>
+      ) : null}
 
       <div className="flex items-start justify-between gap-2">
         <div>

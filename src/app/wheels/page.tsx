@@ -1460,8 +1460,8 @@ export default async function WheelsPage({
 
             {/* Top Picks section - curated recommendations */}
             {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
-              <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-blue-50 to-white border border-blue-100 p-5">
-                <div className="flex items-start justify-between mb-4">
+              <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-5">
+                <div className="flex items-start justify-between mb-2">
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-xl">⭐</span>
@@ -1472,14 +1472,17 @@ export default async function WheelsPage({
                     <p className="mt-1 text-sm text-neutral-600">
                       Hand-picked based on fitment, popularity, and value
                     </p>
+                    <p className="mt-0.5 text-xs text-neutral-500">
+                      Start here — most customers choose from these options
+                    </p>
                   </div>
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-800">
-                    Staff Picks
+                  <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-800 whitespace-nowrap">
+                    ✓ Top Pick
                   </span>
                 </div>
                 
                 {/* Featured grid */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-4">
                   {recommendedWheels.slice(0, 4).map((w, idx) => (
                     <WheelsStyleCard
                       key={`rec-${w.sku || idx}`}
@@ -1498,6 +1501,7 @@ export default async function WheelsPage({
                       }}
                       finishThumbs={w.finishThumbs}
                       fitmentClass={w.fitmentClass}
+                      isPopular={idx === 0 || idx === 1}
                       viewParams={{
                         year,
                         make,
