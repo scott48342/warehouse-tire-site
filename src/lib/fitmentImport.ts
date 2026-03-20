@@ -17,6 +17,9 @@ import {
   getPool,
   ensureFitmentTables,
   upsertVehicle,
+  getVehicleBySlug,
+  getVehicleFitment,
+  getVehicleWheelSpecs,
   upsertVehicleFitment,
   clearVehicleWheelSpecs,
   insertVehicleWheelSpec,
@@ -30,6 +33,8 @@ export type ImportResult = {
   wheelSpecsCount: number;
   modificationSlug?: string;
   modificationName?: string;
+  cached?: boolean;
+  selectionReason?: string;
   error?: string;
   rawData?: any;
 };
@@ -55,12 +60,13 @@ export async function importVehicleFitment(
   make: string,
   model: string,
   options: { 
+    desiredTrim?: string;       // User-selected trim (e.g., "XLT") for modification selection
     modificationSlug?: string;  // Specific modification slug to import
     usMarketOnly?: boolean;     // Only import USDM modifications (default: true)
     debug?: boolean;
   } = {}
 ): Promise<ImportResult> {
-  const { modificationSlug, usMarketOnly = true, debug = false } = options;
+  const { desiredTrim, modificationSlug, usMarketOnly = true, debug = false } = options;
   const db = getPool();
 
   try {
@@ -94,9 +100,10 @@ export async function importVehicleFitment(
     const modelSlug = foundModel.slug;
     console.log(`[fitmentImport] Model resolved: ${model} -> ${modelSlug}`);
 
-    // Step 3: Get modification slug if not provided
+    // Step 3: Choose modification slug (engine variant) using Wheel-Size modifications
     let selectedModSlug = modificationSlug;
     let selectedModName: string | undefined;
+    let selectionReason: string | undefined;
 
     if (!selectedModSlug) {
       console.log(`[fitmentImport] Fetching modifications for ${year} ${makeSlug} ${modelSlug}`);
@@ -122,14 +129,55 @@ export async function importVehicleFitment(
         }
       }
 
-      // Select first modification
+      // If user selected a trim (e.g., XLT), prefer a modification whose trim_levels contains it
+      if (desiredTrim) {
+        const needle = desiredTrim.toLowerCase().trim();
+        const trimMatches = mods.filter(m => (m.trim_levels || []).some(t => t?.toLowerCase?.() === needle));
+        if (trimMatches.length > 0) {
+          mods = trimMatches;
+          selectionReason = `matched desiredTrim=${desiredTrim} via modification.trim_levels`;
+          console.log(`[fitmentImport] Trim-based selection: ${desiredTrim} matched ${mods.length} modifications`);
+        } else {
+          console.log(`[fitmentImport] desiredTrim=${desiredTrim} did not match any modification.trim_levels; falling back`);
+        }
+      }
+
+      // Deterministic selection: prefer USDM (already filtered), then pick first by name+slug
+      mods.sort((a, b) => (a.name + a.slug).localeCompare(b.name + b.slug));
+
       selectedModSlug = mods[0].slug;
       selectedModName = mods[0].name;
-      console.log(`[fitmentImport] Selected modification: ${selectedModSlug} (${selectedModName})`);
+      selectionReason = selectionReason || (usMarketOnly ? "first US-market modification (sorted)" : "first modification (sorted)");
+      console.log(`[fitmentImport] Selected modification: ${selectedModSlug} (${selectedModName}) reason=${selectionReason}`);
+
+      if (debug) {
+        console.log(`[fitmentImport] modification.trim_levels for selected:`, mods[0].trim_levels || []);
+      }
     }
 
-    // Step 4: Fetch vehicle data with modification
-    console.log(`[fitmentImport] Fetching vehicle data for modification: ${selectedModSlug}`);
+    // Step 4: Check local cache first (avoid repeat Wheel-Size calls)
+    const cachedVehicle = await getVehicleBySlug(db, year, foundMake.name, foundModel.name, selectedModSlug);
+    if (cachedVehicle) {
+      const cachedFitment = await getVehicleFitment(db, cachedVehicle.id);
+      const cachedSpecs = await getVehicleWheelSpecs(db, cachedVehicle.id);
+      if (cachedFitment && cachedSpecs.length > 0) {
+        console.log(`[fitmentImport] Cache hit: vehicleId=${cachedVehicle.id} slug=${selectedModSlug}`);
+        return {
+          success: true,
+          vehicle: cachedVehicle,
+          fitmentImported: true,
+          wheelSpecsCount: cachedSpecs.length,
+          modificationSlug: selectedModSlug,
+          modificationName: selectedModName,
+          cached: true,
+          selectionReason,
+        };
+      }
+      console.log(`[fitmentImport] Cache partial: vehicle exists but missing fitment/specs; re-importing`);
+    }
+
+    // Step 5: Fetch vehicle data from Wheel-Size
+    console.log(`[fitmentImport] Fetching Wheel-Size vehicle data for modification: ${selectedModSlug}`);
     const wsData = await wheelSizeApi.getVehicleData(makeSlug, modelSlug, year, selectedModSlug);
 
     if (!wsData) {
@@ -146,13 +194,19 @@ export async function importVehicleFitment(
       console.log("[fitmentImport] Raw Wheel-Size data:", JSON.stringify(wsData, null, 2));
     }
 
-    // Step 5: Upsert vehicle record
+    // Step 6: Upsert vehicle record (cache key is slug)
     const vehicle = await upsertVehicle(db, {
       year,
-      make: foundMake.name,  // Use canonical name from API
-      model: foundModel.name,  // Use canonical name from API
-      trim: wsData.trim || wsData.name,
+      make: foundMake.name, // canonical
+      model: foundModel.name, // canonical
+      trim: wsData.trim || wsData.name, // engine/modification name
+      searchTrim: desiredTrim,
       slug: wsData.slug,
+      marketRegions: wsData.regions || [],
+      importedFrom: "wheel_size",
+      importStatus: "success",
+      importedAt: new Date(),
+      lastImportAttemptAt: new Date(),
     });
     console.log(`[fitmentImport] Vehicle upserted: id=${vehicle.id}`);
 
@@ -238,6 +292,8 @@ export async function importVehicleFitment(
       wheelSpecsCount,
       modificationSlug: selectedModSlug,
       modificationName: selectedModName || wsData.name,
+      cached: false,
+      selectionReason,
       rawData: debug ? wsData : undefined,
     };
   } catch (err: any) {

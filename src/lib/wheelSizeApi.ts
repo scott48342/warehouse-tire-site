@@ -49,6 +49,8 @@ export type WheelSizeModification = {
   trim?: string;
   body?: string;
   regions?: string[];
+  // Wheel-Size sometimes includes trim levels here (e.g., ["XL","XLT",...])
+  trim_levels?: string[];
   generation?: {
     name: string;
     slug: string;

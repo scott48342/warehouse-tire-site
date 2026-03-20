@@ -57,6 +57,7 @@ export async function POST(req: Request) {
       year, 
       make, 
       model, 
+      desiredTrim,
       modificationSlug,
       allVariants = false, 
       usMarketOnly = true,
@@ -85,7 +86,7 @@ export async function POST(req: Request) {
         Number(year), 
         make, 
         model, 
-        { modificationSlug, usMarketOnly, debug }
+        { desiredTrim, modificationSlug, usMarketOnly, debug }
       );
       return NextResponse.json(result, { status: result.success ? 200 : 400 });
     }

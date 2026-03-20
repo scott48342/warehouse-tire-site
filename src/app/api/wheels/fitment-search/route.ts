@@ -4,6 +4,7 @@ import {
   buildFitmentProfile, 
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
+import { importVehicleFitment } from "@/lib/fitmentImport";
 import {
   buildFitmentEnvelope,
   validateWheel,
@@ -59,14 +60,34 @@ export async function GET(req: Request) {
     await ensureFitmentTables(db);
 
     // Step 1: Get fitment profile from our database
-    const profile = await buildFitmentProfile(db, Number(year), make, model, trim);
+    let profile = await buildFitmentProfile(db, Number(year), make, model, trim);
 
     if (!profile) {
-      return NextResponse.json({
-        error: "No fitment profile found. Import vehicle data first via POST /api/fitment/import",
-        vehicle: { year, make, model, trim },
-        fallback: true,
-      }, { status: 404 });
+      // On-demand import + cache
+      console.log(`[fitment-search] Cache miss for ${year} ${make} ${model} trim=${trim || ""} -> importing from Wheel-Size`);
+      const importRes = await importVehicleFitment(Number(year), make, model, {
+        desiredTrim: trim,
+        usMarketOnly: true,
+        debug: false,
+      });
+
+      if (!importRes.success) {
+        return NextResponse.json({
+          error: "No fitment profile found and import failed",
+          importError: importRes.error,
+          vehicle: { year, make, model, trim },
+        }, { status: 404 });
+      }
+
+      // Rebuild profile after import (should now hit DB)
+      profile = await buildFitmentProfile(db, Number(year), make, model, trim);
+
+      if (!profile) {
+        return NextResponse.json({
+          error: "Import succeeded but fitment profile still not found in DB",
+          vehicle: { year, make, model, trim },
+        }, { status: 500 });
+      }
     }
 
     const profileMs = Date.now() - t0;

@@ -108,7 +108,14 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
       make VARCHAR(100) NOT NULL,
       model VARCHAR(100) NOT NULL,
       trim VARCHAR(100),
-      slug VARCHAR(255),
+      search_trim VARCHAR(100),
+      slug VARCHAR(255), -- Wheel-Size modification slug
+      market_regions VARCHAR(255),
+      imported_from VARCHAR(50),
+      imported_at TIMESTAMP WITH TIME ZONE,
+      import_status VARCHAR(20),
+      last_import_error TEXT,
+      last_import_attempt_at TIMESTAMP WITH TIME ZONE,
       created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
       updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
       UNIQUE(year, make, model, trim)
@@ -124,6 +131,7 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
       thread_size VARCHAR(20),
       fastener_type VARCHAR(20),
       torque_nm INTEGER,
+      imported_at TIMESTAMP WITH TIME ZONE,
       created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
       updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
       UNIQUE(vehicle_id)
@@ -137,15 +145,39 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
       "offset" INTEGER,
       tire_size VARCHAR(30),
       is_stock BOOLEAN DEFAULT true,
+      imported_at TIMESTAMP WITH TIME ZONE,
       created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
       updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     );
 
     CREATE INDEX IF NOT EXISTS idx_vehicles_year_make_model ON vehicles(year, make, model);
+    CREATE INDEX IF NOT EXISTS idx_vehicles_year_make_model_slug ON vehicles(year, make, model, slug);
     CREATE INDEX IF NOT EXISTS idx_vehicle_wheel_specs_vehicle_id ON vehicle_wheel_specs(vehicle_id);
 
     -- Allow NULL offset for existing tables
     ALTER TABLE vehicle_wheel_specs ALTER COLUMN "offset" DROP NOT NULL;
+
+    -- Add missing columns for existing deployments (safe no-ops if present)
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS search_trim VARCHAR(100);
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS market_regions VARCHAR(255);
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS imported_from VARCHAR(50);
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS imported_at TIMESTAMP WITH TIME ZONE;
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS import_status VARCHAR(20);
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS last_import_error TEXT;
+    ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS last_import_attempt_at TIMESTAMP WITH TIME ZONE;
+
+    ALTER TABLE vehicle_fitment ADD COLUMN IF NOT EXISTS imported_at TIMESTAMP WITH TIME ZONE;
+    ALTER TABLE vehicle_wheel_specs ADD COLUMN IF NOT EXISTS imported_at TIMESTAMP WITH TIME ZONE;
+
+    -- Ensure uniqueness for caching: year/make/model/modification_slug (vehicles.slug)
+    DO $$
+    BEGIN
+      IF NOT EXISTS (
+        SELECT 1 FROM pg_constraint WHERE conname = 'vehicles_year_make_model_slug_unique'
+      ) THEN
+        ALTER TABLE vehicles ADD CONSTRAINT vehicles_year_make_model_slug_unique UNIQUE (year, make, model, slug);
+      END IF;
+    END$$;
   `);
 }
 
@@ -155,15 +187,89 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
 
 export async function upsertVehicle(
   db: pg.Pool,
-  data: { year: number; make: string; model: string; trim?: string; slug?: string }
+  data: {
+    year: number;
+    make: string;
+    model: string;
+    trim?: string;
+    searchTrim?: string;
+    slug?: string; // modification slug
+    marketRegions?: string[];
+    importedFrom?: string;
+    importedAt?: Date;
+    importStatus?: "pending" | "success" | "failed";
+    lastImportError?: string;
+    lastImportAttemptAt?: Date;
+  }
 ): Promise<Vehicle> {
+  // Prefer caching by (year, make, model, slug) when slug is present.
+  // Fallback to legacy unique (year, make, model, trim) if slug is null.
+  const marketRegions = data.marketRegions?.length ? data.marketRegions.join(",") : null;
+
+  if (data.slug) {
+    const result = await db.query<Vehicle>(
+      `INSERT INTO vehicles (year, make, model, trim, search_trim, slug, market_regions, imported_from, imported_at, import_status, last_import_error, last_import_attempt_at, updated_at)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9, NOW()), $10, $11, COALESCE($12, NOW()), NOW())
+       ON CONFLICT (year, make, model, slug)
+       DO UPDATE SET 
+         trim = COALESCE($4, vehicles.trim),
+         search_trim = COALESCE($5, vehicles.search_trim),
+         market_regions = COALESCE($7, vehicles.market_regions),
+         imported_from = COALESCE($8, vehicles.imported_from),
+         imported_at = COALESCE(vehicles.imported_at, $9, NOW()),
+         import_status = COALESCE($10, vehicles.import_status),
+         last_import_error = $11,
+         last_import_attempt_at = COALESCE($12, NOW()),
+         updated_at = NOW()
+       RETURNING id, year, make, model, trim, slug, created_at, updated_at`,
+      [
+        data.year,
+        data.make,
+        data.model,
+        data.trim || null,
+        // search_trim: what the user selected (e.g., XLT)
+        data.searchTrim || null,
+        data.slug,
+        marketRegions,
+        data.importedFrom || null,
+        data.importedAt || null,
+        data.importStatus || null,
+        data.lastImportError || null,
+        data.lastImportAttemptAt || null,
+      ]
+    );
+    return result.rows[0];
+  }
+
   const result = await db.query<Vehicle>(
-    `INSERT INTO vehicles (year, make, model, trim, slug, updated_at)
-     VALUES ($1, $2, $3, $4, $5, NOW())
+    `INSERT INTO vehicles (year, make, model, trim, search_trim, slug, market_regions, imported_from, imported_at, import_status, last_import_error, last_import_attempt_at, updated_at)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9, NOW()), $10, $11, COALESCE($12, NOW()), NOW())
      ON CONFLICT (year, make, model, trim) 
-     DO UPDATE SET slug = COALESCE($5, vehicles.slug), updated_at = NOW()
+     DO UPDATE SET 
+       search_trim = COALESCE($5, vehicles.search_trim),
+       slug = COALESCE($6, vehicles.slug),
+       market_regions = COALESCE($7, vehicles.market_regions),
+       imported_from = COALESCE($8, vehicles.imported_from),
+       imported_at = COALESCE(vehicles.imported_at, $9, NOW()),
+       import_status = COALESCE($10, vehicles.import_status),
+       last_import_error = $11,
+       last_import_attempt_at = COALESCE($12, NOW()),
+       updated_at = NOW()
      RETURNING id, year, make, model, trim, slug, created_at, updated_at`,
-    [data.year, data.make, data.model, data.trim || null, data.slug || null]
+    [
+      data.year,
+      data.make,
+      data.model,
+      data.trim || null,
+      data.searchTrim || null,
+      data.slug || null,
+      marketRegions,
+      data.importedFrom || null,
+      data.importedAt || null,
+      data.importStatus || null,
+      data.lastImportError || null,
+      data.lastImportAttemptAt || null,
+    ]
   );
   return result.rows[0];
 }
@@ -178,8 +284,32 @@ export async function getVehicle(
   const result = await db.query<Vehicle>(
     `SELECT id, year, make, model, trim, slug, created_at, updated_at
      FROM vehicles
-     WHERE year = $1 AND make = $2 AND model = $3 AND (trim = $4 OR ($4 IS NULL AND trim IS NULL))`,
+     WHERE year = $1 AND make = $2 AND model = $3 AND (
+       ($4 IS NULL AND trim IS NULL) OR
+       (trim = $4) OR
+       (search_trim = $4)
+     )
+     ORDER BY imported_at DESC NULLS LAST, updated_at DESC
+     LIMIT 1`,
     [year, make, model, trim || null]
+  );
+  return result.rows[0] || null;
+}
+
+export async function getVehicleBySlug(
+  db: pg.Pool,
+  year: number,
+  make: string,
+  model: string,
+  slug: string
+): Promise<Vehicle | null> {
+  const result = await db.query<Vehicle>(
+    `SELECT id, year, make, model, trim, slug, created_at, updated_at
+     FROM vehicles
+     WHERE year = $1 AND make = $2 AND model = $3 AND slug = $4
+     ORDER BY imported_at DESC NULLS LAST, updated_at DESC
+     LIMIT 1`,
+    [year, make, model, slug]
   );
   return result.rows[0] || null;
 }
@@ -202,12 +332,14 @@ export async function upsertVehicleFitment(
   }
 ): Promise<VehicleFitment> {
   const result = await db.query<VehicleFitment>(
-    `INSERT INTO vehicle_fitment (vehicle_id, bolt_pattern, center_bore, stud_holes, pcd, thread_size, fastener_type, torque_nm, updated_at)
-     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW())
+    `INSERT INTO vehicle_fitment (vehicle_id, bolt_pattern, center_bore, stud_holes, pcd, thread_size, fastener_type, torque_nm, imported_at, updated_at)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9, NOW()), NOW())
      ON CONFLICT (vehicle_id)
      DO UPDATE SET 
        bolt_pattern = $2, center_bore = $3, stud_holes = $4, pcd = $5,
-       thread_size = $6, fastener_type = $7, torque_nm = $8, updated_at = NOW()
+       thread_size = $6, fastener_type = $7, torque_nm = $8,
+       imported_at = COALESCE(vehicle_fitment.imported_at, $9, NOW()),
+       updated_at = NOW()
      RETURNING *`,
     [
       vehicleId,
@@ -218,6 +350,7 @@ export async function upsertVehicleFitment(
       data.threadSize || null,
       data.fastenerType || null,
       data.torqueNm || null,
+      new Date(),
     ]
   );
   return result.rows[0];
@@ -255,8 +388,8 @@ export async function insertVehicleWheelSpec(
   }
 ): Promise<VehicleWheelSpec> {
   const result = await db.query<VehicleWheelSpec>(
-    `INSERT INTO vehicle_wheel_specs (vehicle_id, rim_diameter, rim_width, "offset", tire_size, is_stock)
-     VALUES ($1, $2, $3, $4, $5, $6)
+    `INSERT INTO vehicle_wheel_specs (vehicle_id, rim_diameter, rim_width, "offset", tire_size, is_stock, imported_at)
+     VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, NOW()))
      RETURNING *`,
     [
       vehicleId,
@@ -265,6 +398,7 @@ export async function insertVehicleWheelSpec(
       spec.offset ?? null,
       spec.tireSize || null,
       spec.isStock ?? true,
+      new Date(),
     ]
   );
   return result.rows[0];
