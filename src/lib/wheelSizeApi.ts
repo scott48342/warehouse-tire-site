@@ -102,12 +102,24 @@ export type WheelSizeVehicleData = {
 // API CALLS
 // ─────────────────────────────────────────────────────────────────────────────
 
+/**
+ * Convert make/model to Wheel-Size slug format
+ * e.g., "Ford" -> "ford", "F-150" -> "f-150"
+ */
+function toSlug(name: string): string {
+  return name.toLowerCase().trim();
+}
+
 async function apiGet<T>(path: string, params?: Record<string, string>): Promise<T> {
   const url = new URL(path, BASE_URL);
   url.searchParams.set("user_key", getApiKey());
   if (params) {
     for (const [k, v] of Object.entries(params)) {
-      if (v) url.searchParams.set(k, v);
+      if (v) {
+        // Convert make/model to slug format
+        const value = (k === "make" || k === "model") ? toSlug(v) : v;
+        url.searchParams.set(k, value);
+      }
     }
   }
 
