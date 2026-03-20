@@ -111,6 +111,25 @@ async function fetchWheels(params: Record<string, string | undefined>) {
   return res.json();
 }
 
+// Fast local browse using techfeed data (no WheelPros API call)
+async function fetchWheelsFast(params: Record<string, string | undefined>) {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v) sp.set(k, v);
+  }
+
+  const res = await fetch(
+    `${getBaseUrl()}/api/wheels/browse?${sp.toString()}`,
+    { cache: "no-store" }
+  );
+
+  if (!res.ok) {
+    return { error: await res.text() };
+  }
+
+  return res.json();
+}
+
 export default async function WheelsPage({
   searchParams,
 }: {
@@ -261,25 +280,107 @@ export default async function WheelsPage({
     offsetType: minOffset || maxOffset ? "RANGE" : undefined,
   };
 
-  // First pass: strict fitment filters (bolt pattern + offset range).
-  let data: any = await fetchWheels(baseWheelProsParams);
-
-  // If we get zero results for a vehicle-based search, relax filters.
-  // This avoids a bad UX where a valid vehicle selection yields an empty wheels page.
-  const emptyFirstPass =
-    (Array.isArray(data?.items) && data.items.length === 0) ||
-    (Array.isArray(data?.results) && data.results.length === 0);
-
-  if (emptyFirstPass && hasVehicle) {
-    data = await fetchWheels({
-      ...baseWheelProsParams,
-      boltPattern: undefined,
-      minOffset: undefined,
-      maxOffset: undefined,
-      offsetType: undefined,
+  // Use fast local techfeed browse API instead of slow WheelPros API
+  const useFastBrowse = true; // Feature flag - can disable if needed
+  
+  let data: any;
+  let fastBrowseData: any = null;
+  
+  if (useFastBrowse) {
+    // Fast path: query local techfeed data
+    fastBrowseData = await fetchWheelsFast({
+      page: String(page),
+      pageSize: "48", // Smaller page for faster response
+      boltPattern: bp,
+      diameter: diameterParam || undefined,
+      width: widthParam || undefined,
+      offsetMin: minOffset,
+      offsetMax: maxOffset,
+      brand_cd: brandCd || undefined,
+      finish: finish || undefined,
+      priceMin: priceMin != null ? String(priceMin) : undefined,
+      priceMax: priceMax != null ? String(priceMax) : undefined,
     });
+    
+    // If no results with bolt pattern, try without
+    if (fastBrowseData?.totalStyles === 0 && hasVehicle && bp) {
+      fastBrowseData = await fetchWheelsFast({
+        page: String(page),
+        pageSize: "48",
+        diameter: diameterParam || undefined,
+        width: widthParam || undefined,
+        brand_cd: brandCd || undefined,
+        finish: finish || undefined,
+        priceMin: priceMin != null ? String(priceMin) : undefined,
+        priceMax: priceMax != null ? String(priceMax) : undefined,
+      });
+    }
+    
+    // Convert fast browse format to expected format
+    data = { results: [], totalCount: fastBrowseData?.totalStyles || 0, facets: fastBrowseData?.facets || {} };
+  } else {
+    // Slow path: WheelPros API
+    data = await fetchWheels(baseWheelProsParams);
+
+    // If we get zero results for a vehicle-based search, relax filters.
+    const emptyFirstPass =
+      (Array.isArray(data?.items) && data.items.length === 0) ||
+      (Array.isArray(data?.results) && data.results.length === 0);
+
+    if (emptyFirstPass && hasVehicle) {
+      data = await fetchWheels({
+        ...baseWheelProsParams,
+        boltPattern: undefined,
+        minOffset: undefined,
+        maxOffset: undefined,
+        offsetType: undefined,
+      });
+    }
   }
 
+  // If using fast browse, convert directly to final format (skip all the WheelPros processing)
+  let fastItems: Wheel[] = [];
+  let fastTotalCount = 0;
+  let fastFacets: any = {};
+  let fastTotalPages = 1;
+  
+  if (useFastBrowse && fastBrowseData?.styles) {
+    // Fast path: data is already grouped by style
+    fastItems = (fastBrowseData.styles as any[]).map((style: any) => ({
+      sku: style.finishes?.[0]?.sku || style.styleKey,
+      brand: style.brand,
+      brandCode: style.brandCode,
+      model: style.model,
+      finish: style.finishes?.[0]?.finish,
+      diameter: style.finishes?.[0]?.diameter,
+      width: style.finishes?.[0]?.width,
+      offset: style.finishes?.[0]?.offset,
+      imageUrl: style.imageUrl,
+      price: style.price,
+      styleKey: style.styleKey,
+      finishThumbs: style.finishes?.map((f: any) => ({
+        finish: f.finish,
+        sku: f.sku,
+        imageUrl: f.imageUrl,
+        price: f.price,
+      })),
+      pair: undefined, // Fast browse doesn't compute staggered pairs yet
+    }));
+    
+    fastTotalCount = fastBrowseData.totalStyles || 0;
+    fastTotalPages = fastBrowseData.totalPages || 1;
+    
+    // Convert facets format
+    fastFacets = {
+      abbreviated_finish_desc: { buckets: fastBrowseData.facets?.finishes?.map((f: any) => ({ value: f.value, count: f.count })) || [] },
+      bolt_pattern_metric: { buckets: fastBrowseData.facets?.boltPatterns?.map((f: any) => ({ value: f.value, count: f.count })) || [] },
+      brand_cd: { buckets: fastBrowseData.facets?.brands?.map((f: any) => ({ value: f.code, count: f.count })) || [] },
+      wheel_diameter: { buckets: fastBrowseData.facets?.diameters?.map((f: any) => ({ value: f.value, count: f.count })) || [] },
+      width: { buckets: fastBrowseData.facets?.widths?.map((f: any) => ({ value: f.value, count: f.count })) || [] },
+    };
+  }
+  
+  // Slow path: process WheelPros data
   const maybeData = data as {
     items?: unknown[];
     results?: unknown[];
@@ -288,9 +389,9 @@ export default async function WheelsPage({
   };
 
   // common patterns: { items: [] } or { results: [] }
-  const rawItems: unknown[] = Array.isArray(maybeData?.items)
+  const rawItems: unknown[] = useFastBrowse ? [] : (Array.isArray(maybeData?.items)
     ? maybeData.items
-    : (Array.isArray(maybeData?.results) ? maybeData.results : []);
+    : (Array.isArray(maybeData?.results) ? maybeData.results : []));
 
   const itemsUnsorted: Wheel[] = rawItems.map((itUnknown) => {
     const it = itUnknown as WheelProsItem;
@@ -579,23 +680,29 @@ export default async function WheelsPage({
       })
     : itemsFilteredOffset;
 
-  const itemsFinal = effectiveFitView === "staggered"
-    ? itemsFilteredPrice.filter((w) => Boolean(w.pair?.staggered))
-    : effectiveFitView === "square"
-      ? itemsFilteredPrice.filter((w) => !w.pair?.staggered)
-      : itemsFilteredPrice;
+  // Use fast browse results if available, otherwise use processed WheelPros results
+  const itemsFinal = useFastBrowse && fastItems.length > 0
+    ? fastItems
+    : (effectiveFitView === "staggered"
+        ? itemsFilteredPrice.filter((w) => Boolean(w.pair?.staggered))
+        : effectiveFitView === "square"
+          ? itemsFilteredPrice.filter((w) => !w.pair?.staggered)
+          : itemsFilteredPrice);
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
-  const totalPages = Math.max(1, Math.ceil(itemsFinal.length / stylesPerPage));
+  const totalPages = useFastBrowse ? fastTotalPages : Math.max(1, Math.ceil(itemsFinal.length / stylesPerPage));
   const safePage = Math.min(page, totalPages);
-  const start = (safePage - 1) * stylesPerPage;
-  const itemsPage: Wheel[] = itemsFinal.slice(start, start + stylesPerPage);
+  
+  // For fast browse, items are already paginated server-side
+  const itemsPage: Wheel[] = useFastBrowse 
+    ? itemsFinal 
+    : itemsFinal.slice((safePage - 1) * stylesPerPage, safePage * stylesPerPage);
 
   // Still show raw SKU count for reference.
-  const totalCount = typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length;
+  const totalCount = useFastBrowse ? fastTotalCount : (typeof maybeData?.totalCount === "number" ? maybeData.totalCount : itemsUnsorted.length);
 
-  const facets = (maybeData as any)?.facets || {};
+  const facets = useFastBrowse ? fastFacets : ((maybeData as any)?.facets || {});
   const buckets = (k: string): Array<{ value: string; count?: number }> => {
     const f = facets?.[k];
     const arr = Array.isArray(f?.buckets) ? f.buckets : [];
@@ -606,6 +713,12 @@ export default async function WheelsPage({
 
   // Brand options: prefer actual brand names from the results we have.
   const brandOptions = (() => {
+    if (useFastBrowse && fastBrowseData?.facets?.brands) {
+      return fastBrowseData.facets.brands.map((b: any) => ({
+        code: b.code,
+        desc: b.name,
+      }));
+    }
     const map = new Map<string, string>();
     for (const w of itemsUnsorted) {
       const code = String(w.brandCode || "").trim();

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { warmTechfeedWheelCache } from "@/lib/techfeed/wheels";
+import { warmBrowseCache } from "@/lib/techfeed/wheels-browse";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -16,9 +17,16 @@ export async function GET(req: Request) {
   const debug = url.searchParams.get("debug") === "1";
 
   const t0 = Date.now();
+  
+  // Warm techfeed SKU lookup cache
   const tf0 = Date.now();
   const tf = await warmTechfeedWheelCache();
   const techfeedMs = Date.now() - tf0;
+
+  // Warm the new fast browse cache (builds style index)
+  const browse0 = Date.now();
+  const browse = await warmBrowseCache();
+  const browseMs = Date.now() - browse0;
 
   // Warm the WheelPros wheels search path (wrapper + our in-memory cache).
   const base = getBaseUrl();
@@ -41,6 +49,7 @@ export async function GET(req: Request) {
     {
       ok: true,
       techfeed: { ...tf, ms: techfeedMs },
+      browse: { ...browse, ms: browseMs },
       wheelpros: { url: wheelsUrl, status: wheelsStatus, ms: wheelsMs },
       totalMs,
       at: new Date().toISOString(),
@@ -51,9 +60,10 @@ export async function GET(req: Request) {
         ...(debug
           ? {
               "x-wt-techfeed-ms": String(techfeedMs),
+              "x-wt-browse-ms": String(browseMs),
               "x-wt-wheelpros-ms": String(wheelsMs),
               "x-wt-total-ms": String(totalMs),
-              "server-timing": `techfeed;dur=${techfeedMs}, wheelpros;dur=${wheelsMs}, total;dur=${totalMs}`,
+              "server-timing": `techfeed;dur=${techfeedMs}, browse;dur=${browseMs}, wheelpros;dur=${wheelsMs}, total;dur=${totalMs}`,
             }
           : null),
       },
