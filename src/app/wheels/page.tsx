@@ -390,6 +390,9 @@ export default async function WheelsPage({
   // Capture staggered debug info from fitment-search response
   const staggeredDebug = data?.fitment?.staggered || null;
 
+  // Capture bolt pattern from fitment-search response (more reliable than separate fitment call)
+  const fitmentSearchBp = data?.fitment?.envelope?.boltPattern;
+
   // Clear staggered fitView if vehicle doesn't support staggered
   // (prevents confusion when someone shares a URL with fitView=staggered for a non-staggered vehicle)
   if (!vehicleCallsForStaggered && effectiveFitView === "staggered") {
@@ -1193,29 +1196,64 @@ export default async function WheelsPage({
               <input type="hidden" name="width" value={widthParam} />
 
               <FilterGroup title="Bolt pattern">
-                {/* Show vehicle bolt pattern when available */}
-                {hasVehicle && bp ? (
-                  <div className="mb-2 rounded-lg bg-neutral-100 px-3 py-2 text-xs">
-                    <span className="text-neutral-500">Vehicle spec:</span>{" "}
-                    <span className="font-bold text-neutral-800">{bp}</span>
-                  </div>
-                ) : null}
-                <select
-                  name="boltPattern"
-                  defaultValue={boltPatternParam}
-                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                >
-                  <option value="">{hasVehicle && bp ? `All matching (${bp})` : "All bolt patterns"}</option>
-                  {boltPatternBuckets.slice(0, 80).map((b) => (
-                    <option key={b.value} value={b.value}>
-                      {b.value}{b.count != null ? ` (${b.count})` : ""}
-                    </option>
-                  ))}
-                </select>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply bolt pattern
-                </button>
+                {(() => {
+                  // Use bolt pattern from fitment-search response (authoritative), fallback to fit data
+                  const vehicleBp = fitmentSearchBp || bp;
+                  const hasSinglePattern = boltPatternBuckets.length === 1;
+                  const hasMultiplePatterns = boltPatternBuckets.length > 1;
+                  
+                  return (
+                    <>
+                      {/* Show vehicle bolt pattern - always visible when vehicle is selected */}
+                      {hasVehicle && vehicleBp ? (
+                        <div className="mb-2 rounded-lg bg-neutral-100 px-3 py-2 text-xs">
+                          <span className="text-neutral-500">Vehicle spec:</span>{" "}
+                          <span className="font-bold text-neutral-800">{vehicleBp}</span>
+                        </div>
+                      ) : null}
+                      
+                      {/* Case 1: No vehicle - show full dropdown */}
+                      {/* Case 2: Vehicle + multiple patterns (dual-drill wheels) - show dropdown */}
+                      {/* Case 3: Vehicle + single pattern - show locked value */}
+                      {!hasVehicle || hasMultiplePatterns ? (
+                        <>
+                          <select
+                            name="boltPattern"
+                            defaultValue={boltPatternParam || ""}
+                            className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
+                          >
+                            {hasVehicle && vehicleBp ? (
+                              <option value="">All matching ({vehicleBp})</option>
+                            ) : (
+                              <option value="">All bolt patterns</option>
+                            )}
+                            {boltPatternBuckets.map((b) => (
+                              <option key={b.value} value={b.value}>
+                                {b.value}{b.count != null ? ` (${b.count})` : ""}
+                              </option>
+                            ))}
+                          </select>
+                          <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
+                            Apply bolt pattern
+                          </button>
+                        </>
+                      ) : hasSinglePattern ? (
+                        /* Single bolt pattern for vehicle - show locked value (no dropdown) */
+                        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
+                          ✓ {boltPatternBuckets[0].value}
+                          {boltPatternBuckets[0].count != null ? (
+                            <span className="ml-1 text-xs text-green-600">({boltPatternBuckets[0].count} wheels)</span>
+                          ) : null}
+                        </div>
+                      ) : (
+                        /* No results / empty state */
+                        <div className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-500">
+                          {vehicleBp || "No bolt pattern data"}
+                        </div>
+                      )}
+                    </>
+                  );
+                })()}
               </FilterGroup>
             </form>
           </aside>
