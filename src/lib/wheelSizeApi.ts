@@ -49,6 +49,7 @@ export type WheelSizeModification = {
     power_hp?: number;
     fuel?: string;
   };
+  regions?: string[]; // e.g., ["usdm", "cdm", "ladm", "medm"]
 };
 
 export type WheelSizeWheelSetup = {

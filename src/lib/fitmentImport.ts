@@ -41,16 +41,20 @@ export async function importVehicleFitment(
     // If no trim/modification provided, get the first available one
     let modificationSlug = trim;
     if (!modificationSlug) {
+      console.log(`[fitmentImport] No trim provided, fetching modifications for ${year} ${make} ${model}`);
       const mods = await wheelSizeApi.getModifications(make, model, year);
+      console.log(`[fitmentImport] Found ${mods.length} modifications`);
       if (mods.length > 0) {
         // Prefer USDM market mods, or just use the first one
         const usdmMod = mods.find(m => m.regions?.includes("usdm"));
         modificationSlug = (usdmMod || mods[0]).slug;
-        if (options.debug) {
-          console.log(`[fitmentImport] Auto-selected modification: ${modificationSlug}`);
-        }
+        console.log(`[fitmentImport] Auto-selected modification: ${modificationSlug} (USDM: ${!!usdmMod})`);
+      } else {
+        console.log(`[fitmentImport] No modifications found`);
       }
     }
+    
+    console.log(`[fitmentImport] Fetching vehicle data with mod: ${modificationSlug}`);
 
     // Fetch from Wheel-Size API
     const wsData = await wheelSizeApi.getVehicleData(make, model, year, modificationSlug);
