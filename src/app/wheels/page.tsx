@@ -1458,40 +1458,40 @@ export default async function WheelsPage({
                   </div>
                 </div>
                 
-                <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-thin scrollbar-thumb-neutral-300">
-                  {recommendedWheels.map((w, idx) => (
-                    <div key={`rec-${w.sku || idx}`} className="flex-shrink-0 w-[280px]">
-                      <WheelsStyleCard
-                        selectToTires
-                        brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
-                        title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
-                        baseSku={String(w.sku || "")}
-                        baseFinish={w.finish ? String(w.finish) : undefined}
-                        baseImageUrl={w.imageUrl}
-                        price={w.price}
-                        sizeLabel={w.diameter || w.width ? { diameter: w.diameter, width: w.width } : undefined}
-                        pair={w.pair}
-                        specLabel={{
-                          boltPattern: (w as any).boltPattern,
-                          offset: (w as any).offset,
-                        }}
-                        finishThumbs={w.finishThumbs}
-                        fitmentClass={w.fitmentClass}
-                        viewParams={{
-                          year,
-                          make,
-                          model,
-                          trim,
-                          modification,
-                          sort,
-                          page: String(page),
-                        }}
-                      />
-                    </div>
+                {/* Grid layout - no horizontal scroll */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {recommendedWheels.slice(0, 4).map((w, idx) => (
+                    <WheelsStyleCard
+                      key={`rec-${w.sku || idx}`}
+                      selectToTires
+                      brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
+                      title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
+                      baseSku={String(w.sku || "")}
+                      baseFinish={w.finish ? String(w.finish) : undefined}
+                      baseImageUrl={w.imageUrl}
+                      price={w.price}
+                      sizeLabel={w.diameter || w.width ? { diameter: w.diameter, width: w.width } : undefined}
+                      pair={w.pair}
+                      specLabel={{
+                        boltPattern: (w as any).boltPattern,
+                        offset: (w as any).offset,
+                      }}
+                      finishThumbs={w.finishThumbs}
+                      fitmentClass={w.fitmentClass}
+                      viewParams={{
+                        year,
+                        make,
+                        model,
+                        trim,
+                        modification,
+                        sort,
+                        page: String(page),
+                      }}
+                    />
                   ))}
                 </div>
                 
-                <div className="mt-4 border-t border-neutral-200 pt-4">
+                <div className="mt-6 border-t border-neutral-200 pt-4">
                   <h3 className="text-base font-extrabold text-neutral-900">All Wheels</h3>
                   <p className="text-sm text-neutral-600">Browse all {itemsFinal.length} styles that fit your vehicle</p>
                 </div>

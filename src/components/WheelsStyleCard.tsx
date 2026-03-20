@@ -32,32 +32,34 @@ function fmtSizePart(v: string) {
   if (!s) return "";
   const n = Number(s);
   if (!Number.isFinite(n)) return s;
-  // trim trailing zeros like 20.0 -> 20, 11.00 -> 11
   return n.toString();
 }
 
-// Fitment badge configuration
-const FITMENT_BADGES = {
+// Fitment configuration with accent colors
+const FITMENT_CONFIG = {
   surefit: {
     label: "Best Fit",
-    helper: "Direct fit for your vehicle",
-    bgColor: "bg-green-100",
-    textColor: "text-green-800",
-    borderColor: "border-green-200",
+    confidence: "Direct fit for your vehicle",
+    accentColor: "bg-green-500",
+    badgeBg: "bg-green-100",
+    badgeText: "text-green-800",
+    badgeBorder: "border-green-200",
   },
   specfit: {
     label: "Good Fit",
-    helper: "Aftermarket fitment",
-    bgColor: "bg-blue-100",
-    textColor: "text-blue-800",
-    borderColor: "border-blue-200",
+    confidence: "Fits your vehicle • Aftermarket setup",
+    accentColor: "bg-blue-500",
+    badgeBg: "bg-blue-100",
+    badgeText: "text-blue-800",
+    badgeBorder: "border-blue-200",
   },
   extended: {
     label: "Aggressive Fit",
-    helper: "Aggressive/custom fitment",
-    bgColor: "bg-orange-100",
-    textColor: "text-orange-800",
-    borderColor: "border-orange-200",
+    confidence: "Fits your vehicle • Custom fitment",
+    accentColor: "bg-orange-500",
+    badgeBg: "bg-orange-100",
+    badgeText: "text-orange-800",
+    badgeBorder: "border-orange-200",
   },
 } as const;
 
@@ -86,11 +88,8 @@ export function WheelsStyleCard({
   finishThumbs?: WheelFinishThumb[];
   viewParams?: Record<string, string | undefined>;
   specLabel?: { boltPattern?: string; offset?: string };
-  /** When true, clicking the card selects the wheel and navigates to /tires automatically. */
   selectToTires?: boolean;
-  /** Optional recommended front/rear pairing (Tireweb-style staggered support). */
   pair?: WheelPair;
-  /** Fitment classification from validation engine */
   fitmentClass?: "surefit" | "specfit" | "extended";
 }) {
   const router = useRouter();
@@ -102,7 +101,6 @@ export function WheelsStyleCard({
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
   const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
 
-  // Visual-only: show "from" pricing when we have multiple finishes.
   const fromPrice = useMemo(() => {
     const ps = (finishThumbs || [])
       .map((t) => (typeof t?.price === "number" ? t.price : null))
@@ -116,7 +114,6 @@ export function WheelsStyleCard({
     for (const [k, v] of Object.entries(viewParams || {})) {
       if (v) sp.set(k, v);
     }
-    // Keep links clean if no vehicle selected.
     if (!sp.get("year") || !sp.get("make") || !sp.get("model")) {
       sp.delete("year");
       sp.delete("make");
@@ -132,7 +129,6 @@ export function WheelsStyleCard({
 
   function selectAndGoToTires() {
     const sku = selectedSku || baseSku;
-
     const p = selectedPair;
     const front = p?.front?.sku ? p.front : { sku, diameter: sizeLabel?.diameter, width: sizeLabel?.width, offset: specLabel?.offset };
     const rear = p?.staggered && p?.rear?.sku ? p.rear : undefined;
@@ -166,7 +162,6 @@ export function WheelsStyleCard({
     for (const [k, v] of Object.entries(viewParams || {})) {
       if (v) sp.set(k, v);
     }
-    // Keep links clean if no vehicle selected.
     if (!sp.get("year") || !sp.get("make") || !sp.get("model")) {
       sp.delete("year");
       sp.delete("make");
@@ -195,25 +190,23 @@ export function WheelsStyleCard({
   }
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
-  const off = specLabel?.offset ? String(specLabel.offset).trim() : "";
+  const fitConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
+  const accentColor = fitConfig?.accentColor || "bg-neutral-300";
 
   return (
-    <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:border-red-300 hover:shadow-sm">
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-500" />
-      <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-500" />
+    <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:shadow-md transition-shadow">
+      {/* Fitment-based left accent bar */}
+      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${accentColor}`} />
 
       <div className="flex items-start justify-between gap-2">
         <div>
           <div className="text-sm font-semibold text-neutral-600">{brand}</div>
           {/* Fitment badge */}
-          {fitmentClass && FITMENT_BADGES[fitmentClass] ? (
+          {fitConfig ? (
             <div className="mt-1">
-              <span className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-bold ${FITMENT_BADGES[fitmentClass].bgColor} ${FITMENT_BADGES[fitmentClass].textColor} ${FITMENT_BADGES[fitmentClass].borderColor}`}>
-                {FITMENT_BADGES[fitmentClass].label}
+              <span className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-bold ${fitConfig.badgeBg} ${fitConfig.badgeText} ${fitConfig.badgeBorder}`}>
+                {fitConfig.label}
               </span>
-              <div className="mt-0.5 text-[10px] text-neutral-500">
-                {FITMENT_BADGES[fitmentClass].helper}
-              </div>
             </div>
           ) : null}
         </div>
@@ -258,117 +251,97 @@ export function WheelsStyleCard({
           className="block w-full text-left"
         >
           <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
-        {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
-
-        <div className="mt-2 flex flex-wrap gap-2">
-          <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
-            Fast shipping
-          </span>
-          <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
-            Fitment checked
-          </span>
-          {thumbs.length > 1 ? null : null}
-        </div>
-
-        {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
-          <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
-            <div>
-              {/* Only show "Front:" label for staggered fitments */}
-              {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
-              {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
-              {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "x" : ""}
-              {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
-            </div>
-            {selectedPair?.staggered && selectedPair?.rear?.sku ? (
-              <div>
-                Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
-                {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "x" : ""}
-                {fmtSizePart(selectedPair?.rear?.width || "")}
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-
-        {bolt ? (
-          <div className="mt-2 flex flex-wrap gap-2">
-            <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-              {bolt}
-            </span>
-          </div>
-        ) : null}
-
-        <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
-          {selectedImage ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={selectedImage}
-              alt={title}
-              className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
-              loading="lazy"
-            />
-          ) : (
-            <div className="grid h-56 place-items-center bg-white p-3 text-center">
-              <div>
-                <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
-              </div>
-            </div>
-          )}
-        </div>
-        </button>
-      ) : (
-        <Link href={viewHref} className="block">
-          <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
           {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
 
-          <div className="mt-2 flex flex-wrap gap-2">
-            <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
-              Fast shipping
-            </span>
-            <span className="rounded-full border border-red-200 bg-white px-2.5 py-1 text-xs font-extrabold text-red-900">
-              Fitment checked
-            </span>
-            {thumbs.length > 1 ? null : null}
-          </div>
-
+          {/* Size display */}
           {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
-            <div className="mt-1 grid gap-1 text-sm font-semibold text-neutral-700">
+            <div className="mt-2 grid gap-1 text-sm font-semibold text-neutral-700">
               <div>
-                {/* Only show "Front:" label for staggered fitments */}
                 {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
                 {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
-                {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "x" : ""}
+                {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "×" : ""}
                 {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
+                {bolt ? <span className="text-neutral-500 ml-2">• {bolt}</span> : null}
               </div>
               {selectedPair?.staggered && selectedPair?.rear?.sku ? (
                 <div>
                   Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
-                  {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "x" : ""}
+                  {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "×" : ""}
                   {fmtSizePart(selectedPair?.rear?.width || "")}
                 </div>
               ) : null}
             </div>
           ) : null}
 
-          {bolt ? (
-            <div className="mt-2 flex flex-wrap gap-2">
-              <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-xs font-extrabold text-neutral-900">
-                {bolt}
-              </span>
+          {/* Fitment confidence text */}
+          {fitConfig ? (
+            <div className="mt-2 text-xs text-neutral-600">
+              <span className="text-green-600">✓</span> {fitConfig.confidence}
             </div>
           ) : null}
 
+          {/* Product image */}
           <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
             {selectedImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={selectedImage}
                 alt={title}
-                className="h-56 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
+                className="h-48 w-full object-contain bg-white"
                 loading="lazy"
               />
             ) : (
-              <div className="grid h-56 place-items-center bg-white p-3 text-center">
+              <div className="grid h-48 place-items-center bg-white p-3 text-center">
+                <div>
+                  <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+                  <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
+                </div>
+              </div>
+            )}
+          </div>
+        </button>
+      ) : (
+        <Link href={viewHref} className="block">
+          <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
+          {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
+
+          {/* Size display */}
+          {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
+            <div className="mt-2 grid gap-1 text-sm font-semibold text-neutral-700">
+              <div>
+                {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
+                {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
+                {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "×" : ""}
+                {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
+                {bolt ? <span className="text-neutral-500 ml-2">• {bolt}</span> : null}
+              </div>
+              {selectedPair?.staggered && selectedPair?.rear?.sku ? (
+                <div>
+                  Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
+                  {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "×" : ""}
+                  {fmtSizePart(selectedPair?.rear?.width || "")}
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+
+          {/* Fitment confidence text */}
+          {fitConfig ? (
+            <div className="mt-2 text-xs text-neutral-600">
+              <span className="text-green-600">✓</span> {fitConfig.confidence}
+            </div>
+          ) : null}
+
+          {/* Product image */}
+          <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+            {selectedImage ? (
+              <img
+                src={selectedImage}
+                alt={title}
+                className="h-48 w-full object-contain bg-white"
+                loading="lazy"
+              />
+            ) : (
+              <div className="grid h-48 place-items-center bg-white p-3 text-center">
                 <div>
                   <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
                   <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
@@ -379,6 +352,7 @@ export function WheelsStyleCard({
         </Link>
       )}
 
+      {/* Finish thumbnails */}
       {thumbs.length ? (
         <div className="mt-2 flex flex-wrap gap-2">
           {thumbs.slice(0, 8).map((t) => {
@@ -401,7 +375,6 @@ export function WheelsStyleCard({
                 aria-pressed={active}
               >
                 {t.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
                   <img src={t.imageUrl} alt={t.finish} className="h-10 w-10 object-contain" loading="lazy" />
                 ) : (
                   <div className="h-10 w-10 bg-neutral-50" />
@@ -412,8 +385,9 @@ export function WheelsStyleCard({
         </div>
       ) : null}
 
-      <div className="mt-5">
-        <div className="text-3xl font-extrabold text-neutral-900">
+      {/* Price */}
+      <div className="mt-4">
+        <div className="text-2xl font-extrabold text-neutral-900">
           {typeof selectedPrice === "number"
             ? `$${selectedPrice.toFixed(2)}`
             : (typeof fromPrice === "number" ? `From $${fromPrice.toFixed(2)}` : "Call for price")}
@@ -421,39 +395,39 @@ export function WheelsStyleCard({
         <div className="text-sm text-neutral-600">each</div>
       </div>
 
-      <div className="mt-5 grid gap-3">
+      {/* Install messaging */}
+      <div className="mt-3 text-xs text-neutral-600 space-y-0.5">
+        <div><span className="text-green-600">✓</span> Ships to your installer</div>
+        <div><span className="text-green-600">✓</span> Local installation available</div>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-4">
         {typeof selectedPrice === "number" ? (
           selectToTires ? (
             <button
               type="button"
               onClick={() => selectAndGoToTires()}
-              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+              className="w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
             >
-              Select wheel
-              {pair?.staggered && pair?.rear?.sku ? " (staggered)" : ""}
+              View Details
             </button>
           ) : (
             <Link
               href={viewHref}
-              className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+              className="block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
             >
-              View details
+              View Details
             </Link>
           )
         ) : (
           <a
             href={BRAND.links.tel}
-            className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+            className="block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
           >
-            Call for price
+            Call for Price
           </a>
         )}
-
-        <div className="flex items-center justify-between gap-3 text-xs">
-          <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
-            Call
-          </a>
-        </div>
       </div>
     </div>
   );
