@@ -85,6 +85,15 @@ export async function importVehicleFitment(
     let fitmentImported = false;
     if (wsData.technical) {
       const tech = wsData.technical;
+      
+      // Parse torque value (can be "204 Nm" string or number)
+      let torqueNm: number | undefined;
+      if (tech.wheel_tightening_torque) {
+        const torqueStr = String(tech.wheel_tightening_torque);
+        const torqueMatch = torqueStr.match(/^(\d+)/);
+        torqueNm = torqueMatch ? parseInt(torqueMatch[1], 10) : undefined;
+      }
+      
       await upsertVehicleFitment(db, vehicle.id, {
         boltPattern: tech.bolt_pattern,
         centerBore: tech.centre_bore,
@@ -92,7 +101,7 @@ export async function importVehicleFitment(
         pcd: tech.pcd,
         threadSize: tech.thread_size,
         fastenerType: tech.fastener_type,
-        torqueNm: tech.wheel_tightening_torque,
+        torqueNm,
       });
       fitmentImported = true;
     }
