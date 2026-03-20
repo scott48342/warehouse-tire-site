@@ -29,6 +29,7 @@ type AddToCartButtonProps = {
   quantity?: number;
   className?: string;
   variant?: "primary" | "secondary";
+  showPriceInButton?: boolean;
 };
 
 export function AddToCartButton({
@@ -51,6 +52,7 @@ export function AddToCartButton({
   quantity = 4,
   className = "",
   variant = "primary",
+  showPriceInButton = true,
 }: AddToCartButtonProps) {
   const { addItem } = useCart();
   const [isAdding, setIsAdding] = useState(false);
@@ -122,7 +124,7 @@ export function AddToCartButton({
       ) : (
         <span>
           Add Wheels — Set of {quantity}
-          {Number.isFinite(total) ? ` • $${total.toFixed(2)}` : ""}
+          {showPriceInButton && Number.isFinite(total) && total > 0 ? ` • $${total.toFixed(2)}` : ""}
         </span>
       )}
     </button>

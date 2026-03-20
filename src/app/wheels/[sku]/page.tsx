@@ -525,34 +525,26 @@ export default async function WheelDetailPage({
               <div id="quote" className="rounded-2xl border border-green-200 bg-green-50 p-4">
                 <div className="text-sm font-extrabold text-neutral-900 mb-3">Ready to buy?</div>
                 <div className="grid gap-2">
-                  {typeof price === "number" && Number.isFinite(price) ? (
-                    <AddToCartButton
-                      sku={sku}
-                      brand={brand || "Wheel"}
-                      model={String(it?.title || sku)}
-                      finish={finish || undefined}
-                      diameter={diameter || undefined}
-                      width={width || undefined}
-                      offset={offset || undefined}
-                      boltPattern={boltPattern || undefined}
-                      imageUrl={imageUrl}
-                      unitPrice={price}
-                      quantity={4}
-                      vehicle={
-                        year && make && model
-                          ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
-                          : undefined
-                      }
-                      className="w-full"
-                    />
-                  ) : (
-                    <a
-                      href={BRAND.links.tel}
-                      className="flex h-12 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
-                    >
-                      Call for Price
-                    </a>
-                  )}
+                  <AddToCartButton
+                    sku={sku}
+                    brand={brand || "Wheel"}
+                    model={String(it?.title || sku)}
+                    finish={finish || undefined}
+                    diameter={diameter || undefined}
+                    width={width || undefined}
+                    offset={offset || undefined}
+                    boltPattern={boltPattern || undefined}
+                    imageUrl={imageUrl}
+                    unitPrice={typeof price === "number" && Number.isFinite(price) ? price : 0}
+                    quantity={4}
+                    vehicle={
+                      year && make && model
+                        ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
+                        : undefined
+                    }
+                    className="w-full"
+                    showPriceInButton={typeof price === "number" && Number.isFinite(price)}
+                  />
                   <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
                 </div>
 
