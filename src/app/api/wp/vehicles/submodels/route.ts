@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { wpVehicleGetJson } from "@/lib/wheelprosVehicle";
+import { normalizeTrims } from "@/lib/trimNormalize";
 
 export const runtime = "nodejs";
 
@@ -18,7 +19,9 @@ export async function GET(req: Request) {
     // GET https://api.wheelpros.com/vehicles/v1/years/{year}/makes/{make}/models/{model}/submodels
     const path = `/v1/years/${encodeURIComponent(year)}/makes/${encodeURIComponent(make)}/models/${encodeURIComponent(model)}/submodels`;
     const data = await wpVehicleGetJson<string[]>(path);
-    const results = Array.isArray(data) ? data.map((s) => ({ value: String(s), label: String(s) })) : [];
+    const raw = Array.isArray(data) ? data.map((s) => String(s)) : [];
+    // Normalize engine codes to friendly trim names (e.g., 5.7i → Z28)
+    const results = normalizeTrims(raw, year, make, model);
     return NextResponse.json({ results });
   } catch (e: any) {
     return NextResponse.json({ error: e?.message || String(e) }, { status: 500 });

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { isInCooldown, record429, recordSuccess, getCacheStats } from "@/lib/fitmentCache";
+import { normalizeTrims } from "@/lib/trimNormalize";
 
 export const runtime = "nodejs";
 
@@ -114,16 +115,10 @@ export async function GET(req: Request) {
             return { value: m.slug, label };
           });
 
-          // Dedupe
-          const seen = new Set<string>();
-          const deduped = results.filter(r => {
-            const k = r.label.toLowerCase();
-            if (seen.has(k)) return false;
-            seen.add(k);
-            return true;
-          });
+          // Normalize engine codes to friendly trim names (e.g., 5.7i → Z28)
+          const normalized = normalizeTrims(results, year, make, model);
 
-          return NextResponse.json({ results: deduped }, {
+          return NextResponse.json({ results: normalized }, {
             headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
           });
         }
@@ -158,15 +153,10 @@ export async function GET(req: Request) {
           return { value, label };
         }).filter(Boolean);
 
-        const seen = new Set<string>();
-        const results = mapped.filter((r: any) => {
-          const k = r.label.toLowerCase();
-          if (seen.has(k)) return false;
-          seen.add(k);
-          return true;
-        });
+        // Normalize engine codes to friendly trim names (e.g., 5.7i → Z28)
+        const normalized = normalizeTrims(mapped, year, make, model);
 
-        return NextResponse.json({ results });
+        return NextResponse.json({ results: normalized });
       }
     } catch (err: any) {
       console.error(`[trims] Package engine error:`, err?.message);
