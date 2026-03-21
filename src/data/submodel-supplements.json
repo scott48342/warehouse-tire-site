@@ -487,5 +487,37 @@
         { "value": "high-altitude", "label": "High Altitude" }
       ]
     }
+  },
+  "lexus": {
+    "rx": {
+      "2016-2022": [
+        { "value": "rx350", "label": "RX 350" },
+        { "value": "rx350l", "label": "RX 350L" },
+        { "value": "rx450h", "label": "RX 450h" },
+        { "value": "rx450hl", "label": "RX 450hL" },
+        { "value": "f-sport", "label": "F Sport" }
+      ],
+      "2023-2025": [
+        { "value": "rx350", "label": "RX 350" },
+        { "value": "rx350h", "label": "RX 350h" },
+        { "value": "rx450h+", "label": "RX 450h+" },
+        { "value": "rx500h", "label": "RX 500h" },
+        { "value": "f-sport", "label": "F Sport" }
+      ]
+    },
+    "rx 350": {
+      "2016-2022": [
+        { "value": "base", "label": "Base" },
+        { "value": "f-sport", "label": "F Sport" },
+        { "value": "luxury", "label": "Luxury" },
+        { "value": "premium", "label": "Premium" }
+      ],
+      "2023-2025": [
+        { "value": "base", "label": "Base" },
+        { "value": "f-sport", "label": "F Sport" },
+        { "value": "luxury", "label": "Luxury" },
+        { "value": "premium", "label": "Premium" }
+      ]
+    }
   }
 }
