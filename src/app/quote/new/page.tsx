@@ -5,6 +5,7 @@ import { getPool as getQuotePool } from "@/lib/quotes";
 import { listCatalogItems, getTaxRate } from "@/lib/quoteCatalog";
 import { cookieName, verifyAdminToken } from "@/lib/adminAuth";
 import { QuoteBuilder, type ProductDetails } from "@/components/QuoteBuilder";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -277,9 +278,11 @@ export default async function NewQuotePage({
               if (v) wheelChangeParams.set(k, v);
             }
 
+            // Never show raw engine text - extract clean submodel or omit
+            const displayTrim = extractDisplayTrim(trim);
             return (
               <QuoteBuilder
-                vehicleLabel={[year, make, model, trim].filter(Boolean).join(" ")}
+                vehicleLabel={[year, make, model, displayTrim].filter(Boolean).join(" ")}
                 vehicle={{ year, make, model, trim, modification }}
                 wheel={wheelLine}
                 tire={tireLine}

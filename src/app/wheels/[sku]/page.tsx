@@ -8,6 +8,7 @@ import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { BRAND } from "@/lib/brand";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
 type WheelProsBrand = {
   code?: string;
@@ -190,7 +191,9 @@ export default async function WheelDetailPage({
   const wheelOffsetParam = safeString(Array.isArray((sp as any).wheelOffset) ? (sp as any).wheelOffset[0] : (sp as any).wheelOffset);
   const wheelBoltParam = safeString(Array.isArray((sp as any).wheelBolt) ? (sp as any).wheelBolt[0] : (sp as any).wheelBolt);
   
-  const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
+  // Never show raw engine text - extract clean submodel or omit
+  const displayTrim = extractDisplayTrim(trim);
+  const vehicleLabel = [year, make, model, displayTrim].filter(Boolean).join(" ");
 
   const vehicleSlugStr = year && make && model ? vehicleSlug(year, make, model) : "";
 

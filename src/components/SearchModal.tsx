@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FitmentSelector } from "@/components/FitmentSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import tireSizes from "@/data/tire-sizes.json";
 
 export type Mode = "vehicle" | "size";
@@ -72,7 +73,9 @@ function buildVehicleParams(f: GarageItem) {
 }
 
 function garageLabel(f: GarageItem) {
-  return [f.year, f.make, f.model, f.trim].filter(Boolean).join(" ");
+  // Never show raw engine text - extract clean submodel or omit
+  const cleanTrim = extractDisplayTrim(f.trim ?? "");
+  return [f.year, f.make, f.model, cleanTrim].filter(Boolean).join(" ");
 }
 
 function GarageQuickPick({

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
 type Fitment = {
   year?: string;
@@ -42,8 +43,9 @@ function fitmentKey(f: Fitment) {
 }
 
 function label(f: Fitment) {
-  const parts = [f.year, f.make, f.model, f.trim].filter(Boolean);
-  return parts.join(" ");
+  // Never show raw engine text - extract clean submodel or omit
+  const cleanTrim = extractDisplayTrim(f.trim ?? "");
+  return [f.year, f.make, f.model, cleanTrim].filter(Boolean).join(" ");
 }
 
 function buildVehicleParams(f: Fitment) {

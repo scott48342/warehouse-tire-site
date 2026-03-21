@@ -5,6 +5,7 @@ import { BRAND } from "@/lib/brand";
 import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
 export const runtime = "nodejs";
 
@@ -76,7 +77,9 @@ export default async function TireDetailPage({
   const wheelUnit = String((sp as any).wheelUnit || "");
   const wheelQty = String((sp as any).wheelQty || "");
   const wheelDia = String((sp as any).wheelDia || "");
-  const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
+  // Never show raw engine text - extract clean submodel or omit
+  const displayTrim = extractDisplayTrim(trim);
+  const vehicleLabel = [year, make, model, displayTrim].filter(Boolean).join(" ");
 
   if (!safeSku) {
     return (

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getPool, getQuote, type QuoteLine } from "@/lib/quotes";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
 export const runtime = "nodejs";
 
@@ -104,7 +105,9 @@ export default async function QuotePage({
 
   const snap = q.snapshot;
   const v = snap.vehicle;
-  const vehicleLabel = [v?.year, v?.make, v?.model, v?.trim].filter(Boolean).join(" ");
+  // Never show raw engine text - extract clean submodel or omit
+  const displayTrim = extractDisplayTrim(v?.trim ?? "");
+  const vehicleLabel = [v?.year, v?.make, v?.model, displayTrim].filter(Boolean).join(" ");
 
   const wheelLine = (snap.lines || []).find((l) => (l as any)?.kind === "product" && (l as any)?.meta?.productType === "wheel") as QuoteLine | undefined;
   const tireLine = (snap.lines || []).find((l) => (l as any)?.kind === "product" && (l as any)?.meta?.productType === "tire") as QuoteLine | undefined;
