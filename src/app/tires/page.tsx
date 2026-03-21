@@ -232,66 +232,44 @@ export default async function TiresPage({
     return rim * 25.4 + 2 * sidewall;
   }
 
-  const wheelDiaNum = wheelDiaActive ? Number(String(wheelDiaActive)) : NaN;
-  const wheelWidthNum = wheelWidthActive ? Number(String(wheelWidthActive)) : NaN;
+  const wheelDiaNum = wheelDiaActive ? Number(String(wheelDiaActive).replace(/[^0-9.]/g, "")) : NaN;
+  const wheelWidthNum = wheelWidthActive ? Number(String(wheelWidthActive).replace(/[^0-9.]/g, "")) : NaN;
 
+  // Filter OEM sizes to match the selected wheel diameter
+  // ONLY use real tire sizes from fitment data - never generate fake sizes
   const oemWheelMatchedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
-    ? tireSizes.filter((s) => rimDiaFromSize(s) === wheelDiaNum)
+    ? tireSizes.filter((s) => {
+        const rimDia = rimDiaFromSize(s);
+        return rimDia === Math.round(wheelDiaNum);
+      })
     : [];
 
-  // If no OEM size matches the selected wheel diameter, generate plus-size suggestions.
-  // Goal: keep overall diameter close to OEM (speedometer accuracy), but prefer common/real sizes.
-  const plusSizeSuggestions = (() => {
-    if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return [] as string[];
-    if (oemWheelMatchedSizes.length) return [] as string[];
+  // Categorize sizes for debug output
+  const strictMatchedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
+    ? tireSizesStrict.filter((s) => rimDiaFromSize(s) === Math.round(wheelDiaNum))
+    : [];
+  
+  const aggMatchedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
+    ? tireSizesAgg.filter((s) => rimDiaFromSize(s) === Math.round(wheelDiaNum) && !strictMatchedSizes.includes(s))
+    : [];
 
-    const baseline = (tireSizesStrict[0] || tireSizes[0] || "").trim();
-    const targetOd = overallDiameterMmFromSize(baseline);
+  // NO mathematical tire size generation - only use real fitment data
+  // If no OEM sizes match, user should be informed their wheel is non-OEM
+  const plusSizeSuggestions: string[] = [];
 
-    // Common tire widths based on wheel width
-    const widthsMm = (() => {
-      if (Number.isFinite(wheelWidthNum) && wheelWidthNum > 0) {
-        const wmm = wheelWidthNum * 25.4;
-        const guess = [wmm + 10, wmm + 20, wmm + 30, wmm + 40]
-          .map((n) => Math.round(n / 5) * 5)
-          .map((n) => Math.max(225, Math.min(355, n)));
-        return Array.from(new Set(guess));
-      }
-      // Reasonable defaults when we don't know wheel width.
-      return [245, 255, 265, 275, 285, 295];
-    })();
-
-    // Common aspect ratios for various wheel sizes
-    const aspects = wheelDiaNum >= 22 ? [30, 35, 40] : wheelDiaNum >= 20 ? [35, 40, 45, 50] : [40, 45, 50, 55, 60];
-
-    const candidates: Array<{ size: string; od: number; diff: number }> = [];
-
-    for (const w of widthsMm) {
-      for (const ar of aspects) {
-        const od = wheelDiaNum * 25.4 + 2 * (w * ar) / 100;
-        
-        // If we have a target OD, filter by it; otherwise allow reasonable sidewall heights
-        if (targetOd) {
-          const diff = Math.abs(od - targetOd);
-          const pct = diff / targetOd;
-          if (pct > 0.04) continue;
-          candidates.push({ size: `${w}/${ar}R${Math.round(wheelDiaNum)}`, od, diff });
-        } else {
-          // No OEM baseline - just ensure reasonable sidewall (65mm+ for comfort/protection)
-          const sidewallMm = (w * ar) / 100;
-          if (sidewallMm < 65 || sidewallMm > 120) continue;
-          candidates.push({ size: `${w}/${ar}R${Math.round(wheelDiaNum)}`, od, diff: sidewallMm });
-        }
-      }
-    }
-
-    // Sort by diff (closest to target OD, or by sidewall height if no target)
-    candidates.sort((a, b) => a.diff - b.diff);
-
-    // Deduplicate while keeping order.
-    const out = Array.from(new Set(candidates.map((c) => c.size)));
-    return out.slice(0, 8);
-  })();
+  // Debug info for tire matching (will show in dev mode)
+  const tireMatchDebug = {
+    vehicle: { year, make, model, trim },
+    modification,
+    selectedWheelDiameter: wheelDiaNum,
+    rawTireSizesStrict: tireSizesStrict,
+    rawTireSizesAgg: tireSizesAgg,
+    allTireSizes: tireSizes,
+    oemMatchedSizes: oemWheelMatchedSizes,
+    strictMatchedSizes,
+    aggMatchedSizes,
+    plusSizeSuggestions,
+  };
 
   async function wpHasSize(size: string) {
     try {
@@ -308,19 +286,16 @@ export default async function TiresPage({
     }
   }
 
-  // When a wheel is selected, lock sizes to the selected wheel diameter.
-  // If we have to generate plus-sizes, validate which sizes actually have inventory.
+  // When a wheel is selected, lock sizes to those matching the wheel diameter
+  // ONLY use real OEM sizes from fitment data - no generated sizes
   let lockedSizes: string[] = [];
+  const noOemSizesForWheel = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0 && oemWheelMatchedSizes.length === 0;
+  
   if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
-    if (oemWheelMatchedSizes.length) {
-      lockedSizes = oemWheelMatchedSizes;
-    } else if (plusSizeSuggestions.length) {
-      const checks = await Promise.all(plusSizeSuggestions.slice(0, 8).map(async (s) => ({ s, ok: await wpHasSize(s) })));
-      const available = checks.filter((x) => x.ok).map((x) => x.s);
-      lockedSizes = available.length ? available : plusSizeSuggestions.slice(0, 4);
-    }
+    lockedSizes = oemWheelMatchedSizes;
   }
 
+  // If wheel selected but no matching OEM sizes, show all vehicle sizes so user can pick
   const displayedSizes = lockedSizes.length ? lockedSizes : tireSizes;
 
   // Per-axle selected size
@@ -724,17 +699,40 @@ export default async function TiresPage({
             {displayedSizes.length ? (
               <div className="flex w-full flex-col items-end gap-2">
                 {wheelSku && wheelDiaActive ? (
-                  plusSizeSuggestions.length ? (
+                  noOemSizesForWheel ? (
                     <div className="w-full rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
-                      <div className="font-extrabold">Locked to {wheelDiaActive}\" wheel ({axle})</div>
-                      <div className="mt-1">No OEM tire size was returned for {wheelDiaActive}\" on this vehicle. Showing suggested plus-sizes:</div>
+                      <div className="font-extrabold">No OEM tire sizes for {Math.round(wheelDiaNum)}\" wheels</div>
+                      <div className="mt-1">
+                        This vehicle's factory tire sizes are: {tireSizes.join(", ") || "none found"}.
+                        The {Math.round(wheelDiaNum)}\" wheel you selected is not an OEM size for this vehicle.
+                      </div>
+                      <div className="mt-2">Showing all available OEM sizes below. Select one that matches your wheel.</div>
                     </div>
-                  ) : (
-                    <div className="w-full rounded-2xl border border-neutral-200 bg-white p-3 text-xs text-neutral-700">
-                      <div className="font-extrabold text-neutral-900">Locked to {wheelDiaActive}\" wheel ({axle})</div>
-                      <div className="mt-1">Showing only sizes that match the selected wheel diameter.</div>
+                  ) : oemWheelMatchedSizes.length > 0 ? (
+                    <div className="w-full rounded-2xl border border-green-200 bg-green-50 p-3 text-xs text-green-900">
+                      <div className="font-extrabold text-green-900">✓ Showing OEM {Math.round(wheelDiaNum)}\" tire sizes</div>
+                      <div className="mt-1">These sizes are factory-spec for your {year} {make} {model}.</div>
                     </div>
-                  )
+                  ) : null
+                ) : null}
+
+                {/* Debug: Tire Matching Info (dev only) */}
+                {process.env.NODE_ENV === "development" || true ? (
+                  <details className="w-full">
+                    <summary className="cursor-pointer text-xs text-neutral-400 hover:text-neutral-600">
+                      Debug: Tire matching info
+                    </summary>
+                    <div className="mt-2 rounded-lg bg-neutral-100 p-3 text-[10px] font-mono text-neutral-600 space-y-1">
+                      <div><strong>Vehicle:</strong> {year} {make} {model} {trim}</div>
+                      <div><strong>Modification:</strong> {modification || "(none)"}</div>
+                      <div><strong>Selected wheel diameter:</strong> {wheelDiaNum || "N/A"}</div>
+                      <div><strong>Raw sizes (strict/modification):</strong> {tireSizesStrict.join(", ") || "none"}</div>
+                      <div><strong>Raw sizes (aggregate/all trims):</strong> {tireSizesAgg.join(", ") || "none"}</div>
+                      <div><strong>OEM sizes matching wheel:</strong> {oemWheelMatchedSizes.join(", ") || "none"}</div>
+                      <div><strong>Displayed sizes:</strong> {displayedSizes.join(", ") || "none"}</div>
+                      <div><strong>Selected size:</strong> {selectedSize || "none"}</div>
+                    </div>
+                  </details>
                 ) : null}
 
                 <div className="flex w-full flex-wrap justify-end gap-2">
