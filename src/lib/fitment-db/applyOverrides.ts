@@ -88,52 +88,125 @@ export async function findApplicableOverrides(
 }
 
 /**
+ * Result of applying overrides, includes metadata about what changed
+ */
+export interface ApplyOverridesResult {
+  fitment: VehicleFitment;
+  overridesApplied: FitmentOverride[];
+  forceQuality: "valid" | "partial" | null;
+  changed: boolean;
+}
+
+/**
  * Apply overrides to a fitment record
  * Returns a new record with overrides applied (original unchanged)
  */
 export async function applyOverrides(fitment: VehicleFitment): Promise<VehicleFitment> {
+  const result = await applyOverridesWithMeta(fitment);
+  return result.fitment;
+}
+
+/**
+ * Apply overrides with full metadata about what was applied
+ */
+export async function applyOverridesWithMeta(fitment: VehicleFitment): Promise<ApplyOverridesResult> {
   const overrides = await findApplicableOverrides(fitment);
   
   if (overrides.length === 0) {
-    return fitment;
+    return {
+      fitment,
+      overridesApplied: [],
+      forceQuality: null,
+      changed: false,
+    };
   }
   
-  // Start with a copy
-  const result: VehicleFitment = { ...fitment };
+  // Start with a copy (deep copy for arrays)
+  const result: VehicleFitment = {
+    ...fitment,
+    oemWheelSizes: fitment.oemWheelSizes ? [...(fitment.oemWheelSizes as any[])] : [],
+    oemTireSizes: fitment.oemTireSizes ? [...(fitment.oemTireSizes as any[])] : [],
+  };
+  
+  let forceQuality: "valid" | "partial" | null = null;
+  const appliedOverrides: FitmentOverride[] = [];
   
   // Apply overrides in order (most specific first, so they win)
   // But we iterate in reverse so less specific are applied first,
   // then more specific overwrite them
   for (const override of [...overrides].reverse()) {
+    let applied = false;
+    
     if (override.displayTrim !== null) {
       result.displayTrim = override.displayTrim;
+      applied = true;
     }
     if (override.boltPattern !== null) {
       result.boltPattern = override.boltPattern;
+      applied = true;
     }
     if (override.centerBoreMm !== null) {
       result.centerBoreMm = override.centerBoreMm;
+      applied = true;
     }
     if (override.threadSize !== null) {
       result.threadSize = override.threadSize;
+      applied = true;
     }
     if (override.seatType !== null) {
       result.seatType = override.seatType;
+      applied = true;
     }
     if (override.offsetMinMm !== null) {
       result.offsetMinMm = override.offsetMinMm;
+      applied = true;
     }
     if (override.offsetMaxMm !== null) {
       result.offsetMaxMm = override.offsetMaxMm;
+      applied = true;
+    }
+    
+    // Apply OEM sizes (replace entire array if provided)
+    if (override.oemWheelSizes !== null && Array.isArray(override.oemWheelSizes)) {
+      result.oemWheelSizes = override.oemWheelSizes as any;
+      applied = true;
+    }
+    if (override.oemTireSizes !== null && Array.isArray(override.oemTireSizes)) {
+      result.oemTireSizes = override.oemTireSizes as any;
+      applied = true;
+    }
+    
+    // Force quality level (most specific wins)
+    if (override.forceQuality === "valid" || override.forceQuality === "partial") {
+      forceQuality = override.forceQuality;
+      applied = true;
+    }
+    
+    if (applied) {
+      appliedOverrides.push(override);
     }
   }
   
-  return result;
+  return {
+    fitment: result,
+    overridesApplied: appliedOverrides,
+    forceQuality,
+    changed: appliedOverrides.length > 0,
+  };
 }
 
 // ============================================================================
 // Override Management
 // ============================================================================
+
+export interface OEMWheelSizeOverride {
+  diameter: number;
+  width: number;
+  offset: number | null;
+  tireSize?: string | null;
+  axle: "front" | "rear" | "both";
+  isStock: boolean;
+}
 
 export interface CreateOverrideInput {
   scope: "global" | "year" | "make" | "model" | "modification";
@@ -146,8 +219,12 @@ export interface CreateOverrideInput {
   centerBoreMm?: number;
   threadSize?: string;
   seatType?: string;
-  offsetMinMm?: number;
-  offsetMaxMm?: number;
+  offsetMinMm?: number | null;  // null = clear override
+  offsetMaxMm?: number | null;  // null = clear override
+  oemWheelSizes?: OEMWheelSizeOverride[];
+  oemTireSizes?: string[];
+  forceQuality?: "valid" | "partial";
+  notes?: string;
   reason: string;
   createdBy: string;
 }
@@ -171,6 +248,10 @@ export async function createOverride(input: CreateOverrideInput): Promise<string
       seatType: input.seatType ?? null,
       offsetMinMm: input.offsetMinMm !== undefined && input.offsetMinMm !== null ? String(input.offsetMinMm) : null,
       offsetMaxMm: input.offsetMaxMm !== undefined && input.offsetMaxMm !== null ? String(input.offsetMaxMm) : null,
+      oemWheelSizes: input.oemWheelSizes ? (input.oemWheelSizes as any) : null,
+      oemTireSizes: input.oemTireSizes ? (input.oemTireSizes as any) : null,
+      forceQuality: input.forceQuality ?? null,
+      notes: input.notes ?? null,
       reason: input.reason,
       createdBy: input.createdBy,
       active: true,
@@ -178,6 +259,90 @@ export async function createOverride(input: CreateOverrideInput): Promise<string
     .returning({ id: fitmentOverrides.id });
   
   return inserted.id;
+}
+
+/**
+ * Update an existing override
+ */
+export async function updateOverride(
+  overrideId: string,
+  input: Partial<Omit<CreateOverrideInput, "scope" | "createdBy">>
+): Promise<void> {
+  const updates: Record<string, any> = { updatedAt: new Date() };
+  
+  if (input.year !== undefined) updates.year = input.year;
+  if (input.make !== undefined) updates.make = input.make ? normalizeMake(input.make) : null;
+  if (input.model !== undefined) updates.model = input.model ? normalizeModel(input.model) : null;
+  if (input.modificationId !== undefined) updates.modificationId = input.modificationId ? slugify(input.modificationId) : null;
+  if (input.displayTrim !== undefined) updates.displayTrim = input.displayTrim;
+  if (input.boltPattern !== undefined) updates.boltPattern = input.boltPattern;
+  if (input.centerBoreMm !== undefined) updates.centerBoreMm = input.centerBoreMm ? String(input.centerBoreMm) : null;
+  if (input.threadSize !== undefined) updates.threadSize = input.threadSize;
+  if (input.seatType !== undefined) updates.seatType = input.seatType;
+  if (input.offsetMinMm !== undefined) updates.offsetMinMm = input.offsetMinMm !== null ? String(input.offsetMinMm) : null;
+  if (input.offsetMaxMm !== undefined) updates.offsetMaxMm = input.offsetMaxMm !== null ? String(input.offsetMaxMm) : null;
+  if (input.oemWheelSizes !== undefined) updates.oemWheelSizes = input.oemWheelSizes;
+  if (input.oemTireSizes !== undefined) updates.oemTireSizes = input.oemTireSizes;
+  if (input.forceQuality !== undefined) updates.forceQuality = input.forceQuality;
+  if (input.notes !== undefined) updates.notes = input.notes;
+  if (input.reason !== undefined) updates.reason = input.reason;
+  
+  await db
+    .update(fitmentOverrides)
+    .set(updates)
+    .where(eq(fitmentOverrides.id, overrideId));
+}
+
+/**
+ * Get a single override by ID
+ */
+export async function getOverride(overrideId: string): Promise<FitmentOverride | null> {
+  const override = await db.query.fitmentOverrides.findFirst({
+    where: eq(fitmentOverrides.id, overrideId),
+  });
+  return override ?? null;
+}
+
+/**
+ * Find override by vehicle match criteria
+ */
+export async function findOverrideByVehicle(
+  year: number,
+  make: string,
+  model: string,
+  modificationId?: string
+): Promise<FitmentOverride | null> {
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  const normalizedModId = modificationId ? slugify(modificationId) : null;
+  
+  // Find most specific matching override
+  const overrides = await db.query.fitmentOverrides.findMany({
+    where: and(
+      eq(fitmentOverrides.active, true),
+      or(
+        // Exact modification match
+        and(
+          eq(fitmentOverrides.scope, "modification"),
+          eq(fitmentOverrides.year, year),
+          eq(fitmentOverrides.make, normalizedMake),
+          eq(fitmentOverrides.model, normalizedModel),
+          normalizedModId ? eq(fitmentOverrides.modificationId, normalizedModId) : isNull(fitmentOverrides.modificationId)
+        ),
+        // Model match
+        and(
+          eq(fitmentOverrides.scope, "model"),
+          or(isNull(fitmentOverrides.year), eq(fitmentOverrides.year, year)),
+          eq(fitmentOverrides.make, normalizedMake),
+          eq(fitmentOverrides.model, normalizedModel)
+        )
+      )
+    ),
+    orderBy: [desc(fitmentOverrides.createdAt)],
+    limit: 1,
+  });
+  
+  return overrides[0] ?? null;
 }
 
 /**

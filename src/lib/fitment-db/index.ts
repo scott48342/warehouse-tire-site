@@ -73,7 +73,25 @@ export {
 export {
   findApplicableOverrides,
   applyOverrides,
+  applyOverridesWithMeta,
   createOverride,
+  updateOverride,
+  getOverride,
+  findOverrideByVehicle,
   deactivateOverride,
   listOverrides,
+  type ApplyOverridesResult,
+  type CreateOverrideInput,
+  type OEMWheelSizeOverride,
 } from "./applyOverrides";
+
+// Profile service
+export {
+  getFitmentProfile,
+  assessFitmentQuality,
+  isValidFitmentProfile,
+  type FitmentProfile,
+  type ProfileLookupResult,
+  type FitmentQuality,
+  type WheelSize,
+} from "./profileService";

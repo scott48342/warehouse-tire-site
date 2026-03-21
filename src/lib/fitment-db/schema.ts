@@ -147,6 +147,16 @@ export const fitmentOverrides = pgTable(
     seatType: varchar("seat_type", { length: 20 }),
     offsetMinMm: decimal("offset_min_mm", { precision: 5, scale: 2 }),
     offsetMaxMm: decimal("offset_max_mm", { precision: 5, scale: 2 }),
+    
+    // Extended override fields (JSON arrays)
+    oemWheelSizes: jsonb("oem_wheel_sizes"), // [{diameter, width, offset, axle, isStock}]
+    oemTireSizes: jsonb("oem_tire_sizes"),   // ["275/55R20", ...]
+    
+    // Force quality level (bypasses validation)
+    forceQuality: varchar("force_quality", { length: 20 }), // 'valid' | 'partial'
+    
+    // Additional notes
+    notes: text("notes"),
 
     // Metadata
     reason: text("reason").notNull(),

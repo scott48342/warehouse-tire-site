@@ -15,7 +15,7 @@ import { vehicleFitments, fitmentSourceRecords } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify, makePayloadChecksum } from "./keys";
-import { applyOverrides } from "./applyOverrides";
+import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 
 // ============================================================================
@@ -333,16 +333,32 @@ export async function getFitmentProfile(
     
     if (dbFitment) {
       // ═══════════════════════════════════════════════════════════════════════
-      // VALIDATION: Check if profile is usable
+      // APPLY OVERRIDES FIRST (may provide forceQuality)
       // ═══════════════════════════════════════════════════════════════════════
-      const { quality, reasons } = assessFitmentQuality(dbFitment);
+      const overrideResult = await applyOverridesWithMeta(dbFitment);
+      const withOverrides = overrideResult.fitment;
+      const overridesApplied = overrideResult.changed;
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // VALIDATION: Check if profile is usable
+      // If forceQuality is set, use that instead of natural assessment
+      // ═══════════════════════════════════════════════════════════════════════
+      let quality: FitmentQuality;
+      let reasons: string[] = [];
+      
+      if (overrideResult.forceQuality) {
+        // Override forces the quality level
+        quality = overrideResult.forceQuality;
+        console.log(`[profileService] DB HIT (forceQuality=${quality}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
+      } else {
+        // Assess naturally
+        const assessment = assessFitmentQuality(withOverrides);
+        quality = assessment.quality;
+        reasons = assessment.reasons;
+      }
       
       if (quality === "valid") {
-        console.log(`[profileService] DB HIT (valid): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
-        
-        // Apply overrides
-        const withOverrides = await applyOverrides(dbFitment);
-        const overridesApplied = withOverrides !== dbFitment;
+        console.log(`[profileService] DB HIT (valid${overridesApplied ? ", with overrides" : ""}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
         
         return {
           profile: dbRecordToProfile(withOverrides, "db"),
@@ -354,26 +370,7 @@ export async function getFitmentProfile(
       }
       
       if (quality === "partial") {
-        // Partial profile - might be fixed by overrides
-        const withOverrides = await applyOverrides(dbFitment);
-        const overridesApplied = withOverrides !== dbFitment;
-        
-        // Re-check quality after overrides
-        const afterOverrides = assessFitmentQuality(withOverrides);
-        
-        if (afterOverrides.quality === "valid" || overridesApplied) {
-          console.log(`[profileService] DB HIT (partial → fixed by override): ${year} ${make} ${model} mod=${modificationId}`);
-          return {
-            profile: dbRecordToProfile(withOverrides, "db"),
-            source: "db",
-            apiCalled: false,
-            overridesApplied,
-            timing: { dbLookupMs, totalMs: Date.now() - t0 },
-          };
-        }
-        
-        // Still partial, but usable
-        console.log(`[profileService] DB HIT (partial): ${year} ${make} ${model} mod=${modificationId} - ${reasons.join(", ")}`);
+        console.log(`[profileService] DB HIT (partial${overridesApplied ? ", with overrides" : ""}): ${year} ${make} ${model} mod=${modificationId} - ${reasons.join(", ")}`);
         return {
           profile: dbRecordToProfile(withOverrides, "db"),
           source: "db",
@@ -383,25 +380,9 @@ export async function getFitmentProfile(
         };
       }
       
-      // INVALID profile - try overrides first
-      const withOverrides = await applyOverrides(dbFitment);
-      if (withOverrides !== dbFitment) {
-        // Overrides exist - check if they fix it
-        const afterOverrides = assessFitmentQuality(withOverrides);
-        if (afterOverrides.quality !== "invalid") {
-          console.log(`[profileService] DB HIT (invalid → fixed by override): ${year} ${make} ${model} mod=${modificationId}`);
-          return {
-            profile: dbRecordToProfile(withOverrides, "db"),
-            source: "db",
-            apiCalled: false,
-            overridesApplied: true,
-            timing: { dbLookupMs, totalMs: Date.now() - t0 },
-          };
-        }
-      }
-      
       // ═══════════════════════════════════════════════════════════════════════
       // INVALID PROFILE - Trigger re-import from API
+      // (only if no override forced quality)
       // ═══════════════════════════════════════════════════════════════════════
       console.warn(`[profileService] INVALID DB PROFILE - triggering re-import: ${year} ${make} ${model} mod=${modificationId}`);
       console.warn(`[profileService] Invalid reasons: ${reasons.join(", ")}`);
@@ -484,13 +465,13 @@ export async function getFitmentProfile(
     }
     
     // Apply overrides
-    const withOverrides = await applyOverrides(newFitment);
+    const overrideResult = await applyOverridesWithMeta(newFitment);
     
     return {
-      profile: dbRecordToProfile(withOverrides, "api"),
+      profile: dbRecordToProfile(overrideResult.fitment, "api"),
       source: "api",
       apiCalled: true,
-      overridesApplied: withOverrides !== newFitment,
+      overridesApplied: overrideResult.changed,
       timing: { dbLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
     };
     
