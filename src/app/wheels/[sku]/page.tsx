@@ -155,6 +155,20 @@ async function fetchVariants({
   return narrowed.length ? narrowed : parsed.map(({ v }) => v);
 }
 
+// Helper to safely extract string from search param (handles objects)
+function safeString(val: unknown): string {
+  if (val === null || val === undefined) return "";
+  if (typeof val === "string") return val.trim();
+  if (typeof val === "number" || typeof val === "boolean") return String(val);
+  if (typeof val === "object") {
+    const obj = val as Record<string, unknown>;
+    if (typeof obj.name === "string") return obj.name.trim();
+    if (typeof obj.value === "string") return obj.value.trim();
+    return "";
+  }
+  return "";
+}
+
 export default async function WheelDetailPage({
   params,
   searchParams,
@@ -164,11 +178,18 @@ export default async function WheelDetailPage({
 }) {
   const { sku } = await params;
   const sp = (await searchParams) || {};
-  const year = String((sp as any).year || "");
-  const make = String((sp as any).make || "");
-  const model = String((sp as any).model || "");
-  const trim = String((sp as any).trim || "");
-  const modification = String((sp as any).modification || "");
+  const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
+  const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
+  const model = safeString(Array.isArray(sp.model) ? sp.model[0] : sp.model);
+  const trim = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
+  const modification = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
+  
+  // Wheel variant params passed from listing page
+  const wheelDiaParam = safeString(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
+  const wheelWidthParam = safeString(Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth);
+  const wheelOffsetParam = safeString(Array.isArray((sp as any).wheelOffset) ? (sp as any).wheelOffset[0] : (sp as any).wheelOffset);
+  const wheelBoltParam = safeString(Array.isArray((sp as any).wheelBolt) ? (sp as any).wheelBolt[0] : (sp as any).wheelBolt);
+  
   const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
 
   const vehicleSlugStr = year && make && model ? vehicleSlug(year, make, model) : "";
@@ -338,6 +359,65 @@ export default async function WheelDetailPage({
     : (wpVariants.length
         ? wpVariants
         : ([{ sku, diameter, width, boltPattern, offset, finish }].filter((v) => v.sku) as WheelVariant[]));
+
+  // VARIANT RESOLUTION: Check if URL params request a different variant than current SKU
+  // If so, find the correct variant and redirect
+  const needsVariantRedirect = (() => {
+    // Only check if we have URL params specifying a different size
+    if (!wheelDiaParam && !wheelWidthParam) return null;
+    
+    // Normalize for comparison
+    const normNum = (v?: string) => {
+      if (!v) return undefined;
+      const n = Number(String(v).trim());
+      return Number.isFinite(n) ? String(n) : v.trim();
+    };
+    
+    const currentDia = normNum(diameter);
+    const currentWidth = normNum(width);
+    const wantDia = normNum(wheelDiaParam);
+    const wantWidth = normNum(wheelWidthParam);
+    
+    // Check if current wheel already matches requested specs
+    const diaMatches = !wantDia || currentDia === wantDia;
+    const widthMatches = !wantWidth || currentWidth === wantWidth;
+    
+    if (diaMatches && widthMatches) return null; // Already on correct variant
+    
+    // Find variant matching the requested specs
+    const matchingVariant = variantsForSelector.find((v) => {
+      const vDia = normNum(v.diameter);
+      const vWidth = normNum(v.width);
+      const diaOk = !wantDia || vDia === wantDia;
+      const widthOk = !wantWidth || vWidth === wantWidth;
+      return diaOk && widthOk;
+    });
+    
+    if (matchingVariant && matchingVariant.sku !== sku) {
+      // Build redirect URL preserving all params
+      const redirectParams = new URLSearchParams();
+      if (year) redirectParams.set("year", year);
+      if (make) redirectParams.set("make", make);
+      if (model) redirectParams.set("model", model);
+      if (trim) redirectParams.set("trim", trim);
+      if (modification) redirectParams.set("modification", modification);
+      if (matchingVariant.diameter) redirectParams.set("wheelDia", matchingVariant.diameter);
+      if (matchingVariant.width) redirectParams.set("wheelWidth", matchingVariant.width);
+      if (matchingVariant.offset) redirectParams.set("wheelOffset", matchingVariant.offset);
+      if (matchingVariant.boltPattern) redirectParams.set("wheelBolt", matchingVariant.boltPattern);
+      
+      const qs = redirectParams.toString();
+      return `/wheels/${encodeURIComponent(matchingVariant.sku)}${qs ? `?${qs}` : ""}`;
+    }
+    
+    return null;
+  })();
+  
+  // If we need to redirect to a different variant, do server-side redirect
+  if (needsVariantRedirect) {
+    const { redirect } = await import("next/navigation");
+    redirect(needsVariantRedirect);
+  }
 
   return (
     <main className="bg-neutral-50">

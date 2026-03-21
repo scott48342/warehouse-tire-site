@@ -114,6 +114,7 @@ export function WheelsStyleCard({
     return Math.min(...ps);
   }, [finishThumbs]);
 
+  // Build URL params including wheel variant info for PDP consistency
   const qs = useMemo(() => {
     const sp = new URLSearchParams();
     for (const [k, v] of Object.entries(viewParams || {})) {
@@ -126,9 +127,23 @@ export function WheelsStyleCard({
       sp.delete("trim");
       sp.delete("modification");
     }
+    
+    // Include wheel variant params so PDP can resolve the correct variant
+    // Priority: selectedPair.front (if staggered flow), then sizeLabel
+    const currentPair = selectedPair || pair;
+    const dia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
+    const wid = currentPair?.front?.width ?? sizeLabel?.width;
+    const off = currentPair?.front?.offset ?? specLabel?.offset;
+    const bolt = specLabel?.boltPattern;
+    
+    if (dia) sp.set("wheelDia", String(dia));
+    if (wid) sp.set("wheelWidth", String(wid));
+    if (off) sp.set("wheelOffset", String(off));
+    if (bolt) sp.set("wheelBolt", String(bolt));
+    
     const s = sp.toString();
     return s ? `?${s}` : "";
-  }, [viewParams]);
+  }, [viewParams, selectedPair, pair, sizeLabel, specLabel]);
 
   const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
 

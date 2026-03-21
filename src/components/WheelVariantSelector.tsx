@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export type WheelVariant = {
   sku: string;
@@ -35,6 +35,29 @@ export function WheelVariantSelector({
   selected: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string };
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  
+  // Build URL preserving all existing params (vehicle info, etc.)
+  function buildVariantUrl(sku: string, variant?: { diameter?: string; width?: string; offset?: string; boltPattern?: string }) {
+    const sp = new URLSearchParams();
+    
+    // Preserve existing params (year, make, model, trim, modification, etc.)
+    searchParams.forEach((value, key) => {
+      // Skip old wheel variant params - we'll add fresh ones
+      if (!["wheelDia", "wheelWidth", "wheelOffset", "wheelBolt"].includes(key)) {
+        sp.set(key, value);
+      }
+    });
+    
+    // Add new variant params
+    if (variant?.diameter) sp.set("wheelDia", variant.diameter);
+    if (variant?.width) sp.set("wheelWidth", variant.width);
+    if (variant?.offset) sp.set("wheelOffset", variant.offset);
+    if (variant?.boltPattern) sp.set("wheelBolt", variant.boltPattern);
+    
+    const qs = sp.toString();
+    return `/wheels/${encodeURIComponent(sku)}${qs ? `?${qs}` : ""}`;
+  }
 
   const options = useMemo(() => {
     const nSel = {
@@ -81,7 +104,8 @@ export function WheelVariantSelector({
     return { diameters, widths, boltPatterns, offsets, finishes, nSel, nVariants };
   }, [variants, selected.diameter, selected.width, selected.boltPattern, selected.offset, selected.finish]);
 
-  function pickSku(nextSel: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string }) {
+  // Pick full variant (not just SKU) so we can include all details in URL
+  function pickVariant(nextSel: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string }): WheelVariant {
     const nNext = {
       diameter: normNum(nextSel.diameter),
       width: normNum(nextSel.width),
@@ -98,7 +122,7 @@ export function WheelVariantSelector({
         (!nNext.offset || v.offset === nNext.offset) &&
         (!nNext.finish || v.finish === nNext.finish)
     );
-    if (exact?.sku) return exact.sku;
+    if (exact) return exact;
 
     // Fallback: try to keep the most specific filters first
     const soft = options.nVariants.find(
@@ -108,7 +132,12 @@ export function WheelVariantSelector({
         (!nNext.boltPattern || v.boltPattern === nNext.boltPattern) &&
         (!nNext.offset || v.offset === nNext.offset)
     );
-    return soft?.sku || currentSku;
+    return soft || { sku: currentSku, ...nNext };
+  }
+  
+  // Navigate to variant with full URL params preserved
+  function navigateToVariant(variant: WheelVariant) {
+    router.replace(buildVariantUrl(variant.sku, variant));
   }
 
   function coerce(nextSel: { diameter?: string; width?: string; boltPattern?: string; offset?: string; finish?: string }) {
@@ -156,8 +185,8 @@ export function WheelVariantSelector({
                 ...selected,
                 diameter: e.currentTarget.value || undefined,
               });
-              const sku = pickSku(next);
-              router.push(`/wheels/${encodeURIComponent(sku)}`);
+              const variant = pickVariant(next);
+              navigateToVariant(variant);
             }}
             className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
           >
@@ -178,8 +207,7 @@ export function WheelVariantSelector({
                 ...selected,
                 width: e.currentTarget.value || undefined,
               });
-              const sku = pickSku(next);
-              router.push(`/wheels/${encodeURIComponent(sku)}`);
+              navigateToVariant(pickVariant(next));
             }}
             className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
           >
@@ -200,8 +228,7 @@ export function WheelVariantSelector({
                 ...selected,
                 boltPattern: e.currentTarget.value || undefined,
               });
-              const sku = pickSku(next);
-              router.push(`/wheels/${encodeURIComponent(sku)}`);
+              navigateToVariant(pickVariant(next));
             }}
             className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
           >
@@ -222,8 +249,7 @@ export function WheelVariantSelector({
                 ...selected,
                 offset: e.currentTarget.value || undefined,
               });
-              const sku = pickSku(next);
-              router.push(`/wheels/${encodeURIComponent(sku)}`);
+              navigateToVariant(pickVariant(next));
             }}
             className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
           >
@@ -244,8 +270,7 @@ export function WheelVariantSelector({
                 ...selected,
                 finish: e.currentTarget.value || undefined,
               });
-              const sku = pickSku(next);
-              router.push(`/wheels/${encodeURIComponent(sku)}`);
+              navigateToVariant(pickVariant(next));
             }}
             className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
           >
