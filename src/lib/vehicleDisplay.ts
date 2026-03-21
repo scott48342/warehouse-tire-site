@@ -10,22 +10,83 @@
  * These should NOT be displayed as customer-facing trim labels.
  */
 const ENGINE_PATTERNS = [
-  /^\d+\.\d+[a-z]?$/i,           // 5.7i, 3.5, 2.0T
-  /^\d+\.\d+L?$/i,               // 5.7L, 3.5L
-  /^V\d+$/i,                     // V6, V8
-  /^\d+[a-z]?$/i,                // 350, 454
-  /^[A-Z]?\d{3,4}[a-z]?$/i,      // LS1, LT1, K24
+  // Displacement patterns (most common)
+  /^\d+\.\d+[a-z]?$/i,           // 5.7i, 3.5, 2.0T, 5.7
+  /^\d+\.\d+L$/i,                // 5.7L, 3.5L
+  /^\d+\.\d+\s*L$/i,             // 5.7 L (with space)
+  /^\d+L$/i,                     // 3L, 5L (no decimal)
+  
+  // V-engine patterns
+  /^V\d+$/i,                     // V6, V8, V10, V12
+  /^V-?\d+$/i,                   // V-6, V-8
+  /^I\d$/i,                      // I4, I6 (inline engines)
+  /^Inline[- ]?\d$/i,            // Inline-4, Inline 6
+  /^Flat[- ]?\d$/i,              // Flat-4, Flat-6 (Subaru/Porsche)
+  
+  // Cubic inch displacement (American classics)
+  /^\d{3}$/,                     // 350, 454, 302, 351
+  /^\d{3}[a-z]?$/i,              // 350i, 454ci
+  
+  // Engine codes
+  /^[A-Z]?\d{2,4}[a-z]?$/i,      // LS1, LT1, K24, 2JZ
+  /^[A-Z]{2}\d{1,2}$/i,          // SR20, RB26, JZ
+  /^LS\d?$/i,                    // LS, LS1, LS2, LS3, LS6, LS7
+  /^LT\d?$/i,                    // LT, LT1, LT4, LT5
+  /^LM\d$/i,                     // LM7, LM4 (truck engines)
+  /^L\d{2}$/i,                   // L76, L99 (GM engines)
+  /^VQ\d{2}$/i,                  // VQ35, VQ37 (Nissan)
+  /^2JZ/i,                       // 2JZ-GTE, 2JZ-GE
+  /^RB\d{2}/i,                   // RB26, RB25 (Nissan)
+  /^SR\d{2}/i,                   // SR20 (Nissan)
+  /^B\d{2}[A-Z]?$/i,             // B18, B16A (Honda)
+  /^K\d{2}[A-Z]?$/i,             // K20, K24A (Honda)
+  /^EJ\d{2,3}$/i,                // EJ25, EJ257 (Subaru)
+  /^FA\d{2}$/i,                  // FA20 (Subaru/Toyota)
+  
+  // Turbo/forced induction
   /^Turbo$/i,                    // Turbo
   /^\d+\.\d+\s*Turbo$/i,         // 2.0 Turbo
+  /^\d+\.\d+T$/i,                // 2.0T (turbo designation)
+  /^Twin\s*Turbo$/i,             // Twin Turbo
+  /^Bi-?Turbo$/i,                // BiTurbo, Bi-Turbo
   /^Supercharged$/i,             // Supercharged
-  /^Hybrid$/i,                   // Hybrid (sometimes OK, but ambiguous)
+  /^SC$/i,                       // SC (supercharged abbreviation)
+  
+  // Branded engine names
+  /^EcoBoost$/i,                 // Ford EcoBoost
+  /^HEMI$/i,                     // Chrysler/Dodge HEMI
+  /^Coyote$/i,                   // Ford Coyote
+  /^Voodoo$/i,                   // Ford Voodoo (GT350)
+  /^Predator$/i,                 // Ford Predator (GT500)
+  /^Godzilla$/i,                 // Ford 7.3L
+  /^Pentastar$/i,                // Chrysler Pentastar
+  /^Triton$/i,                   // Ford Triton
+  /^Modular$/i,                  // Ford Modular
+  /^PowerStroke$/i,              // Ford PowerStroke diesel
+  /^Duramax$/i,                  // GM Duramax diesel
+  /^Cummins$/i,                  // Cummins diesel
+  /^TDI$/i,                      // VW/Audi TDI diesel
+  /^CDI$/i,                      // Mercedes CDI diesel
+  /^BlueTEC$/i,                  // Mercedes BlueTEC diesel
+  /^SkyActiv$/i,                 // Mazda SkyActiv
+  /^VTEC$/i,                     // Honda VTEC
+  /^VVT-?i$/i,                   // Toyota VVT-i
+  /^Duratec$/i,                  // Ford Duratec
+  /^Zetec$/i,                    // Ford Zetec
+  
+  // Fuel types (standalone)
   /^Diesel$/i,                   // Diesel
-  /^EcoBoost$/i,                 // EcoBoost
-  /^HEMI$/i,                     // HEMI
-  /^Coyote$/i,                   // Coyote (engine name)
-  /^LS\d?$/i,                    // LS, LS1, LS3
-  /^LT\d?$/i,                    // LT, LT1, LT4
+  /^Hybrid$/i,                   // Hybrid
+  /^Electric$/i,                 // Electric
+  /^PHEV$/i,                     // Plug-in Hybrid
+  /^BEV$/i,                      // Battery Electric
+  /^CNG$/i,                      // Compressed Natural Gas
+  /^FFV$/i,                      // Flex Fuel Vehicle
+  
+  // Combined patterns
   /^\d+\.\d+[a-z]*\s*\/\s*\d+\.\d+[a-z]*$/i, // 5.7i / 3.8L (combined engine options)
+  /^\d+\.\d+[a-z]*\s+[A-Z]+$/i,  // 5.7i V8, 3.5L V6
+  /^[A-Z]+\s+\d+\.\d+$/i,        // V8 5.7
 ];
 
 /**
