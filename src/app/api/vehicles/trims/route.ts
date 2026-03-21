@@ -65,11 +65,33 @@ export async function GET(req: Request) {
           const mods = usMods.length > 0 ? usMods : allMods;
 
           const results = mods.map((m) => {
+            // Safely extract string values - API sometimes returns objects
+            const safeStr = (v: unknown): string => {
+              if (v === null || v === undefined) return "";
+              if (typeof v === "string") return v.trim();
+              if (typeof v === "number") return String(v);
+              if (typeof v === "object") {
+                const obj = v as Record<string, unknown>;
+                // Try common string properties
+                if (typeof obj.name === "string") return obj.name.trim();
+                if (typeof obj.value === "string") return obj.value.trim();
+                if (typeof obj.label === "string") return obj.label.trim();
+                return ""; // Don't use [object Object]
+              }
+              return "";
+            };
+            
             const parts: string[] = [];
-            if (m.trim) parts.push(m.trim);
-            if (m.engine) parts.push(m.engine);
-            if (m.body) parts.push(m.body);
-            const label = parts.length > 0 ? parts.join(" / ") : m.name || m.slug;
+            const trimStr = safeStr(m.trim);
+            const engineStr = safeStr(m.engine);
+            const bodyStr = safeStr(m.body);
+            
+            if (trimStr) parts.push(trimStr);
+            if (engineStr) parts.push(engineStr);
+            // Skip body for cleaner labels - usually redundant with trim
+            // if (bodyStr) parts.push(bodyStr);
+            
+            const label = parts.length > 0 ? parts.join(" / ") : safeStr(m.name) || m.slug;
             return { value: m.slug, label };
           });
 

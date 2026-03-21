@@ -292,16 +292,35 @@ export default async function TiresPage({
     ? tireSizesAgg.filter((s) => rimDiaFromSize(s) === Math.round(wheelDiaNum) && !strictMatchedSizes.includes(s))
     : [];
 
-  const plusSizeSuggestions: string[] = [];
+  // PLUS-SIZING: When wheel diameter is selected but no OEM sizes match,
+  // compute potential plus-size tire dimensions. For now, show empty state
+  // rather than showing wrong-diameter OEM tires.
+  const plusSizeSuggestions: string[] = (() => {
+    // If we have a wheel diameter but no OEM sizes match, suggest common plus-sizes
+    // This is a simplified approach - a proper plus-size calculator would use
+    // section width, aspect ratio, and overall diameter matching.
+    if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return [];
+    if (oemWheelMatchedSizes.length > 0) return []; // OEM sizes exist, no need for plus-sizing
+    
+    // For now, return empty - we'll show "no compatible sizes" instead of wrong sizes
+    // Future enhancement: compute actual plus-size candidates from OEM specs
+    return [];
+  })();
 
   let lockedSizes: string[] = [];
   const noOemSizesForWheel = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0 && oemWheelMatchedSizes.length === 0;
 
   if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
-    lockedSizes = oemWheelMatchedSizes;
+    // CRITICAL: Only lock to sizes that MATCH the wheel diameter
+    // Do NOT fall back to OEM sizes that don't match
+    lockedSizes = oemWheelMatchedSizes; // This might be empty for plus-size wheels
   }
 
-  const displayedSizes = lockedSizes.length ? lockedSizes : tireSizes;
+  // IMPORTANT: When wheel diameter is specified, ONLY show matching sizes
+  // Do NOT fall back to all tire sizes - that would show wrong-diameter tires
+  const displayedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
+    ? lockedSizes // Only show sizes matching wheel diameter (could be empty)
+    : (lockedSizes.length ? lockedSizes : tireSizes); // No wheel = show all OEM sizes
 
   const selectedSizeRaw = (axle === "rear" ? sizeRearRaw : sizeFrontRaw) || (safeString(Array.isArray(sp.size) ? sp.size[0] : sp.size));
   const metricSizeOverride = safeString(Array.isArray((sp as any).metricSize) ? (sp as any).metricSize[0] : (sp as any).metricSize);
@@ -1208,13 +1227,40 @@ export default async function TiresPage({
                   />
                 ))
               ) : (
-                <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-                  {hasVehicle ? (
-                    tireSizes.length
-                      ? "No tire results yet."
-                      : "No OEM tire size returned for this vehicle/trim yet."
+                <div className="col-span-full rounded-2xl border border-amber-200 bg-amber-50 p-6 text-sm">
+                  {noOemSizesForWheel && Number.isFinite(wheelDiaNum) ? (
+                    <div>
+                      <div className="font-extrabold text-amber-900 text-base">
+                        No OEM tire sizes for {Math.round(wheelDiaNum)}&quot; wheels
+                      </div>
+                      <div className="mt-2 text-amber-800">
+                        Your {year} {make} {model} doesn&apos;t have factory {Math.round(wheelDiaNum)}&quot; wheel options.
+                        The OEM sizes are: <span className="font-semibold">{tireSizes.join(", ") || "not found"}</span>
+                      </div>
+                      <div className="mt-3 text-amber-700">
+                        <strong>Options:</strong>
+                        <ul className="mt-1 list-disc pl-5 space-y-1">
+                          <li>Choose wheels matching your OEM tire sizes ({tireSizes.map(s => {
+                            const m = s.match(/R(\d{2})/);
+                            return m ? m[1] + '"' : null;
+                          }).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ") || "check fitment"})</li>
+                          <li>Call us for plus-size tire recommendations</li>
+                        </ul>
+                      </div>
+                      <div className="mt-4">
+                        <a href="/wheels" className="inline-flex h-10 items-center rounded-xl bg-amber-600 px-4 text-sm font-extrabold text-white hover:bg-amber-700">
+                          ← Choose different wheels
+                        </a>
+                      </div>
+                    </div>
+                  ) : hasVehicle ? (
+                    <div className="text-neutral-700">
+                      {tireSizes.length
+                        ? "No tire results for this size. Try a different size."
+                        : "No OEM tire size returned for this vehicle/trim yet."}
+                    </div>
                   ) : (
-                    "Select a vehicle in the header to see tires."
+                    <div className="text-neutral-700">Select a vehicle in the header to see tires.</div>
                   )}
                 </div>
               )}
@@ -1424,12 +1470,30 @@ function TireCard({
       {/* Fitment messaging - matching wheels card */}
       {hasVehicle ? (
         <div className="relative z-10 mt-3 rounded-lg bg-neutral-50 px-3 py-2 text-xs space-y-1">
-          {isPackageFlow ? (
-            <div className="flex items-center gap-1.5 text-blue-700 font-medium">
-              <span className="text-blue-600">✓</span>
-              <span>Matches your selected wheels</span>
-            </div>
-          ) : null}
+          {(() => {
+            // CRITICAL: Only show "Matches your selected wheels" if tire rim diameter
+            // actually equals the selected wheel diameter
+            const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
+            const tireRimDia = (() => {
+              const desc = String(t.description || selectedSize || "").toUpperCase();
+              const m = desc.match(/R(\d{2})\b/);
+              return m ? Number(m[1]) : NaN;
+            })();
+            const wheelMatches = isPackageFlow && Number.isFinite(wheelDiaN) && Number.isFinite(tireRimDia)
+              && Math.round(wheelDiaN) === Math.round(tireRimDia);
+            
+            return wheelMatches ? (
+              <div className="flex items-center gap-1.5 text-blue-700 font-medium">
+                <span className="text-blue-600">✓</span>
+                <span>Matches your selected {Math.round(wheelDiaN)}&quot; wheels</span>
+              </div>
+            ) : isPackageFlow && Number.isFinite(wheelDiaN) ? (
+              <div className="flex items-center gap-1.5 text-amber-700 font-medium">
+                <span className="text-amber-500">⚠</span>
+                <span>Size doesn&apos;t match {Math.round(wheelDiaN)}&quot; wheels</span>
+              </div>
+            ) : null;
+          })()}
           <div className="flex items-center gap-1.5 text-green-700 font-medium">
             <span className="text-green-600">✓</span>
             <span>Fits your {year} {make} {model}</span>
