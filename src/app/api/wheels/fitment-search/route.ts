@@ -5,6 +5,7 @@ import {
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
 import { importVehicleFitment } from "@/lib/fitmentImport";
+import { getFitmentProfile, type FitmentProfile as DBFitmentProfile } from "@/lib/fitment-db/profileService";
 import {
   buildFitmentEnvelope,
   validateWheel,
@@ -71,22 +72,52 @@ export async function GET(req: Request) {
   }
 
   try {
+    // ─────────────────────────────────────────────────────────────────────────
+    // NEW: DB-First Profile Lookup using canonical modificationId
+    // ─────────────────────────────────────────────────────────────────────────
+    
+    let dbProfile: DBFitmentProfile | null = null;
+    let usedLegacyFallback = false;
+    
+    // Try new DB-first service if we have a modification param
+    if (modification) {
+      const result = await getFitmentProfile(Number(year), make, model, modification);
+      
+      if (result.profile) {
+        dbProfile = result.profile;
+        console.log(`[fitment-search] ${result.source.toUpperCase()}: ${year} ${make} ${model} mod=${modification}`, {
+          boltPattern: dbProfile.boltPattern,
+          oemWheelSizes: dbProfile.oemWheelSizes.length,
+          oemTireSizes: dbProfile.oemTireSizes.length,
+          timing: result.timing,
+        });
+      }
+    }
+    
+    // ─────────────────────────────────────────────────────────────────────────
+    // LEGACY: Fall back to old system if new system didn't find anything
+    // ─────────────────────────────────────────────────────────────────────────
+    
     const db = getPool();
     await ensureFitmentTables(db);
 
     // Step 1: Get fitment profile from our database
-    let profile = await buildFitmentProfile(db, Number(year), make, model, trim);
-
-    if (!profile) {
-      // On-demand import + cache
-      console.log(`[fitment-search] Cache miss for ${year} ${make} ${model} trim=${trim || ""} -> importing from Wheel-Size`);
+    let profile = dbProfile ? null : await buildFitmentProfile(db, Number(year), make, model, trim);
+    
+    // If we got a dbProfile, skip the legacy import flow
+    if (dbProfile) {
+      usedLegacyFallback = false;
+    } else if (!profile) {
+      usedLegacyFallback = true;
+      // On-demand import + cache (legacy)
+      console.log(`[fitment-search] LEGACY Cache miss for ${year} ${make} ${model} trim=${trim || ""} -> importing from Wheel-Size`);
       const importRes = await importVehicleFitment(Number(year), make, model, {
         desiredTrim: trim,
         usMarketOnly: true,
-        debug: true,  // Enable debug to see imported values
+        debug: true,
       });
 
-      console.log(`[fitment-search] Import result:`, {
+      console.log(`[fitment-search] LEGACY Import result:`, {
         success: importRes.success,
         vehicleId: importRes.vehicle?.id,
         vehicleTrim: importRes.vehicle?.trim,
@@ -105,13 +136,12 @@ export async function GET(req: Request) {
       }
 
       // Rebuild profile after import (should now hit DB)
-      // NOTE: We now try BOTH the imported slug AND the user's trim
-      console.log(`[fitment-search] Attempting to load profile with: trim=${trim}, importedSlug=${importRes.modificationSlug}`);
+      console.log(`[fitment-search] LEGACY Attempting to load profile with: trim=${trim}, importedSlug=${importRes.modificationSlug}`);
       profile = await buildFitmentProfile(db, Number(year), make, model, trim);
 
       if (!profile && importRes.vehicle) {
         // Fallback: try loading by the exact vehicleId we just imported
-        console.log(`[fitment-search] Primary lookup failed, trying by vehicleId=${importRes.vehicle.id}`);
+        console.log(`[fitment-search] LEGACY Primary lookup failed, trying by vehicleId=${importRes.vehicle.id}`);
         const fitment = await db.query(
           `SELECT id FROM vehicle_fitment WHERE vehicle_id = $1`,
           [importRes.vehicle.id]
@@ -310,6 +340,24 @@ export async function GET(req: Request) {
         },
         // Staggered fitment info (based on vehicle's actual front/rear specs)
         staggered: profile.staggered,
+        // NEW: DB-first profile data when available
+        ...(dbProfile ? {
+          dbProfile: {
+            modificationId: dbProfile.modificationId,
+            displayTrim: dbProfile.displayTrim,
+            boltPattern: dbProfile.boltPattern,
+            centerBoreMm: dbProfile.centerBoreMm,
+            threadSize: dbProfile.threadSize,
+            seatType: dbProfile.seatType,
+            offsetRange: {
+              min: dbProfile.offsetMinMm,
+              max: dbProfile.offsetMaxMm,
+            },
+            oemWheelSizes: dbProfile.oemWheelSizes,
+            oemTireSizes: dbProfile.oemTireSizes,
+            source: dbProfile.source,
+          },
+        } : {}),
       },
       summary: {
         fromWheelPros: wpResults.length,
