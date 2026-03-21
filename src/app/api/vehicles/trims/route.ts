@@ -1,6 +1,39 @@
 import { NextResponse } from "next/server";
 import { isInCooldown, record429, recordSuccess, getCacheStats } from "@/lib/fitmentCache";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
+import submodelSupplements from "@/data/submodel-supplements.json";
+
+type SubmodelEntry = { value: string; label: string };
+type YearRangeMap = { [yearRange: string]: SubmodelEntry[] };
+type ModelMap = { [model: string]: YearRangeMap };
+type MakeMap = { [make: string]: ModelMap };
+
+/**
+ * Look up supplemental submodel data for vehicles where Wheel-Size lacks good data.
+ * Returns array of { value, label } or null if no supplement exists.
+ */
+function getSubmodelSupplement(year: string, make: string, model: string): SubmodelEntry[] | null {
+  const yearNum = parseInt(year, 10);
+  if (!yearNum) return null;
+
+  const makeData = (submodelSupplements as MakeMap)[make.toLowerCase()];
+  if (!makeData) return null;
+
+  const modelData = makeData[model.toLowerCase()];
+  if (!modelData) return null;
+
+  // Find matching year range (e.g., "2007-2018")
+  for (const [range, entries] of Object.entries(modelData)) {
+    const [startStr, endStr] = range.split("-");
+    const start = parseInt(startStr, 10);
+    const end = parseInt(endStr, 10);
+    if (yearNum >= start && yearNum <= end) {
+      return entries;
+    }
+  }
+
+  return null;
+}
 
 export const runtime = "nodejs";
 
@@ -128,6 +161,30 @@ export async function GET(req: Request) {
             seen.add(k);
             return true;
           });
+
+          // Check if results are poor (only "Base" or similar generic labels)
+          const hasGoodSubmodels = deduped.some(r => 
+            r.label.toLowerCase() !== "base" && 
+            r.label.toLowerCase() !== "standard"
+          );
+
+          // If Wheel-Size only has generic labels, try supplemental data
+          if (!hasGoodSubmodels) {
+            const supplement = getSubmodelSupplement(year, make, model);
+            if (supplement && supplement.length > 0) {
+              if (debug) {
+                return NextResponse.json({ 
+                  source: "supplement",
+                  reason: "wheelsize-only-had-base",
+                  rawMods: mods.slice(0, 10).map(m => ({ slug: m.slug, name: m.name, trim: m.trim, engine: m.engine })),
+                  results: supplement
+                });
+              }
+              return NextResponse.json({ results: supplement }, {
+                headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+              });
+            }
+          }
 
           if (debug) {
             return NextResponse.json({ 

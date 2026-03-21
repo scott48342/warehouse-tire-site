@@ -1,0 +1,40 @@
+{
+  "jeep": {
+    "wrangler": {
+      "2007-2018": [
+        { "value": "rubicon", "label": "Rubicon" },
+        { "value": "sahara", "label": "Sahara" },
+        { "value": "sport", "label": "Sport" },
+        { "value": "sport-s", "label": "Sport S" },
+        { "value": "unlimited-rubicon", "label": "Unlimited Rubicon" },
+        { "value": "unlimited-sahara", "label": "Unlimited Sahara" },
+        { "value": "unlimited-sport", "label": "Unlimited Sport" },
+        { "value": "unlimited-x", "label": "Unlimited X" },
+        { "value": "x", "label": "X" }
+      ],
+      "2019-2025": [
+        { "value": "rubicon", "label": "Rubicon" },
+        { "value": "sahara", "label": "Sahara" },
+        { "value": "sport", "label": "Sport" },
+        { "value": "sport-s", "label": "Sport S" },
+        { "value": "willys", "label": "Willys" },
+        { "value": "freedom", "label": "Freedom" },
+        { "value": "rubicon-392", "label": "Rubicon 392" },
+        { "value": "unlimited-rubicon", "label": "Unlimited Rubicon" },
+        { "value": "unlimited-sahara", "label": "Unlimited Sahara" },
+        { "value": "unlimited-sport", "label": "Unlimited Sport" }
+      ]
+    },
+    "grand cherokee": {
+      "2011-2021": [
+        { "value": "laredo", "label": "Laredo" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "overland", "label": "Overland" },
+        { "value": "summit", "label": "Summit" },
+        { "value": "trailhawk", "label": "Trailhawk" },
+        { "value": "srt", "label": "SRT" },
+        { "value": "trackhawk", "label": "Trackhawk" }
+      ]
+    }
+  }
+}
