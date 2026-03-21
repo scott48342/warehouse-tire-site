@@ -127,7 +127,7 @@ async function fetchWheelSizeModifications(
   url.searchParams.set("year", String(year));
 
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 5000);
+  const timeout = setTimeout(() => controller.abort(), 15000); // 15 seconds - API can be slow
 
   try {
     const res = await fetch(url.toString(), {
@@ -526,7 +526,14 @@ export async function GET(req: Request) {
     });
 
   } catch (apiErr: any) {
-    console.error(`[trims] API error:`, apiErr?.message);
-    return NextResponse.json({ results: [], source: "empty" } as TrimResponse);
+    const errorMsg = apiErr?.name === "AbortError" 
+      ? "API timeout (15s)" 
+      : apiErr?.message || String(apiErr);
+    console.error(`[trims] API error for ${year} ${make} ${model}:`, errorMsg);
+    return NextResponse.json({ 
+      results: [], 
+      source: "error" as const,
+      error: errorMsg,
+    });
   }
 }
