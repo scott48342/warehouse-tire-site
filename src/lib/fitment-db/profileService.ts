@@ -169,15 +169,17 @@ async function fetchModification(
   
   // Find matching modification
   // modificationId could be: API slug (hex), supplement hash (s_xxx), or slugified trim name
-  let mod = mods.find(m => m.slug === modificationId);
+  // For Lexus RX and similar: search ALL mods (not just USDM) to find exact match
+  let mod = allMods.find(m => m.slug === modificationId);
   
-  // If not found by slug, try to match by slugified name
+  // If not found by exact slug, try to match by slugified name
   if (!mod) {
-    mod = mods.find(m => slugify(m.slug) === slugify(modificationId));
+    mod = allMods.find(m => slugify(m.slug) === slugify(modificationId));
   }
   
-  // If still not found and there are mods, pick first USDM one
+  // If STILL not found, try USDM-filtered list as fallback (for new imports)
   if (!mod && mods.length > 0) {
+    console.log(`[profileService] Mod ${modificationId} not found in allMods (${allMods.length}), using first USDM`);
     mod = mods[0];
   }
   
