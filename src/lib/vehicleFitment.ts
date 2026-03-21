@@ -162,7 +162,7 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
       vehicle_id INTEGER NOT NULL REFERENCES vehicles(id) ON DELETE CASCADE,
       rim_diameter DECIMAL(4,1) NOT NULL,
       rim_width DECIMAL(4,2) NOT NULL,
-      "offset" INTEGER,
+      "offset" DECIMAL(5,2),
       tire_size VARCHAR(30),
       axle VARCHAR(10) DEFAULT 'both',  -- front, rear, or both
       is_stock BOOLEAN DEFAULT true,
@@ -177,6 +177,9 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
 
     -- Allow NULL offset for existing tables
     ALTER TABLE vehicle_wheel_specs ALTER COLUMN "offset" DROP NOT NULL;
+    
+    -- Change offset from INTEGER to DECIMAL for API values like 44.45
+    ALTER TABLE vehicle_wheel_specs ALTER COLUMN "offset" TYPE DECIMAL(5,2) USING "offset"::DECIMAL(5,2);
 
     -- Add missing columns for existing deployments (safe no-ops if present)
     ALTER TABLE vehicles ADD COLUMN IF NOT EXISTS search_trim VARCHAR(100);
