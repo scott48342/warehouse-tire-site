@@ -7,14 +7,13 @@
  * Flow:
  * 1. If size param provided → direct size search
  * 2. If vehicle params provided:
- *    a. Get tire sizes for vehicle from fitment profile
+ *    a. Get tire sizes for vehicle from tire-sizes API
  *    b. Filter to wheelDiameter if provided
  *    c. Search tires matching those sizes
  */
 
 import { NextResponse } from "next/server";
 import pg from "pg";
-import { getFitmentProfile } from "@/lib/fitment-db/profileService";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -201,50 +200,26 @@ export async function GET(req: Request) {
       });
     }
     
-    // Get fitment profile to find tire sizes
+    // Get tire sizes from vehicles/tire-sizes API
     let tireSizes: string[] = [];
-    let fitmentSource = "unknown";
+    let fitmentSource = "api";
     
-    if (modification) {
-      try {
-        const profile = await getFitmentProfile({
-          year: parseInt(year, 10),
-          make,
-          model,
-          modificationId: modification,
-        });
-        
-        if (profile?.oemTireSizes && profile.oemTireSizes.length > 0) {
-          tireSizes = profile.oemTireSizes.map((ts: any) => 
-            typeof ts === "string" ? ts : ts.size || ts.front || ""
-          ).filter(Boolean);
-          fitmentSource = profile.source || "db";
-        }
-      } catch (err) {
-        console.error("[tires/search] Fitment profile error:", err);
+    try {
+      const tireSizesUrl = new URL(`${url.origin}/api/vehicles/tire-sizes`);
+      tireSizesUrl.searchParams.set("year", year);
+      tireSizesUrl.searchParams.set("make", make);
+      tireSizesUrl.searchParams.set("model", model);
+      if (modification) tireSizesUrl.searchParams.set("modification", modification);
+      
+      const tsRes = await fetch(tireSizesUrl.toString());
+      if (tsRes.ok) {
+        const tsData = await tsRes.json();
+        tireSizes = (tsData.sizes || tsData.results || []).map((s: any) => 
+          typeof s === "string" ? s : s.size || s.front || ""
+        ).filter(Boolean);
       }
-    }
-    
-    // Fallback: query vehicles/tire-sizes API
-    if (tireSizes.length === 0) {
-      try {
-        const tireSizesUrl = new URL(`${url.origin}/api/vehicles/tire-sizes`);
-        tireSizesUrl.searchParams.set("year", year);
-        tireSizesUrl.searchParams.set("make", make);
-        tireSizesUrl.searchParams.set("model", model);
-        if (modification) tireSizesUrl.searchParams.set("modification", modification);
-        
-        const tsRes = await fetch(tireSizesUrl.toString());
-        if (tsRes.ok) {
-          const tsData = await tsRes.json();
-          tireSizes = (tsData.sizes || tsData.results || []).map((s: any) => 
-            typeof s === "string" ? s : s.size || s.front || ""
-          ).filter(Boolean);
-          fitmentSource = "api-fallback";
-        }
-      } catch (err) {
-        console.error("[tires/search] Tire sizes fallback error:", err);
-      }
+    } catch (err) {
+      console.error("[tires/search] Tire sizes error:", err);
     }
     
     // Filter by wheel diameter if specified
