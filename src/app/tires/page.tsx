@@ -9,6 +9,10 @@ import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
+import {
+  generatePlusSizeCandidates,
+  type PlusSizeCandidate,
+} from "@/lib/tirePlusSizing";
 
 type Tire = {
   source?: "wp" | "km";
@@ -293,43 +297,84 @@ export default async function TiresPage({
     : [];
 
   // PLUS-SIZING: When wheel diameter is selected but no OEM sizes match,
-  // compute potential plus-size tire dimensions. For now, show empty state
-  // rather than showing wrong-diameter OEM tires.
-  const plusSizeSuggestions: string[] = (() => {
-    // If we have a wheel diameter but no OEM sizes match, suggest common plus-sizes
-    // This is a simplified approach - a proper plus-size calculator would use
-    // section width, aspect ratio, and overall diameter matching.
-    if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return [];
-    if (oemWheelMatchedSizes.length > 0) return []; // OEM sizes exist, no need for plus-sizing
+  // compute plus-size tire candidates using the real tire-sizes.json database.
+  // Uses overall diameter matching (±3% acceptable, ±2% primary/recommended).
+  const plusSizeResult = (() => {
+    // Only compute plus-sizes when:
+    // 1. We have a valid wheel diameter
+    // 2. No OEM sizes match the wheel diameter
+    // 3. We have at least one OEM size to calculate from
+    if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
+    if (oemWheelMatchedSizes.length > 0) return null; // OEM sizes exist, no need
+    if (tireSizesStrict.length === 0) return null; // No OEM sizes to calculate from
     
-    // For now, return empty - we'll show "no compatible sizes" instead of wrong sizes
-    // Future enhancement: compute actual plus-size candidates from OEM specs
-    return [];
+    // Use the first OEM size as the reference for plus-sizing
+    const referenceOemSize = tireSizesStrict[0];
+    
+    // Generate plus-size candidates
+    const result = generatePlusSizeCandidates(
+      referenceOemSize,
+      Math.round(wheelDiaNum),
+      {
+        wheelWidth: Number.isFinite(wheelWidthNum) ? wheelWidthNum : undefined,
+        maxOdDiffPercent: 3,
+        primaryOdDiffPercent: 2,
+      }
+    );
+    
+    return result;
   })();
+
+  // Plus-size suggestions: prioritize primary (±2%), then acceptable (±3%)
+  const plusSizeSuggestions: string[] = plusSizeResult
+    ? plusSizeResult.acceptableCandidates.map((c) => c.size)
+    : [];
+
+  // Plus-size candidates with full metadata (for display)
+  const plusSizeCandidates: PlusSizeCandidate[] = plusSizeResult
+    ? plusSizeResult.acceptableCandidates
+    : [];
+
+  // Primary plus-sizes (±2% OD) - recommended
+  const primaryPlusSizes: string[] = plusSizeResult
+    ? plusSizeResult.primaryCandidates.map((c) => c.size)
+    : [];
 
   let lockedSizes: string[] = [];
   const noOemSizesForWheel = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0 && oemWheelMatchedSizes.length === 0;
+  const hasPlusSizes = plusSizeSuggestions.length > 0;
 
   if (Number.isFinite(wheelDiaNum) && wheelDiaNum > 0) {
     // CRITICAL: Only lock to sizes that MATCH the wheel diameter
-    // Do NOT fall back to OEM sizes that don't match
-    lockedSizes = oemWheelMatchedSizes; // This might be empty for plus-size wheels
+    // Rule 7: Never show a tire whose rim does not equal the selected wheel diameter
+    // Rule 8: Never fall back to OEM sizes when a non-OEM wheel diameter is selected
+    if (oemWheelMatchedSizes.length > 0) {
+      // OEM sizes exist for this wheel diameter - use them
+      lockedSizes = oemWheelMatchedSizes;
+    } else if (plusSizeSuggestions.length > 0) {
+      // No OEM sizes match, but we have plus-size candidates - use those
+      lockedSizes = plusSizeSuggestions;
+    }
+    // If neither OEM nor plus-sizes are available, lockedSizes stays empty
+    // This will show a "no compatible sizes" message
   }
 
   // IMPORTANT: When wheel diameter is specified, ONLY show matching sizes
   // Do NOT fall back to all tire sizes - that would show wrong-diameter tires
   const displayedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
-    ? lockedSizes // Only show sizes matching wheel diameter (could be empty)
+    ? lockedSizes // Only show sizes matching wheel diameter (OEM or plus-size)
     : (lockedSizes.length ? lockedSizes : tireSizes); // No wheel = show all OEM sizes
 
   const selectedSizeRaw = (axle === "rear" ? sizeRearRaw : sizeFrontRaw) || (safeString(Array.isArray(sp.size) ? sp.size[0] : sp.size));
   const metricSizeOverride = safeString(Array.isArray((sp as any).metricSize) ? (sp as any).metricSize[0] : (sp as any).metricSize);
   const selectedSizeCandidate = selectedSizeRaw
     ? String(selectedSizeRaw)
-    : (displayedSizes[0] || tireSizesStrict[0] || tireSizes[0] || "");
+    : (displayedSizes[0] || plusSizeSuggestions[0] || tireSizesStrict[0] || tireSizes[0] || "");
 
-  const selectedSize = lockedSizes.length
-    ? (lockedSizes.includes(selectedSizeCandidate) ? selectedSizeCandidate : (lockedSizes[0] || ""))
+  // Validate selected size is in the allowed set
+  const allowedSizes = lockedSizes.length > 0 ? lockedSizes : displayedSizes;
+  const selectedSize = allowedSizes.length > 0
+    ? (allowedSizes.includes(selectedSizeCandidate) ? selectedSizeCandidate : (allowedSizes[0] || ""))
     : selectedSizeCandidate;
 
   const sizeFront = axle === "front" ? selectedSize : (sizeFrontRaw || "");
@@ -740,7 +785,7 @@ export default async function TiresPage({
         ) : null}
 
         {/* Size Selection with Guided UX */}
-        {hasVehicle && displayedSizes.length ? (
+        {hasVehicle && (displayedSizes.length > 0 || hasPlusSizes) ? (
           <div className="mt-5 rounded-2xl border border-neutral-200 bg-white p-5">
             <div className="flex items-center justify-between mb-4">
               <div>
@@ -824,12 +869,90 @@ export default async function TiresPage({
               );
             })()}
 
-            {noOemSizesForWheel ? (
-              <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
-                <div className="font-extrabold">No OEM tire sizes for {Math.round(wheelDiaNum)}&quot; wheels</div>
+            {/* Plus-Size Selection (when no OEM sizes match wheel diameter) */}
+            {noOemSizesForWheel && hasPlusSizes ? (
+              <div className="mt-4">
+                <div className="text-xs font-bold text-blue-700 mb-2 flex items-center gap-2">
+                  <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-[10px] text-white">⚙</span>
+                  Plus-Sizes — Calculated for your {Math.round(wheelDiaNum)}&quot; wheels
+                </div>
+                <div className="mb-3 rounded-xl border border-blue-100 bg-blue-50/50 p-3 text-xs text-blue-900">
+                  <div className="font-semibold">No factory {Math.round(wheelDiaNum)}&quot; option for this vehicle</div>
+                  <div className="mt-1 text-blue-700">
+                    These plus-sizes maintain your original overall diameter (OEM: {tireSizesStrict[0] || tireSizes[0] || "N/A"} = {plusSizeResult?.oemOverallDiameter?.toFixed(1) || "?"}&quot; OD).
+                  </div>
+                </div>
+                
+                {/* Primary Plus-Sizes (±2% OD) - Recommended */}
+                {primaryPlusSizes.length > 0 ? (
+                  <div className="mb-3">
+                    <div className="text-[10px] font-bold text-green-700 mb-1.5 uppercase tracking-wide">
+                      ✓ Recommended (±2% OD)
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {plusSizeCandidates.filter(c => c.isPrimary).map((c) => {
+                        const active = c.size === selectedSize;
+                        const diffLabel = c.odDiffPercent >= 0 ? `+${c.odDiffPercent.toFixed(1)}%` : `${c.odDiffPercent.toFixed(1)}%`;
+                        const href = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(c.size)}`;
+                        return (
+                          <Link
+                            key={c.size}
+                            href={href}
+                            className={
+                              active
+                                ? "rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-extrabold text-white shadow-sm"
+                                : "rounded-xl border-2 border-green-300 bg-green-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-green-500 hover:bg-green-100 transition-colors"
+                            }
+                          >
+                            <span>{c.size}</span>
+                            <span className="ml-1.5 text-xs opacity-70">({diffLabel})</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ) : null}
+
+                {/* Acceptable Plus-Sizes (±3% OD but not primary) */}
+                {(() => {
+                  const acceptableOnly = plusSizeCandidates.filter(c => !c.isPrimary);
+                  if (acceptableOnly.length === 0) return null;
+                  return (
+                    <div>
+                      <div className="text-[10px] font-bold text-amber-700 mb-1.5 uppercase tracking-wide">
+                        Acceptable (±3% OD)
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {acceptableOnly.map((c) => {
+                          const active = c.size === selectedSize;
+                          const diffLabel = c.odDiffPercent >= 0 ? `+${c.odDiffPercent.toFixed(1)}%` : `${c.odDiffPercent.toFixed(1)}%`;
+                          const href = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(c.size)}`;
+                          return (
+                            <Link
+                              key={c.size}
+                              href={href}
+                              className={
+                                active
+                                  ? "rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-extrabold text-white shadow-sm"
+                                  : "rounded-xl border-2 border-amber-200 bg-amber-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-amber-400 hover:bg-amber-100 transition-colors"
+                              }
+                            >
+                              <span>{c.size}</span>
+                              <span className="ml-1.5 text-xs opacity-70">({diffLabel})</span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            ) : noOemSizesForWheel && !hasPlusSizes ? (
+              <div className="mt-3 rounded-xl border border-red-200 bg-red-50 p-3 text-xs text-red-900">
+                <div className="font-extrabold">No compatible tire sizes for {Math.round(wheelDiaNum)}&quot; wheels</div>
                 <div className="mt-1">
                   This vehicle&apos;s factory tire sizes are: {tireSizes.join(", ") || "none found"}.
-                  The {Math.round(wheelDiaNum)}&quot; wheel you selected is not an OEM size for this vehicle.
+                  No plus-size options are available for {Math.round(wheelDiaNum)}&quot; wheels that maintain acceptable overall diameter.
                 </div>
               </div>
             ) : null}
