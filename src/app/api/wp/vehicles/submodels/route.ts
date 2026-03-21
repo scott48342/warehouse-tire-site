@@ -24,6 +24,7 @@ export async function GET(req: Request) {
     const results = normalizeTrims(raw, year, make, model);
     return NextResponse.json({ results });
   } catch (e: any) {
-    return NextResponse.json({ error: e?.message || String(e) }, { status: 500 });
+    console.error("[wp/submodels] Error:", e?.message || e);
+    return NextResponse.json({ error: e?.message || String(e), stack: e?.stack?.split("\n").slice(0, 3) }, { status: 500 });
   }
 }
