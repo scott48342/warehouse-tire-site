@@ -230,7 +230,7 @@ export default async function WheelsPage({
   });
 
   // DEBUG: Trace vehicle label values (remove after confirming fix)
-  const DEBUG_BUILD = "2026-03-21-1";
+  const DEBUG_BUILD = "2026-03-21-2";
   console.log(`[wheels DEBUG_BUILD=${DEBUG_BUILD}] Vehicle label trace:`, {
     rawTrimFromURL: trim,
     fitVehicleTrim: fit?.vehicle?.trim,
@@ -973,7 +973,7 @@ export default async function WheelsPage({
             </p>
             {/* DEBUG MARKER - REMOVE AFTER CONFIRMING DEPLOY */}
             <p className="mt-1 text-[10px] font-mono text-orange-600">
-              DEBUG_BUILD=2026-03-21-1 | rawTrim={trim || "(none)"} | displayTrim={displayTrim || "(null)"} | submodel={_submodelCandidate || "(none)"}
+              DEBUG_BUILD=2026-03-21-2 | rawTrim={trim || "(none)"} | displayTrim={displayTrim || "(null)"} | submodel={_submodelCandidate || "(none)"}
             </p>
 
             {year && make && model ? (
