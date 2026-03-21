@@ -222,10 +222,24 @@ export default async function WheelsPage({
   const bp: string | undefined = hasVehicle ? (boltPatternParam || fit?.boltPattern || undefined) : undefined;
 
   // Build display-friendly trim label (never shows engine text like "5.7i")
+  const _submodelCandidate = fit?.vehicle?.trim || fit?.trim || (fitment as any)?.vehicle?.trim;
   const displayTrim = getDisplayTrim({
     trim,
-    submodel: fit?.vehicle?.trim || fit?.trim || (fitment as any)?.vehicle?.trim,
+    submodel: _submodelCandidate,
     displayTrim: wpSubmodel || undefined,
+  });
+
+  // DEBUG: Trace vehicle label values (remove after confirming fix)
+  const DEBUG_BUILD = "2026-03-21-1";
+  console.log(`[wheels DEBUG_BUILD=${DEBUG_BUILD}] Vehicle label trace:`, {
+    rawTrimFromURL: trim,
+    fitVehicleTrim: fit?.vehicle?.trim,
+    fitTrim: fit?.trim,
+    fitmentVehicleTrim: (fitment as any)?.vehicle?.trim,
+    submodelCandidate: _submodelCandidate,
+    wpSubmodel,
+    displayTrimResult: displayTrim,
+    finalLabel: `${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`,
   });
 
   function rimDiaFromTireSize(s: string) {
@@ -956,6 +970,10 @@ export default async function WheelsPage({
               {year && make && model
                 ? `Showing wheels for ${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}.`
                 : "Select your vehicle in the header to filter wheels."}
+            </p>
+            {/* DEBUG MARKER - REMOVE AFTER CONFIRMING DEPLOY */}
+            <p className="mt-1 text-[10px] font-mono text-orange-600">
+              DEBUG_BUILD=2026-03-21-1 | rawTrim={trim || "(none)"} | displayTrim={displayTrim || "(null)"} | submodel={_submodelCandidate || "(none)"}
             </p>
 
             {year && make && model ? (
