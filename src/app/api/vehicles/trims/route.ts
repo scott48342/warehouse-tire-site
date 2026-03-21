@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { isInCooldown, record429, recordSuccess, getCacheStats } from "@/lib/fitmentCache";
-import { normalizeTrims } from "@/lib/trimNormalize";
+import { normalizeTrimLabel } from "@/lib/trimNormalize";
 
 export const runtime = "nodejs";
 
@@ -101,24 +101,29 @@ export async function GET(req: Request) {
               return "";
             };
             
-            const parts: string[] = [];
             const trimStr = safeStr(m.trim);
             const engineStr = safeStr(m.engine);
-            const bodyStr = safeStr(m.body);
             
-            if (trimStr) parts.push(trimStr);
-            if (engineStr) parts.push(engineStr);
-            // Skip body for cleaner labels - usually redundant with trim
-            // if (bodyStr) parts.push(bodyStr);
+            // Build display label - normalize engine codes to friendly trim names
+            // Pass engineStr to normalizer so it can map "5.7i" → "Z28"
+            const normalized = normalizeTrimLabel(trimStr, engineStr, year, make, model);
             
-            const label = parts.length > 0 ? parts.join(" / ") : safeStr(m.name) || m.slug;
+            // Never show modification IDs or raw engine codes
+            const label = normalized || "Base";
+            
             return { value: m.slug, label };
           });
 
-          // Normalize engine codes to friendly trim names (e.g., 5.7i → Z28)
-          const normalized = normalizeTrims(results, year, make, model);
+          // Dedupe by label
+          const seen = new Set<string>();
+          const deduped = results.filter(r => {
+            const k = r.label.toLowerCase();
+            if (seen.has(k)) return false;
+            seen.add(k);
+            return true;
+          });
 
-          return NextResponse.json({ results: normalized }, {
+          return NextResponse.json({ results: deduped }, {
             headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
           });
         }
@@ -145,18 +150,27 @@ export async function GET(req: Request) {
         const mapped = raw.map((it: any) => {
           if (!it || typeof it !== "object") return null;
           const mod = it.modification ? String(it.modification) : "";
-          const baseLabel = it.trimLevel || it.trim || it.modification;
-          const engineCode = (it.engineCode || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-          const value = mod ? `${mod}__${String(baseLabel).replace(/\s+/g, "-").toLowerCase()}__${engineCode}` : "";
-          const label = baseLabel ? String(baseLabel) : "";
-          if (!value || !label) return null;
+          const trimLevel = it.trimLevel || it.trim || "";
+          const engineCode = it.engineCode || "";
+          const value = mod ? `${mod}__${String(trimLevel).replace(/\s+/g, "-").toLowerCase()}__${engineCode.toLowerCase().replace(/[^a-z0-9]+/g, "-")}` : "";
+          
+          // Normalize engine codes to friendly trim names
+          const label = normalizeTrimLabel(String(trimLevel), String(engineCode), year, make, model) || "Base";
+          
+          if (!value) return null;
           return { value, label };
         }).filter(Boolean);
 
-        // Normalize engine codes to friendly trim names (e.g., 5.7i → Z28)
-        const normalized = normalizeTrims(mapped, year, make, model);
+        // Dedupe by label
+        const seen = new Set<string>();
+        const results = mapped.filter((r: any) => {
+          const k = r.label.toLowerCase();
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        });
 
-        return NextResponse.json({ results: normalized });
+        return NextResponse.json({ results });
       }
     } catch (err: any) {
       console.error(`[trims] Package engine error:`, err?.message);

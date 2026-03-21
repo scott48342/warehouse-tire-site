@@ -2,252 +2,207 @@
  * Trim/Submodel Normalization
  * 
  * Maps raw engine codes and technical identifiers to customer-friendly trim names.
- * Preserves original value for fitment lookup while showing friendly labels.
+ * NEVER displays modification IDs or raw engine codes to users.
  */
 
 type TrimMapping = {
-  /** Pattern to match against engine/trim string (case-insensitive) */
-  pattern: RegExp;
+  /** Pattern to match against engine string (case-insensitive) */
+  enginePattern: RegExp;
   /** Display label for the customer */
   label: string;
 };
 
-type VehicleTrimMappings = {
-  [year: string]: {
-    [make: string]: {
-      [model: string]: TrimMapping[];
-    };
-  };
+type VehicleModelMappings = {
+  [model: string]: TrimMapping[];
+};
+
+type VehicleMakeMappings = {
+  [make: string]: VehicleModelMappings;
 };
 
 /**
- * Known engine-to-trim mappings by year/make/model
- * Add more vehicles as needed
+ * Known engine-to-trim mappings by make/model
+ * Years are handled by range - these patterns apply across model generations
  */
-const TRIM_MAPPINGS: VehicleTrimMappings = {
-  "1993": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
+const ENGINE_TO_TRIM_MAPPINGS: VehicleMakeMappings = {
+  chevrolet: {
+    camaro: [
+      { enginePattern: /^5\.7/i, label: "Z28" },
+      { enginePattern: /^3\.(4|8)/i, label: "Base" },
+      { enginePattern: /^6\.2/i, label: "SS" },
+      { enginePattern: /^2\.0/i, label: "Turbo" },
+      { enginePattern: /^3\.6/i, label: "LT" },
+    ],
+    corvette: [
+      { enginePattern: /^5\.7/i, label: "Base" },
+      { enginePattern: /^6\.0/i, label: "Z06" },
+      { enginePattern: /^6\.2/i, label: "Stingray" },
+      { enginePattern: /^7\.0/i, label: "Z06" },
+    ],
   },
-  "1994": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
+  pontiac: {
+    firebird: [
+      { enginePattern: /^5\.7/i, label: "Trans Am" },
+      { enginePattern: /^3\.(4|8)/i, label: "Base" },
+      { enginePattern: /^5\.0/i, label: "Formula" },
+    ],
+    "grand prix": [
+      { enginePattern: /^3\.8/i, label: "GT" },
+      { enginePattern: /^3\.1/i, label: "SE" },
+      { enginePattern: /^5\.3/i, label: "GXP" },
+    ],
   },
-  "1995": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
+  ford: {
+    mustang: [
+      { enginePattern: /^5\.0/i, label: "GT" },
+      { enginePattern: /^4\.6/i, label: "GT" },
+      { enginePattern: /^3\.8/i, label: "Base" },
+      { enginePattern: /^3\.7/i, label: "V6" },
+      { enginePattern: /^2\.3/i, label: "EcoBoost" },
+      { enginePattern: /^5\.4/i, label: "Shelby GT500" },
+      { enginePattern: /^5\.8/i, label: "Shelby GT500" },
+    ],
   },
-  "1996": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.(4|8)/i, label: "Base" },
-      ],
-    },
-  },
-  "1997": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.8/i, label: "Formula" },
-      ],
-    },
-  },
-  "1998": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-  },
-  "1999": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-  },
-  "2000": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-  },
-  "2001": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-  },
-  "2002": {
-    chevrolet: {
-      camaro: [
-        { pattern: /^5\.7/i, label: "Z28" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
-    pontiac: {
-      firebird: [
-        { pattern: /^5\.7/i, label: "Trans Am" },
-        { pattern: /^3\.8/i, label: "Base" },
-      ],
-    },
+  dodge: {
+    challenger: [
+      { enginePattern: /^6\.4/i, label: "Scat Pack" },
+      { enginePattern: /^6\.2/i, label: "Hellcat" },
+      { enginePattern: /^5\.7/i, label: "R/T" },
+      { enginePattern: /^3\.6/i, label: "SXT" },
+    ],
+    charger: [
+      { enginePattern: /^6\.4/i, label: "Scat Pack" },
+      { enginePattern: /^6\.2/i, label: "Hellcat" },
+      { enginePattern: /^5\.7/i, label: "R/T" },
+      { enginePattern: /^3\.6/i, label: "SXT" },
+    ],
   },
 };
 
 /**
- * Generic engine displacement patterns for fallback normalization
- * Maps common engine codes to displacement-based labels when no specific mapping exists
+ * Check if a string looks like an engine code
  */
-const ENGINE_PATTERNS: Array<{ pattern: RegExp; test: (s: string) => boolean }> = [
-  // Patterns that look like engine displacements (e.g., "3.8i", "5.7L", "2.0T")
-  { pattern: /^\d+\.\d+[iLtT]?$/i, test: (s) => /^\d+\.\d+[iLtT]?$/i.test(s) },
-];
-
-/**
- * Check if a string looks like a raw engine code rather than a trim name
- */
-export function isEngineCode(value: string): boolean {
+function isEngineCode(value: string): boolean {
   if (!value) return false;
   const trimmed = value.trim();
-  // Common engine code patterns
   return (
     /^\d+\.\d+[iLtT]?$/i.test(trimmed) || // "3.8i", "5.7L", "2.0T"
     /^V\d+$/i.test(trimmed) || // "V6", "V8"
-    /^L\d{2}$/i.test(trimmed) || // "L86", "LT1" style GM codes
-    /^[A-Z]\d{2,3}$/i.test(trimmed) // Other alphanumeric engine codes
+    /^L\d{2,3}$/i.test(trimmed) || // "L86", "LT1", "LS3"
+    /^[A-Z]{2,3}\d{1,2}$/i.test(trimmed) // "LS1", "LT4"
   );
 }
 
 /**
- * Normalize a trim/submodel option for display
+ * Check if a string looks like a modification ID (hex or UUID-like)
+ */
+function isModificationId(value: string): boolean {
+  if (!value) return false;
+  const trimmed = value.trim();
+  return (
+    /^[0-9a-f]{8,}$/i.test(trimmed) || // hex ID
+    /^[0-9a-f]{8}-[0-9a-f]{4}-/i.test(trimmed) // UUID prefix
+  );
+}
+
+/**
+ * Normalize a trim label from raw trim and engine strings
  * 
- * @param value - The raw value (engine code, slug, etc.) used for fitment lookup
+ * @param trimStr - The trim level string (e.g., "Base", "LT", "Z28", or empty)
+ * @param engineStr - The engine string (e.g., "5.7i", "3.8L", or empty)
  * @param year - Vehicle year
  * @param make - Vehicle make
  * @param model - Vehicle model
- * @returns Normalized { value, label } object
+ * @returns Friendly display label, or empty string if none determined
  */
-export function normalizeTrim(
-  value: string,
+export function normalizeTrimLabel(
+  trimStr: string,
+  engineStr: string,
   year: string,
   make: string,
   model: string
-): { value: string; label: string } {
-  if (!value) {
-    return { value: "", label: "" };
-  }
-
+): string {
   const normalizedMake = make.toLowerCase().trim();
   const normalizedModel = model.toLowerCase().trim();
-  const normalizedValue = value.trim();
+  const cleanTrim = trimStr.trim();
+  const cleanEngine = engineStr.trim();
 
-  // Check for specific vehicle mappings
-  const yearMappings = TRIM_MAPPINGS[year];
-  if (yearMappings) {
-    const makeMappings = yearMappings[normalizedMake];
-    if (makeMappings) {
-      const modelMappings = makeMappings[normalizedModel];
-      if (modelMappings) {
-        for (const mapping of modelMappings) {
-          if (mapping.pattern.test(normalizedValue)) {
-            return { value: normalizedValue, label: mapping.label };
-          }
+  // If we have a good trim string that's not an engine code or ID, use it
+  if (cleanTrim && !isEngineCode(cleanTrim) && !isModificationId(cleanTrim)) {
+    return cleanTrim;
+  }
+
+  // Try to map engine to a friendly trim name
+  const makeMappings = ENGINE_TO_TRIM_MAPPINGS[normalizedMake];
+  if (makeMappings) {
+    const modelMappings = makeMappings[normalizedModel];
+    if (modelMappings) {
+      // Check against engine string
+      for (const mapping of modelMappings) {
+        if (mapping.enginePattern.test(cleanEngine)) {
+          return mapping.label;
+        }
+        // Also check if trim string is actually an engine code
+        if (cleanTrim && mapping.enginePattern.test(cleanTrim)) {
+          return mapping.label;
         }
       }
     }
   }
 
-  // If it looks like an engine code but we don't have a mapping, 
-  // show as "Base" with the engine in parentheses
-  if (isEngineCode(normalizedValue)) {
-    return { value: normalizedValue, label: `Base (${normalizedValue})` };
+  // If trim looks like an engine code but we have no mapping, return empty
+  // (caller should default to "Base")
+  if (cleanTrim && isEngineCode(cleanTrim)) {
+    return "";
   }
 
-  // Otherwise, use the value as the label (it's probably already a trim name)
-  return { value: normalizedValue, label: normalizedValue };
+  // If we have engine info but no mapping, return empty
+  if (cleanEngine && !cleanTrim) {
+    return "";
+  }
+
+  return cleanTrim;
+}
+
+/**
+ * Normalize a raw trim/submodel value for display
+ * Used when we only have a single value (not separate trim/engine)
+ * 
+ * @param rawValue - Raw trim value that might be an engine code
+ * @param year - Vehicle year
+ * @param make - Vehicle make
+ * @param model - Vehicle model
+ * @returns { value, label } with friendly label
+ */
+export function normalizeTrim(
+  rawValue: string,
+  year: string,
+  make: string,
+  model: string
+): { value: string; label: string } {
+  if (!rawValue) {
+    return { value: "", label: "" };
+  }
+
+  const clean = rawValue.trim();
+
+  // Never show modification IDs
+  if (isModificationId(clean)) {
+    return { value: clean, label: "Base" };
+  }
+
+  // If it's not an engine code, use as-is
+  if (!isEngineCode(clean)) {
+    return { value: clean, label: clean };
+  }
+
+  // Try to map engine code to friendly name
+  const label = normalizeTrimLabel("", clean, year, make, model);
+  return { value: clean, label: label || "Base" };
 }
 
 /**
  * Normalize an array of trim options, deduplicating by label
- * 
- * @param options - Array of raw values or {value, label} objects
- * @param year - Vehicle year
- * @param make - Vehicle make  
- * @param model - Vehicle model
- * @returns Deduplicated array of { value, label } objects
  */
 export function normalizeTrims(
   options: Array<string | { value: string; label?: string }>,
@@ -261,23 +216,19 @@ export function normalizeTrims(
     const raw = typeof opt === "string" ? opt : opt.value;
     const existingLabel = typeof opt === "object" ? opt.label : undefined;
 
-    // If we already have a good label, check if it's an engine code
-    let normalized: { value: string; label: string };
-    if (existingLabel && !isEngineCode(existingLabel)) {
-      // Label looks good, keep it
-      normalized = { value: raw, label: existingLabel };
+    let label: string;
+    if (existingLabel && !isEngineCode(existingLabel) && !isModificationId(existingLabel)) {
+      label = existingLabel;
     } else {
-      // Normalize based on the raw value
-      normalized = normalizeTrim(raw, year, make, model);
+      const normalized = normalizeTrim(raw, year, make, model);
+      label = normalized.label || "Base";
     }
 
-    if (!normalized.value || !normalized.label) continue;
+    if (!raw) continue;
 
-    const labelKey = normalized.label.toLowerCase();
-    
-    // Keep the first occurrence of each label
+    const labelKey = label.toLowerCase();
     if (!seen.has(labelKey)) {
-      seen.set(labelKey, normalized);
+      seen.set(labelKey, { value: raw, label });
     }
   }
 
