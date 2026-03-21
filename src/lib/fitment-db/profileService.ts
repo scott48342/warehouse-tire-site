@@ -220,12 +220,79 @@ async function fetchModification(
 }
 
 // ============================================================================
+// Profile Validation
+// ============================================================================
+
+export type FitmentQuality = "valid" | "partial" | "invalid";
+
+/**
+ * Validate a fitment profile for completeness
+ * 
+ * Rules for VALID:
+ * - boltPattern must exist
+ * - AND at least one of: oemWheelSizes.length > 0 OR oemTireSizes.length > 0
+ * 
+ * Rules for PARTIAL:
+ * - Has boltPattern but missing sizes (might have override data)
+ * 
+ * Rules for INVALID:
+ * - Missing boltPattern (cannot match any wheels)
+ */
+export function assessFitmentQuality(fitment: VehicleFitment): {
+  quality: FitmentQuality;
+  reasons: string[];
+} {
+  const reasons: string[] = [];
+  
+  const hasBoltPattern = Boolean(fitment.boltPattern);
+  const hasWheelSizes = Array.isArray(fitment.oemWheelSizes) && fitment.oemWheelSizes.length > 0;
+  const hasTireSizes = Array.isArray(fitment.oemTireSizes) && fitment.oemTireSizes.length > 0;
+  const hasCenterBore = Boolean(fitment.centerBoreMm);
+  const hasThreadSize = Boolean(fitment.threadSize);
+  
+  if (!hasBoltPattern) {
+    reasons.push("missing boltPattern");
+  }
+  if (!hasWheelSizes && !hasTireSizes) {
+    reasons.push("no OEM wheel or tire sizes");
+  }
+  if (!hasCenterBore) {
+    reasons.push("missing centerBore");
+  }
+  if (!hasThreadSize) {
+    reasons.push("missing threadSize");
+  }
+  
+  // Determine quality level
+  if (hasBoltPattern && (hasWheelSizes || hasTireSizes)) {
+    // Valid: has bolt pattern + at least some size data
+    return { quality: "valid", reasons: [] };
+  }
+  
+  if (hasBoltPattern) {
+    // Partial: has bolt pattern but no sizes (might work with overrides)
+    return { quality: "partial", reasons };
+  }
+  
+  // Invalid: no bolt pattern = cannot match any wheels
+  return { quality: "invalid", reasons };
+}
+
+/**
+ * Check if a fitment profile is usable for wheel matching
+ */
+export function isValidFitmentProfile(fitment: VehicleFitment): boolean {
+  const { quality } = assessFitmentQuality(fitment);
+  return quality === "valid" || quality === "partial";
+}
+
+// ============================================================================
 // Main Profile Lookup
 // ============================================================================
 
 /**
  * Get fitment profile for a vehicle modification
- * DB-first with API fallback
+ * DB-first with API fallback, auto-re-imports invalid profiles
  */
 export async function getFitmentProfile(
   year: number,
@@ -244,6 +311,7 @@ export async function getFitmentProfile(
   let dbLookupMs = 0;
   let apiCallMs: number | undefined;
   let importMs: number | undefined;
+  let reImportTriggered = false;
   
   // ─────────────────────────────────────────────────────────────────────────
   // Step 1: Check database (unless forcing refresh)
@@ -264,22 +332,84 @@ export async function getFitmentProfile(
     dbLookupMs = Date.now() - dbStart;
     
     if (dbFitment) {
-      console.log(`[profileService] DB HIT: ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
+      // ═══════════════════════════════════════════════════════════════════════
+      // VALIDATION: Check if profile is usable
+      // ═══════════════════════════════════════════════════════════════════════
+      const { quality, reasons } = assessFitmentQuality(dbFitment);
       
-      // Apply overrides
+      if (quality === "valid") {
+        console.log(`[profileService] DB HIT (valid): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
+        
+        // Apply overrides
+        const withOverrides = await applyOverrides(dbFitment);
+        const overridesApplied = withOverrides !== dbFitment;
+        
+        return {
+          profile: dbRecordToProfile(withOverrides, "db"),
+          source: "db",
+          apiCalled: false,
+          overridesApplied,
+          timing: { dbLookupMs, totalMs: Date.now() - t0 },
+        };
+      }
+      
+      if (quality === "partial") {
+        // Partial profile - might be fixed by overrides
+        const withOverrides = await applyOverrides(dbFitment);
+        const overridesApplied = withOverrides !== dbFitment;
+        
+        // Re-check quality after overrides
+        const afterOverrides = assessFitmentQuality(withOverrides);
+        
+        if (afterOverrides.quality === "valid" || overridesApplied) {
+          console.log(`[profileService] DB HIT (partial → fixed by override): ${year} ${make} ${model} mod=${modificationId}`);
+          return {
+            profile: dbRecordToProfile(withOverrides, "db"),
+            source: "db",
+            apiCalled: false,
+            overridesApplied,
+            timing: { dbLookupMs, totalMs: Date.now() - t0 },
+          };
+        }
+        
+        // Still partial, but usable
+        console.log(`[profileService] DB HIT (partial): ${year} ${make} ${model} mod=${modificationId} - ${reasons.join(", ")}`);
+        return {
+          profile: dbRecordToProfile(withOverrides, "db"),
+          source: "db",
+          apiCalled: false,
+          overridesApplied,
+          timing: { dbLookupMs, totalMs: Date.now() - t0 },
+        };
+      }
+      
+      // INVALID profile - try overrides first
       const withOverrides = await applyOverrides(dbFitment);
-      const overridesApplied = withOverrides !== dbFitment;
+      if (withOverrides !== dbFitment) {
+        // Overrides exist - check if they fix it
+        const afterOverrides = assessFitmentQuality(withOverrides);
+        if (afterOverrides.quality !== "invalid") {
+          console.log(`[profileService] DB HIT (invalid → fixed by override): ${year} ${make} ${model} mod=${modificationId}`);
+          return {
+            profile: dbRecordToProfile(withOverrides, "db"),
+            source: "db",
+            apiCalled: false,
+            overridesApplied: true,
+            timing: { dbLookupMs, totalMs: Date.now() - t0 },
+          };
+        }
+      }
       
-      return {
-        profile: dbRecordToProfile(withOverrides, "db"),
-        source: "db",
-        apiCalled: false,
-        overridesApplied,
-        timing: { dbLookupMs, totalMs: Date.now() - t0 },
-      };
+      // ═══════════════════════════════════════════════════════════════════════
+      // INVALID PROFILE - Trigger re-import from API
+      // ═══════════════════════════════════════════════════════════════════════
+      console.warn(`[profileService] INVALID DB PROFILE - triggering re-import: ${year} ${make} ${model} mod=${modificationId}`);
+      console.warn(`[profileService] Invalid reasons: ${reasons.join(", ")}`);
+      reImportTriggered = true;
+      // Fall through to API fetch below
+    } else {
+      console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
     }
-    
-    console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
   }
   
   // ─────────────────────────────────────────────────────────────────────────
@@ -301,7 +431,8 @@ export async function getFitmentProfile(
   const apiStart = Date.now();
   
   try {
-    console.log(`[profileService] API FETCH: ${year} ${make} ${model} mod=${modificationId}`);
+    const fetchReason = reImportTriggered ? "RE-IMPORT (invalid profile)" : "FETCH (new)";
+    console.log(`[profileService] API ${fetchReason}: ${year} ${make} ${model} mod=${modificationId}`);
     
     const apiData = await fetchModification(apiKey, year, make, model, modificationId);
     apiCallMs = Date.now() - apiStart;
@@ -334,7 +465,8 @@ export async function getFitmentProfile(
     );
     
     importMs = Date.now() - importStart;
-    console.log(`[profileService] IMPORTED: fitmentId=${fitmentId} (${importMs}ms)`);
+    const importType = reImportTriggered ? "RE-IMPORTED (fixed)" : "IMPORTED (new)";
+    console.log(`[profileService] ${importType}: fitmentId=${fitmentId} (${importMs}ms)`);
     
     // Fetch the newly imported record
     const newFitment = await db.query.vehicleFitments.findFirst({
@@ -437,6 +569,15 @@ async function importApiDataToDb(
   const centerBoreMm = tech.centre_bore ? parseFloat(tech.centre_bore) : null;
   const threadSize = tech.wheel_fasteners?.thread_size || null;
   const seatType = tech.wheel_fasteners?.type || null;
+  
+  // Log extraction results for debugging
+  console.log(`[profileService] Extracting specs from API:`, {
+    hasTechnical: !!vehicleData.technical,
+    boltPattern: boltPattern || "(missing)",
+    centerBore: centerBoreMm || "(missing)",
+    threadSize: threadSize || "(missing)",
+    wheelSetups: vehicleData.wheels?.length || 0,
+  });
   
   // Extract wheel/tire sizes
   const wheelSetups = vehicleData.wheels || [];
