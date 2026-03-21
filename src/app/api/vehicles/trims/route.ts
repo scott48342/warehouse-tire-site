@@ -38,16 +38,14 @@ export async function GET(req: Request) {
   const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
 
   // Check if we're in 429 cooldown
-  if (isInCooldown()) {
-    return NextResponse.json({ 
-      results: [],
-      error: "Rate limited - in cooldown",
-      cacheStats: getCacheStats(),
-    });
+  // NOTE: Only skip API call during cooldown - still try package engine fallback
+  const inCooldown = isInCooldown();
+  if (inCooldown) {
+    console.log(`[trims] In cooldown, skipping Wheel-Size API, trying fallback`);
   }
 
-  // Try Wheel-Size API first
-  if (apiKey) {
+  // Try Wheel-Size API first (skip if in cooldown)
+  if (apiKey && !inCooldown) {
     try {
       const apiUrl = new URL("modifications/", BASE_URL);
       apiUrl.searchParams.set("user_key", apiKey);
