@@ -51,7 +51,8 @@ async function fetchFitment(params: Record<string, string | undefined>) {
     if (v) sp.set(k, v);
   }
 
-  const res = await fetch(`${getBaseUrl()}/api/vehicles/search?${sp.toString()}`, { cache: "no-store" });
+  // Use the new direct tire-sizes endpoint that queries Wheel-Size API
+  const res = await fetch(`${getBaseUrl()}/api/vehicles/tire-sizes?${sp.toString()}`, { cache: "no-store" });
   if (!res.ok) return { error: await res.text() };
   return res.json();
 }
