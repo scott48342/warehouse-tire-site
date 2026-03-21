@@ -236,21 +236,20 @@ export function getVehicleDisplayLabel(input: VehicleDisplayInput): string {
 
 /**
  * Get just the trim portion for display, or empty string if none appropriate.
+ * 
+ * Runs ALL candidate fields through extractDisplayTrim() to ensure mixed
+ * values like "Z28 / 5.7i" are cleaned to just "Z28".
  */
 export function getDisplayTrim(input: VehicleDisplayInput): string {
-  const { trim, submodel, displayTrim } = input;
+  const candidates = [
+    input.displayTrim,
+    input.submodel,
+    input.trim,
+  ];
   
-  // Priority 1: Explicit display override
-  if (displayTrim && !isEngineLikeText(displayTrim)) {
-    return displayTrim;
-  }
-  // Priority 2: Submodel from fitment
-  if (submodel && !isEngineLikeText(submodel)) {
-    return submodel;
-  }
-  // Priority 3: Extract from trim param
-  if (trim) {
-    return extractDisplayTrim(trim) || "";
+  for (const candidate of candidates) {
+    const cleaned = extractDisplayTrim(candidate ?? "");
+    if (cleaned) return cleaned;
   }
   
   return "";
