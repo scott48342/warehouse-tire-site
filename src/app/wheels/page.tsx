@@ -167,8 +167,33 @@ export default async function WheelsPage({
   const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
   const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
   const model = safeString(Array.isArray(sp.model) ? sp.model[0] : sp.model);
-  const trim = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
-  const modification = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
+  
+  // PARAM SEPARATION: modification = fitment identity, trim = display label only
+  const modificationRaw = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
+  const trimRaw = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
+  
+  // Resolve canonical modificationId: prefer 'modification' param, fallback to 'trim' if it looks like a modificationId
+  let modification = modificationRaw;
+  let trimLabel = trimRaw;
+  
+  if (!modification && trimRaw) {
+    // Check if trim looks like a modificationId (hash or hex slug)
+    if (/^s_[a-f0-9]{8}$/.test(trimRaw) || /^[a-f0-9]{10}$/.test(trimRaw)) {
+      // Legacy URL using trim as modificationId - migrate it
+      modification = trimRaw;
+      trimLabel = ""; // Will be resolved below
+      console.warn(`[wheels] DEPRECATION: Using 'trim' as modificationId. Migrate to 'modification=${trimRaw}'`);
+    }
+  }
+  
+  // For backward compat, also support plain trim slugs (e.g., "ltz") as modification
+  // but only if modification is not set
+  if (!modification && trimRaw && !trimRaw.includes(" ")) {
+    modification = trimRaw;
+  }
+  
+  // Alias for places still using 'trim' variable
+  const trim = trimLabel || modification;
 
   // Optional user-supplied wheel filters.
   const diameterParam = (Array.isArray(sp.diameter) ? sp.diameter[0] : sp.diameter) || "";
@@ -980,7 +1005,8 @@ export default async function WheelsPage({
 
   const basePath = year && make && model ? `/wheels/v/${vehicleSlug(year, make, model)}` : "/wheels";
 
-  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}${fitLevel !== "oem" ? `&fitLevel=${encodeURIComponent(fitLevel)}` : ""}`;
+  // URL construction: use 'modification' for fitment identity, omit 'trim' (legacy)
+  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}${fitLevel !== "oem" ? `&fitLevel=${encodeURIComponent(fitLevel)}` : ""}`;
 
   return (
     <main className="bg-neutral-50">
@@ -1041,7 +1067,7 @@ export default async function WheelsPage({
                     <div className="mt-1 text-xs text-neutral-600">We'll show OEM sizes and options that match your vehicle.</div>
                     <div className="mt-3">
                       <Link
-                        href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                        href={`/tires?${new URLSearchParams(Object.fromEntries(Object.entries({ year, make, model, modification }).filter(([,v]) => v))).toString()}`}
                         className="inline-flex h-10 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white"
                       >
                         Click here to select tires
@@ -1104,7 +1130,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1216,7 +1241,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1256,7 +1280,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1299,7 +1322,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1340,7 +1362,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1380,7 +1401,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1420,7 +1440,6 @@ export default async function WheelsPage({
               <input type="hidden" name="year" value={year} />
               <input type="hidden" name="make" value={make} />
               <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
               <input type="hidden" name="modification" value={modification} />
               <input type="hidden" name="sort" value={sort} />
               <input type="hidden" name="page" value={"1"} />
@@ -1471,7 +1490,7 @@ export default async function WheelsPage({
                       <div className="mt-1 text-xs text-neutral-600">We'll show OEM sizes and options that match your vehicle.</div>
                       <div className="mt-3">
                         <Link
-                          href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
+                          href={`/tires?${new URLSearchParams(Object.fromEntries(Object.entries({ year, make, model, modification }).filter(([,v]) => v))).toString()}`}
                           className="inline-flex h-10 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white"
                         >
                           Click here to select tires

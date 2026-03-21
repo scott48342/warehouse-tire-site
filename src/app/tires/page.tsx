@@ -198,8 +198,28 @@ export default async function TiresPage({
   const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
   const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
   const model = safeString(Array.isArray(sp.model) ? sp.model[0] : sp.model);
-  const trim = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
-  const modification = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
+  
+  // PARAM SEPARATION: modification = fitment identity, trim = display label only
+  const modificationRaw = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
+  const trimRaw = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
+  
+  // Resolve canonical modificationId: prefer 'modification' param, fallback to 'trim' if it looks like a modificationId
+  let modification = modificationRaw;
+  let trimLabel = trimRaw;
+  
+  if (!modification && trimRaw) {
+    if (/^s_[a-f0-9]{8}$/.test(trimRaw) || /^[a-f0-9]{10}$/.test(trimRaw)) {
+      modification = trimRaw;
+      trimLabel = "";
+      console.warn(`[tires] DEPRECATION: Using 'trim' as modificationId. Migrate to 'modification=${trimRaw}'`);
+    }
+  }
+  
+  if (!modification && trimRaw && !trimRaw.includes(" ")) {
+    modification = trimRaw;
+  }
+  
+  const trim = trimLabel || modification;
 
   // Quote carry-over (so wheel stays on quote when selecting tires)
   const wheelSku = safeString(Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku);

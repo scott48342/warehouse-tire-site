@@ -4,8 +4,17 @@ export type Fitment = {
   year?: string;
   make?: string;
   model?: string;
+  /**
+   * @deprecated Use `modification` for fitment queries.
+   * `trim` is retained for display labels only.
+   * Will be removed in a future version.
+   */
   trim?: string;
-  // Wheel-Size modification id/slug (trim-specific fitment)
+  /**
+   * Canonical fitment identity (modificationId).
+   * This is the ONLY field that should be used for fitment queries.
+   * Format: "s_xxxxxxxx" (supplement hash) or hex API slug.
+   */
   modification?: string;
 };
 

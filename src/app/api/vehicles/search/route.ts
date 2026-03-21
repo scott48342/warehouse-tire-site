@@ -42,16 +42,28 @@ type Modification = {
 };
 
 /**
- * GET /api/vehicles/search?year=2024&make=Ford&model=F-150&modification=abc123
+ * GET /api/vehicles/search?year=2024&make=Ford&model=F-150&modification=s_abc123
  * 
  * Returns vehicle fitment data (bolt pattern, tire sizes, wheel specs) from Wheel-Size API.
+ * 
+ * Params:
+ * - modification: canonical fitment identity (preferred)
+ * - trim: legacy param, falls back if modification not provided
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
-  const modificationRaw = url.searchParams.get("modification") || "";
+  
+  // PARAM SEPARATION: prefer modification, fall back to trim for backward compat
+  const modificationParam = url.searchParams.get("modification") || "";
+  const trimParam = url.searchParams.get("trim") || "";
+  const modificationRaw = modificationParam || trimParam;
+  
+  if (!modificationParam && trimParam) {
+    console.warn(`[vehicles/search] DEPRECATION: Using 'trim' param. Migrate to 'modification=${trimParam}'`);
+  }
   
   // Handle composite modification values like "bfd36e8a76__xlt__"
   const modification = modificationRaw.includes("__") 

@@ -4,15 +4,23 @@ import { getPool, buildFitmentProfile, ensureFitmentTables } from "@/lib/vehicle
 export const runtime = "nodejs";
 
 /**
- * GET /api/fitment/profile?year=2024&make=Ford&model=F-150&trim=XLT
+ * GET /api/fitment/profile?year=2024&make=Ford&model=F-150&modification=s_abc123
  * Get the stored fitment profile for a vehicle
+ * 
+ * Params:
+ * - modification: canonical fitment identity (preferred)
+ * - trim: legacy param, falls back if modification not provided
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
-  const trim = url.searchParams.get("trim") || undefined;
+  
+  // Prefer 'modification' param, fall back to 'trim' for backward compat
+  const modification = url.searchParams.get("modification");
+  const trimParam = url.searchParams.get("trim");
+  const trim = modification || trimParam || undefined;
 
   if (!year || !make || !model) {
     return NextResponse.json(

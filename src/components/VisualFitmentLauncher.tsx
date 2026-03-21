@@ -279,8 +279,14 @@ export function VisualFitmentLauncher({
     if (next.year) qs.set("year", String(next.year));
     if (next.make) qs.set("make", String(next.make));
     if (next.model) qs.set("model", String(next.model));
-    if (next.trim) qs.set("trim", String(next.trim));
-    if (next.modification) qs.set("modification", String(next.modification));
+    // Use 'modification' for canonical fitment identity (not 'trim')
+    // The trim selector value is the modificationId
+    if (next.modification) {
+      qs.set("modification", String(next.modification));
+    } else if (next.trim) {
+      // next.trim contains the modificationId from the selector
+      qs.set("modification", String(next.trim));
+    }
 
     // Navigate based on entry mode
     if (mode === "tires") {

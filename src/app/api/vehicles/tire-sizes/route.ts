@@ -78,17 +78,30 @@ type Modification = {
 };
 
 /**
- * GET /api/vehicles/tire-sizes?year=2024&make=Ford&model=F-150&modification=bfd36e8a76
+ * GET /api/vehicles/tire-sizes?year=2024&make=Ford&model=F-150&modification=s_abc123
  * 
  * Returns tire sizes for a vehicle by querying Wheel-Size API directly.
  * Uses caching and handles 429 rate limits gracefully.
+ * 
+ * Params:
+ * - modification: canonical fitment identity (preferred)
+ * - trim: legacy param, falls back if modification not provided
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
-  const modificationRaw = url.searchParams.get("modification") || "";
+  
+  // PARAM SEPARATION: prefer modification, fall back to trim
+  const modificationParam = url.searchParams.get("modification") || "";
+  const trimParam = url.searchParams.get("trim") || "";
+  const modificationRaw = modificationParam || trimParam;
+  
+  if (!modificationParam && trimParam) {
+    console.warn(`[tire-sizes] DEPRECATION: Using 'trim' param. Migrate to 'modification=${trimParam}'`);
+  }
+  
   const forceRefresh = url.searchParams.get("refresh") === "1";
   
   // Handle composite modification values like "bfd36e8a76__xlt__"
