@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { BRAND } from "@/lib/brand";
 import { FavoritesButton } from "@/components/FavoritesButton";
+import { useCart } from "@/lib/cart/CartContext";
 
 export type WheelFinishThumb = {
   finish: string;
@@ -95,6 +96,7 @@ export function WheelsStyleCard({
   isPopular?: boolean;
 }) {
   const router = useRouter();
+  const { addItem } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
   const [selectedSku, setSelectedSku] = useState<string>(baseSku);
@@ -102,6 +104,7 @@ export function WheelsStyleCard({
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
   const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
+  const [isQuickAdding, setIsQuickAdding] = useState(false);
 
   const fromPrice = useMemo(() => {
     const ps = (finishThumbs || [])
@@ -189,6 +192,41 @@ export function WheelsStyleCard({
     if (wRear) sp.set("wheelWidthRear", String(wRear));
 
     router.push(`/tires?${sp.toString()}`);
+  }
+
+  function quickAddToCart() {
+    setIsQuickAdding(true);
+    
+    // Build vehicle object from viewParams
+    const year = viewParams?.year;
+    const make = viewParams?.make;
+    const model = viewParams?.model;
+    const trim = viewParams?.trim;
+    const modification = viewParams?.modification;
+    
+    const vehicle = year && make && model
+      ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
+      : undefined;
+
+    setTimeout(() => {
+      addItem({
+        type: "wheel",
+        sku: selectedSku || baseSku,
+        brand,
+        model: title,
+        finish: selectedFinish,
+        diameter: sizeLabel?.diameter,
+        width: sizeLabel?.width,
+        offset: specLabel?.offset,
+        boltPattern: specLabel?.boltPattern,
+        imageUrl: selectedImage,
+        unitPrice: typeof selectedPrice === "number" ? selectedPrice : 0,
+        quantity: 4,
+        fitmentClass,
+        vehicle,
+      });
+      setIsQuickAdding(false);
+    }, 150);
   }
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
@@ -420,32 +458,49 @@ export function WheelsStyleCard({
       </div>
 
       {/* CTA */}
-      <div className="mt-4">
-        {typeof selectedPrice === "number" ? (
-          selectToTires ? (
-            <button
-              type="button"
-              onClick={() => selectAndGoToTires()}
-              className="w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-            >
-              View Details
-            </button>
-          ) : (
-            <Link
-              href={viewHref}
-              className="block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-            >
-              View Details
-            </Link>
-          )
+      <div className="mt-4 space-y-2">
+        {/* Primary: View Details */}
+        {selectToTires ? (
+          <button
+            type="button"
+            onClick={() => selectAndGoToTires()}
+            className="w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
+          >
+            View Details
+          </button>
         ) : (
-          <a
-            href={BRAND.links.tel}
+          <Link
+            href={viewHref}
             className="block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
           >
-            Call for Price
-          </a>
+            View Details
+          </Link>
         )}
+
+        {/* Secondary: Quick Add */}
+        <button
+          type="button"
+          onClick={quickAddToCart}
+          disabled={isQuickAdding}
+          className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-xs font-bold text-neutral-700 hover:bg-neutral-50 hover:border-neutral-400 transition-colors disabled:opacity-60"
+        >
+          {isQuickAdding ? (
+            <span className="inline-flex items-center gap-1.5">
+              <svg className="animate-spin h-3 w-3" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+              </svg>
+              Adding...
+            </span>
+          ) : (
+            <span>
+              Quick Add Set of 4
+              {typeof selectedPrice === "number" && selectedPrice > 0 ? (
+                <span className="text-neutral-500 ml-1">• ${(selectedPrice * 4).toFixed(0)}</span>
+              ) : null}
+            </span>
+          )}
+        </button>
       </div>
     </div>
   );
