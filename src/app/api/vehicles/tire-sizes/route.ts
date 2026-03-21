@@ -86,10 +86,10 @@ export async function GET(req: Request) {
     );
   }
 
-  // Convert to slugs (lowercase, replace special chars)
-  // Wheel-Size API uses slugs like "town-and-country" not "town & country"
-  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-  const modelSlug = model.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  // Convert to slugs (lowercase, replace special chars with dashes)
+  // Wheel-Size API uses slugs like "town-country" (not "town & country" or "town-and-country")
+  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
+  const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
 
   const debug: any = {
     input: { year, make, model, modification, modificationRaw },
