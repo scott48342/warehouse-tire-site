@@ -1,6 +1,9 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from "react";
+import type { CartAccessoryItem, AccessoryRecommendationState } from "./accessoryTypes";
+
+export type { CartAccessoryItem, AccessoryRecommendationState };
 
 export type CartWheelItem = {
   type: "wheel";
@@ -50,20 +53,28 @@ export type CartTireItem = {
   staggered?: boolean;
 };
 
-export type CartItem = CartWheelItem | CartTireItem;
+export type CartItem = CartWheelItem | CartTireItem | CartAccessoryItem;
 
 type CartContextValue = {
   items: CartItem[];
   addItem: (item: CartItem) => void;
-  removeItem: (sku: string, type: "wheel" | "tire") => void;
-  updateQuantity: (sku: string, type: "wheel" | "tire", quantity: number) => void;
+  addAccessory: (item: CartAccessoryItem) => void;
+  addAccessories: (items: CartAccessoryItem[]) => void;
+  removeItem: (sku: string, type: "wheel" | "tire" | "accessory") => void;
+  updateQuantity: (sku: string, type: "wheel" | "tire" | "accessory", quantity: number) => void;
   clearCart: () => void;
   getItemCount: () => number;
   getTotal: () => number;
   hasWheels: () => boolean;
   hasTires: () => boolean;
+  hasAccessories: () => boolean;
   getWheels: () => CartWheelItem[];
   getTires: () => CartTireItem[];
+  getAccessories: () => CartAccessoryItem[];
+  getRequiredAccessories: () => CartAccessoryItem[];
+  // Accessory recommendation state (for UI)
+  accessoryState: AccessoryRecommendationState | null;
+  setAccessoryState: (state: AccessoryRecommendationState | null) => void;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
   lastAddedItem: CartItem | null;
@@ -78,6 +89,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [lastAddedItem, setLastAddedItem] = useState<CartItem | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  const [accessoryState, setAccessoryState] = useState<AccessoryRecommendationState | null>(null);
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -130,12 +142,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setIsOpen(true);
   }, []);
 
-  const removeItem = useCallback((sku: string, type: "wheel" | "tire") => {
+  const removeItem = useCallback((sku: string, type: "wheel" | "tire" | "accessory") => {
     setItems((prev) => prev.filter((i) => !(i.sku === sku && i.type === type)));
   }, []);
 
   const updateQuantity = useCallback(
-    (sku: string, type: "wheel" | "tire", quantity: number) => {
+    (sku: string, type: "wheel" | "tire" | "accessory", quantity: number) => {
       if (quantity <= 0) {
         removeItem(sku, type);
         return;
@@ -178,11 +190,54 @@ export function CartProvider({ children }: { children: ReactNode }) {
     return items.filter((i): i is CartTireItem => i.type === "tire");
   }, [items]);
 
+  const hasAccessories = useCallback(() => {
+    return items.some((i) => i.type === "accessory");
+  }, [items]);
+
+  const getAccessories = useCallback(() => {
+    return items.filter((i): i is CartAccessoryItem => i.type === "accessory");
+  }, [items]);
+
+  const getRequiredAccessories = useCallback(() => {
+    return items.filter(
+      (i): i is CartAccessoryItem => i.type === "accessory" && i.required
+    );
+  }, [items]);
+
+  const addAccessory = useCallback((item: CartAccessoryItem) => {
+    setItems((prev) => {
+      // Check if already exists
+      const existingIndex = prev.findIndex(
+        (i) => i.type === "accessory" && i.sku === item.sku
+      );
+      if (existingIndex >= 0) {
+        // Already added, don't duplicate
+        return prev;
+      }
+      console.log("[cart] Adding accessory:", item.sku, item.name);
+      return [...prev, item];
+    });
+  }, []);
+
+  const addAccessories = useCallback((newItems: CartAccessoryItem[]) => {
+    setItems((prev) => {
+      const existingSkus = new Set(
+        prev.filter((i) => i.type === "accessory").map((i) => i.sku)
+      );
+      const toAdd = newItems.filter((i) => !existingSkus.has(i.sku));
+      if (toAdd.length === 0) return prev;
+      console.log("[cart] Adding accessories:", toAdd.map((i) => i.sku));
+      return [...prev, ...toAdd];
+    });
+  }, []);
+
   return (
     <CartContext.Provider
       value={{
         items,
         addItem,
+        addAccessory,
+        addAccessories,
         removeItem,
         updateQuantity,
         clearCart,
@@ -190,8 +245,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
         getTotal,
         hasWheels,
         hasTires,
+        hasAccessories,
         getWheels,
         getTires,
+        getAccessories,
+        getRequiredAccessories,
+        accessoryState,
+        setAccessoryState,
         isOpen,
         setIsOpen,
         lastAddedItem,

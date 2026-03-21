@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useCart, type CartWheelItem, type CartTireItem } from "@/lib/cart/CartContext";
+import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { AccessoryRecommendations } from "./AccessoryRecommendations";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -74,6 +75,39 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
   );
 }
 
+function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
+  const total = item.unitPrice * item.quantity;
+
+  return (
+    <div className="flex gap-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
+      <div className="w-12 h-12 flex-shrink-0 rounded-lg bg-amber-100 flex items-center justify-center">
+        <span className="text-xl">{item.category === "hub_ring" ? "🔘" : "🔩"}</span>
+      </div>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-neutral-900 text-sm truncate">{item.name}</span>
+          {item.required && (
+            <span className="flex-shrink-0 rounded-full bg-red-600 px-2 py-0.5 text-[9px] font-bold text-white">
+              REQUIRED
+            </span>
+          )}
+        </div>
+        <div className="text-xs text-neutral-600 mt-0.5">{item.reason}</div>
+
+        <div className="mt-2 text-sm">
+          <span className="font-extrabold text-neutral-900">
+            ${total.toFixed(2)}
+          </span>
+          <span className="text-neutral-500 ml-1">
+            ({item.quantity} × ${item.unitPrice.toFixed(2)})
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TireItemCard({ item }: { item: CartTireItem }) {
   const total = item.unitPrice * item.quantity;
 
@@ -128,8 +162,13 @@ export function CartSlideout() {
     getItemCount,
     hasWheels,
     hasTires,
+    hasAccessories,
     getWheels,
+    getAccessories,
     removeItem,
+    addAccessory,
+    addAccessories,
+    accessoryState,
   } = useCart();
 
   const slideoutRef = useRef<HTMLDivElement>(null);
@@ -175,7 +214,10 @@ export function CartSlideout() {
   if (!isOpen) return null;
 
   const wheels = getWheels();
-  const vehicle = lastAddedItem?.vehicle || wheels[0]?.vehicle;
+  // Get vehicle from wheel items (which have full vehicle info including trim/modification)
+  const wheelVehicle = wheels[0]?.vehicle;
+  const lastWheelItem = lastAddedItem?.type === "wheel" ? lastAddedItem as CartWheelItem : null;
+  const vehicle = lastWheelItem?.vehicle || wheelVehicle;
   const total = getTotal();
   const itemCount = getItemCount();
 
@@ -245,34 +287,62 @@ export function CartSlideout() {
 
         {/* Cart Items */}
         <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3">
-          {items.map((item) =>
-            item.type === "wheel" ? (
-              <div key={`wheel-${item.sku}`} className="relative">
-                <WheelItemCard item={item} />
-                <button
-                  onClick={() => removeItem(item.sku, "wheel")}
-                  className="absolute top-2 right-2 rounded-full p-1 hover:bg-neutral-100 text-neutral-400 hover:text-neutral-600"
-                  aria-label="Remove item"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            ) : (
-              <div key={`tire-${item.sku}`} className="relative">
-                <TireItemCard item={item} />
-                <button
-                  onClick={() => removeItem(item.sku, "tire")}
-                  className="absolute top-2 right-2 rounded-full p-1 hover:bg-neutral-100 text-neutral-400 hover:text-neutral-600"
-                  aria-label="Remove item"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            )
+          {/* Wheels */}
+          {items.filter(i => i.type === "wheel").map((item) => (
+            <div key={`wheel-${item.sku}`} className="relative">
+              <WheelItemCard item={item as CartWheelItem} />
+              <button
+                onClick={() => removeItem(item.sku, "wheel")}
+                className="absolute top-2 right-2 rounded-full p-1 hover:bg-neutral-100 text-neutral-400 hover:text-neutral-600"
+                aria-label="Remove item"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          ))}
+
+          {/* Tires */}
+          {items.filter(i => i.type === "tire").map((item) => (
+            <div key={`tire-${item.sku}`} className="relative">
+              <TireItemCard item={item as CartTireItem} />
+              <button
+                onClick={() => removeItem(item.sku, "tire")}
+                className="absolute top-2 right-2 rounded-full p-1 hover:bg-neutral-100 text-neutral-400 hover:text-neutral-600"
+                aria-label="Remove item"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          ))}
+
+          {/* Accessories */}
+          {items.filter(i => i.type === "accessory").map((item) => (
+            <div key={`acc-${item.sku}`} className="relative">
+              <AccessoryItemCard item={item as CartAccessoryItem} />
+              <button
+                onClick={() => removeItem(item.sku, "accessory")}
+                className="absolute top-2 right-2 rounded-full p-1 hover:bg-amber-100 text-amber-400 hover:text-amber-600"
+                aria-label="Remove item"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          ))}
+
+          {/* Accessory Recommendations (if wheels added but accessories not yet) */}
+          {hasWheels() && !hasAccessories() && accessoryState && (
+            <AccessoryRecommendations
+              state={accessoryState}
+              onAddAccessory={addAccessory}
+              onAddAllRequired={(items) => addAccessories(items)}
+              compact
+            />
           )}
         </div>
 
