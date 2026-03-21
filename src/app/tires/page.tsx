@@ -233,7 +233,9 @@ export default async function TiresPage({
     modification = trimRaw;
   }
   
-  const trim = trimLabel || modification;
+  // IMPORTANT: Never use modification as display trim - it's a hex ID, not a customer-facing label
+  // Only use trimLabel (actual display text) or empty string
+  const trim = trimLabel || "";
 
   // Quote carry-over (so wheel stays on quote when selecting tires)
   const wheelSku = safeString(Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku);

@@ -194,7 +194,9 @@ export default async function WheelsPage({
   }
   
   // Alias for places still using 'trim' variable
-  const trim = trimLabel || modification;
+  // IMPORTANT: Never use modification as display trim - it's a hex ID, not a customer-facing label
+  // Only use trimLabel (actual display text) or empty string
+  const trim = trimLabel || "";
 
   // Optional user-supplied wheel filters.
   const diameterParam = (Array.isArray(sp.diameter) ? sp.diameter[0] : sp.diameter) || "";

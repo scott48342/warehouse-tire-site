@@ -165,12 +165,36 @@ const SUBMODEL_PATTERNS = [
 ];
 
 /**
+ * Check if a string looks like a raw modificationId (hex hash or supplement ID).
+ * These should NEVER be displayed to customers.
+ */
+export function isModificationId(text: string): boolean {
+  if (!text || typeof text !== "string") return false;
+  const trimmed = text.trim();
+  if (!trimmed) return false;
+  
+  // Supplement IDs: s_xxxxxxxx (8 hex chars after s_)
+  if (/^s_[a-f0-9]{8}$/i.test(trimmed)) return true;
+  
+  // Wheel-Size API hex slugs: 10 hex characters
+  if (/^[a-f0-9]{10}$/i.test(trimmed)) return true;
+  
+  // Generic hex strings (8+ chars, all hex)
+  if (/^[a-f0-9]{8,}$/i.test(trimmed)) return true;
+  
+  return false;
+}
+
+/**
  * Check if a string looks like engine/technical text rather than a submodel name.
  */
 export function isEngineLikeText(text: string): boolean {
   if (!text || typeof text !== "string") return false;
   const trimmed = text.trim();
   if (!trimmed) return false;
+  
+  // First check if it's a modification ID (hex hash)
+  if (isModificationId(trimmed)) return true;
   
   // Check if it matches engine patterns
   for (const pattern of ENGINE_PATTERNS) {
