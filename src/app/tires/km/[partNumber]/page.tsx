@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
+import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
 export const runtime = "nodejs";
 
@@ -44,6 +45,9 @@ export default async function KmTireDetailPage({
   const model = String((sp as any).model || "");
   const trim = String((sp as any).trim || "");
   const modification = String((sp as any).modification || "");
+  
+  // Build display-friendly trim label (never shows engine text like "5.7i")
+  const displayTrim = getDisplayTrim({ trim });
 
   const backQs = new URLSearchParams();
   if (year) backQs.set("year", year);
@@ -170,7 +174,7 @@ export default async function KmTireDetailPage({
           <div className="rounded-3xl border border-neutral-200 bg-white p-6">
             <div className="text-xs font-semibold text-neutral-600">Fitment</div>
             <div className="mt-2 text-sm font-extrabold text-neutral-900">
-              {year && make && model ? `${year} ${make} ${model} ${trim}` : "Select a vehicle to verify fitment"}
+              {year && make && model ? `${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}` : "Select a vehicle to verify fitment"}
             </div>
             <div className="mt-3 text-xs text-neutral-600">
               KM detail pages currently show supplier data; we can enrich this later with images, UTQG, etc.
