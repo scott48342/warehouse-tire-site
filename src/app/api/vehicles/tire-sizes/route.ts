@@ -86,15 +86,17 @@ export async function GET(req: Request) {
     );
   }
 
+  // Convert to slugs (lowercase, replace special chars)
+  // Wheel-Size API uses slugs like "town-and-country" not "town & country"
+  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const modelSlug = model.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
   const debug: any = {
     input: { year, make, model, modification, modificationRaw },
+    slugs: { makeSlug, modelSlug },
   };
 
   try {
-    // Convert to slugs (lowercase)
-    const makeSlug = make.toLowerCase();
-    const modelSlug = model.toLowerCase();
-
     // Step 1: Get available modifications for this vehicle
     const modsResponse = await apiGet<{ data: Modification[] }>("modifications/", {
       make: makeSlug,
