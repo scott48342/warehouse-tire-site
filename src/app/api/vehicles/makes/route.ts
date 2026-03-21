@@ -2,35 +2,54 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+const BASE_URL = "https://api.wheel-size.com/v2/";
+
+function getApiKey(): string {
+  const key = process.env.WHEELSIZE_API_KEY;
+  if (!key) throw new Error("Missing WHEELSIZE_API_KEY");
+  return key;
+}
+
+/**
+ * GET /api/vehicles/makes?year=2005
+ * 
+ * Returns available makes for a given year from Wheel-Size API directly.
+ */
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const base = process.env.PACKAGE_ENGINE_URL;
-  if (!base) {
-    return NextResponse.json(
-      { error: "Missing PACKAGE_ENGINE_URL" },
-      { status: 500 }
-    );
+  const year = url.searchParams.get("year");
+
+  if (!year) {
+    return NextResponse.json({ results: [] });
   }
 
-  const upstream = new URL("/v1/vehicles/makes", base);
-  // forward querystring (expects year)
-  url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 8000);
-
   try {
-    const res = await fetch(upstream, { cache: "no-store", signal: controller.signal });
-    const text = await res.text();
-    return new NextResponse(text, {
-      status: res.status,
-      headers: {
-        "content-type": res.headers.get("content-type") || "application/json",
-      },
+    const apiUrl = new URL("makes/", BASE_URL);
+    apiUrl.searchParams.set("user_key", getApiKey());
+
+    const res = await fetch(apiUrl.toString(), {
+      headers: { Accept: "application/json" },
+      cache: "no-store",
     });
-  } catch {
-    return NextResponse.json({ results: [] }, { status: 200, headers: { "cache-control": "no-store" } });
-  } finally {
-    clearTimeout(timeout);
+
+    if (!res.ok) {
+      console.error(`[makes] Wheel-Size API error: ${res.status}`);
+      return NextResponse.json({ results: [] });
+    }
+
+    const data = await res.json();
+    const allMakes = data?.data || [];
+
+    // Wheel-Size returns all makes; filter to those with models for the given year
+    // For efficiency, we just return all makes and let the models endpoint filter
+    const results = allMakes
+      .map((m: any) => m?.name || m?.slug)
+      .filter(Boolean)
+      .sort();
+
+    return NextResponse.json({ results });
+  } catch (err: any) {
+    console.error(`[makes] Error:`, err?.message || err);
+    return NextResponse.json({ results: [] });
   }
 }

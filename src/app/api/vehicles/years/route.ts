@@ -2,22 +2,21 @@ import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 
+/**
+ * GET /api/vehicles/years
+ * 
+ * Returns available years for vehicle selection.
+ * Years are generated statically (current year down to 2000).
+ */
 export async function GET() {
-  const base = process.env.PACKAGE_ENGINE_URL;
-  if (!base) {
-    return NextResponse.json(
-      { error: "Missing PACKAGE_ENGINE_URL" },
-      { status: 500 }
-    );
+  const currentYear = new Date().getFullYear();
+  const startYear = 2000;
+  
+  // Generate years from current year down to startYear
+  const results: string[] = [];
+  for (let y = currentYear + 1; y >= startYear; y--) {
+    results.push(String(y));
   }
 
-  const upstream = new URL("/v1/vehicles/years", base);
-  const res = await fetch(upstream, { cache: "no-store" });
-  const text = await res.text();
-  return new NextResponse(text, {
-    status: res.status,
-    headers: {
-      "content-type": res.headers.get("content-type") || "application/json",
-    },
-  });
+  return NextResponse.json({ results });
 }
