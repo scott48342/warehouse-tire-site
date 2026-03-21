@@ -80,17 +80,24 @@ export async function GET(req: Request) {
     let usedLegacyFallback = false;
     
     // Try new DB-first service if we have a modification param
+    // Wrapped in try-catch to gracefully degrade to legacy system on errors
     if (modification) {
-      const result = await getFitmentProfile(Number(year), make, model, modification);
-      
-      if (result.profile) {
-        dbProfile = result.profile;
-        console.log(`[fitment-search] ${result.source.toUpperCase()}: ${year} ${make} ${model} mod=${modification}`, {
-          boltPattern: dbProfile.boltPattern,
-          oemWheelSizes: dbProfile.oemWheelSizes.length,
-          oemTireSizes: dbProfile.oemTireSizes.length,
-          timing: result.timing,
-        });
+      try {
+        const result = await getFitmentProfile(Number(year), make, model, modification);
+        
+        if (result.profile) {
+          dbProfile = result.profile;
+          console.log(`[fitment-search] ${result.source.toUpperCase()}: ${year} ${make} ${model} mod=${modification}`, {
+            boltPattern: dbProfile.boltPattern,
+            oemWheelSizes: dbProfile.oemWheelSizes.length,
+            oemTireSizes: dbProfile.oemTireSizes.length,
+            timing: result.timing,
+          });
+        }
+      } catch (profileErr: any) {
+        // Log but don't fail - fall back to legacy system
+        console.error(`[fitment-search] DB-first profile lookup failed:`, profileErr?.message || profileErr);
+        dbProfile = null;
       }
     }
     
