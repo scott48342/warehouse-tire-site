@@ -13,6 +13,7 @@ import {
   generatePlusSizeCandidates,
   type PlusSizeCandidate,
 } from "@/lib/tirePlusSizing";
+import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
 type Tire = {
   source?: "wp" | "km";
@@ -272,6 +273,12 @@ export default async function TiresPage({
     : [];
 
   const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
+
+  // Build display-friendly trim label (never shows engine text like "5.7i")
+  const displayTrim = getDisplayTrim({
+    trim,
+    submodel: (fitmentStrict as any)?.selectedModification?.name || (fitmentStrict as any)?.vehicle?.trim,
+  });
 
   function rimDiaFromSize(s: string) {
     const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
@@ -719,7 +726,7 @@ export default async function TiresPage({
             </div>
             <div className="mt-4 rounded-xl bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
               Building package for <span className="font-bold">{year} {make} {model}</span>
-              {trim ? <span className="text-neutral-500"> • {trim}</span> : null}
+              {displayTrim ? <span className="text-neutral-500"> • {displayTrim}</span> : null}
             </div>
           </div>
         ) : null}
@@ -731,7 +738,7 @@ export default async function TiresPage({
             </h1>
             <p className="mt-1 text-sm text-neutral-700">
               {hasVehicle
-                ? `Showing tires for ${year} ${make} ${model}${trim ? ` ${trim}` : ""}.`
+                ? `Showing tires for ${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}.`
                 : "Select your vehicle in the header to filter tires."}
             </p>
 
@@ -741,7 +748,7 @@ export default async function TiresPage({
                   <span className="text-neutral-500">Vehicle:</span>
                   <span className="font-extrabold text-neutral-900">
                     {year} {make} {model}
-                    {trim ? ` ${trim}` : ""}
+                    {displayTrim ? ` ${displayTrim}` : ""}
                   </span>
                 </div>
                 <GarageWidget type="tires" />

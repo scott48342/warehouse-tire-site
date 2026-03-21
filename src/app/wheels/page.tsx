@@ -6,6 +6,7 @@ import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
 type Wheel = {
   sku?: string;
@@ -219,6 +220,13 @@ export default async function WheelsPage({
   const fit = (fitment as any)?.fitment ? (fitment as any).fitment : fitment;
   const hasVehicle = Boolean(year && make && model);
   const bp: string | undefined = hasVehicle ? (boltPatternParam || fit?.boltPattern || undefined) : undefined;
+
+  // Build display-friendly trim label (never shows engine text like "5.7i")
+  const displayTrim = getDisplayTrim({
+    trim,
+    submodel: fit?.vehicle?.trim || fit?.trim || (fitment as any)?.vehicle?.trim,
+    displayTrim: wpSubmodel || undefined,
+  });
 
   function rimDiaFromTireSize(s: string) {
     const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
@@ -946,7 +954,7 @@ export default async function WheelsPage({
             </h1>
             <p className="mt-1 text-sm text-neutral-700">
               {year && make && model
-                ? `Showing wheels for ${year} ${make} ${model}${trim ? ` ${trim}` : ""}.`
+                ? `Showing wheels for ${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}.`
                 : "Select your vehicle in the header to filter wheels."}
             </p>
 
@@ -956,7 +964,7 @@ export default async function WheelsPage({
                   <span className="text-neutral-500">Vehicle:</span>
                   <span className="font-extrabold text-neutral-900">
                     {year} {make} {model}
-                    {trim ? ` ${trim}` : ""}
+                    {displayTrim ? ` ${displayTrim}` : ""}
                   </span>
                   {/* Only show staggered badge if vehicle fitment profile indicates staggered */}
                   {vehicleCallsForStaggered ? (
