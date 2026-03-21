@@ -274,9 +274,29 @@ export default async function TiresPage({
 
   const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
 
+  // Resolve modificationId to display label if trim looks like a hash ID
+  let resolvedTrimLabel: string | undefined;
+  if (trim && /^s_[a-f0-9]{8}$/.test(trim) && year && make && model) {
+    try {
+      const trimsRes = await fetch(
+        `${getBaseUrl()}/api/vehicles/trims?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`,
+        { cache: "force-cache" }
+      );
+      if (trimsRes.ok) {
+        const trimsData = await trimsRes.json();
+        const match = trimsData?.results?.find((t: any) => t.modificationId === trim || t.value === trim);
+        if (match?.label) {
+          resolvedTrimLabel = match.label;
+        }
+      }
+    } catch {
+      // Ignore lookup errors
+    }
+  }
+
   // Build display-friendly trim label (never shows engine text like "5.7i")
   const displayTrim = getDisplayTrim({
-    trim,
+    trim: resolvedTrimLabel || trim,
     submodel: (fitmentStrict as any)?.selectedModification?.name || (fitmentStrict as any)?.vehicle?.trim,
   });
 
