@@ -34,6 +34,8 @@ export async function GET(req: Request) {
     return NextResponse.json({ results: [] });
   }
 
+  const debug = url.searchParams.get("debug") === "1";
+
   const apiKey = getApiKey();
   const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
   const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
@@ -127,6 +129,13 @@ export async function GET(req: Request) {
             return true;
           });
 
+          if (debug) {
+            return NextResponse.json({ 
+              source: "wheelsize",
+              rawMods: mods.slice(0, 10).map(m => ({ slug: m.slug, name: m.name, trim: m.trim, engine: m.engine })),
+              results: deduped 
+            });
+          }
           return NextResponse.json({ results: deduped }, {
             headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
           });
@@ -175,6 +184,9 @@ export async function GET(req: Request) {
           return true;
         });
 
+        if (debug) {
+          return NextResponse.json({ source: "package-engine", rawCount: raw.length, rawSample: raw.slice(0, 5), results });
+        }
         return NextResponse.json({ results });
       }
     } catch (err: any) {
