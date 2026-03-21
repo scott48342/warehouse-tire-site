@@ -71,7 +71,17 @@ export async function GET(req: Request) {
       const importRes = await importVehicleFitment(Number(year), make, model, {
         desiredTrim: trim,
         usMarketOnly: true,
-        debug: false,
+        debug: true,  // Enable debug to see imported values
+      });
+
+      console.log(`[fitment-search] Import result:`, {
+        success: importRes.success,
+        vehicleId: importRes.vehicle?.id,
+        vehicleTrim: importRes.vehicle?.trim,
+        vehicleSlug: importRes.vehicle?.slug,
+        modSlug: importRes.modificationSlug,
+        modName: importRes.modificationName,
+        error: importRes.error,
       });
 
       if (!importRes.success) {
@@ -83,12 +93,43 @@ export async function GET(req: Request) {
       }
 
       // Rebuild profile after import (should now hit DB)
+      // NOTE: We now try BOTH the imported slug AND the user's trim
+      console.log(`[fitment-search] Attempting to load profile with: trim=${trim}, importedSlug=${importRes.modificationSlug}`);
       profile = await buildFitmentProfile(db, Number(year), make, model, trim);
+
+      if (!profile && importRes.vehicle) {
+        // Fallback: try loading by the exact vehicleId we just imported
+        console.log(`[fitment-search] Primary lookup failed, trying by vehicleId=${importRes.vehicle.id}`);
+        const fitment = await db.query(
+          `SELECT id FROM vehicle_fitment WHERE vehicle_id = $1`,
+          [importRes.vehicle.id]
+        );
+        console.log(`[fitment-search] Direct fitment lookup found ${fitment.rows.length} rows`);
+        
+        // If fitment exists for this vehicle, our lookup is the problem
+        if (fitment.rows.length > 0) {
+          // Debug: what does getVehicle return for various lookup strategies?
+          const debugLookup = await db.query(
+            `SELECT id, year, make, model, trim, search_trim, slug 
+             FROM vehicles 
+             WHERE year = $1 AND make = $2 AND model = $3 
+             LIMIT 5`,
+            [Number(year), make, model]
+          );
+          console.log(`[fitment-search] DEBUG - All vehicles for ${year} ${make} ${model}:`, debugLookup.rows);
+        }
+      }
 
       if (!profile) {
         return NextResponse.json({
           error: "Import succeeded but fitment profile still not found in DB",
           vehicle: { year, make, model, trim },
+          debug: {
+            importedVehicleId: importRes.vehicle?.id,
+            importedTrim: importRes.vehicle?.trim,
+            importedSlug: importRes.vehicle?.slug,
+            searchedTrim: trim,
+          }
         }, { status: 500 });
       }
     }

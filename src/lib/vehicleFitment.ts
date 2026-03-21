@@ -303,20 +303,62 @@ export async function getVehicle(
   model: string,
   trim?: string
 ): Promise<Vehicle | null> {
+  // Normalize lookup value for comparison
+  const lookupTrim = trim?.trim().toLowerCase() ?? null;
+  
+  // First, try exact match on trim, search_trim, or slug
   const result = await db.query<Vehicle>(
     `SELECT id, year, make, model, trim, slug, created_at, updated_at
      FROM vehicles
      WHERE year = $1 AND make = $2 AND model = $3 
        AND (
-         $4::text IS NULL OR -- no trim specified = match any
-         trim = $4 OR 
-         search_trim = $4
+         $4::text IS NULL OR 
+         LOWER(TRIM(trim)) = $4 OR 
+         LOWER(TRIM(search_trim)) = $4 OR
+         LOWER(TRIM(slug)) = $4
        )
      ORDER BY imported_at DESC NULLS LAST, updated_at DESC
      LIMIT 1`,
-    [year, make, model, trim ?? null]
+    [year, make, model, lookupTrim]
   );
-  return result.rows[0] || null;
+  
+  if (result.rows[0]) {
+    return result.rows[0];
+  }
+  
+  // Fallback: if no exact match but trim looks like a modification ID (alphanumeric hash),
+  // try to find any vehicle for this Y/M/M and use the most recently imported one
+  if (trim && /^[a-f0-9]{8,}$/i.test(trim)) {
+    console.log(`[getVehicle] Trim "${trim}" looks like a modification slug, trying slug match`);
+    const slugResult = await db.query<Vehicle>(
+      `SELECT id, year, make, model, trim, slug, created_at, updated_at
+       FROM vehicles
+       WHERE year = $1 AND make = $2 AND model = $3 AND slug = $4
+       ORDER BY imported_at DESC NULLS LAST, updated_at DESC
+       LIMIT 1`,
+      [year, make, model, trim]
+    );
+    if (slugResult.rows[0]) {
+      return slugResult.rows[0];
+    }
+  }
+  
+  // Final fallback: if trim specified but no match, return any vehicle for this Y/M/M
+  // This ensures we have SOME fitment data rather than failing completely
+  if (trim) {
+    console.log(`[getVehicle] No exact match for trim="${trim}", falling back to any vehicle for ${year} ${make} ${model}`);
+    const fallbackResult = await db.query<Vehicle>(
+      `SELECT id, year, make, model, trim, slug, created_at, updated_at
+       FROM vehicles
+       WHERE year = $1 AND make = $2 AND model = $3
+       ORDER BY imported_at DESC NULLS LAST, updated_at DESC
+       LIMIT 1`,
+      [year, make, model]
+    );
+    return fallbackResult.rows[0] || null;
+  }
+  
+  return null;
 }
 
 export async function getVehicleBySlug(
