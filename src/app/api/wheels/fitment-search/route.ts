@@ -40,8 +40,15 @@ export async function GET(req: Request) {
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
-  const trim = url.searchParams.get("trim") || undefined;
+  // Prefer modificationId over trim for canonical fitment identity
+  const modification = url.searchParams.get("modification") || undefined;
+  const trim = url.searchParams.get("trim") || modification || undefined;
   const modeParam = url.searchParams.get("mode"); // may be null for auto-detect
+  
+  // Log modificationId usage
+  if (modification) {
+    console.log(`[fitment-search] Using modificationId: ${modification} for ${year} ${make} ${model}`);
+  }
 
   if (!year || !make || !model) {
     return NextResponse.json(

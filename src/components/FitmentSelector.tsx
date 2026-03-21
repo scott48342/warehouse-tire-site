@@ -107,7 +107,7 @@ export function FitmentSelector({
 
   const [makes, setMakes] = useState<string[]>([]);
   const [models, setModels] = useState<string[]>([]);
-  const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
+  const [trims, setTrims] = useState<Array<{ value: string; label: string; modificationId?: string }>>([]);
 
   // Load makes when year changes
   useEffect(() => {
@@ -227,13 +227,22 @@ export function FitmentSelector({
               value={draft.modification ?? ""}
               onChange={(v) => {
                 const sel = trims.find((t) => t.value === v);
+                // Use modificationId if available, otherwise fall back to value
+                const modificationId = sel?.modificationId || sel?.value || v;
+                
                 const next: Fitment = {
                   ...draft,
-                  // For WheelPros submodels, store as a special modification token so downstream can detect it.
-                  modification: v ? (provider === "wheelpros" ? `wp:${v}` : v) : undefined,
+                  // Store modificationId as the canonical identifier
+                  // For WheelPros submodels, prefix with wp: so downstream can detect provider
+                  modification: v ? (provider === "wheelpros" ? `wp:${modificationId}` : modificationId) : undefined,
                   trim: sel?.label || undefined,
                 };
                 setDraft(next);
+
+                // Log the selected modificationId
+                if (next.modification) {
+                  console.log(`[FitmentSelector] Selected: ${draft.year} ${draft.make} ${draft.model} → modificationId=${next.modification}, label=${sel?.label}`);
+                }
 
                 // UX: once trim/modification is selected, immediately complete.
                 // If parent provided onComplete, let it handle navigation (e.g. SearchModal -> /wheels?...).

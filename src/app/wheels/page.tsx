@@ -328,6 +328,8 @@ export default async function WheelsPage({
     make: make || undefined,
     model: model || undefined,
     trim: trim || undefined,
+    // modificationId is the canonical fitment identity
+    modification: modification || undefined,
 
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,

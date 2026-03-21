@@ -19,7 +19,19 @@ type YearRangeMap = { [yearRange: string]: SubmodelEntry[] };
 type ModelMap = { [model: string]: YearRangeMap };
 type MakeMap = { [make: string]: ModelMap };
 
-type TrimOption = { value: string; label: string };
+/**
+ * TrimOption returned to the selector
+ * - value: backwards-compatible, same as modificationId
+ * - label: customer-facing display text
+ * - modificationId: canonical fitment identity (REQUIRED for downstream)
+ * - rawTrim: original value from source (for debugging)
+ */
+type TrimOption = {
+  value: string;
+  label: string;
+  modificationId: string;
+  rawTrim?: string;
+};
 
 interface TrimResponse {
   results: TrimOption[];
@@ -307,6 +319,8 @@ export async function GET(req: Request) {
           results.push({
             value: fitment.modificationId,
             label: fitment.displayTrim,
+            modificationId: fitment.modificationId,
+            rawTrim: fitment.rawTrim || undefined,
           });
         }
       }
@@ -345,10 +359,16 @@ export async function GET(req: Request) {
   const supplement = getSubmodelSupplement(year, make, model);
   if (supplement && supplement.length > 0) {
     console.log(`[trims] SUPPLEMENT: ${year} ${make} ${model} → ${supplement.length} options`);
+    // Add modificationId to supplement results
+    const supplementWithIds: TrimOption[] = supplement.map(s => ({
+      value: s.value,
+      label: s.label,
+      modificationId: s.value, // For supplements, value IS the modificationId
+    }));
     return NextResponse.json({
-      results: supplement,
+      results: supplementWithIds,
       source: "supplement",
-      count: supplement.length,
+      count: supplementWithIds.length,
       overridesApplied: false,
       cached: false,
     } as TrimResponse);
@@ -403,6 +423,8 @@ export async function GET(req: Request) {
         results.push({
           value: fitment.modificationId,
           label: fitment.displayTrim,
+          modificationId: fitment.modificationId,
+          rawTrim: fitment.rawTrim || undefined,
         });
       }
     }
@@ -417,7 +439,12 @@ export async function GET(req: Request) {
 
     // If only poor results, return "Base" as a fallback
     const finalResults = goodResults.length > 0 ? goodResults : 
-      (results.length > 0 ? [{ value: results[0].value, label: "Base" }] : []);
+      (results.length > 0 ? [{
+        value: results[0].value,
+        label: "Base",
+        modificationId: results[0].modificationId,
+        rawTrim: results[0].rawTrim,
+      }] : []);
 
     console.log(`[trims] Returning ${finalResults.length} options from API import (overrides: ${overridesApplied})`);
     
