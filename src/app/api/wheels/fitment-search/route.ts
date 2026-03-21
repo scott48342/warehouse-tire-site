@@ -95,19 +95,24 @@ export async function GET(req: Request) {
     }
     
     // ─────────────────────────────────────────────────────────────────────────
-    // LEGACY: Fall back to old system if new system didn't find anything
+    // LEGACY: Build legacy profile for wheel validation (still needed for now)
+    // NOTE: We always build this because downstream validation uses it
     // ─────────────────────────────────────────────────────────────────────────
     
     const db = getPool();
     await ensureFitmentTables(db);
 
-    // Step 1: Get fitment profile from our database
-    let profile = dbProfile ? null : await buildFitmentProfile(db, Number(year), make, model, trim);
+    // Step 1: Get fitment profile from our database (legacy system)
+    let profile = await buildFitmentProfile(db, Number(year), make, model, trim);
     
-    // If we got a dbProfile, skip the legacy import flow
+    // If we got a dbProfile, mark that we don't need legacy import
     if (dbProfile) {
       usedLegacyFallback = false;
-    } else if (!profile) {
+      console.log(`[fitment-search] Using dbProfile, legacy profile ${profile ? 'also available' : 'not found'}`);
+    }
+    
+    // If no legacy profile AND no dbProfile, try legacy import
+    if (!profile && !dbProfile) {
       usedLegacyFallback = true;
       // On-demand import + cache (legacy)
       console.log(`[fitment-search] LEGACY Cache miss for ${year} ${make} ${model} trim=${trim || ""} -> importing from Wheel-Size`);
@@ -162,7 +167,7 @@ export async function GET(req: Request) {
         }
       }
 
-      if (!profile) {
+      if (!profile && !dbProfile) {
         return NextResponse.json({
           error: "Import succeeded but fitment profile still not found in DB",
           vehicle: { year, make, model, trim },
@@ -175,8 +180,50 @@ export async function GET(req: Request) {
         }, { status: 500 });
       }
     }
+    
+    // If we have dbProfile but no legacy profile, skip wheel validation for now
+    // (The legacy profile provides the envelope/validation logic)
+    if (!profile && dbProfile) {
+      console.log(`[fitment-search] Using dbProfile only (no legacy profile available)`);
+      // Return a simplified response with just the dbProfile data
+      return NextResponse.json({
+        results: [], // No wheels without validation
+        fitment: {
+          mode: "unknown",
+          vehicle: {
+            year: dbProfile.year,
+            make: dbProfile.make,
+            model: dbProfile.model,
+            trim: dbProfile.displayTrim,
+          },
+          dbProfile: {
+            modificationId: dbProfile.modificationId,
+            displayTrim: dbProfile.displayTrim,
+            boltPattern: dbProfile.boltPattern,
+            centerBoreMm: dbProfile.centerBoreMm,
+            threadSize: dbProfile.threadSize,
+            seatType: dbProfile.seatType,
+            offsetRange: {
+              min: dbProfile.offsetMinMm,
+              max: dbProfile.offsetMaxMm,
+            },
+            oemWheelSizes: dbProfile.oemWheelSizes,
+            oemTireSizes: dbProfile.oemTireSizes,
+            source: dbProfile.source,
+          },
+        },
+        summary: { note: "Legacy profile not available, wheel validation skipped" },
+      });
+    }
 
     const profileMs = Date.now() - t0;
+    
+    // At this point, profile is guaranteed to be non-null
+    // (either from DB or from import, and we returned early if neither available)
+    if (!profile) {
+      // This should never happen, but satisfies TypeScript
+      throw new Error("Unexpected: profile is null after all fallbacks");
+    }
 
     // Step 2: Determine fitment mode (auto-detect if not specified)
     let mode: FitmentMode;
