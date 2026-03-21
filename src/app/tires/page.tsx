@@ -8,6 +8,8 @@ import { vehicleSlug } from "@/lib/vehicleSlug";
 import { TiresWorkspaceHeader } from "@/components/TiresWorkspaceHeader";
 import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
+import { TireMatchingBanner } from "@/components/TireMatchingBanner";
+import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 
 type Tire = {
   source?: "wp" | "km";
@@ -796,6 +798,20 @@ export default async function TiresPage({
           </div>
         </div>
 
+        {/* Tire Matching Banner - shows when coming from wheel selection */}
+        {wheelSku || wheelDia ? (
+          <TireMatchingBanner
+            wheelDiameter={wheelDiaActive || wheelDia}
+            wheelWidth={wheelWidthActive || wheelWidth}
+            wheelSku={wheelSku}
+            oemSizes={oemWheelMatchedSizes}
+            plusSizes={plusSizeSuggestions}
+            selectedSize={selectedSize}
+            vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+            baseUrl={basePath}
+          />
+        ) : null}
+
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
             {year && make && model ? (
@@ -1493,6 +1509,20 @@ export default async function TiresPage({
                           Call for price
                         </a>
                       )}
+
+                      {/* Quick Add to Package - shows when wheels are in cart */}
+                      {typeof t.cost === "number" ? (
+                        <QuickAddTireButton
+                          sku={String(t.partNumber || t.mfgPartNumber || "")}
+                          brand={String(t.brand || "Tire")}
+                          model={String(stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire")}
+                          size={selectedSize}
+                          imageUrl={t.imageUrl}
+                          unitPrice={t.cost + 50}
+                          vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+                          quantity={4}
+                        />
+                      ) : null}
 
                       <div className="flex items-center justify-between gap-3 text-xs">
                         <a
