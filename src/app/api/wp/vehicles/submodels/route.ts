@@ -25,6 +25,6 @@ export async function GET(req: Request) {
     return NextResponse.json({ results });
   } catch (e: any) {
     console.error("[wp/submodels] Error:", e?.message || e);
-    return NextResponse.json({ error: e?.message || String(e), stack: e?.stack?.split("\n").slice(0, 3) }, { status: 500 });
+    return NextResponse.json({ error: e?.message || String(e) }, { status: 500 });
   }
 }
