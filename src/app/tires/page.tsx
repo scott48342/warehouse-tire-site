@@ -5,7 +5,7 @@ import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { vehicleSlug } from "@/lib/vehicleSlug";
-import { TiresWorkspaceHeader } from "@/components/TiresWorkspaceHeader";
+// TiresWorkspaceHeader removed - using cart-based flow now
 import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
@@ -1179,16 +1179,6 @@ export default async function TiresPage({
           </aside>
 
           <section className="grid gap-4">
-            <TiresWorkspaceHeader
-              year={year}
-              make={make}
-              model={model}
-              trim={trim}
-              modification={modification}
-              wheelSku={wheelSku}
-              tireSku={tireSku}
-            />
-
             {isStaggered ? (
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold text-neutral-500">Selecting:</span>

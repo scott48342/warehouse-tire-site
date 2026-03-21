@@ -50,12 +50,13 @@ export function TireMatchingBanner({
   const cartTotal = mounted ? getTotal() : 0;
 
   // Only show if there's wheel context (from URL or cart)
-  const hasWheelContext = Boolean(wheelSku || cartWheel);
+  const hasWheelContext = Boolean(wheelSku || wheelDiameter || cartWheel);
   if (!hasWheelContext) return null;
 
+  const wheelInCart = Boolean(cartWheel);
   const effectiveWheel = cartWheel || {
-    brand: "Selected Wheel",
-    model: "",
+    brand: "Your Wheel",
+    model: wheelSku || "",
     diameter: wheelDiameter,
     width: wheelWidth,
     imageUrl: undefined,
@@ -153,9 +154,15 @@ export function TireMatchingBanner({
           ) : null}
         </div>
         <div className="flex-shrink-0">
-          <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-bold text-green-800">
-            ✓ In Cart
-          </span>
+          {wheelInCart ? (
+            <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-bold text-green-800">
+              ✓ In Cart
+            </span>
+          ) : (
+            <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-bold text-blue-800">
+              Selected
+            </span>
+          )}
         </div>
       </div>
 
