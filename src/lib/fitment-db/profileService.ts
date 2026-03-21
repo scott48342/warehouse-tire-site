@@ -14,7 +14,7 @@ import { db } from "./db";
 import { vehicleFitments, fitmentSourceRecords } from "./schema";
 import type { VehicleFitment } from "./schema";
 import { eq, and } from "drizzle-orm";
-import { normalizeMake, normalizeModel, slugify, makePayloadChecksum } from "./keys";
+import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 
@@ -143,8 +143,9 @@ async function fetchModification(
   model: string,
   modificationId: string
 ): Promise<{ modification: WheelSizeModification; vehicleData: WheelSizeVehicleData } | null> {
-  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  // Use normalized slugs for API compatibility (e.g., "RX 350" → "rx")
+  const makeSlug = normalizeMake(make);
+  const modelSlug = normalizeModelForApi(model);
   
   // First get modifications list to find the matching one
   const modsUrl = new URL("modifications/", WHEELSIZE_API_BASE);

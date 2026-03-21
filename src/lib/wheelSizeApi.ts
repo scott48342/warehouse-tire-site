@@ -11,6 +11,8 @@
  * - For US market, filter modifications by region "usdm"
  */
 
+import { normalizeModelForApi } from "./fitment-db/keys";
+
 const BASE_URL = "https://api.wheel-size.com/v2/";
 
 function getApiKey(): string {
@@ -217,12 +219,15 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Wh
   const models = await getModels(makeSlug);
   const needle = toSlug(modelName);
   const needleNoHyphen = needle.replace(/-/g, "");
+  // Use normalized model for alias matching (e.g., "RX 350" → "rx")
+  const normalizedNeedle = normalizeModelForApi(modelName);
   
   return models.find(m => {
     const slug = m.slug?.toLowerCase() || "";
     const name = m.name?.toLowerCase() || "";
     return slug === needle || 
            slug === needleNoHyphen ||
+           slug === normalizedNeedle ||  // Match alias (rx-350 → rx)
            name === needle ||
            name === needleNoHyphen;
   }) || null;
