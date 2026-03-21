@@ -4,10 +4,8 @@ export const runtime = "nodejs";
 
 const BASE_URL = "https://api.wheel-size.com/v2/";
 
-function getApiKey(): string {
-  const key = process.env.WHEELSIZE_API_KEY;
-  if (!key) throw new Error("Missing WHEELSIZE_API_KEY");
-  return key;
+function getApiKey(): string | null {
+  return process.env.WHEELSIZE_API_KEY || null;
 }
 
 type Modification = {
@@ -23,7 +21,8 @@ type Modification = {
 /**
  * GET /api/vehicles/trims?year=2005&make=Cadillac&model=CTS
  * 
- * Returns available trims/modifications for a vehicle from Wheel-Size API directly.
+ * Returns available trims/modifications from Wheel-Size API.
+ * Caches responses for 24 hours.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -35,24 +34,47 @@ export async function GET(req: Request) {
     return NextResponse.json({ results: [] });
   }
 
+  const apiKey = getApiKey();
+  if (!apiKey) {
+    console.error("[trims] Missing WHEELSIZE_API_KEY");
+    return NextResponse.json({ results: [], error: "API not configured" });
+  }
+
   // Convert to slug format
   const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
   const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
 
   try {
     const apiUrl = new URL("modifications/", BASE_URL);
-    apiUrl.searchParams.set("user_key", getApiKey());
+    apiUrl.searchParams.set("user_key", apiKey);
     apiUrl.searchParams.set("make", makeSlug);
     apiUrl.searchParams.set("model", modelSlug);
     apiUrl.searchParams.set("year", year);
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+
     const res = await fetch(apiUrl.toString(), {
       headers: { Accept: "application/json" },
-      cache: "no-store",
+      next: { revalidate: 86400 },
+      signal: controller.signal,
     });
 
+    clearTimeout(timeout);
+
+    if (res.status === 429) {
+      console.error(`[trims] Rate limited for ${makeSlug}/${modelSlug}/${year}`);
+      return NextResponse.json(
+        { results: [], error: "Rate limited - please try again" },
+        { 
+          status: 200,
+          headers: { "Retry-After": "60" }
+        }
+      );
+    }
+
     if (!res.ok) {
-      console.error(`[trims] Wheel-Size API error: ${res.status} for ${makeSlug}/${modelSlug}/${year}`);
+      console.error(`[trims] API error: ${res.status}`);
       return NextResponse.json({ results: [] });
     }
 
@@ -63,9 +85,8 @@ export async function GET(req: Request) {
     const usMods = allMods.filter(m => m.regions?.includes("usdm"));
     const mods = usMods.length > 0 ? usMods : allMods;
 
-    // Build trim options with slug as value and descriptive label
+    // Build trim options
     const results = mods.map((m) => {
-      // Build a descriptive label
       const parts: string[] = [];
       if (m.trim) parts.push(m.trim);
       if (m.engine) parts.push(m.engine);
@@ -73,15 +94,13 @@ export async function GET(req: Request) {
       
       const label = parts.length > 0 ? parts.join(" / ") : m.name || m.slug;
       
-      // Value format: slug (for Wheel-Size API compatibility)
-      // The tire-sizes and other endpoints can use this slug directly
       return {
         value: m.slug,
         label: label,
       };
     });
 
-    // Deduplicate by label (keep first)
+    // Deduplicate by label
     const seen = new Set<string>();
     const dedupedResults: Array<{ value: string; label: string }> = [];
     for (const r of results) {
@@ -91,7 +110,14 @@ export async function GET(req: Request) {
       dedupedResults.push(r);
     }
 
-    return NextResponse.json({ results: dedupedResults });
+    return NextResponse.json(
+      { results: dedupedResults },
+      {
+        headers: {
+          "Cache-Control": "public, max-age=3600, s-maxage=86400",
+        },
+      }
+    );
   } catch (err: any) {
     console.error(`[trims] Error:`, err?.message || err);
     return NextResponse.json({ results: [] });
