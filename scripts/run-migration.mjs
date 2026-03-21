@@ -1,50 +1,63 @@
 import pg from 'pg';
-import fs from 'fs';
-import path from 'path';
+import { config } from 'dotenv';
 
-const { Client } = pg;
+config({ path: '.env.local' });
 
-const connectionString = process.env.POSTGRES_URL;
-if (!connectionString) {
-  console.error('POSTGRES_URL not set');
-  process.exit(1);
-}
-
-const client = new Client({ connectionString });
+const { Pool } = pg;
+const pool = new Pool({ connectionString: process.env.POSTGRES_URL });
 
 async function run() {
+  const client = await pool.connect();
   try {
-    console.log('Connecting to database...');
-    await client.connect();
-    console.log('Connected!');
+    console.log('Running migration: 0002_offset_decimal.sql');
     
-    // Read the migration file
-    const migrationPath = path.join(process.cwd(), 'drizzle/migrations/0001_create_fitment_tables.sql');
-    const sql = fs.readFileSync(migrationPath, 'utf8');
+    // Check current column types first
+    const res = await client.query(`
+      SELECT column_name, data_type 
+      FROM information_schema.columns 
+      WHERE table_name = 'vehicle_fitments' 
+      AND column_name IN ('offset_min_mm', 'offset_max_mm')
+    `);
+    console.log('Current types:', res.rows);
     
-    console.log('Running migration...');
-    await client.query(sql);
-    console.log('Migration complete!');
-    
-    // Verify tables exist
-    const result = await client.query(`
-      SELECT table_name 
-      FROM information_schema.tables 
-      WHERE table_schema = 'public' 
-      AND table_name LIKE 'fitment%' OR table_name LIKE 'vehicle%'
+    // Run migration for vehicle_fitments
+    await client.query(`
+      ALTER TABLE vehicle_fitments 
+        ALTER COLUMN offset_min_mm TYPE decimal(5,2) USING offset_min_mm::decimal(5,2)
+    `);
+    await client.query(`
+      ALTER TABLE vehicle_fitments 
+        ALTER COLUMN offset_max_mm TYPE decimal(5,2) USING offset_max_mm::decimal(5,2)
     `);
     
-    console.log('\\nCreated tables:');
-    for (const row of result.rows) {
-      console.log(' -', row.table_name);
+    // Run migration for fitment_overrides (if table exists)
+    try {
+      await client.query(`
+        ALTER TABLE fitment_overrides 
+          ALTER COLUMN offset_min_mm TYPE decimal(5,2) USING offset_min_mm::decimal(5,2)
+      `);
+      await client.query(`
+        ALTER TABLE fitment_overrides 
+          ALTER COLUMN offset_max_mm TYPE decimal(5,2) USING offset_max_mm::decimal(5,2)
+      `);
+      console.log('fitment_overrides table updated');
+    } catch (e) {
+      console.log('fitment_overrides table not found or already migrated');
     }
     
-  } catch (err) {
-    console.error('Error:', err.message);
-    process.exit(1);
+    // Verify
+    const verify = await client.query(`
+      SELECT column_name, data_type 
+      FROM information_schema.columns 
+      WHERE table_name = 'vehicle_fitments' 
+      AND column_name IN ('offset_min_mm', 'offset_max_mm')
+    `);
+    console.log('After migration:', verify.rows);
+    console.log('Migration successful!');
   } finally {
-    await client.end();
+    client.release();
+    pool.end();
   }
 }
 
-run();
+run().catch(e => { console.error(e); process.exit(1); });

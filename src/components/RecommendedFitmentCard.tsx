@@ -168,7 +168,10 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
 
       if (!hasVehicle) return;
 
-      // First, check our fitment-search endpoint for actual staggered info
+      // ═══════════════════════════════════════════════════════════════════════════
+      // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
+      // ═══════════════════════════════════════════════════════════════════════════
+      // First, check our fitment-search endpoint for dbProfile + staggered info
       try {
         const fitmentQs = new URLSearchParams({
           year: String(fitment.year || ""),
@@ -176,6 +179,8 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
           model: String(fitment.model || ""),
           pageSize: "1", // Just need fitment info, not wheels
         });
+        if (fitment.modification) fitmentQs.set("modification", String(fitment.modification));
+        
         const fitmentData = await fetchJson<{
           fitment?: {
             staggered?: {
@@ -188,19 +193,60 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
               centerBore?: number;
               oem?: { diameter: [number, number]; width: [number, number]; offset: [number, number] };
             };
+            // NEW: DB-first profile (primary source of truth)
+            dbProfile?: {
+              modificationId: string;
+              displayTrim: string;
+              boltPattern: string | null;
+              centerBoreMm: number | null;
+              offsetRange: { min: number | null; max: number | null };
+              oemWheelSizes: Array<{ diameter: number; width: number; offset: number | null }>;
+              oemTireSizes: string[];
+              source: string;
+            };
           };
         }>(`/api/wheels/fitment-search?${fitmentQs.toString()}`);
 
         if (cancelled) return;
+
+        // Extract dbProfile (primary source of truth)
+        const dbProfile = fitmentData?.fitment?.dbProfile;
+        if (dbProfile) {
+          console.log('[RecommendedFitmentCard] ✅ DB PROFILE CONSUMED:', {
+            modificationId: dbProfile.modificationId,
+            displayTrim: dbProfile.displayTrim,
+            boltPattern: dbProfile.boltPattern,
+            oemTireSizes: dbProfile.oemTireSizes,
+            source: dbProfile.source,
+          });
+          
+          // Use dbProfile values as primary source
+          const oemWheelDias = dbProfile.oemWheelSizes?.map(s => s.diameter).filter(d => d != null) || [];
+          const oemWheelWidths = dbProfile.oemWheelSizes?.map(s => s.width).filter(w => w != null) || [];
+          
+          setDetails({
+            boltPattern: dbProfile.boltPattern || undefined,
+            centerBoreMm: dbProfile.centerBoreMm || undefined,
+            wheelDiameterRangeIn: oemWheelDias.length ? [Math.min(...oemWheelDias), Math.max(...oemWheelDias)] : undefined,
+            wheelWidthRangeIn: oemWheelWidths.length ? [Math.min(...oemWheelWidths), Math.max(...oemWheelWidths)] : undefined,
+            offsetRangeMm: dbProfile.offsetRange?.min != null && dbProfile.offsetRange?.max != null 
+              ? [dbProfile.offsetRange.min, dbProfile.offsetRange.max] 
+              : undefined,
+          });
+          
+          setOemTireSizes(dbProfile.oemTireSizes || []);
+        } else {
+          console.log('[RecommendedFitmentCard] ⚠️ NO DB PROFILE - using legacy envelope');
+        }
 
         // If we got staggered info from fitment-search, use it
         if (fitmentData?.fitment?.staggered) {
           const staggered = fitmentData.fitment.staggered;
           setVehicleIsStaggered(Boolean(staggered.isStaggered));
 
-          // Use envelope for basic details
+          // Use envelope for basic details if dbProfile didn't set them
           const envelope = fitmentData.fitment.envelope;
-          if (envelope) {
+          if (envelope && !dbProfile) {
             setDetails({
               boltPattern: envelope.boltPattern,
               centerBoreMm: envelope.centerBore,
@@ -212,17 +258,19 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
 
           // Only set axles if vehicle actually supports staggered
           if (staggered.isStaggered && staggered.frontSpec && staggered.rearSpec) {
+            const bp = dbProfile?.boltPattern || envelope?.boltPattern;
+            const cb = dbProfile?.centerBoreMm || envelope?.centerBore;
             setAxles({
               front: {
-                boltPattern: envelope?.boltPattern,
-                centerBoreMm: envelope?.centerBore,
+                boltPattern: bp,
+                centerBoreMm: cb,
                 wheelDiameterRangeIn: [staggered.frontSpec.diameter, staggered.frontSpec.diameter],
                 wheelWidthRangeIn: [staggered.frontSpec.width, staggered.frontSpec.width],
                 offsetRangeMm: staggered.frontSpec.offset != null ? [staggered.frontSpec.offset, staggered.frontSpec.offset] : undefined,
               },
               rear: {
-                boltPattern: envelope?.boltPattern,
-                centerBoreMm: envelope?.centerBore,
+                boltPattern: bp,
+                centerBoreMm: cb,
                 wheelDiameterRangeIn: [staggered.rearSpec.diameter, staggered.rearSpec.diameter],
                 wheelWidthRangeIn: [staggered.rearSpec.width, staggered.rearSpec.width],
                 offsetRangeMm: staggered.rearSpec.offset != null ? [staggered.rearSpec.offset, staggered.rearSpec.offset] : undefined,
@@ -231,8 +279,12 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
           }
           return; // We have good data from fitment-search, no need to continue
         }
+        
+        // If we got dbProfile but no staggered info, we still have what we need
+        if (dbProfile) return;
       } catch {
         // Fitment-search failed, fall through to legacy logic
+        console.log('[RecommendedFitmentCard] ⚠️ fitment-search failed, using legacy API');
       }
 
       // 1) If we have a WheelPros submodel, show WheelPros vehicle fitment details.

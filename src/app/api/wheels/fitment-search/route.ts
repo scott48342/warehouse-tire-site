@@ -362,6 +362,24 @@ export async function GET(req: Request) {
     // Build facets from passing wheels only
     const facets = buildFacets(passingWheels);
 
+    // ═══════════════════════════════════════════════════════════════════════════
+    // RESPONSE SUMMARY LOG
+    // ═══════════════════════════════════════════════════════════════════════════
+    console.log(`[fitment-search] 📤 RESPONSE: ${year} ${make} ${model}`, {
+      dbProfile: dbProfile ? {
+        modificationId: dbProfile.modificationId,
+        oemTireSizes: dbProfile.oemTireSizes,
+        boltPattern: dbProfile.boltPattern,
+        source: dbProfile.source,
+      } : null,
+      legacyEnvelope: envelope ? {
+        boltPattern: envelope.boltPattern,
+        oemDia: `${envelope.oemMinDiameter}-${envelope.oemMaxDiameter}`,
+      } : null,
+      wheels: passingWheels.length,
+      timing: `${Date.now() - t0}ms`,
+    });
+
     return NextResponse.json({
       results: passingWheels,
       totalCount: passingWheels.length,
@@ -394,7 +412,11 @@ export async function GET(req: Request) {
         },
         // Staggered fitment info (based on vehicle's actual front/rear specs)
         staggered: profile.staggered,
-        // NEW: DB-first profile data when available
+        // ═══════════════════════════════════════════════════════════════════════
+        // DB-FIRST PROFILE (Primary Source of Truth)
+        // ═══════════════════════════════════════════════════════════════════════
+        // When present, dbProfile provides canonical fitment data from our database.
+        // Frontend should use dbProfile values over legacy envelope when available.
         ...(dbProfile ? {
           dbProfile: {
             modificationId: dbProfile.modificationId,

@@ -7,18 +7,23 @@
 // Core database
 export { db, schema } from "./db";
 
-// Types
+// Types from schema (Drizzle inferred types)
 export type {
-  FitmentSource,
   FitmentSourceRecord,
+  NewFitmentSourceRecord,
   VehicleFitment,
+  NewVehicleFitment,
   FitmentOverride,
+  NewFitmentOverride,
   FitmentImportJob,
-  OemWheelSize,
-  OemTireSize,
-  FitmentLookupParams,
-  FitmentLookupResult,
-  CanonicalKey,
+  NewFitmentImportJob,
+} from "./schema";
+
+// Shared frontend types
+export type {
+  OEMWheelSize,
+  DBFitmentProfile,
+  FitmentSearchResponse,
 } from "./types";
 
 // Schema (for migrations)

@@ -478,6 +478,34 @@ export default async function WheelsPage({
   // Capture bolt pattern from fitment-search response (more reliable than separate fitment call)
   const fitmentSearchBp = data?.fitment?.envelope?.boltPattern;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // dbProfile is the canonical fitment data from our own database.
+  // It takes precedence over legacy envelope data when present.
+  const dbProfile = data?.fitment?.dbProfile || null;
+  
+  if (dbProfile) {
+    console.log('[wheels/page] ✅ DB PROFILE CONSUMED:', {
+      modificationId: dbProfile.modificationId,
+      displayTrim: dbProfile.displayTrim,
+      boltPattern: dbProfile.boltPattern,
+      centerBoreMm: dbProfile.centerBoreMm,
+      oemWheelSizes: dbProfile.oemWheelSizes?.length || 0,
+      oemTireSizes: dbProfile.oemTireSizes,
+      offsetRange: dbProfile.offsetRange,
+      source: dbProfile.source,
+    });
+  } else if (hasVehicle) {
+    console.log('[wheels/page] ⚠️ NO DB PROFILE - falling back to legacy envelope');
+  }
+  
+  // Use dbProfile values as primary, fallback to legacy envelope
+  const primaryBoltPattern = dbProfile?.boltPattern || fitmentSearchBp || bp;
+  const primaryCenterBore = dbProfile?.centerBoreMm || data?.fitment?.envelope?.centerBore;
+  const primaryOemTireSizes = dbProfile?.oemTireSizes || [];
+  const primaryModificationId = dbProfile?.modificationId || modification;
+
   // Clear staggered fitView if vehicle doesn't support staggered
   // (prevents confusion when someone shares a URL with fitView=staggered for a non-staggered vehicle)
   if (!vehicleCallsForStaggered && effectiveFitView === "staggered") {

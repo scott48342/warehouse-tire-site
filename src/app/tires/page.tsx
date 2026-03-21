@@ -61,6 +61,19 @@ async function fetchFitment(params: Record<string, string | undefined>) {
   return res.json();
 }
 
+// DB-first fitment profile fetch (primary source of truth when available)
+async function fetchDBProfile(params: Record<string, string | undefined>) {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v) sp.set(k, v);
+  }
+  // Use fitment-search which returns dbProfile
+  const res = await fetch(`${getBaseUrl()}/api/wheels/fitment-search?${sp.toString()}&pageSize=1`, { cache: "no-store" });
+  if (!res.ok) return null;
+  const data = await res.json();
+  return data?.fitment?.dbProfile || null;
+}
+
 async function fetchKmTires(tireSize: string) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
   const res = await fetch(`${getBaseUrl()}/api/km/tiresizesearch?tireSize=${encodeURIComponent(sizeQ)}&minQty=4`, {
@@ -276,6 +289,27 @@ export default async function TiresPage({
     );
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Fetch dbProfile first when modification is known (canonical fitment data from our DB)
+  const dbProfile = year && make && model && modification
+    ? await fetchDBProfile({ year, make, model, modification })
+    : null;
+  
+  if (dbProfile) {
+    console.log('[tires/page] ✅ DB PROFILE CONSUMED:', {
+      modificationId: dbProfile.modificationId,
+      displayTrim: dbProfile.displayTrim,
+      oemTireSizes: dbProfile.oemTireSizes,
+      boltPattern: dbProfile.boltPattern,
+      source: dbProfile.source,
+    });
+  } else if (hasVehicle && modification) {
+    console.log('[tires/page] ⚠️ NO DB PROFILE - falling back to legacy tire-sizes API');
+  }
+
+  // Legacy API fallback (only used when dbProfile unavailable)
   const fitmentStrict = year && make && model
     ? await fetchFitment({ year, make, model, modification: modification || undefined })
     : null;
@@ -284,15 +318,26 @@ export default async function TiresPage({
     ? await fetchFitment({ year, make, model })
     : null;
 
-  const tireSizesStrict: string[] = Array.isArray(fitmentStrict?.tireSizes)
-    ? fitmentStrict.tireSizes.map(String)
-    : [];
+  // Use dbProfile.oemTireSizes as primary, fallback to legacy API
+  const tireSizesStrict: string[] = dbProfile?.oemTireSizes?.length
+    ? dbProfile.oemTireSizes.map(String)
+    : (Array.isArray(fitmentStrict?.tireSizes) ? fitmentStrict.tireSizes.map(String) : []);
 
   const tireSizesAgg: string[] = Array.isArray(fitmentAgg?.tireSizes)
     ? fitmentAgg.tireSizes.map(String)
     : [];
 
   const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
+  
+  // Log tire size source for debugging
+  if (hasVehicle) {
+    console.log('[tires/page] 📊 Tire sizes:', {
+      source: dbProfile?.oemTireSizes?.length ? 'dbProfile' : 'legacy API',
+      strict: tireSizesStrict,
+      aggregate: tireSizesAgg.filter(s => !tireSizesStrict.includes(s)),
+      total: tireSizes.length,
+    });
+  }
 
   // Resolve modificationId to display label if trim looks like a hash ID
   let resolvedTrimLabel: string | undefined;

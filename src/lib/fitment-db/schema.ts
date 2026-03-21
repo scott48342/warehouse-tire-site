@@ -80,9 +80,9 @@ export const vehicleFitments = pgTable(
     threadSize: varchar("thread_size", { length: 20 }), // e.g., "M14x1.5"
     seatType: varchar("seat_type", { length: 20 }), // conical, ball, flat
 
-    // Offset range
-    offsetMinMm: integer("offset_min_mm"),
-    offsetMaxMm: integer("offset_max_mm"),
+    // Offset range (decimal to support API values like 44.45)
+    offsetMinMm: decimal("offset_min_mm", { precision: 5, scale: 2 }),
+    offsetMaxMm: decimal("offset_max_mm", { precision: 5, scale: 2 }),
 
     // OEM sizes (JSON arrays)
     oemWheelSizes: jsonb("oem_wheel_sizes").notNull().default([]),
@@ -145,8 +145,8 @@ export const fitmentOverrides = pgTable(
     centerBoreMm: decimal("center_bore_mm", { precision: 5, scale: 1 }),
     threadSize: varchar("thread_size", { length: 20 }),
     seatType: varchar("seat_type", { length: 20 }),
-    offsetMinMm: integer("offset_min_mm"),
-    offsetMaxMm: integer("offset_max_mm"),
+    offsetMinMm: decimal("offset_min_mm", { precision: 5, scale: 2 }),
+    offsetMaxMm: decimal("offset_max_mm", { precision: 5, scale: 2 }),
 
     // Metadata
     reason: text("reason").notNull(),
