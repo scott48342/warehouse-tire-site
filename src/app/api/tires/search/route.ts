@@ -214,7 +214,7 @@ export async function GET(req: Request) {
       const tsRes = await fetch(tireSizesUrl.toString());
       if (tsRes.ok) {
         const tsData = await tsRes.json();
-        tireSizes = (tsData.sizes || tsData.results || []).map((s: any) => 
+        tireSizes = (tsData.tireSizes || tsData.sizes || tsData.results || []).map((s: any) => 
           typeof s === "string" ? s : s.size || s.front || ""
         ).filter(Boolean);
       }
