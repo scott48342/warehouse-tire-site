@@ -9,6 +9,7 @@ import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
+import { PackageSummary } from "@/components/PackageSummary";
 import {
   generatePlusSizeCandidates,
   type PlusSizeCandidate,
@@ -1068,6 +1069,11 @@ export default async function TiresPage({
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
           {/* Filters Sidebar - matching wheels page spacing */}
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
+            {/* Package Summary - shows when building a package */}
+            <div className="mb-4">
+              <PackageSummary variant="sidebar" showCheckout={true} />
+            </div>
+
             {hasVehicle ? (
               <div className="mb-4">
                 <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />

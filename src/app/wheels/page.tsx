@@ -5,6 +5,7 @@ import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
+import { PackageSummary } from "@/components/PackageSummary";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
@@ -1140,6 +1141,11 @@ export default async function WheelsPage({
 
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
+            {/* Package Summary - shows when building a package */}
+            <div className="mb-4">
+              <PackageSummary variant="sidebar" showCheckout={true} />
+            </div>
+
             {year && make && model ? (
               <div className="mb-4">
                 <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
