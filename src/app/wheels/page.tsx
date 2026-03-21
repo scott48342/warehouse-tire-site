@@ -1507,7 +1507,6 @@ export default async function WheelsPage({
                   {recommendedWheels.slice(0, 4).map((w, idx) => (
                     <WheelsStyleCard
                       key={`rec-${w.sku || idx}`}
-                      selectToTires
                       brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
                       title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
                       baseSku={String(w.sku || "")}
@@ -1550,7 +1549,6 @@ export default async function WheelsPage({
               {itemsPage.length ? (
                 itemsPage.map((w, idx) => (
                   <WheelsStyleCard
-                    selectToTires
                     key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
                     brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
                     title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
