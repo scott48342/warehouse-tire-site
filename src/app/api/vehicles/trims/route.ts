@@ -3,7 +3,7 @@ import crypto from "crypto";
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and } from "drizzle-orm";
-import { normalizeMake, normalizeModel, slugify, makePayloadChecksum } from "@/lib/fitment-db/keys";
+import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "@/lib/fitment-db/keys";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { fitmentSourceRecords } from "@/lib/fitment-db/schema";
@@ -117,8 +117,9 @@ async function fetchWheelSizeModifications(
   make: string,
   model: string
 ): Promise<WheelSizeModification[]> {
-  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  // Use normalized slugs for API compatibility (e.g., "RX 350" → "rx")
+  const makeSlug = normalizeMake(make);
+  const modelSlug = normalizeModelForApi(model);
 
   const url = new URL("modifications/", WHEELSIZE_API_BASE);
   url.searchParams.set("user_key", apiKey);

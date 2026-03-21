@@ -52,10 +52,50 @@ export function normalizeMake(make: string): string {
 }
 
 /**
+ * Model aliases for Wheel-Size API compatibility
+ * Maps user-facing model names to API-expected slugs
+ */
+const modelAliases: Record<string, string> = {
+  // Lexus RX variants → base model
+  "rx-350": "rx",
+  "rx-450h": "rx",
+  "rx-500h": "rx",
+  "rx-350h": "rx",
+  "rx350": "rx",
+  "rx450h": "rx",
+  // BMW series with numbers
+  "3-series": "3-series",
+  "330i": "3-series",
+  "m340i": "3-series",
+  "5-series": "5-series",
+  "530i": "5-series",
+  "m550i": "5-series",
+  // Mercedes classes
+  "c-class": "c-class",
+  "c300": "c-class",
+  "e-class": "e-class",
+  "e350": "e-class",
+  // Audi models
+  "a4": "a4",
+  "s4": "a4",
+  "a6": "a6",
+  "s6": "a6",
+};
+
+/**
  * Normalize model name for consistent lookups
  */
 export function normalizeModel(model: string): string {
-  return slugify(model);
+  const slugified = slugify(model);
+  return modelAliases[slugified] || slugified;
+}
+
+/**
+ * Normalize model name specifically for Wheel-Size API calls
+ * This handles the common case where user searches "RX 350" but API expects "RX"
+ */
+export function normalizeModelForApi(model: string): string {
+  return normalizeModel(model);
 }
 
 /**
