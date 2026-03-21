@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isInCooldown, record429, recordSuccess, getCacheStats } from "@/lib/fitmentCache";
 
 export const runtime = "nodejs";
 
@@ -36,6 +37,15 @@ export async function GET(req: Request) {
   const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
   const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
 
+  // Check if we're in 429 cooldown
+  if (isInCooldown()) {
+    return NextResponse.json({ 
+      results: [],
+      error: "Rate limited - in cooldown",
+      cacheStats: getCacheStats(),
+    });
+  }
+
   // Try Wheel-Size API first
   if (apiKey) {
     try {
@@ -56,7 +66,18 @@ export async function GET(req: Request) {
 
       clearTimeout(timeout);
 
+      // Handle 429 rate limit
+      if (res.status === 429) {
+        record429();
+        return NextResponse.json({ 
+          results: [],
+          error: "Rate limited",
+          cacheStats: getCacheStats(),
+        });
+      }
+
       if (res.ok) {
+        recordSuccess();
         const data = await res.json();
         const allMods: Modification[] = data?.data || [];
         

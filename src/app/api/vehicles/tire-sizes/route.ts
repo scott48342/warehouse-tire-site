@@ -1,4 +1,14 @@
 import { NextResponse } from "next/server";
+import {
+  makeCacheKey,
+  getCached,
+  setCache,
+  isInCooldown,
+  record429,
+  recordSuccess,
+  getCacheStats,
+  type CachedFitment,
+} from "@/lib/fitmentCache";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -26,9 +36,15 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   });
 
   if (!res.ok) {
+    // Check for 429 rate limit
+    if (res.status === 429) {
+      record429();
+      throw new Error(`Wheel-Size API rate limited (429)`);
+    }
     throw new Error(`Wheel-Size API error: ${res.status}`);
   }
 
+  recordSuccess();
   return res.json();
 }
 
@@ -65,7 +81,7 @@ type Modification = {
  * GET /api/vehicles/tire-sizes?year=2024&make=Ford&model=F-150&modification=bfd36e8a76
  * 
  * Returns tire sizes for a vehicle by querying Wheel-Size API directly.
- * This bypasses the package engine which has database issues.
+ * Uses caching and handles 429 rate limits gracefully.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -73,6 +89,7 @@ export async function GET(req: Request) {
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
   const modificationRaw = url.searchParams.get("modification") || "";
+  const forceRefresh = url.searchParams.get("refresh") === "1";
   
   // Handle composite modification values like "bfd36e8a76__xlt__"
   const modification = modificationRaw.includes("__") 
@@ -86,8 +103,38 @@ export async function GET(req: Request) {
     );
   }
 
+  // Check cache first (unless force refresh)
+  const cacheKey = makeCacheKey(year, make, model, modification);
+  if (!forceRefresh) {
+    const cached = getCached(cacheKey);
+    if (cached) {
+      return NextResponse.json({
+        tireSizes: cached.tireSizes || [],
+        tireSizesStrict: cached.tireSizes || [],
+        tireSizesAgg: [],
+        fitment: {
+          boltPattern: cached.boltPattern,
+          centerBore: cached.centerBore,
+        },
+        source: "cache",
+        cacheStats: getCacheStats(),
+      });
+    }
+  }
+
+  // Check if we're in 429 cooldown
+  if (isInCooldown()) {
+    return NextResponse.json({
+      tireSizes: [],
+      tireSizesStrict: [],
+      tireSizesAgg: [],
+      error: "Rate limited - in cooldown",
+      source: "cooldown",
+      cacheStats: getCacheStats(),
+    });
+  }
+
   // Convert to slugs (lowercase, replace special chars with dashes)
-  // Wheel-Size API uses slugs like "town-country" (not "town & country" or "town-and-country")
   const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
   const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
 
@@ -242,29 +289,53 @@ export async function GET(req: Request) {
       centerBore: vehicleData.technical?.centre_bore,
     };
 
+    // Cache the successful result
+    const strictSizes = stockTireSizes.length > 0 ? [...new Set(stockTireSizes)] : allTireSizes;
+    setCache(cacheKey, {
+      tireSizes: strictSizes,
+      boltPattern: fitment.boltPattern,
+      centerBore: fitment.centerBore ? parseFloat(String(fitment.centerBore)) : undefined,
+      vehicle: {
+        year: Number(year),
+        make,
+        model,
+        submodel: selectedMod.name,
+      },
+      source: "wheelsize",
+      cachedAt: Date.now(),
+      expiresAt: Date.now() + 3600000, // 1 hour
+    });
+
     return NextResponse.json({
       tireSizes,
-      tireSizesStrict: stockTireSizes.length > 0 ? [...new Set(stockTireSizes)] : allTireSizes,
+      tireSizesStrict: strictSizes,
       tireSizesAgg: aggTireSizes,
       fitment,
       selectedModification: {
         slug: selectedMod.slug,
         name: selectedMod.name,
       },
+      source: "api",
       debug,
     });
 
   } catch (err: any) {
     debug.error = err?.message || String(err);
+    
+    // Check if this is a rate limit error
+    const is429 = err?.message?.includes("429") || err?.message?.includes("rate limit");
+    
     return NextResponse.json(
       { 
         tireSizes: [],
         tireSizesStrict: [],
         tireSizesAgg: [],
-        error: err?.message || String(err),
+        error: is429 ? "Rate limited - please try again later" : (err?.message || String(err)),
+        rateLimited: is429,
+        cacheStats: getCacheStats(),
         debug,
       },
-      { status: 500 }
+      { status: is429 ? 429 : 500 }
     );
   }
 }
