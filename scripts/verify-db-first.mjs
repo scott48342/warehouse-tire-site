@@ -5,14 +5,32 @@
 const BASE_URL = 'https://shop.warehousetiredirect.com';
 
 const VEHICLES = [
-  { year: 2009, make: 'Jeep', model: 'Wrangler', label: '2009 Jeep Wrangler Rubicon' },
+  { year: 2009, make: 'Jeep', model: 'Wrangler', modification: 's_f6ffe16b', label: '2009 Jeep Wrangler Rubicon' },
   { year: 1995, make: 'Chevrolet', model: 'Camaro', label: '1995 Camaro' },
   { year: 2020, make: 'Chevrolet', model: 'Silverado 1500', label: '2020 Chevy Silverado 1500 (GM Truck)' },
 ];
 
 async function testVehicle(vehicle) {
   const { year, make, model, label } = vehicle;
-  const url = `${BASE_URL}/api/wheels/fitment-search?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&pageSize=1&debug=1`;
+  let { modification } = vehicle;
+  
+  // If no modification provided, fetch trims and use the first one
+  if (!modification) {
+    try {
+      const trimsUrl = `${BASE_URL}/api/vehicles/trims?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`;
+      const trimsRes = await fetch(trimsUrl);
+      const trimsData = await trimsRes.json();
+      if (trimsData.results?.length) {
+        modification = trimsData.results[0].modificationId;
+        console.log(`   Auto-selected trim: ${trimsData.results[0].label} (${modification})`);
+      }
+    } catch (e) {
+      console.log(`   Could not fetch trims: ${e.message}`);
+    }
+  }
+  
+  const modParam = modification ? `&modification=${encodeURIComponent(modification)}` : '';
+  const url = `${BASE_URL}/api/wheels/fitment-search?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${modParam}&pageSize=1&debug=1`;
   
   console.log(`\n${'═'.repeat(60)}`);
   console.log(`Testing: ${label}`);

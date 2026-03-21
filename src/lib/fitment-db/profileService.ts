@@ -182,28 +182,40 @@ async function fetchModification(
   
   if (!mod) return null;
   
-  // Now fetch vehicle data for this modification
-  const vehicleUrl = new URL("vehicles/", WHEELSIZE_API_BASE);
+  // Now fetch vehicle data using search/by_model endpoint
+  // (NOT vehicles/ - which returns different/incomplete data)
+  const vehicleUrl = new URL("search/by_model/", WHEELSIZE_API_BASE);
   vehicleUrl.searchParams.set("user_key", apiKey);
   vehicleUrl.searchParams.set("make", makeSlug);
   vehicleUrl.searchParams.set("model", modelSlug);
   vehicleUrl.searchParams.set("year", String(year));
   vehicleUrl.searchParams.set("modification", mod.slug);
   
+  console.log(`[profileService] Fetching: search/by_model/${makeSlug}/${modelSlug}/${year}/${mod.slug}`);
+  
   const vehicleRes = await fetch(vehicleUrl.toString(), {
     headers: { Accept: "application/json" },
   });
   
   if (!vehicleRes.ok) {
+    console.log(`[profileService] search/by_model failed: ${vehicleRes.status}`);
     // Return modification without vehicle data
     return { modification: mod, vehicleData: {} };
   }
   
-  const vehicleData = await vehicleRes.json();
+  const vehicleRaw = await vehicleRes.json();
+  const vehicleData = vehicleRaw?.data?.[0] || {};
+  
+  console.log(`[profileService] Got vehicleData:`, {
+    hastechnical: !!vehicleData.technical,
+    boltPattern: vehicleData.technical?.bolt_pattern,
+    centreBore: vehicleData.technical?.centre_bore,
+    wheelSetups: vehicleData.wheels?.length || 0,
+  });
   
   return {
     modification: mod,
-    vehicleData: vehicleData?.data?.[0] || vehicleData || {},
+    vehicleData,
   };
 }
 
