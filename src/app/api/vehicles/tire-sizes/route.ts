@@ -9,6 +9,7 @@ import {
   getCacheStats,
   type CachedFitment,
 } from "@/lib/fitmentCache";
+import { normalizeModelForApi, slugify } from "@/lib/fitment-db/keys";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -148,8 +149,8 @@ export async function GET(req: Request) {
   }
 
   // Convert to slugs (lowercase, replace special chars with dashes)
-  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
-  const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
+  const makeSlug = slugify(make);
+  const modelSlug = normalizeModelForApi(model);
 
   const debug: any = {
     input: { year, make, model, modification, modificationRaw },
