@@ -247,10 +247,9 @@ export default async function TiresPage({
 
     const baseline = (tireSizesStrict[0] || tireSizes[0] || "").trim();
     const targetOd = overallDiameterMmFromSize(baseline);
-    if (!targetOd) return [] as string[];
 
+    // Common tire widths based on wheel width
     const widthsMm = (() => {
-      // Use wheel width (in) as a hint, but keep to common widths.
       if (Number.isFinite(wheelWidthNum) && wheelWidthNum > 0) {
         const wmm = wheelWidthNum * 25.4;
         const guess = [wmm + 10, wmm + 20, wmm + 30, wmm + 40]
@@ -262,28 +261,31 @@ export default async function TiresPage({
       return [245, 255, 265, 275, 285, 295];
     })();
 
-    // Common aspect ratios for large diameters.
-    const aspects = [25, 30, 35, 40];
+    // Common aspect ratios for various wheel sizes
+    const aspects = wheelDiaNum >= 22 ? [30, 35, 40] : wheelDiaNum >= 20 ? [35, 40, 45, 50] : [40, 45, 50, 55, 60];
 
     const candidates: Array<{ size: string; od: number; diff: number }> = [];
 
     for (const w of widthsMm) {
       for (const ar of aspects) {
         const od = wheelDiaNum * 25.4 + 2 * (w * ar) / 100;
-        const diff = Math.abs(od - targetOd);
-        const pct = diff / targetOd;
-
-        // Keep within ~4% overall diameter change.
-        if (pct > 0.04) continue;
-
-        // Avoid super-thin sidewalls on big wheels.
-        const sidewallMm = (w * ar) / 100;
-        if (sidewallMm < 65) continue;
-
-        candidates.push({ size: `${w}/${ar}R${wheelDiaNum}`, od, diff });
+        
+        // If we have a target OD, filter by it; otherwise allow reasonable sidewall heights
+        if (targetOd) {
+          const diff = Math.abs(od - targetOd);
+          const pct = diff / targetOd;
+          if (pct > 0.04) continue;
+          candidates.push({ size: `${w}/${ar}R${Math.round(wheelDiaNum)}`, od, diff });
+        } else {
+          // No OEM baseline - just ensure reasonable sidewall (65mm+ for comfort/protection)
+          const sidewallMm = (w * ar) / 100;
+          if (sidewallMm < 65 || sidewallMm > 120) continue;
+          candidates.push({ size: `${w}/${ar}R${Math.round(wheelDiaNum)}`, od, diff: sidewallMm });
+        }
       }
     }
 
+    // Sort by diff (closest to target OD, or by sidewall height if no target)
     candidates.sort((a, b) => a.diff - b.diff);
 
     // Deduplicate while keeping order.
