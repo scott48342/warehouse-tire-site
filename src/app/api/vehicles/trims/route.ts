@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import crypto from "crypto";
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and } from "drizzle-orm";
@@ -7,6 +8,19 @@ import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { fitmentSourceRecords } from "@/lib/fitment-db/schema";
 import submodelSupplements from "@/data/submodel-supplements.json";
+
+/**
+ * Generate a canonical modificationId for supplement data.
+ * Since supplements don't have API slugs, we generate a deterministic
+ * hash-based ID that's unique per vehicle+trim combination.
+ * 
+ * Format: s_{8-char-hash} where hash is based on year:make:model:trimValue
+ */
+function makeSupplementId(year: number, make: string, model: string, trimValue: string): string {
+  const input = `${year}:${normalizeMake(make)}:${normalizeModel(model)}:${slugify(trimValue)}`;
+  const hash = crypto.createHash("sha256").update(input).digest("hex").slice(0, 8);
+  return `s_${hash}`;
+}
 
 export const runtime = "nodejs";
 
@@ -309,20 +323,45 @@ export async function GET(req: Request) {
       const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
       overridesApplied = withOverrides.some((f, i) => f.displayTrim !== dbFitments[i].displayTrim);
 
-      // Dedupe by displayTrim
-      const seen = new Set<string>();
+      // Dedupe by modificationId (preserve all unique mods, even with same displayTrim)
+      const seenModIds = new Set<string>();
+      const deduped = withOverrides.filter(f => {
+        if (seenModIds.has(f.modificationId)) return false;
+        seenModIds.add(f.modificationId);
+        return true;
+      });
+
+      // Check for displayTrim collisions and disambiguate labels
+      const labelCounts = new Map<string, number>();
+      deduped.forEach(f => {
+        const key = f.displayTrim.toLowerCase();
+        labelCounts.set(key, (labelCounts.get(key) || 0) + 1);
+      });
+
       const results: TrimOption[] = [];
-      for (const fitment of withOverrides) {
-        const labelKey = fitment.displayTrim.toLowerCase();
-        if (!seen.has(labelKey)) {
-          seen.add(labelKey);
-          results.push({
-            value: fitment.modificationId,
-            label: fitment.displayTrim,
-            modificationId: fitment.modificationId,
-            rawTrim: fitment.rawTrim || undefined,
-          });
+      const labelIndexes = new Map<string, number>();
+      for (const fitment of deduped) {
+        const key = fitment.displayTrim.toLowerCase();
+        let label = fitment.displayTrim;
+        
+        // If multiple mods share the same displayTrim, disambiguate with rawTrim or index
+        if ((labelCounts.get(key) || 0) > 1) {
+          const idx = (labelIndexes.get(key) || 0) + 1;
+          labelIndexes.set(key, idx);
+          // Use rawTrim for disambiguation if available, otherwise use index
+          if (fitment.rawTrim && fitment.rawTrim !== fitment.displayTrim) {
+            label = `${fitment.displayTrim} (${fitment.rawTrim})`;
+          } else {
+            label = `${fitment.displayTrim} #${idx}`;
+          }
         }
+        
+        results.push({
+          value: fitment.modificationId,
+          label,
+          modificationId: fitment.modificationId,
+          rawTrim: fitment.rawTrim || undefined,
+        });
       }
 
       // Check if results are good (not just "Base" or engine codes)
@@ -359,12 +398,16 @@ export async function GET(req: Request) {
   const supplement = getSubmodelSupplement(year, make, model);
   if (supplement && supplement.length > 0) {
     console.log(`[trims] SUPPLEMENT: ${year} ${make} ${model} → ${supplement.length} options`);
-    // Add modificationId to supplement results
-    const supplementWithIds: TrimOption[] = supplement.map(s => ({
-      value: s.value,
-      label: s.label,
-      modificationId: s.value, // For supplements, value IS the modificationId
-    }));
+    // Generate canonical modificationIds for supplement entries
+    const supplementWithIds: TrimOption[] = supplement.map(s => {
+      const modificationId = makeSupplementId(year, make, model, s.value);
+      return {
+        value: modificationId, // Use canonical ID for value (backwards compat - consumers should use modificationId)
+        label: s.label,
+        modificationId, // Canonical fitment identity
+        rawTrim: s.value, // Original supplement value for debugging
+      };
+    });
     return NextResponse.json({
       results: supplementWithIds,
       source: "supplement",
@@ -413,27 +456,51 @@ export async function GET(req: Request) {
     const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
     overridesApplied = withOverrides.some((f, i) => f.displayTrim !== dbFitments[i].displayTrim);
 
-    // Dedupe by displayTrim
-    const seen = new Set<string>();
+    // Dedupe by modificationId (preserve all unique mods)
+    const seenModIds = new Set<string>();
+    const deduped = withOverrides.filter(f => {
+      if (seenModIds.has(f.modificationId)) return false;
+      seenModIds.add(f.modificationId);
+      return true;
+    });
+
+    // Check for displayTrim collisions and disambiguate labels
+    const labelCounts = new Map<string, number>();
+    deduped.forEach(f => {
+      const key = f.displayTrim.toLowerCase();
+      labelCounts.set(key, (labelCounts.get(key) || 0) + 1);
+    });
+
     const results: TrimOption[] = [];
-    for (const fitment of withOverrides) {
-      const labelKey = fitment.displayTrim.toLowerCase();
-      if (!seen.has(labelKey)) {
-        seen.add(labelKey);
-        results.push({
-          value: fitment.modificationId,
-          label: fitment.displayTrim,
-          modificationId: fitment.modificationId,
-          rawTrim: fitment.rawTrim || undefined,
-        });
+    const labelIndexes = new Map<string, number>();
+    for (const fitment of deduped) {
+      const key = fitment.displayTrim.toLowerCase();
+      let label = fitment.displayTrim;
+      
+      // Disambiguate when multiple mods share same displayTrim
+      if ((labelCounts.get(key) || 0) > 1) {
+        const idx = (labelIndexes.get(key) || 0) + 1;
+        labelIndexes.set(key, idx);
+        if (fitment.rawTrim && fitment.rawTrim !== fitment.displayTrim) {
+          label = `${fitment.displayTrim} (${fitment.rawTrim})`;
+        } else {
+          label = `${fitment.displayTrim} #${idx}`;
+        }
       }
+      
+      results.push({
+        value: fitment.modificationId,
+        label,
+        modificationId: fitment.modificationId,
+        rawTrim: fitment.rawTrim || undefined,
+      });
     }
 
-    // Filter out poor labels
+    // Filter out poor labels (but preserve unique mods)
     const goodResults = results.filter(r => {
-      const label = r.label.toLowerCase();
-      if (label === "base" && results.length > 1) return false;
-      if (/^\d+\.\d+\s+\w+/.test(label)) return false;
+      const baseLabel = r.label.toLowerCase().replace(/\s*\(.*\)$/, '').replace(/\s*#\d+$/, '');
+      if (baseLabel === "base" && results.length > 1) return false;
+      if (/^\d+\.\d+\s+\w+$/.test(baseLabel)) return false;
       return true;
     });
 
