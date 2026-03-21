@@ -160,20 +160,31 @@ export async function GET(req: Request) {
             return true;
           });
 
-          // Check if results are poor (only "Base" or similar generic labels)
-          const hasGoodSubmodels = deduped.some(r => 
-            r.label.toLowerCase() !== "base" && 
-            r.label.toLowerCase() !== "standard"
-          );
+          // Check if we have curated supplement data for this vehicle
+          // Supplements are more accurate than Wheel-Size for trim names
+          const supplement = getSubmodelSupplement(year, make, model);
+          if (supplement && supplement.length > 0) {
+            return NextResponse.json({ results: supplement }, {
+              headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+            });
+          }
 
-          // If Wheel-Size only has generic labels, try supplemental data
+          // No supplement available - check if Wheel-Size data is usable
+          // Reject if only "Base"/"Standard" or engine descriptions
+          const hasGoodSubmodels = deduped.some(r => {
+            const label = r.label.toLowerCase();
+            // Reject generic labels
+            if (label === "base" || label === "standard") return false;
+            // Reject engine descriptions like "2.7 EcoBoost", "5.0 Ti-VCT"
+            if (/^\d+\.\d+\s+\w+/.test(label)) return false;
+            return true;
+          });
+
           if (!hasGoodSubmodels) {
-            const supplement = getSubmodelSupplement(year, make, model);
-            if (supplement && supplement.length > 0) {
-              return NextResponse.json({ results: supplement }, {
-                headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
-              });
-            }
+            // Wheel-Size only has engine data, return empty to show "Select submodel" placeholder
+            return NextResponse.json({ results: [] }, {
+              headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+            });
           }
 
           return NextResponse.json({ results: deduped }, {
