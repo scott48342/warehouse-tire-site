@@ -14,15 +14,13 @@ type Modification = {
   trim?: string;
   engine?: string;
   body?: string;
-  generation?: string;
   regions?: string[];
 };
 
 /**
  * GET /api/vehicles/trims?year=2005&make=Cadillac&model=CTS
  * 
- * Returns available trims/modifications from Wheel-Size API.
- * Caches responses for 24 hours.
+ * Returns available trims from Wheel-Size API with package engine fallback.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -35,91 +33,104 @@ export async function GET(req: Request) {
   }
 
   const apiKey = getApiKey();
-  if (!apiKey) {
-    console.error("[trims] Missing WHEELSIZE_API_KEY");
-    return NextResponse.json({ results: [], error: "API not configured" });
-  }
-
-  // Convert to slug format
   const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
   const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").replace(/-+/g, "-");
 
-  try {
-    const apiUrl = new URL("modifications/", BASE_URL);
-    apiUrl.searchParams.set("user_key", apiKey);
-    apiUrl.searchParams.set("make", makeSlug);
-    apiUrl.searchParams.set("model", modelSlug);
-    apiUrl.searchParams.set("year", year);
+  // Try Wheel-Size API first
+  if (apiKey) {
+    try {
+      const apiUrl = new URL("modifications/", BASE_URL);
+      apiUrl.searchParams.set("user_key", apiKey);
+      apiUrl.searchParams.set("make", makeSlug);
+      apiUrl.searchParams.set("model", modelSlug);
+      apiUrl.searchParams.set("year", year);
 
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 8000);
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
 
-    const res = await fetch(apiUrl.toString(), {
-      headers: { Accept: "application/json" },
-      next: { revalidate: 86400 },
-      signal: controller.signal,
-    });
+      const res = await fetch(apiUrl.toString(), {
+        headers: { Accept: "application/json" },
+        next: { revalidate: 86400 },
+        signal: controller.signal,
+      });
 
-    clearTimeout(timeout);
+      clearTimeout(timeout);
 
-    if (res.status === 429) {
-      console.error(`[trims] Rate limited for ${makeSlug}/${modelSlug}/${year}`);
-      return NextResponse.json(
-        { results: [], error: "Rate limited - please try again" },
-        { 
-          status: 200,
-          headers: { "Retry-After": "60" }
+      if (res.ok) {
+        const data = await res.json();
+        const allMods: Modification[] = data?.data || [];
+        
+        if (allMods.length > 0) {
+          const usMods = allMods.filter(m => m.regions?.includes("usdm"));
+          const mods = usMods.length > 0 ? usMods : allMods;
+
+          const results = mods.map((m) => {
+            const parts: string[] = [];
+            if (m.trim) parts.push(m.trim);
+            if (m.engine) parts.push(m.engine);
+            if (m.body) parts.push(m.body);
+            const label = parts.length > 0 ? parts.join(" / ") : m.name || m.slug;
+            return { value: m.slug, label };
+          });
+
+          // Dedupe
+          const seen = new Set<string>();
+          const deduped = results.filter(r => {
+            const k = r.label.toLowerCase();
+            if (seen.has(k)) return false;
+            seen.add(k);
+            return true;
+          });
+
+          return NextResponse.json({ results: deduped }, {
+            headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+          });
         }
-      );
-    }
-
-    if (!res.ok) {
-      console.error(`[trims] API error: ${res.status}`);
-      return NextResponse.json({ results: [] });
-    }
-
-    const data = await res.json();
-    const allMods: Modification[] = data?.data || [];
-
-    // Prefer US market modifications
-    const usMods = allMods.filter(m => m.regions?.includes("usdm"));
-    const mods = usMods.length > 0 ? usMods : allMods;
-
-    // Build trim options
-    const results = mods.map((m) => {
-      const parts: string[] = [];
-      if (m.trim) parts.push(m.trim);
-      if (m.engine) parts.push(m.engine);
-      if (m.body) parts.push(m.body);
-      
-      const label = parts.length > 0 ? parts.join(" / ") : m.name || m.slug;
-      
-      return {
-        value: m.slug,
-        label: label,
-      };
-    });
-
-    // Deduplicate by label
-    const seen = new Set<string>();
-    const dedupedResults: Array<{ value: string; label: string }> = [];
-    for (const r of results) {
-      const k = r.label.trim().toLowerCase();
-      if (seen.has(k)) continue;
-      seen.add(k);
-      dedupedResults.push(r);
-    }
-
-    return NextResponse.json(
-      { results: dedupedResults },
-      {
-        headers: {
-          "Cache-Control": "public, max-age=3600, s-maxage=86400",
-        },
       }
-    );
-  } catch (err: any) {
-    console.error(`[trims] Error:`, err?.message || err);
-    return NextResponse.json({ results: [] });
+    } catch (err: any) {
+      console.error(`[trims] Wheel-Size error:`, err?.message);
+    }
   }
+
+  // Fallback to package engine
+  const pkgUrl = process.env.PACKAGE_ENGINE_URL;
+  if (pkgUrl) {
+    try {
+      const upstream = new URL("/v1/vehicles/trims", pkgUrl);
+      upstream.searchParams.set("year", year);
+      upstream.searchParams.set("make", make);
+      upstream.searchParams.set("model", model);
+
+      const res = await fetch(upstream.toString(), { cache: "no-store" });
+      if (res.ok) {
+        const data = await res.json();
+        const raw = Array.isArray(data?.results) ? data.results : [];
+
+        const mapped = raw.map((it: any) => {
+          if (!it || typeof it !== "object") return null;
+          const mod = it.modification ? String(it.modification) : "";
+          const baseLabel = it.trimLevel || it.trim || it.modification;
+          const engineCode = (it.engineCode || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+          const value = mod ? `${mod}__${String(baseLabel).replace(/\s+/g, "-").toLowerCase()}__${engineCode}` : "";
+          const label = baseLabel ? String(baseLabel) : "";
+          if (!value || !label) return null;
+          return { value, label };
+        }).filter(Boolean);
+
+        const seen = new Set<string>();
+        const results = mapped.filter((r: any) => {
+          const k = r.label.toLowerCase();
+          if (seen.has(k)) return false;
+          seen.add(k);
+          return true;
+        });
+
+        return NextResponse.json({ results });
+      }
+    } catch (err: any) {
+      console.error(`[trims] Package engine error:`, err?.message);
+    }
+  }
+
+  return NextResponse.json({ results: [] });
 }
