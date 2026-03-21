@@ -100,10 +100,19 @@ export interface ApplyOverridesResult {
 /**
  * Apply overrides to a fitment record
  * Returns a new record with overrides applied (original unchanged)
+ * 
+ * Note: Returns original fitment unchanged if override query fails
+ * (e.g., missing columns from pending migrations)
  */
 export async function applyOverrides(fitment: VehicleFitment): Promise<VehicleFitment> {
-  const result = await applyOverridesWithMeta(fitment);
-  return result.fitment;
+  try {
+    const result = await applyOverridesWithMeta(fitment);
+    return result.fitment;
+  } catch (err: any) {
+    // Log but don't fail - overrides are optional
+    console.warn(`[applyOverrides] Query failed, returning original:`, err?.message?.slice(0, 100));
+    return fitment;
+  }
 }
 
 /**
