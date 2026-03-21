@@ -188,19 +188,239 @@ export async function GET(req: Request) {
       }
     }
     
-    // If we have dbProfile but no legacy profile, skip wheel validation for now
-    // (The legacy profile provides the envelope/validation logic)
+    // ═══════════════════════════════════════════════════════════════════════════
+    // DB-PROFILE FALLBACK: Use dbProfile when legacy profile is unavailable
+    // ═══════════════════════════════════════════════════════════════════════════
     if (!profile && dbProfile) {
-      console.log(`[fitment-search] Using dbProfile only (no legacy profile available)`);
-      // Return a simplified response with just the dbProfile data
+      console.log(`[fitment-search] Using dbProfile fallback (no legacy profile): ${year} ${make} ${model}`);
+      
+      // Validate dbProfile has minimum required data
+      if (!dbProfile.boltPattern) {
+        console.warn(`[fitment-search] dbProfile invalid - missing boltPattern`);
+        return NextResponse.json({
+          results: [],
+          fitment: {
+            mode: "unknown",
+            fitmentSource: "invalid",
+            validationMode: "skipped",
+            vehicle: { year: Number(year), make, model, trim: dbProfile.displayTrim },
+            dbProfile: {
+              modificationId: dbProfile.modificationId,
+              displayTrim: dbProfile.displayTrim,
+              boltPattern: null,
+              centerBoreMm: dbProfile.centerBoreMm,
+              oemWheelSizes: dbProfile.oemWheelSizes,
+              oemTireSizes: dbProfile.oemTireSizes,
+              source: dbProfile.source,
+            },
+          },
+          summary: { 
+            note: "Fitment profile invalid - missing bolt pattern",
+            fitmentSource: "invalid",
+            validationMode: "skipped",
+          },
+        });
+      }
+      
+      // Build derived envelope from dbProfile
+      const derivedWheelSpecs = (dbProfile.oemWheelSizes || []).map((ws: any) => ({
+        rimDiameter: Number(ws.diameter),
+        rimWidth: Number(ws.width),
+        offset: ws.offset != null ? Number(ws.offset) : null,
+      }));
+      
+      // Calculate OEM ranges from wheel specs
+      const diameters = derivedWheelSpecs.map(ws => ws.rimDiameter).filter(d => d > 0);
+      const widths = derivedWheelSpecs.map(ws => ws.rimWidth).filter(w => w > 0);
+      const offsets = derivedWheelSpecs.map(ws => ws.offset).filter((o): o is number => o != null);
+      
+      const oemMinDiameter = diameters.length > 0 ? Math.min(...diameters) : 16;
+      const oemMaxDiameter = diameters.length > 0 ? Math.max(...diameters) : 20;
+      const oemMinWidth = widths.length > 0 ? Math.min(...widths) : 7;
+      const oemMaxWidth = widths.length > 0 ? Math.max(...widths) : 9;
+      const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : (dbProfile.offsetMinMm ?? 20);
+      const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : (dbProfile.offsetMaxMm ?? 50);
+      
+      // Auto-detect fitment mode
+      let derivedMode: FitmentMode = "aftermarket_safe";
+      let derivedVehicleType: "truck" | "suv" | "car" | undefined;
+      
+      if (modeParam && modeParam !== "auto") {
+        derivedMode = modeParam as FitmentMode;
+      } else {
+        const autoResult = autoDetectFitmentMode(model!, {
+          boltPattern: dbProfile.boltPattern,
+          minDiameter: oemMinDiameter,
+          maxWidth: oemMaxWidth,
+        });
+        derivedMode = autoResult.recommendedMode;
+        derivedVehicleType = autoResult.vehicleType;
+      }
+      
+      // Build derived envelope with expansion based on mode
+      const expansion = EXPANSION_PRESETS[derivedMode] || EXPANSION_PRESETS.aftermarket_safe;
+      
+      const derivedEnvelope = {
+        boltPattern: dbProfile.boltPattern,
+        centerBore: dbProfile.centerBoreMm || 0,
+        oemMinDiameter,
+        oemMaxDiameter,
+        oemMinWidth,
+        oemMaxWidth,
+        oemMinOffset,
+        oemMaxOffset,
+        allowedMinDiameter: Math.max(14, oemMinDiameter - (expansion.diameterPlusMin || 0)),
+        allowedMaxDiameter: oemMaxDiameter + (expansion.diameterPlusMax || 2),
+        allowedMinWidth: Math.max(5, oemMinWidth - (expansion.widthPlusMin || 0)),
+        allowedMaxWidth: oemMaxWidth + (expansion.widthPlusMax || 1),
+        allowedMinOffset: oemMinOffset - (expansion.offsetExpandLow || 15),
+        allowedMaxOffset: oemMaxOffset + (expansion.offsetExpandHigh || 10),
+      };
+      
+      console.log(`[fitment-search] Derived envelope:`, {
+        boltPattern: derivedEnvelope.boltPattern,
+        diameter: `${derivedEnvelope.allowedMinDiameter}-${derivedEnvelope.allowedMaxDiameter}`,
+        width: `${derivedEnvelope.allowedMinWidth}-${derivedEnvelope.allowedMaxWidth}`,
+        offset: `${derivedEnvelope.allowedMinOffset}-${derivedEnvelope.allowedMaxOffset}`,
+        mode: derivedMode,
+      });
+      
+      // Query WheelPros
+      const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+      if (!wheelProsBase) {
+        return NextResponse.json({ error: "Missing WHEELPROS_WRAPPER_URL" }, { status: 500 });
+      }
+      
+      const page = url.searchParams.get("page") || "1";
+      const pageSize = url.searchParams.get("pageSize") || "200";
+      const brandCd = url.searchParams.get("brand_cd");
+      const finish = url.searchParams.get("finish");
+      const diameter = url.searchParams.get("diameter");
+      const width = url.searchParams.get("width");
+      
+      const wpParams = new URLSearchParams({
+        boltPattern: dbProfile.boltPattern,
+        page,
+        pageSize,
+        fields: "inventory,price,images",
+      });
+      if (brandCd) wpParams.set("brand_cd", brandCd);
+      if (finish) wpParams.set("abbreviated_finish_desc", finish);
+      if (diameter) wpParams.set("diameter", diameter);
+      if (width) wpParams.set("width", width);
+      
+      const headers: Record<string, string> = { Accept: "application/json" };
+      if (process.env.WHEELPROS_WRAPPER_API_KEY) {
+        headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
+      }
+      
+      const wpUrl = new URL("/wheels/search", wheelProsBase);
+      wpParams.forEach((v, k) => wpUrl.searchParams.set(k, v));
+      
+      const wpRes = await fetch(wpUrl.toString(), { headers, cache: "no-store" });
+      const wpData = await wpRes.json();
+      const wpResults = wpData?.results || wpData?.items || [];
+      
+      console.log(`[fitment-search] WheelPros returned ${wpResults.length} wheels for bolt pattern ${dbProfile.boltPattern}`);
+      
+      // Validate wheels against derived envelope
+      const passingWheels: any[] = [];
+      let surefitCount = 0;
+      let specfitCount = 0;
+      let extendedCount = 0;
+      let excludedCount = 0;
+      
+      for (const wpWheel of wpResults) {
+        const wheelDia = wpWheel.properties?.diameter ? Number(wpWheel.properties.diameter) : null;
+        const wheelWidth = wpWheel.properties?.width ? Number(wpWheel.properties.width) : null;
+        const wheelOffset = wpWheel.properties?.offset ? Number(wpWheel.properties.offset) : null;
+        const wheelCb = wpWheel.properties?.centerbore ? Number(wpWheel.properties.centerbore) : null;
+        
+        // Basic validation
+        const diaPass = wheelDia != null && wheelDia >= derivedEnvelope.allowedMinDiameter && wheelDia <= derivedEnvelope.allowedMaxDiameter;
+        const widthPass = wheelWidth != null && wheelWidth >= derivedEnvelope.allowedMinWidth && wheelWidth <= derivedEnvelope.allowedMaxWidth;
+        const offsetPass = wheelOffset == null || (wheelOffset >= derivedEnvelope.allowedMinOffset && wheelOffset <= derivedEnvelope.allowedMaxOffset);
+        const cbPass = wheelCb == null || derivedEnvelope.centerBore === 0 || wheelCb >= derivedEnvelope.centerBore;
+        
+        if (!diaPass || !widthPass || !offsetPass || !cbPass) {
+          excludedCount++;
+          continue;
+        }
+        
+        // Determine fitment class
+        let fitmentClass: "surefit" | "specfit" | "extended" = "extended";
+        
+        const isOemDia = wheelDia != null && wheelDia >= oemMinDiameter && wheelDia <= oemMaxDiameter;
+        const isOemWidth = wheelWidth != null && wheelWidth >= oemMinWidth && wheelWidth <= oemMaxWidth;
+        const isOemOffset = wheelOffset == null || (wheelOffset >= oemMinOffset && wheelOffset <= oemMaxOffset);
+        
+        if (isOemDia && isOemWidth && isOemOffset) {
+          fitmentClass = "surefit";
+          surefitCount++;
+        } else if (isOemDia && isOemWidth) {
+          fitmentClass = "specfit";
+          specfitCount++;
+        } else {
+          extendedCount++;
+        }
+        
+        passingWheels.push({
+          ...wpWheel,
+          fitmentValidation: {
+            fitmentClass,
+            fitmentMode: derivedMode,
+            ...(debug ? {
+              diameterPass: diaPass,
+              widthPass,
+              offsetPass,
+              centerBorePass: cbPass,
+            } : {}),
+          },
+        });
+      }
+      
+      console.log(`[fitment-search] 📤 RESPONSE (dbProfile fallback): ${year} ${make} ${model}`, {
+        boltPattern: dbProfile.boltPattern,
+        wheels: passingWheels.length,
+        surefit: surefitCount,
+        specfit: specfitCount,
+        extended: extendedCount,
+        excluded: excludedCount,
+      });
+      
+      // Build facets
+      const facets = buildFacets(passingWheels);
+      
       return NextResponse.json({
-        results: [], // No wheels without validation
+        results: passingWheels,
+        totalCount: passingWheels.length,
+        page: Number(page),
+        pageSize: Number(pageSize),
+        facets,
         fitment: {
-          mode: "unknown",
+          mode: derivedMode,
+          modeAutoDetected: !modeParam || modeParam === "auto",
+          vehicleType: derivedVehicleType,
+          fitmentSource: "dbProfileFallback",
+          validationMode: "derived",
+          envelope: {
+            boltPattern: derivedEnvelope.boltPattern,
+            centerBore: derivedEnvelope.centerBore,
+            oem: {
+              diameter: [oemMinDiameter, oemMaxDiameter],
+              width: [oemMinWidth, oemMaxWidth],
+              offset: [oemMinOffset, oemMaxOffset],
+            },
+            allowed: {
+              diameter: [derivedEnvelope.allowedMinDiameter, derivedEnvelope.allowedMaxDiameter],
+              width: [derivedEnvelope.allowedMinWidth, derivedEnvelope.allowedMaxWidth],
+              offset: [derivedEnvelope.allowedMinOffset, derivedEnvelope.allowedMaxOffset],
+            },
+          },
           vehicle: {
-            year: dbProfile.year,
-            make: dbProfile.make,
-            model: dbProfile.model,
+            year: Number(year),
+            make,
+            model,
             trim: dbProfile.displayTrim,
           },
           dbProfile: {
@@ -219,7 +439,19 @@ export async function GET(req: Request) {
             source: dbProfile.source,
           },
         },
-        summary: { note: "Legacy profile not available, wheel validation skipped" },
+        summary: {
+          fromWheelPros: wpResults.length,
+          afterFitmentFilter: passingWheels.length,
+          total: passingWheels.length,
+          surefit: surefitCount,
+          specfit: specfitCount,
+          extended: extendedCount,
+          excluded: excludedCount,
+          fitmentSource: "dbProfileFallback",
+          validationMode: "derived",
+          note: "Using dbProfile fallback - legacy profile not available",
+        },
+        timing: debug ? { totalMs: Date.now() - t0 } : undefined,
       });
     }
 
@@ -390,6 +622,8 @@ export async function GET(req: Request) {
         mode,
         modeAutoDetected,
         vehicleType,
+        fitmentSource: "legacy",
+        validationMode: "strict",
         envelope: {
           boltPattern: envelope.boltPattern,
           centerBore: envelope.centerBore,
@@ -439,6 +673,8 @@ export async function GET(req: Request) {
         fromWheelPros: wpResults.length,
         afterFitmentFilter: passingWheels.length,
         ...summary,
+        fitmentSource: "legacy",
+        validationMode: "strict",
       },
       timing: debug ? {
         totalMs: Date.now() - t0,
