@@ -1,4 +1,435 @@
 {
+  "chevrolet": {
+    "silverado": {
+      "2014-2018": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "lt-z71", "label": "LT Z71" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "ltz-z71", "label": "LTZ Z71" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2019-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "custom-trail-boss", "label": "Custom Trail Boss" },
+        { "value": "lt", "label": "LT" },
+        { "value": "rst", "label": "RST" },
+        { "value": "lt-trail-boss", "label": "LT Trail Boss" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" },
+        { "value": "zr2", "label": "ZR2" }
+      ]
+    },
+    "silverado 1500": {
+      "2014-2018": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "lt-z71", "label": "LT Z71" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "ltz-z71", "label": "LTZ Z71" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2019-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "custom-trail-boss", "label": "Custom Trail Boss" },
+        { "value": "lt", "label": "LT" },
+        { "value": "rst", "label": "RST" },
+        { "value": "lt-trail-boss", "label": "LT Trail Boss" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" },
+        { "value": "zr2", "label": "ZR2" }
+      ]
+    },
+    "silverado 2500": {
+      "2015-2019": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2020-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" },
+        { "value": "zr2", "label": "ZR2" }
+      ]
+    },
+    "silverado 2500 hd": {
+      "2015-2019": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2020-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" },
+        { "value": "zr2", "label": "ZR2" }
+      ]
+    },
+    "silverado 3500": {
+      "2015-2019": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2020-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ]
+    },
+    "silverado 3500 hd": {
+      "2015-2019": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2020-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ]
+    },
+    "colorado": {
+      "2015-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "lt", "label": "LT" },
+        { "value": "z71", "label": "Z71" },
+        { "value": "zr2", "label": "ZR2" },
+        { "value": "trail-boss", "label": "Trail Boss" }
+      ]
+    },
+    "tahoe": {
+      "2015-2020": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "premier", "label": "Premier" }
+      ],
+      "2021-2025": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "rst", "label": "RST" },
+        { "value": "z71", "label": "Z71" },
+        { "value": "premier", "label": "Premier" },
+        { "value": "high-country", "label": "High Country" }
+      ]
+    },
+    "suburban": {
+      "2015-2020": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "premier", "label": "Premier" }
+      ],
+      "2021-2025": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "rst", "label": "RST" },
+        { "value": "z71", "label": "Z71" },
+        { "value": "premier", "label": "Premier" },
+        { "value": "high-country", "label": "High Country" }
+      ]
+    }
+  },
+  "gmc": {
+    "sierra": {
+      "2014-2018": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" },
+        { "value": "all-terrain", "label": "All Terrain" }
+      ],
+      "2019-2025": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "elevation", "label": "Elevation" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "at4x", "label": "AT4X" },
+        { "value": "denali", "label": "Denali" },
+        { "value": "denali-ultimate", "label": "Denali Ultimate" }
+      ]
+    },
+    "sierra 1500": {
+      "2014-2018": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" },
+        { "value": "all-terrain", "label": "All Terrain" }
+      ],
+      "2019-2025": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "elevation", "label": "Elevation" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "at4x", "label": "AT4X" },
+        { "value": "denali", "label": "Denali" },
+        { "value": "denali-ultimate", "label": "Denali Ultimate" }
+      ]
+    },
+    "sierra 2500": {
+      "2015-2019": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2020-2025": [
+        { "value": "pro", "label": "Pro" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "sierra 2500 hd": {
+      "2015-2019": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2020-2025": [
+        { "value": "pro", "label": "Pro" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "sierra 3500": {
+      "2015-2019": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2020-2025": [
+        { "value": "pro", "label": "Pro" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "sierra 3500 hd": {
+      "2015-2019": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2020-2025": [
+        { "value": "pro", "label": "Pro" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "canyon": {
+      "2015-2025": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "all-terrain", "label": "All Terrain" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "at4x", "label": "AT4X" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "yukon": {
+      "2015-2020": [
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2021-2025": [
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" },
+        { "value": "denali-ultimate", "label": "Denali Ultimate" }
+      ]
+    },
+    "yukon xl": {
+      "2015-2020": [
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2021-2025": [
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" },
+        { "value": "denali-ultimate", "label": "Denali Ultimate" }
+      ]
+    }
+  },
+  "ford": {
+    "f-150": {
+      "2015-2020": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "raptor", "label": "Raptor" }
+      ],
+      "2021-2025": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "tremor", "label": "Tremor" },
+        { "value": "raptor", "label": "Raptor" },
+        { "value": "raptor-r", "label": "Raptor R" }
+      ]
+    },
+    "f-250": {
+      "2017-2025": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "tremor", "label": "Tremor" }
+      ]
+    },
+    "f-350": {
+      "2017-2025": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "tremor", "label": "Tremor" }
+      ]
+    },
+    "ranger": {
+      "2019-2025": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "raptor", "label": "Raptor" }
+      ]
+    },
+    "bronco": {
+      "2021-2025": [
+        { "value": "base", "label": "Base" },
+        { "value": "big-bend", "label": "Big Bend" },
+        { "value": "black-diamond", "label": "Black Diamond" },
+        { "value": "outer-banks", "label": "Outer Banks" },
+        { "value": "badlands", "label": "Badlands" },
+        { "value": "wildtrak", "label": "Wildtrak" },
+        { "value": "raptor", "label": "Raptor" }
+      ]
+    }
+  },
+  "ram": {
+    "1500": {
+      "2019-2025": [
+        { "value": "tradesman", "label": "Tradesman" },
+        { "value": "big-horn", "label": "Big Horn / Lone Star" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "rebel", "label": "Rebel" },
+        { "value": "longhorn", "label": "Longhorn" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "trx", "label": "TRX" }
+      ]
+    },
+    "2500": {
+      "2019-2025": [
+        { "value": "tradesman", "label": "Tradesman" },
+        { "value": "big-horn", "label": "Big Horn / Lone Star" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "power-wagon", "label": "Power Wagon" },
+        { "value": "longhorn", "label": "Longhorn" },
+        { "value": "limited", "label": "Limited" }
+      ]
+    },
+    "3500": {
+      "2019-2025": [
+        { "value": "tradesman", "label": "Tradesman" },
+        { "value": "big-horn", "label": "Big Horn / Lone Star" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "longhorn", "label": "Longhorn" },
+        { "value": "limited", "label": "Limited" }
+      ]
+    }
+  },
+  "toyota": {
+    "tacoma": {
+      "2016-2025": [
+        { "value": "sr", "label": "SR" },
+        { "value": "sr5", "label": "SR5" },
+        { "value": "trd-sport", "label": "TRD Sport" },
+        { "value": "trd-off-road", "label": "TRD Off-Road" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "trd-pro", "label": "TRD Pro" }
+      ]
+    },
+    "tundra": {
+      "2014-2021": [
+        { "value": "sr", "label": "SR" },
+        { "value": "sr5", "label": "SR5" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "1794-edition", "label": "1794 Edition" },
+        { "value": "trd-pro", "label": "TRD Pro" }
+      ],
+      "2022-2025": [
+        { "value": "sr", "label": "SR" },
+        { "value": "sr5", "label": "SR5" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "1794-edition", "label": "1794 Edition" },
+        { "value": "trd-pro", "label": "TRD Pro" },
+        { "value": "capstone", "label": "Capstone" }
+      ]
+    },
+    "4runner": {
+      "2014-2025": [
+        { "value": "sr5", "label": "SR5" },
+        { "value": "trail", "label": "Trail" },
+        { "value": "trd-off-road", "label": "TRD Off-Road" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "trd-pro", "label": "TRD Pro" }
+      ]
+    }
+  },
   "jeep": {
     "wrangler": {
       "2007-2018": [
@@ -34,6 +465,26 @@
         { "value": "trailhawk", "label": "Trailhawk" },
         { "value": "srt", "label": "SRT" },
         { "value": "trackhawk", "label": "Trackhawk" }
+      ],
+      "2022-2025": [
+        { "value": "laredo", "label": "Laredo" },
+        { "value": "altitude", "label": "Altitude" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "overland", "label": "Overland" },
+        { "value": "trailhawk", "label": "Trailhawk" },
+        { "value": "summit", "label": "Summit" },
+        { "value": "summit-reserve", "label": "Summit Reserve" }
+      ]
+    },
+    "gladiator": {
+      "2020-2025": [
+        { "value": "sport", "label": "Sport" },
+        { "value": "sport-s", "label": "Sport S" },
+        { "value": "willys", "label": "Willys" },
+        { "value": "overland", "label": "Overland" },
+        { "value": "rubicon", "label": "Rubicon" },
+        { "value": "mojave", "label": "Mojave" },
+        { "value": "high-altitude", "label": "High Altitude" }
       ]
     }
   }

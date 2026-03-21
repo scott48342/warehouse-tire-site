@@ -86,10 +86,11 @@ function isEngineCode(value: string): boolean {
   if (!value) return false;
   const trimmed = value.trim();
   return (
-    /^\d+\.\d+[iLtT]?$/i.test(trimmed) || // "3.8i", "5.7L", "2.0T"
+    /^\d+\.\d+[iLtTDd]{0,2}$/i.test(trimmed) || // "3.8i", "5.7L", "2.0T", "6.6TD", "3.0TD"
     /^V\d+$/i.test(trimmed) || // "V6", "V8"
     /^L\d{2,3}$/i.test(trimmed) || // "L86", "LT1", "LS3"
-    /^[A-Z]{2,3}\d{1,2}$/i.test(trimmed) // "LS1", "LT4"
+    /^[A-Z]{2,3}\d{1,2}$/i.test(trimmed) || // "LS1", "LT4"
+    /^\d+\.\d+L?\s*(V\d+|I\d+)?$/i.test(trimmed) // "6.6L V8", "3.0L I6"
   );
 }
 
