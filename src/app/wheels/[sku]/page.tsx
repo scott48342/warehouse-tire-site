@@ -201,6 +201,9 @@ export default async function WheelDetailPage({
     ? await fetchFitment({ year, make, model, modification: modification || undefined })
     : null;
 
+  // Extract DB profile for accessory fitment calculation
+  const dbProfile = (fitmentStrict as any)?.dbProfile || null;
+
   const oemTireSizesAll: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
     ? (fitmentStrict as any).tireSizes.map(String)
     : [];
@@ -627,6 +630,8 @@ export default async function WheelDetailPage({
                     }
                     className="w-full"
                     showPriceInButton={typeof price === "number" && Number.isFinite(price)}
+                    dbProfile={dbProfile}
+                    wheelCenterBore={tfSelf?.centerbore ? Number(tfSelf.centerbore) : (it?.properties?.centerbore ? Number(it.properties.centerbore) : undefined)}
                   />
                   <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
                 </div>

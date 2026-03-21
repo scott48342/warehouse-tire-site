@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useCart, type CartWheelItem } from "@/lib/cart/CartContext";
+import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 
 type AddToCartButtonProps = {
   sku: string;
@@ -30,6 +31,12 @@ type AddToCartButtonProps = {
   className?: string;
   variant?: "primary" | "secondary";
   showPriceInButton?: boolean;
+  /** DB fitment profile for accessory calculation */
+  dbProfile?: DBProfileForAccessories | null;
+  /** Wheel center bore in mm (for hub ring calculation) */
+  wheelCenterBore?: number;
+  /** Wheel seat type override (conical, ball, flat, mag) */
+  wheelSeatType?: string;
 };
 
 export function AddToCartButton({
@@ -53,12 +60,40 @@ export function AddToCartButton({
   className = "",
   variant = "primary",
   showPriceInButton = true,
+  dbProfile,
+  wheelCenterBore,
+  wheelSeatType,
 }: AddToCartButtonProps) {
-  const { addItem } = useCart();
+  const { addItem, addAccessories, setAccessoryState } = useCart();
   const [isAdding, setIsAdding] = useState(false);
 
   const handleAddToCart = () => {
     setIsAdding(true);
+
+    // ═══════════════════════════════════════════════════════════════════════
+    // ACCESSORY FITMENT - Calculate and auto-add required accessories
+    // ═══════════════════════════════════════════════════════════════════════
+    console.log("[AddToCartButton] Accessory fitment triggered on wheel add:", {
+      sku,
+      hasDbProfile: !!dbProfile,
+      hasVehicle: !!vehicle,
+    });
+
+    // Check if we have vehicle data for accessory calculation
+    const hasVehicleData = Boolean(
+      dbProfile?.threadSize || dbProfile?.centerBoreMm
+    );
+
+    if (!hasVehicleData && vehicle) {
+      console.warn("[AddToCartButton] WARNING: Vehicle data missing for accessory fitment", {
+        vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+        missingFields: {
+          threadSize: !dbProfile?.threadSize,
+          centerBoreMm: !dbProfile?.centerBoreMm,
+          seatType: !dbProfile?.seatType,
+        },
+      });
+    }
 
     const item: CartWheelItem = {
       type: "wheel",
@@ -84,6 +119,42 @@ export function AddToCartButton({
     // Small delay for visual feedback
     setTimeout(() => {
       addItem(item);
+
+      // Calculate and add accessories if we have profile data
+      if (dbProfile) {
+        const wheelForFitment: WheelForAccessories = {
+          sku,
+          centerBore: wheelCenterBore,
+          seatType: wheelSeatType,
+          boltPattern,
+        };
+
+        const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
+        
+        if (fitmentResult.state) {
+          setAccessoryState(fitmentResult.state);
+        }
+
+        // Auto-add required accessories
+        if (fitmentResult.requiredItems.length > 0) {
+          console.log("[AddToCartButton] Auto-adding required accessories:", 
+            fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
+          );
+          addAccessories(fitmentResult.requiredItems);
+        }
+
+        // Log accessory decisions
+        if (fitmentResult.fitment) {
+          const lugStatus = fitmentResult.fitment.lugNuts.status;
+          const hubStatus = fitmentResult.fitment.hubRings.status;
+          
+          console.log(`[AddToCartButton] Lug nuts: ${lugStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.lugNuts.reason}`);
+          console.log(`[AddToCartButton] Hub rings: ${hubStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.hubRings.reason}`);
+        }
+      } else if (vehicle) {
+        console.log("[AddToCartButton] Skipping accessory fitment - no dbProfile available");
+      }
+
       setIsAdding(false);
     }, 150);
   };

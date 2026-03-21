@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { BRAND } from "@/lib/brand";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { useCart } from "@/lib/cart/CartContext";
+import { useAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 
 export type WheelFinishThumb = {
   finish: string;
@@ -79,6 +80,9 @@ export function WheelsStyleCard({
   pair,
   fitmentClass,
   isPopular,
+  dbProfile,
+  wheelCenterBore,
+  wheelSeatType,
 }: {
   brand: string;
   title: string;
@@ -94,9 +98,15 @@ export function WheelsStyleCard({
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
   isPopular?: boolean;
+  /** DB fitment profile for accessory calculation */
+  dbProfile?: DBProfileForAccessories | null;
+  /** Wheel center bore in mm (for hub ring calculation) */
+  wheelCenterBore?: number;
+  /** Wheel seat type override (conical, ball, flat, mag) */
+  wheelSeatType?: string;
 }) {
   const router = useRouter();
-  const { addItem } = useCart();
+  const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
   // CRITICAL: Use pair.front.sku if available - this is the variant matching displayed size
@@ -235,7 +245,41 @@ export function WheelsStyleCard({
     const effectiveWidth = currentPair?.front?.width ?? sizeLabel?.width;
     const effectiveOffset = currentPair?.front?.offset ?? specLabel?.offset;
 
+    // ═══════════════════════════════════════════════════════════════════════
+    // ACCESSORY FITMENT - Calculate and auto-add required accessories
+    // ═══════════════════════════════════════════════════════════════════════
+    console.log("[WheelsStyleCard] Accessory fitment triggered on wheel add:", {
+      sku: effectiveSku,
+      hasDbProfile: !!dbProfile,
+      hasVehicle: !!vehicle,
+    });
+
+    // Build wheel data for accessory fitment
+    const wheelForFitment: WheelForAccessories = {
+      sku: effectiveSku,
+      centerBore: wheelCenterBore,
+      seatType: wheelSeatType,
+      boltPattern: specLabel?.boltPattern,
+    };
+
+    // Check if we have vehicle data for accessory calculation
+    const hasVehicleData = Boolean(
+      dbProfile?.threadSize || dbProfile?.centerBoreMm
+    );
+
+    if (!hasVehicleData && vehicle) {
+      console.warn("[WheelsStyleCard] WARNING: Vehicle data missing for accessory fitment", {
+        vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+        missingFields: {
+          threadSize: !dbProfile?.threadSize,
+          centerBoreMm: !dbProfile?.centerBoreMm,
+          seatType: !dbProfile?.seatType,
+        },
+      });
+    }
+
     setTimeout(() => {
+      // Add the wheel first
       addItem({
         type: "wheel",
         sku: effectiveSku,
@@ -252,6 +296,38 @@ export function WheelsStyleCard({
         fitmentClass,
         vehicle,
       });
+
+      // Calculate and add accessories if we have profile data
+      if (dbProfile) {
+        // Import accessory calculation inline to avoid hook rules violation
+        import("@/hooks/useAccessoryFitment").then(({ calculateAccessoryFitment }) => {
+          const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
+          
+          if (fitmentResult.state) {
+            setAccessoryState(fitmentResult.state);
+          }
+
+          // Auto-add required accessories
+          if (fitmentResult.requiredItems.length > 0) {
+            console.log("[WheelsStyleCard] Auto-adding required accessories:", 
+              fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
+            );
+            addAccessories(fitmentResult.requiredItems);
+          }
+
+          // Log accessory decisions
+          if (fitmentResult.fitment) {
+            const lugStatus = fitmentResult.fitment.lugNuts.status;
+            const hubStatus = fitmentResult.fitment.hubRings.status;
+            
+            console.log(`[WheelsStyleCard] Lug nuts: ${lugStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.lugNuts.reason}`);
+            console.log(`[WheelsStyleCard] Hub rings: ${hubStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.hubRings.reason}`);
+          }
+        });
+      } else if (vehicle) {
+        console.log("[WheelsStyleCard] Skipping accessory fitment - no dbProfile available");
+      }
+
       setIsQuickAdding(false);
     }, 150);
   }

@@ -1645,6 +1645,7 @@ export default async function WheelsPage({
                         sort,
                         page: String(page),
                       }}
+                      dbProfile={dbProfile}
                     />
                   ))}
                 </div>
@@ -1696,6 +1697,7 @@ export default async function WheelsPage({
                       sort,
                       page: String(page),
                     }}
+                    dbProfile={dbProfile}
                   />
                 ))
               ) : (
