@@ -103,10 +103,14 @@ export async function GET(req: Request) {
             
             const trimStr = safeStr(m.trim);
             const engineStr = safeStr(m.engine);
+            const nameStr = safeStr(m.name);
             
-            // Build display label - normalize engine codes to friendly trim names
-            // Pass engineStr to normalizer so it can map "5.7i" → "Z28"
-            const normalized = normalizeTrimLabel(trimStr, engineStr, year, make, model);
+            // Build display label from best available source:
+            // 1. m.trim if it's a valid customer-facing name (not engine code)
+            // 2. m.name if it's a valid customer-facing name (contains submodel like "Rubicon")
+            // 3. Engine-to-trim mapping for specific vehicles (Camaro 5.7i → Z28)
+            // 4. "Base" as last resort only
+            const normalized = normalizeTrimLabel(trimStr, engineStr, nameStr, year, make, model);
             
             // Never show modification IDs or raw engine codes
             const label = normalized || "Base";
@@ -155,7 +159,8 @@ export async function GET(req: Request) {
           const value = mod ? `${mod}__${String(trimLevel).replace(/\s+/g, "-").toLowerCase()}__${engineCode.toLowerCase().replace(/[^a-z0-9]+/g, "-")}` : "";
           
           // Normalize engine codes to friendly trim names
-          const label = normalizeTrimLabel(String(trimLevel), String(engineCode), year, make, model) || "Base";
+          // Package engine returns trimLevel which is usually the customer-facing name
+          const label = normalizeTrimLabel(String(trimLevel), String(engineCode), "", year, make, model) || "Base";
           
           if (!value) return null;
           return { value, label };

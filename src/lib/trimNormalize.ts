@@ -106,10 +106,30 @@ function isModificationId(value: string): boolean {
 }
 
 /**
- * Normalize a trim label from raw trim and engine strings
+ * Check if a string is a valid customer-facing label
+ * (not an engine code, not a modification ID, not empty)
+ */
+function isValidDisplayLabel(value: string): boolean {
+  if (!value) return false;
+  const trimmed = value.trim();
+  if (!trimmed) return false;
+  if (isEngineCode(trimmed)) return false;
+  if (isModificationId(trimmed)) return false;
+  return true;
+}
+
+/**
+ * Normalize a trim label from raw trim, engine, and name strings
+ * 
+ * Priority:
+ * 1. trimStr if it's a valid customer-facing name
+ * 2. nameStr if it's a valid customer-facing name (contains submodel like "Rubicon")
+ * 3. Engine-to-trim mapping for specific vehicles (Camaro 5.7i → Z28)
+ * 4. Empty string (caller defaults to "Base")
  * 
  * @param trimStr - The trim level string (e.g., "Base", "LT", "Z28", or empty)
  * @param engineStr - The engine string (e.g., "5.7i", "3.8L", or empty)
+ * @param nameStr - The modification name (e.g., "Rubicon", "Unlimited Sahara 4x2")
  * @param year - Vehicle year
  * @param make - Vehicle make
  * @param model - Vehicle model
@@ -118,6 +138,7 @@ function isModificationId(value: string): boolean {
 export function normalizeTrimLabel(
   trimStr: string,
   engineStr: string,
+  nameStr: string,
   year: string,
   make: string,
   model: string
@@ -126,20 +147,28 @@ export function normalizeTrimLabel(
   const normalizedModel = model.toLowerCase().trim();
   const cleanTrim = trimStr.trim();
   const cleanEngine = engineStr.trim();
+  const cleanName = nameStr.trim();
 
-  // If we have a good trim string that's not an engine code or ID, use it
-  if (cleanTrim && !isEngineCode(cleanTrim) && !isModificationId(cleanTrim)) {
+  // Priority 1: If trim is a valid customer-facing name, use it
+  if (isValidDisplayLabel(cleanTrim)) {
     return cleanTrim;
   }
 
-  // Try to map engine to a friendly trim name
+  // Priority 2: If name is a valid customer-facing name, use it
+  // This handles Wrangler "Rubicon", "Sahara", "Unlimited X 4x2" etc.
+  if (isValidDisplayLabel(cleanName)) {
+    return cleanName;
+  }
+
+  // Priority 3: Try to map engine to a friendly trim name (vehicle-specific)
+  // Only applies to vehicles with known engine-to-trim mappings
   const makeMappings = ENGINE_TO_TRIM_MAPPINGS[normalizedMake];
   if (makeMappings) {
     const modelMappings = makeMappings[normalizedModel];
     if (modelMappings) {
       // Check against engine string
       for (const mapping of modelMappings) {
-        if (mapping.enginePattern.test(cleanEngine)) {
+        if (cleanEngine && mapping.enginePattern.test(cleanEngine)) {
           return mapping.label;
         }
         // Also check if trim string is actually an engine code
@@ -150,25 +179,25 @@ export function normalizeTrimLabel(
     }
   }
 
-  // If trim looks like an engine code but we have no mapping, return empty
-  // (caller should default to "Base")
+  // Priority 4: If trim looks like an engine code but we have no mapping,
+  // return empty (caller should default to "Base")
   if (cleanTrim && isEngineCode(cleanTrim)) {
     return "";
   }
 
-  // If we have engine info but no mapping, return empty
-  if (cleanEngine && !cleanTrim) {
+  // If we only have engine info and no mapping, return empty
+  if (cleanEngine && !cleanTrim && !cleanName) {
     return "";
   }
 
-  return cleanTrim;
+  return "";
 }
 
 /**
  * Normalize a raw trim/submodel value for display
  * Used when we only have a single value (not separate trim/engine)
  * 
- * @param rawValue - Raw trim value that might be an engine code
+ * @param rawValue - Raw trim value that might be an engine code or a valid submodel name
  * @param year - Vehicle year
  * @param make - Vehicle make
  * @param model - Vehicle model
@@ -186,19 +215,25 @@ export function normalizeTrim(
 
   const clean = rawValue.trim();
 
-  // Never show modification IDs
+  // Never show modification IDs - but this shouldn't happen for submodel names
   if (isModificationId(clean)) {
     return { value: clean, label: "Base" };
   }
 
-  // If it's not an engine code, use as-is
-  if (!isEngineCode(clean)) {
+  // If it's a valid customer-facing name (not an engine code), use as-is
+  // This preserves "Rubicon", "Sahara", "Unlimited X 4x2", etc.
+  if (isValidDisplayLabel(clean)) {
     return { value: clean, label: clean };
   }
 
-  // Try to map engine code to friendly name
-  const label = normalizeTrimLabel("", clean, year, make, model);
-  return { value: clean, label: label || "Base" };
+  // If it looks like an engine code, try to map to friendly name (vehicle-specific)
+  if (isEngineCode(clean)) {
+    const label = normalizeTrimLabel("", clean, "", year, make, model);
+    return { value: clean, label: label || "Base" };
+  }
+
+  // Fallback - use the value as-is
+  return { value: clean, label: clean };
 }
 
 /**
