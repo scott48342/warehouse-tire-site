@@ -123,10 +123,10 @@ const SUBMODEL_PATTERNS = [
   /Denali/i,
   /AT4/i,
   /Elevation/i,
-  /SEL/i,
-  /SE$/i,
-  /LE$/i,
-  /XLE/i,
+  /\bSEL\b/i,   // SEL as word (not substring of "Diesel")
+  /\bSE\b/i,    // SE as word (not substring)
+  /\bLE\b/i,    // LE as word
+  /\bXLE\b/i,   // XLE as word
   /TRD/i,
   /SR5/i,
   /Trail/i,
@@ -214,9 +214,15 @@ export function extractDisplayTrim(label: string): string | null {
   const trimmed = label.trim();
   if (!trimmed) return null;
   
-  // If it's purely engine text, return null (don't display)
-  if (isEngineLikeText(trimmed) && !isSubmodelLikeText(trimmed)) {
-    return null;
+  // If it's engine text, return null UNLESS it also matches a strong submodel pattern
+  // Engine detection takes priority - we'd rather omit than show "5.7i"
+  if (isEngineLikeText(trimmed)) {
+    // Only allow through if it ALSO matches a known submodel pattern (e.g., "Z28")
+    if (!isSubmodelLikeText(trimmed)) {
+      return null;
+    }
+    // For ambiguous cases like "Z28" (which looks like an engine code but is a trim),
+    // isSubmodelLikeText will return true because it matches SUBMODEL_PATTERNS
   }
   
   // If it contains a separator (/ or ,), try to find the submodel part
