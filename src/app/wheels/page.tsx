@@ -135,6 +135,23 @@ async function fetchWheelsFast(params: Record<string, string | undefined>) {
   return res.json();
 }
 
+// Helper to safely convert any value to string (fixes [object Object] bug)
+function safeString(val: unknown): string {
+  if (val === null || val === undefined) return "";
+  if (typeof val === "string") return val.trim();
+  if (typeof val === "number" || typeof val === "boolean") return String(val);
+  if (typeof val === "object") {
+    const obj = val as Record<string, unknown>;
+    if (typeof obj.name === "string") return obj.name.trim();
+    if (typeof obj.value === "string") return obj.value.trim();
+    if (typeof obj.label === "string") return obj.label.trim();
+    if (typeof obj.title === "string") return obj.title.trim();
+    if (typeof obj.description === "string") return obj.description.trim();
+    return "";
+  }
+  return "";
+}
+
 export default async function WheelsPage({
   searchParams,
 }: {
@@ -146,11 +163,11 @@ export default async function WheelsPage({
   const pageRaw = Array.isArray(sp.page) ? sp.page[0] : sp.page;
   const page = Math.max(1, Number(pageRaw || "1") || 1);
 
-  const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
-  const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
-  const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
-  const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
-  const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
+  const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
+  const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
+  const model = safeString(Array.isArray(sp.model) ? sp.model[0] : sp.model);
+  const trim = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
+  const modification = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
 
   // Optional user-supplied wheel filters.
   const diameterParam = (Array.isArray(sp.diameter) ? sp.diameter[0] : sp.diameter) || "";

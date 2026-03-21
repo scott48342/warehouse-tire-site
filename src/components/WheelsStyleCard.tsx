@@ -99,7 +99,11 @@ export function WheelsStyleCard({
   const { addItem } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
-  const [selectedSku, setSelectedSku] = useState<string>(baseSku);
+  // CRITICAL: Use pair.front.sku if available - this is the variant matching displayed size
+  // The baseSku might be a different size variant (e.g., 18" when pair shows 19")
+  const effectiveInitialSku = pair?.front?.sku || baseSku;
+  
+  const [selectedSku, setSelectedSku] = useState<string>(effectiveInitialSku);
   const [selectedImage, setSelectedImage] = useState<string | undefined>(baseImageUrl);
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
@@ -223,16 +227,24 @@ export function WheelsStyleCard({
       ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
       : undefined;
 
+    // CRITICAL: Use the correct SKU and specs from selectedPair/pair
+    // This ensures Quick Add uses the same variant shown on card
+    const currentPair = selectedPair || pair;
+    const effectiveSku = selectedSku || currentPair?.front?.sku || baseSku;
+    const effectiveDia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
+    const effectiveWidth = currentPair?.front?.width ?? sizeLabel?.width;
+    const effectiveOffset = currentPair?.front?.offset ?? specLabel?.offset;
+
     setTimeout(() => {
       addItem({
         type: "wheel",
-        sku: selectedSku || baseSku,
+        sku: effectiveSku,
         brand,
         model: title,
         finish: selectedFinish,
-        diameter: sizeLabel?.diameter,
-        width: sizeLabel?.width,
-        offset: specLabel?.offset,
+        diameter: effectiveDia,
+        width: effectiveWidth,
+        offset: effectiveOffset,
         boltPattern: specLabel?.boltPattern,
         imageUrl: selectedImage,
         unitPrice: typeof selectedPrice === "number" ? selectedPrice : 0,
