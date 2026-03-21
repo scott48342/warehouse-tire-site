@@ -118,6 +118,26 @@ function scoreTireForPicks(tire: Tire): number {
   return score;
 }
 
+// Helper to safely convert any value to string (fixes [object Object] bug)
+function safeString(val: unknown): string {
+  if (val === null || val === undefined) return "";
+  if (typeof val === "string") return val.trim();
+  if (typeof val === "number" || typeof val === "boolean") return String(val);
+  // Handle objects - extract a sensible string value
+  if (typeof val === "object") {
+    // Try common property names
+    const obj = val as Record<string, unknown>;
+    if (typeof obj.name === "string") return obj.name.trim();
+    if (typeof obj.value === "string") return obj.value.trim();
+    if (typeof obj.label === "string") return obj.label.trim();
+    if (typeof obj.title === "string") return obj.title.trim();
+    if (typeof obj.description === "string") return obj.description.trim();
+    // Last resort: return empty string instead of [object Object]
+    return "";
+  }
+  return "";
+}
+
 export default async function TiresPage({
   searchParams,
 }: {
@@ -169,37 +189,38 @@ export default async function TiresPage({
       ? [String(loadRangesRaw).trim().toUpperCase()].filter(Boolean)
       : [];
 
-  const year = (Array.isArray(sp.year) ? sp.year[0] : sp.year) || "";
-  const make = (Array.isArray(sp.make) ? sp.make[0] : sp.make) || "";
-  const model = (Array.isArray(sp.model) ? sp.model[0] : sp.model) || "";
-  const trim = (Array.isArray(sp.trim) ? sp.trim[0] : sp.trim) || "";
-  const modification = (Array.isArray(sp.modification) ? sp.modification[0] : sp.modification) || "";
+  // Use safeString to handle potential object values (fixes [object Object] bug)
+  const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
+  const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
+  const model = safeString(Array.isArray(sp.model) ? sp.model[0] : sp.model);
+  const trim = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
+  const modification = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
 
   // Quote carry-over (so wheel stays on quote when selecting tires)
-  const wheelSku = (Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku) || "";
-  const axleRaw = (Array.isArray((sp as any).axle) ? (sp as any).axle[0] : (sp as any).axle) || "";
-  const axle = (String(axleRaw).trim() === "rear" ? "rear" : "front") as "front" | "rear";
+  const wheelSku = safeString(Array.isArray((sp as any).wheelSku) ? (sp as any).wheelSku[0] : (sp as any).wheelSku);
+  const axleRaw = safeString(Array.isArray((sp as any).axle) ? (sp as any).axle[0] : (sp as any).axle);
+  const axle = (axleRaw === "rear" ? "rear" : "front") as "front" | "rear";
 
-  const tireSku = (Array.isArray((sp as any).tireSku) ? (sp as any).tireSku[0] : (sp as any).tireSku) || "";
-  const tireSkuFront = (Array.isArray((sp as any).tireSkuFront) ? (sp as any).tireSkuFront[0] : (sp as any).tireSkuFront) || "";
-  const tireSkuRear = (Array.isArray((sp as any).tireSkuRear) ? (sp as any).tireSkuRear[0] : (sp as any).tireSkuRear) || "";
+  const tireSku = safeString(Array.isArray((sp as any).tireSku) ? (sp as any).tireSku[0] : (sp as any).tireSku);
+  const tireSkuFront = safeString(Array.isArray((sp as any).tireSkuFront) ? (sp as any).tireSkuFront[0] : (sp as any).tireSkuFront);
+  const tireSkuRear = safeString(Array.isArray((sp as any).tireSkuRear) ? (sp as any).tireSkuRear[0] : (sp as any).tireSkuRear);
 
-  const wheelSkuRear = (Array.isArray((sp as any).wheelSkuRear) ? (sp as any).wheelSkuRear[0] : (sp as any).wheelSkuRear) || "";
-  const wheelDiaFront = (Array.isArray((sp as any).wheelDiaFront) ? (sp as any).wheelDiaFront[0] : (sp as any).wheelDiaFront) || "";
-  const wheelDiaRear = (Array.isArray((sp as any).wheelDiaRear) ? (sp as any).wheelDiaRear[0] : (sp as any).wheelDiaRear) || "";
-  const wheelWidthFront = (Array.isArray((sp as any).wheelWidthFront) ? (sp as any).wheelWidthFront[0] : (sp as any).wheelWidthFront) || "";
-  const wheelWidthRear = (Array.isArray((sp as any).wheelWidthRear) ? (sp as any).wheelWidthRear[0] : (sp as any).wheelWidthRear) || "";
+  const wheelSkuRear = safeString(Array.isArray((sp as any).wheelSkuRear) ? (sp as any).wheelSkuRear[0] : (sp as any).wheelSkuRear);
+  const wheelDiaFront = safeString(Array.isArray((sp as any).wheelDiaFront) ? (sp as any).wheelDiaFront[0] : (sp as any).wheelDiaFront);
+  const wheelDiaRear = safeString(Array.isArray((sp as any).wheelDiaRear) ? (sp as any).wheelDiaRear[0] : (sp as any).wheelDiaRear);
+  const wheelWidthFront = safeString(Array.isArray((sp as any).wheelWidthFront) ? (sp as any).wheelWidthFront[0] : (sp as any).wheelWidthFront);
+  const wheelWidthRear = safeString(Array.isArray((sp as any).wheelWidthRear) ? (sp as any).wheelWidthRear[0] : (sp as any).wheelWidthRear);
 
-  const sizeFrontRaw = (Array.isArray((sp as any).sizeFront) ? (sp as any).sizeFront[0] : (sp as any).sizeFront) || "";
-  const sizeRearRaw = (Array.isArray((sp as any).sizeRear) ? (sp as any).sizeRear[0] : (sp as any).sizeRear) || "";
+  const sizeFrontRaw = safeString(Array.isArray((sp as any).sizeFront) ? (sp as any).sizeFront[0] : (sp as any).sizeFront);
+  const sizeRearRaw = safeString(Array.isArray((sp as any).sizeRear) ? (sp as any).sizeRear[0] : (sp as any).sizeRear);
 
-  const wheelName = (Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName) || "";
-  const wheelUnit = (Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit) || "";
-  const wheelQty = (Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty) || "";
-  const wheelDia = (Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia) || "";
-  const wheelWidth = (Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth) || "";
+  const wheelName = safeString(Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName);
+  const wheelUnit = safeString(Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit);
+  const wheelQty = safeString(Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty);
+  const wheelDia = safeString(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
+  const wheelWidth = safeString(Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth);
 
-  const isStaggered = Boolean(String(wheelSkuRear || "").trim());
+  const isStaggered = Boolean(wheelSkuRear);
   const wheelDiaActive = axle === "rear" ? (wheelDiaRear || wheelDia) : (wheelDiaFront || wheelDia);
   const wheelWidthActive = axle === "rear" ? (wheelWidthRear || wheelWidth) : (wheelWidthFront || wheelWidth);
 
@@ -282,8 +303,8 @@ export default async function TiresPage({
 
   const displayedSizes = lockedSizes.length ? lockedSizes : tireSizes;
 
-  const selectedSizeRaw = (axle === "rear" ? sizeRearRaw : sizeFrontRaw) || ((Array.isArray(sp.size) ? sp.size[0] : sp.size) || "");
-  const metricSizeOverride = (Array.isArray((sp as any).metricSize) ? (sp as any).metricSize[0] : (sp as any).metricSize) || "";
+  const selectedSizeRaw = (axle === "rear" ? sizeRearRaw : sizeFrontRaw) || (safeString(Array.isArray(sp.size) ? sp.size[0] : sp.size));
+  const metricSizeOverride = safeString(Array.isArray((sp as any).metricSize) ? (sp as any).metricSize[0] : (sp as any).metricSize);
   const selectedSizeCandidate = selectedSizeRaw
     ? String(selectedSizeRaw)
     : (displayedSizes[0] || tireSizesStrict[0] || tireSizes[0] || "");
@@ -612,24 +633,29 @@ export default async function TiresPage({
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-screen-2xl px-4 py-8">
-        {/* Package Context Banner - when coming from wheel selection */}
+        {/* Package Context Header - when coming from wheel selection */}
         {isPackageFlow && hasVehicle ? (
-          <div className="mb-6 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 to-white p-4">
-            <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="mb-6 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
+            <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white">✓</span>
-                  <span className="text-sm font-semibold text-green-800">Wheels selected</span>
-                </div>
-                <span className="text-neutral-400">→</span>
-                <div className="flex items-center gap-2">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-xs font-bold text-white">2</span>
-                  <span className="text-sm font-extrabold text-blue-900">Now choose matching tires</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-sm font-bold text-white">✓</div>
+                <div>
+                  <div className="text-xs font-semibold text-green-700 uppercase tracking-wide">Step 1 Complete</div>
+                  <div className="text-sm font-extrabold text-neutral-900">Wheels Selected</div>
                 </div>
               </div>
-              <div className="text-xs text-neutral-600">
-                Building package for {year} {make} {model}
+              <div className="hidden sm:block text-2xl text-neutral-300">→</div>
+              <div className="flex items-center gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-bold text-white">2</div>
+                <div>
+                  <div className="text-xs font-semibold text-red-700 uppercase tracking-wide">Now</div>
+                  <div className="text-sm font-extrabold text-neutral-900">Choose Matching Tires</div>
+                </div>
               </div>
+            </div>
+            <div className="mt-4 rounded-xl bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
+              Building package for <span className="font-bold">{year} {make} {model}</span>
+              {trim ? <span className="text-neutral-500"> • {trim}</span> : null}
             </div>
           </div>
         ) : null}
@@ -676,41 +702,45 @@ export default async function TiresPage({
           </div>
         </div>
 
-        {/* Install & Trust Strip */}
+        {/* Trust & Install Strip - matches wheels page */}
         {hasVehicle ? (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-100 px-4 py-3">
-            <div className="flex flex-wrap items-center gap-4 text-sm">
-              <span className="flex items-center gap-1.5 text-green-800 font-medium">
-                <span className="text-green-600">✓</span> Ship to your installer
-              </span>
-              <span className="flex items-center gap-1.5 text-green-800 font-medium">
-                <span className="text-green-600">✓</span> Local installation available
-              </span>
-              <span className="flex items-center gap-1.5 text-green-800 font-medium">
-                <span className="text-green-600">✓</span> Mount &amp; balance included
-              </span>
+          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl bg-gradient-to-r from-green-50 to-white border border-green-100 px-5 py-3">
+            <div className="flex items-center gap-2 text-sm font-medium text-green-800">
+              <span className="text-green-600 text-base">✓</span> Ship to your installer
             </div>
-            <div className="text-xs text-green-700 font-semibold">
-              No guesswork — guaranteed fitment
+            <div className="flex items-center gap-2 text-sm font-medium text-green-800">
+              <span className="text-green-600 text-base">✓</span> Local installation available
+            </div>
+            <div className="flex items-center gap-2 text-sm font-medium text-green-800">
+              <span className="text-green-600 text-base">✓</span> Mount &amp; balance included
+            </div>
+            <div className="ml-auto text-xs font-bold text-green-700 bg-green-100 px-3 py-1 rounded-full">
+              Guaranteed fitment
             </div>
           </div>
         ) : null}
 
-        {/* Size Selection with Guidance */}
+        {/* Size Selection with Guided UX */}
         {hasVehicle && displayedSizes.length ? (
-          <div className="mt-5 rounded-2xl border border-neutral-200 bg-white p-4">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-sm font-extrabold text-neutral-900">Select Tire Size</h2>
+          <div className="mt-5 rounded-2xl border border-neutral-200 bg-white p-5">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h2 className="text-sm font-extrabold text-neutral-900">Select Tire Size</h2>
+                <p className="mt-0.5 text-xs text-neutral-500">Choose the right size for your setup</p>
+              </div>
               {wheelDiaActive ? (
-                <span className="text-xs text-neutral-500">Filtered for {Math.round(wheelDiaNum)}&quot; wheels</span>
+                <span className="rounded-full bg-blue-100 border border-blue-200 px-3 py-1 text-xs font-bold text-blue-800">
+                  {Math.round(wheelDiaNum)}&quot; wheels selected
+                </span>
               ) : null}
             </div>
             
-            {/* Stock Sizes (from selected trim) */}
+            {/* Stock Sizes (from selected trim) - Recommended */}
             {tireSizesStrict.length > 0 ? (
               <div className="mb-4">
-                <div className="text-xs font-semibold text-green-700 mb-2 flex items-center gap-1">
-                  <span className="text-green-600">●</span> Stock Sizes — OEM fitment for your trim
+                <div className="text-xs font-bold text-green-700 mb-2 flex items-center gap-2">
+                  <span className="flex h-4 w-4 items-center justify-center rounded-full bg-green-500 text-[10px] text-white">✓</span>
+                  Recommended — OEM sizes for your {modification || "trim"}
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {(wheelDiaNum ? tireSizesStrict.filter(s => rimDiaFromSize(s) === Math.round(wheelDiaNum)) : tireSizesStrict).map((s) => {
@@ -723,12 +753,12 @@ export default async function TiresPage({
                         href={href}
                         className={
                           active
-                            ? "rounded-xl bg-neutral-900 px-4 py-2 text-sm font-extrabold text-white"
-                            : "rounded-xl border border-green-200 bg-green-50 px-4 py-2 text-sm font-extrabold text-neutral-900 hover:border-green-300"
+                            ? "rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-extrabold text-white shadow-sm"
+                            : "rounded-xl border-2 border-green-200 bg-green-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-green-400 hover:bg-green-100 transition-colors"
                         }
                       >
                         <span>{s}</span>
-                        {rim ? <span className="ml-1 text-xs opacity-70">({rim}&quot;)</span> : null}
+                        {rim ? <span className="ml-1.5 text-xs opacity-70">({rim}&quot;)</span> : null}
                       </Link>
                     );
                   })}
@@ -746,8 +776,9 @@ export default async function TiresPage({
               
               return (
                 <div>
-                  <div className="text-xs font-semibold text-amber-700 mb-2 flex items-center gap-1">
-                    <span className="text-amber-500">●</span> Optional Sizes — available on other trims
+                  <div className="text-xs font-bold text-amber-700 mb-2 flex items-center gap-2">
+                    <span className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-500 text-[10px] text-white">+</span>
+                    Optional — Sportier / wider stance options
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {upgradeSizes.map((s) => {
@@ -760,12 +791,12 @@ export default async function TiresPage({
                           href={href}
                           className={
                             active
-                              ? "rounded-xl bg-neutral-900 px-4 py-2 text-sm font-extrabold text-white"
-                              : "rounded-xl border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-extrabold text-neutral-900 hover:border-amber-300"
+                              ? "rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-extrabold text-white shadow-sm"
+                              : "rounded-xl border-2 border-amber-200 bg-amber-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-amber-400 hover:bg-amber-100 transition-colors"
                           }
                         >
                           <span>{s}</span>
-                          {rim ? <span className="ml-1 text-xs opacity-70">({rim}&quot;)</span> : null}
+                          {rim ? <span className="ml-1.5 text-xs opacity-70">({rim}&quot;)</span> : null}
                         </Link>
                       );
                     })}
@@ -801,6 +832,7 @@ export default async function TiresPage({
         ) : null}
 
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
+          {/* Filters Sidebar - matching wheels page spacing */}
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
             {hasVehicle ? (
               <div className="mb-4">
@@ -833,7 +865,7 @@ export default async function TiresPage({
 
               <FilterGroup title="Brand">
                 {topBrands.length ? (
-                  <div className="grid gap-2">
+                  <div className="grid gap-3">
                     {topBrands.map((b) => (
                       <div key={b} className="flex items-center justify-between gap-2">
                         <Check label={b} name="brand" value={b} defaultChecked={brands.includes(b)} />
@@ -841,11 +873,11 @@ export default async function TiresPage({
                       </div>
                     ))}
                     {restBrands.length ? (
-                      <details className="rounded-xl border border-neutral-200 bg-white p-2">
+                      <details className="rounded-xl border border-neutral-200 bg-white p-3">
                         <summary className="cursor-pointer select-none text-xs font-extrabold text-neutral-900">
                           More brands ({restBrands.length})
                         </summary>
-                        <div className="mt-2 grid gap-2">
+                        <div className="mt-3 grid gap-3">
                           {restBrands.map((b) => (
                             <div key={b} className="flex items-center justify-between gap-2">
                               <Check label={b} name="brand" value={b} defaultChecked={brands.includes(b)} />
@@ -874,7 +906,7 @@ export default async function TiresPage({
               {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
 
               <FilterGroup title="Price">
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-3">
                   <input name="priceMin" defaultValue={priceMinRaw ? String(priceMinRaw) : ""} placeholder="$ min" className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold" />
                   <input name="priceMax" defaultValue={priceMaxRaw ? String(priceMaxRaw) : ""} placeholder="$ max" className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold" />
                 </div>
@@ -901,12 +933,14 @@ export default async function TiresPage({
 
               <FilterGroup title="Season">
                 {seasonsAvailable.length ? (
-                  seasonsAvailable.map((s) => (
-                    <div key={s} className="flex items-center justify-between gap-2">
-                      <Check label={s} name="season" value={s} defaultChecked={seasons.includes(s)} />
-                      <span className="text-xs font-semibold text-neutral-500">{seasonCounts.get(s) || 0}</span>
-                    </div>
-                  ))
+                  <div className="grid gap-3">
+                    {seasonsAvailable.map((s) => (
+                      <div key={s} className="flex items-center justify-between gap-2">
+                        <Check label={s} name="season" value={s} defaultChecked={seasons.includes(s)} />
+                        <span className="text-xs font-semibold text-neutral-500">{seasonCounts.get(s) || 0}</span>
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   <div className="text-xs text-neutral-600">No season data yet.</div>
                 )}
@@ -933,12 +967,14 @@ export default async function TiresPage({
 
               <FilterGroup title="Speed Rating">
                 {speedsAvailable.length ? (
-                  speedsAvailable.slice(0, 12).map((s) => (
-                    <div key={s} className="flex items-center justify-between gap-2">
-                      <Check label={s} name="speed" value={s} defaultChecked={speeds.includes(s)} />
-                      <span className="text-xs font-semibold text-neutral-500">{speedCounts.get(s) || 0}</span>
-                    </div>
-                  ))
+                  <div className="grid gap-3">
+                    {speedsAvailable.slice(0, 12).map((s) => (
+                      <div key={s} className="flex items-center justify-between gap-2">
+                        <Check label={s} name="speed" value={s} defaultChecked={speeds.includes(s)} />
+                        <span className="text-xs font-semibold text-neutral-500">{speedCounts.get(s) || 0}</span>
+                      </div>
+                    ))}
+                  </div>
                 ) : (
                   <div className="text-xs text-neutral-600">No speed rating data yet.</div>
                 )}
@@ -964,7 +1000,7 @@ export default async function TiresPage({
               {loadRanges.map((lr) => (<input key={lr} type="hidden" name="loadRange" value={lr} />))}
 
               <FilterGroup title="Features">
-                <div className="grid gap-2">
+                <div className="grid gap-3">
                   <div className="flex items-center justify-between gap-2">
                     <Check label="Run-flat" name="runFlat" value="1" defaultChecked={runFlat} />
                     <span className="text-xs font-semibold text-neutral-500">{runFlatCount}</span>
@@ -1005,7 +1041,7 @@ export default async function TiresPage({
               <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
 
               <FilterGroup title="Load Range">
-                <div className="grid gap-2">
+                <div className="grid gap-3">
                   <div className="flex items-center justify-between gap-2">
                     <Check label="Load Range E" name="loadRange" value="E" defaultChecked={loadRanges.includes("E")} />
                     <span className="text-xs font-semibold text-neutral-500">{loadRangeCounts.get("E") || 0}</span>
@@ -1078,10 +1114,10 @@ export default async function TiresPage({
               </div>
             </div>
 
-            {/* Top Picks Section - only on page 1 */}
+            {/* Top Picks Section - matches wheels page styling */}
             {hasVehicle && topPicks.length > 0 && safePage === 1 ? (
-              <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-5">
-                <div className="flex items-start justify-between mb-2">
+              <div className="mt-5 mb-8 rounded-2xl bg-gradient-to-b from-neutral-50 to-white border border-neutral-200 p-6 shadow-sm">
+                <div className="flex items-start justify-between mb-4">
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-xl">⭐</span>
@@ -1093,12 +1129,9 @@ export default async function TiresPage({
                       Hand-picked based on fitment, value, and popularity
                     </p>
                   </div>
-                  <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-800 whitespace-nowrap">
-                    ✓ Top Pick
-                  </span>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-4">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {topPicks.slice(0, 4).map((t, idx) => (
                     <TireCard
                       key={`top-${t.partNumber || t.mfgPartNumber || idx}`}
@@ -1121,6 +1154,7 @@ export default async function TiresPage({
                       axle={axle}
                       isTopPick
                       hasVehicle={hasVehicle}
+                      isPackageFlow={isPackageFlow}
                     />
                   ))}
                 </div>
@@ -1170,6 +1204,7 @@ export default async function TiresPage({
                     isStaggered={isStaggered}
                     axle={axle}
                     hasVehicle={hasVehicle}
+                    isPackageFlow={isPackageFlow}
                   />
                 ))
               ) : (
@@ -1241,7 +1276,7 @@ export default async function TiresPage({
   );
 }
 
-// Tire Card Component
+// Tire Card Component - matches wheel card design
 function TireCard({
   tire: t,
   stripSizeFromName,
@@ -1262,6 +1297,7 @@ function TireCard({
   axle,
   isTopPick,
   hasVehicle,
+  isPackageFlow,
 }: {
   tire: Tire;
   stripSizeFromName: (name: string) => string;
@@ -1282,6 +1318,7 @@ function TireCard({
   axle: "front" | "rear";
   isTopPick?: boolean;
   hasVehicle: boolean;
+  isPackageFlow?: boolean;
 }) {
   const brandKey = String(t.brand || "").trim().toLowerCase();
   const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
@@ -1297,11 +1334,13 @@ function TireCard({
   const inStock = maxQty >= 4;
 
   const tireSku = String(t.partNumber || t.mfgPartNumber || "").trim();
+  const displayTitle = stripSizeFromName(t.displayName || t.prettyName || t.description || "") ||
+    t.displayName || t.prettyName || t.description || t.partNumber || "Tire";
 
   return (
     <article className={`group relative overflow-hidden rounded-2xl border bg-white p-5 hover:shadow-md transition-shadow ${isTopPick ? "border-green-200 ring-1 ring-green-100" : "border-neutral-200 hover:border-red-300"}`}>
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-red-500" />
-      <div className="pointer-events-none absolute left-0 top-0 h-1 w-full bg-red-500" />
+      {/* Left accent bar - matching wheels card */}
+      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${isTopPick ? "bg-green-500" : "bg-neutral-800"}`} />
 
       {t.source === "wp" && t.mfgPartNumber ? (
         <Link
@@ -1309,7 +1348,7 @@ function TireCard({
             year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia,
           }).toString()}`}
           className="absolute inset-0 z-0"
-          aria-label={`View ${stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
+          aria-label={`View ${displayTitle}`}
         />
       ) : t.source === "km" && t.partNumber ? (
         <Link
@@ -1317,7 +1356,7 @@ function TireCard({
             year, make, model, trim, modification, size: selectedSize, sort,
           }).toString()}`}
           className="absolute inset-0 z-0"
-          aria-label={`View ${stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}`}
+          aria-label={`View ${displayTitle}`}
         />
       ) : null}
 
@@ -1327,54 +1366,48 @@ function TireCard({
           <FavoritesButton
             type="tire"
             sku={t.mfgPartNumber}
-            label={`${t.brand || "Tire"} ${t.displayName || t.prettyName || t.description || t.mfgPartNumber}`}
+            label={`${t.brand || "Tire"} ${displayTitle}`}
             href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
             imageUrl={t.imageUrl}
           />
         ) : null}
       </div>
 
-      <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
-        {stripSizeFromName(t.displayName || t.prettyName || t.description || "") ||
-          t.displayName || t.prettyName || t.description || t.partNumber || "Tire"}
+      <h3 className="relative z-10 mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
+        {displayTitle}
       </h3>
 
-      {/* Fitment confirmation for vehicle */}
-      {hasVehicle ? (
-        <div className="mt-1.5 flex items-center gap-1 text-xs text-green-700 font-medium">
-          <span className="text-green-600">✓</span> Fits your {year} {make} {model}
-        </div>
-      ) : null}
-
-      <div className="mt-2 flex flex-wrap gap-1.5">
+      {/* Badges row - matching wheels card */}
+      <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
         {isTopPick ? (
-          <span className="rounded-full border border-green-200 bg-green-50 px-2 py-0.5 text-[10px] font-extrabold text-green-800">
-            Top Pick
+          <span className="rounded-full border border-green-200 bg-green-100 px-2 py-0.5 text-[10px] font-bold text-green-800">
+            ⭐ Top Pick
           </span>
         ) : null}
         {rebateLabel ? (
-          <span className="rounded-full border border-red-200 bg-white px-2 py-0.5 text-[10px] font-extrabold text-red-900">
+          <span className="rounded-full border border-red-200 bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-900">
             {rebateLabel}
           </span>
         ) : null}
         {t.badges?.terrain ? (
-          <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[10px] font-extrabold text-neutral-700">
+          <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
             {String(t.badges.terrain)}
           </span>
         ) : null}
         {t.badges?.loadIndex && t.badges?.speedRating ? (
-          <span className="rounded-full border border-neutral-200 bg-white px-2 py-0.5 text-[10px] font-extrabold text-neutral-700">
+          <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
             {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
           </span>
         ) : null}
       </div>
 
+      {/* Product image - matching wheels card */}
       <div className="relative z-10 mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
         {t.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={t.imageUrl}
-            alt={stripSizeFromName(t.displayName || t.prettyName || t.description || "") || "Tire"}
+            alt={displayTitle}
             className="h-48 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
             loading="lazy"
           />
@@ -1388,6 +1421,27 @@ function TireCard({
         )}
       </div>
 
+      {/* Fitment messaging - matching wheels card */}
+      {hasVehicle ? (
+        <div className="relative z-10 mt-3 rounded-lg bg-neutral-50 px-3 py-2 text-xs space-y-1">
+          {isPackageFlow ? (
+            <div className="flex items-center gap-1.5 text-blue-700 font-medium">
+              <span className="text-blue-600">✓</span>
+              <span>Matches your selected wheels</span>
+            </div>
+          ) : null}
+          <div className="flex items-center gap-1.5 text-green-700 font-medium">
+            <span className="text-green-600">✓</span>
+            <span>Fits your {year} {make} {model}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-neutral-600">
+            <span>📍</span>
+            <span>Install available near you</span>
+          </div>
+        </div>
+      ) : null}
+
+      {/* Price and stock - matching wheels card */}
       <div className="relative z-10 mt-4">
         <div className="text-2xl font-extrabold text-neutral-900">
           {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
@@ -1402,6 +1456,7 @@ function TireCard({
         </div>
       </div>
 
+      {/* CTA buttons - matching wheels card structure */}
       <div className="relative z-10 mt-4 grid gap-2">
         {typeof t.cost === "number" && wheelSku && tireSku ? (
           isStaggered ? (
@@ -1411,7 +1466,7 @@ function TireCard({
               tire={{
                 sku: tireSku,
                 brand: String(t.brand || ""),
-                title: String(stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                title: String(displayTitle),
                 size: "",
                 price: typeof t.cost === "number" ? t.cost + 50 : undefined,
                 imageUrl: t.imageUrl,
@@ -1428,7 +1483,7 @@ function TireCard({
               tire={{
                 sku: tireSku,
                 brand: String(t.brand || ""),
-                title: String(stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || t.mfgPartNumber || "Tire"),
+                title: String(displayTitle),
                 size: "",
                 price: typeof t.cost === "number" ? t.cost + 50 : undefined,
                 imageUrl: t.imageUrl,
@@ -1444,7 +1499,7 @@ function TireCard({
           <QuickAddTireButton
             sku={tireSku}
             brand={String(t.brand || "Tire")}
-            model={String(stripSizeFromName(t.displayName || t.prettyName || t.description || "") || t.displayName || t.prettyName || t.description || t.partNumber || "Tire")}
+            model={String(displayTitle)}
             size={selectedSize}
             imageUrl={t.imageUrl}
             unitPrice={t.cost + 50}
@@ -1464,7 +1519,7 @@ function TireCard({
               ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
               : "#"
           }
-          className="rounded-xl border border-neutral-200 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+          className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
         >
           View Details
         </Link>
@@ -1484,11 +1539,12 @@ function Chip({ children, active }: { children: React.ReactNode; active?: boolea
   );
 }
 
+// FilterGroup - matching wheels page spacing (mt-6, text-sm title, mt-3 content gap-3)
 function FilterGroup({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="mt-4">
-      <div className="text-xs font-extrabold text-neutral-900">{title}</div>
-      <div className="mt-2 grid gap-2">{children}</div>
+    <div className="mt-6">
+      <div className="text-sm font-extrabold text-neutral-900">{title}</div>
+      <div className="mt-3 grid gap-3">{children}</div>
     </div>
   );
 }
