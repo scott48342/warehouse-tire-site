@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fitmentLabel, type Fitment } from "@/lib/fitment";
+import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
@@ -140,7 +141,8 @@ export function VisualFitmentLauncher({
       { label: "Year", value: draft.year },
       { label: "Make", value: draft.make },
       { label: "Model", value: draft.model },
-      { label: "Trim", value: draft.trim },
+      // Filter out engine text like "5.7i" from the trim breadcrumb
+      { label: "Trim", value: extractDisplayTrim(draft.trim ?? "") || undefined },
     ],
     [draft]
   );
