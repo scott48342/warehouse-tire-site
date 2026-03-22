@@ -169,16 +169,23 @@ async function fetchWheelSizeModificationsResolved(
   model: string
 ): Promise<{ resolved: ResolvedWheelSize; modifications: WheelSizeModification[] }> {
   const resolved = await resolveWheelSizeMakeModel(make, model);
-  if (!resolved) return { resolved: { makeSlug: normalizeMake(make), modelSlug: normalizeModelForApi(model) }, modifications: [] };
+
+  // If catalog resolution fails, fall back to our best-guess slugs (still try the API).
+  const fallbackResolved: ResolvedWheelSize = {
+    makeSlug: normalizeMake(make),
+    modelSlug: normalizeModelForApi(model),
+  };
+
+  const chosen = resolved || fallbackResolved;
 
   // Get modifications via the shared API client.
-  let mods = await wheelSizeApi.getModifications(resolved.makeSlug, resolved.modelSlug, year);
+  let mods = await wheelSizeApi.getModifications(chosen.makeSlug, chosen.modelSlug, year);
 
   // Prefer USDM if available
   const us = mods.filter(m => m.regions?.includes("usdm"));
   mods = us.length > 0 ? us : mods;
 
-  return { resolved, modifications: mods };
+  return { resolved: chosen, modifications: mods };
 }
 
 // ============================================================================
