@@ -23,6 +23,11 @@ import {
   EXPANSION_PRESETS,
 } from "@/lib/aftermarketFitment";
 
+import {
+  getTechfeedCandidatesByBoltPattern,
+  getTechfeedIndexBuiltAt,
+} from "@/lib/techfeed/wheels";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -174,31 +179,36 @@ async function handleDbProfilePath(
   const year = url.searchParams.get("year")!;
   const make = url.searchParams.get("make")!;
   const model = url.searchParams.get("model")!;
-  
-  // Build derived envelope from dbProfile
-  const derivedWheelSpecs = (dbProfile.oemWheelSizes || []).map((ws: any) => ({
+
+  const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
+  const requestedPageSize = Math.max(1, Math.min(200, Number(url.searchParams.get("pageSize") || "24") || 24));
+
+  const brandCd = url.searchParams.get("brand_cd");
+  const finish = url.searchParams.get("finish");
+  const diameter = url.searchParams.get("diameter");
+  const width = url.searchParams.get("width");
+
+  // Hard requirement for "in stock only" live validation
+  const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
+
+  // Build OEM specs from dbProfile (wheel-size based)
+  const wheelSpecs = (dbProfile.oemWheelSizes || []).map((ws: any) => ({
     rimDiameter: Number(ws.diameter),
     rimWidth: Number(ws.width),
     offset: ws.offset != null ? Number(ws.offset) : null,
   }));
-  
-  // Calculate OEM ranges from wheel specs
-  const diameters = derivedWheelSpecs.map(ws => ws.rimDiameter).filter(d => d > 0);
-  const widths = derivedWheelSpecs.map(ws => ws.rimWidth).filter(w => w > 0);
-  const offsets = derivedWheelSpecs.map(ws => ws.offset).filter((o): o is number => o != null);
-  
-  const oemMinDiameter = diameters.length > 0 ? Math.min(...diameters) : 16;
-  const oemMaxDiameter = diameters.length > 0 ? Math.max(...diameters) : 20;
-  const oemMinWidth = widths.length > 0 ? Math.min(...widths) : 7;
-  const oemMaxWidth = widths.length > 0 ? Math.max(...widths) : 9;
-  const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : (dbProfile.offsetMinMm ?? 20);
-  const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : (dbProfile.offsetMaxMm ?? 50);
-  
+
   // Auto-detect fitment mode
   let mode: FitmentMode = "aftermarket_safe";
   let vehicleType: "truck" | "suv" | "car" | undefined;
   let modeAutoDetected = false;
-  
+
+  // (for auto detect) approximate OEM range
+  const oemDiameters = wheelSpecs.map((s) => s.rimDiameter).filter((d) => d > 0);
+  const oemWidths = wheelSpecs.map((s) => s.rimWidth).filter((w) => w > 0);
+  const oemMinDiameter = oemDiameters.length ? Math.min(...oemDiameters) : 15;
+  const oemMaxWidth = oemWidths.length ? Math.max(...oemWidths) : 10;
+
   if (modeParam && modeParam !== "auto") {
     mode = modeParam as FitmentMode;
   } else {
@@ -211,139 +221,173 @@ async function handleDbProfilePath(
     vehicleType = autoResult.vehicleType;
     modeAutoDetected = true;
   }
-  
-  // Build derived envelope with expansion based on mode
-  const expansion = EXPANSION_PRESETS[mode] || EXPANSION_PRESETS.aftermarket_safe;
-  
-  const derivedEnvelope = {
+
+  const oem: OEMSpecs = {
     boltPattern: dbProfile.boltPattern!,
-    centerBore: dbProfile.centerBoreMm || 0,
-    oemMinDiameter,
-    oemMaxDiameter,
-    oemMinWidth,
-    oemMaxWidth,
-    oemMinOffset,
-    oemMaxOffset,
-    allowedMinDiameter: Math.max(14, oemMinDiameter - (expansion.diameterPlusMin || 0)),
-    allowedMaxDiameter: oemMaxDiameter + (expansion.diameterPlusMax || 2),
-    allowedMinWidth: Math.max(5, oemMinWidth - (expansion.widthPlusMin || 0)),
-    allowedMaxWidth: oemMaxWidth + (expansion.widthPlusMax || 1),
-    allowedMinOffset: oemMinOffset - (expansion.offsetExpandLow || 15),
-    allowedMaxOffset: oemMaxOffset + (expansion.offsetExpandHigh || 10),
+    centerBore: Number(dbProfile.centerBoreMm || 0) || 0,
+    wheelSpecs,
   };
-  
-  // Query WheelPros
+
+  const envelope = buildFitmentEnvelope(oem, mode);
+
+  // ========================================================================
+  // Production path: DB-first candidate filtering + live availability validation
+  // - No multi-page WheelPros scans
+  // - No dealerline=1 / legacyFallback changes
+  // ========================================================================
+
   const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
   if (!wheelProsBase) {
     return NextResponse.json({ error: "Missing WHEELPROS_WRAPPER_URL" }, { status: 500 });
   }
-  
-  const page = url.searchParams.get("page") || "1";
-  const pageSize = url.searchParams.get("pageSize") || "200";
-  const brandCd = url.searchParams.get("brand_cd");
-  const finish = url.searchParams.get("finish");
-  const diameter = url.searchParams.get("diameter");
-  const width = url.searchParams.get("width");
-  
-  const wpParams = new URLSearchParams({
-    boltPattern: dbProfile.boltPattern!,
-    page,
-    pageSize,
-    fields: "inventory,price,images",
-  });
-  if (brandCd) wpParams.set("brand_cd", brandCd);
-  if (finish) wpParams.set("abbreviated_finish_desc", finish);
-  if (diameter) wpParams.set("diameter", diameter);
-  if (width) wpParams.set("width", width);
-  
+
   const headers: Record<string, string> = { Accept: "application/json" };
   if (process.env.WHEELPROS_WRAPPER_API_KEY) {
     headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
   }
-  
-  const wpUrl = new URL("/wheels/search", wheelProsBase);
-  wpParams.forEach((v, k) => wpUrl.searchParams.set(k, v));
-  
-  const wpRes = await fetch(wpUrl.toString(), { headers, cache: "no-store" });
-  const wpData = await wpRes.json();
-  const wpResults = wpData?.results || wpData?.items || [];
-  
-  // Validate wheels against derived envelope
-  const passingWheels: any[] = [];
-  let surefitCount = 0;
-  let specfitCount = 0;
-  let extendedCount = 0;
-  let excludedCount = 0;
-  
-  for (const wpWheel of wpResults) {
-    const wheelDia = wpWheel.properties?.diameter ? Number(wpWheel.properties.diameter) : null;
-    const wheelWidth = wpWheel.properties?.width ? Number(wpWheel.properties.width) : null;
-    const wheelOffset = wpWheel.properties?.offset ? Number(wpWheel.properties.offset) : null;
-    const wheelCb = wpWheel.properties?.centerbore ? Number(wpWheel.properties.centerbore) : null;
-    
-    // Basic validation
-    const diaPass = wheelDia != null && wheelDia >= derivedEnvelope.allowedMinDiameter && wheelDia <= derivedEnvelope.allowedMaxDiameter;
-    const widthPass = wheelWidth != null && wheelWidth >= derivedEnvelope.allowedMinWidth && wheelWidth <= derivedEnvelope.allowedMaxWidth;
-    const offsetPass = wheelOffset == null || (wheelOffset >= derivedEnvelope.allowedMinOffset && wheelOffset <= derivedEnvelope.allowedMaxOffset);
-    const cbPass = wheelCb == null || derivedEnvelope.centerBore === 0 || wheelCb >= derivedEnvelope.centerBore;
-    
-    if (!diaPass || !widthPass || !offsetPass || !cbPass) {
-      excludedCount++;
-      continue;
+
+  const candidates = await getTechfeedCandidatesByBoltPattern(dbProfile.boltPattern!);
+
+  // Apply basic DB-level filters first (cheap)
+  const filteredCandidates = candidates.filter((c) => {
+    if (brandCd && c.brand_cd && c.brand_cd !== brandCd) return false;
+    if (finish && c.abbreviated_finish_desc && String(c.abbreviated_finish_desc) !== String(finish)) return false;
+    if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
+    if (width && c.width && Number(c.width) !== Number(width)) return false;
+
+    // valid pricing fields (required)
+    const p = Number(c.map_price || c.msrp || 0) || 0;
+    if (p <= 0) return false;
+
+    // best-effort: skip obviously discontinued items if present in text
+    const desc = (c.product_desc || "").toLowerCase();
+    if (desc.includes("discontinued")) return false;
+
+    return true;
+  });
+
+  // Batched availability validation to keep browsing fast.
+  const startWanted = (requestedPage - 1) * requestedPageSize;
+  const results: any[] = [];
+
+  let scanned = 0;
+  let fitmentValid = 0;
+  let availabilityChecked = 0;
+  let eligibleCount = 0;
+
+  let truncated = false;
+  const capsHit: string[] = [];
+
+  const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "4000") || 4000);
+  const timeBudgetMs = Math.max(1500, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "2500") || 2500);
+  const tScan0 = Date.now();
+
+  for (const c of filteredCandidates) {
+    scanned++;
+    if (scanned > scanCap) {
+      truncated = true;
+      capsHit.push("scanCap");
+      break;
     }
-    
-    // Determine fitment class
-    let fitmentClass: "surefit" | "specfit" | "extended" = "extended";
-    
-    const isOemDia = wheelDia != null && wheelDia >= oemMinDiameter && wheelDia <= oemMaxDiameter;
-    const isOemWidth = wheelWidth != null && wheelWidth >= oemMinWidth && wheelWidth <= oemMaxWidth;
-    const isOemOffset = wheelOffset == null || (wheelOffset >= oemMinOffset && wheelOffset <= oemMaxOffset);
-    
-    if (isOemDia && isOemWidth && isOemOffset) {
-      fitmentClass = "surefit";
-      surefitCount++;
-    } else if (isOemDia && isOemWidth) {
-      fitmentClass = "specfit";
-      specfitCount++;
-    } else {
-      extendedCount++;
+    if (Date.now() - tScan0 > timeBudgetMs) {
+      truncated = true;
+      capsHit.push("timeBudget");
+      break;
     }
-    
-    passingWheels.push({
-      ...wpWheel,
+
+    const wheelSpec: WheelSpec = {
+      sku: c.sku,
+      boltPattern: c.bolt_pattern_metric || c.bolt_pattern_standard || envelope.boltPattern,
+      centerBore: c.centerbore != null ? Number(c.centerbore) : undefined,
+      diameter: c.diameter != null ? Number(c.diameter) : undefined,
+      width: c.width != null ? Number(c.width) : undefined,
+      offset: c.offset != null ? Number(c.offset) : undefined,
+    };
+
+    const v = validateWheel(wheelSpec, envelope);
+    if (v.fitmentClass === "excluded") continue;
+    fitmentValid++;
+
+    // Live availability confirmation (cached, short timeout)
+    const avail = await fetchLiveAvailabilityForSku({
+      wheelProsBase,
+      headers,
+      sku: c.sku,
+      minQty,
+    });
+    availabilityChecked++;
+
+    if (!avail.ok) continue;
+
+    eligibleCount++;
+    if (eligibleCount <= startWanted) continue;
+    if (results.length >= requestedPageSize) break;
+
+    results.push({
+      sku: c.sku,
+      skuType: "WHEEL",
+      title: c.product_desc || c.sku,
+      brand: c.brand_cd ? { code: c.brand_cd, description: c.brand_desc || c.brand_cd } : undefined,
+      inventory: {
+        type: avail.inventoryType,
+        localStock: avail.localQty,
+        globalStock: avail.globalQty,
+      },
+      prices: {
+        msrp: [
+          {
+            currencyAmount: String(Number(c.map_price || c.msrp || 0) || 0),
+            currencyCode: "USD",
+          },
+        ],
+      },
+      images: (c.images || []).map((u) => ({
+        imageUrlLarge: u,
+        imageUrlMedium: u,
+        imageUrlSmall: u,
+        imageUrlThumbnail: u,
+      })),
+      properties: {
+        brand_cd: c.brand_cd,
+        brand_desc: c.brand_desc,
+        abbreviated_finish_desc: c.abbreviated_finish_desc,
+        diameter: c.diameter,
+        width: c.width,
+        offset: c.offset,
+        centerbore: c.centerbore,
+        boltPatternMetric: c.bolt_pattern_metric,
+        boltPattern: c.bolt_pattern_standard,
+      },
       fitmentValidation: {
-        fitmentClass,
-        fitmentMode: mode,
-        ...(debug ? {
-          diameterPass: diaPass,
-          widthPass,
-          offsetPass,
-          centerBorePass: cbPass,
-        } : {}),
+        fitmentClass: v.fitmentClass,
+        fitmentMode: v.fitmentMode,
+        ...(debug
+          ? {
+              boltPatternPass: v.boltPatternPass,
+              centerBorePass: v.centerBorePass,
+              diameterPass: v.diameterPass,
+              widthPass: v.widthPass,
+              offsetPass: v.offsetPass,
+              exclusionReasons: v.exclusionReasons,
+            }
+          : {}),
+      },
+      availability: {
+        confirmed: true,
+        minQty,
+        checkedAt: avail.checkedAt,
       },
     });
   }
-  
-  console.log(`[fitment-search] 📤 RESPONSE (${resolutionPath}): ${year} ${make} ${model}`, {
-    boltPattern: dbProfile.boltPattern,
-    wheels: passingWheels.length,
-    surefit: surefitCount,
-    specfit: specfitCount,
-    extended: extendedCount,
-    excluded: excludedCount,
-    timing: `${Date.now() - t0}ms`,
-  });
-  
-  // Build facets
-  const facets = buildFacets(passingWheels);
-  
+
+  const facets = buildFacets(results);
   const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
-  
+
   return NextResponse.json({
-    results: passingWheels,
-    totalCount: passingWheels.length,
-    page: Number(page),
-    pageSize: Number(pageSize),
+    results,
+    totalCount: eligibleCount,
+    page: requestedPage,
+    pageSize: requestedPageSize,
     facets,
     fitment: {
       mode,
@@ -354,19 +398,19 @@ async function handleDbProfilePath(
       aliasUsed,
       canonicalModificationId,
       requestedModificationId,
-      validationMode: "derived",
+      validationMode: "strict",
       envelope: {
-        boltPattern: derivedEnvelope.boltPattern,
-        centerBore: derivedEnvelope.centerBore,
+        boltPattern: envelope.boltPattern,
+        centerBore: envelope.centerBore,
         oem: {
-          diameter: [oemMinDiameter, oemMaxDiameter],
-          width: [oemMinWidth, oemMaxWidth],
-          offset: [oemMinOffset, oemMaxOffset],
+          diameter: [envelope.oemMinDiameter, envelope.oemMaxDiameter],
+          width: [envelope.oemMinWidth, envelope.oemMaxWidth],
+          offset: [envelope.oemMinOffset, envelope.oemMaxOffset],
         },
         allowed: {
-          diameter: [derivedEnvelope.allowedMinDiameter, derivedEnvelope.allowedMaxDiameter],
-          width: [derivedEnvelope.allowedMinWidth, derivedEnvelope.allowedMaxWidth],
-          offset: [derivedEnvelope.allowedMinOffset, derivedEnvelope.allowedMaxOffset],
+          diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
+          width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
+          offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
         },
       },
       vehicle: {
@@ -392,20 +436,136 @@ async function handleDbProfilePath(
       },
     },
     summary: {
-      fromWheelPros: wpResults.length,
-      afterFitmentFilter: passingWheels.length,
-      total: passingWheels.length,
-      surefit: surefitCount,
-      specfit: specfitCount,
-      extended: extendedCount,
-      excluded: excludedCount,
+      total: results.length,
+      totalCountEligible: eligibleCount,
+      candidates: filteredCandidates.length,
+      scanned,
+      fitmentValid,
+      availabilityChecked,
+      truncated,
+      capsHit: Array.from(new Set(capsHit)),
       resolutionPath,
       fitmentSource: resolutionPath,
       aliasUsed,
-      validationMode: "derived",
+      validationMode: "strict",
+      dbIndexBuiltAt: getTechfeedIndexBuiltAt(),
     },
-    timing: debug ? { totalMs: Date.now() - t0 } : undefined,
+    timing: debug
+      ? {
+          totalMs: Date.now() - t0,
+          scanMs: Date.now() - tScan0,
+        }
+      : undefined,
+    dealerlineMode: false,
   });
+}
+
+// ============================================================================
+// Live availability (WheelPros wrapper) with short TTL cache
+// ============================================================================
+
+const AVAIL_CACHE_TTL_MS = Math.max(
+  60_000,
+  Math.min(30 * 60_000, Number(process.env.WT_AVAIL_CACHE_TTL_MS || "600000") || 600_000)
+);
+const availCache = new Map<
+  string,
+  {
+    expiresAt: number;
+    ok: boolean;
+    inventoryType?: string;
+    localQty?: number;
+    globalQty?: number;
+    checkedAt: string;
+  }
+>();
+
+const ORDERABLE_TYPES = new Set(["SO", "ST", "NW", "BW", "CS"]);
+
+async function fetchLiveAvailabilityForSku(opts: {
+  wheelProsBase: string;
+  headers: Record<string, string>;
+  sku: string;
+  minQty: number;
+}): Promise<
+  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string }
+  | { ok: false; checkedAt: string }
+> {
+  const checkedAt = new Date().toISOString();
+  const sku = String(opts.sku || "").trim();
+  if (!sku) return { ok: false, checkedAt };
+
+  const cacheKey = `${sku}|minQty=${opts.minQty}`;
+  const cached = availCache.get(cacheKey);
+  if (cached && cached.expiresAt > Date.now()) {
+    return cached.ok
+      ? {
+          ok: true,
+          inventoryType: cached.inventoryType || "",
+          localQty: cached.localQty || 0,
+          globalQty: cached.globalQty || 0,
+          checkedAt: cached.checkedAt,
+        }
+      : { ok: false, checkedAt: cached.checkedAt };
+  }
+
+  const ac = new AbortController();
+  const timeoutMs = Math.max(500, Math.min(2500, Number(process.env.WT_AVAIL_TIMEOUT_MS || "1400") || 1400));
+  const to = setTimeout(() => ac.abort(), timeoutMs);
+
+  try {
+    const u = new URL("/wheels/search", opts.wheelProsBase);
+    u.searchParams.set("sku", sku);
+    u.searchParams.set("page", "1");
+    u.searchParams.set("pageSize", "1");
+    u.searchParams.set("fields", "inventory");
+
+    // Required params for true sellability
+    u.searchParams.set("customer", "1022165");
+    u.searchParams.set("company", "1000");
+    u.searchParams.set("min_qty", String(opts.minQty));
+
+    const res = await fetch(u.toString(), {
+      headers: opts.headers,
+      cache: "no-store",
+      signal: ac.signal,
+    });
+
+    const data = await res.json().catch(() => null);
+    const item = data?.results?.[0] || data?.items?.[0] || null;
+
+    const inv = item?.inventory;
+    const invObj = Array.isArray(inv) ? inv[0] : inv;
+    const t = typeof invObj?.type === "string" ? invObj.type.trim().toUpperCase() : "";
+
+    const local = Number(invObj?.localStock ?? invObj?.local_qty ?? invObj?.localQty ?? 0) || 0;
+    const global = Number(invObj?.globalStock ?? invObj?.global_qty ?? invObj?.globalQty ?? invObj?.quantity ?? 0) || 0;
+    const total = local + global;
+
+    const ok = Boolean(t && ORDERABLE_TYPES.has(t) && total >= opts.minQty);
+
+    availCache.set(cacheKey, {
+      expiresAt: Date.now() + AVAIL_CACHE_TTL_MS,
+      ok,
+      inventoryType: t,
+      localQty: local,
+      globalQty: global,
+      checkedAt,
+    });
+
+    return ok
+      ? { ok: true, inventoryType: t, localQty: local, globalQty: global, checkedAt }
+      : { ok: false, checkedAt };
+  } catch {
+    availCache.set(cacheKey, {
+      expiresAt: Date.now() + AVAIL_CACHE_TTL_MS,
+      ok: false,
+      checkedAt,
+    });
+    return { ok: false, checkedAt };
+  } finally {
+    clearTimeout(to);
+  }
 }
 
 // ============================================================================

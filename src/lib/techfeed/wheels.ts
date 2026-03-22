@@ -45,6 +45,10 @@ type WheelsByStyleFile = {
 let bySkuCache: WheelsBySkuFile | null = null;
 let byStyleCache: WheelsByStyleFile | null = null;
 
+// Bolt-pattern index (built lazily, per server instance)
+let byBoltPatternCache: Map<string, TechfeedWheel[]> | null = null;
+let techfeedIndexBuiltAt: string | null = null;
+
 async function loadGzJson<T>(relPath: string): Promise<T | null> {
   try {
     const abs = path.join(process.cwd(), relPath);
@@ -84,4 +88,56 @@ export async function getTechfeedWheelsByStyle(style: string): Promise<TechfeedW
   }
   if (!byStyleCache?.byStyle) return null;
   return byStyleCache.byStyle[style] || null;
+}
+
+function normalizeBoltPatternKey(bp: string): string {
+  return String(bp || "")
+    .toLowerCase()
+    .replace(/\s/g, "")
+    .replace(/[×-]/g, "x")
+    .trim();
+}
+
+function parseBoltPatternKeys(bp: string): string[] {
+  const raw = String(bp || "").trim();
+  if (!raw) return [];
+  const parts = raw.split(/[\/,]/).map((p) => normalizeBoltPatternKey(p));
+  return parts.filter(Boolean);
+}
+
+/**
+ * Build / cache a bolt-pattern index for quick candidate lookup.
+ * NOTE: This is best-effort and lives in-memory per server instance.
+ */
+async function ensureBoltPatternIndex(): Promise<void> {
+  if (byBoltPatternCache) return;
+  if (!bySkuCache) {
+    bySkuCache = await loadGzJson<WheelsBySkuFile>("src/techfeed/wheels_by_sku.json.gz");
+  }
+
+  const idx = new Map<string, TechfeedWheel[]>();
+  const bySku = bySkuCache?.bySku || {};
+  for (const w of Object.values(bySku)) {
+    const bpRaw = w.bolt_pattern_metric || w.bolt_pattern_standard || "";
+    const keys = parseBoltPatternKeys(bpRaw);
+    if (!keys.length) continue;
+    for (const k of keys) {
+      const arr = idx.get(k);
+      if (arr) arr.push(w);
+      else idx.set(k, [w]);
+    }
+  }
+
+  byBoltPatternCache = idx;
+  techfeedIndexBuiltAt = new Date().toISOString();
+}
+
+export async function getTechfeedCandidatesByBoltPattern(boltPattern: string): Promise<TechfeedWheel[]> {
+  await ensureBoltPatternIndex();
+  const k = normalizeBoltPatternKey(boltPattern);
+  return (byBoltPatternCache?.get(k) || []).slice();
+}
+
+export function getTechfeedIndexBuiltAt(): string | null {
+  return techfeedIndexBuiltAt;
 }
