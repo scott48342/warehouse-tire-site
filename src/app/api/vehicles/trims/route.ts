@@ -325,6 +325,7 @@ export async function GET(req: Request) {
 
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
+  const debug = url.searchParams.get("debug") === "1";
   
   let source: "db" | "api" | "supplement" | "empty" = "empty";
   let overridesApplied = false;
@@ -457,7 +458,12 @@ export async function GET(req: Request) {
 
     if (modifications.length === 0) {
       console.log(`[trims] API returned 0 modifications (resolved make=${resolved.makeSlug} model=${resolved.modelSlug})`);
-      return NextResponse.json({ results: [], source: "api", count: 0 } as TrimResponse);
+      return NextResponse.json({
+        results: [],
+        source: "api",
+        count: 0,
+        ...(debug ? { debug: { resolved } } : {}),
+      } as any);
     }
 
     // Import to database
