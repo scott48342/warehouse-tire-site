@@ -203,7 +203,7 @@ async function handleDbProfilePath(
     mode = modeParam as FitmentMode;
   } else {
     const autoResult = autoDetectFitmentMode(model!, {
-      boltPattern: dbProfile.boltPattern,
+      boltPattern: dbProfile.boltPattern || undefined,
       minDiameter: oemMinDiameter,
       maxWidth: oemMaxWidth,
     });
