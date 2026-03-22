@@ -1,4 +1,5 @@
 import { getPool, getTaxRate } from "@/lib/quoteCatalog";
+import { getStripeSettings } from "@/lib/payments/stripeSettings";
 
 export const runtime = "nodejs";
 
@@ -11,11 +12,13 @@ export default async function AdminSettingsPage({
   const saved = (Array.isArray((sp as any).saved) ? (sp as any).saved[0] : (sp as any).saved) || "";
 
   let taxRate = 0.06;
+  let stripe = { enabled: false, mode: "test" as const, publishableKey: null as string | null, secretKeyPresent: false };
   let err: string | null = null;
 
   try {
     const db = getPool();
     taxRate = await getTaxRate(db);
+    stripe = await getStripeSettings(db);
   } catch (e: any) {
     err = e?.message || String(e);
   }
@@ -62,6 +65,68 @@ export default async function AdminSettingsPage({
             </label>
 
             <button className="h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">Save</button>
+          </form>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-neutral-200 bg-white p-4">
+          <div className="text-sm font-extrabold text-neutral-900">Payments (Stripe)</div>
+          <div className="mt-1 text-xs text-neutral-600">
+            Configure Stripe keys. Secret key is stored server-side and never shown in the UI.
+          </div>
+
+          <form action="/api/admin/settings" method="post" className="mt-3 grid gap-3">
+            <div className="flex flex-wrap gap-3">
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Enabled
+                <select
+                  name="stripeEnabled"
+                  defaultValue={stripe.enabled ? "1" : "0"}
+                  className="h-10 w-40 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                >
+                  <option value="0">Disabled</option>
+                  <option value="1">Enabled</option>
+                </select>
+              </label>
+
+              <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+                Mode
+                <select
+                  name="stripeMode"
+                  defaultValue={stripe.mode}
+                  className="h-10 w-40 rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+                >
+                  <option value="test">Test</option>
+                  <option value="live">Live</option>
+                </select>
+              </label>
+            </div>
+
+            <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+              Publishable key
+              <input
+                name="stripePublishableKey"
+                defaultValue={stripe.publishableKey || ""}
+                placeholder="pk_test_..."
+                className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+              />
+            </label>
+
+            <label className="grid gap-1 text-xs font-semibold text-neutral-700">
+              Secret key (stored server-side)
+              <input
+                name="stripeSecretKey"
+                defaultValue=""
+                placeholder={stripe.secretKeyPresent ? "(already set) paste to replace" : "sk_test_..."}
+                className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm"
+              />
+              <div className="text-[11px] text-neutral-500">
+                Current: {stripe.secretKeyPresent ? "set" : "not set"}
+              </div>
+            </label>
+
+            <button className="h-10 w-48 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white">
+              Save Stripe Settings
+            </button>
           </form>
         </div>
 

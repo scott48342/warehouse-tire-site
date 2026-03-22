@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getPool, setTaxRate } from "@/lib/quoteCatalog";
+import { setStripeSettings } from "@/lib/payments/stripeSettings";
 
 export const runtime = "nodejs";
 
@@ -14,10 +15,31 @@ export async function POST(req: Request) {
       ? await req.json().catch(() => ({} as any))
       : Object.fromEntries(await req.formData());
 
-    const taxRate = Number(s(body.taxRate));
+    const taxRateRaw = s(body.taxRate);
+    const taxRate = taxRateRaw ? Number(taxRateRaw) : NaN;
 
     const db = getPool();
-    await setTaxRate(db, taxRate);
+
+    // Tax rate (optional)
+    if (taxRateRaw) {
+      await setTaxRate(db, taxRate);
+    }
+
+    // Stripe settings (optional)
+    const stripeEnabledRaw = s(body.stripeEnabled);
+    const stripeModeRaw = s(body.stripeMode);
+    const stripePublishableKey = s(body.stripePublishableKey);
+    const stripeSecretKey = s(body.stripeSecretKey);
+
+    const patch: any = {};
+    if (stripeEnabledRaw) patch.enabled = stripeEnabledRaw === "1" || stripeEnabledRaw === "true" || stripeEnabledRaw === "on";
+    if (stripeModeRaw === "test" || stripeModeRaw === "live") patch.mode = stripeModeRaw;
+    if (stripePublishableKey) patch.publishableKey = stripePublishableKey;
+    if (stripeSecretKey) patch.secretKey = stripeSecretKey;
+
+    if (Object.keys(patch).length > 0) {
+      await setStripeSettings(db, patch);
+    }
 
     const accept = req.headers.get("accept") || "";
     if (accept.includes("text/html")) {

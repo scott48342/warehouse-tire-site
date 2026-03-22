@@ -106,13 +106,28 @@ export async function ensureQuoteTables(db: pg.Pool) {
   });
 }
 
-export async function getTaxRate(db: pg.Pool): Promise<number> {
+export async function getSiteSetting(db: pg.Pool, key: string): Promise<string | null> {
   await ensureQuoteTables(db);
   const { rows } = await db.query({
-    text: `select value from site_settings where key = 'tax_rate' limit 1`,
-    values: [],
+    text: `select value from site_settings where key = $1 limit 1`,
+    values: [key],
   });
-  const v = rows?.[0]?.value;
+  return rows?.[0]?.value ?? null;
+}
+
+export async function setSiteSetting(db: pg.Pool, key: string, value: string) {
+  await ensureQuoteTables(db);
+  await db.query({
+    text: `insert into site_settings (key, value, updated_at)
+           values ($1, $2, now())
+           on conflict (key) do update set value = excluded.value, updated_at = now()`,
+    values: [key, String(value)],
+  });
+}
+
+export async function getTaxRate(db: pg.Pool): Promise<number> {
+  await ensureQuoteTables(db);
+  const v = await getSiteSetting(db, "tax_rate");
   const n = Number(v);
   return Number.isFinite(n) ? n : 0.06;
 }
@@ -121,12 +136,7 @@ export async function setTaxRate(db: pg.Pool, rate: number) {
   await ensureQuoteTables(db);
   const r = Number(rate);
   if (!Number.isFinite(r) || r < 0 || r > 0.2) throw new Error("invalid_tax_rate");
-  await db.query({
-    text: `insert into site_settings (key, value, updated_at)
-           values ('tax_rate', $1, now())
-           on conflict (key) do update set value = excluded.value, updated_at = now()`,
-    values: [String(r)],
-  });
+  await setSiteSetting(db, "tax_rate", String(r));
 }
 
 export async function listCatalogItems(db: pg.Pool): Promise<CatalogItem[]> {
