@@ -31,12 +31,13 @@ export function normalizeMake(make: string): string {
   // Handle common variations
   const normalized = make.trim().toLowerCase();
   
+  // Wheel-Size API uses "mercedes" not "mercedes-benz"
   const makeAliases: Record<string, string> = {
     "chevrolet": "chevrolet",
     "chevy": "chevrolet",
-    "mercedes-benz": "mercedes-benz",
-    "mercedes benz": "mercedes-benz",
-    "mercedes": "mercedes-benz",
+    "mercedes-benz": "mercedes",
+    "mercedes benz": "mercedes",
+    "mercedes": "mercedes",
     "bmw": "bmw",
     "volkswagen": "volkswagen",
     "vw": "volkswagen",
@@ -67,13 +68,16 @@ const modelAliases: Record<string, string> = {
   "rx450h": "rx",
   
   // ===== BMW - Map model numbers to series =====
+  // Note: Wheel-Size API uses "3 series" (space) not "3-series" (hyphen)
   // 2-series
   "228i": "2-series",
   "230i": "2-series",
   "m240i": "2-series",
   "m2": "2-series",
+  "2-series": "2-series",
   // 3-series
   "3-series": "3-series",
+  "3 series": "3-series", // API variant
   "318i": "3-series",
   "320i": "3-series",
   "328i": "3-series",
@@ -84,6 +88,7 @@ const modelAliases: Record<string, string> = {
   "m3": "3-series",
   // 4-series
   "4-series": "4-series",
+  "4 series": "4-series",
   "428i": "4-series",
   "430i": "4-series",
   "430i-xdrive": "4-series",
@@ -95,6 +100,7 @@ const modelAliases: Record<string, string> = {
   "m4": "4-series",
   // 5-series
   "5-series": "5-series",
+  "5 series": "5-series",
   "525i": "5-series",
   "528i": "5-series",
   "530i": "5-series",
@@ -106,17 +112,20 @@ const modelAliases: Record<string, string> = {
   "m5": "5-series",
   // 6-series
   "6-series": "6-series",
+  "6 series": "6-series",
   "640i": "6-series",
   "650i": "6-series",
   "m6": "6-series",
   // 7-series
   "7-series": "7-series",
+  "7 series": "7-series",
   "740i": "7-series",
   "745i": "7-series",
   "750i": "7-series",
   "760i": "7-series",
   // 8-series
   "8-series": "8-series",
+  "8 series": "8-series",
   "840i": "8-series",
   "850i": "8-series",
   "m850i": "8-series",
