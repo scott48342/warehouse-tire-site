@@ -316,13 +316,17 @@ export async function getVehicle(
   // Check both original model and normalized model (for aliases like RX 350 → RX)
   // Use REPLACE to handle "Ioniq 5" (space) vs "ioniq-5" (hyphen) mismatch
   // Also normalize make for "Mercedes-Benz" vs "mercedes" cases
+  // DB stores API canonical name (e.g., "Mercedes"), URL may have "Mercedes-Benz"
   const result = await db.query<Vehicle>(
     `SELECT id, year, make, model, trim, slug, created_at, updated_at
      FROM vehicles
      WHERE year = $1 
        AND (
          make = $2 OR 
-         LOWER(REPLACE(REPLACE(make, '-', ''), ' ', '')) = $6
+         LOWER(make) = $6 OR
+         LOWER(make) = LOWER($2) OR
+         $6 LIKE LOWER(make) || '%' OR
+         LOWER(make) LIKE $6 || '%'
        )
        AND (
          model = $3 OR 
@@ -337,7 +341,7 @@ export async function getVehicle(
        )
      ORDER BY imported_at DESC NULLS LAST, updated_at DESC
      LIMIT 1`,
-    [year, make, model, lookupTrim, normalizedModel, normalizedMakeVal.replace(/-/g, '')]
+    [year, make, model, lookupTrim, normalizedModel, normalizedMakeVal]
   );
   
   if (result.rows[0]) {
@@ -354,7 +358,10 @@ export async function getVehicle(
        WHERE year = $1 
          AND (
            make = $2 OR 
-           LOWER(REPLACE(REPLACE(make, '-', ''), ' ', '')) = $6
+           LOWER(make) = $6 OR
+           LOWER(make) = LOWER($2) OR
+           $6 LIKE LOWER(make) || '%' OR
+           LOWER(make) LIKE $6 || '%'
          )
          AND (
            model = $3 OR 
@@ -364,7 +371,7 @@ export async function getVehicle(
          AND slug = $4
        ORDER BY imported_at DESC NULLS LAST, updated_at DESC
        LIMIT 1`,
-      [year, make, model, trim, normalizedModel, normalizedMakeVal.replace(/-/g, '')]
+      [year, make, model, trim, normalizedModel, normalizedMakeVal]
     );
     if (slugResult.rows[0]) {
       return slugResult.rows[0];
@@ -381,7 +388,10 @@ export async function getVehicle(
        WHERE year = $1 
          AND (
            make = $2 OR 
-           LOWER(REPLACE(REPLACE(make, '-', ''), ' ', '')) = $5
+           LOWER(make) = $5 OR
+           LOWER(make) = LOWER($2) OR
+           $5 LIKE LOWER(make) || '%' OR
+           LOWER(make) LIKE $5 || '%'
          )
          AND (
            model = $3 OR 
@@ -390,7 +400,7 @@ export async function getVehicle(
          )
        ORDER BY imported_at DESC NULLS LAST, updated_at DESC
        LIMIT 1`,
-      [year, make, model, normalizedModel, normalizedMakeVal.replace(/-/g, '')]
+      [year, make, model, normalizedModel, normalizedMakeVal]
     );
     return fallbackResult.rows[0] || null;
   }
