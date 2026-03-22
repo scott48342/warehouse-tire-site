@@ -178,7 +178,7 @@ export async function ensureFitmentTables(db: pg.Pool): Promise<void> {
 
     -- Allow NULL offset for existing tables
     ALTER TABLE vehicle_wheel_specs ALTER COLUMN "offset" DROP NOT NULL;
-    
+
     -- Change offset from INTEGER to DECIMAL for API values like 44.45
     ALTER TABLE vehicle_wheel_specs ALTER COLUMN "offset" TYPE DECIMAL(5,2) USING "offset"::DECIMAL(5,2);
 
@@ -237,7 +237,7 @@ export async function upsertVehicle(
       `INSERT INTO vehicles (year, make, model, trim, search_trim, slug, market_regions, imported_from, imported_at, import_status, last_import_error, last_import_attempt_at, updated_at)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9, NOW()), $10, $11, COALESCE($12, NOW()), NOW())
        ON CONFLICT (year, make, model, slug)
-       DO UPDATE SET 
+       DO UPDATE SET
          trim = COALESCE($4, vehicles.trim),
          search_trim = COALESCE($5, vehicles.search_trim),
          market_regions = COALESCE($7, vehicles.market_regions),
@@ -270,8 +270,8 @@ export async function upsertVehicle(
   const result = await db.query<Vehicle>(
     `INSERT INTO vehicles (year, make, model, trim, search_trim, slug, market_regions, imported_from, imported_at, import_status, last_import_error, last_import_attempt_at, updated_at)
      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9, NOW()), $10, $11, COALESCE($12, NOW()), NOW())
-     ON CONFLICT (year, make, model, trim) 
-     DO UPDATE SET 
+     ON CONFLICT (year, make, model, trim)
+     DO UPDATE SET
        search_trim = COALESCE($5, vehicles.search_trim),
        slug = COALESCE($6, vehicles.slug),
        market_regions = COALESCE($7, vehicles.market_regions),
@@ -311,7 +311,7 @@ export async function getVehicle(
   const lookupTrim = trim?.trim().toLowerCase() ?? null;
   const normalizedModel = normalizeModelForApi(model);  // "RX 350" → "rx", "Ioniq 5 SEL" → "ioniq-5"
   const normalizedMakeVal = normalizeMake(make);        // "Mercedes-Benz" → "mercedes"
-  
+
   // First, try exact match on trim, search_trim, or slug
   // Check both original model and normalized model (for aliases like RX 350 → RX)
   // Use REPLACE to handle "Ioniq 5" (space) vs "ioniq-5" (hyphen) mismatch
@@ -320,22 +320,25 @@ export async function getVehicle(
   const result = await db.query<Vehicle>(
     `SELECT id, year, make, model, trim, slug, created_at, updated_at
      FROM vehicles
-     WHERE year = $1 
+     WHERE year = $1
        AND (
-         make = $2 OR 
+         make = $2 OR
          LOWER(make) = $6 OR
          LOWER(make) = LOWER($2) OR
          $6 LIKE LOWER(make) || '%' OR
          LOWER(make) LIKE $6 || '%'
        )
        AND (
-         model = $3 OR 
+         model = $3 OR
          LOWER(model) = $5 OR
-         LOWER(REPLACE(model, ' ', '-')) = $5
+         LOWER(REPLACE(model, ' ', '-')) = $5 OR
+         LOWER(REPLACE(model, '-Class', '')) = $5 OR
+         $5 LIKE LOWER(model) || '%' OR
+         LOWER(model) LIKE $5 || '%'
        )
        AND (
-         $4::text IS NULL OR 
-         LOWER(TRIM(trim)) = $4 OR 
+         $4::text IS NULL OR
+         LOWER(TRIM(trim)) = $4 OR
          LOWER(TRIM(search_trim)) = $4 OR
          LOWER(TRIM(slug)) = $4
        )
@@ -343,11 +346,11 @@ export async function getVehicle(
      LIMIT 1`,
     [year, make, model, lookupTrim, normalizedModel, normalizedMakeVal]
   );
-  
+
   if (result.rows[0]) {
     return result.rows[0];
   }
-  
+
   // Fallback: if no exact match but trim looks like a modification ID (alphanumeric hash),
   // try to find any vehicle for this Y/M/M and use the most recently imported one
   if (trim && /^[a-f0-9]{8,}$/i.test(trim)) {
@@ -355,19 +358,22 @@ export async function getVehicle(
     const slugResult = await db.query<Vehicle>(
       `SELECT id, year, make, model, trim, slug, created_at, updated_at
        FROM vehicles
-       WHERE year = $1 
+       WHERE year = $1
          AND (
-           make = $2 OR 
+           make = $2 OR
            LOWER(make) = $6 OR
            LOWER(make) = LOWER($2) OR
            $6 LIKE LOWER(make) || '%' OR
            LOWER(make) LIKE $6 || '%'
          )
          AND (
-           model = $3 OR 
+           model = $3 OR
            LOWER(model) = $5 OR
-           LOWER(REPLACE(model, ' ', '-')) = $5
-         ) 
+           LOWER(REPLACE(model, ' ', '-')) = $5 OR
+           LOWER(REPLACE(model, '-Class', '')) = $5 OR
+           $5 LIKE LOWER(model) || '%' OR
+           LOWER(model) LIKE $5 || '%'
+         )
          AND slug = $4
        ORDER BY imported_at DESC NULLS LAST, updated_at DESC
        LIMIT 1`,
@@ -377,7 +383,7 @@ export async function getVehicle(
       return slugResult.rows[0];
     }
   }
-  
+
   // Final fallback: if trim specified but no match, return any vehicle for this Y/M/M
   // This ensures we have SOME fitment data rather than failing completely
   if (trim) {
@@ -385,9 +391,9 @@ export async function getVehicle(
     const fallbackResult = await db.query<Vehicle>(
       `SELECT id, year, make, model, trim, slug, created_at, updated_at
        FROM vehicles
-       WHERE year = $1 
+       WHERE year = $1
          AND (
-           make = $2 OR 
+           make = $2 OR
            LOWER(make) = $5 OR
            LOWER(make) = LOWER($2) OR
            $5 LIKE LOWER(make) || '%' OR
@@ -396,7 +402,10 @@ export async function getVehicle(
          AND (
            model = $3 OR 
            LOWER(model) = $4 OR
-           LOWER(REPLACE(model, ' ', '-')) = $4
+           LOWER(REPLACE(model, ' ', '-')) = $4 OR
+           LOWER(REPLACE(model, '-Class', '')) = $4 OR
+           $4 LIKE LOWER(model) || '%' OR
+           LOWER(model) LIKE $4 || '%'
          )
        ORDER BY imported_at DESC NULLS LAST, updated_at DESC
        LIMIT 1`,
@@ -404,7 +413,7 @@ export async function getVehicle(
     );
     return fallbackResult.rows[0] || null;
   }
-  
+
   return null;
 }
 
@@ -447,7 +456,7 @@ export async function upsertVehicleFitment(
     `INSERT INTO vehicle_fitment (vehicle_id, bolt_pattern, center_bore, stud_holes, pcd, thread_size, fastener_type, torque_nm, imported_at, updated_at)
      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9, NOW()), NOW())
      ON CONFLICT (vehicle_id)
-     DO UPDATE SET 
+     DO UPDATE SET
        bolt_pattern = $2, center_bore = $3, stud_holes = $4, pcd = $5,
        thread_size = $6, fastener_type = $7, torque_nm = $8,
        imported_at = COALESCE(vehicle_fitment.imported_at, $9, NOW()),
@@ -470,9 +479,9 @@ export async function upsertVehicleFitment(
 
 export async function getVehicleFitment(db: pg.Pool, vehicleId: number): Promise<VehicleFitment | null> {
   const result = await db.query<VehicleFitment>(
-    `SELECT id, vehicle_id as "vehicleId", bolt_pattern as "boltPattern", 
+    `SELECT id, vehicle_id as "vehicleId", bolt_pattern as "boltPattern",
             center_bore as "centerBore", stud_holes as "studHoles", pcd,
-            thread_size as "threadSize", fastener_type as "fastenerType", 
+            thread_size as "threadSize", fastener_type as "fastenerType",
             torque_nm as "torqueNm", created_at as "createdAt", updated_at as "updatedAt"
      FROM vehicle_fitment WHERE vehicle_id = $1`,
     [vehicleId]
@@ -520,7 +529,7 @@ export async function insertVehicleWheelSpec(
 
 export async function getVehicleWheelSpecs(db: pg.Pool, vehicleId: number): Promise<VehicleWheelSpec[]> {
   const result = await db.query<VehicleWheelSpec>(
-    `SELECT id, vehicle_id as "vehicleId", rim_diameter as "rimDiameter", 
+    `SELECT id, vehicle_id as "vehicleId", rim_diameter as "rimDiameter",
             rim_width as "rimWidth", "offset", tire_size as "tireSize",
             COALESCE(axle, 'both') as "axle",
             is_stock as "isStock", created_at as "createdAt", updated_at as "updatedAt"
@@ -669,11 +678,11 @@ export function evaluateWheel(wheel: WheelToValidate, profile: FitmentProfile): 
 
   // Normalize bolt patterns for comparison (e.g., "6X135" vs "6x135")
   const normalizeBoltPattern = (bp: string) => bp.toUpperCase().replace(/\s/g, "");
-  
+
   // Handle multi-drill patterns (e.g., "6X135/6X139.7")
   const wheelBoltPatterns = (wheel.boltPattern || "").split("/").map(normalizeBoltPattern);
   const vehicleBoltPattern = normalizeBoltPattern(profile.boltPattern);
-  
+
   const boltPatternPass = wheelBoltPatterns.some((wbp) => wbp === vehicleBoltPattern);
   if (!boltPatternPass) {
     exclusionReasons.push(`Bolt pattern mismatch: wheel=${wheel.boltPattern}, vehicle=${profile.boltPattern}`);
@@ -692,7 +701,7 @@ export function evaluateWheel(wheel: WheelToValidate, profile: FitmentProfile): 
   }
 
   // Width: if allowed list is empty, skip check; otherwise must match
-  const widthPass = profile.allowedWidths.length === 0 || 
+  const widthPass = profile.allowedWidths.length === 0 ||
     (wheel.width != null && profile.allowedWidths.some((w) => Math.abs(w - wheel.width!) < 0.1));
   if (!widthPass) {
     exclusionReasons.push(`Width not allowed: wheel=${wheel.width}, allowed=${profile.allowedWidths.join(",")}`);

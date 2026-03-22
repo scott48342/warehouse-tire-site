@@ -193,16 +193,19 @@ const modelAliases: Record<string, string> = {
   "s63": "s-class",
   // GLA
   "gla": "gla",
+  "gla-class": "gla",  // API returns "GLA-Class"
   "gla250": "gla",
   "gla-250": "gla",
   "gla35": "gla",
   "gla45": "gla",
   // GLB
   "glb": "glb",
+  "glb-class": "glb",  // API returns "GLB-Class"
   "glb250": "glb",
   "glb-250": "glb",
   // GLC
   "glc": "glc",
+  "glc-class": "glc",  // API returns "GLC-Class"
   "glc-300": "glc",
   "glc300": "glc",
   "glc350": "glc",
@@ -210,6 +213,7 @@ const modelAliases: Record<string, string> = {
   "glc63": "glc",
   // GLE
   "gle": "gle",
+  "gle-class": "gle",  // API returns "GLE-Class"
   "gle-350": "gle",
   "gle350": "gle",
   "gle450": "gle",
@@ -217,6 +221,7 @@ const modelAliases: Record<string, string> = {
   "gle63": "gle",
   // GLS
   "gls": "gls",
+  "gls-class": "gls",  // API returns "GLS-Class"
   "gls450": "gls",
   "gls550": "gls",
   "gls580": "gls",
