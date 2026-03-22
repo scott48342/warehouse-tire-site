@@ -10,6 +10,7 @@ import {
   type CachedFitment,
 } from "@/lib/fitmentCache";
 import { normalizeModelForApi, normalizeMake, slugify } from "@/lib/fitment-db/keys";
+import * as wheelSizeApi from "@/lib/wheelSizeApi";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -148,14 +149,33 @@ export async function GET(req: Request) {
     });
   }
 
-  // Convert to slugs (lowercase, replace special chars with dashes)
-  // Use normalizeMake for proper API-compatible make names (e.g., "mercedes-benz" → "mercedes")
-  const makeSlug = normalizeMake(make || "");
-  const modelSlug = normalizeModelForApi(model);
+  // Convert to slugs.
+  // Prefer resolving via Wheel-Size catalog (handles Mercedes '*-Class' names, etc.).
+  const fallbackMakeSlug = normalizeMake(make || "");
+  const fallbackModelSlug = normalizeModelForApi(model);
+
+  let makeSlug = fallbackMakeSlug;
+  let modelSlug = fallbackModelSlug;
+  let resolved: { makeSlug: string; modelSlug: string; modelName?: string } | null = null;
+
+  try {
+    resolved = await wheelSizeApi.resolveMakeModel(make, model);
+    if (resolved) {
+      makeSlug = resolved.makeSlug;
+      modelSlug = resolved.modelSlug;
+    }
+  } catch {
+    // If catalog resolve fails, proceed with best-guess slugs.
+  }
 
   const debug: any = {
     input: { year, make, model, modification, modificationRaw },
-    slugs: { makeSlug, modelSlug },
+    slugs: {
+      makeSlug,
+      modelSlug,
+      resolved,
+      fallback: { makeSlug: fallbackMakeSlug, modelSlug: fallbackModelSlug },
+    },
   };
 
   try {

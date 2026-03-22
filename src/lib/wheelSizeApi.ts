@@ -248,6 +248,21 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Wh
 }
 
 /**
+ * Resolve user-provided make/model strings to Wheel-Size slugs using the API catalog.
+ * This is safer than guessing slugs locally and keeps resolution logic centralized.
+ */
+export async function resolveMakeModel(
+  make: string,
+  model: string
+): Promise<{ makeSlug: string; modelSlug: string; modelName?: string } | null> {
+  const foundMake = await findMake(make);
+  if (!foundMake) return null;
+  const foundModel = await findModel(foundMake.slug, model);
+  if (!foundModel) return null;
+  return { makeSlug: foundMake.slug, modelSlug: foundModel.slug, modelName: foundModel.name };
+}
+
+/**
  * Get years for a make/model
  */
 export async function getYears(makeSlug: string, modelSlug: string): Promise<number[]> {
