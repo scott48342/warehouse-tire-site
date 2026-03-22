@@ -12,7 +12,12 @@ export default async function AdminSettingsPage({
   const saved = (Array.isArray((sp as any).saved) ? (sp as any).saved[0] : (sp as any).saved) || "";
 
   let taxRate = 0.06;
-  let stripe = { enabled: false, mode: "test" as const, publishableKey: null as string | null, secretKeyPresent: false };
+  let stripe: Awaited<ReturnType<typeof getStripeSettings>> = {
+    enabled: false,
+    mode: "test",
+    publishableKey: null,
+    secretKeyPresent: false,
+  };
   let err: string | null = null;
 
   try {
