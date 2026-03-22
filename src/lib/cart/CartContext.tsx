@@ -40,6 +40,8 @@ export type CartTireItem = {
   model: string;
   size: string;
   rearSize?: string;
+  loadIndex?: string;
+  speedRating?: string;
   imageUrl?: string;
   unitPrice: number;
   quantity: number;

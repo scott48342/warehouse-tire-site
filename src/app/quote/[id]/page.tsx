@@ -200,12 +200,15 @@ export default async function QuotePage({
                   const meta = (l as any)?.meta || {};
                   const required = !!meta.required;
                   const label = required ? `${l.name} (Included)` : l.name;
+                  const threadSize = meta?.spec?.threadSize || meta?.threadSize;
+                  const skuNote = l.sku ? `SKU: ${l.sku}` : undefined;
+                  const noteText = [threadSize, skuNote].filter(Boolean).join(" • ");
                   return (
                     <LineRow
                       key={i}
                       name={label}
                       price={money(ext(l))}
-                      note={meta?.meta?.nipCost ? `NIP: $${Number(meta.meta.nipCost).toFixed(2)}` : undefined}
+                      note={noteText || undefined}
                     />
                   );
                 })}

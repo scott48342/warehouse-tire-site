@@ -10,6 +10,8 @@ type AddTiresToCartButtonProps = {
   model: string;
   size: string;
   rearSize?: string;
+  loadIndex?: string;
+  speedRating?: string;
   imageUrl?: string;
   unitPrice: number;
   vehicle?: {
@@ -33,6 +35,8 @@ export function AddTiresToCartButton({
   model,
   size,
   rearSize,
+  loadIndex,
+  speedRating,
   imageUrl,
   unitPrice,
   vehicle,
@@ -56,6 +60,8 @@ export function AddTiresToCartButton({
       model,
       size,
       rearSize,
+      loadIndex,
+      speedRating,
       imageUrl,
       unitPrice,
       quantity,
@@ -126,6 +132,8 @@ export function QuickAddTireButton({
   brand,
   model,
   size,
+  loadIndex,
+  speedRating,
   imageUrl,
   unitPrice,
   vehicle,
@@ -135,6 +143,8 @@ export function QuickAddTireButton({
   brand: string;
   model: string;
   size: string;
+  loadIndex?: string;
+  speedRating?: string;
   imageUrl?: string;
   unitPrice: number;
   vehicle?: {
@@ -161,6 +171,8 @@ export function QuickAddTireButton({
         brand,
         model,
         size,
+        loadIndex,
+        speedRating,
         imageUrl,
         unitPrice,
         quantity,

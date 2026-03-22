@@ -99,6 +99,9 @@ function WheelItem({ item }: { item: CartWheelItem }) {
           {item.boltPattern && <span>• {item.boltPattern}</span>}
           {item.offset && <span>• ET{item.offset}</span>}
         </div>
+        
+        {/* SKU / Part Number */}
+        <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
       </div>
 
       {/* Price */}
@@ -115,6 +118,9 @@ function WheelItem({ item }: { item: CartWheelItem }) {
 
 function TireItem({ item }: { item: CartTireItem }) {
   const lineTotal = item.unitPrice * item.quantity;
+  
+  // Build load/speed display (e.g., "102H")
+  const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -131,10 +137,21 @@ function TireItem({ item }: { item: CartTireItem }) {
       <div className="flex-1 min-w-0">
         <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
         <h3 className="font-extrabold text-neutral-900">{item.model}</h3>
-        <div className="mt-1 text-sm text-neutral-600">{item.size}</div>
+        
+        {/* Tire size with load/speed rating */}
+        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
+          <span className="font-medium text-neutral-800">{item.size}</span>
+          {loadSpeedDisplay ? (
+            <span className="text-neutral-600">• {loadSpeedDisplay}</span>
+          ) : null}
+        </div>
+        
         {item.staggered && item.rearSize && (
           <div className="text-sm text-neutral-500">Rear: {item.rearSize}</div>
         )}
+        
+        {/* SKU / Part Number */}
+        <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
       </div>
 
       {/* Price */}
@@ -194,6 +211,10 @@ function AccessoryItem({ item }: { item: CartAccessoryItem }) {
         {specDisplay && (
           <div className="text-sm text-neutral-600">{specDisplay}</div>
         )}
+        
+        {/* SKU / Part Number */}
+        <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+        
         {item.reason && (
           <div className="text-xs text-neutral-500 mt-0.5">{item.reason}</div>
         )}
@@ -202,7 +223,9 @@ function AccessoryItem({ item }: { item: CartAccessoryItem }) {
       {/* Price */}
       <div className="text-right flex-shrink-0">
         <div className="text-sm text-neutral-500">Qty: {item.quantity}</div>
-        <div className="font-extrabold text-neutral-900">${lineTotal.toFixed(2)}</div>
+        <div className="font-extrabold text-neutral-900">
+          {lineTotal === 0 ? "Included" : `$${lineTotal.toFixed(2)}`}
+        </div>
       </div>
     </div>
   );

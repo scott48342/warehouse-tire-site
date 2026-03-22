@@ -55,6 +55,9 @@ function WheelCartItem({
           {item.offset ? <span>• ET{item.offset}</span> : null}
         </div>
 
+        {/* SKU / Part Number */}
+        <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+
         {item.vehicle ? (
           <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1 text-xs font-medium text-green-800">
             <span className="text-green-600">✓</span>
@@ -102,6 +105,9 @@ function TireCartItem({
 }) {
   const total = item.unitPrice * item.quantity;
 
+  // Build load/speed display (e.g., "102H" or "102 H")
+  const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
+
   return (
     <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-5">
       <div className="w-28 h-28 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 overflow-hidden">
@@ -115,7 +121,22 @@ function TireCartItem({
       <div className="flex-1 min-w-0">
         <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
         <h3 className="font-extrabold text-lg text-neutral-900">{item.model}</h3>
-        <div className="text-sm text-neutral-600">{item.size}</div>
+        
+        {/* Tire size with load/speed rating */}
+        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
+          <span className="font-semibold text-neutral-900">{item.size}</span>
+          {loadSpeedDisplay ? (
+            <span className="text-neutral-600">• {loadSpeedDisplay}</span>
+          ) : null}
+        </div>
+        
+        {/* Staggered rear size */}
+        {item.staggered && item.rearSize ? (
+          <div className="text-sm text-neutral-500">Rear: {item.rearSize}</div>
+        ) : null}
+
+        {/* SKU / Part Number */}
+        <div className="mt-1 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
 
         {item.vehicle ? (
           <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-green-50 border border-green-200 px-3 py-1 text-xs font-medium text-green-800">
@@ -161,10 +182,21 @@ function AccessoryCartItem({
   onRemove: () => void;
 }) {
   const total = item.unitPrice * item.quantity;
+  
+  // Icon based on category
+  const iconMap: Record<string, string> = {
+    lug_nut: "🔩",
+    lug_bolt: "🔩",
+    hub_ring: "⭕",
+    valve_stem: "🔘",
+    tpms: "📡",
+  };
+  const icon = iconMap[item.category] || "🔧";
+
   return (
     <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-5">
       <div className="w-12 h-12 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 flex items-center justify-center">
-        <span className="text-xl">🔧</span>
+        <span className="text-xl">{icon}</span>
       </div>
 
       <div className="flex-1 min-w-0">
@@ -184,6 +216,10 @@ function AccessoryCartItem({
               : null}
           </div>
         ) : null}
+        
+        {/* SKU / Part Number */}
+        <div className="mt-0.5 text-xs text-neutral-400 font-mono">SKU: {item.sku}</div>
+        
         <div className="text-xs text-neutral-500 mt-0.5">{item.reason}</div>
 
         <div className="mt-4 flex items-center justify-between">

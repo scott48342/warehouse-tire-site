@@ -76,6 +76,8 @@ export function SelectTireButton({
             brand: tire.brand || "Tire",
             model: tire.title || tire.sku,
             size: tire.size || "",
+            loadIndex: tire.loadIndex,
+            speedRating: tire.speed,
             imageUrl: tire.imageUrl,
             unitPrice: tire.price || 0,
             quantity: 4,

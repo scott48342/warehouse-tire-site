@@ -48,6 +48,9 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
             <span className="text-neutral-500">• {item.boltPattern}</span>
           ) : null}
         </div>
+        
+        {/* SKU */}
+        <div className="text-[10px] text-neutral-400 font-mono mt-0.5">{item.sku}</div>
 
         {item.staggered && item.rearSku ? (
           <div className="mt-1 text-xs text-amber-700 font-medium">
@@ -78,10 +81,20 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
 function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
   const total = item.unitPrice * item.quantity;
 
+  // Icon based on category
+  const iconMap: Record<string, string> = {
+    lug_nut: "🔩",
+    lug_bolt: "🔩",
+    hub_ring: "⭕",
+    valve_stem: "🔘",
+    tpms: "📡",
+  };
+  const icon = iconMap[item.category] || "🔧";
+
   return (
     <div className="flex gap-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
       <div className="w-12 h-12 flex-shrink-0 rounded-lg bg-amber-100 flex items-center justify-center">
-        <span className="text-xl">{item.category === "hub_ring" ? "🔘" : "🔩"}</span>
+        <span className="text-xl">{icon}</span>
       </div>
 
       <div className="flex-1 min-w-0">
@@ -93,15 +106,26 @@ function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
             </span>
           )}
         </div>
+        
+        {/* Spec display (thread size, etc.) */}
+        {item.spec?.threadSize ? (
+          <div className="text-xs text-neutral-700 font-medium">{item.spec.threadSize}</div>
+        ) : null}
+        
+        {/* SKU */}
+        <div className="text-[10px] text-neutral-400 font-mono">{item.sku}</div>
+        
         <div className="text-xs text-neutral-600 mt-0.5">{item.reason}</div>
 
         <div className="mt-2 text-sm">
           <span className="font-extrabold text-neutral-900">
-            ${total.toFixed(2)}
+            {total === 0 ? "Included" : `$${total.toFixed(2)}`}
           </span>
-          <span className="text-neutral-500 ml-1">
-            ({item.quantity} × ${item.unitPrice.toFixed(2)})
-          </span>
+          {total > 0 && (
+            <span className="text-neutral-500 ml-1">
+              ({item.quantity} × ${item.unitPrice.toFixed(2)})
+            </span>
+          )}
         </div>
       </div>
     </div>
@@ -110,6 +134,9 @@ function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
 
 function TireItemCard({ item }: { item: CartTireItem }) {
   const total = item.unitPrice * item.quantity;
+  
+  // Build load/speed display (e.g., "102H")
+  const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -130,7 +157,15 @@ function TireItemCard({ item }: { item: CartTireItem }) {
       <div className="flex-1 min-w-0">
         <div className="text-xs font-semibold text-neutral-500">{item.brand}</div>
         <div className="font-extrabold text-neutral-900 truncate">{item.model}</div>
-        <div className="text-sm text-neutral-600">{item.size}</div>
+        
+        {/* Tire size with load/speed rating */}
+        <div className="text-sm text-neutral-600">
+          {item.size}
+          {loadSpeedDisplay ? ` ${loadSpeedDisplay}` : null}
+        </div>
+        
+        {/* SKU */}
+        <div className="text-[10px] text-neutral-400 font-mono">{item.sku}</div>
 
         {item.staggered && item.rearSize ? (
           <div className="mt-1 text-xs text-amber-700 font-medium">

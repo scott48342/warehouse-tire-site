@@ -92,6 +92,8 @@ export function SelectTireButtonAxle({
             brand: tire.brand || "Tire",
             model: tire.title || tire.sku,
             size: tire.size || "",
+            loadIndex: tire.loadIndex,
+            speedRating: tire.speed,
             imageUrl: tire.imageUrl,
             unitPrice: tire.price || 0,
             quantity: axle === "front" ? 2 : 2, // 2 per axle for staggered
