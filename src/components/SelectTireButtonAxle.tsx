@@ -28,7 +28,19 @@ export function SelectTireButtonAxle({
 }) {
   const router = useRouter();
   const sp = useSearchParams();
-  const { addItem, getTires, removeItem } = useCart();
+  const { addItem, getTires, removeItem, getWheels } = useCart();
+  
+  // Get vehicle info from URL params or from wheels in cart
+  const wheels = getWheels();
+  const wheelVehicle = wheels[0]?.vehicle;
+  const urlVehicle = sp.get("year") && sp.get("make") && sp.get("model") ? {
+    year: sp.get("year")!,
+    make: sp.get("make")!,
+    model: sp.get("model")!,
+    trim: sp.get("trim") || undefined,
+    modification: sp.get("modification") || undefined,
+  } : null;
+  const vehicle = wheelVehicle || urlVehicle;
 
   const param = axle === "rear" ? "tireSkuRear" : "tireSkuFront";
   const currentSku = sp.get(param) || "";
@@ -85,7 +97,7 @@ export function SelectTireButtonAxle({
 
         // Add tire to cart
         if (!tireInCart) {
-          console.log(`[SelectTireButtonAxle] Adding ${axle} tire to cart:`, tire.sku);
+          console.log(`[SelectTireButtonAxle] Adding ${axle} tire to cart:`, tire.sku, "vehicle:", vehicle);
           addItem({
             type: "tire",
             sku: tire.sku,
@@ -98,6 +110,7 @@ export function SelectTireButtonAxle({
             unitPrice: tire.price || 0,
             quantity: axle === "front" ? 2 : 2, // 2 per axle for staggered
             staggered: true,
+            vehicle: vehicle || undefined,
           });
           console.log(`[SelectTireButtonAxle] ${axle} tire added to cart successfully`);
         } else {

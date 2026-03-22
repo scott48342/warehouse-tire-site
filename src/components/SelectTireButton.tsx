@@ -26,7 +26,19 @@ export function SelectTireButton({
 }) {
   const router = useRouter();
   const sp = useSearchParams();
-  const { addItem, getTires, removeItem } = useCart();
+  const { addItem, getTires, removeItem, getWheels } = useCart();
+  
+  // Get vehicle info from URL params or from wheels in cart
+  const wheels = getWheels();
+  const wheelVehicle = wheels[0]?.vehicle;
+  const urlVehicle = sp.get("year") && sp.get("make") && sp.get("model") ? {
+    year: sp.get("year")!,
+    make: sp.get("make")!,
+    model: sp.get("model")!,
+    trim: sp.get("trim") || undefined,
+    modification: sp.get("modification") || undefined,
+  } : null;
+  const vehicle = wheelVehicle || urlVehicle;
 
   const currentTireSku = sp.get("tireSku") || "";
   const active = Boolean(tire?.sku && currentTireSku && tire.sku === currentTireSku);
@@ -69,7 +81,7 @@ export function SelectTireButton({
 
         // Add tire to cart
         if (!tireInCart) {
-          console.log("[SelectTireButton] Adding tire to cart:", tire.sku);
+          console.log("[SelectTireButton] Adding tire to cart:", tire.sku, "vehicle:", vehicle);
           addItem({
             type: "tire",
             sku: tire.sku,
@@ -81,6 +93,7 @@ export function SelectTireButton({
             imageUrl: tire.imageUrl,
             unitPrice: tire.price || 0,
             quantity: 4,
+            vehicle: vehicle || undefined,
           });
           console.log("[SelectTireButton] Tire added to cart successfully");
         } else {
