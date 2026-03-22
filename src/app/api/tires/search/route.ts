@@ -222,20 +222,114 @@ export async function GET(req: Request) {
       console.error("[tires/search] Tire sizes error:", err);
     }
     
+    // Track original OEM sizes for response
+    const oemTireSizes = [...tireSizes];
+    
     // Filter by wheel diameter if specified
+    let matchMode: "exact" | "oem-fallback" | "direct-search" = "exact";
+    
     if (wheelDiameter && tireSizes.length > 0) {
       const filtered = tireSizes.filter((size) => {
         const rim = extractRimDiameter(size);
         return rim === wheelDiameter;
       });
       
-      // If no exact matches, keep all (user might be plus-sizing)
       if (filtered.length > 0) {
         tireSizes = filtered;
+        matchMode = "exact";
+      } else {
+        // No OEM tires match the wheel diameter - this is a plus/minus sizing scenario
+        // Search directly for tires of the specified diameter
+        tireSizes = [];
+        matchMode = "direct-search";
+        console.log(`[tires/search] No OEM tires for ${wheelDiameter}" wheel, using direct search`);
       }
     }
     
-    if (tireSizes.length === 0) {
+    // Build results
+    const allResults: TireResult[] = [];
+    const seenSkus = new Set<string>();
+    
+    if (tireSizes.length > 0) {
+      // Search using OEM tire sizes (filtered by wheel diameter)
+      for (const size of tireSizes.slice(0, 5)) {
+        const results = await searchTiresBySize(db, size, minQty, Math.ceil(pageSize / tireSizes.length));
+        for (const tire of results) {
+          if (!seenSkus.has(tire.partNumber)) {
+            seenSkus.add(tire.partNumber);
+            allResults.push(tire);
+          }
+        }
+      }
+    } else if (wheelDiameter && matchMode === "direct-search") {
+      // Direct search by rim diameter when no OEM sizes match
+      // Query tires with matching rim diameter directly
+      const { rows } = await db.query({
+        text: `
+          select
+            t.sku,
+            t.brand_desc,
+            t.tire_description,
+            t.tire_size,
+            t.simple_size,
+            t.terrain,
+            t.construction_type,
+            t.mileage_warranty,
+            t.load_index,
+            t.speed_rating,
+            t.image_url,
+            t.map_usd,
+            t.msrp_usd,
+            coalesce(i.qoh, 0) as qoh
+          from wp_tires t
+          left join wp_inventory i
+            on i.sku = t.sku
+           and i.product_type = 'tire'
+           and i.location_id = 'TOTAL'
+          where t.simple_size like $1
+            and ($2::int is null or coalesce(i.qoh, 0) >= $2::int)
+          order by coalesce(i.qoh, 0) desc, t.brand_desc asc
+          limit $3
+        `,
+        values: [`%${String(wheelDiameter).padStart(2, "0")}`, minQty || null, pageSize],
+      });
+      
+      for (const r of rows) {
+        const tireSize = r.tire_size || r.simple_size || "";
+        const rim = extractRimDiameter(tireSize);
+        
+        // Only include tires that exactly match the wheel diameter
+        if (rim !== wheelDiameter) continue;
+        
+        const mapUsd0 = n(r.map_usd);
+        const msrpUsd0 = n(r.msrp_usd);
+        const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+        const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
+        const cost = mapUsd != null ? Math.max(0.01, mapUsd - 50) : msrpUsd;
+        
+        allResults.push({
+          partNumber: String(r.sku),
+          mfgPartNumber: String(r.sku),
+          brand: r.brand_desc || null,
+          description: r.tire_description || tireSize || r.sku,
+          cost: cost != null && Number.isFinite(cost) ? cost : null,
+          quantity: { primary: 0, alternate: 0, national: i(r.qoh) },
+          imageUrl: r.image_url || null,
+          size: tireSize,
+          simpleSize: r.simple_size || toSimpleSize(tireSize),
+          rimDiameter: rim,
+          badges: {
+            terrain: r.terrain || null,
+            construction: r.construction_type || null,
+            warrantyMiles: r.mileage_warranty != null ? i(r.mileage_warranty) : null,
+            loadIndex: r.load_index || null,
+            speedRating: r.speed_rating || null,
+          },
+        });
+      }
+    }
+    
+    if (allResults.length === 0 && !wheelDiameter) {
       return NextResponse.json({
         results: [],
         mode: "vehicle",
@@ -245,40 +339,36 @@ export async function GET(req: Request) {
       });
     }
     
-    // Search for tires matching any of the tire sizes
-    const allResults: TireResult[] = [];
-    const seenSkus = new Set<string>();
-    
-    for (const size of tireSizes.slice(0, 5)) { // Limit to 5 sizes to avoid N+1
-      const results = await searchTiresBySize(db, size, minQty, Math.ceil(pageSize / tireSizes.length));
-      for (const tire of results) {
-        if (!seenSkus.has(tire.partNumber)) {
-          seenSkus.add(tire.partNumber);
-          allResults.push(tire);
-        }
-      }
-    }
-    
     // Sort by stock and limit
-    allResults.sort((a, b) => {
-      const qtyA = a.quantity.national;
-      const qtyB = b.quantity.national;
-      return qtyB - qtyA;
-    });
-    
+    allResults.sort((a, b) => b.quantity.national - a.quantity.national);
     const results = allResults.slice(0, pageSize);
     
-    // Filter results to match wheelDiameter if specified
-    const filteredResults = wheelDiameter
+    // Final strict filter: only return tires matching wheelDiameter
+    const finalResults = wheelDiameter
       ? results.filter((t) => t.rimDiameter === wheelDiameter)
       : results;
     
+    // If strict filtering leaves us empty but we have results, return error
+    if (wheelDiameter && finalResults.length === 0 && results.length > 0) {
+      return NextResponse.json({
+        results: [],
+        mode: "vehicle",
+        vehicle: { year, make, model, modification },
+        wheelDiameter,
+        oemTireSizes,
+        error: `No tires found for ${wheelDiameter}" wheels. OEM sizes are ${oemTireSizes.join(", ")}`,
+        matchMode,
+      });
+    }
+    
     return NextResponse.json({
-      results: filteredResults.length > 0 ? filteredResults : results,
+      results: finalResults,
       mode: "vehicle",
       vehicle: { year, make, model, modification },
       wheelDiameter: wheelDiameter || null,
-      tireSizesSearched: tireSizes,
+      tireSizesSearched: tireSizes.length > 0 ? tireSizes : [`direct:R${wheelDiameter}`],
+      oemTireSizes,
+      matchMode,
       fitmentSource,
     });
   } catch (e: any) {

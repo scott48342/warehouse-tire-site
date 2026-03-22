@@ -148,8 +148,25 @@ export async function GET(req: Request) {
       }
 
       // Rebuild profile after import (should now hit DB)
+      // Add retry logic to handle potential race condition
       console.log(`[fitment-search] LEGACY Attempting to load profile with: trim=${trim}, importedSlug=${importRes.modificationSlug}`);
-      profile = await buildFitmentProfile(db, Number(year), make, model, trim);
+      
+      let retries = 0;
+      const maxRetries = 3;
+      const retryDelayMs = 100;
+      
+      while (retries < maxRetries && !profile) {
+        if (retries > 0) {
+          console.log(`[fitment-search] Retry ${retries}/${maxRetries} after ${retryDelayMs}ms...`);
+          await new Promise(r => setTimeout(r, retryDelayMs));
+        }
+        profile = await buildFitmentProfile(db, Number(year), make, model, trim);
+        retries++;
+      }
+      
+      if (profile) {
+        console.log(`[fitment-search] Profile loaded after ${retries} attempt(s)`);
+      }
 
       if (!profile && importRes.vehicle) {
         // Fallback: try loading by the exact vehicleId we just imported
