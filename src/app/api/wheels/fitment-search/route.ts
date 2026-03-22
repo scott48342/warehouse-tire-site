@@ -263,6 +263,35 @@ async function handleDbProfilePath(
 // Shared wheel results: DB-first candidates + live availability validation
 // ============================================================================
 
+/**
+ * Diversifies candidate list by round-robin across brands.
+ * Prevents getting stuck on one brand cluster.
+ */
+function diversifyCandidatesByBrand<T extends { brand_cd?: string }>(candidates: T[]): T[] {
+  // Group by brand
+  const byBrand = new Map<string, T[]>();
+  for (const c of candidates) {
+    const brand = c.brand_cd || "__unknown__";
+    if (!byBrand.has(brand)) byBrand.set(brand, []);
+    byBrand.get(brand)!.push(c);
+  }
+
+  // Round-robin interleave
+  const brandQueues = Array.from(byBrand.values());
+  const result: T[] = [];
+  let added = true;
+  while (added) {
+    added = false;
+    for (const queue of brandQueues) {
+      if (queue.length > 0) {
+        result.push(queue.shift()!);
+        added = true;
+      }
+    }
+  }
+  return result;
+}
+
 async function handleDbFirstWheelResults(opts: {
   url: URL;
   year: string;
@@ -325,31 +354,30 @@ async function handleDbFirstWheelResults(opts: {
     return true;
   });
 
-  const startWanted = (requestedPage - 1) * requestedPageSize;
-  const results: any[] = [];
+  // Diversify by brand (round-robin) to avoid brand clustering
+  const diversifiedCandidates = diversifyCandidatesByBrand(filteredCandidates);
 
+  // Concurrent availability validation settings
+  const CONCURRENCY = Math.max(1, Math.min(12, Number(process.env.WT_AVAIL_CONCURRENCY || "8") || 8));
+  const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "6000") || 6000);
+  const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "8000") || 8000);
+  const tScan0 = Date.now();
+
+  // Phase 1: Fitment validation (fast, no I/O)
+  type FitmentValidCandidate = {
+    candidate: typeof diversifiedCandidates[0];
+    validation: FitmentValidation;
+  };
+  const fitmentValidCandidates: FitmentValidCandidate[] = [];
   let scanned = 0;
-  let fitmentValid = 0;
-  let availabilityChecked = 0;
-  let eligibleCount = 0;
-
   let truncated = false;
   const capsHit: string[] = [];
 
-  const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "4000") || 4000);
-  const timeBudgetMs = Math.max(1500, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "2500") || 2500);
-  const tScan0 = Date.now();
-
-  for (const c of filteredCandidates) {
+  for (const c of diversifiedCandidates) {
     scanned++;
     if (scanned > scanCap) {
       truncated = true;
       capsHit.push("scanCap");
-      break;
-    }
-    if (Date.now() - tScan0 > timeBudgetMs) {
-      truncated = true;
-      capsHit.push("timeBudget");
       break;
     }
 
@@ -364,81 +392,144 @@ async function handleDbFirstWheelResults(opts: {
 
     const v = validateWheel(wheelSpec, envelope);
     if (v.fitmentClass === "excluded") continue;
-    fitmentValid++;
 
-    // Live availability confirmation (cached, short timeout).
-    // If we cannot confirm in time, we SKIP (per production rules).
+    fitmentValidCandidates.push({ candidate: c, validation: v });
+  }
+
+  const fitmentValid = fitmentValidCandidates.length;
+
+  // Phase 2: Concurrent live availability checks with time budget
+  type EligibleItem = {
+    candidate: typeof diversifiedCandidates[0];
+    validation: FitmentValidation;
+    avail: { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string };
+  };
+  const eligibleItems: EligibleItem[] = [];
+  let availabilityChecked = 0;
+  let launchStopped = false;
+
+  // Concurrency pool
+  const inFlight = new Set<Promise<void>>();
+
+  const checkAvailability = async (item: FitmentValidCandidate): Promise<void> => {
     const avail = await fetchLiveAvailabilityForSku({
       wheelProsBase,
       headers,
-      sku: c.sku,
+      sku: item.candidate.sku,
       minQty,
     });
     availabilityChecked++;
-    if (!avail.ok) continue;
+    if (avail.ok) {
+      eligibleItems.push({
+        candidate: item.candidate,
+        validation: item.validation,
+        avail: avail as EligibleItem["avail"],
+      });
+    }
+  };
 
-    eligibleCount++;
-    if (eligibleCount <= startWanted) continue;
-    if (results.length >= requestedPageSize) break;
+  for (const item of fitmentValidCandidates) {
+    // Check time budget before launching new checks
+    if (Date.now() - tScan0 > timeBudgetMs) {
+      truncated = true;
+      capsHit.push("timeBudget");
+      launchStopped = true;
+      break;
+    }
 
-    results.push({
-      sku: c.sku,
-      skuType: "WHEEL",
-      title: c.product_desc || c.sku,
-      brand: c.brand_cd ? { code: c.brand_cd, description: c.brand_desc || c.brand_cd } : undefined,
-      inventory: {
-        type: avail.inventoryType,
-        localStock: avail.localQty,
-        globalStock: avail.globalQty,
-      },
-      prices: {
-        msrp: [
-          {
-            currencyAmount: String(Number(c.map_price || c.msrp || 0) || 0),
-            currencyCode: "USD",
-          },
-        ],
-      },
-      images: (c.images || []).map((u) => ({
-        imageUrlLarge: u,
-        imageUrlMedium: u,
-        imageUrlSmall: u,
-        imageUrlThumbnail: u,
-      })),
-      properties: {
-        brand_cd: c.brand_cd,
-        brand_desc: c.brand_desc,
-        abbreviated_finish_desc: c.abbreviated_finish_desc,
-        diameter: c.diameter,
-        width: c.width,
-        offset: c.offset,
-        centerbore: c.centerbore,
-        boltPatternMetric: c.bolt_pattern_metric,
-        boltPattern: c.bolt_pattern_standard,
-      },
-      fitmentValidation: {
-        fitmentClass: v.fitmentClass,
-        fitmentMode: v.fitmentMode,
-        ...(debug
-          ? {
-              boltPatternPass: v.boltPatternPass,
-              centerBorePass: v.centerBorePass,
-              diameterPass: v.diameterPass,
-              widthPass: v.widthPass,
-              offsetPass: v.offsetPass,
-              exclusionReasons: v.exclusionReasons,
-            }
-          : {}),
-      },
-      availability: {
-        confirmed: true,
-        minQty,
-        checkedAt: avail.checkedAt,
-      },
-    });
+    // Wait if at concurrency limit
+    while (inFlight.size >= CONCURRENCY) {
+      await Promise.race(inFlight);
+    }
+
+    // Launch availability check
+    const p = checkAvailability(item).finally(() => inFlight.delete(p));
+    inFlight.add(p);
   }
 
-  const facets = buildFacets(results);
+  // Wait for remaining in-flight checks to complete (with a hard cap)
+  if (inFlight.size > 0) {
+    const flushDeadline = Date.now() + 3000; // max 3s extra for in-flight
+    while (inFlight.size > 0 && Date.now() < flushDeadline) {
+      await Promise.race([...inFlight, new Promise((r) => setTimeout(r, 100))]);
+    }
+  }
+
+  // Phase 3: Build results from eligible items
+  const startWanted = (requestedPage - 1) * requestedPageSize;
+  const eligibleCount = eligibleItems.length;
+
+  const pageItems = eligibleItems.slice(startWanted, startWanted + requestedPageSize);
+  const results = pageItems.map(({ candidate: c, validation: v, avail }) => ({
+    sku: c.sku,
+    skuType: "WHEEL",
+    title: c.product_desc || c.sku,
+    brand: c.brand_cd ? { code: c.brand_cd, description: c.brand_desc || c.brand_cd } : undefined,
+    inventory: {
+      type: avail.inventoryType,
+      localStock: avail.localQty,
+      globalStock: avail.globalQty,
+    },
+    prices: {
+      msrp: [
+        {
+          currencyAmount: String(Number(c.map_price || c.msrp || 0) || 0),
+          currencyCode: "USD",
+        },
+      ],
+    },
+    images: (c.images || []).map((u: string) => ({
+      imageUrlLarge: u,
+      imageUrlMedium: u,
+      imageUrlSmall: u,
+      imageUrlThumbnail: u,
+    })),
+    properties: {
+      brand_cd: c.brand_cd,
+      brand_desc: c.brand_desc,
+      abbreviated_finish_desc: c.abbreviated_finish_desc,
+      diameter: c.diameter,
+      width: c.width,
+      offset: c.offset,
+      centerbore: c.centerbore,
+      boltPatternMetric: c.bolt_pattern_metric,
+      boltPattern: c.bolt_pattern_standard,
+    },
+    fitmentValidation: {
+      fitmentClass: v.fitmentClass,
+      fitmentMode: v.fitmentMode,
+      ...(debug
+        ? {
+            boltPatternPass: v.boltPatternPass,
+            centerBorePass: v.centerBorePass,
+            diameterPass: v.diameterPass,
+            widthPass: v.widthPass,
+            offsetPass: v.offsetPass,
+            exclusionReasons: v.exclusionReasons,
+          }
+        : {}),
+    },
+    availability: {
+      confirmed: true,
+      minQty,
+      checkedAt: avail.checkedAt,
+    },
+  }));
+
+  // Build facets from ALL eligible items (not just page)
+  const facets = buildFacets(eligibleItems.map((e) => ({
+    ...e.candidate,
+    properties: {
+      brand_cd: e.candidate.brand_cd,
+      brand_desc: e.candidate.brand_desc,
+      abbreviated_finish_desc: e.candidate.abbreviated_finish_desc,
+      diameter: e.candidate.diameter,
+      width: e.candidate.width,
+      offset: e.candidate.offset,
+      boltPatternMetric: e.candidate.bolt_pattern_metric,
+      boltPattern: e.candidate.bolt_pattern_standard,
+    },
+  })));
 
   return NextResponse.json({
     results,
