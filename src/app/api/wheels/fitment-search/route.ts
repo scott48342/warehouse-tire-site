@@ -9,6 +9,7 @@ import {
   getFitmentProfile, 
   type FitmentProfile as DBFitmentProfile,
   type ProfileResolutionPath,
+  type ProfileLookupResult,
 } from "@/lib/fitment-db/profileService";
 import {
   buildFitmentEnvelope,
@@ -27,8 +28,9 @@ export const maxDuration = 60;
 
 /**
  * Resolution paths for fitment profile lookup:
- * - modificationIdDb: Found directly in vehicle_fitments by modificationId
- * - modificationIdApi: Fetched from API, imported to DB, then read
+ * - directCanonical: Found directly in vehicle_fitments by modificationId
+ * - canonicalAlias: Found via alias mapping to different canonical ID
+ * - importedAlias: Fetched from API, imported with different ID, alias stored
  * - legacyFallback: Used legacy system (trim-based lookup)
  * - invalid: Could not resolve fitment profile
  */
@@ -93,28 +95,32 @@ export async function GET(req: Request) {
 
   try {
     // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 1: ModificationId-First Profile Resolution
+    // STEP 1: ModificationId-First Profile Resolution (with Alias Support)
     // ═══════════════════════════════════════════════════════════════════════════
     
     let dbProfile: DBFitmentProfile | null = null;
     let resolutionPath: FitmentResolutionPath = "invalid";
-    let profileTiming: any = {};
+    let profileResult: ProfileLookupResult | null = null;
+    let canonicalModificationId: string | null = null;
+    let aliasUsed = false;
     
-    // Primary path: Use modificationId-first lookup (DB + API fallback)
+    // Primary path: Use modificationId-first lookup (DB → Alias → API)
     if (modificationId) {
       try {
-        const result = await getFitmentProfile(Number(year), make, model, modificationId);
-        profileTiming = result.timing;
+        profileResult = await getFitmentProfile(Number(year), make, model, modificationId);
         
-        if (result.profile) {
-          dbProfile = result.profile;
-          resolutionPath = result.resolutionPath;
+        if (profileResult.profile) {
+          dbProfile = profileResult.profile;
+          resolutionPath = profileResult.resolutionPath;
+          canonicalModificationId = profileResult.canonicalModificationId;
+          aliasUsed = profileResult.aliasUsed;
           
-          console.log(`[fitment-search] RESOLVED (${resolutionPath}): ${year} ${make} ${model} mod=${modificationId}`, {
+          console.log(`[fitment-search] RESOLVED (${resolutionPath}): ${year} ${make} ${model} mod=${modificationId}${aliasUsed ? ` → ${canonicalModificationId}` : ''}`, {
             boltPattern: dbProfile.boltPattern,
             oemWheelSizes: dbProfile.oemWheelSizes.length,
             oemTireSizes: dbProfile.oemTireSizes.length,
-            timing: result.timing,
+            aliasUsed,
+            timing: profileResult.timing,
           });
         } else {
           console.log(`[fitment-search] PROFILE NOT FOUND: ${year} ${make} ${model} mod=${modificationId}`);
@@ -130,7 +136,7 @@ export async function GET(req: Request) {
     // ═══════════════════════════════════════════════════════════════════════════
     
     if (dbProfile && dbProfile.boltPattern) {
-      return await handleDbProfilePath(url, dbProfile, resolutionPath, modeParam, debug, t0);
+      return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0);
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
@@ -159,6 +165,8 @@ async function handleDbProfilePath(
   url: URL,
   dbProfile: DBFitmentProfile,
   resolutionPath: FitmentResolutionPath,
+  canonicalModificationId: string | null,
+  aliasUsed: boolean,
   modeParam: string | null,
   debug: boolean,
   t0: number
@@ -329,6 +337,8 @@ async function handleDbProfilePath(
   // Build facets
   const facets = buildFacets(passingWheels);
   
+  const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
+  
   return NextResponse.json({
     results: passingWheels,
     totalCount: passingWheels.length,
@@ -341,6 +351,9 @@ async function handleDbProfilePath(
       vehicleType,
       resolutionPath,
       fitmentSource: resolutionPath,
+      aliasUsed,
+      canonicalModificationId,
+      requestedModificationId,
       validationMode: "derived",
       envelope: {
         boltPattern: derivedEnvelope.boltPattern,
@@ -388,6 +401,7 @@ async function handleDbProfilePath(
       excluded: excludedCount,
       resolutionPath,
       fitmentSource: resolutionPath,
+      aliasUsed,
       validationMode: "derived",
     },
     timing: debug ? { totalMs: Date.now() - t0 } : undefined,

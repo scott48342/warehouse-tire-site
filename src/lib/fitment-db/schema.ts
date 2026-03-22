@@ -6,6 +6,7 @@
  * - vehicle_fitments: Normalized fitment data for runtime
  * - fitment_overrides: Manual corrections
  * - fitment_import_jobs: Batch import tracking
+ * - modification_aliases: Maps requested modificationIds to canonical ones
  */
 
 import {
@@ -218,6 +219,64 @@ export const fitmentImportJobs = pgTable(
 );
 
 // ============================================================================
+// modification_aliases - Maps requested modificationIds to canonical ones
+// ============================================================================
+
+/**
+ * When a user selects a trim from the trims API, they get a modificationId.
+ * When the profile system imports from Wheel-Size API, it might store with
+ * a different modificationId (the actual API slug).
+ * 
+ * This table maps:
+ * - requestedModificationId (what the trims API returned / user selected)
+ * - canonicalModificationId (what's stored in vehicle_fitments)
+ * 
+ * This allows profile lookup by the requested ID to find the canonical record.
+ */
+export const modificationAliases = pgTable(
+  "modification_aliases",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Vehicle identity
+    year: integer("year").notNull(),
+    make: varchar("make", { length: 100 }).notNull(),
+    model: varchar("model", { length: 100 }).notNull(),
+    
+    // The modificationId that was requested (from trims API / user selection)
+    requestedModificationId: varchar("requested_modification_id", { length: 255 }).notNull(),
+    
+    // The canonical modificationId stored in vehicle_fitments
+    canonicalModificationId: varchar("canonical_modification_id", { length: 255 }).notNull(),
+    
+    // Display info for debugging
+    displayTrim: varchar("display_trim", { length: 255 }),
+    
+    // Reference to the vehicle_fitments record
+    vehicleFitmentId: uuid("vehicle_fitment_id").references(() => vehicleFitments.id),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary lookup: year + make + model + requested modificationId
+    requestedIdx: uniqueIndex("modification_aliases_requested_idx").on(
+      table.year,
+      table.make,
+      table.model,
+      table.requestedModificationId
+    ),
+    // Lookup by canonical ID
+    canonicalIdx: index("modification_aliases_canonical_idx").on(
+      table.year,
+      table.make,
+      table.model,
+      table.canonicalModificationId
+    ),
+  })
+);
+
+// ============================================================================
 // Type exports for Drizzle
 // ============================================================================
 
@@ -232,3 +291,6 @@ export type NewFitmentOverride = typeof fitmentOverrides.$inferInsert;
 
 export type FitmentImportJob = typeof fitmentImportJobs.$inferSelect;
 export type NewFitmentImportJob = typeof fitmentImportJobs.$inferInsert;
+
+export type ModificationAlias = typeof modificationAliases.$inferSelect;
+export type NewModificationAlias = typeof modificationAliases.$inferInsert;

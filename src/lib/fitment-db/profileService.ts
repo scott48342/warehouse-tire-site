@@ -1,25 +1,27 @@
 /**
- * Fitment Profile Service (ModificationId-First)
+ * Fitment Profile Service (ModificationId-First with Alias Resolution)
  * 
  * Provides complete fitment profiles for wheels/tires pages.
  * Uses vehicle_fitments table with canonical modificationId as PRIMARY key.
+ * Supports alias mapping when requested modificationId differs from canonical.
  * 
  * Resolution Flow:
- * 1. Direct DB lookup by modificationId
- * 2. If not found → call Wheel-Size API to fetch and import
- * 3. Retry DB lookup after import (with short delay)
- * 4. Return profile with resolution path metadata
+ * 1. Direct DB lookup by requested modificationId → "directCanonical"
+ * 2. Alias lookup (requested → canonical mapping) → "canonicalAlias"
+ * 3. API fetch + import (stores alias if different) → "importedAlias"
+ * 4. Failure → "not_found"
  * 
  * Resolution Paths:
- * - "modificationIdDb" - Found directly in vehicle_fitments by modificationId
- * - "modificationIdApi" - Fetched from API, imported, then read from DB
- * - "not_found" - Could not resolve (API didn't have data or import failed)
+ * - "directCanonical" - Found directly in vehicle_fitments by modificationId
+ * - "canonicalAlias" - Found via alias mapping to different canonical ID
+ * - "importedAlias" - Fetched from API, imported with different ID, alias stored
+ * - "not_found" - Could not resolve
  */
 
 import { db } from "./db";
-import { vehicleFitments, fitmentSourceRecords } from "./schema";
+import { vehicleFitments, fitmentSourceRecords, modificationAliases } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, or } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
@@ -29,36 +31,26 @@ import { normalizeTrimLabel } from "@/lib/trimNormalize";
 // ============================================================================
 
 export type ProfileResolutionPath = 
-  | "modificationIdDb"    // Found directly in DB by modificationId
-  | "modificationIdApi"   // Fetched from API, imported, returned
-  | "not_found";          // Could not resolve
+  | "directCanonical"   // Found directly in DB by requested modificationId
+  | "canonicalAlias"    // Found via alias to different canonical modificationId
+  | "importedAlias"     // Imported from API, alias stored
+  | "not_found";        // Could not resolve
 
 export interface FitmentProfile {
-  // Identity
   modificationId: string;
   year: number;
   make: string;
   model: string;
-  
-  // Display
   displayTrim: string;
   rawTrim: string | null;
-  
-  // Wheel specs
   boltPattern: string | null;
   centerBoreMm: number | null;
   threadSize: string | null;
   seatType: string | null;
-  
-  // Offset range
   offsetMinMm: number | null;
   offsetMaxMm: number | null;
-  
-  // OEM sizes
   oemWheelSizes: WheelSize[];
   oemTireSizes: string[];
-  
-  // Metadata
   source: "db" | "api";
   apiCalled: boolean;
   overridesApplied: boolean;
@@ -76,13 +68,16 @@ export interface WheelSize {
 export interface ProfileLookupResult {
   profile: FitmentProfile | null;
   resolutionPath: ProfileResolutionPath;
+  requestedModificationId: string;
+  canonicalModificationId: string | null;
+  aliasUsed: boolean;
   apiCalled: boolean;
   overridesApplied: boolean;
   timing: {
     dbLookupMs: number;
+    aliasLookupMs?: number;
     apiCallMs?: number;
     importMs?: number;
-    retryCount?: number;
     totalMs: number;
   };
   // Legacy compatibility
@@ -155,13 +150,11 @@ async function fetchModificationFromApi(
   year: number,
   make: string,
   model: string,
-  modificationId: string
+  requestedModificationId: string
 ): Promise<{ modification: WheelSizeModification; vehicleData: WheelSizeVehicleData } | null> {
-  // Use normalized slugs for API compatibility (e.g., "RX 350" → "rx")
   const makeSlug = normalizeMake(make);
   const modelSlug = normalizeModelForApi(model);
   
-  // First get modifications list to find the matching one
   const modsUrl = new URL("modifications/", WHEELSIZE_API_BASE);
   modsUrl.searchParams.set("user_key", apiKey);
   modsUrl.searchParams.set("make", makeSlug);
@@ -189,24 +182,23 @@ async function fetchModificationFromApi(
   const usMods = allMods.filter(m => m.regions?.includes("usdm"));
   const mods = usMods.length > 0 ? usMods : allMods;
   
-  // Find matching modification by slug
-  // modificationId could be: API slug (hex), supplement hash (s_xxx), or slugified trim name
-  let mod = allMods.find(m => m.slug === modificationId);
+  // Try to find exact match by slug
+  let mod = allMods.find(m => m.slug === requestedModificationId);
   
-  // If not found by exact slug, try to match by slugified name
+  // Try slugified match
   if (!mod) {
-    mod = allMods.find(m => slugify(m.slug) === slugify(modificationId));
+    mod = allMods.find(m => slugify(m.slug) === slugify(requestedModificationId));
   }
   
-  // If STILL not found, use first USDM mod as fallback (for new imports)
+  // Fallback to first USDM mod
   if (!mod && mods.length > 0) {
-    console.log(`[profileService] Mod ${modificationId} not found in ${allMods.length} mods, using first available: ${mods[0].slug}`);
+    console.log(`[profileService] Mod ${requestedModificationId} not found in ${allMods.length} mods, using first: ${mods[0].slug}`);
     mod = mods[0];
   }
   
   if (!mod) return null;
   
-  // Now fetch vehicle data using search/by_model endpoint
+  // Fetch vehicle data
   const vehicleUrl = new URL("search/by_model/", WHEELSIZE_API_BASE);
   vehicleUrl.searchParams.set("user_key", apiKey);
   vehicleUrl.searchParams.set("make", makeSlug);
@@ -214,14 +206,11 @@ async function fetchModificationFromApi(
   vehicleUrl.searchParams.set("year", String(year));
   vehicleUrl.searchParams.set("modification", mod.slug);
   
-  console.log(`[profileService] API: search/by_model/${makeSlug}/${modelSlug}/${year}/${mod.slug}`);
-  
   const vehicleRes = await fetch(vehicleUrl.toString(), {
     headers: { Accept: "application/json" },
   });
   
   if (!vehicleRes.ok) {
-    console.log(`[profileService] API search/by_model failed: ${vehicleRes.status}`);
     return { modification: mod, vehicleData: {} };
   }
   
@@ -242,7 +231,6 @@ export function assessFitmentQuality(fitment: VehicleFitment): {
   reasons: string[];
 } {
   const reasons: string[] = [];
-  
   const hasBoltPattern = Boolean(fitment.boltPattern);
   const hasWheelSizes = Array.isArray(fitment.oemWheelSizes) && fitment.oemWheelSizes.length > 0;
   const hasTireSizes = Array.isArray(fitment.oemTireSizes) && fitment.oemTireSizes.length > 0;
@@ -253,11 +241,9 @@ export function assessFitmentQuality(fitment: VehicleFitment): {
   if (hasBoltPattern && (hasWheelSizes || hasTireSizes)) {
     return { quality: "valid", reasons: [] };
   }
-  
   if (hasBoltPattern) {
     return { quality: "partial", reasons };
   }
-  
   return { quality: "invalid", reasons };
 }
 
@@ -267,86 +253,143 @@ export function isValidFitmentProfile(fitment: VehicleFitment): boolean {
 }
 
 // ============================================================================
-// Direct DB Lookup (ModificationId-First)
+// Alias Management
 // ============================================================================
 
 /**
- * Direct DB lookup by modificationId with retry support.
- * This is the PRIMARY lookup method - no API fallback.
+ * Look up canonical modificationId from alias table
  */
-export async function getProfileByModificationIdDirect(
+async function resolveAlias(
   year: number,
   make: string,
   model: string,
-  modificationId: string,
-  options?: {
-    retryCount?: number;
-    retryDelayMs?: number;
+  requestedModificationId: string
+): Promise<{ canonicalModificationId: string; vehicleFitmentId: string | null } | null> {
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  const normalizedReqId = slugify(requestedModificationId);
+  
+  const alias = await db.query.modificationAliases.findFirst({
+    where: and(
+      eq(modificationAliases.year, year),
+      eq(modificationAliases.make, normalizedMake),
+      eq(modificationAliases.model, normalizedModel),
+      eq(modificationAliases.requestedModificationId, normalizedReqId)
+    ),
+  });
+  
+  if (alias) {
+    return {
+      canonicalModificationId: alias.canonicalModificationId,
+      vehicleFitmentId: alias.vehicleFitmentId,
+    };
   }
-): Promise<{
-  fitment: VehicleFitment | null;
-  lookupMs: number;
-  retryAttempts: number;
-}> {
+  
+  return null;
+}
+
+/**
+ * Store an alias mapping from requested to canonical modificationId
+ */
+async function storeAlias(
+  year: number,
+  make: string,
+  model: string,
+  requestedModificationId: string,
+  canonicalModificationId: string,
+  displayTrim: string,
+  vehicleFitmentId: string | null
+): Promise<void> {
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  const normalizedReqId = slugify(requestedModificationId);
+  const normalizedCanonId = slugify(canonicalModificationId);
+  
+  // Don't store self-referential aliases
+  if (normalizedReqId === normalizedCanonId) {
+    return;
+  }
+  
+  console.log(`[profileService] STORING ALIAS: ${year} ${make} ${model} | ${requestedModificationId} → ${canonicalModificationId}`);
+  
+  try {
+    // Upsert the alias
+    const existing = await db.query.modificationAliases.findFirst({
+      where: and(
+        eq(modificationAliases.year, year),
+        eq(modificationAliases.make, normalizedMake),
+        eq(modificationAliases.model, normalizedModel),
+        eq(modificationAliases.requestedModificationId, normalizedReqId)
+      ),
+    });
+    
+    if (existing) {
+      await db.update(modificationAliases)
+        .set({
+          canonicalModificationId: normalizedCanonId,
+          displayTrim,
+          vehicleFitmentId,
+        })
+        .where(eq(modificationAliases.id, existing.id));
+    } else {
+      await db.insert(modificationAliases).values({
+        year,
+        make: normalizedMake,
+        model: normalizedModel,
+        requestedModificationId: normalizedReqId,
+        canonicalModificationId: normalizedCanonId,
+        displayTrim,
+        vehicleFitmentId,
+      });
+    }
+  } catch (err: any) {
+    console.error(`[profileService] Failed to store alias:`, err?.message);
+  }
+}
+
+// ============================================================================
+// Direct DB Lookup
+// ============================================================================
+
+async function getProfileByModificationIdDirect(
+  year: number,
+  make: string,
+  model: string,
+  modificationId: string
+): Promise<{ fitment: VehicleFitment | null; lookupMs: number }> {
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
   const normalizedModId = slugify(modificationId);
   
-  const maxRetries = options?.retryCount ?? 3;
-  const retryDelay = options?.retryDelayMs ?? 50;
-  
   const t0 = Date.now();
-  let attempts = 0;
-  let fitment: VehicleFitment | null = null;
   
-  while (attempts < maxRetries && !fitment) {
-    if (attempts > 0) {
-      await new Promise(r => setTimeout(r, retryDelay));
-    }
-    
-    attempts++;
-    
-    // Primary lookup: exact modificationId match
-    fitment = await db.query.vehicleFitments.findFirst({
-      where: and(
-        eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
-        eq(vehicleFitments.model, normalizedModel),
-        eq(vehicleFitments.modificationId, normalizedModId)
-      ),
-    });
-    
-    // Secondary lookup: try original modificationId if different from slugified
-    if (!fitment && modificationId !== normalizedModId) {
-      fitment = await db.query.vehicleFitments.findFirst({
-        where: and(
-          eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, normalizedModel),
-          eq(vehicleFitments.modificationId, modificationId)
-        ),
-      });
-    }
-  }
+  const fitment = await db.query.vehicleFitments.findFirst({
+    where: and(
+      eq(vehicleFitments.year, year),
+      eq(vehicleFitments.make, normalizedMake),
+      eq(vehicleFitments.model, normalizedModel),
+      eq(vehicleFitments.modificationId, normalizedModId)
+    ),
+  });
   
   return {
-    fitment,
+    fitment: fitment || null,
     lookupMs: Date.now() - t0,
-    retryAttempts: attempts,
   };
 }
 
 // ============================================================================
-// Main Profile Lookup (ModificationId-First with API Fallback)
+// Main Profile Lookup (with Alias Resolution)
 // ============================================================================
 
 /**
  * Get fitment profile for a vehicle modification.
  * 
  * Resolution order:
- * 1. Direct DB lookup by modificationId → "modificationIdDb"
- * 2. API fetch + import + DB retry → "modificationIdApi"
- * 3. Failure → "not_found"
+ * 1. Direct DB lookup by requested modificationId → "directCanonical"
+ * 2. Alias lookup (requested → canonical) → "canonicalAlias"  
+ * 3. API fetch + import (stores alias if different) → "importedAlias"
+ * 4. Failure → "not_found"
  */
 export async function getFitmentProfile(
   year: number,
@@ -360,61 +403,86 @@ export async function getFitmentProfile(
   const t0 = Date.now();
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
-  const normalizedModId = slugify(modificationId);
+  const requestedModId = slugify(modificationId);
   
   let dbLookupMs = 0;
+  let aliasLookupMs: number | undefined;
   let apiCallMs: number | undefined;
   let importMs: number | undefined;
-  let retryCount: number | undefined;
+  let canonicalModificationId: string | null = null;
   
   // ─────────────────────────────────────────────────────────────────────────
-  // Step 1: Direct DB lookup by modificationId
+  // Step 1: Direct DB lookup by requested modificationId
   // ─────────────────────────────────────────────────────────────────────────
   
   if (!options?.forceRefresh) {
-    const dbResult = await getProfileByModificationIdDirect(year, make, model, modificationId);
-    dbLookupMs = dbResult.lookupMs;
-    retryCount = dbResult.retryAttempts;
+    const directResult = await getProfileByModificationIdDirect(year, make, model, modificationId);
+    dbLookupMs = directResult.lookupMs;
     
-    if (dbResult.fitment) {
-      // Apply overrides
-      const overrideResult = await applyOverridesWithMeta(dbResult.fitment);
-      const { quality, reasons } = assessFitmentQuality(overrideResult.fitment);
+    if (directResult.fitment) {
+      const overrideResult = await applyOverridesWithMeta(directResult.fitment);
+      const { quality } = assessFitmentQuality(overrideResult.fitment);
       
-      // Check if override forces quality
-      if (overrideResult.forceQuality) {
-        console.log(`[profileService] DB HIT (modificationIdDb, forceQuality=${overrideResult.forceQuality}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
+      if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
+        console.log(`[profileService] RESOLVED (directCanonical): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
+        
         return {
           profile: dbRecordToProfile(overrideResult.fitment, "db"),
-          resolutionPath: "modificationIdDb",
+          resolutionPath: "directCanonical",
+          requestedModificationId: requestedModId,
+          canonicalModificationId: requestedModId,
+          aliasUsed: false,
           source: "db",
           apiCalled: false,
           overridesApplied: overrideResult.changed,
-          timing: { dbLookupMs, retryCount, totalMs: Date.now() - t0 },
+          timing: { dbLookupMs, totalMs: Date.now() - t0 },
         };
       }
-      
-      if (quality === "valid" || quality === "partial") {
-        console.log(`[profileService] DB HIT (modificationIdDb, ${quality}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
-        return {
-          profile: dbRecordToProfile(overrideResult.fitment, "db"),
-          resolutionPath: "modificationIdDb",
-          source: "db",
-          apiCalled: false,
-          overridesApplied: overrideResult.changed,
-          timing: { dbLookupMs, retryCount, totalMs: Date.now() - t0 },
-        };
-      }
-      
-      // Invalid profile - need to re-import
-      console.warn(`[profileService] INVALID DB PROFILE - triggering re-import: ${year} ${make} ${model} mod=${modificationId} - ${reasons.join(", ")}`);
-    } else {
-      console.log(`[profileService] DB MISS (modificationIdDb): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
     }
+    
+    // ─────────────────────────────────────────────────────────────────────────
+    // Step 2: Alias lookup (requested → canonical)
+    // ─────────────────────────────────────────────────────────────────────────
+    
+    const aliasStart = Date.now();
+    const aliasResult = await resolveAlias(year, make, model, modificationId);
+    aliasLookupMs = Date.now() - aliasStart;
+    
+    if (aliasResult) {
+      canonicalModificationId = aliasResult.canonicalModificationId;
+      
+      // Look up by canonical ID
+      const canonicalResult = await getProfileByModificationIdDirect(
+        year, make, model, aliasResult.canonicalModificationId
+      );
+      
+      if (canonicalResult.fitment) {
+        const overrideResult = await applyOverridesWithMeta(canonicalResult.fitment);
+        const { quality } = assessFitmentQuality(overrideResult.fitment);
+        
+        if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
+          console.log(`[profileService] RESOLVED (canonicalAlias): ${year} ${make} ${model} mod=${modificationId} → ${canonicalModificationId} (${dbLookupMs + aliasLookupMs}ms)`);
+          
+          return {
+            profile: dbRecordToProfile(overrideResult.fitment, "db"),
+            resolutionPath: "canonicalAlias",
+            requestedModificationId: requestedModId,
+            canonicalModificationId: aliasResult.canonicalModificationId,
+            aliasUsed: true,
+            source: "db",
+            apiCalled: false,
+            overridesApplied: overrideResult.changed,
+            timing: { dbLookupMs, aliasLookupMs, totalMs: Date.now() - t0 },
+          };
+        }
+      }
+    }
+    
+    console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (db: ${dbLookupMs}ms, alias: ${aliasLookupMs}ms)`);
   }
   
   // ─────────────────────────────────────────────────────────────────────────
-  // Step 2: Fetch from Wheel-Size API
+  // Step 3: Fetch from Wheel-Size API
   // ─────────────────────────────────────────────────────────────────────────
   
   const apiKey = getApiKey();
@@ -423,10 +491,13 @@ export async function getFitmentProfile(
     return {
       profile: null,
       resolutionPath: "not_found",
+      requestedModificationId: requestedModId,
+      canonicalModificationId: null,
+      aliasUsed: false,
       source: "not_found",
       apiCalled: false,
       overridesApplied: false,
-      timing: { dbLookupMs, totalMs: Date.now() - t0 },
+      timing: { dbLookupMs, aliasLookupMs, totalMs: Date.now() - t0 },
     };
   }
   
@@ -443,24 +514,31 @@ export async function getFitmentProfile(
       return {
         profile: null,
         resolutionPath: "not_found",
+        requestedModificationId: requestedModId,
+        canonicalModificationId: null,
+        aliasUsed: false,
         source: "not_found",
         apiCalled: true,
         overridesApplied: false,
-        timing: { dbLookupMs, apiCallMs, totalMs: Date.now() - t0 },
+        timing: { dbLookupMs, aliasLookupMs, apiCallMs, totalMs: Date.now() - t0 },
       };
     }
     
-    console.log(`[profileService] API OK: slug=${apiData.modification.slug} (${apiCallMs}ms)`);
+    // The actual canonical modificationId from the API
+    const actualCanonicalId = slugify(apiData.modification.slug);
+    const isAlias = actualCanonicalId !== requestedModId;
+    
+    if (isAlias) {
+      console.log(`[profileService] ALIAS DETECTED: requested=${requestedModId} → canonical=${actualCanonicalId}`);
+    }
     
     // ─────────────────────────────────────────────────────────────────────────
-    // Step 3: Import to database
+    // Step 4: Import to database
     // ─────────────────────────────────────────────────────────────────────────
     
     const importStart = Date.now();
     
-    // Import using the ACTUAL API slug (not the requested modificationId)
-    // This ensures we store with the canonical ID
-    const fitmentId = await importApiDataToDb(
+    const { fitmentId, displayTrim } = await importApiDataToDb(
       year,
       normalizedMake,
       normalizedModel,
@@ -469,46 +547,54 @@ export async function getFitmentProfile(
     );
     
     importMs = Date.now() - importStart;
-    console.log(`[profileService] IMPORTED: fitmentId=${fitmentId} (${importMs}ms)`);
+    console.log(`[profileService] IMPORTED: fitmentId=${fitmentId}, canonical=${actualCanonicalId} (${importMs}ms)`);
+    
+    // Store alias if different
+    if (isAlias) {
+      await storeAlias(
+        year, make, model,
+        requestedModId, actualCanonicalId,
+        displayTrim, fitmentId
+      );
+    }
     
     // ─────────────────────────────────────────────────────────────────────────
-    // Step 4: Retry DB lookup with the imported modificationId
+    // Step 5: Read back the imported record
     // ─────────────────────────────────────────────────────────────────────────
     
-    // Use the actual API slug for lookup (might be different from requested modificationId)
-    const importedModId = slugify(apiData.modification.slug);
-    
-    const retryResult = await getProfileByModificationIdDirect(
-      year, make, model, importedModId,
-      { retryCount: 3, retryDelayMs: 50 }
+    const importedResult = await getProfileByModificationIdDirect(
+      year, make, model, actualCanonicalId
     );
     
-    retryCount = retryResult.retryAttempts;
-    
-    if (!retryResult.fitment) {
-      console.error(`[profileService] IMPORT SUCCEEDED BUT LOOKUP FAILED: ${year} ${make} ${model} mod=${importedModId}`);
+    if (!importedResult.fitment) {
+      console.error(`[profileService] IMPORT SUCCEEDED BUT LOOKUP FAILED: ${year} ${make} ${model} canonical=${actualCanonicalId}`);
       return {
         profile: null,
         resolutionPath: "not_found",
+        requestedModificationId: requestedModId,
+        canonicalModificationId: actualCanonicalId,
+        aliasUsed: isAlias,
         source: "not_found",
         apiCalled: true,
         overridesApplied: false,
-        timing: { dbLookupMs, apiCallMs, importMs, retryCount, totalMs: Date.now() - t0 },
+        timing: { dbLookupMs, aliasLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
       };
     }
     
-    // Apply overrides
-    const overrideResult = await applyOverridesWithMeta(retryResult.fitment);
+    const overrideResult = await applyOverridesWithMeta(importedResult.fitment);
     
-    console.log(`[profileService] RESOLVED (modificationIdApi): ${year} ${make} ${model} mod=${importedModId}`);
+    console.log(`[profileService] RESOLVED (importedAlias): ${year} ${make} ${model} mod=${requestedModId} → ${actualCanonicalId}`);
     
     return {
       profile: dbRecordToProfile(overrideResult.fitment, "api"),
-      resolutionPath: "modificationIdApi",
+      resolutionPath: "importedAlias",
+      requestedModificationId: requestedModId,
+      canonicalModificationId: actualCanonicalId,
+      aliasUsed: isAlias,
       source: "api",
       apiCalled: true,
       overridesApplied: overrideResult.changed,
-      timing: { dbLookupMs, apiCallMs, importMs, retryCount, totalMs: Date.now() - t0 },
+      timing: { dbLookupMs, aliasLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
     };
     
   } catch (err: any) {
@@ -518,10 +604,13 @@ export async function getFitmentProfile(
     return {
       profile: null,
       resolutionPath: "not_found",
+      requestedModificationId: requestedModId,
+      canonicalModificationId: null,
+      aliasUsed: false,
       source: "not_found",
       apiCalled: true,
       overridesApplied: false,
-      timing: { dbLookupMs, apiCallMs, totalMs: Date.now() - t0 },
+      timing: { dbLookupMs, aliasLookupMs, apiCallMs, totalMs: Date.now() - t0 },
     };
   }
 }
@@ -536,7 +625,7 @@ async function importApiDataToDb(
   model: string,
   modification: WheelSizeModification,
   vehicleData: WheelSizeVehicleData
-): Promise<string> {
+): Promise<{ fitmentId: string; displayTrim: string }> {
   const sourceId = modification.slug;
   const modificationId = slugify(modification.slug);
   const checksum = makePayloadChecksum({ modification, vehicleData });
@@ -581,7 +670,7 @@ async function importApiDataToDb(
   const nameStr = safeString(modification.name);
   const displayTrim = normalizeTrimLabel(trimStr, engineStr, nameStr, String(year), make, model) || "Base";
   
-  // Extract specs from vehicle data
+  // Extract specs
   const tech = vehicleData.technical || {};
   const boltPattern = tech.bolt_pattern || null;
   const centerBoreMm = tech.centre_bore ? parseFloat(tech.centre_bore) : null;
@@ -643,7 +732,7 @@ async function importApiDataToDb(
     }
   }
   
-  // Upsert fitment record using modificationId as key
+  // Upsert fitment record
   const existingFitment = await db.query.vehicleFitments.findFirst({
     where: and(
       eq(vehicleFitments.year, year),
@@ -652,6 +741,8 @@ async function importApiDataToDb(
       eq(vehicleFitments.modificationId, modificationId)
     ),
   });
+  
+  let fitmentId: string;
   
   if (existingFitment) {
     await db.update(vehicleFitments)
@@ -670,31 +761,32 @@ async function importApiDataToDb(
         updatedAt: new Date(),
       })
       .where(eq(vehicleFitments.id, existingFitment.id));
-    return existingFitment.id;
+    fitmentId = existingFitment.id;
+  } else {
+    const [inserted] = await db.insert(vehicleFitments)
+      .values({
+        year,
+        make,
+        model,
+        modificationId,
+        rawTrim: trimStr || engineStr || nameStr || null,
+        displayTrim,
+        boltPattern,
+        centerBoreMm: centerBoreMm ? String(centerBoreMm) : null,
+        threadSize,
+        seatType,
+        offsetMinMm: offsetMin !== null ? String(offsetMin) : null,
+        offsetMaxMm: offsetMax !== null ? String(offsetMax) : null,
+        oemWheelSizes: oemWheelSizes as any,
+        oemTireSizes: oemTireSizes as any,
+        source: "wheelsize",
+        sourceRecordId,
+      })
+      .returning({ id: vehicleFitments.id });
+    fitmentId = inserted.id;
   }
   
-  const [inserted] = await db.insert(vehicleFitments)
-    .values({
-      year,
-      make,
-      model,
-      modificationId,
-      rawTrim: trimStr || engineStr || nameStr || null,
-      displayTrim,
-      boltPattern,
-      centerBoreMm: centerBoreMm ? String(centerBoreMm) : null,
-      threadSize,
-      seatType,
-      offsetMinMm: offsetMin !== null ? String(offsetMin) : null,
-      offsetMaxMm: offsetMax !== null ? String(offsetMax) : null,
-      oemWheelSizes: oemWheelSizes as any,
-      oemTireSizes: oemTireSizes as any,
-      source: "wheelsize",
-      sourceRecordId,
-    })
-    .returning({ id: vehicleFitments.id });
-  
-  return inserted.id;
+  return { fitmentId, displayTrim };
 }
 
 // ============================================================================
