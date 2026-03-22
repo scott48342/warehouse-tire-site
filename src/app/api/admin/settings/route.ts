@@ -1,55 +1,87 @@
 import { NextResponse } from "next/server";
-import { getPool, setTaxRate } from "@/lib/quoteCatalog";
-import { setStripeSettings } from "@/lib/payments/stripeSettings";
+import pg from "pg";
 
 export const runtime = "nodejs";
 
-function s(v: any) {
-  return typeof v === "string" ? v.trim() : "";
+const { Pool } = pg;
+
+function getPool() {
+  const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!url) throw new Error("Missing DATABASE_URL");
+  return new Pool({
+    connectionString: url,
+    ssl: { rejectUnauthorized: false },
+    max: 3,
+  });
 }
 
-export async function POST(req: Request) {
+/**
+ * Get all settings
+ */
+export async function GET() {
+  const pool = getPool();
   try {
-    const ct = req.headers.get("content-type") || "";
-    const body: any = ct.includes("application/json")
-      ? await req.json().catch(() => ({} as any))
-      : Object.fromEntries(await req.formData());
+    const { rows } = await pool.query(`
+      SELECT key, value, updated_at
+      FROM admin_settings
+      ORDER BY key
+    `);
 
-    const taxRateRaw = s(body.taxRate);
-    const taxRate = taxRateRaw ? Number(taxRateRaw) : NaN;
-
-    const db = getPool();
-
-    // Tax rate (optional)
-    if (taxRateRaw) {
-      await setTaxRate(db, taxRate);
+    const settings: Record<string, any> = {};
+    for (const row of rows) {
+      settings[row.key] = {
+        value: row.value,
+        updatedAt: row.updated_at,
+      };
     }
 
-    // Stripe settings (optional)
-    const stripeEnabledRaw = s(body.stripeEnabled);
-    const stripeModeRaw = s(body.stripeMode);
-    const stripePublishableKey = s(body.stripePublishableKey);
-    const stripeSecretKey = s(body.stripeSecretKey);
+    return NextResponse.json({ settings });
+  } catch (err: any) {
+    console.error("[admin/settings] GET Error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
+  } finally {
+    await pool.end();
+  }
+}
 
-    const patch: any = {};
-    if (stripeEnabledRaw) patch.enabled = stripeEnabledRaw === "1" || stripeEnabledRaw === "true" || stripeEnabledRaw === "on";
-    if (stripeModeRaw === "test" || stripeModeRaw === "live") patch.mode = stripeModeRaw;
-    if (stripePublishableKey) patch.publishableKey = stripePublishableKey;
-    if (stripeSecretKey) patch.secretKey = stripeSecretKey;
+/**
+ * Update a setting
+ */
+export async function POST(req: Request) {
+  const { key, value } = await req.json();
 
-    if (Object.keys(patch).length > 0) {
-      await setStripeSettings(db, patch);
-    }
+  if (!key) {
+    return NextResponse.json({ error: "key required" }, { status: 400 });
+  }
 
-    const accept = req.headers.get("accept") || "";
-    if (accept.includes("text/html")) {
-      const u = new URL("/admin/settings", req.url);
-      u.searchParams.set("saved", "1");
-      return NextResponse.redirect(u, { status: 303 });
-    }
+  // Protected keys that shouldn't be editable via admin UI
+  const protectedKeys = ["stripe_secret_key", "api_keys"];
+  if (protectedKeys.includes(key)) {
+    return NextResponse.json({ error: "This setting cannot be modified via admin UI" }, { status: 403 });
+  }
 
-    return NextResponse.json({ ok: true }, { status: 200, headers: { "cache-control": "no-store" } });
-  } catch (e: any) {
-    return NextResponse.json({ ok: false, error: e?.message || String(e) }, { status: 500 });
+  const pool = getPool();
+  try {
+    const { rows } = await pool.query(`
+      INSERT INTO admin_settings (key, value, updated_at)
+      VALUES ($1, $2, now())
+      ON CONFLICT (key) DO UPDATE SET
+        value = EXCLUDED.value,
+        updated_at = now()
+      RETURNING *
+    `, [key, JSON.stringify(value)]);
+
+    // Log the change
+    await pool.query(`
+      INSERT INTO admin_logs (log_type, details)
+      VALUES ('settings_change', $1)
+    `, [JSON.stringify({ key, value })]);
+
+    return NextResponse.json({ ok: true, setting: rows[0] });
+  } catch (err: any) {
+    console.error("[admin/settings] POST Error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
+  } finally {
+    await pool.end();
   }
 }
