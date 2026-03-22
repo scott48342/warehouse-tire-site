@@ -9,7 +9,7 @@ import {
   getCacheStats,
   type CachedFitment,
 } from "@/lib/fitmentCache";
-import { normalizeModelForApi, slugify } from "@/lib/fitment-db/keys";
+import { normalizeModelForApi, normalizeMake, slugify } from "@/lib/fitment-db/keys";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -149,7 +149,8 @@ export async function GET(req: Request) {
   }
 
   // Convert to slugs (lowercase, replace special chars with dashes)
-  const makeSlug = slugify(make);
+  // Use normalizeMake for proper API-compatible make names (e.g., "mercedes-benz" → "mercedes")
+  const makeSlug = normalizeMake(make || "");
   const modelSlug = normalizeModelForApi(model);
 
   const debug: any = {
