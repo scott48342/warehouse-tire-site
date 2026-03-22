@@ -1,19 +1,25 @@
 /**
- * Fitment Profile Service (DB-First)
+ * Fitment Profile Service (ModificationId-First)
  * 
  * Provides complete fitment profiles for wheels/tires pages.
- * Uses vehicle_fitments table with canonical modificationId.
+ * Uses vehicle_fitments table with canonical modificationId as PRIMARY key.
  * 
- * Flow:
- * 1. Check DB for profile by year/make/model/modificationId
- * 2. If found → return (DB HIT)
- * 3. If not found → call Wheel-Size API, import, return (API FETCH + IMPORT)
+ * Resolution Flow:
+ * 1. Direct DB lookup by modificationId
+ * 2. If not found → call Wheel-Size API to fetch and import
+ * 3. Retry DB lookup after import (with short delay)
+ * 4. Return profile with resolution path metadata
+ * 
+ * Resolution Paths:
+ * - "modificationIdDb" - Found directly in vehicle_fitments by modificationId
+ * - "modificationIdApi" - Fetched from API, imported, then read from DB
+ * - "not_found" - Could not resolve (API didn't have data or import failed)
  */
 
 import { db } from "./db";
 import { vehicleFitments, fitmentSourceRecords } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and } from "drizzle-orm";
+import { eq, and, or } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
@@ -21,6 +27,11 @@ import { normalizeTrimLabel } from "@/lib/trimNormalize";
 // ============================================================================
 // Types
 // ============================================================================
+
+export type ProfileResolutionPath = 
+  | "modificationIdDb"    // Found directly in DB by modificationId
+  | "modificationIdApi"   // Fetched from API, imported, returned
+  | "not_found";          // Could not resolve
 
 export interface FitmentProfile {
   // Identity
@@ -64,15 +75,18 @@ export interface WheelSize {
 
 export interface ProfileLookupResult {
   profile: FitmentProfile | null;
-  source: "db" | "api" | "not_found";
+  resolutionPath: ProfileResolutionPath;
   apiCalled: boolean;
   overridesApplied: boolean;
   timing: {
     dbLookupMs: number;
     apiCallMs?: number;
     importMs?: number;
+    retryCount?: number;
     totalMs: number;
   };
+  // Legacy compatibility
+  source: "db" | "api" | "not_found";
 }
 
 // ============================================================================
@@ -136,7 +150,7 @@ function safeString(v: unknown): string {
   return "";
 }
 
-async function fetchModification(
+async function fetchModificationFromApi(
   apiKey: string,
   year: number,
   make: string,
@@ -158,18 +172,25 @@ async function fetchModification(
     headers: { Accept: "application/json" },
   });
   
-  if (!modsRes.ok) return null;
+  if (!modsRes.ok) {
+    console.log(`[profileService] API modifications call failed: ${modsRes.status}`);
+    return null;
+  }
   
   const modsData = await modsRes.json();
   const allMods: WheelSizeModification[] = modsData?.data || [];
+  
+  if (allMods.length === 0) {
+    console.log(`[profileService] API returned 0 modifications for ${year} ${makeSlug} ${modelSlug}`);
+    return null;
+  }
   
   // Prefer USDM
   const usMods = allMods.filter(m => m.regions?.includes("usdm"));
   const mods = usMods.length > 0 ? usMods : allMods;
   
-  // Find matching modification
+  // Find matching modification by slug
   // modificationId could be: API slug (hex), supplement hash (s_xxx), or slugified trim name
-  // For Lexus RX and similar: search ALL mods (not just USDM) to find exact match
   let mod = allMods.find(m => m.slug === modificationId);
   
   // If not found by exact slug, try to match by slugified name
@@ -177,16 +198,15 @@ async function fetchModification(
     mod = allMods.find(m => slugify(m.slug) === slugify(modificationId));
   }
   
-  // If STILL not found, try USDM-filtered list as fallback (for new imports)
+  // If STILL not found, use first USDM mod as fallback (for new imports)
   if (!mod && mods.length > 0) {
-    console.log(`[profileService] Mod ${modificationId} not found in allMods (${allMods.length}), using first USDM`);
+    console.log(`[profileService] Mod ${modificationId} not found in ${allMods.length} mods, using first available: ${mods[0].slug}`);
     mod = mods[0];
   }
   
   if (!mod) return null;
   
   // Now fetch vehicle data using search/by_model endpoint
-  // (NOT vehicles/ - which returns different/incomplete data)
   const vehicleUrl = new URL("search/by_model/", WHEELSIZE_API_BASE);
   vehicleUrl.searchParams.set("user_key", apiKey);
   vehicleUrl.searchParams.set("make", makeSlug);
@@ -194,32 +214,21 @@ async function fetchModification(
   vehicleUrl.searchParams.set("year", String(year));
   vehicleUrl.searchParams.set("modification", mod.slug);
   
-  console.log(`[profileService] Fetching: search/by_model/${makeSlug}/${modelSlug}/${year}/${mod.slug}`);
+  console.log(`[profileService] API: search/by_model/${makeSlug}/${modelSlug}/${year}/${mod.slug}`);
   
   const vehicleRes = await fetch(vehicleUrl.toString(), {
     headers: { Accept: "application/json" },
   });
   
   if (!vehicleRes.ok) {
-    console.log(`[profileService] search/by_model failed: ${vehicleRes.status}`);
-    // Return modification without vehicle data
+    console.log(`[profileService] API search/by_model failed: ${vehicleRes.status}`);
     return { modification: mod, vehicleData: {} };
   }
   
   const vehicleRaw = await vehicleRes.json();
   const vehicleData = vehicleRaw?.data?.[0] || {};
   
-  console.log(`[profileService] Got vehicleData:`, {
-    hastechnical: !!vehicleData.technical,
-    boltPattern: vehicleData.technical?.bolt_pattern,
-    centreBore: vehicleData.technical?.centre_bore,
-    wheelSetups: vehicleData.wheels?.length || 0,
-  });
-  
-  return {
-    modification: mod,
-    vehicleData,
-  };
+  return { modification: mod, vehicleData };
 }
 
 // ============================================================================
@@ -228,19 +237,6 @@ async function fetchModification(
 
 export type FitmentQuality = "valid" | "partial" | "invalid";
 
-/**
- * Validate a fitment profile for completeness
- * 
- * Rules for VALID:
- * - boltPattern must exist
- * - AND at least one of: oemWheelSizes.length > 0 OR oemTireSizes.length > 0
- * 
- * Rules for PARTIAL:
- * - Has boltPattern but missing sizes (might have override data)
- * 
- * Rules for INVALID:
- * - Missing boltPattern (cannot match any wheels)
- */
 export function assessFitmentQuality(fitment: VehicleFitment): {
   quality: FitmentQuality;
   reasons: string[];
@@ -250,52 +246,107 @@ export function assessFitmentQuality(fitment: VehicleFitment): {
   const hasBoltPattern = Boolean(fitment.boltPattern);
   const hasWheelSizes = Array.isArray(fitment.oemWheelSizes) && fitment.oemWheelSizes.length > 0;
   const hasTireSizes = Array.isArray(fitment.oemTireSizes) && fitment.oemTireSizes.length > 0;
-  const hasCenterBore = Boolean(fitment.centerBoreMm);
-  const hasThreadSize = Boolean(fitment.threadSize);
   
-  if (!hasBoltPattern) {
-    reasons.push("missing boltPattern");
-  }
-  if (!hasWheelSizes && !hasTireSizes) {
-    reasons.push("no OEM wheel or tire sizes");
-  }
-  if (!hasCenterBore) {
-    reasons.push("missing centerBore");
-  }
-  if (!hasThreadSize) {
-    reasons.push("missing threadSize");
-  }
+  if (!hasBoltPattern) reasons.push("missing boltPattern");
+  if (!hasWheelSizes && !hasTireSizes) reasons.push("no OEM wheel or tire sizes");
   
-  // Determine quality level
   if (hasBoltPattern && (hasWheelSizes || hasTireSizes)) {
-    // Valid: has bolt pattern + at least some size data
     return { quality: "valid", reasons: [] };
   }
   
   if (hasBoltPattern) {
-    // Partial: has bolt pattern but no sizes (might work with overrides)
     return { quality: "partial", reasons };
   }
   
-  // Invalid: no bolt pattern = cannot match any wheels
   return { quality: "invalid", reasons };
 }
 
-/**
- * Check if a fitment profile is usable for wheel matching
- */
 export function isValidFitmentProfile(fitment: VehicleFitment): boolean {
   const { quality } = assessFitmentQuality(fitment);
   return quality === "valid" || quality === "partial";
 }
 
 // ============================================================================
-// Main Profile Lookup
+// Direct DB Lookup (ModificationId-First)
 // ============================================================================
 
 /**
- * Get fitment profile for a vehicle modification
- * DB-first with API fallback, auto-re-imports invalid profiles
+ * Direct DB lookup by modificationId with retry support.
+ * This is the PRIMARY lookup method - no API fallback.
+ */
+export async function getProfileByModificationIdDirect(
+  year: number,
+  make: string,
+  model: string,
+  modificationId: string,
+  options?: {
+    retryCount?: number;
+    retryDelayMs?: number;
+  }
+): Promise<{
+  fitment: VehicleFitment | null;
+  lookupMs: number;
+  retryAttempts: number;
+}> {
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  const normalizedModId = slugify(modificationId);
+  
+  const maxRetries = options?.retryCount ?? 3;
+  const retryDelay = options?.retryDelayMs ?? 50;
+  
+  const t0 = Date.now();
+  let attempts = 0;
+  let fitment: VehicleFitment | null = null;
+  
+  while (attempts < maxRetries && !fitment) {
+    if (attempts > 0) {
+      await new Promise(r => setTimeout(r, retryDelay));
+    }
+    
+    attempts++;
+    
+    // Primary lookup: exact modificationId match
+    fitment = await db.query.vehicleFitments.findFirst({
+      where: and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        eq(vehicleFitments.model, normalizedModel),
+        eq(vehicleFitments.modificationId, normalizedModId)
+      ),
+    });
+    
+    // Secondary lookup: try original modificationId if different from slugified
+    if (!fitment && modificationId !== normalizedModId) {
+      fitment = await db.query.vehicleFitments.findFirst({
+        where: and(
+          eq(vehicleFitments.year, year),
+          eq(vehicleFitments.make, normalizedMake),
+          eq(vehicleFitments.model, normalizedModel),
+          eq(vehicleFitments.modificationId, modificationId)
+        ),
+      });
+    }
+  }
+  
+  return {
+    fitment,
+    lookupMs: Date.now() - t0,
+    retryAttempts: attempts,
+  };
+}
+
+// ============================================================================
+// Main Profile Lookup (ModificationId-First with API Fallback)
+// ============================================================================
+
+/**
+ * Get fitment profile for a vehicle modification.
+ * 
+ * Resolution order:
+ * 1. Direct DB lookup by modificationId → "modificationIdDb"
+ * 2. API fetch + import + DB retry → "modificationIdApi"
+ * 3. Failure → "not_found"
  */
 export async function getFitmentProfile(
   year: number,
@@ -314,90 +365,56 @@ export async function getFitmentProfile(
   let dbLookupMs = 0;
   let apiCallMs: number | undefined;
   let importMs: number | undefined;
-  let reImportTriggered = false;
+  let retryCount: number | undefined;
   
   // ─────────────────────────────────────────────────────────────────────────
-  // Step 1: Check database (unless forcing refresh)
+  // Step 1: Direct DB lookup by modificationId
   // ─────────────────────────────────────────────────────────────────────────
   
   if (!options?.forceRefresh) {
-    const dbStart = Date.now();
+    const dbResult = await getProfileByModificationIdDirect(year, make, model, modificationId);
+    dbLookupMs = dbResult.lookupMs;
+    retryCount = dbResult.retryAttempts;
     
-    const dbFitment = await db.query.vehicleFitments.findFirst({
-      where: and(
-        eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
-        eq(vehicleFitments.model, normalizedModel),
-        eq(vehicleFitments.modificationId, normalizedModId)
-      ),
-    });
-    
-    dbLookupMs = Date.now() - dbStart;
-    
-    if (dbFitment) {
-      // ═══════════════════════════════════════════════════════════════════════
-      // APPLY OVERRIDES FIRST (may provide forceQuality)
-      // ═══════════════════════════════════════════════════════════════════════
-      const overrideResult = await applyOverridesWithMeta(dbFitment);
-      const withOverrides = overrideResult.fitment;
-      const overridesApplied = overrideResult.changed;
+    if (dbResult.fitment) {
+      // Apply overrides
+      const overrideResult = await applyOverridesWithMeta(dbResult.fitment);
+      const { quality, reasons } = assessFitmentQuality(overrideResult.fitment);
       
-      // ═══════════════════════════════════════════════════════════════════════
-      // VALIDATION: Check if profile is usable
-      // If forceQuality is set, use that instead of natural assessment
-      // ═══════════════════════════════════════════════════════════════════════
-      let quality: FitmentQuality;
-      let reasons: string[] = [];
-      
+      // Check if override forces quality
       if (overrideResult.forceQuality) {
-        // Override forces the quality level
-        quality = overrideResult.forceQuality;
-        console.log(`[profileService] DB HIT (forceQuality=${quality}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
-      } else {
-        // Assess naturally
-        const assessment = assessFitmentQuality(withOverrides);
-        quality = assessment.quality;
-        reasons = assessment.reasons;
-      }
-      
-      if (quality === "valid") {
-        console.log(`[profileService] DB HIT (valid${overridesApplied ? ", with overrides" : ""}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
-        
+        console.log(`[profileService] DB HIT (modificationIdDb, forceQuality=${overrideResult.forceQuality}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
         return {
-          profile: dbRecordToProfile(withOverrides, "db"),
+          profile: dbRecordToProfile(overrideResult.fitment, "db"),
+          resolutionPath: "modificationIdDb",
           source: "db",
           apiCalled: false,
-          overridesApplied,
-          timing: { dbLookupMs, totalMs: Date.now() - t0 },
+          overridesApplied: overrideResult.changed,
+          timing: { dbLookupMs, retryCount, totalMs: Date.now() - t0 },
         };
       }
       
-      if (quality === "partial") {
-        console.log(`[profileService] DB HIT (partial${overridesApplied ? ", with overrides" : ""}): ${year} ${make} ${model} mod=${modificationId} - ${reasons.join(", ")}`);
+      if (quality === "valid" || quality === "partial") {
+        console.log(`[profileService] DB HIT (modificationIdDb, ${quality}): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
         return {
-          profile: dbRecordToProfile(withOverrides, "db"),
+          profile: dbRecordToProfile(overrideResult.fitment, "db"),
+          resolutionPath: "modificationIdDb",
           source: "db",
           apiCalled: false,
-          overridesApplied,
-          timing: { dbLookupMs, totalMs: Date.now() - t0 },
+          overridesApplied: overrideResult.changed,
+          timing: { dbLookupMs, retryCount, totalMs: Date.now() - t0 },
         };
       }
       
-      // ═══════════════════════════════════════════════════════════════════════
-      // INVALID PROFILE - Trigger re-import from API
-      // (only if no override forced quality)
-      // ═══════════════════════════════════════════════════════════════════════
-      console.warn(`[profileService] INVALID DB PROFILE - triggering re-import: ${year} ${make} ${model} mod=${modificationId}`);
-      console.warn(`[profileService] Invalid reasons: ${reasons.join(", ")}`);
-      reImportTriggered = true;
-      // Fall through to API fetch below
+      // Invalid profile - need to re-import
+      console.warn(`[profileService] INVALID DB PROFILE - triggering re-import: ${year} ${make} ${model} mod=${modificationId} - ${reasons.join(", ")}`);
     } else {
-      console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
+      console.log(`[profileService] DB MISS (modificationIdDb): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
     }
   }
   
   // ─────────────────────────────────────────────────────────────────────────
-  // Step 2: Call Wheel-Size API
+  // Step 2: Fetch from Wheel-Size API
   // ─────────────────────────────────────────────────────────────────────────
   
   const apiKey = getApiKey();
@@ -405,6 +422,7 @@ export async function getFitmentProfile(
     console.log(`[profileService] NO API KEY - cannot fetch`);
     return {
       profile: null,
+      resolutionPath: "not_found",
       source: "not_found",
       apiCalled: false,
       overridesApplied: false,
@@ -415,16 +433,16 @@ export async function getFitmentProfile(
   const apiStart = Date.now();
   
   try {
-    const fetchReason = reImportTriggered ? "RE-IMPORT (invalid profile)" : "FETCH (new)";
-    console.log(`[profileService] API ${fetchReason}: ${year} ${make} ${model} mod=${modificationId}`);
+    console.log(`[profileService] API FETCH: ${year} ${make} ${model} mod=${modificationId}`);
     
-    const apiData = await fetchModification(apiKey, year, make, model, modificationId);
+    const apiData = await fetchModificationFromApi(apiKey, year, make, model, modificationId);
     apiCallMs = Date.now() - apiStart;
     
     if (!apiData) {
       console.log(`[profileService] API returned no data (${apiCallMs}ms)`);
       return {
         profile: null,
+        resolutionPath: "not_found",
         source: "not_found",
         apiCalled: true,
         overridesApplied: false,
@@ -440,6 +458,8 @@ export async function getFitmentProfile(
     
     const importStart = Date.now();
     
+    // Import using the ACTUAL API slug (not the requested modificationId)
+    // This ensures we store with the canonical ID
     const fitmentId = await importApiDataToDb(
       year,
       normalizedMake,
@@ -449,33 +469,46 @@ export async function getFitmentProfile(
     );
     
     importMs = Date.now() - importStart;
-    const importType = reImportTriggered ? "RE-IMPORTED (fixed)" : "IMPORTED (new)";
-    console.log(`[profileService] ${importType}: fitmentId=${fitmentId} (${importMs}ms)`);
+    console.log(`[profileService] IMPORTED: fitmentId=${fitmentId} (${importMs}ms)`);
     
-    // Fetch the newly imported record
-    const newFitment = await db.query.vehicleFitments.findFirst({
-      where: eq(vehicleFitments.id, fitmentId),
-    });
+    // ─────────────────────────────────────────────────────────────────────────
+    // Step 4: Retry DB lookup with the imported modificationId
+    // ─────────────────────────────────────────────────────────────────────────
     
-    if (!newFitment) {
+    // Use the actual API slug for lookup (might be different from requested modificationId)
+    const importedModId = slugify(apiData.modification.slug);
+    
+    const retryResult = await getProfileByModificationIdDirect(
+      year, make, model, importedModId,
+      { retryCount: 3, retryDelayMs: 50 }
+    );
+    
+    retryCount = retryResult.retryAttempts;
+    
+    if (!retryResult.fitment) {
+      console.error(`[profileService] IMPORT SUCCEEDED BUT LOOKUP FAILED: ${year} ${make} ${model} mod=${importedModId}`);
       return {
         profile: null,
+        resolutionPath: "not_found",
         source: "not_found",
         apiCalled: true,
         overridesApplied: false,
-        timing: { dbLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
+        timing: { dbLookupMs, apiCallMs, importMs, retryCount, totalMs: Date.now() - t0 },
       };
     }
     
     // Apply overrides
-    const overrideResult = await applyOverridesWithMeta(newFitment);
+    const overrideResult = await applyOverridesWithMeta(retryResult.fitment);
+    
+    console.log(`[profileService] RESOLVED (modificationIdApi): ${year} ${make} ${model} mod=${importedModId}`);
     
     return {
       profile: dbRecordToProfile(overrideResult.fitment, "api"),
+      resolutionPath: "modificationIdApi",
       source: "api",
       apiCalled: true,
       overridesApplied: overrideResult.changed,
-      timing: { dbLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
+      timing: { dbLookupMs, apiCallMs, importMs, retryCount, totalMs: Date.now() - t0 },
     };
     
   } catch (err: any) {
@@ -484,6 +517,7 @@ export async function getFitmentProfile(
     
     return {
       profile: null,
+      resolutionPath: "not_found",
       source: "not_found",
       apiCalled: true,
       overridesApplied: false,
@@ -554,15 +588,6 @@ async function importApiDataToDb(
   const threadSize = tech.wheel_fasteners?.thread_size || null;
   const seatType = tech.wheel_fasteners?.type || null;
   
-  // Log extraction results for debugging
-  console.log(`[profileService] Extracting specs from API:`, {
-    hasTechnical: !!vehicleData.technical,
-    boltPattern: boltPattern || "(missing)",
-    centerBore: centerBoreMm || "(missing)",
-    threadSize: threadSize || "(missing)",
-    wheelSetups: vehicleData.wheels?.length || 0,
-  });
-  
   // Extract wheel/tire sizes
   const wheelSetups = vehicleData.wheels || [];
   const oemWheelSizes: WheelSize[] = [];
@@ -573,7 +598,6 @@ async function importApiDataToDb(
   let offsetMax: number | null = null;
   
   for (const setup of wheelSetups) {
-    // Front
     if (setup.front) {
       const ws: WheelSize = {
         diameter: setup.front.rim_diameter,
@@ -596,7 +620,6 @@ async function importApiDataToDb(
       }
     }
     
-    // Rear (if different)
     if (setup.rear && (setup.rear.rim_diameter || setup.rear.tire)) {
       const ws: WheelSize = {
         diameter: setup.rear.rim_diameter ?? setup.front?.rim_diameter ?? 0,
@@ -620,7 +643,7 @@ async function importApiDataToDb(
     }
   }
   
-  // Upsert fitment record
+  // Upsert fitment record using modificationId as key
   const existingFitment = await db.query.vehicleFitments.findFirst({
     where: and(
       eq(vehicleFitments.year, year),
@@ -690,7 +713,6 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     centerBoreMm: record.centerBoreMm ? parseFloat(String(record.centerBoreMm)) : null,
     threadSize: record.threadSize,
     seatType: record.seatType,
-    // Parse decimal strings back to numbers
     offsetMinMm: record.offsetMinMm ? parseFloat(String(record.offsetMinMm)) : null,
     offsetMaxMm: record.offsetMaxMm ? parseFloat(String(record.offsetMaxMm)) : null,
     oemWheelSizes: (record.oemWheelSizes as WheelSize[]) || [],
