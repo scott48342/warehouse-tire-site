@@ -256,6 +256,22 @@ async function handleDbProfilePath(
     requestedModificationId,
     debug,
     t0,
+    // Include dbProfile in response for accessory fitment calculation
+    dbProfileForResponse: {
+      modificationId: dbProfile.modificationId,
+      displayTrim: dbProfile.displayTrim,
+      boltPattern: dbProfile.boltPattern,
+      centerBoreMm: dbProfile.centerBoreMm,
+      threadSize: dbProfile.threadSize,
+      seatType: dbProfile.seatType,
+      offsetRange: {
+        min: dbProfile.offsetMinMm,
+        max: dbProfile.offsetMaxMm,
+      },
+      oemWheelSizes: dbProfile.oemWheelSizes,
+      oemTireSizes: dbProfile.oemTireSizes,
+      source: dbProfile.source,
+    },
   });
 }
 
@@ -310,6 +326,19 @@ async function handleDbFirstWheelResults(opts: {
   requestedModificationId?: string | null;
   debug: boolean;
   t0: number;
+  // DB profile for accessory fitment calculation (threadSize, seatType, centerBoreMm)
+  dbProfileForResponse?: {
+    modificationId: string;
+    displayTrim: string;
+    boltPattern: string | null;
+    centerBoreMm: number | null;
+    threadSize: string | null;
+    seatType: string | null;
+    offsetRange: { min: number | null; max: number | null };
+    oemWheelSizes: any[];
+    oemTireSizes: string[];
+    source: string;
+  } | null;
 }): Promise<NextResponse> {
   const { url, envelope, debug, t0 } = opts;
 
@@ -567,6 +596,8 @@ async function handleDbFirstWheelResults(opts: {
         model: opts.model,
         trim: opts.displayTrim,
       },
+      // DB profile for accessory fitment calculation (threadSize, seatType, centerBoreMm)
+      dbProfile: opts.dbProfileForResponse || null,
     },
     summary: {
       total: results.length,
@@ -813,6 +844,29 @@ async function handleLegacyPath(
   // Wheel results must come from DB-first candidates + cached live availability.
   const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
 
+  // Build dbProfile-compatible response from legacy profile
+  // NOTE: Legacy profiles do NOT have threadSize/seatType - those only come from DB-first path.
+  // Accessory calculation will show a warning when these are missing.
+  const legacyDbProfile = {
+    modificationId: profile.vehicle.slug || requestedModificationId || "",
+    displayTrim: profile.vehicle.trim || "",
+    boltPattern: profile.boltPattern,
+    centerBoreMm: profile.centerBore || null,
+    threadSize: (profile.fitment as any)?.threadSize || null, // Not available in legacy
+    seatType: (profile.fitment as any)?.seatType || null, // Not available in legacy
+    offsetRange: {
+      min: profile.allowedOffsets.length > 0 ? Math.min(...profile.allowedOffsets) : null,
+      max: profile.allowedOffsets.length > 0 ? Math.max(...profile.allowedOffsets) : null,
+    },
+    oemWheelSizes: profile.wheelSpecs.map((ws: any) => ({
+      diameter: ws.rimDiameter,
+      width: ws.rimWidth,
+      offset: ws.offset,
+    })),
+    oemTireSizes: (profile as any).tireSizes || [],
+    source: "legacy",
+  };
+
   return await handleDbFirstWheelResults({
     url,
     year,
@@ -829,6 +883,7 @@ async function handleLegacyPath(
     requestedModificationId,
     debug,
     t0,
+    dbProfileForResponse: legacyDbProfile,
   });
 }
 

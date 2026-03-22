@@ -74,6 +74,67 @@ async function fetchFitment(params: Record<string, string | undefined>) {
   return res.json();
 }
 
+/**
+ * Fetch dbProfile from our fitment profile service (DB-first).
+ * This provides threadSize, seatType, centerBoreMm needed for accessory calculation.
+ */
+async function fetchDbProfile(params: {
+  year: string;
+  make: string;
+  model: string;
+  modification?: string;
+}): Promise<{ dbProfile: import("@/hooks/useAccessoryFitment").DBProfileForAccessories | null }> {
+  const { year, make, model, modification } = params;
+  if (!year || !make || !model) return { dbProfile: null };
+
+  try {
+    // Use fitment-search endpoint with minimal params to get dbProfile
+    const sp = new URLSearchParams({
+      year,
+      make,
+      model,
+      pageSize: "1", // We only need profile data, not wheel results
+      debug: "1",
+    });
+    if (modification) sp.set("modification", modification);
+
+    const res = await fetch(`${getBaseUrl()}/api/wheels/fitment-search?${sp.toString()}`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      console.warn("[wheel-pdp] Failed to fetch dbProfile:", await res.text());
+      return { dbProfile: null };
+    }
+
+    const data = await res.json();
+    const fitment = data?.fitment;
+    
+    // Extract dbProfile-compatible fields from fitment response
+    if (fitment?.dbProfile) {
+      // Direct dbProfile from fitment-search response
+      return { dbProfile: fitment.dbProfile };
+    }
+    
+    // Fallback: construct from envelope data (legacy support)
+    if (fitment?.envelope) {
+      return {
+        dbProfile: {
+          threadSize: null, // Not available in legacy envelope
+          seatType: null,
+          centerBoreMm: fitment.envelope.centerBore || null,
+          boltPattern: fitment.envelope.boltPattern || null,
+        },
+      };
+    }
+
+    return { dbProfile: null };
+  } catch (err) {
+    console.error("[wheel-pdp] Error fetching dbProfile:", err);
+    return { dbProfile: null };
+  }
+}
+
 function extractModelToken(title: string) {
   // Titles often look like:
   // "BR ALISO 18X9 6X5.5 G-BRONZE 12MM"
@@ -202,7 +263,20 @@ export default async function WheelDetailPage({
     : null;
 
   // Extract DB profile for accessory fitment calculation
-  const dbProfile = (fitmentStrict as any)?.dbProfile || null;
+  // NOTE: fitmentStrict (from /api/vehicles/search) does NOT include dbProfile.
+  // We need to fetch it separately from our fitment profile service.
+  const { dbProfile } = year && make && model
+    ? await fetchDbProfile({ year, make, model, modification: modification || undefined })
+    : { dbProfile: null };
+  
+  // Log for debugging
+  console.log("[wheel-pdp] Accessory fitment data:", {
+    vehicle: `${year} ${make} ${model}`,
+    hasDbProfile: !!dbProfile,
+    threadSize: dbProfile?.threadSize,
+    seatType: dbProfile?.seatType,
+    centerBoreMm: dbProfile?.centerBoreMm,
+  });
 
   const oemTireSizesAll: string[] = Array.isArray((fitmentStrict as any)?.tireSizes)
     ? (fitmentStrict as any).tireSizes.map(String)
