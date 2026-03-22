@@ -469,7 +469,9 @@ export async function GET(req: Request) {
         results: [],
         source: "api",
         count: 0,
-        ...(debug ? { debug: { resolved } } : {}),
+        overridesApplied: false,
+        cached: false,
+        ...(debug ? { debug: { resolved, apiModCount: 0 } } : {}),
       } as any);
     }
 
@@ -556,7 +558,8 @@ export async function GET(req: Request) {
       count: finalResults.length,
       overridesApplied,
       cached: false,
-    } as TrimResponse, {
+      ...(debug ? { debug: { resolved, apiModCount: modifications.length } } : {}),
+    } as any, {
       headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
     });
 
