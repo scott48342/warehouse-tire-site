@@ -3,7 +3,7 @@
  * Uses Wheel-Size API data as source of truth for strict wheel validation
  */
 import pg from "pg";
-import { normalizeModelForApi } from "./fitment-db/keys";
+import { normalizeModelForApi, normalizeMake } from "./fitment-db/keys";
 
 const { Pool } = pg;
 
@@ -307,17 +307,28 @@ export async function getVehicle(
   model: string,
   trim?: string
 ): Promise<Vehicle | null> {
-  // Normalize lookup value for comparison
+  // Normalize lookup values for comparison
   const lookupTrim = trim?.trim().toLowerCase() ?? null;
-  // Also normalize model for cases like "RX 350" → "RX"
-  const normalizedModel = normalizeModelForApi(model);
+  const normalizedModel = normalizeModelForApi(model);  // "RX 350" → "rx", "Ioniq 5 SEL" → "ioniq-5"
+  const normalizedMakeVal = normalizeMake(make);        // "Mercedes-Benz" → "mercedes"
   
   // First, try exact match on trim, search_trim, or slug
   // Check both original model and normalized model (for aliases like RX 350 → RX)
+  // Use REPLACE to handle "Ioniq 5" (space) vs "ioniq-5" (hyphen) mismatch
+  // Also normalize make for "Mercedes-Benz" vs "mercedes" cases
   const result = await db.query<Vehicle>(
     `SELECT id, year, make, model, trim, slug, created_at, updated_at
      FROM vehicles
-     WHERE year = $1 AND make = $2 AND (model = $3 OR LOWER(model) = $5)
+     WHERE year = $1 
+       AND (
+         make = $2 OR 
+         LOWER(REPLACE(REPLACE(make, '-', ''), ' ', '')) = $6
+       )
+       AND (
+         model = $3 OR 
+         LOWER(model) = $5 OR
+         LOWER(REPLACE(model, ' ', '-')) = $5
+       )
        AND (
          $4::text IS NULL OR 
          LOWER(TRIM(trim)) = $4 OR 
@@ -326,7 +337,7 @@ export async function getVehicle(
        )
      ORDER BY imported_at DESC NULLS LAST, updated_at DESC
      LIMIT 1`,
-    [year, make, model, lookupTrim, normalizedModel]
+    [year, make, model, lookupTrim, normalizedModel, normalizedMakeVal.replace(/-/g, '')]
   );
   
   if (result.rows[0]) {
@@ -340,10 +351,20 @@ export async function getVehicle(
     const slugResult = await db.query<Vehicle>(
       `SELECT id, year, make, model, trim, slug, created_at, updated_at
        FROM vehicles
-       WHERE year = $1 AND make = $2 AND (model = $3 OR LOWER(model) = $5) AND slug = $4
+       WHERE year = $1 
+         AND (
+           make = $2 OR 
+           LOWER(REPLACE(REPLACE(make, '-', ''), ' ', '')) = $6
+         )
+         AND (
+           model = $3 OR 
+           LOWER(model) = $5 OR
+           LOWER(REPLACE(model, ' ', '-')) = $5
+         ) 
+         AND slug = $4
        ORDER BY imported_at DESC NULLS LAST, updated_at DESC
        LIMIT 1`,
-      [year, make, model, trim, normalizedModel]
+      [year, make, model, trim, normalizedModel, normalizedMakeVal.replace(/-/g, '')]
     );
     if (slugResult.rows[0]) {
       return slugResult.rows[0];
@@ -357,10 +378,19 @@ export async function getVehicle(
     const fallbackResult = await db.query<Vehicle>(
       `SELECT id, year, make, model, trim, slug, created_at, updated_at
        FROM vehicles
-       WHERE year = $1 AND make = $2 AND (model = $3 OR LOWER(model) = $4)
+       WHERE year = $1 
+         AND (
+           make = $2 OR 
+           LOWER(REPLACE(REPLACE(make, '-', ''), ' ', '')) = $5
+         )
+         AND (
+           model = $3 OR 
+           LOWER(model) = $4 OR
+           LOWER(REPLACE(model, ' ', '-')) = $4
+         )
        ORDER BY imported_at DESC NULLS LAST, updated_at DESC
        LIMIT 1`,
-      [year, make, model, normalizedModel]
+      [year, make, model, normalizedModel, normalizedMakeVal.replace(/-/g, '')]
     );
     return fallbackResult.rows[0] || null;
   }
