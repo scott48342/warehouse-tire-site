@@ -4,6 +4,7 @@ import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "@/lib/fitment-db/keys";
+import * as wheelSizeApi from "@/lib/wheelSizeApi";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import { applyOverrides } from "@/lib/fitment-db/applyOverrides";
 import { fitmentSourceRecords } from "@/lib/fitment-db/schema";
@@ -79,23 +80,16 @@ function getSubmodelSupplement(year: number, make: string, model: string): Submo
 }
 
 // ============================================================================
-// Wheel-Size API
+// Wheel-Size API helpers
 // ============================================================================
 
-const WHEELSIZE_API_BASE = "https://api.wheel-size.com/v2/";
+type WheelSizeModification = wheelSizeApi.WheelSizeModification;
 
-interface WheelSizeModification {
-  slug: string;
-  name?: string;
-  trim?: string | { name?: string };
-  engine?: string | { capacity?: string; type?: string };
-  body?: string;
-  regions?: string[];
-}
-
-function getApiKey(): string | null {
-  return process.env.WHEELSIZE_API_KEY || null;
-}
+type ResolvedWheelSize = {
+  makeSlug: string;
+  modelSlug: string;
+  modelName?: string;
+};
 
 function safeString(v: unknown): string {
   if (v === null || v === undefined) return "";
@@ -111,47 +105,80 @@ function safeString(v: unknown): string {
   return "";
 }
 
-async function fetchWheelSizeModifications(
-  apiKey: string,
+/**
+ * Resolve make/model slugs using the Wheel-Size catalog (more reliable than local slug guesses).
+ * Includes a couple of Mercedes-specific fallbacks for "*-Class" names.
+ */
+async function resolveWheelSizeMakeModel(make: string, model: string): Promise<ResolvedWheelSize | null> {
+  const foundMake = await wheelSizeApi.findMake(make);
+  if (!foundMake) return null;
+
+  // First try the shared resolver (matches by slug/name plus normalizeModelForApi alias).
+  let foundModel = await wheelSizeApi.findModel(foundMake.slug, model);
+
+  // If not found, try some pragmatic fallbacks.
+  if (!foundModel) {
+    const models = await wheelSizeApi.getModels(foundMake.slug);
+    const needle = slugify(model).toLowerCase();
+    const base = normalizeModelForApi(model).toLowerCase();
+
+    const candidates: wheelSizeApi.WheelSizeModel[] = [];
+
+    // Mercedes frequently uses "XYZ-Class" or "XYZ-Class Coupe".
+    if (foundMake.slug === "mercedes" || foundMake.slug === "mercedes-benz") {
+      const mercedesTries = [
+        `${base}-class`,
+        `${base}-class-coupe`,
+        `${base}-class-suv`,
+      ];
+      for (const t of mercedesTries) {
+        const hit = models.find(m => (m.slug || "").toLowerCase() === t);
+        if (hit) candidates.push(hit);
+      }
+    }
+
+    // Generic fuzzy: startsWith base/needle
+    const fuzzy = models.filter(m => {
+      const slug = (m.slug || "").toLowerCase();
+      const name = (m.name || "").toLowerCase();
+      return (
+        slug === needle ||
+        slug === base ||
+        slug.startsWith(`${base}-`) ||
+        slug.startsWith(`${needle}-`) ||
+        name === needle ||
+        name.startsWith(base) ||
+        name.startsWith(needle)
+      );
+    });
+
+    candidates.push(...fuzzy);
+
+    // Prefer *-class* matches when present.
+    foundModel = candidates.find(m => (m.slug || "").toLowerCase().includes("-class")) || candidates[0] || null;
+  }
+
+  if (!foundModel) return null;
+
+  return { makeSlug: foundMake.slug, modelSlug: foundModel.slug, modelName: foundModel.name };
+}
+
+async function fetchWheelSizeModificationsResolved(
   year: number,
   make: string,
   model: string
-): Promise<WheelSizeModification[]> {
-  // Use normalized slugs for API compatibility (e.g., "RX 350" → "rx")
-  const makeSlug = normalizeMake(make);
-  const modelSlug = normalizeModelForApi(model);
+): Promise<{ resolved: ResolvedWheelSize; modifications: WheelSizeModification[] }> {
+  const resolved = await resolveWheelSizeMakeModel(make, model);
+  if (!resolved) return { resolved: { makeSlug: normalizeMake(make), modelSlug: normalizeModelForApi(model) }, modifications: [] };
 
-  const url = new URL("modifications/", WHEELSIZE_API_BASE);
-  url.searchParams.set("user_key", apiKey);
-  url.searchParams.set("make", makeSlug);
-  url.searchParams.set("model", modelSlug);
-  url.searchParams.set("year", String(year));
+  // Get modifications via the shared API client.
+  let mods = await wheelSizeApi.getModifications(resolved.makeSlug, resolved.modelSlug, year);
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 15000); // 15 seconds - API can be slow
+  // Prefer USDM if available
+  const us = mods.filter(m => m.regions?.includes("usdm"));
+  mods = us.length > 0 ? us : mods;
 
-  try {
-    const res = await fetch(url.toString(), {
-      headers: { Accept: "application/json" },
-      signal: controller.signal,
-    });
-
-    clearTimeout(timeout);
-
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    const allMods: WheelSizeModification[] = data?.data || [];
-    
-    // Prefer USDM models
-    const usMods = allMods.filter(m => m.regions?.includes("usdm"));
-    return usMods.length > 0 ? usMods : allMods;
-  } catch (err) {
-    clearTimeout(timeout);
-    throw err;
-  }
+  return { resolved, modifications: mods };
 }
 
 // ============================================================================
@@ -422,20 +449,14 @@ export async function GET(req: Request) {
   // Step 3: Call Wheel-Size API and import to database
   // -------------------------------------------------------------------------
 
-  const apiKey = getApiKey();
-  if (!apiKey) {
-    console.log(`[trims] No API key, returning empty`);
-    return NextResponse.json({ results: [], source: "empty" } as TrimResponse);
-  }
-
   try {
-    console.log(`[trims] API FETCH: ${year} ${make} ${model}`);
+    console.log(`[trims] API FETCH (resolved): ${year} ${make} ${model}`);
     apiCalled = true;
 
-    const modifications = await fetchWheelSizeModifications(apiKey, year, make, model);
+    const { resolved, modifications } = await fetchWheelSizeModificationsResolved(year, make, model);
 
     if (modifications.length === 0) {
-      console.log(`[trims] API returned 0 modifications`);
+      console.log(`[trims] API returned 0 modifications (resolved make=${resolved.makeSlug} model=${resolved.modelSlug})`);
       return NextResponse.json({ results: [], source: "api", count: 0 } as TrimResponse);
     }
 
