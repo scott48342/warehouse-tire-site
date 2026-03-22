@@ -14,7 +14,7 @@ import {
 import {
   buildFitmentEnvelope,
   validateWheel,
-  summarizeValidations,
+  // summarizeValidations,
   autoDetectFitmentMode,
   type FitmentMode,
   type WheelSpec,
@@ -233,8 +233,67 @@ async function handleDbProfilePath(
   // ========================================================================
   // Production path: DB-first candidate filtering + live availability validation
   // - No multi-page WheelPros scans
-  // - No dealerline=1 / legacyFallback changes
+  // - Always enforces orderable + qty >= minQty
   // ========================================================================
+
+  const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
+
+  return await handleDbFirstWheelResults({
+    url,
+    year,
+    make,
+    model,
+    displayTrim: dbProfile.displayTrim,
+    boltPattern: dbProfile.boltPattern!,
+    envelope,
+    mode,
+    modeAutoDetected,
+    vehicleType,
+    resolutionPath,
+    fitmentSource: "dbFirst",
+    aliasUsed,
+    canonicalModificationId,
+    requestedModificationId,
+    debug,
+    t0,
+  });
+}
+
+// ============================================================================
+// Shared wheel results: DB-first candidates + live availability validation
+// ============================================================================
+
+async function handleDbFirstWheelResults(opts: {
+  url: URL;
+  year: string;
+  make: string;
+  model: string;
+  displayTrim: string;
+  boltPattern: string;
+  envelope: ReturnType<typeof buildFitmentEnvelope>;
+  mode: FitmentMode;
+  modeAutoDetected: boolean;
+  vehicleType: "truck" | "suv" | "car" | undefined;
+  resolutionPath: FitmentResolutionPath;
+  fitmentSource: string;
+  aliasUsed?: boolean;
+  canonicalModificationId?: string | null;
+  requestedModificationId?: string | null;
+  debug: boolean;
+  t0: number;
+}): Promise<NextResponse> {
+  const { url, envelope, debug, t0 } = opts;
+
+  const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
+  const requestedPageSize = Math.max(1, Math.min(200, Number(url.searchParams.get("pageSize") || "24") || 24));
+
+  const brandCd = url.searchParams.get("brand_cd");
+  const finish = url.searchParams.get("finish");
+  const diameter = url.searchParams.get("diameter");
+  const width = url.searchParams.get("width");
+
+  // Hard requirement for "in stock only" live validation
+  const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
 
   const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
   if (!wheelProsBase) {
@@ -246,7 +305,7 @@ async function handleDbProfilePath(
     headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
   }
 
-  const candidates = await getTechfeedCandidatesByBoltPattern(dbProfile.boltPattern!);
+  const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
 
   // Apply basic DB-level filters first (cheap)
   const filteredCandidates = candidates.filter((c) => {
@@ -266,7 +325,6 @@ async function handleDbProfilePath(
     return true;
   });
 
-  // Batched availability validation to keep browsing fast.
   const startWanted = (requestedPage - 1) * requestedPageSize;
   const results: any[] = [];
 
@@ -308,7 +366,8 @@ async function handleDbProfilePath(
     if (v.fitmentClass === "excluded") continue;
     fitmentValid++;
 
-    // Live availability confirmation (cached, short timeout)
+    // Live availability confirmation (cached, short timeout).
+    // If we cannot confirm in time, we SKIP (per production rules).
     const avail = await fetchLiveAvailabilityForSku({
       wheelProsBase,
       headers,
@@ -316,7 +375,6 @@ async function handleDbProfilePath(
       minQty,
     });
     availabilityChecked++;
-
     if (!avail.ok) continue;
 
     eligibleCount++;
@@ -381,7 +439,6 @@ async function handleDbProfilePath(
   }
 
   const facets = buildFacets(results);
-  const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
 
   return NextResponse.json({
     results,
@@ -390,14 +447,14 @@ async function handleDbProfilePath(
     pageSize: requestedPageSize,
     facets,
     fitment: {
-      mode,
-      modeAutoDetected,
-      vehicleType,
-      resolutionPath,
-      fitmentSource: resolutionPath,
-      aliasUsed,
-      canonicalModificationId,
-      requestedModificationId,
+      mode: opts.mode,
+      modeAutoDetected: opts.modeAutoDetected,
+      vehicleType: opts.vehicleType,
+      resolutionPath: opts.resolutionPath,
+      fitmentSource: opts.fitmentSource,
+      aliasUsed: Boolean(opts.aliasUsed),
+      canonicalModificationId: opts.canonicalModificationId || null,
+      requestedModificationId: opts.requestedModificationId || null,
       validationMode: "strict",
       envelope: {
         boltPattern: envelope.boltPattern,
@@ -414,25 +471,10 @@ async function handleDbProfilePath(
         },
       },
       vehicle: {
-        year: Number(year),
-        make,
-        model,
-        trim: dbProfile.displayTrim,
-      },
-      dbProfile: {
-        modificationId: dbProfile.modificationId,
-        displayTrim: dbProfile.displayTrim,
-        boltPattern: dbProfile.boltPattern,
-        centerBoreMm: dbProfile.centerBoreMm,
-        threadSize: dbProfile.threadSize,
-        seatType: dbProfile.seatType,
-        offsetRange: {
-          min: dbProfile.offsetMinMm,
-          max: dbProfile.offsetMaxMm,
-        },
-        oemWheelSizes: dbProfile.oemWheelSizes,
-        oemTireSizes: dbProfile.oemTireSizes,
-        source: dbProfile.source,
+        year: Number(opts.year),
+        make: opts.make,
+        model: opts.model,
+        trim: opts.displayTrim,
       },
     },
     summary: {
@@ -444,9 +486,9 @@ async function handleDbProfilePath(
       availabilityChecked,
       truncated,
       capsHit: Array.from(new Set(capsHit)),
-      resolutionPath,
-      fitmentSource: resolutionPath,
-      aliasUsed,
+      resolutionPath: opts.resolutionPath,
+      fitmentSource: opts.fitmentSource,
+      aliasUsed: Boolean(opts.aliasUsed),
       validationMode: "strict",
       dbIndexBuiltAt: getTechfeedIndexBuiltAt(),
     },
@@ -675,141 +717,27 @@ async function handleLegacyPath(
   };
 
   const envelope = buildFitmentEnvelope(oemSpecs, mode);
-  const envelopeMs = Date.now() - t0 - profileMs;
 
-  // Query Wheel Pros
-  const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
-  if (!wheelProsBase) {
-    return NextResponse.json({ error: "Missing WHEELPROS_WRAPPER_URL" }, { status: 500 });
-  }
+  // IMPORTANT: legacyFallback is allowed ONLY to derive a fitment envelope.
+  // Wheel results must come from DB-first candidates + cached live availability.
+  const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
 
-  const page = url.searchParams.get("page") || "1";
-  const pageSize = url.searchParams.get("pageSize") || "200";
-  const brandCd = url.searchParams.get("brand_cd");
-  const finish = url.searchParams.get("finish");
-  const diameter = url.searchParams.get("diameter");
-  const width = url.searchParams.get("width");
-
-  const wpParams = new URLSearchParams({
+  return await handleDbFirstWheelResults({
+    url,
+    year,
+    make,
+    model,
+    displayTrim: profile.vehicle.trim || "",
     boltPattern: profile.boltPattern,
-    page,
-    pageSize,
-    fields: "inventory,price,images",
-  });
-  if (brandCd) wpParams.set("brand_cd", brandCd);
-  if (finish) wpParams.set("abbreviated_finish_desc", finish);
-  if (diameter) wpParams.set("diameter", diameter);
-  if (width) wpParams.set("width", width);
-
-  const headers: Record<string, string> = { Accept: "application/json" };
-  if (process.env.WHEELPROS_WRAPPER_API_KEY) {
-    headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
-  }
-
-  const wpUrl = new URL("/wheels/search", wheelProsBase);
-  wpParams.forEach((v, k) => wpUrl.searchParams.set(k, v));
-
-  const wpRes = await fetch(wpUrl.toString(), { headers, cache: "no-store" });
-  const wpData = await wpRes.json();
-  const wpMs = Date.now() - t0 - profileMs - envelopeMs;
-  const wpResults = wpData?.results || wpData?.items || [];
-
-  // Validate each wheel
-  const allValidations: FitmentValidation[] = [];
-  const passingWheels: any[] = [];
-
-  for (const wpWheel of wpResults) {
-    const wheelSpec: WheelSpec = {
-      sku: wpWheel.sku || "",
-      boltPattern: wpWheel.properties?.boltPatternMetric || wpWheel.properties?.boltPattern || "",
-      centerBore: wpWheel.properties?.centerbore ? Number(wpWheel.properties.centerbore) : undefined,
-      diameter: wpWheel.properties?.diameter ? Number(wpWheel.properties.diameter) : undefined,
-      width: wpWheel.properties?.width ? Number(wpWheel.properties.width) : undefined,
-      offset: wpWheel.properties?.offset ? Number(wpWheel.properties.offset) : undefined,
-    };
-
-    const validation = validateWheel(wheelSpec, envelope);
-    allValidations.push(validation);
-
-    if (validation.fitmentClass !== "excluded") {
-      passingWheels.push({
-        ...wpWheel,
-        fitmentValidation: {
-          fitmentClass: validation.fitmentClass,
-          fitmentMode: validation.fitmentMode,
-          ...(debug ? {
-            boltPatternPass: validation.boltPatternPass,
-            centerBorePass: validation.centerBorePass,
-            diameterPass: validation.diameterPass,
-            widthPass: validation.widthPass,
-            offsetPass: validation.offsetPass,
-            exclusionReasons: validation.exclusionReasons,
-          } : {}),
-        },
-      });
-    }
-  }
-
-  const validateMs = Date.now() - t0 - profileMs - envelopeMs - wpMs;
-  const summary = summarizeValidations(allValidations);
-  const facets = buildFacets(passingWheels);
-
-  console.log(`[fitment-search] 📤 RESPONSE (legacyFallback): ${year} ${make} ${model}`, {
-    boltPattern: envelope.boltPattern,
-    wheels: passingWheels.length,
-    timing: `${Date.now() - t0}ms`,
-  });
-
-  return NextResponse.json({
-    results: passingWheels,
-    totalCount: passingWheels.length,
-    page: Number(page),
-    pageSize: Number(pageSize),
-    facets,
-    fitment: {
-      mode,
-      modeAutoDetected,
-      vehicleType,
-      resolutionPath: "legacyFallback",
-      fitmentSource: "legacyFallback",
-      validationMode: "strict",
-      envelope: {
-        boltPattern: envelope.boltPattern,
-        centerBore: envelope.centerBore,
-        oem: {
-          diameter: [envelope.oemMinDiameter, envelope.oemMaxDiameter],
-          width: [envelope.oemMinWidth, envelope.oemMaxWidth],
-          offset: [envelope.oemMinOffset, envelope.oemMaxOffset],
-        },
-        allowed: {
-          diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
-          width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
-          offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
-        },
-      },
-      vehicle: {
-        year: profile.vehicle.year,
-        make: profile.vehicle.make,
-        model: profile.vehicle.model,
-        trim: profile.vehicle.trim,
-      },
-      staggered: profile.staggered,
-    },
-    summary: {
-      fromWheelPros: wpResults.length,
-      afterFitmentFilter: passingWheels.length,
-      ...summary,
-      resolutionPath: "legacyFallback",
-      fitmentSource: "legacyFallback",
-      validationMode: "strict",
-    },
-    timing: debug ? {
-      totalMs: Date.now() - t0,
-      profileMs,
-      envelopeMs,
-      wpMs,
-      validateMs,
-    } : undefined,
+    envelope,
+    mode,
+    modeAutoDetected,
+    vehicleType,
+    resolutionPath: "legacyFallback",
+    fitmentSource: "dbFirst",
+    requestedModificationId,
+    debug,
+    t0,
   });
 }
 
