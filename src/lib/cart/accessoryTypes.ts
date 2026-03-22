@@ -14,6 +14,8 @@ export type CartAccessoryItem = {
   quantity: number;
   required: boolean;
   reason: string;
+  /** Arbitrary metadata for order payloads (e.g., nipCost, msrp, source title). */
+  meta?: Record<string, any>;
   // Link to the wheel this accessory is for
   wheelSku?: string;
   // Spec details for display

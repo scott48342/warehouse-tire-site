@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCart, type CartWheelItem, type CartTireItem } from "@/lib/cart/CartContext";
+import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { BRAND } from "@/lib/brand";
 
 const FITMENT_LABELS = {
@@ -27,15 +27,9 @@ function WheelCartItem({
       {/* Image */}
       <div className="w-28 h-28 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 overflow-hidden">
         {item.imageUrl ? (
-          <img
-            src={item.imageUrl}
-            alt={item.model}
-            className="w-full h-full object-contain"
-          />
+          <img src={item.imageUrl} alt={item.model} className="w-full h-full object-contain" />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-neutral-400 text-xs">
-            No image
-          </div>
+          <div className="w-full h-full flex items-center justify-center text-neutral-400 text-xs">No image</div>
         )}
       </div>
 
@@ -45,9 +39,7 @@ function WheelCartItem({
           <div>
             <div className="text-sm font-semibold text-neutral-500">{item.brand}</div>
             <h3 className="font-extrabold text-lg text-neutral-900">{item.model}</h3>
-            {item.finish ? (
-              <div className="text-sm text-neutral-600">{item.finish}</div>
-            ) : null}
+            {item.finish ? <div className="text-sm text-neutral-600">{item.finish}</div> : null}
           </div>
           {fitment ? (
             <span className={`text-xs font-bold px-2 py-1 rounded-full ${fitment.bg} ${fitment.color}`}>
@@ -84,21 +76,14 @@ function WheelCartItem({
                 </option>
               ))}
             </select>
-            <button
-              onClick={onRemove}
-              className="text-sm text-red-600 hover:text-red-700 font-medium"
-            >
+            <button onClick={onRemove} className="text-sm text-red-600 hover:text-red-700 font-medium">
               Remove
             </button>
           </div>
 
           <div className="text-right">
-            <div className="text-xl font-extrabold text-neutral-900">
-              ${total.toFixed(2)}
-            </div>
-            <div className="text-xs text-neutral-500">
-              ${item.unitPrice.toFixed(2)} each
-            </div>
+            <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
+            <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
           </div>
         </div>
       </div>
@@ -121,15 +106,9 @@ function TireCartItem({
     <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-5">
       <div className="w-28 h-28 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 overflow-hidden">
         {item.imageUrl ? (
-          <img
-            src={item.imageUrl}
-            alt={item.model}
-            className="w-full h-full object-contain"
-          />
+          <img src={item.imageUrl} alt={item.model} className="w-full h-full object-contain" />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-neutral-400 text-xs">
-            No image
-          </div>
+          <div className="w-full h-full flex items-center justify-center text-neutral-400 text-xs">No image</div>
         )}
       </div>
 
@@ -159,20 +138,66 @@ function TireCartItem({
                 </option>
               ))}
             </select>
-            <button
-              onClick={onRemove}
-              className="text-sm text-red-600 hover:text-red-700 font-medium"
-            >
+            <button onClick={onRemove} className="text-sm text-red-600 hover:text-red-700 font-medium">
               Remove
             </button>
           </div>
 
           <div className="text-right">
-            <div className="text-xl font-extrabold text-neutral-900">
-              ${total.toFixed(2)}
-            </div>
+            <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
+            <div className="text-xs text-neutral-500">${item.unitPrice.toFixed(2)} each</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AccessoryCartItem({
+  item,
+  onRemove,
+}: {
+  item: CartAccessoryItem;
+  onRemove: () => void;
+}) {
+  const total = item.unitPrice * item.quantity;
+  return (
+    <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-5">
+      <div className="w-12 h-12 flex-shrink-0 rounded-xl border border-neutral-100 bg-neutral-50 flex items-center justify-center">
+        <span className="text-xl">🔧</span>
+      </div>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2">
+          <h3 className="font-extrabold text-lg text-neutral-900">{item.name}</h3>
+          {item.required ? (
+            <span className="text-[10px] font-bold uppercase text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">
+              Required
+            </span>
+          ) : null}
+        </div>
+        {item.spec?.threadSize || item.spec?.outerDiameter ? (
+          <div className="text-sm text-neutral-600">
+            {item.spec.threadSize ? item.spec.threadSize : null}
+            {item.spec.outerDiameter && item.spec.innerDiameter
+              ? ` • ${item.spec.outerDiameter}/${item.spec.innerDiameter}mm`
+              : null}
+          </div>
+        ) : null}
+        <div className="text-xs text-neutral-500 mt-0.5">{item.reason}</div>
+
+        <div className="mt-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="text-sm font-medium text-neutral-600">Qty: {item.quantity}</div>
+            <button onClick={onRemove} className="text-sm text-red-600 hover:text-red-700 font-medium">
+              Remove
+            </button>
+          </div>
+
+          <div className="text-right">
+            <div className="text-xl font-extrabold text-neutral-900">${total.toFixed(2)}</div>
             <div className="text-xs text-neutral-500">
-              ${item.unitPrice.toFixed(2)} each
+              {item.unitPrice === 0 ? "Included" : `$${item.unitPrice.toFixed(2)} each`}
             </div>
           </div>
         </div>
@@ -191,6 +216,7 @@ export default function CartPage() {
     getItemCount,
     hasWheels,
     hasTires,
+    hasAccessories,
     getWheels,
   } = useCart();
 
@@ -224,9 +250,7 @@ export default function CartPage() {
           <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-8 text-center">
             <div className="text-5xl mb-4">🛒</div>
             <h2 className="text-xl font-bold text-neutral-900">Your cart is empty</h2>
-            <p className="mt-2 text-neutral-600">
-              Start shopping for wheels and tires that fit your vehicle.
-            </p>
+            <p className="mt-2 text-neutral-600">Start shopping for wheels and tires that fit your vehicle.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link
                 href="/wheels"
@@ -254,10 +278,7 @@ export default function CartPage() {
           <h1 className="text-3xl font-extrabold text-neutral-900">
             Your Cart ({itemCount} {itemCount === 1 ? "item" : "items"})
           </h1>
-          <button
-            onClick={clearCart}
-            className="text-sm text-neutral-500 hover:text-red-600 font-medium"
-          >
+          <button onClick={clearCart} className="text-sm text-neutral-500 hover:text-red-600 font-medium">
             Clear cart
           </button>
         </div>
@@ -298,6 +319,20 @@ export default function CartPage() {
                         onRemove={() => removeItem(item.sku, "tire")}
                         onUpdateQty={(qty) => updateQuantity(item.sku, "tire", qty)}
                       />
+                    ))}
+                </div>
+              </div>
+            ) : null}
+
+            {/* Accessories Section */}
+            {hasAccessories() ? (
+              <div>
+                <h2 className="text-lg font-bold text-neutral-900 mb-3">Accessories</h2>
+                <div className="space-y-3">
+                  {items
+                    .filter((i): i is CartAccessoryItem => i.type === "accessory")
+                    .map((item) => (
+                      <AccessoryCartItem key={item.sku} item={item} onRemove={() => removeItem(item.sku, "accessory")} />
                     ))}
                 </div>
               </div>

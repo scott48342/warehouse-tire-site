@@ -300,7 +300,7 @@ export function WheelsStyleCard({
       // Calculate and add accessories if we have profile data
       if (dbProfile) {
         // Import accessory calculation inline to avoid hook rules violation
-        import("@/hooks/useAccessoryFitment").then(({ calculateAccessoryFitment }) => {
+        import("@/hooks/useAccessoryFitment").then(async ({ calculateAccessoryFitment }) => {
           const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
           
           if (fitmentResult.state) {
@@ -309,6 +309,23 @@ export function WheelsStyleCard({
 
           // Auto-add required accessories
           if (fitmentResult.requiredItems.length > 0) {
+            // Replace lug kit placeholder SKU with real Gorilla kit SKU + NIP cost (server-side lookup)
+            const lug = fitmentResult.requiredItems.find(i => i.category === "lug_nut");
+            if (lug?.spec?.threadSize) {
+              try {
+                const res = await fetch(`/api/accessories/lugkits?threadSize=${encodeURIComponent(lug.spec.threadSize)}`, {
+                  headers: { Accept: "application/json" },
+                });
+                const data = await res.json().catch(() => null);
+                if (res.ok && data?.choice?.sku) {
+                  lug.sku = String(data.choice.sku);
+                  (lug as any).meta = { ...(lug as any).meta, nipCost: data.choice.nip, msrp: data.choice.msrp, title: data.choice.title };
+                }
+              } catch {
+                // ignore, keep placeholder
+              }
+            }
+
             console.log("[WheelsStyleCard] Auto-adding required accessories:", 
               fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
             );

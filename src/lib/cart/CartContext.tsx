@@ -60,6 +60,10 @@ type CartContextValue = {
   addItem: (item: CartItem) => void;
   addAccessory: (item: CartAccessoryItem) => void;
   addAccessories: (items: CartAccessoryItem[]) => void;
+  /** Update an accessory in-place by SKU (safe immutable update). */
+  updateAccessory: (sku: string, patch: Partial<CartAccessoryItem>) => void;
+  /** Replace an accessory's SKU (e.g., placeholder → real Gorilla SKU). */
+  replaceAccessorySku: (oldSku: string, next: CartAccessoryItem) => void;
   removeItem: (sku: string, type: "wheel" | "tire" | "accessory") => void;
   updateQuantity: (sku: string, type: "wheel" | "tire" | "accessory", quantity: number) => void;
   clearCart: () => void;
@@ -231,6 +235,35 @@ export function CartProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const updateAccessory = useCallback((sku: string, patch: Partial<CartAccessoryItem>) => {
+    setItems((prev) =>
+      prev.map((i) => {
+        if (i.type !== "accessory") return i;
+        if (i.sku !== sku) return i;
+        return { ...(i as CartAccessoryItem), ...patch };
+      })
+    );
+  }, []);
+
+  const replaceAccessorySku = useCallback((oldSku: string, next: CartAccessoryItem) => {
+    setItems((prev) => {
+      const withoutOld = prev.filter((i) => !(i.type === "accessory" && i.sku === oldSku));
+      // If new sku already exists, don't duplicate; instead merge meta onto existing.
+      const existingIdx = withoutOld.findIndex((i) => i.type === "accessory" && i.sku === next.sku);
+      if (existingIdx >= 0) {
+        const updated = [...withoutOld];
+        const existing = updated[existingIdx] as CartAccessoryItem;
+        updated[existingIdx] = {
+          ...existing,
+          ...next,
+          meta: { ...(existing.meta || {}), ...(next.meta || {}) },
+        };
+        return updated;
+      }
+      return [...withoutOld, next];
+    });
+  }, []);
+
   return (
     <CartContext.Provider
       value={{
@@ -238,6 +271,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         addItem,
         addAccessory,
         addAccessories,
+        updateAccessory,
+        replaceAccessorySku,
         removeItem,
         updateQuantity,
         clearCart,

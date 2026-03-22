@@ -30,22 +30,46 @@ export async function POST(req: Request) {
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
 
-    // Convert cart items to quote lines (also used for Stripe line items)
-    const lines: QuoteLine[] = items
+    // Convert cart items to quote lines.
+    // IMPORTANT: keep $0 REQUIRED install hardware in the quote snapshot / order payload.
+    const linesAll: QuoteLine[] = items
       .map((i: any) => {
         const kind: QuoteLine["kind"] = "product";
         const name = String(i.model || i.name || i.sku || "Item").trim();
         const sku = String(i.sku || "").trim() || undefined;
         const unitPriceUsd = Number(i.unitPrice || 0);
         const qty = Math.max(1, Math.trunc(Number(i.quantity || 1)));
-        const taxable = i.type === "wheel" || i.type === "tire"; // accessories default to taxable? keep false for now
+        const taxable = i.type === "wheel" || i.type === "tire"; // accessories treated as non-taxable for now
 
-        return { kind, name, sku, unitPriceUsd, qty, taxable, meta: { cartType: i.type } };
+        const meta = {
+          cartType: i.type,
+          category: i.category,
+          required: !!i.required,
+          wheelSku: i.wheelSku,
+          spec: i.spec,
+          meta: i.meta,
+        };
+
+        return { kind, name, sku, unitPriceUsd, qty, taxable, meta };
       })
-      .filter((l) => l.unitPriceUsd > 0 && l.qty > 0);
+      .filter((l) => l.qty > 0);
 
-    if (lines.length === 0) {
+    if (linesAll.length === 0) {
       return NextResponse.json({ ok: false, error: "empty_cart" }, { status: 400 });
+    }
+
+    // Stripe line items: exclude $0 lines (Stripe doesn't allow meaningful $0 charges).
+    const stripeLines = linesAll.filter((l) => l.unitPriceUsd > 0);
+
+    if (stripeLines.length === 0) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "no_billable_items",
+          detail: "Cart only contains $0 items. Required install hardware is preserved in quote snapshot, but nothing is billable.",
+        },
+        { status: 400 }
+      );
     }
 
     const db = getPool();
@@ -62,7 +86,7 @@ export async function POST(req: Request) {
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
-      lines,
+      lines: linesAll,
     });
 
     const origin = new URL(req.url).origin;
@@ -70,7 +94,7 @@ export async function POST(req: Request) {
     const session = await stripeConn.stripe.checkout.sessions.create({
       mode: "payment",
       customer_email: email || undefined,
-      line_items: lines.map((l) => ({
+      line_items: stripeLines.map((l) => ({
         quantity: l.qty,
         price_data: {
           currency: "usd",

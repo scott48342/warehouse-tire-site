@@ -64,7 +64,7 @@ export function AddToCartButton({
   wheelCenterBore,
   wheelSeatType,
 }: AddToCartButtonProps) {
-  const { addItem, addAccessories, setAccessoryState } = useCart();
+  const { addItem, addAccessories, setAccessoryState, replaceAccessorySku } = useCart();
   const [isAdding, setIsAdding] = useState(false);
 
   const handleAddToCart = () => {
@@ -137,8 +137,45 @@ export function AddToCartButton({
 
         // Auto-add required accessories
         if (fitmentResult.requiredItems.length > 0) {
-          console.log("[AddToCartButton] Auto-adding required accessories:", 
-            fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
+          // Replace lug kit placeholder SKU with real Gorilla kit SKU + NIP cost (server-side lookup)
+          const lug = fitmentResult.requiredItems.find((i) => i.category === "lug_nut");
+          if (lug?.spec?.threadSize) {
+            const placeholderSku = lug.sku;
+            const qs = new URLSearchParams({
+              threadSize: lug.spec.threadSize,
+            });
+            if (lug.spec.seatType) qs.set("seatType", lug.spec.seatType);
+
+            fetch(`/api/accessories/lugkits?${qs.toString()}`, {
+              headers: { Accept: "application/json" },
+            })
+              .then((r) => r.json().catch(() => null).then((j) => ({ ok: r.ok, j })))
+              .then(({ ok, j }) => {
+                if (ok && j?.choice?.sku) {
+                  const next = {
+                    ...lug,
+                    sku: String(j.choice.sku),
+                    // Keep customer-facing behavior as included, but store real SKU + cost basis.
+                    meta: {
+                      ...(lug.meta || {}),
+                      placeholder: false,
+                      source: "wheelpros",
+                      brandCode: j.choice.brandCode,
+                      nipCost: j.choice.nip,
+                      msrp: j.choice.msrp,
+                      title: j.choice.title,
+                      threadKey: j.choice.threadKey,
+                    },
+                  };
+                  replaceAccessorySku(placeholderSku, next);
+                }
+              })
+              .catch(() => {});
+          }
+
+          console.log(
+            "[AddToCartButton] Auto-adding required accessories:",
+            fitmentResult.requiredItems.map((i) => `${i.category}: ${i.name}`)
           );
           addAccessories(fitmentResult.requiredItems);
         }

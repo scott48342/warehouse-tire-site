@@ -104,10 +104,11 @@ export function useAccessoryFitment(
       const item: CartAccessoryItem = {
         type: "accessory",
         category: "lug_nut",
-        sku: `LUG-${spec.isMetric ? "M" : ""}${spec.threadDiameter}-${spec.seatType.toUpperCase()}`,
-        name: `${spec.seatType.charAt(0).toUpperCase() + spec.seatType.slice(1)} Lug Nut ${formatThreadSize(spec)}`,
-        unitPrice: 2.50, // Placeholder
-        quantity: spec.quantity,
+        // Placeholder SKU; will be replaced by WheelPros Gorilla kit SKU via server lookup.
+        sku: `LUGKIT-${formatThreadSize(spec)}`,
+        name: `Standard Lug Kit — Included`,
+        unitPrice: 0, // Included
+        quantity: 1,
         required: true,
         reason: fitment.lugNuts.reason,
         wheelSku: wheel.sku,
@@ -127,9 +128,9 @@ export function useAccessoryFitment(
         type: "accessory",
         category: "hub_ring",
         sku: `HR-${spec.outerDiameter.toFixed(0)}-${spec.innerDiameter.toFixed(0)}`,
-        name: `Hub Centric Ring ${formatHubRingSpec(spec)}`,
-        unitPrice: 8.00, // Placeholder
-        quantity: 4,
+        name: `Hub Rings — Included (${formatHubRingSpec(spec)})`,
+        unitPrice: 0, // Included
+        quantity: 1,
         required: true,
         reason: fitment.hubRings.reason,
         wheelSku: wheel.sku,
@@ -244,44 +245,52 @@ export function calculateAccessoryFitment(
   const recommendedItems: CartAccessoryItem[] = [];
   const requiredItems: CartAccessoryItem[] = [];
 
-  // Lug nuts
+  // Lug nuts (REQUIRED install hardware: included $0 line, real SKU resolved later)
   if (fitment.lugNuts.status === "required" && fitment.lugNuts.spec) {
     const spec = fitment.lugNuts.spec as LugNutSpec;
+    const threadLabel = formatThreadSize(spec);
     const item: CartAccessoryItem = {
       type: "accessory",
       category: "lug_nut",
-      sku: `LUG-${spec.isMetric ? "M" : ""}${spec.threadDiameter}-${spec.seatType.toUpperCase()}`,
-      name: `${spec.seatType.charAt(0).toUpperCase() + spec.seatType.slice(1)} Lug Nut ${formatThreadSize(spec)}`,
-      unitPrice: 2.50,
-      quantity: spec.quantity,
+      // Placeholder SKU; will be replaced by WheelPros/Gorilla kit SKU via server lookup.
+      sku: `LUGKIT-${threadLabel}`,
+      name: `Standard Lug Kit — Included`,
+      unitPrice: 0,
+      quantity: 1,
       required: true,
       reason: fitment.lugNuts.reason,
       wheelSku: wheel.sku,
       spec: {
-        threadSize: formatThreadSize(spec),
+        threadSize: threadLabel,
         seatType: spec.seatType,
+      },
+      meta: {
+        placeholder: true,
       },
     };
     recommendedItems.push(item);
     requiredItems.push(item);
   }
 
-  // Hub rings
+  // Hub rings (REQUIRED install hardware: always included $0)
   if (fitment.hubRings.status === "required" && fitment.hubRings.spec) {
     const spec = fitment.hubRings.spec as HubRingSpec;
     const item: CartAccessoryItem = {
       type: "accessory",
       category: "hub_ring",
       sku: `HR-${spec.outerDiameter.toFixed(0)}-${spec.innerDiameter.toFixed(0)}`,
-      name: `Hub Centric Ring ${formatHubRingSpec(spec)}`,
-      unitPrice: 8.00,
-      quantity: 4,
+      name: `Hub Rings — Included (${formatHubRingSpec(spec)})`,
+      unitPrice: 0,
+      quantity: 1,
       required: true,
       reason: fitment.hubRings.reason,
       wheelSku: wheel.sku,
       spec: {
         outerDiameter: spec.outerDiameter,
         innerDiameter: spec.innerDiameter,
+      },
+      meta: {
+        included: true,
       },
     };
     recommendedItems.push(item);
