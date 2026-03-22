@@ -148,24 +148,33 @@ export async function GET(req: Request) {
       }
 
       // Rebuild profile after import (should now hit DB)
-      // Add retry logic to handle potential race condition
-      console.log(`[fitment-search] LEGACY Attempting to load profile with: trim=${trim}, importedSlug=${importRes.modificationSlug}`);
+      // The import may have stored a different trim value (e.g., "325i" instead of "3d1c8c0a9b")
+      // Try multiple lookup strategies
+      console.log(`[fitment-search] LEGACY Attempting to load profile with: trim=${trim}, importedSlug=${importRes.modificationSlug}, importedTrim=${importRes.vehicle?.trim}`);
       
-      let retries = 0;
-      const maxRetries = 3;
-      const retryDelayMs = 100;
+      // Strategy 1: Try with original trim (modificationId)
+      profile = await buildFitmentProfile(db, Number(year), make, model, trim);
       
-      while (retries < maxRetries && !profile) {
-        if (retries > 0) {
-          console.log(`[fitment-search] Retry ${retries}/${maxRetries} after ${retryDelayMs}ms...`);
-          await new Promise(r => setTimeout(r, retryDelayMs));
-        }
-        profile = await buildFitmentProfile(db, Number(year), make, model, trim);
-        retries++;
+      // Strategy 2: Try with imported modification slug
+      if (!profile && importRes.modificationSlug && importRes.modificationSlug !== trim) {
+        console.log(`[fitment-search] Trying with modificationSlug: ${importRes.modificationSlug}`);
+        profile = await buildFitmentProfile(db, Number(year), make, model, importRes.modificationSlug);
+      }
+      
+      // Strategy 3: Try with vehicle trim from import result
+      if (!profile && importRes.vehicle?.trim && importRes.vehicle.trim !== trim && importRes.vehicle.trim !== importRes.modificationSlug) {
+        console.log(`[fitment-search] Trying with imported vehicle trim: ${importRes.vehicle.trim}`);
+        profile = await buildFitmentProfile(db, Number(year), make, model, importRes.vehicle.trim);
+      }
+      
+      // Strategy 4: Try with slug from imported vehicle
+      if (!profile && importRes.vehicle?.slug) {
+        console.log(`[fitment-search] Trying with imported vehicle slug: ${importRes.vehicle.slug}`);
+        profile = await buildFitmentProfile(db, Number(year), make, model, importRes.vehicle.slug);
       }
       
       if (profile) {
-        console.log(`[fitment-search] Profile loaded after ${retries} attempt(s)`);
+        console.log(`[fitment-search] Profile loaded via fallback strategy`);
       }
 
       if (!profile && importRes.vehicle) {
