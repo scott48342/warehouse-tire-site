@@ -222,15 +222,29 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Wh
   // Use normalized model for alias matching (e.g., "RX 350" → "rx")
   const normalizedNeedle = normalizeModelForApi(modelName);
   
-  return models.find(m => {
-    const slug = m.slug?.toLowerCase() || "";
-    const name = m.name?.toLowerCase() || "";
-    return slug === needle || 
-           slug === needleNoHyphen ||
-           slug === normalizedNeedle ||  // Match alias (rx-350 → rx)
-           name === needle ||
-           name === needleNoHyphen;
-  }) || null;
+  const isMercedes = toSlug(makeSlug) === "mercedes" || toSlug(makeSlug) === "mercedes-benz";
+  const mercedesAltSlugs = isMercedes
+    ? [
+        `${normalizedNeedle}-class`,
+        `${normalizedNeedle}-class-coupe`,
+        `${normalizedNeedle}-class-suv`,
+      ]
+    : [];
+
+  return (
+    models.find(m => {
+      const slug = m.slug?.toLowerCase() || "";
+      const name = m.name?.toLowerCase() || "";
+      return (
+        slug === needle ||
+        slug === needleNoHyphen ||
+        slug === normalizedNeedle || // Match alias (rx-350 → rx)
+        (isMercedes && mercedesAltSlugs.includes(slug)) ||
+        name === needle ||
+        name === needleNoHyphen
+      );
+    }) || null
+  );
 }
 
 /**
