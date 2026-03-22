@@ -218,23 +218,22 @@ async function importModificationsToDb(
         ),
       });
 
-      if (existingSource && existingSource.checksum === checksum) {
-        skipped++;
-        continue;
-      }
-
-      // Upsert source record
+      // Upsert source record (but *never* skip fitment upsert just because the source checksum matches)
       let sourceRecordId: string;
       if (existingSource) {
-        await db
-          .update(fitmentSourceRecords)
-          .set({
-            rawPayload: mod as any,
-            checksum,
-            fetchedAt: new Date(),
-          })
-          .where(eq(fitmentSourceRecords.id, existingSource.id));
         sourceRecordId = existingSource.id;
+        if (existingSource.checksum !== checksum) {
+          await db
+            .update(fitmentSourceRecords)
+            .set({
+              rawPayload: mod as any,
+              checksum,
+              fetchedAt: new Date(),
+            })
+            .where(eq(fitmentSourceRecords.id, existingSource.id));
+        } else {
+          skipped++;
+        }
       } else {
         const [inserted] = await db
           .insert(fitmentSourceRecords)
