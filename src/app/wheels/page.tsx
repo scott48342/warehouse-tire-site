@@ -385,7 +385,8 @@ export default async function WheelsPage({
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
     // but keep it reasonable for performance.
     pageSize: String(upstreamPageSize),
-    fields: "inventory,price,images",
+    // Include properties so we have wheel center bore for required hub ring calculation.
+    fields: "inventory,price,images,properties",
     priceType: "msrp",
     // NOTE: WheelPros docs say company is required for pricing, but in practice passing
     // company can zero results for some accounts/environments. Omit for now.
@@ -1654,6 +1655,7 @@ export default async function WheelsPage({
                         page: String(page),
                       }}
                       dbProfile={dbProfile}
+                      wheelCenterBore={(w as any)?.centerBoreMm != null ? Number((w as any).centerBoreMm) : ((w as any)?.centerbore != null ? Number((w as any).centerbore) : undefined)}
                     />
                   ))}
                 </div>
@@ -1706,6 +1708,7 @@ export default async function WheelsPage({
                       page: String(page),
                     }}
                     dbProfile={dbProfile}
+                    wheelCenterBore={(w as any)?.centerBoreMm != null ? Number((w as any).centerBoreMm) : ((w as any)?.centerbore != null ? Number((w as any).centerbore) : undefined)}
                   />
                 ))
               ) : (

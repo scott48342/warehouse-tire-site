@@ -416,9 +416,16 @@ export async function getFitmentProfile(
   // ─────────────────────────────────────────────────────────────────────────
   
   if (!options?.forceRefresh) {
-    const directResult = await getProfileByModificationIdDirect(year, make, model, modificationId);
+    let directResult: { fitment: any; lookupMs: number } = { fitment: null, lookupMs: 0 };
+    try {
+      directResult = await getProfileByModificationIdDirect(year, make, model, modificationId);
+    } catch (e: any) {
+      // If DB is unavailable/migrating, do not fail the whole request; fall back to API fetch.
+      console.warn(`[profileService] DB lookup failed; falling back to API fetch: ${e?.message || String(e)}`);
+      directResult = { fitment: null, lookupMs: 0 };
+    }
     dbLookupMs = directResult.lookupMs;
-    
+
     if (directResult.fitment) {
       const overrideResult = await applyOverridesWithMeta(directResult.fitment);
       const { quality } = assessFitmentQuality(overrideResult.fitment);
@@ -445,7 +452,13 @@ export async function getFitmentProfile(
     // ─────────────────────────────────────────────────────────────────────────
     
     const aliasStart = Date.now();
-    const aliasResult = await resolveAlias(year, make, model, modificationId);
+    let aliasResult: any = null;
+    try {
+      aliasResult = await resolveAlias(year, make, model, modificationId);
+    } catch (e: any) {
+      console.warn(`[profileService] Alias lookup failed; continuing without alias: ${e?.message || String(e)}`);
+      aliasResult = null;
+    }
     aliasLookupMs = Date.now() - aliasStart;
     
     if (aliasResult) {
@@ -537,65 +550,113 @@ export async function getFitmentProfile(
     // ─────────────────────────────────────────────────────────────────────────
     
     const importStart = Date.now();
-    
-    const { fitmentId, displayTrim } = await importApiDataToDb(
-      year,
-      normalizedMake,
-      normalizedModel,
-      apiData.modification,
-      apiData.vehicleData
-    );
-    
-    importMs = Date.now() - importStart;
-    console.log(`[profileService] IMPORTED: fitmentId=${fitmentId}, canonical=${actualCanonicalId} (${importMs}ms)`);
-    
-    // Store alias if different
-    if (isAlias) {
-      await storeAlias(
-        year, make, model,
-        requestedModId, actualCanonicalId,
-        displayTrim, fitmentId
+
+    try {
+      const { fitmentId, displayTrim } = await importApiDataToDb(
+        year,
+        normalizedMake,
+        normalizedModel,
+        apiData.modification,
+        apiData.vehicleData
       );
-    }
-    
-    // ─────────────────────────────────────────────────────────────────────────
-    // Step 5: Read back the imported record
-    // ─────────────────────────────────────────────────────────────────────────
-    
-    const importedResult = await getProfileByModificationIdDirect(
-      year, make, model, actualCanonicalId
-    );
-    
-    if (!importedResult.fitment) {
-      console.error(`[profileService] IMPORT SUCCEEDED BUT LOOKUP FAILED: ${year} ${make} ${model} canonical=${actualCanonicalId}`);
+
+      importMs = Date.now() - importStart;
+      console.log(`[profileService] IMPORTED: fitmentId=${fitmentId}, canonical=${actualCanonicalId} (${importMs}ms)`);
+
+      // Store alias if different
+      if (isAlias) {
+        await storeAlias(
+          year,
+          make,
+          model,
+          requestedModId,
+          actualCanonicalId,
+          displayTrim,
+          fitmentId
+        );
+      }
+
+      // ─────────────────────────────────────────────────────────────────────────
+      // Step 5: Read back the imported record
+      // ─────────────────────────────────────────────────────────────────────────
+
+      const importedResult = await getProfileByModificationIdDirect(year, make, model, actualCanonicalId);
+
+      if (!importedResult.fitment) {
+        console.error(
+          `[profileService] IMPORT SUCCEEDED BUT LOOKUP FAILED: ${year} ${make} ${model} canonical=${actualCanonicalId}`
+        );
+        return {
+          profile: null,
+          resolutionPath: "not_found",
+          requestedModificationId: requestedModId,
+          canonicalModificationId: actualCanonicalId,
+          aliasUsed: isAlias,
+          source: "not_found",
+          apiCalled: true,
+          overridesApplied: false,
+          timing: { dbLookupMs, aliasLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
+        };
+      }
+
+      const overrideResult = await applyOverridesWithMeta(importedResult.fitment);
+
+      console.log(
+        `[profileService] RESOLVED (importedAlias): ${year} ${make} ${model} mod=${requestedModId} → ${actualCanonicalId}`
+      );
+
       return {
-        profile: null,
-        resolutionPath: "not_found",
+        profile: dbRecordToProfile(overrideResult.fitment, "api"),
+        resolutionPath: "importedAlias",
         requestedModificationId: requestedModId,
         canonicalModificationId: actualCanonicalId,
         aliasUsed: isAlias,
-        source: "not_found",
+        source: "api",
+        apiCalled: true,
+        overridesApplied: overrideResult.changed,
+        timing: { dbLookupMs, aliasLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
+      };
+    } catch (e: any) {
+      // DB import failed (e.g. migrations not present / DB temporarily unavailable).
+      // Still return an API-derived profile so downstream flows (required accessories) work.
+      importMs = Date.now() - importStart;
+      console.warn(`[profileService] IMPORT FAILED; returning API-only profile: ${e?.message || String(e)}`);
+
+      const tech = (apiData as any)?.vehicleData?.technical || {};
+      const threadSize = tech?.wheel_fasteners?.thread_size || null;
+      const centerBoreMm = tech?.centre_bore ? Number(tech.centre_bore) : null;
+      const boltPattern = tech?.bolt_pattern || null;
+
+      return {
+        profile: {
+          modificationId: actualCanonicalId,
+          year,
+          make: normalizedMake,
+          model: normalizedModel,
+          displayTrim: String((apiData as any)?.modification?.name || (apiData as any)?.modification?.trim || "Base"),
+          rawTrim: String((apiData as any)?.modification?.trim || (apiData as any)?.modification?.name || "") || null,
+          boltPattern,
+          centerBoreMm,
+          threadSize,
+          seatType: null,
+          offsetMinMm: null,
+          offsetMaxMm: null,
+          oemWheelSizes: [],
+          oemTireSizes: [],
+          source: "api",
+          apiCalled: true,
+          overridesApplied: false,
+        },
+        resolutionPath: "importedAlias",
+        requestedModificationId: requestedModId,
+        canonicalModificationId: actualCanonicalId,
+        aliasUsed: isAlias,
+        source: "api",
         apiCalled: true,
         overridesApplied: false,
         timing: { dbLookupMs, aliasLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
       };
     }
-    
-    const overrideResult = await applyOverridesWithMeta(importedResult.fitment);
-    
-    console.log(`[profileService] RESOLVED (importedAlias): ${year} ${make} ${model} mod=${requestedModId} → ${actualCanonicalId}`);
-    
-    return {
-      profile: dbRecordToProfile(overrideResult.fitment, "api"),
-      resolutionPath: "importedAlias",
-      requestedModificationId: requestedModId,
-      canonicalModificationId: actualCanonicalId,
-      aliasUsed: isAlias,
-      source: "api",
-      apiCalled: true,
-      overridesApplied: overrideResult.changed,
-      timing: { dbLookupMs, aliasLookupMs, apiCallMs, importMs, totalMs: Date.now() - t0 },
-    };
     
   } catch (err: any) {
     console.error(`[profileService] API ERROR:`, err?.message);

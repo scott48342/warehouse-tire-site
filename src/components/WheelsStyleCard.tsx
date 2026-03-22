@@ -106,7 +106,7 @@ export function WheelsStyleCard({
   wheelSeatType?: string;
 }) {
   const router = useRouter();
-  const { addItem, addAccessories, setAccessoryState } = useCart();
+  const { addItem, addAccessories, setAccessoryState, replaceAccessorySku } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
   // CRITICAL: Use pair.front.sku if available - this is the variant matching displayed size
@@ -309,27 +309,44 @@ export function WheelsStyleCard({
 
           // Auto-add required accessories
           if (fitmentResult.requiredItems.length > 0) {
+            // Auto-add required accessories (lug kits + hub rings)
+            console.log("[WheelsStyleCard] Auto-adding required accessories:",
+              fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
+            );
+            addAccessories(fitmentResult.requiredItems);
+
             // Replace lug kit placeholder SKU with real Gorilla kit SKU + NIP cost (server-side lookup)
-            const lug = fitmentResult.requiredItems.find(i => i.category === "lug_nut");
+            const lug = fitmentResult.requiredItems.find((i) => i.category === "lug_nut");
             if (lug?.spec?.threadSize) {
+              const placeholderSku = lug.sku;
+              const qs = new URLSearchParams({ threadSize: lug.spec.threadSize });
+              if (lug.spec.seatType) qs.set("seatType", lug.spec.seatType);
+
               try {
-                const res = await fetch(`/api/accessories/lugkits?threadSize=${encodeURIComponent(lug.spec.threadSize)}`, {
+                const res = await fetch(`/api/accessories/lugkits?${qs.toString()}`, {
                   headers: { Accept: "application/json" },
                 });
                 const data = await res.json().catch(() => null);
                 if (res.ok && data?.choice?.sku) {
-                  lug.sku = String(data.choice.sku);
-                  (lug as any).meta = { ...(lug as any).meta, nipCost: data.choice.nip, msrp: data.choice.msrp, title: data.choice.title };
+                  replaceAccessorySku(placeholderSku, {
+                    ...lug,
+                    sku: String(data.choice.sku),
+                    meta: {
+                      ...(lug.meta || {}),
+                      placeholder: false,
+                      source: "wheelpros",
+                      brandCode: data.choice.brandCode,
+                      nipCost: data.choice.nip,
+                      msrp: data.choice.msrp,
+                      title: data.choice.title,
+                      threadKey: data.choice.threadKey,
+                    },
+                  });
                 }
               } catch {
                 // ignore, keep placeholder
               }
             }
-
-            console.log("[WheelsStyleCard] Auto-adding required accessories:", 
-              fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
-            );
-            addAccessories(fitmentResult.requiredItems);
           }
 
           // Log accessory decisions

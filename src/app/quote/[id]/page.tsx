@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getPool, getQuote, type QuoteLine } from "@/lib/quotes";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
+import { PrintButton } from "@/components/PrintButton";
 
 export const runtime = "nodejs";
 
@@ -84,9 +85,10 @@ export default async function QuotePage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = await params;
-  const db = getPool();
-  const q = await getQuote(db, String(id));
+  try {
+    const { id } = await params;
+    const db = getPool();
+    const q = await getQuote(db, String(id));
 
   if (!q) {
     return (
@@ -109,8 +111,16 @@ export default async function QuotePage({
   const displayTrim = extractDisplayTrim(v?.trim ?? "");
   const vehicleLabel = [v?.year, v?.make, v?.model, displayTrim].filter(Boolean).join(" ");
 
-  const wheelLine = (snap.lines || []).find((l) => (l as any)?.kind === "product" && (l as any)?.meta?.productType === "wheel") as QuoteLine | undefined;
-  const tireLine = (snap.lines || []).find((l) => (l as any)?.kind === "product" && (l as any)?.meta?.productType === "tire") as QuoteLine | undefined;
+  const wheelLine = (snap.lines || []).find(
+    (l) => (l as any)?.kind === "product" && ((l as any)?.meta?.cartType === "wheel" || (l as any)?.meta?.productType === "wheel")
+  ) as QuoteLine | undefined;
+  const tireLine = (snap.lines || []).find(
+    (l) => (l as any)?.kind === "product" && ((l as any)?.meta?.cartType === "tire" || (l as any)?.meta?.productType === "tire")
+  ) as QuoteLine | undefined;
+
+  const accessoryLines = (snap.lines || []).filter(
+    (l) => (l as any)?.kind === "product" && (l as any)?.meta?.cartType === "accessory"
+  ) as QuoteLine[];
 
   const svcLines = (snap.lines || []).filter((l) => (l as any)?.kind === "catalog") as QuoteLine[];
   const requiredSvc = svcLines.filter((l) => !!(l as any)?.meta?.required);
@@ -121,9 +131,9 @@ export default async function QuotePage({
     tireLine?.sku ? fetchTireDetailsBySku(db, String(tireLine.sku)) : Promise.resolve(null),
   ]);
 
-  return (
-    <main className="bg-neutral-50">
-      <div className="mx-auto max-w-4xl px-4 py-10">
+    return (
+      <main className="bg-neutral-50">
+        <div className="mx-auto max-w-4xl px-4 py-10">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-xs font-semibold text-neutral-600">{BRAND.name} quote</div>
@@ -131,12 +141,7 @@ export default async function QuotePage({
             <div className="mt-1 text-xs text-neutral-600">Saved {new Date(q.created_at).toLocaleString()}</div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={() => window.print()}
-              className="h-10 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900"
-            >
-              Print
-            </button>
+            <PrintButton className="h-10 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900" />
             <Link href="/" className="h-10 rounded-xl bg-neutral-900 px-4 py-2 text-sm font-extrabold text-white">
               Shop
             </Link>
@@ -187,6 +192,27 @@ export default async function QuotePage({
             />
           ) : null}
 
+          {accessoryLines.length ? (
+            <div className="rounded-2xl border border-neutral-200 bg-white p-4">
+              <div className="text-sm font-extrabold text-neutral-900">Required install hardware</div>
+              <div className="mt-3 grid gap-2">
+                {accessoryLines.map((l, i) => {
+                  const meta = (l as any)?.meta || {};
+                  const required = !!meta.required;
+                  const label = required ? `${l.name} (Included)` : l.name;
+                  return (
+                    <LineRow
+                      key={i}
+                      name={label}
+                      price={money(ext(l))}
+                      note={meta?.meta?.nipCost ? `NIP: $${Number(meta.meta.nipCost).toFixed(2)}` : undefined}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          ) : null}
+
           <div className="rounded-2xl border border-neutral-200 bg-white p-4">
             <div className="text-sm font-extrabold text-neutral-900">Required services</div>
             <div className="mt-3 grid gap-2">
@@ -224,9 +250,25 @@ export default async function QuotePage({
             <div className="mt-1">Call: {BRAND.phone.callDisplay} • Email: {BRAND.email}</div>
           </div>
         </div>
-      </div>
-    </main>
-  );
+        </div>
+      </main>
+    );
+  } catch (e: any) {
+    return (
+      <main className="bg-neutral-50">
+        <div className="mx-auto max-w-4xl px-4 py-12">
+          <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+            Quote page error: {e?.message || String(e)}
+          </div>
+          <div className="mt-4">
+            <Link href="/" className="text-sm font-extrabold text-neutral-900 hover:underline">
+              Back to shop
+            </Link>
+          </div>
+        </div>
+      </main>
+    );
+  }
 }
 
 function ProductBlock({
@@ -291,10 +333,13 @@ function ProductBlock({
   );
 }
 
-function LineRow({ name, price }: { name: string; price: string }) {
+function LineRow({ name, price, note }: { name: string; price: string; note?: string }) {
   return (
-    <div className="flex items-center justify-between gap-3 rounded-xl border border-neutral-200 bg-white p-3">
-      <div className="text-sm font-extrabold text-neutral-900">{name}</div>
+    <div className="flex items-start justify-between gap-3 rounded-xl border border-neutral-200 bg-white p-3">
+      <div>
+        <div className="text-sm font-extrabold text-neutral-900">{name}</div>
+        {note ? <div className="text-[11px] text-neutral-500 mt-0.5">{note}</div> : null}
+      </div>
       <div className="text-sm font-extrabold text-neutral-900">{price}</div>
     </div>
   );

@@ -77,6 +77,44 @@ export default function CheckoutPage() {
   });
   const [sameAsBilling, setSameAsBilling] = useState(true);
   const [processing, setProcessing] = useState(false);
+  const [stripeError, setStripeError] = useState<string | null>(null);
+
+  async function startStripeCheckout() {
+    try {
+      setStripeError(null);
+      setProcessing(true);
+
+      const customer = {
+        firstName: shipping.firstName,
+        lastName: shipping.lastName,
+        email: shipping.email,
+        phone: shipping.phone,
+      };
+
+      const res = await fetch("/api/stripe/create-checkout-session", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          items,
+          customer,
+          vehicle,
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.ok || !data?.url) {
+        setStripeError(String(data?.error || data?.detail || "Stripe checkout failed"));
+        setProcessing(false);
+        return;
+      }
+
+      // Redirect to Stripe Checkout
+      window.location.href = String(data.url);
+    } catch (e: any) {
+      setStripeError(e?.message || String(e));
+      setProcessing(false);
+    }
+  }
 
   // Empty cart state
   if (items.length === 0) {
@@ -364,16 +402,18 @@ export default function CheckoutPage() {
                   <h2 className="text-lg font-bold text-neutral-900 mb-4">Payment</h2>
 
                   <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-6 text-center">
-                    <p className="text-neutral-600 mb-3">
-                      Payment processing integration coming soon.
+                    <p className="text-neutral-700 mb-3 font-semibold">
+                      Pay securely with card (Stripe Test Mode)
                     </p>
                     <p className="text-sm text-neutral-500">
-                      For now, please call{" "}
-                      <a href={BRAND.links.tel} className="font-bold text-green-700">
-                        {BRAND.phone.callDisplay}
-                      </a>{" "}
-                      to complete your order.
+                      You will be redirected to Stripe Checkout to complete your purchase.
                     </p>
+
+                    {stripeError ? (
+                      <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                        {stripeError}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
 
@@ -384,12 +424,15 @@ export default function CheckoutPage() {
                   >
                     Back
                   </button>
-                  <a
-                    href={BRAND.links.tel}
-                    className="flex-1 h-12 rounded-xl bg-green-600 font-extrabold text-white hover:bg-green-700 flex items-center justify-center"
+                  <button
+                    onClick={startStripeCheckout}
+                    disabled={processing}
+                    className={`flex-1 h-12 rounded-xl font-extrabold text-white flex items-center justify-center ${
+                      processing ? "bg-neutral-300 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+                    }`}
                   >
-                    📞 Call to Complete Order
-                  </a>
+                    {processing ? "Redirecting…" : "Pay with Card"}
+                  </button>
                 </div>
               </div>
             )}
