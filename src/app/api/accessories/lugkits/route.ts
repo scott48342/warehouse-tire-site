@@ -96,9 +96,26 @@ export async function GET(req: Request) {
 
   const best = parsed.sort((a, b) => a.nip - b.nip)[0];
 
+  // Debug mode: return sample titles to diagnose filtering
+  const debug = url.searchParams.get("debug") === "1";
+  
   if (!best) {
+    // Get sample Gorilla titles to help diagnose
+    const gorillaKits = (res.results || [])
+      .filter((r) => String(r.brand?.code || "") === "GO")
+      .slice(0, 10)
+      .map((r) => ({ sku: r.sku, title: r.title }));
+    
     return NextResponse.json(
-      { ok: false, error: "no_standard_kit_found", threadKey, sampleCount: (res.results || []).length },
+      { 
+        ok: false, 
+        error: "no_standard_kit_found", 
+        threadKey, 
+        needles: titleNeedleForThread(threadKey),
+        sampleCount: (res.results || []).length,
+        gorillaCount: (res.results || []).filter((r) => String(r.brand?.code || "") === "GO").length,
+        ...(debug ? { sampleTitles: gorillaKits } : {}),
+      },
       { status: 404 }
     );
   }
