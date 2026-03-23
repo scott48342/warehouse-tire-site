@@ -17,6 +17,7 @@ function getPool() {
 
 /**
  * Get Y/M/M dropdown values for fitment search
+ * Queries vehicle_fitments table which has year, make, model columns
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -28,36 +29,44 @@ export async function GET(req: Request) {
   try {
     if (type === "years") {
       const { rows } = await pool.query(`
-        SELECT DISTINCT year FROM fitment_modifications
+        SELECT DISTINCT year FROM vehicle_fitments
         WHERE year IS NOT NULL
         ORDER BY year DESC
       `);
-      return NextResponse.json({ years: rows.map((r: any) => r.year) });
+      return NextResponse.json({ years: rows.map((r: any) => String(r.year)) });
     }
 
     if (type === "makes" && year) {
       const { rows } = await pool.query(`
-        SELECT DISTINCT mk.name
-        FROM fitment_makes mk
-        JOIN fitment_models mo ON mo.make_id = mk.make_id
-        JOIN fitment_modifications m ON m.model_id = mo.model_id
-        WHERE m.year = $1
-        ORDER BY mk.name
-      `, [year]);
-      return NextResponse.json({ makes: rows.map((r: any) => r.name) });
+        SELECT DISTINCT make
+        FROM vehicle_fitments
+        WHERE year = $1
+        ORDER BY make
+      `, [parseInt(year, 10)]);
+      // Return properly cased makes (capitalize first letter)
+      return NextResponse.json({
+        makes: rows.map((r: any) =>
+          r.make.split("-").map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+        ),
+      });
     }
 
     if (type === "models" && year && make) {
+      // Normalize make for comparison (lowercase, hyphenated)
+      const normalizedMake = make.toLowerCase().replace(/\s+/g, "-");
       const { rows } = await pool.query(`
-        SELECT DISTINCT mo.name
-        FROM fitment_models mo
-        JOIN fitment_makes mk ON mk.make_id = mo.make_id
-        JOIN fitment_modifications m ON m.model_id = mo.model_id
-        WHERE m.year = $1
-          AND mk.name ILIKE $2
-        ORDER BY mo.name
-      `, [year, make]);
-      return NextResponse.json({ models: rows.map((r: any) => r.name) });
+        SELECT DISTINCT model
+        FROM vehicle_fitments
+        WHERE year = $1
+          AND make ILIKE $2
+        ORDER BY model
+      `, [parseInt(year, 10), normalizedMake]);
+      // Return properly cased models
+      return NextResponse.json({
+        models: rows.map((r: any) =>
+          r.model.split("-").map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+        ),
+      });
     }
 
     return NextResponse.json({ error: "Invalid type or missing params" }, { status: 400 });

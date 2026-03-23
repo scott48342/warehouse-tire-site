@@ -2,23 +2,65 @@
 
 import { useState, useEffect } from "react";
 
-type SettingValue = {
-  value: any;
-  updatedAt: string;
+type Gateway = {
+  id: string;
+  provider: string;
+  display_name: string;
+  enabled: boolean;
+  mode: "test" | "live";
+  priority: number;
+  config: Record<string, any>;
+  secretKeyConfigured: boolean | null;
+  publishableKeyConfigured: boolean | null;
+  updated_at: string;
 };
 
-type Settings = Record<string, SettingValue>;
+type Supplier = {
+  id: string;
+  provider: string;
+  display_name: string;
+  enabled: boolean;
+  priority: number;
+  config: Record<string, any>;
+  apiKeyConfigured: boolean | null;
+  customer_number: string | null;
+  company_code: string | null;
+  warehouse_codes: string[] | null;
+  last_test_at: string | null;
+  last_test_status: "success" | "error" | null;
+  last_test_message: string | null;
+  updated_at: string;
+};
+
+type SiteSettings = {
+  maintenance_mode: boolean;
+};
 
 export default function SettingsPage() {
-  const [settings, setSettings] = useState<Settings>({});
+  const [gateways, setGateways] = useState<Gateway[]>([]);
+  const [suppliers, setSuppliers] = useState<Supplier[]>([]);
+  const [siteSettings, setSiteSettings] = useState<SiteSettings>({ maintenance_mode: false });
   const [loading, setLoading] = useState(true);
+  const [needsMigration, setNeedsMigration] = useState(false);
   const [saving, setSaving] = useState<string | null>(null);
+  const [testing, setTesting] = useState<string | null>(null);
 
-  const fetchSettings = async () => {
+  const fetchData = async () => {
     try {
-      const res = await fetch("/api/admin/settings");
-      const data = await res.json();
-      setSettings(data.settings || {});
+      const [gatewaysRes, suppliersRes, settingsRes] = await Promise.all([
+        fetch("/api/admin/settings/gateways"),
+        fetch("/api/admin/settings/suppliers"),
+        fetch("/api/admin/settings"),
+      ]);
+
+      const gatewaysData = await gatewaysRes.json();
+      const suppliersData = await suppliersRes.json();
+      const settingsData = await settingsRes.json();
+
+      setGateways(gatewaysData.gateways || []);
+      setSuppliers(suppliersData.suppliers || []);
+      setSiteSettings(settingsData.settings?.site?.value || { maintenance_mode: false });
+      setNeedsMigration(gatewaysData.needsMigration || suppliersData.needsMigration);
     } catch (err) {
       console.error("Failed to fetch settings:", err);
     } finally {
@@ -27,24 +69,19 @@ export default function SettingsPage() {
   };
 
   useEffect(() => {
-    fetchSettings();
+    fetchData();
   }, []);
 
-  const updateSetting = async (key: string, value: any) => {
-    setSaving(key);
+  const updateGateway = async (gateway: Gateway, updates: Partial<Gateway>) => {
+    setSaving(gateway.id);
     try {
-      const res = await fetch("/api/admin/settings", {
+      const res = await fetch("/api/admin/settings/gateways", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ key, value }),
+        body: JSON.stringify({ id: gateway.id, provider: gateway.provider, ...updates }),
       });
-
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || "Failed to save");
-      }
-
-      await fetchSettings();
+      if (!res.ok) throw new Error("Failed to save");
+      await fetchData();
     } catch (err: any) {
       alert(err.message);
     } finally {
@@ -52,9 +89,55 @@ export default function SettingsPage() {
     }
   };
 
-  const payments = settings.payments?.value || { stripe_enabled: true };
-  const suppliers = settings.suppliers?.value || { wheelpros_enabled: true, keystone_enabled: true };
-  const site = settings.site?.value || { maintenance_mode: false };
+  const updateSupplier = async (supplier: Supplier, updates: Partial<Supplier>) => {
+    setSaving(supplier.id);
+    try {
+      const res = await fetch("/api/admin/settings/suppliers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: supplier.id, provider: supplier.provider, ...updates }),
+      });
+      if (!res.ok) throw new Error("Failed to save");
+      await fetchData();
+    } catch (err: any) {
+      alert(err.message);
+    } finally {
+      setSaving(null);
+    }
+  };
+
+  const testSupplier = async (supplier: Supplier) => {
+    setTesting(supplier.id);
+    try {
+      const res = await fetch("/api/admin/settings/suppliers/test", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ provider: supplier.provider }),
+      });
+      await fetchData();
+    } catch (err: any) {
+      alert(err.message);
+    } finally {
+      setTesting(null);
+    }
+  };
+
+  const updateSiteSetting = async (key: string, value: any) => {
+    setSaving("site");
+    try {
+      const res = await fetch("/api/admin/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key: "site", value: { ...siteSettings, [key]: value } }),
+      });
+      if (!res.ok) throw new Error("Failed to save");
+      await fetchData();
+    } catch (err: any) {
+      alert(err.message);
+    } finally {
+      setSaving(null);
+    }
+  };
 
   if (loading) {
     return (
@@ -74,147 +157,379 @@ export default function SettingsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Payments */}
-        <SettingsCard
-          icon="💳"
-          title="Payments"
-          description="Payment processing configuration"
-        >
-          <ToggleSetting
-            label="Stripe Checkout"
-            description="Enable Stripe payment processing"
-            enabled={payments.stripe_enabled}
-            saving={saving === "payments"}
-            onChange={(enabled) =>
-              updateSetting("payments", { ...payments, stripe_enabled: enabled })
-            }
-          />
+      {needsMigration && (
+        <div className="bg-amber-900/30 border border-amber-700 rounded-lg p-4 text-amber-300">
+          <strong>Migration Required:</strong> Run the database migration to enable multi-gateway and multi-supplier support.
+          <code className="block mt-2 bg-neutral-800 p-2 rounded text-sm">
+            npx drizzle-kit push
+          </code>
+        </div>
+      )}
 
-          <div className="mt-4 pt-4 border-t border-neutral-700">
-            <div className="text-xs text-neutral-500">
-              <strong>Note:</strong> Stripe API keys are configured via environment variables
-              (STRIPE_SECRET_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) and cannot be
-              changed here for security.
-            </div>
-          </div>
-        </SettingsCard>
-
-        {/* Suppliers */}
-        <SettingsCard
-          icon="🏭"
-          title="Suppliers"
-          description="Supplier integration settings"
-        >
-          <ToggleSetting
-            label="WheelPros"
-            description="Wheels and accessories supplier"
-            enabled={suppliers.wheelpros_enabled}
-            saving={saving === "suppliers"}
-            onChange={(enabled) =>
-              updateSetting("suppliers", { ...suppliers, wheelpros_enabled: enabled })
-            }
-          />
-
-          <div className="mt-3">
-            <ToggleSetting
-              label="Keystone"
-              description="Tires supplier"
-              enabled={suppliers.keystone_enabled}
-              saving={saving === "suppliers"}
-              onChange={(enabled) =>
-                updateSetting("suppliers", { ...suppliers, keystone_enabled: enabled })
-              }
+      {/* Payment Gateways */}
+      <section>
+        <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <span>💳</span> Payment Gateways
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {gateways.map((gateway) => (
+            <GatewayCard
+              key={gateway.id}
+              gateway={gateway}
+              saving={saving === gateway.id}
+              onUpdate={(updates) => updateGateway(gateway, updates)}
             />
-          </div>
+          ))}
+          
+          {/* Coming Soon Cards */}
+          <ComingSoonCard
+            icon="🏦"
+            title="Square"
+            description="Square payment processing"
+          />
+          <ComingSoonCard
+            icon="🅿️"
+            title="PayPal"
+            description="PayPal checkout"
+          />
+        </div>
+      </section>
 
-          <div className="mt-4 pt-4 border-t border-neutral-700">
-            <div className="text-xs text-neutral-500">
-              Disabling a supplier will hide products from that source in search results.
-            </div>
-          </div>
-        </SettingsCard>
+      {/* Suppliers */}
+      <section>
+        <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <span>🏭</span> Suppliers
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {suppliers.map((supplier) => (
+            <SupplierCard
+              key={supplier.id}
+              supplier={supplier}
+              saving={saving === supplier.id}
+              testing={testing === supplier.id}
+              onUpdate={(updates) => updateSupplier(supplier, updates)}
+              onTest={() => testSupplier(supplier)}
+            />
+          ))}
 
-        {/* Site */}
-        <SettingsCard
-          icon="🌐"
-          title="Site"
-          description="Site-wide settings"
-        >
+          {/* Coming Soon Cards */}
+          <ComingSoonCard
+            icon="🔧"
+            title="K&M Tire"
+            description="K&M tire supplier integration"
+          />
+          <ComingSoonCard
+            icon="📦"
+            title="Custom Supplier"
+            description="Add your own supplier via API/FTP"
+          />
+        </div>
+      </section>
+
+      {/* Site Settings */}
+      <section>
+        <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <span>🌐</span> Site Settings
+        </h2>
+        <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-6">
           <ToggleSetting
             label="Maintenance Mode"
             description="Show maintenance page to visitors"
-            enabled={site.maintenance_mode}
+            enabled={siteSettings.maintenance_mode}
             saving={saving === "site"}
-            onChange={(enabled) =>
-              updateSetting("site", { ...site, maintenance_mode: enabled })
-            }
             danger
+            onChange={(enabled) => updateSiteSetting("maintenance_mode", enabled)}
           />
-
           <div className="mt-4 pt-4 border-t border-neutral-700">
             <div className="text-xs text-neutral-500">
               <strong>Warning:</strong> Enabling maintenance mode will prevent customers
               from accessing the shop.
             </div>
           </div>
-        </SettingsCard>
-
-        {/* Future: Multi-tenant */}
-        <SettingsCard
-          icon="🏢"
-          title="Multi-Client"
-          description="Multi-tenant configuration"
-          disabled
-        >
-          <div className="text-sm text-neutral-500">
-            Multi-client configuration will be available in a future update.
-            This will allow running multiple storefronts from a single admin.
-          </div>
-        </SettingsCard>
-      </div>
+        </div>
+      </section>
 
       {/* Environment Info */}
-      <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
+      <section className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
         <h3 className="text-lg font-bold text-white mb-4">Environment</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <EnvItem label="Node Env" value={process.env.NODE_ENV || "development"} />
-          <EnvItem label="Stripe" value={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ? "Configured" : "Not set"} />
+          <EnvItem 
+            label="Stripe Key" 
+            value={gateways.find(g => g.provider === 'stripe')?.secretKeyConfigured ? "Configured" : "Not set"} 
+          />
           <EnvItem label="Database" value="Connected" />
           <EnvItem label="Admin Auth" value="Enabled" />
         </div>
+      </section>
+    </div>
+  );
+}
+
+function GatewayCard({
+  gateway,
+  saving,
+  onUpdate,
+}: {
+  gateway: Gateway;
+  saving: boolean;
+  onUpdate: (updates: Partial<Gateway>) => void;
+}) {
+  const isStripe = gateway.provider === "stripe";
+  const isManual = gateway.provider === "manual";
+
+  return (
+    <div className={`bg-neutral-800 rounded-xl border p-6 ${gateway.enabled ? "border-green-600/50" : "border-neutral-700"}`}>
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">{isStripe ? "💳" : isManual ? "📞" : "💰"}</span>
+          <div>
+            <h3 className="text-white font-bold">{gateway.display_name}</h3>
+            <div className="flex items-center gap-2 mt-1">
+              {gateway.enabled && (
+                <span className={`text-xs px-2 py-0.5 rounded ${
+                  gateway.mode === "live" ? "bg-green-600 text-white" : "bg-amber-600 text-white"
+                }`}>
+                  {gateway.mode === "live" ? "Live" : "Test Mode"}
+                </span>
+              )}
+              {isStripe && gateway.secretKeyConfigured === false && (
+                <span className="text-xs text-red-400">API key not configured</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <ToggleSetting
+          label="Enabled"
+          description={`Accept payments via ${gateway.display_name}`}
+          enabled={gateway.enabled}
+          saving={saving}
+          onChange={(enabled) => onUpdate({ enabled })}
+        />
+
+        {isStripe && gateway.enabled && (
+          <div>
+            <label className="block text-sm font-medium text-neutral-300 mb-2">Mode</label>
+            <div className="flex gap-2">
+              <button
+                onClick={() => onUpdate({ mode: "test" })}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  gateway.mode === "test"
+                    ? "bg-amber-600 text-white"
+                    : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                }`}
+              >
+                Test
+              </button>
+              <button
+                onClick={() => onUpdate({ mode: "live" })}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  gateway.mode === "live"
+                    ? "bg-green-600 text-white"
+                    : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                }`}
+              >
+                Live
+              </button>
+            </div>
+          </div>
+        )}
+
+        {isManual && gateway.enabled && (
+          <div className="text-sm text-neutral-400">
+            Customers will be prompted to call for payment completion.
+          </div>
+        )}
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-neutral-700 text-xs text-neutral-500">
+        {isStripe
+          ? "API keys configured via environment variables (STRIPE_SECRET_KEY)"
+          : isManual
+          ? "No API keys required"
+          : "Configure via environment variables"}
       </div>
     </div>
   );
 }
 
-function SettingsCard({
+function SupplierCard({
+  supplier,
+  saving,
+  testing,
+  onUpdate,
+  onTest,
+}: {
+  supplier: Supplier;
+  saving: boolean;
+  testing: boolean;
+  onUpdate: (updates: Partial<Supplier>) => void;
+  onTest: () => void;
+}) {
+  const [editingFields, setEditingFields] = useState(false);
+  const [customerNumber, setCustomerNumber] = useState(supplier.customer_number || "");
+  const [companyCode, setCompanyCode] = useState(supplier.company_code || "");
+
+  const saveFields = () => {
+    onUpdate({ customer_number: customerNumber, company_code: companyCode });
+    setEditingFields(false);
+  };
+
+  return (
+    <div className={`bg-neutral-800 rounded-xl border p-6 ${supplier.enabled ? "border-green-600/50" : "border-neutral-700"}`}>
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">
+            {supplier.provider === "wheelpros" ? "🛞" : supplier.provider === "keystone" ? "🔑" : "📦"}
+          </span>
+          <div>
+            <h3 className="text-white font-bold">{supplier.display_name}</h3>
+            <div className="flex items-center gap-2 mt-1">
+              {supplier.apiKeyConfigured === false && (
+                <span className="text-xs text-red-400">API key not configured</span>
+              )}
+              {supplier.last_test_status && (
+                <span className={`text-xs ${
+                  supplier.last_test_status === "success" ? "text-green-400" : "text-red-400"
+                }`}>
+                  {supplier.last_test_status === "success" ? "✓ Connected" : "✗ Error"}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <ToggleSetting
+          label="Enabled"
+          description={`Show products from ${supplier.display_name}`}
+          enabled={supplier.enabled}
+          saving={saving}
+          onChange={(enabled) => onUpdate({ enabled })}
+        />
+
+        {supplier.enabled && (
+          <>
+            {editingFields ? (
+              <div className="space-y-3">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-1">
+                    Customer/Dealer Number
+                  </label>
+                  <input
+                    type="text"
+                    value={customerNumber}
+                    onChange={(e) => setCustomerNumber(e.target.value)}
+                    className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                    placeholder="Your dealer number"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-1">
+                    Company Code
+                  </label>
+                  <input
+                    type="text"
+                    value={companyCode}
+                    onChange={(e) => setCompanyCode(e.target.value)}
+                    className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                    placeholder="Company code (if required)"
+                  />
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={saveFields}
+                    className="px-3 py-1.5 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700"
+                  >
+                    Save
+                  </button>
+                  <button
+                    onClick={() => setEditingFields(false)}
+                    className="px-3 py-1.5 rounded-lg bg-neutral-700 text-white text-sm font-medium hover:bg-neutral-600"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-2">
+                {(supplier.customer_number || supplier.company_code) && (
+                  <div className="text-sm">
+                    {supplier.customer_number && (
+                      <div className="text-neutral-400">
+                        Customer #: <span className="text-white">{supplier.customer_number}</span>
+                      </div>
+                    )}
+                    {supplier.company_code && (
+                      <div className="text-neutral-400">
+                        Company Code: <span className="text-white">{supplier.company_code}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+                <button
+                  onClick={() => setEditingFields(true)}
+                  className="text-sm text-red-400 hover:text-red-300"
+                >
+                  {supplier.customer_number || supplier.company_code ? "Edit" : "Add"} credentials
+                </button>
+              </div>
+            )}
+
+            <button
+              onClick={onTest}
+              disabled={testing}
+              className="w-full py-2 rounded-lg bg-neutral-700 text-white text-sm font-medium hover:bg-neutral-600 disabled:opacity-50"
+            >
+              {testing ? "Testing..." : "Test Connection"}
+            </button>
+
+            {supplier.last_test_at && (
+              <div className="text-xs text-neutral-500">
+                Last tested: {new Date(supplier.last_test_at).toLocaleString()}
+                {supplier.last_test_message && (
+                  <div className={supplier.last_test_status === "error" ? "text-red-400" : "text-green-400"}>
+                    {supplier.last_test_message}
+                  </div>
+                )}
+              </div>
+            )}
+          </>
+        )}
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-neutral-700 text-xs text-neutral-500">
+        API keys configured via environment variables
+      </div>
+    </div>
+  );
+}
+
+function ComingSoonCard({
   icon,
   title,
   description,
-  disabled,
-  children,
 }: {
   icon: string;
   title: string;
   description: string;
-  disabled?: boolean;
-  children: React.ReactNode;
 }) {
   return (
-    <div
-      className={`bg-neutral-800 rounded-xl border border-neutral-700 p-6 ${
-        disabled ? "opacity-50" : ""
-      }`}
-    >
-      <div className="flex items-center gap-3 mb-4">
+    <div className="bg-neutral-800/50 rounded-xl border border-neutral-700/50 border-dashed p-6 opacity-60">
+      <div className="flex items-center gap-3 mb-2">
         <span className="text-2xl">{icon}</span>
         <div>
-          <h2 className="text-lg font-bold text-white">{title}</h2>
-          <p className="text-xs text-neutral-400">{description}</p>
+          <h3 className="text-white font-bold">{title}</h3>
+          <span className="text-xs bg-neutral-700 text-neutral-400 px-2 py-0.5 rounded">
+            Coming Soon
+          </span>
         </div>
       </div>
-      {children}
+      <p className="text-sm text-neutral-500">{description}</p>
     </div>
   );
 }
