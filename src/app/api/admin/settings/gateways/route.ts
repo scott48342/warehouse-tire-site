@@ -19,6 +19,8 @@ function getPool() {
  * Get all payment gateways
  */
 export async function GET() {
+  const dbUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  const urlHost = dbUrl ? new URL(dbUrl).host : 'none';
   const pool = getPool();
   try {
     const { rows } = await pool.query(`
@@ -43,7 +45,7 @@ export async function GET() {
       return NextResponse.json({ 
         gateways: [], 
         needsMigration: true,
-        debug: { error: err.message, code: err.code }
+        debug: { error: err.message, code: err.code, dbHost: urlHost }
       });
     }
     console.error("[admin/settings/gateways] GET Error:", err);
