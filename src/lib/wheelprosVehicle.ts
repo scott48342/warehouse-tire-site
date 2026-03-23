@@ -41,8 +41,9 @@ async function getToken(): Promise<string> {
 
 export async function wpVehicleGetJson<T>(path: string, qs?: Record<string, string | undefined>): Promise<T> {
   const token = await getToken();
-  // Most WheelPros vehicle endpoints live under /vehicle/v1/...
-  const url = new URL(path, baseUrl());
+  // Construct URL properly - path should be appended to base, not replace it
+  const base = baseUrl().replace(/\/$/, "");
+  const url = new URL(`${base}${path}`);
   if (qs) {
     for (const [k, v] of Object.entries(qs)) {
       if (v) url.searchParams.set(k, v);
