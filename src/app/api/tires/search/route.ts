@@ -4,16 +4,21 @@
  * Accepts vehicle params (year, make, model, modification) + optional wheelDiameter
  * Returns tires that fit the vehicle.
  * 
+ * Sources:
+ * - WheelPros local database (wp_tires)
+ * - Tirewire (ATD, NTW, US AutoForce) via SOAP API
+ * 
  * Flow:
  * 1. If size param provided → direct size search
  * 2. If vehicle params provided:
  *    a. Get tire sizes for vehicle from tire-sizes API
  *    b. Filter to wheelDiameter if provided
- *    c. Search tires matching those sizes
+ *    c. Search tires matching those sizes from all sources
  */
 
 import { NextResponse } from "next/server";
 import pg from "pg";
+import { searchTiresTirewire, tirewireTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -78,19 +83,24 @@ interface TireResult {
   partNumber: string;
   mfgPartNumber: string;
   brand: string | null;
+  model?: string | null;
   description: string;
   cost: number | null;
+  price?: number | null;
   quantity: { primary: number; alternate: number; national: number };
   imageUrl: string | null;
   size: string;
   simpleSize: string;
   rimDiameter: number | null;
+  tireLibraryId?: number | null;
+  source?: string; // "wheelpros", "tirewire:atd", "tirewire:ntw", etc.
   badges: {
     terrain: string | null;
     construction: string | null;
     warrantyMiles: number | null;
     loadIndex: string | null;
     speedRating: string | null;
+    utqg?: string | null;
   };
 }
 
@@ -151,6 +161,7 @@ async function searchTiresBySize(
       size: tireSize,
       simpleSize: r.simple_size || toSimpleSize(tireSize),
       rimDiameter: extractRimDiameter(tireSize),
+      source: "wheelpros",
       badges: {
         terrain: r.terrain || null,
         construction: r.construction_type || null,
@@ -160,6 +171,103 @@ async function searchTiresBySize(
       },
     };
   });
+}
+
+/**
+ * Search Tirewire suppliers and convert to TireResult format
+ */
+async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]> {
+  try {
+    const results = await searchTiresTirewire(size);
+    const tires: TireResult[] = [];
+    
+    for (const result of results) {
+      for (const tire of result.tires) {
+        const unified = tirewireTireToUnified(tire, result.provider);
+        tires.push({
+          partNumber: unified.partNumber,
+          mfgPartNumber: unified.mfgPartNumber,
+          brand: unified.brand,
+          model: unified.model,
+          description: unified.description,
+          cost: unified.cost,
+          price: unified.price,
+          quantity: unified.quantity,
+          imageUrl: unified.imageUrl,
+          size: unified.size,
+          simpleSize: unified.simpleSize,
+          rimDiameter: unified.rimDiameter,
+          tireLibraryId: unified.tireLibraryId,
+          source: unified.source,
+          badges: {
+            terrain: unified.badges.terrain,
+            construction: unified.badges.construction,
+            warrantyMiles: unified.badges.warrantyMiles,
+            loadIndex: unified.badges.loadIndex,
+            speedRating: unified.badges.speedRating,
+            utqg: unified.badges.utqg,
+          },
+        });
+      }
+    }
+    
+    return tires;
+  } catch (err) {
+    console.error("[tires/search] Tirewire error:", err);
+    return [];
+  }
+}
+
+/**
+ * Merge results from WheelPros and Tirewire, deduplicating by product code.
+ * Tirewire results are preferred when duplicates exist (better images).
+ */
+function mergeTireResults(
+  wpResults: TireResult[],
+  twResults: TireResult[],
+  minQty: number
+): TireResult[] {
+  const merged = new Map<string, TireResult>();
+  
+  // Add Tirewire results first (they have TireLibrary images)
+  for (const tire of twResults) {
+    const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
+    const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
+    if (minQty > 0 && totalQty < minQty) continue;
+    merged.set(key, tire);
+  }
+  
+  // Add WheelPros results if not already present
+  for (const tire of wpResults) {
+    const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
+    if (!merged.has(key)) {
+      merged.set(key, tire);
+    } else {
+      // Tire exists from Tirewire - aggregate quantity if different source
+      const existing = merged.get(key)!;
+      if (existing.source !== tire.source) {
+        // Add WheelPros quantity to existing
+        existing.quantity.national += tire.quantity.national;
+      }
+    }
+  }
+  
+  // Sort by total quantity descending, then by brand
+  return Array.from(merged.values()).sort((a, b) => {
+    const qtyA = a.quantity.primary + a.quantity.alternate + a.quantity.national;
+    const qtyB = b.quantity.primary + b.quantity.alternate + b.quantity.national;
+    if (qtyB !== qtyA) return qtyB - qtyA;
+    return (a.brand || "").localeCompare(b.brand || "");
+  });
+}
+
+function normalizeProductKey(partNumber: string, brand: string | null): string {
+  // Normalize part numbers for comparison
+  // Remove common prefixes/suffixes and normalize case
+  const normalized = String(partNumber || "")
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, "");
+  return `${(brand || "").toUpperCase()}:${normalized}`;
 }
 
 export async function GET(req: Request) {
@@ -184,11 +292,24 @@ export async function GET(req: Request) {
     
     // Case 1: Direct size search
     if (sizeRaw) {
-      const results = await searchTiresBySize(db, sizeRaw, minQty, pageSize);
+      // Query both sources in parallel
+      const [wpResults, twResults] = await Promise.all([
+        searchTiresBySize(db, sizeRaw, minQty, pageSize),
+        searchTiresTirewireFormatted(sizeRaw),
+      ]);
+      
+      // Merge and dedupe by partNumber (prefer Tirewire for images)
+      const merged = mergeTireResults(wpResults, twResults, minQty);
+      const results = merged.slice(0, pageSize);
+      
       return NextResponse.json({
         results,
         mode: "size",
         size: sizeRaw,
+        sources: {
+          wheelpros: wpResults.length,
+          tirewire: twResults.length,
+        },
       });
     }
     
@@ -246,88 +367,49 @@ export async function GET(req: Request) {
       }
     }
     
-    // Build results
-    const allResults: TireResult[] = [];
-    const seenSkus = new Set<string>();
+    // Build results from both sources
+    let wpResults: TireResult[] = [];
+    let twResults: TireResult[] = [];
     
     if (tireSizes.length > 0) {
       // Search using OEM tire sizes (filtered by wheel diameter)
+      const searchPromises: Promise<void>[] = [];
+      
       for (const size of tireSizes.slice(0, 5)) {
-        const results = await searchTiresBySize(db, size, minQty, Math.ceil(pageSize / tireSizes.length));
-        for (const tire of results) {
-          if (!seenSkus.has(tire.partNumber)) {
-            seenSkus.add(tire.partNumber);
-            allResults.push(tire);
-          }
-        }
+        // WheelPros
+        searchPromises.push(
+          searchTiresBySize(db, size, minQty, Math.ceil(pageSize / tireSizes.length))
+            .then((results) => { wpResults.push(...results); })
+        );
+        // Tirewire
+        searchPromises.push(
+          searchTiresTirewireFormatted(size)
+            .then((results) => { twResults.push(...results); })
+        );
       }
+      
+      await Promise.all(searchPromises);
     } else if (wheelDiameter && matchMode === "direct-search") {
       // Direct search by rim diameter when no OEM sizes match
-      // Query tires with matching rim diameter directly
-      const { rows } = await db.query({
-        text: `
-          select
-            t.sku,
-            t.brand_desc,
-            t.tire_description,
-            t.tire_size,
-            t.simple_size,
-            t.terrain,
-            t.construction_type,
-            t.mileage_warranty,
-            t.load_index,
-            t.speed_rating,
-            t.image_url,
-            t.map_usd,
-            t.msrp_usd,
-            coalesce(i.qoh, 0) as qoh
-          from wp_tires t
-          left join wp_inventory i
-            on i.sku = t.sku
-           and i.product_type = 'tire'
-           and i.location_id = 'TOTAL'
-          where t.simple_size like $1
-            and ($2::int is null or coalesce(i.qoh, 0) >= $2::int)
-          order by coalesce(i.qoh, 0) desc, t.brand_desc asc
-          limit $3
-        `,
-        values: [`%${String(wheelDiameter).padStart(2, "0")}`, minQty || null, pageSize],
-      });
+      // Search for common sizes with this rim diameter
+      const commonSizes = [`205/55R${wheelDiameter}`, `225/45R${wheelDiameter}`, `245/40R${wheelDiameter}`];
       
-      for (const r of rows) {
-        const tireSize = r.tire_size || r.simple_size || "";
-        const rim = extractRimDiameter(tireSize);
-        
-        // Only include tires that exactly match the wheel diameter
-        if (rim !== wheelDiameter) continue;
-        
-        const mapUsd0 = n(r.map_usd);
-        const msrpUsd0 = n(r.msrp_usd);
-        const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
-        const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
-        const cost = mapUsd != null ? Math.max(0.01, mapUsd - 50) : msrpUsd;
-        
-        allResults.push({
-          partNumber: String(r.sku),
-          mfgPartNumber: String(r.sku),
-          brand: r.brand_desc || null,
-          description: r.tire_description || tireSize || r.sku,
-          cost: cost != null && Number.isFinite(cost) ? cost : null,
-          quantity: { primary: 0, alternate: 0, national: i(r.qoh) },
-          imageUrl: r.image_url || null,
-          size: tireSize,
-          simpleSize: r.simple_size || toSimpleSize(tireSize),
-          rimDiameter: rim,
-          badges: {
-            terrain: r.terrain || null,
-            construction: r.construction_type || null,
-            warrantyMiles: r.mileage_warranty != null ? i(r.mileage_warranty) : null,
-            loadIndex: r.load_index || null,
-            speedRating: r.speed_rating || null,
-          },
-        });
+      const searchPromises: Promise<void>[] = [];
+      for (const size of commonSizes) {
+        searchPromises.push(
+          searchTiresBySize(db, size, minQty, Math.ceil(pageSize / 3))
+            .then((results) => { wpResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+        );
+        searchPromises.push(
+          searchTiresTirewireFormatted(size)
+            .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+        );
       }
+      await Promise.all(searchPromises);
     }
+    
+    // Merge results from both sources
+    const allResults = mergeTireResults(wpResults, twResults, minQty);
     
     if (allResults.length === 0 && !wheelDiameter) {
       return NextResponse.json({
@@ -339,17 +421,15 @@ export async function GET(req: Request) {
       });
     }
     
-    // Sort by stock and limit
-    allResults.sort((a, b) => b.quantity.national - a.quantity.national);
-    const results = allResults.slice(0, pageSize);
-    
     // Final strict filter: only return tires matching wheelDiameter
-    const finalResults = wheelDiameter
-      ? results.filter((t) => t.rimDiameter === wheelDiameter)
-      : results;
+    const filteredResults = wheelDiameter
+      ? allResults.filter((t) => t.rimDiameter === wheelDiameter)
+      : allResults;
+    
+    const finalResults = filteredResults.slice(0, pageSize);
     
     // If strict filtering leaves us empty but we have results, return error
-    if (wheelDiameter && finalResults.length === 0 && results.length > 0) {
+    if (wheelDiameter && finalResults.length === 0 && allResults.length > 0) {
       return NextResponse.json({
         results: [],
         mode: "vehicle",
@@ -370,6 +450,10 @@ export async function GET(req: Request) {
       oemTireSizes,
       matchMode,
       fitmentSource,
+      sources: {
+        wheelpros: wpResults.length,
+        tirewire: twResults.length,
+      },
     });
   } catch (e: any) {
     console.error("[tires/search] Error:", e);
