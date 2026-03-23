@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { trackLiftedEntryClick } from "@/lib/analytics";
 
 function EntryTile({
   title,
@@ -31,15 +32,18 @@ function EntryTileLink({
   subtitle,
   href,
   accent,
+  onClick,
 }: {
   title: string;
   subtitle: string;
   href: string;
   accent?: boolean;
+  onClick?: () => void;
 }) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`group relative overflow-hidden rounded-3xl border p-6 text-left ${
         accent
           ? "border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 hover:border-amber-400"
@@ -74,6 +78,7 @@ export function HomeFitmentEntry() {
           subtitle="Build your lifted truck or SUV setup."
           href="/lifted"
           accent
+          onClick={() => trackLiftedEntryClick()}
         />
         <EntryTile
           title="Shop tires"

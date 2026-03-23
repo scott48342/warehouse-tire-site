@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { trackLiftPresetSelect, trackLiftedCtaClick } from "@/lib/analytics";
 
 // Lift presets - extensible structure for future fitment logic
 const LIFT_PRESETS = [
@@ -326,6 +327,21 @@ export default function LiftedPage() {
         </div>
       </section>
 
+      {/* Safety Disclaimer */}
+      <section className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+          <div className="flex gap-3">
+            <span className="text-amber-600 text-lg">⚠️</span>
+            <div className="text-sm text-amber-900">
+              <strong>Important:</strong> Lift presets are general guidance only. Final tire and wheel fitment may vary 
+              based on your specific lift kit, wheel offset, tire size, fender trimming, and other modifications. 
+              We recommend verifying fitment with our team before ordering.{" "}
+              <a href="tel:+12483324120" className="font-semibold underline">Call 248-332-4120</a> for personalized advice.
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-10">
         <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
           {/* Main content */}
@@ -347,7 +363,10 @@ export default function LiftedPage() {
                     key={preset.id}
                     preset={preset}
                     selected={selectedLift?.id === preset.id}
-                    onSelect={() => setSelectedLift(preset)}
+                    onSelect={() => {
+                      setSelectedLift(preset);
+                      trackLiftPresetSelect(preset.id, preset.liftInches);
+                    }}
                   />
                 ))}
               </div>
@@ -433,9 +452,18 @@ export default function LiftedPage() {
 
               {/* CTA */}
               <div className="mt-6">
-                {ctaUrl ? (
+                {ctaUrl && selectedLift && selectedVehicle ? (
                   <Link
                     href={ctaUrl}
+                    onClick={() => {
+                      trackLiftedCtaClick({
+                        liftPreset: selectedLift.id,
+                        liftInches: selectedLift.liftInches,
+                        year: selectedVehicle.year,
+                        make: selectedVehicle.make,
+                        model: selectedVehicle.model,
+                      });
+                    }}
                     className="flex h-14 w-full items-center justify-center rounded-xl bg-amber-500 text-base font-extrabold text-white hover:bg-amber-600 transition-colors"
                   >
                     Shop Tires for This Setup →
