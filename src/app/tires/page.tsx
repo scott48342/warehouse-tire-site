@@ -271,6 +271,33 @@ export default async function TiresPage({
   // Package flow detection - user came from wheel selection
   const isPackageFlow = Boolean(wheelSku);
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LIFTED BUILD CONTEXT
+  // ═══════════════════════════════════════════════════════════════════════════
+  // When user comes from /lifted page, use lifted tire recommendations instead of OEM
+  const liftedSource = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
+  const liftedPreset = safeString(Array.isArray(sp.liftedPreset) ? sp.liftedPreset[0] : sp.liftedPreset);
+  const liftedInchesRaw = safeString(Array.isArray(sp.liftedInches) ? sp.liftedInches[0] : sp.liftedInches);
+  const liftedInches = liftedInchesRaw ? parseInt(liftedInchesRaw, 10) : 0;
+  const liftedTireSizesRaw = safeString(Array.isArray(sp.liftedTireSizes) ? sp.liftedTireSizes[0] : sp.liftedTireSizes);
+  const liftedTireSizes = liftedTireSizesRaw ? liftedTireSizesRaw.split(",").filter(Boolean) : [];
+  const liftedTireDiaMinRaw = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
+  const liftedTireDiaMin = liftedTireDiaMinRaw ? parseInt(liftedTireDiaMinRaw, 10) : 0;
+  const liftedTireDiaMaxRaw = safeString(Array.isArray(sp.liftedTireDiaMax) ? sp.liftedTireDiaMax[0] : sp.liftedTireDiaMax);
+  const liftedTireDiaMax = liftedTireDiaMaxRaw ? parseInt(liftedTireDiaMaxRaw, 10) : 0;
+  
+  // Lifted build is active when we have valid lifted context from URL params
+  const isLiftedBuild = liftedSource === "lifted" && liftedPreset && liftedInches > 0;
+  
+  if (isLiftedBuild) {
+    console.log('[tires/page] 🚀 LIFTED BUILD DETECTED:', {
+      presetId: liftedPreset,
+      liftInches: liftedInches,
+      tireSizes: liftedTireSizes,
+      tireDiameterRange: `${liftedTireDiaMin}"-${liftedTireDiaMax}"`,
+    });
+  }
+
   if (year && make && model && !modification) {
     return (
       <main className="bg-neutral-50">
@@ -321,21 +348,42 @@ export default async function TiresPage({
     ? await fetchFitment({ year, make, model })
     : null;
 
-  // Use dbProfile.oemTireSizes as primary, fallback to legacy API
-  const tireSizesStrict: string[] = dbProfile?.oemTireSizes?.length
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TIRE SIZE RESOLUTION
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Priority:
+  // 1. LIFTED BUILD: Use lifted tire recommendations (e.g., 35x12.50R20)
+  // 2. DB PROFILE: Use oemTireSizes from fitment database
+  // 3. LEGACY API: Fallback to WheelPros/external fitment data
+  
+  // OEM sizes from fitment data (used for non-lifted builds and as fallback)
+  const oemTireSizesStrict: string[] = dbProfile?.oemTireSizes?.length
     ? dbProfile.oemTireSizes.map(String)
     : (Array.isArray(fitmentStrict?.tireSizes) ? fitmentStrict.tireSizes.map(String) : []);
 
-  const tireSizesAgg: string[] = Array.isArray(fitmentAgg?.tireSizes)
+  const oemTireSizesAgg: string[] = Array.isArray(fitmentAgg?.tireSizes)
     ? fitmentAgg.tireSizes.map(String)
     : [];
+
+  // LIFTED BUILD: Override tire sizes with lifted recommendations
+  // When user comes from /lifted page, use those sizes instead of stock OEM
+  const tireSizesStrict: string[] = isLiftedBuild && liftedTireSizes.length > 0
+    ? liftedTireSizes
+    : oemTireSizesStrict;
+
+  // For lifted builds, don't include OEM aggregate sizes (they're stock, not lifted)
+  const tireSizesAgg: string[] = isLiftedBuild
+    ? [] // Don't mix stock sizes with lifted recommendations
+    : oemTireSizesAgg;
 
   const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
   
   // Log tire size source for debugging
   if (hasVehicle) {
     console.log('[tires/page] 📊 Tire sizes:', {
-      source: dbProfile?.oemTireSizes?.length ? 'dbProfile' : 'legacy API',
+      source: isLiftedBuild ? 'LIFTED BUILD' : (dbProfile?.oemTireSizes?.length ? 'dbProfile' : 'legacy API'),
+      isLiftedBuild,
+      liftedSizes: isLiftedBuild ? liftedTireSizes : null,
       strict: tireSizesStrict,
       aggregate: tireSizesAgg.filter(s => !tireSizesStrict.includes(s)),
       total: tireSizes.length,
@@ -790,9 +838,44 @@ export default async function TiresPage({
   // Build query base for pagination
   const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}`;
 
+  // Lifted preset display name for UI
+  const liftedPresetLabel = liftedPreset === "daily" ? "Daily Driver" : liftedPreset === "offroad" ? "Off-Road" : liftedPreset === "extreme" ? "Extreme" : liftedPreset;
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-screen-2xl px-4 py-8">
+        {/* Lifted Build Context Banner */}
+        {isLiftedBuild && hasVehicle ? (
+          <div className="mb-4 rounded-2xl border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
+            <div className="flex items-start gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-xl">🚀</div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-extrabold text-amber-900">Lifted Build Mode</span>
+                  <span className="rounded-full bg-amber-200 px-2 py-0.5 text-xs font-bold text-amber-800">
+                    {liftedInches}" {liftedPresetLabel}
+                  </span>
+                </div>
+                <p className="mt-1 text-sm text-amber-800">
+                  Showing recommended tire sizes for your {liftedInches}" lift — designed for proper clearance and stance.
+                </p>
+                {tireSizesStrict.length > 0 ? (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {tireSizesStrict.slice(0, 4).map((size) => (
+                      <span key={size} className="rounded-lg bg-white/80 border border-amber-200 px-2 py-1 text-xs font-semibold text-amber-900">
+                        {size}
+                      </span>
+                    ))}
+                    {tireSizesStrict.length > 4 ? (
+                      <span className="text-xs text-amber-700">+{tireSizesStrict.length - 4} more</span>
+                    ) : null}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        ) : null}
+
         {/* Package Context Header - when coming from wheel selection */}
         {isPackageFlow && hasVehicle ? (
           <div className="mb-6 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">

@@ -1,10 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { AccessoryRecommendations } from "./AccessoryRecommendations";
+import {
+  loadLiftedContext,
+  liftedContextMatchesVehicle,
+  getLiftedTireSizesForWheel,
+  type LiftedBuildContext,
+} from "@/lib/liftedBuildContext";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -256,7 +262,14 @@ export function CartSlideout() {
   const total = getTotal();
   const itemCount = getItemCount();
 
-  // Build tires URL with vehicle and wheel info
+  // Load lifted context from sessionStorage (if any)
+  // This preserves lifted tire recommendations from /lifted page through the wheel → tire flow
+  const [liftedCtx, setLiftedCtx] = useState<LiftedBuildContext | null>(null);
+  useEffect(() => {
+    setLiftedCtx(loadLiftedContext());
+  }, [isOpen]);
+
+  // Build tires URL with vehicle, wheel, and lifted info
   const tiresParams = new URLSearchParams();
   if (vehicle) {
     tiresParams.set("year", vehicle.year);
@@ -269,6 +282,28 @@ export function CartSlideout() {
     tiresParams.set("wheelSku", wheels[0].sku);
     if (wheels[0].diameter) tiresParams.set("wheelDia", wheels[0].diameter);
     if (wheels[0].width) tiresParams.set("wheelWidth", wheels[0].width);
+  }
+
+  // Include lifted context if it matches the current vehicle
+  // This ensures lifted tire sizes are used instead of OEM sizes
+  if (liftedCtx && vehicle && liftedContextMatchesVehicle(liftedCtx, vehicle)) {
+    tiresParams.set("liftedSource", "lifted");
+    tiresParams.set("liftedPreset", liftedCtx.presetId);
+    tiresParams.set("liftedInches", String(liftedCtx.liftInches));
+    tiresParams.set("liftedTireDiaMin", String(liftedCtx.tireDiameterMin));
+    tiresParams.set("liftedTireDiaMax", String(liftedCtx.tireDiameterMax));
+    
+    // Get tire sizes that match the selected wheel diameter
+    const wheelDia = wheels[0]?.diameter ? parseInt(wheels[0].diameter, 10) : 0;
+    if (wheelDia > 0) {
+      const tireSizesForWheel = getLiftedTireSizesForWheel(liftedCtx, wheelDia);
+      if (tireSizesForWheel.length > 0) {
+        tiresParams.set("liftedTireSizes", tireSizesForWheel.join(","));
+      } else if (liftedCtx.recommendedTireSizes.length > 0) {
+        // Fall back to all recommended sizes if none match this specific wheel dia
+        tiresParams.set("liftedTireSizes", liftedCtx.recommendedTireSizes.join(","));
+      }
+    }
   }
 
   const tiresUrl = `/tires?${tiresParams.toString()}`;

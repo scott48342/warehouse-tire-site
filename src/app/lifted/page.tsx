@@ -20,6 +20,7 @@ import {
   type LiftRecommendation,
   type VehicleLiftProfile,
 } from "@/lib/liftedRecommendations";
+import { saveLiftedContext, type LiftedBuildContext } from "@/lib/liftedBuildContext";
 
 // Lift presets - extensible structure for future fitment logic
 const LIFT_PRESETS = [
@@ -329,13 +330,29 @@ function RecommendationPanel({
   liftPreset: { id: string; liftInches: number };
   vehicle: { year: string; make: string; model: string; trim: string; modification: string };
 }) {
+  // Save lifted context to sessionStorage for the wheel → tire flow
+  // This preserves lifted tire recommendations when continuing to tires
+  useEffect(() => {
+    saveLiftedContext({
+      source: "lifted",
+      presetId: liftPreset.id as LiftedBuildContext["presetId"],
+      liftInches: liftPreset.liftInches,
+      vehicle,
+      recommendedTireSizes: recommendation.commonTireSizes,
+      tireDiameterMin: recommendation.tireDiameterMin,
+      tireDiameterMax: recommendation.tireDiameterMax,
+      offsetMin: recommendation.offsetMin ?? -20,
+      offsetMax: recommendation.offsetMax ?? 0,
+    });
+  }, [liftPreset.id, liftPreset.liftInches, vehicle, recommendation]);
+
   // Build suggested tire category URL (All-Terrain is most common for lifted trucks)
   const tireCategoryUrl = "/tires/c/all-terrain";
 
   // Check if we have full vehicle context for vehicle-aware links
   const hasFullVehicleContext = !!(vehicle.year && vehicle.make && vehicle.model && vehicle.modification);
 
-  // Build vehicle-aware wheel URL with offset params based on lift level
+  // Build vehicle-aware wheel URL with offset params and lifted context
   // IMPORTANT: Always include offset params when we have a recommendation
   // This ensures lifted trucks get appropriate negative offsets, not OEM +35mm
   function buildWheelUrl(diameter: number): string {
@@ -357,6 +374,21 @@ function RecommendationPanel({
       params.set("offsetMin", String(recommendation.offsetMin));
       params.set("offsetMax", String(recommendation.offsetMax));
     }
+    
+    // Include lifted context params so they carry through to tires page
+    params.set("liftedSource", "lifted");
+    params.set("liftedPreset", liftPreset.id);
+    params.set("liftedInches", String(liftPreset.liftInches));
+    // Filter tire sizes that match this wheel diameter
+    const tireSizesForWheel = recommendation.commonTireSizes.filter((size) => {
+      const rimMatch = size.match(/R(\d+)$/i) || size.match(/(\d+)$/);
+      return rimMatch && parseInt(rimMatch[1], 10) === diameter;
+    });
+    if (tireSizesForWheel.length > 0) {
+      params.set("liftedTireSizes", tireSizesForWheel.join(","));
+    }
+    params.set("liftedTireDiaMin", String(recommendation.tireDiameterMin));
+    params.set("liftedTireDiaMax", String(recommendation.tireDiameterMax));
     
     return `/wheels?${params.toString()}`;
   }
