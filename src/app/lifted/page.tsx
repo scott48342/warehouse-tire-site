@@ -327,10 +327,42 @@ function RecommendationPanel({
   recommendation: LiftRecommendation;
   liftName: string;
   liftPreset: { id: string; liftInches: number };
-  vehicle: { year: string; make: string; model: string };
+  vehicle: { year: string; make: string; model: string; trim: string; modification: string };
 }) {
   // Build suggested tire category URL (All-Terrain is most common for lifted trucks)
   const tireCategoryUrl = "/tires/c/all-terrain";
+
+  // Check if we have full vehicle context for vehicle-aware links
+  const hasFullVehicleContext = !!(vehicle.year && vehicle.make && vehicle.model && vehicle.modification);
+
+  // Build vehicle-aware wheel URL
+  function buildWheelUrl(diameter: number): string {
+    if (hasFullVehicleContext) {
+      const params = new URLSearchParams({
+        year: vehicle.year,
+        make: vehicle.make,
+        model: vehicle.model,
+        trim: vehicle.trim,
+        modification: vehicle.modification,
+        diameter: String(diameter),
+      });
+      return `/wheels?${params.toString()}`;
+    }
+    // Fallback: diameter only
+    return `/wheels?diameter=${diameter}`;
+  }
+
+  // Compute display ranges that include popular sizes
+  const allWheelSizes = [
+    recommendation.wheelDiameterMin,
+    recommendation.wheelDiameterMax,
+    ...recommendation.popularWheelSizes,
+  ];
+  const displayWheelMin = Math.min(...allWheelSizes);
+  const displayWheelMax = Math.max(...allWheelSizes);
+  const displayWheelRange = displayWheelMin === displayWheelMax 
+    ? `${displayWheelMin}"` 
+    : `${displayWheelMin}"-${displayWheelMax}"`;
 
   return (
     <div className="rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-5">
@@ -354,11 +386,11 @@ function RecommendationPanel({
           </div>
         </div>
 
-        {/* Wheel Size */}
+        {/* Wheel Size - now shows full range including popular sizes */}
         <div className="rounded-xl bg-white/80 p-4 border border-green-100">
-          <div className="text-xs font-semibold text-neutral-500">Wheel Diameter Range</div>
+          <div className="text-xs font-semibold text-neutral-500">Popular Wheel Sizes</div>
           <div className="mt-1 text-2xl font-extrabold text-neutral-900">
-            {formatWheelDiameterRange(recommendation)}
+            {displayWheelRange}
           </div>
           <div className="mt-2 text-xs text-neutral-600">
             Width: {recommendation.wheelWidthMin}-{recommendation.wheelWidthMax}" •
@@ -398,14 +430,16 @@ function RecommendationPanel({
           </div>
         </div>
 
-        {/* Popular Wheel Sizes */}
+        {/* Popular Wheel Sizes - now vehicle-aware */}
         <div className="mt-4 space-y-2">
-          <div className="text-xs text-neutral-600 mb-2">Shop popular wheel sizes for this build:</div>
+          <div className="text-xs text-neutral-600 mb-2">
+            Shop popular wheel sizes for your {vehicle.year} {vehicle.make} {vehicle.model}:
+          </div>
           <div className="flex flex-wrap gap-2">
             {recommendation.popularWheelSizes.map((dia) => (
               <Link
                 key={dia}
-                href={`/wheels?diameter=${dia}`}
+                href={buildWheelUrl(dia)}
                 onClick={() => {
                   trackLiftedWheelSuggestionClick({
                     liftPreset: liftPreset.id,
@@ -414,6 +448,7 @@ function RecommendationPanel({
                     year: vehicle.year,
                     make: vehicle.make,
                     model: vehicle.model,
+                    vehicleAwareLink: hasFullVehicleContext,
                   });
                 }}
                 className="inline-flex items-center gap-1.5 rounded-lg border border-blue-300 bg-white px-3 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-50 hover:border-blue-400 transition-colors"
@@ -423,6 +458,11 @@ function RecommendationPanel({
               </Link>
             ))}
           </div>
+          {hasFullVehicleContext && (
+            <div className="text-xs text-blue-600">
+              ✓ Links include your vehicle for better results
+            </div>
+          )}
         </div>
 
         {/* Category Link */}
@@ -449,7 +489,7 @@ function RecommendationPanel({
         </div>
 
         <div className="mt-3 text-xs text-neutral-500">
-          💡 These are starting points based on typical setups. Wheel fitment depends on offset, backspacing, and modifications.
+          💡 These are starting points based on typical setups. Larger wheels may require specific offsets and modifications.
         </div>
       </div>
 
@@ -695,6 +735,8 @@ export default function LiftedPage() {
                         year: selectedVehicle.year,
                         make: selectedVehicle.make,
                         model: selectedVehicle.model,
+                        trim: selectedVehicle.trim,
+                        modification: selectedVehicle.modification,
                       }}
                     />
                   ) : (

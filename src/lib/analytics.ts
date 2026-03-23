@@ -113,6 +113,7 @@ export function trackLiftedWheelSuggestionClick(params: {
   year: string;
   make: string;
   model: string;
+  vehicleAwareLink: boolean;
 }) {
   trackEvent("lifted_wheel_suggestion_click", {
     preset_id: params.liftPreset,
@@ -121,6 +122,7 @@ export function trackLiftedWheelSuggestionClick(params: {
     vehicle_year: params.year,
     vehicle_make: params.make,
     vehicle_model: params.model,
+    vehicle_aware_link: params.vehicleAwareLink,
   });
 }
 
