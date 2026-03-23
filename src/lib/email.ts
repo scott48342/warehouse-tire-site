@@ -1,54 +1,187 @@
+import nodemailer from "nodemailer";
 import { BRAND } from "./brand";
 import type { QuoteSnapshot } from "./quotes";
+import pg from "pg";
+
+const { Pool } = pg;
+
+type EmailSettings = {
+  enabled: boolean;
+  smtpHost: string;
+  smtpPort: number;
+  smtpUser: string;
+  smtpPass: string;
+  fromEmail: string;
+  fromName: string;
+  notifyEmail: string; // Admin gets copy of all orders
+};
+
+function getPool() {
+  const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!url) throw new Error("Missing DATABASE_URL");
+  return new Pool({
+    connectionString: url,
+    ssl: { rejectUnauthorized: false },
+    max: 2,
+  });
+}
+
+async function getEmailSettings(): Promise<EmailSettings | null> {
+  const pool = getPool();
+  try {
+    // Ensure table exists
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS admin_settings (
+        key TEXT PRIMARY KEY,
+        value JSONB NOT NULL,
+        updated_at TIMESTAMPTZ DEFAULT NOW()
+      )
+    `);
+
+    const { rows } = await pool.query(
+      `SELECT value FROM admin_settings WHERE key = 'email'`
+    );
+
+    if (rows.length === 0) return null;
+
+    const val = rows[0].value;
+    if (!val || !val.enabled) return null;
+
+    return {
+      enabled: !!val.enabled,
+      smtpHost: val.smtpHost || "",
+      smtpPort: parseInt(val.smtpPort, 10) || 587,
+      smtpUser: val.smtpUser || "",
+      smtpPass: val.smtpPass || "",
+      fromEmail: val.fromEmail || "",
+      fromName: val.fromName || BRAND.name,
+      notifyEmail: val.notifyEmail || "",
+    };
+  } catch (err) {
+    console.error("[email] Failed to get settings:", err);
+    return null;
+  } finally {
+    await pool.end();
+  }
+}
+
+async function getTransporter(settings: EmailSettings) {
+  return nodemailer.createTransport({
+    host: settings.smtpHost,
+    port: settings.smtpPort,
+    secure: settings.smtpPort === 465,
+    auth: {
+      user: settings.smtpUser,
+      pass: settings.smtpPass,
+    },
+  });
+}
 
 /**
- * Send order confirmation email via Resend
+ * Send order confirmation email to customer + notification to admin
  */
 export async function sendOrderConfirmationEmail(
   orderId: string,
-  toEmail: string,
+  customerEmail: string,
   snapshot: QuoteSnapshot
 ): Promise<{ success: boolean; messageId?: string; error?: string }> {
-  const apiKey = process.env.RESEND_API_KEY;
-  
-  if (!apiKey) {
-    console.log("[email] RESEND_API_KEY not configured, skipping email");
+  const settings = await getEmailSettings();
+
+  if (!settings) {
+    console.log("[email] Email not configured in admin settings, skipping");
     return { success: false, error: "email_not_configured" };
   }
 
-  const fromEmail = process.env.RESEND_FROM_EMAIL || `orders@${BRAND.domain || "example.com"}`;
-
-  // Build email HTML
-  const html = buildOrderConfirmationHtml(orderId, snapshot);
-  const text = buildOrderConfirmationText(orderId, snapshot);
+  if (!settings.smtpHost || !settings.smtpUser || !settings.smtpPass) {
+    console.log("[email] SMTP settings incomplete, skipping");
+    return { success: false, error: "smtp_incomplete" };
+  }
 
   try {
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: fromEmail,
-        to: [toEmail],
-        subject: `Order Confirmed: ${orderId} - ${BRAND.name}`,
-        html,
-        text,
-      }),
-    });
+    const transporter = await getTransporter(settings);
+    const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
 
-    if (!res.ok) {
-      const errorData = await res.json().catch(() => ({}));
-      console.error("[email] Resend API error:", res.status, errorData);
-      return { success: false, error: `resend_error_${res.status}` };
+    // Build email content
+    const customerHtml = buildOrderConfirmationHtml(orderId, snapshot, false);
+    const customerText = buildOrderConfirmationText(orderId, snapshot);
+    const adminHtml = buildOrderConfirmationHtml(orderId, snapshot, true);
+
+    const results: string[] = [];
+
+    // Send to customer
+    if (customerEmail) {
+      const customerResult = await transporter.sendMail({
+        from: fromAddress,
+        to: customerEmail,
+        subject: `Order Confirmed: ${orderId} - ${BRAND.name}`,
+        html: customerHtml,
+        text: customerText,
+      });
+      console.log("[email] Customer email sent:", customerResult.messageId);
+      results.push(customerResult.messageId);
     }
 
-    const data = await res.json();
-    console.log("[email] Email sent:", data.id);
-    return { success: true, messageId: data.id };
+    // Send notification to admin
+    if (settings.notifyEmail) {
+      const adminResult = await transporter.sendMail({
+        from: fromAddress,
+        to: settings.notifyEmail,
+        subject: `🛒 New Order: ${orderId} - ${snapshot.customer.firstName} ${snapshot.customer.lastName}`,
+        html: adminHtml,
+        text: customerText,
+      });
+      console.log("[email] Admin notification sent:", adminResult.messageId);
+      results.push(adminResult.messageId);
+    }
+
+    return { success: true, messageId: results.join(", ") };
   } catch (err: any) {
     console.error("[email] Failed to send:", err.message);
+    return { success: false, error: err.message };
+  }
+}
+
+/**
+ * Test email configuration by sending a test message
+ */
+export async function sendTestEmail(
+  toEmail: string
+): Promise<{ success: boolean; error?: string }> {
+  const settings = await getEmailSettings();
+
+  if (!settings) {
+    return { success: false, error: "Email not configured in admin settings" };
+  }
+
+  if (!settings.smtpHost || !settings.smtpUser || !settings.smtpPass) {
+    return { success: false, error: "SMTP settings incomplete" };
+  }
+
+  try {
+    const transporter = await getTransporter(settings);
+    const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
+
+    await transporter.sendMail({
+      from: fromAddress,
+      to: toEmail,
+      subject: `Test Email - ${BRAND.name}`,
+      html: `
+        <div style="font-family: sans-serif; padding: 20px;">
+          <h2>✅ Email Configuration Working</h2>
+          <p>This is a test email from ${BRAND.name}.</p>
+          <p>If you received this, your email settings are configured correctly.</p>
+          <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+          <p style="color: #666; font-size: 12px;">
+            Sent from: ${settings.fromEmail}<br>
+            SMTP: ${settings.smtpHost}:${settings.smtpPort}
+          </p>
+        </div>
+      `,
+      text: `Test Email - ${BRAND.name}\n\nThis is a test email. If you received this, your email settings are configured correctly.`,
+    });
+
+    return { success: true };
+  } catch (err: any) {
     return { success: false, error: err.message };
   }
 }
@@ -57,10 +190,10 @@ function formatMoney(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
 }
 
-function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): string {
+function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, isAdmin: boolean): string {
   const { customer, vehicle, lines, totals } = snapshot;
-  
-  const vehicleLabel = vehicle 
+
+  const vehicleLabel = vehicle
     ? [vehicle.year, vehicle.make, vehicle.model, vehicle.trim].filter(Boolean).join(" ")
     : "";
 
@@ -84,6 +217,15 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): s
     `;
   };
 
+  const adminBanner = isAdmin ? `
+    <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px; margin-bottom: 20px;">
+      <strong>🔔 New Order Notification</strong><br>
+      <span style="font-size: 14px;">Customer: ${customer.firstName} ${customer.lastName}</span><br>
+      ${customer.email ? `<span style="font-size: 14px;">Email: ${customer.email}</span><br>` : ""}
+      ${customer.phone ? `<span style="font-size: 14px;">Phone: ${customer.phone}</span>` : ""}
+    </div>
+  ` : "";
+
   return `
 <!DOCTYPE html>
 <html>
@@ -93,15 +235,17 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): s
   <title>Order Confirmation</title>
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-  
+
   <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #dc2626;">
     <h1 style="margin: 0; color: #dc2626; font-size: 24px;">${BRAND.name}</h1>
   </div>
 
+  ${adminBanner}
+
   <div style="padding: 30px 0;">
     <h2 style="margin: 0 0 10px; color: #16a34a;">✓ Order Confirmed</h2>
     <p style="margin: 0; font-size: 18px;">
-      Thank you for your order, <strong>${customer.firstName}</strong>!
+      ${isAdmin ? `Order from <strong>${customer.firstName} ${customer.lastName}</strong>` : `Thank you for your order, <strong>${customer.firstName}</strong>!`}
     </p>
   </div>
 
@@ -122,7 +266,7 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): s
 
   <div style="margin-bottom: 30px;">
     <h3 style="margin: 0 0 15px; padding-bottom: 10px; border-bottom: 2px solid #333;">Order Details</h3>
-    
+
     <table style="width: 100%; border-collapse: collapse;">
       <thead>
         <tr style="background: #f3f4f6;">
@@ -136,17 +280,17 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): s
           <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Wheels</td></tr>
           ${wheels.map(renderLineItem).join("")}
         ` : ""}
-        
+
         ${tires.length > 0 ? `
           <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Tires</td></tr>
           ${tires.map(renderLineItem).join("")}
         ` : ""}
-        
+
         ${accessories.length > 0 ? `
           <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Accessories</td></tr>
           ${accessories.map(renderLineItem).join("")}
         ` : ""}
-        
+
         ${services.length > 0 ? `
           <tr><td colspan="3" style="padding: 10px 0 5px; font-weight: 600; color: #666;">Services</td></tr>
           ${services.map(renderLineItem).join("")}
@@ -166,17 +310,19 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): s
         <td style="padding: 4px 0; text-align: right;">${formatMoney(totals.tax * 100)}</td>
       </tr>
       <tr style="font-size: 18px; font-weight: 600;">
-        <td style="padding: 10px 0 0; border-top: 2px solid #333;">Total Paid:</td>
+        <td style="padding: 10px 0 0; border-top: 2px solid #333;">Total:</td>
         <td style="padding: 10px 0 0; border-top: 2px solid #333; text-align: right;">${formatMoney(totals.total * 100)}</td>
       </tr>
     </table>
   </div>
 
   <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666; font-size: 14px;">
-    <p style="margin: 0 0 10px;">Questions? Reply to this email or call us.</p>
-    <p style="margin: 0;">
-      <strong>${BRAND.name}</strong>
-    </p>
+    ${isAdmin ? `
+      <p style="margin: 0;"><a href="https://shop.warehousetiredirect.com/admin/orders" style="color: #dc2626;">View in Admin →</a></p>
+    ` : `
+      <p style="margin: 0 0 10px;">Questions? Reply to this email or call us.</p>
+      <p style="margin: 0;"><strong>${BRAND.name}</strong></p>
+    `}
   </div>
 
 </body>
@@ -186,8 +332,8 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot): s
 
 function buildOrderConfirmationText(orderId: string, snapshot: QuoteSnapshot): string {
   const { customer, vehicle, lines, totals } = snapshot;
-  
-  const vehicleLabel = vehicle 
+
+  const vehicleLabel = vehicle
     ? [vehicle.year, vehicle.make, vehicle.model, vehicle.trim].filter(Boolean).join(" ")
     : "";
 
@@ -216,7 +362,7 @@ ${"-".repeat(40)}
 ${"-".repeat(40)}
 Subtotal: $${(totals.partsSubtotal + totals.servicesSubtotal).toFixed(2)}
 Tax: $${totals.tax.toFixed(2)}
-TOTAL PAID: $${totals.total.toFixed(2)}
+TOTAL: $${totals.total.toFixed(2)}
 
 Questions? Reply to this email or call us.
 

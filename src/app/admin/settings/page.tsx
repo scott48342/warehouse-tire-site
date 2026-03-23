@@ -37,10 +37,32 @@ type SiteSettings = {
   maintenance_mode: boolean;
 };
 
+type EmailSettings = {
+  enabled: boolean;
+  smtpHost: string;
+  smtpPort: number;
+  smtpUser: string;
+  smtpPass: string;
+  fromEmail: string;
+  fromName: string;
+  notifyEmail: string;
+  hasPassword?: boolean;
+};
+
 export default function SettingsPage() {
   const [gateways, setGateways] = useState<Gateway[]>([]);
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
   const [siteSettings, setSiteSettings] = useState<SiteSettings>({ maintenance_mode: false });
+  const [emailSettings, setEmailSettings] = useState<EmailSettings>({
+    enabled: false,
+    smtpHost: "",
+    smtpPort: 587,
+    smtpUser: "",
+    smtpPass: "",
+    fromEmail: "",
+    fromName: "Warehouse Tire",
+    notifyEmail: "",
+  });
   const [loading, setLoading] = useState(true);
   const [needsMigration, setNeedsMigration] = useState(false);
   const [saving, setSaving] = useState<string | null>(null);
@@ -48,19 +70,22 @@ export default function SettingsPage() {
 
   const fetchData = async () => {
     try {
-      const [gatewaysRes, suppliersRes, settingsRes] = await Promise.all([
+      const [gatewaysRes, suppliersRes, settingsRes, emailRes] = await Promise.all([
         fetch("/api/admin/settings/gateways"),
         fetch("/api/admin/settings/suppliers"),
         fetch("/api/admin/settings"),
+        fetch("/api/admin/settings/email"),
       ]);
 
       const gatewaysData = await gatewaysRes.json();
       const suppliersData = await suppliersRes.json();
       const settingsData = await settingsRes.json();
+      const emailData = await emailRes.json();
 
       setGateways(gatewaysData.gateways || []);
       setSuppliers(suppliersData.suppliers || []);
       setSiteSettings(settingsData.settings?.site?.value || { maintenance_mode: false });
+      setEmailSettings(emailData);
       setNeedsMigration(gatewaysData.needsMigration || suppliersData.needsMigration);
     } catch (err) {
       console.error("Failed to fetch settings:", err);
@@ -267,6 +292,54 @@ export default function SettingsPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Email Settings */}
+      <section>
+        <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <span>📧</span> Email Notifications
+        </h2>
+        <EmailSettingsCard
+          settings={emailSettings}
+          saving={saving === "email"}
+          testing={testing === "email"}
+          onSave={async (updates) => {
+            setSaving("email");
+            try {
+              const res = await fetch("/api/admin/settings/email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updates),
+              });
+              if (!res.ok) throw new Error("Failed to save");
+              await fetchData();
+            } catch (err: any) {
+              alert(err.message);
+            } finally {
+              setSaving(null);
+            }
+          }}
+          onTest={async (toEmail) => {
+            setTesting("email");
+            try {
+              const res = await fetch("/api/admin/settings/email", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ testTo: toEmail }),
+              });
+              const data = await res.json();
+              if (data.ok) {
+                alert("Test email sent successfully!");
+              } else {
+                alert(`Failed: ${data.error}`);
+              }
+            } catch (err: any) {
+              alert(err.message);
+            } finally {
+              setTesting(null);
+            }
+          }}
+        />
       </section>
 
       {/* Environment Info */}
@@ -687,6 +760,205 @@ function EnvItem({ label, value }: { label: string; value: string }) {
       <div className="text-neutral-500 text-xs">{label}</div>
       <div className={`font-medium ${isGood ? "text-green-400" : "text-white"}`}>
         {value}
+      </div>
+    </div>
+  );
+}
+
+function EmailSettingsCard({
+  settings,
+  saving,
+  testing,
+  onSave,
+  onTest,
+}: {
+  settings: EmailSettings;
+  saving: boolean;
+  testing: boolean;
+  onSave: (updates: Partial<EmailSettings>) => Promise<void>;
+  onTest: (toEmail: string) => Promise<void>;
+}) {
+  const [form, setForm] = useState(settings);
+  const [testEmail, setTestEmail] = useState("");
+
+  // Update form when settings change
+  useEffect(() => {
+    setForm(settings);
+  }, [settings]);
+
+  const handleSave = async () => {
+    await onSave(form);
+  };
+
+  const handleTest = async () => {
+    const email = testEmail || form.notifyEmail || form.fromEmail;
+    if (!email) {
+      alert("Enter an email to send test to");
+      return;
+    }
+    await onTest(email);
+  };
+
+  return (
+    <div className={`bg-neutral-800 rounded-xl border p-6 ${form.enabled ? "border-green-600/50" : "border-neutral-700"}`}>
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">📧</span>
+          <div>
+            <h3 className="text-white font-bold">Email Configuration</h3>
+            <div className="text-xs text-neutral-400 mt-1">
+              {form.enabled 
+                ? settings.hasPassword 
+                  ? "✓ SMTP configured" 
+                  : "⚠️ SMTP password not set"
+                : "Email notifications disabled"}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <ToggleSetting
+          label="Enable Email"
+          description="Send order confirmations and notifications"
+          enabled={form.enabled}
+          saving={saving}
+          onChange={(enabled) => setForm({ ...form, enabled })}
+        />
+
+        {form.enabled && (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  SMTP Host
+                </label>
+                <input
+                  type="text"
+                  value={form.smtpHost}
+                  onChange={(e) => setForm({ ...form, smtpHost: e.target.value })}
+                  className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder="smtp.gmail.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  SMTP Port
+                </label>
+                <input
+                  type="number"
+                  value={form.smtpPort}
+                  onChange={(e) => setForm({ ...form, smtpPort: parseInt(e.target.value) || 587 })}
+                  className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder="587"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  SMTP Username
+                </label>
+                <input
+                  type="text"
+                  value={form.smtpUser}
+                  onChange={(e) => setForm({ ...form, smtpUser: e.target.value })}
+                  className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  SMTP Password {settings.hasPassword && <span className="text-green-400">(set)</span>}
+                </label>
+                <input
+                  type="password"
+                  value={form.smtpPass}
+                  onChange={(e) => setForm({ ...form, smtpPass: e.target.value })}
+                  className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder={settings.hasPassword ? "••••••••" : "App password"}
+                />
+              </div>
+            </div>
+
+            <div className="border-t border-neutral-700 pt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-1">
+                    From Email
+                  </label>
+                  <input
+                    type="email"
+                    value={form.fromEmail}
+                    onChange={(e) => setForm({ ...form, fromEmail: e.target.value })}
+                    className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                    placeholder="orders@yourstore.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-300 mb-1">
+                    From Name
+                  </label>
+                  <input
+                    type="text"
+                    value={form.fromName}
+                    onChange={(e) => setForm({ ...form, fromName: e.target.value })}
+                    className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                    placeholder="Warehouse Tire"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-neutral-700 pt-4">
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  Admin Notification Email
+                </label>
+                <input
+                  type="email"
+                  value={form.notifyEmail}
+                  onChange={(e) => setForm({ ...form, notifyEmail: e.target.value })}
+                  className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder="you@example.com"
+                />
+                <div className="text-xs text-neutral-500 mt-1">
+                  You&apos;ll receive a copy of every order confirmation
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 pt-2">
+              <button
+                onClick={handleSave}
+                disabled={saving}
+                className="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 disabled:opacity-50"
+              >
+                {saving ? "Saving..." : "Save Settings"}
+              </button>
+              
+              <div className="flex-1 flex items-center gap-2">
+                <input
+                  type="email"
+                  value={testEmail}
+                  onChange={(e) => setTestEmail(e.target.value)}
+                  className="flex-1 h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder="Test email to..."
+                />
+                <button
+                  onClick={handleTest}
+                  disabled={testing}
+                  className="px-4 py-2 rounded-lg bg-neutral-700 text-white text-sm font-medium hover:bg-neutral-600 disabled:opacity-50"
+                >
+                  {testing ? "Sending..." : "Send Test"}
+                </button>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-neutral-700 text-xs text-neutral-500">
+        <strong>Gmail users:</strong> Use an App Password (Google Account → Security → App Passwords).
+        Regular passwords won&apos;t work with 2FA enabled.
       </div>
     </div>
   );
