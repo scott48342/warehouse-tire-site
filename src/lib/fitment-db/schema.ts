@@ -277,8 +277,29 @@ export const modificationAliases = pgTable(
 );
 
 // ============================================================================
+// km_image_mappings - Cache for K&M tire image URL mappings
+// ============================================================================
+
+export const kmImageMappings = pgTable(
+  "km_image_mappings",
+  {
+    partNumber: varchar("part_number", { length: 50 }).primaryKey(),
+    prodline: varchar("prodline", { length: 20 }),
+    folderId: varchar("folder_id", { length: 20 }),
+    imageUrl: text("image_url"),
+    fetchedAt: timestamp("fetched_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    prodlineIdx: index("km_image_mappings_prodline_idx").on(table.prodline),
+  })
+);
+
+// ============================================================================
 // Type exports for Drizzle
 // ============================================================================
+
+export type KmImageMapping = typeof kmImageMappings.$inferSelect;
+export type NewKmImageMapping = typeof kmImageMappings.$inferInsert;
 
 export type FitmentSourceRecord = typeof fitmentSourceRecords.$inferSelect;
 export type NewFitmentSourceRecord = typeof fitmentSourceRecords.$inferInsert;
