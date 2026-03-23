@@ -335,21 +335,30 @@ function RecommendationPanel({
   // Check if we have full vehicle context for vehicle-aware links
   const hasFullVehicleContext = !!(vehicle.year && vehicle.make && vehicle.model && vehicle.modification);
 
-  // Build vehicle-aware wheel URL
+  // Check if offset is a single target value (for extreme builds)
+  const isSingleOffsetTarget = recommendation.offsetMin === recommendation.offsetMax;
+
+  // Build vehicle-aware wheel URL with optional offset params
   function buildWheelUrl(diameter: number): string {
+    const params = new URLSearchParams();
+    
     if (hasFullVehicleContext) {
-      const params = new URLSearchParams({
-        year: vehicle.year,
-        make: vehicle.make,
-        model: vehicle.model,
-        trim: vehicle.trim,
-        modification: vehicle.modification,
-        diameter: String(diameter),
-      });
-      return `/wheels?${params.toString()}`;
+      params.set("year", vehicle.year);
+      params.set("make", vehicle.make);
+      params.set("model", vehicle.model);
+      params.set("trim", vehicle.trim);
+      params.set("modification", vehicle.modification);
     }
-    // Fallback: diameter only
-    return `/wheels?diameter=${diameter}`;
+    
+    params.set("diameter", String(diameter));
+    
+    // Include offset params for targeted builds (like -44mm for extreme)
+    if (isSingleOffsetTarget && recommendation.offsetMin !== null) {
+      params.set("offsetMin", String(recommendation.offsetMin));
+      params.set("offsetMax", String(recommendation.offsetMax));
+    }
+    
+    return `/wheels?${params.toString()}`;
   }
 
   // Compute display ranges that include popular sizes
@@ -371,30 +380,41 @@ function RecommendationPanel({
         <h3 className="text-lg font-extrabold">Recommended Setup</h3>
       </div>
       <p className="mt-1 text-sm text-green-800">
-        Typical fitment for {profile.make} {profile.model} with {liftName}
+        {recommendation.stanceDescription} for {profile.make} {profile.model}
       </p>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {/* Tire Size */}
         <div className="rounded-xl bg-white/80 p-4 border border-green-100">
-          <div className="text-xs font-semibold text-neutral-500">Tire Diameter Range</div>
+          <div className="text-xs font-semibold text-neutral-500">Tire Diameter</div>
           <div className="mt-1 text-2xl font-extrabold text-neutral-900">
             {formatTireDiameterRange(recommendation)}
           </div>
           <div className="mt-2 text-xs text-neutral-600">
-            Common sizes: {recommendation.commonTireSizes.slice(0, 3).join(", ")}
+            {recommendation.commonTireSizes.slice(0, 2).join(", ")}
           </div>
         </div>
 
-        {/* Wheel Size - now shows full range including popular sizes */}
+        {/* Wheel Size */}
         <div className="rounded-xl bg-white/80 p-4 border border-green-100">
-          <div className="text-xs font-semibold text-neutral-500">Popular Wheel Sizes</div>
+          <div className="text-xs font-semibold text-neutral-500">Wheel Diameter</div>
           <div className="mt-1 text-2xl font-extrabold text-neutral-900">
             {displayWheelRange}
           </div>
           <div className="mt-2 text-xs text-neutral-600">
-            Width: {recommendation.wheelWidthMin}-{recommendation.wheelWidthMax}" •
-            Offset: {formatOffsetRange(recommendation)}
+            Width: {recommendation.wheelWidthMin}-{recommendation.wheelWidthMax}"
+          </div>
+        </div>
+
+        {/* Offset - now prominent with label */}
+        <div className="rounded-xl bg-white/80 p-4 border border-green-100">
+          <div className="text-xs font-semibold text-neutral-500">Wheel Offset</div>
+          <div className="mt-1 text-2xl font-extrabold text-neutral-900">
+            {recommendation.offsetLabel}
+          </div>
+          <div className="mt-2 text-xs text-neutral-600">
+            {liftPreset.liftInches <= 2 ? "Near-stock look" : 
+             liftPreset.liftInches <= 4 ? "Moderate poke" : "Aggressive poke"}
           </div>
         </div>
       </div>
