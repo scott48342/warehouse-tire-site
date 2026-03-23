@@ -278,8 +278,8 @@ export default function SuppliersPage() {
                 <h3 className="text-white font-bold">TireWeb API Credentials</h3>
                 <p className="text-xs text-neutral-400 mt-1">
                   {tirewebConfig.configured
-                    ? "✓ Access key and group token configured"
-                    : "⏳ Waiting for Tirewire to provide credentials"}
+                    ? "✓ Group token configured"
+                    : "⏳ Enter your group token from Tirewire"}
                 </p>
               </div>
             </div>
@@ -297,19 +297,7 @@ export default function SuppliersPage() {
             <div className="space-y-4 p-4 bg-neutral-900 rounded-lg border border-neutral-700">
               <div>
                 <label className="block text-sm font-medium text-neutral-300 mb-1">
-                  Tirewire Access Key
-                </label>
-                <input
-                  type="password"
-                  value={accessKey}
-                  onChange={(e) => setAccessKey(e.target.value)}
-                  className="w-full h-10 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white"
-                  placeholder="Enter access key from Tirewire"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-neutral-300 mb-1">
-                  Group Token
+                  Group Token <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="password"
@@ -318,11 +306,25 @@ export default function SuppliersPage() {
                   className="w-full h-10 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white"
                   placeholder="Enter group token from Tirewire"
                 />
+                <p className="text-xs text-neutral-500 mt-1">Required - provided by Tirewire</p>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  Access Key <span className="text-neutral-500">(optional)</span>
+                </label>
+                <input
+                  type="password"
+                  value={accessKey}
+                  onChange={(e) => setAccessKey(e.target.value)}
+                  className="w-full h-10 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white"
+                  placeholder="Leave blank to use group token"
+                />
+                <p className="text-xs text-neutral-500 mt-1">If not provided, group token will be used for authentication</p>
               </div>
               <div className="flex gap-2">
                 <button
                   onClick={saveTirewebCredentials}
-                  disabled={savingTireweb === "credentials" || !accessKey || !groupToken}
+                  disabled={savingTireweb === "credentials" || !groupToken}
                   className="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 disabled:opacity-50"
                 >
                   {savingTireweb === "credentials" ? "Saving..." : "Save Credentials"}
@@ -343,7 +345,7 @@ export default function SuppliersPage() {
                 <a href="mailto:developer@tirewire.com" className="text-red-400 hover:underline">
                   developer@tirewire.com
                 </a>{" "}
-                to get credentials.
+                if you need help with credentials.
               </p>
             </div>
           )}
@@ -384,11 +386,14 @@ export default function SuppliersPage() {
       <section className="bg-neutral-800/50 rounded-xl border border-neutral-700/50 p-5">
         <h3 className="text-white font-bold mb-2">How TireWeb works</h3>
         <ul className="text-sm text-neutral-400 space-y-2">
-          <li><strong>1.</strong> Tirewire provides your Access Key, Group Token, and Connection IDs</li>
-          <li><strong>2.</strong> Enter credentials above, then add Connection ID for each supplier</li>
+          <li><strong>1.</strong> Tirewire provides your Group Token and Connection IDs for each supplier</li>
+          <li><strong>2.</strong> Enter the group token above, then add Connection ID for each supplier</li>
           <li><strong>3.</strong> Enable suppliers you want in tire searches</li>
           <li><strong>4.</strong> Inventory aggregates with pricing and TireLibrary images</li>
         </ul>
+        <p className="text-xs text-neutral-500 mt-3">
+          ℹ️ TireLibrary images will automatically appear for all tires returned through TireWeb, including brands like Lexani, Lionhart, Thunderer, etc.
+        </p>
       </section>
     </div>
   );

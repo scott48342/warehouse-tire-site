@@ -42,14 +42,18 @@ function decrypt(encrypted: string): string {
 
 /**
  * Save TireWeb credentials
+ * accessKey is optional - if not provided, groupToken will be used for both
  */
 export async function POST(req: Request) {
   const body = await req.json();
   const { accessKey, groupToken } = body;
 
-  if (!accessKey || !groupToken) {
-    return NextResponse.json({ error: "accessKey and groupToken required" }, { status: 400 });
+  if (!groupToken) {
+    return NextResponse.json({ error: "groupToken required" }, { status: 400 });
   }
+
+  // If accessKey not provided, use groupToken as the accessKey
+  const effectiveAccessKey = accessKey || groupToken;
 
   const pool = getPool();
   try {
@@ -64,7 +68,7 @@ export async function POST(req: Request) {
     `);
 
     // Encrypt and store credentials
-    const encryptedAccessKey = encrypt(accessKey);
+    const encryptedAccessKey = encrypt(effectiveAccessKey);
     const encryptedGroupToken = encrypt(groupToken);
 
     await pool.query(`
