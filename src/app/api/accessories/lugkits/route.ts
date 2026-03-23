@@ -72,8 +72,13 @@ export async function GET(req: Request) {
       }
     }
 
-    // Must be a kit (not loose nuts)
-    if (!t.includes("KIT")) return false;
+    // Must be a kit (not loose nuts or bulk)
+    // Gorilla kits use "5-LUG", "4-LUG", etc. in title, or "-20"/"-24" in SKU
+    const sku = String(r.sku || "").toUpperCase();
+    const isKit = t.includes("5-LUG") || t.includes("4-LUG") || t.includes("6-LUG") ||
+                  t.includes("5LUG") || t.includes("4LUG") || t.includes("6LUG") ||
+                  sku.includes("-20") || sku.includes("-24") || sku.includes("-16");
+    if (!isKit) return false;
 
     return true;
   });
