@@ -16,6 +16,7 @@ type FitmentData = {
 type Modification = {
   modificationId: string;
   trim: string;
+  hasDbData: boolean;
   current: FitmentData;
   override: (FitmentData & { id: string; notes: string; updatedAt: string; createdBy: string }) | null;
 };
@@ -24,6 +25,9 @@ type SearchResult = {
   year: string;
   make: string;
   model: string;
+  trimCount: number;
+  dbMatchCount: number;
+  overrideCount: number;
   modifications: Modification[];
 };
 
@@ -181,11 +185,27 @@ export default function FitmentPage() {
       {/* Results */}
       {result && (
         <div className="space-y-4">
-          <div className="text-lg font-bold text-white">
-            {result.year} {result.make} {result.model}
-            <span className="text-neutral-400 font-normal ml-2">
-              ({result.modifications.length} trim{result.modifications.length !== 1 ? "s" : ""})
-            </span>
+          <div>
+            <div className="text-lg font-bold text-white">
+              {result.year} {result.make} {result.model}
+            </div>
+            <div className="flex items-center gap-4 mt-1 text-sm">
+              <span className="text-neutral-400">
+                {result.trimCount} trim{result.trimCount !== 1 ? "s" : ""}
+              </span>
+              <span className="text-neutral-500">•</span>
+              <span className="text-green-400">
+                {result.dbMatchCount} with base data
+              </span>
+              {result.overrideCount > 0 && (
+                <>
+                  <span className="text-neutral-500">•</span>
+                  <span className="text-amber-400">
+                    {result.overrideCount} override{result.overrideCount !== 1 ? "s" : ""}
+                  </span>
+                </>
+              )}
+            </div>
           </div>
 
           {result.modifications.length === 0 ? (
@@ -308,6 +328,11 @@ function ModificationCard({
           {mod.override && (
             <span className="ml-2 text-xs bg-amber-600 text-white px-2 py-0.5 rounded">
               Override Active
+            </span>
+          )}
+          {!mod.hasDbData && !mod.override && (
+            <span className="ml-2 text-xs bg-neutral-600 text-neutral-300 px-2 py-0.5 rounded">
+              No Base Data
             </span>
           )}
         </div>

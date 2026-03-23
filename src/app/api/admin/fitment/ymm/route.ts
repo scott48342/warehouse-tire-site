@@ -1,79 +1,132 @@
 import { NextResponse } from "next/server";
-import pg from "pg";
 
 export const runtime = "nodejs";
 
-const { Pool } = pg;
-
-function getPool() {
-  const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
-  if (!url) throw new Error("Missing DATABASE_URL");
-  return new Pool({
-    connectionString: url,
-    ssl: { rejectUnauthorized: false },
-    max: 3,
-  });
-}
+/**
+ * Common makes - covers ~95% of US market
+ * Same list as storefront /api/vehicles/makes
+ */
+const MAKES = [
+  "Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Buick",
+  "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari", "Fiat", "Ford",
+  "Genesis", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia",
+  "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "Maserati",
+  "Mazda", "McLaren", "Mercedes-Benz", "Mini", "Mitsubishi", "Nissan",
+  "Polestar", "Porsche", "Ram", "Rivian", "Rolls-Royce", "Subaru", "Tesla",
+  "Toyota", "Volkswagen", "Volvo"
+].sort();
 
 /**
- * Get Y/M/M dropdown values for fitment search
- * Queries vehicle_fitments table which has year, make, model columns
+ * GET /api/admin/fitment/ymm
+ * 
+ * Full-coverage Y/M/M/T picker for admin fitment overrides.
+ * Uses same sources as storefront (static years/makes, Wheel-Size API for models/trims).
+ * 
+ * Query params:
+ *   type=years                        → returns { years: string[] }
+ *   type=makes                        → returns { makes: string[] }
+ *   type=models&year=X&make=Y         → returns { models: string[] }
+ *   type=trims&year=X&make=Y&model=Z  → returns { trims: TrimOption[] }
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const type = url.searchParams.get("type"); // years, makes, models
+  const type = url.searchParams.get("type");
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");
+  const model = url.searchParams.get("model");
 
-  const pool = getPool();
   try {
+    // -------------------------------------------------------------------------
+    // Years: Static list (2000 → current year + 1)
+    // -------------------------------------------------------------------------
     if (type === "years") {
-      const { rows } = await pool.query(`
-        SELECT DISTINCT year FROM vehicle_fitments
-        WHERE year IS NOT NULL
-        ORDER BY year DESC
-      `);
-      return NextResponse.json({ years: rows.map((r: any) => String(r.year)) });
+      const currentYear = new Date().getFullYear();
+      const startYear = 2000;
+      const years: string[] = [];
+      for (let y = currentYear + 1; y >= startYear; y--) {
+        years.push(String(y));
+      }
+      return NextResponse.json({ years });
     }
 
-    if (type === "makes" && year) {
-      const { rows } = await pool.query(`
-        SELECT DISTINCT make
-        FROM vehicle_fitments
-        WHERE year = $1
-        ORDER BY make
-      `, [parseInt(year, 10)]);
-      // Return properly cased makes (capitalize first letter)
-      return NextResponse.json({
-        makes: rows.map((r: any) =>
-          r.make.split("-").map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
-        ),
+    // -------------------------------------------------------------------------
+    // Makes: Static list (~45 makes, covers 95% US market)
+    // -------------------------------------------------------------------------
+    if (type === "makes") {
+      return NextResponse.json({ makes: MAKES });
+    }
+
+    // -------------------------------------------------------------------------
+    // Models: Proxy to storefront /api/vehicles/models
+    // -------------------------------------------------------------------------
+    if (type === "models") {
+      if (!year || !make) {
+        return NextResponse.json({ error: "Missing year or make" }, { status: 400 });
+      }
+
+      // Build internal URL to storefront models API
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}` 
+        : "http://localhost:3000";
+      
+      const modelsUrl = new URL("/api/vehicles/models", baseUrl);
+      modelsUrl.searchParams.set("year", year);
+      modelsUrl.searchParams.set("make", make);
+
+      const res = await fetch(modelsUrl.toString(), { cache: "no-store" });
+      
+      if (!res.ok) {
+        console.error(`[admin/ymm] Models API error: ${res.status}`);
+        return NextResponse.json({ models: [] });
+      }
+
+      const data = await res.json();
+      return NextResponse.json({ models: data.results || [] });
+    }
+
+    // -------------------------------------------------------------------------
+    // Trims: Proxy to storefront /api/vehicles/trims
+    // -------------------------------------------------------------------------
+    if (type === "trims") {
+      if (!year || !make || !model) {
+        return NextResponse.json({ error: "Missing year, make, or model" }, { status: 400 });
+      }
+
+      // Build internal URL to storefront trims API
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}` 
+        : "http://localhost:3000";
+      
+      const trimsUrl = new URL("/api/vehicles/trims", baseUrl);
+      trimsUrl.searchParams.set("year", year);
+      trimsUrl.searchParams.set("make", make);
+      trimsUrl.searchParams.set("model", model);
+
+      const res = await fetch(trimsUrl.toString(), { cache: "no-store" });
+      
+      if (!res.ok) {
+        console.error(`[admin/ymm] Trims API error: ${res.status}`);
+        return NextResponse.json({ trims: [] });
+      }
+
+      const data = await res.json();
+      // Transform to admin-friendly format
+      const trims = (data.results || []).map((t: any) => ({
+        value: t.modificationId || t.value,
+        label: t.label,
+        modificationId: t.modificationId || t.value,
+      }));
+      
+      return NextResponse.json({ 
+        trims,
+        source: data.source || "unknown",
       });
     }
 
-    if (type === "models" && year && make) {
-      // Normalize make for comparison (lowercase, hyphenated)
-      const normalizedMake = make.toLowerCase().replace(/\s+/g, "-");
-      const { rows } = await pool.query(`
-        SELECT DISTINCT model
-        FROM vehicle_fitments
-        WHERE year = $1
-          AND make ILIKE $2
-        ORDER BY model
-      `, [parseInt(year, 10), normalizedMake]);
-      // Return properly cased models
-      return NextResponse.json({
-        models: rows.map((r: any) =>
-          r.model.split("-").map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
-        ),
-      });
-    }
-
-    return NextResponse.json({ error: "Invalid type or missing params" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid type. Use: years, makes, models, trims" }, { status: 400 });
+    
   } catch (err: any) {
     console.error("[admin/fitment/ymm] Error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });
-  } finally {
-    await pool.end();
   }
 }
