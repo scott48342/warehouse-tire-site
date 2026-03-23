@@ -19,8 +19,6 @@ function getPool() {
  * Get all payment gateways
  */
 export async function GET() {
-  const dbUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL;
-  const urlHost = dbUrl ? new URL(dbUrl).host : 'none';
   const pool = getPool();
   try {
     const { rows } = await pool.query(`
@@ -42,14 +40,10 @@ export async function GET() {
   } catch (err: any) {
     // Table might not exist yet
     if (err.message?.includes("does not exist")) {
-      return NextResponse.json({ 
-        gateways: [], 
-        needsMigration: true,
-        debug: { error: err.message, code: err.code, dbHost: urlHost }
-      });
+      return NextResponse.json({ gateways: [], needsMigration: true });
     }
     console.error("[admin/settings/gateways] GET Error:", err);
-    return NextResponse.json({ error: err.message, code: err.code }, { status: 500 });
+    return NextResponse.json({ error: err.message }, { status: 500 });
   } finally {
     await pool.end();
   }
