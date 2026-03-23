@@ -335,10 +335,9 @@ function RecommendationPanel({
   // Check if we have full vehicle context for vehicle-aware links
   const hasFullVehicleContext = !!(vehicle.year && vehicle.make && vehicle.model && vehicle.modification);
 
-  // Check if offset is a single target value (for extreme builds)
-  const isSingleOffsetTarget = recommendation.offsetMin === recommendation.offsetMax;
-
-  // Build vehicle-aware wheel URL with optional offset params
+  // Build vehicle-aware wheel URL with offset params based on lift level
+  // IMPORTANT: Always include offset params when we have a recommendation
+  // This ensures lifted trucks get appropriate negative offsets, not OEM +35mm
   function buildWheelUrl(diameter: number): string {
     const params = new URLSearchParams();
     
@@ -352,8 +351,9 @@ function RecommendationPanel({
     
     params.set("diameter", String(diameter));
     
-    // Include offset params for targeted builds (like -44mm for extreme)
-    if (isSingleOffsetTarget && recommendation.offsetMin !== null) {
+    // Always include offset params for lifted builds to filter out OEM offsets
+    // For example: 4" lift F150 should show -18 to 0mm, not +35mm OEM offset
+    if (recommendation.offsetMin !== null && recommendation.offsetMax !== null) {
       params.set("offsetMin", String(recommendation.offsetMin));
       params.set("offsetMax", String(recommendation.offsetMax));
     }

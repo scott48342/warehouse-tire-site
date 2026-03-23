@@ -351,6 +351,15 @@ async function handleDbFirstWheelResults(opts: {
   const finish = url.searchParams.get("finish");
   const diameter = url.searchParams.get("diameter");
   const width = url.searchParams.get("width");
+  
+  // User-provided offset range (e.g., from lifted page: offsetMin=-18, offsetMax=0)
+  // When provided, this HARD filters results to only show wheels within the specified range
+  // This is critical for lifted trucks to avoid showing OEM +35mm offset wheels
+  const offsetMinParam = url.searchParams.get("offsetMin");
+  const offsetMaxParam = url.searchParams.get("offsetMax");
+  const userOffsetMin = offsetMinParam ? Number(offsetMinParam) : null;
+  const userOffsetMax = offsetMaxParam ? Number(offsetMaxParam) : null;
+  const hasUserOffsetFilter = Number.isFinite(userOffsetMin) || Number.isFinite(userOffsetMax);
 
   // Hard requirement for "in stock only" live validation
   const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
@@ -426,6 +435,18 @@ async function handleDbFirstWheelResults(opts: {
 
     const v = validateWheel(wheelSpec, envelope);
     if (v.fitmentClass === "excluded") continue;
+    
+    // User-provided offset range filter (HARD filter, not classification)
+    // Critical for lifted trucks: e.g., 4" lift F150 needs -18 to 0mm offset, not +35mm OEM
+    if (hasUserOffsetFilter && wheelSpec.offset !== undefined) {
+      const wheelOffset = Number(wheelSpec.offset);
+      if (Number.isFinite(wheelOffset)) {
+        // Check min offset (if provided)
+        if (Number.isFinite(userOffsetMin) && wheelOffset < userOffsetMin!) continue;
+        // Check max offset (if provided)
+        if (Number.isFinite(userOffsetMax) && wheelOffset > userOffsetMax!) continue;
+      }
+    }
 
     fitmentValidCandidates.push({ candidate: c, validation: v });
   }
@@ -597,6 +618,13 @@ async function handleDbFirstWheelResults(opts: {
           offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
         },
       },
+      // User-provided offset filter (from lifted page or manual filter)
+      // When active, this overrides the OEM envelope for hard filtering
+      userOffsetFilter: hasUserOffsetFilter ? {
+        min: userOffsetMin,
+        max: userOffsetMax,
+        active: true,
+      } : null,
       vehicle: {
         year: Number(opts.year),
         make: opts.make,
