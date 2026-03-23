@@ -123,14 +123,15 @@ export async function GET(req: Request) {
       return NextResponse.json(debug);
     }
 
-    // 3. Try a direct SOAP call to the first connection
+    // 3. Try multiple SOAP request formats to find what works
     const conn = connections[0];
-    const soapRequest = `<?xml version="1.0" encoding="utf-8"?>
+    
+    // Format 1: GroupToken only (no AccessKey)
+    const soapRequest1 = `<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">
   <soap:Body>
     <prod:GetTires>
       <prod:options>
-        <prod:AccessKey>${escapeXml(creds.accessKey)}</prod:AccessKey>
         <prod:GroupToken>${escapeXml(creds.groupToken)}</prod:GroupToken>
         <prod:ConnectionID>${conn.connectionId}</prod:ConnectionID>
         <prod:TireSize>${escapeXml(simpleSize)}</prod:TireSize>
@@ -140,48 +141,93 @@ export async function GET(req: Request) {
   </soap:Body>
 </soap:Envelope>`;
 
+    // Format 2: With empty AccessKey
+    const soapRequest2 = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">
+  <soap:Body>
+    <prod:GetTires>
+      <prod:options>
+        <prod:AccessKey></prod:AccessKey>
+        <prod:GroupToken>${escapeXml(creds.groupToken)}</prod:GroupToken>
+        <prod:ConnectionID>${conn.connectionId}</prod:ConnectionID>
+        <prod:TireSize>${escapeXml(simpleSize)}</prod:TireSize>
+        <prod:DetailLevel>10</prod:DetailLevel>
+      </prod:options>
+    </prod:GetTires>
+  </soap:Body>
+</soap:Envelope>`;
+
+    // Format 3: GroupToken as AccessKey (in case they use same field)
+    const soapRequest3 = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">
+  <soap:Body>
+    <prod:GetTires>
+      <prod:options>
+        <prod:AccessKey>${escapeXml(creds.groupToken)}</prod:AccessKey>
+        <prod:GroupToken>${escapeXml(creds.groupToken)}</prod:GroupToken>
+        <prod:ConnectionID>${conn.connectionId}</prod:ConnectionID>
+        <prod:TireSize>${escapeXml(simpleSize)}</prod:TireSize>
+        <prod:DetailLevel>10</prod:DetailLevel>
+      </prod:options>
+    </prod:GetTires>
+  </soap:Body>
+</soap:Envelope>`;
+
+    const soapFormats = [
+      { name: "GroupToken only", body: soapRequest1 },
+      { name: "Empty AccessKey", body: soapRequest2 },
+      { name: "GroupToken as both", body: soapRequest3 },
+    ];
+
+    debug.soapTests = [];
+    
+    for (const format of soapFormats) {
+      const startTime = Date.now();
+      try {
+        const res = await fetch(PRODUCTS_SERVICE_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/xml;charset=UTF-8",
+            "SOAPAction": "http://ws.tirewire.com/connectionscenter/productsservice/GetTires",
+          },
+          body: format.body,
+        });
+        
+        const responseText = await res.text();
+        const tireMatches = responseText.match(/<Tire>/g);
+        const faultMatch = responseText.match(/<faultstring>([\s\S]*?)<\/faultstring>/);
+        
+        debug.soapTests.push({
+          format: format.name,
+          status: res.status,
+          durationMs: Date.now() - startTime,
+          tireCount: tireMatches ? tireMatches.length : 0,
+          fault: faultMatch ? faultMatch[1] : null,
+          success: res.status === 200 && !faultMatch,
+          bodyPreview: responseText.slice(0, 500),
+        });
+        
+        // If this format works, stop testing
+        if (res.status === 200 && !faultMatch && tireMatches && tireMatches.length > 0) {
+          debug.workingFormat = format.name;
+          break;
+        }
+      } catch (err: any) {
+        debug.soapTests.push({
+          format: format.name,
+          error: err.message,
+          durationMs: Date.now() - startTime,
+        });
+      }
+    }
+
     debug.soapRequest = {
       url: PRODUCTS_SERVICE_URL,
       connectionId: conn.connectionId,
       provider: conn.provider,
       tireSize: simpleSize,
+      groupTokenPreview: creds.groupToken ? `${creds.groupToken.slice(0, 8)}...` : null,
     };
-
-    const startTime = Date.now();
-    const res = await fetch(PRODUCTS_SERVICE_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/xml;charset=UTF-8",
-        "SOAPAction": "http://ws.tirewire.com/connectionscenter/productsservice/GetTires",
-      },
-      body: soapRequest,
-    });
-
-    debug.soapResponse = {
-      status: res.status,
-      statusText: res.statusText,
-      durationMs: Date.now() - startTime,
-    };
-
-    const responseText = await res.text();
-    debug.soapResponse.bodyLength = responseText.length;
-    debug.soapResponse.bodyPreview = responseText.slice(0, 2000);
-
-    // Check for errors in response
-    if (responseText.includes("<faultstring>")) {
-      const faultMatch = responseText.match(/<faultstring>([\s\S]*?)<\/faultstring>/);
-      debug.soapResponse.fault = faultMatch ? faultMatch[1] : "Unknown fault";
-    }
-
-    // Count tires in response
-    const tireMatches = responseText.match(/<Tire>/g);
-    debug.soapResponse.tireCount = tireMatches ? tireMatches.length : 0;
-
-    // Extract message if present
-    const messageMatch = responseText.match(/<Message>([\s\S]*?)<\/Message>/);
-    if (messageMatch) {
-      debug.soapResponse.message = messageMatch[1];
-    }
 
     return NextResponse.json(debug);
   } catch (err: any) {
