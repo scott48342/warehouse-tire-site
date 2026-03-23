@@ -85,7 +85,10 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
 }
 
 function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
-  const total = item.unitPrice * item.quantity;
+  // Defensive: handle corrupted items with missing prices
+  const unitPrice = item.unitPrice ?? 0;
+  const quantity = item.quantity ?? 1;
+  const total = unitPrice * quantity;
 
   // Icon based on category
   const iconMap: Record<string, string> = {
@@ -129,7 +132,7 @@ function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
           </span>
           {total > 0 && (
             <span className="text-neutral-500 ml-1">
-              ({item.quantity} × ${item.unitPrice.toFixed(2)})
+              ({quantity} × ${unitPrice.toFixed(2)})
             </span>
           )}
         </div>
