@@ -20,7 +20,10 @@ const FITMENT_LABELS = {
 
 function WheelItemCard({ item }: { item: CartWheelItem }) {
   const fitment = item.fitmentClass ? FITMENT_LABELS[item.fitmentClass] : null;
-  const total = item.unitPrice * item.quantity;
+  // Defensive: handle corrupted items with missing prices
+  const unitPrice = item.unitPrice ?? 0;
+  const quantity = item.quantity ?? 0;
+  const total = unitPrice * quantity;
 
   return (
     <div className="flex gap-4 rounded-xl border border-neutral-200 bg-white p-4">
@@ -70,7 +73,7 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
               ${total.toFixed(2)}
             </span>
             <span className="text-neutral-500 ml-1">
-              ({item.quantity} × ${item.unitPrice.toFixed(2)})
+              ({quantity} × ${unitPrice.toFixed(2)})
             </span>
           </div>
           {fitment ? (
@@ -142,7 +145,10 @@ function AccessoryItemCard({ item }: { item: CartAccessoryItem }) {
 }
 
 function TireItemCard({ item }: { item: CartTireItem }) {
-  const total = item.unitPrice * item.quantity;
+  // Defensive: handle corrupted items with missing prices
+  const unitPrice = item.unitPrice ?? 0;
+  const quantity = item.quantity ?? 0;
+  const total = unitPrice * quantity;
   
   // Build load/speed display (e.g., "102H")
   const loadSpeedDisplay = [item.loadIndex, item.speedRating].filter(Boolean).join("");
@@ -187,7 +193,7 @@ function TireItemCard({ item }: { item: CartTireItem }) {
             ${total.toFixed(2)}
           </span>
           <span className="text-neutral-500 ml-1">
-            ({item.quantity} × ${item.unitPrice.toFixed(2)})
+            ({quantity} × ${unitPrice.toFixed(2)})
           </span>
         </div>
       </div>

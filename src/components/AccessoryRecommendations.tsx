@@ -35,8 +35,9 @@ export function AccessoryRecommendations({
   ];
 
   const hasRequired = requiredItems.length > 0;
+  // Defensive: handle items with missing unitPrice/quantity
   const totalRequiredPrice = requiredItems.reduce(
-    (sum, i) => sum + i.unitPrice * i.quantity,
+    (sum, i) => sum + (i.unitPrice ?? 0) * (i.quantity ?? 0),
     0
   );
 
@@ -238,12 +239,12 @@ function AccessorySection({
                   {item.name}
                 </div>
                 <div className="text-xs text-neutral-500">
-                  Qty: {item.quantity} • ${item.unitPrice.toFixed(2)} each
+                  Qty: {item.quantity ?? 0} • ${(item.unitPrice ?? 0).toFixed(2)} each
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-sm font-bold text-neutral-900">
-                  ${(item.unitPrice * item.quantity).toFixed(2)}
+                  ${((item.unitPrice ?? 0) * (item.quantity ?? 0)).toFixed(2)}
                 </span>
                 {addedSkus.has(item.sku) ? (
                   <span className="text-xs font-semibold text-green-600">✓ Added</span>

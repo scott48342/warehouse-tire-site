@@ -37,10 +37,10 @@ export function PackageSummary({
   const hasPackage = wheels.length > 0;
   const isComplete = wheels.length > 0 && tires.length > 0;
 
-  // Calculate subtotals
-  const wheelSubtotal = wheels.reduce((sum, w) => sum + w.unitPrice * w.quantity, 0);
-  const tireSubtotal = tires.reduce((sum, t) => sum + t.unitPrice * t.quantity, 0);
-  const accessorySubtotal = accessories.reduce((sum, a) => sum + a.unitPrice * a.quantity, 0);
+  // Calculate subtotals (defensive: handle items with missing unitPrice/quantity)
+  const wheelSubtotal = wheels.reduce((sum, w) => sum + (w.unitPrice ?? 0) * (w.quantity ?? 0), 0);
+  const tireSubtotal = tires.reduce((sum, t) => sum + (t.unitPrice ?? 0) * (t.quantity ?? 0), 0);
+  const accessorySubtotal = accessories.reduce((sum, a) => sum + (a.unitPrice ?? 0) * (a.quantity ?? 0), 0);
 
   // Log state changes for debugging
   console.log("[PackageSummary] State update:", {
@@ -105,9 +105,9 @@ export function PackageSummary({
             <div key={w.sku} className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-green-600">✓</span>
-                <span className="font-semibold text-neutral-900">{w.quantity}× {w.brand} {w.model}</span>
+                <span className="font-semibold text-neutral-900">{w.quantity ?? 0}× {w.brand} {w.model}</span>
               </div>
-              <span className="font-semibold text-neutral-700">${(w.unitPrice * w.quantity).toFixed(0)}</span>
+              <span className="font-semibold text-neutral-700">${((w.unitPrice ?? 0) * (w.quantity ?? 0)).toFixed(0)}</span>
             </div>
           ))}
 
@@ -116,9 +116,9 @@ export function PackageSummary({
             <div key={t.sku} className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-green-600">✓</span>
-                <span className="font-semibold text-neutral-900">{t.quantity}× {t.brand} {t.model}</span>
+                <span className="font-semibold text-neutral-900">{t.quantity ?? 0}× {t.brand} {t.model}</span>
               </div>
-              <span className="font-semibold text-neutral-700">${(t.unitPrice * t.quantity).toFixed(0)}</span>
+              <span className="font-semibold text-neutral-700">${((t.unitPrice ?? 0) * (t.quantity ?? 0)).toFixed(0)}</span>
             </div>
           ))}
 
@@ -128,11 +128,11 @@ export function PackageSummary({
               <div className="flex items-center gap-2">
                 <span className="text-green-600">✓</span>
                 <span className="text-neutral-700">
-                  {a.quantity}× {a.name}
+                  {a.quantity ?? 0}× {a.name}
                   {a.required && <span className="ml-1 text-[10px] text-green-700">(Required)</span>}
                 </span>
               </div>
-              <span className="text-neutral-600">${(a.unitPrice * a.quantity).toFixed(0)}</span>
+              <span className="text-neutral-600">${((a.unitPrice ?? 0) * (a.quantity ?? 0)).toFixed(0)}</span>
             </div>
           ))}
 
@@ -212,8 +212,8 @@ export function PackageSummary({
                   </div>
                 </div>
                 <div className="mt-2 flex items-center justify-between text-sm">
-                  <span className="text-neutral-600">{w.quantity}× ${w.unitPrice.toFixed(2)}</span>
-                  <span className="font-extrabold text-neutral-900">${(w.unitPrice * w.quantity).toFixed(2)}</span>
+                  <span className="text-neutral-600">{w.quantity ?? 0}× ${(w.unitPrice ?? 0).toFixed(2)}</span>
+                  <span className="font-extrabold text-neutral-900">${((w.unitPrice ?? 0) * (w.quantity ?? 0)).toFixed(2)}</span>
                 </div>
               </div>
             ))
@@ -252,8 +252,8 @@ export function PackageSummary({
                   </div>
                 </div>
                 <div className="mt-2 flex items-center justify-between text-sm">
-                  <span className="text-neutral-600">{t.quantity}× ${t.unitPrice.toFixed(2)}</span>
-                  <span className="font-extrabold text-neutral-900">${(t.unitPrice * t.quantity).toFixed(2)}</span>
+                  <span className="text-neutral-600">{t.quantity ?? 0}× ${(t.unitPrice ?? 0).toFixed(2)}</span>
+                  <span className="font-extrabold text-neutral-900">${((t.unitPrice ?? 0) * (t.quantity ?? 0)).toFixed(2)}</span>
                 </div>
               </div>
             ))
@@ -291,11 +291,11 @@ export function PackageSummary({
                   <div>
                     <div className="text-xs font-semibold text-neutral-900">{a.name}</div>
                     <div className="text-[10px] text-neutral-600">
-                      {a.quantity}× ${a.unitPrice.toFixed(2)}
+                      {a.quantity ?? 0}× ${(a.unitPrice ?? 0).toFixed(2)}
                       {a.required && <span className="ml-1 text-green-600">(Required)</span>}
                     </div>
                   </div>
-                  <span className="text-xs font-semibold text-neutral-700">${(a.unitPrice * a.quantity).toFixed(2)}</span>
+                  <span className="text-xs font-semibold text-neutral-700">${((a.unitPrice ?? 0) * (a.quantity ?? 0)).toFixed(2)}</span>
                 </div>
               ))}
             </div>
