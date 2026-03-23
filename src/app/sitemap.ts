@@ -1,12 +1,12 @@
 import { MetadataRoute } from 'next'
-import { getTopVehicleSlugs } from '@/lib/seo'
+import { getAllVehicleSlugs } from '@/lib/seo'
 
 const BASE_URL = 'https://shop.warehousetiredirect.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
   
-  // Static pages
+  // Static pages (high priority)
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -27,15 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/cart`,
+      url: `${BASE_URL}/schedule`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.5,
+      priority: 0.7,
     },
   ]
 
-  // SEO vehicle landing pages (top 100 vehicles)
-  const vehicleSlugs = getTopVehicleSlugs()
+  // SEO vehicle landing pages (2000+ vehicles)
+  const vehicleSlugs = getAllVehicleSlugs()
   const vehiclePages: MetadataRoute.Sitemap = vehicleSlugs.map(slug => ({
     url: `${BASE_URL}/tires/for/${slug}`,
     lastModified: now,
@@ -43,5 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...vehiclePages]
+  // Tire category pages
+  const categoryPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/tires/c/all-season`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE_URL}/tires/c/all-terrain`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE_URL}/tires/c/winter`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
+  ]
+
+  return [...staticPages, ...categoryPages, ...vehiclePages]
 }
