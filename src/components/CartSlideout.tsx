@@ -249,6 +249,16 @@ export function CartSlideout() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, setIsOpen]);
 
+  // Load lifted context from sessionStorage (if any)
+  // This preserves lifted tire recommendations from /lifted page through the wheel → tire flow
+  // IMPORTANT: Must be called before early return to satisfy Rules of Hooks
+  const [liftedCtx, setLiftedCtx] = useState<LiftedBuildContext | null>(null);
+  useEffect(() => {
+    if (isOpen) {
+      setLiftedCtx(loadLiftedContext());
+    }
+  }, [isOpen]);
+
   // Lock body scroll when open
   useEffect(() => {
     if (isOpen) {
@@ -270,13 +280,6 @@ export function CartSlideout() {
   const vehicle = lastWheelItem?.vehicle || wheelVehicle;
   const total = getTotal();
   const itemCount = getItemCount();
-
-  // Load lifted context from sessionStorage (if any)
-  // This preserves lifted tire recommendations from /lifted page through the wheel → tire flow
-  const [liftedCtx, setLiftedCtx] = useState<LiftedBuildContext | null>(null);
-  useEffect(() => {
-    setLiftedCtx(loadLiftedContext());
-  }, [isOpen]);
 
   // Build tires URL with vehicle, wheel, and lifted info
   const tiresParams = new URLSearchParams();
