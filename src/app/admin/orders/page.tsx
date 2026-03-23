@@ -18,21 +18,43 @@ function getPool() {
 
 type OrderRow = {
   id: string;
-  customer_first: string;
-  customer_last: string;
+  quote_id: string;
+  status: string;
   customer_email: string | null;
   customer_phone: string | null;
-  vehicle_label: string | null;
+  amount_paid_cents: number;
+  paid_at: string | null;
   snapshot_json: any;
   created_at: string;
-  updated_at: string;
 };
+
+async function ensureOrdersTable(pool: pg.Pool) {
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS orders (
+      id TEXT PRIMARY KEY,
+      quote_id TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'received',
+      stripe_session_id TEXT,
+      stripe_payment_intent_id TEXT,
+      amount_paid_cents INTEGER NOT NULL DEFAULT 0,
+      paid_at TIMESTAMPTZ,
+      customer_email TEXT,
+      customer_phone TEXT,
+      snapshot_json JSONB NOT NULL,
+      email_sent_at TIMESTAMPTZ,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    );
+    CREATE INDEX IF NOT EXISTS orders_created_at_idx ON orders (created_at DESC);
+  `);
+}
 
 async function getOrders(filter?: string): Promise<OrderRow[]> {
   const pool = getPool();
   try {
+    await ensureOrdersTable(pool);
+
     let whereClause = "";
-    const values: any[] = [];
 
     if (filter === "today") {
       whereClause = "WHERE created_at >= CURRENT_DATE";
@@ -43,15 +65,15 @@ async function getOrders(filter?: string): Promise<OrderRow[]> {
     const { rows } = await pool.query<OrderRow>(`
       SELECT 
         id,
-        customer_first,
-        customer_last,
+        quote_id,
+        status,
         customer_email,
         customer_phone,
-        vehicle_label,
+        amount_paid_cents,
+        paid_at,
         snapshot_json,
-        created_at,
-        updated_at
-      FROM quotes
+        created_at
+      FROM orders
       ${whereClause}
       ORDER BY created_at DESC
       LIMIT 100
@@ -74,8 +96,25 @@ function formatDate(dateStr: string) {
   });
 }
 
-function formatMoney(n: number) {
-  return `$${(n || 0).toFixed(2)}`;
+function formatMoney(cents: number) {
+  return `$${(cents / 100).toFixed(2)}`;
+}
+
+const STATUS_COLORS: Record<string, { bg: string; text: string }> = {
+  received: { bg: "bg-green-600", text: "text-white" },
+  processing: { bg: "bg-blue-600", text: "text-white" },
+  shipped: { bg: "bg-purple-600", text: "text-white" },
+  delivered: { bg: "bg-neutral-600", text: "text-white" },
+  cancelled: { bg: "bg-red-600", text: "text-white" },
+};
+
+function StatusBadge({ status }: { status: string }) {
+  const colors = STATUS_COLORS[status] || { bg: "bg-neutral-600", text: "text-white" };
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${colors.bg} ${colors.text}`}>
+      {status.charAt(0).toUpperCase() + status.slice(1)}
+    </span>
+  );
 }
 
 export default async function OrdersPage({
@@ -103,10 +142,10 @@ export default async function OrdersPage({
           <h1 className="text-2xl font-bold text-white">Orders</h1>
           <p className="text-neutral-400 mt-1">
             {filter === "today"
-              ? "Orders submitted today"
+              ? "Orders placed today"
               : filter === "week"
               ? "Orders from the past week"
-              : "All submitted orders and quotes"}
+              : "All paid orders"}
           </p>
         </div>
 
@@ -138,15 +177,23 @@ export default async function OrdersPage({
         {orders.length === 0 ? (
           <div className="p-8 text-center text-neutral-500">
             No orders found
+            {filter && (
+              <div className="mt-2">
+                <Link href="/admin/orders" className="text-red-400 hover:text-red-300">
+                  View all orders →
+                </Link>
+              </div>
+            )}
           </div>
         ) : (
           <table className="w-full">
             <thead>
               <tr className="border-b border-neutral-700 text-left text-sm text-neutral-400">
                 <th className="px-4 py-3 font-medium">Order ID</th>
+                <th className="px-4 py-3 font-medium">Status</th>
                 <th className="px-4 py-3 font-medium">Customer</th>
                 <th className="px-4 py-3 font-medium">Vehicle</th>
-                <th className="px-4 py-3 font-medium">Total</th>
+                <th className="px-4 py-3 font-medium">Amount</th>
                 <th className="px-4 py-3 font-medium">Date</th>
                 <th className="px-4 py-3 font-medium"></th>
               </tr>
@@ -154,7 +201,11 @@ export default async function OrdersPage({
             <tbody className="divide-y divide-neutral-700">
               {orders.map((order) => {
                 const snapshot = order.snapshot_json || {};
-                const total = snapshot.totals?.total || 0;
+                const customer = snapshot.customer || {};
+                const vehicle = snapshot.vehicle;
+                const vehicleLabel = vehicle 
+                  ? [vehicle.year, vehicle.make, vehicle.model].filter(Boolean).join(" ")
+                  : "—";
 
                 return (
                   <tr
@@ -162,13 +213,16 @@ export default async function OrdersPage({
                     className="hover:bg-neutral-700/50 transition-colors"
                   >
                     <td className="px-4 py-3">
-                      <code className="text-sm text-neutral-300 bg-neutral-700 px-2 py-0.5 rounded">
-                        {order.id.slice(0, 8).toUpperCase()}
+                      <code className="text-sm text-white font-mono font-bold">
+                        {order.id}
                       </code>
                     </td>
                     <td className="px-4 py-3">
+                      <StatusBadge status={order.status} />
+                    </td>
+                    <td className="px-4 py-3">
                       <div className="text-white font-medium">
-                        {order.customer_first} {order.customer_last}
+                        {customer.firstName} {customer.lastName}
                       </div>
                       {order.customer_email && (
                         <div className="text-xs text-neutral-400">
@@ -177,11 +231,11 @@ export default async function OrdersPage({
                       )}
                     </td>
                     <td className="px-4 py-3 text-neutral-300 text-sm">
-                      {order.vehicle_label || "—"}
+                      {vehicleLabel}
                     </td>
                     <td className="px-4 py-3">
                       <span className="text-white font-semibold">
-                        {formatMoney(total)}
+                        {formatMoney(order.amount_paid_cents)}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-neutral-400 text-sm">
@@ -204,8 +258,13 @@ export default async function OrdersPage({
       </div>
 
       {/* Stats */}
-      <div className="text-sm text-neutral-500">
-        Showing {orders.length} order{orders.length !== 1 ? "s" : ""}
+      <div className="flex items-center justify-between text-sm text-neutral-500">
+        <span>Showing {orders.length} order{orders.length !== 1 ? "s" : ""}</span>
+        {orders.length > 0 && (
+          <span>
+            Total: {formatMoney(orders.reduce((sum, o) => sum + o.amount_paid_cents, 0))}
+          </span>
+        )}
       </div>
     </div>
   );

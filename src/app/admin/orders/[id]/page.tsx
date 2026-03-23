@@ -50,21 +50,47 @@ type QuoteSnapshot = {
 
 type OrderRow = {
   id: string;
-  customer_first: string;
-  customer_last: string;
+  quote_id: string;
+  status: string;
+  stripe_session_id: string | null;
+  stripe_payment_intent_id: string | null;
+  amount_paid_cents: number;
+  paid_at: string | null;
   customer_email: string | null;
   customer_phone: string | null;
-  vehicle_label: string | null;
   snapshot_json: QuoteSnapshot;
+  email_sent_at: string | null;
   created_at: string;
   updated_at: string;
 };
 
+async function ensureOrdersTable(pool: pg.Pool) {
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS orders (
+      id TEXT PRIMARY KEY,
+      quote_id TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'received',
+      stripe_session_id TEXT,
+      stripe_payment_intent_id TEXT,
+      amount_paid_cents INTEGER NOT NULL DEFAULT 0,
+      paid_at TIMESTAMPTZ,
+      customer_email TEXT,
+      customer_phone TEXT,
+      snapshot_json JSONB NOT NULL,
+      email_sent_at TIMESTAMPTZ,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    );
+  `);
+}
+
 async function getOrder(id: string): Promise<OrderRow | null> {
   const pool = getPool();
   try {
+    await ensureOrdersTable(pool);
+    
     const { rows } = await pool.query<OrderRow>(
-      `SELECT * FROM quotes WHERE id = $1`,
+      `SELECT * FROM orders WHERE id = $1`,
       [id]
     );
     return rows[0] || null;
@@ -88,6 +114,18 @@ function formatDate(dateStr: string) {
 function formatMoney(n: number) {
   return `$${(n || 0).toFixed(2)}`;
 }
+
+function formatCents(cents: number) {
+  return `$${(cents / 100).toFixed(2)}`;
+}
+
+const STATUS_CONFIG: Record<string, { color: string; label: string; description: string }> = {
+  received: { color: "bg-green-500", label: "Received", description: "Order received, awaiting processing" },
+  processing: { color: "bg-blue-500", label: "Processing", description: "Order is being prepared" },
+  shipped: { color: "bg-purple-500", label: "Shipped", description: "Order has been shipped" },
+  delivered: { color: "bg-neutral-500", label: "Delivered", description: "Order delivered" },
+  cancelled: { color: "bg-red-500", label: "Cancelled", description: "Order was cancelled" },
+};
 
 export default async function OrderDetailPage({
   params,
@@ -119,6 +157,7 @@ export default async function OrderDetailPage({
   const vehicle = snapshot.vehicle;
   const lines = snapshot.lines || [];
   const totals = snapshot.totals;
+  const statusConfig = STATUS_CONFIG[order.status] || STATUS_CONFIG.received;
 
   // Categorize lines
   const wheelLines = lines.filter(
@@ -143,19 +182,22 @@ export default async function OrderDetailPage({
           >
             ← Back to Orders
           </Link>
-          <h1 className="text-2xl font-bold text-white">
-            Order #{order.id.slice(0, 8).toUpperCase()}
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-2xl font-bold text-white font-mono">{order.id}</h1>
+            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${statusConfig.color} text-white`}>
+              {statusConfig.label}
+            </span>
+          </div>
           <p className="text-neutral-400 mt-1">{formatDate(order.created_at)}</p>
         </div>
 
         <div className="flex items-center gap-3">
           <Link
-            href={`/quote/${order.id}`}
+            href={`/quote/${order.quote_id}`}
             target="_blank"
             className="px-4 py-2 rounded-lg bg-neutral-700 text-white text-sm font-medium hover:bg-neutral-600"
           >
-            View Quote Page ↗
+            View Quote ↗
           </Link>
         </div>
       </div>
@@ -167,8 +209,8 @@ export default async function OrderDetailPage({
           <Section title="Customer Information">
             <div className="grid grid-cols-2 gap-4">
               <InfoRow label="Name" value={`${customer.firstName} ${customer.lastName}`} />
-              <InfoRow label="Email" value={customer.email || "—"} />
-              <InfoRow label="Phone" value={customer.phone || "—"} />
+              <InfoRow label="Email" value={order.customer_email || customer.email || "—"} />
+              <InfoRow label="Phone" value={order.customer_phone || customer.phone || "—"} />
             </div>
           </Section>
 
@@ -243,9 +285,9 @@ export default async function OrderDetailPage({
 
         {/* Sidebar */}
         <div className="space-y-6">
-          {/* Order Summary */}
+          {/* Payment Summary */}
           <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
-            <h3 className="text-lg font-bold text-white mb-4">Order Summary</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Payment Summary</h3>
 
             <div className="space-y-3 text-sm">
               <div className="flex justify-between">
@@ -270,36 +312,82 @@ export default async function OrderDetailPage({
               </div>
 
               <div className="border-t border-neutral-700 pt-3 flex justify-between">
-                <span className="text-white font-bold">Total</span>
+                <span className="text-white font-bold">Order Total</span>
                 <span className="text-white font-bold text-lg">
                   {formatMoney(totals.total)}
                 </span>
               </div>
+
+              {order.amount_paid_cents > 0 && (
+                <div className="flex justify-between text-green-400">
+                  <span className="font-medium">Amount Paid</span>
+                  <span className="font-bold">
+                    {formatCents(order.amount_paid_cents)}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Status */}
+          {/* Order Status */}
           <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
-            <h3 className="text-lg font-bold text-white mb-4">Status</h3>
+            <h3 className="text-lg font-bold text-white mb-4">Order Status</h3>
 
             <div className="space-y-3">
               <StatusRow
-                label="Quote Created"
+                label="Order Placed"
                 status="complete"
                 date={order.created_at}
               />
               <StatusRow
                 label="Payment"
-                status="pending"
-                note="Pending checkout"
+                status={order.paid_at ? "complete" : "pending"}
+                date={order.paid_at || undefined}
+                note={order.paid_at ? formatCents(order.amount_paid_cents) : "Awaiting payment"}
               />
+              {order.email_sent_at && (
+                <StatusRow
+                  label="Confirmation Email"
+                  status="complete"
+                  date={order.email_sent_at}
+                />
+              )}
               <StatusRow
-                label="Installation"
-                status="pending"
-                note="Not scheduled"
+                label="Processing"
+                status={order.status === "processing" || order.status === "shipped" || order.status === "delivered" ? "complete" : "pending"}
+                note={statusConfig.description}
               />
             </div>
+
+            {/* Status Update Form would go here */}
+            <div className="mt-4 pt-4 border-t border-neutral-700">
+              <div className="text-xs text-neutral-500">
+                Current Status: <span className="text-white font-medium">{statusConfig.label}</span>
+              </div>
+            </div>
           </div>
+
+          {/* Payment Details */}
+          {(order.stripe_session_id || order.stripe_payment_intent_id) && (
+            <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
+              <h3 className="text-lg font-bold text-white mb-4">Payment Details</h3>
+              
+              <div className="space-y-2 text-sm">
+                {order.stripe_payment_intent_id && (
+                  <div>
+                    <div className="text-neutral-500 text-xs">Payment Intent</div>
+                    <code className="text-neutral-300 text-xs">{order.stripe_payment_intent_id}</code>
+                  </div>
+                )}
+                {order.stripe_session_id && (
+                  <div>
+                    <div className="text-neutral-500 text-xs">Session ID</div>
+                    <code className="text-neutral-300 text-xs break-all">{order.stripe_session_id}</code>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Raw Data */}
           <details className="bg-neutral-800 rounded-xl border border-neutral-700">
