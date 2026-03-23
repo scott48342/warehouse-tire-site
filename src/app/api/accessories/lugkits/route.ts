@@ -41,7 +41,7 @@ export async function GET(req: Request) {
   // Get supplier credentials from admin settings (with fallback to env/hardcoded)
   const wpCreds = await getSupplierCredentials("wheelpros");
   // company = sales org (1500=USD), customer = account number for pricing
-  const company = wpCreds.company || "1500";
+  const company = "1500"; // USD sales org - always use this for US pricing
   const customer = wpCreds.customerNumber || "1022165";
 
   // Pull a page of lug nut accessories (we filter client-side).
