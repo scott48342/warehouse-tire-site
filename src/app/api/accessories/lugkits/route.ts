@@ -40,7 +40,9 @@ export async function GET(req: Request) {
 
   // Get supplier credentials from admin settings (with fallback to env/hardcoded)
   const wpCreds = await getSupplierCredentials("wheelpros");
-  const company = wpCreds.customerNumber || "1022165";
+  // company = sales org (1500=USD), customer = account number for pricing
+  const company = wpCreds.company || "1500";
+  const customer = wpCreds.customerNumber || "1022165";
 
   // Pull a page of lug nut accessories (we filter client-side).
   const res = await searchAccessories({
@@ -48,6 +50,7 @@ export async function GET(req: Request) {
     fields: "inventory,price",
     priceType: "msrp,map,nip",
     company,
+    customer,
     page: 1,
     pageSize: 200,
   });

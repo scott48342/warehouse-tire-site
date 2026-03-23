@@ -39,7 +39,8 @@ export async function searchAccessories(params: {
   filter: string;
   fields?: string; // "inventory,price"
   priceType?: string; // "msrp,map,nip"
-  company: string;
+  company?: string; // sales org: 1500=USD, 4000=CAD, etc.
+  customer?: string; // account number for pricing
   page?: number;
   pageSize?: number;
 }): Promise<WheelProsAccessorySearchResponse> {
@@ -49,7 +50,8 @@ export async function searchAccessories(params: {
   url.searchParams.set("filter", params.filter);
   url.searchParams.set("fields", params.fields || "inventory,price");
   url.searchParams.set("priceType", params.priceType || "msrp,map,nip");
-  url.searchParams.set("company", params.company);
+  url.searchParams.set("company", params.company || "1500"); // default USD
+  if (params.customer) url.searchParams.set("customer", params.customer);
   url.searchParams.set("page", String(params.page || 1));
   url.searchParams.set("pageSize", String(params.pageSize || 50));
 
