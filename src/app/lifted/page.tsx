@@ -144,8 +144,8 @@ function VehicleSelector({
     setModel("");
     setLoading(true);
     try {
-      const data = await fetchJson<{ makes?: string[] }>(`/api/vehicles/makes?year=${y}`);
-      setMakes(data.makes || []);
+      const data = await fetchJson<{ results?: string[] }>(`/api/vehicles/makes?year=${y}`);
+      setMakes(data.results || []);
       setStep("make");
     } catch {
       setMakes([]);
@@ -158,8 +158,8 @@ function VehicleSelector({
     setModel("");
     setLoading(true);
     try {
-      const data = await fetchJson<{ models?: string[] }>(`/api/vehicles/models?year=${year}&make=${m}`);
-      setModels(data.models || []);
+      const data = await fetchJson<{ results?: string[] }>(`/api/vehicles/models?year=${year}&make=${m}`);
+      setModels(data.results || []);
       setStep("model");
     } catch {
       setModels([]);
@@ -171,10 +171,15 @@ function VehicleSelector({
     setModel(mod);
     setLoading(true);
     try {
-      const data = await fetchJson<{ trims?: { trim: string; modification: string }[] }>(
+      const data = await fetchJson<{ results?: { label: string; modificationId: string }[] }>(
         `/api/vehicles/trims?year=${year}&make=${make}&model=${mod}`
       );
-      setTrims(data.trims || []);
+      // Map API response to our expected format
+      const mapped = (data.results || []).map((t) => ({
+        trim: t.label,
+        modification: t.modificationId,
+      }));
+      setTrims(mapped);
       setStep("trim");
     } catch {
       setTrims([]);
