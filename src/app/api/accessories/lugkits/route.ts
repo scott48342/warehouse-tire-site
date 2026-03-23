@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { searchAccessories } from "@/lib/wheelprosAccessory";
 import { threadKeyFromRaw, titleNeedleForThread, type LugThreadKey } from "@/lib/accessories/gorillaLugKits";
-import { getWheelProsCredentials } from "@/lib/supplierCredentials";
+import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 export const runtime = "nodejs";
 
@@ -39,7 +39,7 @@ export async function GET(req: Request) {
   }
 
   // Get supplier credentials from admin settings (with fallback to env/hardcoded)
-  const wpCreds = await getWheelProsCredentials();
+  const wpCreds = await getSupplierCredentials("wheelpros");
   const company = wpCreds.customerNumber || "1022165";
 
   // Pull a page of lug nut accessories (we filter client-side).

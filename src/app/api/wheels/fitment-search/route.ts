@@ -28,7 +28,7 @@ import {
   getTechfeedIndexBuiltAt,
 } from "@/lib/techfeed/wheels";
 
-import { getWheelProsCredentials } from "@/lib/supplierCredentials";
+import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -366,7 +366,7 @@ async function handleDbFirstWheelResults(opts: {
   }
 
   // Get supplier credentials from admin settings (with fallback to env/hardcoded)
-  const wpCreds = await getWheelProsCredentials();
+  const wpCreds = await getSupplierCredentials("wheelpros");
 
   const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
 

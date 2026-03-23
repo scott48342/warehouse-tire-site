@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import pg from "pg";
+import { getSupplierCredentials, hasCredentials } from "@/lib/supplierCredentialsSecure";
+import { getWheelProsToken } from "@/lib/wheelprosAuth";
 
 export const runtime = "nodejs";
 
@@ -16,7 +18,7 @@ function getPool() {
 }
 
 /**
- * Test a supplier connection
+ * Test a supplier connection using admin-managed credentials
  */
 export async function POST(req: Request) {
   const { provider } = await req.json();
@@ -28,55 +30,54 @@ export async function POST(req: Request) {
   const pool = getPool();
   let status: "success" | "error" = "error";
   let message = "";
+  let source: "db" | "env" | "none" = "none";
 
   try {
+    // Check credential status first
+    const credStatus = await hasCredentials(provider);
+    source = credStatus.source;
+
     // Test connection based on provider
     switch (provider) {
       case "wheelpros": {
-        const apiKey = process.env.WHEELPROS_API_KEY;
-        if (!apiKey) {
-          message = "WHEELPROS_API_KEY not configured";
+        const creds = await getSupplierCredentials("wheelpros");
+        
+        if (!creds.username || !creds.password) {
+          message = "WheelPros credentials not configured. Add username/password in Settings.";
           break;
         }
         
-        // Attempt a simple API call
+        // Try to get a token (validates credentials)
         try {
-          const res = await fetch("https://api.wheelpros.com/api/vehicle/years", {
-            headers: {
-              "Authorization": `Bearer ${apiKey}`,
-              "Accept": "application/json",
-            },
-            signal: AbortSignal.timeout(10000),
-          });
-          
-          if (res.ok) {
+          const token = await getWheelProsToken();
+          if (token) {
             status = "success";
-            message = "Connected successfully";
+            message = `Connected successfully (credentials from ${source === "db" ? "admin settings" : "environment"})`;
           } else {
-            message = `API returned ${res.status}: ${await res.text().catch(() => "Unknown error")}`;
+            message = "Auth succeeded but no token returned";
           }
         } catch (e: any) {
-          message = e.message || "Connection failed";
+          message = e.message || "Authentication failed";
         }
         break;
       }
 
       case "keystone": {
-        const apiKey = process.env.KEYSTONE_API_KEY;
-        if (!apiKey) {
-          message = "KEYSTONE_API_KEY not configured";
+        const creds = await getSupplierCredentials("keystone");
+        
+        if (!creds.apiKey) {
+          message = "Keystone API key not configured. Add credentials in Settings.";
           break;
         }
         
-        // Keystone typically uses SOAP/FTP - just check if key is set
+        // Keystone typically uses SOAP/FTP - just validate we have credentials
         status = "success";
-        message = "API key configured (connection test not available for SOAP/FTP)";
+        message = `API key configured (credentials from ${source === "db" ? "admin settings" : "environment"})`;
         break;
       }
 
       case "km": {
-        // K&M uses FTP
-        message = "K&M FTP connection test not yet implemented";
+        message = "K&M connection test not yet implemented";
         break;
       }
 
@@ -93,7 +94,12 @@ export async function POST(req: Request) {
       WHERE provider = $3
     `, [status, message, provider]);
 
-    return NextResponse.json({ ok: status === "success", status, message });
+    return NextResponse.json({ 
+      ok: status === "success", 
+      status, 
+      message,
+      credentialSource: source,
+    });
   } catch (err: any) {
     console.error("[admin/settings/suppliers/test] Error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });

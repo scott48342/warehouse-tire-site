@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import pg from "pg";
-import { clearSupplierCredentialsCache } from "@/lib/supplierCredentials";
+import { clearCredentialsCache, hasCredentials } from "@/lib/supplierCredentialsSecure";
 
 export const runtime = "nodejs";
 
@@ -32,11 +32,17 @@ export async function GET() {
       ORDER BY priority, display_name
     `);
 
-    // Check which env vars are configured
-    const suppliers = rows.map((s: any) => ({
-      ...s,
-      apiKeyConfigured: s.api_key_env ? !!process.env[s.api_key_env] : null,
-    }));
+    // Check credential status for each supplier
+    const suppliers = await Promise.all(
+      rows.map(async (s: any) => {
+        const credStatus = await hasCredentials(s.provider);
+        return {
+          ...s,
+          credentialsConfigured: credStatus.configured,
+          credentialSource: credStatus.source,
+        };
+      })
+    );
 
     return NextResponse.json({ suppliers });
   } catch (err: any) {
@@ -147,7 +153,7 @@ export async function POST(req: Request) {
     `, [JSON.stringify({ provider: provider || result.rows[0]?.provider, enabled })]);
 
     // Clear credentials cache so changes take effect immediately
-    clearSupplierCredentialsCache(provider || result.rows[0]?.provider);
+    clearCredentialsCache(provider || result.rows[0]?.provider);
 
     return NextResponse.json({ ok: true, supplier: result.rows[0] });
   } catch (err: any) {

@@ -22,7 +22,8 @@ type Supplier = {
   enabled: boolean;
   priority: number;
   config: Record<string, any>;
-  apiKeyConfigured: boolean | null;
+  credentialsConfigured: boolean;
+  credentialSource: "db" | "env" | "none";
   customer_number: string | null;
   company_code: string | null;
   warehouse_codes: string[] | null;
@@ -122,6 +123,24 @@ export default function SettingsPage() {
     }
   };
 
+  const saveSupplierCredentials = async (provider: string, credentials: Record<string, string>) => {
+    try {
+      const res = await fetch("/api/admin/settings/suppliers/credentials", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ provider, ...credentials }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to save credentials");
+      }
+      await fetchData();
+    } catch (err: any) {
+      alert(err.message);
+      throw err;
+    }
+  };
+
   const updateSiteSetting = async (key: string, value: any) => {
     setSaving("site");
     try {
@@ -209,6 +228,7 @@ export default function SettingsPage() {
               testing={testing === supplier.id}
               onUpdate={(updates) => updateSupplier(supplier, updates)}
               onTest={() => testSupplier(supplier)}
+              onSaveCredentials={saveSupplierCredentials}
             />
           ))}
 
@@ -362,21 +382,56 @@ function SupplierCard({
   testing,
   onUpdate,
   onTest,
+  onSaveCredentials,
 }: {
   supplier: Supplier;
   saving: boolean;
   testing: boolean;
   onUpdate: (updates: Partial<Supplier>) => void;
   onTest: () => void;
+  onSaveCredentials: (provider: string, creds: Record<string, string>) => Promise<void>;
 }) {
-  const [editingFields, setEditingFields] = useState(false);
+  const [editingCredentials, setEditingCredentials] = useState(false);
+  const [savingCredentials, setSavingCredentials] = useState(false);
   const [customerNumber, setCustomerNumber] = useState(supplier.customer_number || "");
   const [companyCode, setCompanyCode] = useState(supplier.company_code || "");
+  // Credential fields (only shown when editing)
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [apiKey, setApiKey] = useState("");
 
-  const saveFields = () => {
-    onUpdate({ customer_number: customerNumber, company_code: companyCode });
-    setEditingFields(false);
+  const saveCredentials = async () => {
+    setSavingCredentials(true);
+    try {
+      const creds: Record<string, string> = {};
+      if (supplier.provider === "wheelpros") {
+        if (username) creds.username = username;
+        if (password) creds.password = password;
+      } else {
+        if (apiKey) creds.apiKey = apiKey;
+      }
+      if (customerNumber) creds.customerNumber = customerNumber;
+      if (companyCode) creds.companyCode = companyCode;
+      
+      await onSaveCredentials(supplier.provider, creds);
+      setEditingCredentials(false);
+      // Clear sensitive fields after save
+      setPassword("");
+      setApiKey("");
+    } finally {
+      setSavingCredentials(false);
+    }
   };
+
+  const credentialStatusText = supplier.credentialsConfigured
+    ? supplier.credentialSource === "db"
+      ? "✓ Configured (admin-managed)"
+      : "✓ Configured (from environment)"
+    : "Not configured";
+
+  const credentialStatusColor = supplier.credentialsConfigured
+    ? "text-green-400"
+    : "text-red-400";
 
   return (
     <div className={`bg-neutral-800 rounded-xl border p-6 ${supplier.enabled ? "border-green-600/50" : "border-neutral-700"}`}>
@@ -388,14 +443,14 @@ function SupplierCard({
           <div>
             <h3 className="text-white font-bold">{supplier.display_name}</h3>
             <div className="flex items-center gap-2 mt-1">
-              {supplier.apiKeyConfigured === false && (
-                <span className="text-xs text-red-400">API key not configured</span>
-              )}
+              <span className={`text-xs ${credentialStatusColor}`}>
+                {credentialStatusText}
+              </span>
               {supplier.last_test_status && (
                 <span className={`text-xs ${
                   supplier.last_test_status === "success" ? "text-green-400" : "text-red-400"
                 }`}>
-                  {supplier.last_test_status === "success" ? "✓ Connected" : "✗ Error"}
+                  {supplier.last_test_status === "success" ? "• Connected" : "• Error"}
                 </span>
               )}
             </div>
@@ -414,12 +469,50 @@ function SupplierCard({
 
         {supplier.enabled && (
           <>
-            {editingFields ? (
-              <div className="space-y-3">
+            {editingCredentials ? (
+              <div className="space-y-3 p-3 bg-neutral-900 rounded-lg border border-neutral-700">
+                <div className="text-sm font-medium text-neutral-300 mb-2">
+                  🔐 Configure Credentials
+                </div>
+                
+                {supplier.provider === "wheelpros" ? (
+                  <>
+                    <div>
+                      <label className="block text-sm text-neutral-400 mb-1">Username</label>
+                      <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                        placeholder="WheelPros API username"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-neutral-400 mb-1">Password</label>
+                      <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                        placeholder="WheelPros API password"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <div>
+                    <label className="block text-sm text-neutral-400 mb-1">API Key</label>
+                    <input
+                      type="password"
+                      value={apiKey}
+                      onChange={(e) => setApiKey(e.target.value)}
+                      className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                      placeholder="API key"
+                    />
+                  </div>
+                )}
+
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-1">
-                    Customer/Dealer Number
-                  </label>
+                  <label className="block text-sm text-neutral-400 mb-1">Customer/Dealer Number</label>
                   <input
                     type="text"
                     value={customerNumber}
@@ -429,9 +522,7 @@ function SupplierCard({
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-neutral-300 mb-1">
-                    Company Code
-                  </label>
+                  <label className="block text-sm text-neutral-400 mb-1">Company Code</label>
                   <input
                     type="text"
                     value={companyCode}
@@ -440,19 +531,25 @@ function SupplierCard({
                     placeholder="Company code (if required)"
                   />
                 </div>
-                <div className="flex gap-2">
+                
+                <div className="flex gap-2 pt-2">
                   <button
-                    onClick={saveFields}
-                    className="px-3 py-1.5 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700"
+                    onClick={saveCredentials}
+                    disabled={savingCredentials}
+                    className="px-3 py-1.5 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 disabled:opacity-50"
                   >
-                    Save
+                    {savingCredentials ? "Saving..." : "Save Credentials"}
                   </button>
                   <button
-                    onClick={() => setEditingFields(false)}
+                    onClick={() => setEditingCredentials(false)}
                     className="px-3 py-1.5 rounded-lg bg-neutral-700 text-white text-sm font-medium hover:bg-neutral-600"
                   >
                     Cancel
                   </button>
+                </div>
+                
+                <div className="text-xs text-neutral-500 mt-2">
+                  🔒 Credentials are encrypted and stored securely. They never leave the server.
                 </div>
               </div>
             ) : (
@@ -472,10 +569,10 @@ function SupplierCard({
                   </div>
                 )}
                 <button
-                  onClick={() => setEditingFields(true)}
+                  onClick={() => setEditingCredentials(true)}
                   className="text-sm text-red-400 hover:text-red-300"
                 >
-                  {supplier.customer_number || supplier.company_code ? "Edit" : "Add"} credentials
+                  {supplier.credentialsConfigured ? "Update" : "Configure"} credentials
                 </button>
               </div>
             )}
@@ -503,7 +600,11 @@ function SupplierCard({
       </div>
 
       <div className="mt-4 pt-4 border-t border-neutral-700 text-xs text-neutral-500">
-        API keys configured via environment variables
+        {supplier.credentialSource === "db" 
+          ? "🔐 Credentials managed via admin settings (encrypted)"
+          : supplier.credentialSource === "env"
+          ? "⚙️ Using environment variables (migrate to admin settings recommended)"
+          : "Configure credentials above to enable this supplier"}
       </div>
     </div>
   );

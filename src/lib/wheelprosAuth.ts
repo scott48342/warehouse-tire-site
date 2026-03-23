@@ -1,7 +1,13 @@
 /**
  * Shared Wheel Pros auth token helper.
  * Used by Product + Accessory API clients.
+ * 
+ * Credentials are loaded from:
+ * 1. admin_suppliers.credentials (encrypted, admin-managed)
+ * 2. Environment variables (fallback)
  */
+
+import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 let tokenCache: { token: string; expiresAt: number } | null = null;
 
@@ -9,17 +15,17 @@ export async function getWheelProsToken(): Promise<string> {
   const now = Date.now();
   if (tokenCache && tokenCache.expiresAt > now + 30_000) return tokenCache.token;
 
-  const userName = process.env.WHEELPROS_PDP_USERNAME;
-  const password = process.env.WHEELPROS_PDP_PASSWORD;
+  // Get credentials from admin settings (with env fallback)
+  const creds = await getSupplierCredentials("wheelpros");
+  
+  const userName = creds.username;
+  const password = creds.password;
   if (!userName || !password) {
-    throw new Error("Missing WHEELPROS_PDP_USERNAME/WHEELPROS_PDP_PASSWORD");
+    throw new Error("Missing WheelPros credentials. Configure in Admin → Settings → Suppliers.");
   }
 
-  const authUrl = process.env.WHEELPROS_AUTH_URL;
-  if (!authUrl) {
-    throw new Error("Missing WHEELPROS_AUTH_URL");
-  }
-
+  const authUrl = creds.authUrl || "https://api.wheelpros.com/auth/token";
+  
   const res = await fetch(authUrl, {
     method: "POST",
     headers: { "content-type": "application/json", accept: "application/json" },
@@ -35,4 +41,11 @@ export async function getWheelProsToken(): Promise<string> {
 
   tokenCache = { token: String(token), expiresAt: now + Math.max(60, expiresIn) * 1000 };
   return tokenCache.token;
+}
+
+/**
+ * Clear the cached token (call after credentials update)
+ */
+export function clearWheelProsTokenCache() {
+  tokenCache = null;
 }
