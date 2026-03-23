@@ -121,7 +121,9 @@ export default async function KmTireDetailPage({
   }
 
   const brand = String(item.brand || "K&M");
-  const description = String(item.description || "Tire");
+  const descriptionRaw = String(item.description || "Tire");
+  // Strip K&M's "/e" economy tier prefix from display
+  const description = descriptionRaw.replace(/\s*\/e\s+/gi, " ").replace(/\s+/g, " ").trim();
   const cost = n(item.cost);
   const qPrimary = n(item?.quantity?.primary);
   const qAlt = n(item?.quantity?.alternate);

@@ -534,6 +534,7 @@ export default async function TiresPage({
     out = out.replace(/\b\d{2}\s*[xX]\s*\d{1,2}\.\d{2}\s*R\s*\d{2}(?:\.5)?\b/gi, "");
     out = out.replace(/\b\d{7}\b/g, "").replace(/\b\d{8}\b/g, "");
     out = out.replace(/\b\d{2}\.\d\b/g, "");
+    out = out.replace(/\s*\/e\s+/gi, " "); // Strip K&M economy tier prefix
     out = out.replace(/\s+/g, " ").trim();
     return out;
   }
