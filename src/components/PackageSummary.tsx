@@ -22,9 +22,6 @@ export function PackageSummary({
     getAccessories,
     getRequiredAccessories,
     getTotal,
-    hasWheels,
-    hasTires,
-    hasAccessories,
     accessoryState,
   } = useCart();
 

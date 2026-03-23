@@ -1,15 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { AccessoryRecommendations } from "./AccessoryRecommendations";
 import {
   loadLiftedContext,
   liftedContextMatchesVehicle,
   getLiftedTireSizesForWheel,
-  type LiftedBuildContext,
 } from "@/lib/liftedBuildContext";
 
 const FITMENT_LABELS = {
@@ -51,8 +49,8 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
         ) : null}
 
         <div className="mt-1 flex flex-wrap gap-1 text-xs">
-          {item.diameter ? <span className="text-neutral-600">{item.diameter}"</span> : null}
-          {item.width ? <span className="text-neutral-600">× {item.width}"</span> : null}
+          {item.diameter ? <span className="text-neutral-600">{item.diameter}&quot;</span> : null}
+          {item.width ? <span className="text-neutral-600">× {item.width}&quot;</span> : null}
           {item.boltPattern ? (
             <span className="text-neutral-500">• {item.boltPattern}</span>
           ) : null}
@@ -202,9 +200,7 @@ function TireItemCard({ item }: { item: CartTireItem }) {
 }
 
 export function CartSlideout() {
-  const router = useRouter();
   const {
-    items,
     isOpen,
     setIsOpen,
     lastAddedItem,
@@ -214,7 +210,6 @@ export function CartSlideout() {
     hasTires,
     hasAccessories,
     getWheels,
-    getAccessories,
     removeItem,
     addAccessory,
     addAccessories,
@@ -252,11 +247,10 @@ export function CartSlideout() {
   // Load lifted context from sessionStorage (if any)
   // This preserves lifted tire recommendations from /lifted page through the wheel → tire flow
   // IMPORTANT: Must be called before early return to satisfy Rules of Hooks
-  const [liftedCtx, setLiftedCtx] = useState<LiftedBuildContext | null>(null);
-  useEffect(() => {
-    if (isOpen) {
-      setLiftedCtx(loadLiftedContext());
-    }
+  // Using useMemo since loadLiftedContext is synchronous (reads from sessionStorage)
+  const liftedCtx = useMemo(() => {
+    if (typeof window === "undefined") return null;
+    return isOpen ? loadLiftedContext() : null;
   }, [isOpen]);
 
   // Lock body scroll when open

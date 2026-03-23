@@ -98,6 +98,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [accessoryState, setAccessoryState] = useState<AccessoryRecommendationState | null>(null);
 
   // Load cart from localStorage on mount
+  // Note: This is the correct SSR hydration pattern - localStorage isn't available during SSR
   useEffect(() => {
     try {
       const stored = localStorage.getItem(CART_STORAGE_KEY);
