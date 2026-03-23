@@ -5,13 +5,7 @@ import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 export const runtime = "nodejs";
 
-const EXCLUDE = ["BULK", "FRGD", "FORGED"]; // also excludes premium/forged kits by default
-const REQUIRE = ["KIT", "-20", "ACORN", "BULGE", "5-LUG"]; // tighten later if needed
-
-function hasAll(title: string, words: string[]) {
-  const t = title.toUpperCase();
-  return words.every((w) => t.includes(w));
-}
+const EXCLUDE = ["BULK", "FRGD", "FORGED"]; // excludes premium/forged kits
 
 function hasAny(title: string, needles: string[]) {
   const t = title.toUpperCase();
@@ -78,8 +72,8 @@ export async function GET(req: Request) {
       }
     }
 
-    // Require some standard-kit markers
-    if (!hasAll(t, REQUIRE)) return false;
+    // Must be a kit (not loose nuts)
+    if (!t.includes("KIT")) return false;
 
     return true;
   });
