@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 import { searchAccessories } from "@/lib/wheelprosAccessory";
 import { threadKeyFromRaw, titleNeedleForThread, type LugThreadKey } from "@/lib/accessories/gorillaLugKits";
+import { getWheelProsCredentials } from "@/lib/supplierCredentials";
 
 export const runtime = "nodejs";
-
-const COMPANY = process.env.WHEELPROS_COMPANY_ID || "1022165";
 
 const EXCLUDE = ["BULK", "FRGD", "FORGED"]; // also excludes premium/forged kits by default
 const REQUIRE = ["KIT", "-20", "ACORN", "BULGE", "5-LUG"]; // tighten later if needed
@@ -39,12 +38,16 @@ export async function GET(req: Request) {
     return NextResponse.json({ ok: false, error: "unsupported_thread", threadSizeRaw }, { status: 400 });
   }
 
+  // Get supplier credentials from admin settings (with fallback to env/hardcoded)
+  const wpCreds = await getWheelProsCredentials();
+  const company = wpCreds.customerNumber || "1022165";
+
   // Pull a page of lug nut accessories (we filter client-side).
   const res = await searchAccessories({
     filter: "lug nut",
     fields: "inventory,price",
     priceType: "msrp,map,nip",
-    company: COMPANY,
+    company,
     page: 1,
     pageSize: 200,
   });

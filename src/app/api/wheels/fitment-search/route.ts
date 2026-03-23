@@ -28,6 +28,8 @@ import {
   getTechfeedIndexBuiltAt,
 } from "@/lib/techfeed/wheels";
 
+import { getWheelProsCredentials } from "@/lib/supplierCredentials";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -363,6 +365,9 @@ async function handleDbFirstWheelResults(opts: {
     headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
   }
 
+  // Get supplier credentials from admin settings (with fallback to env/hardcoded)
+  const wpCreds = await getWheelProsCredentials();
+
   const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
 
   // Apply basic DB-level filters first (cheap)
@@ -446,6 +451,8 @@ async function handleDbFirstWheelResults(opts: {
       headers,
       sku: item.candidate.sku,
       minQty,
+      customerNumber: wpCreds.customerNumber || undefined,
+      companyCode: wpCreds.companyCode || undefined,
     });
     availabilityChecked++;
     if (avail.ok) {
@@ -651,6 +658,8 @@ async function fetchLiveAvailabilityForSku(opts: {
   headers: Record<string, string>;
   sku: string;
   minQty: number;
+  customerNumber?: string;
+  companyCode?: string;
 }): Promise<
   | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string }
   | { ok: false; checkedAt: string }
@@ -684,9 +693,9 @@ async function fetchLiveAvailabilityForSku(opts: {
     u.searchParams.set("pageSize", "1");
     u.searchParams.set("fields", "inventory");
 
-    // Required params for true sellability
-    u.searchParams.set("customer", "1022165");
-    u.searchParams.set("company", "1000");
+    // Required params for true sellability (admin-managed or env fallback)
+    u.searchParams.set("customer", opts.customerNumber || "1022165");
+    u.searchParams.set("company", opts.companyCode || "1000");
     u.searchParams.set("min_qty", String(opts.minQty));
 
     const res = await fetch(u.toString(), {

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import pg from "pg";
+import { clearSupplierCredentialsCache } from "@/lib/supplierCredentials";
 
 export const runtime = "nodejs";
 
@@ -144,6 +145,9 @@ export async function POST(req: Request) {
       INSERT INTO admin_logs (log_type, details)
       VALUES ('supplier_update', $1)
     `, [JSON.stringify({ provider: provider || result.rows[0]?.provider, enabled })]);
+
+    // Clear credentials cache so changes take effect immediately
+    clearSupplierCredentialsCache(provider || result.rows[0]?.provider);
 
     return NextResponse.json({ ok: true, supplier: result.rows[0] });
   } catch (err: any) {
