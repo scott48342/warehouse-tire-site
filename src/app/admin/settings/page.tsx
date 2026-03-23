@@ -197,7 +197,7 @@ export default function SettingsPage() {
       <div>
         <h1 className="text-2xl font-bold text-white">Settings</h1>
         <p className="text-neutral-400 mt-1">
-          Configure payments, suppliers, and site settings
+          Configure payments, email, and site settings
         </p>
       </div>
 
@@ -235,38 +235,6 @@ export default function SettingsPage() {
             icon="🅿️"
             title="PayPal"
             description="PayPal checkout"
-          />
-        </div>
-      </section>
-
-      {/* Suppliers */}
-      <section>
-        <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-          <span>🏭</span> Suppliers
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {suppliers.map((supplier) => (
-            <SupplierCard
-              key={supplier.id}
-              supplier={supplier}
-              saving={saving === supplier.id}
-              testing={testing === supplier.id}
-              onUpdate={(updates) => updateSupplier(supplier, updates)}
-              onTest={() => testSupplier(supplier)}
-              onSaveCredentials={saveSupplierCredentials}
-            />
-          ))}
-
-          {/* Coming Soon Cards */}
-          <ComingSoonCard
-            icon="🔧"
-            title="K&M Tire"
-            description="K&M tire supplier integration"
-          />
-          <ComingSoonCard
-            icon="📦"
-            title="Custom Supplier"
-            description="Add your own supplier via API/FTP"
           />
         </div>
       </section>
