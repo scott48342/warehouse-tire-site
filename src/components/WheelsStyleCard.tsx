@@ -297,70 +297,15 @@ export function WheelsStyleCard({
         vehicle,
       });
 
+      // ⚠️ TEMPORARILY DISABLED: Accessory auto-add causing cart crashes
+      // TODO: Fix accessory item validation before re-enabling
+      // Root cause: accessory items added with undefined unitPrice crash CartSlideout render
+      // 
       // Calculate and add accessories if we have profile data
-      if (dbProfile) {
-        // Import accessory calculation inline to avoid hook rules violation
-        import("@/hooks/useAccessoryFitment").then(async ({ calculateAccessoryFitment }) => {
-          const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
-          
-          if (fitmentResult.state) {
-            setAccessoryState(fitmentResult.state);
-          }
-
-          // Auto-add required accessories
-          if (fitmentResult.requiredItems.length > 0) {
-            // Auto-add required accessories (lug kits + hub rings)
-            console.log("[WheelsStyleCard] Auto-adding required accessories:",
-              fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
-            );
-            addAccessories(fitmentResult.requiredItems);
-
-            // Replace lug kit placeholder SKU with real Gorilla kit SKU + NIP cost (server-side lookup)
-            const lug = fitmentResult.requiredItems.find((i) => i.category === "lug_nut");
-            if (lug?.spec?.threadSize) {
-              const placeholderSku = lug.sku;
-              const qs = new URLSearchParams({ threadSize: lug.spec.threadSize });
-              if (lug.spec.seatType) qs.set("seatType", lug.spec.seatType);
-
-              try {
-                const res = await fetch(`/api/accessories/lugkits?${qs.toString()}`, {
-                  headers: { Accept: "application/json" },
-                });
-                const data = await res.json().catch(() => null);
-                if (res.ok && data?.choice?.sku) {
-                  replaceAccessorySku(placeholderSku, {
-                    ...lug,
-                    sku: String(data.choice.sku),
-                    meta: {
-                      ...(lug.meta || {}),
-                      placeholder: false,
-                      source: "wheelpros",
-                      brandCode: data.choice.brandCode,
-                      nipCost: data.choice.nip,
-                      msrp: data.choice.msrp,
-                      title: data.choice.title,
-                      threadKey: data.choice.threadKey,
-                    },
-                  });
-                }
-              } catch {
-                // ignore, keep placeholder
-              }
-            }
-          }
-
-          // Log accessory decisions
-          if (fitmentResult.fitment) {
-            const lugStatus = fitmentResult.fitment.lugNuts.status;
-            const hubStatus = fitmentResult.fitment.hubRings.status;
-            
-            console.log(`[WheelsStyleCard] Lug nuts: ${lugStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.lugNuts.reason}`);
-            console.log(`[WheelsStyleCard] Hub rings: ${hubStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.hubRings.reason}`);
-          }
-        });
-      } else if (vehicle) {
-        console.log("[WheelsStyleCard] Skipping accessory fitment - no dbProfile available");
-      }
+      // if (dbProfile) {
+      //   ... accessory auto-add code disabled ...
+      // }
+      console.log("[WheelsStyleCard] Accessory auto-add DISABLED (emergency fix)");
 
       setIsQuickAdding(false);
     }, 150);
