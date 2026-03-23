@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer tire -->
+  <circle cx="100" cy="100" r="90" stroke="#e5e5e5" stroke-width="8" fill="#fafafa"/>
+  
+  <!-- Tire tread pattern -->
+  <circle cx="100" cy="100" r="82" stroke="#d4d4d4" stroke-width="2" fill="none" stroke-dasharray="8 4"/>
+  
+  <!-- Wheel rim -->
+  <circle cx="100" cy="100" r="50" stroke="#a3a3a3" stroke-width="4" fill="#f5f5f5"/>
+  
+  <!-- Inner hub -->
+  <circle cx="100" cy="100" r="20" stroke="#737373" stroke-width="3" fill="#e5e5e5"/>
+  
+  <!-- Center cap -->
+  <circle cx="100" cy="100" r="8" fill="#a3a3a3"/>
+  
+  <!-- Spoke lines -->
+  <line x1="100" y1="55" x2="100" y2="80" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="120" x2="100" y2="145" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="55" y1="100" x2="80" y2="100" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="100" x2="145" y2="100" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Diagonal spokes -->
+  <line x1="68" y1="68" x2="85" y2="85" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="132" y1="132" x2="115" y2="115" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="132" y1="68" x2="115" y2="85" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+  <line x1="68" y1="132" x2="85" y2="115" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round"/>
+</svg>
