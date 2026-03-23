@@ -1,9 +1,44 @@
 import { NextResponse } from "next/server";
 import { getTirewireCredentials, getEnabledConnections } from "@/lib/tirewire/client";
+import pg from "pg";
+import crypto from "crypto";
 
 export const runtime = "nodejs";
 
+const { Pool } = pg;
 const PRODUCTS_SERVICE_URL = "http://ws.tirewire.com/connectionscenter/productsservice.asmx";
+
+// Check encryption key
+function getEncryptionKey(): Buffer {
+  const key = process.env.CREDENTIALS_KEY || process.env.ADMIN_PASSWORD || "default-key-change-me";
+  return crypto.scryptSync(key, "tireweb-salt", 32);
+}
+
+function decrypt(encrypted: string): string {
+  try {
+    const [ivHex, data] = encrypted.split(":");
+    if (!ivHex || !data) return `[no-colon:${encrypted.slice(0,20)}...]`;
+    const iv = Buffer.from(ivHex, "hex");
+    const decipher = crypto.createDecipheriv("aes-256-cbc", getEncryptionKey(), iv);
+    let decrypted = decipher.update(data, "hex", "utf8");
+    decrypted += decipher.final("utf8");
+    return decrypted;
+  } catch (err: any) {
+    return `[decrypt-error:${err.message}]`;
+  }
+}
+
+async function getRawCredentials() {
+  const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!url) return null;
+  const pool = new Pool({ connectionString: url, ssl: { rejectUnauthorized: false }, max: 1 });
+  try {
+    const { rows } = await pool.query(`SELECT key, value FROM tireweb_config WHERE key IN ('access_key', 'group_token')`);
+    return rows;
+  } finally {
+    await pool.end();
+  }
+}
 
 function escapeXml(str: string): string {
   return str
@@ -39,7 +74,29 @@ export async function GET(req: Request) {
   };
 
   try {
-    // 1. Check credentials
+    // 1. Check raw credentials from database
+    const rawCreds = await getRawCredentials();
+    debug.rawCredentials = rawCreds?.map((r: any) => ({
+      key: r.key,
+      valueLength: r.value?.length || 0,
+      hasColon: r.value?.includes(":") || false,
+      valuePreview: r.value ? `${r.value.slice(0, 10)}...${r.value.slice(-10)}` : null,
+    }));
+
+    // 1b. Try decrypting manually
+    const accessKeyRaw = rawCreds?.find((r: any) => r.key === "access_key")?.value;
+    const groupTokenRaw = rawCreds?.find((r: any) => r.key === "group_token")?.value;
+    
+    const accessKeyDecrypted = accessKeyRaw ? decrypt(accessKeyRaw) : null;
+    const groupTokenDecrypted = groupTokenRaw ? decrypt(groupTokenRaw) : null;
+    
+    debug.decryption = {
+      accessKey: accessKeyDecrypted ? `${accessKeyDecrypted.slice(0, 4)}...${accessKeyDecrypted.slice(-4)} (len=${accessKeyDecrypted.length})` : null,
+      groupToken: groupTokenDecrypted ? `${groupTokenDecrypted.slice(0, 4)}...${groupTokenDecrypted.slice(-4)} (len=${groupTokenDecrypted.length})` : null,
+      envKeySource: process.env.CREDENTIALS_KEY ? "CREDENTIALS_KEY" : process.env.ADMIN_PASSWORD ? "ADMIN_PASSWORD" : "default",
+    };
+
+    // 2. Use the lib function
     const creds = await getTirewireCredentials();
     debug.credentials = creds
       ? {
