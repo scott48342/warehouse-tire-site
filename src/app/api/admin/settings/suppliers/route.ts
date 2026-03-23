@@ -41,10 +41,14 @@ export async function GET() {
   } catch (err: any) {
     // Table might not exist yet
     if (err.message?.includes("does not exist")) {
-      return NextResponse.json({ suppliers: [], needsMigration: true });
+      return NextResponse.json({ 
+        suppliers: [], 
+        needsMigration: true,
+        debug: { error: err.message, code: err.code }
+      });
     }
     console.error("[admin/settings/suppliers] GET Error:", err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    return NextResponse.json({ error: err.message, code: err.code }, { status: 500 });
   } finally {
     await pool.end();
   }
