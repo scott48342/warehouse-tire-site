@@ -1,8 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { trackLiftPresetSelect, trackLiftedCtaClick } from "@/lib/analytics";
+import { useState, useEffect } from "react";
+import {
+  trackLiftPresetSelect,
+  trackLiftedCtaClick,
+  trackLiftedRecommendationShown,
+  trackLiftedFallbackShown,
+} from "@/lib/analytics";
+import {
+  getLiftRecommendation,
+  formatTireDiameterRange,
+  formatWheelDiameterRange,
+  formatOffsetRange,
+  type LiftLevel,
+  type LiftRecommendation,
+  type VehicleLiftProfile,
+} from "@/lib/liftedRecommendations";
 
 // Lift presets - extensible structure for future fitment logic
 const LIFT_PRESETS = [
@@ -293,6 +307,97 @@ function VehicleSelector({
   );
 }
 
+// Recommendation Panel Component
+function RecommendationPanel({
+  profile,
+  recommendation,
+  liftName,
+}: {
+  profile: VehicleLiftProfile;
+  recommendation: LiftRecommendation;
+  liftName: string;
+}) {
+  return (
+    <div className="rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-5">
+      <div className="flex items-center gap-2 text-green-700">
+        <span className="text-xl">✅</span>
+        <h3 className="text-lg font-extrabold">Recommended Setup</h3>
+      </div>
+      <p className="mt-1 text-sm text-green-800">
+        Typical fitment for {profile.make} {profile.model} with {liftName}
+      </p>
+
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        {/* Tire Size */}
+        <div className="rounded-xl bg-white/80 p-4 border border-green-100">
+          <div className="text-xs font-semibold text-neutral-500">Tire Diameter Range</div>
+          <div className="mt-1 text-2xl font-extrabold text-neutral-900">
+            {formatTireDiameterRange(recommendation)}
+          </div>
+          <div className="mt-2 text-xs text-neutral-600">
+            Common sizes: {recommendation.commonTireSizes.slice(0, 3).join(", ")}
+          </div>
+        </div>
+
+        {/* Wheel Size */}
+        <div className="rounded-xl bg-white/80 p-4 border border-green-100">
+          <div className="text-xs font-semibold text-neutral-500">Wheel Diameter Range</div>
+          <div className="mt-1 text-2xl font-extrabold text-neutral-900">
+            {formatWheelDiameterRange(recommendation)}
+          </div>
+          <div className="mt-2 text-xs text-neutral-600">
+            Width: {recommendation.wheelWidthMin}-{recommendation.wheelWidthMax}" •
+            Offset: {formatOffsetRange(recommendation)}
+          </div>
+        </div>
+      </div>
+
+      {/* Notes */}
+      {recommendation.notes.length > 0 && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-500 mb-2">Setup Notes</div>
+          <ul className="space-y-1">
+            {recommendation.notes.map((note, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-neutral-700">
+                <span className="text-amber-500 mt-0.5">•</span>
+                {note}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className="mt-4 rounded-lg bg-amber-100/50 px-3 py-2 text-xs text-amber-800">
+        <strong>Note:</strong> These are typical supported ranges. Actual fitment depends on your specific 
+        lift kit, wheel offset, and modifications. Call us to confirm before ordering.
+      </div>
+    </div>
+  );
+}
+
+// Fallback Panel for unsupported vehicles
+function FallbackPanel({ make, model }: { make: string; model: string }) {
+  return (
+    <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5">
+      <div className="flex items-center gap-2 text-neutral-600">
+        <span className="text-xl">📋</span>
+        <h3 className="text-lg font-extrabold text-neutral-900">Recommendations Coming Soon</h3>
+      </div>
+      <p className="mt-2 text-sm text-neutral-600">
+        Lifted fitment recommendations for <strong>{make} {model}</strong> are not yet in our database. 
+        You can still shop stock-fitment tires now, or call us for personalized lift fitment advice.
+      </p>
+      <a
+        href="tel:+12483324120"
+        className="mt-3 inline-flex items-center gap-2 text-sm font-extrabold text-blue-700 hover:underline"
+      >
+        <span>📞</span>
+        <span>Call 248-332-4120 for custom recommendations</span>
+      </a>
+    </div>
+  );
+}
+
 export default function LiftedPage() {
   const [selectedLift, setSelectedLift] = useState<LiftPreset | null>(LIFT_PRESETS[1]); // Default to Off-Road
   const [selectedVehicle, setSelectedVehicle] = useState<{
@@ -302,6 +407,48 @@ export default function LiftedPage() {
     trim: string;
     modification: string;
   } | null>(null);
+  const [recommendationTracked, setRecommendationTracked] = useState(false);
+
+  // Look up recommendation when both vehicle and lift are selected
+  const recommendationResult = selectedVehicle && selectedLift
+    ? getLiftRecommendation(
+        selectedVehicle.make,
+        selectedVehicle.model,
+        selectedLift.id as LiftLevel,
+        parseInt(selectedVehicle.year, 10)
+      )
+    : null;
+
+  const hasRecommendation = !!recommendationResult;
+
+  // Track recommendation shown (once per combination)
+  useEffect(() => {
+    if (!selectedVehicle || !selectedLift) {
+      setRecommendationTracked(false);
+      return;
+    }
+
+    if (recommendationTracked) return;
+
+    if (recommendationResult) {
+      trackLiftedRecommendationShown({
+        liftPreset: selectedLift.id,
+        liftInches: selectedLift.liftInches,
+        year: selectedVehicle.year,
+        make: selectedVehicle.make,
+        model: selectedVehicle.model,
+        tireDiameterMin: recommendationResult.recommendation.tireDiameterMin,
+        tireDiameterMax: recommendationResult.recommendation.tireDiameterMax,
+      });
+    } else {
+      trackLiftedFallbackShown({
+        year: selectedVehicle.year,
+        make: selectedVehicle.make,
+        model: selectedVehicle.model,
+      });
+    }
+    setRecommendationTracked(true);
+  }, [selectedVehicle, selectedLift, recommendationResult, recommendationTracked]);
 
   // Build the CTA URL - redirects to existing /tires flow
   const ctaUrl = selectedVehicle
@@ -426,6 +573,32 @@ export default function LiftedPage() {
                 </div>
               </div>
             )}
+
+            {/* Step 3: Recommendations (shown after vehicle selection) */}
+            {selectedVehicle && selectedLift && (
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="grid h-8 w-8 place-items-center rounded-full bg-amber-500 text-sm font-extrabold text-white">
+                    3
+                  </div>
+                  <h2 className="text-xl font-extrabold text-neutral-900">Your Recommendations</h2>
+                </div>
+                <div className="mt-4 ml-11">
+                  {recommendationResult ? (
+                    <RecommendationPanel
+                      profile={recommendationResult.profile}
+                      recommendation={recommendationResult.recommendation}
+                      liftName={`${selectedLift.liftInches}" lift`}
+                    />
+                  ) : (
+                    <FallbackPanel
+                      make={selectedVehicle.make}
+                      model={selectedVehicle.model}
+                    />
+                  )}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Sidebar - Summary & CTA */}
@@ -462,6 +635,7 @@ export default function LiftedPage() {
                         year: selectedVehicle.year,
                         make: selectedVehicle.make,
                         model: selectedVehicle.model,
+                        hasRecommendation,
                       });
                     }}
                     className="flex h-14 w-full items-center justify-center rounded-xl bg-amber-500 text-base font-extrabold text-white hover:bg-amber-600 transition-colors"
