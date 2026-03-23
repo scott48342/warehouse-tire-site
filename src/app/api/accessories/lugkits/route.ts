@@ -67,8 +67,8 @@ export async function GET(req: Request) {
       } else if (seatType.includes("MAG") || seatType.includes("SHANK") || seatType.includes("FLAT")) {
         if (!(t.includes("MAG") || t.includes("SHANK") || t.includes("FLAT") || t.includes("WASHER"))) return false;
       } else {
-        // default conical/acorn: most Gorilla "standard" kits are ACORN/BULGE.
-        if (!(t.includes("ACORN") || t.includes("BULGE") || t.includes("CONICAL") || t.includes("TAPER"))) return false;
+        // default conical/acorn: most Gorilla "standard" kits are ACORN/BULGE/TUNER.
+        if (!(t.includes("ACORN") || t.includes("BULGE") || t.includes("CONICAL") || t.includes("TAPER") || t.includes("TUNER") || t.includes("SPLINE"))) return false;
       }
     }
 
