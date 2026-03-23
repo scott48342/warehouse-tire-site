@@ -7,6 +7,9 @@ import {
   trackLiftedCtaClick,
   trackLiftedRecommendationShown,
   trackLiftedFallbackShown,
+  trackLiftedTireSuggestionClick,
+  trackLiftedWheelSuggestionClick,
+  trackLiftedCategoryClick,
 } from "@/lib/analytics";
 import {
   getLiftRecommendation,
@@ -312,11 +315,21 @@ function RecommendationPanel({
   profile,
   recommendation,
   liftName,
+  liftPreset,
+  vehicle,
 }: {
   profile: VehicleLiftProfile;
   recommendation: LiftRecommendation;
   liftName: string;
+  liftPreset: { id: string; liftInches: number };
+  vehicle: { year: string; make: string; model: string };
 }) {
+  // Build suggested tire category URL (All-Terrain is most common for lifted trucks)
+  const tireCategoryUrl = "/tires/c/all-terrain";
+  
+  // Get the most common wheel diameter from the recommendation
+  const suggestedWheelDia = recommendation.wheelDiameterMin;
+
   return (
     <div className="rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-5">
       <div className="flex items-center gap-2 text-green-700">
@@ -352,9 +365,89 @@ function RecommendationPanel({
         </div>
       </div>
 
+      {/* Suggested Shopping Actions */}
+      <div className="mt-5">
+        <div className="text-xs font-semibold text-neutral-500 mb-3">Start Shopping</div>
+        
+        {/* Common Tire Sizes */}
+        <div className="space-y-2">
+          <div className="text-xs text-neutral-600 mb-2">Shop popular sizes for this setup:</div>
+          <div className="flex flex-wrap gap-2">
+            {recommendation.commonTireSizes.slice(0, 4).map((size) => (
+              <Link
+                key={size}
+                href={`/tires?size=${encodeURIComponent(size)}`}
+                onClick={() => {
+                  trackLiftedTireSuggestionClick({
+                    liftPreset: liftPreset.id,
+                    liftInches: liftPreset.liftInches,
+                    tireSize: size,
+                    year: vehicle.year,
+                    make: vehicle.make,
+                    model: vehicle.model,
+                  });
+                }}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-green-300 bg-white px-3 py-2 text-sm font-semibold text-green-800 hover:bg-green-50 hover:border-green-400 transition-colors"
+              >
+                <span>🛞</span>
+                {size}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Category & Wheel Actions */}
+        <div className="mt-4 grid gap-2 sm:grid-cols-2">
+          <Link
+            href={tireCategoryUrl}
+            onClick={() => {
+              trackLiftedCategoryClick({
+                liftPreset: liftPreset.id,
+                category: "all-terrain",
+                year: vehicle.year,
+                make: vehicle.make,
+                model: vehicle.model,
+              });
+            }}
+            className="flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 transition-colors"
+          >
+            <span>🏔️</span>
+            <div>
+              <div>Browse All-Terrain Tires</div>
+              <div className="text-xs font-normal text-neutral-500">Popular for lifted builds</div>
+            </div>
+          </Link>
+          
+          <Link
+            href={`/wheels?diameter=${suggestedWheelDia}`}
+            onClick={() => {
+              trackLiftedWheelSuggestionClick({
+                liftPreset: liftPreset.id,
+                liftInches: liftPreset.liftInches,
+                wheelDiameter: suggestedWheelDia,
+                year: vehicle.year,
+                make: vehicle.make,
+                model: vehicle.model,
+              });
+            }}
+            className="flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 transition-colors"
+          >
+            <span>⚙️</span>
+            <div>
+              <div>Browse {suggestedWheelDia}" Wheels</div>
+              <div className="text-xs font-normal text-neutral-500">Recommended diameter</div>
+            </div>
+          </Link>
+        </div>
+
+        <div className="mt-3 text-xs text-neutral-500">
+          💡 These are starting points based on typical setups. Use the main search for exact sizing.
+        </div>
+      </div>
+
       {/* Notes */}
       {recommendation.notes.length > 0 && (
-        <div className="mt-4">
+        <div className="mt-5 pt-4 border-t border-green-200">
           <div className="text-xs font-semibold text-neutral-500 mb-2">Setup Notes</div>
           <ul className="space-y-1">
             {recommendation.notes.map((note, i) => (
@@ -589,6 +682,12 @@ export default function LiftedPage() {
                       profile={recommendationResult.profile}
                       recommendation={recommendationResult.recommendation}
                       liftName={`${selectedLift.liftInches}" lift`}
+                      liftPreset={{ id: selectedLift.id, liftInches: selectedLift.liftInches }}
+                      vehicle={{
+                        year: selectedVehicle.year,
+                        make: selectedVehicle.make,
+                        model: selectedVehicle.model,
+                      }}
                     />
                   ) : (
                     <FallbackPanel

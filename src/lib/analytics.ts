@@ -87,3 +87,55 @@ export function trackLiftedFallbackShown(params: {
     vehicle_model: params.model,
   });
 }
+
+export function trackLiftedTireSuggestionClick(params: {
+  liftPreset: string;
+  liftInches: number;
+  tireSize: string;
+  year: string;
+  make: string;
+  model: string;
+}) {
+  trackEvent("lifted_tire_suggestion_click", {
+    preset_id: params.liftPreset,
+    lift_inches: params.liftInches,
+    tire_size: params.tireSize,
+    vehicle_year: params.year,
+    vehicle_make: params.make,
+    vehicle_model: params.model,
+  });
+}
+
+export function trackLiftedWheelSuggestionClick(params: {
+  liftPreset: string;
+  liftInches: number;
+  wheelDiameter: number;
+  year: string;
+  make: string;
+  model: string;
+}) {
+  trackEvent("lifted_wheel_suggestion_click", {
+    preset_id: params.liftPreset,
+    lift_inches: params.liftInches,
+    wheel_diameter: params.wheelDiameter,
+    vehicle_year: params.year,
+    vehicle_make: params.make,
+    vehicle_model: params.model,
+  });
+}
+
+export function trackLiftedCategoryClick(params: {
+  liftPreset: string;
+  category: string;
+  year: string;
+  make: string;
+  model: string;
+}) {
+  trackEvent("lifted_category_click", {
+    preset_id: params.liftPreset,
+    category: params.category,
+    vehicle_year: params.year,
+    vehicle_make: params.make,
+    vehicle_model: params.model,
+  });
+}
