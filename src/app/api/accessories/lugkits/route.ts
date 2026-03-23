@@ -28,29 +28,30 @@ export type LugKitChoice = {
 };
 
 export async function GET(req: Request) {
-  const url = new URL(req.url);
-  const threadSizeRaw = url.searchParams.get("threadSize");
-  const seatTypeRaw = url.searchParams.get("seatType");
-  const seatType = seatTypeRaw ? String(seatTypeRaw).toUpperCase() : "";
-  const threadKey = threadKeyFromRaw(threadSizeRaw);
+  try {
+    const url = new URL(req.url);
+    const threadSizeRaw = url.searchParams.get("threadSize");
+    const seatTypeRaw = url.searchParams.get("seatType");
+    const seatType = seatTypeRaw ? String(seatTypeRaw).toUpperCase() : "";
+    const threadKey = threadKeyFromRaw(threadSizeRaw);
 
-  if (!threadKey) {
-    return NextResponse.json({ ok: false, error: "unsupported_thread", threadSizeRaw }, { status: 400 });
-  }
+    if (!threadKey) {
+      return NextResponse.json({ ok: false, error: "unsupported_thread", threadSizeRaw }, { status: 400 });
+    }
 
-  // Get supplier credentials from admin settings (with fallback to env/hardcoded)
-  const wpCreds = await getSupplierCredentials("wheelpros");
-  const company = wpCreds.customerNumber || "1022165";
+    // Get supplier credentials from admin settings (with fallback to env/hardcoded)
+    const wpCreds = await getSupplierCredentials("wheelpros");
+    const company = wpCreds.customerNumber || "1022165";
 
-  // Pull a page of lug nut accessories (we filter client-side).
-  const res = await searchAccessories({
-    filter: "lug nut",
-    fields: "inventory,price",
-    priceType: "msrp,map,nip",
-    company,
-    page: 1,
-    pageSize: 200,
-  });
+    // Pull a page of lug nut accessories (we filter client-side).
+    const res = await searchAccessories({
+      filter: "lug nut",
+      fields: "inventory,price",
+      priceType: "msrp,map,nip",
+      company,
+      page: 1,
+      pageSize: 200,
+    });
 
   const results = (res.results || []).filter((r) => {
     const title = String(r.title || "");
@@ -109,4 +110,9 @@ export async function GET(req: Request) {
   }
 
   return NextResponse.json({ ok: true, choice: best }, { status: 200, headers: { "cache-control": "no-store" } });
+  } catch (err) {
+    console.error("[lugkits] Error:", err);
+    const message = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ ok: false, error: "internal_error", message }, { status: 500 });
+  }
 }
