@@ -43,7 +43,8 @@ export async function searchAccessories(params: {
 }): Promise<WheelProsAccessorySearchResponse> {
   const token = await getWheelProsToken();
 
-  const url = new URL("/search/accessory", baseUrl());
+  const base = baseUrl().replace(/\/$/, ""); // strip trailing slash
+  const url = new URL(`${base}/search/accessory`);
   url.searchParams.set("filter", params.filter);
   url.searchParams.set("fields", params.fields || "inventory,price");
   url.searchParams.set("priceType", params.priceType || "msrp,map,nip");
