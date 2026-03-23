@@ -6,7 +6,9 @@
 import { getWheelProsToken } from "@/lib/wheelprosAuth";
 
 function baseUrl() {
-  return process.env.WHEELPROS_ACCESSORY_API_BASE_URL || "https://api.wheelpros.com/products/v1";
+  const base = process.env.WHEELPROS_ACCESSORY_API_BASE_URL || "https://api.wheelpros.com/products/v1";
+  // Ensure trailing slash so relative URLs resolve correctly
+  return base.endsWith("/") ? base : base + "/";
 }
 
 export type WheelProsAccessoryPrice = {
@@ -43,7 +45,7 @@ export async function searchAccessories(params: {
 }): Promise<WheelProsAccessorySearchResponse> {
   const token = await getWheelProsToken();
 
-  const url = new URL("/search/accessory", baseUrl());
+  const url = new URL("search/accessory", baseUrl());
   url.searchParams.set("filter", params.filter);
   url.searchParams.set("fields", params.fields || "inventory,price");
   url.searchParams.set("priceType", params.priceType || "msrp,map,nip");

@@ -6,7 +6,9 @@
 import { getWheelProsToken } from "@/lib/wheelprosAuth";
 
 function baseUrl() {
-  return process.env.WHEELPROS_PRODUCT_API_BASE_URL || "https://api.wheelpros.com/product/v1";
+  const base = process.env.WHEELPROS_PRODUCT_API_BASE_URL || "https://api.wheelpros.com/product/v1";
+  // Ensure trailing slash so relative URLs resolve correctly
+  return base.endsWith("/") ? base : base + "/";
 }
 
 export type WheelSearchParams = {
@@ -80,7 +82,7 @@ export type WheelSearchResult = {
 
 export async function searchWheels(params: WheelSearchParams): Promise<WheelSearchResult> {
   const token = await getWheelProsToken();
-  const url = new URL("/wheel/search", baseUrl());
+  const url = new URL("wheel/search", baseUrl());
   
   // Add query params
   if (params.vehicleYear) url.searchParams.set("vehicleYear", String(params.vehicleYear));
