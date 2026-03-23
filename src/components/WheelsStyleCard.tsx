@@ -297,11 +297,10 @@ export function WheelsStyleCard({
         vehicle,
       });
 
-      // TEMP DISABLED: Calculate and add accessories if we have profile data
-      if (false && dbProfile) {
+      // Calculate and add accessories if we have profile data
+      if (dbProfile) {
         // Import accessory calculation inline to avoid hook rules violation
         import("@/hooks/useAccessoryFitment").then(async ({ calculateAccessoryFitment }) => {
-          try {
           const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
           
           if (fitmentResult.state) {
@@ -358,11 +357,6 @@ export function WheelsStyleCard({
             console.log(`[WheelsStyleCard] Lug nuts: ${lugStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.lugNuts.reason}`);
             console.log(`[WheelsStyleCard] Hub rings: ${hubStatus === 'required' ? 'ADDED' : 'SKIPPED'} - ${fitmentResult.fitment.hubRings.reason}`);
           }
-          } catch (err) {
-            console.error("[WheelsStyleCard] Accessory fitment error:", err);
-          }
-        }).catch((err) => {
-          console.error("[WheelsStyleCard] Failed to load accessory module:", err);
         });
       } else if (vehicle) {
         console.log("[WheelsStyleCard] Skipping accessory fitment - no dbProfile available");

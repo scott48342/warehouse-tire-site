@@ -5,7 +5,13 @@ import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 export const runtime = "nodejs";
 
-const EXCLUDE = ["BULK", "FRGD", "FORGED"]; // excludes premium/forged kits
+const EXCLUDE = ["BULK", "FRGD", "FORGED"]; // also excludes premium/forged kits by default
+const REQUIRE = ["KIT", "-20", "ACORN", "BULGE", "5-LUG"]; // tighten later if needed
+
+function hasAll(title: string, words: string[]) {
+  const t = title.toUpperCase();
+  return words.every((w) => t.includes(w));
+}
 
 function hasAny(title: string, needles: string[]) {
   const t = title.toUpperCase();
@@ -22,30 +28,29 @@ export type LugKitChoice = {
 };
 
 export async function GET(req: Request) {
-  try {
-    const url = new URL(req.url);
-    const threadSizeRaw = url.searchParams.get("threadSize");
-    const seatTypeRaw = url.searchParams.get("seatType");
-    const seatType = seatTypeRaw ? String(seatTypeRaw).toUpperCase() : "";
-    const threadKey = threadKeyFromRaw(threadSizeRaw);
+  const url = new URL(req.url);
+  const threadSizeRaw = url.searchParams.get("threadSize");
+  const seatTypeRaw = url.searchParams.get("seatType");
+  const seatType = seatTypeRaw ? String(seatTypeRaw).toUpperCase() : "";
+  const threadKey = threadKeyFromRaw(threadSizeRaw);
 
-    if (!threadKey) {
-      return NextResponse.json({ ok: false, error: "unsupported_thread", threadSizeRaw }, { status: 400 });
-    }
+  if (!threadKey) {
+    return NextResponse.json({ ok: false, error: "unsupported_thread", threadSizeRaw }, { status: 400 });
+  }
 
-    // Get supplier credentials from admin settings (with fallback to env/hardcoded)
-    const wpCreds = await getSupplierCredentials("wheelpros");
-    const company = wpCreds.companyCode || "1000"; // WheelPros region code, not customer number
+  // Get supplier credentials from admin settings (with fallback to env/hardcoded)
+  const wpCreds = await getSupplierCredentials("wheelpros");
+  const company = wpCreds.customerNumber || "1022165";
 
-    // Pull a page of lug nut accessories (we filter client-side).
-    const res = await searchAccessories({
-      filter: "lug nut",
-      fields: "inventory,price",
-      priceType: "msrp,map,nip",
-      company,
-      page: 1,
-      pageSize: 200,
-    });
+  // Pull a page of lug nut accessories (we filter client-side).
+  const res = await searchAccessories({
+    filter: "lug nut",
+    fields: "inventory,price",
+    priceType: "msrp,map,nip",
+    company,
+    page: 1,
+    pageSize: 200,
+  });
 
   const results = (res.results || []).filter((r) => {
     const title = String(r.title || "");
@@ -67,18 +72,13 @@ export async function GET(req: Request) {
       } else if (seatType.includes("MAG") || seatType.includes("SHANK") || seatType.includes("FLAT")) {
         if (!(t.includes("MAG") || t.includes("SHANK") || t.includes("FLAT") || t.includes("WASHER"))) return false;
       } else {
-        // default conical/acorn: most Gorilla "standard" kits are ACORN/BULGE/TUNER.
-        if (!(t.includes("ACORN") || t.includes("BULGE") || t.includes("CONICAL") || t.includes("TAPER") || t.includes("TUNER") || t.includes("SPLINE"))) return false;
+        // default conical/acorn: most Gorilla "standard" kits are ACORN/BULGE.
+        if (!(t.includes("ACORN") || t.includes("BULGE") || t.includes("CONICAL") || t.includes("TAPER"))) return false;
       }
     }
 
-    // Must be a kit (not loose nuts or bulk)
-    // Gorilla kits use "5-LUG", "4-LUG", etc. in title, or "-20"/"-24" in SKU
-    const sku = String(r.sku || "").toUpperCase();
-    const isKit = t.includes("5-LUG") || t.includes("4-LUG") || t.includes("6-LUG") ||
-                  t.includes("5LUG") || t.includes("4LUG") || t.includes("6LUG") ||
-                  sku.includes("-20") || sku.includes("-24") || sku.includes("-16");
-    if (!isKit) return false;
+    // Require some standard-kit markers
+    if (!hasAll(t, REQUIRE)) return false;
 
     return true;
   });
@@ -101,34 +101,12 @@ export async function GET(req: Request) {
 
   const best = parsed.sort((a, b) => a.nip - b.nip)[0];
 
-  // Debug mode: return sample titles to diagnose filtering
-  const debug = url.searchParams.get("debug") === "1";
-  
   if (!best) {
-    // Get sample Gorilla titles to help diagnose
-    const gorillaKits = (res.results || [])
-      .filter((r) => String(r.brand?.code || "") === "GO")
-      .slice(0, 10)
-      .map((r) => ({ sku: r.sku, title: r.title }));
-    
     return NextResponse.json(
-      { 
-        ok: false, 
-        error: "no_standard_kit_found", 
-        threadKey, 
-        needles: titleNeedleForThread(threadKey),
-        sampleCount: (res.results || []).length,
-        gorillaCount: (res.results || []).filter((r) => String(r.brand?.code || "") === "GO").length,
-        ...(debug ? { sampleTitles: gorillaKits } : {}),
-      },
+      { ok: false, error: "no_standard_kit_found", threadKey, sampleCount: (res.results || []).length },
       { status: 404 }
     );
   }
 
   return NextResponse.json({ ok: true, choice: best }, { status: 200, headers: { "cache-control": "no-store" } });
-  } catch (err) {
-    console.error("[lugkits] Error:", err);
-    const message = err instanceof Error ? err.message : String(err);
-    return NextResponse.json({ ok: false, error: "internal_error", message }, { status: 500 });
-  }
 }

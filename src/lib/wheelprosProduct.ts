@@ -80,8 +80,7 @@ export type WheelSearchResult = {
 
 export async function searchWheels(params: WheelSearchParams): Promise<WheelSearchResult> {
   const token = await getWheelProsToken();
-  const base = baseUrl().replace(/\/$/, "");
-  const url = new URL(`${base}/wheel/search`);
+  const url = new URL("/wheel/search", baseUrl());
   
   // Add query params
   if (params.vehicleYear) url.searchParams.set("vehicleYear", String(params.vehicleYear));
