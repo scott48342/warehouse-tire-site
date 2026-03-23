@@ -297,8 +297,8 @@ export function WheelsStyleCard({
         vehicle,
       });
 
-      // Calculate and add accessories if we have profile data
-      if (dbProfile) {
+      // TEMP DISABLED: Calculate and add accessories if we have profile data
+      if (false && dbProfile) {
         // Import accessory calculation inline to avoid hook rules violation
         import("@/hooks/useAccessoryFitment").then(async ({ calculateAccessoryFitment }) => {
           try {
