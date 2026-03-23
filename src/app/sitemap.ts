@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { getTopVehicleSlugs } from '@/lib/seo'
 
 const BASE_URL = 'https://shop.warehousetiredirect.com'
 
@@ -33,15 +34,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // TODO: Add dynamic wheel/tire product pages once we have a catalog endpoint
-  // Example:
-  // const wheels = await fetchWheelSKUs()
-  // const wheelPages = wheels.map(sku => ({
-  //   url: `${BASE_URL}/wheels/${sku}`,
-  //   lastModified: now,
-  //   changeFrequency: 'weekly' as const,
-  //   priority: 0.7,
-  // }))
+  // SEO vehicle landing pages (top 100 vehicles)
+  const vehicleSlugs = getTopVehicleSlugs()
+  const vehiclePages: MetadataRoute.Sitemap = vehicleSlugs.map(slug => ({
+    url: `${BASE_URL}/tires/for/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
 
-  return [...staticPages]
+  return [...staticPages, ...vehiclePages]
 }
