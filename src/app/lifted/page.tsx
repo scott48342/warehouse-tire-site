@@ -331,9 +331,6 @@ function RecommendationPanel({
 }) {
   // Build suggested tire category URL (All-Terrain is most common for lifted trucks)
   const tireCategoryUrl = "/tires/c/all-terrain";
-  
-  // Get the most common wheel diameter from the recommendation
-  const suggestedWheelDia = recommendation.wheelDiameterMin;
 
   return (
     <div className="rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-5">
@@ -376,7 +373,7 @@ function RecommendationPanel({
         
         {/* Common Tire Sizes */}
         <div className="space-y-2">
-          <div className="text-xs text-neutral-600 mb-2">Shop popular sizes for this setup:</div>
+          <div className="text-xs text-neutral-600 mb-2">Shop popular tire sizes for this setup:</div>
           <div className="flex flex-wrap gap-2">
             {recommendation.commonTireSizes.slice(0, 4).map((size) => (
               <Link
@@ -401,8 +398,35 @@ function RecommendationPanel({
           </div>
         </div>
 
-        {/* Category & Wheel Actions */}
-        <div className="mt-4 grid gap-2 sm:grid-cols-2">
+        {/* Popular Wheel Sizes */}
+        <div className="mt-4 space-y-2">
+          <div className="text-xs text-neutral-600 mb-2">Shop popular wheel sizes for this build:</div>
+          <div className="flex flex-wrap gap-2">
+            {recommendation.popularWheelSizes.map((dia) => (
+              <Link
+                key={dia}
+                href={`/wheels?diameter=${dia}`}
+                onClick={() => {
+                  trackLiftedWheelSuggestionClick({
+                    liftPreset: liftPreset.id,
+                    liftInches: liftPreset.liftInches,
+                    wheelDiameter: dia,
+                    year: vehicle.year,
+                    make: vehicle.make,
+                    model: vehicle.model,
+                  });
+                }}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-blue-300 bg-white px-3 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-50 hover:border-blue-400 transition-colors"
+              >
+                <span>⚙️</span>
+                {dia}" Wheels
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Category Link */}
+        <div className="mt-4">
           <Link
             href={tireCategoryUrl}
             onClick={() => {
@@ -422,31 +446,10 @@ function RecommendationPanel({
               <div className="text-xs font-normal text-neutral-500">Popular for lifted builds</div>
             </div>
           </Link>
-          
-          <Link
-            href={`/wheels?diameter=${suggestedWheelDia}`}
-            onClick={() => {
-              trackLiftedWheelSuggestionClick({
-                liftPreset: liftPreset.id,
-                liftInches: liftPreset.liftInches,
-                wheelDiameter: suggestedWheelDia,
-                year: vehicle.year,
-                make: vehicle.make,
-                model: vehicle.model,
-              });
-            }}
-            className="flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 transition-colors"
-          >
-            <span>⚙️</span>
-            <div>
-              <div>Browse {suggestedWheelDia}" Wheels</div>
-              <div className="text-xs font-normal text-neutral-500">Recommended diameter</div>
-            </div>
-          </Link>
         </div>
 
         <div className="mt-3 text-xs text-neutral-500">
-          💡 These are starting points based on typical setups. Use the main search for exact sizing.
+          💡 These are starting points based on typical setups. Wheel fitment depends on offset, backspacing, and modifications.
         </div>
       </div>
 
