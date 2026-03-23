@@ -1,19 +1,24 @@
 /**
  * Vehicle Lookup by Slug
  * 
- * Maps URL slugs to normalized vehicle objects
- * Uses existing fitment system data sources
+ * Maps URL slugs to normalized vehicle objects with trim resolution
  */
 
 import { parseVehicleSlug, VehicleSlugParts } from './slugifyVehicle'
+
+export interface TrimOption {
+  label: string
+  modificationId: string
+  searchUrl: string
+}
 
 export interface VehicleLookupResult {
   year: string
   make: string
   model: string
   trim?: string
-  modificationId?: string
-  tireSizes?: string[]
+  trims: TrimOption[]
+  autoResolvable: boolean  // true if exactly one trim exists
   source: 'parsed' | 'api' | 'db'
 }
 
@@ -75,6 +80,61 @@ const KNOWN_MAKES: Record<string, string> = {
 }
 
 /**
+ * Build tire search URL with full params for direct results
+ */
+function buildTireSearchUrlWithMod(
+  year: string,
+  make: string,
+  model: string,
+  modificationId: string,
+  trimLabel: string
+): string {
+  const params = new URLSearchParams({
+    year,
+    make,
+    model,
+    modification: modificationId,
+  })
+  
+  // Only include trim if it's a real label (not a modificationId)
+  if (trimLabel && !trimLabel.startsWith('s_') && !/^[a-f0-9]{10}$/.test(trimLabel)) {
+    params.set('trim', trimLabel)
+  }
+
+  return `/tires?${params.toString()}`
+}
+
+/**
+ * Fetch trims from the API
+ */
+async function fetchTrims(
+  year: string, 
+  make: string, 
+  model: string
+): Promise<{ results: Array<{ label: string; modificationId: string }> } | null> {
+  try {
+    // Determine base URL for SSR vs client
+    const baseUrl = typeof window === 'undefined' 
+      ? (process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
+          ? `https://${process.env.VERCEL_URL}` 
+          : 'http://localhost:3000')
+      : ''
+    
+    const params = new URLSearchParams({ year, make, model })
+    const res = await fetch(`${baseUrl}/api/vehicles/trims?${params.toString()}`, {
+      cache: 'force-cache',  // Cache trim lookups
+      next: { revalidate: 86400 }  // Revalidate daily
+    })
+    
+    if (!res.ok) return null
+    return res.json()
+  } catch (error) {
+    console.error('[getVehicleBySlug] Failed to fetch trims:', error)
+    return null
+  }
+}
+
+/**
  * Look up a vehicle by its URL slug
  * Returns null if the vehicle cannot be resolved
  */
@@ -92,32 +152,60 @@ export async function getVehicleBySlug(slug: string): Promise<VehicleLookupResul
     return null
   }
 
-  // Step 4: Return normalized vehicle
-  // For now, we trust the parsed data. The actual tire search
-  // will validate against the Wheel-Size API when the user clicks through.
+  // Step 4: Fetch available trims
+  const trimData = await fetchTrims(parsed.year, normalizedMake, parsed.model)
+  
+  if (!trimData?.results?.length) {
+    // No trims found - still return vehicle but not auto-resolvable
+    return {
+      year: parsed.year,
+      make: normalizedMake,
+      model: parsed.model,
+      trims: [],
+      autoResolvable: false,
+      source: 'parsed',
+    }
+  }
+
+  // Build trim options with search URLs
+  const trims: TrimOption[] = trimData.results.map(t => ({
+    label: t.label,
+    modificationId: t.modificationId,
+    searchUrl: buildTireSearchUrlWithMod(
+      parsed.year,
+      normalizedMake,
+      parsed.model,
+      t.modificationId,
+      t.label
+    ),
+  }))
+
   return {
     year: parsed.year,
     make: normalizedMake,
     model: parsed.model,
-    trim: parsed.trim,
-    source: 'parsed',
+    trims,
+    autoResolvable: trims.length === 1,
+    source: trimData.results.length > 0 ? 'api' : 'parsed',
   }
 }
 
 /**
- * Build tire search URL for a vehicle
+ * Build tire search URL for a vehicle (basic, without modification)
+ * Use this only as fallback - prefer trim-specific URLs
  */
 export function buildTireSearchUrl(vehicle: VehicleLookupResult): string {
+  // If auto-resolvable, use the single trim's URL
+  if (vehicle.autoResolvable && vehicle.trims.length === 1) {
+    return vehicle.trims[0].searchUrl
+  }
+  
+  // Otherwise return basic URL (will prompt for trim selection)
   const params = new URLSearchParams({
     year: vehicle.year,
     make: vehicle.make,
     model: vehicle.model,
   })
-  
-  if (vehicle.trim) {
-    params.set('trim', vehicle.trim)
-  }
-
   return `/tires?${params.toString()}`
 }
 
@@ -126,8 +214,5 @@ export function buildTireSearchUrl(vehicle: VehicleLookupResult): string {
  */
 export function formatVehicleName(vehicle: VehicleLookupResult): string {
   const parts = [vehicle.year, vehicle.make, vehicle.model]
-  if (vehicle.trim) {
-    parts.push(vehicle.trim)
-  }
   return parts.join(' ')
 }
