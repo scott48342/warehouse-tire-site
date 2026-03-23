@@ -113,23 +113,34 @@ async function fetchTrims(
   model: string
 ): Promise<{ results: Array<{ label: string; modificationId: string }> } | null> {
   try {
-    // Determine base URL for SSR vs client
-    const baseUrl = typeof window === 'undefined' 
-      ? (process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL 
-          ? `https://${process.env.VERCEL_URL}` 
-          : 'http://localhost:3000')
-      : ''
+    // Determine base URL for SSR
+    let baseUrl = ''
+    if (typeof window === 'undefined') {
+      // Server-side: need absolute URL
+      if (process.env.NEXT_PUBLIC_BASE_URL) {
+        baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+      } else if (process.env.VERCEL_URL) {
+        baseUrl = `https://${process.env.VERCEL_URL}`
+      } else {
+        baseUrl = 'http://localhost:3000'
+      }
+    }
     
     const params = new URLSearchParams({ year, make, model })
-    const res = await fetch(`${baseUrl}/api/vehicles/trims?${params.toString()}`, {
+    const url = `${baseUrl}/api/vehicles/trims?${params.toString()}`
+    
+    const res = await fetch(url, {
       cache: 'force-cache',  // Cache trim lookups
       next: { revalidate: 86400 }  // Revalidate daily
     })
     
-    if (!res.ok) return null
+    if (!res.ok) {
+      console.error('[fetchTrims] API returned non-OK:', res.status, url)
+      return null
+    }
     return res.json()
   } catch (error) {
-    console.error('[getVehicleBySlug] Failed to fetch trims:', error)
+    console.error('[fetchTrims] Failed to fetch trims:', error)
     return null
   }
 }
