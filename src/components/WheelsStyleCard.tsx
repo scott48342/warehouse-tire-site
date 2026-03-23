@@ -3,10 +3,14 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import { BRAND } from "@/lib/brand";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { useCart } from "@/lib/cart/CartContext";
-import { useAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
+import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
+import { 
+  isAccessoryAutoAddEnabled, 
+  safeAutoAddAccessories, 
+  logAccessoryEvent 
+} from "@/lib/cart/accessoryAutoAdd";
 
 export type WheelFinishThumb = {
   finish: string;
@@ -106,7 +110,7 @@ export function WheelsStyleCard({
   wheelSeatType?: string;
 }) {
   const router = useRouter();
-  const { addItem, addAccessories, setAccessoryState, replaceAccessorySku } = useCart();
+  const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
   // CRITICAL: Use pair.front.sku if available - this is the variant matching displayed size
@@ -254,14 +258,6 @@ export function WheelsStyleCard({
       hasVehicle: !!vehicle,
     });
 
-    // Build wheel data for accessory fitment
-    const wheelForFitment: WheelForAccessories = {
-      sku: effectiveSku,
-      centerBore: wheelCenterBore,
-      seatType: wheelSeatType,
-      boltPattern: specLabel?.boltPattern,
-    };
-
     // Check if we have vehicle data for accessory calculation
     const hasVehicleData = Boolean(
       dbProfile?.threadSize || dbProfile?.centerBoreMm
@@ -279,7 +275,7 @@ export function WheelsStyleCard({
     }
 
     setTimeout(() => {
-      // Add the wheel first
+      // Add the wheel first - this MUST succeed regardless of accessory status
       addItem({
         type: "wheel",
         sku: effectiveSku,
@@ -297,15 +293,61 @@ export function WheelsStyleCard({
         vehicle,
       });
 
-      // ⚠️ TEMPORARILY DISABLED: Accessory auto-add causing cart crashes
-      // TODO: Fix accessory item validation before re-enabling
-      // Root cause: accessory items added with undefined unitPrice crash CartSlideout render
-      // 
-      // Calculate and add accessories if we have profile data
-      // if (dbProfile) {
-      //   ... accessory auto-add code disabled ...
-      // }
-      console.log("[WheelsStyleCard] Accessory auto-add DISABLED (emergency fix)");
+      // ═══════════════════════════════════════════════════════════════════
+      // ACCESSORY AUTO-ADD (Safe, fail-soft implementation)
+      // - Never crashes main cart flow
+      // - Validates all items before adding
+      // - Can be disabled via ENABLE_ACCESSORY_AUTO_ADD flag or localStorage
+      // ═══════════════════════════════════════════════════════════════════
+      try {
+        if (isAccessoryAutoAddEnabled() && dbProfile) {
+          // Calculate accessory fitment
+          const fitmentResult = calculateAccessoryFitment(dbProfile, {
+            sku: effectiveSku,
+            centerBore: wheelCenterBore,
+            seatType: wheelSeatType,
+            boltPattern: specLabel?.boltPattern,
+          });
+
+          // Set accessory state for UI display (even if no items to add)
+          if (fitmentResult.state) {
+            setAccessoryState(fitmentResult.state);
+          }
+
+          // Safely auto-add required accessories
+          if (fitmentResult.requiredItems.length > 0) {
+            const addResult = safeAutoAddAccessories(
+              effectiveSku,
+              fitmentResult.requiredItems,
+              (item) => addAccessories([item])
+            );
+            
+            console.log("[WheelsStyleCard] Accessory auto-add result:", addResult);
+          } else {
+            logAccessoryEvent("accessory_auto_add_attempt", {
+              wheelSku: effectiveSku,
+              reason: "No required accessories for this fitment",
+            });
+          }
+        } else if (!isAccessoryAutoAddEnabled()) {
+          logAccessoryEvent("accessory_auto_add_skipped_disabled", {
+            wheelSku: effectiveSku,
+            reason: "Feature flag disabled",
+          });
+        } else {
+          logAccessoryEvent("accessory_auto_add_skipped_disabled", {
+            wheelSku: effectiveSku,
+            reason: "No dbProfile available",
+          });
+        }
+      } catch (accessoryError) {
+        // CRITICAL: Never let accessory errors crash the cart
+        console.error("[WheelsStyleCard] Accessory auto-add error (non-fatal):", accessoryError);
+        logAccessoryEvent("accessory_auto_add_failed", {
+          wheelSku: effectiveSku,
+          error: accessoryError instanceof Error ? accessoryError.message : String(accessoryError),
+        });
+      }
 
       setIsQuickAdding(false);
     }, 150);

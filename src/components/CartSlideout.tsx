@@ -201,6 +201,7 @@ function TireItemCard({ item }: { item: CartTireItem }) {
 
 export function CartSlideout() {
   const {
+    items,
     isOpen,
     setIsOpen,
     lastAddedItem,
