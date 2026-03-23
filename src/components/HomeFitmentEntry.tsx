@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 function EntryTile({
@@ -25,6 +26,34 @@ function EntryTile({
   );
 }
 
+function EntryTileLink({
+  title,
+  subtitle,
+  href,
+  accent,
+}: {
+  title: string;
+  subtitle: string;
+  href: string;
+  accent?: boolean;
+}) {
+  return (
+    <Link
+      href={href}
+      className={`group relative overflow-hidden rounded-3xl border p-6 text-left ${
+        accent
+          ? "border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 hover:border-amber-400"
+          : "border-neutral-200 bg-neutral-50 hover:border-neutral-300"
+      }`}
+    >
+      <div className="text-[11px] font-extrabold tracking-widest text-neutral-500">SHOP BY</div>
+      <div className="mt-1 text-2xl font-extrabold text-neutral-900 group-hover:underline">{title}</div>
+      <div className="mt-1 text-sm text-neutral-600">{subtitle}</div>
+      <div className="pointer-events-none absolute right-6 top-6 h-10 w-10 rounded-2xl border border-neutral-200 bg-white" />
+    </Link>
+  );
+}
+
 export function HomeFitmentEntry() {
   const router = useRouter();
 
@@ -40,10 +69,11 @@ export function HomeFitmentEntry() {
       <div className="mt-1 text-sm text-neutral-700">Select your year, make, model and trim.</div>
 
       <div className="mt-5 grid gap-4 md:grid-cols-3">
-        <EntryTile
-          title="Wheel & tire packages"
-          subtitle="Pick year/make/model to build a package."
-          onClick={() => launch("packages")}
+        <EntryTileLink
+          title="Lifted & Off-Road Builds"
+          subtitle="Build your lifted truck or SUV setup."
+          href="/lifted"
+          accent
         />
         <EntryTile
           title="Shop tires"

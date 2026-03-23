@@ -1,0 +1,486 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+
+// Lift presets - extensible structure for future fitment logic
+const LIFT_PRESETS = [
+  {
+    id: "daily",
+    name: "Daily Driver",
+    liftInches: 2,
+    description: "Perfect balance of style and practicality",
+    features: ["Maintains factory ride quality", "Easy entry/exit", "No major mods needed"],
+    icon: "🚗",
+  },
+  {
+    id: "offroad",
+    name: "Off-Road Ready",
+    liftInches: 4,
+    description: "Serious capability without going extreme",
+    features: ["Improved approach angles", "Fits 33-35\" tires", "Great trail performance"],
+    icon: "🏔️",
+  },
+  {
+    id: "extreme",
+    name: "Extreme Build",
+    liftInches: 6,
+    description: "Maximum clearance for serious off-roading",
+    features: ["Fits 35-37\" tires", "Rock crawling capable", "Show truck presence"],
+    icon: "🦖",
+  },
+] as const;
+
+type LiftPreset = (typeof LIFT_PRESETS)[number];
+
+const THIS_YEAR = new Date().getFullYear();
+const YEARS = Array.from({ length: 20 }, (_, i) => String(THIS_YEAR - i));
+
+// Popular trucks/SUVs for lifted builds
+const POPULAR_VEHICLES = [
+  { year: "2024", make: "Ford", model: "F-150" },
+  { year: "2024", make: "Chevrolet", model: "Silverado 1500" },
+  { year: "2024", make: "RAM", model: "1500" },
+  { year: "2024", make: "Toyota", model: "Tacoma" },
+  { year: "2024", make: "Jeep", model: "Wrangler" },
+  { year: "2024", make: "Ford", model: "Bronco" },
+  { year: "2024", make: "Toyota", model: "4Runner" },
+  { year: "2024", make: "Chevrolet", model: "Colorado" },
+];
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return (await res.json()) as T;
+}
+
+function LiftCard({
+  preset,
+  selected,
+  onSelect,
+}: {
+  preset: LiftPreset;
+  selected: boolean;
+  onSelect: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      className={`group relative overflow-hidden rounded-2xl border-2 p-5 text-left transition-all ${
+        selected
+          ? "border-amber-500 bg-amber-50 ring-2 ring-amber-200"
+          : "border-neutral-200 bg-white hover:border-amber-300 hover:bg-amber-50/50"
+      }`}
+    >
+      <div className="flex items-start justify-between">
+        <div>
+          <span className="text-2xl">{preset.icon}</span>
+          <div className="mt-2 text-lg font-extrabold text-neutral-900">{preset.name}</div>
+          <div className="text-sm font-bold text-amber-700">{preset.liftInches}" Lift</div>
+        </div>
+        <div
+          className={`grid h-6 w-6 place-items-center rounded-full border-2 transition-colors ${
+            selected ? "border-amber-500 bg-amber-500" : "border-neutral-300 bg-white"
+          }`}
+        >
+          {selected && (
+            <svg className="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            </svg>
+          )}
+        </div>
+      </div>
+      <p className="mt-2 text-sm text-neutral-600">{preset.description}</p>
+      <ul className="mt-3 space-y-1">
+        {preset.features.map((f) => (
+          <li key={f} className="flex items-center gap-2 text-xs text-neutral-700">
+            <span className="text-green-600">✓</span>
+            {f}
+          </li>
+        ))}
+      </ul>
+    </button>
+  );
+}
+
+function VehicleSelector({
+  onSelect,
+}: {
+  onSelect: (v: { year: string; make: string; model: string; trim: string; modification: string }) => void;
+}) {
+  const [step, setStep] = useState<"year" | "make" | "model" | "trim">("year");
+  const [year, setYear] = useState("");
+  const [make, setMake] = useState("");
+  const [model, setModel] = useState("");
+  
+  const [makes, setMakes] = useState<string[]>([]);
+  const [models, setModels] = useState<string[]>([]);
+  const [trims, setTrims] = useState<{ trim: string; modification: string }[]>([]);
+  
+  const [loading, setLoading] = useState(false);
+
+  async function selectYear(y: string) {
+    setYear(y);
+    setMake("");
+    setModel("");
+    setLoading(true);
+    try {
+      const data = await fetchJson<{ makes?: string[] }>(`/api/vehicles/makes?year=${y}`);
+      setMakes(data.makes || []);
+      setStep("make");
+    } catch {
+      setMakes([]);
+    }
+    setLoading(false);
+  }
+
+  async function selectMake(m: string) {
+    setMake(m);
+    setModel("");
+    setLoading(true);
+    try {
+      const data = await fetchJson<{ models?: string[] }>(`/api/vehicles/models?year=${year}&make=${m}`);
+      setModels(data.models || []);
+      setStep("model");
+    } catch {
+      setModels([]);
+    }
+    setLoading(false);
+  }
+
+  async function selectModel(mod: string) {
+    setModel(mod);
+    setLoading(true);
+    try {
+      const data = await fetchJson<{ trims?: { trim: string; modification: string }[] }>(
+        `/api/vehicles/trims?year=${year}&make=${make}&model=${mod}`
+      );
+      setTrims(data.trims || []);
+      setStep("trim");
+    } catch {
+      setTrims([]);
+    }
+    setLoading(false);
+  }
+
+  function selectTrim(t: { trim: string; modification: string }) {
+    onSelect({ year, make, model, trim: t.trim, modification: t.modification });
+  }
+
+  function reset() {
+    setStep("year");
+    setYear("");
+    setMake("");
+    setModel("");
+    setMakes([]);
+    setModels([]);
+    setTrims([]);
+  }
+
+  return (
+    <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+      <div className="flex items-center justify-between">
+        <h3 className="text-sm font-extrabold text-neutral-900">Select Your Vehicle</h3>
+        {step !== "year" && (
+          <button type="button" onClick={reset} className="text-xs font-semibold text-blue-700 hover:underline">
+            Start over
+          </button>
+        )}
+      </div>
+
+      {/* Breadcrumbs */}
+      {(year || make || model) && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {year && (
+            <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-700">
+              {year}
+            </span>
+          )}
+          {make && (
+            <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-700">
+              {make}
+            </span>
+          )}
+          {model && (
+            <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-700">
+              {model}
+            </span>
+          )}
+        </div>
+      )}
+
+      {loading && (
+        <div className="mt-4 flex items-center gap-2 text-sm text-neutral-600">
+          <div className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-300 border-t-neutral-600" />
+          Loading...
+        </div>
+      )}
+
+      {!loading && step === "year" && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-600 mb-2">Year</div>
+          <div className="grid grid-cols-5 gap-2 max-h-48 overflow-y-auto">
+            {YEARS.map((y) => (
+              <button
+                key={y}
+                type="button"
+                onClick={() => selectYear(y)}
+                className="rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50"
+              >
+                {y}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {!loading && step === "make" && makes.length > 0 && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-600 mb-2">Make</div>
+          <div className="grid grid-cols-3 gap-2 max-h-64 overflow-y-auto">
+            {makes.map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => selectMake(m)}
+                className="rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 text-left"
+              >
+                {m}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {!loading && step === "model" && models.length > 0 && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-600 mb-2">Model</div>
+          <div className="grid grid-cols-2 gap-2 max-h-64 overflow-y-auto">
+            {models.map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => selectModel(m)}
+                className="rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 text-left"
+              >
+                {m}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {!loading && step === "trim" && trims.length > 0 && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-600 mb-2">Trim</div>
+          <div className="grid gap-2 max-h-64 overflow-y-auto">
+            {trims.map((t) => (
+              <button
+                key={t.modification}
+                type="button"
+                onClick={() => selectTrim(t)}
+                className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 text-left"
+              >
+                {t.trim}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function LiftedPage() {
+  const [selectedLift, setSelectedLift] = useState<LiftPreset | null>(LIFT_PRESETS[1]); // Default to Off-Road
+  const [selectedVehicle, setSelectedVehicle] = useState<{
+    year: string;
+    make: string;
+    model: string;
+    trim: string;
+    modification: string;
+  } | null>(null);
+
+  // Build the CTA URL - redirects to existing /tires flow
+  const ctaUrl = selectedVehicle
+    ? `/tires?year=${encodeURIComponent(selectedVehicle.year)}&make=${encodeURIComponent(selectedVehicle.make)}&model=${encodeURIComponent(selectedVehicle.model)}&trim=${encodeURIComponent(selectedVehicle.trim)}&modification=${encodeURIComponent(selectedVehicle.modification)}`
+    : null;
+
+  return (
+    <main className="bg-neutral-50 min-h-screen">
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-neutral-900 to-neutral-800 text-white">
+        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div className="flex items-center gap-2 text-amber-400 text-sm font-semibold">
+            <span>🏔️</span>
+            <span>Off-Road & Lifted Builds</span>
+          </div>
+          <h1 className="mt-3 text-4xl font-extrabold tracking-tight md:text-5xl">
+            Build Your Lifted Truck or SUV
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-neutral-300">
+            Select your vehicle and lift setup, then shop tires sized for your build. 
+            We'll help you find the right fitment for your lifted rig.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-10">
+        <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
+          {/* Main content */}
+          <div className="space-y-8">
+            {/* Step 1: Choose Lift */}
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="grid h-8 w-8 place-items-center rounded-full bg-amber-500 text-sm font-extrabold text-white">
+                  1
+                </div>
+                <h2 className="text-xl font-extrabold text-neutral-900">Choose Your Lift</h2>
+              </div>
+              <p className="mt-2 ml-11 text-sm text-neutral-600">
+                Select a lift level to help us recommend the right tire sizes.
+              </p>
+              <div className="mt-4 ml-11 grid gap-4 sm:grid-cols-3">
+                {LIFT_PRESETS.map((preset) => (
+                  <LiftCard
+                    key={preset.id}
+                    preset={preset}
+                    selected={selectedLift?.id === preset.id}
+                    onSelect={() => setSelectedLift(preset)}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Step 2: Select Vehicle */}
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="grid h-8 w-8 place-items-center rounded-full bg-amber-500 text-sm font-extrabold text-white">
+                  2
+                </div>
+                <h2 className="text-xl font-extrabold text-neutral-900">Select Your Vehicle</h2>
+              </div>
+              <p className="mt-2 ml-11 text-sm text-neutral-600">
+                Tell us what you drive so we can show tires that fit.
+              </p>
+              <div className="mt-4 ml-11">
+                {selectedVehicle ? (
+                  <div className="rounded-2xl border border-green-200 bg-green-50 p-5">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs font-semibold text-green-700">Selected Vehicle</div>
+                        <div className="mt-1 text-lg font-extrabold text-neutral-900">
+                          {selectedVehicle.year} {selectedVehicle.make} {selectedVehicle.model}
+                        </div>
+                        <div className="text-sm text-neutral-600">{selectedVehicle.trim}</div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedVehicle(null)}
+                        className="text-sm font-semibold text-blue-700 hover:underline"
+                      >
+                        Change
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <VehicleSelector onSelect={setSelectedVehicle} />
+                )}
+              </div>
+            </div>
+
+            {/* Popular Vehicles Shortcut */}
+            {!selectedVehicle && (
+              <div className="ml-11">
+                <div className="text-xs font-semibold text-neutral-600 mb-3">Popular lifted trucks & SUVs</div>
+                <div className="flex flex-wrap gap-2">
+                  {POPULAR_VEHICLES.slice(0, 6).map((v) => (
+                    <Link
+                      key={`${v.year}-${v.make}-${v.model}`}
+                      href={`/tires/for/${v.year.toLowerCase()}-${v.make.toLowerCase()}-${v.model.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:border-amber-300 hover:bg-amber-50"
+                    >
+                      {v.year} {v.make} {v.model}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Sidebar - Summary & CTA */}
+          <div className="lg:sticky lg:top-6 lg:self-start">
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 className="text-lg font-extrabold text-neutral-900">Your Build</h3>
+              
+              <div className="mt-4 space-y-3">
+                <div className="flex items-center justify-between rounded-xl bg-neutral-50 px-4 py-3">
+                  <div className="text-sm text-neutral-600">Lift Level</div>
+                  <div className="text-sm font-extrabold text-neutral-900">
+                    {selectedLift ? `${selectedLift.name} (${selectedLift.liftInches}")` : "Not selected"}
+                  </div>
+                </div>
+                <div className="flex items-center justify-between rounded-xl bg-neutral-50 px-4 py-3">
+                  <div className="text-sm text-neutral-600">Vehicle</div>
+                  <div className="text-sm font-extrabold text-neutral-900">
+                    {selectedVehicle
+                      ? `${selectedVehicle.year} ${selectedVehicle.make} ${selectedVehicle.model}`
+                      : "Not selected"}
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="mt-6">
+                {ctaUrl ? (
+                  <Link
+                    href={ctaUrl}
+                    className="flex h-14 w-full items-center justify-center rounded-xl bg-amber-500 text-base font-extrabold text-white hover:bg-amber-600 transition-colors"
+                  >
+                    Shop Tires for This Setup →
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    disabled
+                    className="flex h-14 w-full items-center justify-center rounded-xl bg-neutral-200 text-base font-extrabold text-neutral-500 cursor-not-allowed"
+                  >
+                    Select vehicle to continue
+                  </button>
+                )}
+              </div>
+
+              <p className="mt-4 text-xs text-neutral-500 text-center">
+                We'll show you tires that work with your lift. No guesswork.
+              </p>
+            </div>
+
+            {/* Help */}
+            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-5">
+              <div className="text-sm font-extrabold text-neutral-900">Need help?</div>
+              <p className="mt-1 text-xs text-neutral-600">
+                Not sure what lift or tire size works for your build? Give us a call and we'll help you figure it out.
+              </p>
+              <a
+                href="tel:+12483324120"
+                className="mt-3 flex items-center gap-2 text-sm font-extrabold text-blue-700 hover:underline"
+              >
+                <span>📞</span>
+                <span>248-332-4120</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Future: This is where we can add lift-specific tire sizing logic */}
+      {/* The LIFT_PRESETS structure is designed to be extensible:
+          - Add wheel diameter recommendations per lift level
+          - Add tire size multipliers or lookup tables
+          - Add suspension component recommendations
+          - Connect to fitment engine with lift offsets
+      */}
+    </main>
+  );
+}
