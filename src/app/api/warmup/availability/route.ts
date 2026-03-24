@@ -7,7 +7,7 @@ import {
   isSchedulerRunning,
   PREWARM_TARGETS,
 } from "@/lib/availabilityPrewarm";
-import { getCacheStats, clearCache, resetMetrics } from "@/lib/availabilityCache";
+import { getCacheStats, clearCache, resetMetrics, runHealthCheck } from "@/lib/availabilityCache";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -36,7 +36,11 @@ export async function GET(req: Request) {
   
   try {
     switch (action) {
-      case "status":
+      case "status": {
+        const [cacheStats, healthCheck] = await Promise.all([
+          getCacheStats(),
+          runHealthCheck(),
+        ]);
         return NextResponse.json({
           ok: true,
           action: "status",
@@ -49,9 +53,12 @@ export async function GET(req: Request) {
               priority: t.priority,
             })),
           },
-          cache: getCacheStats(),
+          cache: cacheStats,
+          health: healthCheck,
+          sharedCacheEnabled: healthCheck.redis.connected,
           at: new Date().toISOString(),
         });
+      }
         
       case "run":
         // Filter targets if specified
@@ -105,11 +112,11 @@ export async function GET(req: Request) {
         });
         
       case "clear-cache":
-        clearCache();
+        await clearCache();
         return NextResponse.json({
           ok: true,
           action: "clear-cache",
-          cache: getCacheStats(),
+          cache: await getCacheStats(),
           at: new Date().toISOString(),
         });
         
@@ -118,7 +125,7 @@ export async function GET(req: Request) {
         return NextResponse.json({
           ok: true,
           action: "reset-metrics",
-          cache: getCacheStats(),
+          cache: await getCacheStats(),
           at: new Date().toISOString(),
         });
         

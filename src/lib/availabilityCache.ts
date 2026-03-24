@@ -2,68 +2,73 @@
  * Wheel Availability Cache
  * 
  * Centralized cache for wheel availability checks from WheelPros.
- * Supports pre-warming for common vehicle searches.
+ * Now uses SHARED CACHE (Upstash Redis) for cross-instance sharing.
+ * 
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * ARCHITECTURE CHANGE (March 2026)
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * 
+ * BEFORE: Instance-local Map cache
+ * - Pre-warm hit rate: 0% (users hit different instances)
+ * - Pre-warm effort: wasted
+ * 
+ * AFTER: Shared Redis cache (Upstash)
+ * - Pre-warm benefits ALL instances
+ * - ~5-15ms latency overhead (acceptable for 30-min TTL)
+ * - Falls back to local cache if Redis unavailable
  * 
  * ═══════════════════════════════════════════════════════════════════════════════
  * CACHE KEY STRUCTURE
  * ═══════════════════════════════════════════════════════════════════════════════
  * 
- * Format: `${sku}|minQty=${minQty}`
+ * Format: `wt:avail:${sku}:minQty=${minQty}`
  * 
  * Examples:
- * - "W1234567|minQty=4"  → Standard consumer order (4 wheels)
- * - "W1234567|minQty=1"  → Single wheel replacement
- * 
- * The cache key includes minQty because availability depends on stock thresholds.
- * A SKU may be available for qty=1 but not qty=4.
+ * - "wt:avail:W1234567:minQty=4"  → Standard consumer order (4 wheels)
+ * - "wt:avail:W1234567:minQty=1"  → Single wheel replacement
  * 
  * ═══════════════════════════════════════════════════════════════════════════════
  * CACHE BEHAVIOR
  * ═══════════════════════════════════════════════════════════════════════════════
  * 
- * - TTL: 30 minutes (configurable via WT_AVAIL_CACHE_TTL_MS)
- * - Max size: 10,000 entries (LRU eviction)
+ * - TTL: 30 minutes
+ * - Primary: Upstash Redis (shared across instances)
+ * - Fallback: Local Map cache (per-instance)
  * - Pre-warm targets: Common truck/SUV bolt patterns
  * 
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
+import {
+  getAvailability,
+  setAvailability,
+  setAvailabilityBulk,
+  getSharedCacheStats,
+  resetSharedCacheMetrics,
+  recordPrewarmStats,
+  makeAvailabilityKey,
+  clearAvailabilityCache,
+  getAvailabilityCacheSize,
+  runHealthCheck,
+  type AvailabilityEntry,
+  type SharedCacheStats,
+} from "./sharedCache";
+
 // ═══════════════════════════════════════════════════════════════════════════════
-// TYPES
+// TYPES (re-export for backward compatibility)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export type AvailabilityResult = {
-  ok: boolean;
-  inventoryType: string;
-  localQty: number;
-  globalQty: number;
-  checkedAt: string;
+export type AvailabilityResult = AvailabilityEntry & {
   fromCache?: boolean;
   fromPrewarm?: boolean;
+  fromShared?: boolean;
 };
 
-type CacheEntry = {
-  expiresAt: number;
-  ok: boolean;
-  inventoryType?: string;
-  localQty?: number;
-  globalQty?: number;
-  checkedAt: string;
-  prewarmed?: boolean;
-};
-
-export type CacheStats = {
+export type CacheStats = SharedCacheStats & {
   size: number;
   maxSize: number;
   ttlMs: number;
-  hits: number;
-  misses: number;
-  hitRate: number;
-  prewarmedEntries: number;
-  prewarmedHits: number;
-  lastPrewarmAt: string | null;
-  lastPrewarmDurationMs: number | null;
-  lastPrewarmSkusWarmed: number | null;
+  prewarmedEntries: number; // Note: can't easily count in Redis, will be approximate
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -71,13 +76,10 @@ export type CacheStats = {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const CONFIG = {
-  // Cache TTL: 30 minutes default, configurable via env
-  TTL_MS: Math.max(
-    60_000,
-    Math.min(60 * 60_000, Number(process.env.WT_AVAIL_CACHE_TTL_MS || "1800000") || 1_800_000)
-  ),
+  // Cache TTL: 30 minutes (in ms for backward compat)
+  TTL_MS: 30 * 60 * 1000,
   
-  // Max cache size (LRU eviction above this)
+  // Max cache size (for local fallback)
   MAX_SIZE: 10_000,
   
   // Orderable inventory types
@@ -85,77 +87,92 @@ const CONFIG = {
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// STATE (module-level singleton)
+// LEGACY API COMPATIBILITY
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const cache = new Map<string, CacheEntry>();
-
-// Metrics
-let metrics = {
-  hits: 0,
-  misses: 0,
-  prewarmedHits: 0,
-  lastPrewarmAt: null as string | null,
-  lastPrewarmDurationMs: null as number | null,
-  lastPrewarmSkusWarmed: null as number | null,
-};
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// CACHE KEY GENERATION
-// ═══════════════════════════════════════════════════════════════════════════════
+// These maintain backward compatibility with existing code
 
 /**
  * Generate a cache key for availability lookup.
- * 
- * Format: `${sku}|minQty=${minQty}`
+ * @deprecated Use makeAvailabilityKey from sharedCache.ts
  */
 export function makeCacheKey(sku: string, minQty: number = 4): string {
-  return `${sku.trim()}|minQty=${minQty}`;
+  return makeAvailabilityKey(sku, minQty);
 }
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// CACHE OPERATIONS
-// ═══════════════════════════════════════════════════════════════════════════════
 
 /**
  * Get cached availability if available and not expired.
+ * Now uses shared Redis cache with local fallback.
  */
-export function getCached(sku: string, minQty: number = 4): AvailabilityResult | null {
-  const key = makeCacheKey(sku, minQty);
-  const entry = cache.get(key);
-  
-  if (!entry) {
-    metrics.misses++;
-    return null;
-  }
-  
-  // Check expiration
-  if (Date.now() > entry.expiresAt) {
-    cache.delete(key);
-    metrics.misses++;
-    return null;
-  }
-  
-  metrics.hits++;
-  if (entry.prewarmed) {
-    metrics.prewarmedHits++;
-  }
+export async function getCached(sku: string, minQty: number = 4): Promise<AvailabilityResult | null> {
+  const result = await getAvailability(sku, minQty);
+  if (!result) return null;
   
   return {
-    ok: entry.ok,
-    inventoryType: entry.inventoryType || "",
-    localQty: entry.localQty || 0,
-    globalQty: entry.globalQty || 0,
-    checkedAt: entry.checkedAt,
-    fromCache: true,
-    fromPrewarm: entry.prewarmed,
+    ok: result.ok,
+    inventoryType: result.inventoryType,
+    localQty: result.localQty,
+    globalQty: result.globalQty,
+    checkedAt: result.checkedAt,
+    fromCache: result.fromCache,
+    fromPrewarm: result.prewarmed,
+    fromShared: result.fromShared,
   };
 }
 
 /**
- * Store availability result in cache.
+ * Synchronous cache check (local only).
+ * For hot-path performance where async isn't acceptable.
+ * Note: This only checks local cache, not shared Redis.
  */
-export function setCache(
+export function getCachedSync(sku: string, minQty: number = 4): AvailabilityResult | null {
+  // This is the legacy behavior - local only
+  // We keep a small local cache for ultra-fast repeated access
+  const key = makeAvailabilityKey(sku, minQty);
+  const entry = localCacheForSync.get(key);
+  
+  if (!entry) return null;
+  if (Date.now() > entry.expiresAt) {
+    localCacheForSync.delete(key);
+    return null;
+  }
+  
+  return {
+    ok: entry.ok,
+    inventoryType: entry.inventoryType,
+    localQty: entry.localQty,
+    globalQty: entry.globalQty,
+    checkedAt: entry.checkedAt,
+    fromCache: true,
+    fromPrewarm: entry.prewarmed,
+    fromShared: false,
+  };
+}
+
+// Local cache for sync access (small, request-scoped essentially)
+type LocalEntry = AvailabilityEntry & { expiresAt: number };
+const localCacheForSync = new Map<string, LocalEntry>();
+
+function updateLocalSyncCache(sku: string, minQty: number, data: AvailabilityEntry): void {
+  const key = makeAvailabilityKey(sku, minQty);
+  
+  // LRU eviction
+  if (localCacheForSync.size >= 1000) {
+    const firstKey = localCacheForSync.keys().next().value;
+    if (firstKey) localCacheForSync.delete(firstKey);
+  }
+  
+  localCacheForSync.set(key, {
+    ...data,
+    expiresAt: Date.now() + CONFIG.TTL_MS,
+  });
+}
+
+/**
+ * Store availability result in cache.
+ * Now writes to shared Redis cache.
+ */
+export async function setCache(
   sku: string,
   minQty: number,
   result: {
@@ -166,32 +183,62 @@ export function setCache(
     checkedAt: string;
   },
   options?: { prewarmed?: boolean; ttlMs?: number }
-): void {
-  const key = makeCacheKey(sku, minQty);
-  const ttl = options?.ttlMs ?? CONFIG.TTL_MS;
+): Promise<void> {
+  const ttlSeconds = Math.round((options?.ttlMs ?? CONFIG.TTL_MS) / 1000);
   
-  // LRU eviction if at max size
-  if (cache.size >= CONFIG.MAX_SIZE) {
-    // Delete oldest entry (first in Map iteration order)
-    const firstKey = cache.keys().next().value;
-    if (firstKey) cache.delete(firstKey);
-  }
-  
-  cache.set(key, {
-    expiresAt: Date.now() + ttl,
+  const data: AvailabilityEntry = {
     ok: result.ok,
-    inventoryType: result.inventoryType,
-    localQty: result.localQty,
-    globalQty: result.globalQty,
+    inventoryType: result.inventoryType || "",
+    localQty: result.localQty || 0,
+    globalQty: result.globalQty || 0,
     checkedAt: result.checkedAt,
     prewarmed: options?.prewarmed,
+  };
+  
+  // Also update local sync cache
+  updateLocalSyncCache(sku, minQty, data);
+  
+  await setAvailability(sku, minQty, data, {
+    prewarmed: options?.prewarmed,
+    ttlSeconds,
   });
+}
+
+/**
+ * Synchronous cache set (local only).
+ * For cases where we can't await.
+ */
+export function setCacheSync(
+  sku: string,
+  minQty: number,
+  result: {
+    ok: boolean;
+    inventoryType?: string;
+    localQty?: number;
+    globalQty?: number;
+    checkedAt: string;
+  },
+  options?: { prewarmed?: boolean }
+): void {
+  const data: AvailabilityEntry = {
+    ok: result.ok,
+    inventoryType: result.inventoryType || "",
+    localQty: result.localQty || 0,
+    globalQty: result.globalQty || 0,
+    checkedAt: result.checkedAt,
+    prewarmed: options?.prewarmed,
+  };
+  
+  updateLocalSyncCache(sku, minQty, data);
+  
+  // Fire-and-forget async write to shared cache
+  setAvailability(sku, minQty, data, { prewarmed: options?.prewarmed }).catch(() => {});
 }
 
 /**
  * Bulk set multiple cache entries (for pre-warming).
  */
-export function setCacheBulk(
+export async function setCacheBulk(
   entries: Array<{
     sku: string;
     minQty: number;
@@ -204,42 +251,68 @@ export function setCacheBulk(
     };
   }>,
   options?: { prewarmed?: boolean; ttlMs?: number }
-): void {
-  for (const entry of entries) {
-    setCache(entry.sku, entry.minQty, entry.result, options);
+): Promise<{ success: number; failed: number }> {
+  const ttlSeconds = Math.round((options?.ttlMs ?? CONFIG.TTL_MS) / 1000);
+  
+  const bulkEntries = entries.map((e) => ({
+    sku: e.sku,
+    minQty: e.minQty,
+    data: {
+      ok: e.result.ok,
+      inventoryType: e.result.inventoryType || "",
+      localQty: e.result.localQty || 0,
+      globalQty: e.result.globalQty || 0,
+      checkedAt: e.result.checkedAt,
+      prewarmed: options?.prewarmed ?? true,
+    } as AvailabilityEntry,
+  }));
+  
+  // Also update local sync cache
+  for (const e of bulkEntries) {
+    updateLocalSyncCache(e.sku, e.minQty, e.data);
   }
+  
+  return setAvailabilityBulk(bulkEntries, {
+    prewarmed: options?.prewarmed ?? true,
+    ttlSeconds,
+  });
 }
 
 /**
  * Clear all cached data.
  */
-export function clearCache(): void {
-  cache.clear();
+export async function clearCache(): Promise<void> {
+  localCacheForSync.clear();
+  await clearAvailabilityCache();
 }
 
 /**
  * Get cache statistics.
  */
-export function getCacheStats(): CacheStats {
-  let prewarmedEntries = 0;
-  for (const entry of cache.values()) {
-    if (entry.prewarmed) prewarmedEntries++;
-  }
-  
-  const total = metrics.hits + metrics.misses;
+export async function getCacheStats(): Promise<CacheStats> {
+  const shared = getSharedCacheStats();
+  const size = await getAvailabilityCacheSize();
   
   return {
-    size: cache.size,
+    ...shared,
+    size,
     maxSize: CONFIG.MAX_SIZE,
     ttlMs: CONFIG.TTL_MS,
-    hits: metrics.hits,
-    misses: metrics.misses,
-    hitRate: total > 0 ? metrics.hits / total : 0,
-    prewarmedEntries,
-    prewarmedHits: metrics.prewarmedHits,
-    lastPrewarmAt: metrics.lastPrewarmAt,
-    lastPrewarmDurationMs: metrics.lastPrewarmDurationMs,
-    lastPrewarmSkusWarmed: metrics.lastPrewarmSkusWarmed,
+    prewarmedEntries: shared.lastPrewarmSkusWarmed ?? 0,
+  };
+}
+
+/**
+ * Get cache statistics (sync version - returns shared stats only).
+ */
+export function getCacheStatsSync(): Omit<CacheStats, "size"> & { size: number } {
+  const shared = getSharedCacheStats();
+  return {
+    ...shared,
+    size: localCacheForSync.size,
+    maxSize: CONFIG.MAX_SIZE,
+    ttlMs: CONFIG.TTL_MS,
+    prewarmedEntries: shared.lastPrewarmSkusWarmed ?? 0,
   };
 }
 
@@ -247,24 +320,20 @@ export function getCacheStats(): CacheStats {
  * Reset metrics (for testing).
  */
 export function resetMetrics(): void {
-  metrics = {
-    hits: 0,
-    misses: 0,
-    prewarmedHits: 0,
-    lastPrewarmAt: null,
-    lastPrewarmDurationMs: null,
-    lastPrewarmSkusWarmed: null,
-  };
+  resetSharedCacheMetrics();
 }
 
 /**
  * Record pre-warm completion.
  */
 export function recordPrewarmComplete(durationMs: number, skusWarmed: number): void {
-  metrics.lastPrewarmAt = new Date().toISOString();
-  metrics.lastPrewarmDurationMs = durationMs;
-  metrics.lastPrewarmSkusWarmed = skusWarmed;
+  recordPrewarmStats(skusWarmed);
 }
+
+/**
+ * Run health check on cache infrastructure.
+ */
+export { runHealthCheck };
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // LIVE AVAILABILITY CHECK
@@ -289,8 +358,8 @@ export async function fetchAvailability(opts: {
     return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt };
   }
   
-  // Check cache first
-  const cached = getCached(sku, opts.minQty);
+  // Check shared cache first
+  const cached = await getCached(sku, opts.minQty);
   if (cached) {
     return cached;
   }
@@ -329,13 +398,13 @@ export async function fetchAvailability(opts: {
     
     const ok = Boolean(inventoryType && CONFIG.ORDERABLE_TYPES.has(inventoryType) && total >= opts.minQty);
     
-    // Cache the result
-    setCache(sku, opts.minQty, { ok, inventoryType, localQty, globalQty, checkedAt });
+    // Cache the result (fire-and-forget to not block response)
+    setCache(sku, opts.minQty, { ok, inventoryType, localQty, globalQty, checkedAt }).catch(() => {});
     
     return { ok, inventoryType, localQty, globalQty, checkedAt };
   } catch {
-    // Cache negative result on error
-    setCache(sku, opts.minQty, { ok: false, checkedAt });
+    // Cache negative result on error (fire-and-forget)
+    setCache(sku, opts.minQty, { ok: false, checkedAt }).catch(() => {});
     return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt };
   } finally {
     clearTimeout(to);

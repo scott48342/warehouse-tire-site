@@ -13,6 +13,7 @@
     "wp:import:inventory": "node scripts/wp-import-inventory.mjs"
   },
   "dependencies": {
+    "@upstash/redis": "^1.37.0",
     "@vercel/postgres": "^0.10.0",
     "cheerio": "^1.2.0",
     "csv-parse": "^5.6.0",

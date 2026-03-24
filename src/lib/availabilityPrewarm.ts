@@ -1,8 +1,18 @@
 /**
  * Wheel Availability Pre-Warm System
  * 
- * Pre-warms the availability cache for common vehicle searches.
- * Targets high-frequency truck/SUV patterns to reduce cold-start latency.
+ * Pre-warms the SHARED availability cache for common vehicle searches.
+ * Now uses Redis (Upstash) so pre-warm benefits ALL serverless instances.
+ * 
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * ARCHITECTURE (Updated March 2026)
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * 
+ * BEFORE: Pre-warm only warmed ONE instance (wasted effort)
+ * AFTER:  Pre-warm writes to SHARED Redis cache, benefits ALL instances
+ * 
+ * Production validation showed 0% pre-warm hit rate with instance-local cache.
+ * Shared cache ensures pre-warm effort actually helps users.
  * 
  * ═══════════════════════════════════════════════════════════════════════════════
  * STRATEGY
@@ -11,7 +21,7 @@
  * 1. Target common truck/SUV bolt patterns (covers ~80% of truck/SUV traffic)
  * 2. Get candidate SKUs from techfeed index for each pattern
  * 3. Batch check availability with rate limiting
- * 4. Cache results for 30 minutes
+ * 4. Write results to SHARED Redis cache (30-minute TTL)
  * 
  * ═══════════════════════════════════════════════════════════════════════════════
  * TARGET VEHICLES (High-Frequency Searches)
@@ -30,10 +40,10 @@
  */
 
 import {
-  setCache,
+  setCacheBulk,
   recordPrewarmComplete,
   getCacheStats,
-  type AvailabilityResult,
+  getCacheStatsSync,
   ORDERABLE_TYPES,
 } from "./availabilityCache";
 
@@ -179,7 +189,7 @@ export type PrewarmResult = {
     durationMs: number;
   }>;
   errors: string[];
-  cacheStats: ReturnType<typeof getCacheStats>;
+  cacheStats: Awaited<ReturnType<typeof getCacheStats>>;
 };
 
 /**
@@ -206,7 +216,7 @@ export async function runPrewarmJob(options?: {
     totalSkusCached: 0,
     targetResults: [],
     errors: [],
-    cacheStats: getCacheStats(),
+    cacheStats: getCacheStatsSync(), // Use sync version for initial state
   };
   
   // Get WheelPros credentials
@@ -260,9 +270,20 @@ export async function runPrewarmJob(options?: {
       let cached = 0;
       
       if (!dryRun) {
+        // Collect results for bulk caching (more efficient with Redis)
+        type AvailResult = {
+          sku: string;
+          ok: boolean;
+          inventoryType: string;
+          localQty: number;
+          globalQty: number;
+          checkedAt: string;
+        };
+        const batchResults: AvailResult[] = [];
+        
         // Batch check availability with concurrency control
         const checkBatch = async (skus: TechfeedWheel[]): Promise<void> => {
-          await Promise.all(
+          const results = await Promise.all(
             skus.map(async (c) => {
               try {
                 const avail = await checkSkuAvailability({
@@ -276,22 +297,20 @@ export async function runPrewarmJob(options?: {
                 
                 checked++;
                 if (avail.ok) available++;
-                cached++;
                 
-                // Cache the result
-                setCache(c.sku, CONFIG.MIN_QTY, {
-                  ok: avail.ok,
-                  inventoryType: avail.inventoryType,
-                  localQty: avail.localQty,
-                  globalQty: avail.globalQty,
-                  checkedAt: avail.checkedAt,
-                }, { prewarmed: true });
+                return { sku: c.sku, ...avail };
               } catch (e) {
                 // Log but don't fail the whole job
                 console.warn(`[prewarm] SKU check failed: ${c.sku}`, e);
+                return null;
               }
             })
           );
+          
+          // Collect non-null results
+          for (const r of results) {
+            if (r) batchResults.push(r);
+          }
         };
         
         // Process in batches
@@ -308,6 +327,29 @@ export async function runPrewarmJob(options?: {
           if (Date.now() - t0 > CONFIG.MAX_JOB_TIME_MS) {
             result.errors.push(`Time budget exceeded during ${target.name}`);
             break;
+          }
+        }
+        
+        // Bulk write all results to shared cache (efficient Redis pipeline)
+        if (batchResults.length > 0) {
+          const bulkResult = await setCacheBulk(
+            batchResults.map((r) => ({
+              sku: r.sku,
+              minQty: CONFIG.MIN_QTY,
+              result: {
+                ok: r.ok,
+                inventoryType: r.inventoryType,
+                localQty: r.localQty,
+                globalQty: r.globalQty,
+                checkedAt: r.checkedAt,
+              },
+            })),
+            { prewarmed: true }
+          );
+          cached = bulkResult.success;
+          
+          if (bulkResult.failed > 0) {
+            console.warn(`[prewarm] ${bulkResult.failed} cache writes failed for ${target.name}`);
           }
         }
       } else {
@@ -336,7 +378,7 @@ export async function runPrewarmJob(options?: {
   }
   
   result.duration = Date.now() - t0;
-  result.cacheStats = getCacheStats();
+  result.cacheStats = await getCacheStats();
   
   // Record completion for metrics
   if (!dryRun) {
