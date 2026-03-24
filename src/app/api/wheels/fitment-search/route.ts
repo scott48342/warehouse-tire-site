@@ -986,22 +986,45 @@ function buildFacets(wheels: any[]) {
     }
   }
 
+  // Return facets in the format expected by wheels/page.tsx:
+  // { facetKey: { buckets: [{ value, count }] } }
+  // This matches the WheelPros API response format that the page consumes.
   return {
-    brands: Array.from(brands.values()).sort((a, b) => b.count - a.count),
-    finishes: Array.from(finishes.entries())
-      .sort((a, b) => b[1] - a[1])
-      .map(([value, count]) => ({ value, count })),
-    diameters: Array.from(diameters.entries())
-      .sort((a, b) => Number(a[0]) - Number(b[0]))
-      .map(([value, count]) => ({ value, count })),
-    widths: Array.from(widths.entries())
-      .sort((a, b) => Number(a[0]) - Number(b[0]))
-      .map(([value, count]) => ({ value, count })),
-    offsets: Array.from(offsets.entries())
-      .sort((a, b) => Number(a[0]) - Number(b[0]))
-      .map(([value, count]) => ({ value, count })),
-    boltPatterns: Array.from(boltPatterns.entries())
-      .sort((a, b) => b[1] - a[1])
-      .map(([value, count]) => ({ value, count })),
+    // Brand facet - page uses buckets("brand_cd") and expects { value, count }
+    brand_cd: {
+      buckets: Array.from(brands.values())
+        .sort((a, b) => b.count - a.count)
+        .map(({ code, count }) => ({ value: code, count })),
+    },
+    // Finish facet - page uses buckets("abbreviated_finish_desc")
+    abbreviated_finish_desc: {
+      buckets: Array.from(finishes.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([value, count]) => ({ value, count })),
+    },
+    // Diameter facet - page uses buckets("wheel_diameter")
+    wheel_diameter: {
+      buckets: Array.from(diameters.entries())
+        .sort((a, b) => Number(a[0]) - Number(b[0]))
+        .map(([value, count]) => ({ value, count })),
+    },
+    // Width facet - page uses buckets("width")
+    width: {
+      buckets: Array.from(widths.entries())
+        .sort((a, b) => Number(a[0]) - Number(b[0]))
+        .map(([value, count]) => ({ value, count })),
+    },
+    // Offset facet (for potential future use)
+    offset: {
+      buckets: Array.from(offsets.entries())
+        .sort((a, b) => Number(a[0]) - Number(b[0]))
+        .map(([value, count]) => ({ value, count })),
+    },
+    // Bolt pattern facet - page uses buckets("bolt_pattern_metric")
+    bolt_pattern_metric: {
+      buckets: Array.from(boltPatterns.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([value, count]) => ({ value, count })),
+    },
   };
 }
