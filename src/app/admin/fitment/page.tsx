@@ -17,8 +17,18 @@ type Modification = {
   modificationId: string;
   trim: string;
   hasDbData: boolean;
+  hasOverride?: boolean;
+  dataSource?: "override" | "db" | "api" | "none";
   current: FitmentData;
   override: (FitmentData & { id: string; notes: string; updatedAt: string; createdBy: string }) | null;
+};
+
+type Diagnostics = {
+  trimsFromApi: number;
+  trimsWithDbData: number;
+  trimsWithOverride: number;
+  trimsWithNoData: number;
+  issues: string[];
 };
 
 type SearchResult = {
@@ -29,6 +39,7 @@ type SearchResult = {
   dbMatchCount: number;
   overrideCount: number;
   modifications: Modification[];
+  diagnostics?: Diagnostics;
 };
 
 export default function FitmentPage() {
@@ -214,6 +225,11 @@ export default function FitmentPage() {
             
             {/* Fitment Summary - aggregate from all trims */}
             <FitmentSummary modifications={result.modifications} />
+            
+            {/* Diagnostics Panel */}
+            {result.diagnostics && (
+              <DiagnosticsPanel diagnostics={result.diagnostics} modifications={result.modifications} />
+            )}
           </div>
 
           {result.modifications.length === 0 ? (
@@ -620,6 +636,133 @@ function FitmentSummary({ modifications }: { modifications: Modification[] }) {
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+function DiagnosticsPanel({ 
+  diagnostics, 
+  modifications 
+}: { 
+  diagnostics: Diagnostics; 
+  modifications: Modification[];
+}) {
+  // Count by source
+  const sourceCount = modifications.reduce((acc, m) => {
+    const src = m.dataSource || "none";
+    acc[src] = (acc[src] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const hasIssues = diagnostics.issues.length > 0;
+
+  return (
+    <div className="mt-4 pt-4 border-t border-neutral-700">
+      <div className="text-sm font-medium text-neutral-400 mb-3 flex items-center gap-2">
+        🔍 Diagnostics
+        {hasIssues && (
+          <span className="text-xs bg-amber-600 text-white px-2 py-0.5 rounded-full">
+            {diagnostics.issues.length} issue{diagnostics.issues.length !== 1 ? "s" : ""}
+          </span>
+        )}
+      </div>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm mb-4">
+        {/* Data Sources */}
+        <div className="bg-neutral-700/30 rounded-lg p-3">
+          <div className="text-neutral-500 text-xs mb-2">Data Sources</div>
+          <div className="space-y-1">
+            {sourceCount.override && (
+              <div className="flex items-center justify-between">
+                <span className="text-amber-400">Override</span>
+                <span className="text-white font-bold">{sourceCount.override}</span>
+              </div>
+            )}
+            {sourceCount.db && (
+              <div className="flex items-center justify-between">
+                <span className="text-green-400">Database</span>
+                <span className="text-white font-bold">{sourceCount.db}</span>
+              </div>
+            )}
+            {sourceCount.api && (
+              <div className="flex items-center justify-between">
+                <span className="text-blue-400">API Only</span>
+                <span className="text-white font-bold">{sourceCount.api}</span>
+              </div>
+            )}
+            {sourceCount.none && (
+              <div className="flex items-center justify-between">
+                <span className="text-neutral-500">No Data</span>
+                <span className="text-white font-bold">{sourceCount.none}</span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Result Counts */}
+        <div className="bg-neutral-700/30 rounded-lg p-3">
+          <div className="text-neutral-500 text-xs mb-2">Result Breakdown</div>
+          <div className="space-y-1 text-xs">
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">Trims from API</span>
+              <span className="text-white">{diagnostics.trimsFromApi}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">With DB data</span>
+              <span className={diagnostics.trimsWithDbData > 0 ? "text-green-400" : "text-neutral-500"}>
+                {diagnostics.trimsWithDbData}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">With override</span>
+              <span className={diagnostics.trimsWithOverride > 0 ? "text-amber-400" : "text-neutral-500"}>
+                {diagnostics.trimsWithOverride}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-neutral-400">No data</span>
+              <span className={diagnostics.trimsWithNoData > 0 ? "text-red-400" : "text-neutral-500"}>
+                {diagnostics.trimsWithNoData}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Status */}
+        <div className="bg-neutral-700/30 rounded-lg p-3 col-span-2">
+          <div className="text-neutral-500 text-xs mb-2">Status</div>
+          {!hasIssues ? (
+            <div className="text-green-400 text-sm">
+              ✅ Vehicle data looks complete
+            </div>
+          ) : (
+            <div className="space-y-2">
+              {diagnostics.issues.map((issue, i) => (
+                <div key={i} className="flex items-start gap-2 text-sm">
+                  <span className="text-amber-400">⚠️</span>
+                  <span className="text-neutral-300">{issue}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Why No Results Help */}
+      {diagnostics.trimsFromApi === 0 && (
+        <div className="bg-red-900/20 border border-red-800 rounded-lg p-4 text-sm">
+          <div className="text-red-400 font-medium mb-2">❌ No Results Found</div>
+          <div className="text-neutral-300 space-y-1">
+            <p>Possible reasons:</p>
+            <ul className="list-disc list-inside text-neutral-400 ml-2">
+              <li>Vehicle year/make/model may not exist in Wheel-Size database</li>
+              <li>Check spelling of make and model</li>
+              <li>Try a different model year (coverage varies by year)</li>
+              <li>Some specialty/limited vehicles may not be covered</li>
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

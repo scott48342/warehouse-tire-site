@@ -127,10 +127,18 @@ export async function GET(req: Request) {
       const dbData = dbMap.get(trim.modificationId);
       const override = overrideMap.get(trim.modificationId);
 
+      // Determine data source for diagnostics
+      let dataSource: "override" | "db" | "api" | "none" = "none";
+      if (override) dataSource = "override";
+      else if (dbData) dataSource = "db";
+      else if (trims.length > 0) dataSource = "api";
+
       return {
         modificationId: trim.modificationId,
         trim: trim.label,
         hasDbData: !!dbData,
+        hasOverride: !!override,
+        dataSource,
         current: dbData ? {
           boltPattern: dbData.bolt_pattern || null,
           centerBoreMm: dbData.center_bore_mm ? Number(dbData.center_bore_mm) : null,
@@ -168,6 +176,26 @@ export async function GET(req: Request) {
       };
     });
 
+    // Build diagnostics
+    const diagnostics = {
+      trimsFromApi: trims.length,
+      trimsWithDbData: dbFitments.length,
+      trimsWithOverride: overrideMap.size,
+      trimsWithNoData: results.filter(r => !r.hasDbData && !r.hasOverride).length,
+      issues: [] as string[],
+    };
+
+    // Identify potential issues
+    if (trims.length === 0) {
+      diagnostics.issues.push("No trims found in Wheel-Size API for this vehicle");
+    }
+    if (dbFitments.length === 0 && overrideMap.size === 0) {
+      diagnostics.issues.push("No fitment data in database - vehicle may not have been imported");
+    }
+    if (trims.length > 0 && dbFitments.length === 0) {
+      diagnostics.issues.push("API has trims but no local fitment data - consider importing");
+    }
+
     return NextResponse.json({
       year,
       make,
@@ -176,6 +204,7 @@ export async function GET(req: Request) {
       dbMatchCount: dbFitments.length,
       overrideCount: overrideMap.size,
       modifications: results,
+      diagnostics,
     });
   } catch (err: any) {
     console.error("[admin/fitment/search] Error:", err);

@@ -166,7 +166,7 @@ export default async function AdminDashboard() {
           </div>
         </div>
 
-        {/* Issues Panel */}
+        {/* Issues Panel - Grouped by Severity */}
         <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-6">
           <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
             <span>🚨</span> Issues (24h)
@@ -181,25 +181,62 @@ export default async function AdminDashboard() {
               ✅ No issues in the last 24 hours
             </div>
           ) : (
-            <div className="space-y-3">
-              <IssueRow
-                icon="❌"
-                label="Search Errors"
-                count={stats.issues.searchErrors}
-                href="/admin/logs?type=search_error"
-              />
-              <IssueRow
-                icon="⚠️"
-                label="Warnings"
-                count={stats.issues.warnings}
-                href="/admin/logs?type=warning"
-              />
-              <IssueRow
-                icon="🔧"
-                label="Fitment Issues"
-                count={stats.issues.fitmentIssues}
-                href="/admin/logs?type=fitment"
-              />
+            <div className="space-y-4">
+              {/* Critical - Search Errors */}
+              {stats.issues.searchErrors > 0 && (
+                <div className="bg-red-900/20 border border-red-800/50 rounded-lg p-3">
+                  <div className="text-xs text-red-400 font-medium mb-2">🔴 CRITICAL</div>
+                  <IssueRow
+                    icon="❌"
+                    label="Search Errors"
+                    count={stats.issues.searchErrors}
+                    href="/admin/logs?type=search_error"
+                    description="Searches that failed - customers may not see results"
+                  />
+                </div>
+              )}
+              
+              {/* Warning - Fitment Issues */}
+              {stats.issues.fitmentIssues > 0 && (
+                <div className="bg-amber-900/20 border border-amber-800/50 rounded-lg p-3">
+                  <div className="text-xs text-amber-400 font-medium mb-2">🟡 WARNING</div>
+                  <IssueRow
+                    icon="🔧"
+                    label="Fitment Issues"
+                    count={stats.issues.fitmentIssues}
+                    href="/admin/fitment"
+                    description="Vehicles with incomplete or invalid fitment data"
+                  />
+                </div>
+              )}
+              
+              {/* Info - Warnings */}
+              {stats.issues.warnings > 0 && (
+                <div className="bg-blue-900/20 border border-blue-800/50 rounded-lg p-3">
+                  <div className="text-xs text-blue-400 font-medium mb-2">🔵 INFO</div>
+                  <IssueRow
+                    icon="⚠️"
+                    label="Warnings"
+                    count={stats.issues.warnings}
+                    href="/admin/logs?type=warning"
+                    description="Non-critical issues logged for review"
+                  />
+                </div>
+              )}
+
+              {/* Flagged Products - links to Products tab */}
+              {stats.flaggedProducts > 0 && (
+                <div className="bg-neutral-700/30 border border-neutral-600/50 rounded-lg p-3">
+                  <div className="text-xs text-neutral-400 font-medium mb-2">📋 ATTENTION</div>
+                  <IssueRow
+                    icon="🚩"
+                    label="Flagged Products"
+                    count={stats.flaggedProducts}
+                    href="/admin/products?filter=flagged"
+                    description="Products marked for review"
+                  />
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -317,24 +354,34 @@ function IssueRow({
   label,
   count,
   href,
+  description,
 }: {
   icon: string;
   label: string;
   count: number;
   href: string;
+  description?: string;
 }) {
   if (count === 0) return null;
   
   return (
     <Link
       href={href}
-      className="flex items-center justify-between p-2 rounded-lg hover:bg-neutral-700/50 transition-colors"
+      className="flex items-center justify-between p-2 rounded-lg hover:bg-neutral-700/50 transition-colors group"
     >
-      <div className="flex items-center gap-2">
-        <span>{icon}</span>
-        <span className="text-sm text-neutral-300">{label}</span>
+      <div className="flex-1">
+        <div className="flex items-center gap-2">
+          <span>{icon}</span>
+          <span className="text-sm text-neutral-300 group-hover:text-white">{label}</span>
+        </div>
+        {description && (
+          <div className="text-xs text-neutral-500 ml-6 mt-0.5">{description}</div>
+        )}
       </div>
-      <span className="text-sm font-bold text-red-400">{count}</span>
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-bold text-white">{count}</span>
+        <span className="text-xs text-neutral-500 group-hover:text-neutral-300">→</span>
+      </div>
     </Link>
   );
 }
