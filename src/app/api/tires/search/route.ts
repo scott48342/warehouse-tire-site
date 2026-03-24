@@ -386,6 +386,99 @@ function toKmSizeFormat(size: string): string {
 }
 
 /**
+ * Build a lookup map of brand+pattern → imageUrl from Tirewire results
+ * Used to enrich K&M results with TireLibrary images
+ */
+function buildPatternImageLookup(twResults: TireResult[]): Map<string, string> {
+  const lookup = new Map<string, string>();
+  
+  for (const tire of twResults) {
+    if (!tire.imageUrl || !tire.brand) continue;
+    
+    // Key: normalized "BRAND:PATTERN" (e.g., "MICHELIN:DEFENDER 2")
+    const model = (tire.model || tire.description || "").trim();
+    if (!model) continue;
+    
+    const key = `${tire.brand.toUpperCase()}:${model.toUpperCase()}`;
+    if (!lookup.has(key)) {
+      lookup.set(key, tire.imageUrl);
+    }
+    
+    // Also add partial matches (first word of pattern)
+    // e.g., "MICHELIN:DEFENDER" for "DEFENDER 2", "DEFENDER T+H", etc.
+    const firstWord = model.split(/\s+/)[0];
+    if (firstWord && firstWord.length > 3) {
+      const partialKey = `${tire.brand.toUpperCase()}:${firstWord.toUpperCase()}`;
+      if (!lookup.has(partialKey)) {
+        lookup.set(partialKey, tire.imageUrl);
+      }
+    }
+  }
+  
+  return lookup;
+}
+
+/**
+ * Enrich K&M results with TireLibrary images by matching brand+pattern
+ */
+function enrichKmWithTireLibraryImages(
+  kmResults: TireResult[],
+  imageLookup: Map<string, string>
+): TireResult[] {
+  return kmResults.map((tire) => {
+    // Already has an image
+    if (tire.imageUrl) return tire;
+    
+    if (!tire.brand) return tire;
+    
+    // Try exact match first
+    const model = (tire.model || "").trim();
+    const desc = (tire.description || "").trim();
+    
+    // Extract pattern name from description (e.g., "LX 225/65R17/SL LXHT-206 102T" → "LXHT-206")
+    let patternName = model;
+    if (!patternName && desc) {
+      // Try to extract pattern from description
+      const parts = desc.split(/\s+/);
+      // Look for pattern-like strings (alphanumeric, possibly with hyphens)
+      for (const part of parts) {
+        if (/^[A-Z]{2,}[-]?\d*[A-Z]*$/i.test(part) && part.length > 3) {
+          patternName = part;
+          break;
+        }
+      }
+    }
+    
+    if (patternName) {
+      // Try exact match
+      const exactKey = `${tire.brand.toUpperCase()}:${patternName.toUpperCase()}`;
+      if (imageLookup.has(exactKey)) {
+        return { ...tire, imageUrl: imageLookup.get(exactKey)! };
+      }
+      
+      // Try partial match (first word)
+      const firstWord = patternName.split(/[-\s]/)[0];
+      if (firstWord && firstWord.length > 2) {
+        const partialKey = `${tire.brand.toUpperCase()}:${firstWord.toUpperCase()}`;
+        if (imageLookup.has(partialKey)) {
+          return { ...tire, imageUrl: imageLookup.get(partialKey)! };
+        }
+      }
+    }
+    
+    // Try brand-only fallback (use any image from that brand)
+    // This gives at least a branded image
+    for (const [key, url] of imageLookup) {
+      if (key.startsWith(`${tire.brand.toUpperCase()}:`)) {
+        return { ...tire, imageUrl: url };
+      }
+    }
+    
+    return tire;
+  });
+}
+
+/**
  * Merge results from WheelPros, Tirewire, and K&M, deduplicating by product code.
  * Tirewire results are preferred when duplicates exist (better images).
  */
@@ -397,6 +490,12 @@ function mergeTireResults(
 ): TireResult[] {
   const merged = new Map<string, TireResult>();
   
+  // Build image lookup from Tirewire results for K&M enrichment
+  const imageLookup = buildPatternImageLookup(twResults);
+  
+  // Enrich K&M results with TireLibrary images
+  const enrichedKmResults = enrichKmWithTireLibraryImages(kmResults, imageLookup);
+  
   // Add Tirewire results first (they have TireLibrary images)
   for (const tire of twResults) {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
@@ -405,8 +504,8 @@ function mergeTireResults(
     merged.set(key, tire);
   }
   
-  // Add K&M results if not already present
-  for (const tire of kmResults) {
+  // Add K&M results if not already present (now enriched with images)
+  for (const tire of enrichedKmResults) {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
     const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
     if (minQty > 0 && totalQty < minQty) continue;
