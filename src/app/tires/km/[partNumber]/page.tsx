@@ -96,15 +96,15 @@ export default async function KmTireDetailPage({
     );
   }
 
-  // Fetch all KM items for the size, then select the requested part number.
+  // Fetch from unified search API which includes admin image overrides
   // NOTE: We use minQty=1 for detail so the product still resolves even if stock is low.
   const res = await fetch(
-    `${getBaseUrl()}/api/km/tiresizesearch?tireSize=${encodeURIComponent(size)}&minQty=1`,
+    `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&minQty=1`,
     { cache: "no-store" }
   );
 
   const data = res.ok ? await res.json() : { error: await res.text() };
-  const items: any[] = Array.isArray((data as any)?.items) ? (data as any).items : [];
+  const items: any[] = Array.isArray((data as any)?.results) ? (data as any).results : [];
 
   const item = items.find(
     (t) => String(t?.partNumber || "").trim() === safePart || String(t?.mfgPartNumber || "").trim() === safePart
@@ -136,31 +136,9 @@ export default async function KmTireDetailPage({
   const qAlt = n(item?.quantity?.alternate);
   const qNat = n(item?.quantity?.national);
 
-  // Enrich with tire asset image (K&M doesn't provide images)
-  let enrichedImageUrl: string | null = null;
-  let enrichedDisplayName: string | null = null;
-  
-  // Use the same asset lookup as the listing page
-  const kmDescription = String(item.description || "").trim();
-  if (kmDescription) {
-    try {
-      const assetRes = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(kmDescription)}`, { 
-        cache: "no-store" 
-      });
-      if (assetRes.ok) {
-        const assetData = (await assetRes.json()) as { results?: TireAsset[] };
-        const asset = Array.isArray(assetData?.results) ? assetData.results[0] : null;
-        if (asset?.image_url) {
-          enrichedImageUrl = asset.image_url;
-        }
-        if (asset?.display_name) {
-          enrichedDisplayName = asset.display_name;
-        }
-      }
-    } catch (err) {
-      console.error("[km-tire-detail] Asset lookup failed:", err);
-    }
-  }
+  // Get image from unified API response (includes admin overrides)
+  const enrichedImageUrl: string | null = item.imageUrl || null;
+  const enrichedDisplayName: string | null = item.displayName || item.prettyName || null;
 
   const title = enrichedDisplayName || `${brand} ${description}`;
 
