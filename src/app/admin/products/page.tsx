@@ -412,12 +412,79 @@ export default function ProductsPage() {
         {(viewMode === "flagged" && loading) || (viewMode === "search" && searchLoading) ? (
           <div className="p-8 text-center text-neutral-500">Loading...</div>
         ) : currentItems.length === 0 ? (
-          <div className="p-8 text-center text-neutral-500">
-            {viewMode === "search" 
-              ? (searchQuery.length < 2 
-                  ? "Enter at least 2 characters to search" 
-                  : searchMessage || "No products found")
-              : "No flagged products yet"}
+          <div className="p-8 text-center">
+            <div className="text-neutral-500">
+              {viewMode === "search" 
+                ? (searchQuery.length < 2 
+                    ? "Enter at least 2 characters to search" 
+                    : searchMessage || "No products found")
+                : "No flagged products yet"}
+            </div>
+            {/* Quick add for SKUs not in catalog */}
+            {viewMode === "search" && searchQuery.length >= 2 && (
+              <div className="mt-6 p-4 bg-neutral-700/50 rounded-lg inline-block">
+                <div className="text-sm text-neutral-300 mb-3">
+                  SKU not in local catalog? Add it directly:
+                </div>
+                <div className="flex items-center gap-2 justify-center">
+                  <code className="text-white bg-neutral-600 px-2 py-1 rounded">{searchQuery}</code>
+                  <button
+                    onClick={async () => {
+                      try {
+                        await fetch("/api/admin/products", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            productType,
+                            sku: searchQuery,
+                            flagged: true,
+                            flagReason: "Manually added",
+                          }),
+                        });
+                        alert(`Added ${searchQuery} to flagged products`);
+                        setViewMode("flagged");
+                        fetchProducts();
+                      } catch {
+                        alert("Failed to add SKU");
+                      }
+                    }}
+                    className="px-3 py-1 bg-amber-600 text-white text-sm rounded hover:bg-amber-700"
+                  >
+                    🚩 Flag
+                  </button>
+                  <button
+                    onClick={async () => {
+                      try {
+                        await fetch("/api/admin/products", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            productType,
+                            sku: searchQuery,
+                            hidden: true,
+                            flagReason: "Manually hidden",
+                          }),
+                        });
+                        alert(`Hidden ${searchQuery} from search results`);
+                        setViewMode("flagged");
+                        fetchProducts();
+                      } catch {
+                        alert("Failed to hide SKU");
+                      }
+                    }}
+                    className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700"
+                  >
+                    🚫 Hide
+                  </button>
+                </div>
+                {productType === "tire" && (
+                  <div className="text-xs text-neutral-500 mt-3">
+                    Note: Tirewire tires (Hankook, Michelin, etc.) aren't in local DB.<br/>
+                    Use these buttons to flag/hide by SKU.
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         ) : (
           <>
