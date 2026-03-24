@@ -18,6 +18,7 @@
 
 import { NextResponse } from "next/server";
 import pg from "pg";
+import { XMLParser } from "fast-xml-parser";
 import { searchTiresTirewire, tirewireTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
 
 export const runtime = "nodejs";
@@ -219,12 +220,179 @@ async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]>
 }
 
 /**
- * Merge results from WheelPros and Tirewire, deduplicating by product code.
+ * Search K&M/Keystone tires by size and convert to TireResult format
+ */
+async function searchTiresKM(size: string): Promise<TireResult[]> {
+  const apiKey = (
+    process.env.KM_API_KEY ||
+    process.env.KMTIRE_API_KEY ||
+    process.env.KM_TIRE_API_KEY ||
+    ""
+  ).trim();
+  
+  if (!apiKey) {
+    console.warn("[tires/search] No K&M API key configured");
+    return [];
+  }
+  
+  // Convert size to K&M format (7-8 digit compact)
+  const tireSize = toKmSizeFormat(size);
+  if (!tireSize) {
+    console.warn("[tires/search] Could not convert size for K&M:", size);
+    return [];
+  }
+  
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<InventoryRequest>` +
+    `<Credentials><APIKey>${apiKey}</APIKey></Credentials>` +
+    `<Item>` +
+    `<TireSize>${tireSize}</TireSize>` +
+    `</Item>` +
+    `</InventoryRequest>`;
+  
+  try {
+    const res = await fetch("https://api.kmtire.com/v1/tiresizesearch", {
+      method: "POST",
+      headers: {
+        "content-type": "application/xml",
+        accept: "application/xml, text/xml, */*",
+      },
+      body: xml,
+      cache: "no-store",
+    });
+    
+    if (!res.ok) {
+      console.error("[tires/search] K&M API error:", res.status);
+      return [];
+    }
+    
+    const text = await res.text();
+    const parser = new XMLParser({
+      ignoreAttributes: false,
+      cdataPropName: "__cdata",
+    });
+    
+    const data = parser.parse(text) as any;
+    const resp = data?.InventoryResponse || data?.inventoryresponse || data;
+    const itemsRaw = resp?.Item;
+    const items = Array.isArray(itemsRaw) ? itemsRaw : itemsRaw ? [itemsRaw] : [];
+    
+    return items.map((it: any) => {
+      const qty = it?.Quantity || {};
+      const brand = pickKmField(it, ["BrandName", "VendorName", "Brand", "Vendor"]);
+      const desc = pickKmField(it, ["Description", "Desc"]);
+      const kmSize = it?.Size || tireSize;
+      const speedRating = pickKmField(it, ["SpeedRating", "Speed_Rating", "Speed"]);
+      const loadRange = pickKmField(it, ["LoadRange", "Load_Range", "LoadRangeCode"]);
+      const utqgTreadwear = pickKmField(it, ["UTQGTreadwear", "UTQG_Treadwear", "Treadwear"]);
+      const utqgTraction = pickKmField(it, ["UTQGTraction", "UTQG_Traction", "Traction"]);
+      const utqgTemperature = pickKmField(it, ["UTQGTemperature", "UTQG_Temperature", "Temperature"]);
+      
+      // Build UTQG string if components exist
+      let utqg: string | null = null;
+      if (utqgTreadwear || utqgTraction || utqgTemperature) {
+        utqg = [utqgTreadwear, utqgTraction, utqgTemperature].filter(Boolean).join(" ");
+      }
+      
+      // Extract rim diameter from size
+      const simpleSize = toSimpleSize(kmSize) || tireSize;
+      const rimDiameter = simpleSize.length >= 7 ? parseInt(simpleSize.slice(5), 10) : null;
+      
+      // Reconstruct display size from simple format
+      let displaySize = kmSize;
+      if (simpleSize && simpleSize.length === 7) {
+        const w = simpleSize.slice(0, 3);
+        const a = simpleSize.slice(3, 5);
+        const r = simpleSize.slice(5);
+        displaySize = `${w}/${a}R${r}`;
+      }
+      
+      const cost = it?.Cost != null ? Number(it.Cost) : null;
+      const qtyPrimary = qty?.Primary != null ? Number(qty.Primary) : 0;
+      const qtyAlternate = qty?.Alternate != null ? Number(qty.Alternate) : 0;
+      const qtyNational = qty?.National != null ? Number(qty.National) : 0;
+      
+      return {
+        partNumber: String(it?.PartNumber || ""),
+        mfgPartNumber: String(it?.MfgPartNumber || it?.PartNumber || ""),
+        brand: brand ? String(brand).trim() : null,
+        description: desc ? String(desc).trim() : displaySize,
+        cost: cost != null && Number.isFinite(cost) ? cost : null,
+        quantity: {
+          primary: qtyPrimary,
+          alternate: qtyAlternate,
+          national: qtyPrimary + qtyAlternate + qtyNational,
+        },
+        imageUrl: null, // K&M doesn't return images in size search
+        size: displaySize,
+        simpleSize,
+        rimDiameter,
+        source: "km",
+        badges: {
+          terrain: null,
+          construction: loadRange || null,
+          warrantyMiles: null,
+          loadIndex: null,
+          speedRating: speedRating ? String(speedRating).trim() : null,
+          utqg,
+        },
+      } as TireResult;
+    });
+  } catch (err) {
+    console.error("[tires/search] K&M error:", err);
+    return [];
+  }
+}
+
+function pickKmField(it: any, keys: string[]): string | null {
+  for (const k of keys) {
+    const v = it?.[k];
+    if (v == null) continue;
+    const cdata = typeof v === "object" && v?.__cdata != null ? v.__cdata : null;
+    const result = cdata != null ? cdata : v;
+    if (result != null) return String(result);
+  }
+  return null;
+}
+
+function toKmSizeFormat(size: string): string {
+  // Accept formats like:
+  // - 245/50R18 → 2455018
+  // - 245/40ZR20 95Y → 2454020
+  // - 37x13.50R22 → 37135022 (flotation)
+  const s = String(size || "").trim().toUpperCase();
+  
+  // Flotation string -> rawSize digits: 37x13.50R22 -> 37135022
+  const f = s.match(/^(\d{2})\s*[X]\s*(\d{1,2}\.\d{2})\s*R\s*(\d{2}(?:\.5)?)\s*(?:LT)?$/i);
+  if (f) {
+    const dia = f[1];
+    const width = f[2].replace(".", "");
+    const rim = f[3].replace(".", "");
+    return `${dia}${width}${rim}`;
+  }
+  
+  // Standard metric: 245/50R18 -> 2455018
+  const m = s.match(/(\d{3})\s*\/?\s*(\d{2})\s*[A-Z]*\s*R\s*(\d{2})/i);
+  if (m) return `${m[1]}${m[2]}${m[3]}`;
+  
+  // Already in compact format
+  const m2 = s.match(/^\d{7}$/);
+  if (m2) return s;
+  
+  const m3 = s.match(/^\d{8}$/);
+  if (m3) return s;
+  
+  return "";
+}
+
+/**
+ * Merge results from WheelPros, Tirewire, and K&M, deduplicating by product code.
  * Tirewire results are preferred when duplicates exist (better images).
  */
 function mergeTireResults(
   wpResults: TireResult[],
   twResults: TireResult[],
+  kmResults: TireResult[],
   minQty: number
 ): TireResult[] {
   const merged = new Map<string, TireResult>();
@@ -237,13 +405,29 @@ function mergeTireResults(
     merged.set(key, tire);
   }
   
+  // Add K&M results if not already present
+  for (const tire of kmResults) {
+    const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
+    const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
+    if (minQty > 0 && totalQty < minQty) continue;
+    if (!merged.has(key)) {
+      merged.set(key, tire);
+    } else {
+      // Tire exists from Tirewire - aggregate quantity if different source
+      const existing = merged.get(key)!;
+      if (existing.source !== tire.source) {
+        existing.quantity.national += tire.quantity.national;
+      }
+    }
+  }
+  
   // Add WheelPros results if not already present
   for (const tire of wpResults) {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
     if (!merged.has(key)) {
       merged.set(key, tire);
     } else {
-      // Tire exists from Tirewire - aggregate quantity if different source
+      // Tire exists from Tirewire/K&M - aggregate quantity if different source
       const existing = merged.get(key)!;
       if (existing.source !== tire.source) {
         // Add WheelPros quantity to existing
@@ -298,16 +482,17 @@ export async function GET(req: Request) {
     // Case 1: Direct size search
     if (sizeRaw) {
       const tSearch0 = Date.now();
-      // Query both sources in parallel
-      const [wpResults, twResults] = await Promise.all([
+      // Query all sources in parallel
+      const [wpResults, twResults, kmResults] = await Promise.all([
         searchTiresBySize(db, sizeRaw, minQty, pageSize),
         searchTiresTirewireFormatted(sizeRaw),
+        searchTiresKM(sizeRaw),
       ]);
       timing.searchMs = Date.now() - tSearch0;
       
       // Merge and dedupe by partNumber (prefer Tirewire for images)
       const tMerge0 = Date.now();
-      const merged = mergeTireResults(wpResults, twResults, minQty);
+      const merged = mergeTireResults(wpResults, twResults, kmResults, minQty);
       const results = merged.slice(0, pageSize);
       timing.mergeMs = Date.now() - tMerge0;
       timing.totalMs = Date.now() - t0;
@@ -319,6 +504,7 @@ export async function GET(req: Request) {
         sources: {
           wheelpros: wpResults.length,
           tirewire: twResults.length,
+          km: kmResults.length,
         },
         timing,
       });
@@ -380,10 +566,11 @@ export async function GET(req: Request) {
       }
     }
     
-    // Build results from both sources
+    // Build results from all sources
     const tSearch0 = Date.now();
     let wpResults: TireResult[] = [];
     let twResults: TireResult[] = [];
+    let kmResults: TireResult[] = [];
     
     if (tireSizes.length > 0) {
       // Search using OEM tire sizes (filtered by wheel diameter)
@@ -399,6 +586,11 @@ export async function GET(req: Request) {
         searchPromises.push(
           searchTiresTirewireFormatted(size)
             .then((results) => { twResults.push(...results); })
+        );
+        // K&M/Keystone
+        searchPromises.push(
+          searchTiresKM(size)
+            .then((results) => { kmResults.push(...results); })
         );
       }
       
@@ -418,13 +610,17 @@ export async function GET(req: Request) {
           searchTiresTirewireFormatted(size)
             .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
         );
+        searchPromises.push(
+          searchTiresKM(size)
+            .then((results) => { kmResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+        );
       }
       await Promise.all(searchPromises);
     }
     timing.searchMs = Date.now() - tSearch0;
     
-    // Merge results from both sources
-    const allResults = mergeTireResults(wpResults, twResults, minQty);
+    // Merge results from all sources
+    const allResults = mergeTireResults(wpResults, twResults, kmResults, minQty);
     
     if (allResults.length === 0 && !wheelDiameter) {
       return NextResponse.json({
@@ -470,6 +666,7 @@ export async function GET(req: Request) {
       sources: {
         wheelpros: wpResults.length,
         tirewire: twResults.length,
+        km: kmResults.length,
       },
       timing,
     });
