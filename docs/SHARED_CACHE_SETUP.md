@@ -13,29 +13,37 @@ Production testing (March 2026) showed:
 
 Shared cache ensures pre-warm benefits ALL serverless instances.
 
+## Current Status ✅
+
+**Setup Complete (March 24, 2026)**
+
+- Upstash Redis database: `upstash-kv-celeste-yacht`
+- Connected via Vercel Integration (auto-configured env vars)
+- Latency: 15-20ms
+- Plan: Free tier
+
 ## Environment Variables
 
-Add these to your Vercel project settings or `.env.local`:
+The Vercel Upstash integration auto-sets these variables:
 
 ```bash
-# Required for shared cache
-UPSTASH_REDIS_REST_URL=https://your-instance.upstash.io
-UPSTASH_REDIS_REST_TOKEN=your_token_here
+# Auto-set by Vercel Upstash Integration
+KV_REST_API_URL=https://...upstash.io
+KV_REST_API_TOKEN=...
+
+# Alternative naming (also supported)
+UPSTASH_REDIS_REST_URL=https://...upstash.io
+UPSTASH_REDIS_REST_TOKEN=...
 ```
 
-### Getting Upstash Credentials
+The `sharedCache.ts` module checks for both naming conventions.
+
+### Manual Setup (if not using Vercel Integration)
 
 1. Go to [console.upstash.com](https://console.upstash.com)
 2. Create a new Redis database (or use existing)
 3. Select "REST API" tab
-4. Copy `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`
-
-### Vercel Integration (Recommended)
-
-1. In Vercel dashboard, go to your project
-2. Settings → Integrations → Browse Marketplace
-3. Search "Upstash" → Add Integration
-4. Follow prompts - it will auto-configure env vars
+4. Copy URL and Token to your Vercel project env vars
 
 ## How It Works
 
