@@ -173,10 +173,42 @@ export async function GET(req: Request) {
   </soap:Body>
 </soap:Envelope>`;
 
+    // Format 4: Both AccessKey and GroupToken (proper format)
+    const soapRequest4 = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">
+  <soap:Body>
+    <prod:GetTires>
+      <prod:options>
+        <prod:AccessKey>${escapeXml(creds.accessKey)}</prod:AccessKey>
+        <prod:GroupToken>${escapeXml(creds.groupToken)}</prod:GroupToken>
+        <prod:ConnectionID>${conn.connectionId}</prod:ConnectionID>
+        <prod:TireSize>${escapeXml(simpleSize)}</prod:TireSize>
+        <prod:DetailLevel>10</prod:DetailLevel>
+      </prod:options>
+    </prod:GetTires>
+  </soap:Body>
+</soap:Envelope>`;
+
+    // Format 5: AccessKey only (no GroupToken)
+    const soapRequest5 = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">
+  <soap:Body>
+    <prod:GetTires>
+      <prod:options>
+        <prod:AccessKey>${escapeXml(creds.accessKey)}</prod:AccessKey>
+        <prod:ConnectionID>${conn.connectionId}</prod:ConnectionID>
+        <prod:TireSize>${escapeXml(simpleSize)}</prod:TireSize>
+        <prod:DetailLevel>10</prod:DetailLevel>
+      </prod:options>
+    </prod:GetTires>
+  </soap:Body>
+</soap:Envelope>`;
+
     const soapFormats = [
+      { name: "Both keys (proper)", body: soapRequest4 },
+      { name: "AccessKey only", body: soapRequest5 },
       { name: "GroupToken only", body: soapRequest1 },
       { name: "Empty AccessKey", body: soapRequest2 },
-      { name: "GroupToken as both", body: soapRequest3 },
     ];
 
     debug.soapTests = [];
