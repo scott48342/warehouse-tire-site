@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-03-24T15:51:37.820Z",
+  "totalVehicles": 10,
+  "successCount": 0,
+  "errorCount": 10,
+  "vehicles": [
+    {
+      "input": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "F-150"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Silverado 1500"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Ram",
+        "model": "1500"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Jeep",
+        "model": "Wrangler"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Tacoma"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Toyota",
+        "model": "Camry"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Honda",
+        "model": "Accord"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "BMW",
+        "model": "3 Series"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Ford",
+        "model": "Mustang"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    },
+    {
+      "input": {
+        "year": 2024,
+        "make": "Chevrolet",
+        "model": "Corvette"
+      },
+      "error": "Missing WHEELSIZE_API_KEY environment variable"
+    }
+  ]
+}
