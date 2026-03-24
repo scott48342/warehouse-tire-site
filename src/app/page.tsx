@@ -5,48 +5,6 @@ import { HomeFitmentEntry } from "@/components/HomeFitmentEntry";
 export const runtime = "nodejs";
 
 /* =============================================================================
-   CATEGORY CARDS - Visual entry points for main shopping flows
-============================================================================= */
-
-function CategoryCard({
-  title,
-  description,
-  href,
-  icon,
-  gradient,
-  badge,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  icon: string;
-  gradient: string;
-  badge?: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className={`group relative overflow-hidden rounded-2xl p-6 text-white transition-transform hover:scale-[1.02] ${gradient}`}
-    >
-      {badge && (
-        <span className="absolute right-4 top-4 rounded-full bg-white/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm">
-          {badge}
-        </span>
-      )}
-      <div className="text-4xl">{icon}</div>
-      <h3 className="mt-4 text-xl font-extrabold">{title}</h3>
-      <p className="mt-2 text-sm text-white/80">{description}</p>
-      <div className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-white group-hover:underline">
-        Shop Now
-        <span className="transition-transform group-hover:translate-x-1">→</span>
-      </div>
-      {/* Decorative circle */}
-      <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10" />
-    </Link>
-  );
-}
-
-/* =============================================================================
    TRUST BADGES - Build confidence with key value props
 ============================================================================= */
 
@@ -73,28 +31,33 @@ function TrustBadge({
 }
 
 /* =============================================================================
-   QUICK LINK - Fast entry to popular categories
+   CATEGORY CARD - Compact category entry point
 ============================================================================= */
 
-function QuickLink({
+function CategoryCard({
   title,
+  description,
   href,
   icon,
 }: {
   title: string;
+  description: string;
   href: string;
   icon: string;
 }) {
   return (
     <Link
       href={href}
-      className="group flex items-center gap-3 rounded-xl border border-neutral-200 bg-white px-4 py-3 transition-colors hover:border-amber-300 hover:bg-amber-50"
+      className="group flex items-start gap-4 rounded-2xl border border-neutral-200 bg-white p-4 transition-all hover:border-amber-300 hover:bg-amber-50 hover:shadow-sm"
     >
-      <span className="text-lg">{icon}</span>
-      <span className="text-sm font-semibold text-neutral-900 group-hover:text-amber-900">
-        {title}
-      </span>
-      <span className="ml-auto text-neutral-400 transition-transform group-hover:translate-x-1 group-hover:text-amber-600">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neutral-100 text-2xl group-hover:bg-amber-100">
+        {icon}
+      </div>
+      <div className="flex-1">
+        <div className="font-bold text-neutral-900 group-hover:text-amber-900">{title}</div>
+        <div className="mt-0.5 text-xs text-neutral-500">{description}</div>
+      </div>
+      <span className="mt-1 text-neutral-300 transition-transform group-hover:translate-x-1 group-hover:text-amber-500">
         →
       </span>
     </Link>
@@ -164,45 +127,8 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ===== CATEGORY CARDS ===== */}
+      {/* ===== VEHICLE-BASED SHOPPING ===== */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="text-center">
-          <h2 className="text-2xl font-extrabold text-neutral-900 md:text-3xl">
-            What are you shopping for?
-          </h2>
-          <p className="mt-2 text-neutral-600">
-            Choose your path — we'll help you find the perfect fit
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          <CategoryCard
-            title="Tires"
-            description="All-season, winter, all-terrain, performance — find tires sized for your vehicle."
-            href="/?open=tires&mode=size"
-            icon="🛞"
-            gradient="bg-gradient-to-br from-neutral-800 to-neutral-900"
-          />
-          <CategoryCard
-            title="Wheels"
-            description="Browse aftermarket wheels with guaranteed fitment for your year, make, and model."
-            href="/?open=wheels&mode=vehicle"
-            icon="⚙️"
-            gradient="bg-gradient-to-br from-blue-600 to-blue-800"
-          />
-          <CategoryCard
-            title="Lifted Builds"
-            description="Build your lifted truck or SUV with the right tire and wheel combo."
-            href="/lifted"
-            icon="🏔️"
-            gradient="bg-gradient-to-br from-amber-500 to-orange-600"
-            badge="Popular"
-          />
-        </div>
-      </section>
-
-      {/* ===== VEHICLE-BASED SHOPPING (existing component) ===== */}
-      <section className="mx-auto max-w-6xl px-4 pb-12">
         <HomeFitmentEntry />
       </section>
 
@@ -234,39 +160,64 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ===== FEATURED QUICK LINKS ===== */}
+      {/* ===== BROWSE BY CATEGORY ===== */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="flex items-end justify-between">
-          <div>
-            <h2 className="text-xl font-extrabold text-neutral-900">Popular Categories</h2>
-            <p className="mt-1 text-sm text-neutral-600">Jump straight to what you need</p>
-          </div>
+        <div className="mb-6">
+          <h2 className="text-xl font-extrabold text-neutral-900">Browse by Category</h2>
+          <p className="mt-1 text-sm text-neutral-600">Jump straight to popular tire and wheel categories</p>
         </div>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <QuickLink title="All-Terrain Tires" href="/tires/c/all-terrain" icon="🏔️" />
-          <QuickLink title="Truck Tires" href="/tires/c/truck" icon="🛻" />
-          <QuickLink title="Winter Tires" href="/tires/c/winter" icon="❄️" />
-          <QuickLink title="Performance Tires" href="/tires/c/performance" icon="🏎️" />
+        {/* Tire Categories */}
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <CategoryCard
+            title="All-Terrain Tires"
+            description="A/T for trucks & SUVs"
+            href="/tires/c/all-terrain"
+            icon="🏔️"
+          />
+          <CategoryCard
+            title="Truck Tires"
+            description="Built for hauling & towing"
+            href="/tires/c/truck"
+            icon="🛻"
+          />
+          <CategoryCard
+            title="Winter Tires"
+            description="Cold weather traction"
+            href="/tires/c/winter"
+            icon="❄️"
+          />
+          <CategoryCard
+            title="Performance Tires"
+            description="Grip for sports cars"
+            href="/tires/c/performance"
+            icon="🏎️"
+          />
         </div>
 
+        {/* Wheel Sizes */}
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <HomeWheelShortcut 
             title='20" Wheels' 
-            desc="Most popular size for trucks & SUVs" 
+            desc="Popular for trucks & SUVs" 
             diameter={20} 
           />
           <HomeWheelShortcut 
             title='18" Wheels' 
-            desc="Great for sedans and crossovers" 
+            desc="Sedans & crossovers" 
             diameter={18} 
           />
           <HomeWheelShortcut 
             title='22" Wheels' 
-            desc="Go big with premium fitments" 
+            desc="Premium fitments" 
             diameter={22} 
           />
-          <QuickLink title="All-Season Tires" href="/tires/c/all-season" icon="☀️" />
+          <CategoryCard
+            title="All-Season Tires"
+            description="Year-round comfort"
+            href="/tires/c/all-season"
+            icon="☀️"
+          />
         </div>
       </section>
 
@@ -310,41 +261,6 @@ export default async function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ===== EXPLORE TILES (preserved from original) ===== */}
-      <section className="mx-auto max-w-6xl px-4 pb-16">
-        <div className="flex items-end justify-between gap-3">
-          <h2 className="text-xl font-extrabold text-neutral-900">Explore More</h2>
-          <div className="text-xs text-neutral-600">Additional shortcuts</div>
-        </div>
-
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          <Link
-            href="/tires/c/all-season"
-            className="group rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
-          >
-            <div className="text-sm font-extrabold text-neutral-900 group-hover:underline">All-season tires</div>
-            <div className="mt-1 text-xs text-neutral-600">Daily drivers, comfort, long tread life.</div>
-            <div className="mt-3 text-xs font-extrabold text-blue-700">Shop →</div>
-          </Link>
-          <Link
-            href="/tires/c/winter"
-            className="group rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
-          >
-            <div className="text-sm font-extrabold text-neutral-900 group-hover:underline">Winter tires</div>
-            <div className="mt-1 text-xs text-neutral-600">Cold weather traction and braking.</div>
-            <div className="mt-3 text-xs font-extrabold text-blue-700">Shop →</div>
-          </Link>
-          <Link
-            href="/wheels"
-            className="group rounded-2xl border border-neutral-200 bg-white p-4 hover:border-neutral-300"
-          >
-            <div className="text-sm font-extrabold text-neutral-900 group-hover:underline">Package quote</div>
-            <div className="mt-1 text-xs text-neutral-600">Build a wheel + tire quote fast.</div>
-            <div className="mt-3 text-xs font-extrabold text-blue-700">Shop →</div>
-          </Link>
         </div>
       </section>
     </main>
