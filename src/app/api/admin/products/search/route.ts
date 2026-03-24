@@ -122,8 +122,11 @@ export async function GET(req: Request) {
           },
         });
       } else {
-        // Tires - get brands from WheelPros DB + K&M brands from admin flags
-        const [wpBrands, kmBrands] = await Promise.all([
+        // Tires - get brands from multiple sources:
+        // 1. WheelPros DB (wp_tires)
+        // 2. Admin flags (admin_product_flags) 
+        // 3. Brand cache (tire_brands_cache) - includes K&M
+        const [wpBrands, flagBrands, cacheBrands] = await Promise.all([
           pool.query(`
             SELECT DISTINCT brand_desc as brand FROM wp_tires 
             WHERE brand_desc IS NOT NULL 
@@ -134,14 +137,21 @@ export async function GET(req: Request) {
             WHERE product_type = 'tire' AND brand IS NOT NULL
             ORDER BY brand LIMIT 100
           `),
+          pool.query(`
+            SELECT DISTINCT brand FROM tire_brands_cache 
+            ORDER BY brand LIMIT 100
+          `).catch(() => ({ rows: [] })), // Table might not exist yet
         ]);
         
-        // Combine and dedupe brands from both sources
+        // Combine and dedupe brands from all sources
         const allBrands = new Set<string>();
         for (const r of wpBrands.rows) {
           if (r.brand) allBrands.add(r.brand);
         }
-        for (const r of kmBrands.rows) {
+        for (const r of flagBrands.rows) {
+          if (r.brand) allBrands.add(r.brand);
+        }
+        for (const r of cacheBrands.rows) {
           if (r.brand) allBrands.add(r.brand);
         }
         

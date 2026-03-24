@@ -77,6 +77,10 @@ export default function ProductsPage() {
   const [editingName, setEditingName] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState("");
 
+  // Brand sync state
+  const [syncingBrands, setSyncingBrands] = useState(false);
+  const [syncMessage, setSyncMessage] = useState<string | null>(null);
+
   // Fetch flagged products
   const fetchProducts = useCallback(async () => {
     setLoading(true);
@@ -110,6 +114,34 @@ export default function ProductsPage() {
       console.error("Failed to fetch filters:", err);
     }
   }, [productType]);
+
+  // Sync tire brands from all suppliers
+  const syncBrands = async () => {
+    if (productType !== "tire") return;
+    
+    setSyncingBrands(true);
+    setSyncMessage(null);
+    
+    try {
+      const res = await fetch("/api/admin/products/sync-brands", { method: "POST" });
+      const data = await res.json();
+      
+      if (data.success) {
+        setSyncMessage(`✓ Synced ${data.discovered} brands (${data.inserted} new)`);
+        // Refresh filters to show new brands
+        fetchFilters();
+      } else {
+        setSyncMessage(`✗ Error: ${data.error}`);
+      }
+    } catch (err) {
+      setSyncMessage("✗ Sync failed");
+      console.error("Brand sync failed:", err);
+    } finally {
+      setSyncingBrands(false);
+      // Clear message after 5 seconds
+      setTimeout(() => setSyncMessage(null), 5000);
+    }
+  };
 
   // Search products
   const searchProducts = useCallback(async () => {
@@ -406,6 +438,25 @@ export default function ProductsPage() {
                     <option key={b} value={b}>{b}</option>
                   ))}
                 </select>
+              )}
+
+              {/* Sync Brands Button (tires only) */}
+              {productType === "tire" && (
+                <button
+                  onClick={syncBrands}
+                  disabled={syncingBrands}
+                  className="h-9 px-3 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 disabled:opacity-50 whitespace-nowrap"
+                  title="Sync K&M and other supplier brands"
+                >
+                  {syncingBrands ? "⏳ Syncing..." : "🔄 Sync Brands"}
+                </button>
+              )}
+              
+              {/* Sync message */}
+              {syncMessage && (
+                <span className={`text-sm ${syncMessage.startsWith("✓") ? "text-green-400" : "text-red-400"}`}>
+                  {syncMessage}
+                </span>
               )}
             </>
           )}
