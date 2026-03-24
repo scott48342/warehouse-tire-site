@@ -419,14 +419,8 @@ async function handleDbFirstWheelResults(opts: {
   const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "6000") || 6000);
   const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "5000") || 5000);
   
-  // OPTIMIZATION: Early stop when we have enough eligible items
-  // Lower target for faster results - facets will be built from eligible items
-  const targetEligible = Math.max(requestedPageSize * 2, 60);
-  
-  // OPTIMIZATION: Fast mode - trust techfeed data for quick results when we have many candidates
-  // Only do live validation for a sample to verify availability patterns
-  const fastMode = filteredCandidates.length > 500;
-  const fastModeSampleSize = fastMode ? Math.min(50, Math.ceil(filteredCandidates.length * 0.02)) : 0;
+  // OPTIMIZATION: Early stop when we have enough eligible items (2x requested for facet quality)
+  const targetEligible = Math.max(requestedPageSize * 3, 100);
   
   const tScan0 = Date.now();
 
@@ -490,7 +484,6 @@ async function handleDbFirstWheelResults(opts: {
   const eligibleItems: EligibleItem[] = [];
   let availabilityChecked = 0;
   let cacheHits = 0;
-  let fastModeAccepted = 0;
   let launchStopped = false;
   let earlyStopReason: string | null = null;
 
@@ -517,112 +510,32 @@ async function handleDbFirstWheelResults(opts: {
     }
   };
 
-  // OPTIMIZATION: Fast mode - accept items from techfeed without live check
-  // Trust techfeed data for items with valid pricing (they're in the dealer catalog)
-  // Do live validation for a sample to verify availability patterns
-  let sampleChecked = 0;
-  let sampleAvailable = 0;
-  
-  if (fastMode && fitmentValidCandidates.length > 100) {
-    // Phase 2a: Sample validation - check a small sample to estimate availability rate
-    const sampleItems = fitmentValidCandidates.slice(0, fastModeSampleSize);
-    const samplePromises = sampleItems.map(async (item) => {
-      const avail = await fetchLiveAvailabilityForSku({
-        wheelProsBase,
-        headers,
-        sku: item.candidate.sku,
-        minQty,
-        customerNumber: wpCreds.customerNumber || undefined,
-        companyCode: wpCreds.companyCode || undefined,
-      });
-      sampleChecked++;
-      availabilityChecked++;
-      if ((avail as any).fromCache) cacheHits++;
-      if (avail.ok) {
-        sampleAvailable++;
-        eligibleItems.push({
-          candidate: item.candidate,
-          validation: item.validation,
-          avail: avail as EligibleItem["avail"],
-        });
-      }
-    });
-    await Promise.all(samplePromises);
-    
-    // If sample shows >50% availability, trust remaining items without live check
-    const availabilityRate = sampleChecked > 0 ? sampleAvailable / sampleChecked : 0;
-    if (availabilityRate >= 0.3 && eligibleItems.length < targetEligible) {
-      // Accept more items from techfeed based on sample confidence
-      const remainingNeeded = targetEligible - eligibleItems.length;
-      const estimatedAvailable = Math.ceil(remainingNeeded / Math.max(0.3, availabilityRate));
-      const acceptCount = Math.min(estimatedAvailable * 2, fitmentValidCandidates.length - fastModeSampleSize);
-      
-      for (let i = fastModeSampleSize; i < fastModeSampleSize + acceptCount && i < fitmentValidCandidates.length; i++) {
-        const item = fitmentValidCandidates[i];
-        // Accept items with valid pricing as "likely available"
-        const hasPrice = Number(item.candidate.map_price || item.candidate.msrp || 0) > 0;
-        if (hasPrice) {
-          fastModeAccepted++;
-          eligibleItems.push({
-            candidate: item.candidate,
-            validation: item.validation,
-            avail: {
-              ok: true,
-              inventoryType: "TF", // TechFeed (not live verified)
-              localQty: 0,
-              globalQty: 4, // Assumed available
-              checkedAt: new Date().toISOString(),
-            },
-          });
-          if (eligibleItems.length >= targetEligible) {
-            earlyStopReason = "fastModeTargetReached";
-            capsHit.push("earlyStop:fastMode");
-            break;
-          }
-        }
-      }
+  for (const item of fitmentValidCandidates) {
+    // OPTIMIZATION: Early stop when we have enough eligible items for good results + facets
+    if (eligibleItems.length >= targetEligible) {
+      earlyStopReason = "targetReached";
+      capsHit.push("earlyStop:targetReached");
+      launchStopped = true;
+      break;
     }
     
-    timing.fastModeSampleRate = availabilityRate;
-    timing.fastModeAccepted = fastModeAccepted;
-  }
-
-  // Phase 2b: Continue with live checks if we need more eligible items
-  if (eligibleItems.length < targetEligible && !earlyStopReason) {
-    const startIdx = fastMode ? fastModeSampleSize : 0;
-    
-    for (let i = startIdx; i < fitmentValidCandidates.length; i++) {
-      const item = fitmentValidCandidates[i];
-      
-      // Skip items already accepted in fast mode
-      if (fastMode && i < fastModeSampleSize + (fastModeAccepted * 2)) continue;
-      
-      // OPTIMIZATION: Early stop when we have enough eligible items
-      if (eligibleItems.length >= targetEligible) {
-        earlyStopReason = "targetReached";
-        capsHit.push("earlyStop:targetReached");
-        launchStopped = true;
-        break;
-      }
-      
-      // Check time budget before launching new checks
-      if (Date.now() - tScan0 > timeBudgetMs) {
-        truncated = true;
-        earlyStopReason = "timeBudget";
-        capsHit.push("timeBudget");
-        launchStopped = true;
-        break;
-      }
-
-      // Wait if at concurrency limit
-      while (inFlight.size >= CONCURRENCY) {
-        await Promise.race(inFlight);
-      }
-
-      // Launch availability check
-      const p = checkAvailability(item).finally(() => inFlight.delete(p));
-      inFlight.add(p);
+    // Check time budget before launching new checks
+    if (Date.now() - tScan0 > timeBudgetMs) {
+      truncated = true;
+      earlyStopReason = "timeBudget";
+      capsHit.push("timeBudget");
+      launchStopped = true;
+      break;
     }
+
+    // Wait if at concurrency limit
+    while (inFlight.size >= CONCURRENCY) {
+      await Promise.race(inFlight);
+    }
+
+    // Launch availability check
+    const p = checkAvailability(item).finally(() => inFlight.delete(p));
+    inFlight.add(p);
   }
 
   // Wait for remaining in-flight checks to complete (with a hard cap)
