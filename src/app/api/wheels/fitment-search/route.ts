@@ -30,6 +30,11 @@ import {
 
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
+import {
+  fetchAvailability,
+  getCacheStats as getAvailabilityCacheStats,
+} from "@/lib/availabilityCache";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -484,6 +489,7 @@ async function handleDbFirstWheelResults(opts: {
   const eligibleItems: EligibleItem[] = [];
   let availabilityChecked = 0;
   let cacheHits = 0;
+  let prewarmHits = 0;
   let launchStopped = false;
   let earlyStopReason: string | null = null;
 
@@ -501,6 +507,7 @@ async function handleDbFirstWheelResults(opts: {
     });
     availabilityChecked++;
     if ((avail as any).fromCache) cacheHits++;
+    if ((avail as any).fromPrewarm) prewarmHits++;
     if (avail.ok) {
       eligibleItems.push({
         candidate: item.candidate,
@@ -549,6 +556,7 @@ async function handleDbFirstWheelResults(opts: {
   timing.availabilityMs = Date.now() - tAvail0;
   timing.availabilityChecked = availabilityChecked;
   timing.availabilityCacheHits = cacheHits;
+  timing.availabilityPrewarmHits = prewarmHits;
   timing.eligibleCount = eligibleItems.length;
   timing.earlyStopReason = earlyStopReason;
 
@@ -700,28 +708,14 @@ async function handleDbFirstWheelResults(opts: {
 }
 
 // ============================================================================
-// Live availability (WheelPros wrapper) with short TTL cache
+// Live availability (using centralized cache from availabilityCache.ts)
 // ============================================================================
 
-// OPTIMIZATION: Increased cache TTL from 10 min to 30 min (inventory doesn't change that fast)
-const AVAIL_CACHE_TTL_MS = Math.max(
-  60_000,
-  Math.min(60 * 60_000, Number(process.env.WT_AVAIL_CACHE_TTL_MS || "1800000") || 1800_000)
-);
-const availCache = new Map<
-  string,
-  {
-    expiresAt: number;
-    ok: boolean;
-    inventoryType?: string;
-    localQty?: number;
-    globalQty?: number;
-    checkedAt: string;
-  }
->();
-
-const ORDERABLE_TYPES = new Set(["SO", "ST", "NW", "BW", "CS"]);
-
+/**
+ * Fetch live availability using centralized cache.
+ * This wrapper maintains the same interface but uses the shared cache
+ * that can be pre-warmed.
+ */
 async function fetchLiveAvailabilityForSku(opts: {
   wheelProsBase: string;
   headers: Record<string, string>;
@@ -730,86 +724,36 @@ async function fetchLiveAvailabilityForSku(opts: {
   customerNumber?: string;
   companyCode?: string;
 }): Promise<
-  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string; fromCache?: boolean }
-  | { ok: false; checkedAt: string; fromCache?: boolean }
+  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean }
+  | { ok: false; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean }
 > {
-  const checkedAt = new Date().toISOString();
-  const sku = String(opts.sku || "").trim();
-  if (!sku) return { ok: false, checkedAt };
-
-  const cacheKey = `${sku}|minQty=${opts.minQty}`;
-  const cached = availCache.get(cacheKey);
-  if (cached && cached.expiresAt > Date.now()) {
-    return cached.ok
-      ? {
-          ok: true,
-          inventoryType: cached.inventoryType || "",
-          localQty: cached.localQty || 0,
-          globalQty: cached.globalQty || 0,
-          checkedAt: cached.checkedAt,
-          fromCache: true,
-        }
-      : { ok: false, checkedAt: cached.checkedAt, fromCache: true };
+  const result = await fetchAvailability({
+    wheelProsBase: opts.wheelProsBase,
+    headers: opts.headers,
+    sku: opts.sku,
+    minQty: opts.minQty,
+    customerNumber: opts.customerNumber,
+    companyCode: opts.companyCode,
+  });
+  
+  if (result.ok) {
+    return {
+      ok: true,
+      inventoryType: result.inventoryType,
+      localQty: result.localQty,
+      globalQty: result.globalQty,
+      checkedAt: result.checkedAt,
+      fromCache: result.fromCache,
+      fromPrewarm: result.fromPrewarm,
+    };
   }
-
-  const ac = new AbortController();
-  // OPTIMIZATION: Reduced timeout from 1400ms to 800ms for faster failure
-  const timeoutMs = Math.max(400, Math.min(1500, Number(process.env.WT_AVAIL_TIMEOUT_MS || "800") || 800));
-  const to = setTimeout(() => ac.abort(), timeoutMs);
-
-  try {
-    const u = new URL("/wheels/search", opts.wheelProsBase);
-    u.searchParams.set("sku", sku);
-    u.searchParams.set("page", "1");
-    u.searchParams.set("pageSize", "1");
-    u.searchParams.set("fields", "inventory");
-
-    // Required params for true sellability (admin-managed or env fallback)
-    u.searchParams.set("customer", opts.customerNumber || "1022165");
-    u.searchParams.set("company", opts.companyCode || "1000");
-    u.searchParams.set("min_qty", String(opts.minQty));
-
-    const res = await fetch(u.toString(), {
-      headers: opts.headers,
-      cache: "no-store",
-      signal: ac.signal,
-    });
-
-    const data = await res.json().catch(() => null);
-    const item = data?.results?.[0] || data?.items?.[0] || null;
-
-    const inv = item?.inventory;
-    const invObj = Array.isArray(inv) ? inv[0] : inv;
-    const t = typeof invObj?.type === "string" ? invObj.type.trim().toUpperCase() : "";
-
-    const local = Number(invObj?.localStock ?? invObj?.local_qty ?? invObj?.localQty ?? 0) || 0;
-    const global = Number(invObj?.globalStock ?? invObj?.global_qty ?? invObj?.globalQty ?? invObj?.quantity ?? 0) || 0;
-    const total = local + global;
-
-    const ok = Boolean(t && ORDERABLE_TYPES.has(t) && total >= opts.minQty);
-
-    availCache.set(cacheKey, {
-      expiresAt: Date.now() + AVAIL_CACHE_TTL_MS,
-      ok,
-      inventoryType: t,
-      localQty: local,
-      globalQty: global,
-      checkedAt,
-    });
-
-    return ok
-      ? { ok: true, inventoryType: t, localQty: local, globalQty: global, checkedAt }
-      : { ok: false, checkedAt };
-  } catch {
-    availCache.set(cacheKey, {
-      expiresAt: Date.now() + AVAIL_CACHE_TTL_MS,
-      ok: false,
-      checkedAt,
-    });
-    return { ok: false, checkedAt };
-  } finally {
-    clearTimeout(to);
-  }
+  
+  return {
+    ok: false,
+    checkedAt: result.checkedAt,
+    fromCache: result.fromCache,
+    fromPrewarm: result.fromPrewarm,
+  };
 }
 
 // ============================================================================

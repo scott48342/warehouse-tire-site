@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 import { warmTechfeedWheelCache } from "@/lib/techfeed/wheels";
 import { warmBrowseCache } from "@/lib/techfeed/wheels-browse";
+import { runPrewarmJob, PREWARM_TARGETS } from "@/lib/availabilityPrewarm";
+import { getCacheStats } from "@/lib/availabilityCache";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+export const maxDuration = 300; // 5 minutes max for full warmup
 
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
@@ -15,6 +18,10 @@ function getBaseUrl() {
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const debug = url.searchParams.get("debug") === "1";
+  // Include availability pre-warm (slower but comprehensive)
+  const includeAvailability = url.searchParams.get("availability") === "1";
+  // Quick mode: just techfeed + browse, skip WheelPros API calls
+  const quick = url.searchParams.get("quick") === "1";
 
   const t0 = Date.now();
   
@@ -28,20 +35,42 @@ export async function GET(req: Request) {
   const browse = await warmBrowseCache();
   const browseMs = Date.now() - browse0;
 
-  // Warm the WheelPros wheels search path (wrapper + our in-memory cache).
-  const base = getBaseUrl();
-  const wp0 = Date.now();
-  const wheelsUrl = `${base}/api/wheelpros/wheels/search?page=1&pageSize=8&fields=images&priceType=msrp&currencyCode=USD&boltPattern=5x115${debug ? "&debug=1" : ""}`;
+  let wheelsUrl = "";
   let wheelsStatus = 0;
-  try {
-    const res = await fetch(wheelsUrl, { cache: "no-store" });
-    wheelsStatus = res.status;
-    // Drain body to avoid leaking sockets
-    await res.arrayBuffer();
-  } catch {
-    wheelsStatus = 0;
+  let wheelsMs = 0;
+
+  if (!quick) {
+    // Warm the WheelPros wheels search path (wrapper + our in-memory cache).
+    const base = getBaseUrl();
+    const wp0 = Date.now();
+    wheelsUrl = `${base}/api/wheelpros/wheels/search?page=1&pageSize=8&fields=images&priceType=msrp&currencyCode=USD&boltPattern=5x115${debug ? "&debug=1" : ""}`;
+    try {
+      const res = await fetch(wheelsUrl, { cache: "no-store" });
+      wheelsStatus = res.status;
+      // Drain body to avoid leaking sockets
+      await res.arrayBuffer();
+    } catch {
+      wheelsStatus = 0;
+    }
+    wheelsMs = Date.now() - wp0;
   }
-  const wheelsMs = Date.now() - wp0;
+
+  // Optionally pre-warm availability cache (full job)
+  let availabilityResult = null;
+  let availabilityMs = 0;
+  if (includeAvailability) {
+    const avail0 = Date.now();
+    try {
+      availabilityResult = await runPrewarmJob({
+        // Only run priority 1 targets for warmup endpoint (faster)
+        targets: PREWARM_TARGETS.filter(t => t.priority <= 2),
+        maxSkusPerPattern: 100, // Limit for faster warmup
+      });
+    } catch (e: any) {
+      availabilityResult = { error: e?.message || String(e) };
+    }
+    availabilityMs = Date.now() - avail0;
+  }
 
   const totalMs = Date.now() - t0;
 
@@ -50,7 +79,14 @@ export async function GET(req: Request) {
       ok: true,
       techfeed: { ...tf, ms: techfeedMs },
       browse: { ...browse, ms: browseMs },
-      wheelpros: { url: wheelsUrl, status: wheelsStatus, ms: wheelsMs },
+      wheelpros: quick ? { skipped: true } : { url: wheelsUrl, status: wheelsStatus, ms: wheelsMs },
+      availability: includeAvailability 
+        ? { ...availabilityResult, ms: availabilityMs }
+        : { 
+            skipped: true, 
+            hint: "Add ?availability=1 to pre-warm availability cache",
+            cacheStats: getCacheStats(),
+          },
       totalMs,
       at: new Date().toISOString(),
     },
@@ -62,8 +98,9 @@ export async function GET(req: Request) {
               "x-wt-techfeed-ms": String(techfeedMs),
               "x-wt-browse-ms": String(browseMs),
               "x-wt-wheelpros-ms": String(wheelsMs),
+              "x-wt-availability-ms": String(availabilityMs),
               "x-wt-total-ms": String(totalMs),
-              "server-timing": `techfeed;dur=${techfeedMs}, browse;dur=${browseMs}, wheelpros;dur=${wheelsMs}, total;dur=${totalMs}`,
+              "server-timing": `techfeed;dur=${techfeedMs}, browse;dur=${browseMs}, wheelpros;dur=${wheelsMs}, availability;dur=${availabilityMs}, total;dur=${totalMs}`,
             }
           : null),
       },
