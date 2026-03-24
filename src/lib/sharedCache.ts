@@ -103,16 +103,21 @@ let lastHealthCheck: string | null = null;
 
 /**
  * Initialize Redis client from environment variables.
+ * Supports both naming conventions:
+ * - UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN (standard)
+ * - KV_REST_API_URL / KV_REST_API_TOKEN (Vercel integration)
  * Returns null if credentials not configured.
  */
 function getRedisClient(): Redis | null {
   if (redis) return redis;
   
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  // Try both naming conventions (Vercel KV-style first, then standard Upstash)
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   
   if (!url || !token) {
     console.log("[sharedCache] Upstash Redis not configured - using local fallback only");
+    console.log("[sharedCache] Looking for KV_REST_API_URL or UPSTASH_REDIS_REST_URL");
     return null;
   }
   
@@ -155,7 +160,7 @@ async function checkRedisHealth(): Promise<boolean> {
 }
 
 // Initial health check on module load (non-blocking)
-if (typeof process !== "undefined" && process.env.UPSTASH_REDIS_REST_URL) {
+if (typeof process !== "undefined" && (process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL)) {
   checkRedisHealth().catch(() => {});
 }
 
