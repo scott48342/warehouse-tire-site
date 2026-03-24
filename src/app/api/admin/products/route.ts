@@ -21,12 +21,17 @@ function getPool() {
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const productType = url.searchParams.get("type"); // wheel, tire
-  const filter = url.searchParams.get("filter"); // flagged, hidden
+  const filter = url.searchParams.get("filter"); // flagged, hidden, missing_image
   const search = url.searchParams.get("search");
   const limit = parseInt(url.searchParams.get("limit") || "100", 10);
 
   const pool = getPool();
   try {
+    // Ensure image_url column exists (idempotent)
+    await pool.query(`
+      ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS image_url TEXT
+    `).catch(() => {}); // Ignore errors if already exists
+
     let whereConditions = ["1=1"];
     const values: any[] = [];
     let paramIndex = 1;
@@ -40,6 +45,8 @@ export async function GET(req: Request) {
       whereConditions.push(`flagged = true`);
     } else if (filter === "hidden") {
       whereConditions.push(`hidden = true`);
+    } else if (filter === "missing_image") {
+      whereConditions.push(`(image_url IS NULL OR image_url = '')`);
     }
 
     if (search) {
@@ -62,6 +69,7 @@ export async function GET(req: Request) {
       SELECT 
         COUNT(*) FILTER (WHERE hidden = true) as hidden_count,
         COUNT(*) FILTER (WHERE flagged = true) as flagged_count,
+        COUNT(*) FILTER (WHERE image_url IS NULL OR image_url = '') as missing_image_count,
         COUNT(*) as total_count
       FROM admin_product_flags
       ${productType ? "WHERE product_type = $1" : ""}
@@ -84,7 +92,7 @@ export async function GET(req: Request) {
  */
 export async function POST(req: Request) {
   const body = await req.json();
-  const { productType, sku, hidden, flagged, flagReason } = body;
+  const { productType, sku, hidden, flagged, flagReason, imageUrl } = body;
 
   if (!productType || !sku) {
     return NextResponse.json({ error: "productType and sku required" }, { status: 400 });
@@ -92,22 +100,28 @@ export async function POST(req: Request) {
 
   const pool = getPool();
   try {
+    // Ensure image_url column exists
+    await pool.query(`
+      ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS image_url TEXT
+    `).catch(() => {});
+
     const { rows } = await pool.query(`
-      INSERT INTO admin_product_flags (product_type, sku, hidden, flagged, flag_reason, updated_at)
-      VALUES ($1, $2, $3, $4, $5, now())
+      INSERT INTO admin_product_flags (product_type, sku, hidden, flagged, flag_reason, image_url, updated_at)
+      VALUES ($1, $2, $3, $4, $5, $6, now())
       ON CONFLICT (product_type, sku) DO UPDATE SET
         hidden = EXCLUDED.hidden,
         flagged = EXCLUDED.flagged,
         flag_reason = EXCLUDED.flag_reason,
+        image_url = EXCLUDED.image_url,
         updated_at = now()
       RETURNING *
-    `, [productType, sku, hidden || false, flagged || false, flagReason || null]);
+    `, [productType, sku, hidden || false, flagged || false, flagReason || null, imageUrl || null]);
 
     // Log the change
     await pool.query(`
       INSERT INTO admin_logs (log_type, sku, details)
       VALUES ('product_flag', $1, $2)
-    `, [sku, JSON.stringify({ productType, hidden, flagged, flagReason })]);
+    `, [sku, JSON.stringify({ productType, hidden, flagged, flagReason, imageUrl })]);
 
     return NextResponse.json({ ok: true, product: rows[0] });
   } catch (err: any) {

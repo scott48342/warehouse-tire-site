@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
 type ProductFlag = {
   id: string;
@@ -10,6 +9,7 @@ type ProductFlag = {
   hidden: boolean;
   flagged: boolean;
   flag_reason: string | null;
+  image_url: string | null;
   created_at: string;
   updated_at: string;
 };
@@ -18,16 +18,21 @@ type Counts = {
   hidden_count: string;
   flagged_count: string;
   total_count: string;
+  missing_image_count: string;
 };
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<ProductFlag[]>([]);
   const [counts, setCounts] = useState<Counts | null>(null);
   const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<"all" | "flagged" | "hidden">("all");
+  const [filter, setFilter] = useState<"all" | "flagged" | "hidden" | "missing_image">("all");
   const [productType, setProductType] = useState<"wheel" | "tire" | "">("");
   const [search, setSearch] = useState("");
   const [addingSku, setAddingSku] = useState("");
+  
+  // Image edit state
+  const [editingImage, setEditingImage] = useState<string | null>(null);
+  const [imageUrl, setImageUrl] = useState("");
 
   const fetchProducts = async () => {
     setLoading(true);
@@ -91,11 +96,34 @@ export default function ProductsPage() {
           hidden: field === "hidden" ? !product.hidden : product.hidden,
           flagged: field === "flagged" ? !product.flagged : product.flagged,
           flagReason: product.flag_reason,
+          imageUrl: product.image_url,
         }),
       });
       fetchProducts();
     } catch (err) {
       alert("Failed to update");
+    }
+  };
+
+  const handleSaveImage = async (product: ProductFlag) => {
+    try {
+      await fetch("/api/admin/products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          productType: product.product_type,
+          sku: product.sku,
+          hidden: product.hidden,
+          flagged: product.flagged,
+          flagReason: product.flag_reason,
+          imageUrl: imageUrl || null,
+        }),
+      });
+      setEditingImage(null);
+      setImageUrl("");
+      fetchProducts();
+    } catch (err) {
+      alert("Failed to save image URL");
     }
   };
 
@@ -118,13 +146,13 @@ export default function ProductsPage() {
       <div>
         <h1 className="text-2xl font-bold text-white">Product Controls</h1>
         <p className="text-neutral-400 mt-1">
-          Hide or flag products from search results
+          Hide, flag, or fix images for products
         </p>
       </div>
 
       {/* Stats */}
       {counts && (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard
             label="Total Flagged"
             value={parseInt(counts.flagged_count)}
@@ -134,6 +162,11 @@ export default function ProductsPage() {
             label="Hidden"
             value={parseInt(counts.hidden_count)}
             color="red"
+          />
+          <StatCard
+            label="Missing Images"
+            value={parseInt(counts.missing_image_count || "0")}
+            color="orange"
           />
           <StatCard
             label="Total Tracked"
@@ -164,17 +197,17 @@ export default function ProductsPage() {
           <div className="flex items-center gap-2">
             <span className="text-sm text-neutral-400">Filter:</span>
             <div className="flex rounded-lg overflow-hidden border border-neutral-600">
-              {(["all", "flagged", "hidden"] as const).map((f) => (
+              {(["all", "flagged", "hidden", "missing_image"] as const).map((f) => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-3 py-1.5 text-sm font-medium ${
+                  className={`px-3 py-1.5 text-sm font-medium whitespace-nowrap ${
                     filter === f
                       ? "bg-red-600 text-white"
                       : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
                   }`}
                 >
-                  {f.charAt(0).toUpperCase() + f.slice(1)}
+                  {f === "missing_image" ? "Missing Image" : f.charAt(0).toUpperCase() + f.slice(1)}
                 </button>
               ))}
             </div>
@@ -235,6 +268,7 @@ export default function ProductsPage() {
               <tr className="border-b border-neutral-700 text-left text-sm text-neutral-400">
                 <th className="px-4 py-3 font-medium">Type</th>
                 <th className="px-4 py-3 font-medium">SKU</th>
+                <th className="px-4 py-3 font-medium">Image</th>
                 <th className="px-4 py-3 font-medium">Status</th>
                 <th className="px-4 py-3 font-medium">Reason</th>
                 <th className="px-4 py-3 font-medium">Updated</th>
@@ -253,6 +287,66 @@ export default function ProductsPage() {
                     <code className="text-sm text-white bg-neutral-700 px-2 py-0.5 rounded">
                       {product.sku}
                     </code>
+                  </td>
+                  <td className="px-4 py-3">
+                    {editingImage === product.id ? (
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="text"
+                          value={imageUrl}
+                          onChange={(e) => setImageUrl(e.target.value)}
+                          placeholder="https://..."
+                          className="w-48 h-8 rounded bg-neutral-700 border border-neutral-600 px-2 text-white text-xs"
+                          autoFocus
+                        />
+                        <button
+                          onClick={() => handleSaveImage(product)}
+                          className="text-xs text-green-400 hover:text-green-300"
+                        >
+                          Save
+                        </button>
+                        <button
+                          onClick={() => { setEditingImage(null); setImageUrl(""); }}
+                          className="text-xs text-neutral-400 hover:text-neutral-300"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        {product.image_url ? (
+                          <>
+                            <img
+                              src={product.image_url}
+                              alt=""
+                              className="w-8 h-8 object-contain bg-neutral-700 rounded"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).style.display = "none";
+                              }}
+                            />
+                            <button
+                              onClick={() => {
+                                setEditingImage(product.id);
+                                setImageUrl(product.image_url || "");
+                              }}
+                              className="text-xs text-blue-400 hover:text-blue-300"
+                            >
+                              Edit
+                            </button>
+                          </>
+                        ) : (
+                          <button
+                            onClick={() => {
+                              setEditingImage(product.id);
+                              setImageUrl("");
+                            }}
+                            className="text-xs text-orange-400 hover:text-orange-300 flex items-center gap-1"
+                          >
+                            <span>📷</span> Add Image
+                          </button>
+                        )}
+                      </div>
+                    )}
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
@@ -301,11 +395,12 @@ function StatCard({
 }: {
   label: string;
   value: number;
-  color: "amber" | "red" | "neutral";
+  color: "amber" | "red" | "orange" | "neutral";
 }) {
   const colors = {
     amber: "border-amber-600 text-amber-400",
     red: "border-red-600 text-red-400",
+    orange: "border-orange-600 text-orange-400",
     neutral: "border-neutral-600 text-neutral-400",
   };
 

@@ -185,27 +185,35 @@ export default function FitmentPage() {
       {/* Results */}
       {result && (
         <div className="space-y-4">
-          <div>
-            <div className="text-lg font-bold text-white">
-              {result.year} {result.make} {result.model}
-            </div>
-            <div className="flex items-center gap-4 mt-1 text-sm">
-              <span className="text-neutral-400">
-                {result.trimCount} trim{result.trimCount !== 1 ? "s" : ""}
-              </span>
-              <span className="text-neutral-500">•</span>
-              <span className="text-green-400">
-                {result.dbMatchCount} with base data
-              </span>
-              {result.overrideCount > 0 && (
-                <>
-                  <span className="text-neutral-500">•</span>
-                  <span className="text-amber-400">
-                    {result.overrideCount} override{result.overrideCount !== 1 ? "s" : ""}
+          {/* Vehicle Header */}
+          <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-5">
+            <div className="flex items-start justify-between">
+              <div>
+                <div className="text-xl font-bold text-white">
+                  {result.year} {result.make} {result.model}
+                </div>
+                <div className="flex items-center gap-4 mt-2 text-sm">
+                  <span className="text-neutral-400">
+                    {result.trimCount} trim{result.trimCount !== 1 ? "s" : ""}
                   </span>
-                </>
-              )}
+                  <span className="text-neutral-500">•</span>
+                  <span className="text-green-400">
+                    {result.dbMatchCount} with base data
+                  </span>
+                  {result.overrideCount > 0 && (
+                    <>
+                      <span className="text-neutral-500">•</span>
+                      <span className="text-amber-400">
+                        {result.overrideCount} override{result.overrideCount !== 1 ? "s" : ""}
+                      </span>
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
+            
+            {/* Fitment Summary - aggregate from all trims */}
+            <FitmentSummary modifications={result.modifications} />
           </div>
 
           {result.modifications.length === 0 ? (
@@ -497,6 +505,121 @@ function DataItem({ label, value }: { label: string; value: string | null | unde
     <div>
       <div className="text-neutral-500 text-xs">{label}</div>
       <div className="text-white font-medium">{value || "—"}</div>
+    </div>
+  );
+}
+
+function FitmentSummary({ modifications }: { modifications: Modification[] }) {
+  // Aggregate fitment data from all modifications
+  const allBoltPatterns = new Set<string>();
+  const allWheelSizes = new Set<string>();
+  const allTireSizes = new Set<string>();
+  let minOffset: number | null = null;
+  let maxOffset: number | null = null;
+  let centerBore: number | null = null;
+  let threadSize: string | null = null;
+  let seatType: string | null = null;
+
+  for (const mod of modifications) {
+    const data = mod.override || mod.current;
+    
+    if (data.boltPattern) allBoltPatterns.add(data.boltPattern);
+    if (data.wheelSizes) data.wheelSizes.forEach(s => allWheelSizes.add(s));
+    if (data.tireSizes) data.tireSizes.forEach(s => allTireSizes.add(s));
+    
+    if (data.offsetMin != null) {
+      minOffset = minOffset === null ? data.offsetMin : Math.min(minOffset, data.offsetMin);
+    }
+    if (data.offsetMax != null) {
+      maxOffset = maxOffset === null ? data.offsetMax : Math.max(maxOffset, data.offsetMax);
+    }
+    if (data.centerBoreMm && !centerBore) centerBore = data.centerBoreMm;
+    if (data.threadSize && !threadSize) threadSize = data.threadSize;
+    if (data.seatType && !seatType) seatType = data.seatType;
+  }
+
+  const hasData = allBoltPatterns.size > 0 || allWheelSizes.size > 0 || allTireSizes.size > 0;
+
+  if (!hasData) {
+    return (
+      <div className="mt-4 pt-4 border-t border-neutral-700">
+        <div className="text-sm text-neutral-500">
+          No fitment data available. Add an override to specify fitment specs.
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-4 pt-4 border-t border-neutral-700">
+      <div className="text-sm font-medium text-neutral-400 mb-3">Fitment Summary</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-sm">
+        {/* Bolt Pattern */}
+        <div className="bg-neutral-700/50 rounded-lg p-3">
+          <div className="text-neutral-500 text-xs mb-1">Bolt Pattern</div>
+          <div className="text-white font-bold">
+            {allBoltPatterns.size > 0 ? Array.from(allBoltPatterns).join(", ") : "—"}
+          </div>
+        </div>
+
+        {/* Center Bore */}
+        <div className="bg-neutral-700/50 rounded-lg p-3">
+          <div className="text-neutral-500 text-xs mb-1">Center Bore</div>
+          <div className="text-white font-bold">
+            {centerBore ? `${centerBore}mm` : "—"}
+          </div>
+        </div>
+
+        {/* Offset Range */}
+        <div className="bg-neutral-700/50 rounded-lg p-3">
+          <div className="text-neutral-500 text-xs mb-1">Offset Range</div>
+          <div className="text-white font-bold">
+            {minOffset != null && maxOffset != null 
+              ? `${minOffset} to ${maxOffset}mm` 
+              : "—"}
+          </div>
+        </div>
+
+        {/* Thread Size */}
+        <div className="bg-neutral-700/50 rounded-lg p-3">
+          <div className="text-neutral-500 text-xs mb-1">Thread Size</div>
+          <div className="text-white font-bold">
+            {threadSize || "—"}
+          </div>
+        </div>
+
+        {/* OEM Wheel Sizes */}
+        <div className="bg-neutral-700/50 rounded-lg p-3 col-span-2 md:col-span-1">
+          <div className="text-neutral-500 text-xs mb-1">OEM Wheel Sizes</div>
+          <div className="text-white font-bold">
+            {allWheelSizes.size > 0 ? (
+              <span className="text-green-400">{allWheelSizes.size} size{allWheelSizes.size !== 1 ? "s" : ""}</span>
+            ) : "—"}
+          </div>
+          {allWheelSizes.size > 0 && (
+            <div className="text-xs text-neutral-400 mt-1 truncate" title={Array.from(allWheelSizes).join(", ")}>
+              {Array.from(allWheelSizes).slice(0, 3).join(", ")}
+              {allWheelSizes.size > 3 && "..."}
+            </div>
+          )}
+        </div>
+
+        {/* OEM Tire Sizes */}
+        <div className="bg-neutral-700/50 rounded-lg p-3 col-span-2 md:col-span-1">
+          <div className="text-neutral-500 text-xs mb-1">OEM Tire Sizes</div>
+          <div className="text-white font-bold">
+            {allTireSizes.size > 0 ? (
+              <span className="text-green-400">{allTireSizes.size} size{allTireSizes.size !== 1 ? "s" : ""}</span>
+            ) : "—"}
+          </div>
+          {allTireSizes.size > 0 && (
+            <div className="text-xs text-neutral-400 mt-1 truncate" title={Array.from(allTireSizes).join(", ")}>
+              {Array.from(allTireSizes).slice(0, 3).join(", ")}
+              {allTireSizes.size > 3 && "..."}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
