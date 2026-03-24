@@ -579,18 +579,26 @@ export default async function TiresPage({
     badges?: any;
   };
   
-  const itemsTw: Tire[] = (Array.isArray(tw?.results) ? tw.results : []).map((t: TireWireResult) => ({
-    source: "tw" as const,
-    partNumber: t.partNumber,
-    mfgPartNumber: t.mfgPartNumber,
-    brand: t.brand,
-    description: t.description || (t.brand && t.model ? `${t.brand} ${t.model}` : undefined),
-    cost: t.cost,
-    quantity: t.quantity,
-    imageUrl: t.imageUrl, // TireLibrary images!
-    displayName: t.model ? `${t.brand || ''} ${t.model}`.trim() : undefined,
-    badges: t.badges,
-  }));
+  const itemsTw: Tire[] = (Array.isArray(tw?.results) ? tw.results : []).map((t: TireWireResult) => {
+    // Map source from unified search: "km" → "km", "wheelpros" → "wp", "tirewire:*" → "tw"
+    let mappedSource: "wp" | "km" | "tw" = "tw";
+    if (t.source === "km") mappedSource = "km";
+    else if (t.source === "wheelpros") mappedSource = "wp";
+    else if (t.source?.startsWith("tirewire")) mappedSource = "tw";
+    
+    return {
+      source: mappedSource,
+      partNumber: t.partNumber,
+      mfgPartNumber: t.mfgPartNumber,
+      brand: t.brand,
+      description: t.description || (t.brand && t.model ? `${t.brand} ${t.model}` : undefined),
+      cost: t.cost,
+      quantity: t.quantity,
+      imageUrl: t.imageUrl, // TireLibrary images!
+      displayName: t.model ? `${t.brand || ''} ${t.model}`.trim() : undefined,
+      badges: t.badges,
+    };
+  });
 
   const itemsKm: Tire[] = (Array.isArray(km?.items) ? km.items : []).map((t: Tire) => ({ ...t, source: "km" as const }));
   const itemsWp: Tire[] = (Array.isArray(wp?.items) ? wp.items : []).map((t: Tire) => ({ ...t, source: "wp" as const }));
