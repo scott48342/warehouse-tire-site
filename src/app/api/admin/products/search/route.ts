@@ -460,18 +460,33 @@ export async function GET(req: Request) {
         if (allProducts.length >= limit) break;
       }
 
-      // Build brands dynamically from search results + DB
+      // Build brands dynamically from search results + DB + brand cache
       // This ensures any supplier's brands appear in the filter
       const resultBrands = new Set<string>();
       for (const p of allProducts) {
         if (p.brand) resultBrands.add(p.brand);
       }
       
-      // Also get common brands from DB for initial filter options
-      const { rows: brandRows } = await pool.query(`
-        SELECT DISTINCT brand_desc as brand FROM wp_tires WHERE brand_desc IS NOT NULL ORDER BY brand_desc LIMIT 100
-      `);
-      for (const r of brandRows) {
+      // Get brands from all sources: wp_tires, admin_product_flags, tire_brands_cache
+      const [wpBrandRows, flagBrandRows, cacheBrandRows] = await Promise.all([
+        pool.query(`
+          SELECT DISTINCT brand_desc as brand FROM wp_tires WHERE brand_desc IS NOT NULL ORDER BY brand_desc LIMIT 100
+        `),
+        pool.query(`
+          SELECT DISTINCT brand FROM admin_product_flags WHERE product_type = 'tire' AND brand IS NOT NULL ORDER BY brand LIMIT 100
+        `),
+        pool.query(`
+          SELECT DISTINCT brand FROM tire_brands_cache ORDER BY brand LIMIT 100
+        `).catch(() => ({ rows: [] })), // Table might not exist yet
+      ]);
+      
+      for (const r of wpBrandRows.rows) {
+        if (r.brand) resultBrands.add(r.brand);
+      }
+      for (const r of flagBrandRows.rows) {
+        if (r.brand) resultBrands.add(r.brand);
+      }
+      for (const r of cacheBrandRows.rows) {
         if (r.brand) resultBrands.add(r.brand);
       }
 
