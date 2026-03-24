@@ -89,17 +89,31 @@ function decrypt(encrypted: string): string {
 
 // ============ Database ============
 
+// OPTIMIZATION: Reuse pool instead of creating/destroying per call
+let _tirewirePool: pg.Pool | null = null;
 function getPool(): pg.Pool {
+  if (_tirewirePool) return _tirewirePool;
   const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
   if (!url) throw new Error("Missing DATABASE_URL");
-  return new Pool({
+  _tirewirePool = new Pool({
     connectionString: url,
     ssl: { rejectUnauthorized: false },
     max: 3,
   });
+  return _tirewirePool;
 }
 
+// OPTIMIZATION: Cache credentials and connections for 5 minutes
+let _credsCache: { data: TirewireCredentials | null; expiresAt: number } | null = null;
+let _connsCache: { data: TirewireConnection[]; expiresAt: number } | null = null;
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+
 export async function getTirewireCredentials(): Promise<TirewireCredentials | null> {
+  // Return from cache if valid
+  if (_credsCache && _credsCache.expiresAt > Date.now()) {
+    return _credsCache.data;
+  }
+  
   const pool = getPool();
   try {
     const { rows } = await pool.query(`
@@ -110,22 +124,29 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
     const groupTokenRow = rows.find((r: any) => r.key === "group_token");
 
     if (!accessKeyRow?.value || !groupTokenRow?.value) {
+      _credsCache = { data: null, expiresAt: Date.now() + CACHE_TTL_MS };
       return null;
     }
 
-    return {
+    const result = {
       accessKey: decrypt(accessKeyRow.value),
       groupToken: decrypt(groupTokenRow.value),
     };
+    _credsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
+    return result;
   } catch (err) {
     console.error("[tirewire] Failed to get credentials:", err);
     return null;
-  } finally {
-    await pool.end();
   }
+  // NOTE: No longer ending pool - it's reused
 }
 
 export async function getEnabledConnections(): Promise<TirewireConnection[]> {
+  // Return from cache if valid
+  if (_connsCache && _connsCache.expiresAt > Date.now()) {
+    return _connsCache.data;
+  }
+  
   const pool = getPool();
   try {
     const { rows } = await pool.query(`
@@ -134,17 +155,18 @@ export async function getEnabledConnections(): Promise<TirewireConnection[]> {
       WHERE enabled = true AND connection_id IS NOT NULL
     `);
 
-    return rows.map((r: any) => ({
+    const result = rows.map((r: any) => ({
       provider: r.provider,
       connectionId: r.connection_id,
       enabled: r.enabled,
     }));
+    _connsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
+    return result;
   } catch (err) {
     console.error("[tirewire] Failed to get connections:", err);
     return [];
-  } finally {
-    await pool.end();
   }
+  // NOTE: No longer ending pool - it's reused
 }
 
 // ============ SOAP API ============

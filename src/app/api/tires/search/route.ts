@@ -271,6 +271,9 @@ function normalizeProductKey(partNumber: string, brand: string | null): string {
 }
 
 export async function GET(req: Request) {
+  const t0 = Date.now();
+  const timing: Record<string, number> = {};
+  
   try {
     const url = new URL(req.url);
     
@@ -288,19 +291,26 @@ export async function GET(req: Request) {
     const minQty = i(url.searchParams.get("minQty"));
     const pageSize = Math.min(Math.max(i(url.searchParams.get("pageSize") || url.searchParams.get("limit")) || 50, 1), 200);
 
+    const tDb0 = Date.now();
     const db = getPool();
+    timing.dbPoolMs = Date.now() - tDb0;
     
     // Case 1: Direct size search
     if (sizeRaw) {
+      const tSearch0 = Date.now();
       // Query both sources in parallel
       const [wpResults, twResults] = await Promise.all([
         searchTiresBySize(db, sizeRaw, minQty, pageSize),
         searchTiresTirewireFormatted(sizeRaw),
       ]);
+      timing.searchMs = Date.now() - tSearch0;
       
       // Merge and dedupe by partNumber (prefer Tirewire for images)
+      const tMerge0 = Date.now();
       const merged = mergeTireResults(wpResults, twResults, minQty);
       const results = merged.slice(0, pageSize);
+      timing.mergeMs = Date.now() - tMerge0;
+      timing.totalMs = Date.now() - t0;
       
       return NextResponse.json({
         results,
@@ -310,6 +320,7 @@ export async function GET(req: Request) {
           wheelpros: wpResults.length,
           tirewire: twResults.length,
         },
+        timing,
       });
     }
     
@@ -322,6 +333,7 @@ export async function GET(req: Request) {
     }
     
     // Get tire sizes from vehicles/tire-sizes API
+    const tFitment0 = Date.now();
     let tireSizes: string[] = [];
     let fitmentSource = "api";
     
@@ -342,6 +354,7 @@ export async function GET(req: Request) {
     } catch (err) {
       console.error("[tires/search] Tire sizes error:", err);
     }
+    timing.fitmentMs = Date.now() - tFitment0;
     
     // Track original OEM sizes for response
     const oemTireSizes = [...tireSizes];
@@ -368,6 +381,7 @@ export async function GET(req: Request) {
     }
     
     // Build results from both sources
+    const tSearch0 = Date.now();
     let wpResults: TireResult[] = [];
     let twResults: TireResult[] = [];
     
@@ -407,6 +421,7 @@ export async function GET(req: Request) {
       }
       await Promise.all(searchPromises);
     }
+    timing.searchMs = Date.now() - tSearch0;
     
     // Merge results from both sources
     const allResults = mergeTireResults(wpResults, twResults, minQty);
@@ -441,6 +456,8 @@ export async function GET(req: Request) {
       });
     }
     
+    timing.totalMs = Date.now() - t0;
+    
     return NextResponse.json({
       results: finalResults,
       mode: "vehicle",
@@ -454,6 +471,7 @@ export async function GET(req: Request) {
         wheelpros: wpResults.length,
         tirewire: twResults.length,
       },
+      timing,
     });
   } catch (e: any) {
     console.error("[tires/search] Error:", e);
