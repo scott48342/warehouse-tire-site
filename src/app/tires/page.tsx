@@ -543,14 +543,18 @@ export default async function TiresPage({
   const sizeFront = axle === "front" ? selectedSize : (sizeFrontRaw || "");
   const sizeRear = axle === "rear" ? selectedSize : (sizeRearRaw || "");
 
-  // Fetch from all tire sources in parallel
+  // Fetch tires from unified search (includes K&M, WheelPros, Tirewire + admin overrides)
   const wpSize = metricSizeOverride || selectedSize;
-  const [km, wp, tw, rebates] = await Promise.all([
-    selectedSize ? fetchKmTires(selectedSize) : null,
-    wpSize ? fetchWpTires(wpSize) : null,
-    selectedSize ? fetchTireWireTires(selectedSize) : null,
+  const [unifiedTires, rebates] = await Promise.all([
+    (wpSize || selectedSize) ? fetchTireWireTires(wpSize || selectedSize) : null,
     fetchActiveRebates(),
   ]);
+  
+  // Unified search returns all sources with overrides applied
+  const tw = unifiedTires;
+  // K&M and WP are now part of unified search - set to empty for backward compat
+  const km: { items?: any[]; error?: string } | null = { items: [] };
+  const wp: { items?: any[]; error?: string } | null = { items: [] };
 
   const rebatesByBrand = new Map<string, any>();
   for (const r of (rebates as any)?.items || []) {
