@@ -255,6 +255,32 @@ export async function GET(req: Request) {
         const tireMatches = responseText.match(/<Tire>/g);
         const faultMatch = responseText.match(/<faultstring>([\s\S]*?)<\/faultstring>/);
         
+        // Extract sample tire data for debugging
+        let sampleTires: any[] = [];
+        if (tireMatches && tireMatches.length > 0) {
+          const tireRegex = /<Tire>([\s\S]*?)<\/Tire>/g;
+          let tireMatch;
+          let count = 0;
+          const tempXml = responseText;
+          while ((tireMatch = tireRegex.exec(tempXml)) !== null && count < 3) {
+            const tireXml = tireMatch[1];
+            const getName = (tag: string) => {
+              const m = tireXml.match(new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`));
+              return m ? m[1].trim() : null;
+            };
+            sampleTires.push({
+              id: getName("ID"),
+              name: getName("Name"),
+              make: getName("Make"),
+              pattern: getName("Pattern"),
+              imageUrl: getName("ImageURL"),
+              patternImageUrl: getName("PatternImageURL"),
+              sideImageUrl: getName("SideImageURL"),
+            });
+            count++;
+          }
+        }
+        
         debug.soapTests.push({
           format: format.name,
           status: res.status,
@@ -263,6 +289,7 @@ export async function GET(req: Request) {
           fault: faultMatch ? faultMatch[1] : null,
           success: res.status === 200 && !faultMatch,
           bodyPreview: responseText.slice(0, 500),
+          sampleTires: sampleTires.length > 0 ? sampleTires : undefined,
         });
         
         // If this format works, stop testing
