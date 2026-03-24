@@ -1558,7 +1558,7 @@ export default async function TiresPage({
                   </div>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="tire-grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {topPicks.slice(0, 4).map((t, idx) => (
                     <TireCard
                       key={`top-${t.partNumber || t.mfgPartNumber || idx}`}
@@ -1608,7 +1608,7 @@ export default async function TiresPage({
               </div>
             ) : null}
 
-            <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="tire-grid mt-3 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {itemsPage.length ? (
                 itemsPage.map((t, idx) => (
                   <TireCard
@@ -1794,7 +1794,7 @@ function TireCard({
   const displayTitle = cleanTireDisplayTitle(rawTitle, t.brand);
 
   return (
-    <article className={`group relative overflow-hidden rounded-2xl border bg-white p-5 hover:shadow-md transition-shadow ${isTopPick ? "border-green-200 ring-1 ring-green-100" : "border-neutral-200 hover:border-red-300"}`}>
+    <article className={`tire-card group relative overflow-hidden rounded-2xl border bg-white p-5 transition-shadow ${isTopPick ? "border-green-200 ring-1 ring-green-100" : "border-neutral-200 hover:border-red-300"}`}>
       {/* Left accent bar - matching wheels card */}
       <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${isTopPick ? "bg-green-500" : "bg-neutral-800"}`} />
 
@@ -1857,22 +1857,19 @@ function TireCard({
         ) : null}
       </div>
 
-      {/* Product image - matching wheels card */}
-      <div className="relative z-10 mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+      {/* Product image - standardized container for consistency */}
+      <div className="tire-card-image-container relative z-10 mt-3">
         {t.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={t.imageUrl}
             alt={displayTitle}
-            className="h-48 w-full object-contain bg-white transition-transform duration-200 group-hover:scale-[1.02]"
             loading="lazy"
           />
         ) : (
-          <div className="grid h-48 place-items-center bg-white p-3 text-center">
-            <div>
-              <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-              <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
-            </div>
+          <div className="tire-card-image-placeholder">
+            <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
+            <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
           </div>
         )}
       </div>
@@ -1931,7 +1928,7 @@ function TireCard({
       </div>
 
       {/* CTA buttons - matching wheels card structure */}
-      <div className="relative z-10 mt-4 grid gap-2">
+      <div className="tire-card-cta relative z-10 grid gap-2">
         {typeof t.cost === "number" && wheelSku && tireSku ? (
           isStaggered ? (
             <SelectTireButtonAxle

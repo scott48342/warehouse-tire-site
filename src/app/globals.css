@@ -35,3 +35,78 @@ body {
     padding-bottom: 72px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TIRE CARD CONSISTENCY
+   Standardize tire card image containers and layout for visual uniformity
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Tire card layout - uses flexbox for consistent spacing */
+.tire-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Tire card content area - grows to push CTA to bottom */
+.tire-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tire card image container - fixed height for consistency */
+.tire-card-image-container {
+  position: relative;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+}
+
+/* Tire card image - centered with consistent sizing */
+.tire-card-image-container img {
+  max-width: 90%;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease-out;
+}
+
+/* Tire card placeholder - when no image */
+.tire-card-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Tire card CTA section - always at bottom */
+.tire-card-cta {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* Tire card hover effects */
+.tire-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tire-card:hover .tire-card-image-container img {
+  transform: scale(1.03);
+}
+
+/* Ensure equal row heights in grid */
+.tire-grid {
+  display: grid;
+  grid-auto-rows: 1fr;
+}
