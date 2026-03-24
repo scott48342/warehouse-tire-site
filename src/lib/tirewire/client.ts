@@ -390,6 +390,13 @@ export interface UnifiedTire {
 export function tirewireTireToUnified(tire: TirewireTire, provider: string): UnifiedTire {
   const size = `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${Math.round(tire.rim)}`;
   
+  // Use PatternID to construct TireLibrary product image URL
+  // Falls back to brand logo if no patternId
+  let imageUrl = tire.imageUrl || null;
+  if (tire.patternId && tire.patternId > 0) {
+    imageUrl = `https://tireweb.tirelibrary.com/images/Products/${tire.patternId}.jpg`;
+  }
+  
   return {
     partNumber: tire.clientProductCode || tire.productCode,
     mfgPartNumber: tire.productCode,
@@ -403,7 +410,7 @@ export function tirewireTireToUnified(tire: TirewireTire, provider: string): Uni
       alternate: tire.quantitySecondary,
       national: tire.quantity + tire.quantitySecondary,
     },
-    imageUrl: tire.imageUrl || null,
+    imageUrl,
     size,
     simpleSize: `${Math.round(tire.width)}${Math.round(tire.aspectRatio)}${Math.round(tire.rim)}`,
     rimDiameter: Math.round(tire.rim),
