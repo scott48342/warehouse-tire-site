@@ -49,6 +49,13 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
+// Convert 32-char hex string to GUID format (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
+function toGuid(hex: string): string {
+  if (hex.length !== 32) return hex;
+  if (hex.includes("-")) return hex; // Already formatted
+  return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20,32)}`;
+}
+
 function toSimpleSize(s: string): string {
   const v = String(s || "").trim().toUpperCase();
   const m = v.match(/(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*\s*R?\s*(\d{2})/i);
@@ -204,11 +211,30 @@ export async function GET(req: Request) {
   </soap:Body>
 </soap:Envelope>`;
 
+    // Format 6: AccessKey as GUID format
+    const accessKeyGuid = toGuid(creds.accessKey);
+    const soapRequest6 = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">
+  <soap:Body>
+    <prod:GetTires>
+      <prod:options>
+        <prod:AccessKey>${escapeXml(accessKeyGuid)}</prod:AccessKey>
+        <prod:GroupToken>${escapeXml(creds.groupToken)}</prod:GroupToken>
+        <prod:ConnectionID>${conn.connectionId}</prod:ConnectionID>
+        <prod:TireSize>${escapeXml(simpleSize)}</prod:TireSize>
+        <prod:DetailLevel>10</prod:DetailLevel>
+      </prod:options>
+    </prod:GetTires>
+  </soap:Body>
+</soap:Envelope>`;
+
+    debug.accessKeyGuid = accessKeyGuid ? `${accessKeyGuid.slice(0,8)}...` : null;
+
     const soapFormats = [
+      { name: "AccessKey as GUID", body: soapRequest6 },
       { name: "Both keys (proper)", body: soapRequest4 },
       { name: "AccessKey only", body: soapRequest5 },
       { name: "GroupToken only", body: soapRequest1 },
-      { name: "Empty AccessKey", body: soapRequest2 },
     ];
 
     debug.soapTests = [];
