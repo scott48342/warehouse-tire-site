@@ -90,13 +90,17 @@ export function validatePackage(items: CartItem[]): PackageValidationResult {
 
   // Validate wheel/tire diameter match (if both present)
   if (wheels.length > 0 && tires.length > 0) {
-    const wheelDiameters = new Set(wheels.map((w) => w.diameter).filter(Boolean));
+    // Normalize wheel diameters to integers for comparison
+    const wheelDiameters = new Set(
+      wheels.map((w) => Math.round(parseFloat(String(w.diameter || 0)))).filter((d) => d > 0)
+    );
     
     tires.forEach((tire) => {
-      // Extract diameter from tire size (e.g., "245/45R18" → 18)
-      const tireDiaMatch = tire.size.match(/R(\d{2})/i);
+      // Extract diameter from tire size
+      // Handles: "245/45R18", "35x12.50R22", "35x12.50R22LT", "P265/70R17"
+      const tireDiaMatch = tire.size.match(/R(\d+)/i);
       if (tireDiaMatch) {
-        const tireDia = tireDiaMatch[1];
+        const tireDia = parseInt(tireDiaMatch[1], 10);
         if (wheelDiameters.size > 0 && !wheelDiameters.has(tireDia)) {
           errors.push(`Tire size ${tire.size} doesn't match wheel diameter (${[...wheelDiameters].join(", ")})`);
         }
