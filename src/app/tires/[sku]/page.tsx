@@ -6,9 +6,20 @@ import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
-import { searchTiresTirewire, tirewireTireToUnified } from "@/lib/tirewire/client";
 
 export const runtime = "nodejs";
+
+type TireAsset = {
+  km_description?: string;
+  display_name?: string;
+  image_url?: string;
+};
+
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+}
 
 const { Pool } = pg;
 
@@ -161,72 +172,27 @@ export default async function TireDetailPage({
 
   const displayPrice = priceFromRow(t);
 
-  // Enrich with TireLibrary image if database doesn't have one
+  // Enrich with tire asset image if database doesn't have one
   let enrichedImageUrl: string | null = t.image_url || null;
   
-  if (!enrichedImageUrl && t.simple_size) {
-    try {
-      // Search Tirewire by size and find matching tire
-      const tirewireResults = await searchTiresTirewire(t.simple_size);
-      
-      // First pass: exact SKU match
-      for (const result of tirewireResults) {
-        for (const tire of result.tires) {
-          if (
-            tire.productCode === safeSku ||
-            tire.clientProductCode === safeSku ||
-            tire.productCode?.toUpperCase() === safeSku.toUpperCase() ||
-            tire.clientProductCode?.toUpperCase() === safeSku.toUpperCase()
-          ) {
-            const unified = tirewireTireToUnified(tire, result.provider);
-            if (unified.imageUrl) {
-              enrichedImageUrl = unified.imageUrl;
-              break;
-            }
+  if (!enrichedImageUrl) {
+    // Use the same asset lookup as the listing page
+    const description = String(t.tire_description || "").trim();
+    if (description) {
+      try {
+        const assetRes = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(description)}`, { 
+          cache: "no-store" 
+        });
+        if (assetRes.ok) {
+          const assetData = (await assetRes.json()) as { results?: TireAsset[] };
+          const asset = Array.isArray(assetData?.results) ? assetData.results[0] : null;
+          if (asset?.image_url) {
+            enrichedImageUrl = asset.image_url;
           }
         }
-        if (enrichedImageUrl) break;
+      } catch (err) {
+        console.error("[tire-detail] Asset lookup failed:", err);
       }
-      
-      // Second pass: match by brand + model name (fuzzy match)
-      if (!enrichedImageUrl) {
-        const wpBrand = String(t.brand_desc || "").toUpperCase().trim();
-        const wpDesc = String(t.tire_description || "").toUpperCase();
-        
-        for (const result of tirewireResults) {
-          for (const tire of result.tires) {
-            const twBrand = String(tire.make || "").toUpperCase().trim();
-            const twPattern = String(tire.pattern || "").toUpperCase().trim();
-            
-            // Match brand and check if pattern is in description
-            if (twBrand === wpBrand && twPattern && wpDesc.includes(twPattern)) {
-              if (tire.imageUrl) {
-                enrichedImageUrl = tire.imageUrl;
-                break;
-              }
-            }
-          }
-          if (enrichedImageUrl) break;
-        }
-      }
-      
-      // Third pass: just match by brand and take first image
-      if (!enrichedImageUrl) {
-        const wpBrand = String(t.brand_desc || "").toUpperCase().trim();
-        
-        for (const result of tirewireResults) {
-          for (const tire of result.tires) {
-            const twBrand = String(tire.make || "").toUpperCase().trim();
-            if (twBrand === wpBrand && tire.imageUrl) {
-              enrichedImageUrl = tire.imageUrl;
-              break;
-            }
-          }
-          if (enrichedImageUrl) break;
-        }
-      }
-    } catch (err) {
-      console.error("[tire-detail] TireLibrary enrichment failed:", err);
     }
   }
 

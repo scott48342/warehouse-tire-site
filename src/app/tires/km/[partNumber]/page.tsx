@@ -1,10 +1,15 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
-import { searchTiresTirewire, tirewireTireToUnified } from "@/lib/tirewire/client";
 import { ImageGallery } from "@/components/ImageGallery";
 
 export const runtime = "nodejs";
+
+type TireAsset = {
+  km_description?: string;
+  display_name?: string;
+  image_url?: string;
+};
 
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
@@ -131,79 +136,33 @@ export default async function KmTireDetailPage({
   const qAlt = n(item?.quantity?.alternate);
   const qNat = n(item?.quantity?.national);
 
-  const title = `${brand} ${description}`;
-
-  // Enrich with TireLibrary image (K&M doesn't provide images)
+  // Enrich with tire asset image (K&M doesn't provide images)
   let enrichedImageUrl: string | null = null;
+  let enrichedDisplayName: string | null = null;
   
-  // Convert size to simple format for Tirewire search (215/55R17 → 2155517)
-  const simpleSize = size.replace(/[^0-9]/g, "").slice(0, 7);
-  
-  if (simpleSize) {
+  // Use the same asset lookup as the listing page
+  const kmDescription = String(item.description || "").trim();
+  if (kmDescription) {
     try {
-      const tirewireResults = await searchTiresTirewire(simpleSize);
-      
-      // First pass: exact SKU match
-      for (const result of tirewireResults) {
-        for (const tire of result.tires) {
-          const mfgPart = String(item.mfgPartNumber || safePart).toUpperCase();
-          if (
-            tire.productCode?.toUpperCase() === mfgPart ||
-            tire.clientProductCode?.toUpperCase() === mfgPart ||
-            tire.productCode?.toUpperCase() === safePart.toUpperCase() ||
-            tire.clientProductCode?.toUpperCase() === safePart.toUpperCase()
-          ) {
-            const unified = tirewireTireToUnified(tire, result.provider);
-            if (unified.imageUrl) {
-              enrichedImageUrl = unified.imageUrl;
-              break;
-            }
-          }
+      const assetRes = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(kmDescription)}`, { 
+        cache: "no-store" 
+      });
+      if (assetRes.ok) {
+        const assetData = (await assetRes.json()) as { results?: TireAsset[] };
+        const asset = Array.isArray(assetData?.results) ? assetData.results[0] : null;
+        if (asset?.image_url) {
+          enrichedImageUrl = asset.image_url;
         }
-        if (enrichedImageUrl) break;
-      }
-      
-      // Second pass: match by brand + model name (fuzzy match)
-      if (!enrichedImageUrl) {
-        const kmBrand = String(brand || "").toUpperCase().trim();
-        const kmDesc = String(description || "").toUpperCase();
-        
-        for (const result of tirewireResults) {
-          for (const tire of result.tires) {
-            const twBrand = String(tire.make || "").toUpperCase().trim();
-            const twPattern = String(tire.pattern || "").toUpperCase().trim();
-            
-            // Match brand and check if pattern is in K&M description
-            if (twBrand === kmBrand && twPattern && kmDesc.includes(twPattern)) {
-              if (tire.imageUrl) {
-                enrichedImageUrl = tire.imageUrl;
-                break;
-              }
-            }
-          }
-          if (enrichedImageUrl) break;
-        }
-      }
-      
-      // Third pass: just match by brand and take first image
-      if (!enrichedImageUrl) {
-        const kmBrand = String(brand || "").toUpperCase().trim();
-        
-        for (const result of tirewireResults) {
-          for (const tire of result.tires) {
-            const twBrand = String(tire.make || "").toUpperCase().trim();
-            if (twBrand === kmBrand && tire.imageUrl) {
-              enrichedImageUrl = tire.imageUrl;
-              break;
-            }
-          }
-          if (enrichedImageUrl) break;
+        if (asset?.display_name) {
+          enrichedDisplayName = asset.display_name;
         }
       }
     } catch (err) {
-      console.error("[km-tire-detail] TireLibrary enrichment failed:", err);
+      console.error("[km-tire-detail] Asset lookup failed:", err);
     }
   }
+
+  const title = enrichedDisplayName || `${brand} ${description}`;
 
   return (
     <main className="bg-neutral-50">
