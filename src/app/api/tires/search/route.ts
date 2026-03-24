@@ -454,6 +454,47 @@ function normalizeProductKey(partNumber: string, brand: string | null): string {
   return `${(brand || "").toUpperCase()}:${normalized}`;
 }
 
+/**
+ * Apply image overrides from admin_product_flags table
+ * This allows admins to set custom images for products (especially K&M which has no images)
+ */
+async function applyImageOverrides(db: pg.Pool, results: TireResult[]): Promise<TireResult[]> {
+  if (results.length === 0) return results;
+  
+  const skus = results.map(r => r.partNumber).filter(Boolean);
+  if (skus.length === 0) return results;
+  
+  try {
+    const { rows } = await db.query(`
+      SELECT sku, image_url 
+      FROM admin_product_flags 
+      WHERE sku = ANY($1) 
+        AND product_type = 'tire' 
+        AND image_url IS NOT NULL 
+        AND image_url != ''
+    `, [skus]);
+    
+    if (rows.length === 0) return results;
+    
+    const overrides = new Map<string, string>();
+    for (const row of rows) {
+      overrides.set(row.sku, row.image_url);
+    }
+    
+    // Apply overrides
+    return results.map(tire => {
+      const override = overrides.get(tire.partNumber);
+      if (override) {
+        return { ...tire, imageUrl: override };
+      }
+      return tire;
+    });
+  } catch (err) {
+    console.error("[tires/search] Image override lookup error:", err);
+    return results; // Return original results on error
+  }
+}
+
 export async function GET(req: Request) {
   const t0 = Date.now();
   const timing: Record<string, number> = {};
@@ -493,12 +534,16 @@ export async function GET(req: Request) {
       // Merge and dedupe by partNumber (prefer Tirewire for images)
       const tMerge0 = Date.now();
       const merged = mergeTireResults(wpResults, twResults, kmResults, minQty);
-      const results = merged.slice(0, pageSize);
       timing.mergeMs = Date.now() - tMerge0;
+      
+      // Apply admin image overrides (for K&M tires without images, etc.)
+      const tOverride0 = Date.now();
+      const resultsWithOverrides = await applyImageOverrides(db, merged.slice(0, pageSize));
+      timing.imageOverrideMs = Date.now() - tOverride0;
       timing.totalMs = Date.now() - t0;
       
       return NextResponse.json({
-        results,
+        results: resultsWithOverrides,
         mode: "size",
         size: sizeRaw,
         sources: {
@@ -637,10 +682,10 @@ export async function GET(req: Request) {
       ? allResults.filter((t) => t.rimDiameter === wheelDiameter)
       : allResults;
     
-    const finalResults = filteredResults.slice(0, pageSize);
+    const slicedResults = filteredResults.slice(0, pageSize);
     
     // If strict filtering leaves us empty but we have results, return error
-    if (wheelDiameter && finalResults.length === 0 && allResults.length > 0) {
+    if (wheelDiameter && slicedResults.length === 0 && allResults.length > 0) {
       return NextResponse.json({
         results: [],
         mode: "vehicle",
@@ -652,6 +697,10 @@ export async function GET(req: Request) {
       });
     }
     
+    // Apply admin image overrides (for K&M tires without images, etc.)
+    const tOverride0 = Date.now();
+    const finalResults = await applyImageOverrides(db, slicedResults);
+    timing.imageOverrideMs = Date.now() - tOverride0;
     timing.totalMs = Date.now() - t0;
     
     return NextResponse.json({
