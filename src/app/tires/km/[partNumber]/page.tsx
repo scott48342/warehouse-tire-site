@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
+import { searchTiresTirewire, tirewireTireToUnified } from "@/lib/tirewire/client";
+import { ImageGallery } from "@/components/ImageGallery";
 
 export const runtime = "nodejs";
 
@@ -131,6 +133,78 @@ export default async function KmTireDetailPage({
 
   const title = `${brand} ${description}`;
 
+  // Enrich with TireLibrary image (K&M doesn't provide images)
+  let enrichedImageUrl: string | null = null;
+  
+  // Convert size to simple format for Tirewire search (215/55R17 → 2155517)
+  const simpleSize = size.replace(/[^0-9]/g, "").slice(0, 7);
+  
+  if (simpleSize) {
+    try {
+      const tirewireResults = await searchTiresTirewire(simpleSize);
+      
+      // First pass: exact SKU match
+      for (const result of tirewireResults) {
+        for (const tire of result.tires) {
+          const mfgPart = String(item.mfgPartNumber || safePart).toUpperCase();
+          if (
+            tire.productCode?.toUpperCase() === mfgPart ||
+            tire.clientProductCode?.toUpperCase() === mfgPart ||
+            tire.productCode?.toUpperCase() === safePart.toUpperCase() ||
+            tire.clientProductCode?.toUpperCase() === safePart.toUpperCase()
+          ) {
+            const unified = tirewireTireToUnified(tire, result.provider);
+            if (unified.imageUrl) {
+              enrichedImageUrl = unified.imageUrl;
+              break;
+            }
+          }
+        }
+        if (enrichedImageUrl) break;
+      }
+      
+      // Second pass: match by brand + model name (fuzzy match)
+      if (!enrichedImageUrl) {
+        const kmBrand = String(brand || "").toUpperCase().trim();
+        const kmDesc = String(description || "").toUpperCase();
+        
+        for (const result of tirewireResults) {
+          for (const tire of result.tires) {
+            const twBrand = String(tire.make || "").toUpperCase().trim();
+            const twPattern = String(tire.pattern || "").toUpperCase().trim();
+            
+            // Match brand and check if pattern is in K&M description
+            if (twBrand === kmBrand && twPattern && kmDesc.includes(twPattern)) {
+              if (tire.imageUrl) {
+                enrichedImageUrl = tire.imageUrl;
+                break;
+              }
+            }
+          }
+          if (enrichedImageUrl) break;
+        }
+      }
+      
+      // Third pass: just match by brand and take first image
+      if (!enrichedImageUrl) {
+        const kmBrand = String(brand || "").toUpperCase().trim();
+        
+        for (const result of tirewireResults) {
+          for (const tire of result.tires) {
+            const twBrand = String(tire.make || "").toUpperCase().trim();
+            if (twBrand === kmBrand && tire.imageUrl) {
+              enrichedImageUrl = tire.imageUrl;
+              break;
+            }
+          }
+          if (enrichedImageUrl) break;
+        }
+      }
+    } catch (err) {
+      console.error("[km-tire-detail] TireLibrary enrichment failed:", err);
+    }
+  }
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-10">
@@ -141,45 +215,106 @@ export default async function KmTireDetailPage({
         </div>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_420px]">
-          <div className="rounded-3xl border border-neutral-200 bg-white p-6">
-            <div className="text-xs font-semibold text-neutral-600">{BRAND.name}</div>
-            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-900">{title}</h1>
-            <div className="mt-4 flex flex-wrap gap-2">
-              <Badge>{size}</Badge>
-              <Badge>Source: K&M</Badge>
-              <Badge>Part: {safePart}</Badge>
+          {/* Left column: Image + Product Details */}
+          <div className="grid gap-4">
+            <div className="rounded-3xl border border-neutral-200 bg-white p-3">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <div className="text-xs font-semibold text-neutral-600">Product photo</div>
+                <div className="text-[11px] text-neutral-500">Click to zoom</div>
+              </div>
+              <ImageGallery images={enrichedImageUrl ? [enrichedImageUrl] : []} alt={title} note="Image may vary by size" />
             </div>
 
-            <div className="mt-6 grid gap-3 text-sm text-neutral-800">
-              <div>
-                <span className="font-semibold">Brand:</span> {brand}
-              </div>
-              <div>
-                <span className="font-semibold">Description:</span> {description}
-              </div>
-              {cost != null ? (
-                <div>
-                  <span className="font-semibold">Cost:</span> {fmtMoney(cost)}
-                </div>
-              ) : null}
-              <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-                <div className="text-xs font-semibold text-neutral-600">Availability (K&M)</div>
-                <div className="mt-2 grid gap-1">
-                  <div>Primary: {qPrimary ?? 0}</div>
-                  <div>Alternate: {qAlt ?? 0}</div>
-                  <div>National: {qNat ?? 0}</div>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div className="rounded-3xl border border-neutral-200 bg-white p-6">
-            <div className="text-xs font-semibold text-neutral-600">Fitment</div>
-            <div className="mt-2 text-sm font-extrabold text-neutral-900">
-              {year && make && model ? `${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}` : "Select a vehicle to verify fitment"}
+          {/* Right column: Product info + CTA */}
+          <div className="lg:sticky lg:top-6 rounded-3xl border border-neutral-200 bg-white p-6">
+            {/* Fitment */}
+            {year && make && model ? (
+              <div className="mb-4 rounded-2xl bg-green-50 border border-green-200 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">✓</span>
+                  <div>
+                    <div className="font-extrabold text-green-900">
+                      Fits your {year} {make} {model}
+                    </div>
+                    <div className="mt-1 text-sm text-green-800">
+                      Guaranteed fitment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="mb-4 rounded-2xl border border-amber-200 bg-amber-50 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-xl">⚠️</span>
+                  <div>
+                    <div className="font-extrabold text-amber-900">Select your vehicle</div>
+                    <div className="mt-1 text-sm text-amber-800">
+                      We'll verify this tire fits before you buy
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div className="text-xs font-semibold text-neutral-600">{brand}</div>
+            <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{title}</h1>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Badge>{size}</Badge>
             </div>
-            <div className="mt-3 text-xs text-neutral-600">
-              KM detail pages currently show supplier data; we can enrich this later with images, UTQG, etc.
+
+            {/* Price */}
+            <div className="mt-4">
+              <div className="text-3xl font-extrabold text-neutral-900">
+                {cost != null ? fmtMoney(cost + 50) : "Call for price"}
+              </div>
+              <div className="text-xs text-neutral-600">each</div>
+            </div>
+
+            {/* Stock status */}
+            <div className="mt-3 flex items-center gap-2 text-sm font-semibold">
+              {(() => {
+                const totalQty = (qPrimary ?? 0) + (qAlt ?? 0) + (qNat ?? 0);
+                const inStock = totalQty >= 4;
+                return (
+                  <>
+                    <span className={`inline-block h-2.5 w-2.5 rounded-full ${inStock ? "bg-green-500" : "bg-amber-500"}`} />
+                    <span className={inStock ? "text-green-800" : "text-amber-800"}>
+                      {inStock ? "In stock" : "Available to order"}
+                    </span>
+                  </>
+                );
+              })()}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-5 grid gap-2">
+              <a
+                href={BRAND.links.tel}
+                className="h-11 rounded-xl bg-[var(--brand-red)] px-4 py-3 text-center text-sm font-extrabold text-white"
+              >
+                Call for quote
+              </a>
+              <Link
+                href="/schedule"
+                className="h-11 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-center text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
+              >
+                Schedule install
+              </Link>
+            </div>
+
+            <div className="mt-4 text-xs text-neutral-600">
+              <div className="flex items-center gap-1.5 mb-1">
+                <span className="text-green-600">✓</span> Fitment verified before shipping
+              </div>
+              <div className="flex items-center gap-1.5 mb-1">
+                <span className="text-green-600">✓</span> Mount & balance included
+              </div>
+              <div className="flex items-center gap-1.5">
+                <span className="text-green-600">✓</span> Expert support included
+              </div>
             </div>
           </div>
         </div>

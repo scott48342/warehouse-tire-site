@@ -6,6 +6,7 @@ import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
+import { searchTiresTirewire, tirewireTireToUnified } from "@/lib/tirewire/client";
 
 export const runtime = "nodejs";
 
@@ -160,6 +161,75 @@ export default async function TireDetailPage({
 
   const displayPrice = priceFromRow(t);
 
+  // Enrich with TireLibrary image if database doesn't have one
+  let enrichedImageUrl: string | null = t.image_url || null;
+  
+  if (!enrichedImageUrl && t.simple_size) {
+    try {
+      // Search Tirewire by size and find matching tire
+      const tirewireResults = await searchTiresTirewire(t.simple_size);
+      
+      // First pass: exact SKU match
+      for (const result of tirewireResults) {
+        for (const tire of result.tires) {
+          if (
+            tire.productCode === safeSku ||
+            tire.clientProductCode === safeSku ||
+            tire.productCode?.toUpperCase() === safeSku.toUpperCase() ||
+            tire.clientProductCode?.toUpperCase() === safeSku.toUpperCase()
+          ) {
+            const unified = tirewireTireToUnified(tire, result.provider);
+            if (unified.imageUrl) {
+              enrichedImageUrl = unified.imageUrl;
+              break;
+            }
+          }
+        }
+        if (enrichedImageUrl) break;
+      }
+      
+      // Second pass: match by brand + model name (fuzzy match)
+      if (!enrichedImageUrl) {
+        const wpBrand = String(t.brand_desc || "").toUpperCase().trim();
+        const wpDesc = String(t.tire_description || "").toUpperCase();
+        
+        for (const result of tirewireResults) {
+          for (const tire of result.tires) {
+            const twBrand = String(tire.make || "").toUpperCase().trim();
+            const twPattern = String(tire.pattern || "").toUpperCase().trim();
+            
+            // Match brand and check if pattern is in description
+            if (twBrand === wpBrand && twPattern && wpDesc.includes(twPattern)) {
+              if (tire.imageUrl) {
+                enrichedImageUrl = tire.imageUrl;
+                break;
+              }
+            }
+          }
+          if (enrichedImageUrl) break;
+        }
+      }
+      
+      // Third pass: just match by brand and take first image
+      if (!enrichedImageUrl) {
+        const wpBrand = String(t.brand_desc || "").toUpperCase().trim();
+        
+        for (const result of tirewireResults) {
+          for (const tire of result.tires) {
+            const twBrand = String(tire.make || "").toUpperCase().trim();
+            if (twBrand === wpBrand && tire.imageUrl) {
+              enrichedImageUrl = tire.imageUrl;
+              break;
+            }
+          }
+          if (enrichedImageUrl) break;
+        }
+      }
+    } catch (err) {
+      console.error("[tire-detail] TireLibrary enrichment failed:", err);
+    }
+  }
+
   const title = String(t.tire_description || t.tire_size || t.simple_size || t.sku);
 
   const badges: string[] = [];
@@ -193,7 +263,7 @@ export default async function TireDetailPage({
                 <div className="text-xs font-semibold text-neutral-600">Product photo</div>
                 <div className="text-[11px] text-neutral-500">Click to zoom</div>
               </div>
-              <ImageGallery images={t.image_url ? [String(t.image_url)] : []} alt={title} note="Image may vary by size" />
+              <ImageGallery images={enrichedImageUrl ? [String(enrichedImageUrl)] : []} alt={title} note="Image may vary by size" />
             </div>
 
             {/* Space reserved for future modules under the photo (packages, accessories, etc.) */}
