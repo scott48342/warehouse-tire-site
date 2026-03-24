@@ -278,35 +278,74 @@ export async function GET(req: Request) {
         LIMIT $2
       `, [`%${query}%`, limit]);
       
-      // Search unified API for K&M results (query common sizes to find model matches)
-      // This catches model names like "LXHT-206" that aren't in our local DB
+      // Search unified API for K&M results (query many sizes to find model matches)
+      // This catches model names like "LXHT-206" across ALL tire sizes
       const unifiedResults: any[] = [];
-      const commonSizes = ["225/65R17", "265/70R17", "275/55R20", "245/45R18", "205/55R16"];
+      
+      // Comprehensive list of common tire sizes to search
+      const commonSizes = [
+        // 16" 
+        "205/55R16", "215/60R16", "225/60R16", "235/65R16", "235/70R16", "245/75R16", "255/70R16", "225/75R16", "235/65R16",
+        // 17"
+        "225/65R17", "235/65R17", "245/65R17", "255/65R17", "265/70R17", "225/60R17", "215/60R17", "235/55R17",
+        // 18"
+        "235/60R18", "245/60R18", "255/55R18", "265/60R18", "235/65R18", "275/65R18",
+        // 19"
+        "255/50R19", "245/55R19",
+        // 20"
+        "275/55R20", "275/60R20", "285/50R20", "33x12.50R20", "35x12.50R20",
+      ];
       
       // Only search unified API if query looks like a model name (not a SKU)
       const looksLikeModel = query.length >= 3 && !/^\d+$/.test(query) && !query.match(/^[A-Z]\d{6,}$/i);
       
       if (looksLikeModel) {
         try {
-          // Search a couple common sizes to find model matches
-          const sizesToSearch = commonSizes.slice(0, 2);
-          for (const size of sizesToSearch) {
-            const res = await fetch(
-              `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&minQty=1`,
-              { cache: "no-store" }
-            );
-            if (res.ok) {
-              const data = await res.json();
-              const results = data.results || [];
-              // Filter to matching descriptions
+          // Search ALL common sizes in parallel (limit to 10 concurrent)
+          const batchSize = 10;
+          const seenSkus = new Set<string>();
+          
+          for (let i = 0; i < commonSizes.length; i += batchSize) {
+            const batch = commonSizes.slice(i, i + batchSize);
+            const batchPromises = batch.map(async (size) => {
+              try {
+                const res = await fetch(
+                  `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&minQty=1`,
+                  { cache: "no-store" }
+                );
+                if (res.ok) {
+                  const data = await res.json();
+                  return data.results || [];
+                }
+              } catch {
+                return [];
+              }
+              return [];
+            });
+            
+            const batchResults = await Promise.all(batchPromises);
+            
+            for (const results of batchResults) {
+              // Filter to matching descriptions and dedupe
               const matches = results.filter((t: any) => {
+                const sku = t.partNumber || "";
+                if (seenSkus.has(sku)) return false;
+                
                 const desc = String(t.description || "").toUpperCase();
                 const name = String(t.displayName || t.prettyName || "").toUpperCase();
                 const q = query.toUpperCase();
-                return desc.includes(q) || name.includes(q);
+                
+                if (desc.includes(q) || name.includes(q)) {
+                  seenSkus.add(sku);
+                  return true;
+                }
+                return false;
               });
               unifiedResults.push(...matches);
             }
+            
+            // Stop early if we have enough results
+            if (unifiedResults.length >= 50) break;
           }
         } catch (err) {
           console.error("[admin/products/search] Unified search error:", err);
