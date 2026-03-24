@@ -123,43 +123,57 @@ export async function GET(req: Request) {
         total: rows.length,
       });
     } else {
-      // For tires - no local cache, but we can show already-flagged tires
-      // and allow direct SKU entry via the Flagged view
+      // Search wp_tires table for tires
       const { rows } = await pool.query(`
         SELECT 
-          pf.id,
-          pf.sku,
+          t.sku,
+          t.brand_desc as brand,
+          t.tire_description as name,
+          t.tire_size as size,
+          t.image_url,
+          t.terrain,
+          t.construction_type,
+          pf.id as flag_id,
           pf.hidden,
           pf.flagged,
           pf.flag_reason,
-          pf.image_url,
-          pf.created_at,
-          pf.updated_at
-        FROM admin_product_flags pf
-        WHERE pf.product_type = 'tire'
-          AND pf.sku ILIKE $1
-        ORDER BY pf.updated_at DESC
+          pf.image_url as override_image_url
+        FROM wp_tires t
+        LEFT JOIN admin_product_flags pf ON pf.sku = t.sku AND pf.product_type = 'tire'
+        WHERE (
+          t.sku ILIKE $1 
+          OR t.tire_description ILIKE $1
+          OR t.brand_desc ILIKE $1
+        )
+        ORDER BY t.brand_desc, t.tire_description
         LIMIT $2
       `, [`%${query}%`, limit]);
+
+      // Get distinct brands for filters
+      const { rows: brandRows } = await pool.query(`
+        SELECT DISTINCT brand_desc as brand FROM wp_tires WHERE brand_desc IS NOT NULL ORDER BY brand_desc LIMIT 100
+      `);
 
       return NextResponse.json({
         products: rows.map(r => ({
           sku: r.sku,
-          name: `Tire SKU: ${r.sku}`,
-          brand: null,
-          size: null,
-          imageUrl: r.image_url,
-          supplier: "Tirewire",
-          flagId: r.id,
+          name: r.name || r.sku,
+          brand: r.brand,
+          size: r.size,
+          terrain: r.terrain,
+          construction: r.construction_type,
+          imageUrl: r.override_image_url || r.image_url,
+          supplier: "WheelPros",
+          flagId: r.flag_id,
           hidden: r.hidden || false,
           flagged: r.flagged || false,
           flagReason: r.flag_reason,
         })),
-        filters: { brands: [], suppliers: [] },
+        filters: { 
+          brands: brandRows.map(r => r.brand),
+          suppliers: ["WheelPros"],
+        },
         total: rows.length,
-        message: rows.length === 0 
-          ? "Tire catalog search not available. Use 'Flagged' view to add tire SKUs manually, or switch to Wheels."
-          : null,
       });
     }
   } catch (err: any) {

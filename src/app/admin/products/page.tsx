@@ -327,15 +327,10 @@ export default function ProductsPage() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={productType === "wheel" ? "Search by SKU, UPC, name, or brand..." : "Search flagged tire SKUs..."}
+                  placeholder="Search by SKU, name, or brand..."
                   className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
                   autoFocus
                 />
-                {productType === "tire" && (
-                  <div className="text-xs text-amber-500 mt-1">
-                    ⚠️ Tire search is limited to already-flagged SKUs. Use Flagged view to add new tire SKUs.
-                  </div>
-                )}
               </div>
               
               {searchFilters.suppliers.length > 0 && (
@@ -417,29 +412,12 @@ export default function ProductsPage() {
         {(viewMode === "flagged" && loading) || (viewMode === "search" && searchLoading) ? (
           <div className="p-8 text-center text-neutral-500">Loading...</div>
         ) : currentItems.length === 0 ? (
-          <div className="p-8 text-center">
-            {viewMode === "search" ? (
-              <div className="space-y-2">
-                <div className="text-neutral-500">
-                  {searchQuery.length < 2 
-                    ? "Enter at least 2 characters to search" 
-                    : searchMessage || "No products found"}
-                </div>
-                {productType === "tire" && searchQuery.length >= 2 && (
-                  <div className="text-sm text-amber-500 mt-4">
-                    💡 Tip: Tire catalog search is limited. To flag/hide a tire, switch to 
-                    <button 
-                      onClick={() => setViewMode("flagged")} 
-                      className="text-amber-400 underline ml-1 hover:text-amber-300"
-                    >
-                      Flagged view
-                    </button> and add the SKU manually.
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div className="text-neutral-500">No flagged products yet</div>
-            )}
+          <div className="p-8 text-center text-neutral-500">
+            {viewMode === "search" 
+              ? (searchQuery.length < 2 
+                  ? "Enter at least 2 characters to search" 
+                  : searchMessage || "No products found")
+              : "No flagged products yet"}
           </div>
         ) : (
           <>
