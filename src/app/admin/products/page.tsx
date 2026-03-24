@@ -57,6 +57,7 @@ export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [searchLoading, setSearchLoading] = useState(false);
+  const [searchMessage, setSearchMessage] = useState<string | null>(null);
   const [searchFilters, setSearchFilters] = useState<{ brands: string[]; suppliers: string[] }>({ brands: [], suppliers: [] });
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedSupplier, setSelectedSupplier] = useState("");
@@ -95,6 +96,7 @@ export default function ProductsPage() {
   const searchProducts = useCallback(async () => {
     if (!searchQuery || searchQuery.length < 2) {
       setSearchResults([]);
+      setSearchMessage(null);
       return;
     }
 
@@ -110,6 +112,7 @@ export default function ProductsPage() {
       const data = await res.json();
 
       setSearchResults(data.products || []);
+      setSearchMessage(data.message || null);
       if (data.filters) setSearchFilters(data.filters);
     } catch (err) {
       console.error("Failed to search products:", err);
@@ -324,10 +327,15 @@ export default function ProductsPage() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search by SKU, UPC, name, or brand..."
+                  placeholder={productType === "wheel" ? "Search by SKU, UPC, name, or brand..." : "Search flagged tire SKUs..."}
                   className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
                   autoFocus
                 />
+                {productType === "tire" && (
+                  <div className="text-xs text-amber-500 mt-1">
+                    ⚠️ Tire search is limited to already-flagged SKUs. Use Flagged view to add new tire SKUs.
+                  </div>
+                )}
               </div>
               
               {searchFilters.suppliers.length > 0 && (
@@ -409,10 +417,29 @@ export default function ProductsPage() {
         {(viewMode === "flagged" && loading) || (viewMode === "search" && searchLoading) ? (
           <div className="p-8 text-center text-neutral-500">Loading...</div>
         ) : currentItems.length === 0 ? (
-          <div className="p-8 text-center text-neutral-500">
-            {viewMode === "search" 
-              ? (searchQuery.length < 2 ? "Enter at least 2 characters to search" : "No products found")
-              : "No flagged products yet"}
+          <div className="p-8 text-center">
+            {viewMode === "search" ? (
+              <div className="space-y-2">
+                <div className="text-neutral-500">
+                  {searchQuery.length < 2 
+                    ? "Enter at least 2 characters to search" 
+                    : searchMessage || "No products found"}
+                </div>
+                {productType === "tire" && searchQuery.length >= 2 && (
+                  <div className="text-sm text-amber-500 mt-4">
+                    💡 Tip: Tire catalog search is limited. To flag/hide a tire, switch to 
+                    <button 
+                      onClick={() => setViewMode("flagged")} 
+                      className="text-amber-400 underline ml-1 hover:text-amber-300"
+                    >
+                      Flagged view
+                    </button> and add the SKU manually.
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="text-neutral-500">No flagged products yet</div>
+            )}
           </div>
         ) : (
           <>

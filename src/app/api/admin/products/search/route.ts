@@ -123,56 +123,44 @@ export async function GET(req: Request) {
         total: rows.length,
       });
     } else {
-      // For tires, search tire_cache if it exists, otherwise return empty
-      try {
-        const { rows } = await pool.query(`
-          SELECT 
-            tc.sku,
-            tc.name,
-            tc.brand,
-            tc.size,
-            tc.image_url,
-            tc.supplier,
-            pf.id as flag_id,
-            pf.hidden,
-            pf.flagged,
-            pf.flag_reason,
-            pf.image_url as override_image_url
-          FROM tire_cache tc
-          LEFT JOIN admin_product_flags pf ON pf.sku = tc.sku AND pf.product_type = 'tire'
-          WHERE (
-            tc.sku ILIKE $1 
-            OR tc.name ILIKE $1
-            OR tc.brand ILIKE $1
-          )
-          ORDER BY tc.brand, tc.name
-          LIMIT $2
-        `, [`%${query}%`, limit]);
+      // For tires - no local cache, but we can show already-flagged tires
+      // and allow direct SKU entry via the Flagged view
+      const { rows } = await pool.query(`
+        SELECT 
+          pf.id,
+          pf.sku,
+          pf.hidden,
+          pf.flagged,
+          pf.flag_reason,
+          pf.image_url,
+          pf.created_at,
+          pf.updated_at
+        FROM admin_product_flags pf
+        WHERE pf.product_type = 'tire'
+          AND pf.sku ILIKE $1
+        ORDER BY pf.updated_at DESC
+        LIMIT $2
+      `, [`%${query}%`, limit]);
 
-        return NextResponse.json({
-          products: rows.map(r => ({
-            sku: r.sku,
-            name: r.name,
-            brand: r.brand,
-            size: r.size,
-            imageUrl: r.override_image_url || r.image_url,
-            supplier: r.supplier,
-            flagId: r.flag_id,
-            hidden: r.hidden || false,
-            flagged: r.flagged || false,
-            flagReason: r.flag_reason,
-          })),
-          filters: { brands: [], suppliers: [] },
-          total: rows.length,
-        });
-      } catch {
-        // tire_cache doesn't exist
-        return NextResponse.json({
-          products: [],
-          filters: { brands: [], suppliers: [] },
-          message: "Tire cache not available",
-        });
-      }
+      return NextResponse.json({
+        products: rows.map(r => ({
+          sku: r.sku,
+          name: `Tire SKU: ${r.sku}`,
+          brand: null,
+          size: null,
+          imageUrl: r.image_url,
+          supplier: "Tirewire",
+          flagId: r.id,
+          hidden: r.hidden || false,
+          flagged: r.flagged || false,
+          flagReason: r.flag_reason,
+        })),
+        filters: { brands: [], suppliers: [] },
+        total: rows.length,
+        message: rows.length === 0 
+          ? "Tire catalog search not available. Use 'Flagged' view to add tire SKUs manually, or switch to Wheels."
+          : null,
+      });
     }
   } catch (err: any) {
     console.error("[admin/products/search] Error:", err);
