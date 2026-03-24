@@ -1,8 +1,49 @@
 import Link from "next/link";
 import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
-import { HomeFitmentEntry } from "@/components/HomeFitmentEntry";
 
 export const runtime = "nodejs";
+
+/* =============================================================================
+   CATEGORY CARDS - Visual entry points for main shopping flows
+============================================================================= */
+
+function CategoryCard({
+  title,
+  description,
+  href,
+  icon,
+  gradient,
+  badge,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+  gradient: string;
+  badge?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={`group relative overflow-hidden rounded-2xl p-6 text-white transition-transform hover:scale-[1.02] ${gradient}`}
+    >
+      {badge && (
+        <span className="absolute right-4 top-4 rounded-full bg-white/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm">
+          {badge}
+        </span>
+      )}
+      <div className="text-4xl">{icon}</div>
+      <h3 className="mt-4 text-xl font-extrabold">{title}</h3>
+      <p className="mt-2 text-sm text-white/80">{description}</p>
+      <div className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-white group-hover:underline">
+        Shop Now
+        <span className="transition-transform group-hover:translate-x-1">→</span>
+      </div>
+      {/* Decorative circle */}
+      <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10" />
+    </Link>
+  );
+}
 
 /* =============================================================================
    TRUST BADGES - Build confidence with key value props
@@ -31,10 +72,10 @@ function TrustBadge({
 }
 
 /* =============================================================================
-   CATEGORY CARD - Compact category entry point
+   COMPACT CATEGORY CARD - For browse section
 ============================================================================= */
 
-function CategoryCard({
+function CompactCategoryCard({
   title,
   description,
   href,
@@ -127,9 +168,41 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ===== VEHICLE-BASED SHOPPING ===== */}
+      {/* ===== CATEGORY CARDS ===== */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <HomeFitmentEntry />
+        <div className="text-center">
+          <h2 className="text-2xl font-extrabold text-neutral-900 md:text-3xl">
+            What are you shopping for?
+          </h2>
+          <p className="mt-2 text-neutral-600">
+            Choose your path — we'll help you find the perfect fit
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <CategoryCard
+            title="Tires"
+            description="All-season, winter, all-terrain, performance — find tires sized for your vehicle."
+            href="/?open=tires&mode=size"
+            icon="🛞"
+            gradient="bg-gradient-to-br from-neutral-800 to-neutral-900"
+          />
+          <CategoryCard
+            title="Wheels"
+            description="Browse aftermarket wheels with guaranteed fitment for your year, make, and model."
+            href="/?open=wheels&mode=vehicle"
+            icon="⚙️"
+            gradient="bg-gradient-to-br from-blue-600 to-blue-800"
+          />
+          <CategoryCard
+            title="Lifted Builds"
+            description="Build your lifted truck or SUV with the right tire and wheel combo."
+            href="/lifted"
+            icon="🏔️"
+            gradient="bg-gradient-to-br from-amber-500 to-orange-600"
+            badge="Popular"
+          />
+        </div>
       </section>
 
       {/* ===== TRUST SECTION ===== */}
@@ -169,25 +242,25 @@ export default async function Home() {
 
         {/* Tire Categories */}
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <CategoryCard
+          <CompactCategoryCard
             title="All-Terrain Tires"
             description="A/T for trucks & SUVs"
             href="/tires/c/all-terrain"
             icon="🏔️"
           />
-          <CategoryCard
+          <CompactCategoryCard
             title="Truck Tires"
             description="Built for hauling & towing"
             href="/tires/c/truck"
             icon="🛻"
           />
-          <CategoryCard
+          <CompactCategoryCard
             title="Winter Tires"
             description="Cold weather traction"
             href="/tires/c/winter"
             icon="❄️"
           />
-          <CategoryCard
+          <CompactCategoryCard
             title="Performance Tires"
             description="Grip for sports cars"
             href="/tires/c/performance"
@@ -212,7 +285,7 @@ export default async function Home() {
             desc="Premium fitments" 
             diameter={22} 
           />
-          <CategoryCard
+          <CompactCategoryCard
             title="All-Season Tires"
             description="Year-round comfort"
             href="/tires/c/all-season"
