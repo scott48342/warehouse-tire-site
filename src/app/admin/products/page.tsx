@@ -97,18 +97,32 @@ export default function ProductsPage() {
     }
   }, [filter, productType]);
 
-  // Search products
-  const searchProducts = useCallback(async () => {
-    if (!searchQuery || searchQuery.length < 2) {
-      setSearchResults([]);
-      setSearchMessage(null);
-      return;
-    }
-
-    setSearchLoading(true);
+  // Fetch filters (called on initial load of search mode)
+  const fetchFilters = useCallback(async () => {
     try {
       const params = new URLSearchParams();
-      params.set("q", searchQuery);
+      params.set("q", ""); // Empty query to just get filters
+      params.set("type", productType);
+      const res = await fetch(`/api/admin/products/search?${params.toString()}`);
+      const data = await res.json();
+      if (data.filters) setSearchFilters(data.filters);
+    } catch (err) {
+      console.error("Failed to fetch filters:", err);
+    }
+  }, [productType]);
+
+  // Search products
+  const searchProducts = useCallback(async () => {
+    // Always fetch if we need filters, but only show loading for actual searches
+    const isRealSearch = searchQuery && searchQuery.length >= 2;
+    
+    if (isRealSearch) {
+      setSearchLoading(true);
+    }
+    
+    try {
+      const params = new URLSearchParams();
+      params.set("q", searchQuery || "");
       params.set("type", productType);
       if (selectedSupplier) params.set("supplier", selectedSupplier);
       if (selectedBrand) params.set("brand", selectedBrand);
@@ -122,7 +136,9 @@ export default function ProductsPage() {
     } catch (err) {
       console.error("Failed to search products:", err);
     } finally {
-      setSearchLoading(false);
+      if (isRealSearch) {
+        setSearchLoading(false);
+      }
     }
   }, [searchQuery, productType, selectedSupplier, selectedBrand]);
 
@@ -131,6 +147,13 @@ export default function ProductsPage() {
       fetchProducts();
     }
   }, [viewMode, fetchProducts]);
+
+  // Fetch filters immediately when entering search mode
+  useEffect(() => {
+    if (viewMode === "search") {
+      fetchFilters();
+    }
+  }, [viewMode, productType, fetchFilters]);
 
   useEffect(() => {
     if (viewMode === "search") {
