@@ -122,15 +122,34 @@ export async function GET(req: Request) {
           },
         });
       } else {
-        // Tires - get brands from local DB + known suppliers
-        const { rows: brandRows } = await pool.query(`
-          SELECT DISTINCT brand_desc as brand FROM wp_tires WHERE brand_desc IS NOT NULL ORDER BY brand_desc LIMIT 100
-        `);
+        // Tires - get brands from WheelPros DB + K&M brands from admin flags
+        const [wpBrands, kmBrands] = await Promise.all([
+          pool.query(`
+            SELECT DISTINCT brand_desc as brand FROM wp_tires 
+            WHERE brand_desc IS NOT NULL 
+            ORDER BY brand_desc LIMIT 100
+          `),
+          pool.query(`
+            SELECT DISTINCT brand FROM admin_product_flags 
+            WHERE product_type = 'tire' AND brand IS NOT NULL
+            ORDER BY brand LIMIT 100
+          `),
+        ]);
+        
+        // Combine and dedupe brands from both sources
+        const allBrands = new Set<string>();
+        for (const r of wpBrands.rows) {
+          if (r.brand) allBrands.add(r.brand);
+        }
+        for (const r of kmBrands.rows) {
+          if (r.brand) allBrands.add(r.brand);
+        }
+        
         return NextResponse.json({ 
           products: [], 
           message: "Enter at least 2 characters to search",
           filters: {
-            brands: brandRows.map(r => r.brand),
+            brands: Array.from(allBrands).sort(),
             suppliers: ["K&M", "WheelPros"],
           },
         });
