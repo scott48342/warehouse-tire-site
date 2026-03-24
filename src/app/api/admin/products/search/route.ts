@@ -266,16 +266,35 @@ export async function GET(req: Request) {
       // Combine - K&M first (since user is likely searching for a specific SKU), then WP
       const allProducts = [...kmProducts, ...wpProducts].slice(0, limit);
 
-      // Get distinct brands for filters
+      // Build brands dynamically from search results + DB
+      // This ensures any supplier's brands appear in the filter
+      const resultBrands = new Set<string>();
+      for (const p of allProducts) {
+        if (p.brand) resultBrands.add(p.brand);
+      }
+      
+      // Also get common brands from DB for initial filter options
       const { rows: brandRows } = await pool.query(`
         SELECT DISTINCT brand_desc as brand FROM wp_tires WHERE brand_desc IS NOT NULL ORDER BY brand_desc LIMIT 100
       `);
+      for (const r of brandRows) {
+        if (r.brand) resultBrands.add(r.brand);
+      }
+
+      // Get distinct suppliers from results
+      const resultSuppliers = new Set<string>();
+      for (const p of allProducts) {
+        if (p.supplier) resultSuppliers.add(p.supplier);
+      }
+      // Always include known suppliers
+      resultSuppliers.add("K&M");
+      resultSuppliers.add("WheelPros");
 
       return NextResponse.json({
         products: allProducts,
         filters: { 
-          brands: brandRows.map(r => r.brand),
-          suppliers: ["K&M", "WheelPros"],
+          brands: Array.from(resultBrands).sort(),
+          suppliers: Array.from(resultSuppliers).sort(),
         },
         total: allProducts.length,
         sources: {
