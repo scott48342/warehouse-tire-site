@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import pg from "pg";
+import { XMLParser } from "fast-xml-parser";
 
 export const runtime = "nodejs";
 
@@ -13,6 +14,61 @@ function getPool() {
     ssl: { rejectUnauthorized: false },
     max: 3,
   });
+}
+
+/**
+ * Search K&M tires by part number
+ */
+async function searchKmTiresByPartNumber(partNumber: string): Promise<any[]> {
+  const apiKey = (
+    process.env.KM_API_KEY ||
+    process.env.KMTIRE_API_KEY ||
+    process.env.KM_TIRE_API_KEY ||
+    ""
+  ).trim();
+  
+  if (!apiKey) return [];
+  
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<InventoryRequest>
+<Credentials><APIKey>${apiKey}</APIKey></Credentials>
+<Item>
+<PartNumber>${partNumber}</PartNumber>
+</Item>
+</InventoryRequest>`;
+  
+  try {
+    const res = await fetch("https://api.kmtire.com/v1/partlookup", {
+      method: "POST",
+      headers: {
+        "content-type": "application/xml",
+        accept: "application/xml, text/xml, */*",
+      },
+      body: xml,
+      cache: "no-store",
+    });
+    
+    if (!res.ok) return [];
+    
+    const text = await res.text();
+    const parser = new XMLParser({ ignoreAttributes: false, cdataPropName: "__cdata" });
+    const data = parser.parse(text) as any;
+    const resp = data?.InventoryResponse || data?.inventoryresponse || data;
+    const itemsRaw = resp?.Item;
+    return Array.isArray(itemsRaw) ? itemsRaw : itemsRaw ? [itemsRaw] : [];
+  } catch {
+    return [];
+  }
+}
+
+function pickKmField(it: any, keys: string[]): string | null {
+  for (const k of keys) {
+    const v = it?.[k];
+    if (v == null) continue;
+    const cdata = typeof v === "object" && v?.__cdata != null ? v.__cdata : null;
+    return cdata != null ? String(cdata) : String(v);
+  }
+  return null;
 }
 
 /**
@@ -123,31 +179,92 @@ export async function GET(req: Request) {
         total: rows.length,
       });
     } else {
-      // Search wp_tires table for tires
-      const { rows } = await pool.query(`
-        SELECT 
-          t.sku,
-          t.brand_desc as brand,
-          t.tire_description as name,
-          t.tire_size as size,
-          t.image_url,
-          t.terrain,
-          t.construction_type,
-          pf.id as flag_id,
-          pf.hidden,
-          pf.flagged,
-          pf.flag_reason,
-          pf.image_url as override_image_url
-        FROM wp_tires t
-        LEFT JOIN admin_product_flags pf ON pf.sku = t.sku AND pf.product_type = 'tire'
-        WHERE (
-          t.sku ILIKE $1 
-          OR t.tire_description ILIKE $1
-          OR t.brand_desc ILIKE $1
-        )
-        ORDER BY t.brand_desc, t.tire_description
-        LIMIT $2
-      `, [`%${query}%`, limit]);
+      // Search wp_tires table AND K&M API for tires
+      const [wpResult, kmItems] = await Promise.all([
+        pool.query(`
+          SELECT 
+            t.sku,
+            t.brand_desc as brand,
+            t.tire_description as name,
+            t.tire_size as size,
+            t.image_url,
+            t.terrain,
+            t.construction_type,
+            pf.id as flag_id,
+            pf.hidden,
+            pf.flagged,
+            pf.flag_reason,
+            pf.image_url as override_image_url
+          FROM wp_tires t
+          LEFT JOIN admin_product_flags pf ON pf.sku = t.sku AND pf.product_type = 'tire'
+          WHERE (
+            t.sku ILIKE $1 
+            OR t.tire_description ILIKE $1
+            OR t.brand_desc ILIKE $1
+          )
+          ORDER BY t.brand_desc, t.tire_description
+          LIMIT $2
+        `, [`%${query}%`, limit]),
+        // Also search K&M by part number (exact match for SKU-like queries)
+        searchKmTiresByPartNumber(query),
+      ]);
+
+      const { rows } = wpResult;
+
+      // Get flag status for K&M items
+      const kmSkus = kmItems.map((it: any) => it?.PartNumber).filter(Boolean);
+      let kmFlags: Record<string, any> = {};
+      if (kmSkus.length > 0) {
+        const { rows: flagRows } = await pool.query(`
+          SELECT sku, id as flag_id, hidden, flagged, flag_reason, image_url as override_image_url
+          FROM admin_product_flags 
+          WHERE sku = ANY($1) AND product_type = 'tire'
+        `, [kmSkus]);
+        for (const f of flagRows) {
+          kmFlags[f.sku] = f;
+        }
+      }
+
+      // Format K&M results
+      const kmProducts = kmItems.map((it: any) => {
+        const sku = it?.PartNumber || "";
+        const flag = kmFlags[sku] || {};
+        const brand = pickKmField(it, ["BrandName", "VendorName", "Brand", "Vendor"]);
+        const desc = pickKmField(it, ["Description", "Desc"]);
+        return {
+          sku,
+          name: desc || sku,
+          brand: brand?.trim() || null,
+          size: it?.Size || null,
+          terrain: null,
+          construction: pickKmField(it, ["LoadRange", "Load_Range"]),
+          imageUrl: flag.override_image_url || null,
+          supplier: "K&M",
+          flagId: flag.flag_id || null,
+          hidden: flag.hidden || false,
+          flagged: flag.flagged || false,
+          flagReason: flag.flag_reason || null,
+        };
+      });
+
+      // Format WheelPros results
+      const wpProducts = rows.map(r => ({
+        sku: r.sku,
+        name: r.name || r.sku,
+        brand: r.brand,
+        size: r.size,
+        terrain: r.terrain,
+        construction: r.construction_type,
+        imageUrl: r.override_image_url || r.image_url,
+        supplier: "WheelPros",
+        flagId: r.flag_id,
+        hidden: r.hidden || false,
+        flagged: r.flagged || false,
+        flagReason: r.flag_reason,
+      }));
+
+      // Combine - K&M first (since user is likely searching for a specific SKU), then WP
+      const allProducts = [...kmProducts, ...wpProducts].slice(0, limit);
 
       // Get distinct brands for filters
       const { rows: brandRows } = await pool.query(`
@@ -155,25 +272,16 @@ export async function GET(req: Request) {
       `);
 
       return NextResponse.json({
-        products: rows.map(r => ({
-          sku: r.sku,
-          name: r.name || r.sku,
-          brand: r.brand,
-          size: r.size,
-          terrain: r.terrain,
-          construction: r.construction_type,
-          imageUrl: r.override_image_url || r.image_url,
-          supplier: "WheelPros",
-          flagId: r.flag_id,
-          hidden: r.hidden || false,
-          flagged: r.flagged || false,
-          flagReason: r.flag_reason,
-        })),
+        products: allProducts,
         filters: { 
           brands: brandRows.map(r => r.brand),
-          suppliers: ["WheelPros"],
+          suppliers: ["K&M", "WheelPros"],
         },
-        total: rows.length,
+        total: allProducts.length,
+        sources: {
+          km: kmProducts.length,
+          wheelpros: wpProducts.length,
+        },
       });
     }
   } catch (err: any) {
