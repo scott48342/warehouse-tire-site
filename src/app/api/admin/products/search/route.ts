@@ -18,6 +18,7 @@ function getPool() {
 
 /**
  * Search K&M tires by part number
+ * Uses /v1/inventory endpoint (same as partlookup route)
  */
 async function searchKmTiresByPartNumber(partNumber: string): Promise<any[]> {
   const apiKey = (
@@ -29,16 +30,19 @@ async function searchKmTiresByPartNumber(partNumber: string): Promise<any[]> {
   
   if (!apiKey) return [];
   
+  // K&M inventory endpoint may require VendorName to avoid 500 error
+  // Use "Hamaton" as fallback (works for tires too based on testing)
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <InventoryRequest>
 <Credentials><APIKey>${apiKey}</APIKey></Credentials>
 <Item>
 <PartNumber>${partNumber}</PartNumber>
+<VendorName>Hamaton</VendorName>
 </Item>
 </InventoryRequest>`;
   
   try {
-    const res = await fetch("https://api.kmtire.com/v1/partlookup", {
+    const res = await fetch("https://api.kmtire.com/v1/inventory", {
       method: "POST",
       headers: {
         "content-type": "application/xml",
