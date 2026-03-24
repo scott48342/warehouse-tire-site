@@ -15,6 +15,7 @@ import {
   type PlusSizeCandidate,
 } from "@/lib/tirePlusSizing";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
+import { cleanTireDisplayTitle } from "@/lib/productFormat";
 
 type Tire = {
   source?: "wp" | "km" | "tw";
@@ -1787,8 +1788,10 @@ function TireCard({
   const inStock = maxQty >= 4;
 
   const tireSku = String(t.partNumber || t.mfgPartNumber || "").trim();
-  const displayTitle = stripSizeFromName(t.displayName || t.prettyName || t.description || "") ||
+  // Clean the display title: remove redundant brand (shown separately) and "/sl" load markers
+  const rawTitle = stripSizeFromName(t.displayName || t.prettyName || t.description || "") ||
     t.displayName || t.prettyName || t.description || t.partNumber || "Tire";
+  const displayTitle = cleanTireDisplayTitle(rawTitle, t.brand);
 
   return (
     <article className={`group relative overflow-hidden rounded-2xl border bg-white p-5 hover:shadow-md transition-shadow ${isTopPick ? "border-green-200 ring-1 ring-green-100" : "border-neutral-200 hover:border-red-300"}`}>

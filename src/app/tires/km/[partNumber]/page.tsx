@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
+import { cleanTireDisplayTitle } from "@/lib/productFormat";
 import { ImageGallery } from "@/components/ImageGallery";
 
 export const runtime = "nodejs";
@@ -140,7 +141,9 @@ export default async function KmTireDetailPage({
   const enrichedImageUrl: string | null = item.imageUrl || null;
   const enrichedDisplayName: string | null = item.displayName || item.prettyName || null;
 
-  const title = enrichedDisplayName || `${brand} ${description}`;
+  // Clean display title: remove redundant brand (shown separately) and "/sl" load markers
+  const rawTitle = enrichedDisplayName || `${brand} ${description}`;
+  const title = cleanTireDisplayTitle(rawTitle, brand);
 
   return (
     <main className="bg-neutral-50">

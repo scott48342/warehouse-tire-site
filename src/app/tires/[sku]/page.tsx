@@ -6,6 +6,7 @@ import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
+import { cleanTireDisplayTitle } from "@/lib/productFormat";
 
 export const runtime = "nodejs";
 
@@ -196,7 +197,9 @@ export default async function TireDetailPage({
     }
   }
 
-  const title = String(t.tire_description || t.tire_size || t.simple_size || t.sku);
+  // Clean display title: remove redundant brand (shown separately) and "/sl" load markers
+  const rawTitle = String(t.tire_description || t.tire_size || t.simple_size || t.sku);
+  const title = cleanTireDisplayTitle(rawTitle, t.brand_desc);
 
   const badges: string[] = [];
   if (t.tire_size) badges.push(String(t.tire_size));
