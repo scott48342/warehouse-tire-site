@@ -89,10 +89,11 @@ export async function GET(req: Request) {
 
 /**
  * Create or update a product flag
+ * Only updates fields that are explicitly provided (not undefined)
  */
 export async function POST(req: Request) {
   const body = await req.json();
-  const { productType, sku, hidden, flagged, flagReason, imageUrl, displayName } = body;
+  const { productType, sku } = body;
 
   if (!productType || !sku) {
     return NextResponse.json({ error: "productType and sku required" }, { status: 400 });
@@ -108,24 +109,52 @@ export async function POST(req: Request) {
       ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS display_name TEXT
     `).catch(() => {});
 
+    // Build dynamic update - only update fields that were explicitly provided
+    const hidden = body.hidden !== undefined ? body.hidden : false;
+    const flagged = body.flagged !== undefined ? body.flagged : false;
+    const flagReason = body.flagReason !== undefined ? body.flagReason : null;
+    
+    // For image_url and display_name: preserve existing value if not provided
+    const imageUrlProvided = 'imageUrl' in body;
+    const displayNameProvided = 'displayName' in body;
+    const imageUrl = body.imageUrl || null;
+    const displayName = body.displayName || null;
+
     const { rows } = await pool.query(`
       INSERT INTO admin_product_flags (product_type, sku, hidden, flagged, flag_reason, image_url, display_name, updated_at)
       VALUES ($1, $2, $3, $4, $5, $6, $7, now())
       ON CONFLICT (product_type, sku) DO UPDATE SET
-        hidden = EXCLUDED.hidden,
-        flagged = EXCLUDED.flagged,
-        flag_reason = EXCLUDED.flag_reason,
-        image_url = EXCLUDED.image_url,
-        display_name = EXCLUDED.display_name,
+        hidden = $3,
+        flagged = $4,
+        flag_reason = $5,
+        image_url = CASE WHEN $8::boolean THEN $6 ELSE admin_product_flags.image_url END,
+        display_name = CASE WHEN $9::boolean THEN $7 ELSE admin_product_flags.display_name END,
         updated_at = now()
       RETURNING *
-    `, [productType, sku, hidden || false, flagged || false, flagReason || null, imageUrl || null, displayName || null]);
+    `, [
+      productType, 
+      sku, 
+      hidden, 
+      flagged, 
+      flagReason, 
+      imageUrl,
+      displayName,
+      imageUrlProvided,
+      displayNameProvided
+    ]);
 
     // Log the change
+    const logDetails: any = { productType };
+    if ('hidden' in body) logDetails.hidden = body.hidden;
+    if ('flagged' in body) logDetails.flagged = body.flagged;
+    if ('flagReason' in body) logDetails.flagReason = body.flagReason;
+    if ('imageUrl' in body) logDetails.imageUrl = body.imageUrl;
+    if ('displayName' in body) logDetails.displayName = body.displayName;
+    
     await pool.query(`
       INSERT INTO admin_logs (log_type, sku, details)
       VALUES ('product_flag', $1, $2)
-    `, [sku, JSON.stringify({ productType, hidden, flagged, flagReason, imageUrl, displayName })]);
+    `, [sku, JSON.stringify(logDetails)]);
 
     return NextResponse.json({ ok: true, product: rows[0] });
   } catch (err: any) {
