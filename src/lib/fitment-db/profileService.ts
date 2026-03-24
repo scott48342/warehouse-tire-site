@@ -98,6 +98,7 @@ interface WheelSizeModification {
   slug: string;
   name?: string;
   trim?: string | { name?: string };
+  trim_levels?: string[];  // Actual trim names (XL, XLT, Lariat, etc.)
   engine?: string | { capacity?: string; type?: string };
   body?: string;
   regions?: string[];
@@ -729,7 +730,21 @@ async function importApiDataToDb(
   const trimStr = safeString(modification.trim);
   const engineStr = safeString(modification.engine);
   const nameStr = safeString(modification.name);
-  const displayTrim = normalizeTrimLabel(trimStr, engineStr, nameStr, String(year), make, model) || "Base";
+  
+  // Use trim_levels if available (these are the actual trim names like XL, XLT, Lariat)
+  // Otherwise fall back to the engine-based trim designation
+  const trimLevels = modification.trim_levels?.filter(t => t && t.trim()) || [];
+  let displayTrim: string;
+  
+  if (trimLevels.length > 0) {
+    // Use first trim level, or join multiple (e.g., "XL / XLT / Lariat")
+    // For display, we'll use the first one as primary but store all in raw
+    displayTrim = trimLevels[0];
+    console.log(`[importApiDataToDb] Using trim_levels: ${trimLevels.join(", ")} → displayTrim="${displayTrim}"`);
+  } else {
+    // Fall back to normalized label from engine/name
+    displayTrim = normalizeTrimLabel(trimStr, engineStr, nameStr, String(year), make, model) || "Base";
+  }
   
   // Extract specs
   const tech = vehicleData.technical || {};
@@ -805,10 +820,15 @@ async function importApiDataToDb(
   
   let fitmentId: string;
   
+  // Store trim_levels in rawTrim if available, otherwise use engine designation
+  const rawTrimValue = trimLevels.length > 0 
+    ? trimLevels.join("; ")  // Store all trim levels: "XL; XLT; Lariat"
+    : (trimStr || engineStr || nameStr || null);
+  
   if (existingFitment) {
     await db.update(vehicleFitments)
       .set({
-        rawTrim: trimStr || engineStr || nameStr || null,
+        rawTrim: rawTrimValue,
         displayTrim,
         boltPattern,
         centerBoreMm: centerBoreMm ? String(centerBoreMm) : null,
@@ -830,7 +850,7 @@ async function importApiDataToDb(
         make,
         model,
         modificationId,
-        rawTrim: trimStr || engineStr || nameStr || null,
+        rawTrim: rawTrimValue,
         displayTrim,
         boltPattern,
         centerBoreMm: centerBoreMm ? String(centerBoreMm) : null,
