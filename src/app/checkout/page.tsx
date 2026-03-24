@@ -7,6 +7,7 @@ import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem 
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
+import { US_STATES } from "@/lib/geo/usStates";
 
 /**
  * Checkout Page
@@ -390,11 +391,11 @@ export default function CheckoutPage() {
                         className="h-11 rounded-xl border border-neutral-200 px-3 text-sm focus:border-green-500"
                       >
                         <option value="">State *</option>
-                        <option value="MI">Michigan</option>
-                        <option value="OH">Ohio</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IL">Illinois</option>
-                        {/* Add more states */}
+                        {US_STATES.map((s) => (
+                          <option key={s.code} value={s.code}>
+                            {s.name}
+                          </option>
+                        ))}
                       </select>
                       <input
                         type="text"
