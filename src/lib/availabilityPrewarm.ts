@@ -27,14 +27,25 @@
  * TARGET VEHICLES (High-Frequency Searches)
  * ═══════════════════════════════════════════════════════════════════════════════
  * 
- * Truck/SUV patterns (prioritized):
+ * Priority 1 - Half-ton trucks (highest volume):
  * - Ford F-150: 6x135 (87.1mm hub)
  * - Chevy Silverado 1500: 6x139.7 (78.1mm hub)
  * - Ram 1500: 5x139.7 (77.8mm hub)
+ * 
+ * Priority 2 - Heavy-duty trucks & SUVs (lifted/modified market):
+ * - Ford F-250/F-350: 8x170 (124.9mm hub) ← CRITICAL for lifted searches
+ * - Ram 2500/3500: 8x165.1 (121.3mm hub)
+ * - Chevy/GMC 2500HD/3500HD: 8x180 (124.1mm hub)
  * - Jeep Wrangler: 5x127 (71.5mm hub)
  * - Toyota Tacoma: 6x139.7 (106.1mm hub)
- * - Chevy Tahoe: 6x139.7 (78.1mm hub)
+ * - Chevy Tahoe/Suburban: 6x139.7 (78.1mm hub)
  * - GMC Sierra 1500: 6x139.7 (78.1mm hub)
+ * 
+ * Priority 3 - Additional coverage:
+ * - Toyota Tundra: 5x150 (110.1mm hub)
+ * - Jeep Grand Cherokee: 5x127 (71.6mm hub)
+ * - Ford Bronco: 6x139.7 (93.1mm hub)
+ * - Toyota 4Runner: 6x139.7 (106.1mm hub)
  * 
  * ═══════════════════════════════════════════════════════════════════════════════
  */
@@ -69,8 +80,15 @@ export type PrewarmTarget = {
 /**
  * High-frequency vehicle patterns for pre-warming.
  * Ordered by search volume/priority.
+ * 
+ * Priority 1: Top-selling half-ton trucks (F-150, Silverado 1500, Ram 1500)
+ * Priority 2: Heavy-duty trucks + popular SUVs (F-250/F-350, Ram 2500/3500, Wrangler, etc.)
+ * Priority 3: Additional coverage (Tundra, Grand Cherokee, etc.)
  */
 export const PREWARM_TARGETS: PrewarmTarget[] = [
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PRIORITY 1: Top-selling half-ton trucks
+  // ═══════════════════════════════════════════════════════════════════════════
   {
     name: "Ford F-150",
     boltPattern: "6x135",
@@ -92,12 +110,38 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
     priority: 1,
     description: "#3 best-selling truck",
   },
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PRIORITY 2: Heavy-duty trucks (lifted/modified market)
+  // These are critical for lifted truck searches and HD vehicle coverage
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    name: "Ford F-250/F-350 Super Duty",
+    boltPattern: "8x170",
+    centerBore: 124.9,
+    priority: 2,
+    description: "Ford HD trucks - F-250, F-350, Super Duty (2017+)",
+  },
+  {
+    name: "Ram 2500/3500",
+    boltPattern: "8x165.1",
+    centerBore: 121.3,
+    priority: 2,
+    description: "Ram HD trucks - 2500, 3500 (8x6.5 pattern)",
+  },
+  {
+    name: "Chevy Silverado 2500HD/3500HD",
+    boltPattern: "8x180",
+    centerBore: 124.1,
+    priority: 2,
+    description: "Chevy/GMC HD trucks - 2500HD, 3500HD",
+  },
   {
     name: "Jeep Wrangler",
     boltPattern: "5x127",
     centerBore: 71.5,
     priority: 2,
-    description: "High-customization SUV",
+    description: "High-customization SUV, lifted builds",
   },
   {
     name: "Toyota Tacoma",
@@ -107,11 +151,11 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
     description: "Best-selling mid-size truck",
   },
   {
-    name: "Chevy Tahoe",
+    name: "Chevy Tahoe/Suburban",
     boltPattern: "6x139.7",
     centerBore: 78.1,
     priority: 2,
-    description: "Popular full-size SUV",
+    description: "Full-size SUV platform",
   },
   {
     name: "GMC Sierra 1500",
@@ -120,7 +164,10 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
     priority: 2,
     description: "GMC truck platform",
   },
-  // Additional patterns for broader coverage
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PRIORITY 3: Additional coverage
+  // ═══════════════════════════════════════════════════════════════════════════
   {
     name: "Toyota Tundra",
     boltPattern: "5x150",
@@ -129,18 +176,25 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
     description: "Full-size Toyota truck",
   },
   {
-    name: "Ford Super Duty",
-    boltPattern: "8x170",
-    centerBore: 124.9,
-    priority: 3,
-    description: "Heavy-duty Ford trucks",
-  },
-  {
     name: "Jeep Grand Cherokee",
     boltPattern: "5x127",
     centerBore: 71.6,
     priority: 3,
     description: "Popular Jeep SUV",
+  },
+  {
+    name: "Ford Bronco",
+    boltPattern: "6x139.7",
+    centerBore: 93.1,
+    priority: 3,
+    description: "Ford off-road SUV",
+  },
+  {
+    name: "Toyota 4Runner",
+    boltPattern: "6x139.7",
+    centerBore: 106.1,
+    priority: 3,
+    description: "Toyota off-road SUV",
   },
 ];
 
