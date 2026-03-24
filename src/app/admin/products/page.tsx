@@ -20,6 +20,7 @@ type SearchResult = {
   sku: string;
   upc?: string;
   name: string;
+  displayName?: string | null;
   brand: string;
   finish?: string;
   size?: string;
@@ -71,6 +72,10 @@ export default function ProductsPage() {
   // Image edit state
   const [editingImage, setEditingImage] = useState<string | null>(null);
   const [imageUrl, setImageUrl] = useState("");
+
+  // Display name edit state
+  const [editingName, setEditingName] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState("");
 
   // Fetch flagged products
   const fetchProducts = useCallback(async () => {
@@ -230,6 +235,27 @@ export default function ProductsPage() {
       else searchProducts();
     } catch (err) {
       alert("Failed to save image URL");
+    }
+  };
+
+  // Save display name for single product
+  const handleSaveDisplayName = async (sku: string) => {
+    try {
+      await fetch("/api/admin/products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          productType,
+          sku,
+          displayName: displayName || null,
+        }),
+      });
+      setEditingName(null);
+      setDisplayName("");
+      if (viewMode === "flagged") fetchProducts();
+      else searchProducts();
+    } catch (err) {
+      alert("Failed to save display name");
     }
   };
 
@@ -542,6 +568,11 @@ export default function ProductsPage() {
                         setEditingImage={setEditingImage}
                         setImageUrl={setImageUrl}
                         onSaveImage={handleSaveImage}
+                        editingName={editingName}
+                        displayName={displayName}
+                        setEditingName={setEditingName}
+                        setDisplayName={setDisplayName}
+                        onSaveDisplayName={handleSaveDisplayName}
                       />
                     ))
                 }
@@ -643,6 +674,11 @@ function SearchRow({
   setEditingImage,
   setImageUrl,
   onSaveImage,
+  editingName,
+  displayName,
+  setEditingName,
+  setDisplayName,
+  onSaveDisplayName,
 }: {
   product: SearchResult;
   selected: boolean;
@@ -653,7 +689,14 @@ function SearchRow({
   setEditingImage: (id: string | null) => void;
   setImageUrl: (url: string) => void;
   onSaveImage: (sku: string) => void;
+  editingName: string | null;
+  displayName: string;
+  setEditingName: (id: string | null) => void;
+  setDisplayName: (name: string) => void;
+  onSaveDisplayName: (sku: string) => void;
 }) {
+  const isEditingThisName = editingName === product.sku;
+  
   return (
     <tr className={`hover:bg-neutral-700/50 ${selected ? "bg-neutral-700/30" : ""}`}>
       <td className="px-4 py-3">
@@ -669,9 +712,43 @@ function SearchRow({
           <code className="text-sm text-white bg-neutral-700 px-2 py-0.5 rounded">
             {product.sku}
           </code>
-          <div className="text-sm text-neutral-300 mt-1 max-w-[300px] truncate">
-            {product.name}
-          </div>
+          {/* Product name with edit capability */}
+          {isEditingThisName ? (
+            <div className="flex items-center gap-2 mt-1">
+              <input
+                type="text"
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+                placeholder="Display name..."
+                className="w-56 h-7 rounded bg-neutral-700 border border-neutral-600 px-2 text-white text-xs"
+                autoFocus
+              />
+              <button onClick={() => onSaveDisplayName(product.sku)} className="text-xs text-green-400 hover:text-green-300">✓</button>
+              <button onClick={() => { setEditingName(null); setDisplayName(""); }} className="text-xs text-neutral-400 hover:text-white">✕</button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 mt-1">
+              <div className="text-sm text-neutral-300 max-w-[250px] truncate">
+                {product.displayName ? (
+                  <span className="text-green-400">{product.displayName}</span>
+                ) : (
+                  product.name
+                )}
+              </div>
+              <button 
+                onClick={() => { setEditingName(product.sku); setDisplayName(product.displayName || ""); }}
+                className="text-xs text-blue-400 hover:text-blue-300"
+                title="Edit display name"
+              >
+                ✏️
+              </button>
+            </div>
+          )}
+          {product.displayName && !isEditingThisName && (
+            <div className="text-xs text-neutral-500 truncate max-w-[250px]" title={product.name}>
+              Original: {product.name}
+            </div>
+          )}
           <div className="text-xs text-neutral-500">{product.brand}</div>
         </div>
       </td>

@@ -87,27 +87,55 @@ export async function GET(req: Request) {
   const brand = url.searchParams.get("brand");
   const limit = Math.min(100, parseInt(url.searchParams.get("limit") || "50", 10));
 
-  if (!query || query.length < 2) {
-    return NextResponse.json({ 
-      products: [], 
-      message: "Enter at least 2 characters to search" 
-    });
-  }
-
   const pool = getPool();
+  
   try {
-    // Ensure image_url column exists
+    // Ensure columns exist
     await pool.query(`
       ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS image_url TEXT
     `).catch(() => {});
-
-    // Add supplier/brand columns if missing
     await pool.query(`
       ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS supplier TEXT
     `).catch(() => {});
     await pool.query(`
       ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS brand TEXT
     `).catch(() => {});
+    await pool.query(`
+      ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS display_name TEXT
+    `).catch(() => {});
+
+    // If no/short query, return just the filters (for pre-populating dropdowns)
+    if (!query || query.length < 2) {
+      if (productType === "wheel") {
+        const { rows: brandRows } = await pool.query(`
+          SELECT DISTINCT brand FROM wheel_cache WHERE brand IS NOT NULL ORDER BY brand LIMIT 100
+        `);
+        const { rows: supplierRows } = await pool.query(`
+          SELECT DISTINCT supplier FROM wheel_cache WHERE supplier IS NOT NULL ORDER BY supplier
+        `);
+        return NextResponse.json({ 
+          products: [], 
+          message: "Enter at least 2 characters to search",
+          filters: {
+            brands: brandRows.map(r => r.brand),
+            suppliers: supplierRows.map(r => r.supplier),
+          },
+        });
+      } else {
+        // Tires - get brands from local DB + known suppliers
+        const { rows: brandRows } = await pool.query(`
+          SELECT DISTINCT brand_desc as brand FROM wp_tires WHERE brand_desc IS NOT NULL ORDER BY brand_desc LIMIT 100
+        `);
+        return NextResponse.json({ 
+          products: [], 
+          message: "Enter at least 2 characters to search",
+          filters: {
+            brands: brandRows.map(r => r.brand),
+            suppliers: ["K&M", "WheelPros"],
+          },
+        });
+      }
+    }
 
     if (productType === "wheel") {
       // Search wheel_cache for wheels
@@ -128,7 +156,8 @@ export async function GET(req: Request) {
           pf.hidden,
           pf.flagged,
           pf.flag_reason,
-          pf.image_url as override_image_url
+          pf.image_url as override_image_url,
+          pf.display_name as override_display_name
         FROM wheel_cache wc
         LEFT JOIN admin_product_flags pf ON pf.sku = wc.sku AND pf.product_type = 'wheel'
         WHERE (
@@ -163,6 +192,7 @@ export async function GET(req: Request) {
           sku: r.sku,
           upc: r.upc,
           name: r.name,
+          displayName: r.override_display_name || null,
           brand: r.brand,
           finish: r.finish_desc,
           size: r.diameter && r.width ? `${r.diameter}x${r.width}` : null,
@@ -198,7 +228,8 @@ export async function GET(req: Request) {
             pf.hidden,
             pf.flagged,
             pf.flag_reason,
-            pf.image_url as override_image_url
+            pf.image_url as override_image_url,
+            pf.display_name as override_display_name
           FROM wp_tires t
           LEFT JOIN admin_product_flags pf ON pf.sku = t.sku AND pf.product_type = 'tire'
           WHERE (
@@ -220,7 +251,7 @@ export async function GET(req: Request) {
       let kmFlags: Record<string, any> = {};
       if (kmSkus.length > 0) {
         const { rows: flagRows } = await pool.query(`
-          SELECT sku, id as flag_id, hidden, flagged, flag_reason, image_url as override_image_url
+          SELECT sku, id as flag_id, hidden, flagged, flag_reason, image_url as override_image_url, display_name as override_display_name
           FROM admin_product_flags 
           WHERE sku = ANY($1) AND product_type = 'tire'
         `, [kmSkus]);
@@ -238,6 +269,7 @@ export async function GET(req: Request) {
         return {
           sku,
           name: desc || sku,
+          displayName: flag.override_display_name || null,
           brand: brand?.trim() || null,
           size: it?.Size || null,
           terrain: null,
@@ -255,6 +287,7 @@ export async function GET(req: Request) {
       const wpProducts = rows.map(r => ({
         sku: r.sku,
         name: r.name || r.sku,
+        displayName: r.override_display_name || null,
         brand: r.brand,
         size: r.size,
         terrain: r.terrain,

@@ -92,7 +92,7 @@ export async function GET(req: Request) {
  */
 export async function POST(req: Request) {
   const body = await req.json();
-  const { productType, sku, hidden, flagged, flagReason, imageUrl } = body;
+  const { productType, sku, hidden, flagged, flagReason, imageUrl, displayName } = body;
 
   if (!productType || !sku) {
     return NextResponse.json({ error: "productType and sku required" }, { status: 400 });
@@ -100,28 +100,32 @@ export async function POST(req: Request) {
 
   const pool = getPool();
   try {
-    // Ensure image_url column exists
+    // Ensure columns exist
     await pool.query(`
       ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS image_url TEXT
     `).catch(() => {});
+    await pool.query(`
+      ALTER TABLE admin_product_flags ADD COLUMN IF NOT EXISTS display_name TEXT
+    `).catch(() => {});
 
     const { rows } = await pool.query(`
-      INSERT INTO admin_product_flags (product_type, sku, hidden, flagged, flag_reason, image_url, updated_at)
-      VALUES ($1, $2, $3, $4, $5, $6, now())
+      INSERT INTO admin_product_flags (product_type, sku, hidden, flagged, flag_reason, image_url, display_name, updated_at)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, now())
       ON CONFLICT (product_type, sku) DO UPDATE SET
         hidden = EXCLUDED.hidden,
         flagged = EXCLUDED.flagged,
         flag_reason = EXCLUDED.flag_reason,
         image_url = EXCLUDED.image_url,
+        display_name = EXCLUDED.display_name,
         updated_at = now()
       RETURNING *
-    `, [productType, sku, hidden || false, flagged || false, flagReason || null, imageUrl || null]);
+    `, [productType, sku, hidden || false, flagged || false, flagReason || null, imageUrl || null, displayName || null]);
 
     // Log the change
     await pool.query(`
       INSERT INTO admin_logs (log_type, sku, details)
       VALUES ('product_flag', $1, $2)
-    `, [sku, JSON.stringify({ productType, hidden, flagged, flagReason, imageUrl })]);
+    `, [sku, JSON.stringify({ productType, hidden, flagged, flagReason, imageUrl, displayName })]);
 
     return NextResponse.json({ ok: true, product: rows[0] });
   } catch (err: any) {

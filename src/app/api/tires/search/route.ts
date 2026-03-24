@@ -455,10 +455,10 @@ function normalizeProductKey(partNumber: string, brand: string | null): string {
 }
 
 /**
- * Apply image overrides from admin_product_flags table
- * This allows admins to set custom images for products (especially K&M which has no images)
+ * Apply overrides from admin_product_flags table
+ * This allows admins to set custom images and display names for products
  */
-async function applyImageOverrides(db: pg.Pool, results: TireResult[]): Promise<TireResult[]> {
+async function applyAdminOverrides(db: pg.Pool, results: TireResult[]): Promise<TireResult[]> {
   if (results.length === 0) return results;
   
   const skus = results.map(r => r.partNumber).filter(Boolean);
@@ -466,34 +466,46 @@ async function applyImageOverrides(db: pg.Pool, results: TireResult[]): Promise<
   
   try {
     const { rows } = await db.query(`
-      SELECT sku, image_url 
+      SELECT sku, image_url, display_name 
       FROM admin_product_flags 
       WHERE sku = ANY($1) 
         AND product_type = 'tire' 
-        AND image_url IS NOT NULL 
-        AND image_url != ''
+        AND (
+          (image_url IS NOT NULL AND image_url != '')
+          OR (display_name IS NOT NULL AND display_name != '')
+        )
     `, [skus]);
     
     if (rows.length === 0) return results;
     
-    const overrides = new Map<string, string>();
+    const overrides = new Map<string, { imageUrl?: string; displayName?: string }>();
     for (const row of rows) {
-      overrides.set(row.sku, row.image_url);
+      overrides.set(row.sku, {
+        imageUrl: row.image_url || undefined,
+        displayName: row.display_name || undefined,
+      });
     }
     
     // Apply overrides
     return results.map(tire => {
       const override = overrides.get(tire.partNumber);
       if (override) {
-        return { ...tire, imageUrl: override };
+        return {
+          ...tire,
+          imageUrl: override.imageUrl || tire.imageUrl,
+          description: override.displayName || tire.description,
+        };
       }
       return tire;
     });
   } catch (err) {
-    console.error("[tires/search] Image override lookup error:", err);
+    console.error("[tires/search] Admin override lookup error:", err);
     return results; // Return original results on error
   }
 }
+
+// Alias for backward compatibility
+const applyImageOverrides = applyAdminOverrides;
 
 export async function GET(req: Request) {
   const t0 = Date.now();
