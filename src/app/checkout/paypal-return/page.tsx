@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 
@@ -12,8 +12,26 @@ import { BRAND } from "@/lib/brand";
  * We capture the order and then show success or redirect.
  */
 export default function PayPalReturnPage() {
+  return (
+    <Suspense fallback={<LoadingState />}>
+      <PayPalReturnContent />
+    </Suspense>
+  );
+}
+
+function LoadingState() {
+  return (
+    <main className="bg-neutral-50 min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full mx-auto"></div>
+        <p className="mt-4 text-neutral-700 font-medium">Loading...</p>
+      </div>
+    </main>
+  );
+}
+
+function PayPalReturnContent() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
