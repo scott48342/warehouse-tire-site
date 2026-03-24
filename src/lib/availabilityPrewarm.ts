@@ -75,6 +75,9 @@ export type PrewarmTarget = {
   centerBore: number;
   priority: number; // 1 = highest priority
   description: string;
+  // Optional: for lifted truck prewarming
+  offsetRange?: { min: number; max: number };
+  maxSkus?: number; // Override default max SKUs for this target
 };
 
 /**
@@ -136,6 +139,48 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
     priority: 2,
     description: "Chevy/GMC HD trucks - 2500HD, 3500HD",
   },
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PRIORITY 2: Lifted truck offset ranges (critical for lifted search perf)
+  // These prewarm low-offset wheels specifically for lifted truck searches
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    name: "Ford F-250/F-350 Lifted (4-6\" lift)",
+    boltPattern: "8x170",
+    centerBore: 124.9,
+    priority: 2,
+    description: "Ford HD lifted: aggressive offset range",
+    offsetRange: { min: -44, max: 0 },
+    maxSkus: 300,
+  },
+  {
+    name: "Ram 2500/3500 Lifted",
+    boltPattern: "8x165.1",
+    centerBore: 121.3,
+    priority: 2,
+    description: "Ram HD lifted: low offset wheels",
+    offsetRange: { min: -44, max: 0 },
+    maxSkus: 300,
+  },
+  {
+    name: "Chevy/GMC 2500HD Lifted",
+    boltPattern: "8x180",
+    centerBore: 124.1,
+    priority: 2,
+    description: "Chevy HD lifted: low offset wheels",
+    offsetRange: { min: -44, max: 0 },
+    maxSkus: 300,
+  },
+  {
+    name: "Ford F-150 Lifted",
+    boltPattern: "6x135",
+    centerBore: 87.1,
+    priority: 2,
+    description: "F-150 lifted: low offset wheels",
+    offsetRange: { min: -24, max: 0 },
+    maxSkus: 250,
+  },
+  
   {
     name: "Jeep Wrangler",
     boltPattern: "5x127",
@@ -311,13 +356,26 @@ export async function runPrewarmJob(options?: {
       // Get candidates for this bolt pattern
       const candidates = await getTechfeedCandidatesByBoltPattern(target.boltPattern);
       
+      // Use target-specific maxSkus or default
+      const targetMaxSkus = target.maxSkus ?? maxSkusPerPattern;
+      
       // Filter to valid-looking SKUs with pricing
+      // Also filter by offset range if specified (for lifted truck prewarming)
       const validCandidates = candidates
         .filter((c) => {
           const price = Number(c.map_price || c.msrp || 0) || 0;
-          return price > 0 && c.sku;
+          if (!(price > 0 && c.sku)) return false;
+          
+          // If target has offset range, filter candidates by offset
+          if (target.offsetRange) {
+            const offset = c.offset != null ? Number(c.offset) : null;
+            if (offset === null || !Number.isFinite(offset)) return false;
+            if (offset < target.offsetRange.min || offset > target.offsetRange.max) return false;
+          }
+          
+          return true;
         })
-        .slice(0, maxSkusPerPattern);
+        .slice(0, targetMaxSkus);
       
       let checked = 0;
       let available = 0;
