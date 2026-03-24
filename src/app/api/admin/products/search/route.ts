@@ -16,6 +16,12 @@ function getPool() {
   });
 }
 
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+}
+
 /**
  * Search K&M tires by part number
  * Uses /v1/inventory endpoint (same as partlookup route)
@@ -242,36 +248,75 @@ export async function GET(req: Request) {
         total: rows.length,
       });
     } else {
-      // Search wp_tires table AND K&M API for tires
-      const [wpResult, kmItems] = await Promise.all([
-        pool.query(`
-          SELECT 
-            t.sku,
-            t.brand_desc as brand,
-            t.tire_description as name,
-            t.tire_size as size,
-            t.image_url,
-            t.terrain,
-            t.construction_type,
-            pf.id as flag_id,
-            pf.hidden,
-            pf.flagged,
-            pf.flag_reason,
-            pf.image_url as override_image_url,
-            pf.display_name as override_display_name
-          FROM wp_tires t
-          LEFT JOIN admin_product_flags pf ON pf.sku = t.sku AND pf.product_type = 'tire'
-          WHERE (
-            t.sku ILIKE $1 
-            OR t.tire_description ILIKE $1
-            OR t.brand_desc ILIKE $1
-          )
-          ORDER BY t.brand_desc, t.tire_description
-          LIMIT $2
-        `, [`%${query}%`, limit]),
-        // Also search K&M by part number (exact match for SKU-like queries)
-        searchKmTiresByPartNumber(query),
-      ]);
+      // Search wp_tires table AND unified tire API (includes K&M with descriptions)
+      // WheelPros: search local DB by sku, description, brand
+      // K&M/Unified: query tire search API which searches descriptions
+      
+      const wpQuery = pool.query(`
+        SELECT 
+          t.sku,
+          t.brand_desc as brand,
+          t.tire_description as name,
+          t.tire_size as size,
+          t.image_url,
+          t.terrain,
+          t.construction_type,
+          pf.id as flag_id,
+          pf.hidden,
+          pf.flagged,
+          pf.flag_reason,
+          pf.image_url as override_image_url,
+          pf.display_name as override_display_name
+        FROM wp_tires t
+        LEFT JOIN admin_product_flags pf ON pf.sku = t.sku AND pf.product_type = 'tire'
+        WHERE (
+          t.sku ILIKE $1 
+          OR t.tire_description ILIKE $1
+          OR t.brand_desc ILIKE $1
+        )
+        ORDER BY t.brand_desc, t.tire_description
+        LIMIT $2
+      `, [`%${query}%`, limit]);
+      
+      // Search unified API for K&M results (query common sizes to find model matches)
+      // This catches model names like "LXHT-206" that aren't in our local DB
+      const unifiedResults: any[] = [];
+      const commonSizes = ["225/65R17", "265/70R17", "275/55R20", "245/45R18", "205/55R16"];
+      
+      // Only search unified API if query looks like a model name (not a SKU)
+      const looksLikeModel = query.length >= 3 && !/^\d+$/.test(query) && !query.match(/^[A-Z]\d{6,}$/i);
+      
+      if (looksLikeModel) {
+        try {
+          // Search a couple common sizes to find model matches
+          const sizesToSearch = commonSizes.slice(0, 2);
+          for (const size of sizesToSearch) {
+            const res = await fetch(
+              `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&minQty=1`,
+              { cache: "no-store" }
+            );
+            if (res.ok) {
+              const data = await res.json();
+              const results = data.results || [];
+              // Filter to matching descriptions
+              const matches = results.filter((t: any) => {
+                const desc = String(t.description || "").toUpperCase();
+                const name = String(t.displayName || t.prettyName || "").toUpperCase();
+                const q = query.toUpperCase();
+                return desc.includes(q) || name.includes(q);
+              });
+              unifiedResults.push(...matches);
+            }
+          }
+        } catch (err) {
+          console.error("[admin/products/search] Unified search error:", err);
+        }
+      }
+      
+      // Also try K&M part number search for SKU-like queries
+      const kmItems = await searchKmTiresByPartNumber(query);
+      
+      const [wpResult] = await Promise.all([wpQuery]);
 
       const { rows } = wpResult;
 
@@ -329,8 +374,52 @@ export async function GET(req: Request) {
         flagReason: r.flag_reason,
       }));
 
-      // Combine - K&M first (since user is likely searching for a specific SKU), then WP
-      const allProducts = [...kmProducts, ...wpProducts].slice(0, limit);
+      // Format unified API results (K&M tires found by model name search)
+      // Get flag status for these items
+      const unifiedSkus = unifiedResults.map((t: any) => t.partNumber).filter(Boolean);
+      let unifiedFlags: Record<string, any> = {};
+      if (unifiedSkus.length > 0) {
+        const { rows: flagRows } = await pool.query(`
+          SELECT sku, id as flag_id, hidden, flagged, flag_reason, image_url as override_image_url, display_name as override_display_name
+          FROM admin_product_flags 
+          WHERE sku = ANY($1) AND product_type = 'tire'
+        `, [unifiedSkus]);
+        for (const f of flagRows) {
+          unifiedFlags[f.sku] = f;
+        }
+      }
+      
+      const unifiedProducts = unifiedResults.map((t: any) => {
+        const sku = t.partNumber || "";
+        const flag = unifiedFlags[sku] || {};
+        return {
+          sku,
+          name: t.description || t.displayName || sku,
+          displayName: flag.override_display_name || t.displayName || t.prettyName || null,
+          brand: t.brand || null,
+          size: t.size || null,
+          terrain: t.badges?.terrain || null,
+          construction: t.badges?.construction || null,
+          imageUrl: flag.override_image_url || t.imageUrl || null,
+          supplier: t.source?.includes("km") ? "K&M" : (t.source?.includes("tirewire") ? "Tirewire" : "WheelPros"),
+          flagId: flag.flag_id || null,
+          hidden: flag.hidden || false,
+          flagged: flag.flagged || false,
+          flagReason: flag.flag_reason || null,
+        };
+      });
+
+      // Combine all results - dedupe by SKU
+      const seenSkus = new Set<string>();
+      const allProducts: any[] = [];
+      
+      for (const p of [...unifiedProducts, ...kmProducts, ...wpProducts]) {
+        if (p.sku && !seenSkus.has(p.sku)) {
+          seenSkus.add(p.sku);
+          allProducts.push(p);
+        }
+        if (allProducts.length >= limit) break;
+      }
 
       // Build brands dynamically from search results + DB
       // This ensures any supplier's brands appear in the filter
