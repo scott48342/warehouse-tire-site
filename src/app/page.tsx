@@ -4,6 +4,48 @@ import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
 export const runtime = "nodejs";
 
 /* =============================================================================
+   CATEGORY CARD - Main shopping flow entry (Tires/Wheels/Lifted)
+============================================================================= */
+
+function CategoryCard({
+  title,
+  description,
+  href,
+  icon,
+  gradient,
+  badge,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+  gradient: string;
+  badge?: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className={`group relative overflow-hidden rounded-2xl p-6 text-white transition-transform hover:scale-[1.02] ${gradient}`}
+    >
+      {badge && (
+        <span className="absolute right-4 top-4 rounded-full bg-white/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide backdrop-blur-sm">
+          {badge}
+        </span>
+      )}
+      <div className="text-4xl">{icon}</div>
+      <h3 className="mt-4 text-xl font-extrabold">{title}</h3>
+      <p className="mt-2 text-sm text-white/80">{description}</p>
+      <div className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-white group-hover:underline">
+        Shop Now
+        <span className="transition-transform group-hover:translate-x-1">→</span>
+      </div>
+      {/* Decorative circle */}
+      <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10" />
+    </Link>
+  );
+}
+
+/* =============================================================================
    INTENT CARD - Quick entry to specific products/categories
 ============================================================================= */
 
@@ -131,6 +173,43 @@ export default async function Home() {
               <div className="text-sm text-neutral-400">Install available</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== CATEGORY CARDS (Tires/Wheels/Lifted) ===== */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <div className="text-center">
+          <h2 className="text-2xl font-extrabold text-neutral-900 md:text-3xl">
+            What are you shopping for?
+          </h2>
+          <p className="mt-2 text-neutral-600">
+            Choose your path — we'll help you find the perfect fit
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <CategoryCard
+            title="Tires"
+            description="All-season, winter, all-terrain, performance — find tires sized for your vehicle."
+            href="/?open=tires&mode=size"
+            icon="🛞"
+            gradient="bg-gradient-to-br from-neutral-800 to-neutral-900"
+          />
+          <CategoryCard
+            title="Wheels"
+            description="Browse aftermarket wheels with guaranteed fitment for your year, make, and model."
+            href="/?open=wheels&mode=vehicle"
+            icon="⚙️"
+            gradient="bg-gradient-to-br from-blue-600 to-blue-800"
+          />
+          <CategoryCard
+            title="Lifted Builds"
+            description="Build your lifted truck or SUV with the right tire and wheel combo."
+            href="/lifted"
+            icon="🏔️"
+            gradient="bg-gradient-to-br from-amber-500 to-orange-600"
+            badge="Popular"
+          />
         </div>
       </section>
 
