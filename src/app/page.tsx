@@ -132,7 +132,7 @@ export default async function Home() {
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/wheels"
+              href="/?open=wheels&mode=vehicle"
               className="inline-flex h-14 items-center justify-center rounded-xl bg-amber-500 px-8 text-base font-extrabold text-white transition-colors hover:bg-amber-600"
             >
               Shop Tires, Wheels & Packages
@@ -179,14 +179,14 @@ export default async function Home() {
           <CategoryCard
             title="Tires"
             description="All-season, winter, all-terrain, performance — find tires sized for your vehicle."
-            href="/tires"
+            href="/?open=tires&mode=size"
             icon="🛞"
             gradient="bg-gradient-to-br from-neutral-800 to-neutral-900"
           />
           <CategoryCard
             title="Wheels"
             description="Browse aftermarket wheels with guaranteed fitment for your year, make, and model."
-            href="/wheels"
+            href="/?open=wheels&mode=vehicle"
             icon="⚙️"
             gradient="bg-gradient-to-br from-blue-600 to-blue-800"
           />
