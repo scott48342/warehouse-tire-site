@@ -49,6 +49,13 @@ type EmailSettings = {
   hasPassword?: boolean;
 };
 
+type PayPalSettings = {
+  enabled: boolean;
+  mode: "sandbox" | "live";
+  clientId: string | null;
+  clientSecretPresent: boolean;
+};
+
 export default function SettingsPage() {
   const [gateways, setGateways] = useState<Gateway[]>([]);
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
@@ -63,6 +70,12 @@ export default function SettingsPage() {
     fromName: "Warehouse Tire",
     notifyEmail: "",
   });
+  const [paypalSettings, setPaypalSettings] = useState<PayPalSettings>({
+    enabled: false,
+    mode: "sandbox",
+    clientId: null,
+    clientSecretPresent: false,
+  });
   const [loading, setLoading] = useState(true);
   const [needsMigration, setNeedsMigration] = useState(false);
   const [saving, setSaving] = useState<string | null>(null);
@@ -70,22 +83,25 @@ export default function SettingsPage() {
 
   const fetchData = async () => {
     try {
-      const [gatewaysRes, suppliersRes, settingsRes, emailRes] = await Promise.all([
+      const [gatewaysRes, suppliersRes, settingsRes, emailRes, paypalRes] = await Promise.all([
         fetch("/api/admin/settings/gateways"),
         fetch("/api/admin/settings/suppliers"),
         fetch("/api/admin/settings"),
         fetch("/api/admin/settings/email"),
+        fetch("/api/admin/settings/paypal"),
       ]);
 
       const gatewaysData = await gatewaysRes.json();
       const suppliersData = await suppliersRes.json();
       const settingsData = await settingsRes.json();
       const emailData = await emailRes.json();
+      const paypalData = await paypalRes.json();
 
       setGateways(gatewaysData.gateways || []);
       setSuppliers(suppliersData.suppliers || []);
       setSiteSettings(settingsData.settings?.site?.value || { maintenance_mode: false });
       setEmailSettings(emailData);
+      setPaypalSettings(paypalData);
       setNeedsMigration(gatewaysData.needsMigration || suppliersData.needsMigration);
     } catch (err) {
       console.error("Failed to fetch settings:", err);
@@ -225,16 +241,33 @@ export default function SettingsPage() {
             />
           ))}
           
+          {/* PayPal */}
+          <PayPalCard
+            settings={paypalSettings}
+            saving={saving === "paypal"}
+            onSave={async (updates) => {
+              setSaving("paypal");
+              try {
+                const res = await fetch("/api/admin/settings/paypal", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(updates),
+                });
+                if (!res.ok) throw new Error("Failed to save");
+                await fetchData();
+              } catch (err: any) {
+                alert(err.message);
+              } finally {
+                setSaving(null);
+              }
+            }}
+          />
+          
           {/* Coming Soon Cards */}
           <ComingSoonCard
             icon="🏦"
             title="Square"
             description="Square payment processing"
-          />
-          <ComingSoonCard
-            icon="🅿️"
-            title="PayPal"
-            description="PayPal checkout"
           />
         </div>
       </section>
@@ -646,6 +679,155 @@ function SupplierCard({
           : supplier.credentialSource === "env"
           ? "⚙️ Using environment variables (migrate to admin settings recommended)"
           : "Configure credentials above to enable this supplier"}
+      </div>
+    </div>
+  );
+}
+
+function PayPalCard({
+  settings,
+  saving,
+  onSave,
+}: {
+  settings: PayPalSettings;
+  saving: boolean;
+  onSave: (updates: Partial<PayPalSettings> & { clientSecret?: string }) => Promise<void>;
+}) {
+  const [clientId, setClientId] = useState(settings.clientId || "");
+  const [clientSecret, setClientSecret] = useState("");
+  const [showSecretInput, setShowSecretInput] = useState(false);
+
+  // Update clientId when settings change
+  useEffect(() => {
+    setClientId(settings.clientId || "");
+  }, [settings.clientId]);
+
+  const handleSave = async () => {
+    const updates: any = { clientId };
+    if (clientSecret) {
+      updates.clientSecret = clientSecret;
+    }
+    await onSave(updates);
+    setClientSecret("");
+    setShowSecretInput(false);
+  };
+
+  return (
+    <div className={`bg-neutral-800 rounded-xl border p-6 ${settings.enabled ? "border-blue-600/50" : "border-neutral-700"}`}>
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">🅿️</span>
+          <div>
+            <h3 className="text-white font-bold">PayPal</h3>
+            <div className="flex items-center gap-2 mt-1">
+              {settings.enabled && (
+                <span className={`text-xs px-2 py-0.5 rounded ${
+                  settings.mode === "live" ? "bg-green-600 text-white" : "bg-amber-600 text-white"
+                }`}>
+                  {settings.mode === "live" ? "Live" : "Sandbox"}
+                </span>
+              )}
+              {settings.clientSecretPresent ? (
+                <span className="text-xs text-green-400">✓ Credentials set</span>
+              ) : (
+                <span className="text-xs text-red-400">Credentials required</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        <ToggleSetting
+          label="Enabled"
+          description="Accept payments via PayPal"
+          enabled={settings.enabled}
+          saving={saving}
+          onChange={(enabled) => onSave({ enabled })}
+        />
+
+        {settings.enabled && (
+          <>
+            <div>
+              <label className="block text-sm font-medium text-neutral-300 mb-2">Mode</label>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => onSave({ mode: "sandbox" })}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    settings.mode === "sandbox"
+                      ? "bg-amber-600 text-white"
+                      : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                  }`}
+                >
+                  Sandbox
+                </button>
+                <button
+                  onClick={() => onSave({ mode: "live" })}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    settings.mode === "live"
+                      ? "bg-green-600 text-white"
+                      : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                  }`}
+                >
+                  Live
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-neutral-300 mb-1">Client ID</label>
+              <input
+                type="text"
+                value={clientId}
+                onChange={(e) => setClientId(e.target.value)}
+                className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                placeholder="PayPal Client ID"
+              />
+            </div>
+
+            {showSecretInput ? (
+              <div>
+                <label className="block text-sm font-medium text-neutral-300 mb-1">
+                  Client Secret {settings.clientSecretPresent && <span className="text-green-400">(already set)</span>}
+                </label>
+                <input
+                  type="password"
+                  value={clientSecret}
+                  onChange={(e) => setClientSecret(e.target.value)}
+                  className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
+                  placeholder="PayPal Client Secret"
+                />
+              </div>
+            ) : (
+              <button
+                onClick={() => setShowSecretInput(true)}
+                className="text-sm text-blue-400 hover:text-blue-300"
+              >
+                {settings.clientSecretPresent ? "Update" : "Set"} Client Secret
+              </button>
+            )}
+
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className="w-full py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+            >
+              {saving ? "Saving..." : "Save PayPal Settings"}
+            </button>
+          </>
+        )}
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-neutral-700 text-xs text-neutral-500">
+        Get credentials from{" "}
+        <a 
+          href="https://developer.paypal.com/dashboard/applications/sandbox" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline"
+        >
+          PayPal Developer Dashboard
+        </a>
       </div>
     </div>
   );

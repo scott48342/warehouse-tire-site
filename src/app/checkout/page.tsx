@@ -78,6 +78,45 @@ export default function CheckoutPage() {
   const [sameAsBilling, setSameAsBilling] = useState(true);
   const [processing, setProcessing] = useState(false);
   const [stripeError, setStripeError] = useState<string | null>(null);
+  const [paypalError, setPaypalError] = useState<string | null>(null);
+  const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
+
+  async function startPayPalCheckout() {
+    try {
+      setPaypalError(null);
+      setProcessing(true);
+
+      const customer = {
+        firstName: shipping.firstName,
+        lastName: shipping.lastName,
+        email: shipping.email,
+        phone: shipping.phone,
+      };
+
+      const res = await fetch("/api/paypal/create-order", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          items,
+          customer,
+          vehicle,
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.ok || !data?.approvalUrl) {
+        setPaypalError(String(data?.error || data?.detail || "PayPal checkout failed"));
+        setProcessing(false);
+        return;
+      }
+
+      // Redirect to PayPal
+      window.location.href = String(data.approvalUrl);
+    } catch (e: any) {
+      setPaypalError(e?.message || String(e));
+      setProcessing(false);
+    }
+  }
 
   async function startStripeCheckout() {
     try {
@@ -399,22 +438,78 @@ export default function CheckoutPage() {
             {step === "payment" && (
               <div className="space-y-4">
                 <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <h2 className="text-lg font-bold text-neutral-900 mb-4">Payment</h2>
+                  <h2 className="text-lg font-bold text-neutral-900 mb-4">Payment Method</h2>
 
-                  <div className="rounded-xl bg-neutral-50 border border-neutral-200 p-6 text-center">
-                    <p className="text-neutral-700 mb-3 font-semibold">
-                      Pay securely with card (Stripe Test Mode)
-                    </p>
-                    <p className="text-sm text-neutral-500">
-                      You will be redirected to Stripe Checkout to complete your purchase.
-                    </p>
-
-                    {stripeError ? (
-                      <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
-                        {stripeError}
+                  {/* Payment method selection */}
+                  <div className="space-y-3">
+                    {/* Credit Card (Stripe) */}
+                    <label
+                      className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
+                        selectedPayment === "stripe"
+                          ? "border-green-600 bg-green-50"
+                          : "border-neutral-200 hover:border-neutral-300"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="payment"
+                        checked={selectedPayment === "stripe"}
+                        onChange={() => setSelectedPayment("stripe")}
+                        className="w-5 h-5 text-green-600"
+                      />
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">💳</span>
+                          <span className="font-bold text-neutral-900">Credit / Debit Card</span>
+                        </div>
+                        <p className="text-sm text-neutral-500 mt-0.5">
+                          Pay securely with Visa, Mastercard, Amex, or Discover
+                        </p>
                       </div>
-                    ) : null}
+                    </label>
+
+                    {/* PayPal */}
+                    <label
+                      className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
+                        selectedPayment === "paypal"
+                          ? "border-blue-600 bg-blue-50"
+                          : "border-neutral-200 hover:border-neutral-300"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="payment"
+                        checked={selectedPayment === "paypal"}
+                        onChange={() => setSelectedPayment("paypal")}
+                        className="w-5 h-5 text-blue-600"
+                      />
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">🅿️</span>
+                          <span className="font-bold text-neutral-900">PayPal</span>
+                        </div>
+                        <p className="text-sm text-neutral-500 mt-0.5">
+                          Pay with your PayPal account or PayPal Credit
+                        </p>
+                      </div>
+                    </label>
                   </div>
+
+                  {/* Error messages */}
+                  {stripeError && selectedPayment === "stripe" && (
+                    <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                      {stripeError}
+                    </div>
+                  )}
+                  {paypalError && selectedPayment === "paypal" && (
+                    <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
+                      {paypalError}
+                    </div>
+                  )}
+
+                  <p className="text-xs text-neutral-500 mt-4 text-center">
+                    You will be redirected to {selectedPayment === "stripe" ? "Stripe" : "PayPal"} to complete your purchase securely.
+                  </p>
                 </div>
 
                 <div className="flex gap-3">
@@ -425,13 +520,21 @@ export default function CheckoutPage() {
                     Back
                   </button>
                   <button
-                    onClick={startStripeCheckout}
+                    onClick={selectedPayment === "stripe" ? startStripeCheckout : startPayPalCheckout}
                     disabled={processing}
                     className={`flex-1 h-12 rounded-xl font-extrabold text-white flex items-center justify-center ${
-                      processing ? "bg-neutral-300 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+                      processing
+                        ? "bg-neutral-300 cursor-not-allowed"
+                        : selectedPayment === "stripe"
+                        ? "bg-green-600 hover:bg-green-700"
+                        : "bg-blue-600 hover:bg-blue-700"
                     }`}
                   >
-                    {processing ? "Redirecting…" : "Pay with Card"}
+                    {processing
+                      ? "Redirecting…"
+                      : selectedPayment === "stripe"
+                      ? "Pay with Card"
+                      : "Pay with PayPal"}
                   </button>
                 </div>
               </div>
