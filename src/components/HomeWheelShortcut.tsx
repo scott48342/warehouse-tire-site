@@ -80,12 +80,15 @@ export function HomeWheelShortcut({
           }
           router.push(buildWheelUrl(f, diameter));
         }}
-        className="group rounded-2xl border border-neutral-200 bg-white p-4 text-left hover:border-neutral-300"
+        className="group flex items-center gap-3 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-left transition-colors hover:border-amber-300 hover:bg-amber-50 w-full"
         title={hrefPreview}
       >
-        <div className="text-sm font-extrabold text-neutral-900 group-hover:underline">{title}</div>
-        <div className="mt-1 text-xs text-neutral-600">{desc}</div>
-        <div className="mt-3 text-xs font-extrabold text-blue-700">Shop →</div>
+        <span className="text-lg">⚙️</span>
+        <div className="flex-1">
+          <div className="text-sm font-semibold text-neutral-900 group-hover:text-amber-900">{title}</div>
+          <div className="text-xs text-neutral-500">{desc}</div>
+        </div>
+        <span className="text-neutral-400 transition-transform group-hover:translate-x-1 group-hover:text-amber-600">→</span>
       </button>
 
       {open ? (
