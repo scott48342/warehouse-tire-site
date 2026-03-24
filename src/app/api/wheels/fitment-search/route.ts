@@ -32,6 +32,7 @@ import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 
 import {
   fetchAvailability,
+  getCachedBulk,
   getCacheStats as getAvailabilityCacheStats,
 } from "@/lib/availabilityCache";
 
@@ -480,6 +481,7 @@ async function handleDbFirstWheelResults(opts: {
   timing.fitmentValidCount = fitmentValid;
 
   // Phase 2: Concurrent live availability checks with time budget
+  // OPTIMIZATION: Use MGET to bulk-fetch cached availability in one round trip
   const tAvail0 = Date.now();
   type EligibleItem = {
     candidate: typeof diversifiedCandidates[0];
@@ -490,10 +492,51 @@ async function handleDbFirstWheelResults(opts: {
   let availabilityChecked = 0;
   let cacheHits = 0;
   let prewarmHits = 0;
+  let bulkCacheHits = 0;
   let launchStopped = false;
   let earlyStopReason: string | null = null;
 
-  // Concurrency pool
+  // MGET OPTIMIZATION: Bulk fetch all cached availability in ONE Redis call
+  const tBulkCache0 = Date.now();
+  const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
+  const cachedAvailability = await getCachedBulk(allSkus, minQty);
+  timing.bulkCacheMs = Date.now() - tBulkCache0;
+  timing.bulkCacheSkus = allSkus.length;
+  timing.bulkCacheHits = cachedAvailability.size;
+
+  // Process cached hits first (instant, no API calls needed)
+  const needsLiveCheck: FitmentValidCandidate[] = [];
+  
+  for (const item of fitmentValidCandidates) {
+    const cached = cachedAvailability.get(item.candidate.sku);
+    
+    if (cached) {
+      bulkCacheHits++;
+      cacheHits++;
+      if (cached.fromPrewarm) prewarmHits++;
+      availabilityChecked++;
+      
+      if (cached.ok) {
+        eligibleItems.push({
+          candidate: item.candidate,
+          validation: item.validation,
+          avail: {
+            ok: true,
+            inventoryType: cached.inventoryType,
+            localQty: cached.localQty,
+            globalQty: cached.globalQty,
+            checkedAt: cached.checkedAt,
+          },
+        });
+      }
+    } else {
+      // Need to fetch live
+      needsLiveCheck.push(item);
+    }
+  }
+
+  // Now do live checks only for cache misses (with concurrency + time budget)
+  const tLiveCheck0 = Date.now();
   const inFlight = new Set<Promise<void>>();
 
   const checkAvailability = async (item: FitmentValidCandidate): Promise<void> => {
@@ -506,7 +549,7 @@ async function handleDbFirstWheelResults(opts: {
       companyCode: wpCreds.companyCode || undefined,
     });
     availabilityChecked++;
-    if ((avail as any).fromCache) cacheHits++;
+    // Don't count as cache hit since we're only checking misses
     if ((avail as any).fromPrewarm) prewarmHits++;
     if (avail.ok) {
       eligibleItems.push({
@@ -517,7 +560,7 @@ async function handleDbFirstWheelResults(opts: {
     }
   };
 
-  for (const item of fitmentValidCandidates) {
+  for (const item of needsLiveCheck) {
     // OPTIMIZATION: Early stop when we have enough eligible items for good results + facets
     if (eligibleItems.length >= targetEligible) {
       earlyStopReason = "targetReached";
@@ -553,10 +596,13 @@ async function handleDbFirstWheelResults(opts: {
     }
   }
   
+  timing.liveCheckMs = Date.now() - tLiveCheck0;
   timing.availabilityMs = Date.now() - tAvail0;
   timing.availabilityChecked = availabilityChecked;
   timing.availabilityCacheHits = cacheHits;
+  timing.availabilityBulkCacheHits = bulkCacheHits;
   timing.availabilityPrewarmHits = prewarmHits;
+  timing.availabilityLiveChecks = needsLiveCheck.length - (launchStopped ? (needsLiveCheck.length - availabilityChecked + bulkCacheHits) : 0);
   timing.eligibleCount = eligibleItems.length;
   timing.earlyStopReason = earlyStopReason;
 

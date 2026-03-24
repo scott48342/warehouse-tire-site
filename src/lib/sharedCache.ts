@@ -319,6 +319,68 @@ export async function getAvailability(
 }
 
 /**
+ * Bulk get availability from shared cache using MGET.
+ * Much more efficient than individual GET calls - 1 round trip instead of N.
+ * Falls back to individual lookups if MGET fails.
+ */
+export async function getAvailabilityBulk(
+  skus: string[],
+  minQty: number = 4
+): Promise<Map<string, AvailabilityEntry & { fromCache: boolean; fromShared: boolean }>> {
+  const results = new Map<string, AvailabilityEntry & { fromCache: boolean; fromShared: boolean }>();
+  
+  if (skus.length === 0) return results;
+  
+  const keys = skus.map(sku => makeAvailabilityKey(sku, minQty));
+  const client = getRedisClient();
+  
+  // Try Redis MGET first
+  if (client && redisHealthy) {
+    const start = Date.now();
+    try {
+      const values = await client.mget<(AvailabilityEntry | null)[]>(...keys);
+      const latency = Date.now() - start;
+      metrics.totalLatencyMs += latency;
+      metrics.latencyCount++;
+      
+      for (let i = 0; i < skus.length; i++) {
+        const data = values[i];
+        if (data) {
+          metrics.hits++;
+          if (data.prewarmed) metrics.prewarmedHits++;
+          
+          // Also store in local cache for ultra-fast repeated access
+          setLocalCache(keys[i], data, CONFIG.TTL_SECONDS);
+          
+          results.set(skus[i], { ...data, fromCache: true, fromShared: true });
+        } else {
+          metrics.misses++;
+        }
+      }
+      
+      return results;
+    } catch (e) {
+      metrics.errors++;
+      console.warn("[sharedCache] Redis MGET failed, trying local cache:", e);
+      // Fall through to local cache
+    }
+  }
+  
+  // Fallback to local cache for each SKU
+  for (let i = 0; i < skus.length; i++) {
+    const local = getLocalCache(keys[i]);
+    if (local) {
+      metrics.fallbackHits++;
+      results.set(skus[i], { ...local, fromCache: true, fromShared: false });
+    } else {
+      metrics.misses++;
+    }
+  }
+  
+  return results;
+}
+
+/**
  * Set availability in shared cache.
  * Also stores in local cache for redundancy.
  */

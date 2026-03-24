@@ -41,6 +41,7 @@
 
 import {
   getAvailability,
+  getAvailabilityBulk,
   setAvailability,
   setAvailabilityBulk,
   getSharedCacheStats,
@@ -118,6 +119,41 @@ export async function getCached(sku: string, minQty: number = 4): Promise<Availa
     fromPrewarm: result.prewarmed,
     fromShared: result.fromShared,
   };
+}
+
+/**
+ * Bulk get cached availability for multiple SKUs.
+ * Uses Redis MGET for efficiency - 1 round trip instead of N.
+ * Returns a Map of SKU -> AvailabilityResult for cache hits.
+ * SKUs not in cache are not included in the result.
+ */
+export async function getCachedBulk(
+  skus: string[],
+  minQty: number = 4
+): Promise<Map<string, AvailabilityResult>> {
+  const results = new Map<string, AvailabilityResult>();
+  
+  if (skus.length === 0) return results;
+  
+  const bulkResults = await getAvailabilityBulk(skus, minQty);
+  
+  for (const [sku, entry] of bulkResults) {
+    results.set(sku, {
+      ok: entry.ok,
+      inventoryType: entry.inventoryType,
+      localQty: entry.localQty,
+      globalQty: entry.globalQty,
+      checkedAt: entry.checkedAt,
+      fromCache: entry.fromCache,
+      fromPrewarm: entry.prewarmed,
+      fromShared: entry.fromShared,
+    });
+    
+    // Also update local sync cache for ultra-fast repeated access
+    updateLocalSyncCache(sku, minQty, entry);
+  }
+  
+  return results;
 }
 
 /**
