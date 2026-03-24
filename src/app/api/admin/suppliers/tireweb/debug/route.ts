@@ -268,14 +268,18 @@ export async function GET(req: Request) {
               const m = tireXml.match(new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`));
               return m ? m[1].trim() : null;
             };
+            const patternId = getName("PatternID");
             sampleTires.push({
               id: getName("ID"),
+              patternId: patternId,
               name: getName("Name"),
               make: getName("Make"),
               pattern: getName("Pattern"),
               imageUrl: getName("ImageURL"),
               patternImageUrl: getName("PatternImageURL"),
               sideImageUrl: getName("SideImageURL"),
+              // Try constructing TireLibrary image URL from pattern ID
+              derivedImageUrl: patternId ? `https://tireweb.tirelibrary.com/images/Products/${patternId}.jpg` : null,
             });
             count++;
           }
