@@ -343,6 +343,12 @@ async function handleDbFirstWheelResults(opts: {
   } | null;
 }): Promise<NextResponse> {
   const { url, envelope, debug, t0 } = opts;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TIMING INSTRUMENTATION
+  // ═══════════════════════════════════════════════════════════════════════════
+  const timing: Record<string, number | string | null> = {};
+  const tStart = Date.now();
 
   const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
   const requestedPageSize = Math.max(1, Math.min(200, Number(url.searchParams.get("pageSize") || "24") || 24));
@@ -375,9 +381,13 @@ async function handleDbFirstWheelResults(opts: {
   }
 
   // Get supplier credentials from admin settings (with fallback to env/hardcoded)
+  const tCreds0 = Date.now();
   const wpCreds = await getSupplierCredentials("wheelpros");
+  timing.credentialsMs = Date.now() - tCreds0;
 
+  const tCandidates0 = Date.now();
   const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
+  timing.candidatesDbMs = Date.now() - tCandidates0;
 
   // Apply basic DB-level filters first (cheap)
   const filteredCandidates = candidates.filter((c) => {
@@ -398,15 +408,24 @@ async function handleDbFirstWheelResults(opts: {
   });
 
   // Diversify by brand (round-robin) to avoid brand clustering
+  const tDiversify0 = Date.now();
   const diversifiedCandidates = diversifyCandidatesByBrand(filteredCandidates);
+  timing.diversifyMs = Date.now() - tDiversify0;
+  timing.candidatesAfterFilter = filteredCandidates.length;
 
   // Concurrent availability validation settings
-  const CONCURRENCY = Math.max(1, Math.min(12, Number(process.env.WT_AVAIL_CONCURRENCY || "8") || 8));
+  // OPTIMIZATION: Increased concurrency and reduced time budget for faster response
+  const CONCURRENCY = Math.max(1, Math.min(20, Number(process.env.WT_AVAIL_CONCURRENCY || "16") || 16));
   const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "6000") || 6000);
-  const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "8000") || 8000);
+  const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "5000") || 5000);
+  
+  // OPTIMIZATION: Early stop when we have enough eligible items (2x requested for facet quality)
+  const targetEligible = Math.max(requestedPageSize * 3, 100);
+  
   const tScan0 = Date.now();
 
   // Phase 1: Fitment validation (fast, no I/O)
+  const tFitment0 = Date.now();
   type FitmentValidCandidate = {
     candidate: typeof diversifiedCandidates[0];
     validation: FitmentValidation;
@@ -452,8 +471,11 @@ async function handleDbFirstWheelResults(opts: {
   }
 
   const fitmentValid = fitmentValidCandidates.length;
+  timing.fitmentValidationMs = Date.now() - tFitment0;
+  timing.fitmentValidCount = fitmentValid;
 
   // Phase 2: Concurrent live availability checks with time budget
+  const tAvail0 = Date.now();
   type EligibleItem = {
     candidate: typeof diversifiedCandidates[0];
     validation: FitmentValidation;
@@ -461,7 +483,9 @@ async function handleDbFirstWheelResults(opts: {
   };
   const eligibleItems: EligibleItem[] = [];
   let availabilityChecked = 0;
+  let cacheHits = 0;
   let launchStopped = false;
+  let earlyStopReason: string | null = null;
 
   // Concurrency pool
   const inFlight = new Set<Promise<void>>();
@@ -476,6 +500,7 @@ async function handleDbFirstWheelResults(opts: {
       companyCode: wpCreds.companyCode || undefined,
     });
     availabilityChecked++;
+    if ((avail as any).fromCache) cacheHits++;
     if (avail.ok) {
       eligibleItems.push({
         candidate: item.candidate,
@@ -486,9 +511,18 @@ async function handleDbFirstWheelResults(opts: {
   };
 
   for (const item of fitmentValidCandidates) {
+    // OPTIMIZATION: Early stop when we have enough eligible items for good results + facets
+    if (eligibleItems.length >= targetEligible) {
+      earlyStopReason = "targetReached";
+      capsHit.push("earlyStop:targetReached");
+      launchStopped = true;
+      break;
+    }
+    
     // Check time budget before launching new checks
     if (Date.now() - tScan0 > timeBudgetMs) {
       truncated = true;
+      earlyStopReason = "timeBudget";
       capsHit.push("timeBudget");
       launchStopped = true;
       break;
@@ -506,11 +540,17 @@ async function handleDbFirstWheelResults(opts: {
 
   // Wait for remaining in-flight checks to complete (with a hard cap)
   if (inFlight.size > 0) {
-    const flushDeadline = Date.now() + 3000; // max 3s extra for in-flight
+    const flushDeadline = Date.now() + 2000; // REDUCED: max 2s extra for in-flight (was 3s)
     while (inFlight.size > 0 && Date.now() < flushDeadline) {
-      await Promise.race([...inFlight, new Promise((r) => setTimeout(r, 100))]);
+      await Promise.race([...inFlight, new Promise((r) => setTimeout(r, 50))]);
     }
   }
+  
+  timing.availabilityMs = Date.now() - tAvail0;
+  timing.availabilityChecked = availabilityChecked;
+  timing.availabilityCacheHits = cacheHits;
+  timing.eligibleCount = eligibleItems.length;
+  timing.earlyStopReason = earlyStopReason;
 
   // Phase 3: Build results from eligible items
   const startWanted = (requestedPage - 1) * requestedPageSize;
@@ -649,12 +689,12 @@ async function handleDbFirstWheelResults(opts: {
       validationMode: "strict",
       dbIndexBuiltAt: getTechfeedIndexBuiltAt(),
     },
-    timing: debug
-      ? {
-          totalMs: Date.now() - t0,
-          scanMs: Date.now() - tScan0,
-        }
-      : undefined,
+    // Always include timing for performance monitoring
+    timing: {
+      totalMs: Date.now() - t0,
+      scanMs: Date.now() - tScan0,
+      ...timing,
+    },
     dealerlineMode: false,
   });
 }
@@ -663,9 +703,10 @@ async function handleDbFirstWheelResults(opts: {
 // Live availability (WheelPros wrapper) with short TTL cache
 // ============================================================================
 
+// OPTIMIZATION: Increased cache TTL from 10 min to 30 min (inventory doesn't change that fast)
 const AVAIL_CACHE_TTL_MS = Math.max(
   60_000,
-  Math.min(30 * 60_000, Number(process.env.WT_AVAIL_CACHE_TTL_MS || "600000") || 600_000)
+  Math.min(60 * 60_000, Number(process.env.WT_AVAIL_CACHE_TTL_MS || "1800000") || 1800_000)
 );
 const availCache = new Map<
   string,
@@ -689,8 +730,8 @@ async function fetchLiveAvailabilityForSku(opts: {
   customerNumber?: string;
   companyCode?: string;
 }): Promise<
-  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string }
-  | { ok: false; checkedAt: string }
+  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string; fromCache?: boolean }
+  | { ok: false; checkedAt: string; fromCache?: boolean }
 > {
   const checkedAt = new Date().toISOString();
   const sku = String(opts.sku || "").trim();
@@ -706,12 +747,14 @@ async function fetchLiveAvailabilityForSku(opts: {
           localQty: cached.localQty || 0,
           globalQty: cached.globalQty || 0,
           checkedAt: cached.checkedAt,
+          fromCache: true,
         }
-      : { ok: false, checkedAt: cached.checkedAt };
+      : { ok: false, checkedAt: cached.checkedAt, fromCache: true };
   }
 
   const ac = new AbortController();
-  const timeoutMs = Math.max(500, Math.min(2500, Number(process.env.WT_AVAIL_TIMEOUT_MS || "1400") || 1400));
+  // OPTIMIZATION: Reduced timeout from 1400ms to 800ms for faster failure
+  const timeoutMs = Math.max(400, Math.min(1500, Number(process.env.WT_AVAIL_TIMEOUT_MS || "800") || 800));
   const to = setTimeout(() => ac.abort(), timeoutMs);
 
   try {
