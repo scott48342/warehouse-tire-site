@@ -7,11 +7,14 @@ export function AutoSubmitSelect({
   defaultValue,
   options,
   className,
+  resetPage = false,
 }: {
   name: string;
   defaultValue: string;
   options: Array<{ value: string; label: string }>;
   className?: string;
+  /** Reset page to 1 when value changes (useful for filters) */
+  resetPage?: boolean;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -24,7 +27,20 @@ export function AutoSubmitSelect({
       className={className}
       onChange={(e) => {
         const next = new URLSearchParams(sp.toString());
-        next.set(name, e.currentTarget.value);
+        const val = e.currentTarget.value;
+        
+        // If empty value, remove the param entirely (cleaner URLs)
+        if (val === "") {
+          next.delete(name);
+        } else {
+          next.set(name, val);
+        }
+        
+        // Reset to page 1 when filter changes
+        if (resetPage) {
+          next.set("page", "1");
+        }
+        
         router.push(`${pathname}?${next.toString()}`);
       }}
     >

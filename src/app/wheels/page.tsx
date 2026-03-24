@@ -1334,86 +1334,42 @@ export default async function WheelsPage({
               </div>
             ) : null}
 
-            {/* BRAND - moved to top */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
+            {/* BRAND - auto-submit on change */}
+            <FilterGroup title="Brand">
+              <AutoSubmitSelect
+                name="brand_cd"
+                defaultValue={brandCd}
+                resetPage
+                className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                options={[
+                  { value: "", label: "All brands" },
+                  ...brandOptions.slice(0, 120).map((b) => ({
+                    value: b.code,
+                    label: b.desc,
+                  })),
+                ]}
+              />
+            </FilterGroup>
 
-              <input type="hidden" name="finish" value={finish} />
-              <input type="hidden" name="diameter" value={diameterParam} />
-              <input type="hidden" name="width" value={widthParam} />
-              <input type="hidden" name="boltPattern" value={boltPatternParam} />
-              <input type="hidden" name="priceMin" value={priceMinRaw} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw} />
-              <input type="hidden" name="offsetMin" value={offsetMinRaw} />
-              <input type="hidden" name="offsetMax" value={offsetMaxRaw} />
-
-              <FilterGroup title="Brand">
-                <select
-                  name="brand_cd"
-                  defaultValue={brandCd}
-                  className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                >
-                  <option value="">All brands</option>
-                  {brandOptions.slice(0, 120).map((b) => (
-                    <option key={b.code} value={b.code}>
-                      {b.desc}
-                    </option>
-                  ))}
-                </select>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply brand
-                </button>
-              </FilterGroup>
-            </form>
-
-            {/* DIAMETER - moved to second */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
-
-              <input type="hidden" name="brand_cd" value={brandCd} />
-              <input type="hidden" name="finish" value={finish} />
-              <input type="hidden" name="width" value={widthParam} />
-              <input type="hidden" name="boltPattern" value={boltPatternParam} />
-              <input type="hidden" name="priceMin" value={priceMinRaw} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw} />
-              <input type="hidden" name="offsetMin" value={offsetMinRaw} />
-              <input type="hidden" name="offsetMax" value={offsetMaxRaw} />
-
-              <FilterGroup title="Diameter">
-                <select
-                  name="diameter"
-                  defaultValue={diameterParam}
-                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                >
-                  <option value="">All diameters</option>
-                  {diameterBuckets.slice(0, 80).map((b) => {
+            {/* DIAMETER - auto-submit on change */}
+            <FilterGroup title="Diameter">
+              <AutoSubmitSelect
+                name="diameter"
+                defaultValue={diameterParam}
+                resetPage
+                className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
+                options={[
+                  { value: "", label: "All diameters" },
+                  ...diameterBuckets.slice(0, 80).map((b) => {
                     const label = String(b.value).replace(/\.0$/, "");
-                    return (
-                      <option key={b.value} value={b.value}>
-                        {label}{b.count != null ? ` (${b.count})` : ""}
-                      </option>
-                    );
-                  })}
-                </select>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply diameter
-                </button>
-              </FilterGroup>
-            </form>
+                    return {
+                      value: b.value,
+                      label: `${label}${b.count != null ? ` (${b.count})` : ""}`,
+                    };
+                  }),
+                ]}
+              />
+            </FilterGroup>
 
             {/* PRICE */}
             <form action={basePath} method="get">
@@ -1455,44 +1411,22 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            {/* FINISH */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
-
-              <input type="hidden" name="brand_cd" value={brandCd} />
-              <input type="hidden" name="diameter" value={diameterParam} />
-              <input type="hidden" name="width" value={widthParam} />
-              <input type="hidden" name="boltPattern" value={boltPatternParam} />
-              <input type="hidden" name="priceMin" value={priceMinRaw} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw} />
-              <input type="hidden" name="offsetMin" value={offsetMinRaw} />
-              <input type="hidden" name="offsetMax" value={offsetMaxRaw} />
-
-              <FilterGroup title="Finish">
-                <select
-                  name="finish"
-                  defaultValue={finish}
-                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                >
-                  <option value="">All finishes</option>
-                  {finishBuckets.slice(0, 80).map((b) => (
-                    <option key={b.value} value={b.value}>
-                      {b.value}{b.count != null ? ` (${b.count})` : ""}
-                    </option>
-                  ))}
-                </select>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply finish
-                </button>
-              </FilterGroup>
-            </form>
+            {/* FINISH - auto-submit on change */}
+            <FilterGroup title="Finish">
+              <AutoSubmitSelect
+                name="finish"
+                defaultValue={finish}
+                resetPage
+                className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
+                options={[
+                  { value: "", label: "All finishes" },
+                  ...finishBuckets.slice(0, 80).map((b) => ({
+                    value: b.value,
+                    label: `${b.value}${b.count != null ? ` (${b.count})` : ""}`,
+                  })),
+                ]}
+              />
+            </FilterGroup>
 
             {/* OFFSET */}
             <form action={basePath} method="get">
@@ -1534,39 +1468,22 @@ export default async function WheelsPage({
               </FilterGroup>
             </form>
 
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
-
-              <input type="hidden" name="brand_cd" value={brandCd} />
-              <input type="hidden" name="finish" value={finish} />
-              <input type="hidden" name="diameter" value={diameterParam} />
-              <input type="hidden" name="boltPattern" value={boltPatternParam} />
-
-              <FilterGroup title="Width">
-                <select
-                  name="width"
-                  defaultValue={widthParam}
-                  className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                >
-                  <option value="">All widths</option>
-                  {widthBuckets.slice(0, 80).map((b) => (
-                    <option key={b.value} value={b.value}>
-                      {b.value}{b.count != null ? ` (${b.count})` : ""}
-                    </option>
-                  ))}
-                </select>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply width
-                </button>
-              </FilterGroup>
-            </form>
+            {/* WIDTH - auto-submit on change */}
+            <FilterGroup title="Width">
+              <AutoSubmitSelect
+                name="width"
+                defaultValue={widthParam}
+                resetPage
+                className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
+                options={[
+                  { value: "", label: "All widths" },
+                  ...widthBuckets.slice(0, 80).map((b) => ({
+                    value: b.value,
+                    label: `${b.value}${b.count != null ? ` (${b.count})` : ""}`,
+                  })),
+                ]}
+              />
+            </FilterGroup>
           </aside>
 
           <section>
