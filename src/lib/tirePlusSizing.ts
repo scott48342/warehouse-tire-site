@@ -365,6 +365,120 @@ export function formatCandidateLabel(candidate: PlusSizeCandidate): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// AFTERMARKET TIRE SIZING (NO OEM REFERENCE)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Generate tire size candidates when NO OEM reference is available.
+ * Used for aftermarket wheels on vehicles without fitment data.
+ * 
+ * Uses wheel diameter and width to suggest appropriate tire sizes
+ * from the tire database, based on industry-standard fitment rules.
+ * 
+ * @param wheelDiameter - Wheel rim diameter in inches (e.g., 18)
+ * @param wheelWidth - Wheel width in inches (e.g., 9.0)
+ * @param vehicleClass - Optional hint: 'truck', 'suv', 'car' for better suggestions
+ */
+export function generateAftermarketTireSizes(
+  wheelDiameter: number,
+  wheelWidth?: number,
+  vehicleClass?: 'truck' | 'suv' | 'car'
+): {
+  sizes: string[];
+  candidates: PlusSizeCandidate[];
+  method: 'aftermarket-fallback';
+  debug: {
+    wheelDiameter: number;
+    wheelWidth: number | null;
+    vehicleClass: string | null;
+    sizesMatchingRim: number;
+    sizesMatchingWidth: number;
+  };
+} {
+  // Get all tire sizes matching the wheel diameter
+  const sizesMatchingRim = tireSizesData.metric.filter((size) => {
+    const parsed = parseMetricSize(size);
+    return parsed && parsed.rim === wheelDiameter;
+  });
+
+  // If wheel width provided, filter to compatible widths
+  // Standard rule: tire width (mm) / 25.4 × 0.7 to 1.0 = wheel width
+  // Inverted: tire width (mm) = wheel width × 25.4 × 1.0 to 1.43
+  let candidates: PlusSizeCandidate[] = [];
+  
+  for (const size of sizesMatchingRim) {
+    const parsed = parseMetricSize(size);
+    if (!parsed) continue;
+    
+    // Width compatibility check
+    if (wheelWidth && wheelWidth > 0) {
+      const minTireWidth = Math.floor(wheelWidth * 25.4 * 0.95);  // Wheel width × ~24mm per inch (min)
+      const maxTireWidth = Math.ceil(wheelWidth * 25.4 * 1.35);   // Wheel width × ~34mm per inch (max)
+      
+      if (parsed.width < minTireWidth || parsed.width > maxTireWidth) {
+        continue;
+      }
+    }
+    
+    // Calculate overall diameter for reference
+    const od = calculateOdFromParsed(parsed);
+    
+    // For trucks/SUVs, prefer larger aspect ratios (60-75) for comfort
+    // For cars, prefer lower aspect ratios (35-55) for performance
+    let aspectScore = 0;
+    if (vehicleClass === 'truck' || vehicleClass === 'suv') {
+      if (parsed.aspect >= 60 && parsed.aspect <= 75) aspectScore = 2;
+      else if (parsed.aspect >= 50 && parsed.aspect <= 80) aspectScore = 1;
+    } else if (vehicleClass === 'car') {
+      if (parsed.aspect >= 35 && parsed.aspect <= 55) aspectScore = 2;
+      else if (parsed.aspect >= 30 && parsed.aspect <= 65) aspectScore = 1;
+    } else {
+      // Default: prefer middle-of-road aspect ratios
+      if (parsed.aspect >= 45 && parsed.aspect <= 70) aspectScore = 1;
+    }
+    
+    candidates.push({
+      size,
+      rimDiameter: parsed.rim,
+      overallDiameter: Math.round(od * 100) / 100,
+      odDiffPercent: 0, // No reference, so no diff
+      odDiffInches: 0,
+      isPrimary: aspectScore >= 2,
+      isAcceptable: aspectScore >= 1,
+      widthMm: parsed.width,
+      aspectRatio: parsed.aspect,
+    });
+  }
+  
+  // Sort: primary first, then by width (common sizes tend to be rounder numbers)
+  candidates.sort((a, b) => {
+    if (a.isPrimary !== b.isPrimary) return a.isPrimary ? -1 : 1;
+    // Prefer common widths (divisible by 5)
+    const aCommon = a.widthMm % 5 === 0 ? 0 : 1;
+    const bCommon = b.widthMm % 5 === 0 ? 0 : 1;
+    if (aCommon !== bCommon) return aCommon - bCommon;
+    // Then by width
+    return a.widthMm - b.widthMm;
+  });
+  
+  // Limit to reasonable number of suggestions
+  const limitedCandidates = candidates.slice(0, 20);
+  
+  return {
+    sizes: limitedCandidates.map(c => c.size),
+    candidates: limitedCandidates,
+    method: 'aftermarket-fallback',
+    debug: {
+      wheelDiameter,
+      wheelWidth: wheelWidth ?? null,
+      vehicleClass: vehicleClass ?? null,
+      sizesMatchingRim: sizesMatchingRim.length,
+      sizesMatchingWidth: candidates.length,
+    },
+  };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // DATABASE STATS (for debugging)
 // ─────────────────────────────────────────────────────────────────────────────
 

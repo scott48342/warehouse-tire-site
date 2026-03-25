@@ -12,6 +12,7 @@ import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { PackageSummary } from "@/components/PackageSummary";
 import {
   generatePlusSizeCandidates,
+  generateAftermarketTireSizes,
   type PlusSizeCandidate,
 } from "@/lib/tirePlusSizing";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
@@ -466,45 +467,83 @@ export default async function TiresPage({
   // compute plus-size tire candidates using the real tire-sizes.json database.
   // Uses overall diameter matching (±3% acceptable, ±2% primary/recommended).
   const plusSizeResult = (() => {
-    // Only compute plus-sizes when:
-    // 1. We have a valid wheel diameter
-    // 2. No OEM sizes match the wheel diameter
-    // 3. We have at least one OEM size to calculate from
+    // Only compute plus-sizes when we have a valid wheel diameter and no OEM match
     if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
     if (oemWheelMatchedSizes.length > 0) return null; // OEM sizes exist, no need
-    if (tireSizesStrict.length === 0) return null; // No OEM sizes to calculate from
     
-    // Use the first OEM size as the reference for plus-sizing
-    const referenceOemSize = tireSizesStrict[0];
+    // If we have OEM sizes, use them as reference for plus-sizing
+    if (tireSizesStrict.length > 0) {
+      const referenceOemSize = tireSizesStrict[0];
+      const result = generatePlusSizeCandidates(
+        referenceOemSize,
+        Math.round(wheelDiaNum),
+        {
+          wheelWidth: Number.isFinite(wheelWidthNum) ? wheelWidthNum : undefined,
+          maxOdDiffPercent: 3,
+          primaryOdDiffPercent: 2,
+        }
+      );
+      return result;
+    }
     
-    // Generate plus-size candidates
-    const result = generatePlusSizeCandidates(
-      referenceOemSize,
+    // No OEM sizes available - use aftermarket fallback
+    // This happens when fitment data is missing/incomplete
+    return null; // Will be handled by aftermarketFallback below
+  })();
+  
+  // AFTERMARKET FALLBACK: When NO OEM data exists at all,
+  // suggest tire sizes based purely on wheel specs and vehicle class.
+  // This is critical for aftermarket wheel builds on vehicles without fitment data.
+  const aftermarketFallback = (() => {
+    // Only use fallback when:
+    // 1. We have a wheel diameter
+    // 2. No OEM sizes available at all (not just no match for this diameter)
+    // 3. Plus-sizing couldn't help (no reference)
+    if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
+    if (oemWheelMatchedSizes.length > 0) return null; // Have OEM match
+    if (plusSizeResult && plusSizeResult.acceptableCandidates.length > 0) return null; // Plus-sizing worked
+    
+    // Detect vehicle class from model name for better suggestions
+    const modelLower = String(model || "").toLowerCase();
+    let vehicleClass: 'truck' | 'suv' | 'car' = 'car';
+    if (/f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick/i.test(modelLower)) {
+      vehicleClass = 'truck';
+    } else if (/wrangler|bronco|4runner|tahoe|suburban|expedition|explorer|highlander|pilot|pathfinder|telluride|palisade|defender|grand cherokee|durango|sequoia|armada|escalade|yukon/i.test(modelLower)) {
+      vehicleClass = 'suv';
+    }
+    
+    // Use aftermarket sizing function for wheel-based suggestions
+    return generateAftermarketTireSizes(
       Math.round(wheelDiaNum),
-      {
-        wheelWidth: Number.isFinite(wheelWidthNum) ? wheelWidthNum : undefined,
-        maxOdDiffPercent: 3,
-        primaryOdDiffPercent: 2,
-      }
+      Number.isFinite(wheelWidthNum) ? wheelWidthNum : undefined,
+      vehicleClass
     );
-    
-    return result;
   })();
 
   // Plus-size suggestions: prioritize primary (±2%), then acceptable (±3%)
+  // Also include aftermarket fallback if plus-sizing didn't work
   const plusSizeSuggestions: string[] = plusSizeResult
     ? plusSizeResult.acceptableCandidates.map((c) => c.size)
-    : [];
+    : (aftermarketFallback ? aftermarketFallback.sizes : []);
 
   // Plus-size candidates with full metadata (for display)
   const plusSizeCandidates: PlusSizeCandidate[] = plusSizeResult
     ? plusSizeResult.acceptableCandidates
-    : [];
+    : (aftermarketFallback ? aftermarketFallback.candidates : []);
 
   // Primary plus-sizes (±2% OD) - recommended
   const primaryPlusSizes: string[] = plusSizeResult
     ? plusSizeResult.primaryCandidates.map((c) => c.size)
-    : [];
+    : (aftermarketFallback ? aftermarketFallback.candidates.filter((c: any) => c.isPrimary).map((c: any) => c.size) : []);
+
+  // Track sizing method for display/logging
+  const sizingMethod = oemWheelMatchedSizes.length > 0 
+    ? 'oem' 
+    : (plusSizeResult ? 'plus-size' : (aftermarketFallback ? 'aftermarket-fallback' : 'none'));
+  
+  if (aftermarketFallback) {
+    console.log('[tires/page] 🔧 AFTERMARKET FALLBACK USED:', aftermarketFallback.debug);
+  }
 
   let lockedSizes: string[] = [];
   const noOemSizesForWheel = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0 && oemWheelMatchedSizes.length === 0;
@@ -518,11 +557,10 @@ export default async function TiresPage({
       // OEM sizes exist for this wheel diameter - use them
       lockedSizes = oemWheelMatchedSizes;
     } else if (plusSizeSuggestions.length > 0) {
-      // No OEM sizes match, but we have plus-size candidates - use those
+      // No OEM sizes match, but we have plus-size or aftermarket candidates - use those
       lockedSizes = plusSizeSuggestions;
     }
-    // If neither OEM nor plus-sizes are available, lockedSizes stays empty
-    // This will show a "no compatible sizes" message
+    // If neither OEM nor plus-sizes nor aftermarket available, lockedSizes stays empty
   }
 
   // IMPORTANT: When wheel diameter is specified, ONLY show matching sizes
@@ -1639,28 +1677,63 @@ export default async function TiresPage({
                 ))
               ) : (
                 <div className="col-span-full rounded-2xl border border-amber-200 bg-amber-50 p-6 text-sm">
-                  {noOemSizesForWheel && Number.isFinite(wheelDiaNum) ? (
+                  {noOemSizesForWheel && Number.isFinite(wheelDiaNum) && hasPlusSizes ? (
+                    /* We have aftermarket/plus-size suggestions but no tires in stock */
                     <div>
                       <div className="font-extrabold text-amber-900 text-base">
-                        No OEM tire sizes for {Math.round(wheelDiaNum)}&quot; wheels
+                        No tires currently in stock for {Math.round(wheelDiaNum)}&quot; wheels
                       </div>
                       <div className="mt-2 text-amber-800">
-                        Your {year} {make} {model} doesn&apos;t have factory {Math.round(wheelDiaNum)}&quot; wheel options.
-                        The OEM sizes are: <span className="font-semibold">{tireSizes.join(", ") || "not found"}</span>
+                        We searched for sizes compatible with your {Math.round(wheelDiaNum)}&quot; wheels 
+                        ({plusSizeSuggestions.slice(0, 3).join(", ")}{plusSizeSuggestions.length > 3 ? "..." : ""})
+                        but couldn&apos;t find matching tires in stock.
+                      </div>
+                      <div className="mt-3 text-amber-700">
+                        <strong>Try:</strong>
+                        <ul className="mt-1 list-disc pl-5 space-y-1">
+                          <li>Call us at 248-332-4120 for availability</li>
+                          <li>Try a different wheel diameter</li>
+                        </ul>
+                      </div>
+                      <div className="mt-4 flex gap-2">
+                        <a href="/wheels" className="inline-flex h-10 items-center rounded-xl bg-amber-600 px-4 text-sm font-extrabold text-white hover:bg-amber-700">
+                          ← Choose different wheels
+                        </a>
+                        <a href="tel:+12483324120" className="inline-flex h-10 items-center rounded-xl border border-amber-600 px-4 text-sm font-extrabold text-amber-700 hover:bg-amber-50">
+                          📞 Call us
+                        </a>
+                      </div>
+                    </div>
+                  ) : noOemSizesForWheel && Number.isFinite(wheelDiaNum) ? (
+                    /* No OEM data AND no aftermarket suggestions */
+                    <div>
+                      <div className="font-extrabold text-amber-900 text-base">
+                        No tire data for {Math.round(wheelDiaNum)}&quot; wheels
+                      </div>
+                      <div className="mt-2 text-amber-800">
+                        We don&apos;t have fitment data for {Math.round(wheelDiaNum)}&quot; wheels on your {year} {make} {model}.
+                        {tireSizes.length > 0 && (
+                          <span> Factory sizes include: <span className="font-semibold">{tireSizes.join(", ")}</span></span>
+                        )}
                       </div>
                       <div className="mt-3 text-amber-700">
                         <strong>Options:</strong>
                         <ul className="mt-1 list-disc pl-5 space-y-1">
-                          <li>Choose wheels matching your OEM tire sizes ({tireSizes.map(s => {
-                            const m = s.match(/R(\d{2})/);
-                            return m ? m[1] + '"' : null;
-                          }).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ") || "check fitment"})</li>
-                          <li>Call us for plus-size tire recommendations</li>
+                          {tireSizes.length > 0 && (
+                            <li>Choose wheels matching your OEM tire sizes ({tireSizes.map(s => {
+                              const m = s.match(/R(\d{2})/);
+                              return m ? m[1] + '"' : null;
+                            }).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ")})</li>
+                          )}
+                          <li>Call us at 248-332-4120 for help finding the right tires</li>
                         </ul>
                       </div>
-                      <div className="mt-4">
+                      <div className="mt-4 flex gap-2">
                         <a href="/wheels" className="inline-flex h-10 items-center rounded-xl bg-amber-600 px-4 text-sm font-extrabold text-white hover:bg-amber-700">
                           ← Choose different wheels
+                        </a>
+                        <a href="tel:+12483324120" className="inline-flex h-10 items-center rounded-xl border border-amber-600 px-4 text-sm font-extrabold text-amber-700 hover:bg-amber-50">
+                          📞 Call us
                         </a>
                       </div>
                     </div>
