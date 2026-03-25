@@ -74,6 +74,12 @@ async function getTransporter(settings: EmailSettings) {
       user: settings.smtpUser,
       pass: settings.smtpPass,
     },
+    // Required for Office 365 and other modern SMTP servers
+    requireTLS: settings.smtpPort === 587,
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false,
+    },
   });
 }
 

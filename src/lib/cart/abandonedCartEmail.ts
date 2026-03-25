@@ -25,8 +25,12 @@ const { Pool } = pg;
 // Configuration
 // ============================================================================
 
-/** Safe mode: log emails instead of sending (for staging) */
-const EMAIL_SAFE_MODE = process.env.EMAIL_SAFE_MODE !== "false";
+/** 
+ * Safe mode: log emails instead of sending (for staging)
+ * Set EMAIL_SAFE_MODE=true to enable safe mode
+ * Default: false (production - actually sends emails)
+ */
+const EMAIL_SAFE_MODE = process.env.EMAIL_SAFE_MODE === "true";
 
 /** Minimum cart value to send emails */
 const MIN_CART_VALUE_FOR_EMAIL = 10;
@@ -125,6 +129,12 @@ async function getTransporter(settings: EmailSettings) {
     auth: {
       user: settings.smtpUser,
       pass: settings.smtpPass,
+    },
+    // Required for Office 365 and other modern SMTP servers
+    requireTLS: settings.smtpPort === 587,
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false,
     },
   });
 }
