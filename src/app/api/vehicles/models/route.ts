@@ -41,14 +41,19 @@ const COMMON_MODELS: Record<string, string[]> = {
 };
 
 /**
- * GET /api/vehicles/models?make=Buick
+ * GET /api/vehicles/models?make=Buick&year=2006
  * 
- * Returns available models from catalog, with API fallback.
+ * Returns available models from catalog, filtered by year when provided.
  * Populates catalog on API fetch for future requests.
+ * 
+ * IMPORTANT: When year is provided, only returns models that were produced in that year.
+ * This prevents invalid combinations like "2006 Buick Encore" (Encore started in 2013).
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const make = url.searchParams.get("make");
+  const yearParam = url.searchParams.get("year");
+  const year = yearParam ? parseInt(yearParam, 10) : null;
 
   if (!make) {
     return NextResponse.json({ results: [] });
@@ -56,13 +61,40 @@ export async function GET(req: Request) {
 
   const makeSlug = normalizeMake(make);
 
+  /**
+   * Filter models by year if provided.
+   * Each model has a `years` array containing valid production years.
+   */
+  function filterByYear(models: { name: string; years?: number[] }[]): string[] {
+    if (!year || isNaN(year)) {
+      // No year filter - return all models
+      return models.map(m => m.name).sort();
+    }
+    
+    // Filter to only models that have this year in their valid years array
+    const filtered = models
+      .filter(m => {
+        const years = m.years || [];
+        // If no years data, include it (fallback behavior)
+        if (years.length === 0) return true;
+        return years.includes(year);
+      })
+      .map(m => m.name)
+      .sort();
+    
+    console.log(`[models] Year filter: ${year} ${make} → ${filtered.length}/${models.length} models`);
+    return filtered;
+  }
+
   // Try catalog first (DB)
   const catalogModels = await catalogStore.getModels(makeSlug);
   if (catalogModels.length > 0) {
-    console.log(`[models] CATALOG HIT: ${make} → ${catalogModels.length} models`);
+    const filtered = filterByYear(catalogModels);
+    console.log(`[models] CATALOG HIT: ${year || "all"} ${make} → ${filtered.length} models`);
     return NextResponse.json({ 
-      results: catalogModels.map(m => m.name).sort(),
+      results: filtered,
       source: "catalog",
+      yearFiltered: !!year,
     }, {
       headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
     });
@@ -76,10 +108,12 @@ export async function GET(req: Request) {
       const count = await catalogStore.populateModels(foundMake.slug);
       if (count > 0) {
         const models = await catalogStore.getModels(foundMake.slug);
-        console.log(`[models] API → CATALOG: ${make} → ${models.length} models (with years)`);
+        const filtered = filterByYear(models);
+        console.log(`[models] API → CATALOG: ${year || "all"} ${make} → ${filtered.length} models (with years)`);
         return NextResponse.json({ 
-          results: models.map(m => m.name).sort(),
+          results: filtered,
           source: "api",
+          yearFiltered: !!year,
         }, {
           headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
         });
@@ -89,14 +123,16 @@ export async function GET(req: Request) {
     console.error(`[models] API error for ${make}:`, err?.message);
   }
 
-  // Final fallback: static list
+  // Final fallback: static list (no year filtering available)
   const staticKey = makeSlug.replace(/-/g, "");
   const staticModels = COMMON_MODELS[staticKey] || COMMON_MODELS[makeSlug];
   if (staticModels) {
-    console.log(`[models] STATIC fallback: ${make} → ${staticModels.length} models`);
+    console.log(`[models] STATIC fallback: ${make} → ${staticModels.length} models (no year filter)`);
     return NextResponse.json({ 
       results: staticModels,
       source: "static",
+      yearFiltered: false,
+      warning: year ? "Year filtering not available for static fallback" : undefined,
     }, {
       headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
     });
