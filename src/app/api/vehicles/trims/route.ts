@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import crypto from "crypto";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify } from "@/lib/fitment-db/keys";
 import * as wheelSizeApi from "@/lib/wheelSizeApi";
+import * as catalogStore from "@/lib/catalog-store";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import submodelSupplements from "@/data/submodel-supplements.json";
 
@@ -289,6 +290,24 @@ export async function GET(req: Request) {
   }
 
   const debug = url.searchParams.get("debug") === "1";
+  const makeSlug = normalizeMake(make);
+
+  // -------------------------------------------------------------------------
+  // Step 0: Validate year against catalog (prevent invalid combos like 2006 Buick Encore)
+  // -------------------------------------------------------------------------
+  
+  const catalogModel = catalogStore.findModel(makeSlug, model);
+  if (catalogModel && catalogModel.years.length > 0) {
+    if (!catalogModel.years.includes(year)) {
+      console.warn(`[trims] INVALID YEAR: ${year} ${make} ${model} - valid years: ${catalogModel.years.slice(0, 5).join(", ")}...`);
+      return NextResponse.json({
+        results: [],
+        source: "invalid",
+        error: `${year} is not a valid year for ${make} ${model}`,
+        validYears: catalogModel.years.slice(0, 10),
+      });
+    }
+  }
 
   // -------------------------------------------------------------------------
   // Step 1: Call Wheel-Size API
