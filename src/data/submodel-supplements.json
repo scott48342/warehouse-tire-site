@@ -13,6 +13,23 @@
         { "value": "ltz", "label": "LTZ" }
       ]
     },
+    "avalanche 1500": {
+      "2002-2006": [
+        { "value": "z66", "label": "Z66" },
+        { "value": "z71", "label": "Z71" }
+      ],
+      "2007-2013": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ]
+    },
+    "avalanche 2500": {
+      "2002-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "z71", "label": "Z71" }
+      ]
+    },
     "silverado": {
       "1999-2006": [
         { "value": "wt", "label": "WT (Work Truck)" },
