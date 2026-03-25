@@ -2,24 +2,16 @@
  * Abandoned Cart Email Service
  * 
  * Sends recovery emails to customers who abandon their carts.
- * 
- * Features:
- * - Safe mode (logs instead of sends) for staging
- * - Rate limiting (max 1 email per cart per interval)
- * - Duplicate prevention
- * - Recovery tracking
+ * Uses Resend API for reliable email delivery.
  * 
  * @created 2026-03-25
  */
 
-import nodemailer from "nodemailer";
-import pg from "pg";
+import { Resend } from "resend";
 import { BRAND } from "@/lib/brand";
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts, type AbandonedCart } from "@/lib/fitment-db/schema";
 import { eq, and, isNull, isNotNull, lt, sql } from "drizzle-orm";
-
-const { Pool } = pg;
 
 // ============================================================================
 // Configuration
@@ -47,19 +39,12 @@ const EMAIL_COOLDOWN_HOURS = 12;
 /** Base URL for recovery links */
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
 
+/** From email address */
+const FROM_EMAIL = process.env.EMAIL_FROM || "orders@warehousetiredirect.com";
+
 // ============================================================================
 // Types
 // ============================================================================
-
-type EmailSettings = {
-  enabled: boolean;
-  smtpHost: string;
-  smtpPort: number;
-  smtpUser: string;
-  smtpPass: string;
-  fromEmail: string;
-  fromName: string;
-};
 
 export interface EmailResult {
   success: boolean;
@@ -79,64 +64,16 @@ export interface ProcessEmailsResult {
 }
 
 // ============================================================================
-// Email Settings
+// Resend Client
 // ============================================================================
 
-function getPool() {
-  const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
-  if (!url) throw new Error("Missing DATABASE_URL");
-  return new Pool({
-    connectionString: url,
-    ssl: { rejectUnauthorized: false },
-    max: 2,
-  });
-}
-
-async function getEmailSettings(): Promise<EmailSettings | null> {
-  const pool = getPool();
-  try {
-    const { rows } = await pool.query(
-      `SELECT value FROM admin_settings WHERE key = 'email'`
-    );
-
-    if (rows.length === 0) return null;
-
-    const val = rows[0].value;
-    if (!val || !val.enabled) return null;
-
-    return {
-      enabled: !!val.enabled,
-      smtpHost: val.smtpHost || "",
-      smtpPort: parseInt(val.smtpPort, 10) || 587,
-      smtpUser: val.smtpUser || "",
-      smtpPass: val.smtpPass || "",
-      fromEmail: val.fromEmail || "",
-      fromName: val.fromName || BRAND.name,
-    };
-  } catch (err) {
-    console.error("[abandonedCartEmail] Failed to get settings:", err);
+function getResendClient(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("[abandonedCartEmail] RESEND_API_KEY not configured");
     return null;
-  } finally {
-    await pool.end();
   }
-}
-
-async function getTransporter(settings: EmailSettings) {
-  return nodemailer.createTransport({
-    host: settings.smtpHost,
-    port: settings.smtpPort,
-    secure: settings.smtpPort === 465,
-    auth: {
-      user: settings.smtpUser,
-      pass: settings.smtpPass,
-    },
-    // Required for Office 365 and other modern SMTP servers
-    requireTLS: settings.smtpPort === 587,
-    tls: {
-      ciphers: "SSLv3",
-      rejectUnauthorized: false,
-    },
-  });
+  return new Resend(apiKey);
 }
 
 // ============================================================================
@@ -175,10 +112,6 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
   const itemCount = cart.itemCount || items.length;
   const totalValue = Number(cart.estimatedTotal) || 0;
 
-  const subjectLine = isSecondEmail
-    ? "Still thinking it over? Your cart is waiting 🛞"
-    : "Your cart is waiting 🛞";
-
   const introText = isSecondEmail
     ? `We noticed you left some great items in your cart. They're still waiting for you!`
     : `Hey ${customerName}! Looks like you left some items in your cart. We've saved them for you.`;
@@ -189,7 +122,6 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${subjectLine}</title>
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5;">
 
@@ -220,20 +152,20 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
 
       <!-- Cart Summary -->
       <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+        <div style="margin-bottom: 12px;">
           <span style="color: #6b7280;">Items in cart:</span>
-          <span style="font-weight: 600; color: #1f2937;">${itemCount} items</span>
+          <span style="font-weight: 600; color: #1f2937; float: right;">${itemCount} items</span>
         </div>
-        <div style="display: flex; justify-content: space-between; padding-top: 12px; border-top: 1px solid #e5e7eb;">
+        <div style="padding-top: 12px; border-top: 1px solid #e5e7eb;">
           <span style="color: #6b7280;">Cart total:</span>
-          <span style="font-size: 24px; font-weight: 700; color: #dc2626;">${formatMoney(totalValue)}</span>
+          <span style="font-size: 24px; font-weight: 700; color: #dc2626; float: right;">${formatMoney(totalValue)}</span>
         </div>
       </div>
 
       <!-- CTA Button -->
       <div style="text-align: center; margin: 32px 0;">
         <a href="${recoveryLink}" 
-           style="display: inline-block; background: #dc2626; color: white; padding: 16px 48px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 18px; box-shadow: 0 4px 12px rgba(220,38,38,0.3);">
+           style="display: inline-block; background: #dc2626; color: white; padding: 16px 48px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 18px;">
           Resume Your Order →
         </a>
       </div>
@@ -247,13 +179,10 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
     <!-- Footer -->
     <div style="background: #f9fafb; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb;">
       <p style="margin: 0 0 8px; color: #6b7280; font-size: 14px;">
-        Questions? Reply to this email or call us.
+        Questions? Reply to this email or call us at ${BRAND.phone.callDisplay}
       </p>
       <p style="margin: 0; color: #9ca3af; font-size: 12px;">
         ${BRAND.name}
-      </p>
-      <p style="margin: 16px 0 0; color: #9ca3af; font-size: 11px;">
-        <a href="${BASE_URL}/unsubscribe?cart=${cart.cartId}" style="color: #9ca3af;">Unsubscribe from cart reminders</a>
       </p>
     </div>
 
@@ -261,42 +190,6 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
 
 </body>
 </html>
-  `.trim();
-}
-
-function buildEmailText(cart: AbandonedCart, isSecondEmail: boolean): string {
-  const recoveryLink = generateRecoveryLink(cart.cartId);
-  const customerName = cart.customerFirstName || "there";
-  
-  const vehicleLabel = cart.vehicleYear
-    ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel}${cart.vehicleTrim ? ` ${cart.vehicleTrim}` : ""}`
-    : null;
-
-  const itemCount = cart.itemCount || 0;
-  const totalValue = Number(cart.estimatedTotal) || 0;
-
-  return `
-${BRAND.name}
-${"=".repeat(40)}
-
-${isSecondEmail ? "Still thinking it over?" : "You left something behind!"}
-
-Hey ${customerName}!
-
-${isSecondEmail 
-  ? "We noticed you left some great items in your cart. They're still waiting for you!"
-  : "Looks like you left some items in your cart. We've saved them for you."}
-
-${vehicleLabel ? `Your Vehicle: ${vehicleLabel}\n` : ""}
-Items in cart: ${itemCount}
-Cart total: ${formatMoney(totalValue)}
-
-Resume your order here:
-${recoveryLink}
-
-Questions? Reply to this email or call us.
-
-${BRAND.name}
   `.trim();
 }
 
@@ -345,7 +238,6 @@ export async function sendRecoveryEmail(
     ? `Still thinking it over? Your cart is waiting 🛞`
     : `Your cart is waiting 🛞`;
   const html = buildEmailHtml(cart, isSecondEmail);
-  const text = buildEmailText(cart, isSecondEmail);
 
   // Safe mode: log instead of send
   if (EMAIL_SAFE_MODE) {
@@ -356,42 +248,36 @@ export async function sendRecoveryEmail(
     console.log(`  Value: ${formatMoney(cartValue)}`);
     console.log(`  Recovery Link: ${generateRecoveryLink(cartId)}`);
 
-    // Still update the tracking fields
     await updateEmailSentTracking(cartId, isSecondEmail);
-
     return { success: true, cartId, action: "logged", reason: "safe_mode" };
   }
 
-  // Get email settings
-  const settings = await getEmailSettings();
-  if (!settings) {
-    console.log("[abandonedCartEmail] Email not configured");
-    return { success: false, cartId, action: "skipped", reason: "email_not_configured" };
-  }
-
-  if (!settings.smtpHost || !settings.smtpUser || !settings.smtpPass) {
-    console.log("[abandonedCartEmail] SMTP settings incomplete");
-    return { success: false, cartId, action: "skipped", reason: "smtp_incomplete" };
+  // Get Resend client
+  const resend = getResendClient();
+  if (!resend) {
+    return { success: false, cartId, action: "skipped", reason: "resend_not_configured" };
   }
 
   try {
-    const transporter = await getTransporter(settings);
-    const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
-
-    const result = await transporter.sendMail({
-      from: fromAddress,
+    const { data, error } = await resend.emails.send({
+      from: `${BRAND.name} <${FROM_EMAIL}>`,
       to: cart.customerEmail,
       subject,
       html,
-      text,
+      replyTo: BRAND.email,
     });
 
-    console.log(`[abandonedCartEmail] Sent to ${cart.customerEmail}, messageId: ${result.messageId}`);
+    if (error) {
+      console.error(`[abandonedCartEmail] Resend error for ${cart.customerEmail}:`, error);
+      return { success: false, cartId, action: "skipped", reason: error.message };
+    }
+
+    console.log(`[abandonedCartEmail] Sent to ${cart.customerEmail}, id: ${data?.id}`);
 
     // Update tracking
     await updateEmailSentTracking(cartId, isSecondEmail);
 
-    return { success: true, cartId, action: "sent", messageId: result.messageId };
+    return { success: true, cartId, action: "sent", messageId: data?.id };
   } catch (err: any) {
     console.error(`[abandonedCartEmail] Failed to send to ${cart.customerEmail}:`, err.message);
     return { success: false, cartId, action: "skipped", reason: err.message };
