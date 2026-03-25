@@ -18,6 +18,11 @@ interface AbandonedCart {
   lastActivityAt: string;
   abandonedAt: string | null;
   recoveredAt: string | null;
+  // Email tracking
+  firstEmailSentAt: string | null;
+  secondEmailSentAt: string | null;
+  emailSentCount: number;
+  recoveredAfterEmail: boolean;
 }
 
 interface Stats {
@@ -174,6 +179,55 @@ export default function AbandonedCartsPage() {
     }
   };
 
+  const handleSendTestEmail = async (cartId: string) => {
+    if (!confirm("Send recovery email to this cart?")) return;
+    
+    try {
+      const res = await fetch("/api/admin/abandoned-carts/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "test", cartId }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        const action = data.result?.action || "processed";
+        alert(`Email ${action}${data.safeMode ? " (SAFE MODE - logged only)" : ""}`);
+        fetchData();
+      } else {
+        alert(`Error: ${data.error || data.result?.reason || "Unknown error"}`);
+      }
+    } catch (e: any) {
+      alert(`Error: ${e.message}`);
+    }
+  };
+
+  const handleProcessEmails = async () => {
+    if (!confirm("Process all pending abandoned cart emails?")) return;
+    
+    try {
+      setProcessing(true);
+      const res = await fetch("/api/admin/abandoned-carts/emails", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "process" }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        const msg = data.safeMode
+          ? `Safe Mode: ${data.logged} emails logged (not sent)`
+          : `Sent: ${data.sent}, Skipped: ${data.skipped}`;
+        alert(`Processed ${data.processed} carts. ${msg}`);
+        fetchData();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e: any) {
+      alert(`Error: ${e.message}`);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       {/* Header */}
@@ -188,6 +242,13 @@ export default function AbandonedCartsPage() {
           </p>
         </div>
         <div className="flex items-center gap-3">
+          <button
+            onClick={handleProcessEmails}
+            disabled={processing}
+            className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg disabled:opacity-50"
+          >
+            {processing ? "Processing..." : "📧 Process Emails"}
+          </button>
           <button
             onClick={handleProcessAbandoned}
             disabled={processing}
@@ -347,6 +408,11 @@ export default function AbandonedCartsPage() {
                             Order: {cart.recoveredOrderId.slice(0, 8)}...
                           </div>
                         )}
+                        {cart.recoveredAfterEmail && (
+                          <div className="text-xs text-green-400 mt-1">
+                            ✉️ Recovered via email
+                          </div>
+                        )}
                       </td>
                       <td className="px-4 py-3">
                         <div className="text-neutral-300">{formatTimeAgo(cart.lastActivityAt)}</div>
@@ -355,9 +421,18 @@ export default function AbandonedCartsPage() {
                             Abandoned {formatTimeAgo(cart.abandonedAt)}
                           </div>
                         )}
+                        {/* Email status */}
+                        {cart.emailSentCount > 0 && (
+                          <div className="text-xs text-purple-400 mt-1">
+                            📧 {cart.emailSentCount} email{cart.emailSentCount > 1 ? "s" : ""} sent
+                            {cart.firstEmailSentAt && (
+                              <span className="text-neutral-500"> • {formatTimeAgo(cart.firstEmailSentAt)}</span>
+                            )}
+                          </div>
+                        )}
                       </td>
                       <td className="px-4 py-3">
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-col gap-1">
                           {cart.status === "active" && (
                             <button
                               onClick={() => handleTestAbandon(cart.cartId)}
@@ -365,6 +440,15 @@ export default function AbandonedCartsPage() {
                               title="Test: Mark as abandoned"
                             >
                               Test Abandon
+                            </button>
+                          )}
+                          {cart.status === "abandoned" && cart.email && cart.emailSentCount === 0 && (
+                            <button
+                              onClick={() => handleSendTestEmail(cart.cartId)}
+                              className="text-xs text-purple-400 hover:text-purple-300"
+                              title="Send recovery email"
+                            >
+                              Send Email
                             </button>
                           )}
                           {cart.recoveredOrderId && (

@@ -89,6 +89,11 @@ export async function GET(req: Request) {
       lastActivityAt: cart.lastActivityAt,
       abandonedAt: cart.abandonedAt,
       recoveredAt: cart.recoveredAt,
+      // Email tracking
+      firstEmailSentAt: cart.firstEmailSentAt,
+      secondEmailSentAt: cart.secondEmailSentAt,
+      emailSentCount: cart.emailSentCount || 0,
+      recoveredAfterEmail: cart.recoveredAfterEmail || false,
     }));
 
     const response: any = {

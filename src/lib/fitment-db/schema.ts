@@ -405,6 +405,13 @@ export const abandonedCarts = pgTable(
     source: varchar("source", { length: 50 }), // web, mobile, etc.
     userAgent: text("user_agent"),
     ipAddress: varchar("ip_address", { length: 45 }),
+    
+    // Email tracking
+    firstEmailSentAt: timestamp("first_email_sent_at"),
+    secondEmailSentAt: timestamp("second_email_sent_at"),
+    emailSentCount: integer("email_sent_count").notNull().default(0),
+    recoveredAfterEmail: boolean("recovered_after_email").default(false),
+    unsubscribed: boolean("unsubscribed").default(false),
   },
   (table) => ({
     // Unique cart id
