@@ -461,6 +461,17 @@ async function handleDbFirstWheelResults(opts: {
     const v = validateWheel(wheelSpec, envelope);
     if (v.fitmentClass === "excluded") continue;
     
+    // HARD diameter filter: Exclude wheels outside the allowed diameter range
+    // This is critical to prevent showing undersized wheels (e.g., 16" on Chrysler 300C)
+    // The validateWheel function uses diameter as a SOFT rule (classification only),
+    // but we need HARD exclusion for customer-facing results.
+    if (wheelSpec.diameter !== undefined) {
+      const wheelDia = Number(wheelSpec.diameter);
+      if (wheelDia < envelope.allowedMinDiameter || wheelDia > envelope.allowedMaxDiameter) {
+        continue; // Skip wheels outside allowed diameter range
+      }
+    }
+    
     // User-provided offset range filter (HARD filter, not classification)
     // Critical for lifted trucks: e.g., 4" lift F150 needs -18 to 0mm offset, not +35mm OEM
     if (hasUserOffsetFilter && wheelSpec.offset !== undefined) {
