@@ -42,3 +42,8 @@ next-env.d.ts
 
 # Catalog data (populated at runtime)
 data/catalog/*.json
+.vercel
+deploy-staging.ps1
+test-staging.ps1
+.env.prod
+.env.production.local

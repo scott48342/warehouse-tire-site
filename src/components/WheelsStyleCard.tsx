@@ -309,6 +309,27 @@ export function WheelsStyleCard({
             boltPattern: specLabel?.boltPattern,
           });
 
+          // Log detailed fitment result for debugging hub ring calculation
+          console.log("[WheelsStyleCard] Fitment calculation result:", {
+            wheelSku: effectiveSku,
+            wheelCenterBore: wheelCenterBore ?? "(not provided)",
+            vehicleCenterBore: dbProfile.centerBoreMm ?? "(not provided)",
+            lugNuts: {
+              status: fitmentResult.fitment?.lugNuts.status,
+              reason: fitmentResult.fitment?.lugNuts.reason,
+            },
+            hubRings: {
+              status: fitmentResult.fitment?.hubRings.status,
+              reason: fitmentResult.fitment?.hubRings.reason,
+              spec: fitmentResult.fitment?.hubRings.spec,
+            },
+            requiredItems: fitmentResult.requiredItems.map(i => ({
+              category: i.category,
+              sku: i.sku,
+              name: i.name,
+            })),
+          });
+
           // Set accessory state for UI display (even if no items to add)
           if (fitmentResult.state) {
             setAccessoryState(fitmentResult.state);

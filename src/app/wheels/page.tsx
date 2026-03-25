@@ -18,6 +18,7 @@ type Wheel = {
   diameter?: string;
   width?: string;
   offset?: string;
+  centerbore?: string; // Wheel center bore in mm (for hub ring calculation)
   imageUrl?: string;
   price?: number;
   styleKey?: string;
@@ -607,6 +608,8 @@ export default async function WheelsPage({
     const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
     const width = it?.properties?.width ? String(it.properties.width) : undefined;
     const offset = it?.properties?.offset ? String(it.properties.offset) : undefined;
+    // Wheel center bore for hub ring calculation (from TechFeed via fitment-search API)
+    const centerbore = it?.properties?.centerbore ? String(it.properties.centerbore) : undefined;
 
     const msrp = it?.prices?.msrp;
     const firstPrice = Array.isArray(msrp) ? msrp[0] : undefined;
@@ -630,6 +633,7 @@ export default async function WheelsPage({
       diameter,
       width,
       offset,
+      centerbore,
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
       styleKey,
@@ -1633,7 +1637,7 @@ export default async function WheelsPage({
                         page: String(page),
                       }}
                       dbProfile={dbProfile}
-                      wheelCenterBore={(w as any)?.centerBoreMm != null ? Number((w as any).centerBoreMm) : ((w as any)?.centerbore != null ? Number((w as any).centerbore) : undefined)}
+                      wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
                     />
                   ))}
                 </div>
@@ -1686,7 +1690,7 @@ export default async function WheelsPage({
                       page: String(page),
                     }}
                     dbProfile={dbProfile}
-                    wheelCenterBore={(w as any)?.centerBoreMm != null ? Number((w as any).centerBoreMm) : ((w as any)?.centerbore != null ? Number((w as any).centerbore) : undefined)}
+                    wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
                   />
                 ))
               ) : (

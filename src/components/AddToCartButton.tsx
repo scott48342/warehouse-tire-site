@@ -77,6 +77,13 @@ export function AddToCartButton({
       sku,
       hasDbProfile: !!dbProfile,
       hasVehicle: !!vehicle,
+      wheelCenterBore: wheelCenterBore ?? "(not provided)",
+      dbProfile: dbProfile ? {
+        threadSize: dbProfile.threadSize ?? "(null)",
+        seatType: dbProfile.seatType ?? "(null)",
+        centerBoreMm: dbProfile.centerBoreMm ?? "(null)",
+        boltPattern: dbProfile.boltPattern ?? "(null)",
+      } : null,
     });
 
     // Check if we have vehicle data for accessory calculation
@@ -131,6 +138,27 @@ export function AddToCartButton({
         };
 
         const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
+        
+        // Log detailed fitment result for debugging hub ring calculation
+        console.log("[AddToCartButton] Fitment calculation result:", {
+          wheelSku: sku,
+          wheelCenterBore: wheelCenterBore ?? "(not provided)",
+          vehicleCenterBore: dbProfile.centerBoreMm ?? "(not provided)",
+          lugNuts: {
+            status: fitmentResult.fitment?.lugNuts.status,
+            reason: fitmentResult.fitment?.lugNuts.reason,
+          },
+          hubRings: {
+            status: fitmentResult.fitment?.hubRings.status,
+            reason: fitmentResult.fitment?.hubRings.reason,
+            spec: fitmentResult.fitment?.hubRings.spec,
+          },
+          requiredItems: fitmentResult.requiredItems.map(i => ({
+            category: i.category,
+            sku: i.sku,
+            name: i.name,
+          })),
+        });
         
         if (fitmentResult.state) {
           setAccessoryState(fitmentResult.state);
