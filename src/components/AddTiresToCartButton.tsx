@@ -26,6 +26,8 @@ type AddTiresToCartButtonProps = {
   className?: string;
   variant?: "primary" | "secondary" | "compact";
   showPriceInButton?: boolean;
+  /** Supplier source (e.g., "tirewire:atd", "km") - for internal tracking */
+  source?: string;
 };
 
 export function AddTiresToCartButton({
@@ -45,6 +47,7 @@ export function AddTiresToCartButton({
   className = "",
   variant = "primary",
   showPriceInButton = true,
+  source,
 }: AddTiresToCartButtonProps) {
   const { addItem } = useCart();
   const [isAdding, setIsAdding] = useState(false);
@@ -67,6 +70,7 @@ export function AddTiresToCartButton({
       quantity,
       vehicle,
       staggered,
+      source,
     };
 
     setTimeout(() => {
@@ -138,6 +142,7 @@ export function QuickAddTireButton({
   unitPrice,
   vehicle,
   quantity = 4,
+  source,
 }: {
   sku: string;
   brand: string;
@@ -155,6 +160,8 @@ export function QuickAddTireButton({
     modification?: string;
   };
   quantity?: number;
+  /** Supplier source for internal tracking */
+  source?: string;
 }) {
   const { addItem, hasWheels } = useCart();
   const [isAdding, setIsAdding] = useState(false);
@@ -177,6 +184,7 @@ export function QuickAddTireButton({
         unitPrice,
         quantity,
         vehicle,
+        source,
       });
       setIsAdding(false);
     }, 150);

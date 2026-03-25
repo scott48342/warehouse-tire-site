@@ -190,6 +190,29 @@ function formatMoney(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
 }
 
+/**
+ * Format supplier source code into readable name
+ * e.g., "tirewire:atd" → "ATD", "km" → "K&M/Keystone", "wheelpros" → "WheelPros"
+ */
+function formatSupplierName(source: string): string {
+  if (!source) return "";
+  
+  const s = source.toLowerCase();
+  
+  // Tirewire suppliers
+  if (s.includes("tirewire:atd") || s === "atd") return "ATD";
+  if (s.includes("tirewire:ntw") || s === "ntw") return "NTW";
+  if (s.includes("tirewire:usautoforce") || s === "usautoforce" || s === "usaf") return "US AutoForce";
+  if (s.includes("tirewire")) return "TireWeb";
+  
+  // Other suppliers
+  if (s === "km" || s.includes("keystone") || s.includes("meyer")) return "K&M/Keystone";
+  if (s === "wheelpros" || s === "wp") return "WheelPros";
+  
+  // Fallback: capitalize
+  return source.charAt(0).toUpperCase() + source.slice(1);
+}
+
 function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, isAdmin: boolean): string {
   const { customer, vehicle, lines, totals } = snapshot;
 
@@ -205,11 +228,16 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
 
   const renderLineItem = (l: typeof lines[0]) => {
     const ext = (l.unitPriceUsd * l.qty * 100);
+    const source = l.meta?.source;
+    // Format supplier name for display (admin only)
+    const supplierLabel = source ? formatSupplierName(source) : null;
+    
     return `
       <tr>
         <td style="padding: 8px 0; border-bottom: 1px solid #eee;">
           <div style="font-weight: 500;">${l.name}</div>
           ${l.sku ? `<div style="font-size: 12px; color: #666;">SKU: ${l.sku}</div>` : ""}
+          ${isAdmin && supplierLabel ? `<div style="font-size: 11px; color: #dc2626; font-weight: 600;">📦 Supplier: ${supplierLabel}</div>` : ""}
         </td>
         <td style="padding: 8px 0; border-bottom: 1px solid #eee; text-align: center;">${l.qty}</td>
         <td style="padding: 8px 0; border-bottom: 1px solid #eee; text-align: right;">${formatMoney(ext)}</td>

@@ -114,6 +114,7 @@ export function AddToCartButton({
       fitmentClass,
       vehicle,
       staggered,
+      source: "wheelpros", // All wheels come from WheelPros
     };
 
     // Small delay for visual feedback

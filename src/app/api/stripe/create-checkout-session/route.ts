@@ -48,6 +48,8 @@ export async function POST(req: Request) {
           wheelSku: i.wheelSku,
           spec: i.spec,
           meta: i.meta,
+          // Supplier source for internal tracking (shown in admin email)
+          source: i.source,
         };
 
         return { kind, name, sku, unitPriceUsd, qty, taxable, meta };

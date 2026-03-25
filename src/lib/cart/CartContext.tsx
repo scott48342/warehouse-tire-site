@@ -30,6 +30,8 @@ export type CartWheelItem = {
     modification?: string;
   };
   staggered?: boolean;
+  /** Supplier source (e.g., "wheelpros") - for internal use only */
+  source?: string;
 };
 
 export type CartTireItem = {
@@ -53,6 +55,8 @@ export type CartTireItem = {
     modification?: string;
   };
   staggered?: boolean;
+  /** Supplier source (e.g., "tirewire:atd", "km") - for internal use only */
+  source?: string;
 };
 
 export type CartItem = CartWheelItem | CartTireItem | CartAccessoryItem;
