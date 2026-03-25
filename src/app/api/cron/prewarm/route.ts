@@ -40,18 +40,23 @@ export async function GET(req: Request) {
   
   const t0 = Date.now();
   
-  console.log("[cron/prewarm] Starting scheduled prewarm job...");
+  // Only run Priority 1 targets in cron (must complete in 300s)
+  // Priority 1 = F-150, Silverado 1500, Ram 1500 (3 patterns × 150 SKUs = ~450 checks)
+  // Full prewarm can be triggered manually via /api/warmup/availability?action=run
+  const priority1Targets = PREWARM_TARGETS.filter(t => t.priority === 1);
+  
+  console.log(`[cron/prewarm] Starting scheduled prewarm job (${priority1Targets.length} priority-1 targets)...`);
   
   try {
     const result = await runPrewarmJob({
-      // Use all configured targets
-      targets: PREWARM_TARGETS,
-      // Standard settings
-      maxSkusPerPattern: 200,
+      // Only Priority 1 targets for cron (keeps under 5 min)
+      targets: priority1Targets,
+      // Reduced SKUs per pattern to ensure completion
+      maxSkusPerPattern: 150,
       concurrency: 8,
     });
     
-    console.log(`[cron/prewarm] Completed in ${result.duration}ms:`, {
+    console.log(`[cron/prewarm] Priority-1 completed in ${result.duration}ms:`, {
       targets: result.targetsProcessed,
       checked: result.totalSkusChecked,
       available: result.totalSkusAvailable,
