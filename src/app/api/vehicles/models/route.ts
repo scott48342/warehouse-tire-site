@@ -56,8 +56,8 @@ export async function GET(req: Request) {
 
   const makeSlug = normalizeMake(make);
 
-  // Try catalog first
-  const catalogModels = catalogStore.getModels(makeSlug);
+  // Try catalog first (DB)
+  const catalogModels = await catalogStore.getModels(makeSlug);
   if (catalogModels.length > 0) {
     console.log(`[models] CATALOG HIT: ${make} → ${catalogModels.length} models`);
     return NextResponse.json({ 
@@ -75,7 +75,7 @@ export async function GET(req: Request) {
       // Populate catalog with models AND their valid years
       const count = await catalogStore.populateModels(foundMake.slug);
       if (count > 0) {
-        const models = catalogStore.getModels(foundMake.slug);
+        const models = await catalogStore.getModels(foundMake.slug);
         console.log(`[models] API → CATALOG: ${make} → ${models.length} models (with years)`);
         return NextResponse.json({ 
           results: models.map(m => m.name).sort(),

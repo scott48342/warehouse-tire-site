@@ -30,8 +30,8 @@ export async function GET(req: Request) {
 
   const makeSlug = normalizeMake(make);
   
-  // Try catalog first
-  const catalogModel = catalogStore.findModel(makeSlug, model);
+  // Try catalog first (DB)
+  const catalogModel = await catalogStore.findModel(makeSlug, model);
   if (catalogModel && catalogModel.years.length > 0) {
     console.log(`[years] CATALOG HIT: ${make} ${model} → ${catalogModel.years.length} years`);
     return NextResponse.json({ 

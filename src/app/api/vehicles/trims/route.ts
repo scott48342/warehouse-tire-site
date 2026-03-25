@@ -296,7 +296,7 @@ export async function GET(req: Request) {
   // Step 0: Validate year against catalog (prevent invalid combos like 2006 Buick Encore)
   // -------------------------------------------------------------------------
   
-  const catalogModel = catalogStore.findModel(makeSlug, model);
+  const catalogModel = await catalogStore.findModel(makeSlug, model);
   if (catalogModel && catalogModel.years.length > 0) {
     if (!catalogModel.years.includes(year)) {
       console.warn(`[trims] INVALID YEAR: ${year} ${make} ${model} - valid years: ${catalogModel.years.slice(0, 5).join(", ")}...`);
