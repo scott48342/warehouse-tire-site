@@ -317,6 +317,7 @@ export function getLogStats() {
     lastDay: {
       count: logsLastDay.length,
       bySource: groupBy(logsLastDay, "triggerSource"),
+      byEndpoint: groupBy(logsLastDay, "endpoint"),
     },
     thresholds: USAGE_THRESHOLDS,
     safeModeEnabled: WHEEL_SIZE_SAFE_MODE,
