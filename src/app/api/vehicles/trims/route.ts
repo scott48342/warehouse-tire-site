@@ -402,8 +402,12 @@ export async function GET(req: Request) {
       // Check if results are good (not just "Base" or engine codes)
       const hasGoodSubmodels = results.some(r => {
         const label = r.label.toLowerCase();
-        if (label === "base" || label === "standard") return false;
-        if (/^\d+\.\d+\s+\w+/.test(label)) return false;
+        // Skip "Base", "Standard", or labels starting with "Base ("
+        if (label === "base" || label === "standard" || label.startsWith("base (")) return false;
+        // Skip engine codes like "5.3i", "6.0i", "2.0 PHEV"
+        if (/^\d+\.\d+\s*\w*/.test(label)) return false;
+        // Skip labels that are ONLY engine codes in parens: "Base (5.3i)"
+        if (/^base\s*\([^)]+\)$/i.test(label)) return false;
         return true;
       });
 

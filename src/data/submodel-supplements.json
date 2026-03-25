@@ -1,6 +1,33 @@
 {
   "chevrolet": {
+    "avalanche": {
+      "2002-2006": [
+        { "value": "1500", "label": "1500" },
+        { "value": "1500-z66", "label": "1500 Z66" },
+        { "value": "1500-z71", "label": "1500 Z71" },
+        { "value": "2500", "label": "2500" }
+      ],
+      "2007-2013": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ]
+    },
     "silverado": {
+      "1999-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "z71", "label": "Z71" },
+        { "value": "ss", "label": "SS" }
+      ],
+      "2007-2013": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "z71", "label": "Z71" }
+      ],
       "2014-2018": [
         { "value": "wt", "label": "WT (Work Truck)" },
         { "value": "ls", "label": "LS" },
@@ -24,6 +51,20 @@
       ]
     },
     "silverado 1500": {
+      "1999-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "z71", "label": "Z71" },
+        { "value": "ss", "label": "SS" }
+      ],
+      "2007-2013": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "z71", "label": "Z71" }
+      ],
       "2014-2018": [
         { "value": "wt", "label": "WT (Work Truck)" },
         { "value": "ls", "label": "LS" },
@@ -122,6 +163,17 @@
       ]
     },
     "tahoe": {
+      "2000-2006": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "z71", "label": "Z71" }
+      ],
+      "2007-2014": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "hybrid", "label": "Hybrid" }
+      ],
       "2015-2020": [
         { "value": "ls", "label": "LS" },
         { "value": "lt", "label": "LT" },
@@ -138,6 +190,16 @@
       ]
     },
     "suburban": {
+      "2000-2006": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "z71", "label": "Z71" }
+      ],
+      "2007-2014": [
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
       "2015-2020": [
         { "value": "ls", "label": "LS" },
         { "value": "lt", "label": "LT" },
