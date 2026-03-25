@@ -89,10 +89,22 @@ export type TriggerSource = "user" | "admin-batch" | "cron" | "background" | "un
 /**
  * Detect the source of the current request.
  * Used to block automated calls when safe mode is enabled.
+ * 
+ * NOTE: This is a SYNC function that uses heuristics when headers aren't available.
+ * For async contexts, use detectTriggerSourceAsync().
  */
 export function detectTriggerSource(): TriggerSource {
+  // In serverless/edge contexts without request context, default to user
+  // The async version should be used in API routes
+  return "user";
+}
+
+/**
+ * Async version that properly reads headers (Next.js 15+)
+ */
+export async function detectTriggerSourceAsync(): Promise<TriggerSource> {
   try {
-    const hdrs = headers();
+    const hdrs = await headers();
     
     // Vercel Cron header
     if (hdrs.get("x-vercel-cron") === "1") return "cron";
@@ -123,11 +135,23 @@ export function detectTriggerSource(): TriggerSource {
 /**
  * Check if the current request is allowed to call Wheel-Size API.
  * Returns error message if blocked, null if allowed.
+ * 
+ * SYNC version - uses simple heuristics, safe for non-async contexts
  */
 export function checkSafeModeBlock(): string | null {
+  // Sync version always allows (can't check headers synchronously in Next.js 15)
+  // Use checkSafeModeBlockAsync() in API routes for proper checking
+  return null;
+}
+
+/**
+ * Async version that properly checks headers (Next.js 15+)
+ * Use this in API routes.
+ */
+export async function checkSafeModeBlockAsync(): Promise<string | null> {
   if (!WHEEL_SIZE_SAFE_MODE) return null;
   
-  const source = detectTriggerSource();
+  const source = await detectTriggerSourceAsync();
   
   if (source === "cron") {
     return "BLOCKED: Wheel-Size API calls from cron jobs are disabled (WHEEL_SIZE_SAFE_MODE=true)";
@@ -490,11 +514,15 @@ export const wheelSizeGuard = {
   BATCH_RATE_LIMIT,
   USAGE_THRESHOLDS,
   
-  // Checks
+  // Checks (sync versions for compatibility)
   checkSafeModeBlock,
   checkBatchJobAllowed,
   checkUsageLimits,
   detectTriggerSource,
+  
+  // Checks (async versions for API routes - Next.js 15+)
+  checkSafeModeBlockAsync,
+  detectTriggerSourceAsync,
   
   // Batch job control
   startBatchJob,

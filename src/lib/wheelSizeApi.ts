@@ -13,10 +13,10 @@
 
 import { normalizeModelForApi } from "./fitment-db/keys";
 import {
-  checkSafeModeBlock,
+  checkSafeModeBlockAsync,
   checkUsageLimits,
   logWheelSizeCall,
-  detectTriggerSource,
+  detectTriggerSourceAsync,
 } from "./wheelSizeGuard";
 
 const BASE_URL = "https://api.wheel-size.com/v2/";
@@ -202,7 +202,7 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   // ═══════════════════════════════════════════════════════════════════════════
   
   // 1. Safe mode check - block cron/background calls
-  const safeModeBlock = checkSafeModeBlock();
+  const safeModeBlock = await checkSafeModeBlockAsync();
   if (safeModeBlock) {
     throw new Error(safeModeBlock);
   }
@@ -238,7 +238,7 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   const text = await res.text();
   
   // Log the API call (for audit trail)
-  const triggerSource = detectTriggerSource();
+  const triggerSource = await detectTriggerSourceAsync();
   logWheelSizeCall({
     endpoint: path,
     triggerSource: triggerSource === "admin-batch" ? "admin-batch" : triggerSource === "user" ? "user" : "unknown",
