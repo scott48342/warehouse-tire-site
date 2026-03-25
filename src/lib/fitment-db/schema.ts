@@ -352,8 +352,79 @@ export const catalogSyncLog = pgTable(
 );
 
 // ============================================================================
+// abandoned_carts - Track carts for recovery and metrics
+// ============================================================================
+
+export const abandonedCarts = pgTable(
+  "abandoned_carts",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Cart identifier (generated client-side for recovery links)
+    cartId: varchar("cart_id", { length: 64 }).notNull(),
+    
+    // Session/user tracking
+    sessionId: varchar("session_id", { length: 255 }),
+    
+    // Customer info (captured during checkout)
+    customerFirstName: varchar("customer_first_name", { length: 100 }),
+    customerLastName: varchar("customer_last_name", { length: 100 }),
+    customerEmail: varchar("customer_email", { length: 255 }),
+    customerPhone: varchar("customer_phone", { length: 50 }),
+    
+    // Vehicle info (from cart items)
+    vehicleYear: varchar("vehicle_year", { length: 10 }),
+    vehicleMake: varchar("vehicle_make", { length: 100 }),
+    vehicleModel: varchar("vehicle_model", { length: 100 }),
+    vehicleTrim: varchar("vehicle_trim", { length: 255 }),
+    
+    // Cart contents
+    items: jsonb("items").notNull(), // Snapshot of cart items
+    itemCount: integer("item_count").notNull().default(0),
+    
+    // Pricing
+    subtotal: decimal("subtotal", { precision: 10, scale: 2 }).notNull().default("0"),
+    estimatedTotal: decimal("estimated_total", { precision: 10, scale: 2 }).notNull().default("0"),
+    
+    // Status: active, abandoned, recovered, expired
+    status: varchar("status", { length: 20 }).notNull().default("active"),
+    
+    // Recovery tracking
+    recoveredOrderId: varchar("recovered_order_id", { length: 255 }),
+    recoveredAt: timestamp("recovered_at"),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+    lastActivityAt: timestamp("last_activity_at").notNull().defaultNow(),
+    
+    // Abandonment detection
+    abandonedAt: timestamp("abandoned_at"),
+    
+    // Source info
+    source: varchar("source", { length: 50 }), // web, mobile, etc.
+    userAgent: text("user_agent"),
+    ipAddress: varchar("ip_address", { length: 45 }),
+  },
+  (table) => ({
+    // Unique cart id
+    cartIdIdx: uniqueIndex("abandoned_carts_cart_id_idx").on(table.cartId),
+    // Status filtering
+    statusIdx: index("abandoned_carts_status_idx").on(table.status),
+    // Customer lookup
+    emailIdx: index("abandoned_carts_email_idx").on(table.customerEmail),
+    // Time-based queries
+    lastActivityIdx: index("abandoned_carts_last_activity_idx").on(table.lastActivityAt),
+    createdAtIdx: index("abandoned_carts_created_at_idx").on(table.createdAt),
+  })
+);
+
+// ============================================================================
 // Type exports for Drizzle
 // ============================================================================
+
+export type AbandonedCart = typeof abandonedCarts.$inferSelect;
+export type NewAbandonedCart = typeof abandonedCarts.$inferInsert;
 
 export type CatalogMake = typeof catalogMakes.$inferSelect;
 export type NewCatalogMake = typeof catalogMakes.$inferInsert;

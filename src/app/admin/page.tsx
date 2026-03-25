@@ -1,5 +1,6 @@
 import Link from "next/link";
 import pg from "pg";
+import { getStats as getCartStats } from "@/lib/cart/abandonedCartService";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -19,6 +20,20 @@ function getPool() {
 async function getStats() {
   const pool = getPool();
   try {
+    // Fetch cart stats in parallel
+    const cartStatsPromise = getCartStats().catch(err => {
+      console.warn("[admin] Error fetching cart stats:", err);
+      return {
+        active: 0,
+        abandoned: 0,
+        recovered: 0,
+        expired: 0,
+        abandonedValue: 0,
+        recoveredValue: 0,
+        recentAbandoned: [],
+      };
+    });
+
     const [todayRes, weekRes, totalRes, flaggedRes, errorsRes, issuesRes] = await Promise.all([
       pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE`),
       pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE - INTERVAL '7 days'`),
@@ -57,6 +72,9 @@ async function getStats() {
         AND created_at >= CURRENT_DATE - INTERVAL '24 hours'
     `);
 
+    // Wait for cart stats
+    const cartStats = await cartStatsPromise;
+
     return {
       ordersToday: parseInt(todayRes.rows[0]?.count || "0", 10),
       ordersWeek: parseInt(weekRes.rows[0]?.count || "0", 10),
@@ -74,6 +92,7 @@ async function getStats() {
         maxSearchTime: Math.round(parseFloat(perfRes.rows[0]?.max_search_time || "0")),
         totalSearches: parseInt(perfRes.rows[0]?.total_searches || "0", 10),
       },
+      carts: cartStats,
     };
   } catch (err) {
     console.error("[admin] Error fetching stats:", err);
@@ -86,6 +105,7 @@ async function getStats() {
       issues: { searchErrors: 0, warnings: 0, fitmentIssues: 0 },
       recentIssues: [],
       performance: { avgSearchTime: 0, maxSearchTime: 0, totalSearches: 0 },
+      carts: { active: 0, abandoned: 0, recovered: 0, expired: 0, abandonedValue: 0, recoveredValue: 0, recentAbandoned: [] },
     };
   } finally {
     await pool.end();
@@ -240,6 +260,70 @@ export default async function AdminDashboard() {
             </div>
           )}
         </div>
+      </div>
+
+      {/* Abandoned Carts Section */}
+      <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <span>🛒</span> Cart Tracking
+          </h2>
+          <Link href="/admin/abandoned-carts" className="text-sm text-red-400 hover:text-red-300">
+            View all →
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <CartMetricCard
+            label="Active Carts"
+            value={stats.carts.active}
+            color="green"
+          />
+          <CartMetricCard
+            label="Abandoned"
+            value={stats.carts.abandoned}
+            subValue={stats.carts.abandonedValue > 0 ? formatCurrency(stats.carts.abandonedValue) : undefined}
+            color="yellow"
+            alert={stats.carts.abandoned > 0}
+          />
+          <CartMetricCard
+            label="Recovered"
+            value={stats.carts.recovered}
+            subValue={stats.carts.recoveredValue > 0 ? formatCurrency(stats.carts.recoveredValue) : undefined}
+            color="blue"
+          />
+          <CartMetricCard
+            label="Recovery Rate"
+            value={stats.carts.abandoned + stats.carts.recovered > 0 
+              ? `${Math.round((stats.carts.recovered / (stats.carts.abandoned + stats.carts.recovered)) * 100)}%`
+              : "—"}
+            color="neutral"
+          />
+        </div>
+        {stats.carts.recentAbandoned && stats.carts.recentAbandoned.length > 0 && (
+          <div className="mt-4 pt-4 border-t border-neutral-700">
+            <div className="text-xs text-neutral-400 mb-2">Recent Abandoned Carts</div>
+            <div className="space-y-1">
+              {stats.carts.recentAbandoned.slice(0, 3).map((cart: any) => (
+                <div key={cart.id} className="flex items-center justify-between text-sm">
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400">⚠️</span>
+                    <span className="text-neutral-300">
+                      {cart.customerEmail || `Cart ${cart.cartId.slice(0, 8)}...`}
+                    </span>
+                    {cart.vehicleYear && (
+                      <span className="text-neutral-500 text-xs">
+                        ({cart.vehicleYear} {cart.vehicleMake} {cart.vehicleModel})
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-neutral-400 font-medium">
+                    {formatCurrency(Number(cart.estimatedTotal))}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Quick Actions */}
@@ -444,4 +528,52 @@ function RecentIssueItem({ issue }: { issue: any }) {
       <div className="text-xs text-neutral-500">{time}</div>
     </div>
   );
+}
+
+function CartMetricCard({
+  label,
+  value,
+  subValue,
+  color = "neutral",
+  alert,
+}: {
+  label: string;
+  value: number | string;
+  subValue?: string;
+  color?: "green" | "yellow" | "blue" | "neutral";
+  alert?: boolean;
+}) {
+  const colorClasses = {
+    green: "border-green-700/50 bg-green-900/20",
+    yellow: "border-yellow-700/50 bg-yellow-900/20",
+    blue: "border-blue-700/50 bg-blue-900/20",
+    neutral: "border-neutral-700 bg-neutral-700/30",
+  };
+
+  const valueColors = {
+    green: "text-green-400",
+    yellow: "text-yellow-400",
+    blue: "text-blue-400",
+    neutral: "text-white",
+  };
+
+  return (
+    <div className={`rounded-lg border p-3 ${colorClasses[color]}`}>
+      <div className="flex items-start justify-between">
+        <div className="text-xs text-neutral-400">{label}</div>
+        {alert && <span className="text-yellow-500 text-xs">●</span>}
+      </div>
+      <div className={`text-2xl font-bold mt-1 ${valueColors[color]}`}>{value}</div>
+      {subValue && <div className="text-xs text-neutral-500 mt-0.5">{subValue}</div>}
+    </div>
+  );
+}
+
+function formatCurrency(value: number): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(value);
 }

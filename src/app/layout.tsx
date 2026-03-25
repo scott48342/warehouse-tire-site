@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { MobileActionBar } from "@/components/MobileActionBar";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CartSlideout } from "@/components/CartSlideout";
+import { CartTracker } from "@/components/CartTracker";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Suspense } from "react";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${oswald.variable} antialiased`}>
         <CartProvider>
+          <CartTracker />
           <Suspense fallback={<div className="h-16" />}>
             <Header />
           </Suspense>

@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
 import { US_STATES } from "@/lib/geo/usStates";
+import { useCartTracking } from "@/lib/cart/useCartTracking";
 
 /**
  * Checkout Page
@@ -81,6 +82,20 @@ export default function CheckoutPage() {
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
+
+  // Prepare customer info for tracking (memoized to avoid re-renders)
+  const customerInfo = useMemo(() => ({
+    firstName: shipping.firstName || undefined,
+    lastName: shipping.lastName || undefined,
+    email: shipping.email || undefined,
+    phone: shipping.phone || undefined,
+  }), [shipping.firstName, shipping.lastName, shipping.email, shipping.phone]);
+
+  // Track cart state on checkout page
+  useCartTracking(items, {
+    customer: customerInfo,
+    isCheckout: true,
+  });
 
   async function startPayPalCheckout() {
     try {
