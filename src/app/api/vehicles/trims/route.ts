@@ -567,10 +567,24 @@ export async function GET(req: Request) {
       ? "API timeout (15s)" 
       : apiErr?.message || String(apiErr);
     console.error(`[trims] API error for ${year} ${make} ${model}:`, errorMsg);
+    
+    // Return a "Base" fallback trim so users can still proceed
+    // This allows the site to function even when API is rate-limited
+    const fallbackModificationId = makeSupplementId(year, make, model, "base");
+    console.log(`[trims] Returning Base fallback due to API error`);
+    
     return NextResponse.json({ 
-      results: [], 
-      source: "error" as const,
-      error: errorMsg,
+      results: [{
+        value: fallbackModificationId,
+        label: "Base",
+        modificationId: fallbackModificationId,
+        rawTrim: "base",
+      }], 
+      source: "fallback" as const,
+      count: 1,
+      overridesApplied: false,
+      cached: false,
+      apiError: errorMsg,
     });
   }
 }
