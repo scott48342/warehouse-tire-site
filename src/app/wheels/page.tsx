@@ -59,6 +59,7 @@ type WheelProsItem = {
     diameter?: string;
     width?: string;
     offset?: string;
+    centerbore?: string; // Wheel center bore in mm (from TechFeed)
   };
   prices?: {
     msrp?: WheelProsPrice[];
