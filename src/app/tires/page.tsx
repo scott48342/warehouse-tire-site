@@ -19,6 +19,8 @@ import { cleanTireDisplayTitle } from "@/lib/productFormat";
 
 type Tire = {
   source?: "wp" | "km" | "tw";
+  /** Raw source from API (e.g., "tirewire:atd", "km", "wheelpros") for cart tracking */
+  rawSource?: string;
   partNumber?: string;
   mfgPartNumber?: string;
   brand?: string;
@@ -589,6 +591,7 @@ export default async function TiresPage({
     
     return {
       source: mappedSource,
+      rawSource: t.source, // Preserve full source for cart tracking (e.g., "tirewire:atd")
       partNumber: t.partNumber,
       mfgPartNumber: t.mfgPartNumber,
       brand: t.brand,
@@ -601,8 +604,8 @@ export default async function TiresPage({
     };
   });
 
-  const itemsKm: Tire[] = (Array.isArray(km?.items) ? km.items : []).map((t: Tire) => ({ ...t, source: "km" as const }));
-  const itemsWp: Tire[] = (Array.isArray(wp?.items) ? wp.items : []).map((t: Tire) => ({ ...t, source: "wp" as const }));
+  const itemsKm: Tire[] = (Array.isArray(km?.items) ? km.items : []).map((t: Tire) => ({ ...t, source: "km" as const, rawSource: "km" }));
+  const itemsWp: Tire[] = (Array.isArray(wp?.items) ? wp.items : []).map((t: Tire) => ({ ...t, source: "wp" as const, rawSource: "wheelpros" }));
 
   // Build deduped map: TireWire first (has images), then K&M, then WP
   // Key by brand + normalized part number for matching
@@ -1946,6 +1949,7 @@ function TireCard({
                 season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
                 runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
                 xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                source: t.rawSource,
               }}
             />
           ) : (
@@ -1963,6 +1967,7 @@ function TireCard({
                 season: t.badges?.terrain ? String(t.badges.terrain) : undefined,
                 runFlat: Boolean(t.description && /\b(RFT|EMT|ROF|RUN\s*-?FLAT)\b/i.test(String(t.description))),
                 xl: Boolean(t.description && /\bXL\b/i.test(String(t.description))),
+                source: t.rawSource,
               }}
             />
           )
@@ -1976,6 +1981,7 @@ function TireCard({
             unitPrice={t.cost + 50}
             vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
             quantity={4}
+            source={t.rawSource}
           />
         ) : (
           <a href={BRAND.links.tel} className="rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700">

@@ -15,6 +15,8 @@ export type SelectedTire = {
   season?: string;
   runFlat?: boolean;
   xl?: boolean;
+  /** Supplier source (e.g., "tirewire:atd", "km", "wheelpros") for internal tracking */
+  source?: string;
 };
 
 export function SelectTireButtonAxle({
@@ -111,6 +113,7 @@ export function SelectTireButtonAxle({
             quantity: axle === "front" ? 2 : 2, // 2 per axle for staggered
             staggered: true,
             vehicle: vehicle || undefined,
+            source: tire.source,
           });
           console.log(`[SelectTireButtonAxle] ${axle} tire added to cart successfully`);
         } else {

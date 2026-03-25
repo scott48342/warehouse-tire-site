@@ -15,6 +15,8 @@ export type SelectedTire = {
   season?: string;
   runFlat?: boolean;
   xl?: boolean;
+  /** Supplier source (e.g., "tirewire:atd", "km", "wheelpros") for internal tracking */
+  source?: string;
 };
 
 export function SelectTireButton({
@@ -94,6 +96,7 @@ export function SelectTireButton({
             unitPrice: tire.price || 0,
             quantity: 4,
             vehicle: vehicle || undefined,
+            source: tire.source,
           });
           console.log("[SelectTireButton] Tire added to cart successfully");
         } else {
