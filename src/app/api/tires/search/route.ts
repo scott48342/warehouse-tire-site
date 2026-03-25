@@ -496,50 +496,50 @@ function mergeTireResults(
   // Enrich K&M results with TireLibrary images
   const enrichedKmResults = enrichKmWithTireLibraryImages(kmResults, imageLookup);
   
-  // Add Tirewire results first (they have TireLibrary images)
-  for (const tire of twResults) {
+  // Helper to add/merge a tire, keeping lowest price
+  const addTire = (tire: TireResult) => {
     const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
     const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
-    if (minQty > 0 && totalQty < minQty) continue;
-    merged.set(key, tire);
-  }
-  
-  // Add K&M results if not already present (now enriched with images)
-  for (const tire of enrichedKmResults) {
-    const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
-    const totalQty = tire.quantity.primary + tire.quantity.alternate + tire.quantity.national;
-    if (minQty > 0 && totalQty < minQty) continue;
+    
+    // Skip if below minimum quantity
+    if (minQty > 0 && totalQty < minQty) return;
+    
     if (!merged.has(key)) {
-      merged.set(key, tire);
+      merged.set(key, { ...tire });
     } else {
-      // Tire exists from Tirewire - aggregate quantity if different source
       const existing = merged.get(key)!;
+      
+      // Aggregate quantities from different sources
       if (existing.source !== tire.source) {
         existing.quantity.national += tire.quantity.national;
       }
-    }
-  }
-  
-  // Add WheelPros results if not already present
-  for (const tire of wpResults) {
-    const key = normalizeProductKey(tire.mfgPartNumber, tire.brand);
-    if (!merged.has(key)) {
-      merged.set(key, tire);
-    } else {
-      // Tire exists from Tirewire/K&M - aggregate quantity if different source
-      const existing = merged.get(key)!;
-      if (existing.source !== tire.source) {
-        // Add WheelPros quantity to existing
-        existing.quantity.national += tire.quantity.national;
+      
+      // Keep the LOWEST PRICE (if the new one has a valid lower price)
+      const existingPrice = existing.cost ?? existing.price ?? Infinity;
+      const newPrice = tire.cost ?? tire.price ?? Infinity;
+      
+      if (newPrice < existingPrice && newPrice > 0) {
+        // New source has lower price - update price but keep best image
+        existing.cost = tire.cost;
+        existing.price = tire.price;
+        // Keep TireLibrary image if existing has one
+        if (!existing.imageUrl?.includes('tirelibrary') && tire.imageUrl) {
+          existing.imageUrl = tire.imageUrl;
+        }
       }
     }
-  }
+  };
   
-  // Sort by total quantity descending, then by brand
+  // Add all results - Tirewire first (best images), then K&M, then WheelPros
+  for (const tire of twResults) addTire(tire);
+  for (const tire of enrichedKmResults) addTire(tire);
+  for (const tire of wpResults) addTire(tire);
+  
+  // Sort by PRICE ascending (lowest first), then by brand
   return Array.from(merged.values()).sort((a, b) => {
-    const qtyA = a.quantity.primary + a.quantity.alternate + a.quantity.national;
-    const qtyB = b.quantity.primary + b.quantity.alternate + b.quantity.national;
-    if (qtyB !== qtyA) return qtyB - qtyA;
+    const priceA = a.cost ?? a.price ?? Infinity;
+    const priceB = b.cost ?? b.price ?? Infinity;
+    if (priceA !== priceB) return priceA - priceB;  // Lowest price first
     return (a.brand || "").localeCompare(b.brand || "");
   });
 }
