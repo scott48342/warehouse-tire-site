@@ -143,7 +143,54 @@ function toSlug(name: string): string {
   return name.toLowerCase().trim();
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// IN-MEMORY CACHE (reduces API calls dramatically)
+// ─────────────────────────────────────────────────────────────────────────────
+
+type CacheEntry<T> = {
+  data: T;
+  expiresAt: number;
+};
+
+const apiCache = new Map<string, CacheEntry<any>>();
+
+// Cache TTLs (in milliseconds)
+const CACHE_TTL = {
+  makes: 24 * 60 * 60 * 1000,      // 24 hours - makes list rarely changes
+  models: 24 * 60 * 60 * 1000,     // 24 hours - models list rarely changes
+  years: 24 * 60 * 60 * 1000,      // 24 hours - years list rarely changes
+  modifications: 12 * 60 * 60 * 1000, // 12 hours - modifications can update
+  vehicleData: 7 * 24 * 60 * 60 * 1000, // 7 days - fitment specs rarely change
+  default: 60 * 60 * 1000,         // 1 hour fallback
+};
+
+function getCacheTTL(path: string): number {
+  if (path.includes("makes")) return CACHE_TTL.makes;
+  if (path.includes("models")) return CACHE_TTL.models;
+  if (path.includes("years")) return CACHE_TTL.years;
+  if (path.includes("modifications")) return CACHE_TTL.modifications;
+  if (path.includes("search/by_model")) return CACHE_TTL.vehicleData;
+  return CACHE_TTL.default;
+}
+
+function getCacheKey(path: string, params?: Record<string, string>): string {
+  const sortedParams = params 
+    ? Object.entries(params).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => `${k}=${v}`).join("&")
+    : "";
+  return `${path}?${sortedParams}`;
+}
+
 async function apiGet<T>(path: string, params?: Record<string, string>): Promise<T> {
+  const cacheKey = getCacheKey(path, params);
+  const now = Date.now();
+  
+  // Check cache first
+  const cached = apiCache.get(cacheKey);
+  if (cached && cached.expiresAt > now) {
+    console.log(`[wheelSizeApi] CACHE HIT: ${path}`);
+    return cached.data as T;
+  }
+  
   const url = new URL(path, BASE_URL);
   url.searchParams.set("user_key", getApiKey());
   if (params) {
@@ -170,7 +217,17 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   }
 
   try {
-    return JSON.parse(text) as T;
+    const data = JSON.parse(text) as T;
+    
+    // Cache the result
+    const ttl = getCacheTTL(path);
+    apiCache.set(cacheKey, {
+      data,
+      expiresAt: now + ttl,
+    });
+    console.log(`[wheelSizeApi] CACHED: ${path} (TTL: ${Math.round(ttl / 60000)}min)`);
+    
+    return data;
   } catch (e) {
     console.error(`[wheelSizeApi] JSON parse error: ${text.slice(0, 500)}`);
     throw e;
@@ -429,4 +486,70 @@ export async function searchByRim(
 
   const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_rim/", params);
   return data.data || [];
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CACHE UTILITIES
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Get cache statistics
+ */
+export function getCacheStats(): {
+  entries: number;
+  expired: number;
+  active: number;
+  byType: Record<string, number>;
+} {
+  const now = Date.now();
+  let expired = 0;
+  let active = 0;
+  const byType: Record<string, number> = {};
+
+  for (const [key, entry] of apiCache.entries()) {
+    if (entry.expiresAt > now) {
+      active++;
+    } else {
+      expired++;
+    }
+    
+    // Categorize by type
+    const type = key.split("?")[0].split("/")[0] || "unknown";
+    byType[type] = (byType[type] || 0) + 1;
+  }
+
+  return {
+    entries: apiCache.size,
+    expired,
+    active,
+    byType,
+  };
+}
+
+/**
+ * Clear expired entries from cache
+ */
+export function pruneExpiredCache(): number {
+  const now = Date.now();
+  let pruned = 0;
+  
+  for (const [key, entry] of apiCache.entries()) {
+    if (entry.expiresAt <= now) {
+      apiCache.delete(key);
+      pruned++;
+    }
+  }
+  
+  console.log(`[wheelSizeApi] Pruned ${pruned} expired cache entries`);
+  return pruned;
+}
+
+/**
+ * Clear all cache entries
+ */
+export function clearCache(): number {
+  const count = apiCache.size;
+  apiCache.clear();
+  console.log(`[wheelSizeApi] Cleared all ${count} cache entries`);
+  return count;
 }
