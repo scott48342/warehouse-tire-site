@@ -11,9 +11,54 @@ import {
 } from "@/lib/fitmentCache";
 import { normalizeModelForApi, normalizeMake, slugify } from "@/lib/fitment-db/keys";
 import * as wheelSizeApi from "@/lib/wheelSizeApi";
+import oemSizesData from "@/data/oem-tire-sizes.json";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
+
+/**
+ * Look up static OEM tire sizes from local data file.
+ * Used as fallback when Wheel-Size API is unavailable.
+ */
+function getStaticOemSizes(year: string, make: string, model: string, modification?: string): string[] {
+  const vehicles = (oemSizesData as any).vehicles;
+  
+  // Normalize inputs
+  const makeKey = make.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const modelKey = model.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const trimKey = modification?.toLowerCase().replace(/[^a-z0-9]+/g, "-") || "";
+  
+  // Look up make
+  const makeData = vehicles[makeKey];
+  if (!makeData) return [];
+  
+  // Look up model
+  const modelData = makeData[modelKey];
+  if (!modelData) return [];
+  
+  // Look up year
+  const yearData = modelData[year];
+  if (!yearData) {
+    // Try adjacent years as fallback
+    const nearYear = modelData[String(Number(year) - 1)] || modelData[String(Number(year) + 1)];
+    if (!nearYear) return [];
+    return nearYear.default || [];
+  }
+  
+  // Look up trim, fall back to default
+  if (trimKey && yearData[trimKey]) {
+    return yearData[trimKey];
+  }
+  
+  // Try partial match on trim
+  for (const key of Object.keys(yearData)) {
+    if (key !== "default" && trimKey.includes(key)) {
+      return yearData[key];
+    }
+  }
+  
+  return yearData.default || [];
+}
 
 const BASE_URL = "https://api.wheel-size.com/v2/";
 
@@ -137,13 +182,25 @@ export async function GET(req: Request) {
     }
   }
 
-  // Check if we're in 429 cooldown
+  // Check if we're in 429 cooldown - use static fallback if available
   if (isInCooldown()) {
+    const staticSizes = getStaticOemSizes(year, make, model, modification);
+    if (staticSizes.length > 0) {
+      console.log(`[tire-sizes] API cooldown, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
+      return NextResponse.json({
+        tireSizes: staticSizes,
+        tireSizesStrict: staticSizes,
+        tireSizesAgg: [],
+        source: "static-fallback",
+        cacheStats: getCacheStats(),
+      });
+    }
+    // No static data available
     return NextResponse.json({
       tireSizes: [],
       tireSizesStrict: [],
       tireSizesAgg: [],
-      error: "Rate limited - in cooldown",
+      error: "Rate limited - in cooldown (no static fallback)",
       source: "cooldown",
       cacheStats: getCacheStats(),
     });
@@ -359,6 +416,21 @@ export async function GET(req: Request) {
     
     // Check if this is a rate limit error
     const is429 = err?.message?.includes("429") || err?.message?.includes("rate limit");
+    
+    // Try static fallback if API failed
+    const staticSizes = getStaticOemSizes(year, make, model, modification);
+    if (staticSizes.length > 0) {
+      console.log(`[tire-sizes] API error, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
+      return NextResponse.json({
+        tireSizes: staticSizes,
+        tireSizesStrict: staticSizes,
+        tireSizesAgg: [],
+        source: "static-fallback",
+        apiError: err?.message || String(err),
+        cacheStats: getCacheStats(),
+        debug,
+      });
+    }
     
     return NextResponse.json(
       { 
