@@ -1,18 +1,19 @@
 /**
- * Wheel-Size Catalog Store
+ * Wheel-Size Catalog Store (PostgreSQL)
  * 
  * Persistent storage for catalog data from Wheel-Size API.
- * ONLY stores data from catalog endpoints (makes, models, years, modifications).
+ * ONLY stores data from catalog endpoints (makes, models, years).
  * Does NOT store search results.
  * 
- * Data structure:
- * - makes: { slug, name }[]
- * - models: Map<makeSlug, { slug, name, years: number[] }[]>
- * - modifications: Map<"year:make:model", { slug, name, ... }[]>
+ * Database tables:
+ * - catalog_makes: { slug, name }
+ * - catalog_models: { make_slug, slug, name, years[] }
+ * - catalog_sync_log: Track sync timestamps
  */
 
-import fs from "fs";
-import path from "path";
+import { db } from "./fitment-db/db";
+import { catalogMakes, catalogModels, catalogSyncLog } from "./fitment-db/schema";
+import { eq, and, ilike, sql } from "drizzle-orm";
 import * as wheelSizeApi from "./wheelSizeApi";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -27,139 +28,159 @@ export interface CatalogMake {
 export interface CatalogModel {
   slug: string;
   name: string;
-  years: number[]; // Valid years for this model
+  years: number[];
 }
 
-export interface CatalogModification {
-  slug: string;
-  name: string;
-  trim?: string;
-  trimLevels?: string[];
-  engine?: string;
-  regions?: string[];
-}
-
-interface CatalogData {
-  version: number;
-  updatedAt: string;
-  makes: CatalogMake[];
-  models: Record<string, CatalogModel[]>; // keyed by makeSlug
-  modifications: Record<string, CatalogModification[]>; // keyed by "year:makeSlug:modelSlug"
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// STORAGE
-// ─────────────────────────────────────────────────────────────────────────────
-
-const CATALOG_VERSION = 1;
-// Use /tmp for Vercel serverless (no persistent filesystem except /tmp)
-const IS_VERCEL = process.env.VERCEL === "1";
-const CATALOG_DIR = IS_VERCEL 
-  ? "/tmp/catalog" 
-  : path.join(process.cwd(), "data", "catalog");
-const CATALOG_FILE = path.join(CATALOG_DIR, "wheel-size-catalog.json");
-
-// In-memory cache (populated from disk on first access)
-let catalogCache: CatalogData | null = null;
-
-function ensureDir() {
-  if (!fs.existsSync(CATALOG_DIR)) {
-    fs.mkdirSync(CATALOG_DIR, { recursive: true });
-  }
-}
-
-function loadCatalog(): CatalogData {
-  if (catalogCache) return catalogCache;
-  
-  try {
-    if (fs.existsSync(CATALOG_FILE)) {
-      const raw = fs.readFileSync(CATALOG_FILE, "utf-8");
-      catalogCache = JSON.parse(raw);
-      console.log(`[catalog-store] Loaded catalog from disk (${catalogCache?.makes?.length || 0} makes)`);
-      return catalogCache!;
-    }
-  } catch (err) {
-    console.error("[catalog-store] Error loading catalog:", err);
-  }
-  
-  // Return empty catalog
-  catalogCache = {
-    version: CATALOG_VERSION,
-    updatedAt: new Date().toISOString(),
-    makes: [],
-    models: {},
-    modifications: {},
-  };
-  return catalogCache;
-}
-
-function saveCatalog(data: CatalogData) {
-  ensureDir();
-  data.updatedAt = new Date().toISOString();
-  fs.writeFileSync(CATALOG_FILE, JSON.stringify(data, null, 2));
-  catalogCache = data;
-  console.log(`[catalog-store] Saved catalog to disk`);
-}
+// Sync interval: only re-fetch from API if data is older than this
+const SYNC_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PUBLIC API - READ
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Get all makes from catalog
+ * Get all makes from catalog (DB first, API fallback)
  */
-export function getMakes(): CatalogMake[] {
-  const catalog = loadCatalog();
-  return catalog.makes;
+export async function getMakes(): Promise<CatalogMake[]> {
+  try {
+    // Check if we have makes in DB
+    const dbMakes = await db.query.catalogMakes.findMany({
+      orderBy: (makes, { asc }) => [asc(makes.name)],
+    });
+    
+    if (dbMakes.length > 0) {
+      console.log(`[catalog-store] DB HIT: ${dbMakes.length} makes`);
+      return dbMakes.map(m => ({ slug: m.slug, name: m.name }));
+    }
+    
+    // DB miss - populate from API
+    console.log(`[catalog-store] DB MISS for makes, fetching from API...`);
+    await populateMakes();
+    
+    const freshMakes = await db.query.catalogMakes.findMany({
+      orderBy: (makes, { asc }) => [asc(makes.name)],
+    });
+    return freshMakes.map(m => ({ slug: m.slug, name: m.name }));
+  } catch (err) {
+    console.error("[catalog-store] Error getting makes:", err);
+    return [];
+  }
 }
 
 /**
- * Get models for a make from catalog
+ * Get models for a make from catalog (DB first, API fallback)
  */
-export function getModels(makeSlug: string): CatalogModel[] {
-  const catalog = loadCatalog();
-  return catalog.models[makeSlug.toLowerCase()] || [];
+export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
+  const normalizedMake = makeSlug.toLowerCase();
+  
+  try {
+    // Check if we have models in DB
+    const dbModels = await db.query.catalogModels.findMany({
+      where: eq(catalogModels.makeSlug, normalizedMake),
+      orderBy: (models, { asc }) => [asc(models.name)],
+    });
+    
+    if (dbModels.length > 0) {
+      console.log(`[catalog-store] DB HIT: ${dbModels.length} models for ${makeSlug}`);
+      return dbModels.map(m => ({ 
+        slug: m.slug, 
+        name: m.name, 
+        years: (m.years || []) as number[] 
+      }));
+    }
+    
+    // DB miss - populate from API
+    console.log(`[catalog-store] DB MISS for ${makeSlug} models, fetching from API...`);
+    await populateModels(normalizedMake);
+    
+    const freshModels = await db.query.catalogModels.findMany({
+      where: eq(catalogModels.makeSlug, normalizedMake),
+      orderBy: (models, { asc }) => [asc(models.name)],
+    });
+    return freshModels.map(m => ({ 
+      slug: m.slug, 
+      name: m.name, 
+      years: (m.years || []) as number[] 
+    }));
+  } catch (err) {
+    console.error(`[catalog-store] Error getting models for ${makeSlug}:`, err);
+    return [];
+  }
 }
 
 /**
  * Get valid years for a make/model combination
  * Returns empty array if model not found
  */
-export function getYears(makeSlug: string, modelSlug: string): number[] {
-  const models = getModels(makeSlug);
-  const model = models.find(m => m.slug.toLowerCase() === modelSlug.toLowerCase());
+export async function getYears(makeSlug: string, modelSlug: string): Promise<number[]> {
+  const model = await findModel(makeSlug, modelSlug);
   return model?.years || [];
 }
 
 /**
  * Check if a year is valid for a make/model
  */
-export function isValidYear(makeSlug: string, modelSlug: string, year: number): boolean {
-  const years = getYears(makeSlug, modelSlug);
+export async function isValidYear(makeSlug: string, modelSlug: string, year: number): Promise<boolean> {
+  const years = await getYears(makeSlug, modelSlug);
   return years.includes(year);
-}
-
-/**
- * Get modifications for a year/make/model
- */
-export function getModifications(year: number, makeSlug: string, modelSlug: string): CatalogModification[] {
-  const catalog = loadCatalog();
-  const key = `${year}:${makeSlug.toLowerCase()}:${modelSlug.toLowerCase()}`;
-  return catalog.modifications[key] || [];
 }
 
 /**
  * Find a model by name (fuzzy match)
  */
-export function findModel(makeSlug: string, modelName: string): CatalogModel | null {
-  const models = getModels(makeSlug);
-  const needle = modelName.toLowerCase().replace(/[^a-z0-9]/g, "");
+export async function findModel(makeSlug: string, modelName: string): Promise<CatalogModel | null> {
+  const normalizedMake = makeSlug.toLowerCase();
+  const normalizedModel = modelName.toLowerCase().replace(/[^a-z0-9]/g, "");
   
-  return models.find(m => {
-    const slug = m.slug.toLowerCase().replace(/[^a-z0-9]/g, "");
-    const name = m.name.toLowerCase().replace(/[^a-z0-9]/g, "");
-    return slug === needle || name === needle || slug.includes(needle) || name.includes(needle);
-  }) || null;
+  try {
+    // First try exact slug match
+    const exactMatch = await db.query.catalogModels.findFirst({
+      where: and(
+        eq(catalogModels.makeSlug, normalizedMake),
+        eq(catalogModels.slug, normalizedModel)
+      ),
+    });
+    
+    if (exactMatch) {
+      return { 
+        slug: exactMatch.slug, 
+        name: exactMatch.name, 
+        years: (exactMatch.years || []) as number[] 
+      };
+    }
+    
+    // Try case-insensitive name match
+    const nameMatch = await db.query.catalogModels.findFirst({
+      where: and(
+        eq(catalogModels.makeSlug, normalizedMake),
+        ilike(catalogModels.name, modelName)
+      ),
+    });
+    
+    if (nameMatch) {
+      return { 
+        slug: nameMatch.slug, 
+        name: nameMatch.name, 
+        years: (nameMatch.years || []) as number[] 
+      };
+    }
+    
+    // Try partial slug match
+    const models = await getModels(normalizedMake);
+    const fuzzyMatch = models.find(m => {
+      const slug = m.slug.toLowerCase().replace(/[^a-z0-9]/g, "");
+      const name = m.name.toLowerCase().replace(/[^a-z0-9]/g, "");
+      return slug === normalizedModel || 
+             name === normalizedModel || 
+             slug.includes(normalizedModel) || 
+             name.includes(normalizedModel);
+    });
+    
+    return fuzzyMatch || null;
+  } catch (err) {
+    console.error(`[catalog-store] Error finding model ${makeSlug}/${modelName}:`, err);
+    return null;
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -171,89 +192,121 @@ export function findModel(makeSlug: string, modelName: string): CatalogModel | n
  */
 export async function populateMakes(): Promise<number> {
   console.log("[catalog-store] Populating makes from API...");
-  const apiMakes = await wheelSizeApi.getMakes();
   
-  const catalog = loadCatalog();
-  catalog.makes = apiMakes.map(m => ({
-    slug: m.slug,
-    name: m.name,
-  }));
-  
-  saveCatalog(catalog);
-  console.log(`[catalog-store] Stored ${catalog.makes.length} makes`);
-  return catalog.makes.length;
+  try {
+    const apiMakes = await wheelSizeApi.getMakes();
+    
+    // Upsert all makes
+    for (const make of apiMakes) {
+      await db
+        .insert(catalogMakes)
+        .values({
+          slug: make.slug.toLowerCase(),
+          name: make.name,
+        })
+        .onConflictDoUpdate({
+          target: catalogMakes.slug,
+          set: {
+            name: make.name,
+            updatedAt: new Date(),
+          },
+        });
+    }
+    
+    // Update sync log
+    await db
+      .insert(catalogSyncLog)
+      .values({
+        entityType: "makes",
+        entityKey: "all",
+        recordCount: apiMakes.length,
+      })
+      .onConflictDoUpdate({
+        target: [catalogSyncLog.entityType, catalogSyncLog.entityKey],
+        set: {
+          syncedAt: new Date(),
+          recordCount: apiMakes.length,
+        },
+      });
+    
+    console.log(`[catalog-store] Stored ${apiMakes.length} makes`);
+    return apiMakes.length;
+  } catch (err) {
+    console.error("[catalog-store] Error populating makes:", err);
+    throw err;
+  }
 }
 
 /**
  * Fetch and store models for a make, including valid years
  */
 export async function populateModels(makeSlug: string): Promise<number> {
-  console.log(`[catalog-store] Populating models for ${makeSlug}...`);
-  const apiModels = await wheelSizeApi.getModels(makeSlug);
+  const normalizedMake = makeSlug.toLowerCase();
+  console.log(`[catalog-store] Populating models for ${normalizedMake}...`);
   
-  const catalog = loadCatalog();
-  const modelsWithYears: CatalogModel[] = [];
-  
-  for (const m of apiModels) {
-    // Fetch valid years for each model
-    try {
-      const years = await wheelSizeApi.getYears(makeSlug, m.slug);
-      modelsWithYears.push({
-        slug: m.slug,
-        name: m.name,
-        years: years.sort((a, b) => b - a), // descending
-      });
-    } catch (err) {
-      console.warn(`[catalog-store] Failed to get years for ${makeSlug}/${m.slug}:`, err);
-      modelsWithYears.push({
-        slug: m.slug,
-        name: m.name,
-        years: [],
-      });
+  try {
+    const apiModels = await wheelSizeApi.getModels(normalizedMake);
+    let count = 0;
+    
+    for (const model of apiModels) {
+      // Fetch valid years for each model
+      let years: number[] = [];
+      try {
+        years = await wheelSizeApi.getYears(normalizedMake, model.slug);
+        years = years.sort((a, b) => b - a); // descending
+      } catch (err) {
+        console.warn(`[catalog-store] Failed to get years for ${normalizedMake}/${model.slug}`);
+      }
+      
+      // Upsert model
+      await db
+        .insert(catalogModels)
+        .values({
+          makeSlug: normalizedMake,
+          slug: model.slug.toLowerCase(),
+          name: model.name,
+          years: years,
+        })
+        .onConflictDoUpdate({
+          target: [catalogModels.makeSlug, catalogModels.slug],
+          set: {
+            name: model.name,
+            years: years,
+            updatedAt: new Date(),
+          },
+        });
+      
+      count++;
     }
+    
+    // Update sync log
+    await db
+      .insert(catalogSyncLog)
+      .values({
+        entityType: "models",
+        entityKey: normalizedMake,
+        recordCount: count,
+      })
+      .onConflictDoUpdate({
+        target: [catalogSyncLog.entityType, catalogSyncLog.entityKey],
+        set: {
+          syncedAt: new Date(),
+          recordCount: count,
+        },
+      });
+    
+    console.log(`[catalog-store] Stored ${count} models for ${normalizedMake}`);
+    return count;
+  } catch (err) {
+    console.error(`[catalog-store] Error populating models for ${normalizedMake}:`, err);
+    throw err;
   }
-  
-  catalog.models[makeSlug.toLowerCase()] = modelsWithYears;
-  saveCatalog(catalog);
-  console.log(`[catalog-store] Stored ${modelsWithYears.length} models for ${makeSlug}`);
-  return modelsWithYears.length;
-}
-
-/**
- * Fetch and store modifications for a specific year/make/model
- */
-export async function populateModifications(
-  year: number,
-  makeSlug: string,
-  modelSlug: string
-): Promise<number> {
-  console.log(`[catalog-store] Populating modifications for ${year} ${makeSlug} ${modelSlug}...`);
-  
-  const apiMods = await wheelSizeApi.getModifications(makeSlug, modelSlug, year);
-  
-  const catalog = loadCatalog();
-  const key = `${year}:${makeSlug.toLowerCase()}:${modelSlug.toLowerCase()}`;
-  
-  catalog.modifications[key] = apiMods.map(m => ({
-    slug: m.slug,
-    name: m.name,
-    trim: m.trim,
-    trimLevels: m.trim_levels,
-    engine: m.engine?.capacity,
-    regions: m.regions,
-  }));
-  
-  saveCatalog(catalog);
-  console.log(`[catalog-store] Stored ${apiMods.length} modifications for ${key}`);
-  return apiMods.length;
 }
 
 /**
  * Populate common US makes and their models with years
- * This is the main initialization function
  */
 export async function populateCommonMakes(): Promise<{ makes: number; models: number }> {
-  // Focus on US market makes
   const commonMakes = [
     "acura", "audi", "bmw", "buick", "cadillac", "chevrolet", "chrysler",
     "dodge", "ford", "genesis", "gmc", "honda", "hyundai", "infiniti",
@@ -273,14 +326,17 @@ export async function populateCommonMakes(): Promise<{ makes: number; models: nu
       const count = await populateModels(makeSlug);
       totalModels += count;
       // Small delay to avoid rate limiting
-      await new Promise(r => setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, 50));
     } catch (err) {
       console.error(`[catalog-store] Failed to populate ${makeSlug}:`, err);
     }
   }
   
-  const catalog = loadCatalog();
-  return { makes: catalog.makes.length, models: totalModels };
+  const makesCount = await db.select({ count: sql<number>`count(*)` }).from(catalogMakes);
+  return { 
+    makes: Number(makesCount[0]?.count || 0), 
+    models: totalModels 
+  };
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -290,43 +346,65 @@ export async function populateCommonMakes(): Promise<{ makes: number; models: nu
 /**
  * Get catalog stats
  */
-export function getStats(): {
+export async function getStats(): Promise<{
   makes: number;
   models: number;
-  modifications: number;
-  updatedAt: string;
-} {
-  const catalog = loadCatalog();
-  return {
-    makes: catalog.makes.length,
-    models: Object.values(catalog.models).reduce((sum, arr) => sum + arr.length, 0),
-    modifications: Object.keys(catalog.modifications).length,
-    updatedAt: catalog.updatedAt,
-  };
+  lastSync: string | null;
+}> {
+  try {
+    const makesCount = await db.select({ count: sql<number>`count(*)` }).from(catalogMakes);
+    const modelsCount = await db.select({ count: sql<number>`count(*)` }).from(catalogModels);
+    
+    const lastSync = await db.query.catalogSyncLog.findFirst({
+      orderBy: (log, { desc }) => [desc(log.syncedAt)],
+    });
+    
+    return {
+      makes: Number(makesCount[0]?.count || 0),
+      models: Number(modelsCount[0]?.count || 0),
+      lastSync: lastSync?.syncedAt?.toISOString() || null,
+    };
+  } catch (err) {
+    console.error("[catalog-store] Error getting stats:", err);
+    return { makes: 0, models: 0, lastSync: null };
+  }
 }
 
 /**
- * Clear the catalog (for testing/reset)
+ * Check if sync is needed for an entity
  */
-export function clearCatalog() {
-  catalogCache = null;
-  if (fs.existsSync(CATALOG_FILE)) {
-    fs.unlinkSync(CATALOG_FILE);
+export async function needsSync(entityType: string, entityKey: string = "all"): Promise<boolean> {
+  try {
+    const syncLog = await db.query.catalogSyncLog.findFirst({
+      where: and(
+        eq(catalogSyncLog.entityType, entityType),
+        eq(catalogSyncLog.entityKey, entityKey)
+      ),
+    });
+    
+    if (!syncLog) return true;
+    
+    const age = Date.now() - syncLog.syncedAt.getTime();
+    return age > SYNC_INTERVAL_MS;
+  } catch {
+    return true;
   }
-  console.log("[catalog-store] Catalog cleared");
 }
 
 /**
  * Check if catalog has data for a make
  */
-export function hasMake(makeSlug: string): boolean {
-  const models = getModels(makeSlug);
+export async function hasMake(makeSlug: string): Promise<boolean> {
+  const models = await getModels(makeSlug);
   return models.length > 0;
 }
 
 /**
- * Invalidate in-memory cache (force reload from disk)
+ * Clear all catalog data (for testing/reset)
  */
-export function invalidateCache() {
-  catalogCache = null;
+export async function clearCatalog(): Promise<void> {
+  await db.delete(catalogModels);
+  await db.delete(catalogMakes);
+  await db.delete(catalogSyncLog);
+  console.log("[catalog-store] Catalog cleared");
 }

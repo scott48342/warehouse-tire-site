@@ -295,8 +295,74 @@ export const kmImageMappings = pgTable(
 );
 
 // ============================================================================
+// catalog_makes - Vehicle makes from Wheel-Size API
+// ============================================================================
+
+export const catalogMakes = pgTable(
+  "catalog_makes",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    slug: varchar("slug", { length: 100 }).notNull().unique(),
+    name: varchar("name", { length: 100 }).notNull(),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    slugIdx: index("catalog_makes_slug_idx").on(table.slug),
+  })
+);
+
+// ============================================================================
+// catalog_models - Models with their valid years
+// ============================================================================
+
+export const catalogModels = pgTable(
+  "catalog_models",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    makeSlug: varchar("make_slug", { length: 100 }).notNull(),
+    slug: varchar("slug", { length: 100 }).notNull(),
+    name: varchar("name", { length: 100 }).notNull(),
+    years: integer("years").array().notNull().default([]),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    makeSlugIdx: index("catalog_models_make_slug_idx").on(table.makeSlug),
+    uniqueMakeModel: uniqueIndex("catalog_models_make_model_idx").on(table.makeSlug, table.slug),
+  })
+);
+
+// ============================================================================
+// catalog_sync_log - Track when catalog data was last synced
+// ============================================================================
+
+export const catalogSyncLog = pgTable(
+  "catalog_sync_log",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    entityType: varchar("entity_type", { length: 50 }).notNull(),
+    entityKey: varchar("entity_key", { length: 255 }),
+    syncedAt: timestamp("synced_at").notNull().defaultNow(),
+    recordCount: integer("record_count").notNull().default(0),
+  },
+  (table) => ({
+    entityIdx: uniqueIndex("catalog_sync_log_entity_idx").on(table.entityType, table.entityKey),
+  })
+);
+
+// ============================================================================
 // Type exports for Drizzle
 // ============================================================================
+
+export type CatalogMake = typeof catalogMakes.$inferSelect;
+export type NewCatalogMake = typeof catalogMakes.$inferInsert;
+
+export type CatalogModel = typeof catalogModels.$inferSelect;
+export type NewCatalogModel = typeof catalogModels.$inferInsert;
+
+export type CatalogSyncLog = typeof catalogSyncLog.$inferSelect;
+export type NewCatalogSyncLog = typeof catalogSyncLog.$inferInsert;
 
 export type KmImageMapping = typeof kmImageMappings.$inferSelect;
 export type NewKmImageMapping = typeof kmImageMappings.$inferInsert;
