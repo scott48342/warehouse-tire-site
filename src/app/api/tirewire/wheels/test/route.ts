@@ -12,7 +12,8 @@ import { NextResponse } from "next/server";
 import { 
   searchWheelsTirewire, 
   tirewireWheelToUnified,
-  testWheelConnection 
+  testWheelConnection,
+  getWheelElements,
 } from "@/lib/tirewire/wheel-client";
 import { getEnabledConnections } from "@/lib/tirewire/client";
 
@@ -41,6 +42,17 @@ export async function GET(req: Request) {
       return NextResponse.json({
         ok: true,
         connections: results,
+      });
+    }
+    
+    // Get wheel elements (available filters) for a connection
+    if (action === "elements") {
+      const connId = Number(url.searchParams.get("connectionId")) || 488677; // ATD default
+      const elements = await getWheelElements(connId);
+      return NextResponse.json({
+        ok: true,
+        connectionId: connId,
+        ...elements,
       });
     }
     

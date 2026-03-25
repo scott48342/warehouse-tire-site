@@ -349,41 +349,150 @@ export function tirewireWheelToUnified(wheel: TirewireWheel, provider: string): 
 
 // ============ Test/Debug ============
 
-export async function testWheelConnection(connectionId: number): Promise<{
+/**
+ * Get available wheel filter values (brands, diameters, etc.)
+ * This helps determine if a connection has wheel inventory.
+ */
+export async function getWheelElements(connectionId: number): Promise<{
   success: boolean;
-  wheelCount: number;
-  sampleBrands: string[];
+  brands: string[];
+  diameters: number[];
+  finishes: string[];
   error?: string;
 }> {
   try {
     const creds = await getTirewireCredentials();
     if (!creds) {
-      return { success: false, wheelCount: 0, sampleBrands: [], error: "No credentials" };
+      return { success: false, brands: [], diameters: [], finishes: [], error: "No credentials" };
     }
     
-    // Search for 20" wheels as a test
-    const soapRequest = buildGetWheelsByWheelElementsRequest(
-      creds.accessKey,
-      creds.groupToken,
-      connectionId,
-      { rimDiameter: 20, excludeZeroStock: true }
-    );
+    const soapRequest = `<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:wheels="http://ws.tirewire.com/connectionscenter/wheelsservice"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <wheels:GetWheelElements>
+      <wheels:options>
+        <wheels:ConnectionID>${connectionId}</wheels:ConnectionID>
+        <wheels:AccessKey>${escapeXml(creds.accessKey)}</wheels:AccessKey>
+        <wheels:GroupToken>${escapeXml(creds.groupToken)}</wheels:GroupToken>
+        <wheels:RimDiameter xsi:nil="true" />
+        <wheels:RimWidth xsi:nil="true" />
+        <wheels:Offset xsi:nil="true" />
+        <wheels:Bore xsi:nil="true" />
+        <wheels:LoadRating xsi:nil="true" />
+        <wheels:MinimumOffset xsi:nil="true" />
+        <wheels:MaximumOffset xsi:nil="true" />
+      </wheels:options>
+    </wheels:GetWheelElements>
+  </soap:Body>
+</soap:Envelope>`;
     
-    const response = await callWheelsApi(soapRequest, "GetWheelsByWheelElements");
-    const result = parseGetWheelsResponse(response, connectionId, "test");
+    const response = await callWheelsApi(soapRequest, "GetWheelElements");
     
-    const brands = [...new Set(result.wheels.map(w => w.brand).filter(Boolean))];
+    // Parse the response for Brands, RimDiameters, Finishes
+    const brands: string[] = [];
+    const brandMatches = response.matchAll(/<Brands>[\s\S]*?<string>([\s\S]*?)<\/string>[\s\S]*?<\/Brands>/g);
+    for (const m of brandMatches) {
+      brands.push(m[1].trim());
+    }
+    // Also try individual string elements under Brands
+    const brandSection = response.match(/<Brands>([\s\S]*?)<\/Brands>/);
+    if (brandSection) {
+      const strings = brandSection[1].matchAll(/<string>([^<]+)<\/string>/g);
+      for (const s of strings) {
+        if (!brands.includes(s[1].trim())) brands.push(s[1].trim());
+      }
+    }
+    
+    const diameters: number[] = [];
+    const diaSection = response.match(/<RimDiameters>([\s\S]*?)<\/RimDiameters>/);
+    if (diaSection) {
+      const decimals = diaSection[1].matchAll(/<decimal>([^<]+)<\/decimal>/g);
+      for (const d of decimals) {
+        const num = parseFloat(d[1]);
+        if (!isNaN(num)) diameters.push(num);
+      }
+    }
+    
+    const finishes: string[] = [];
+    const finSection = response.match(/<Finishes>([\s\S]*?)<\/Finishes>/);
+    if (finSection) {
+      const strings = finSection[1].matchAll(/<string>([^<]+)<\/string>/g);
+      for (const s of strings) {
+        finishes.push(s[1].trim());
+      }
+    }
     
     return {
       success: true,
-      wheelCount: result.wheels.length,
-      sampleBrands: brands.slice(0, 10),
+      brands: brands.slice(0, 50),
+      diameters: diameters.sort((a, b) => a - b),
+      finishes: finishes.slice(0, 30),
+    };
+  } catch (err: any) {
+    return {
+      success: false,
+      brands: [],
+      diameters: [],
+      finishes: [],
+      error: err.message,
+    };
+  }
+}
+
+export async function testWheelConnection(connectionId: number): Promise<{
+  success: boolean;
+  wheelCount: number;
+  sampleBrands: string[];
+  availableDiameters: number[];
+  error?: string;
+}> {
+  try {
+    const creds = await getTirewireCredentials();
+    if (!creds) {
+      return { success: false, wheelCount: 0, sampleBrands: [], availableDiameters: [], error: "No credentials" };
+    }
+    
+    // First try GetWheelElements to see what's available
+    const elements = await getWheelElements(connectionId);
+    
+    if (elements.brands.length > 0 || elements.diameters.length > 0) {
+      // Connection has wheel data - try a search
+      const testDia = elements.diameters[0] || 20;
+      const soapRequest = buildGetWheelsByWheelElementsRequest(
+        creds.accessKey,
+        creds.groupToken,
+        connectionId,
+        { rimDiameter: testDia, excludeZeroStock: false } // Don't exclude zero stock for test
+      );
+      
+      const response = await callWheelsApi(soapRequest, "GetWheelsByWheelElements");
+      const result = parseGetWheelsResponse(response, connectionId, "test");
+      
+      return {
+        success: true,
+        wheelCount: result.wheels.length,
+        sampleBrands: elements.brands.slice(0, 10),
+        availableDiameters: elements.diameters,
+      };
+    }
+    
+    // No wheel elements available - this connection likely doesn't have wheels
+    return {
+      success: true, 
+      wheelCount: 0,
+      sampleBrands: [],
+      availableDiameters: [],
+      error: "Connection has no wheel inventory",
     };
   } catch (err: any) {
     return {
       success: false,
       wheelCount: 0,
       sampleBrands: [],
+      availableDiameters: [],
       error: err.message,
     };
   }
