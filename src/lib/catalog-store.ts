@@ -52,7 +52,11 @@ interface CatalogData {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const CATALOG_VERSION = 1;
-const CATALOG_DIR = path.join(process.cwd(), "data", "catalog");
+// Use /tmp for Vercel serverless (no persistent filesystem except /tmp)
+const IS_VERCEL = process.env.VERCEL === "1";
+const CATALOG_DIR = IS_VERCEL 
+  ? "/tmp/catalog" 
+  : path.join(process.cwd(), "data", "catalog");
 const CATALOG_FILE = path.join(CATALOG_DIR, "wheel-size-catalog.json");
 
 // In-memory cache (populated from disk on first access)

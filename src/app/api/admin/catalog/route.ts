@@ -17,8 +17,18 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const body = await req.json().catch(() => ({}));
-  const action = body.action || "stats";
+  let body: any = {};
+  try {
+    body = await req.json();
+  } catch (e: any) {
+    return NextResponse.json({ 
+      error: "Failed to parse JSON body",
+      message: e?.message,
+      contentType: req.headers.get("content-type"),
+    }, { status: 400 });
+  }
+  
+  const action = body.action;
   
   switch (action) {
     case "populate-makes": {
@@ -58,6 +68,8 @@ export async function POST(req: Request) {
     default:
       return NextResponse.json({ 
         error: "Unknown action",
+        receivedAction: action,
+        receivedBody: body,
         validActions: ["populate-makes", "populate-models", "populate-common", "populate-modifications", "clear"]
       }, { status: 400 });
   }
