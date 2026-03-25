@@ -2,6 +2,12 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/fitment-db/db";
 import { vehicleFitments } from "@/lib/fitment-db/schema";
 import { eq, and, or, isNull } from "drizzle-orm";
+import {
+  checkBatchJobAllowed,
+  startBatchJob,
+  endBatchJob,
+  getUsageStats,
+} from "@/lib/wheelSizeGuard";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -9,6 +15,9 @@ export const maxDuration = 300;
 
 /**
  * POST /api/admin/fitment/refresh-trims
+ * 
+ * ⚠️ PROTECTED by Wheel-Size API guardrails
+ * Requires: { confirm: true, allowBatch: true }
  * 
  * Safely refresh displayTrim for vehicles that show "Base" by fetching
  * fresh trim_levels from Wheel-Size API.
@@ -26,6 +35,8 @@ export const maxDuration = 300;
  * - dryRun: boolean (default: true) - simulate without saving
  * - limit: number (default: 20) - max vehicles to process
  * - skipIfHasData: boolean (default: true) - skip if displayTrim isn't "Base"
+ * - confirm: boolean (REQUIRED) - acknowledge ToS warning
+ * - allowBatch: boolean (REQUIRED) - enable batch mode
  */
 export async function POST(req: Request) {
   const t0 = Date.now();
@@ -36,6 +47,31 @@ export async function POST(req: Request) {
   } catch {
     // No body is fine
   }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GUARDRAIL CHECK - this endpoint makes batch Wheel-Size API calls
+  // ═══════════════════════════════════════════════════════════════════════════
+  const batchCheck = checkBatchJobAllowed({
+    action: "refresh-trims",
+    confirm: body.confirm,
+    allowBatch: body.allowBatch,
+    adminId: body.adminId || "anonymous",
+  });
+  
+  if (!batchCheck.allowed) {
+    return NextResponse.json({
+      error: batchCheck.error,
+      warning: batchCheck.warning,
+      requiresConfirmation: batchCheck.requiresConfirmation,
+      usage: getUsageStats(),
+      hint: batchCheck.requiresConfirmation 
+        ? 'Add { "confirm": true, "allowBatch": true } to your request body'
+        : undefined,
+    }, { status: batchCheck.requiresConfirmation ? 400 : 429 });
+  }
+  
+  startBatchJob(body.adminId || "anonymous");
+  // ═══════════════════════════════════════════════════════════════════════════
   
   const dryRun = body.dryRun !== false; // Default to dry run for safety
   const limit = Math.min(100, Math.max(1, body.limit || 20));
@@ -150,6 +186,8 @@ export async function POST(req: Request) {
       }
     }
     
+    endBatchJob(true);
+    
     return NextResponse.json({
       ok: true,
       dryRun,
@@ -164,6 +202,7 @@ export async function POST(req: Request) {
     });
     
   } catch (err: any) {
+    endBatchJob(false);
     console.error("[refresh-trims] Error:", err);
     return NextResponse.json({
       ok: false,

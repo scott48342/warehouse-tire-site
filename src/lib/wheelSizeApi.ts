@@ -12,6 +12,12 @@
  */
 
 import { normalizeModelForApi } from "./fitment-db/keys";
+import {
+  checkSafeModeBlock,
+  checkUsageLimits,
+  logWheelSizeCall,
+  detectTriggerSource,
+} from "./wheelSizeGuard";
 
 const BASE_URL = "https://api.wheel-size.com/v2/";
 
@@ -184,12 +190,30 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   const cacheKey = getCacheKey(path, params);
   const now = Date.now();
   
-  // Check cache first
+  // Check cache first (cache hits don't count against limits)
   const cached = apiCache.get(cacheKey);
   if (cached && cached.expiresAt > now) {
     console.log(`[wheelSizeApi] CACHE HIT: ${path}`);
     return cached.data as T;
   }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GUARDRAIL CHECKS (only for actual API calls, not cache hits)
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  // 1. Safe mode check - block cron/background calls
+  const safeModeBlock = checkSafeModeBlock();
+  if (safeModeBlock) {
+    throw new Error(safeModeBlock);
+  }
+  
+  // 2. Usage limit check - block if hourly limit exceeded
+  const usageBlock = checkUsageLimits();
+  if (usageBlock) {
+    throw new Error(usageBlock);
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
   
   const url = new URL(path, BASE_URL);
   url.searchParams.set("user_key", getApiKey());
@@ -204,12 +228,28 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   const safeUrl = url.toString().replace(/user_key=[^&]+/, "user_key=***");
   console.log(`[wheelSizeApi] GET ${safeUrl}`);
 
+  const startTime = Date.now();
   const res = await fetch(url.toString(), {
     headers: { Accept: "application/json" },
     cache: "no-store",
   });
+  const durationMs = Date.now() - startTime;
 
   const text = await res.text();
+  
+  // Log the API call (for audit trail)
+  const triggerSource = detectTriggerSource();
+  logWheelSizeCall({
+    endpoint: path,
+    triggerSource: triggerSource === "admin-batch" ? "admin-batch" : triggerSource === "user" ? "user" : "unknown",
+    vehicle: params?.make || params?.model ? {
+      year: params?.year ? parseInt(params.year) : undefined,
+      make: params?.make,
+      model: params?.model,
+    } : undefined,
+    status: res.status,
+    durationMs,
+  });
 
   if (!res.ok) {
     console.error(`[wheelSizeApi] Error ${res.status}: ${text.slice(0, 500)}`);
