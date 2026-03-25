@@ -300,6 +300,11 @@ export type OEMSpecs = {
 
 /**
  * Build a fitment envelope from OEM specs + expansion mode
+ * 
+ * IMPORTANT: When no OEM wheel data is available, this function uses CONSERVATIVE
+ * fallback defaults (17-22") to prevent showing invalid small diameters on modern
+ * vehicles. The old permissive defaults (15-22") caused regressions where 15-16"
+ * wheels were shown for vehicles like Chrysler 300C that require 18"+ minimum.
  */
 export function buildFitmentEnvelope(
   oem: OEMSpecs,
@@ -315,9 +320,14 @@ export function buildFitmentEnvelope(
   const widths = oem.wheelSpecs.map(s => s.rimWidth).filter(w => w > 0);
   const offsets = oem.wheelSpecs.map(s => s.offset).filter((o): o is number => o !== null);
 
-  const oemMinDiameter = diameters.length > 0 ? Math.min(...diameters) : 15;
+  // CONSERVATIVE FALLBACK: Use 17" minimum when no OEM data exists.
+  // This prevents showing invalid 15-16" wheels on modern vehicles.
+  // Most modern sedans/coupes (post-2005) have 17"+ as minimum OEM.
+  // Vehicles with 15-16" wheels are typically older economy cars with 4-lug patterns.
+  // 5-lug pattern vehicles (which this system primarily handles) almost always have 17"+.
+  const oemMinDiameter = diameters.length > 0 ? Math.min(...diameters) : 17;
   const oemMaxDiameter = diameters.length > 0 ? Math.max(...diameters) : 22;
-  const oemMinWidth = widths.length > 0 ? Math.min(...widths) : 6;
+  const oemMinWidth = widths.length > 0 ? Math.min(...widths) : 7;
   const oemMaxWidth = widths.length > 0 ? Math.max(...widths) : 10;
   const oemMinOffset = offsets.length > 0 ? Math.min(...offsets) : 20;
   const oemMaxOffset = offsets.length > 0 ? Math.max(...offsets) : 50;
