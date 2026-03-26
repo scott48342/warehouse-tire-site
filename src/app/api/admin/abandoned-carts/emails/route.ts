@@ -63,15 +63,88 @@ export async function GET() {
  * POST /api/admin/abandoned-carts/emails
  * 
  * Body:
- * - action: "process" | "test" | "preview"
+ * - action: "process" | "test" | "preview" | "send-preview"
  * - cartId: (for test) cart to send test email to
+ * - email: (for send-preview) email address to send preview to
+ * - variant: (for send-preview) "first" | "second" - which email variant
  */
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { action, cartId } = body;
+    const { action, cartId, email, variant } = body;
 
     switch (action) {
+      case "send-preview": {
+        // Send preview email with mock data to specified address
+        if (!email) {
+          return NextResponse.json(
+            { error: "email required for send-preview action" },
+            { status: 400 }
+          );
+        }
+
+        // Create mock cart for preview
+        const mockCart = {
+          id: "preview",
+          cartId: "preview-test-" + Date.now(),
+          sessionId: null,
+          customerFirstName: "Scott",
+          customerLastName: "Test",
+          customerEmail: email,
+          customerPhone: null,
+          vehicleYear: "2024",
+          vehicleMake: "Ford",
+          vehicleModel: "F-150",
+          vehicleTrim: "XLT",
+          items: [
+            { type: "wheel", brand: "Fuel", model: "Rebel", finish: "Matte Black", quantity: 4 },
+            { type: "tire", brand: "Nitto", model: "Ridge Grappler", size: "275/65R20", quantity: 4 },
+            { type: "accessory", name: "Gorilla Lug Nuts (Black)", quantity: 1 },
+          ],
+          itemCount: 5,
+          subtotal: "1847",
+          estimatedTotal: "1847",
+          status: "abandoned" as const,
+          recoveredOrderId: null,
+          recoveredAt: null,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          lastActivityAt: new Date(Date.now() - 2 * 60 * 60 * 1000),
+          abandonedAt: new Date(Date.now() - 1.5 * 60 * 60 * 1000),
+          source: "preview",
+          userAgent: null,
+          ipAddress: null,
+          firstEmailSentAt: variant === "second" ? new Date(Date.now() - 24 * 60 * 60 * 1000) : null,
+          secondEmailSentAt: null,
+          emailSentCount: variant === "second" ? 1 : 0,
+          unsubscribed: false,
+          recoveredAfterEmail: false,
+        };
+
+        // Temporarily bypass safe mode for preview
+        const originalSafeMode = process.env.EMAIL_SAFE_MODE;
+        process.env.EMAIL_SAFE_MODE = "false";
+
+        try {
+          const result = await sendRecoveryEmail(mockCart as any, variant === "second");
+          
+          return NextResponse.json({
+            success: result.success,
+            action: "send-preview",
+            sentTo: email,
+            variant: variant || "first",
+            result,
+          });
+        } finally {
+          // Restore safe mode
+          if (originalSafeMode) {
+            process.env.EMAIL_SAFE_MODE = originalSafeMode;
+          } else {
+            delete process.env.EMAIL_SAFE_MODE;
+          }
+        }
+      }
+
       case "process": {
         // Process all pending emails
         const result = await processAbandonedCartEmails();

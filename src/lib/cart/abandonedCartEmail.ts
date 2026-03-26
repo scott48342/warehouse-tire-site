@@ -5,6 +5,7 @@
  * Uses Resend API for reliable email delivery.
  * 
  * @created 2026-03-25
+ * @updated 2026-03-26 - Optimized for higher conversion (personalization, urgency, stronger CTA)
  */
 
 import { Resend } from "resend";
@@ -64,6 +65,66 @@ export interface ProcessEmailsResult {
 }
 
 // ============================================================================
+// Subject Line Variants (for future A/B testing)
+// ============================================================================
+
+type SubjectVariant = "vehicle" | "urgency" | "friendly" | "direct";
+
+/**
+ * Subject line variants for testing
+ * Select variant via ABANDONED_CART_SUBJECT_VARIANT env var or pass directly
+ */
+const SUBJECT_VARIANTS: Record<SubjectVariant, { first: string; second: string }> = {
+  vehicle: {
+    first: "Finish your order for your {{year}} {{make}} {{model}}",
+    second: "Your {{year}} {{make}} {{model}} is waiting 🚗",
+  },
+  urgency: {
+    first: "Your cart is ready — complete your order",
+    second: "Don't miss out — your items are still available",
+  },
+  friendly: {
+    first: "Hey {{firstName}}, you left something behind!",
+    second: "Still thinking it over, {{firstName}}?",
+  },
+  direct: {
+    first: "Complete your {{brand}} order",
+    second: "Your cart expires soon",
+  },
+};
+
+/** Get configured subject variant */
+function getSubjectVariant(): SubjectVariant {
+  const variant = process.env.ABANDONED_CART_SUBJECT_VARIANT as SubjectVariant | undefined;
+  return variant && SUBJECT_VARIANTS[variant] ? variant : "vehicle";
+}
+
+/**
+ * Build personalized subject line
+ */
+function buildSubject(cart: AbandonedCart, isSecondEmail: boolean): string {
+  const variant = getSubjectVariant();
+  const templates = SUBJECT_VARIANTS[variant];
+  let subject = isSecondEmail ? templates.second : templates.first;
+
+  // Extract first item brand for {{brand}} placeholder
+  const items = Array.isArray(cart.items) ? cart.items : [];
+  const firstItem = items[0] as any;
+  const brand = firstItem?.brand || "wheel & tire";
+
+  // Replace placeholders
+  subject = subject
+    .replace(/\{\{year\}\}/g, cart.vehicleYear || "your vehicle")
+    .replace(/\{\{make\}\}/g, cart.vehicleMake || "")
+    .replace(/\{\{model\}\}/g, cart.vehicleModel || "")
+    .replace(/\{\{firstName\}\}/g, cart.customerFirstName || "there")
+    .replace(/\{\{brand\}\}/g, brand);
+
+  // Clean up double spaces and trim
+  return subject.replace(/\s+/g, " ").trim();
+}
+
+// ============================================================================
 // Resend Client
 // ============================================================================
 
@@ -88,7 +149,7 @@ export function generateRecoveryLink(cartId: string): string {
 }
 
 // ============================================================================
-// Email Template
+// Email Template Helpers
 // ============================================================================
 
 function formatMoney(value: number): string {
@@ -100,21 +161,70 @@ function formatMoney(value: number): string {
   }).format(value);
 }
 
+/**
+ * Extract display names for top cart items (up to 3)
+ */
+function getTopItemNames(items: any[], maxItems: number = 3): string[] {
+  const names: string[] = [];
+
+  for (const item of items) {
+    if (names.length >= maxItems) break;
+
+    let name = "";
+    if (item.type === "wheel") {
+      // Wheel: "Brand Model Finish" or "Brand Model"
+      name = [item.brand, item.model, item.finish].filter(Boolean).join(" ");
+    } else if (item.type === "tire") {
+      // Tire: "Brand Model Size"
+      name = [item.brand, item.model, item.size].filter(Boolean).join(" ");
+    } else if (item.type === "accessory") {
+      // Accessory: name or "Brand Model"
+      name = item.name || [item.brand, item.model].filter(Boolean).join(" ");
+    }
+
+    if (name && !names.includes(name)) {
+      names.push(name);
+    }
+  }
+
+  return names;
+}
+
+// ============================================================================
+// Email Template
+// ============================================================================
+
 function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
   const recoveryLink = generateRecoveryLink(cart.cartId);
-  const customerName = cart.customerFirstName || "there";
+  const customerName = cart.customerFirstName || null;
   
-  const vehicleLabel = cart.vehicleYear
-    ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel}${cart.vehicleTrim ? ` ${cart.vehicleTrim}` : ""}`
+  // Vehicle label
+  const vehicleLabel = cart.vehicleYear && cart.vehicleMake
+    ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel || ""}${cart.vehicleTrim ? ` ${cart.vehicleTrim}` : ""}`.trim()
     : null;
 
+  // Items
   const items = Array.isArray(cart.items) ? cart.items : [];
   const itemCount = cart.itemCount || items.length;
   const totalValue = Number(cart.estimatedTotal) || 0;
 
+  // Top item names
+  const topItemNames = getTopItemNames(items, 3);
+
+  // Personalized greeting and intro
+  const greeting = customerName ? `Hey ${customerName},` : "Hey there,";
+  
   const introText = isSecondEmail
-    ? `We noticed you left some great items in your cart. They're still waiting for you!`
-    : `Hey ${customerName}! Looks like you left some items in your cart. We've saved them for you.`;
+    ? `Your items are still in your cart and ready to ship. We've held everything for you — just pick up where you left off.`
+    : `Looks like you didn't finish checking out. No worries — we saved your cart so you can pick up right where you left off.`;
+
+  // Headline
+  const headline = isSecondEmail
+    ? "Your cart is still waiting"
+    : "You left something behind";
+
+  // CTA text
+  const ctaText = "Complete My Order";
 
   return `
 <!DOCTYPE html>
@@ -122,6 +232,7 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Order - ${BRAND.name}</title>
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5;">
 
@@ -135,14 +246,18 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
     <!-- Content -->
     <div style="padding: 32px;">
       
+      <!-- Headline -->
       <h2 style="margin: 0 0 16px; color: #1f2937; font-size: 22px;">
-        ${isSecondEmail ? "🛒 Your cart misses you!" : "🛒 You left something behind!"}
+        ${headline}
       </h2>
       
+      <!-- Personalized Intro -->
       <p style="margin: 0 0 24px; color: #4b5563; font-size: 16px;">
+        ${greeting}<br><br>
         ${introText}
       </p>
 
+      <!-- Vehicle Badge (if available) -->
       ${vehicleLabel ? `
       <div style="background: #f3f4f6; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
         <div style="font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Your Vehicle</div>
@@ -154,24 +269,43 @@ function buildEmailHtml(cart: AbandonedCart, isSecondEmail: boolean): string {
       <div style="background: #fafafa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
         <div style="margin-bottom: 12px;">
           <span style="color: #6b7280;">Items in cart:</span>
-          <span style="font-weight: 600; color: #1f2937; float: right;">${itemCount} items</span>
+          <span style="font-weight: 600; color: #1f2937; float: right;">${itemCount} item${itemCount !== 1 ? "s" : ""}</span>
         </div>
-        <div style="padding-top: 12px; border-top: 1px solid #e5e7eb;">
+        
+        ${topItemNames.length > 0 ? `
+        <!-- Top Items List -->
+        <div style="margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb;">
+          ${topItemNames.map(name => `
+            <div style="color: #374151; font-size: 14px; padding: 4px 0;">• ${name}</div>
+          `).join("")}
+          ${items.length > topItemNames.length ? `
+            <div style="color: #9ca3af; font-size: 13px; padding: 4px 0; font-style: italic;">+ ${items.length - topItemNames.length} more item${items.length - topItemNames.length !== 1 ? "s" : ""}</div>
+          ` : ""}
+        </div>
+        ` : ""}
+
+        <div style="padding-top: 12px;">
           <span style="color: #6b7280;">Cart total:</span>
           <span style="font-size: 24px; font-weight: 700; color: #dc2626; float: right;">${formatMoney(totalValue)}</span>
         </div>
       </div>
 
-      <!-- CTA Button -->
+      <!-- Primary CTA Button -->
       <div style="text-align: center; margin: 32px 0;">
         <a href="${recoveryLink}" 
            style="display: inline-block; background: #dc2626; color: white; padding: 16px 48px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 18px;">
-          Resume Your Order →
+          ${ctaText}
         </a>
       </div>
 
-      <p style="margin: 24px 0 0; color: #9ca3af; font-size: 14px; text-align: center;">
-        This link will restore your cart exactly as you left it.
+      <!-- Reassurance -->
+      <p style="margin: 0 0 16px; color: #6b7280; font-size: 14px; text-align: center;">
+        ✓ Your cart will restore automatically — just click and continue.
+      </p>
+
+      <!-- Light Urgency -->
+      <p style="margin: 0; color: #9ca3af; font-size: 13px; text-align: center; font-style: italic;">
+        Note: Pricing and availability may change. We recommend completing your order soon to lock in today's prices.
       </p>
 
     </div>
@@ -234,9 +368,7 @@ export async function sendRecoveryEmail(
   }
 
   // Build email content
-  const subject = isSecondEmail
-    ? `Still thinking it over? Your cart is waiting 🛞`
-    : `Your cart is waiting 🛞`;
+  const subject = buildSubject(cart, isSecondEmail);
   const html = buildEmailHtml(cart, isSecondEmail);
 
   // Safe mode: log instead of send
@@ -247,6 +379,9 @@ export async function sendRecoveryEmail(
     console.log(`  Cart ID: ${cartId}`);
     console.log(`  Value: ${formatMoney(cartValue)}`);
     console.log(`  Recovery Link: ${generateRecoveryLink(cartId)}`);
+    console.log(`  Vehicle: ${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel}`);
+    console.log(`  Customer: ${cart.customerFirstName || "(no name)"}`);
+    console.log(`  Items: ${cart.itemCount}`);
 
     await updateEmailSentTracking(cartId, isSecondEmail);
     return { success: true, cartId, action: "logged", reason: "safe_mode" };
@@ -437,6 +572,10 @@ export async function markRecoveredAfterEmail(cartId: string): Promise<void> {
   }
 }
 
+// ============================================================================
+// Exports
+// ============================================================================
+
 export const abandonedCartEmailService = {
   sendRecoveryEmail,
   processAbandonedCartEmails,
@@ -447,6 +586,8 @@ export const abandonedCartEmailService = {
   EMAIL_SAFE_MODE,
   FIRST_EMAIL_DELAY_HOURS,
   SECOND_EMAIL_DELAY_HOURS,
+  SUBJECT_VARIANTS,
+  getSubjectVariant,
 };
 
 export default abandonedCartEmailService;
