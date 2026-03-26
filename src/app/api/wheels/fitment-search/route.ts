@@ -154,54 +154,49 @@ export async function GET(req: Request) {
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 2: Calculate Fitment Confidence (SAFETY-FIRST)
+    // STEP 2: Use dbProfile if Available (ModificationId-First Path)
+    // Check confidence and potentially block ONLY if we have a profile to evaluate
     // ═══════════════════════════════════════════════════════════════════════════
     
-    const confidenceResult = calculateConfidence(dbProfile);
-    console.log(formatConfidenceForLog(confidenceResult));
-    
-    // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 2b: Block results if confidence too low (SAFETY)
-    // ═══════════════════════════════════════════════════════════════════════════
-    
-    if (!confidenceResult.canShowWheels) {
-      const uiMeta = getConfidenceUIMetadata(confidenceResult.confidence);
+    if (dbProfile) {
+      const confidenceResult = calculateConfidence(dbProfile);
+      console.log(`[fitment-search] DB-FIRST CONFIDENCE:`, formatConfidenceForLog(confidenceResult));
       
-      console.warn(`[fitment-search] BLOCKED (${confidenceResult.confidence}): ${year} ${make} ${model} mod=${modificationId || "(none)"} - insufficient fitment data`);
-      
-      return NextResponse.json({
-        results: [],
-        totalCount: 0,
-        blocked: true,
-        blockReason: "Cannot safely show wheel results without verified fitment data",
-        fitment: {
-          ...buildConfidenceResponse(confidenceResult),
-          vehicle: {
-            year: Number(year),
-            make,
-            model,
-            trim: dbProfile?.displayTrim || modificationId || null,
+      // Block if profile exists but has insufficient data
+      if (!confidenceResult.canShowWheels) {
+        console.warn(`[fitment-search] BLOCKED (${confidenceResult.confidence}): ${year} ${make} ${model} mod=${modificationId || "(none)"} - DB profile has insufficient data`);
+        
+        return NextResponse.json({
+          results: [],
+          totalCount: 0,
+          blocked: true,
+          blockReason: "Cannot safely show wheel results without verified fitment data",
+          fitment: {
+            ...buildConfidenceResponse(confidenceResult),
+            vehicle: {
+              year: Number(year),
+              make,
+              model,
+              trim: dbProfile.displayTrim || modificationId || null,
+            },
+            resolutionPath,
+            profileFound: true,
           },
-          resolutionPath: dbProfile ? resolutionPath : "invalid",
-          profileFound: !!dbProfile,
-        },
-        suggestions: [
-          "Try a different trim level if available",
-          "Contact us at (248) 332-4120 for manual fitment lookup",
-          "Check your owner's manual for wheel specifications",
-        ],
-        timing: {
-          totalMs: Date.now() - t0,
-        },
-      });
-    }
-    
-    // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 3: Use dbProfile if Available (ModificationId-First Path)
-    // ═══════════════════════════════════════════════════════════════════════════
-    
-    if (dbProfile && dbProfile.boltPattern) {
-      return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0, confidenceResult);
+          suggestions: [
+            "Try a different trim level if available",
+            "Contact us at (248) 332-4120 for manual fitment lookup",
+            "Check your owner's manual for wheel specifications",
+          ],
+          timing: {
+            totalMs: Date.now() - t0,
+          },
+        });
+      }
+      
+      // Profile has good confidence - proceed with wheel search
+      if (dbProfile.boltPattern) {
+        return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0, confidenceResult);
+      }
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
