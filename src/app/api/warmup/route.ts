@@ -32,12 +32,12 @@ export async function GET(req: Request) {
   const hitRate = cacheStats.hitRate; // Already computed in cacheStats
   const isCacheCold = totalRequests < 100 || hitRate < 0.3;
   
-  // Only auto-prewarm on production (preview deployments don't have WheelPros credentials)
-  const isProduction = process.env.VERCEL_ENV === "production" || 
-                       process.env.NODE_ENV === "production" && !process.env.VERCEL_URL?.includes("-");
+  // Only auto-prewarm on production (preview deployments typically don't have WheelPros credentials)
+  const isProduction = process.env.VERCEL_ENV === "production";
+  const allowOnPreview = process.env.WT_ALLOW_PREWARM_ON_PREVIEW === "1";
   
-  // Include availability if explicitly requested OR (cache is cold AND we're on production)
-  const includeAvailability = includeAvailabilityParam || (isCacheCold && !quick && isProduction);
+  // Include availability if explicitly requested OR (cache is cold AND (prod OR explicitly allowed))
+  const includeAvailability = includeAvailabilityParam || (isCacheCold && !quick && (isProduction || allowOnPreview));
 
   const t0 = Date.now();
   

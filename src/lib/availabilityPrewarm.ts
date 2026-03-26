@@ -372,9 +372,9 @@ export async function runPrewarmJob(options?: {
   }
   
   // Sanity check: don't run prewarm on preview deployments (they poison the shared cache)
-  const isPreviewDeployment = process.env.VERCEL_ENV === "preview" ||
-                              (process.env.VERCEL_URL && process.env.VERCEL_URL.includes("-"));
-  if (isPreviewDeployment && !dryRun) {
+  const allowOnPreview = process.env.WT_ALLOW_PREWARM_ON_PREVIEW === "1";
+  const isPreviewDeployment = process.env.VERCEL_ENV === "preview";
+  if (isPreviewDeployment && !allowOnPreview && !dryRun) {
     result.success = false;
     result.errors.push("Prewarm disabled on preview deployments to prevent cache poisoning");
     result.duration = Date.now() - t0;
