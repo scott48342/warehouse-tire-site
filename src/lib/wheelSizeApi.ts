@@ -21,6 +21,28 @@ import {
 
 const BASE_URL = "https://api.wheel-size.com/v2/";
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// KILL SWITCH - Set WHEEL_SIZE_ENABLED=true to re-enable API calls
+// Default: DISABLED (false) - all calls return empty/fallback data
+// ═══════════════════════════════════════════════════════════════════════════════
+const WHEEL_SIZE_ENABLED = process.env.WHEEL_SIZE_ENABLED === "true";
+
+/** Error thrown when API is disabled */
+class WheelSizeDisabledError extends Error {
+  constructor() {
+    super("Wheel-Size API is temporarily disabled");
+    this.name = "WheelSizeDisabledError";
+  }
+}
+
+/** Check if API is enabled, throw if disabled */
+function assertEnabled(): void {
+  if (!WHEEL_SIZE_ENABLED) {
+    console.warn("[wheelSizeApi] API DISABLED - returning fallback data");
+    throw new WheelSizeDisabledError();
+  }
+}
+
 function getApiKey(): string {
   const key = process.env.WHEELSIZE_API_KEY;
   if (!key) throw new Error("Missing WHEELSIZE_API_KEY environment variable");
@@ -198,6 +220,11 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   }
   
   // ═══════════════════════════════════════════════════════════════════════════
+  // KILL SWITCH - Block ALL API calls when disabled
+  // ═══════════════════════════════════════════════════════════════════════════
+  assertEnabled();
+  
+  // ═══════════════════════════════════════════════════════════════════════════
   // GUARDRAIL CHECKS (only for actual API calls, not cache hits)
   // ═══════════════════════════════════════════════════════════════════════════
   
@@ -282,66 +309,86 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
  * Get all makes
  */
 export async function getMakes(): Promise<WheelSizeMake[]> {
-  const data = await apiGet<{ data: WheelSizeMake[] }>("makes/");
-  return data.data || [];
+  try {
+    const data = await apiGet<{ data: WheelSizeMake[] }>("makes/");
+    return data.data || [];
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 /**
  * Find a make by name (case-insensitive)
  */
 export async function findMake(makeName: string): Promise<WheelSizeMake | null> {
-  const makes = await getMakes();
-  const needle = toSlug(makeName);
-  return makes.find(m => 
-    m.slug === needle || 
-    m.name.toLowerCase() === needle ||
-    m.name_en?.toLowerCase() === needle
-  ) || null;
+  try {
+    const makes = await getMakes();
+    const needle = toSlug(makeName);
+    return makes.find(m => 
+      m.slug === needle || 
+      m.name.toLowerCase() === needle ||
+      m.name_en?.toLowerCase() === needle
+    ) || null;
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return null;
+    throw err;
+  }
 }
 
 /**
  * Get models for a make (pass slug, not display name)
  */
 export async function getModels(makeSlug: string): Promise<WheelSizeModel[]> {
-  const data = await apiGet<{ data: WheelSizeModel[] }>("models/", { 
-    make: toSlug(makeSlug) 
-  });
-  return data.data || [];
+  try {
+    const data = await apiGet<{ data: WheelSizeModel[] }>("models/", { 
+      make: toSlug(makeSlug) 
+    });
+    return data.data || [];
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 /**
  * Find a model by name within a make (case-insensitive, handles hyphen variations)
  */
 export async function findModel(makeSlug: string, modelName: string): Promise<WheelSizeModel | null> {
-  const models = await getModels(makeSlug);
-  const needle = toSlug(modelName);
-  const needleNoHyphen = needle.replace(/-/g, "");
-  // Use normalized model for alias matching (e.g., "RX 350" → "rx")
-  const normalizedNeedle = normalizeModelForApi(modelName);
-  
-  const isMercedes = toSlug(makeSlug) === "mercedes" || toSlug(makeSlug) === "mercedes-benz";
-  const mercedesAltSlugs = isMercedes
-    ? [
-        `${normalizedNeedle}-class`,
-        `${normalizedNeedle}-class-coupe`,
-        `${normalizedNeedle}-class-suv`,
-      ]
-    : [];
+  try {
+    const models = await getModels(makeSlug);
+    const needle = toSlug(modelName);
+    const needleNoHyphen = needle.replace(/-/g, "");
+    // Use normalized model for alias matching (e.g., "RX 350" → "rx")
+    const normalizedNeedle = normalizeModelForApi(modelName);
+    
+    const isMercedes = toSlug(makeSlug) === "mercedes" || toSlug(makeSlug) === "mercedes-benz";
+    const mercedesAltSlugs = isMercedes
+      ? [
+          `${normalizedNeedle}-class`,
+          `${normalizedNeedle}-class-coupe`,
+          `${normalizedNeedle}-class-suv`,
+        ]
+      : [];
 
-  return (
-    models.find(m => {
-      const slug = m.slug?.toLowerCase() || "";
-      const name = m.name?.toLowerCase() || "";
-      return (
-        slug === needle ||
-        slug === needleNoHyphen ||
-        slug === normalizedNeedle || // Match alias (rx-350 → rx)
-        (isMercedes && mercedesAltSlugs.includes(slug)) ||
-        name === needle ||
-        name === needleNoHyphen
-      );
-    }) || null
-  );
+    return (
+      models.find(m => {
+        const slug = m.slug?.toLowerCase() || "";
+        const name = m.name?.toLowerCase() || "";
+        return (
+          slug === needle ||
+          slug === needleNoHyphen ||
+          slug === normalizedNeedle || // Match alias (rx-350 → rx)
+          (isMercedes && mercedesAltSlugs.includes(slug)) ||
+          name === needle ||
+          name === needleNoHyphen
+        );
+      }) || null
+    );
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return null;
+    throw err;
+  }
 }
 
 /**
@@ -352,24 +399,34 @@ export async function resolveMakeModel(
   make: string,
   model: string
 ): Promise<{ makeSlug: string; modelSlug: string; modelName?: string } | null> {
-  const foundMake = await findMake(make);
-  if (!foundMake) return null;
-  const foundModel = await findModel(foundMake.slug, model);
-  if (!foundModel) return null;
-  return { makeSlug: foundMake.slug, modelSlug: foundModel.slug, modelName: foundModel.name };
+  try {
+    const foundMake = await findMake(make);
+    if (!foundMake) return null;
+    const foundModel = await findModel(foundMake.slug, model);
+    if (!foundModel) return null;
+    return { makeSlug: foundMake.slug, modelSlug: foundModel.slug, modelName: foundModel.name };
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return null;
+    throw err;
+  }
 }
 
 /**
  * Get years for a make/model
  */
 export async function getYears(makeSlug: string, modelSlug: string): Promise<number[]> {
-  const data = await apiGet<{ data: WheelSizeYear[] }>("years/", { 
-    make: toSlug(makeSlug), 
-    model: toSlug(modelSlug) 
-  });
-  return (data.data || []).map(y => 
-    typeof y.name === "number" ? y.name : parseInt(String(y.name), 10)
-  ).filter(y => !isNaN(y));
+  try {
+    const data = await apiGet<{ data: WheelSizeYear[] }>("years/", { 
+      make: toSlug(makeSlug), 
+      model: toSlug(modelSlug) 
+    });
+    return (data.data || []).map(y => 
+      typeof y.name === "number" ? y.name : parseInt(String(y.name), 10)
+    ).filter(y => !isNaN(y));
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 /**
@@ -380,12 +437,17 @@ export async function getModifications(
   modelSlug: string,
   year: number
 ): Promise<WheelSizeModification[]> {
-  const data = await apiGet<{ data: WheelSizeModification[] }>("modifications/", {
-    make: toSlug(makeSlug),
-    model: toSlug(modelSlug),
-    year: String(year),
-  });
-  return data.data || [];
+  try {
+    const data = await apiGet<{ data: WheelSizeModification[] }>("modifications/", {
+      make: toSlug(makeSlug),
+      model: toSlug(modelSlug),
+      year: String(year),
+    });
+    return data.data || [];
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 /**
@@ -396,8 +458,13 @@ export async function getUSModifications(
   modelSlug: string,
   year: number
 ): Promise<WheelSizeModification[]> {
-  const mods = await getModifications(makeSlug, modelSlug, year);
-  return mods.filter(m => m.regions?.includes("usdm"));
+  try {
+    const mods = await getModifications(makeSlug, modelSlug, year);
+    return mods.filter(m => m.regions?.includes("usdm"));
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 /**
@@ -430,6 +497,7 @@ export async function getVehicleData(
 
     return data.data?.[0] || null;
   } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return null;
     console.error("[wheelSizeApi] getVehicleData error:", err);
     return null;
   }
@@ -451,63 +519,73 @@ export async function getAllVehicleData(
   year: number;
   modifications: WheelSizeModification[];
   vehicles: WheelSizeVehicleData[];
-}> {
-  // Step 1: Resolve make slug
-  const foundMake = await findMake(make);
-  if (!foundMake) {
-    throw new Error(`Make "${make}" not found in Wheel-Size API`);
-  }
-  const makeSlug = foundMake.slug;
-
-  // Step 2: Resolve model slug
-  const foundModel = await findModel(makeSlug, model);
-  if (!foundModel) {
-    throw new Error(`Model "${model}" not found for make "${make}"`);
-  }
-  const modelSlug = foundModel.slug;
-
-  // Step 3: Check year exists
-  const years = await getYears(makeSlug, modelSlug);
-  if (!years.includes(year)) {
-    throw new Error(`Year ${year} not available for ${make} ${model}. Available: ${years.slice(0, 10).join(", ")}...`);
-  }
-
-  // Step 4: Get modifications
-  let modifications = await getModifications(makeSlug, modelSlug, year);
-  if (options?.usMarketOnly) {
-    modifications = modifications.filter(m => m.regions?.includes("usdm"));
-  }
-
-  if (modifications.length === 0) {
-    throw new Error(`No modifications found for ${year} ${make} ${model}${options?.usMarketOnly ? " (US market)" : ""}`);
-  }
-
-  // Step 5: Fetch vehicle data for each modification
-  const vehicles: WheelSizeVehicleData[] = [];
-  for (const mod of modifications) {
-    const data = await getVehicleData(makeSlug, modelSlug, year, mod.slug);
-    if (data) {
-      vehicles.push(data);
+} | null> {
+  try {
+    // Step 1: Resolve make slug
+    const foundMake = await findMake(make);
+    if (!foundMake) {
+      throw new Error(`Make "${make}" not found in Wheel-Size API`);
     }
-  }
+    const makeSlug = foundMake.slug;
 
-  return {
-    makeSlug,
-    modelSlug,
-    year,
-    modifications,
-    vehicles,
-  };
+    // Step 2: Resolve model slug
+    const foundModel = await findModel(makeSlug, model);
+    if (!foundModel) {
+      throw new Error(`Model "${model}" not found for make "${make}"`);
+    }
+    const modelSlug = foundModel.slug;
+
+    // Step 3: Check year exists
+    const years = await getYears(makeSlug, modelSlug);
+    if (!years.includes(year)) {
+      throw new Error(`Year ${year} not available for ${make} ${model}. Available: ${years.slice(0, 10).join(", ")}...`);
+    }
+
+    // Step 4: Get modifications
+    let modifications = await getModifications(makeSlug, modelSlug, year);
+    if (options?.usMarketOnly) {
+      modifications = modifications.filter(m => m.regions?.includes("usdm"));
+    }
+
+    if (modifications.length === 0) {
+      throw new Error(`No modifications found for ${year} ${make} ${model}${options?.usMarketOnly ? " (US market)" : ""}`);
+    }
+
+    // Step 5: Fetch vehicle data for each modification
+    const vehicles: WheelSizeVehicleData[] = [];
+    for (const mod of modifications) {
+      const data = await getVehicleData(makeSlug, modelSlug, year, mod.slug);
+      if (data) {
+        vehicles.push(data);
+      }
+    }
+
+    return {
+      makeSlug,
+      modelSlug,
+      year,
+      modifications,
+      vehicles,
+    };
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return null;
+    throw err;
+  }
 }
 
 /**
  * Search by tire size to get potential wheel/tire combinations
  */
 export async function searchByTire(tireSize: string): Promise<WheelSizeVehicleData[]> {
-  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_tire/", {
-    tire: tireSize,
-  });
-  return data.data || [];
+  try {
+    const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_tire/", {
+      tire: tireSize,
+    });
+    return data.data || [];
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 /**
@@ -518,14 +596,19 @@ export async function searchByRim(
   width: number,
   offset?: number
 ): Promise<WheelSizeVehicleData[]> {
-  const params: Record<string, string> = {
-    diameter: String(diameter),
-    width: String(width),
-  };
-  if (offset !== undefined) params.offset = String(offset);
+  try {
+    const params: Record<string, string> = {
+      diameter: String(diameter),
+      width: String(width),
+    };
+    if (offset !== undefined) params.offset = String(offset);
 
-  const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_rim/", params);
-  return data.data || [];
+    const data = await apiGet<{ data: WheelSizeVehicleData[] }>("search/by_rim/", params);
+    return data.data || [];
+  } catch (err) {
+    if (err instanceof WheelSizeDisabledError) return [];
+    throw err;
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -593,3 +676,13 @@ export function clearCache(): number {
   console.log(`[wheelSizeApi] Cleared all ${count} cache entries`);
   return count;
 }
+
+/**
+ * Check if Wheel-Size API is enabled
+ */
+export function isWheelSizeEnabled(): boolean {
+  return WHEEL_SIZE_ENABLED;
+}
+
+// Export the enabled state for external checks
+export { WHEEL_SIZE_ENABLED };
