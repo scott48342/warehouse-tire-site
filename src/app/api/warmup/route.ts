@@ -32,8 +32,12 @@ export async function GET(req: Request) {
   const hitRate = cacheStats.hitRate; // Already computed in cacheStats
   const isCacheCold = totalRequests < 100 || hitRate < 0.3;
   
-  // Include availability if explicitly requested OR cache is cold
-  const includeAvailability = includeAvailabilityParam || (isCacheCold && !quick);
+  // Only auto-prewarm on production (preview deployments don't have WheelPros credentials)
+  const isProduction = process.env.VERCEL_ENV === "production" || 
+                       process.env.NODE_ENV === "production" && !process.env.VERCEL_URL?.includes("-");
+  
+  // Include availability if explicitly requested OR (cache is cold AND we're on production)
+  const includeAvailability = includeAvailabilityParam || (isCacheCold && !quick && isProduction);
 
   const t0 = Date.now();
   

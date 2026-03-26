@@ -371,6 +371,16 @@ export async function runPrewarmJob(options?: {
     return result;
   }
   
+  // Sanity check: don't run prewarm on preview deployments (they poison the shared cache)
+  const isPreviewDeployment = process.env.VERCEL_ENV === "preview" ||
+                              (process.env.VERCEL_URL && process.env.VERCEL_URL.includes("-"));
+  if (isPreviewDeployment && !dryRun) {
+    result.success = false;
+    result.errors.push("Prewarm disabled on preview deployments to prevent cache poisoning");
+    result.duration = Date.now() - t0;
+    return result;
+  }
+  
   const headers: Record<string, string> = { Accept: "application/json" };
   if (process.env.WHEELPROS_WRAPPER_API_KEY) {
     headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
