@@ -1217,7 +1217,23 @@ export default async function WheelsPage({
           </div>
         </div>
 
-        {data?.error ? (
+        {/* ═══════════════════════════════════════════════════════════════════════
+            FITMENT ERROR: Show FitmentUnavailable when vehicle isn't found
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {data?.error && hasVehicle && (String(data.error).includes("fitment") || String(data.error).includes("profile") || data?.resolutionPath === "invalid") ? (
+          <div className="mt-5">
+            <FitmentUnavailable
+              vehicle={{ year, make, model, trim: displayTrim }}
+              blockReason={data.importError || String(data.error)}
+              suggestions={[
+                "This vehicle may not be in our fitment database",
+                "Try selecting a different trim level if available",
+                "Contact us at (248) 332-4120 for manual fitment lookup",
+              ]}
+              showAlternatives={true}
+            />
+          </div>
+        ) : data?.error ? (
           <div className="mt-5 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
             Wheel search error: {String(data.error).slice(0, 500)}
             <div className="mt-2 text-xs text-red-800">
@@ -1229,7 +1245,7 @@ export default async function WheelsPage({
         {/* ═══════════════════════════════════════════════════════════════════════
             BLOCKED STATE: Show FitmentUnavailable when confidence is too low
             ═══════════════════════════════════════════════════════════════════════ */}
-        {isBlocked && hasVehicle ? (
+        {isBlocked && hasVehicle && !data?.error ? (
           <div className="mt-5">
             <FitmentUnavailable
               vehicle={{ year, make, model, trim: displayTrim }}
