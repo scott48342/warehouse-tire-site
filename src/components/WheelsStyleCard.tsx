@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { FavoritesButton } from "@/components/FavoritesButton";
+import { FitmentBadgeInline, FitmentAccentBar } from "@/components/FitmentConfidenceBadge";
 import { useCart } from "@/lib/cart/CartContext";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { 
@@ -41,31 +42,16 @@ function fmtSizePart(v: string) {
   return n.toString();
 }
 
-// Fitment configuration with accent colors
-const FITMENT_CONFIG = {
+// Fitment copy (kept local to card; styling comes from FitmentConfidenceBadge)
+const FITMENT_COPY = {
   surefit: {
-    label: "Best Fit",
     confidence: "Direct fit for your vehicle",
-    accentColor: "bg-green-500",
-    badgeBg: "bg-green-100",
-    badgeText: "text-green-800",
-    badgeBorder: "border-green-200",
   },
   specfit: {
-    label: "Good Fit",
     confidence: "Fits your vehicle • Aftermarket setup",
-    accentColor: "bg-blue-500",
-    badgeBg: "bg-blue-100",
-    badgeText: "text-blue-800",
-    badgeBorder: "border-blue-200",
   },
   extended: {
-    label: "Aggressive Fit",
     confidence: "Fits your vehicle • Custom fitment",
-    accentColor: "bg-orange-500",
-    badgeBg: "bg-orange-100",
-    badgeText: "text-orange-800",
-    badgeBorder: "border-orange-200",
   },
 } as const;
 
@@ -375,13 +361,12 @@ export function WheelsStyleCard({
   }
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
-  const fitConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
-  const accentColor = fitConfig?.accentColor || "bg-neutral-300";
+  const fitCopy = fitmentClass ? FITMENT_COPY[fitmentClass] : null;
 
   return (
     <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:shadow-md transition-shadow">
       {/* Fitment-based left accent bar */}
-      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${accentColor}`} />
+      <FitmentAccentBar fitmentClass={fitmentClass} />
 
       {/* Popular badge - absolute positioned */}
       {isPopular ? (
@@ -396,11 +381,9 @@ export function WheelsStyleCard({
         <div>
           <div className="text-sm font-semibold text-neutral-600">{brand}</div>
           {/* Fitment badge */}
-          {fitConfig ? (
+          {fitmentClass ? (
             <div className="mt-1">
-              <span className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-bold ${fitConfig.badgeBg} ${fitConfig.badgeText} ${fitConfig.badgeBorder}`}>
-                {fitConfig.label}
-              </span>
+              <FitmentBadgeInline fitmentClass={fitmentClass} size="sm" />
             </div>
           ) : null}
         </div>
@@ -443,9 +426,9 @@ export function WheelsStyleCard({
           ) : null}
 
           {/* Fitment confidence text */}
-          {fitConfig ? (
+          {fitCopy ? (
             <div className="mt-2 text-xs text-neutral-600">
-              <span className="text-green-600">✓</span> {fitConfig.confidence}
+              <span className="text-green-600">✓</span> {fitCopy.confidence}
             </div>
           ) : null}
 
@@ -494,9 +477,9 @@ export function WheelsStyleCard({
           ) : null}
 
           {/* Fitment confidence text */}
-          {fitConfig ? (
+          {fitCopy ? (
             <div className="mt-2 text-xs text-neutral-600">
-              <span className="text-green-600">✓</span> {fitConfig.confidence}
+              <span className="text-green-600">✓</span> {fitCopy.confidence}
             </div>
           ) : null}
 

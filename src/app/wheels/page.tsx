@@ -1137,6 +1137,17 @@ export default async function WheelsPage({
                 ? `Showing wheels for ${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}.`
                 : "Select your vehicle in the header to filter wheels."}
             </p>
+
+            {/* Fitment confidence summary (only when vehicle selected and not blocked) */}
+            {hasVehicle && !isBlocked && !data?.error ? (
+              <div className="mt-3">
+                <FitmentConfidenceStrip
+                  confidence={fitmentConfidence}
+                  vehicle={{ year, make, model, trim: displayTrim || undefined }}
+                  warningMessage={fitmentConfidence === "medium" ? (confidenceWarningMessage || null) : null}
+                />
+              </div>
+            ) : null}
             {/* DEBUG MARKER - REMOVE AFTER CONFIRMING DEPLOY */}
             <p className="mt-1 text-[10px] font-mono text-orange-600">
               DEBUG_BUILD=2026-03-23-2 | rawTrim={trim || "(none)"} | displayTrim={displayTrim || "(null)"} | submodel={_submodelCandidate || "(none)"}
