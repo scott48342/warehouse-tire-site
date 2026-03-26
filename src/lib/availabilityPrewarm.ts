@@ -444,6 +444,8 @@ export async function runPrewarmJob(options?: {
           localQty: number;
           globalQty: number;
           checkedAt: string;
+          httpStatus: number;
+          fetchOk: boolean;
         };
         const batchResults: AvailResult[] = [];
         
@@ -463,7 +465,16 @@ export async function runPrewarmJob(options?: {
                 
                 checked++;
                 if (avail.ok) available++;
-                
+
+                // SAFETY: never cache negative/empty results if upstream request failed.
+                // This prevents shared-cache poisoning during auth outages (401/403), timeouts, etc.
+                if (!avail.fetchOk) {
+                  if (avail.httpStatus === 401 || avail.httpStatus === 403) {
+                    console.warn(`[prewarm] Upstream auth failure (${avail.httpStatus}) - skipping cache write for ${c.sku}`);
+                  }
+                  return null;
+                }
+
                 return { sku: c.sku, ...avail };
               } catch (e) {
                 // Log but don't fail the whole job
@@ -571,12 +582,14 @@ async function checkSkuAvailability(opts: {
   localQty: number;
   globalQty: number;
   checkedAt: string;
+  httpStatus: number;
+  fetchOk: boolean;
 }> {
   const checkedAt = new Date().toISOString();
   const sku = String(opts.sku || "").trim();
   
   if (!sku) {
-    return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt };
+    return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt, httpStatus: 0, fetchOk: false };
   }
   
   const ac = new AbortController();
@@ -597,7 +610,10 @@ async function checkSkuAvailability(opts: {
       cache: "no-store",
       signal: ac.signal,
     });
-    
+
+    const httpStatus = res.status;
+    const fetchOk = res.ok;
+
     const data = await res.json().catch(() => null);
     const item = data?.results?.[0] || data?.items?.[0] || null;
     
@@ -611,9 +627,9 @@ async function checkSkuAvailability(opts: {
     
     const ok = Boolean(inventoryType && ORDERABLE_TYPES.has(inventoryType) && total >= opts.minQty);
     
-    return { ok, inventoryType, localQty, globalQty, checkedAt };
+    return { ok, inventoryType, localQty, globalQty, checkedAt, httpStatus, fetchOk };
   } catch {
-    return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt };
+    return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt, httpStatus: 0, fetchOk: false };
   } finally {
     clearTimeout(to);
   }
