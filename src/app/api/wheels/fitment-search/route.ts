@@ -472,14 +472,22 @@ async function handleDbFirstWheelResults(opts: {
   timing.candidatesAfterFilter = filteredCandidates.length;
 
   // Concurrent availability validation settings
-  // OPTIMIZATION: Increased concurrency and reduced time budget for faster response
+  // Availability validation settings
   const CONCURRENCY = Math.max(1, Math.min(20, Number(process.env.WT_AVAIL_CONCURRENCY || "16") || 16));
   const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "6000") || 6000);
-  const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "5000") || 5000);
-  
-  // OPTIMIZATION: Early stop when we have enough eligible items (2x requested for facet quality)
+
+  // TUNING: Restore a safer default time budget to avoid false 0-result cutoffs on cold cache.
+  // Can be overridden via env.
+  const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "8000") || 8000);
+
+  // Early stop when we have enough eligible items, but only after a minimum scan time
+  // to preserve variety and avoid premature cutoffs under noisy availability latency.
   const targetEligible = Math.max(requestedPageSize * 3, 100);
-  
+  const minScanMsBeforeEarlyStop = Math.max(
+    0,
+    Number(process.env.WT_MIN_SCAN_MS_BEFORE_EARLY_STOP || "1750") || 1750
+  );
+
   const tScan0 = Date.now();
 
   // Phase 1: Fitment validation (fast, no I/O)
@@ -624,8 +632,9 @@ async function handleDbFirstWheelResults(opts: {
   };
 
   for (const item of needsLiveCheck) {
-    // OPTIMIZATION: Early stop when we have enough eligible items for good results + facets
-    if (eligibleItems.length >= targetEligible) {
+    // Early stop when we have enough eligible items for good results + facets,
+    // but only after scanning for a minimum amount of time.
+    if (eligibleItems.length >= targetEligible && Date.now() - tScan0 >= minScanMsBeforeEarlyStop) {
       earlyStopReason = "targetReached";
       capsHit.push("earlyStop:targetReached");
       launchStopped = true;
@@ -653,9 +662,18 @@ async function handleDbFirstWheelResults(opts: {
 
   // Wait for remaining in-flight checks to complete (with a hard cap)
   if (inFlight.size > 0) {
-    const flushDeadline = Date.now() + 2000; // REDUCED: max 2s extra for in-flight (was 3s)
+    const flushExtraMs = Math.max(
+      500,
+      Number(process.env.WT_AVAIL_FLUSH_DEADLINE_MS || "3000") || 3000
+    );
+    const flushPollMs = Math.max(
+      25,
+      Number(process.env.WT_AVAIL_FLUSH_POLL_MS || "100") || 100
+    );
+
+    const flushDeadline = Date.now() + flushExtraMs;
     while (inFlight.size > 0 && Date.now() < flushDeadline) {
-      await Promise.race([...inFlight, new Promise((r) => setTimeout(r, 50))]);
+      await Promise.race([...inFlight, new Promise((r) => setTimeout(r, flushPollMs))]);
     }
   }
   
