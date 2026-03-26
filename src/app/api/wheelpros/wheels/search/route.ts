@@ -59,7 +59,13 @@ export async function GET(req: Request) {
   const upstream = new URL("/wheels/search", base);
   url.searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
 
-  const headers: Record<string, string> = { Accept: "application/json" };
+  // NOTE: The Railway wrapper appears to block "bot"/default Node fetch user agents (403 Forbidden).
+  // Send a browser-like UA so server-to-server calls from Vercel/Node runtimes succeed.
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    "User-Agent":
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+  };
   if (process.env.WHEELPROS_WRAPPER_API_KEY) {
     headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
   }
