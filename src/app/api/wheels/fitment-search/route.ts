@@ -482,10 +482,25 @@ async function handleDbFirstWheelResults(opts: {
 
   // Early stop when we have enough eligible items, but only after a minimum scan time
   // to preserve variety and avoid premature cutoffs under noisy availability latency.
-  const targetEligible = Math.max(requestedPageSize * 3, 100);
+  const defaultTargetEligible = Math.max(requestedPageSize * 3, 100);
+  const targetEligible = Math.max(
+    1,
+    Number(process.env.WT_TARGET_ELIGIBLE_BEFORE_STOP || String(defaultTargetEligible)) || defaultTargetEligible
+  );
+
   const minScanMsBeforeEarlyStop = Math.max(
     0,
     Number(process.env.WT_MIN_SCAN_MS_BEFORE_EARLY_STOP || "1750") || 1750
+  );
+
+  const minCandidatesBeforeEarlyStop = Math.max(
+    0,
+    Number(process.env.WT_MIN_CANDIDATES_BEFORE_EARLY_STOP || "24") || 24
+  );
+
+  const minUniqueBrandsBeforeEarlyStop = Math.max(
+    0,
+    Number(process.env.WT_MIN_UNIQUE_BRANDS_BEFORE_EARLY_STOP || "4") || 4
   );
 
   const tScan0 = Date.now();
@@ -567,6 +582,11 @@ async function handleDbFirstWheelResults(opts: {
   let launchStopped = false;
   let earlyStopReason: string | null = null;
 
+  // Diagnostics for tuning
+  let availabilityResolvedCount = 0; // cache hits + non-timeout live checks
+  let availabilityTimedOutCount = 0; // live checks that timed out
+  let liveCheckCount = 0;
+
   // MGET OPTIMIZATION: Bulk fetch all cached availability in ONE Redis call
   const tBulkCache0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
@@ -586,6 +606,7 @@ async function handleDbFirstWheelResults(opts: {
       cacheHits++;
       if (cached.fromPrewarm) prewarmHits++;
       availabilityChecked++;
+      availabilityResolvedCount++;
       
       if (cached.ok) {
         eligibleItems.push({
@@ -611,6 +632,7 @@ async function handleDbFirstWheelResults(opts: {
   const inFlight = new Set<Promise<void>>();
 
   const checkAvailability = async (item: FitmentValidCandidate): Promise<void> => {
+    liveCheckCount++;
     const avail = await fetchLiveAvailabilityForSku({
       wheelProsBase,
       headers,
@@ -622,6 +644,10 @@ async function handleDbFirstWheelResults(opts: {
     availabilityChecked++;
     // Don't count as cache hit since we're only checking misses
     if ((avail as any).fromPrewarm) prewarmHits++;
+
+    if ((avail as any).timedOut) availabilityTimedOutCount++;
+    else availabilityResolvedCount++;
+
     if (avail.ok) {
       eligibleItems.push({
         candidate: item.candidate,
@@ -633,12 +659,28 @@ async function handleDbFirstWheelResults(opts: {
 
   for (const item of needsLiveCheck) {
     // Early stop when we have enough eligible items for good results + facets,
-    // but only after scanning for a minimum amount of time.
-    if (eligibleItems.length >= targetEligible && Date.now() - tScan0 >= minScanMsBeforeEarlyStop) {
-      earlyStopReason = "targetReached";
-      capsHit.push("earlyStop:targetReached");
-      launchStopped = true;
-      break;
+    // but only after scanning for a minimum amount of time AND doing a minimum amount of work.
+    // This avoids premature cutoffs on cold cache / noisy upstream latency.
+    const msSinceScanStart = Date.now() - tScan0;
+    if (
+      eligibleItems.length >= targetEligible &&
+      msSinceScanStart >= minScanMsBeforeEarlyStop &&
+      availabilityChecked >= minCandidatesBeforeEarlyStop
+    ) {
+      // Ensure we have some brand diversity before stopping early
+      const brands = new Set(
+        eligibleItems
+          .map((it) => (it.candidate as any)?.brand_cd || "")
+          .map((s) => String(s || "").trim().toUpperCase())
+          .filter(Boolean)
+      );
+
+      if (brands.size >= minUniqueBrandsBeforeEarlyStop) {
+        earlyStopReason = "targetReached";
+        capsHit.push("earlyStop:targetReached");
+        launchStopped = true;
+        break;
+      }
     }
     
     // Check time budget before launching new checks
@@ -683,6 +725,11 @@ async function handleDbFirstWheelResults(opts: {
   timing.availabilityCacheHits = cacheHits;
   timing.availabilityBulkCacheHits = bulkCacheHits;
   timing.availabilityPrewarmHits = prewarmHits;
+  // For clarity in tuning reports
+  timing.availabilityResolvedCount = availabilityResolvedCount;
+  timing.availabilityTimedOutCount = availabilityTimedOutCount;
+  timing.availabilityLiveChecksLaunched = liveCheckCount;
+
   timing.availabilityLiveChecks = needsLiveCheck.length - (launchStopped ? (needsLiveCheck.length - availabilityChecked + bulkCacheHits) : 0);
   timing.eligibleCount = eligibleItems.length;
   timing.earlyStopReason = earlyStopReason;
@@ -865,8 +912,8 @@ async function fetchLiveAvailabilityForSku(opts: {
   customerNumber?: string;
   companyCode?: string;
 }): Promise<
-  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean }
-  | { ok: false; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean }
+  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean; timedOut?: boolean }
+  | { ok: false; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean; timedOut?: boolean }
 > {
   const result = await fetchAvailability({
     wheelProsBase: opts.wheelProsBase,
@@ -886,6 +933,7 @@ async function fetchLiveAvailabilityForSku(opts: {
       checkedAt: result.checkedAt,
       fromCache: result.fromCache,
       fromPrewarm: result.fromPrewarm,
+      timedOut: (result as any).timedOut,
     };
   }
   
@@ -894,6 +942,7 @@ async function fetchLiveAvailabilityForSku(opts: {
     checkedAt: result.checkedAt,
     fromCache: result.fromCache,
     fromPrewarm: result.fromPrewarm,
+    timedOut: (result as any).timedOut,
   };
 }
 

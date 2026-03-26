@@ -386,7 +386,7 @@ export async function fetchAvailability(opts: {
   minQty: number;
   customerNumber?: string;
   companyCode?: string;
-}): Promise<AvailabilityResult> {
+}): Promise<AvailabilityResult & { timedOut?: boolean; httpStatus?: number; fetchOk?: boolean }> {
   const checkedAt = new Date().toISOString();
   const sku = String(opts.sku || "").trim();
   
@@ -397,7 +397,7 @@ export async function fetchAvailability(opts: {
   // Check shared cache first
   const cached = await getCached(sku, opts.minQty);
   if (cached) {
-    return cached;
+    return { ...cached, httpStatus: 200, fetchOk: true, timedOut: false };
   }
   
   // Fetch live
@@ -420,7 +420,10 @@ export async function fetchAvailability(opts: {
       cache: "no-store",
       signal: ac.signal,
     });
-    
+
+    const httpStatus = res.status;
+    const fetchOk = res.ok;
+
     const data = await res.json().catch(() => null);
     const item = data?.results?.[0] || data?.items?.[0] || null;
     
@@ -437,11 +440,12 @@ export async function fetchAvailability(opts: {
     // Cache the result (fire-and-forget to not block response)
     setCache(sku, opts.minQty, { ok, inventoryType, localQty, globalQty, checkedAt }).catch(() => {});
     
-    return { ok, inventoryType, localQty, globalQty, checkedAt };
-  } catch {
+    return { ok, inventoryType, localQty, globalQty, checkedAt, httpStatus, fetchOk };
+  } catch (e: any) {
+    const timedOut = e?.name === "AbortError";
     // Cache negative result on error (fire-and-forget)
     setCache(sku, opts.minQty, { ok: false, checkedAt }).catch(() => {});
-    return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt };
+    return { ok: false, inventoryType: "", localQty: 0, globalQty: 0, checkedAt, timedOut, httpStatus: 0, fetchOk: false };
   } finally {
     clearTimeout(to);
   }
