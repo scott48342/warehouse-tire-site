@@ -16,6 +16,7 @@ import { eq, and, or, isNull, desc } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { importWheelSizeFitment } from "./importFitment";
 import { applyOverrides } from "./applyOverrides";
+import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 // ============================================================================
 // Types
@@ -43,6 +44,12 @@ interface WheelSizeApiConfig {
 let wheelSizeConfig: WheelSizeApiConfig | null = null;
 
 function getWheelSizeConfig(): WheelSizeApiConfig | null {
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  if (!isWheelSizeEnabled()) {
+    console.warn("[getFitment] Wheel-Size API DISABLED - returning null config");
+    return null;
+  }
+
   if (wheelSizeConfig) return wheelSizeConfig;
   
   const apiKey = process.env.WHEELSIZE_API_KEY;

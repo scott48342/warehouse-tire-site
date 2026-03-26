@@ -25,6 +25,7 @@ import { eq, and } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
+import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 // ============================================================================
 // Types
@@ -91,6 +92,11 @@ export interface ProfileLookupResult {
 const WHEELSIZE_API_BASE = "https://api.wheel-size.com/v2/";
 
 function getApiKey(): string | null {
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  if (!isWheelSizeEnabled()) {
+    console.warn("[profileService] Wheel-Size API DISABLED - returning null API key");
+    return null;
+  }
   return process.env.WHEELSIZE_API_KEY || null;
 }
 

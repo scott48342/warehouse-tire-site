@@ -11,6 +11,7 @@ import type { NewFitmentSourceRecord, NewVehicleFitment, NewFitmentImportJob } f
 import { eq, and } from "drizzle-orm";
 import { makePayloadChecksum, normalizeMake, normalizeModel, slugify } from "./keys";
 import { normalizeWheelSizeData, createWheelSizeSourceRecord } from "./normalize";
+import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 // ============================================================================
 // Single Record Import
@@ -247,6 +248,16 @@ export async function importFromWheelSize(
   jobId: string,
   options: WheelSizeImportOptions
 ): Promise<void> {
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  if (!isWheelSizeEnabled()) {
+    console.warn("[importFitment] Wheel-Size API DISABLED - blocking batch import");
+    await updateImportJobProgress(jobId, { 
+      status: "failed",
+      lastError: "Wheel-Size API is temporarily disabled"
+    });
+    throw new Error("Wheel-Size API is temporarily disabled");
+  }
+
   const { yearStart, yearEnd, makes, apiKey, onProgress } = options;
   
   await updateImportJobProgress(jobId, { status: "running" });

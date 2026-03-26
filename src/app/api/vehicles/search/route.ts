@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 export const runtime = "nodejs";
 
@@ -51,6 +52,18 @@ type Modification = {
  * - trim: legacy param, falls back if modification not provided
  */
 export async function GET(req: Request) {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!isWheelSizeEnabled()) {
+    console.warn("[vehicles/search] Wheel-Size API DISABLED - returning null fitment");
+    return NextResponse.json({
+      fitment: null,
+      error: "Wheel-Size API is temporarily disabled",
+      disabled: true,
+    });
+  }
+
   const url = new URL(req.url);
   const year = url.searchParams.get("year");
   const make = url.searchParams.get("make");

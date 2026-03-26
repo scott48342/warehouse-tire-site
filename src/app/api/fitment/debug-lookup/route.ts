@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -12,6 +13,12 @@ function getApiKey(): string {
 }
 
 async function apiGet(path: string, params?: Record<string, string>): Promise<any> {
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  if (!isWheelSizeEnabled()) {
+    console.warn("[debug-lookup] Wheel-Size API DISABLED - blocking request");
+    return { error: "Wheel-Size API is temporarily disabled", disabled: true };
+  }
+
   const url = new URL(path, BASE_URL);
   url.searchParams.set("user_key", getApiKey());
   if (params) {

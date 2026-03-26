@@ -69,6 +69,14 @@ function getApiKey(): string {
 }
 
 async function apiGet<T>(path: string, params?: Record<string, string>): Promise<T> {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!wheelSizeApi.isWheelSizeEnabled()) {
+    console.warn("[tire-sizes] Wheel-Size API DISABLED - blocking direct call");
+    throw new Error("Wheel-Size API is temporarily disabled");
+  }
+
   const url = new URL(path, BASE_URL);
   url.searchParams.set("user_key", getApiKey());
   if (params) {

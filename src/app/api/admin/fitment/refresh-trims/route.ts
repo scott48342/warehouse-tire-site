@@ -8,6 +8,7 @@ import {
   endBatchJob,
   getUsageStats,
 } from "@/lib/wheelSizeGuard";
+import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -39,6 +40,17 @@ export const maxDuration = 300;
  * - allowBatch: boolean (REQUIRED) - enable batch mode
  */
 export async function POST(req: Request) {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!isWheelSizeEnabled()) {
+    console.warn("[refresh-trims] Wheel-Size API DISABLED - blocking request");
+    return NextResponse.json({
+      error: "Wheel-Size API is temporarily disabled",
+      disabled: true,
+    }, { status: 503 });
+  }
+
   const t0 = Date.now();
   
   let body: any = {};
