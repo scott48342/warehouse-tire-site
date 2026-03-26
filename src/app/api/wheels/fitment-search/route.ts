@@ -36,6 +36,15 @@ import {
   getCacheStats as getAvailabilityCacheStats,
 } from "@/lib/availabilityCache";
 
+import {
+  calculateConfidence,
+  buildConfidenceResponse,
+  getConfidenceUIMetadata,
+  formatConfidenceForLog,
+  type FitmentConfidence,
+  type ConfidenceResult,
+} from "@/lib/fitmentConfidence";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -145,15 +154,58 @@ export async function GET(req: Request) {
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 2: Use dbProfile if Available (ModificationId-First Path)
+    // STEP 2: Calculate Fitment Confidence (SAFETY-FIRST)
     // ═══════════════════════════════════════════════════════════════════════════
     
-    if (dbProfile && dbProfile.boltPattern) {
-      return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0);
+    const confidenceResult = calculateConfidence(dbProfile);
+    console.log(formatConfidenceForLog(confidenceResult));
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 2b: Block results if confidence too low (SAFETY)
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    if (!confidenceResult.canShowWheels) {
+      const uiMeta = getConfidenceUIMetadata(confidenceResult.confidence);
+      
+      console.warn(`[fitment-search] BLOCKED (${confidenceResult.confidence}): ${year} ${make} ${model} mod=${modificationId || "(none)"} - insufficient fitment data`);
+      
+      return NextResponse.json({
+        results: [],
+        totalCount: 0,
+        blocked: true,
+        blockReason: "Cannot safely show wheel results without verified fitment data",
+        fitment: {
+          ...buildConfidenceResponse(confidenceResult),
+          vehicle: {
+            year: Number(year),
+            make,
+            model,
+            trim: dbProfile?.displayTrim || modificationId || null,
+          },
+          resolutionPath: dbProfile ? resolutionPath : "invalid",
+          profileFound: !!dbProfile,
+        },
+        suggestions: [
+          "Try a different trim level if available",
+          "Contact us at (248) 332-4120 for manual fitment lookup",
+          "Check your owner's manual for wheel specifications",
+        ],
+        timing: {
+          totalMs: Date.now() - t0,
+        },
+      });
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 3: Legacy Fallback (Only When ModificationId-First Fails)
+    // STEP 3: Use dbProfile if Available (ModificationId-First Path)
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    if (dbProfile && dbProfile.boltPattern) {
+      return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, aliasUsed, modeParam, debug, t0, confidenceResult);
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 4: Legacy Fallback (Only When ModificationId-First Fails)
     // ═══════════════════════════════════════════════════════════════════════════
     
     console.warn(`[fitment-search] LEGACY FALLBACK: ${year} ${make} ${model} mod=${modificationId || "(none)"} - dbProfile unavailable`);
@@ -182,7 +234,8 @@ async function handleDbProfilePath(
   aliasUsed: boolean,
   modeParam: string | null,
   debug: boolean,
-  t0: number
+  t0: number,
+  confidenceResult?: ConfidenceResult
 ): Promise<NextResponse> {
   const year = url.searchParams.get("year")!;
   const make = url.searchParams.get("make")!;
@@ -264,6 +317,8 @@ async function handleDbProfilePath(
     requestedModificationId,
     debug,
     t0,
+    // Confidence result for response
+    confidenceResult,
     // Include dbProfile in response for accessory fitment calculation
     dbProfileForResponse: {
       modificationId: dbProfile.modificationId,
@@ -334,6 +389,8 @@ async function handleDbFirstWheelResults(opts: {
   requestedModificationId?: string | null;
   debug: boolean;
   t0: number;
+  // Confidence result from safety check
+  confidenceResult?: ConfidenceResult;
   // DB profile for accessory fitment calculation (threadSize, seatType, centerBoreMm)
   dbProfileForResponse?: {
     modificationId: string;
@@ -693,6 +750,11 @@ async function handleDbFirstWheelResults(opts: {
     },
   })));
 
+  // Build confidence UI metadata for response
+  const confidenceUIMeta = opts.confidenceResult 
+    ? getConfidenceUIMetadata(opts.confidenceResult.confidence)
+    : null;
+
   return NextResponse.json({
     results,
     totalCount: eligibleCount,
@@ -709,6 +771,15 @@ async function handleDbFirstWheelResults(opts: {
       canonicalModificationId: opts.canonicalModificationId || null,
       requestedModificationId: opts.requestedModificationId || null,
       validationMode: "strict",
+      // Confidence information (SAFETY-FIRST)
+      confidence: opts.confidenceResult?.confidence || "high",  // Assume high if we got here
+      confidenceReasons: opts.confidenceResult?.reasons || [],
+      confidenceUI: confidenceUIMeta ? {
+        label: confidenceUIMeta.label,
+        colorToken: confidenceUIMeta.colorToken,
+        icon: confidenceUIMeta.icon,
+        warningMessage: confidenceUIMeta.warningMessage,
+      } : null,
       envelope: {
         boltPattern: envelope.boltPattern,
         centerBore: envelope.centerBore,
@@ -888,6 +959,53 @@ async function handleLegacyPath(
 
   const profileMs = Date.now() - t0;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SAFETY CHECK: Calculate confidence on legacy profile
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  const legacyConfidenceInput = {
+    boltPattern: profile.boltPattern,
+    centerBoreMm: profile.centerBore,
+    oemWheelSizes: profile.wheelSpecs,
+  };
+  
+  const confidenceResult = calculateConfidence(legacyConfidenceInput);
+  console.log(`[fitment-search] LEGACY CONFIDENCE:`, formatConfidenceForLog(confidenceResult));
+  
+  // Block if confidence too low (same as main path)
+  if (!confidenceResult.canShowWheels) {
+    const uiMeta = getConfidenceUIMetadata(confidenceResult.confidence);
+    
+    console.warn(`[fitment-search] LEGACY BLOCKED (${confidenceResult.confidence}): ${year} ${make} ${model} - insufficient fitment data`);
+    
+    return NextResponse.json({
+      results: [],
+      totalCount: 0,
+      blocked: true,
+      blockReason: "Cannot safely show wheel results without verified fitment data",
+      fitment: {
+        ...buildConfidenceResponse(confidenceResult),
+        vehicle: {
+          year: Number(year),
+          make,
+          model,
+          trim: profile.vehicle.trim || modificationId || null,
+        },
+        resolutionPath: "legacyFallback",
+        profileFound: true,
+      },
+      suggestions: [
+        "Try a different trim level if available",
+        "Contact us at (248) 332-4120 for manual fitment lookup",
+        "Check your owner's manual for wheel specifications",
+      ],
+      timing: {
+        totalMs: Date.now() - t0,
+        profileMs,
+      },
+    });
+  }
+
   // Determine fitment mode
   let mode: FitmentMode;
   let modeAutoDetected = false;
@@ -964,6 +1082,7 @@ async function handleLegacyPath(
     requestedModificationId,
     debug,
     t0,
+    confidenceResult,  // Pass confidence to response
     dbProfileForResponse: legacyDbProfile,
   });
 }
