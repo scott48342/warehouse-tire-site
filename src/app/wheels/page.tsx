@@ -6,6 +6,8 @@ import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
+import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
+import { FitmentConfidenceStrip, type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
@@ -505,6 +507,22 @@ export default async function WheelsPage({
 
   // Capture staggered debug info from fitment-search response
   const staggeredDebug = data?.fitment?.staggered || null;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BLOCKED STATE (Confidence too low to show wheels)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // When the fitment engine doesn't have enough confidence in the data,
+  // it returns blocked=true and we should NOT show wheel results.
+  const isBlocked = Boolean(data?.blocked);
+  const blockReason = data?.blockReason || null;
+  const blockSuggestions: string[] = Array.isArray(data?.suggestions) ? data.suggestions : [];
+  
+  // Extract confidence level and UI metadata
+  const fitmentConfidence = (data?.fitment?.confidence || "none") as FitmentConfidenceLevel;
+  const confidenceReasons: string[] = Array.isArray(data?.fitment?.confidenceReasons) 
+    ? data.fitment.confidenceReasons 
+    : [];
+  const confidenceWarningMessage = data?.fitment?.ui?.warningMessage || null;
 
   // Capture bolt pattern from fitment-search response (more reliable than separate fitment call)
   const fitmentSearchBp = data?.fitment?.envelope?.boltPattern;
@@ -1208,6 +1226,32 @@ export default async function WheelsPage({
           </div>
         ) : null}
 
+        {/* ═══════════════════════════════════════════════════════════════════════
+            BLOCKED STATE: Show FitmentUnavailable when confidence is too low
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {isBlocked && hasVehicle ? (
+          <div className="mt-5">
+            <FitmentUnavailable
+              vehicle={{ year, make, model, trim: displayTrim }}
+              blockReason={blockReason}
+              suggestions={blockSuggestions}
+              confidenceReasons={confidenceReasons}
+              showAlternatives={true}
+            />
+          </div>
+        ) : null}
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            MEDIUM CONFIDENCE WARNING: Show warning banner but still display results
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {!isBlocked && fitmentConfidence === "medium" && hasVehicle && confidenceWarningMessage ? (
+          <div className="mt-5">
+            <FitmentMediumConfidenceWarning message={confidenceWarningMessage} />
+          </div>
+        ) : null}
+
+        {/* Main content grid - only show if NOT blocked */}
+        {!isBlocked ? (
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
           <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
             {/* Package Summary - shows when building a package */}
@@ -1750,6 +1794,7 @@ export default async function WheelsPage({
             </div>
           </section>
         </div>
+        ) : null}
       </div>
     </main>
   );
