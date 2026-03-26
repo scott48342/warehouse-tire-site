@@ -19,9 +19,21 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const debug = url.searchParams.get("debug") === "1";
   // Include availability pre-warm (slower but comprehensive)
-  const includeAvailability = url.searchParams.get("availability") === "1";
+  const includeAvailabilityParam = url.searchParams.get("availability") === "1";
   // Quick mode: just techfeed + browse, skip WheelPros API calls
   const quick = url.searchParams.get("quick") === "1";
+  // Priority filter: only warm priority 1 (fastest), 1-2 (medium), or all (slowest)
+  const priorityParam = url.searchParams.get("priority");
+  const maxPriority = priorityParam ? parseInt(priorityParam, 10) : 2;
+  
+  // Auto-detect cold cache: if cache hit rate is very low, automatically include availability
+  const cacheStats = await getCacheStats();
+  const totalRequests = cacheStats.hits + cacheStats.misses;
+  const hitRate = cacheStats.hitRate; // Already computed in cacheStats
+  const isCacheCold = totalRequests < 100 || hitRate < 0.3;
+  
+  // Include availability if explicitly requested OR cache is cold
+  const includeAvailability = includeAvailabilityParam || (isCacheCold && !quick);
 
   const t0 = Date.now();
   
@@ -62,9 +74,10 @@ export async function GET(req: Request) {
     const avail0 = Date.now();
     try {
       availabilityResult = await runPrewarmJob({
-        // Only run priority 1 targets for warmup endpoint (faster)
-        targets: PREWARM_TARGETS.filter(t => t.priority <= 2),
-        maxSkusPerPattern: 100, // Limit for faster warmup
+        // Filter targets by priority (1 = fastest, 3 = slowest)
+        targets: PREWARM_TARGETS.filter(t => t.priority <= maxPriority),
+        // Limit SKUs based on priority for faster warmup
+        maxSkusPerPattern: maxPriority <= 1 ? 50 : maxPriority <= 2 ? 100 : 150,
       });
     } catch (e: any) {
       availabilityResult = { error: e?.message || String(e) };
@@ -81,11 +94,18 @@ export async function GET(req: Request) {
       browse: { ...browse, ms: browseMs },
       wheelpros: quick ? { skipped: true } : { url: wheelsUrl, status: wheelsStatus, ms: wheelsMs },
       availability: includeAvailability 
-        ? { ...availabilityResult, ms: availabilityMs }
+        ? { 
+            ...availabilityResult, 
+            ms: availabilityMs,
+            autoTriggered: isCacheCold && !includeAvailabilityParam,
+            maxPriority,
+          }
         : { 
             skipped: true, 
-            hint: "Add ?availability=1 to pre-warm availability cache",
+            hint: "Add ?availability=1 to pre-warm availability cache (auto-triggers when cache is cold)",
             cacheStats: getCacheStats(),
+            cacheColdDetected: isCacheCold,
+            hitRate: Math.round(hitRate * 100) + "%",
           },
       totalMs,
       at: new Date().toISOString(),

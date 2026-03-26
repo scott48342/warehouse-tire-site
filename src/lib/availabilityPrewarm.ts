@@ -211,7 +211,7 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
   },
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // PRIORITY 3: Additional coverage
+  // PRIORITY 3: Additional truck/SUV coverage
   // ═══════════════════════════════════════════════════════════════════════════
   {
     name: "Toyota Tundra",
@@ -240,6 +240,50 @@ export const PREWARM_TARGETS: PrewarmTarget[] = [
     centerBore: 106.1,
     priority: 3,
     description: "Toyota off-road SUV",
+  },
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PRIORITY 3: Common passenger cars (high-volume but lower margin)
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    name: "Toyota Camry/RAV4/Highlander",
+    boltPattern: "5x114.3",
+    centerBore: 60.1,
+    priority: 3,
+    description: "Toyota 5-lug platform (Camry, RAV4, Highlander, Sienna)",
+    maxSkus: 150,
+  },
+  {
+    name: "Honda Accord/Civic/CR-V",
+    boltPattern: "5x114.3",
+    centerBore: 64.1,
+    priority: 3,
+    description: "Honda 5-lug platform (Accord, Civic, CR-V, Odyssey)",
+    maxSkus: 150,
+  },
+  {
+    name: "Nissan Altima/Maxima/Murano",
+    boltPattern: "5x114.3",
+    centerBore: 66.1,
+    priority: 3,
+    description: "Nissan 5-lug platform",
+    maxSkus: 100,
+  },
+  {
+    name: "Ford Mustang/Explorer",
+    boltPattern: "5x114.3",
+    centerBore: 70.5,
+    priority: 3,
+    description: "Ford 5-lug cars/crossovers",
+    maxSkus: 100,
+  },
+  {
+    name: "Chevy Malibu/Equinox",
+    boltPattern: "5x115",
+    centerBore: 70.3,
+    priority: 3,
+    description: "GM 5-lug cars/crossovers",
+    maxSkus: 100,
   },
 ];
 
