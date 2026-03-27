@@ -618,8 +618,15 @@ export function parseCsv(csvContent: string): FitmentInput[] {
   const lines = csvContent.trim().split("\n");
   if (lines.length < 2) return [];
   
+  // Find header (skip comment lines at the start)
+  let headerIdx = 0;
+  while (headerIdx < lines.length && lines[headerIdx].trim().startsWith("#")) {
+    headerIdx++;
+  }
+  if (headerIdx >= lines.length) return [];
+  
   // Parse header
-  const header = lines[0].split(",").map(h => h.trim().toLowerCase().replace(/[^a-z0-9_]/g, "_"));
+  const header = lines[headerIdx].split(",").map(h => h.trim().toLowerCase().replace(/[^a-z0-9_]/g, "_"));
   
   // Map common header variations
   const headerMapping: Record<string, string> = {
@@ -667,9 +674,9 @@ export function parseCsv(csvContent: string): FitmentInput[] {
   // Parse rows
   const records: FitmentInput[] = [];
   
-  for (let i = 1; i < lines.length; i++) {
+  for (let i = headerIdx + 1; i < lines.length; i++) {
     const line = lines[i].trim();
-    if (!line) continue;
+    if (!line || line.startsWith("#")) continue; // Skip empty lines and comments
     
     // Simple CSV parsing (doesn't handle quoted commas)
     const values = line.split(",").map(v => v.trim());
