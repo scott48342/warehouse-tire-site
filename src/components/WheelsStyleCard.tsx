@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { FitmentBadgeInline, FitmentAccentBar } from "@/components/FitmentConfidenceBadge";
-import { WheelBadgeStack, AvailabilityIndicator, type WheelBadgeInfo, type AvailabilityLabel } from "@/components/WheelBadges";
 import { useCart } from "@/lib/cart/CartContext";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { 
@@ -74,8 +73,6 @@ export function WheelsStyleCard({
   dbProfile,
   wheelCenterBore,
   wheelSeatType,
-  availability,
-  ranking,
 }: {
   brand: string;
   title: string;
@@ -97,17 +94,6 @@ export function WheelsStyleCard({
   wheelCenterBore?: number;
   /** Wheel seat type override (conical, ball, flat, mag) */
   wheelSeatType?: string;
-  /** Availability info for badges */
-  availability?: {
-    label: AvailabilityLabel;
-    localStock?: number;
-    globalStock?: number;
-  };
-  /** Ranking info for merchandising badges */
-  ranking?: {
-    score: number;
-    priceTier?: "value" | "mid" | "premium";
-  };
 }) {
   const router = useRouter();
   const { addItem, addAccessories, setAccessoryState } = useCart();
@@ -382,22 +368,14 @@ export function WheelsStyleCard({
       {/* Fitment-based left accent bar */}
       <FitmentAccentBar fitmentClass={fitmentClass} />
 
-      {/* Badges row - Top Pick, Best Value, In Stock, Limited */}
-      {(availability || ranking || isPopular) && (
-        <div className="absolute top-3 right-3 z-10 flex flex-col items-end gap-1">
-          {/* Merchandising & Availability Badges */}
-          <WheelBadgeStack
-            info={{
-              availability,
-              ranking,
-              isTopPick: isPopular || (ranking?.score ?? 0) >= 90,
-              isBestValue: ranking?.priceTier === "mid" && (ranking?.score ?? 0) >= 75,
-            }}
-            size="sm"
-            layout="vertical"
-          />
+      {/* Popular badge - absolute positioned */}
+      {isPopular ? (
+        <div className="absolute top-3 right-3 z-10">
+          <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-800">
+            🔥 Popular
+          </span>
         </div>
-      )}
+      ) : null}
 
       <div className="flex items-start justify-between gap-2">
         <div>
@@ -585,26 +563,14 @@ export function WheelsStyleCard({
         </div>
       ) : null}
 
-      {/* Price & Availability */}
+      {/* Price */}
       <div className="mt-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-2xl font-extrabold text-neutral-900">
-              {typeof selectedPrice === "number"
-                ? `$${selectedPrice.toFixed(2)}`
-                : (typeof fromPrice === "number" ? `From $${fromPrice.toFixed(2)}` : "Call for price")}
-            </div>
-            <div className="text-sm text-neutral-600">each</div>
-          </div>
-          {/* Availability indicator */}
-          {availability && (
-            <AvailabilityIndicator 
-              label={availability.label} 
-              showLabel={true}
-              size="sm"
-            />
-          )}
+        <div className="text-2xl font-extrabold text-neutral-900">
+          {typeof selectedPrice === "number"
+            ? `$${selectedPrice.toFixed(2)}`
+            : (typeof fromPrice === "number" ? `From $${fromPrice.toFixed(2)}` : "Call for price")}
         </div>
+        <div className="text-sm text-neutral-600">each</div>
       </div>
 
       {/* Install & Trust messaging */}

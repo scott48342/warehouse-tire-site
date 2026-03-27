@@ -110,12 +110,3 @@ body {
   display: grid;
   grid-auto-rows: 1fr;
 }
-
-/* Hide scrollbar for horizontal scroll carousels */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari, and Opera */
-}

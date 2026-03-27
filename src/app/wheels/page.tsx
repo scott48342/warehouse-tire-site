@@ -8,8 +8,6 @@ import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { FitmentConfidenceStrip, type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
-import { HeroRow, toHeroItem, type HeroWheelItem } from "@/components/HeroRow";
-import { type AvailabilityLabel } from "@/components/WheelBadges";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
@@ -32,16 +30,6 @@ type Wheel = {
     staggered: boolean;
     front: { sku: string; diameter?: string; width?: string; offset?: string };
     rear?: { sku: string; diameter?: string; width?: string; offset?: string };
-  };
-  // NEW: Availability & ranking for badges
-  availability?: {
-    label: AvailabilityLabel;
-    localStock?: number;
-    globalStock?: number;
-  };
-  ranking?: {
-    score: number;
-    priceTier?: "value" | "mid" | "premium";
   };
 };
 
@@ -655,21 +643,6 @@ export default async function WheelsPage({
     const fitmentValidation = (it as any)?.fitmentValidation;
     const fitmentClass = fitmentValidation?.fitmentClass as Wheel["fitmentClass"] | undefined;
 
-    // Extract availability info (from fitment-search endpoint DB-first architecture)
-    const availabilityData = (it as any)?.availability;
-    const availability = availabilityData ? {
-      label: (availabilityData.label || "check_availability") as AvailabilityLabel,
-      localStock: availabilityData.localStock,
-      globalStock: availabilityData.globalStock,
-    } : undefined;
-
-    // Extract ranking info for merchandising badges (from fitment-search endpoint)
-    const rankingRaw = (it as any)?.ranking;
-    const ranking: Wheel["ranking"] = rankingRaw ? {
-      score: rankingRaw?.score ?? 50,
-      priceTier: rankingRaw?.priceTier as "value" | "mid" | "premium" | undefined,
-    } : undefined;
-
     return {
       sku: it?.sku,
       brand,
@@ -684,8 +657,6 @@ export default async function WheelsPage({
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
       styleKey,
       fitmentClass,
-      availability,
-      ranking,
     };
   });
 
@@ -857,35 +828,12 @@ export default async function WheelsPage({
         return best;
       }, undefined as Wheel["fitmentClass"]);
 
-      // Determine best availability for this style (prioritize in_stock > limited > check_availability)
-      const availPriority = (label: AvailabilityLabel | undefined) => {
-        if (label === "in_stock") return 0;
-        if (label === "limited") return 1;
-        return 2; // check_availability or undefined
-      };
-      const bestAvailability = arr.reduce((best, w) => {
-        if (!w.availability) return best;
-        if (!best) return w.availability;
-        if (availPriority(w.availability.label) < availPriority(best.label)) return w.availability;
-        return best;
-      }, undefined as Wheel["availability"]);
-
-      // Determine best ranking score for this style (highest score wins)
-      const bestRanking = arr.reduce((best, w) => {
-        if (!w.ranking) return best;
-        if (!best) return w.ranking;
-        if ((w.ranking.score ?? 0) > (best.score ?? 0)) return w.ranking;
-        return best;
-      }, undefined as Wheel["ranking"]);
-
       out.push({
         ...rep,
         styleKey: k,
         finishThumbs: thumbs.filter((t) => t.sku),
         pair,
         fitmentClass: bestFitmentClass,
-        availability: bestAvailability,
-        ranking: bestRanking,
       });
     }
 
@@ -1708,31 +1656,63 @@ export default async function WheelsPage({
               </div>
             ) : null}
 
-            {/* Hero Row - Top Picks Carousel (NEW) */}
-            {hasVehicle && itemsFinal.length > 0 && safePage === 1 ? (
-              <div className="mt-4 mb-6">
-                <HeroRow
-                  items={itemsFinal.map((w) => toHeroItem(w, {
-                    year,
-                    make,
-                    model,
-                    trim,
-                    modification,
-                    sort,
-                    page: String(page),
-                  }))}
-                  title="🔥 Top Picks for Your Vehicle"
-                  vehicleLabel={`${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`}
-                  config={{
-                    maxItems: 8,
-                    requireInStock: false, // Show best items even if not cached as in_stock
-                    preferTier1Brands: true,
-                    requireImages: true,
-                    minScore: 50,
-                    maxPerBrand: 2,
-                    maxPerModel: 1,
-                  }}
-                />
+            {/* Top Picks section - curated recommendations */}
+            {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
+              <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-5">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">⭐</span>
+                      <h2 className="text-xl font-extrabold text-neutral-900">
+                        Top Picks for Your {year} {make} {model}
+                      </h2>
+                    </div>
+                    <p className="mt-1 text-sm text-neutral-600">
+                      Hand-picked based on fitment, popularity, and value
+                    </p>
+                    <p className="mt-0.5 text-xs text-neutral-500">
+                      Start here — most customers choose from these options
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-800 whitespace-nowrap">
+                    ✓ Top Pick
+                  </span>
+                </div>
+                
+                {/* Featured grid */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-4">
+                  {recommendedWheels.slice(0, 4).map((w, idx) => (
+                    <WheelsStyleCard
+                      key={`rec-${w.sku || idx}`}
+                      brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
+                      title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
+                      baseSku={String(w.sku || "")}
+                      baseFinish={w.finish ? String(w.finish) : undefined}
+                      baseImageUrl={w.imageUrl}
+                      price={w.price}
+                      sizeLabel={w.diameter || w.width ? { diameter: w.diameter, width: w.width } : undefined}
+                      pair={w.pair}
+                      specLabel={{
+                        boltPattern: (w as any).boltPattern,
+                        offset: (w as any).offset,
+                      }}
+                      finishThumbs={w.finishThumbs}
+                      fitmentClass={w.fitmentClass}
+                      isPopular={idx === 0 || idx === 1}
+                      viewParams={{
+                        year,
+                        make,
+                        model,
+                        trim,
+                        modification,
+                        sort,
+                        page: String(page),
+                      }}
+                      dbProfile={dbProfile}
+                      wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
+                    />
+                  ))}
+                </div>
               </div>
             ) : null}
 
@@ -1783,8 +1763,6 @@ export default async function WheelsPage({
                     }}
                     dbProfile={dbProfile}
                     wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
-                    availability={w.availability}
-                    ranking={w.ranking}
                   />
                 ))
               ) : (
