@@ -336,18 +336,25 @@ async function fetchModificationFromApi(
       }
     } else {
       console.warn(`[profileService] SUPPLEMENT UNKNOWN: Could not resolve ${requestedModificationId} - no matching trim in supplements`);
-      // DO NOT fall back to first mod - return null to indicate resolution failure
+      // DO NOT fall back to first mod for UNKNOWN supplement IDs - return null
+      return null;
     }
   }
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // REMOVED: Dangerous fallback to first mod for non-supplement IDs
-  // Old code: if (!mod && mods.length > 0) { mod = mods[0]; }
-  // This caused XLT to resolve to 2.7 EcoBoost incorrectly
+  // FALLBACK: For non-supplement IDs that don't match any slug exactly,
+  // fall back to first USDM modification. This is SAFE because:
+  // - Non-supplement IDs are typically engine/configuration slugs
+  // - All configurations of the same model/year share fitment specs
+  // - Only supplement IDs (trim levels) need exact matching
   // ═══════════════════════════════════════════════════════════════════════════
+  if (!mod && mods.length > 0) {
+    mod = mods[0];
+    console.log(`[profileService] FALLBACK: Using first USDM mod ${mod.slug} for unmatched ID "${requestedModificationId}"`);
+  }
   
   if (!mod) {
-    console.log(`[profileService] No matching modification found for ${requestedModificationId}`);
+    console.log(`[profileService] No modifications available for ${requestedModificationId}`);
     return null;
   }
   
