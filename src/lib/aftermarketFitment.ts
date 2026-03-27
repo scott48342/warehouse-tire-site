@@ -262,9 +262,10 @@ export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
   aggressive: {
     // Truck/enthusiast fitment: +4" diameter, +3" width, very wide offset range
     // Allows aggressive poke/stance for lifted trucks
-    diameterPlusMin: -1,   // allow 1" smaller too
+    // NOTE: diameterPlusMin is ignored - we NEVER allow below OEM minimum
+    diameterPlusMin: 0,    // OEM minimum is the floor (safety)
     diameterPlusMax: 4,
-    widthPlusMin: -0.5,    // allow slightly narrower too
+    widthPlusMin: -0.5,    // allow slightly narrower
     widthPlusMax: 3,
     offsetExpandLow: 60,   // allow VERY low offset (aggressive poke, -26mm etc)
     offsetExpandHigh: 20,  // allow higher offset (tucked)
@@ -273,7 +274,8 @@ export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
   truck: {
     // Maximum flexibility for truck/SUV builds - matches Wheel Pros YMM behavior
     // Essentially allows any wheel with correct bolt pattern and center bore
-    diameterPlusMin: -2,   // allow 2" smaller
+    // NOTE: diameterPlusMin is ignored - we NEVER allow below OEM minimum
+    diameterPlusMin: 0,    // OEM minimum is the floor (safety)
     diameterPlusMax: 6,    // allow up to +6" (26" on 20" OEM)
     widthPlusMin: -1,      // allow narrower
     widthPlusMax: 5,       // allow up to 14" wide wheels
@@ -344,10 +346,19 @@ export function buildFitmentEnvelope(
   }
 
   // Apply expansion rules
-  const allowedMinDiameter = oemMinDiameter + rules.diameterPlusMin;
+  // SAFETY: Never allow diameter BELOW OEM minimum - downsizing can cause:
+  // - Brake caliper interference
+  // - Speedometer inaccuracy  
+  // - Suspension geometry issues
+  // Upsizing is allowed per mode rules, but downsizing below OEM is always blocked.
+  const allowedMinDiameter = Math.max(oemMinDiameter, oemMinDiameter + rules.diameterPlusMin);
   const allowedMaxDiameter = oemMaxDiameter + rules.diameterPlusMax;
+  
+  // Width can expand both directions within mode limits
   const allowedMinWidth = oemMinWidth + rules.widthPlusMin;
   const allowedMaxWidth = oemMaxWidth + rules.widthPlusMax;
+  
+  // Offset can expand both directions within mode limits
   const allowedMinOffset = oemMinOffset - rules.offsetExpandLow;
   const allowedMaxOffset = oemMaxOffset + rules.offsetExpandHigh;
 
