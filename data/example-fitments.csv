@@ -1,0 +1,11 @@
+year,make,model,trim,bolt_pattern,center_bore_mm,thread_size,seat_type,offset_min_mm,offset_max_mm,source,confidence,source_notes
+2024,Ford,F-150,XLT,6x135,87.1,M14x1.5,conical,-12,44,manual_entry,high,Example data for testing
+2024,Ford,F-150,Lariat,6x135,87.1,M14x1.5,conical,-12,44,manual_entry,high,Example data for testing
+2024,Ford,F-150,Platinum,6x135,87.1,M14x1.5,conical,-12,44,manual_entry,high,Example data for testing
+2024,Chevrolet,Silverado 1500,LT,6x139.7,78.1,M14x1.5,conical,0,31,manual_entry,high,Example data for testing
+2024,Chevrolet,Silverado 1500,High Country,6x139.7,78.1,M14x1.5,conical,0,31,manual_entry,high,Example data for testing
+2024,RAM,Ram 1500,Big Horn,6x139.7,77.8,M14x1.5,conical,-12,25,manual_entry,high,Example data for testing
+2024,RAM,Ram 1500,Laramie,6x139.7,77.8,M14x1.5,conical,-12,25,manual_entry,high,Example data for testing
+2024,GMC,Sierra 1500,SLT,6x139.7,78.1,M14x1.5,conical,0,31,manual_entry,high,Example data for testing
+2024,Toyota,Tacoma,TRD Off-Road,6x139.7,106.1,M12x1.5,conical,0,30,manual_entry,high,Example data for testing
+2024,Toyota,Tundra,SR5,6x139.7,106.1,M14x1.5,conical,0,35,manual_entry,high,Example data for testing
