@@ -406,7 +406,9 @@ export async function fetchAvailability(opts: {
   const to = setTimeout(() => ac.abort(), timeoutMs);
   
   try {
-    const u = new URL("/wheels/search", opts.wheelProsBase);
+    // Ensure proper URL construction (don't use leading slash which replaces path)
+    const baseUrl = opts.wheelProsBase.endsWith("/") ? opts.wheelProsBase : opts.wheelProsBase + "/";
+    const u = new URL("wheels/search", baseUrl);
     u.searchParams.set("sku", sku);
     u.searchParams.set("page", "1");
     u.searchParams.set("pageSize", "1");
