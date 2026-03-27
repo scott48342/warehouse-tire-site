@@ -218,12 +218,12 @@ function resolveSupplementTrimValue(
 
 /**
  * Find a modification that contains the given trim level in its trim_levels array.
- * Returns the best matching modification or null.
+ * Returns the best matching modification or undefined.
  */
 function findModificationByTrimLevel(
   modifications: WheelSizeModification[],
   trimValue: string
-): WheelSizeModification | null {
+): WheelSizeModification | undefined {
   const normalizedTrim = trimValue.toLowerCase().trim();
   
   // First pass: exact match in trim_levels
@@ -263,7 +263,7 @@ function findModificationByTrimLevel(
     }
   }
   
-  return null;
+  return undefined;
 }
 
 async function fetchModificationFromApi(
