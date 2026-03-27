@@ -517,32 +517,64 @@ export default async function WheelDetailPage({
               </div>
               <ImageGallery images={galleryImages} alt={String(it?.title || sku)} note="Finish may vary by lighting" />
 
-              <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
+                            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
                 <div className="text-xs font-extrabold text-neutral-900">Add tires</div>
                 <div className="mt-1 text-xs text-neutral-600">
                   {vehicleLabel
-                    ? (wheelDiaN
+                    ? (wheelDiaN && oemTireSizes.length > 0
                         ? `Choose an OEM tire size that fits ${wheelDiaN}" wheels.`
-                        : "Choose an OEM tire size for your vehicle.")
+                        : wheelDiaN && oemTireSizes.length === 0
+                          ? `Find compatible tires for your ${wheelDiaN}" wheels.`
+                          : "Choose an OEM tire size for your vehicle.")
                     : "Select a vehicle to see OEM tire sizes."}
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {vehicleLabel && (oemTireSizes.length || oemTireSizesAll.length) ? (
-                    (oemTireSizes.length ? oemTireSizes : oemTireSizesAll).slice(0, 4).map((s) => (
+                  {vehicleLabel && oemTireSizes.length > 0 ? (
+                    /* Case 1: OEM tire sizes match the wheel diameter - show them */
+                    oemTireSizes.slice(0, 4).map((s) => (
                       <Link
                         key={s}
                         href={
                           vehicleSlugStr
-                            ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ year, make, model, trim, modification, size: s }).toString()}`
-                            : `/tires?${new URLSearchParams({ year, make, model, trim, modification, size: s }).toString()}`
+                            ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
+                                year, make, model, trim, modification, size: s,
+                                ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
+                                ...(width ? { wheelWidth: width } : {}),
+                              }).toString()}`
+                            : `/tires?${new URLSearchParams({ 
+                                year, make, model, trim, modification, size: s,
+                                ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
+                                ...(width ? { wheelWidth: width } : {}),
+                              }).toString()}`
                         }
                         className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
                       >
                         {s}
                       </Link>
                     ))
+                  ) : vehicleLabel && wheelDiaN ? (
+                    /* Case 2: No OEM match for wheel diameter - use plus-sizing */
+                    <Link
+                      href={
+                        vehicleSlugStr
+                          ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
+                              year, make, model, trim, modification,
+                              wheelDia: String(wheelDiaN),
+                              ...(width ? { wheelWidth: width } : {}),
+                            }).toString()}`
+                          : `/tires?${new URLSearchParams({ 
+                              year, make, model, trim, modification,
+                              wheelDia: String(wheelDiaN),
+                              ...(width ? { wheelWidth: width } : {}),
+                            }).toString()}`
+                      }
+                      className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-neutral-800"
+                    >
+                      Find {wheelDiaN}" tires
+                    </Link>
                   ) : (
+                    /* Case 3: No vehicle or wheel diameter - show vehicle selector */
                     <Link
                       href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
                       className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
@@ -552,7 +584,13 @@ export default async function WheelDetailPage({
                   )}
                 </div>
 
-                <div className="mt-2 text-[11px] text-neutral-600">Well verify fitment before install.</div>
+                {wheelDiaN && oemTireSizes.length === 0 && oemTireSizesAll.length > 0 && (
+                  <div className="mt-2 text-[11px] text-amber-700 bg-amber-50 rounded-lg px-2 py-1">
+                    This is a plus-size wheel. We will find compatible tire sizes.
+                  </div>
+                )}
+
+                <div className="mt-2 text-[11px] text-neutral-600">We will verify fitment before install.</div>
               </div>
             </div>
 
