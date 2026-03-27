@@ -534,41 +534,207 @@ async function handleDbFirstWheelResults(opts: {
   timing.totalFitmentValid = fitmentValidCandidates.length;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // PHASE 4: Build paginated results (ALL fitment-valid wheels)
+  // PHASE 4: RANKING & SCORING
+  // Score each wheel for quality-based ordering without removing any results
   // ═══════════════════════════════════════════════════════════════════════════
-  const totalCount = fitmentValidCandidates.length;
-  const startIdx = (requestedPage - 1) * requestedPageSize;
-  const pageItems = fitmentValidCandidates.slice(startIdx, startIdx + requestedPageSize);
-
-  const results = pageItems.map(({ candidate: c, validation: v }) => {
-    // Check if we have cached availability for this SKU
+  const tRanking0 = Date.now();
+  
+  // Brand tiers for scoring
+  const TIER_1_BRANDS = new Set(["FM", "FT", "MO", "XD", "KM", "RC", "AR"]); // Fuel, Moto Metal, XD, KMC, Raceline, American Racing
+  const TIER_2_BRANDS = new Set(["HE", "VF", "PR", "LE", "DC", "NC", "UC"]); // Helo, Vision, Pro Comp, Level 8, Dick Cepek, Niche, Ultra
+  
+  // Calculate OEM midpoints for fitment quality scoring
+  const oemMidDiameter = (envelope.oemMinDiameter + envelope.oemMaxDiameter) / 2;
+  const oemMidOffset = (envelope.oemMinOffset + envelope.oemMaxOffset) / 2;
+  
+  // Calculate price statistics for mid-range preference
+  const allPrices = fitmentValidCandidates
+    .map(item => Number(item.candidate.map_price || item.candidate.msrp || 0))
+    .filter(p => p > 0);
+  const priceMedian = allPrices.length > 0 
+    ? allPrices.sort((a, b) => a - b)[Math.floor(allPrices.length / 2)] 
+    : 300;
+  const priceQ1 = allPrices.length > 0 
+    ? allPrices[Math.floor(allPrices.length * 0.25)] 
+    : 150;
+  const priceQ3 = allPrices.length > 0 
+    ? allPrices[Math.floor(allPrices.length * 0.75)] 
+    : 500;
+  
+  // Score each candidate
+  type ScoredCandidate = {
+    candidate: typeof fitmentValidCandidates[0]["candidate"];
+    validation: typeof fitmentValidCandidates[0]["validation"];
+    score: number;
+    scoreBreakdown: {
+      availability: number;
+      brandTier: number;
+      fitmentQuality: number;
+      visualQuality: number;
+      priceRange: number;
+    };
+    availabilityLabel: "in_stock" | "limited" | "check_availability";
+  };
+  
+  const scoredCandidates: ScoredCandidate[] = fitmentValidCandidates.map(({ candidate: c, validation: v }) => {
     const cached = cachedAvailability.get(c.sku);
+    const totalStock = cached ? (cached.localQty || 0) + (cached.globalQty || 0) : 0;
     
     // Determine availability label
     let availabilityLabel: "in_stock" | "limited" | "check_availability" = "check_availability";
-    let availabilityData: {
-      confirmed: boolean;
-      inventoryType?: string;
-      localStock?: number;
-      globalStock?: number;
-      checkedAt?: string;
-    } = { confirmed: false };
-    
-    if (cached) {
-      const totalStock = (cached.localQty || 0) + (cached.globalQty || 0);
-      if (cached.ok && totalStock >= minQty * 2) {
-        availabilityLabel = "in_stock";
-      } else if (cached.ok && totalStock >= minQty) {
-        availabilityLabel = "limited";
-      }
-      availabilityData = {
-        confirmed: true,
-        inventoryType: cached.inventoryType,
-        localStock: cached.localQty,
-        globalStock: cached.globalQty,
-        checkedAt: cached.checkedAt,
-      };
+    if (cached?.ok && totalStock >= minQty * 2) {
+      availabilityLabel = "in_stock";
+    } else if (cached?.ok && totalStock >= minQty) {
+      availabilityLabel = "limited";
     }
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // SCORING (0-100 scale per category, weighted)
+    // ═══════════════════════════════════════════════════════════════════════
+    
+    // 1. Availability Score (0-100, weight: 30%)
+    let availabilityScore = 0;
+    if (availabilityLabel === "in_stock") availabilityScore = 100;
+    else if (availabilityLabel === "limited") availabilityScore = 60;
+    else availabilityScore = 20; // check_availability still gets some points
+    
+    // 2. Brand Tier Score (0-100, weight: 20%)
+    let brandTierScore = 50; // default for unknown brands
+    const brandCode = (c.brand_cd || "").toUpperCase();
+    if (TIER_1_BRANDS.has(brandCode)) brandTierScore = 100;
+    else if (TIER_2_BRANDS.has(brandCode)) brandTierScore = 75;
+    
+    // 3. Fitment Quality Score (0-100, weight: 20%)
+    let fitmentQualityScore = 50;
+    const wheelDiameter = Number(c.diameter) || 0;
+    const wheelOffset = Number(c.offset) || 0;
+    
+    // Diameter: prefer near OEM midpoint (within 2" is great, 4" is okay)
+    if (wheelDiameter > 0) {
+      const diameterDiff = Math.abs(wheelDiameter - oemMidDiameter);
+      if (diameterDiff <= 1) fitmentQualityScore = 100;
+      else if (diameterDiff <= 2) fitmentQualityScore = 85;
+      else if (diameterDiff <= 3) fitmentQualityScore = 60;
+      else fitmentQualityScore = 40;
+    }
+    
+    // Offset: prefer within OEM range (bonus for near midpoint)
+    if (wheelOffset !== 0 || c.offset != null) {
+      const offsetDiff = Math.abs(wheelOffset - oemMidOffset);
+      if (offsetDiff <= 5) fitmentQualityScore = Math.min(100, fitmentQualityScore + 15);
+      else if (offsetDiff <= 15) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
+    }
+    
+    // 4. Visual Quality Score (0-100, weight: 15%)
+    let visualQualityScore = 30; // no images
+    const images = c.images || [];
+    if (images.length >= 3) visualQualityScore = 100;
+    else if (images.length >= 1) visualQualityScore = 70;
+    
+    // 5. Price Range Score (0-100, weight: 15%)
+    // Prefer mid-range pricing (between Q1 and Q3)
+    let priceRangeScore = 50;
+    const price = Number(c.map_price || c.msrp || 0);
+    if (price > 0) {
+      if (price >= priceQ1 && price <= priceQ3) {
+        // In the sweet spot (middle 50%)
+        priceRangeScore = 100;
+      } else if (price < priceQ1) {
+        // Budget range - still okay
+        priceRangeScore = 70;
+      } else {
+        // Premium range
+        priceRangeScore = 60;
+      }
+    }
+    
+    // Calculate weighted total score
+    const score = (
+      availabilityScore * 0.30 +
+      brandTierScore * 0.20 +
+      fitmentQualityScore * 0.20 +
+      visualQualityScore * 0.15 +
+      priceRangeScore * 0.15
+    );
+    
+    return {
+      candidate: c,
+      validation: v,
+      score,
+      scoreBreakdown: {
+        availability: availabilityScore,
+        brandTier: brandTierScore,
+        fitmentQuality: fitmentQualityScore,
+        visualQuality: visualQualityScore,
+        priceRange: priceRangeScore,
+      },
+      availabilityLabel,
+    };
+  });
+  
+  // Sort by score (descending)
+  scoredCandidates.sort((a, b) => b.score - a.score);
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 4b: BRAND DIVERSITY POST-PROCESSING
+  // Avoid more than 2 consecutive items from the same brand
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  function applyBrandDiversity(items: ScoredCandidate[]): ScoredCandidate[] {
+    if (items.length <= 3) return items;
+    
+    const result: ScoredCandidate[] = [];
+    const remaining = [...items];
+    
+    while (remaining.length > 0) {
+      // Find next item that doesn't create 3+ consecutive same-brand
+      let foundIdx = 0;
+      
+      if (result.length >= 2) {
+        const lastBrand = result[result.length - 1].candidate.brand_cd;
+        const secondLastBrand = result[result.length - 2].candidate.brand_cd;
+        
+        if (lastBrand && lastBrand === secondLastBrand) {
+          // Need to find a different brand
+          for (let i = 0; i < remaining.length; i++) {
+            if (remaining[i].candidate.brand_cd !== lastBrand) {
+              foundIdx = i;
+              break;
+            }
+          }
+          // If all remaining are same brand, just take the first
+        }
+      }
+      
+      result.push(remaining[foundIdx]);
+      remaining.splice(foundIdx, 1);
+    }
+    
+    return result;
+  }
+  
+  const rankedCandidates = applyBrandDiversity(scoredCandidates);
+  
+  timing.rankingMs = Date.now() - tRanking0;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 5: Build paginated results from ranked candidates
+  // ═══════════════════════════════════════════════════════════════════════════
+  const totalCount = rankedCandidates.length;
+  const startIdx = (requestedPage - 1) * requestedPageSize;
+  const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
+
+  const results = pageItems.map(({ candidate: c, validation: v, score, scoreBreakdown, availabilityLabel }) => {
+    // Get cached availability for inventory display
+    const cached = cachedAvailability.get(c.sku);
+    
+    const availabilityData = cached ? {
+      confirmed: true,
+      inventoryType: cached.inventoryType,
+      localStock: cached.localQty,
+      globalStock: cached.globalQty,
+      checkedAt: cached.checkedAt,
+    } : { confirmed: false };
     
     return {
       sku: c.sku,
@@ -624,18 +790,23 @@ async function handleDbFirstWheelResults(opts: {
             }
           : {}),
       },
-      // NEW: Availability mode for DB-first architecture
+      // Availability with label
       availability: {
         ...availabilityData,
         label: availabilityLabel,
-        mode: "catalog", // Indicates search mode (vs "live_verified" at checkout)
+        mode: "catalog",
         minQty,
+      },
+      // NEW: Ranking score
+      ranking: {
+        score: Math.round(score * 10) / 10, // Round to 1 decimal
+        breakdown: debug ? scoreBreakdown : undefined,
       },
     };
   });
 
-  // Build facets from ALL fitment-valid items (not just page)
-  const facets = buildFacets(fitmentValidCandidates.map((e) => ({
+  // Build facets from ALL ranked items (not just page)
+  const facets = buildFacets(rankedCandidates.map((e) => ({
     ...e.candidate,
     properties: {
       brand_cd: e.candidate.brand_cd,
@@ -648,6 +819,35 @@ async function handleDbFirstWheelResults(opts: {
       boltPattern: e.candidate.bolt_pattern_standard,
     },
   })));
+  
+  // Calculate ranking statistics for response
+  const rankingStats = {
+    // Availability distribution
+    availabilityDistribution: {
+      in_stock: rankedCandidates.filter(c => c.availabilityLabel === "in_stock").length,
+      limited: rankedCandidates.filter(c => c.availabilityLabel === "limited").length,
+      check_availability: rankedCandidates.filter(c => c.availabilityLabel === "check_availability").length,
+    },
+    // Brand distribution in top 100
+    topBrandDistribution: (() => {
+      const top100 = rankedCandidates.slice(0, 100);
+      const brandCounts = new Map<string, number>();
+      for (const c of top100) {
+        const brand = c.candidate.brand_cd || "UNKNOWN";
+        brandCounts.set(brand, (brandCounts.get(brand) || 0) + 1);
+      }
+      return Array.from(brandCounts.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([brand, count]) => ({ brand, count }));
+    })(),
+    // Score range
+    scoreRange: {
+      min: Math.round((rankedCandidates[rankedCandidates.length - 1]?.score || 0) * 10) / 10,
+      max: Math.round((rankedCandidates[0]?.score || 0) * 10) / 10,
+      median: Math.round((rankedCandidates[Math.floor(rankedCandidates.length / 2)]?.score || 0) * 10) / 10,
+    },
+  };
 
   // Build confidence UI metadata for response
   const confidenceUIMeta = opts.confidenceResult 
@@ -722,6 +922,8 @@ async function handleDbFirstWheelResults(opts: {
       validationMode: "strict",
       dbIndexBuiltAt: getTechfeedIndexBuiltAt(),
     },
+    // NEW: Ranking statistics
+    ranking: rankingStats,
     timing: {
       totalMs: Date.now() - t0,
       ...timing,
