@@ -534,32 +534,30 @@ async function handleDbFirstWheelResults(opts: {
   timing.totalFitmentValid = fitmentValidCandidates.length;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // PHASE 4: RANKING & SCORING
+  // PHASE 4: RANKING & SCORING (v2 - Merchandising Refinement)
   // Score each wheel for quality-based ordering without removing any results
   // ═══════════════════════════════════════════════════════════════════════════
   const tRanking0 = Date.now();
   
   // Brand tiers for scoring
   const TIER_1_BRANDS = new Set(["FM", "FT", "MO", "XD", "KM", "RC", "AR"]); // Fuel, Moto Metal, XD, KMC, Raceline, American Racing
-  const TIER_2_BRANDS = new Set(["HE", "VF", "PR", "LE", "DC", "NC", "UC"]); // Helo, Vision, Pro Comp, Level 8, Dick Cepek, Niche, Ultra
+  const TIER_2_BRANDS = new Set(["HE", "VF", "PR", "LE", "DC", "NC", "UC", "OC", "AC", "TU"]); // Helo, Vision, Pro Comp, Level 8, Dick Cepek, Niche, Ultra, Ouray, ATX, Tuff
+  
+  // Popular finish keywords for visual boost
+  const PREMIUM_FINISHES = ["BLACK", "MATTE BLACK", "GLOSS BLACK", "MACHINED", "MILLED", "BRONZE", "GUNMETAL"];
   
   // Calculate OEM midpoints for fitment quality scoring
   const oemMidDiameter = (envelope.oemMinDiameter + envelope.oemMaxDiameter) / 2;
   const oemMidOffset = (envelope.oemMinOffset + envelope.oemMaxOffset) / 2;
   
-  // Calculate price statistics for mid-range preference
+  // Calculate price statistics for tiered pricing
   const allPrices = fitmentValidCandidates
     .map(item => Number(item.candidate.map_price || item.candidate.msrp || 0))
-    .filter(p => p > 0);
-  const priceMedian = allPrices.length > 0 
-    ? allPrices.sort((a, b) => a - b)[Math.floor(allPrices.length / 2)] 
-    : 300;
-  const priceQ1 = allPrices.length > 0 
-    ? allPrices[Math.floor(allPrices.length * 0.25)] 
-    : 150;
-  const priceQ3 = allPrices.length > 0 
-    ? allPrices[Math.floor(allPrices.length * 0.75)] 
-    : 500;
+    .filter(p => p > 0)
+    .sort((a, b) => a - b);
+  const priceP25 = allPrices.length > 0 ? allPrices[Math.floor(allPrices.length * 0.25)] : 200;
+  const priceP50 = allPrices.length > 0 ? allPrices[Math.floor(allPrices.length * 0.50)] : 350;
+  const priceP75 = allPrices.length > 0 ? allPrices[Math.floor(allPrices.length * 0.75)] : 550;
   
   // Score each candidate
   type ScoredCandidate = {
@@ -572,8 +570,11 @@ async function handleDbFirstWheelResults(opts: {
       fitmentQuality: number;
       visualQuality: number;
       priceRange: number;
+      finishBoost: number;
     };
     availabilityLabel: "in_stock" | "limited" | "check_availability";
+    priceTier: "value" | "mid" | "premium";
+    modelKey: string; // brand+style for deduping
   };
   
   const scoredCandidates: ScoredCandidate[] = fitmentValidCandidates.map(({ candidate: c, validation: v }) => {
@@ -589,14 +590,14 @@ async function handleDbFirstWheelResults(opts: {
     }
     
     // ═══════════════════════════════════════════════════════════════════════
-    // SCORING (0-100 scale per category, weighted)
+    // SCORING v2 (rebalanced weights, normalized availability)
     // ═══════════════════════════════════════════════════════════════════════
     
-    // 1. Availability Score (0-100, weight: 30%)
-    let availabilityScore = 0;
+    // 1. Availability Score (0-100, weight: 25%) - REBALANCED
+    // Narrower gap so other factors can compete
+    let availabilityScore = 50; // check_availability baseline
     if (availabilityLabel === "in_stock") availabilityScore = 100;
-    else if (availabilityLabel === "limited") availabilityScore = 60;
-    else availabilityScore = 20; // check_availability still gets some points
+    else if (availabilityLabel === "limited") availabilityScore = 75;
     
     // 2. Brand Tier Score (0-100, weight: 20%)
     let brandTierScore = 50; // default for unknown brands
@@ -609,53 +610,73 @@ async function handleDbFirstWheelResults(opts: {
     const wheelDiameter = Number(c.diameter) || 0;
     const wheelOffset = Number(c.offset) || 0;
     
-    // Diameter: prefer near OEM midpoint (within 2" is great, 4" is okay)
+    // Diameter: prefer near OEM midpoint
     if (wheelDiameter > 0) {
       const diameterDiff = Math.abs(wheelDiameter - oemMidDiameter);
       if (diameterDiff <= 1) fitmentQualityScore = 100;
       else if (diameterDiff <= 2) fitmentQualityScore = 85;
-      else if (diameterDiff <= 3) fitmentQualityScore = 60;
-      else fitmentQualityScore = 40;
+      else if (diameterDiff <= 3) fitmentQualityScore = 65;
+      else fitmentQualityScore = 45;
     }
     
-    // Offset: prefer within OEM range (bonus for near midpoint)
-    if (wheelOffset !== 0 || c.offset != null) {
+    // Offset bonus for near midpoint
+    if (c.offset != null) {
       const offsetDiff = Math.abs(wheelOffset - oemMidOffset);
-      if (offsetDiff <= 5) fitmentQualityScore = Math.min(100, fitmentQualityScore + 15);
+      if (offsetDiff <= 5) fitmentQualityScore = Math.min(100, fitmentQualityScore + 10);
       else if (offsetDiff <= 15) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
     }
     
     // 4. Visual Quality Score (0-100, weight: 15%)
-    let visualQualityScore = 30; // no images
+    let visualQualityScore = 35; // no images
     const images = c.images || [];
     if (images.length >= 3) visualQualityScore = 100;
-    else if (images.length >= 1) visualQualityScore = 70;
+    else if (images.length >= 1) visualQualityScore = 75;
     
     // 5. Price Range Score (0-100, weight: 15%)
-    // Prefer mid-range pricing (between Q1 and Q3)
-    let priceRangeScore = 50;
+    // All price tiers are viable, slight preference for mid-range
     const price = Number(c.map_price || c.msrp || 0);
+    let priceRangeScore = 50;
+    let priceTier: "value" | "mid" | "premium" = "mid";
+    
     if (price > 0) {
-      if (price >= priceQ1 && price <= priceQ3) {
-        // In the sweet spot (middle 50%)
-        priceRangeScore = 100;
-      } else if (price < priceQ1) {
-        // Budget range - still okay
-        priceRangeScore = 70;
+      if (price < priceP25) {
+        priceTier = "value";
+        priceRangeScore = 80; // Value is good
+      } else if (price <= priceP75) {
+        priceTier = "mid";
+        priceRangeScore = 100; // Mid-range is best
       } else {
-        // Premium range
-        priceRangeScore = 60;
+        priceTier = "premium";
+        priceRangeScore = 85; // Premium is good
+      }
+    }
+    
+    // 6. Finish Boost (0-15 bonus points) - NEW
+    // Boost popular truck/off-road finishes
+    let finishBoost = 0;
+    const finishDesc = (c.abbreviated_finish_desc || c.fancy_finish_desc || "").toUpperCase();
+    const productDesc = (c.product_desc || "").toUpperCase();
+    const combinedDesc = `${finishDesc} ${productDesc}`;
+    
+    for (const finish of PREMIUM_FINISHES) {
+      if (combinedDesc.includes(finish)) {
+        finishBoost = 10;
+        break;
       }
     }
     
     // Calculate weighted total score
     const score = (
-      availabilityScore * 0.30 +
+      availabilityScore * 0.25 +
       brandTierScore * 0.20 +
       fitmentQualityScore * 0.20 +
       visualQualityScore * 0.15 +
-      priceRangeScore * 0.15
+      priceRangeScore * 0.15 +
+      finishBoost * 0.05 // 5% weight for finish boost
     );
+    
+    // Model key for deduping (brand + style/display_style_no)
+    const modelKey = `${c.brand_cd || ""}:${c.style || c.display_style_no || c.product_desc?.split(" ")[0] || ""}`.toLowerCase();
     
     return {
       candidate: c,
@@ -667,8 +688,11 @@ async function handleDbFirstWheelResults(opts: {
         fitmentQuality: fitmentQualityScore,
         visualQuality: visualQualityScore,
         priceRange: priceRangeScore,
+        finishBoost,
       },
       availabilityLabel,
+      priceTier,
+      modelKey,
     };
   });
   
@@ -676,44 +700,111 @@ async function handleDbFirstWheelResults(opts: {
   scoredCandidates.sort((a, b) => b.score - a.score);
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // PHASE 4b: BRAND DIVERSITY POST-PROCESSING
-  // Avoid more than 2 consecutive items from the same brand
+  // PHASE 4b: MERCHANDISING POST-PROCESSING
+  // 1. Model-level deduping for top slots
+  // 2. Brand concentration control
+  // 3. Price mix optimization
+  // 4. Consecutive brand limit
   // ═══════════════════════════════════════════════════════════════════════════
   
-  function applyBrandDiversity(items: ScoredCandidate[]): ScoredCandidate[] {
-    if (items.length <= 3) return items;
+  function applyMerchandisingRules(items: ScoredCandidate[]): ScoredCandidate[] {
+    if (items.length <= 5) return items;
     
     const result: ScoredCandidate[] = [];
     const remaining = [...items];
     
+    // Track for merchandising rules
+    const modelCountInTop20 = new Map<string, number>();
+    const brandCountInTop100 = new Map<string, number>();
+    const priceTierCountInTop20 = { value: 0, mid: 0, premium: 0 };
+    
+    // Target price mix for top 20: ~50% mid, ~25% premium, ~25% value
+    const priceMixTargets = { value: 5, mid: 10, premium: 5 };
+    
     while (remaining.length > 0) {
-      // Find next item that doesn't create 3+ consecutive same-brand
-      let foundIdx = 0;
+      const currentPosition = result.length;
+      const isTop20 = currentPosition < 20;
+      const isTop100 = currentPosition < 100;
       
-      if (result.length >= 2) {
-        const lastBrand = result[result.length - 1].candidate.brand_cd;
-        const secondLastBrand = result[result.length - 2].candidate.brand_cd;
+      let bestIdx = 0;
+      let bestScore = -Infinity;
+      
+      // Evaluate each remaining candidate
+      for (let i = 0; i < Math.min(remaining.length, 50); i++) { // Look ahead up to 50 items
+        const item = remaining[i];
+        let adjustedScore = item.score;
         
-        if (lastBrand && lastBrand === secondLastBrand) {
-          // Need to find a different brand
-          for (let i = 0; i < remaining.length; i++) {
-            if (remaining[i].candidate.brand_cd !== lastBrand) {
-              foundIdx = i;
-              break;
-            }
+        // === Rule 1: Model-level deduping in top 20 ===
+        if (isTop20) {
+          const modelCount = modelCountInTop20.get(item.modelKey) || 0;
+          if (modelCount >= 2) {
+            adjustedScore -= 30; // Heavy penalty for 3rd+ of same model
+          } else if (modelCount >= 1) {
+            adjustedScore -= 10; // Mild penalty for 2nd of same model
           }
-          // If all remaining are same brand, just take the first
+        }
+        
+        // === Rule 2: Brand concentration control in top 100 ===
+        if (isTop100) {
+          const brandCount = brandCountInTop100.get(item.candidate.brand_cd || "") || 0;
+          const brandPct = brandCount / Math.max(1, currentPosition);
+          if (brandPct > 0.25 && brandCount >= 5) {
+            // Brand already >25% of results, penalize unless score is exceptional
+            adjustedScore -= 15;
+          }
+        }
+        
+        // === Rule 3: Price mix optimization in top 20 ===
+        if (isTop20) {
+          const tierCount = priceTierCountInTop20[item.priceTier];
+          const tierTarget = priceMixTargets[item.priceTier];
+          
+          if (tierCount < tierTarget) {
+            // Boost underrepresented price tiers
+            adjustedScore += 5;
+          } else if (tierCount >= tierTarget * 1.5) {
+            // Penalize overrepresented tiers
+            adjustedScore -= 5;
+          }
+        }
+        
+        // === Rule 4: Consecutive brand limit (max 2) ===
+        if (result.length >= 2) {
+          const lastBrand = result[result.length - 1].candidate.brand_cd;
+          const secondLastBrand = result[result.length - 2].candidate.brand_cd;
+          
+          if (lastBrand && lastBrand === secondLastBrand && item.candidate.brand_cd === lastBrand) {
+            adjustedScore -= 50; // Heavy penalty for 3rd consecutive
+          }
+        }
+        
+        if (adjustedScore > bestScore) {
+          bestScore = adjustedScore;
+          bestIdx = i;
         }
       }
       
-      result.push(remaining[foundIdx]);
-      remaining.splice(foundIdx, 1);
+      // Add best candidate to result
+      const selected = remaining[bestIdx];
+      result.push(selected);
+      remaining.splice(bestIdx, 1);
+      
+      // Update tracking
+      if (result.length <= 20) {
+        const mc = modelCountInTop20.get(selected.modelKey) || 0;
+        modelCountInTop20.set(selected.modelKey, mc + 1);
+        priceTierCountInTop20[selected.priceTier]++;
+      }
+      if (result.length <= 100) {
+        const bc = brandCountInTop100.get(selected.candidate.brand_cd || "") || 0;
+        brandCountInTop100.set(selected.candidate.brand_cd || "", bc + 1);
+      }
     }
     
     return result;
   }
   
-  const rankedCandidates = applyBrandDiversity(scoredCandidates);
+  const rankedCandidates = applyMerchandisingRules(scoredCandidates);
   
   timing.rankingMs = Date.now() - tRanking0;
 
@@ -724,7 +815,7 @@ async function handleDbFirstWheelResults(opts: {
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
 
-  const results = pageItems.map(({ candidate: c, validation: v, score, scoreBreakdown, availabilityLabel }) => {
+  const results = pageItems.map(({ candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey }) => {
     // Get cached availability for inventory display
     const cached = cachedAvailability.get(c.sku);
     
@@ -800,6 +891,8 @@ async function handleDbFirstWheelResults(opts: {
       // NEW: Ranking score
       ranking: {
         score: Math.round(score * 10) / 10, // Round to 1 decimal
+        priceTier,
+        modelKey: debug ? modelKey : undefined,
         breakdown: debug ? scoreBreakdown : undefined,
       },
     };
@@ -821,16 +914,51 @@ async function handleDbFirstWheelResults(opts: {
   })));
   
   // Calculate ranking statistics for response
+  const top20 = rankedCandidates.slice(0, 20);
+  const top100 = rankedCandidates.slice(0, 100);
+  
   const rankingStats = {
-    // Availability distribution
+    // Availability distribution (all results)
     availabilityDistribution: {
       in_stock: rankedCandidates.filter(c => c.availabilityLabel === "in_stock").length,
       limited: rankedCandidates.filter(c => c.availabilityLabel === "limited").length,
       check_availability: rankedCandidates.filter(c => c.availabilityLabel === "check_availability").length,
     },
+    // Top 20 stats
+    top20: {
+      availabilityDistribution: {
+        in_stock: top20.filter(c => c.availabilityLabel === "in_stock").length,
+        limited: top20.filter(c => c.availabilityLabel === "limited").length,
+        check_availability: top20.filter(c => c.availabilityLabel === "check_availability").length,
+      },
+      priceTierDistribution: {
+        value: top20.filter(c => c.priceTier === "value").length,
+        mid: top20.filter(c => c.priceTier === "mid").length,
+        premium: top20.filter(c => c.priceTier === "premium").length,
+      },
+      brandDistribution: (() => {
+        const counts = new Map<string, number>();
+        for (const c of top20) {
+          const brand = c.candidate.brand_cd || "UNKNOWN";
+          counts.set(brand, (counts.get(brand) || 0) + 1);
+        }
+        return Array.from(counts.entries())
+          .sort((a, b) => b[1] - a[1])
+          .map(([brand, count]) => ({ brand, count }));
+      })(),
+      uniqueModels: new Set(top20.map(c => c.modelKey)).size,
+      duplicateModels: (() => {
+        const modelCounts = new Map<string, number>();
+        for (const c of top20) {
+          modelCounts.set(c.modelKey, (modelCounts.get(c.modelKey) || 0) + 1);
+        }
+        return Array.from(modelCounts.entries())
+          .filter(([, count]) => count > 1)
+          .map(([model, count]) => ({ model, count }));
+      })(),
+    },
     // Brand distribution in top 100
-    topBrandDistribution: (() => {
-      const top100 = rankedCandidates.slice(0, 100);
+    top100BrandDistribution: (() => {
       const brandCounts = new Map<string, number>();
       for (const c of top100) {
         const brand = c.candidate.brand_cd || "UNKNOWN";
@@ -839,7 +967,7 @@ async function handleDbFirstWheelResults(opts: {
       return Array.from(brandCounts.entries())
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
-        .map(([brand, count]) => ({ brand, count }));
+        .map(([brand, count]) => ({ brand, count, pct: Math.round(count / Math.max(1, top100.length) * 100) }));
     })(),
     // Score range
     scoreRange: {
