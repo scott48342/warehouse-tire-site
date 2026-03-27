@@ -28,10 +28,10 @@ import {
   getTechfeedIndexBuiltAt,
 } from "@/lib/techfeed/wheels";
 
-import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
+// NOTE: getSupplierCredentials removed from search (DB-first architecture)
+// Live availability checks now happen at cart/checkout only
 
 import {
-  fetchAvailability,
   getCachedBulk,
   getCacheStats as getAvailabilityCacheStats,
 } from "@/lib/availabilityCache";
@@ -366,6 +366,23 @@ function diversifyCandidatesByBrand<T extends { brand_cd?: string }>(candidates:
   return result;
 }
 
+/**
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * DB-FIRST WHEEL SEARCH (March 2026 Architecture)
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * 
+ * This function returns ALL fitment-valid wheels from the local Techfeed database.
+ * NO live WheelPros API calls are made during search.
+ * 
+ * Availability is shown as:
+ * - "In Stock" / "Limited" - if cached value exists
+ * - "Check Availability" - if no cached value (default)
+ * 
+ * Live availability checks happen ONLY at cart/checkout via:
+ * POST /api/cart/validate-availability
+ * 
+ * ═══════════════════════════════════════════════════════════════════════════════
+ */
 async function handleDbFirstWheelResults(opts: {
   url: URL;
   year: string;
@@ -406,7 +423,6 @@ async function handleDbFirstWheelResults(opts: {
   // TIMING INSTRUMENTATION
   // ═══════════════════════════════════════════════════════════════════════════
   const timing: Record<string, number | string | null> = {};
-  const tStart = Date.now();
 
   const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
   const requestedPageSize = Math.max(1, Math.min(200, Number(url.searchParams.get("pageSize") || "24") || 24));
@@ -425,29 +441,17 @@ async function handleDbFirstWheelResults(opts: {
   const userOffsetMax = offsetMaxParam ? Number(offsetMaxParam) : null;
   const hasUserOffsetFilter = Number.isFinite(userOffsetMin) || Number.isFinite(userOffsetMax);
 
-  // Hard requirement for "in stock only" live validation
+  // minQty for cached availability label (not used for filtering in DB-first mode)
   const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
 
-  const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
-  if (!wheelProsBase) {
-    return NextResponse.json({ error: "Missing WHEELPROS_WRAPPER_URL" }, { status: 500 });
-  }
-
-  const headers: Record<string, string> = { Accept: "application/json" };
-  if (process.env.WHEELPROS_WRAPPER_API_KEY) {
-    headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
-  }
-
-  // Get supplier credentials from admin settings (with fallback to env/hardcoded)
-  const tCreds0 = Date.now();
-  const wpCreds = await getSupplierCredentials("wheelpros");
-  timing.credentialsMs = Date.now() - tCreds0;
-
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 1: Get candidates from Techfeed DB (local, fast)
+  // ═══════════════════════════════════════════════════════════════════════════
   const tCandidates0 = Date.now();
   const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
   timing.candidatesDbMs = Date.now() - tCandidates0;
 
-  // Apply basic DB-level filters first (cheap)
+  // Apply basic DB-level filters (cheap, no I/O)
   const filteredCandidates = candidates.filter((c) => {
     if (brandCd && c.brand_cd && c.brand_cd !== brandCd) return false;
     if (finish && c.abbreviated_finish_desc && String(c.abbreviated_finish_desc) !== String(finish)) return false;
@@ -471,59 +475,18 @@ async function handleDbFirstWheelResults(opts: {
   timing.diversifyMs = Date.now() - tDiversify0;
   timing.candidatesAfterFilter = filteredCandidates.length;
 
-  // Concurrent availability validation settings
-  // Availability validation settings
-  const CONCURRENCY = Math.max(1, Math.min(20, Number(process.env.WT_AVAIL_CONCURRENCY || "16") || 16));
-  const scanCap = Math.max(500, Number(process.env.WT_DB_SCAN_CAP || "6000") || 6000);
-
-  // TUNING: Restore a safer default time budget to avoid false 0-result cutoffs on cold cache.
-  // Can be overridden via env.
-  const timeBudgetMs = Math.max(2000, Number(process.env.WT_DB_SCAN_TIME_BUDGET_MS || "8000") || 8000);
-
-  // Early stop when we have enough eligible items, but only after a minimum scan time
-  // to preserve variety and avoid premature cutoffs under noisy availability latency.
-  const defaultTargetEligible = Math.max(requestedPageSize * 3, 100);
-  const targetEligible = Math.max(
-    1,
-    Number(process.env.WT_TARGET_ELIGIBLE_BEFORE_STOP || String(defaultTargetEligible)) || defaultTargetEligible
-  );
-
-  const minScanMsBeforeEarlyStop = Math.max(
-    0,
-    Number(process.env.WT_MIN_SCAN_MS_BEFORE_EARLY_STOP || "1750") || 1750
-  );
-
-  const minCandidatesBeforeEarlyStop = Math.max(
-    0,
-    Number(process.env.WT_MIN_CANDIDATES_BEFORE_EARLY_STOP || "24") || 24
-  );
-
-  const minUniqueBrandsBeforeEarlyStop = Math.max(
-    0,
-    Number(process.env.WT_MIN_UNIQUE_BRANDS_BEFORE_EARLY_STOP || "4") || 4
-  );
-
-  const tScan0 = Date.now();
-
-  // Phase 1: Fitment validation (fast, no I/O)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 2: Fitment validation (fast, no I/O)
+  // NO AVAILABILITY FILTERING - return ALL fitment-valid wheels
+  // ═══════════════════════════════════════════════════════════════════════════
   const tFitment0 = Date.now();
   type FitmentValidCandidate = {
     candidate: typeof diversifiedCandidates[0];
     validation: FitmentValidation;
   };
   const fitmentValidCandidates: FitmentValidCandidate[] = [];
-  let scanned = 0;
-  let truncated = false;
-  const capsHit: string[] = [];
 
   for (const c of diversifiedCandidates) {
-    scanned++;
-    if (scanned > scanCap) {
-      truncated = true;
-      capsHit.push("scanCap");
-      break;
-    }
-
     const wheelSpec: WheelSpec = {
       sku: c.sku,
       boltPattern: c.bolt_pattern_metric || c.bolt_pattern_standard || envelope.boltPattern,
@@ -537,24 +500,18 @@ async function handleDbFirstWheelResults(opts: {
     if (v.fitmentClass === "excluded") continue;
     
     // HARD diameter filter: Exclude wheels outside the allowed diameter range
-    // This is critical to prevent showing undersized wheels (e.g., 16" on Chrysler 300C)
-    // The validateWheel function uses diameter as a SOFT rule (classification only),
-    // but we need HARD exclusion for customer-facing results.
     if (wheelSpec.diameter !== undefined) {
       const wheelDia = Number(wheelSpec.diameter);
       if (wheelDia < envelope.allowedMinDiameter || wheelDia > envelope.allowedMaxDiameter) {
-        continue; // Skip wheels outside allowed diameter range
+        continue;
       }
     }
     
-    // User-provided offset range filter (HARD filter, not classification)
-    // Critical for lifted trucks: e.g., 4" lift F150 needs -18 to 0mm offset, not +35mm OEM
+    // User-provided offset range filter (HARD filter)
     if (hasUserOffsetFilter && wheelSpec.offset !== undefined) {
       const wheelOffset = Number(wheelSpec.offset);
       if (Number.isFinite(wheelOffset)) {
-        // Check min offset (if provided)
         if (Number.isFinite(userOffsetMin) && wheelOffset < userOffsetMin!) continue;
-        // Check max offset (if provided)
         if (Number.isFinite(userOffsetMax) && wheelOffset > userOffsetMax!) continue;
       }
     }
@@ -562,241 +519,123 @@ async function handleDbFirstWheelResults(opts: {
     fitmentValidCandidates.push({ candidate: c, validation: v });
   }
 
-  const fitmentValid = fitmentValidCandidates.length;
   timing.fitmentValidationMs = Date.now() - tFitment0;
-  timing.fitmentValidCount = fitmentValid;
+  timing.fitmentValidCount = fitmentValidCandidates.length;
 
-  // Phase 2: Concurrent live availability checks with time budget
-  // OPTIMIZATION: Use MGET to bulk-fetch cached availability in one round trip
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 3: Optional cached availability lookup (NO LIVE CALLS)
+  // Used only for displaying availability labels, NOT for filtering results
+  // ═══════════════════════════════════════════════════════════════════════════
   const tAvail0 = Date.now();
-  type EligibleItem = {
-    candidate: typeof diversifiedCandidates[0];
-    validation: FitmentValidation;
-    avail: { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string };
-  };
-  const eligibleItems: EligibleItem[] = [];
-  let availabilityChecked = 0;
-  let cacheHits = 0;
-  let prewarmHits = 0;
-  let bulkCacheHits = 0;
-  let launchStopped = false;
-  let earlyStopReason: string | null = null;
-
-  // Diagnostics for tuning
-  let availabilityResolvedCount = 0; // cache hits + non-timeout live checks
-  let availabilityTimedOutCount = 0; // live checks that timed out
-  let liveCheckCount = 0;
-
-  // MGET OPTIMIZATION: Bulk fetch all cached availability in ONE Redis call
-  const tBulkCache0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
   const cachedAvailability = await getCachedBulk(allSkus, minQty);
-  timing.bulkCacheMs = Date.now() - tBulkCache0;
-  timing.bulkCacheSkus = allSkus.length;
-  timing.bulkCacheHits = cachedAvailability.size;
+  timing.cachedAvailabilityMs = Date.now() - tAvail0;
+  timing.cachedAvailabilityHits = cachedAvailability.size;
+  timing.totalFitmentValid = fitmentValidCandidates.length;
 
-  // Process cached hits first (instant, no API calls needed)
-  const needsLiveCheck: FitmentValidCandidate[] = [];
-  
-  for (const item of fitmentValidCandidates) {
-    const cached = cachedAvailability.get(item.candidate.sku);
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 4: Build paginated results (ALL fitment-valid wheels)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const totalCount = fitmentValidCandidates.length;
+  const startIdx = (requestedPage - 1) * requestedPageSize;
+  const pageItems = fitmentValidCandidates.slice(startIdx, startIdx + requestedPageSize);
+
+  const results = pageItems.map(({ candidate: c, validation: v }) => {
+    // Check if we have cached availability for this SKU
+    const cached = cachedAvailability.get(c.sku);
+    
+    // Determine availability label
+    let availabilityLabel: "in_stock" | "limited" | "check_availability" = "check_availability";
+    let availabilityData: {
+      confirmed: boolean;
+      inventoryType?: string;
+      localStock?: number;
+      globalStock?: number;
+      checkedAt?: string;
+    } = { confirmed: false };
     
     if (cached) {
-      bulkCacheHits++;
-      cacheHits++;
-      if (cached.fromPrewarm) prewarmHits++;
-      availabilityChecked++;
-      availabilityResolvedCount++;
-      
-      if (cached.ok) {
-        eligibleItems.push({
-          candidate: item.candidate,
-          validation: item.validation,
-          avail: {
-            ok: true,
-            inventoryType: cached.inventoryType,
-            localQty: cached.localQty,
-            globalQty: cached.globalQty,
-            checkedAt: cached.checkedAt,
-          },
-        });
+      const totalStock = (cached.localQty || 0) + (cached.globalQty || 0);
+      if (cached.ok && totalStock >= minQty * 2) {
+        availabilityLabel = "in_stock";
+      } else if (cached.ok && totalStock >= minQty) {
+        availabilityLabel = "limited";
       }
-    } else {
-      // Need to fetch live
-      needsLiveCheck.push(item);
-    }
-  }
-
-  // Now do live checks only for cache misses (with concurrency + time budget)
-  const tLiveCheck0 = Date.now();
-  const inFlight = new Set<Promise<void>>();
-
-  const checkAvailability = async (item: FitmentValidCandidate): Promise<void> => {
-    liveCheckCount++;
-    const avail = await fetchLiveAvailabilityForSku({
-      wheelProsBase,
-      headers,
-      sku: item.candidate.sku,
-      minQty,
-      customerNumber: wpCreds.customerNumber || undefined,
-      companyCode: wpCreds.companyCode || undefined,
-    });
-    availabilityChecked++;
-    // Don't count as cache hit since we're only checking misses
-    if ((avail as any).fromPrewarm) prewarmHits++;
-
-    if ((avail as any).timedOut) availabilityTimedOutCount++;
-    else availabilityResolvedCount++;
-
-    if (avail.ok) {
-      eligibleItems.push({
-        candidate: item.candidate,
-        validation: item.validation,
-        avail: avail as EligibleItem["avail"],
-      });
-    }
-  };
-
-  for (const item of needsLiveCheck) {
-    // Early stop when we have enough eligible items for good results + facets,
-    // but only after scanning for a minimum amount of time AND doing a minimum amount of work.
-    // This avoids premature cutoffs on cold cache / noisy upstream latency.
-    const msSinceScanStart = Date.now() - tScan0;
-    if (
-      eligibleItems.length >= targetEligible &&
-      msSinceScanStart >= minScanMsBeforeEarlyStop &&
-      availabilityChecked >= minCandidatesBeforeEarlyStop
-    ) {
-      // Ensure we have some brand diversity before stopping early
-      const brands = new Set(
-        eligibleItems
-          .map((it) => (it.candidate as any)?.brand_cd || "")
-          .map((s) => String(s || "").trim().toUpperCase())
-          .filter(Boolean)
-      );
-
-      if (brands.size >= minUniqueBrandsBeforeEarlyStop) {
-        earlyStopReason = "targetReached";
-        capsHit.push("earlyStop:targetReached");
-        launchStopped = true;
-        break;
-      }
+      availabilityData = {
+        confirmed: true,
+        inventoryType: cached.inventoryType,
+        localStock: cached.localQty,
+        globalStock: cached.globalQty,
+        checkedAt: cached.checkedAt,
+      };
     }
     
-    // Check time budget before launching new checks
-    if (Date.now() - tScan0 > timeBudgetMs) {
-      truncated = true;
-      earlyStopReason = "timeBudget";
-      capsHit.push("timeBudget");
-      launchStopped = true;
-      break;
-    }
+    return {
+      sku: c.sku,
+      skuType: "WHEEL",
+      title: c.product_desc || c.sku,
+      brand: c.brand_cd ? { code: c.brand_cd, description: c.brand_desc || c.brand_cd } : undefined,
+      // Inventory shown from cache only (no live calls)
+      inventory: cached ? {
+        type: cached.inventoryType || "UNKNOWN",
+        localStock: cached.localQty || 0,
+        globalStock: cached.globalQty || 0,
+      } : {
+        type: "UNKNOWN",
+        localStock: 0,
+        globalStock: 0,
+      },
+      prices: {
+        msrp: [
+          {
+            currencyAmount: String(Number(c.map_price || c.msrp || 0) || 0),
+            currencyCode: "USD",
+          },
+        ],
+      },
+      images: (c.images || []).map((u: string) => ({
+        imageUrlLarge: u,
+        imageUrlMedium: u,
+        imageUrlSmall: u,
+        imageUrlThumbnail: u,
+      })),
+      properties: {
+        brand_cd: c.brand_cd,
+        brand_desc: c.brand_desc,
+        abbreviated_finish_desc: c.abbreviated_finish_desc,
+        diameter: c.diameter,
+        width: c.width,
+        offset: c.offset,
+        centerbore: c.centerbore,
+        boltPatternMetric: c.bolt_pattern_metric,
+        boltPattern: c.bolt_pattern_standard,
+      },
+      fitmentValidation: {
+        fitmentClass: v.fitmentClass,
+        fitmentMode: v.fitmentMode,
+        ...(debug
+          ? {
+              boltPatternPass: v.boltPatternPass,
+              centerBorePass: v.centerBorePass,
+              diameterPass: v.diameterPass,
+              widthPass: v.widthPass,
+              offsetPass: v.offsetPass,
+              exclusionReasons: v.exclusionReasons,
+            }
+          : {}),
+      },
+      // NEW: Availability mode for DB-first architecture
+      availability: {
+        ...availabilityData,
+        label: availabilityLabel,
+        mode: "catalog", // Indicates search mode (vs "live_verified" at checkout)
+        minQty,
+      },
+    };
+  });
 
-    // Wait if at concurrency limit
-    while (inFlight.size >= CONCURRENCY) {
-      await Promise.race(inFlight);
-    }
-
-    // Launch availability check
-    const p = checkAvailability(item).finally(() => inFlight.delete(p));
-    inFlight.add(p);
-  }
-
-  // Wait for remaining in-flight checks to complete (with a hard cap)
-  if (inFlight.size > 0) {
-    const flushExtraMs = Math.max(
-      500,
-      Number(process.env.WT_AVAIL_FLUSH_DEADLINE_MS || "3000") || 3000
-    );
-    const flushPollMs = Math.max(
-      25,
-      Number(process.env.WT_AVAIL_FLUSH_POLL_MS || "100") || 100
-    );
-
-    const flushDeadline = Date.now() + flushExtraMs;
-    while (inFlight.size > 0 && Date.now() < flushDeadline) {
-      await Promise.race([...inFlight, new Promise((r) => setTimeout(r, flushPollMs))]);
-    }
-  }
-  
-  timing.liveCheckMs = Date.now() - tLiveCheck0;
-  timing.availabilityMs = Date.now() - tAvail0;
-  timing.availabilityChecked = availabilityChecked;
-  timing.availabilityCacheHits = cacheHits;
-  timing.availabilityBulkCacheHits = bulkCacheHits;
-  timing.availabilityPrewarmHits = prewarmHits;
-  // For clarity in tuning reports
-  timing.availabilityResolvedCount = availabilityResolvedCount;
-  timing.availabilityTimedOutCount = availabilityTimedOutCount;
-  timing.availabilityLiveChecksLaunched = liveCheckCount;
-
-  timing.availabilityLiveChecks = needsLiveCheck.length - (launchStopped ? (needsLiveCheck.length - availabilityChecked + bulkCacheHits) : 0);
-  timing.eligibleCount = eligibleItems.length;
-  timing.earlyStopReason = earlyStopReason;
-
-  // Phase 3: Build results from eligible items
-  const startWanted = (requestedPage - 1) * requestedPageSize;
-  const eligibleCount = eligibleItems.length;
-
-  const pageItems = eligibleItems.slice(startWanted, startWanted + requestedPageSize);
-  const results = pageItems.map(({ candidate: c, validation: v, avail }) => ({
-    sku: c.sku,
-    skuType: "WHEEL",
-    title: c.product_desc || c.sku,
-    brand: c.brand_cd ? { code: c.brand_cd, description: c.brand_desc || c.brand_cd } : undefined,
-    inventory: {
-      type: avail.inventoryType,
-      localStock: avail.localQty,
-      globalStock: avail.globalQty,
-    },
-    prices: {
-      msrp: [
-        {
-          currencyAmount: String(Number(c.map_price || c.msrp || 0) || 0),
-          currencyCode: "USD",
-        },
-      ],
-    },
-    images: (c.images || []).map((u: string) => ({
-      imageUrlLarge: u,
-      imageUrlMedium: u,
-      imageUrlSmall: u,
-      imageUrlThumbnail: u,
-    })),
-    properties: {
-      brand_cd: c.brand_cd,
-      brand_desc: c.brand_desc,
-      abbreviated_finish_desc: c.abbreviated_finish_desc,
-      diameter: c.diameter,
-      width: c.width,
-      offset: c.offset,
-      centerbore: c.centerbore,
-      boltPatternMetric: c.bolt_pattern_metric,
-      boltPattern: c.bolt_pattern_standard,
-    },
-    fitmentValidation: {
-      fitmentClass: v.fitmentClass,
-      fitmentMode: v.fitmentMode,
-      ...(debug
-        ? {
-            boltPatternPass: v.boltPatternPass,
-            centerBorePass: v.centerBorePass,
-            diameterPass: v.diameterPass,
-            widthPass: v.widthPass,
-            offsetPass: v.offsetPass,
-            exclusionReasons: v.exclusionReasons,
-          }
-        : {}),
-    },
-    availability: {
-      confirmed: true,
-      minQty,
-      checkedAt: avail.checkedAt,
-    },
-  }));
-
-  // Build facets from ALL eligible items (not just page)
-  const facets = buildFacets(eligibleItems.map((e) => ({
+  // Build facets from ALL fitment-valid items (not just page)
+  const facets = buildFacets(fitmentValidCandidates.map((e) => ({
     ...e.candidate,
     properties: {
       brand_cd: e.candidate.brand_cd,
@@ -817,7 +656,7 @@ async function handleDbFirstWheelResults(opts: {
 
   return NextResponse.json({
     results,
-    totalCount: eligibleCount,
+    totalCount,
     page: requestedPage,
     pageSize: requestedPageSize,
     facets,
@@ -831,8 +670,10 @@ async function handleDbFirstWheelResults(opts: {
       canonicalModificationId: opts.canonicalModificationId || null,
       requestedModificationId: opts.requestedModificationId || null,
       validationMode: "strict",
+      // NEW: Availability mode for DB-first architecture
+      availabilityMode: "catalog", // Search uses DB only, no live calls
       // Confidence information (SAFETY-FIRST)
-      confidence: opts.confidenceResult?.confidence || "high",  // Assume high if we got here
+      confidence: opts.confidenceResult?.confidence || "high",
       confidenceReasons: opts.confidenceResult?.reasons || [],
       confidenceUI: confidenceUIMeta ? {
         label: confidenceUIMeta.label,
@@ -854,8 +695,6 @@ async function handleDbFirstWheelResults(opts: {
           offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
         },
       },
-      // User-provided offset filter (from lifted page or manual filter)
-      // When active, this overrides the OEM envelope for hard filtering
       userOffsetFilter: hasUserOffsetFilter ? {
         min: userOffsetMin,
         max: userOffsetMax,
@@ -867,84 +706,37 @@ async function handleDbFirstWheelResults(opts: {
         model: opts.model,
         trim: opts.displayTrim,
       },
-      // DB profile for accessory fitment calculation (threadSize, seatType, centerBoreMm)
       dbProfile: opts.dbProfileForResponse || null,
     },
     summary: {
       total: results.length,
-      totalCountEligible: eligibleCount,
+      totalCountEligible: totalCount,
       candidates: filteredCandidates.length,
-      scanned,
-      fitmentValid,
-      availabilityChecked,
-      truncated,
-      capsHit: Array.from(new Set(capsHit)),
+      fitmentValid: fitmentValidCandidates.length,
+      // DB-FIRST: No live availability checks during search
+      availabilityMode: "catalog",
+      availabilityCachedHits: cachedAvailability.size,
       resolutionPath: opts.resolutionPath,
       fitmentSource: opts.fitmentSource,
       aliasUsed: Boolean(opts.aliasUsed),
       validationMode: "strict",
       dbIndexBuiltAt: getTechfeedIndexBuiltAt(),
     },
-    // Always include timing for performance monitoring
     timing: {
       totalMs: Date.now() - t0,
-      scanMs: Date.now() - tScan0,
       ...timing,
     },
+    // DB-FIRST architecture flag
+    dbFirstMode: true,
     dealerlineMode: false,
   });
 }
 
 // ============================================================================
-// Live availability (using centralized cache from availabilityCache.ts)
+// NOTE: Live availability checks removed from search (DB-first architecture)
+// Live availability is now handled at cart/checkout via:
+// POST /api/cart/validate-availability
 // ============================================================================
-
-/**
- * Fetch live availability using centralized cache.
- * This wrapper maintains the same interface but uses the shared cache
- * that can be pre-warmed.
- */
-async function fetchLiveAvailabilityForSku(opts: {
-  wheelProsBase: string;
-  headers: Record<string, string>;
-  sku: string;
-  minQty: number;
-  customerNumber?: string;
-  companyCode?: string;
-}): Promise<
-  | { ok: true; inventoryType: string; localQty: number; globalQty: number; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean; timedOut?: boolean }
-  | { ok: false; checkedAt: string; fromCache?: boolean; fromPrewarm?: boolean; timedOut?: boolean }
-> {
-  const result = await fetchAvailability({
-    wheelProsBase: opts.wheelProsBase,
-    headers: opts.headers,
-    sku: opts.sku,
-    minQty: opts.minQty,
-    customerNumber: opts.customerNumber,
-    companyCode: opts.companyCode,
-  });
-  
-  if (result.ok) {
-    return {
-      ok: true,
-      inventoryType: result.inventoryType,
-      localQty: result.localQty,
-      globalQty: result.globalQty,
-      checkedAt: result.checkedAt,
-      fromCache: result.fromCache,
-      fromPrewarm: result.fromPrewarm,
-      timedOut: (result as any).timedOut,
-    };
-  }
-  
-  return {
-    ok: false,
-    checkedAt: result.checkedAt,
-    fromCache: result.fromCache,
-    fromPrewarm: result.fromPrewarm,
-    timedOut: (result as any).timedOut,
-  };
-}
 
 // ============================================================================
 // Legacy Fallback Path Handler

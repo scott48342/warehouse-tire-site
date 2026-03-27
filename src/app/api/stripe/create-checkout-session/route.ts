@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getPool, createQuote, type QuoteLine } from "@/lib/quotes";
 import { getStripeClient } from "@/lib/payments/stripeClient";
+import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
+import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
 
 export const runtime = "nodejs";
@@ -8,6 +10,84 @@ export const runtime = "nodejs";
 function moneyToCents(n: number) {
   const x = Math.round((Number(n) || 0) * 100);
   return Number.isFinite(x) ? x : 0;
+}
+
+/**
+ * Validate live availability for wheel items before checkout.
+ * Returns { ok: true } if all items available, or { ok: false, unavailable: [...] } if any are out of stock.
+ */
+async function validateWheelAvailability(items: CartItem[]): Promise<{
+  ok: boolean;
+  unavailable?: Array<{ sku: string; name: string; requestedQty: number; availableQty: number }>;
+}> {
+  // Filter to wheel items only (tires/accessories have different supply chains)
+  const wheelItems = items.filter((i) => i.type === "wheel" && i.sku);
+  
+  if (wheelItems.length === 0) {
+    return { ok: true }; // No wheels to validate
+  }
+  
+  const wheelProsBase = process.env.WHEELPROS_WRAPPER_URL || process.env.NEXT_PUBLIC_WHEELPROS_API_BASE_URL;
+  if (!wheelProsBase) {
+    console.warn("[checkout] WHEELPROS_WRAPPER_URL not configured, skipping availability check");
+    return { ok: true }; // Skip validation if not configured (fail open)
+  }
+  
+  const headers: Record<string, string> = { Accept: "application/json" };
+  if (process.env.WHEELPROS_WRAPPER_API_KEY) {
+    headers["x-api-key"] = process.env.WHEELPROS_WRAPPER_API_KEY;
+  }
+  
+  const wpCreds = await getSupplierCredentials("wheelpros");
+  const unavailable: Array<{ sku: string; name: string; requestedQty: number; availableQty: number }> = [];
+  
+  // Check each wheel's availability
+  await Promise.all(
+    wheelItems.map(async (item) => {
+      const sku = String(item.sku || "").trim();
+      const qty = item.quantity || 1;
+      const name = String((item as any).model || item.sku || "Wheel");
+      
+      try {
+        const avail = await fetchAvailability({
+          wheelProsBase,
+          headers,
+          sku,
+          minQty: qty,
+          customerNumber: wpCreds.customerNumber || undefined,
+          companyCode: wpCreds.companyCode || undefined,
+        });
+        
+        const totalStock = (avail.localQty || 0) + (avail.globalQty || 0);
+        const isOrderable = ORDERABLE_TYPES.has(avail.inventoryType);
+        
+        if (!avail.ok || !isOrderable || totalStock < qty) {
+          unavailable.push({
+            sku,
+            name,
+            requestedQty: qty,
+            availableQty: totalStock,
+          });
+        }
+      } catch (e) {
+        console.error(`[checkout] Availability check failed for ${sku}:`, e);
+        // On error, add to unavailable list (fail safe)
+        unavailable.push({
+          sku,
+          name,
+          requestedQty: qty,
+          availableQty: 0,
+        });
+      }
+    })
+  );
+  
+  if (unavailable.length > 0) {
+    console.warn(`[checkout] ${unavailable.length} wheel(s) unavailable:`, unavailable);
+    return { ok: false, unavailable };
+  }
+  
+  return { ok: true };
 }
 
 export async function POST(req: Request) {
@@ -26,6 +106,20 @@ export async function POST(req: Request) {
     }
     if (!email && !phone) {
       return NextResponse.json({ ok: false, error: "email_or_phone_required" }, { status: 400 });
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // LIVE AVAILABILITY VALIDATION (DB-first architecture)
+    // Block checkout if any wheels are out of stock or unavailable
+    // ═══════════════════════════════════════════════════════════════════════════
+    const availCheck = await validateWheelAvailability(items);
+    if (!availCheck.ok) {
+      return NextResponse.json({
+        ok: false,
+        error: "items_unavailable",
+        detail: "Some items in your cart are no longer available",
+        unavailable: availCheck.unavailable,
+      }, { status: 409 }); // 409 Conflict
     }
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
