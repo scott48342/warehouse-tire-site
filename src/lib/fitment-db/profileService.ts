@@ -26,6 +26,8 @@ import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePaylo
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
+import crypto from "crypto";
+import submodelSupplements from "@/data/submodel-supplements.json";
 
 // ============================================================================
 // Types
@@ -152,6 +154,118 @@ function safeString(v: unknown): string {
   return "";
 }
 
+// ============================================================================
+// Supplement ID Resolution
+// ============================================================================
+
+type SubmodelEntry = { value: string; label: string };
+type YearRangeMap = { [yearRange: string]: SubmodelEntry[] };
+type ModelMap = { [model: string]: YearRangeMap };
+type MakeMap = { [make: string]: ModelMap };
+
+/**
+ * Check if a modificationId is a supplement-generated hash ID (prefix: s_)
+ */
+function isSupplementId(modificationId: string): boolean {
+  return modificationId.startsWith("s_") && modificationId.length === 10;
+}
+
+/**
+ * Reverse-lookup a supplement ID to get the original trim value.
+ * Supplement IDs are SHA256 hashes of "year:make:model:trimValue".
+ * 
+ * Returns the trim value (e.g., "xlt") if found, null otherwise.
+ */
+function resolveSupplementTrimValue(
+  supplementId: string,
+  year: number,
+  make: string,
+  model: string
+): string | null {
+  if (!isSupplementId(supplementId)) return null;
+  
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  
+  const makeData = (submodelSupplements as MakeMap)[make.toLowerCase()];
+  if (!makeData) return null;
+  
+  const modelData = makeData[model.toLowerCase()];
+  if (!modelData) return null;
+  
+  // Check each year range
+  for (const [range, entries] of Object.entries(modelData)) {
+    const [startStr, endStr] = range.split("-");
+    const start = parseInt(startStr, 10);
+    const end = parseInt(endStr, 10);
+    
+    if (year >= start && year <= end) {
+      // Check each trim entry to find which one matches our hash
+      for (const entry of entries as SubmodelEntry[]) {
+        const input = `${year}:${normalizedMake}:${normalizedModel}:${slugify(entry.value)}`;
+        const hash = crypto.createHash("sha256").update(input).digest("hex").slice(0, 8);
+        if (`s_${hash}` === supplementId) {
+          console.log(`[profileService] Resolved supplement ID ${supplementId} → trim "${entry.value}" (${entry.label})`);
+          return entry.value;
+        }
+      }
+    }
+  }
+  
+  console.log(`[profileService] Could not resolve supplement ID ${supplementId} for ${year} ${make} ${model}`);
+  return null;
+}
+
+/**
+ * Find a modification that contains the given trim level in its trim_levels array.
+ * Returns the best matching modification or null.
+ */
+function findModificationByTrimLevel(
+  modifications: WheelSizeModification[],
+  trimValue: string
+): WheelSizeModification | null {
+  const normalizedTrim = trimValue.toLowerCase().trim();
+  
+  // First pass: exact match in trim_levels
+  for (const mod of modifications) {
+    if (mod.trim_levels && Array.isArray(mod.trim_levels)) {
+      const match = mod.trim_levels.find(
+        (t: string) => t.toLowerCase().trim() === normalizedTrim
+      );
+      if (match) {
+        console.log(`[profileService] Found modification ${mod.slug} with exact trim_level match: "${match}"`);
+        return mod;
+      }
+    }
+  }
+  
+  // Second pass: partial match (trim contains or is contained by)
+  for (const mod of modifications) {
+    if (mod.trim_levels && Array.isArray(mod.trim_levels)) {
+      const match = mod.trim_levels.find((t: string) => {
+        const normalized = t.toLowerCase().trim();
+        return normalized.includes(normalizedTrim) || normalizedTrim.includes(normalized);
+      });
+      if (match) {
+        console.log(`[profileService] Found modification ${mod.slug} with partial trim_level match: "${match}" ~ "${trimValue}"`);
+        return mod;
+      }
+    }
+  }
+  
+  // Third pass: check if trim name appears in modification name/trim field
+  for (const mod of modifications) {
+    const modName = safeString(mod.name).toLowerCase();
+    const modTrim = safeString(mod.trim).toLowerCase();
+    if (modName.includes(normalizedTrim) || modTrim.includes(normalizedTrim)) {
+      console.log(`[profileService] Found modification ${mod.slug} with name/trim match`);
+      return mod;
+    }
+  }
+  
+  return null;
+}
+
 async function fetchModificationFromApi(
   apiKey: string,
   year: number,
@@ -197,13 +311,45 @@ async function fetchModificationFromApi(
     mod = allMods.find(m => slugify(m.slug) === slugify(requestedModificationId));
   }
   
-  // Fallback to first USDM mod
-  if (!mod && mods.length > 0) {
-    console.log(`[profileService] Mod ${requestedModificationId} not found in ${allMods.length} mods, using first: ${mods[0].slug}`);
-    mod = mods[0];
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FIX: Handle supplement IDs (s_XXXXXXXX) by resolving to original trim value
+  // and finding a modification that contains that trim in trim_levels[]
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!mod && isSupplementId(requestedModificationId)) {
+    const trimValue = resolveSupplementTrimValue(requestedModificationId, year, make, model);
+    
+    if (trimValue) {
+      // Search for a modification containing this trim level
+      mod = findModificationByTrimLevel(mods, trimValue);
+      
+      if (mod) {
+        console.log(`[profileService] SUPPLEMENT RESOLVED: ${requestedModificationId} → trim "${trimValue}" → mod ${mod.slug}`);
+      } else {
+        console.log(`[profileService] SUPPLEMENT PARTIAL: Found trim "${trimValue}" but no modification contains it in trim_levels`);
+        // Fall back to first USDM mod only for supplement IDs where we found the trim
+        // This is acceptable because the trim is a marketing level, not a technical spec
+        // All F-150 XLT/Lariat/etc share the same fitment specs for a given engine
+        if (mods.length > 0) {
+          mod = mods[0];
+          console.log(`[profileService] Using first USDM mod ${mod.slug} for supplement trim "${trimValue}"`);
+        }
+      }
+    } else {
+      console.warn(`[profileService] SUPPLEMENT UNKNOWN: Could not resolve ${requestedModificationId} - no matching trim in supplements`);
+      // DO NOT fall back to first mod - return null to indicate resolution failure
+    }
   }
   
-  if (!mod) return null;
+  // ═══════════════════════════════════════════════════════════════════════════
+  // REMOVED: Dangerous fallback to first mod for non-supplement IDs
+  // Old code: if (!mod && mods.length > 0) { mod = mods[0]; }
+  // This caused XLT to resolve to 2.7 EcoBoost incorrectly
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  if (!mod) {
+    console.log(`[profileService] No matching modification found for ${requestedModificationId}`);
+    return null;
+  }
   
   // Fetch vehicle data
   const vehicleUrl = new URL("search/by_model/", WHEELSIZE_API_BASE);
