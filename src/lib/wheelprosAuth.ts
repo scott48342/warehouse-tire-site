@@ -1,51 +1,77 @@
 /**
- * Shared Wheel Pros auth token helper.
- * Used by Product + Accessory API clients.
- * 
- * Credentials are loaded from:
- * 1. admin_suppliers.credentials (encrypted, admin-managed)
- * 2. Environment variables (fallback)
+ * WheelPros Authentication Module
+ * Shared token management for WheelPros API proxy routes.
  */
 
-import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
+const AUTH_BASE_URL = process.env.WHEELPROS_AUTH_BASE_URL || "https://api.wheelpros.com/auth";
+const USERNAME = process.env.WHEELPROS_USERNAME || "";
+const PASSWORD = process.env.WHEELPROS_PASSWORD || "";
+const TOKEN_SKEW_MS = 60_000;
+const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36";
 
-let tokenCache: { token: string; expiresAt: number } | null = null;
+let cachedToken: string | null = null;
+let tokenExpiresAt = 0;
+let refreshPromise: Promise<string> | null = null;
 
-export async function getWheelProsToken(): Promise<string> {
-  const now = Date.now();
-  if (tokenCache && tokenCache.expiresAt > now + 30_000) return tokenCache.token;
+export function hasValidToken(): boolean {
+  return !!cachedToken && Date.now() < (tokenExpiresAt - TOKEN_SKEW_MS);
+}
 
-  // Get credentials from admin settings (with env fallback)
-  const creds = await getSupplierCredentials("wheelpros");
-  
-  const userName = creds.username;
-  const password = creds.password;
-  if (!userName || !password) {
-    throw new Error("Missing WheelPros credentials. Configure in Admin → Settings → Suppliers.");
+export async function refreshToken(): Promise<{ accessToken: string; expiresIn: number }> {
+  if (refreshPromise) {
+    const token = await refreshPromise;
+    return { accessToken: token, expiresIn: Math.round((tokenExpiresAt - Date.now()) / 1000) };
   }
 
-  const authUrl = creds.authUrl || "https://api.wheelpros.com/auth/token";
-  
-  const res = await fetch(authUrl, {
-    method: "POST",
-    headers: { "content-type": "application/json", accept: "application/json" },
-    body: JSON.stringify({ userName, password }),
-    cache: "no-store",
-  });
-  if (!res.ok) throw new Error(`WheelPros auth failed: HTTP ${res.status}`);
-  const data = (await res.json()) as any;
+  refreshPromise = (async () => {
+    console.log("[WheelPros Auth] Refreshing token...");
 
-  const token = data?.accessToken || data?.token || data?.access_token || data?.tokenString;
-  const expiresIn = Number(data?.expiresIn || data?.expires_in || data?.expiresInSeconds || 3600);
-  if (!token) throw new Error("WheelPros auth: missing token in response");
+    const res = await fetch(`${AUTH_BASE_URL}/v1/authorize`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": USER_AGENT,
+      },
+      body: JSON.stringify({ userName: USERNAME, password: PASSWORD }),
+      cache: "no-store",
+    });
 
-  tokenCache = { token: String(token), expiresAt: now + Math.max(60, expiresIn) * 1000 };
-  return tokenCache.token;
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("[WheelPros Auth] Failed:", res.status, text);
+      throw new Error(`WheelPros auth failed: ${res.status}`);
+    }
+
+    const data = await res.json();
+    if (!data.accessToken) {
+      throw new Error("WheelPros auth did not return accessToken");
+    }
+
+    cachedToken = data.accessToken;
+    const expiresInSec = Number(data.expiresIn ?? 3600);
+    tokenExpiresAt = Date.now() + expiresInSec * 1000;
+
+    console.log(`[WheelPros Auth] Token refreshed, expires in ${expiresInSec}s`);
+    return cachedToken;
+  })();
+
+  try {
+    const token = await refreshPromise;
+    return { accessToken: token, expiresIn: Math.round((tokenExpiresAt - Date.now()) / 1000) };
+  } finally {
+    refreshPromise = null;
+  }
 }
 
-/**
- * Clear the cached token (call after credentials update)
- */
-export function clearWheelProsTokenCache() {
-  tokenCache = null;
+export async function getToken(): Promise<string> {
+  if (hasValidToken()) return cachedToken!;
+  const result = await refreshToken();
+  return result.accessToken;
 }
+
+export function getCredentialsConfigured(): boolean {
+  return !!(USERNAME && PASSWORD);
+}
+
+export { USER_AGENT };
