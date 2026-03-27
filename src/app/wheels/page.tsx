@@ -664,10 +664,10 @@ export default async function WheelsPage({
     } : undefined;
 
     // Extract ranking info for merchandising badges (from fitment-search endpoint)
-    const rankingData = (it as any)?.ranking;
-    const ranking = rankingData ? {
-      score: rankingData.score ?? 50,
-      priceTier: rankingData.priceTier as Wheel["ranking"]["priceTier"],
+    const rankingRaw = (it as any)?.ranking;
+    const ranking: Wheel["ranking"] = rankingRaw ? {
+      score: rankingRaw?.score ?? 50,
+      priceTier: rankingRaw?.priceTier as "value" | "mid" | "premium" | undefined,
     } : undefined;
 
     return {
