@@ -51,12 +51,13 @@ export async function refreshToken(): Promise<{ accessToken: string; expiresIn: 
       throw new Error("WheelPros auth did not return accessToken");
     }
 
-    cachedToken = data.accessToken;
+    const accessToken = String(data.accessToken);
+    cachedToken = accessToken;
     const expiresInSec = Number(data.expiresIn ?? 3600);
     tokenExpiresAt = Date.now() + expiresInSec * 1000;
 
     console.log(`[WheelPros Proxy] Token refreshed, expires in ${expiresInSec}s`);
-    return cachedToken;
+    return accessToken;
   })();
 
   try {
