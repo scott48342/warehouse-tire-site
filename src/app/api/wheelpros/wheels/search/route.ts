@@ -113,12 +113,17 @@ export async function GET(req: Request) {
   const ct = res.headers.get("content-type") || "application/json";
 
   let data: WheelProsSearchResponse | null = null;
+  let rawText: string | null = null;
   try {
-    data = (await res.json()) as WheelProsSearchResponse;
+    // Read body as text first (body can only be consumed once)
+    rawText = await res.text();
+    data = JSON.parse(rawText) as WheelProsSearchResponse;
   } catch {
-    // If upstream didn't return JSON for some reason, just proxy through.
-    const text = await res.text();
-    return new NextResponse(text, { status: res.status, headers: { "content-type": ct } });
+    // If upstream didn't return valid JSON, proxy the raw text through
+    return new NextResponse(rawText || "Upstream error", { 
+      status: res.status, 
+      headers: { "content-type": ct } 
+    });
   }
 
   let enrichMs = debug ? 0 : 0;
