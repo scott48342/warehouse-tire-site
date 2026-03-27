@@ -13,7 +13,9 @@ async function doSearch(searchParams: URLSearchParams, retry = true): Promise<Re
   if (!searchParams.has("page")) searchParams.set("page", "1");
   if (!searchParams.has("pageSize")) searchParams.set("pageSize", "20");
 
-  const url = new URL("/v1/search/wheel", PRODUCTS_BASE_URL);
+  // Ensure proper URL construction (don't use leading slash which replaces path)
+  const baseUrl = PRODUCTS_BASE_URL.endsWith("/") ? PRODUCTS_BASE_URL : PRODUCTS_BASE_URL + "/";
+  const url = new URL("v1/search/wheel", baseUrl);
   searchParams.forEach((v, k) => url.searchParams.set(k, v));
 
   const res = await fetch(url.toString(), {
