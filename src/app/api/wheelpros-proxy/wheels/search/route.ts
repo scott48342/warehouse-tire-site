@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getToken, refreshToken, getCredentialsConfigured, USER_AGENT } from "@/lib/wheelprosAuth";
+import { getToken, refreshToken, getCredentialsConfigured, USER_AGENT } from "@/lib/wheelprosProxyAuth";
 
 const PRODUCTS_BASE_URL = process.env.WHEELPROS_PRODUCTS_BASE_URL || "https://api.wheelpros.com/products";
 

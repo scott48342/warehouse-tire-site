@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { refreshToken, getCredentialsConfigured } from "@/lib/wheelprosAuth";
+import { refreshToken, getCredentialsConfigured } from "@/lib/wheelprosProxyAuth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
