@@ -205,9 +205,13 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
       offroad: {
         tireDiameterMin: 33,
         tireDiameterMax: 35,
-        commonTireSizes: ["285/70R17", "295/70R17", "315/70R17", "35x12.50R17"],
+        commonTireSizes: [
+          "285/70R17", "295/70R17", "315/70R17", "35x12.50R17",  // 17" wheels
+          "33x12.50R18", "285/70R18", "295/65R18",                // 18" wheels
+          "33x12.50R20", "35x12.50R20", "295/60R20", "305/55R20", // 20" wheels
+        ],
         wheelDiameterMin: 17,
-        wheelDiameterMax: 18,
+        wheelDiameterMax: 20,
         popularWheelSizes: [17, 18, 20],
         wheelWidthMin: 9,
         wheelWidthMax: 12,
@@ -220,7 +224,12 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
       extreme: {
         tireDiameterMin: 35,
         tireDiameterMax: 37,
-        commonTireSizes: ["35x12.50R17", "37x12.50R17", "37x13.50R17"],
+        commonTireSizes: [
+          "35x12.50R17", "37x12.50R17", "37x13.50R17",            // 17" wheels
+          "35x12.50R18", "33x12.50R18",                            // 18" wheels
+          "35x12.50R20", "37x12.50R20", "33x12.50R20",            // 20" wheels
+          "35x12.50R22", "33x12.50R22",                            // 22" wheels
+        ],
         wheelDiameterMin: 17,
         wheelDiameterMax: 22,
         popularWheelSizes: [18, 20, 22],
