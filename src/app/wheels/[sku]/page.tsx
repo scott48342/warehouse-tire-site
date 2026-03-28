@@ -252,6 +252,29 @@ export default async function WheelDetailPage({
   const wheelOffsetParam = safeString(Array.isArray((sp as any).wheelOffset) ? (sp as any).wheelOffset[0] : (sp as any).wheelOffset);
   const wheelBoltParam = safeString(Array.isArray((sp as any).wheelBolt) ? (sp as any).wheelBolt[0] : (sp as any).wheelBolt);
   
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LIFTED BUILD CONTEXT - Read from URL params (passed from /wheels listing)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const liftedSource = safeString(Array.isArray(sp.liftedSource) ? sp.liftedSource[0] : sp.liftedSource);
+  const liftedPreset = safeString(Array.isArray(sp.liftedPreset) ? sp.liftedPreset[0] : sp.liftedPreset);
+  const liftedInchesRaw = safeString(Array.isArray(sp.liftedInches) ? sp.liftedInches[0] : sp.liftedInches);
+  const liftedInches = liftedInchesRaw ? parseInt(liftedInchesRaw, 10) : 0;
+  const liftedTireSizesRaw = safeString(Array.isArray(sp.liftedTireSizes) ? sp.liftedTireSizes[0] : sp.liftedTireSizes);
+  const liftedTireSizes = liftedTireSizesRaw ? liftedTireSizesRaw.split(",").filter(Boolean) : [];
+  const liftedTireDiaMin = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
+  const liftedTireDiaMax = safeString(Array.isArray(sp.liftedTireDiaMax) ? sp.liftedTireDiaMax[0] : sp.liftedTireDiaMax);
+  
+  // Check if lifted build is active
+  const isLiftedBuild = liftedSource === "lifted" && liftedPreset && liftedInches > 0;
+  
+  if (isLiftedBuild) {
+    console.log('[wheel-pdp] 🚀 LIFTED BUILD CONTEXT:', {
+      presetId: liftedPreset,
+      liftInches: liftedInches,
+      tireSizes: liftedTireSizes,
+    });
+  }
+  
   // Never show raw engine text - extract clean submodel or omit
   const displayTrim = extractDisplayTrim(trim);
   const vehicleLabel = [year, make, model, displayTrim].filter(Boolean).join(" ");
@@ -520,77 +543,132 @@ export default async function WheelDetailPage({
                             <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
                 <div className="text-xs font-extrabold text-neutral-900">Add tires</div>
                 <div className="mt-1 text-xs text-neutral-600">
-                  {vehicleLabel
-                    ? (wheelDiaN && oemTireSizes.length > 0
-                        ? `Choose an OEM tire size that fits ${wheelDiaN}" wheels.`
-                        : wheelDiaN && oemTireSizes.length === 0
-                          ? `Find compatible tires for your ${wheelDiaN}" wheels.`
-                          : "Choose an OEM tire size for your vehicle.")
-                    : "Select a vehicle to see OEM tire sizes."}
+                  {isLiftedBuild
+                    ? `Choose lifted tire sizes for your ${liftedInches}" lift build.`
+                    : vehicleLabel
+                      ? (wheelDiaN && oemTireSizes.length > 0
+                          ? `Choose an OEM tire size that fits ${wheelDiaN}" wheels.`
+                          : wheelDiaN && oemTireSizes.length === 0
+                            ? `Find compatible tires for your ${wheelDiaN}" wheels.`
+                            : "Choose an OEM tire size for your vehicle.")
+                      : "Select a vehicle to see OEM tire sizes."}
                 </div>
+
+                {/* LIFTED BUILD: Show lifted tire sizes instead of OEM */}
+                {isLiftedBuild && (
+                  <div className="mt-2 rounded-lg bg-amber-50 border border-amber-200 px-2 py-1">
+                    <div className="flex items-center gap-1.5 text-xs text-amber-800">
+                      <span>🚀</span>
+                      <span className="font-semibold">Lifted Build Mode</span>
+                      <span className="text-amber-600">• {liftedInches}" {liftedPreset}</span>
+                    </div>
+                  </div>
+                )}
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {vehicleLabel && oemTireSizes.length > 0 ? (
-                    /* Case 1: OEM tire sizes match the wheel diameter - show them */
-                    oemTireSizes.slice(0, 4).map((s) => (
+                  {/* LIFTED BUILD TIRE SIZES - prioritize lifted recommendations */}
+                  {(() => {
+                    // Build common URL params including lifted context
+                    const liftedUrlParams = isLiftedBuild ? {
+                      liftedSource,
+                      liftedPreset,
+                      liftedInches: String(liftedInches),
+                      liftedTireSizes: liftedTireSizesRaw,
+                      liftedTireDiaMin,
+                      liftedTireDiaMax,
+                    } : {};
+                    
+                    // Get tire sizes matching wheel diameter
+                    const effectiveTireSizes = isLiftedBuild
+                      ? liftedTireSizes.filter((s) => {
+                          // Filter lifted sizes to match the wheel diameter
+                          const m = String(s).toUpperCase().match(/R(\d{2})\b/);
+                          const rim = m ? Number(m[1]) : NaN;
+                          return !wheelDiaN || (Number.isFinite(rim) && rim === wheelDiaN);
+                        })
+                      : oemTireSizes;
+                    
+                    // Case 1: Have tire sizes that match the wheel - show them
+                    if (vehicleLabel && effectiveTireSizes.length > 0) {
+                      return effectiveTireSizes.slice(0, 4).map((s) => (
+                        <Link
+                          key={s}
+                          href={
+                            vehicleSlugStr
+                              ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
+                                  year, make, model, trim, modification, size: s,
+                                  ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
+                                  ...(width ? { wheelWidth: width } : {}),
+                                  ...liftedUrlParams,
+                                }).toString()}`
+                              : `/tires?${new URLSearchParams({ 
+                                  year, make, model, trim, modification, size: s,
+                                  ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
+                                  ...(width ? { wheelWidth: width } : {}),
+                                  ...liftedUrlParams,
+                                }).toString()}`
+                          }
+                          className={`rounded-xl border px-3 py-2 text-xs font-extrabold hover:border-neutral-300 ${
+                            isLiftedBuild
+                              ? "border-amber-200 bg-amber-50 text-amber-900"
+                              : "border-neutral-200 bg-white text-neutral-900"
+                          }`}
+                        >
+                          {s}
+                        </Link>
+                      ));
+                    }
+                    
+                    // Case 2: No matching sizes for wheel diameter - find tires
+                    if (vehicleLabel && wheelDiaN) {
+                      return (
+                        <Link
+                          href={
+                            vehicleSlugStr
+                              ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
+                                  year, make, model, trim, modification,
+                                  wheelDia: String(wheelDiaN),
+                                  ...(width ? { wheelWidth: width } : {}),
+                                  ...liftedUrlParams,
+                                }).toString()}`
+                              : `/tires?${new URLSearchParams({ 
+                                  year, make, model, trim, modification,
+                                  wheelDia: String(wheelDiaN),
+                                  ...(width ? { wheelWidth: width } : {}),
+                                  ...liftedUrlParams,
+                                }).toString()}`
+                          }
+                          className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-neutral-800"
+                        >
+                          Find {wheelDiaN}" tires
+                        </Link>
+                      );
+                    }
+                    
+                    // Case 3: No vehicle or wheel diameter - select vehicle
+                    return (
                       <Link
-                        key={s}
-                        href={
-                          vehicleSlugStr
-                            ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
-                                year, make, model, trim, modification, size: s,
-                                ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
-                                ...(width ? { wheelWidth: width } : {}),
-                              }).toString()}`
-                            : `/tires?${new URLSearchParams({ 
-                                year, make, model, trim, modification, size: s,
-                                ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
-                                ...(width ? { wheelWidth: width } : {}),
-                              }).toString()}`
-                        }
-                        className="rounded-xl border border-neutral-200 bg-white px-3 py-2 text-xs font-extrabold text-neutral-900 hover:border-neutral-300"
+                        href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, ...liftedUrlParams }).toString()}`}
+                        className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
                       >
-                        {s}
+                        Select vehicle
                       </Link>
-                    ))
-                  ) : vehicleLabel && wheelDiaN ? (
-                    /* Case 2: No OEM match for wheel diameter - use plus-sizing */
-                    <Link
-                      href={
-                        vehicleSlugStr
-                          ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
-                              year, make, model, trim, modification,
-                              wheelDia: String(wheelDiaN),
-                              ...(width ? { wheelWidth: width } : {}),
-                            }).toString()}`
-                          : `/tires?${new URLSearchParams({ 
-                              year, make, model, trim, modification,
-                              wheelDia: String(wheelDiaN),
-                              ...(width ? { wheelWidth: width } : {}),
-                            }).toString()}`
-                      }
-                      className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-neutral-800"
-                    >
-                      Find {wheelDiaN}" tires
-                    </Link>
-                  ) : (
-                    /* Case 3: No vehicle or wheel diameter - show vehicle selector */
-                    <Link
-                      href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
-                      className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
-                    >
-                      Select vehicle
-                    </Link>
-                  )}
+                    );
+                  })()}
                 </div>
 
-                {wheelDiaN && oemTireSizes.length === 0 && oemTireSizesAll.length > 0 && (
+                {/* Plus-size notice - only show for stock builds, not lifted */}
+                {!isLiftedBuild && wheelDiaN && oemTireSizes.length === 0 && oemTireSizesAll.length > 0 && (
                   <div className="mt-2 text-[11px] text-amber-700 bg-amber-50 rounded-lg px-2 py-1">
                     This is a plus-size wheel. We will find compatible tire sizes.
                   </div>
                 )}
 
-                <div className="mt-2 text-[11px] text-neutral-600">We will verify fitment before install.</div>
+                <div className="mt-2 text-[11px] text-neutral-600">
+                  {isLiftedBuild 
+                    ? "Lifted tire recommendations are based on common fitments for your lift level."
+                    : "We will verify fitment before install."}
+                </div>
               </div>
             </div>
 

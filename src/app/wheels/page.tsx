@@ -1707,6 +1707,15 @@ export default async function WheelsPage({
                         modification,
                         sort,
                         page: String(page),
+                        // LIFTED BUILD CONTEXT: Pass through to wheel detail and tire pages
+                        ...(isLiftedBuild ? {
+                          liftedSource,
+                          liftedPreset,
+                          liftedInches: String(liftedInches),
+                          liftedTireSizes: liftedTireSizesRaw,
+                          liftedTireDiaMin,
+                          liftedTireDiaMax,
+                        } : {}),
                       }}
                       dbProfile={dbProfile}
                       wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
@@ -1760,6 +1769,15 @@ export default async function WheelsPage({
                       modification,
                       sort,
                       page: String(page),
+                      // LIFTED BUILD CONTEXT: Pass through to wheel detail and tire pages
+                      ...(isLiftedBuild ? {
+                        liftedSource,
+                        liftedPreset,
+                        liftedInches: String(liftedInches),
+                        liftedTireSizes: liftedTireSizesRaw,
+                        liftedTireDiaMin,
+                        liftedTireDiaMax,
+                      } : {}),
                     }}
                     dbProfile={dbProfile}
                     wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
