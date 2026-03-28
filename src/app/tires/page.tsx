@@ -472,6 +472,11 @@ export default async function TiresPage({
     if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
     if (oemWheelMatchedSizes.length > 0) return null; // OEM sizes exist, no need
     
+    // CRITICAL: Skip plus-sizing for lifted builds
+    // Lifted sizes are intentional recommendations, not OEM sizes to be scaled
+    // If lifted sizes don't match wheel diameter, we should NOT fall back to calculated sizes
+    if (isLiftedBuild) return null;
+    
     // If we have OEM sizes, use them as reference for plus-sizing
     if (tireSizesStrict.length > 0) {
       const referenceOemSize = tireSizesStrict[0];
@@ -500,9 +505,11 @@ export default async function TiresPage({
     // 1. We have a wheel diameter
     // 2. No OEM sizes available at all (not just no match for this diameter)
     // 3. Plus-sizing couldn't help (no reference)
+    // 4. NOT a lifted build (lifted builds use specific sizes)
     if (!Number.isFinite(wheelDiaNum) || wheelDiaNum <= 0) return null;
     if (oemWheelMatchedSizes.length > 0) return null; // Have OEM match
     if (plusSizeResult && plusSizeResult.acceptableCandidates.length > 0) return null; // Plus-sizing worked
+    if (isLiftedBuild) return null; // Lifted builds don't use aftermarket fallback
     
     // Detect vehicle class from model name for better suggestions
     const modelLower = String(model || "").toLowerCase();
