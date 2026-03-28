@@ -364,7 +364,23 @@ export default async function WheelDetailPage({
             </div>
           </div>
           <div className="mt-4">
-            <Link href="/wheels" className="text-sm font-extrabold text-neutral-900 hover:underline">
+            <Link 
+              href={(() => {
+                if (!year || !make || !model) return "/wheels";
+                const params: Record<string, string> = { year, make, model };
+                if (trim) params.trim = trim;
+                if (modification) params.modification = modification;
+                // Preserve lifted build context
+                if (liftedSource) params.liftedSource = liftedSource;
+                if (liftedPreset) params.liftedPreset = liftedPreset;
+                if (liftedInchesRaw) params.liftedInches = liftedInchesRaw;
+                if (liftedTireSizesRaw) params.liftedTireSizes = liftedTireSizesRaw;
+                if (liftedTireDiaMin) params.liftedTireDiaMin = liftedTireDiaMin;
+                if (liftedTireDiaMax) params.liftedTireDiaMax = liftedTireDiaMax;
+                return `/wheels?${new URLSearchParams(params).toString()}`;
+              })()} 
+              className="text-sm font-extrabold text-neutral-900 hover:underline"
+            >
               ← Back to wheels
             </Link>
           </div>
@@ -561,7 +577,23 @@ export default async function WheelDetailPage({
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="flex items-center justify-between gap-3">
-          <Link href="/wheels" className="text-sm font-extrabold text-neutral-900 hover:underline">
+          <Link 
+            href={(() => {
+              if (!year || !make || !model) return "/wheels";
+              const params: Record<string, string> = { year, make, model };
+              if (trim) params.trim = trim;
+              if (modification) params.modification = modification;
+              // Preserve lifted build context
+              if (liftedSource) params.liftedSource = liftedSource;
+              if (liftedPreset) params.liftedPreset = liftedPreset;
+              if (liftedInches) params.liftedInches = String(liftedInches);
+              if (liftedTireSizesRaw) params.liftedTireSizes = liftedTireSizesRaw;
+              if (liftedTireDiaMin) params.liftedTireDiaMin = liftedTireDiaMin;
+              if (liftedTireDiaMax) params.liftedTireDiaMax = liftedTireDiaMax;
+              return `/wheels?${new URLSearchParams(params).toString()}`;
+            })()} 
+            className="text-sm font-extrabold text-neutral-900 hover:underline"
+          >
             ← Back to wheels
           </Link>
         </div>
