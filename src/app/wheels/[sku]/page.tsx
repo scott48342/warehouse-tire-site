@@ -569,14 +569,16 @@ export default async function WheelDetailPage({
                   {/* LIFTED BUILD TIRE SIZES - prioritize lifted recommendations */}
                   {(() => {
                     // Build common URL params including lifted context
-                    const liftedUrlParams = isLiftedBuild ? {
-                      liftedSource,
-                      liftedPreset,
-                      liftedInches: String(liftedInches),
-                      liftedTireSizes: liftedTireSizesRaw,
-                      liftedTireDiaMin,
-                      liftedTireDiaMax,
-                    } : {};
+                    // Filter out empty values to satisfy URLSearchParams type requirements
+                    const liftedUrlParams: Record<string, string> = {};
+                    if (isLiftedBuild) {
+                      if (liftedSource) liftedUrlParams.liftedSource = liftedSource;
+                      if (liftedPreset) liftedUrlParams.liftedPreset = liftedPreset;
+                      if (liftedInches) liftedUrlParams.liftedInches = String(liftedInches);
+                      if (liftedTireSizesRaw) liftedUrlParams.liftedTireSizes = liftedTireSizesRaw;
+                      if (liftedTireDiaMin) liftedUrlParams.liftedTireDiaMin = liftedTireDiaMin;
+                      if (liftedTireDiaMax) liftedUrlParams.liftedTireDiaMax = liftedTireDiaMax;
+                    }
                     
                     // Get tire sizes matching wheel diameter
                     const effectiveTireSizes = isLiftedBuild
@@ -588,6 +590,15 @@ export default async function WheelDetailPage({
                         })
                       : oemTireSizes;
                     
+                    // Helper to build URL params (filters empty values)
+                    const buildParams = (params: Record<string, string | number | null | undefined>) => {
+                      const filtered: Record<string, string> = {};
+                      for (const [k, v] of Object.entries(params)) {
+                        if (v != null && v !== "") filtered[k] = String(v);
+                      }
+                      return new URLSearchParams(filtered).toString();
+                    };
+                    
                     // Case 1: Have tire sizes that match the wheel - show them
                     if (vehicleLabel && effectiveTireSizes.length > 0) {
                       return effectiveTireSizes.slice(0, 4).map((s) => (
@@ -595,18 +606,16 @@ export default async function WheelDetailPage({
                           key={s}
                           href={
                             vehicleSlugStr
-                              ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
+                              ? `/tires/v/${vehicleSlugStr}?${buildParams({ 
                                   year, make, model, trim, modification, size: s,
-                                  ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
-                                  ...(width ? { wheelWidth: width } : {}),
+                                  wheelDia: wheelDiaN, wheelWidth: width,
                                   ...liftedUrlParams,
-                                }).toString()}`
-                              : `/tires?${new URLSearchParams({ 
+                                })}`
+                              : `/tires?${buildParams({ 
                                   year, make, model, trim, modification, size: s,
-                                  ...(wheelDiaN ? { wheelDia: String(wheelDiaN) } : {}),
-                                  ...(width ? { wheelWidth: width } : {}),
+                                  wheelDia: wheelDiaN, wheelWidth: width,
                                   ...liftedUrlParams,
-                                }).toString()}`
+                                })}`
                           }
                           className={`rounded-xl border px-3 py-2 text-xs font-extrabold hover:border-neutral-300 ${
                             isLiftedBuild
@@ -625,18 +634,16 @@ export default async function WheelDetailPage({
                         <Link
                           href={
                             vehicleSlugStr
-                              ? `/tires/v/${vehicleSlugStr}?${new URLSearchParams({ 
+                              ? `/tires/v/${vehicleSlugStr}?${buildParams({ 
                                   year, make, model, trim, modification,
-                                  wheelDia: String(wheelDiaN),
-                                  ...(width ? { wheelWidth: width } : {}),
+                                  wheelDia: wheelDiaN, wheelWidth: width,
                                   ...liftedUrlParams,
-                                }).toString()}`
-                              : `/tires?${new URLSearchParams({ 
+                                })}`
+                              : `/tires?${buildParams({ 
                                   year, make, model, trim, modification,
-                                  wheelDia: String(wheelDiaN),
-                                  ...(width ? { wheelWidth: width } : {}),
+                                  wheelDia: wheelDiaN, wheelWidth: width,
                                   ...liftedUrlParams,
-                                }).toString()}`
+                                })}`
                           }
                           className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-neutral-800"
                         >
@@ -648,7 +655,7 @@ export default async function WheelDetailPage({
                     // Case 3: No vehicle or wheel diameter - select vehicle
                     return (
                       <Link
-                        href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, ...liftedUrlParams }).toString()}`}
+                        href={`/tires?${buildParams({ year, make, model, trim, modification, ...liftedUrlParams })}`}
                         className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white"
                       >
                         Select vehicle
