@@ -86,7 +86,7 @@ interface BackupRecord {
  */
 async function backupAffectedRecords(
   records: FitmentInput[]
-): Promise<{ backup: BackupRecord[]; count: number }> {
+): Promise<{ records: BackupRecord[]; count: number }> {
   // Get unique year/make/model combinations
   const vehicles = new Map<string, { year: number; make: string; model: string }>();
   
@@ -103,7 +103,7 @@ async function backupAffectedRecords(
   }
   
   if (vehicles.size === 0) {
-    return { backup: [], count: 0 };
+    return { records: [], count: 0 };
   }
   
   // Build conditions for each vehicle
@@ -138,7 +138,7 @@ async function backupAffectedRecords(
     .where(or(...conditions));
   
   return {
-    backup: existing as BackupRecord[],
+    records: existing as BackupRecord[],
     count: existing.length,
   };
 }
