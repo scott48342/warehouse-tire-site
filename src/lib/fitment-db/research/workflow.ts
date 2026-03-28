@@ -254,11 +254,13 @@ export async function executeResearchWorkflow(
         input.year >= 2019 && input.year <= 2024
       ) {
         // Note: In actual implementation, this would trigger separate research
-        // For now, just log that a variant should be researched
-        record.notes = [
-          ...(record.candidate?.notes || []),
-          "⚠️ RAM 1500 Classic variant exists for this year range - research separately",
-        ];
+        // For now, just add a warning to the candidate notes
+        if (record.candidate) {
+          record.candidate.notes = [
+            ...(record.candidate.notes || []),
+            "⚠️ RAM 1500 Classic variant exists for this year range - research separately",
+          ];
+        }
       }
     }
   }

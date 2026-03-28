@@ -1073,6 +1073,65 @@ async function importApiDataToDb(
 // ============================================================================
 
 function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): FitmentProfile {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CRITICAL: Apply fitment rules to override incorrect DB/API data
+  // This is the ONLY place where rules are applied at resolution time.
+  // Rules handle cases like RAM 1500 Classic vs 5th Gen where bolt pattern differs.
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  let boltPattern = record.boltPattern;
+  let centerBoreMm = record.centerBoreMm ? parseFloat(String(record.centerBoreMm)) : null;
+  let threadSize = record.threadSize;
+  let seatType = record.seatType;
+  let offsetMinMm = record.offsetMinMm ? parseFloat(String(record.offsetMinMm)) : null;
+  let offsetMaxMm = record.offsetMaxMm ? parseFloat(String(record.offsetMaxMm)) : null;
+  let rulesApplied = false;
+  
+  // Check if fitment rules should override
+  const ruleOverride = getFitmentFromRules({
+    year: record.year,
+    make: record.make,
+    model: record.model,
+    rawModel: record.model, // Use model as rawModel
+    trim: record.displayTrim,
+    modificationId: record.modificationId,
+  });
+  
+  if (ruleOverride) {
+    // Log when rules override data
+    if (ruleOverride.boltPattern && ruleOverride.boltPattern !== boltPattern) {
+      console.log(`[dbRecordToProfile] 🔧 RULE OVERRIDE: ${record.year} ${record.make} ${record.model} (mod=${record.modificationId})`);
+      console.log(`  Bolt pattern: ${boltPattern} → ${ruleOverride.boltPattern}`);
+      console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
+    }
+    
+    // Apply overrides
+    if (ruleOverride.boltPattern) {
+      boltPattern = ruleOverride.boltPattern;
+      rulesApplied = true;
+    }
+    if (ruleOverride.centerBoreMm !== undefined) {
+      centerBoreMm = ruleOverride.centerBoreMm;
+      rulesApplied = true;
+    }
+    if (ruleOverride.threadSize) {
+      threadSize = ruleOverride.threadSize;
+      rulesApplied = true;
+    }
+    if (ruleOverride.seatType) {
+      seatType = ruleOverride.seatType;
+      rulesApplied = true;
+    }
+    if (ruleOverride.offsetMin !== undefined) {
+      offsetMinMm = ruleOverride.offsetMin;
+      rulesApplied = true;
+    }
+    if (ruleOverride.offsetMax !== undefined) {
+      offsetMaxMm = ruleOverride.offsetMax;
+      rulesApplied = true;
+    }
+  }
+  
   return {
     modificationId: record.modificationId,
     year: record.year,
@@ -1080,16 +1139,16 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     model: record.model,
     displayTrim: record.displayTrim,
     rawTrim: record.rawTrim,
-    boltPattern: record.boltPattern,
-    centerBoreMm: record.centerBoreMm ? parseFloat(String(record.centerBoreMm)) : null,
-    threadSize: record.threadSize,
-    seatType: record.seatType,
-    offsetMinMm: record.offsetMinMm ? parseFloat(String(record.offsetMinMm)) : null,
-    offsetMaxMm: record.offsetMaxMm ? parseFloat(String(record.offsetMaxMm)) : null,
+    boltPattern,
+    centerBoreMm,
+    threadSize,
+    seatType,
+    offsetMinMm,
+    offsetMaxMm,
     oemWheelSizes: (record.oemWheelSizes as WheelSize[]) || [],
     oemTireSizes: (record.oemTireSizes as string[]) || [],
     source,
     apiCalled: source === "api",
-    overridesApplied: false,
+    overridesApplied: rulesApplied,
   };
 }

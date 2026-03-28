@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { normalizeWpVehicleInfoToFitment, wpVehicleGetJson } from "@/lib/wheelprosVehicle";
+import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 
 export const runtime = "nodejs";
 
@@ -32,13 +33,41 @@ export async function GET(req: Request) {
     const hub = data?.hub != null ? Number(data.hub) : NaN;
     const offset = data?.offset != null ? Number(data.offset) : NaN;
 
-    const fitment = {
+    let fitment = {
       ...normalized,
       boltPattern: normalized.boltPattern || boltPattern,
       centerBoreMm: normalized.centerBoreMm || (Number.isFinite(hub) ? hub : undefined),
       offsetRangeMm:
         normalized.offsetRangeMm || (Number.isFinite(offset) ? ([offset, offset] as [number, number]) : undefined),
     };
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CRITICAL: Apply fitment rules to override incorrect WheelPros data
+    // This handles cases like RAM 1500 Classic vs 5th Gen where bolt pattern differs.
+    // ═══════════════════════════════════════════════════════════════════════════
+    const ruleOverride = getFitmentFromRules({
+      year: Number(year),
+      make,
+      model,
+      rawModel: model,
+      trim: submodel,
+      modificationId: submodel,
+    });
+    
+    if (ruleOverride) {
+      if (ruleOverride.boltPattern && ruleOverride.boltPattern !== fitment.boltPattern) {
+        console.log(`[wp/vehicles/fitment] 🔧 RULE OVERRIDE: ${year} ${make} ${model} submodel=${submodel}`);
+        console.log(`  Bolt pattern: ${fitment.boltPattern} → ${ruleOverride.boltPattern}`);
+        console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
+        fitment.boltPattern = ruleOverride.boltPattern;
+      }
+      if (ruleOverride.centerBoreMm !== undefined) {
+        fitment.centerBoreMm = ruleOverride.centerBoreMm;
+      }
+      if (ruleOverride.offsetMin !== undefined && ruleOverride.offsetMax !== undefined) {
+        fitment.offsetRangeMm = [ruleOverride.offsetMin, ruleOverride.offsetMax];
+      }
+    }
 
     const totalMs = debug ? Date.now() - t0 : 0;
     if (debug) {

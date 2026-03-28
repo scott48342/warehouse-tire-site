@@ -11,6 +11,7 @@ import {
   type ProfileResolutionPath,
   type ProfileLookupResult,
 } from "@/lib/fitment-db/profileService";
+import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
   buildFitmentEnvelope,
   validateWheel,
@@ -1142,6 +1143,33 @@ async function handleLegacyPath(
   }
 
   const profileMs = Date.now() - t0;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CRITICAL: Apply fitment rules to override incorrect legacy data
+  // This handles cases like RAM 1500 Classic vs 5th Gen where bolt pattern differs.
+  // ═══════════════════════════════════════════════════════════════════════════
+  const ruleOverride = getFitmentFromRules({
+    year: Number(year),
+    make,
+    model,
+    rawModel: model,
+    trim: profile.vehicle?.trim || trim,
+    modificationId: trim,
+  });
+  
+  if (ruleOverride && ruleOverride.boltPattern && ruleOverride.boltPattern !== profile.boltPattern) {
+    console.log(`[fitment-search] 🔧 LEGACY RULE OVERRIDE: ${year} ${make} ${model} trim=${trim || "(none)"}`);
+    console.log(`  Bolt pattern: ${profile.boltPattern} → ${ruleOverride.boltPattern}`);
+    console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
+    
+    // Override the bolt pattern in the profile
+    profile.boltPattern = ruleOverride.boltPattern;
+    
+    // Also override center bore if provided
+    if (ruleOverride.centerBoreMm !== undefined) {
+      profile.centerBore = ruleOverride.centerBoreMm;
+    }
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // SAFETY CHECK: Calculate confidence on legacy profile
