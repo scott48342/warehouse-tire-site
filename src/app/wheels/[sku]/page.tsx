@@ -309,6 +309,7 @@ export default async function WheelDetailPage({
   let wheelDiaN: number | null = null;
   let oemTireSizes = oemTireSizesAll;
 
+  // Try WheelPros first
   const data = await fetchWheelBySku(sku);
 
   const maybeData = data as { items?: unknown[]; results?: unknown[]; error?: unknown };
@@ -316,7 +317,41 @@ export default async function WheelDetailPage({
     ? maybeData.items
     : (Array.isArray(maybeData?.results) ? maybeData.results : []);
 
-  const it = (rawItems[0] as WheelProsItem | undefined) || undefined;
+  let it = (rawItems[0] as WheelProsItem | undefined) || undefined;
+  let isFromTechfeed = false;
+
+  // FALLBACK: If WheelPros doesn't have the SKU, try techfeed directly
+  if (!it) {
+    const tf = await getTechfeedWheelBySku(sku);
+    if (tf) {
+      isFromTechfeed = true;
+      // Convert techfeed data to WheelProsItem format
+      it = {
+        sku: tf.sku,
+        title: tf.product_desc || tf.sku,
+        brand: tf.brand_desc || tf.brand_cd || "",
+        properties: {
+          model: tf.product_desc,
+          finish: tf.abbreviated_finish_desc || tf.fancy_finish_desc || "",
+          width: tf.width,
+          diameter: tf.diameter,
+          offset: tf.offset,
+          boltPattern: tf.bolt_pattern_standard,
+          boltPatternMetric: tf.bolt_pattern_metric,
+          centerbore: tf.centerbore,
+        },
+        prices: tf.msrp ? {
+          msrp: [{ currencyAmount: tf.msrp, currencyCode: "USD" }],
+        } : undefined,
+        images: tf.images?.map((url) => ({
+          imageUrlLarge: url,
+          imageUrlMedium: url,
+          imageUrlSmall: url,
+          imageUrlOriginal: url,
+        })),
+      } as WheelProsItem;
+    }
+  }
 
   if (maybeData?.error || !it) {
     return (
