@@ -30,6 +30,104 @@
         { "value": "z71", "label": "Z71" }
       ]
     },
+    "c/k 1500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" },
+        { "value": "sportside", "label": "Sportside" }
+      ]
+    },
+    "c/k 2500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" }
+      ]
+    },
+    "c/k 3500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" }
+      ]
+    },
+    "c1500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" },
+        { "value": "sportside", "label": "Sportside" }
+      ]
+    },
+    "c2500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" }
+      ]
+    },
+    "c3500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" }
+      ]
+    },
+    "k1500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" },
+        { "value": "sportside", "label": "Sportside" }
+      ]
+    },
+    "k2500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" }
+      ]
+    },
+    "k3500": {
+      "1988-1998": [
+        { "value": "cheyenne", "label": "Cheyenne" },
+        { "value": "scottsdale", "label": "Scottsdale" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "wt", "label": "Work Truck" }
+      ]
+    },
+    "s-10": {
+      "1982-2004": [
+        { "value": "base", "label": "Base" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "xtreme", "label": "Xtreme" },
+        { "value": "zr2", "label": "ZR2" }
+      ]
+    },
+    "blazer": {
+      "1983-1994": [
+        { "value": "base", "label": "Base" },
+        { "value": "silverado", "label": "Silverado" },
+        { "value": "scottsdale", "label": "Scottsdale" }
+      ],
+      "1995-2005": [
+        { "value": "base", "label": "Base" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "xtreme", "label": "Xtreme" },
+        { "value": "trailblazer", "label": "TrailBlazer" }
+      ]
+    },
     "silverado": {
       "1999-2006": [
         { "value": "wt", "label": "WT (Work Truck)" },
@@ -332,7 +430,317 @@
       ]
     }
   },
+  "dodge": {
+    "d100": {
+      "1968-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" }
+      ]
+    },
+    "d150": {
+      "1977-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" },
+        { "value": "sport", "label": "Sport" }
+      ]
+    },
+    "d250": {
+      "1977-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" }
+      ]
+    },
+    "d350": {
+      "1977-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" }
+      ]
+    },
+    "w100": {
+      "1968-1989": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" },
+        { "value": "power-wagon", "label": "Power Wagon" }
+      ]
+    },
+    "w150": {
+      "1977-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" },
+        { "value": "power-wagon", "label": "Power Wagon" }
+      ]
+    },
+    "w250": {
+      "1977-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" },
+        { "value": "power-wagon", "label": "Power Wagon" }
+      ]
+    },
+    "w350": {
+      "1977-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" },
+        { "value": "power-wagon", "label": "Power Wagon" }
+      ]
+    },
+    "ram 1500": {
+      "1994-2001": [
+        { "value": "ws", "label": "WS (Work Special)" },
+        { "value": "st", "label": "ST" },
+        { "value": "lt", "label": "LT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie-slt", "label": "Laramie SLT" },
+        { "value": "sport", "label": "Sport" }
+      ],
+      "2002-2008": [
+        { "value": "st", "label": "ST" },
+        { "value": "sxt", "label": "SXT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "sport", "label": "Sport" }
+      ]
+    },
+    "ram 2500": {
+      "1994-2001": [
+        { "value": "ws", "label": "WS (Work Special)" },
+        { "value": "st", "label": "ST" },
+        { "value": "lt", "label": "LT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie-slt", "label": "Laramie SLT" }
+      ],
+      "2002-2009": [
+        { "value": "st", "label": "ST" },
+        { "value": "sxt", "label": "SXT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "power-wagon", "label": "Power Wagon" }
+      ]
+    },
+    "ram 3500": {
+      "1994-2001": [
+        { "value": "ws", "label": "WS (Work Special)" },
+        { "value": "st", "label": "ST" },
+        { "value": "lt", "label": "LT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie-slt", "label": "Laramie SLT" }
+      ],
+      "2002-2009": [
+        { "value": "st", "label": "ST" },
+        { "value": "sxt", "label": "SXT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie", "label": "Laramie" }
+      ]
+    },
+    "b150": {
+      "1981-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "le", "label": "LE" },
+        { "value": "se", "label": "SE" }
+      ]
+    },
+    "b250": {
+      "1981-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "le", "label": "LE" },
+        { "value": "se", "label": "SE" }
+      ]
+    },
+    "b350": {
+      "1981-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "le", "label": "LE" },
+        { "value": "se", "label": "SE" }
+      ]
+    },
+    "ram van": {
+      "1981-2003": [
+        { "value": "base", "label": "Base" },
+        { "value": "1500", "label": "1500" },
+        { "value": "2500", "label": "2500" },
+        { "value": "3500", "label": "3500" }
+      ]
+    },
+    "dakota": {
+      "1987-1996": [
+        { "value": "base", "label": "Base" },
+        { "value": "s", "label": "S" },
+        { "value": "le", "label": "LE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sport", "label": "Sport" }
+      ],
+      "1997-2004": [
+        { "value": "base", "label": "Base" },
+        { "value": "sport", "label": "Sport" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "r-t", "label": "R/T" }
+      ],
+      "2005-2011": [
+        { "value": "st", "label": "ST" },
+        { "value": "sxt", "label": "SXT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "trx4", "label": "TRX4" }
+      ]
+    },
+    "durango": {
+      "1998-2003": [
+        { "value": "sxt", "label": "SXT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "r-t", "label": "R/T" }
+      ],
+      "2004-2009": [
+        { "value": "st", "label": "ST" },
+        { "value": "sxt", "label": "SXT" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "adventurer", "label": "Adventurer" }
+      ],
+      "2011-2025": [
+        { "value": "sxt", "label": "SXT" },
+        { "value": "gt", "label": "GT" },
+        { "value": "citadel", "label": "Citadel" },
+        { "value": "r-t", "label": "R/T" },
+        { "value": "srt", "label": "SRT" }
+      ]
+    },
+    "ramcharger": {
+      "1974-1993": [
+        { "value": "base", "label": "Base" },
+        { "value": "se", "label": "SE" },
+        { "value": "le", "label": "LE" },
+        { "value": "awd", "label": "AWD" }
+      ]
+    }
+  },
   "gmc": {
+    "c/k 1500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "c/k 2500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "c/k 3500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "c1500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "c2500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "c3500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "k1500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "k2500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "k3500": {
+      "1988-1998": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ]
+    },
+    "s-15": {
+      "1982-1990": [
+        { "value": "base", "label": "Base" },
+        { "value": "sierra-classic", "label": "Sierra Classic" },
+        { "value": "high-sierra", "label": "High Sierra" }
+      ]
+    },
+    "sonoma": {
+      "1991-2004": [
+        { "value": "sl", "label": "SL" },
+        { "value": "sls", "label": "SLS" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "highrider", "label": "Highrider" }
+      ]
+    },
+    "jimmy": {
+      "1983-1994": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "sierra", "label": "Sierra" }
+      ],
+      "1995-2001": [
+        { "value": "sl", "label": "SL" },
+        { "value": "sls", "label": "SLS" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "diamond-edition", "label": "Diamond Edition" }
+      ]
+    },
     "sierra": {
       "2014-2018": [
         { "value": "base", "label": "Base" },
@@ -574,7 +982,56 @@
     }
   },
   "ford": {
+    "f-100": {
+      "1953-1983": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "ranger", "label": "Ranger" },
+        { "value": "xlt", "label": "XLT" }
+      ]
+    },
     "f-150": {
+      "1975-1986": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "ranger", "label": "Ranger" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" }
+      ],
+      "1987-1996": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "eddie-bauer", "label": "Eddie Bauer" }
+      ],
+      "1997-2003": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "lightning", "label": "Lightning" },
+        { "value": "harley-davidson", "label": "Harley-Davidson" }
+      ],
+      "2004-2008": [
+        { "value": "xl", "label": "XL" },
+        { "value": "stx", "label": "STX" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "fx4", "label": "FX4" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
+      "2009-2014": [
+        { "value": "xl", "label": "XL" },
+        { "value": "stx", "label": "STX" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "fx2", "label": "FX2" },
+        { "value": "fx4", "label": "FX4" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "svt-raptor", "label": "SVT Raptor" }
+      ],
       "2015-2020": [
         { "value": "xl", "label": "XL" },
         { "value": "xlt", "label": "XLT" },
@@ -597,6 +1054,25 @@
       ]
     },
     "f-250": {
+      "1967-1986": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "ranger", "label": "Ranger" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" }
+      ],
+      "1987-1997": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "eddie-bauer", "label": "Eddie Bauer" }
+      ],
+      "1999-2007": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
       "2008-2010": [
         { "value": "xl", "label": "XL" },
         { "value": "xlt", "label": "XLT" },
@@ -645,6 +1121,25 @@
       ]
     },
     "f-350": {
+      "1967-1986": [
+        { "value": "base", "label": "Base" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "ranger", "label": "Ranger" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" }
+      ],
+      "1987-1997": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "eddie-bauer", "label": "Eddie Bauer" }
+      ],
+      "1999-2007": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
       "2008-2010": [
         { "value": "xl", "label": "XL" },
         { "value": "xlt", "label": "XLT" },
