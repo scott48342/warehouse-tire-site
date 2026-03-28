@@ -61,9 +61,9 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|f-250",
     make: "Ford",
     model: "F-250",
-    yearMin: 2011,
+    yearMin: 1999,  // Super Duty introduced 1999; all gens share similar lift fitment
     yearMax: 2026,
-    platform: "Super Duty",
+    platform: "Super Duty (all generations)",
     recommendations: {
       daily: {
         tireDiameterMin: 33,
@@ -122,9 +122,9 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|f-350",
     make: "Ford",
     model: "F-350",
-    yearMin: 2011,
+    yearMin: 1999,  // Super Duty introduced 1999; all gens share similar lift fitment
     yearMax: 2026,
-    platform: "Super Duty",
+    platform: "Super Duty (all generations)",
     recommendations: {
       daily: {
         tireDiameterMin: 33,
@@ -417,9 +417,9 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|silverado 2500 hd",
     make: "Chevrolet",
     model: "Silverado 2500 HD",
-    yearMin: 2011,
+    yearMin: 2001,  // HD designation introduced 2001; all gens share similar lift fitment
     yearMax: 2026,
-    platform: "HD Truck",
+    platform: "HD Truck (all generations)",
     recommendations: {
       daily: {
         tireDiameterMin: 33,
@@ -478,9 +478,9 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|silverado 3500 hd",
     make: "Chevrolet",
     model: "Silverado 3500 HD",
-    yearMin: 2011,
+    yearMin: 2001,  // HD designation introduced 2001; all gens share similar lift fitment
     yearMax: 2026,
-    platform: "HD Truck",
+    platform: "HD Truck (all generations)",
     recommendations: {
       daily: {
         tireDiameterMin: 33,
@@ -775,9 +775,9 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ram|2500",
     make: "RAM",
     model: "2500",
-    yearMin: 2010,
+    yearMin: 2003,  // Includes 3rd gen Dodge Ram (2003-2009) + RAM era (2010+)
     yearMax: 2026,
-    platform: "D2/DJ",
+    platform: "HD Truck (3rd gen Dodge + RAM)",
     recommendations: {
       daily: {
         tireDiameterMin: 33,
@@ -836,9 +836,9 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ram|3500",
     make: "RAM",
     model: "3500",
-    yearMin: 2010,
+    yearMin: 2003,  // Includes 3rd gen Dodge Ram (2003-2009) + RAM era (2010+)
     yearMax: 2026,
-    platform: "D2/DJ",
+    platform: "HD Truck (3rd gen Dodge + RAM)",
     recommendations: {
       daily: {
         tireDiameterMin: 33,
@@ -1530,7 +1530,7 @@ export function findLiftProfile(
   let searchMake = normalizedMake;
   let searchModel = normalizeHdModel(model);
   
-  // Handle GMC = Chevrolet equivalents (same platforms)
+  // Handle make equivalents (same platforms, different badges)
   if (normalizedMake === "gmc") {
     searchMake = "chevrolet";
     // Sierra HD models already normalized above, handle remaining GMC models
@@ -1540,6 +1540,14 @@ export function findLiftProfile(
     else if (normalizedModel === "yukon xl") searchModel = "suburban";
     else if (normalizedModel === "canyon") searchModel = "colorado";
     // Sierra HD already handled by normalizeHdModel
+  }
+  
+  // Handle Dodge → RAM for pre-2010 trucks (Dodge Ram 2500/3500 → RAM 2500/3500)
+  if (normalizedMake === "dodge") {
+    // Dodge Ram 2500/3500 use same platform as RAM 2500/3500
+    if (/^(ram[\s-]?)?2500$/i.test(model) || /^(ram[\s-]?)?3500$/i.test(model)) {
+      searchMake = "ram";
+    }
   }
   
   const profile = VEHICLE_LIFT_PROFILES.find((p) => {
