@@ -1,0 +1,30 @@
+year,make,model,trim,bolt_pattern,center_bore_mm,thread_size,seat_type,offset_min_mm,offset_max_mm,source,confidence,source_notes
+# Toyota Tacoma - Generation-based fitment
+# Note: Early Tacoma (1995-2004) had mixed 5-lug (4cyl 2WD) and 6-lug (V6/4WD)
+# This file covers the 6-lug variants which are the majority
+#
+# 4th Gen (2024-2026): 6x139.7, 106.1mm hub
+2026,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,4th Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2025,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,4th Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2024,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,4th Gen - fitmentLevel:generation-baseline fitmentSource:generation
+# 3rd Gen (2016-2023): 6x139.7, 106.1mm hub
+2023,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2022,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2021,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2020,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2019,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2018,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2017,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2016,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+# 2nd Gen (2005-2015): 6x139.7, 106.1mm hub
+2015,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2014,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2013,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2012,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2011,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2010,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2009,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2008,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2007,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2006,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2005,Toyota,Tacoma,Base,6x139.7,106.1,M12x1.5,conical,0,30,generation,high,2nd Gen - fitmentLevel:generation-baseline fitmentSource:generation

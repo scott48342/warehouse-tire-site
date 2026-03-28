@@ -1,0 +1,37 @@
+year,make,model,trim,bolt_pattern,center_bore_mm,thread_size,seat_type,offset_min_mm,offset_max_mm,source,confidence,source_notes
+# Toyota Tundra - Generation-based fitment
+# CRITICAL: Different bolt patterns across generations!
+# - 1st Gen (2000-2006): 6x139.7
+# - 2nd Gen (2007-2021): 5x150 (DIFFERENT!)
+# - 3rd Gen (2022+): 6x139.7
+#
+# 3rd Gen (2022-2026): 6x139.7, 106.1mm hub - BACK TO 6-LUG
+2026,Toyota,Tundra,Base,6x139.7,106.1,M14x1.5,conical,0,35,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2025,Toyota,Tundra,Base,6x139.7,106.1,M14x1.5,conical,0,35,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2024,Toyota,Tundra,Base,6x139.7,106.1,M14x1.5,conical,0,35,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2023,Toyota,Tundra,Base,6x139.7,106.1,M14x1.5,conical,0,35,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2022,Toyota,Tundra,Base,6x139.7,106.1,M14x1.5,conical,0,35,generation,high,3rd Gen - fitmentLevel:generation-baseline fitmentSource:generation
+# 2nd Gen (2007-2021): 5x150, 110.1mm hub - DIFFERENT BOLT PATTERN
+2021,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2020,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2019,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2018,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2017,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2016,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2015,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2014,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2013,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2012,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2011,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2010,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2009,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2008,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+2007,Toyota,Tundra,Base,5x150,110.1,M14x1.5,conical,-20,30,generation,high,2nd Gen 5-LUG - fitmentLevel:generation-baseline fitmentSource:generation
+# 1st Gen (2000-2006): 6x139.7, 106.1mm hub
+2006,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2005,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2004,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2003,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2002,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2001,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2000,Toyota,Tundra,Base,6x139.7,106.1,M12x1.5,conical,0,35,generation,high,1st Gen - fitmentLevel:generation-baseline fitmentSource:generation

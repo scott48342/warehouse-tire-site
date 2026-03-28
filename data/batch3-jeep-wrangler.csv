@@ -1,0 +1,41 @@
+year,make,model,trim,bolt_pattern,center_bore_mm,thread_size,seat_type,offset_min_mm,offset_max_mm,source,confidence,source_notes
+# Jeep Wrangler - Generation-based fitment
+# CRITICAL: Different bolt patterns across generations!
+# - YJ (1987-1995): 5x114.3
+# - TJ (1997-2006): 5x114.3
+# - JK (2007-2017): 5x127
+# - JL (2018+): 5x127
+#
+# JL Generation (2018-2026): 5x127, 71.6mm hub
+2026,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2025,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2024,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2023,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2022,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2021,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2020,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2019,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2018,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JL Gen - fitmentLevel:generation-baseline fitmentSource:generation
+# JK Generation (2007-2017): 5x127, 71.6mm hub
+2017,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2016,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2015,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2014,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2013,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2012,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2011,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2010,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2009,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2008,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+2007,Jeep,Wrangler,Base,5x127,71.6,M14x1.5,conical,0,44,generation,high,JK Gen - fitmentLevel:generation-baseline fitmentSource:generation
+# TJ Generation (1997-2006): 5x114.3, 71.5mm hub - DIFFERENT BOLT PATTERN
+2006,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+2005,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+2004,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+2003,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+2002,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+2001,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+2000,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+1999,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+1998,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
+1997,Jeep,Wrangler,Base,5x114.3,71.5,M12x1.5,conical,0,40,generation,high,TJ Gen 5x114.3 - fitmentLevel:generation-baseline fitmentSource:generation
