@@ -5,6 +5,7 @@ import * as wheelSizeApi from "@/lib/wheelSizeApi";
 import * as catalogStore from "@/lib/catalog-store";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import submodelSupplements from "@/data/submodel-supplements.json";
+import { listLocalFitments } from "@/lib/fitment-db/getFitment";
 
 /**
  * Generate a canonical modificationId for supplement data.
@@ -46,7 +47,7 @@ type TrimOption = {
 
 interface TrimResponse {
   results: TrimOption[];
-  source?: "api" | "supplement" | "fallback";
+  source?: "api" | "supplement" | "fallback" | "local";
   count?: number;
   overridesApplied?: boolean;
   cached?: boolean;
@@ -293,7 +294,39 @@ export async function GET(req: Request) {
   const makeSlug = normalizeMake(make);
 
   // -------------------------------------------------------------------------
-  // Step 0: Validate year against catalog (prevent invalid combos like 2006 Buick Encore)
+  // Step 0: Check local fitment DB FIRST (for manually imported data)
+  // Local fitment is authoritative - bypass catalog validation if we have data
+  // -------------------------------------------------------------------------
+  
+  try {
+    const localFitments = await listLocalFitments(year, make, model);
+    
+    if (localFitments.length > 0) {
+      console.log(`[trims] LOCAL DB HIT: ${year} ${make} ${model} → ${localFitments.length} local fitment(s)`);
+      
+      const localResults: TrimOption[] = localFitments.map(f => ({
+        value: f.modificationId,
+        label: f.displayTrim || "Base",
+        modificationId: f.modificationId,
+        rawTrim: f.displayTrim || undefined,
+      }));
+      
+      return NextResponse.json({
+        results: localResults,
+        source: "local",
+        count: localResults.length,
+        overridesApplied: false,
+        cached: true,
+        ...(debug ? { debug: { localFitmentIds: localFitments.map(f => f.modificationId) } } : {}),
+      } as TrimResponse);
+    }
+  } catch (localErr: any) {
+    console.warn(`[trims] Local fitment lookup failed, falling back to API: ${localErr?.message}`);
+  }
+
+  // -------------------------------------------------------------------------
+  // Step 1: Validate year against catalog (only for vehicles without local fitment)
+  // This prevents invalid combos like 2006 Buick Encore from hitting the API
   // -------------------------------------------------------------------------
   
   const catalogModel = await catalogStore.findModel(makeSlug, model);
@@ -310,7 +343,7 @@ export async function GET(req: Request) {
   }
 
   // -------------------------------------------------------------------------
-  // Step 1: Call Wheel-Size API
+  // Step 2: Call Wheel-Size API (no local fitment found)
   // -------------------------------------------------------------------------
 
   try {

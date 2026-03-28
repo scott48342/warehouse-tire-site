@@ -299,6 +299,38 @@ export async function getTrimOptions(
 }
 
 // ============================================================================
+// Local-Only Fitment Lookup (no API fallback)
+// ============================================================================
+
+/**
+ * Get all fitments for a year/make/model from LOCAL DB ONLY.
+ * Does NOT call Wheel-Size API. Used by trims endpoint to serve locally imported data.
+ * 
+ * This is different from listFitments() which falls back to API.
+ */
+export async function listLocalFitments(
+  year: number,
+  make: string,
+  model: string
+): Promise<VehicleFitment[]> {
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  
+  const dbFitments = await db.query.vehicleFitments.findMany({
+    where: and(
+      eq(vehicleFitments.year, year),
+      eq(vehicleFitments.make, normalizedMake),
+      eq(vehicleFitments.model, normalizedModel)
+    ),
+    orderBy: [vehicleFitments.displayTrim],
+  });
+  
+  // Apply overrides to all
+  const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
+  return withOverrides;
+}
+
+// ============================================================================
 // Wheel-Size API Helpers
 // ============================================================================
 

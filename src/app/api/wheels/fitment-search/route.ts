@@ -11,6 +11,7 @@ import {
   type ProfileResolutionPath,
   type ProfileLookupResult,
 } from "@/lib/fitment-db/profileService";
+import { listLocalFitments } from "@/lib/fitment-db/getFitment";
 import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
   buildFitmentEnvelope,
@@ -200,6 +201,65 @@ export async function GET(req: Request) {
       }
     }
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 3.5: Direct Local DB Fallback (bypass profileService)
+    // This handles cases where profileService fails but we have local fitment data
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    if (!dbProfile) {
+      try {
+        console.log(`[fitment-search] TRYING LOCAL DB FALLBACK: ${year} ${make} ${model}`);
+        const localFitments = await listLocalFitments(Number(year), make, model);
+        
+        if (localFitments.length > 0) {
+          // Pick best fitment (one with bolt pattern and tire sizes)
+          const bestFitment = localFitments.find(f => f.boltPattern && Array.isArray(f.oemTireSizes) && f.oemTireSizes.length > 0) || localFitments[0];
+          
+          if (bestFitment && bestFitment.boltPattern) {
+            console.log(`[fitment-search] LOCAL DB HIT: ${year} ${make} ${model} → ${bestFitment.modificationId} (boltPattern: ${bestFitment.boltPattern})`);
+            
+            // Convert to DBFitmentProfile format
+            dbProfile = {
+              modificationId: bestFitment.modificationId,
+              year: bestFitment.year,
+              make: bestFitment.make,
+              model: bestFitment.model,
+              displayTrim: bestFitment.displayTrim,
+              rawTrim: bestFitment.rawTrim,
+              boltPattern: bestFitment.boltPattern,
+              centerBoreMm: bestFitment.centerBoreMm ? Number(bestFitment.centerBoreMm) : null,
+              threadSize: bestFitment.threadSize,
+              seatType: bestFitment.seatType,
+              offsetMinMm: bestFitment.offsetMinMm ? Number(bestFitment.offsetMinMm) : null,
+              offsetMaxMm: bestFitment.offsetMaxMm ? Number(bestFitment.offsetMaxMm) : null,
+              oemWheelSizes: (Array.isArray(bestFitment.oemWheelSizes) ? bestFitment.oemWheelSizes : []).map((ws: any) => ({
+                diameter: Number(ws.diameter || ws.rimDiameter || 17),
+                width: Number(ws.width || ws.rimWidth || 8),
+                offset: ws.offset != null ? Number(ws.offset) : null,
+                tireSize: ws.tireSize || null,
+                axle: ws.axle || "both",
+                isStock: ws.isStock !== false,
+              })),
+              oemTireSizes: Array.isArray(bestFitment.oemTireSizes) ? bestFitment.oemTireSizes : [],
+              source: "db",
+              apiCalled: false,
+              overridesApplied: false,
+            };
+            resolutionPath = "directCanonical";
+            canonicalModificationId = bestFitment.modificationId;
+            
+            // Now proceed with wheel search
+            const confidenceResult = calculateConfidence(dbProfile);
+            if (confidenceResult.canShowWheels && dbProfile.boltPattern) {
+              return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult);
+            }
+          }
+        }
+      } catch (localErr: any) {
+        console.error(`[fitment-search] Local DB fallback failed:`, localErr?.message || localErr);
+      }
+    }
+
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 4: Legacy Fallback (Only When ModificationId-First Fails)
     // ═══════════════════════════════════════════════════════════════════════════

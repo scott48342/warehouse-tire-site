@@ -80,6 +80,7 @@ export interface ProfileLookupResult {
   timing: {
     dbLookupMs: number;
     aliasLookupMs?: number;
+    ymmFallbackMs?: number;
     apiCallMs?: number;
     importMs?: number;
     totalMs: number;
@@ -428,7 +429,8 @@ async function resolveAlias(
 ): Promise<{ canonicalModificationId: string; vehicleFitmentId: string | null } | null> {
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
-  const normalizedReqId = slugify(requestedModificationId);
+  // Don't slugify - preserve underscores in manual_XXXX IDs
+  const normalizedReqId = requestedModificationId.toLowerCase().trim();
   
   const alias = await db.query.modificationAliases.findFirst({
     where: and(
@@ -463,8 +465,9 @@ async function storeAlias(
 ): Promise<void> {
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
-  const normalizedReqId = slugify(requestedModificationId);
-  const normalizedCanonId = slugify(canonicalModificationId);
+  // Don't slugify - preserve underscores in manual_XXXX IDs
+  const normalizedReqId = requestedModificationId.toLowerCase().trim();
+  const normalizedCanonId = canonicalModificationId.toLowerCase().trim();
   
   // Don't store self-referential aliases
   if (normalizedReqId === normalizedCanonId) {
@@ -520,10 +523,13 @@ async function getProfileByModificationIdDirect(
 ): Promise<{ fitment: VehicleFitment | null; lookupMs: number }> {
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
-  const normalizedModId = slugify(modificationId);
+  // NOTE: Don't use slugify() here - it converts underscores to hyphens
+  // Manual imports use modificationIds like "manual_XXXX" with underscores
+  const normalizedModId = modificationId.toLowerCase().trim();
   
   const t0 = Date.now();
   
+  // Use query API pattern (same as listLocalFitments which works)
   const fitment = await db.query.vehicleFitments.findFirst({
     where: and(
       eq(vehicleFitments.year, year),
@@ -536,6 +542,66 @@ async function getProfileByModificationIdDirect(
   return {
     fitment: fitment || null,
     lookupMs: Date.now() - t0,
+  };
+}
+
+// ============================================================================
+// YMM Fallback Lookup (for locally imported data with generated IDs)
+// ============================================================================
+
+/**
+ * Look up any valid fitment for a year/make/model, regardless of modificationId.
+ * This handles cases where:
+ * - We imported fitment with generated IDs (manual_XXXX)
+ * - Runtime requests use different IDs (from Wheel-Size API trims)
+ * 
+ * Returns the FIRST valid fitment found for the YMM.
+ * For trucks/vehicles with shared fitment across trims, this is correct.
+ */
+async function getProfileByYMMFallback(
+  year: number,
+  make: string,
+  model: string
+): Promise<{ fitment: VehicleFitment | null; lookupMs: number; usedModificationId: string | null }> {
+  const normalizedMake = normalizeMake(make);
+  const normalizedModel = normalizeModel(model);
+  
+  const t0 = Date.now();
+  
+  // Find any fitment for this YMM - prioritize those with good data
+  // Use query API pattern (same as listLocalFitments which works)
+  const fitments = await db.query.vehicleFitments.findMany({
+    where: and(
+      eq(vehicleFitments.year, year),
+      eq(vehicleFitments.make, normalizedMake),
+      eq(vehicleFitments.model, normalizedModel)
+    ),
+    limit: 10,
+  });
+  
+  if (fitments.length === 0) {
+    return {
+      fitment: null,
+      lookupMs: Date.now() - t0,
+      usedModificationId: null,
+    };
+  }
+  
+  // Pick the best fitment: prefer ones with complete data
+  let best = fitments[0];
+  for (const f of fitments) {
+    const hasFullData = f.boltPattern && f.centerBoreMm && f.oemWheelSizes;
+    const bestHasFullData = best.boltPattern && best.centerBoreMm && best.oemWheelSizes;
+    
+    if (hasFullData && !bestHasFullData) {
+      best = f;
+    }
+  }
+  
+  return {
+    fitment: best,
+    lookupMs: Date.now() - t0,
+    usedModificationId: best.modificationId,
   };
 }
 
@@ -564,7 +630,8 @@ export async function getFitmentProfile(
   const t0 = Date.now();
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
-  const requestedModId = slugify(modificationId);
+  // NOTE: Don't slugify - manual imports use "manual_XXXX" with underscores
+  const requestedModId = modificationId.toLowerCase().trim();
   
   let dbLookupMs = 0;
   let aliasLookupMs: number | undefined;
@@ -653,6 +720,55 @@ export async function getFitmentProfile(
     }
     
     console.log(`[profileService] DB MISS: ${year} ${make} ${model} mod=${modificationId} (db: ${dbLookupMs}ms, alias: ${aliasLookupMs}ms)`);
+    
+    // ─────────────────────────────────────────────────────────────────────────
+    // Step 2.5: YMM Fallback Lookup (for locally imported data with generated IDs)
+    // This handles cases where we imported fitment with manual_XXXX IDs
+    // but runtime requests use different modificationIds from Wheel-Size API
+    // ─────────────────────────────────────────────────────────────────────────
+    
+    let ymmFallbackMs: number | undefined;
+    
+    try {
+      const ymmResult = await getProfileByYMMFallback(year, make, model);
+      ymmFallbackMs = ymmResult.lookupMs;
+      
+      if (ymmResult.fitment) {
+        const overrideResult = await applyOverridesWithMeta(ymmResult.fitment);
+        const { quality } = assessFitmentQuality(overrideResult.fitment);
+        
+        if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
+          console.log(`[profileService] RESOLVED (ymmFallback): ${year} ${make} ${model} mod=${modificationId} → used ${ymmResult.usedModificationId} (${ymmFallbackMs}ms)`);
+          
+          // Store alias so future lookups are faster
+          if (ymmResult.usedModificationId && ymmResult.usedModificationId !== requestedModId) {
+            await storeAlias(
+              year,
+              make,
+              model,
+              requestedModId,
+              ymmResult.usedModificationId,
+              overrideResult.fitment.displayTrim || "Base",
+              ymmResult.fitment.id
+            );
+          }
+          
+          return {
+            profile: dbRecordToProfile(overrideResult.fitment, "db"),
+            resolutionPath: "canonicalAlias", // Treat as alias since we're mapping IDs
+            requestedModificationId: requestedModId,
+            canonicalModificationId: ymmResult.usedModificationId,
+            aliasUsed: true,
+            source: "db",
+            apiCalled: false,
+            overridesApplied: overrideResult.changed,
+            timing: { dbLookupMs, aliasLookupMs, ymmFallbackMs, totalMs: Date.now() - t0 },
+          };
+        }
+      }
+    } catch (e: any) {
+      console.warn(`[profileService] YMM fallback lookup failed: ${e?.message || String(e)}`);
+    }
   }
   
   // ─────────────────────────────────────────────────────────────────────────
