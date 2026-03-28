@@ -1,0 +1,668 @@
+{
+  "timestamp": "2026-03-27T14:42:46.455Z",
+  "totalMedium": 47,
+  "safeToPromote": 29,
+  "requiresReview": 18,
+  "safeOnes": [
+    {
+      "target": "2026 ford f-150",
+      "source": "2025 ford f-150",
+      "specs": {
+        "bolt_pattern": "6x135",
+        "center_bore_mm": "87.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "-12.00",
+        "offset_max_mm": "44.00",
+        "display_trim": "Base"
+      },
+      "notes": "Likely continuation of 14th gen"
+    },
+    {
+      "target": "2013 chevrolet silverado-1500",
+      "source": "2014 chevrolet silverado-1500",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "78.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "31.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same K2 platform as 2014"
+    },
+    {
+      "target": "2026 chevrolet silverado-1500",
+      "source": "2025 chevrolet silverado-1500",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "78.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "31.00",
+        "display_trim": "Base"
+      },
+      "notes": "Likely continuation of T1 platform"
+    },
+    {
+      "target": "2026 honda cr-v",
+      "source": "2025 honda cr-v",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "64.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "40.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same platform as 2023-2025"
+    },
+    {
+      "target": "2026 gmc sierra-1500",
+      "source": "2025 gmc sierra-1500",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "78.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "31.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same as Silverado, likely continuation"
+    },
+    {
+      "target": "2026 chevrolet tahoe",
+      "source": "2025 chevrolet tahoe",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "78.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "15.00",
+        "offset_max_mm": "44.00",
+        "display_trim": "Base"
+      },
+      "notes": "Likely continuation of 5th gen"
+    },
+    {
+      "target": "2018 toyota camry",
+      "source": "2019 toyota camry",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "40.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "LE"
+      },
+      "notes": "Same TNGA-K platform"
+    },
+    {
+      "target": "2021 toyota camry",
+      "source": "2020 toyota camry",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "40.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "LE"
+      },
+      "notes": "Same platform, refresh only"
+    },
+    {
+      "target": "2023 toyota camry",
+      "source": "2022 toyota camry",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "2.5 VVT-i"
+      },
+      "notes": "Same platform"
+    },
+    {
+      "target": "2025 toyota camry",
+      "source": "2024 toyota camry",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "Standard"
+      },
+      "notes": "Same platform"
+    },
+    {
+      "target": "2026 toyota tacoma",
+      "source": "2025 toyota tacoma",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "106.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "30.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same platform as 2024-2025"
+    },
+    {
+      "target": "2026 ford bronco",
+      "source": "2025 ford bronco",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "93.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "-12.00",
+        "offset_max_mm": "44.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same gen, no redesign expected"
+    },
+    {
+      "target": "2019 honda civic",
+      "source": "2020 honda civic",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "64.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "1.5 VTEC"
+      },
+      "notes": "Same platform as 2020"
+    },
+    {
+      "target": "2026 toyota highlander",
+      "source": "2025 toyota highlander",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "35.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same platform"
+    },
+    {
+      "target": "2026 toyota tundra",
+      "source": "2025 toyota tundra",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "106.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "35.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same platform"
+    },
+    {
+      "target": "2017 chevrolet silverado-2500-hd",
+      "source": "2018 chevrolet silverado-2500-hd",
+      "specs": {
+        "bolt_pattern": "8x180",
+        "center_bore_mm": "124.1",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "44.00",
+        "offset_max_mm": "44.00",
+        "display_trim": "WT"
+      },
+      "notes": "Same platform as 2018"
+    },
+    {
+      "target": "2026 ford ranger",
+      "source": "2025 ford ranger",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "93.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "40.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same gen as 2024-2025"
+    },
+    {
+      "target": "2026 subaru outback",
+      "source": "2025 subaru outback",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "56.1",
+        "thread_size": "M12x1.25",
+        "seat_type": "conical",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same platform"
+    },
+    {
+      "target": "2026 subaru forester",
+      "source": "2025 subaru forester",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "56.1",
+        "thread_size": "M12x1.25",
+        "seat_type": "conical",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Same platform"
+    },
+    {
+      "target": "2023 hyundai tucson",
+      "source": "2022 hyundai tucson",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "67.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "48.50",
+        "offset_max_mm": "54.00",
+        "display_trim": "2.5 GDi"
+      },
+      "notes": "Same platform as 2022"
+    },
+    {
+      "target": "2020 kia telluride",
+      "source": "2021 kia telluride",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "67.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "49.50",
+        "offset_max_mm": "50.00",
+        "display_trim": "3.8 GDi"
+      },
+      "notes": "Same gen as 2021, launched 2020"
+    },
+    {
+      "target": "2022 kia telluride",
+      "source": "2021 kia telluride",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "67.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "49.50",
+        "offset_max_mm": "50.00",
+        "display_trim": "3.8 GDi"
+      },
+      "notes": "Same gen as 2021"
+    },
+    {
+      "target": "2017 bmw 3-series",
+      "source": "2018 bmw 3-series",
+      "specs": {
+        "bolt_pattern": "5x120",
+        "center_bore_mm": "72.6",
+        "thread_size": "M14 x 1.25",
+        "seat_type": "Lug bolts",
+        "offset_min_mm": "34.00",
+        "offset_max_mm": "47.00",
+        "display_trim": "340i xDrive"
+      },
+      "notes": "Same platform as 2018"
+    },
+    {
+      "target": "2020 audi a4",
+      "source": "2021 audi a4",
+      "specs": {
+        "bolt_pattern": "5x112",
+        "center_bore_mm": "66.5",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug bolts",
+        "offset_min_mm": "38.00",
+        "offset_max_mm": "42.00",
+        "display_trim": "40 TFSi Quattro"
+      },
+      "notes": "Same platform as 2021"
+    },
+    {
+      "target": "2022 audi a4",
+      "source": "2021 audi a4",
+      "specs": {
+        "bolt_pattern": "5x112",
+        "center_bore_mm": "66.5",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug bolts",
+        "offset_min_mm": "38.00",
+        "offset_max_mm": "42.00",
+        "display_trim": "40 TFSi Quattro"
+      },
+      "notes": "Same platform as 2021"
+    },
+    {
+      "target": "2012 audi a6",
+      "source": "2013 audi a6",
+      "specs": {
+        "bolt_pattern": "5x112",
+        "center_bore_mm": "66.5",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug bolts",
+        "offset_min_mm": "39.00",
+        "offset_max_mm": "45.00",
+        "display_trim": "3.0 TDi"
+      },
+      "notes": "Same platform as 2013"
+    },
+    {
+      "target": "2014 audi a6",
+      "source": "2013 audi a6",
+      "specs": {
+        "bolt_pattern": "5x112",
+        "center_bore_mm": "66.5",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug bolts",
+        "offset_min_mm": "39.00",
+        "offset_max_mm": "45.00",
+        "display_trim": "3.0 TDi"
+      },
+      "notes": "Same platform as 2013"
+    },
+    {
+      "target": "2019 chrysler 300",
+      "source": "2020 chrysler 300",
+      "specs": {
+        "bolt_pattern": "5x115",
+        "center_bore_mm": "71.6",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "24.00",
+        "offset_max_mm": "24.00",
+        "display_trim": "Limited"
+      },
+      "notes": "Same LX platform as 2020"
+    },
+    {
+      "target": "2021 chrysler 300",
+      "source": "2020 chrysler 300",
+      "specs": {
+        "bolt_pattern": "5x115",
+        "center_bore_mm": "71.6",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "24.00",
+        "offset_max_mm": "24.00",
+        "display_trim": "Limited"
+      },
+      "notes": "Same platform"
+    }
+  ],
+  "unsafeOnes": [
+    {
+      "target": "2014 ford f-150",
+      "source": "2015 ford f-150",
+      "specs": {
+        "bolt_pattern": "6x135",
+        "center_bore_mm": "87.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "-12.00",
+        "offset_max_mm": "44.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 12th gen ends, 13th starts 2015"
+    },
+    {
+      "target": "2018 toyota rav4",
+      "source": "2019 toyota rav4",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "35.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 5th gen starts 2019"
+    },
+    {
+      "target": "2016 honda cr-v",
+      "source": "2017 honda cr-v",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "64.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "40.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 5th gen starts 2017"
+    },
+    {
+      "target": "2015 toyota tacoma",
+      "source": "2016 toyota tacoma",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "106.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "30.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 3rd gen starts 2016"
+    },
+    {
+      "target": "2021 honda civic",
+      "source": "2020 honda civic",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "64.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "1.5 VTEC"
+      },
+      "notes": "Gen boundary: 11th gen starts 2022"
+    },
+    {
+      "target": "2010 jeep grand-cherokee",
+      "source": "2011 jeep grand-cherokee",
+      "specs": {
+        "bolt_pattern": "5x127",
+        "center_bore_mm": "71.6",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "30.00",
+        "offset_max_mm": "56.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: WK2 starts 2011"
+    },
+    {
+      "target": "2019 toyota highlander",
+      "source": "2020 toyota highlander",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "60.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "35.00",
+        "offset_max_mm": "50.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 4th gen starts 2020"
+    },
+    {
+      "target": "2026 toyota 4runner",
+      "source": "2025 toyota 4runner",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "106.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "25.00",
+        "display_trim": "Base"
+      },
+      "notes": "6th gen expected 2025/2026"
+    },
+    {
+      "target": "2021 toyota tundra",
+      "source": "2022 toyota tundra",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "106.1",
+        "thread_size": "M14x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "0.00",
+        "offset_max_mm": "35.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 3rd gen starts 2022"
+    },
+    {
+      "target": "2019 chevrolet silverado-2500-hd",
+      "source": "2018 chevrolet silverado-2500-hd",
+      "specs": {
+        "bolt_pattern": "8x180",
+        "center_bore_mm": "124.1",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "44.00",
+        "offset_max_mm": "44.00",
+        "display_trim": "WT"
+      },
+      "notes": "Gen boundary: 2019 HD still 3rd gen but 2020 is 4th"
+    },
+    {
+      "target": "2018 ford ranger",
+      "source": "2019 ford ranger",
+      "specs": {
+        "bolt_pattern": "6x139.7",
+        "center_bore_mm": "93.1",
+        "thread_size": "M12x1.5",
+        "seat_type": "conical",
+        "offset_min_mm": "40.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Ranger returned to US in 2019, no 2018 model"
+    },
+    {
+      "target": "2019 subaru outback",
+      "source": "2020 subaru outback",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "56.1",
+        "thread_size": "M12x1.25",
+        "seat_type": "conical",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 6th gen starts 2020"
+    },
+    {
+      "target": "2019 jeep gladiator",
+      "source": "2020 jeep gladiator",
+      "specs": {
+        "bolt_pattern": "5x127",
+        "center_bore_mm": "71.6",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "37.17",
+        "offset_max_mm": "44.45",
+        "display_trim": "3.6 Pentastar"
+      },
+      "notes": "Gladiator launched 2020, no 2019 model in production"
+    },
+    {
+      "target": "2018 subaru forester",
+      "source": "2019 subaru forester",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "56.1",
+        "thread_size": "M12x1.25",
+        "seat_type": "conical",
+        "offset_min_mm": "45.00",
+        "offset_max_mm": "55.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 5th gen starts 2019"
+    },
+    {
+      "target": "2021 hyundai tucson",
+      "source": "2022 hyundai tucson",
+      "specs": {
+        "bolt_pattern": "5x114.3",
+        "center_bore_mm": "67.1",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "48.50",
+        "offset_max_mm": "54.00",
+        "display_trim": "2.5 GDi"
+      },
+      "notes": "Gen boundary: 4th gen starts 2022"
+    },
+    {
+      "target": "2019 bmw 3-series",
+      "source": "2018 bmw 3-series",
+      "specs": {
+        "bolt_pattern": "5x120",
+        "center_bore_mm": "72.6",
+        "thread_size": "M14 x 1.25",
+        "seat_type": "Lug bolts",
+        "offset_min_mm": "34.00",
+        "offset_max_mm": "47.00",
+        "display_trim": "340i xDrive"
+      },
+      "notes": "Gen boundary: G20 starts 2019"
+    },
+    {
+      "target": "2011 chevrolet impala",
+      "source": "2010 chevrolet impala",
+      "specs": {
+        "bolt_pattern": "5x115",
+        "center_bore_mm": "70.3",
+        "thread_size": "M12 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "47.00",
+        "offset_max_mm": "52.00",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 10th gen starts 2014"
+    },
+    {
+      "target": "2011 chrysler 300c",
+      "source": "2010 chrysler 300c",
+      "specs": {
+        "bolt_pattern": "5x115",
+        "center_bore_mm": "71.6",
+        "thread_size": "M14 x 1.5",
+        "seat_type": "Lug nuts",
+        "offset_min_mm": "20.00",
+        "offset_max_mm": "25.50",
+        "display_trim": "Base"
+      },
+      "notes": "Gen boundary: 2nd gen starts 2011"
+    }
+  ]
+}

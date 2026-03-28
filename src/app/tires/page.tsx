@@ -311,7 +311,8 @@ export default async function TiresPage({
   const liftedTireDiaMax = liftedTireDiaMaxRaw ? parseInt(liftedTireDiaMaxRaw, 10) : 0;
   
   // Lifted build is active when we have valid lifted context from URL params
-  const isLiftedBuild = liftedSource === "lifted" && liftedPreset && liftedInches > 0;
+  // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or any truthy value
+  const isLiftedBuild = Boolean(liftedSource) && liftedPreset && liftedInches > 0;
   
   if (isLiftedBuild) {
     console.log('[tires/page] 🚀 LIFTED BUILD DETECTED:', {
