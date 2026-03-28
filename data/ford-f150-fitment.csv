@@ -1,0 +1,36 @@
+year,make,model,trim,bolt_pattern,center_bore_mm,thread_size,seat_type,offset_min_mm,offset_max_mm,source,confidence,source_notes
+# Ford F-150 (14th Gen: 2021-2026)
+2026,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2025,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2024,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2023,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2022,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2021,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+# Ford F-150 (13th Gen: 2015-2020)
+2020,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2019,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2018,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2017,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2016,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2015,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+# Ford F-150 (12th Gen: 2009-2014)
+2014,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2013,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2012,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2011,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2010,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2009,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+# Ford F-150 (11th Gen: 2004-2008)
+2008,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2007,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2006,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2005,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+2004,Ford,F-150,Base,6x135,87.1,M14x1.5,conical,-12,44,manufacturer_spec,high,OEM specification
+# Ford F-150 (10th Gen: 1997-2003) - 5-lug pattern
+2003,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
+2002,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
+2001,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
+2000,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
+1999,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
+1998,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
+1997,Ford,F-150,Base,5x135,87.1,M14x2.0,conical,-12,44,manufacturer_spec,high,OEM specification - 5-lug
