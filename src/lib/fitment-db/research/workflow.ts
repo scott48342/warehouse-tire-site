@@ -35,6 +35,69 @@ import { normalizeFindings, detectVariant } from "./normalize";
 import { normalizeMake, normalizeModel } from "../normalization";
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// KNOWN MODEL VARIANTS REGISTRY
+// ═══════════════════════════════════════════════════════════════════════════════
+// Vehicles with concurrent model variants that require separate research.
+// This is NOT for fitment rules (those are in vehicleFitmentRules.ts),
+// but for alerting researchers about potential variant splits.
+
+interface KnownVariantEntry {
+  make: string;
+  model: string;
+  yearStart: number;
+  yearEnd: number;
+  variantName: string;
+  warning: string;
+}
+
+const KNOWN_VARIANTS: KnownVariantEntry[] = [
+  // RAM 1500 Classic (2019-2024) - different bolt pattern
+  {
+    make: "ram",
+    model: "1500",
+    yearStart: 2019,
+    yearEnd: 2024,
+    variantName: "Classic",
+    warning: "⚠️ RAM 1500 Classic variant exists for this year range (uses 5x139.7 vs 6x139.7) - research separately",
+  },
+  // Ford F-150 Lightning (2022+) - EV variant
+  {
+    make: "ford",
+    model: "f-150",
+    yearStart: 2022,
+    yearEnd: 2026,
+    variantName: "Lightning",
+    warning: "⚠️ F-150 Lightning (EV) variant exists - may have different specs",
+  },
+  // Toyota Tacoma (2024+) - new generation
+  {
+    make: "toyota",
+    model: "tacoma",
+    yearStart: 2024,
+    yearEnd: 2026,
+    variantName: "4th Gen",
+    warning: "⚠️ 2024+ Tacoma is a new generation - verify specs are for correct generation",
+  },
+];
+
+/**
+ * Check if a known variant warning applies to this vehicle
+ */
+function getKnownVariantWarning(make: string, model: string, year: number): string | null {
+  for (const entry of KNOWN_VARIANTS) {
+    if (
+      entry.make === make &&
+      entry.model === model &&
+      year >= entry.yearStart &&
+      year <= entry.yearEnd
+    ) {
+      return entry.warning;
+    }
+  }
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // VALIDATION
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -239,28 +302,26 @@ export async function executeResearchWorkflow(
   // Step 2: Create main record
   const record = createResearchRecord(input, findings, sources, initiatedBy);
   
-  // Step 3: Check for variants (e.g., if researching "Ram 1500", also check "Ram 1500 Classic")
+  // Step 3: Check for known model variants that require separate research
+  // This is a registry of vehicles with concurrent model variants (e.g., Classic, Hybrid, EV)
   const relatedVariants: FitmentResearchRecord[] = [];
   
   if (checkVariants) {
     const { isVariant } = detectVariant(input);
     
-    // If this is NOT a variant, check if variants might exist
-    if (!isVariant) {
-      // For RAM 1500 in 2019+, check for Classic variant
-      if (
-        normalizeMake(input.make) === "ram" &&
-        normalizeModel(input.make, input.model) === "1500" &&
-        input.year >= 2019 && input.year <= 2024
-      ) {
-        // Note: In actual implementation, this would trigger separate research
-        // For now, just add a warning to the candidate notes
-        if (record.candidate) {
-          record.candidate.notes = [
-            ...(record.candidate.notes || []),
-            "⚠️ RAM 1500 Classic variant exists for this year range - research separately",
-          ];
-        }
+    // If this is NOT already a variant, check if known variants exist for this vehicle
+    if (!isVariant && record.candidate) {
+      const variantWarning = getKnownVariantWarning(
+        normalizeMake(input.make),
+        normalizeModel(input.make, input.model),
+        input.year
+      );
+      
+      if (variantWarning) {
+        record.candidate.notes = [
+          ...(record.candidate.notes || []),
+          variantWarning,
+        ];
       }
     }
   }

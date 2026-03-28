@@ -311,19 +311,29 @@ export function extractExceptions(findings: RawFitmentFinding[]): FitmentExcepti
     // Try to parse structured exception info
     const value = f.value;
     
-    // Check for variant exception (e.g., "Classic uses 5x139.7")
-    if (value.toLowerCase().includes("classic")) {
-      const bpMatch = value.match(/(\d)x(\d+(?:\.\d+)?)/);
-      if (bpMatch) {
-        exceptions.push({
-          type: "variant",
-          description: "RAM 1500 Classic uses different bolt pattern than 5th gen",
-          differs: {
-            boltPattern: `${bpMatch[1]}x${bpMatch[2]}`,
-          },
-          appliesTo: ["Classic", "1500 Classic"],
-        });
-      }
+    // Check for variant exception with bolt pattern difference
+    // Generic detection: looks for "XYZ uses/has NxNNN.N" pattern
+    const variantBpMatch = value.match(/(.+?)\s+(?:uses?|has)\s+(\d)x(\d+(?:\.\d+)?)/i);
+    if (variantBpMatch) {
+      const variantName = variantBpMatch[1].trim();
+      const boltPattern = `${variantBpMatch[2]}x${variantBpMatch[3]}`;
+      exceptions.push({
+        type: "variant",
+        description: value, // Use the original finding text as description
+        differs: {
+          boltPattern,
+        },
+        appliesTo: [variantName],
+      });
+    }
+    // Fallback: "Classic" keyword without bolt pattern
+    else if (value.toLowerCase().includes("classic") && !variantBpMatch) {
+      exceptions.push({
+        type: "variant",
+        description: value,
+        differs: {},
+        appliesTo: ["Classic"],
+      });
     }
     
     // Check for trim/engine exception
