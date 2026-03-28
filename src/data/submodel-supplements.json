@@ -105,6 +105,17 @@
       ]
     },
     "silverado 2500": {
+      "2001-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" }
+      ],
+      "2007-2014": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
       "2015-2019": [
         { "value": "wt", "label": "WT (Work Truck)" },
         { "value": "ls", "label": "LS" },
@@ -122,6 +133,45 @@
       ]
     },
     "silverado 2500 hd": {
+      "2001-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" }
+      ],
+      "2007-2014": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
+      "2015-2019": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2020-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" },
+        { "value": "zr2", "label": "ZR2" }
+      ]
+    },
+    "silverado 2500hd": {
+      "2001-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" }
+      ],
+      "2007-2014": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
       "2015-2019": [
         { "value": "wt", "label": "WT (Work Truck)" },
         { "value": "ls", "label": "LS" },
@@ -139,6 +189,17 @@
       ]
     },
     "silverado 3500": {
+      "2001-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" }
+      ],
+      "2007-2014": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
       "2015-2019": [
         { "value": "wt", "label": "WT (Work Truck)" },
         { "value": "ls", "label": "LS" },
@@ -155,6 +216,44 @@
       ]
     },
     "silverado 3500 hd": {
+      "2001-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" }
+      ],
+      "2007-2014": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
+      "2015-2019": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ],
+      "2020-2025": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "custom", "label": "Custom" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" },
+        { "value": "high-country", "label": "High Country" }
+      ]
+    },
+    "silverado 3500hd": {
+      "2001-2006": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" }
+      ],
+      "2007-2014": [
+        { "value": "wt", "label": "WT (Work Truck)" },
+        { "value": "ls", "label": "LS" },
+        { "value": "lt", "label": "LT" },
+        { "value": "ltz", "label": "LTZ" }
+      ],
       "2015-2019": [
         { "value": "wt", "label": "WT (Work Truck)" },
         { "value": "ls", "label": "LS" },
@@ -273,6 +372,18 @@
       ]
     },
     "sierra 2500": {
+      "2001-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" }
+      ],
+      "2007-2014": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
       "2015-2019": [
         { "value": "base", "label": "Base" },
         { "value": "sle", "label": "SLE" },
@@ -288,6 +399,45 @@
       ]
     },
     "sierra 2500 hd": {
+      "2001-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" }
+      ],
+      "2007-2014": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2015-2019": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2020-2025": [
+        { "value": "pro", "label": "Pro" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "sierra 2500hd": {
+      "2001-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" }
+      ],
+      "2007-2014": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
       "2015-2019": [
         { "value": "base", "label": "Base" },
         { "value": "sle", "label": "SLE" },
@@ -303,6 +453,18 @@
       ]
     },
     "sierra 3500": {
+      "2001-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" }
+      ],
+      "2007-2014": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
       "2015-2019": [
         { "value": "base", "label": "Base" },
         { "value": "sle", "label": "SLE" },
@@ -318,6 +480,45 @@
       ]
     },
     "sierra 3500 hd": {
+      "2001-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" }
+      ],
+      "2007-2014": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2015-2019": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
+      "2020-2025": [
+        { "value": "pro", "label": "Pro" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "at4", "label": "AT4" },
+        { "value": "denali", "label": "Denali" }
+      ]
+    },
+    "sierra 3500hd": {
+      "2001-2006": [
+        { "value": "base", "label": "Base" },
+        { "value": "sl", "label": "SL" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" }
+      ],
+      "2007-2014": [
+        { "value": "base", "label": "Base" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "denali", "label": "Denali" }
+      ],
       "2015-2019": [
         { "value": "base", "label": "Base" },
         { "value": "sle", "label": "SLE" },
@@ -396,6 +597,43 @@
       ]
     },
     "f-250": {
+      "2008-2010": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
+      "2011-2016": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" }
+      ],
+      "2017-2025": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "tremor", "label": "Tremor" }
+      ]
+    },
+    "f-250 super duty": {
+      "2008-2010": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
+      "2011-2016": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" }
+      ],
       "2017-2025": [
         { "value": "xl", "label": "XL" },
         { "value": "xlt", "label": "XLT" },
@@ -407,6 +645,43 @@
       ]
     },
     "f-350": {
+      "2008-2010": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
+      "2011-2016": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" }
+      ],
+      "2017-2025": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "tremor", "label": "Tremor" }
+      ]
+    },
+    "f-350 super duty": {
+      "2008-2010": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" }
+      ],
+      "2011-2016": [
+        { "value": "xl", "label": "XL" },
+        { "value": "xlt", "label": "XLT" },
+        { "value": "lariat", "label": "Lariat" },
+        { "value": "king-ranch", "label": "King Ranch" },
+        { "value": "platinum", "label": "Platinum" }
+      ],
       "2017-2025": [
         { "value": "xl", "label": "XL" },
         { "value": "xlt", "label": "XLT" },
@@ -472,6 +747,22 @@
       ]
     },
     "2500": {
+      "2010-2012": [
+        { "value": "st", "label": "ST" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "power-wagon", "label": "Power Wagon" },
+        { "value": "laramie-longhorn", "label": "Laramie Longhorn" }
+      ],
+      "2013-2018": [
+        { "value": "tradesman", "label": "Tradesman" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "big-horn", "label": "Big Horn / Lone Star" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "power-wagon", "label": "Power Wagon" },
+        { "value": "laramie-longhorn", "label": "Laramie Longhorn" },
+        { "value": "limited", "label": "Limited" }
+      ],
       "2019-2025": [
         { "value": "tradesman", "label": "Tradesman" },
         { "value": "big-horn", "label": "Big Horn / Lone Star" },
@@ -482,6 +773,20 @@
       ]
     },
     "3500": {
+      "2010-2012": [
+        { "value": "st", "label": "ST" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "laramie-longhorn", "label": "Laramie Longhorn" }
+      ],
+      "2013-2018": [
+        { "value": "tradesman", "label": "Tradesman" },
+        { "value": "slt", "label": "SLT" },
+        { "value": "big-horn", "label": "Big Horn / Lone Star" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "laramie-longhorn", "label": "Laramie Longhorn" },
+        { "value": "limited", "label": "Limited" }
+      ],
       "2019-2025": [
         { "value": "tradesman", "label": "Tradesman" },
         { "value": "big-horn", "label": "Big Horn / Lone Star" },

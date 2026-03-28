@@ -1478,6 +1478,46 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
 // ─────────────────────────────────────────────────────────────
 
 /**
+ * Normalize HD truck model names to canonical format
+ * Handles variations like "2500HD", "2500 HD", "2500-HD", "Super Duty", etc.
+ */
+function normalizeHdModel(model: string): string {
+  let normalized = model.toLowerCase().trim();
+  
+  // === GMC Sierra HD → Chevrolet Silverado HD (same platforms) ===
+  // Handle Sierra 2500/3500 variations
+  if (/^sierra[\s-]?2500[\s-]?(hd)?$/i.test(model)) return "silverado 2500 hd";
+  if (/^sierra[\s-]?3500[\s-]?(hd)?$/i.test(model)) return "silverado 3500 hd";
+  
+  // === Chevrolet Silverado HD ===
+  // Silverado 2500: with or without "HD", various spacings
+  if (/^silverado[\s-]?2500[\s-]?(hd)?$/i.test(model)) return "silverado 2500 hd";
+  // Silverado 3500: with or without "HD", various spacings
+  if (/^silverado[\s-]?3500[\s-]?(hd)?$/i.test(model)) return "silverado 3500 hd";
+  
+  // === Ford Super Duty ===
+  // F-250: "F-250", "F250", "F-250 Super Duty", "Super Duty F-250"
+  if (/^f[\s-]?250([\s-]?super[\s-]?duty)?$/i.test(model)) return "f-250";
+  if (/^super[\s-]?duty[\s-]?f[\s-]?250$/i.test(model)) return "f-250";
+  // F-350: "F-350", "F350", "F-350 Super Duty", "Super Duty F-350"
+  if (/^f[\s-]?350([\s-]?super[\s-]?duty)?$/i.test(model)) return "f-350";
+  if (/^super[\s-]?duty[\s-]?f[\s-]?350$/i.test(model)) return "f-350";
+  // F-450: "F-450", "F450", "F-450 Super Duty"
+  if (/^f[\s-]?450([\s-]?super[\s-]?duty)?$/i.test(model)) return "f-450";
+  
+  // === RAM HD ===
+  // RAM 2500: "RAM 2500", "Ram 2500", "2500" (when make is RAM)
+  if (/^(ram[\s-]?)?2500$/i.test(model)) return "2500";
+  // RAM 3500: "RAM 3500", "Ram 3500", "3500" (when make is RAM)
+  if (/^(ram[\s-]?)?3500$/i.test(model)) return "3500";
+  
+  // === Nissan Titan XD ===
+  if (/^titan[\s-]?xd$/i.test(model)) return "titan xd";
+  
+  return normalized;
+}
+
+/**
  * Find a lift profile for a given vehicle
  * Returns undefined if no profile exists (show fallback messaging)
  */
@@ -1487,41 +1527,19 @@ export function findLiftProfile(
   year?: number
 ): VehicleLiftProfile | undefined {
   const normalizedMake = make.toLowerCase().trim();
-  const normalizedModel = model.toLowerCase().trim();
+  let searchMake = normalizedMake;
+  let searchModel = normalizeHdModel(model);
   
   // Handle GMC = Chevrolet equivalents (same platforms)
-  let searchMake = normalizedMake;
-  let searchModel = normalizedModel;
-  
   if (normalizedMake === "gmc") {
     searchMake = "chevrolet";
-    // Map GMC models to Chevy equivalents
+    // Sierra HD models already normalized above, handle remaining GMC models
+    const normalizedModel = model.toLowerCase().trim();
     if (normalizedModel === "sierra 1500") searchModel = "silverado 1500";
-    else if (normalizedModel === "sierra 2500 hd" || normalizedModel === "sierra 2500") searchModel = "silverado 2500 hd";
-    else if (normalizedModel === "sierra 3500 hd" || normalizedModel === "sierra 3500") searchModel = "silverado 3500 hd";
     else if (normalizedModel === "yukon") searchModel = "tahoe";
     else if (normalizedModel === "yukon xl") searchModel = "suburban";
     else if (normalizedModel === "canyon") searchModel = "colorado";
-  }
-  
-  // Normalize HD variants (people type "2500" vs "2500 HD")
-  if (searchModel === "silverado 2500" || searchModel === "silverado 2500hd") {
-    searchModel = "silverado 2500 hd";
-  }
-  if (searchModel === "silverado 3500" || searchModel === "silverado 3500hd") {
-    searchModel = "silverado 3500 hd";
-  }
-  if (searchModel === "ram 2500") {
-    searchModel = "2500";
-  }
-  if (searchModel === "ram 3500") {
-    searchModel = "3500";
-  }
-  if (searchModel === "f-250 super duty" || searchModel === "f250") {
-    searchModel = "f-250";
-  }
-  if (searchModel === "f-350 super duty" || searchModel === "f350") {
-    searchModel = "f-350";
+    // Sierra HD already handled by normalizeHdModel
   }
   
   const profile = VEHICLE_LIFT_PROFILES.find((p) => {
