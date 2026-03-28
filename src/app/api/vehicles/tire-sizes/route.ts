@@ -212,11 +212,17 @@ export async function GET(req: Request) {
     }
   }
 
-  // Check if we're in 429 cooldown - use static fallback if available
-  if (isInCooldown()) {
+  // Check if we're in 429 cooldown OR if API is disabled - use static fallback if available
+  const apiUnavailable = isInCooldown() || !wheelSizeApi.isWheelSizeEnabled();
+  
+  if (apiUnavailable) {
     const staticSizes = getStaticOemSizes(year, make, model, modification);
+    const reason = !wheelSizeApi.isWheelSizeEnabled() 
+      ? "Wheel-Size API is temporarily disabled" 
+      : "Rate limited - in cooldown";
+    
     if (staticSizes.length > 0) {
-      console.log(`[tire-sizes] API cooldown, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
+      console.log(`[tire-sizes] ${reason}, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
       
       // Convert legacy sizes for static fallback too
       const { searchSizes } = convertTireSizesForSearch(staticSizes);
@@ -239,10 +245,12 @@ export async function GET(req: Request) {
         sizeConversions: staticConversions,
         hasLegacySizes: staticConversions.some(c => c.isLegacy),
         source: "static-fallback",
+        apiError: reason,
         cacheStats: getCacheStats(),
       });
     }
-    // No static data available
+    
+    // No static data available - return empty array gracefully (NOT a 500 error)
     return NextResponse.json({
       tireSizes: [],
       tireSizesStrict: [],
@@ -250,8 +258,8 @@ export async function GET(req: Request) {
       searchableSizes: [],
       sizeConversions: [],
       hasLegacySizes: false,
-      error: "Rate limited - in cooldown (no static fallback)",
-      source: "cooldown",
+      apiError: `${reason} (no static fallback for ${year} ${make} ${model})`,
+      source: "none",
       cacheStats: getCacheStats(),
     });
   }
