@@ -380,8 +380,42 @@ export default async function TiresPage({
   // 1. LIFTED BUILD: Use lifted tire recommendations (e.g., 35x12.50R20)
   // 2. DB PROFILE: Use oemTireSizes from fitment database
   // 3. LEGACY API: Fallback to WheelPros/external fitment data
+  //
+  // LEGACY SIZE CONVERSION:
+  // Classic vehicles (pre-1975) often have legacy tire sizes like E70-14, G60-15.
+  // The API returns both:
+  //   - tireSizes: Original OEM sizes (for display, e.g., "E70-14")
+  //   - searchableSizes: Modern P-metric equivalents (for search, e.g., "205/75R14")
+  // We display the original sizes but use searchableSizes for actual product search.
   
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LEGACY TIRE SIZE DATA
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Extract legacy conversion data from API response
+  const hasLegacySizes: boolean = Boolean(fitmentStrict?.hasLegacySizes);
+  const sizeConversions: Array<{
+    originalSize: string;
+    recommendedSize: string;
+    alternatives: string[];
+    isLegacy: boolean;
+  }> = Array.isArray(fitmentStrict?.sizeConversions) ? fitmentStrict.sizeConversions : [];
+  
+  // Searchable sizes = modern P-metric equivalents for legacy sizes
+  // Falls back to tireSizes if no conversion needed
+  const searchableSizesFromApi: string[] = Array.isArray(fitmentStrict?.searchableSizes)
+    ? fitmentStrict.searchableSizes.map(String)
+    : [];
+  
+  // Build a map from original size → searchable size for chip selection
+  const sizeConversionMap = new Map<string, string>();
+  for (const conv of sizeConversions) {
+    if (conv.isLegacy && conv.recommendedSize) {
+      sizeConversionMap.set(conv.originalSize, conv.recommendedSize);
+    }
+  }
+
   // OEM sizes from fitment data (used for non-lifted builds and as fallback)
+  // These are the ORIGINAL sizes (may be legacy like E70-14)
   const oemTireSizesStrict: string[] = dbProfile?.oemTireSizes?.length
     ? dbProfile.oemTireSizes.map(String)
     : (Array.isArray(fitmentStrict?.tireSizes) ? fitmentStrict.tireSizes.map(String) : []);
@@ -401,7 +435,14 @@ export default async function TiresPage({
     ? [] // Don't mix stock sizes with lifted recommendations
     : oemTireSizesAgg;
 
+  // tireSizes = original OEM sizes for DISPLAY (may include legacy like E70-14)
   const tireSizes = Array.from(new Set([...tireSizesStrict, ...tireSizesAgg]));
+  
+  // searchableTireSizes = modern P-metric sizes for SEARCH
+  // For legacy vehicles, use the converted sizes; otherwise use original
+  const searchableTireSizes: string[] = hasLegacySizes && searchableSizesFromApi.length > 0
+    ? searchableSizesFromApi
+    : tireSizes;
   
   // Log tire size source for debugging
   if (hasVehicle) {
@@ -412,6 +453,9 @@ export default async function TiresPage({
       strict: tireSizesStrict,
       aggregate: tireSizesAgg.filter(s => !tireSizesStrict.includes(s)),
       total: tireSizes.length,
+      hasLegacySizes,
+      searchableSizes: hasLegacySizes ? searchableTireSizes : null,
+      conversions: sizeConversions.length > 0 ? sizeConversions.map(c => `${c.originalSize}→${c.recommendedSize}`) : null,
     });
   }
 
@@ -442,17 +486,43 @@ export default async function TiresPage({
   });
 
   function rimDiaFromSize(s: string) {
-    const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
-    return m ? Number(m[1]) : null;
+    const str = String(s || "").toUpperCase();
+    
+    // Modern P-metric: 205/75R14, 275/65R18 → extract R## part
+    const modernMatch = str.match(/R(\d{2})\b/);
+    if (modernMatch) return Number(modernMatch[1]);
+    
+    // Legacy alphanumeric: E70-14, F60-15, G78-14 → extract trailing ##
+    // Pattern: [letter][##]-[##] where last ## is rim diameter
+    const legacyMatch = str.match(/^[A-Z]\d{2}-(\d{2})$/);
+    if (legacyMatch) return Number(legacyMatch[1]);
+    
+    // Legacy with optional letters: FR70-14, GR70-15 → extract trailing ##
+    const legacyRadialMatch = str.match(/^[A-Z]+R?\d{2}-(\d{2})$/);
+    if (legacyRadialMatch) return Number(legacyRadialMatch[1]);
+    
+    return null;
   }
 
   const wheelDiaNum = wheelDiaActive ? Number(String(wheelDiaActive).replace(/[^0-9.]/g, "")) : NaN;
   const wheelWidthNum = wheelWidthActive ? Number(String(wheelWidthActive).replace(/[^0-9.]/g, "")) : NaN;
 
+  // For legacy vehicles, match using either the original sizes OR the converted sizes
+  // This ensures wheel matching works for both E70-14 (rim=14) and 205/75R14 (rim=14)
   const oemWheelMatchedSizes = Number.isFinite(wheelDiaNum) && wheelDiaNum > 0
     ? tireSizes.filter((s) => {
+        // First try direct rim extraction from the original size
         const rimDia = rimDiaFromSize(s);
-        return rimDia === Math.round(wheelDiaNum);
+        if (rimDia === Math.round(wheelDiaNum)) return true;
+        
+        // For legacy sizes, also check the converted searchable size
+        if (sizeConversionMap.has(s)) {
+          const converted = sizeConversionMap.get(s)!;
+          const convertedRimDia = rimDiaFromSize(converted);
+          if (convertedRimDia === Math.round(wheelDiaNum)) return true;
+        }
+        
+        return false;
       })
     : [];
 
@@ -627,8 +697,29 @@ export default async function TiresPage({
     console.log('[tires/page] 🔧 AFTERMARKET FALLBACK USED:', aftermarketFallback.debug);
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LEGACY SIZE → SEARCH SIZE CONVERSION
+  // ═══════════════════════════════════════════════════════════════════════════
+  // When selectedSize is a legacy format (E70-14, etc.), convert it to the
+  // modern P-metric equivalent for the actual tire search.
+  // Display shows original size, but search uses converted size.
+  const searchSizeForFetch = (() => {
+    // If we have a metricSizeOverride from URL, use that
+    if (metricSizeOverride) return metricSizeOverride;
+    
+    // If selectedSize is in our legacy conversion map, use the converted size
+    if (selectedSize && sizeConversionMap.has(selectedSize)) {
+      const converted = sizeConversionMap.get(selectedSize)!;
+      console.log(`[tires/page] 🔄 Legacy size conversion: ${selectedSize} → ${converted}`);
+      return converted;
+    }
+    
+    // For non-legacy vehicles or if no conversion needed, use selectedSize as-is
+    return selectedSize;
+  })();
+  
   // Fetch tires from unified search (includes K&M, WheelPros, Tirewire + admin overrides)
-  const wpSize = metricSizeOverride || selectedSize;
+  const wpSize = searchSizeForFetch;
   const [unifiedTires, rebates] = await Promise.all([
     (wpSize || selectedSize) ? fetchTireWireTires(wpSize || selectedSize) : null,
     fetchActiveRebates(),
@@ -1187,6 +1278,9 @@ export default async function TiresPage({
                   {(wheelDiaNum ? tireSizesStrict.filter(s => rimDiaFromSize(s) === Math.round(wheelDiaNum)) : tireSizesStrict).map((s) => {
                     const active = s === selectedSize;
                     const rim = rimDiaFromSize(s);
+                    // Check if this is a legacy size with conversion
+                    const isLegacy = sizeConversionMap.has(s);
+                    const modernEquivalent = isLegacy ? sizeConversionMap.get(s) : null;
                     // Preserve lifted context in size links
                     const liftedParams = isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(liftedTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : "";
                     const href = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(s)}${liftedParams}`;
@@ -1194,20 +1288,34 @@ export default async function TiresPage({
                       <Link
                         key={s}
                         href={href}
+                        title={isLegacy ? `${s} (Classic size) → Modern equivalent: ${modernEquivalent}` : undefined}
                         className={
                           active
                             ? "rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-extrabold text-white shadow-sm"
                             : isLiftedBuild
                               ? "rounded-xl border-2 border-amber-300 bg-amber-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-amber-500 hover:bg-amber-100 transition-colors"
-                              : "rounded-xl border-2 border-green-200 bg-green-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-green-400 hover:bg-green-100 transition-colors"
+                              : isLegacy
+                                ? "rounded-xl border-2 border-purple-200 bg-purple-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-purple-400 hover:bg-purple-100 transition-colors"
+                                : "rounded-xl border-2 border-green-200 bg-green-50 px-4 py-2.5 text-sm font-extrabold text-neutral-900 hover:border-green-400 hover:bg-green-100 transition-colors"
                         }
                       >
                         <span>{s}</span>
-                        {rim ? <span className="ml-1.5 text-xs opacity-70">({rim}&quot;)</span> : null}
+                        {isLegacy && modernEquivalent ? (
+                          <span className="ml-1.5 text-xs opacity-80">→ {modernEquivalent}</span>
+                        ) : rim ? (
+                          <span className="ml-1.5 text-xs opacity-70">({rim}&quot;)</span>
+                        ) : null}
                       </Link>
                     );
                   })}
                 </div>
+                {/* Legacy size conversion info banner */}
+                {hasLegacySizes && sizeConversions.length > 0 ? (
+                  <div className="mt-3 rounded-lg bg-purple-50 border border-purple-200 px-3 py-2 text-xs text-purple-800">
+                    <span className="font-semibold">🔧 Classic Vehicle:</span>{" "}
+                    Original OEM sizes are shown. We search using modern equivalents to find compatible tires.
+                  </div>
+                ) : null}
                 {/* Show note when lifted sizes don't match selected wheel diameter */}
                 {isLiftedBuild && wheelDiaNum && tireSizesStrict.filter(s => rimDiaFromSize(s) === Math.round(wheelDiaNum)).length === 0 && (
                   <div className="mt-2 rounded-lg bg-amber-100 border border-amber-300 px-3 py-2 text-xs text-amber-800">
