@@ -323,7 +323,30 @@ export default async function TiresPage({
     });
   }
 
-  if (year && make && model && !modification) {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Fetch dbProfile first when modification is known (canonical fitment data from our DB)
+  const dbProfile = year && make && model && modification
+    ? await fetchDBProfile({ year, make, model, modification })
+    : null;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC VEHICLE CHECK
+  // ═══════════════════════════════════════════════════════════════════════════
+  // For classic vehicles without trim data (e.g., 1970 Chevelle), check if we
+  // have static tire sizes available. If so, proceed without requiring a modification.
+  const prefetchFitment = year && make && model && !modification
+    ? await fetchFitment({ year, make, model })
+    : null;
+  
+  const hasStaticTireData = prefetchFitment?.tireSizes?.length > 0 || prefetchFitment?.hasLegacySizes;
+  
+  // Only require trim selection if:
+  // 1. We have a vehicle selected (year/make/model)
+  // 2. No modification is specified
+  // 3. AND we don't have static tire data available (not a classic vehicle)
+  if (year && make && model && !modification && !hasStaticTireData) {
     return (
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
@@ -343,14 +366,6 @@ export default async function TiresPage({
       </main>
     );
   }
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
-  // ═══════════════════════════════════════════════════════════════════════════
-  // Fetch dbProfile first when modification is known (canonical fitment data from our DB)
-  const dbProfile = year && make && model && modification
-    ? await fetchDBProfile({ year, make, model, modification })
-    : null;
   
   if (dbProfile) {
     console.log('[tires/page] ✅ DB PROFILE CONSUMED:', {
@@ -362,16 +377,20 @@ export default async function TiresPage({
     });
   } else if (hasVehicle && modification) {
     console.log('[tires/page] ⚠️ NO DB PROFILE - falling back to legacy tire-sizes API');
+  } else if (hasVehicle && hasStaticTireData) {
+    console.log('[tires/page] 🚗 CLASSIC VEHICLE - using static tire data without modification');
   }
 
   // Legacy API fallback (only used when dbProfile unavailable)
-  const fitmentStrict = year && make && model
+  // For classic vehicles without modification, use the prefetched data
+  const fitmentStrict = prefetchFitment || (year && make && model
     ? await fetchFitment({ year, make, model, modification: modification || undefined })
-    : null;
+    : null);
 
-  const fitmentAgg = year && make && model
+  // Aggregate fitment (all trims) - use prefetch if available to avoid duplicate call
+  const fitmentAgg = prefetchFitment || (year && make && model
     ? await fetchFitment({ year, make, model })
-    : null;
+    : null);
 
   // ═══════════════════════════════════════════════════════════════════════════
   // TIRE SIZE RESOLUTION
