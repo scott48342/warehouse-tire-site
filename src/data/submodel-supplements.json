@@ -439,14 +439,36 @@
   },
   "ram": {
     "1500": {
-      "2019-2025": [
+      "2009-2018": [
+        { "value": "tradesman", "label": "Tradesman" },
+        { "value": "sxt", "label": "SXT" },
+        { "value": "express", "label": "Express" },
+        { "value": "big-horn", "label": "Big Horn / Lone Star" },
+        { "value": "outdoorsman", "label": "Outdoorsman" },
+        { "value": "sport", "label": "Sport" },
+        { "value": "laramie", "label": "Laramie" },
+        { "value": "laramie-longhorn", "label": "Laramie Longhorn" },
+        { "value": "limited", "label": "Limited" },
+        { "value": "rebel", "label": "Rebel" }
+      ],
+      "2019-2026": [
         { "value": "tradesman", "label": "Tradesman" },
         { "value": "big-horn", "label": "Big Horn / Lone Star" },
         { "value": "laramie", "label": "Laramie" },
         { "value": "rebel", "label": "Rebel" },
         { "value": "longhorn", "label": "Longhorn" },
         { "value": "limited", "label": "Limited" },
-        { "value": "trx", "label": "TRX" }
+        { "value": "trx", "label": "TRX" },
+        { "value": "rev", "label": "REV (Electric)" }
+      ]
+    },
+    "1500 classic": {
+      "2019-2024": [
+        { "value": "tradesman", "label": "Tradesman (Classic)" },
+        { "value": "express", "label": "Express (Classic)" },
+        { "value": "big-horn-classic", "label": "Big Horn / Lone Star (Classic)" },
+        { "value": "slt-classic", "label": "SLT (Classic)" },
+        { "value": "warlock", "label": "Warlock (Classic)" }
       ]
     },
     "2500": {

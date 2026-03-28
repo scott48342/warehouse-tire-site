@@ -66,9 +66,16 @@ export const VEHICLE_GENERATIONS: Record<string, Record<string, Array<{ start: n
   },
   "ram": {
     "1500": [
-      { start: 2019, end: 2025, name: "5th Gen (DT)" },
+      { start: 2019, end: 2026, name: "5th Gen (DT)" },
       { start: 2013, end: 2018, name: "4th Gen (DS)" },
       { start: 2009, end: 2012, name: "4th Gen (DS early)" },
+      { start: 2002, end: 2008, name: "3rd Gen" },
+      { start: 1994, end: 2001, name: "2nd Gen" },
+    ],
+    // RAM 1500 Classic is the carryover 4th gen sold 2019-2024 alongside 5th gen
+    // IMPORTANT: Uses 5x139.7 (5-lug), NOT the 6x139.7 of the 5th gen DT
+    "1500-classic": [
+      { start: 2019, end: 2024, name: "Classic (4th Gen DS carryover)" },
     ],
   },
   "toyota": {

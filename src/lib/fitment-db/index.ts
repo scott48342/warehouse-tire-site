@@ -95,3 +95,16 @@ export {
   type FitmentQuality,
   type WheelSize,
 } from "./profileService";
+
+// Vehicle fitment rules (explicit per-generation/variant rules)
+export {
+  matchFitmentRule,
+  getFitmentFromRules,
+  isRam1500Classic,
+  getRam1500GenerationInfo,
+  VEHICLE_FITMENT_RULES,
+  type FitmentRule,
+  type FitmentRuleMatch,
+  type RuleMatchInput,
+  type RuleMatchResult,
+} from "./vehicleFitmentRules";

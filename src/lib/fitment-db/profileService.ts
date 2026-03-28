@@ -28,6 +28,7 @@ import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 import crypto from "crypto";
 import submodelSupplements from "@/data/submodel-supplements.json";
+import { getFitmentFromRules, matchFitmentRule } from "./vehicleFitmentRules";
 
 // ============================================================================
 // Types
@@ -905,12 +906,40 @@ async function importApiDataToDb(
     displayTrim = normalizeTrimLabel(trimStr, engineStr, nameStr, String(year), make, model) || "Base";
   }
   
-  // Extract specs
+  // Extract specs from API
   const tech = vehicleData.technical || {};
-  const boltPattern = tech.bolt_pattern || null;
-  const centerBoreMm = tech.centre_bore ? parseFloat(tech.centre_bore) : null;
-  const threadSize = tech.wheel_fasteners?.thread_size || null;
-  const seatType = tech.wheel_fasteners?.type || null;
+  let boltPattern = tech.bolt_pattern || null;
+  let centerBoreMm = tech.centre_bore ? parseFloat(tech.centre_bore) : null;
+  let threadSize = tech.wheel_fasteners?.thread_size || null;
+  let seatType = tech.wheel_fasteners?.type || null;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // APPLY FITMENT RULES - Override API data with known-correct values
+  // This is critical for vehicles like RAM 1500 vs RAM 1500 Classic where
+  // the bolt pattern differs by model variant, not just year.
+  // ═══════════════════════════════════════════════════════════════════════════
+  const ruleOverride = getFitmentFromRules({
+    year,
+    make,
+    model,
+    rawModel: model,
+    trim: displayTrim,
+    modificationId,
+  });
+  
+  if (ruleOverride) {
+    console.log(`[importApiDataToDb] RULE OVERRIDE for ${year} ${make} ${model}:`, {
+      apiBoltPattern: boltPattern,
+      ruleBoltPattern: ruleOverride.boltPattern,
+      notes: ruleOverride.notes,
+    });
+    
+    // Apply rule overrides (only if rule provides the value)
+    if (ruleOverride.boltPattern) boltPattern = ruleOverride.boltPattern;
+    if (ruleOverride.centerBoreMm !== undefined) centerBoreMm = ruleOverride.centerBoreMm;
+    if (ruleOverride.threadSize) threadSize = ruleOverride.threadSize;
+    if (ruleOverride.seatType) seatType = ruleOverride.seatType;
+  }
   
   // Extract wheel/tire sizes
   const wheelSetups = vehicleData.wheels || [];
@@ -964,6 +993,16 @@ async function importApiDataToDb(
         seenTires.add(setup.rear.tire);
         oemTireSizes.push(setup.rear.tire);
       }
+    }
+  }
+  
+  // Apply offset range from fitment rules if available
+  if (ruleOverride) {
+    if (ruleOverride.offsetMin !== undefined) {
+      offsetMin = ruleOverride.offsetMin;
+    }
+    if (ruleOverride.offsetMax !== undefined) {
+      offsetMax = ruleOverride.offsetMax;
     }
   }
   
