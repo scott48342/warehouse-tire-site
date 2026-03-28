@@ -676,7 +676,10 @@ export async function GET(req: Request) {
     
     // Get tire sizes from vehicles/tire-sizes API
     const tFitment0 = Date.now();
-    let tireSizes: string[] = [];
+    let tireSizes: string[] = [];           // Original OEM sizes (for display)
+    let searchableSizes: string[] = [];     // Modern sizes (for search)
+    let sizeConversions: any[] = [];        // Conversion details
+    let hasLegacySizes = false;
     let fitmentSource = "api";
     
     try {
@@ -689,9 +692,23 @@ export async function GET(req: Request) {
       const tsRes = await fetch(tireSizesUrl.toString());
       if (tsRes.ok) {
         const tsData = await tsRes.json();
+        
+        // Get original OEM sizes (may include legacy formats like E70-14)
         tireSizes = (tsData.tireSizes || tsData.sizes || tsData.results || []).map((s: any) => 
           typeof s === "string" ? s : s.size || s.front || ""
         ).filter(Boolean);
+        
+        // Get searchable sizes (modern P-metric equivalents)
+        // The tire-sizes API now returns searchableSizes for legacy tire conversion
+        searchableSizes = tsData.searchableSizes || tireSizes;
+        sizeConversions = tsData.sizeConversions || [];
+        hasLegacySizes = tsData.hasLegacySizes || false;
+        
+        if (hasLegacySizes) {
+          console.log(`[tires/search] Legacy tire sizes detected for ${year} ${make} ${model}`);
+          console.log(`  Original: ${tireSizes.join(", ")}`);
+          console.log(`  Search:   ${searchableSizes.join(", ")}`);
+        }
       }
     } catch (err) {
       console.error("[tires/search] Tire sizes error:", err);
@@ -702,21 +719,23 @@ export async function GET(req: Request) {
     const oemTireSizes = [...tireSizes];
     
     // Filter by wheel diameter if specified
+    // Use searchableSizes (modern P-metric) for actual searching
     let matchMode: "exact" | "oem-fallback" | "direct-search" = "exact";
+    let sizesToSearch = searchableSizes.length > 0 ? searchableSizes : tireSizes;
     
-    if (wheelDiameter && tireSizes.length > 0) {
-      const filtered = tireSizes.filter((size) => {
+    if (wheelDiameter && sizesToSearch.length > 0) {
+      const filtered = sizesToSearch.filter((size) => {
         const rim = extractRimDiameter(size);
         return rim === wheelDiameter;
       });
       
       if (filtered.length > 0) {
-        tireSizes = filtered;
+        sizesToSearch = filtered;
         matchMode = "exact";
       } else {
         // No OEM tires match the wheel diameter - this is a plus/minus sizing scenario
         // Search directly for tires of the specified diameter
-        tireSizes = [];
+        sizesToSearch = [];
         matchMode = "direct-search";
         console.log(`[tires/search] No OEM tires for ${wheelDiameter}" wheel, using direct search`);
       }
@@ -728,11 +747,11 @@ export async function GET(req: Request) {
     let twResults: TireResult[] = [];
     let kmResults: TireResult[] = [];
     
-    if (tireSizes.length > 0) {
-      // Search using OEM tire sizes (filtered by wheel diameter)
+    if (sizesToSearch.length > 0) {
+      // Search using modern P-metric sizes (converted from legacy if needed)
       const searchPromises: Promise<void>[] = [];
       
-      for (const size of tireSizes.slice(0, 5)) {
+      for (const size of sizesToSearch.slice(0, 5)) {
         // WheelPros
         searchPromises.push(
           searchTiresBySize(db, size, minQty, Math.ceil(pageSize / tireSizes.length))
@@ -751,7 +770,7 @@ export async function GET(req: Request) {
       }
       
       await Promise.all(searchPromises);
-    } else if (wheelDiameter && matchMode === "direct-search") {
+    } else if (wheelDiameter && matchMode === "direct-search" && sizesToSearch.length === 0) {
       // Direct search by rim diameter when no OEM sizes match
       // Search for common sizes with this rim diameter
       const commonSizes = [`205/55R${wheelDiameter}`, `225/45R${wheelDiameter}`, `245/40R${wheelDiameter}`];
@@ -784,6 +803,9 @@ export async function GET(req: Request) {
         mode: "vehicle",
         vehicle: { year, make, model, modification },
         wheelDiameter: wheelDiameter || null,
+        oemTireSizes: tireSizes,
+        hasLegacySizes,
+        sizeConversions: hasLegacySizes ? sizeConversions : undefined,
         error: "No tire sizes found for vehicle",
       });
     }
@@ -802,8 +824,10 @@ export async function GET(req: Request) {
         mode: "vehicle",
         vehicle: { year, make, model, modification },
         wheelDiameter,
-        oemTireSizes,
-        error: `No tires found for ${wheelDiameter}" wheels. OEM sizes are ${oemTireSizes.join(", ")}`,
+        oemTireSizes: tireSizes,
+        hasLegacySizes,
+        sizeConversions: hasLegacySizes ? sizeConversions : undefined,
+        error: `No tires found for ${wheelDiameter}" wheels. OEM sizes are ${tireSizes.join(", ")}`,
         matchMode,
       });
     }
@@ -819,8 +843,17 @@ export async function GET(req: Request) {
       mode: "vehicle",
       vehicle: { year, make, model, modification },
       wheelDiameter: wheelDiameter || null,
-      tireSizesSearched: tireSizes.length > 0 ? tireSizes : [`direct:R${wheelDiameter}`],
-      oemTireSizes,
+      
+      // Original OEM sizes (for display, may include legacy like E70-14)
+      oemTireSizes: tireSizes,
+      
+      // Sizes actually searched (modern P-metric)
+      tireSizesSearched: sizesToSearch.length > 0 ? sizesToSearch : [`direct:R${wheelDiameter}`],
+      
+      // Legacy conversion info
+      hasLegacySizes,
+      sizeConversions: hasLegacySizes ? sizeConversions : undefined,
+      
       matchMode,
       fitmentSource,
       sources: {

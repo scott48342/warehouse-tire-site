@@ -12,6 +12,11 @@ import {
 import { normalizeModelForApi, normalizeMake, slugify } from "@/lib/fitment-db/keys";
 import * as wheelSizeApi from "@/lib/wheelSizeApi";
 import oemSizesData from "@/data/oem-tire-sizes.json";
+import { 
+  convertLegacyTireSize, 
+  convertTireSizesForSearch,
+  type LegacyTireConversion 
+} from "@/lib/legacyTireConverter";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -176,10 +181,27 @@ export async function GET(req: Request) {
   if (!forceRefresh) {
     const cached = getCached(cacheKey);
     if (cached) {
+      // Convert legacy sizes for cached results too
+      const cachedSizes = cached.tireSizes || [];
+      const { searchSizes } = convertTireSizesForSearch(cachedSizes);
+      const cachedConversions = cachedSizes.map(size => {
+        const conv = convertLegacyTireSize(size);
+        return {
+          originalSize: conv.original,
+          recommendedSize: conv.recommended,
+          alternatives: conv.alternatives,
+          conversionMethod: conv.conversionMethod,
+          isLegacy: conv.isLegacy,
+        };
+      });
+      
       return NextResponse.json({
-        tireSizes: cached.tireSizes || [],
-        tireSizesStrict: cached.tireSizes || [],
+        tireSizes: cachedSizes,
+        tireSizesStrict: cachedSizes,
         tireSizesAgg: [],
+        searchableSizes: searchSizes.length > 0 ? searchSizes : cachedSizes,
+        sizeConversions: cachedConversions,
+        hasLegacySizes: cachedConversions.some(c => c.isLegacy),
         fitment: {
           boltPattern: cached.boltPattern,
           centerBore: cached.centerBore,
@@ -195,10 +217,27 @@ export async function GET(req: Request) {
     const staticSizes = getStaticOemSizes(year, make, model, modification);
     if (staticSizes.length > 0) {
       console.log(`[tire-sizes] API cooldown, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
+      
+      // Convert legacy sizes for static fallback too
+      const { searchSizes } = convertTireSizesForSearch(staticSizes);
+      const staticConversions = staticSizes.map(size => {
+        const conv = convertLegacyTireSize(size);
+        return {
+          originalSize: conv.original,
+          recommendedSize: conv.recommended,
+          alternatives: conv.alternatives,
+          conversionMethod: conv.conversionMethod,
+          isLegacy: conv.isLegacy,
+        };
+      });
+      
       return NextResponse.json({
         tireSizes: staticSizes,
         tireSizesStrict: staticSizes,
         tireSizesAgg: [],
+        searchableSizes: searchSizes.length > 0 ? searchSizes : staticSizes,
+        sizeConversions: staticConversions,
+        hasLegacySizes: staticConversions.some(c => c.isLegacy),
         source: "static-fallback",
         cacheStats: getCacheStats(),
       });
@@ -208,6 +247,9 @@ export async function GET(req: Request) {
       tireSizes: [],
       tireSizesStrict: [],
       tireSizesAgg: [],
+      searchableSizes: [],
+      sizeConversions: [],
+      hasLegacySizes: false,
       error: "Rate limited - in cooldown (no static fallback)",
       source: "cooldown",
       cacheStats: getCacheStats(),
@@ -389,6 +431,43 @@ export async function GET(req: Request) {
       centerBore: vehicleData.technical?.centre_bore,
     };
 
+    // ═══════════════════════════════════════════════════════════════════════
+    // LEGACY TIRE SIZE CONVERSION
+    // Convert pre-metric sizes (E70-14, G60-15, etc.) to modern equivalents
+    // Original sizes preserved for display, modern sizes used for search
+    // ═══════════════════════════════════════════════════════════════════════
+    const { searchSizes, displayMap } = convertTireSizesForSearch(tireSizes);
+    
+    // Build size conversions array for API response
+    const sizeConversions: Array<{
+      originalSize: string;
+      recommendedSize: string;
+      alternatives: string[];
+      conversionMethod: string;
+      isLegacy: boolean;
+    }> = [];
+    
+    for (const size of tireSizes) {
+      const conversion = convertLegacyTireSize(size);
+      sizeConversions.push({
+        originalSize: conversion.original,
+        recommendedSize: conversion.recommended,
+        alternatives: conversion.alternatives,
+        conversionMethod: conversion.conversionMethod,
+        isLegacy: conversion.isLegacy,
+      });
+    }
+    
+    // For searching, use converted modern sizes
+    const searchableSizes = searchSizes.length > 0 ? searchSizes : tireSizes;
+    
+    debug.legacyConversion = {
+      hasLegacySizes: sizeConversions.some(c => c.isLegacy),
+      originalSizes: tireSizes,
+      searchSizes: searchableSizes,
+      conversions: sizeConversions,
+    };
+
     // Cache the successful result
     const strictSizes = stockTireSizes.length > 0 ? [...new Set(stockTireSizes)] : allTireSizes;
     setCache(cacheKey, {
@@ -407,9 +486,18 @@ export async function GET(req: Request) {
     });
 
     return NextResponse.json({
+      // Original OEM sizes (for display)
       tireSizes,
       tireSizesStrict: strictSizes,
       tireSizesAgg: aggTireSizes,
+      
+      // Converted sizes for search (modern P-metric)
+      searchableSizes,
+      
+      // Size conversion details
+      sizeConversions,
+      hasLegacySizes: sizeConversions.some(c => c.isLegacy),
+      
       fitment,
       selectedModification: {
         slug: selectedMod.slug,
@@ -429,10 +517,27 @@ export async function GET(req: Request) {
     const staticSizes = getStaticOemSizes(year, make, model, modification);
     if (staticSizes.length > 0) {
       console.log(`[tire-sizes] API error, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
+      
+      // Convert legacy sizes for error fallback too
+      const { searchSizes: fallbackSearchSizes } = convertTireSizesForSearch(staticSizes);
+      const fallbackConversions = staticSizes.map(size => {
+        const conv = convertLegacyTireSize(size);
+        return {
+          originalSize: conv.original,
+          recommendedSize: conv.recommended,
+          alternatives: conv.alternatives,
+          conversionMethod: conv.conversionMethod,
+          isLegacy: conv.isLegacy,
+        };
+      });
+      
       return NextResponse.json({
         tireSizes: staticSizes,
         tireSizesStrict: staticSizes,
         tireSizesAgg: [],
+        searchableSizes: fallbackSearchSizes.length > 0 ? fallbackSearchSizes : staticSizes,
+        sizeConversions: fallbackConversions,
+        hasLegacySizes: fallbackConversions.some(c => c.isLegacy),
         source: "static-fallback",
         apiError: err?.message || String(err),
         cacheStats: getCacheStats(),
