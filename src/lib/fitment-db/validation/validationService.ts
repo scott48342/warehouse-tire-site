@@ -656,7 +656,7 @@ function detectStaggeredSizes(tireSizes: string[]): { frontSize: string; rearSiz
   }
   
   // Look for staggered pattern: same diameter, different widths
-  for (const [diameter, tires] of byDiameter.entries()) {
+  for (const [diameter, tires] of Array.from(byDiameter.entries())) {
     if (tires.length < 2) continue;
     
     // Sort by width
