@@ -92,7 +92,7 @@ async function getDbFitmentSizes(
           return {
             tireSizes: Array.from(extractedSizes),
             boltPattern: selectedFitment.boltPattern ?? undefined,
-            centerBore: selectedFitment.centerBoreMm ?? undefined,
+            centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
             source: "db-first",
           };
         }
@@ -103,7 +103,7 @@ async function getDbFitmentSizes(
     return {
       tireSizes: oemTireSizes,
       boltPattern: selectedFitment.boltPattern ?? undefined,
-      centerBore: selectedFitment.centerBoreMm ?? undefined,
+      centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
       source: "db-first",
     };
     
