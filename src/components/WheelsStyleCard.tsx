@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { FavoritesButton } from "@/components/FavoritesButton";
-import { FitmentBadgeInline, FitmentAccentBar } from "@/components/FitmentConfidenceBadge";
 import { useCart } from "@/lib/cart/CartContext";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { 
@@ -42,16 +40,30 @@ function fmtSizePart(v: string) {
   return n.toString();
 }
 
-// Fitment copy (kept local to card; styling comes from FitmentConfidenceBadge)
-const FITMENT_COPY = {
+// ═══════════════════════════════════════════════════════════════════════════════
+// FITMENT BADGE CONFIG - Conversion-optimized copy
+// ═══════════════════════════════════════════════════════════════════════════════
+const FITMENT_CONFIG = {
   surefit: {
-    confidence: "Direct fit for your vehicle",
+    label: "Guaranteed Fit",
+    sublabel: "Verified for your vehicle",
+    bgClass: "bg-green-600",
+    textClass: "text-white",
+    icon: "✓",
   },
   specfit: {
-    confidence: "Fits your vehicle • Aftermarket setup",
+    label: "Good Fit",
+    sublabel: "Works with your vehicle",
+    bgClass: "bg-blue-600",
+    textClass: "text-white",
+    icon: "✓",
   },
   extended: {
-    confidence: "Fits your vehicle • Custom fitment",
+    label: "Custom Fit",
+    sublabel: "May need modifications",
+    bgClass: "bg-amber-500",
+    textClass: "text-white",
+    icon: "⚡",
   },
 } as const;
 
@@ -84,23 +96,18 @@ export function WheelsStyleCard({
   finishThumbs?: WheelFinishThumb[];
   viewParams?: Record<string, string | undefined>;
   specLabel?: { boltPattern?: string; offset?: string };
+  /** @deprecated No longer used - single CTA flow */
   selectToTires?: boolean;
   pair?: WheelPair;
   fitmentClass?: "surefit" | "specfit" | "extended";
   isPopular?: boolean;
-  /** DB fitment profile for accessory calculation */
   dbProfile?: DBProfileForAccessories | null;
-  /** Wheel center bore in mm (for hub ring calculation) */
   wheelCenterBore?: number;
-  /** Wheel seat type override (conical, ball, flat, mag) */
   wheelSeatType?: string;
 }) {
-  const router = useRouter();
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
 
-  // CRITICAL: Use pair.front.sku if available - this is the variant matching displayed size
-  // The baseSku might be a different size variant (e.g., 18" when pair shows 19")
   const effectiveInitialSku = pair?.front?.sku || baseSku;
   
   const [selectedSku, setSelectedSku] = useState<string>(effectiveInitialSku);
@@ -108,17 +115,19 @@ export function WheelsStyleCard({
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
   const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
-  const [isQuickAdding, setIsQuickAdding] = useState(false);
+  const [isAdding, setIsAdding] = useState(false);
 
-  const fromPrice = useMemo(() => {
+  // Calculate set price (4 wheels)
+  const setPrice = typeof selectedPrice === "number" ? selectedPrice * 4 : null;
+  const fromSetPrice = useMemo(() => {
     const ps = (finishThumbs || [])
-      .map((t) => (typeof t?.price === "number" ? t.price : null))
+      .map((t) => (typeof t?.price === "number" ? t.price * 4 : null))
       .filter((v): v is number => typeof v === "number" && Number.isFinite(v));
-    if (!ps.length) return undefined;
+    if (!ps.length) return null;
     return Math.min(...ps);
   }, [finishThumbs]);
 
-  // Build URL params including wheel variant info for PDP consistency
+  // Build URL params
   const qs = useMemo(() => {
     const sp = new URLSearchParams();
     for (const [k, v] of Object.entries(viewParams || {})) {
@@ -132,8 +141,6 @@ export function WheelsStyleCard({
       sp.delete("modification");
     }
     
-    // Include wheel variant params so PDP can resolve the correct variant
-    // Priority: selectedPair.front (if staggered flow), then sizeLabel
     const currentPair = selectedPair || pair;
     const dia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
     const wid = currentPair?.front?.width ?? sizeLabel?.width;
@@ -151,72 +158,12 @@ export function WheelsStyleCard({
 
   const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
 
-  function selectAndGoToTires() {
-    const sku = selectedSku || baseSku;
-    const p = selectedPair;
-    const front = p?.front?.sku ? p.front : { sku, diameter: sizeLabel?.diameter, width: sizeLabel?.width, offset: specLabel?.offset };
-    const rear = p?.staggered && p?.rear?.sku ? p.rear : undefined;
-
-    try {
-      localStorage.setItem(
-        "wt_selected_wheel",
-        JSON.stringify({
-          sku: front.sku,
-          brand,
-          title,
-          finish: selectedFinish,
-          price: selectedPrice,
-          imageUrl: selectedImage,
-          diameter: front.diameter ?? sizeLabel?.diameter,
-          width: front.width ?? sizeLabel?.width,
-          boltPattern: specLabel?.boltPattern,
-          offset: front.offset ?? specLabel?.offset,
-          rearSku: rear?.sku,
-          rearDiameter: rear?.diameter,
-          rearWidth: rear?.width,
-          rearOffset: rear?.offset,
-          staggered: Boolean(rear?.sku),
-        })
-      );
-    } catch {
-      // ignore
-    }
-
-    const sp = new URLSearchParams();
-    for (const [k, v] of Object.entries(viewParams || {})) {
-      if (v) sp.set(k, v);
-    }
-    if (!sp.get("year") || !sp.get("make") || !sp.get("model")) {
-      sp.delete("year");
-      sp.delete("make");
-      sp.delete("model");
-      sp.delete("trim");
-      sp.delete("modification");
-    }
-
-    sp.set("wheelSku", front.sku);
-    sp.set("wheelSkuFront", front.sku);
-    if (rear?.sku) sp.set("wheelSkuRear", rear.sku);
-
-    const dia = front.diameter ?? sizeLabel?.diameter;
-    const wFront = front.width ?? sizeLabel?.width;
-    const wRear = rear?.width;
-
-    if (dia) sp.set("wheelDia", String(dia));
-    if (dia) sp.set("wheelDiaFront", String(dia));
-    if (rear?.diameter) sp.set("wheelDiaRear", String(rear.diameter));
-
-    if (wFront) sp.set("wheelWidth", String(wFront));
-    if (wFront) sp.set("wheelWidthFront", String(wFront));
-    if (wRear) sp.set("wheelWidthRear", String(wRear));
-
-    router.push(`/tires?${sp.toString()}`);
-  }
-
-  function quickAddToCart() {
-    setIsQuickAdding(true);
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SINGLE CTA: Add to Package
+  // ═══════════════════════════════════════════════════════════════════════════
+  function addToPackage() {
+    setIsAdding(true);
     
-    // Build vehicle object from viewParams
     const year = viewParams?.year;
     const make = viewParams?.make;
     const model = viewParams?.model;
@@ -227,41 +174,14 @@ export function WheelsStyleCard({
       ? { year, make, model, trim: trim || undefined, modification: modification || undefined }
       : undefined;
 
-    // CRITICAL: Use the correct SKU and specs from selectedPair/pair
-    // This ensures Quick Add uses the same variant shown on card
     const currentPair = selectedPair || pair;
     const effectiveSku = selectedSku || currentPair?.front?.sku || baseSku;
     const effectiveDia = currentPair?.front?.diameter ?? sizeLabel?.diameter;
     const effectiveWidth = currentPair?.front?.width ?? sizeLabel?.width;
     const effectiveOffset = currentPair?.front?.offset ?? specLabel?.offset;
 
-    // ═══════════════════════════════════════════════════════════════════════
-    // ACCESSORY FITMENT - Calculate and auto-add required accessories
-    // ═══════════════════════════════════════════════════════════════════════
-    console.log("[WheelsStyleCard] Accessory fitment triggered on wheel add:", {
-      sku: effectiveSku,
-      hasDbProfile: !!dbProfile,
-      hasVehicle: !!vehicle,
-    });
-
-    // Check if we have vehicle data for accessory calculation
-    const hasVehicleData = Boolean(
-      dbProfile?.threadSize || dbProfile?.centerBoreMm
-    );
-
-    if (!hasVehicleData && vehicle) {
-      console.warn("[WheelsStyleCard] WARNING: Vehicle data missing for accessory fitment", {
-        vehicle: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
-        missingFields: {
-          threadSize: !dbProfile?.threadSize,
-          centerBoreMm: !dbProfile?.centerBoreMm,
-          seatType: !dbProfile?.seatType,
-        },
-      });
-    }
-
     setTimeout(() => {
-      // Add the wheel first - this MUST succeed regardless of accessory status
+      // Add wheel to cart
       addItem({
         type: "wheel",
         sku: effectiveSku,
@@ -279,15 +199,9 @@ export function WheelsStyleCard({
         vehicle,
       });
 
-      // ═══════════════════════════════════════════════════════════════════
-      // ACCESSORY AUTO-ADD (Safe, fail-soft implementation)
-      // - Never crashes main cart flow
-      // - Validates all items before adding
-      // - Can be disabled via ENABLE_ACCESSORY_AUTO_ADD flag or localStorage
-      // ═══════════════════════════════════════════════════════════════════
+      // Auto-add accessories (fail-soft)
       try {
         if (isAccessoryAutoAddEnabled() && dbProfile) {
-          // Calculate accessory fitment
           const fitmentResult = calculateAccessoryFitment(dbProfile, {
             sku: effectiveSku,
             centerBore: wheelCenterBore,
@@ -295,340 +209,268 @@ export function WheelsStyleCard({
             boltPattern: specLabel?.boltPattern,
           });
 
-          // Log detailed fitment result for debugging hub ring calculation
-          console.log("[WheelsStyleCard] Fitment calculation result:", {
-            wheelSku: effectiveSku,
-            wheelCenterBore: wheelCenterBore ?? "(not provided)",
-            vehicleCenterBore: dbProfile.centerBoreMm ?? "(not provided)",
-            lugNuts: {
-              status: fitmentResult.fitment?.lugNuts.status,
-              reason: fitmentResult.fitment?.lugNuts.reason,
-            },
-            hubRings: {
-              status: fitmentResult.fitment?.hubRings.status,
-              reason: fitmentResult.fitment?.hubRings.reason,
-              spec: fitmentResult.fitment?.hubRings.spec,
-            },
-            requiredItems: fitmentResult.requiredItems.map(i => ({
-              category: i.category,
-              sku: i.sku,
-              name: i.name,
-            })),
-          });
-
-          // Set accessory state for UI display (even if no items to add)
           if (fitmentResult.state) {
             setAccessoryState(fitmentResult.state);
           }
 
-          // Safely auto-add required accessories
           if (fitmentResult.requiredItems.length > 0) {
-            const addResult = safeAutoAddAccessories(
+            safeAutoAddAccessories(
               effectiveSku,
               fitmentResult.requiredItems,
               (item) => addAccessories([item])
             );
-            
-            console.log("[WheelsStyleCard] Accessory auto-add result:", addResult);
-          } else {
-            logAccessoryEvent("accessory_auto_add_attempt", {
-              wheelSku: effectiveSku,
-              reason: "No required accessories for this fitment",
-            });
           }
-        } else if (!isAccessoryAutoAddEnabled()) {
-          logAccessoryEvent("accessory_auto_add_skipped_disabled", {
-            wheelSku: effectiveSku,
-            reason: "Feature flag disabled",
-          });
-        } else {
-          logAccessoryEvent("accessory_auto_add_skipped_disabled", {
-            wheelSku: effectiveSku,
-            reason: "No dbProfile available",
-          });
         }
-      } catch (accessoryError) {
-        // CRITICAL: Never let accessory errors crash the cart
-        console.error("[WheelsStyleCard] Accessory auto-add error (non-fatal):", accessoryError);
-        logAccessoryEvent("accessory_auto_add_failed", {
-          wheelSku: effectiveSku,
-          error: accessoryError instanceof Error ? accessoryError.message : String(accessoryError),
-        });
+      } catch (err) {
+        console.error("[WheelsStyleCard] Accessory auto-add error (non-fatal):", err);
       }
 
-      setIsQuickAdding(false);
+      setIsAdding(false);
     }, 150);
   }
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
-  const fitCopy = fitmentClass ? FITMENT_COPY[fitmentClass] : null;
+  const fitmentConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
 
   return (
-    <div className="relative block overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 hover:shadow-md transition-shadow">
-      {/* Fitment-based left accent bar */}
-      <FitmentAccentBar fitmentClass={fitmentClass} />
-
-      {/* Popular badge - absolute positioned */}
-      {isPopular ? (
-        <div className="absolute top-3 right-3 z-10">
-          <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-800">
-            🔥 Popular
-          </span>
-        </div>
-      ) : null}
-
-      <div className="flex items-start justify-between gap-2">
-        <div>
-          <div className="text-sm font-semibold text-neutral-600">{brand}</div>
-          {/* Fitment badge */}
-          {fitmentClass ? (
-            <div className="mt-1">
-              <FitmentBadgeInline fitmentClass={fitmentClass} size="sm" />
-            </div>
-          ) : null}
-        </div>
-        <FavoritesButton
-          type="wheel"
-          sku={selectedSku || baseSku}
-          label={`${brand} ${title}${selectedFinish ? ` - ${selectedFinish}` : ""}`}
-          href={viewHref}
-          imageUrl={selectedImage}
-        />
-      </div>
-
-      {selectToTires ? (
-        <button
-          type="button"
-          onClick={() => selectAndGoToTires()}
-          className="block w-full text-left"
-        >
-          <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
-          {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
-
-          {/* Size display */}
-          {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
-            <div className="mt-2 grid gap-1 text-sm font-semibold text-neutral-700">
+    <div className="relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-shadow hover:shadow-lg">
+      
+      {/* ═══════════════════════════════════════════════════════════════════════
+          TOP: FITMENT BADGE (Full width, prominent)
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {fitmentConfig ? (
+        <div className={`${fitmentConfig.bgClass} ${fitmentConfig.textClass} px-4 py-2.5`}>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{fitmentConfig.icon}</span>
               <div>
-                {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
-                {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
-                {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "×" : ""}
-                {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
-                {bolt ? <span className="text-neutral-500 ml-2">• {bolt}</span> : null}
+                <div className="text-sm font-extrabold">{fitmentConfig.label}</div>
+                <div className="text-xs opacity-90">{fitmentConfig.sublabel}</div>
               </div>
-              {selectedPair?.staggered && selectedPair?.rear?.sku ? (
-                <div>
-                  Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
-                  {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "×" : ""}
-                  {fmtSizePart(selectedPair?.rear?.width || "")}
-                </div>
-              ) : null}
             </div>
-          ) : null}
-
-          {/* Fitment confidence text */}
-          {fitCopy ? (
-            <div className="mt-2 text-xs text-neutral-600">
-              <span className="text-green-600">✓</span> {fitCopy.confidence}
-            </div>
-          ) : null}
-
-          {/* Product image */}
-          <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
-            {selectedImage ? (
-              <img
-                src={selectedImage}
-                alt={title}
-                className="h-48 w-full object-contain bg-white"
-                loading="lazy"
-              />
-            ) : (
-              <div className="grid h-48 place-items-center bg-white p-3 text-center">
-                <div>
-                  <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                  <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
-                </div>
-              </div>
-            )}
+            {isPopular ? (
+              <span className="rounded-full bg-white/20 px-2 py-0.5 text-[10px] font-bold">
+                🔥 Popular
+              </span>
+            ) : null}
           </div>
-        </button>
-      ) : (
-        <Link href={viewHref} className="block">
-          <h3 className="mt-1 text-base font-extrabold tracking-tight text-neutral-900">{title}</h3>
-          {selectedFinish ? <div className="mt-1 text-sm text-neutral-600">{selectedFinish}</div> : null}
-
-          {/* Size display */}
-          {selectedPair?.front?.diameter || selectedPair?.front?.width || sizeLabel?.diameter || sizeLabel?.width ? (
-            <div className="mt-2 grid gap-1 text-sm font-semibold text-neutral-700">
-              <div>
-                {selectedPair?.staggered && selectedPair?.rear?.sku ? "Front: " : ""}
-                {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}
-                {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (selectedPair?.front?.width || sizeLabel?.width) ? "×" : ""}
-                {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}
-                {bolt ? <span className="text-neutral-500 ml-2">• {bolt}</span> : null}
-              </div>
-              {selectedPair?.staggered && selectedPair?.rear?.sku ? (
-                <div>
-                  Rear: {fmtSizePart(selectedPair?.rear?.diameter || selectedPair?.front?.diameter || "")}
-                  {(selectedPair?.rear?.diameter || selectedPair?.front?.diameter) && selectedPair?.rear?.width ? "×" : ""}
-                  {fmtSizePart(selectedPair?.rear?.width || "")}
-                </div>
-              ) : null}
-            </div>
-          ) : null}
-
-          {/* Fitment confidence text */}
-          {fitCopy ? (
-            <div className="mt-2 text-xs text-neutral-600">
-              <span className="text-green-600">✓</span> {fitCopy.confidence}
-            </div>
-          ) : null}
-
-          {/* Product image */}
-          <div className="mt-3 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
-            {selectedImage ? (
-              <img
-                src={selectedImage}
-                alt={title}
-                className="h-48 w-full object-contain bg-white"
-                loading="lazy"
-              />
-            ) : (
-              <div className="grid h-48 place-items-center bg-white p-3 text-center">
-                <div>
-                  <div className="text-xs font-extrabold text-neutral-900">Image coming soon</div>
-                  <div className="mt-1 text-[11px] text-neutral-600">{brand}</div>
-                </div>
-              </div>
-            )}
-          </div>
-        </Link>
-      )}
-
-      {/* Finish thumbnails */}
-      {thumbs.length ? (
-        <div className="mt-2 flex flex-wrap gap-2">
-          {thumbs.slice(0, 8).map((t) => {
-            const active = t.sku === selectedSku;
-            return (
-              <button
-                key={t.sku}
-                type="button"
-                onClick={() => {
-                  setSelectedSku(t.sku);
-                  setSelectedFinish(t.finish);
-                  if (t.imageUrl) setSelectedImage(t.imageUrl);
-                  if (typeof t.price === "number") setSelectedPrice(t.price);
-                }}
-                className={
-                  "overflow-hidden rounded-lg border bg-white " +
-                  (active ? "border-neutral-900" : "border-neutral-200 hover:border-neutral-300")
-                }
-                title={t.finish}
-                aria-pressed={active}
-              >
-                {t.imageUrl ? (
-                  <img src={t.imageUrl} alt={t.finish} className="h-10 w-10 object-contain" loading="lazy" />
-                ) : (
-                  <div className="h-10 w-10 bg-neutral-50" />
-                )}
-              </button>
-            );
-          })}
+        </div>
+      ) : isPopular ? (
+        <div className="bg-amber-500 text-white px-4 py-2">
+          <span className="text-sm font-bold">🔥 Popular Choice</span>
         </div>
       ) : null}
 
-      {/* Finish dropdown - shown when multiple finishes available */}
-      {thumbs.length > 1 ? (
-        <div className="mt-3">
-          <label className="text-[11px] font-semibold text-neutral-600">Finish</label>
-          <select
-            value={selectedFinish || ""}
-            onChange={(e) => {
-              const fin = e.target.value;
-              const hit = thumbs.find((t) => String(t.finish) === fin);
-              setSelectedFinish(fin);
-              if (hit?.sku) setSelectedSku(hit.sku);
-              if (hit?.imageUrl) setSelectedImage(hit.imageUrl);
-              if (typeof hit?.price === "number") setSelectedPrice(hit.price);
-              if (hit?.pair) setSelectedPair(hit.pair);
-            }}
-            className="mt-1 h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-          >
-            {thumbs.map((t) => (
-              <option key={t.sku || t.finish} value={t.finish}>
-                {t.finish}
-              </option>
-            ))}
-          </select>
+      {/* ═══════════════════════════════════════════════════════════════════════
+          IMAGE (Larger, more prominent)
+          ═══════════════════════════════════════════════════════════════════════ */}
+      <Link href={viewHref} className="block relative">
+        <div className="aspect-square w-full overflow-hidden bg-neutral-50">
+          {selectedImage ? (
+            <img
+              src={selectedImage}
+              alt={title}
+              className="h-full w-full object-contain p-4 transition-transform hover:scale-105"
+              loading="lazy"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center p-6">
+              <div className="text-center">
+                <div className="text-4xl text-neutral-300">⚙️</div>
+                <div className="mt-2 text-xs font-semibold text-neutral-500">Image coming soon</div>
+              </div>
+            </div>
+          )}
         </div>
-      ) : null}
-
-      {/* Price */}
-      <div className="mt-4">
-        <div className="text-2xl font-extrabold text-neutral-900">
-          {typeof selectedPrice === "number"
-            ? `$${selectedPrice.toFixed(2)}`
-            : (typeof fromPrice === "number" ? `From $${fromPrice.toFixed(2)}` : "Call for price")}
-        </div>
-        <div className="text-sm text-neutral-600">each</div>
-      </div>
-
-      {/* Install & Trust messaging */}
-      <div className="mt-3 rounded-lg bg-neutral-50 px-3 py-2 text-xs space-y-1">
-        <div className="flex items-center gap-1.5 text-neutral-700">
-          <span className="text-green-600">✓</span>
-          <span>Install available near you</span>
-          <span className="text-neutral-400">📍</span>
-        </div>
-        <div className="text-neutral-500">
-          Guaranteed fitment for your vehicle
-        </div>
-      </div>
-
-      {/* CTA */}
-      <div className="mt-4 space-y-2">
-        {/* Primary: View Details */}
-        {selectToTires ? (
-          <button
-            type="button"
-            onClick={() => selectAndGoToTires()}
-            className="w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-          >
-            View Details
-          </button>
-        ) : (
-          <Link
+        
+        {/* Favorites button overlay */}
+        <div className="absolute top-3 right-3">
+          <FavoritesButton
+            type="wheel"
+            sku={selectedSku || baseSku}
+            label={`${brand} ${title}${selectedFinish ? ` - ${selectedFinish}` : ""}`}
             href={viewHref}
-            className="block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-sm font-extrabold text-white hover:bg-red-700"
-          >
-            View Details
-          </Link>
-        )}
+            imageUrl={selectedImage}
+          />
+        </div>
+      </Link>
 
-        {/* Secondary: Quick Add */}
+      {/* ═══════════════════════════════════════════════════════════════════════
+          CONTENT AREA
+          ═══════════════════════════════════════════════════════════════════════ */}
+      <div className="flex flex-1 flex-col p-4">
+        
+        {/* Brand & Title */}
+        <div>
+          <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{brand}</div>
+          <Link href={viewHref}>
+            <h3 className="mt-0.5 text-lg font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2">
+              {title}
+            </h3>
+          </Link>
+        </div>
+
+        {/* Specs Row */}
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-neutral-600">
+          {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (
+            <span className="font-semibold text-neutral-800">
+              {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}"
+            </span>
+          )}
+          {(selectedPair?.front?.width || sizeLabel?.width) && (
+            <span>
+              × {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}"
+            </span>
+          )}
+          {bolt && (
+            <>
+              <span className="text-neutral-400">•</span>
+              <span>{bolt}</span>
+            </>
+          )}
+        </div>
+
+        {/* Finish selector (if multiple) */}
+        {thumbs.length > 1 ? (
+          <div className="mt-3">
+            <div className="flex flex-wrap gap-1.5">
+              {thumbs.slice(0, 6).map((t) => {
+                const active = t.sku === selectedSku;
+                return (
+                  <button
+                    key={t.sku}
+                    type="button"
+                    onClick={() => {
+                      setSelectedSku(t.sku);
+                      setSelectedFinish(t.finish);
+                      if (t.imageUrl) setSelectedImage(t.imageUrl);
+                      if (typeof t.price === "number") setSelectedPrice(t.price);
+                      if (t.pair) setSelectedPair(t.pair);
+                    }}
+                    className={`h-9 w-9 overflow-hidden rounded-lg border-2 transition-all ${
+                      active 
+                        ? "border-neutral-900 ring-2 ring-neutral-900/20" 
+                        : "border-neutral-200 hover:border-neutral-400"
+                    }`}
+                    title={t.finish}
+                    aria-pressed={active}
+                  >
+                    {t.imageUrl ? (
+                      <img src={t.imageUrl} alt={t.finish} className="h-full w-full object-contain" loading="lazy" />
+                    ) : (
+                      <div className="h-full w-full bg-neutral-100" />
+                    )}
+                  </button>
+                );
+              })}
+              {thumbs.length > 6 && (
+                <Link 
+                  href={viewHref}
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 text-xs font-bold text-neutral-500 hover:border-neutral-400"
+                >
+                  +{thumbs.length - 6}
+                </Link>
+              )}
+            </div>
+            {selectedFinish && (
+              <div className="mt-1.5 text-xs text-neutral-600">{selectedFinish}</div>
+            )}
+          </div>
+        ) : selectedFinish ? (
+          <div className="mt-2 text-sm text-neutral-600">{selectedFinish}</div>
+        ) : null}
+
+        {/* Spacer */}
+        <div className="flex-1" />
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            PRICING (Set of 4 prominent, per-wheel secondary)
+            ═══════════════════════════════════════════════════════════════════════ */}
+        <div className="mt-4 rounded-xl bg-neutral-50 p-3">
+          <div className="flex items-end justify-between">
+            <div>
+              <div className="text-2xl font-extrabold text-neutral-900">
+                {setPrice !== null 
+                  ? `$${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
+                  : fromSetPrice !== null 
+                    ? `From $${fromSetPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
+                    : "Call for price"
+                }
+              </div>
+              <div className="text-xs text-neutral-500">
+                for set of 4
+                {typeof selectedPrice === "number" && (
+                  <span className="ml-1">
+                    (${selectedPrice.toFixed(0)} each)
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Trust signals */}
+          <div className="mt-2 flex items-center gap-3 text-[11px] text-neutral-600">
+            <span className="flex items-center gap-1">
+              <span className="text-green-600">✓</span>
+              Free Shipping
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-green-600">✓</span>
+              Fitment Guarantee
+            </span>
+          </div>
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            SINGLE PRIMARY CTA: Add to Package
+            ═══════════════════════════════════════════════════════════════════════ */}
         <button
           type="button"
-          onClick={quickAddToCart}
-          disabled={isQuickAdding}
-          className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-xs font-bold text-neutral-700 hover:bg-neutral-50 hover:border-neutral-400 transition-colors disabled:opacity-60"
+          onClick={addToPackage}
+          disabled={isAdding}
+          className={`
+            mt-3 flex h-14 w-full items-center justify-center gap-2 rounded-xl 
+            text-base font-extrabold transition-all
+            ${isAdding 
+              ? "bg-neutral-300 text-neutral-500 cursor-wait" 
+              : "bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] shadow-lg shadow-red-600/25"
+            }
+          `}
         >
-          {isQuickAdding ? (
-            <span className="inline-flex items-center gap-1.5">
-              <svg className="animate-spin h-3 w-3" viewBox="0 0 24 24">
+          {isAdding ? (
+            <>
+              <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
-              Adding...
-            </span>
+              Adding to Package...
+            </>
           ) : (
-            <span>
-              Quick Add Set of 4
-              {typeof selectedPrice === "number" && selectedPrice > 0 ? (
-                <span className="text-neutral-500 ml-1">• ${(selectedPrice * 4).toFixed(0)}</span>
-              ) : null}
-            </span>
+            <>
+              Add to Package
+              {setPrice !== null && (
+                <span className="opacity-90">
+                  — ${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                </span>
+              )}
+            </>
           )}
         </button>
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            SECONDARY: View Details link (small, de-emphasized)
+            ═══════════════════════════════════════════════════════════════════════ */}
+        <div className="mt-2 text-center">
+          <Link
+            href={viewHref}
+            className="inline-flex items-center gap-1 text-xs font-medium text-neutral-500 hover:text-neutral-800 transition-colors"
+          >
+            View full specs & details
+            <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </div>
   );
