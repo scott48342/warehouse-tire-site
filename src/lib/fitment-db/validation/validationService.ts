@@ -437,8 +437,8 @@ async function testLiftedFlow(vehicle: VehicleToTest): Promise<LiftedFlowResult 
   const liftResult = getLiftRecommendation(
     vehicle.make,
     vehicle.model,
-    vehicle.year,
-    "daily"
+    "daily",
+    vehicle.year
   );
   
   if (!liftResult) {
