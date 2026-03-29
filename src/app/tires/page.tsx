@@ -1150,7 +1150,7 @@ export default async function TiresPage({
       {/* ═══════════════════════════════════════════════════════════════════════
           PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
           ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle && isPackageFlow ? (
+      {hasVehicle ? (
         <PackageJourneyBar
           currentStep="tires"
           wheelSetPrice={null}

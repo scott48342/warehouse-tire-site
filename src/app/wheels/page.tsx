@@ -309,20 +309,6 @@ export default async function WheelsPage({
     displayTrim: wpSubmodel || undefined,
   });
 
-  // DEBUG: Trace vehicle label values (remove after confirming fix)
-  const DEBUG_BUILD = "2026-03-23-2";
-  console.log(`[wheels DEBUG_BUILD=${DEBUG_BUILD}] Vehicle label trace:`, {
-    rawTrimFromURL: trim,
-    resolvedTrimLabel: resolvedTrimLabel || "(none)",
-    fitVehicleTrim: fit?.vehicle?.trim,
-    fitTrim: fit?.trim,
-    fitmentVehicleTrim: (fitment as any)?.vehicle?.trim,
-    submodelCandidate: _submodelCandidate,
-    wpSubmodel,
-    displayTrimResult: displayTrim,
-    finalLabel: `${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`,
-  });
-
   function rimDiaFromTireSize(s: string) {
     const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
     return m ? Number(m[1]) : NaN;
@@ -1098,7 +1084,7 @@ export default async function WheelsPage({
       {/* ═══════════════════════════════════════════════════════════════════════
           PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
           ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle && isPackageFlow ? (
+      {hasVehicle ? (
         <PackageJourneyBar
           currentStep="wheels"
           wheelSetPrice={null}
@@ -1167,11 +1153,6 @@ export default async function WheelsPage({
                 />
               </div>
             ) : null}
-            {/* DEBUG MARKER - REMOVE AFTER CONFIRMING DEPLOY */}
-            <p className="mt-1 text-[10px] font-mono text-orange-600">
-              DEBUG_BUILD=2026-03-23-2 | rawTrim={trim || "(none)"} | displayTrim={displayTrim || "(null)"} | submodel={_submodelCandidate || "(none)"}
-            </p>
-
             {year && make && model ? (
               <>
                 <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
