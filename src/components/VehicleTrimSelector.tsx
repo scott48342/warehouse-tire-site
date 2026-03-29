@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 type TrimApiResult = {
   value: string
@@ -43,9 +44,11 @@ export function VehicleTrimSelector({
   model: string
   vehicleName: string
 }) {
+  const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [trims, setTrims] = useState<TrimApiResult[]>([])
+  const [redirecting, setRedirecting] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -78,11 +81,19 @@ export function VehicleTrimSelector({
 
   const fallbackUrl = useMemo(() => buildFallbackUrl(year, make, model), [year, make, model])
 
-  if (loading) {
+  // Auto-redirect when no trims available (skip showing "fitment not available")
+  useEffect(() => {
+    if (!loading && !error && trims.length === 0 && !redirecting) {
+      setRedirecting(true)
+      router.push(fallbackUrl)
+    }
+  }, [loading, error, trims.length, fallbackUrl, router, redirecting])
+
+  if (loading || redirecting) {
     return (
       <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
         <h2 className="text-xl font-bold mb-2">Loading fitment options…</h2>
-        <p className="text-gray-600">We’re finding trims/options for your {vehicleName}.</p>
+        <p className="text-gray-600">We're finding trims/options for your {vehicleName}.</p>
       </div>
     )
   }
@@ -93,7 +104,7 @@ export function VehicleTrimSelector({
       <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
         <h2 className="text-xl font-bold mb-2">Shop tires for your {vehicleName}</h2>
         <p className="text-gray-600 mb-4">
-          We couldn’t load trim options right now. You can still continue and select your trim on the next page.
+          We couldn't load trim options right now. You can still continue and select your trim on the next page.
         </p>
         <Link
           href={fallbackUrl}
@@ -105,15 +116,7 @@ export function VehicleTrimSelector({
     )
   }
 
-  if (!trims.length) {
-    // No usable fitment: safest is not to present a dead-end.
-    return (
-      <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-        <h2 className="text-xl font-bold mb-2">Fitment not available</h2>
-        <p className="text-gray-600">We don’t have usable trim/fitment data for this vehicle yet.</p>
-      </div>
-    )
-  }
+  // Note: if !trims.length, the useEffect above will auto-redirect to fallbackUrl
 
   if (trims.length === 1) {
     const t = trims[0]

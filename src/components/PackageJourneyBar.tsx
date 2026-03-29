@@ -19,9 +19,9 @@ type StepConfig = {
 };
 
 const STEPS: StepConfig[] = [
-  { id: "wheels", label: "Wheels", shortLabel: "Wheels", icon: "⚙️" },
-  { id: "tires", label: "Tires", shortLabel: "Tires", icon: "🛞" },
-  { id: "review", label: "Review", shortLabel: "Review", icon: "✓" },
+  { id: "wheels", label: "Choose Wheels", shortLabel: "Wheels", icon: "⚙️" },
+  { id: "tires", label: "Choose Tires", shortLabel: "Tires", icon: "🛞" },
+  { id: "review", label: "Review Package", shortLabel: "Review", icon: "✓" },
 ];
 
 function getStepIndex(step: JourneyStep): number {
@@ -35,11 +35,11 @@ function calculateEstimate(params: {
   wheelSetPrice?: number | null;
   tireSetPrice?: number | null;
   hasAccessories?: boolean;
-}): { min: number; max: number } | null {
+}): { min: number; max: number; hasSelection: boolean } {
   const { wheelSetPrice, tireSetPrice, hasAccessories } = params;
 
-  // Need at least wheel price to estimate
-  if (!wheelSetPrice && !tireSetPrice) return null;
+  // Track if user has made any selection
+  const hasSelection = Boolean(wheelSetPrice || tireSetPrice);
 
   // Base estimates
   let min = 0;
@@ -50,8 +50,8 @@ function calculateEstimate(params: {
     max += wheelSetPrice;
   } else {
     // No wheels selected yet - estimate range
-    min += 800; // Budget wheels set
-    max += 2400; // Premium wheels set
+    min += 1200; // Budget wheels set (adjusted for realistic range)
+    max += 2800; // Premium wheels set
   }
 
   if (tireSetPrice) {
@@ -59,8 +59,8 @@ function calculateEstimate(params: {
     max += tireSetPrice;
   } else {
     // No tires selected yet - estimate range
-    min += 600; // Budget tires set
-    max += 1400; // Premium tires set
+    min += 700; // Budget tires set
+    max += 1500; // Premium tires set
   }
 
   // TPMS sensors ($60-$100)
@@ -77,7 +77,7 @@ function calculateEstimate(params: {
     max += 60;
   }
 
-  return { min, max };
+  return { min, max, hasSelection };
 }
 
 function formatPriceRange(range: { min: number; max: number }): string {
@@ -193,17 +193,16 @@ export function PackageJourneyBar({
             })}
           </div>
 
-          {/* Right: Price Estimate */}
+          {/* Right: Price Estimate - Always show, becomes more specific as user selects */}
           <div className="text-right">
-            {estimate ? (
-              <>
-                <div className="text-xs text-neutral-500">Estimated total</div>
-                <div className="text-sm font-bold text-neutral-900">
-                  {formatPriceRange(estimate)}
-                </div>
-              </>
-            ) : (
-              <div className="text-xs text-neutral-400">Select wheels to see estimate</div>
+            <div className="text-[10px] uppercase tracking-wide text-neutral-400">
+              {estimate.hasSelection ? "Your Package" : "Typical Package"}
+            </div>
+            <div className="text-lg font-extrabold text-neutral-900">
+              {formatPriceRange(estimate)}
+            </div>
+            {!estimate.hasSelection && (
+              <div className="text-[10px] text-neutral-400">Wheels + tires + install</div>
             )}
           </div>
         </div>
@@ -216,14 +215,14 @@ export function PackageJourneyBar({
               <span className="text-lg">📦</span>
               <span className="text-sm font-bold text-neutral-900">Build Your Package</span>
             </div>
-            {estimate && (
-              <div className="text-right">
-                <div className="text-[10px] text-neutral-500">Est. total</div>
-                <div className="text-xs font-bold text-neutral-900">
-                  {formatPriceRange(estimate)}
-                </div>
+            <div className="text-right">
+              <div className="text-[10px] text-neutral-400">
+                {estimate.hasSelection ? "Your Package" : "Typical"}
               </div>
-            )}
+              <div className="text-sm font-extrabold text-neutral-900">
+                {formatPriceRange(estimate)}
+              </div>
+            </div>
           </div>
 
           {/* Progress bar */}
@@ -259,17 +258,13 @@ export function PackageJourneyBar({
             })}
           </div>
 
-          {/* Context text */}
+          {/* Context text - action oriented */}
           <div className="mt-2 flex items-center justify-center gap-2 text-xs text-neutral-600">
-            <span>
-              You're on: <strong>{STEPS[currentIndex].label}</strong>
-            </span>
+            <span className="font-semibold text-red-600">{STEPS[currentIndex].label}</span>
             {nextStep && (
               <>
                 <span className="text-neutral-300">→</span>
-                <span>
-                  Next: <strong>{nextStep.label}</strong>
-                </span>
+                <span className="text-neutral-400">{nextStep.label}</span>
               </>
             )}
           </div>
@@ -341,23 +336,19 @@ export function PackageJourneyBarMini({
 
       {/* Context */}
       <div className="text-center text-xs text-neutral-600 mb-3">
-        <span>
-          You're on: <strong>{STEPS[currentIndex].label}</strong>
-        </span>
+        <span className="font-semibold text-red-600">{STEPS[currentIndex].label}</span>
         {nextStep && (
-          <span className="ml-2">
-            → Next: <strong>{nextStep.label}</strong>
-          </span>
+          <span className="ml-2 text-neutral-400">→ {nextStep.label}</span>
         )}
       </div>
 
-      {/* Price estimate */}
-      {estimate && (
-        <div className="rounded-lg bg-neutral-50 p-2 text-center">
-          <div className="text-[10px] text-neutral-500">Estimated total</div>
-          <div className="text-sm font-bold text-neutral-900">{formatPriceRange(estimate)}</div>
+      {/* Price estimate - always visible */}
+      <div className="rounded-lg bg-neutral-50 p-2 text-center">
+        <div className="text-[10px] text-neutral-400">
+          {estimate.hasSelection ? "Your Package" : "Typical Package"}
         </div>
-      )}
+        <div className="text-sm font-bold text-neutral-900">{formatPriceRange(estimate)}</div>
+      </div>
     </div>
   );
 }

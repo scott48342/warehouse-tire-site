@@ -169,6 +169,14 @@ export function SteppedVehicleSelector({
     return () => { cancelled = true; };
   }, [year, make, model]);
 
+  // Auto-continue when no trims available (skip the trim step entirely)
+  useEffect(() => {
+    if (step === "trim" && !trimsLoading && trims.length === 0 && year && make && model) {
+      // No trims available - auto-continue without showing the empty state
+      onComplete({ year, make, model });
+    }
+  }, [step, trimsLoading, trims.length, year, make, model, onComplete]);
+
   function reset() {
     setStep("year");
     setYear("");

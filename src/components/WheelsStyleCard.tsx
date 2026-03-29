@@ -298,6 +298,10 @@ export function WheelsStyleCard({
   stockDiameter,
   socialProof,
   ctaVariant = "A",
+  // Selection state props
+  isSelected = false,
+  hasSelection = false,
+  onSelect,
 }: {
   brand: string;
   title: string;
@@ -324,6 +328,10 @@ export function WheelsStyleCard({
   stockDiameter?: number;
   socialProof?: SocialProofConfig;
   ctaVariant?: CTAVariant;
+  // Selection state props
+  isSelected?: boolean;
+  hasSelection?: boolean;
+  onSelect?: () => void;
 }) {
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -705,31 +713,58 @@ export function WheelsStyleCard({
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            SINGLE PRIMARY CTA: A/B Test Ready
-            Variant A: "Add to Package"
-            Variant B: "Build My Package"
+            SINGLE PRIMARY CTA: Selection-aware states
+            - Not selected (no selection): "Add to Package"
+            - Selected: "Selected ✓" (green, disabled-looking)
+            - Not selected (has selection): "Compare or Switch"
             ═══════════════════════════════════════════════════════════════════════ */}
         <button
           type="button"
-          onClick={addToPackage}
-          disabled={isAdding}
+          onClick={() => {
+            if (isSelected) return; // Already selected, no action
+            if (onSelect) {
+              onSelect();
+            } else {
+              addToPackage();
+            }
+          }}
+          disabled={isAdding || isSelected}
           data-cta-variant={ctaVariant}
+          data-selected={isSelected}
           className={`
             mt-3 flex h-14 w-full items-center justify-center gap-2 rounded-xl 
-            text-base font-extrabold transition-all
-            ${isAdding 
-              ? "bg-neutral-300 text-neutral-500 cursor-wait" 
-              : "bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] shadow-lg shadow-red-600/25"
+            text-base font-extrabold transition-all duration-200
+            ${isSelected
+              ? "bg-green-600 text-white cursor-default shadow-lg shadow-green-600/25"
+              : isAdding 
+                ? "bg-neutral-300 text-neutral-500 cursor-wait" 
+                : hasSelection
+                  ? "bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-2 border-neutral-200 hover:border-neutral-300 active:scale-[0.98]"
+                  : "bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] shadow-lg shadow-red-600/25"
             }
           `}
         >
-          {isAdding ? (
+          {isSelected ? (
+            <>
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+              Selected
+            </>
+          ) : isAdding ? (
             <>
               <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
               Adding...
+            </>
+          ) : hasSelection ? (
+            <>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+              Compare or Switch
             </>
           ) : (
             <>

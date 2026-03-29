@@ -187,7 +187,7 @@ export async function GET(req: Request) {
 
     // Identify potential issues
     if (trims.length === 0) {
-      diagnostics.issues.push("No trims found in Wheel-Size API for this vehicle");
+      diagnostics.issues.push("No trims found for this vehicle");
     }
     if (dbFitments.length === 0 && overrideMap.size === 0) {
       diagnostics.issues.push("No fitment data in database - vehicle may not have been imported");

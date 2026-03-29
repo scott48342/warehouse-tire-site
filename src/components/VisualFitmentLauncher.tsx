@@ -308,6 +308,21 @@ export function VisualFitmentLauncher({
     router.push(`/wheels?${qs.toString()}`);
   }
 
+  // Auto-continue when no trims available (skip the trim step entirely)
+  useEffect(() => {
+    if (step === "trim" && !trimsLoading && trims.length === 0 && draft.year && draft.make && draft.model) {
+      // No trims available - auto-continue without showing the empty state
+      const next: Fitment = {
+        ...draft,
+        trim: undefined,
+        modification: undefined,
+      };
+      close();
+      complete(next);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step, trimsLoading, trims.length, draft.year, draft.make, draft.model]);
+
   return (
     <>
       {showTrigger ? (
