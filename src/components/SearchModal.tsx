@@ -177,7 +177,7 @@ export function SearchModal({
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const [mode, setMode] = useState<Mode>(defaultMode || "vehicle");
+  const [mode, setMode] = useState<Mode>("vehicle");
 
   // Tires by size (stepped, limited to real sizes)
   const [tireStep, setTireStep] = useState<"w" | "a" | "r">("w");
@@ -204,9 +204,10 @@ export function SearchModal({
   const currentSp = useMemo(() => new URLSearchParams(searchParams.toString()), [searchParams]);
 
   // Reset mode when reopened, so menu actions can choose the starting tab.
+  // Default to "vehicle" unless explicitly set to "size"
   useEffect(() => {
     if (open) {
-      setMode(defaultMode || "vehicle");
+      setMode(defaultMode === "size" ? "size" : "vehicle");
 
       // Reset size picker state each time.
       setTireStep("w");
