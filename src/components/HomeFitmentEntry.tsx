@@ -83,7 +83,7 @@ export function HomeFitmentEntry() {
         <EntryTile
           title="Shop tires"
           subtitle="Select your vehicle to find tires."
-          onClick={() => launch("tires", "vehicle")}
+          onClick={() => launch("tires")}
         />
         <EntryTile
           title="Shop wheels"

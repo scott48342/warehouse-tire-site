@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { VehicleSelector, type VehicleSelection } from "@/components/VehicleSelector";
+import { FitmentSelector } from "@/components/FitmentSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import tireSizes from "@/data/tire-sizes.json";
@@ -299,22 +299,26 @@ export function SearchModal({
                 />
 
                 <div className="mt-2">
-                  <VehicleSelector
-                    onSelect={(selection: VehicleSelection) => {
+                  <FitmentSelector
+                    provider="wheelsize"
+                    blank
+                    onComplete={(fitment) => {
                       // After trim is selected, immediately navigate (SEO/sharable) and close.
                       // Preserve any existing params (e.g. quote carry-over like wheelSku).
                       const next = new URLSearchParams(currentSp);
-                      next.set("year", selection.year);
-                      next.set("make", selection.make);
-                      next.set("model", selection.model);
-                      if (selection.trim) next.set("trim", selection.trim);
-                      if (selection.modification) next.set("modification", selection.modification);
+                      for (const k of ["year", "make", "model", "trim", "modification"] as const) {
+                        const v = (fitment as any)?.[k];
+                        if (v) next.set(k, String(v));
+                      }
 
-                      const slug = vehicleSlug(selection.year, selection.make, selection.model);
+                      const year = next.get("year") || "";
+                      const make = next.get("make") || "";
+                      const model = next.get("model") || "";
+                      const slug = year && make && model ? vehicleSlug(year, make, model) : "";
 
                       const target = isTires
-                        ? `/tires/v/${slug}`
-                        : `/wheels/v/${slug}`;
+                        ? (slug ? `/tires/v/${slug}` : "/tires")
+                        : (slug ? `/wheels/v/${slug}` : "/wheels");
 
                       if (!isTires) applyPendingWheelDiameter(next);
                       router.push(buildUrl(target, next));
