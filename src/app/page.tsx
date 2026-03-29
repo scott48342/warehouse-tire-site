@@ -191,7 +191,7 @@ export default async function Home() {
           <CategoryCard
             title="Tires"
             description="All-season, winter, all-terrain, performance — find tires sized for your vehicle."
-            href="/?open=tires&mode=size"
+            href="/?open=tires&mode=vehicle"
             icon="🛞"
             gradient="bg-gradient-to-br from-neutral-800 to-neutral-900"
           />
