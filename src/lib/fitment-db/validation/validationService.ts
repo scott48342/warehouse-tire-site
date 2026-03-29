@@ -15,7 +15,7 @@ import {
   type ValidationResult,
   type NewValidationResult,
 } from "./schema";
-import { getLiftRecommendations } from "@/lib/liftedRecommendations";
+import { getLiftRecommendation } from "@/lib/liftedRecommendations";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shop.warehousetiredirect.com";
 
@@ -434,7 +434,7 @@ async function testStandardFlow(vehicle: VehicleToTest): Promise<FlowResult> {
  */
 async function testLiftedFlow(vehicle: VehicleToTest): Promise<LiftedFlowResult | undefined> {
   // Check if vehicle has lift recommendations
-  const liftProfile = getLiftRecommendations(
+  const liftProfile = getLiftRecommendation(
     vehicle.make,
     vehicle.model,
     vehicle.year
