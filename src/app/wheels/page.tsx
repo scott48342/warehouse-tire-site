@@ -6,6 +6,7 @@ import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
+import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { FitmentConfidenceStrip, type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { vehicleSlug } from "@/lib/vehicleSlug";
@@ -1094,6 +1095,23 @@ export default async function WheelsPage({
 
   return (
     <main className="bg-neutral-50">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle && isPackageFlow ? (
+        <PackageJourneyBar
+          currentStep="wheels"
+          wheelSetPrice={null}
+          tireSetPrice={null}
+          vehicleParams={{
+            year,
+            make,
+            model,
+            modification: modification || undefined,
+          }}
+        />
+      ) : null}
+
       <div className="mx-auto max-w-screen-2xl px-4 py-8">
         {/* Lifted Build Context Banner */}
         {isLiftedBuild && hasVehicle ? (

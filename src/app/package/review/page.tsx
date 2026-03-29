@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { useRouter } from "next/navigation";
 import { BRAND } from "@/lib/brand";
+import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 
 /**
  * Review Package Page
@@ -599,16 +600,23 @@ export default function ReviewPackagePage() {
   // Complete package view
   return (
     <main className="bg-neutral-50 min-h-screen">
+      {/* Package Journey Bar */}
+      <PackageJourneyBar
+        currentStep="review"
+        wheelSetPrice={wheelSubtotal}
+        tireSetPrice={tireSubtotal}
+        hasAccessories={accessories.length > 0}
+        vehicleParams={vehicle ? {
+          year: vehicle.year,
+          make: vehicle.make,
+          model: vehicle.model,
+          modification: vehicle.trim || undefined,
+        } : undefined}
+      />
+
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Header */}
         <div className="mb-6">
-          <div className="flex items-center gap-2 text-sm text-neutral-500 mb-2">
-            <span className="text-green-600">Step 1 ✓</span>
-            <span>→</span>
-            <span className="text-green-600">Step 2 ✓</span>
-            <span>→</span>
-            <span className="font-bold text-green-700">Review Package</span>
-          </div>
           <h1 className="text-3xl font-extrabold text-neutral-900">Review Your Package</h1>
         </div>
 

@@ -10,6 +10,7 @@ import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { PackageSummary } from "@/components/PackageSummary";
+import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import {
   generatePlusSizeCandidates,
   generateAftermarketTireSizes,
@@ -1146,6 +1147,23 @@ export default async function TiresPage({
 
   return (
     <main className="bg-neutral-50">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle && isPackageFlow ? (
+        <PackageJourneyBar
+          currentStep="tires"
+          wheelSetPrice={null}
+          tireSetPrice={null}
+          vehicleParams={{
+            year,
+            make,
+            model,
+            modification: modification || undefined,
+          }}
+        />
+      ) : null}
+
       <div className="mx-auto max-w-screen-2xl px-4 py-8">
         {/* Lifted Build Context Banner */}
         {isLiftedBuild && hasVehicle ? (
