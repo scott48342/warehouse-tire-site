@@ -134,7 +134,38 @@ export async function GET(req: Request) {
     return filtered;
   }
 
-  // Try catalog first (DB)
+  // Try year-specific catalog query first (most efficient)
+  if (year && !isNaN(year)) {
+    const yearModels = await catalogStore.getModelsByYear(makeSlug, year);
+    
+    // Also check vehicle_fitments for locally imported data
+    const fitmentModels = await catalogStore.getFitmentModelsByYear(year, makeSlug);
+    
+    // Merge results (deduped)
+    const modelSet = new Set<string>();
+    for (const m of yearModels) modelSet.add(m.name);
+    for (const m of fitmentModels) {
+      // Convert slug to display name
+      const displayName = m.split("-").map((w: string) => 
+        w.charAt(0).toUpperCase() + w.slice(1)
+      ).join(" ");
+      modelSet.add(displayName);
+    }
+    
+    if (modelSet.size > 0) {
+      const models = Array.from(modelSet).sort();
+      console.log(`[models] YEAR-SPECIFIC: ${year} ${make} → ${models.length} models (catalog: ${yearModels.length}, fitment: ${fitmentModels.length})`);
+      return NextResponse.json({ 
+        results: models,
+        source: "catalog",
+        yearFiltered: true,
+      }, {
+        headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+      });
+    }
+  }
+
+  // Fallback: Try full catalog (no year filter or no year-specific data)
   const catalogModels = await catalogStore.getModels(makeSlug);
   if (catalogModels.length > 0) {
     const filtered = filterByYear(catalogModels);

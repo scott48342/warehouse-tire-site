@@ -400,6 +400,66 @@ export async function hasMake(makeSlug: string): Promise<boolean> {
 }
 
 /**
+ * Get all makes that have models available for a specific year.
+ * Queries catalog_models where the year is in the years[] array.
+ */
+export async function getMakesByYear(year: number): Promise<CatalogMake[]> {
+  try {
+    // Query catalog_models where year is in the years array
+    // Then get distinct make_slugs and join with catalog_makes for names
+    const results = await db.execute(sql`
+      SELECT DISTINCT cm.make_slug, 
+             COALESCE(mk.name, INITCAP(REPLACE(cm.make_slug, '-', ' '))) as name
+      FROM catalog_models cm
+      LEFT JOIN catalog_makes mk ON mk.slug = cm.make_slug
+      WHERE ${year} = ANY(cm.years)
+      ORDER BY name
+    `);
+    
+    const makes: CatalogMake[] = (results.rows as any[]).map(row => ({
+      slug: row.make_slug,
+      name: row.name,
+    }));
+    
+    console.log(`[catalog-store] getMakesByYear(${year}): ${makes.length} makes from catalog`);
+    return makes;
+  } catch (err) {
+    console.error(`[catalog-store] Error getting makes for year ${year}:`, err);
+    return [];
+  }
+}
+
+/**
+ * Get all models for a make that are available for a specific year.
+ * Filters catalog_models by make_slug and year in years[] array.
+ */
+export async function getModelsByYear(makeSlug: string, year: number): Promise<CatalogModel[]> {
+  const normalizedMake = makeSlug.toLowerCase();
+  
+  try {
+    const results = await db.execute(sql`
+      SELECT slug, name, years
+      FROM catalog_models
+      WHERE make_slug = ${normalizedMake}
+        AND ${year} = ANY(years)
+      ORDER BY name
+    `);
+    
+    const models: CatalogModel[] = (results.rows as any[]).map(row => ({
+      slug: row.slug,
+      name: row.name,
+      years: row.years || [],
+    }));
+    
+    console.log(`[catalog-store] getModelsByYear(${normalizedMake}, ${year}): ${models.length} models`);
+    return models;
+  } catch (err) {
+    console.error(`[catalog-store] Error getting models for ${makeSlug}/${year}:`, err);
+    return [];
+  }
+}
+
+/**
  * Clear all catalog data (for testing/reset)
  */
 export async function clearCatalog(): Promise<void> {
@@ -407,4 +467,47 @@ export async function clearCatalog(): Promise<void> {
   await db.delete(catalogMakes);
   await db.delete(catalogSyncLog);
   console.log("[catalog-store] Catalog cleared");
+}
+
+/**
+ * Get makes from vehicle_fitments table (locally imported data) for a specific year.
+ * This supplements catalog data with any manually imported fitment.
+ */
+export async function getFitmentMakesByYear(year: number): Promise<string[]> {
+  try {
+    const results = await db.execute(sql`
+      SELECT DISTINCT make
+      FROM vehicle_fitments
+      WHERE year = ${year}
+      ORDER BY make
+    `);
+    
+    const makes = (results.rows as any[]).map(row => row.make);
+    console.log(`[catalog-store] getFitmentMakesByYear(${year}): ${makes.length} makes from fitments`);
+    return makes;
+  } catch (err) {
+    console.error(`[catalog-store] Error getting fitment makes for year ${year}:`, err);
+    return [];
+  }
+}
+
+/**
+ * Get models from vehicle_fitments table for a specific year/make.
+ */
+export async function getFitmentModelsByYear(year: number, makeSlug: string): Promise<string[]> {
+  try {
+    const results = await db.execute(sql`
+      SELECT DISTINCT model
+      FROM vehicle_fitments
+      WHERE year = ${year} AND make = ${makeSlug.toLowerCase()}
+      ORDER BY model
+    `);
+    
+    const models = (results.rows as any[]).map(row => row.model);
+    console.log(`[catalog-store] getFitmentModelsByYear(${year}, ${makeSlug}): ${models.length} models from fitments`);
+    return models;
+  } catch (err) {
+    console.error(`[catalog-store] Error getting fitment models for ${year}/${makeSlug}:`, err);
+    return [];
+  }
 }
