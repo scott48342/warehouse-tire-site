@@ -107,8 +107,9 @@ async function fetchWheels(params: Record<string, string | undefined>) {
 
   // NOTE: We intentionally call our own API route.
   // For vehicle-based browsing, prefer fitment-aware search so facets reflect ONLY current results.
+  // For browse mode (no vehicle), use DB-first /api/wheels/browse instead of legacy WheelPros proxy.
   const hasVehicle = Boolean(params.year && params.make && params.model);
-  const path = hasVehicle ? "/api/wheels/fitment-search" : "/api/wheelpros/wheels/search";
+  const path = hasVehicle ? "/api/wheels/fitment-search" : "/api/wheels/browse";
 
   const res = await fetch(
     `${getBaseUrl()}${path}?${sp.toString()}`,
