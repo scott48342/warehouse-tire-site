@@ -1,3 +1,14 @@
+/**
+ * PATCHED: tire-sizes route with DB-First Fitment Lookup
+ * 
+ * File: src/app/api/vehicles/tire-sizes/route.ts
+ * 
+ * CHANGES FROM ORIGINAL:
+ * 1. Added getDbFitmentSizes() function
+ * 2. DB lookup happens FIRST before cache/API/fallback
+ * 3. Returns source: "db-first" when data comes from database
+ */
+
 import { NextResponse } from "next/server";
 import {
   makeCacheKey,
@@ -20,6 +31,91 @@ import {
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// NEW: DB-FIRST FITMENT LOOKUP
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Look up OEM tire sizes from the fitment database.
+ * This is the PRIMARY source for imported fitment data (Toyota, GM, Ford, etc.)
+ * Returns null if no data found (allows fallback to other sources).
+ */
+async function getDbFitmentSizes(
+  year: string, 
+  make: string, 
+  model: string, 
+  modification?: string
+): Promise<{
+  tireSizes: string[];
+  boltPattern?: string;
+  centerBore?: number;
+  source: string;
+} | null> {
+  try {
+    // Dynamic import to avoid breaking if fitment-db isn't ready
+    const { listLocalFitments } = await import("@/lib/fitment-db/getFitment");
+    
+    const fitments = await listLocalFitments(
+      parseInt(year, 10),
+      make,
+      model
+    );
+    
+    if (!fitments || fitments.length === 0) {
+      return null;
+    }
+    
+    // Find matching modification or use first
+    let selectedFitment = fitments[0];
+    if (modification) {
+      const match = fitments.find(f => 
+        f.modificationId === modification ||
+        f.displayTrim?.toLowerCase().includes(modification.toLowerCase())
+      );
+      if (match) selectedFitment = match;
+    }
+    
+    // Extract tire sizes from oem_tire_sizes JSON field
+    const oemTireSizes = selectedFitment.oemTireSizes as string[] | null;
+    if (!oemTireSizes || oemTireSizes.length === 0) {
+      // Also check oemWheelSizes for tire info
+      const oemWheelSizes = selectedFitment.oemWheelSizes as Array<{ tires?: string[] }> | null;
+      if (oemWheelSizes) {
+        const extractedSizes = new Set<string>();
+        for (const ws of oemWheelSizes) {
+          if (ws.tires) {
+            ws.tires.forEach(t => extractedSizes.add(t));
+          }
+        }
+        if (extractedSizes.size > 0) {
+          return {
+            tireSizes: Array.from(extractedSizes),
+            boltPattern: selectedFitment.boltPattern ?? undefined,
+            centerBore: selectedFitment.centerBoreMm ?? undefined,
+            source: "db-first",
+          };
+        }
+      }
+      return null;
+    }
+    
+    return {
+      tireSizes: oemTireSizes,
+      boltPattern: selectedFitment.boltPattern ?? undefined,
+      centerBore: selectedFitment.centerBoreMm ?? undefined,
+      source: "db-first",
+    };
+    
+  } catch (err) {
+    console.warn("[tire-sizes] DB lookup failed:", err);
+    return null;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ORIGINAL FUNCTIONS (unchanged)
+// ═══════════════════════════════════════════════════════════════════════════
 
 /**
  * Look up static OEM tire sizes from local data file.
@@ -74,9 +170,6 @@ function getApiKey(): string {
 }
 
 async function apiGet<T>(path: string, params?: Record<string, string>): Promise<T> {
-  // ═══════════════════════════════════════════════════════════════════════════
-  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
-  // ═══════════════════════════════════════════════════════════════════════════
   if (!wheelSizeApi.isWheelSizeEnabled()) {
     console.warn("[tire-sizes] Wheel-Size API DISABLED - blocking direct call");
     throw new Error("Wheel-Size API is temporarily disabled");
@@ -96,7 +189,6 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
   });
 
   if (!res.ok) {
-    // Check for 429 rate limit
     if (res.status === 429) {
       record429();
       throw new Error(`Wheel-Size API rate limited (429)`);
@@ -110,24 +202,13 @@ async function apiGet<T>(path: string, params?: Record<string, string>): Promise
 
 type WheelSetup = {
   is_stock: boolean;
-  front: {
-    tire: string;
-    tire_full?: string;
-    rim_diameter: number;
-  };
-  rear?: {
-    tire: string;
-    tire_full?: string;
-    rim_diameter?: number;
-  };
+  front: { tire: string; tire_full?: string; rim_diameter: number };
+  rear?: { tire: string; tire_full?: string; rim_diameter?: number };
 };
 
 type VehicleData = {
   wheels?: WheelSetup[];
-  technical?: {
-    bolt_pattern?: string;
-    centre_bore?: string;
-  };
+  technical?: { bolt_pattern?: string; centre_bore?: string };
 };
 
 type Modification = {
@@ -139,13 +220,6 @@ type Modification = {
 
 /**
  * GET /api/vehicles/tire-sizes?year=2024&make=Ford&model=F-150&modification=s_abc123
- * 
- * Returns tire sizes for a vehicle by querying Wheel-Size API directly.
- * Uses caching and handles 429 rate limits gracefully.
- * 
- * Params:
- * - modification: canonical fitment identity (preferred)
- * - trim: legacy param, falls back if modification not provided
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -153,7 +227,6 @@ export async function GET(req: Request) {
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
   
-  // PARAM SEPARATION: prefer modification, fall back to trim
   const modificationParam = url.searchParams.get("modification") || "";
   const trimParam = url.searchParams.get("trim") || "";
   const modificationRaw = modificationParam || trimParam;
@@ -164,7 +237,6 @@ export async function GET(req: Request) {
   
   const forceRefresh = url.searchParams.get("refresh") === "1";
   
-  // Handle composite modification values like "bfd36e8a76__xlt__"
   const modification = modificationRaw.includes("__") 
     ? modificationRaw.split("__")[0] 
     : modificationRaw;
@@ -176,12 +248,51 @@ export async function GET(req: Request) {
     );
   }
 
-  // Check cache first (unless force refresh)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 1: DB-FIRST - Check imported fitment database BEFORE anything else
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!forceRefresh) {
+    const dbFitment = await getDbFitmentSizes(year, make, model, modification);
+    if (dbFitment && dbFitment.tireSizes.length > 0) {
+      console.log(`[tire-sizes] DB-FIRST HIT: ${year} ${make} ${model} → ${dbFitment.tireSizes.join(", ")}`);
+      
+      // Convert legacy sizes if any
+      const { searchSizes } = convertTireSizesForSearch(dbFitment.tireSizes);
+      const dbConversions = dbFitment.tireSizes.map(size => {
+        const conv = convertLegacyTireSize(size);
+        return {
+          originalSize: conv.original,
+          recommendedSize: conv.recommended,
+          alternatives: conv.alternatives,
+          conversionMethod: conv.conversionMethod,
+          isLegacy: conv.isLegacy,
+        };
+      });
+      
+      return NextResponse.json({
+        tireSizes: dbFitment.tireSizes,
+        tireSizesStrict: dbFitment.tireSizes,
+        tireSizesAgg: [],
+        searchableSizes: searchSizes.length > 0 ? searchSizes : dbFitment.tireSizes,
+        sizeConversions: dbConversions,
+        hasLegacySizes: dbConversions.some(c => c.isLegacy),
+        fitment: {
+          boltPattern: dbFitment.boltPattern,
+          centerBore: dbFitment.centerBore,
+        },
+        source: dbFitment.source, // "db-first"
+        cacheStats: getCacheStats(),
+      });
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 2: Check in-memory cache
+  // ═══════════════════════════════════════════════════════════════════════════
   const cacheKey = makeCacheKey(year, make, model, modification);
   if (!forceRefresh) {
     const cached = getCached(cacheKey);
     if (cached) {
-      // Convert legacy sizes for cached results too
       const cachedSizes = cached.tireSizes || [];
       const { searchSizes } = convertTireSizesForSearch(cachedSizes);
       const cachedConversions = cachedSizes.map(size => {
@@ -212,7 +323,9 @@ export async function GET(req: Request) {
     }
   }
 
-  // Check if we're in 429 cooldown OR if API is disabled - use static fallback if available
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 3: API unavailable? Use static fallback
+  // ═══════════════════════════════════════════════════════════════════════════
   const apiUnavailable = isInCooldown() || !wheelSizeApi.isWheelSizeEnabled();
   
   if (apiUnavailable) {
@@ -224,7 +337,6 @@ export async function GET(req: Request) {
     if (staticSizes.length > 0) {
       console.log(`[tire-sizes] ${reason}, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
       
-      // Convert legacy sizes for static fallback too
       const { searchSizes } = convertTireSizesForSearch(staticSizes);
       const staticConversions = staticSizes.map(size => {
         const conv = convertLegacyTireSize(size);
@@ -250,7 +362,6 @@ export async function GET(req: Request) {
       });
     }
     
-    // No static data available - return empty array gracefully (NOT a 500 error)
     return NextResponse.json({
       tireSizes: [],
       tireSizesStrict: [],
@@ -264,8 +375,9 @@ export async function GET(req: Request) {
     });
   }
 
-  // Convert to slugs.
-  // Prefer resolving via Wheel-Size catalog (handles Mercedes '*-Class' names, etc.).
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 4: Call Wheel-Size API (original logic)
+  // ═══════════════════════════════════════════════════════════════════════════
   const fallbackMakeSlug = normalizeMake(make || "");
   const fallbackModelSlug = normalizeModelForApi(model);
 
@@ -280,29 +392,21 @@ export async function GET(req: Request) {
       modelSlug = resolved.modelSlug;
     }
   } catch {
-    // If catalog resolve fails, proceed with best-guess slugs.
+    // proceed with fallback slugs
   }
 
   const debug: any = {
     input: { year, make, model, modification, modificationRaw },
-    slugs: {
-      makeSlug,
-      modelSlug,
-      resolved,
-      fallback: { makeSlug: fallbackMakeSlug, modelSlug: fallbackModelSlug },
-    },
+    slugs: { makeSlug, modelSlug, resolved, fallback: { makeSlug: fallbackMakeSlug, modelSlug: fallbackModelSlug } },
   };
 
   try {
-    // Step 1: Get available modifications for this vehicle
     const modsResponse = await apiGet<{ data: Modification[] }>("modifications/", {
       make: makeSlug,
       model: modelSlug,
       year,
     });
     const allMods = modsResponse.data || [];
-    
-    // Filter to US market mods
     const usMods = allMods.filter(m => m.regions?.includes("usdm"));
     const mods = usMods.length > 0 ? usMods : allMods;
 
@@ -322,22 +426,16 @@ export async function GET(req: Request) {
       });
     }
 
-    // Step 2: Find the right modification to use
     let selectedMod: Modification | null = null;
-    
     if (modification) {
-      // Try to match the provided modification slug
       selectedMod = mods.find(m => m.slug === modification) || null;
     }
-    
-    // If no match, use the first US market modification
     if (!selectedMod) {
       selectedMod = mods[0];
     }
 
     debug.selectedModification = selectedMod;
 
-    // Step 3: Get vehicle data with tire sizes
     const vehicleResponse = await apiGet<{ data: VehicleData[] }>("search/by_model/", {
       make: makeSlug,
       model: modelSlug,
@@ -359,7 +457,6 @@ export async function GET(req: Request) {
       });
     }
 
-    // Step 4: Extract tire sizes from wheels array
     const tireSizesSet = new Set<string>();
     const stockTireSizes: string[] = [];
     const allTireSizes: string[] = [];
@@ -373,9 +470,7 @@ export async function GET(req: Request) {
         if (normalized) {
           allTireSizes.push(normalized);
           tireSizesSet.add(normalized);
-          if (wheel.is_stock) {
-            stockTireSizes.push(normalized);
-          }
+          if (wheel.is_stock) stockTireSizes.push(normalized);
         }
       }
 
@@ -384,17 +479,12 @@ export async function GET(req: Request) {
         if (normalized) {
           allTireSizes.push(normalized);
           tireSizesSet.add(normalized);
-          if (wheel.is_stock) {
-            stockTireSizes.push(normalized);
-          }
+          if (wheel.is_stock) stockTireSizes.push(normalized);
         }
       }
     }
 
-    // Step 5: Also fetch other modifications to get aggregate sizes
     const aggTireSizes: string[] = [];
-    
-    // Limit to first 3 additional mods to avoid rate limits
     const otherMods = mods.filter(m => m.slug !== selectedMod?.slug).slice(0, 3);
     
     for (const mod of otherMods) {
@@ -424,29 +514,16 @@ export async function GET(req: Request) {
       }
     }
 
-    debug.rawTireSizes = {
-      stock: stockTireSizes,
-      all: allTireSizes,
-      aggregate: aggTireSizes,
-    };
+    debug.rawTireSizes = { stock: stockTireSizes, all: allTireSizes, aggregate: aggTireSizes };
 
-    // Final tire sizes (deduplicated)
     const tireSizes = Array.from(tireSizesSet);
-
-    // Also include bolt pattern and other fitment data
     const fitment = {
       boltPattern: vehicleData.technical?.bolt_pattern,
       centerBore: vehicleData.technical?.centre_bore,
     };
 
-    // ═══════════════════════════════════════════════════════════════════════
-    // LEGACY TIRE SIZE CONVERSION
-    // Convert pre-metric sizes (E70-14, G60-15, etc.) to modern equivalents
-    // Original sizes preserved for display, modern sizes used for search
-    // ═══════════════════════════════════════════════════════════════════════
     const { searchSizes, displayMap } = convertTireSizesForSearch(tireSizes);
     
-    // Build size conversions array for API response
     const sizeConversions: Array<{
       originalSize: string;
       recommendedSize: string;
@@ -466,7 +543,6 @@ export async function GET(req: Request) {
       });
     }
     
-    // For searching, use converted modern sizes
     const searchableSizes = searchSizes.length > 0 ? searchSizes : tireSizes;
     
     debug.legacyConversion = {
@@ -476,57 +552,38 @@ export async function GET(req: Request) {
       conversions: sizeConversions,
     };
 
-    // Cache the successful result
     const strictSizes = stockTireSizes.length > 0 ? [...new Set(stockTireSizes)] : allTireSizes;
     setCache(cacheKey, {
       tireSizes: strictSizes,
       boltPattern: fitment.boltPattern,
       centerBore: fitment.centerBore ? parseFloat(String(fitment.centerBore)) : undefined,
-      vehicle: {
-        year: Number(year),
-        make,
-        model,
-        submodel: selectedMod.name,
-      },
+      vehicle: { year: Number(year), make, model, submodel: selectedMod.name },
       source: "wheelsize",
       cachedAt: Date.now(),
-      expiresAt: Date.now() + 3600000, // 1 hour
+      expiresAt: Date.now() + 3600000,
     });
 
     return NextResponse.json({
-      // Original OEM sizes (for display)
       tireSizes,
       tireSizesStrict: strictSizes,
       tireSizesAgg: aggTireSizes,
-      
-      // Converted sizes for search (modern P-metric)
       searchableSizes,
-      
-      // Size conversion details
       sizeConversions,
       hasLegacySizes: sizeConversions.some(c => c.isLegacy),
-      
       fitment,
-      selectedModification: {
-        slug: selectedMod.slug,
-        name: selectedMod.name,
-      },
+      selectedModification: { slug: selectedMod.slug, name: selectedMod.name },
       source: "api",
       debug,
     });
 
   } catch (err: any) {
     debug.error = err?.message || String(err);
-    
-    // Check if this is a rate limit error
     const is429 = err?.message?.includes("429") || err?.message?.includes("rate limit");
     
-    // Try static fallback if API failed
     const staticSizes = getStaticOemSizes(year, make, model, modification);
     if (staticSizes.length > 0) {
       console.log(`[tire-sizes] API error, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
       
-      // Convert legacy sizes for error fallback too
       const { searchSizes: fallbackSearchSizes } = convertTireSizesForSearch(staticSizes);
       const fallbackConversions = staticSizes.map(size => {
         const conv = convertLegacyTireSize(size);
@@ -568,28 +625,20 @@ export async function GET(req: Request) {
   }
 }
 
-/**
- * Normalize tire size to standard format (e.g., "LT315/70R17" -> "315/70R17")
- */
 function normalizeTireSize(size: string): string | null {
   if (!size) return null;
   
   let s = size.trim().toUpperCase();
-  
-  // Remove LT prefix for light truck sizes
   s = s.replace(/^LT/, "");
   
-  // Handle flotation sizes like "37x12.50R17LT" -> keep as-is for now
   if (s.match(/^\d+X[\d.]+R\d+/i)) {
     return s;
   }
   
-  // Standard metric sizes: 315/70R17, 275/55R20, etc.
   const match = s.match(/(\d{3})\/(\d{2,3})R(\d{2})/);
   if (match) {
     return `${match[1]}/${match[2]}R${match[3]}`;
   }
   
-  // Return original if can't normalize
   return size.trim();
 }
