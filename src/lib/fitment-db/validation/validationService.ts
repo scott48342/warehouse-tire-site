@@ -434,19 +434,20 @@ async function testStandardFlow(vehicle: VehicleToTest): Promise<FlowResult> {
  */
 async function testLiftedFlow(vehicle: VehicleToTest): Promise<LiftedFlowResult | undefined> {
   // Check if vehicle has lift recommendations
-  const liftProfile = getLiftRecommendation(
+  const liftResult = getLiftRecommendation(
     vehicle.make,
     vehicle.model,
-    vehicle.year
+    vehicle.year,
+    "daily"
   );
   
-  if (!liftProfile) {
+  if (!liftResult) {
     return undefined;
   }
 
   const errors: string[] = [];
   const timings: Record<string, number> = {};
-  const preset = liftProfile.recommendations.daily;
+  const preset = liftResult.recommendation;
   const presetId = "daily";
   const liftInches = 2; // Default daily driver lift
 
