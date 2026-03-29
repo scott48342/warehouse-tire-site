@@ -11,6 +11,7 @@ import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { PackageSummary } from "@/components/PackageSummary";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
+import { TiresGridWithSelection } from "@/components/TiresGridWithSelection";
 import {
   generatePlusSizeCandidates,
   generateAftermarketTireSizes,
@@ -1741,6 +1742,50 @@ export default async function TiresPage({
           </aside>
 
           <section>
+            {/* ═══════════════════════════════════════════════════════════════════════
+                PACKAGE FLOW: Enhanced tire selection with grouping
+                When user came from wheel selection, show conversion-optimized grid
+                ═══════════════════════════════════════════════════════════════════════ */}
+            {isPackageFlow && !isStaggered ? (
+              <TiresGridWithSelection
+                tires={items.map(t => ({
+                  source: t.source,
+                  rawSource: t.rawSource,
+                  partNumber: t.partNumber,
+                  mfgPartNumber: t.mfgPartNumber,
+                  brand: t.brand,
+                  description: t.description,
+                  displayName: t.displayName,
+                  prettyName: t.prettyName,
+                  cost: t.cost,
+                  quantity: t.quantity,
+                  imageUrl: t.imageUrl,
+                  badges: t.badges,
+                  tireLibraryId: t.tireLibraryId,
+                }))}
+                selectedSize={selectedSize}
+                viewParams={{
+                  year,
+                  make,
+                  model,
+                  trim,
+                  modification,
+                  wheelSku,
+                  wheelDia,
+                  selectedSize,
+                }}
+                selectedWheel={wheelSku ? {
+                  sku: wheelSku,
+                  brand: wheelName || "Wheel",
+                  model: wheelName || wheelSku,
+                  diameter: wheelDia,
+                  width: wheelWidth,
+                  setPrice: wheelUnit ? Number(wheelUnit) * (Number(wheelQty) || 4) : 0,
+                  imageUrl: undefined, // Would need to pass from wheel selection
+                } : null}
+              />
+            ) : (
+            <>
             {/* Staggered axle selector */}
             {isStaggered ? (
               <div className="mb-4 flex flex-wrap items-center gap-2">
@@ -2015,6 +2060,8 @@ export default async function TiresPage({
                 </div>
               </div>
             ) : null}
+            </>
+            )}
           </section>
         </div>
       </div>
