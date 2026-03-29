@@ -32,6 +32,26 @@ export type WheelPair = {
   rear?: WheelPick;
 };
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// A/B TEST CONFIG - CTA Variants
+// ═══════════════════════════════════════════════════════════════════════════════
+export type CTAVariant = "A" | "B";
+
+const CTA_TEXT: Record<CTAVariant, string> = {
+  A: "Add to Package",
+  B: "Build My Package",
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SOCIAL PROOF TYPES
+// ═══════════════════════════════════════════════════════════════════════════════
+export type SocialProofType = "rating" | "popular" | "bestseller" | "trending" | "staff-pick";
+
+type SocialProofConfig = {
+  rating?: { score: number; count: number };
+  badge?: SocialProofType;
+};
+
 function fmtSizePart(v: string) {
   const s = String(v || "").trim();
   if (!s) return "";
@@ -46,14 +66,14 @@ function fmtSizePart(v: string) {
 const FITMENT_CONFIG = {
   surefit: {
     label: "Guaranteed Fit",
-    sublabel: "Verified for your vehicle",
+    sublabel: "Verified for your vehicle • Hardware included",
     bgClass: "bg-green-600",
     textClass: "text-white",
     icon: "✓",
   },
   specfit: {
     label: "Good Fit",
-    sublabel: "Works with your vehicle",
+    sublabel: "Works with your vehicle • Hardware included",
     bgClass: "bg-blue-600",
     textClass: "text-white",
     icon: "✓",
@@ -66,6 +86,192 @@ const FITMENT_CONFIG = {
     icon: "⚡",
   },
 } as const;
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// "WHY THIS WHEEL" HELPER - Context-aware copy generation
+// ═══════════════════════════════════════════════════════════════════════════════
+function generateWhyThisWheel(params: {
+  brand?: string;
+  style?: string;
+  width?: string;
+  diameter?: string;
+  finish?: string;
+  vehicleModel?: string;
+  fitmentClass?: string;
+  isStockSize?: boolean;
+}): string | null {
+  const { brand, style, width, diameter, finish, vehicleModel, fitmentClass, isStockSize } = params;
+  
+  const hints: string[] = [];
+  
+  // Style-based hints
+  const styleLower = (style || "").toLowerCase();
+  if (styleLower.includes("off-road") || styleLower.includes("offroad") || styleLower.includes("at") || styleLower.includes("mt")) {
+    hints.push("Aggressive off-road look");
+  } else if (styleLower.includes("sport") || styleLower.includes("racing")) {
+    hints.push("Sporty, lightweight design");
+  } else if (styleLower.includes("classic") || styleLower.includes("vintage")) {
+    hints.push("Timeless classic style");
+  } else if (styleLower.includes("luxury") || styleLower.includes("chrome")) {
+    hints.push("Premium luxury finish");
+  }
+  
+  // Width-based hints (wider = more aggressive)
+  const numWidth = parseFloat(width || "");
+  if (numWidth >= 10) {
+    hints.push("Wide stance for bold presence");
+  } else if (numWidth >= 9) {
+    hints.push("Slightly wider for sportier look");
+  }
+  
+  // Diameter-based hints
+  const numDia = parseFloat(diameter || "");
+  if (numDia >= 22) {
+    hints.push("Large diameter for commanding presence");
+  } else if (numDia >= 20) {
+    hints.push("20\"+ size for upgraded look");
+  }
+  
+  // Finish hints
+  const finishLower = (finish || "").toLowerCase();
+  if (finishLower.includes("black") && finishLower.includes("milled")) {
+    hints.push("Black milled accents");
+  } else if (finishLower.includes("matte black") || finishLower.includes("satin black")) {
+    hints.push("Murdered-out aesthetic");
+  } else if (finishLower.includes("chrome") || finishLower.includes("polished")) {
+    hints.push("Eye-catching shine");
+  } else if (finishLower.includes("bronze") || finishLower.includes("copper")) {
+    hints.push("Unique bronze tones");
+  }
+  
+  // Vehicle-specific
+  if (vehicleModel) {
+    const modelLower = vehicleModel.toLowerCase();
+    if (modelLower.includes("tahoe") || modelLower.includes("suburban") || modelLower.includes("yukon")) {
+      hints.push(`Popular for ${vehicleModel}`);
+    } else if (modelLower.includes("f-150") || modelLower.includes("f150") || modelLower.includes("silverado") || modelLower.includes("ram")) {
+      hints.push(`Popular truck upgrade`);
+    } else if (modelLower.includes("wrangler") || modelLower.includes("bronco") || modelLower.includes("4runner")) {
+      hints.push(`Trail-ready styling`);
+    }
+  }
+  
+  // Return top 2 hints joined
+  if (hints.length === 0) return null;
+  return hints.slice(0, 2).join(" • ");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SIZE CONTEXT - Stock vs Upgraded messaging
+// ═══════════════════════════════════════════════════════════════════════════════
+function getSizeContext(params: {
+  isStockSize?: boolean;
+  width?: string;
+  diameter?: string;
+  stockWidth?: number;
+  stockDiameter?: number;
+}): { text: string; icon: string; type: "stock" | "upgraded" } | null {
+  const { isStockSize, width, diameter, stockWidth, stockDiameter } = params;
+  
+  // Explicit stock size flag
+  if (isStockSize === true) {
+    return {
+      text: "Stock size • No modifications needed",
+      icon: "✓",
+      type: "stock",
+    };
+  }
+  
+  // If we have stock specs to compare
+  const numWidth = parseFloat(width || "");
+  const numDia = parseFloat(diameter || "");
+  
+  if (stockWidth && stockDiameter) {
+    if (numWidth <= stockWidth && numDia <= stockDiameter) {
+      return {
+        text: "Stock size • No modifications needed",
+        icon: "✓",
+        type: "stock",
+      };
+    }
+  }
+  
+  // Explicit upgraded sizing
+  if (isStockSize === false || numWidth >= 9.5 || numDia >= 20) {
+    return {
+      text: "Wider stance • More aggressive look",
+      icon: "↔",
+      type: "upgraded",
+    };
+  }
+  
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SOCIAL PROOF BADGE RENDERER
+// ═══════════════════════════════════════════════════════════════════════════════
+function SocialProofBadge({ config }: { config: SocialProofConfig }) {
+  // Priority: rating > badge
+  if (config.rating && config.rating.count > 0) {
+    const { score, count } = config.rating;
+    const fullStars = Math.floor(score);
+    const hasHalf = score - fullStars >= 0.5;
+    
+    return (
+      <div className="flex items-center gap-1 text-xs">
+        <div className="flex text-amber-400">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <span key={i} className={i < fullStars ? "" : i === fullStars && hasHalf ? "opacity-50" : "opacity-20"}>
+              ★
+            </span>
+          ))}
+        </div>
+        <span className="text-neutral-600 font-medium">{score.toFixed(1)}</span>
+        <span className="text-neutral-400">({count.toLocaleString()})</span>
+      </div>
+    );
+  }
+  
+  if (config.badge) {
+    const badgeConfig: Record<SocialProofType, { icon: string; text: string; className: string }> = {
+      popular: { icon: "🔥", text: "Popular", className: "bg-amber-50 text-amber-700 border-amber-200" },
+      bestseller: { icon: "⭐", text: "Best Seller", className: "bg-green-50 text-green-700 border-green-200" },
+      trending: { icon: "📈", text: "Trending", className: "bg-blue-50 text-blue-700 border-blue-200" },
+      "staff-pick": { icon: "👍", text: "Staff Pick", className: "bg-purple-50 text-purple-700 border-purple-200" },
+      rating: { icon: "★", text: "Top Rated", className: "bg-amber-50 text-amber-700 border-amber-200" },
+    };
+    
+    const badge = badgeConfig[config.badge];
+    return (
+      <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold border ${badge.className}`}>
+        {badge.icon} {badge.text}
+      </span>
+    );
+  }
+  
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PRICE ANCHORING - Typical package range
+// ═══════════════════════════════════════════════════════════════════════════════
+function getPriceAnchor(wheelSetPrice: number | null): string | null {
+  if (wheelSetPrice === null) return null;
+  
+  // Estimate typical package: wheels + tires + TPMS
+  // Tires: roughly $150-$300 each for truck/SUV = $600-$1200 for 4
+  // TPMS: $60-$100 for 4
+  // Installation: $80-$120
+  const minPackage = wheelSetPrice + 600 + 60 + 80;
+  const maxPackage = wheelSetPrice + 1200 + 100 + 120;
+  
+  // Round to nearest $100
+  const minRounded = Math.round(minPackage / 100) * 100;
+  const maxRounded = Math.round(maxPackage / 100) * 100;
+  
+  return `Typical package: $${minRounded.toLocaleString()}–$${maxRounded.toLocaleString()}`;
+}
 
 export function WheelsStyleCard({
   brand,
@@ -85,6 +291,13 @@ export function WheelsStyleCard({
   dbProfile,
   wheelCenterBore,
   wheelSeatType,
+  // New conversion props
+  style,
+  isStockSize,
+  stockWidth,
+  stockDiameter,
+  socialProof,
+  ctaVariant = "A",
 }: {
   brand: string;
   title: string;
@@ -104,6 +317,13 @@ export function WheelsStyleCard({
   dbProfile?: DBProfileForAccessories | null;
   wheelCenterBore?: number;
   wheelSeatType?: string;
+  // New conversion props
+  style?: string;
+  isStockSize?: boolean;
+  stockWidth?: number;
+  stockDiameter?: number;
+  socialProof?: SocialProofConfig;
+  ctaVariant?: CTAVariant;
 }) {
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -126,6 +346,37 @@ export function WheelsStyleCard({
     if (!ps.length) return null;
     return Math.min(...ps);
   }, [finishThumbs]);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CONVERSION HELPERS - Computed values
+  // ═══════════════════════════════════════════════════════════════════════════
+  const currentDiameter = selectedPair?.front?.diameter || sizeLabel?.diameter;
+  const currentWidth = selectedPair?.front?.width || sizeLabel?.width;
+  const vehicleModel = viewParams?.model;
+  
+  const whyThisWheel = useMemo(() => generateWhyThisWheel({
+    brand,
+    style,
+    width: currentWidth,
+    diameter: currentDiameter,
+    finish: selectedFinish,
+    vehicleModel,
+    fitmentClass,
+    isStockSize,
+  }), [brand, style, currentWidth, currentDiameter, selectedFinish, vehicleModel, fitmentClass, isStockSize]);
+  
+  const sizeContext = useMemo(() => getSizeContext({
+    isStockSize,
+    width: currentWidth,
+    diameter: currentDiameter,
+    stockWidth,
+    stockDiameter,
+  }), [isStockSize, currentWidth, currentDiameter, stockWidth, stockDiameter]);
+  
+  const priceAnchor = useMemo(() => getPriceAnchor(setPrice), [setPrice]);
+  
+  // Derive social proof - use prop or fallback to isPopular
+  const effectiveSocialProof: SocialProofConfig | undefined = socialProof || (isPopular ? { badge: "popular" } : undefined);
 
   // Build URL params
   const qs = useMemo(() => {
@@ -159,7 +410,7 @@ export function WheelsStyleCard({
   const viewHref = `/wheels/${encodeURIComponent(selectedSku || baseSku)}${qs}`;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // SINGLE CTA: Add to Package
+  // SINGLE CTA: Add to Package / Build My Package
   // ═══════════════════════════════════════════════════════════════════════════
   function addToPackage() {
     setIsAdding(true);
@@ -248,16 +499,7 @@ export function WheelsStyleCard({
                 <div className="text-xs opacity-90">{fitmentConfig.sublabel}</div>
               </div>
             </div>
-            {isPopular ? (
-              <span className="rounded-full bg-white/20 px-2 py-0.5 text-[10px] font-bold">
-                🔥 Popular
-              </span>
-            ) : null}
           </div>
-        </div>
-      ) : isPopular ? (
-        <div className="bg-amber-500 text-white px-4 py-2">
-          <span className="text-sm font-bold">🔥 Popular Choice</span>
         </div>
       ) : null}
 
@@ -300,35 +542,74 @@ export function WheelsStyleCard({
           ═══════════════════════════════════════════════════════════════════════ */}
       <div className="flex flex-1 flex-col p-4">
         
-        {/* Brand & Title */}
+        {/* ═══════════════════════════════════════════════════════════════════════
+            SIMPLIFIED TITLE STRUCTURE
+            Line 1: Brand + Model name
+            Line 2: Size + Finish
+            ═══════════════════════════════════════════════════════════════════════ */}
         <div>
           <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{brand}</div>
           <Link href={viewHref}>
-            <h3 className="mt-0.5 text-lg font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2">
+            <h3 className="mt-0.5 text-lg font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-1">
               {title}
             </h3>
           </Link>
+          {/* Line 2: Size + Finish */}
+          <div className="mt-0.5 text-sm text-neutral-600">
+            {(currentDiameter || currentWidth) && (
+              <span className="font-medium">
+                {currentDiameter && `${fmtSizePart(currentDiameter)}"`}
+                {currentDiameter && currentWidth && " × "}
+                {currentWidth && `${fmtSizePart(currentWidth)}"`}
+              </span>
+            )}
+            {(currentDiameter || currentWidth) && selectedFinish && (
+              <span className="mx-1.5 text-neutral-300">|</span>
+            )}
+            {selectedFinish && <span>{selectedFinish}</span>}
+          </div>
         </div>
 
-        {/* Specs Row */}
-        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-neutral-600">
-          {(selectedPair?.front?.diameter || sizeLabel?.diameter) && (
-            <span className="font-semibold text-neutral-800">
-              {fmtSizePart(selectedPair?.front?.diameter || sizeLabel?.diameter || "")}"
+        {/* ═══════════════════════════════════════════════════════════════════════
+            "WHY THIS WHEEL" HELPER TEXT
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {whyThisWheel && (
+          <div className="mt-2 text-xs text-neutral-500 italic">
+            {whyThisWheel}
+          </div>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            SIZE CONTEXT (Stock vs Upgraded)
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {sizeContext && (
+          <div className={`mt-2 flex items-center gap-1.5 text-xs font-medium ${
+            sizeContext.type === "stock" ? "text-green-700" : "text-blue-700"
+          }`}>
+            <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] ${
+              sizeContext.type === "stock" ? "bg-green-100" : "bg-blue-100"
+            }`}>
+              {sizeContext.icon}
             </span>
-          )}
-          {(selectedPair?.front?.width || sizeLabel?.width) && (
-            <span>
-              × {fmtSizePart(selectedPair?.front?.width || sizeLabel?.width || "")}"
-            </span>
-          )}
-          {bolt && (
-            <>
-              <span className="text-neutral-400">•</span>
-              <span>{bolt}</span>
-            </>
-          )}
-        </div>
+            {sizeContext.text}
+          </div>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            SOCIAL PROOF (One badge per card)
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {effectiveSocialProof && (
+          <div className="mt-2">
+            <SocialProofBadge config={effectiveSocialProof} />
+          </div>
+        )}
+
+        {/* Specs Row - Bolt pattern only (size moved to title area) */}
+        {bolt && (
+          <div className="mt-2 text-xs text-neutral-500">
+            {bolt}
+          </div>
+        )}
 
         {/* Finish selector (if multiple) */}
         {thumbs.length > 1 ? (
@@ -372,19 +653,14 @@ export function WheelsStyleCard({
                 </Link>
               )}
             </div>
-            {selectedFinish && (
-              <div className="mt-1.5 text-xs text-neutral-600">{selectedFinish}</div>
-            )}
           </div>
-        ) : selectedFinish ? (
-          <div className="mt-2 text-sm text-neutral-600">{selectedFinish}</div>
         ) : null}
 
         {/* Spacer */}
         <div className="flex-1" />
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            PRICING (Set of 4 prominent, per-wheel secondary)
+            PRICING (Set of 4 prominent, per-wheel secondary, price anchor)
             ═══════════════════════════════════════════════════════════════════════ */}
         <div className="mt-4 rounded-xl bg-neutral-50 p-3">
           <div className="flex items-end justify-between">
@@ -408,6 +684,13 @@ export function WheelsStyleCard({
             </div>
           </div>
 
+          {/* Price anchoring */}
+          {priceAnchor && (
+            <div className="mt-1.5 text-[11px] text-neutral-400 font-medium">
+              {priceAnchor}
+            </div>
+          )}
+
           {/* Trust signals */}
           <div className="mt-2 flex items-center gap-3 text-[11px] text-neutral-600">
             <span className="flex items-center gap-1">
@@ -422,12 +705,15 @@ export function WheelsStyleCard({
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            SINGLE PRIMARY CTA: Add to Package
+            SINGLE PRIMARY CTA: A/B Test Ready
+            Variant A: "Add to Package"
+            Variant B: "Build My Package"
             ═══════════════════════════════════════════════════════════════════════ */}
         <button
           type="button"
           onClick={addToPackage}
           disabled={isAdding}
+          data-cta-variant={ctaVariant}
           className={`
             mt-3 flex h-14 w-full items-center justify-center gap-2 rounded-xl 
             text-base font-extrabold transition-all
@@ -443,11 +729,11 @@ export function WheelsStyleCard({
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
-              Adding to Package...
+              Adding...
             </>
           ) : (
             <>
-              Add to Package
+              {CTA_TEXT[ctaVariant]}
               {setPrice !== null && (
                 <span className="opacity-90">
                   — ${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
