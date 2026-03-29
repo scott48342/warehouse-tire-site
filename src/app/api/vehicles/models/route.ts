@@ -6,16 +6,30 @@ import { normalizeMake } from "@/lib/fitment-db/keys";
 export const runtime = "nodejs";
 
 // Static fallback for when API/catalog unavailable
+// Includes both current models and classic/defunct vehicles with fitment data
 const COMMON_MODELS: Record<string, string[]> = {
+  // Current manufacturers
   ford: ["Bronco", "Bronco Sport", "Edge", "Escape", "Expedition", "Explorer", "F-150", "F-250", "F-350", "Fusion", "Maverick", "Mustang", "Ranger", "Transit"],
-  chevrolet: ["Blazer", "Camaro", "Colorado", "Corvette", "Equinox", "Malibu", "Silverado 1500", "Silverado 2500", "Silverado 3500", "Suburban", "Tahoe", "Trailblazer", "Traverse"],
+  chevrolet: [
+    // Current
+    "Blazer", "Camaro", "Colorado", "Corvette", "Equinox", "Malibu", 
+    "Silverado 1500", "Silverado 2500 HD", "Silverado 3500 HD", 
+    "Suburban", "Tahoe", "Trailblazer", "Traverse",
+    // Classic
+    "Cavalier", "Chevelle", "Cobalt", "Caprice", "Impala", 
+    "Lumina", "Monte Carlo", "Cruze"
+  ],
   ram: ["1500", "2500", "3500", "ProMaster"],
   toyota: ["4Runner", "Camry", "Corolla", "GR86", "Highlander", "Land Cruiser", "Prius", "RAV4", "Sequoia", "Sienna", "Tacoma", "Tundra"],
   honda: ["Accord", "Civic", "CR-V", "HR-V", "Odyssey", "Passport", "Pilot", "Ridgeline"],
   nissan: ["370Z", "Altima", "Armada", "Frontier", "Kicks", "Maxima", "Murano", "Pathfinder", "Rogue", "Sentra", "Titan", "Versa", "Z"],
   jeep: ["Cherokee", "Compass", "Gladiator", "Grand Cherokee", "Grand Cherokee L", "Grand Wagoneer", "Renegade", "Wagoneer", "Wrangler"],
-  gmc: ["Acadia", "Canyon", "Sierra 1500", "Sierra 2500", "Sierra 3500", "Terrain", "Yukon", "Yukon XL"],
-  dodge: ["Challenger", "Charger", "Durango", "Hornet"],
+  gmc: [
+    // Current
+    "Acadia", "Canyon", "Sierra 1500", "Sierra 2500 HD", "Sierra 3500 HD", 
+    "Terrain", "Yukon", "Yukon XL"
+  ],
+  dodge: ["Challenger", "Charger", "Durango", "Hornet", "Ram 1500"],
   hyundai: ["Elantra", "Ioniq 5", "Ioniq 6", "Kona", "Palisade", "Santa Cruz", "Santa Fe", "Sonata", "Tucson", "Venue"],
   kia: ["Carnival", "EV6", "Forte", "K5", "Niro", "Rio", "Seltos", "Sorento", "Soul", "Sportage", "Stinger", "Telluride"],
   subaru: ["Ascent", "BRZ", "Crosstrek", "Forester", "Impreza", "Legacy", "Outback", "Solterra", "WRX"],
@@ -28,16 +42,50 @@ const COMMON_MODELS: Record<string, string[]> = {
   lexus: ["ES", "GX", "IS", "LC", "LS", "LX", "NX", "RC", "RX", "RZ", "TX", "UX"],
   acura: ["ILX", "Integra", "MDX", "RDX", "TLX"],
   infiniti: ["Q50", "Q60", "QX50", "QX55", "QX60", "QX80"],
-  cadillac: ["CT4", "CT5", "Escalade", "Escalade ESV", "Lyriq", "XT4", "XT5", "XT6"],
-  lincoln: ["Aviator", "Corsair", "Nautilus", "Navigator"],
-  buick: ["Enclave", "Encore", "Encore GX", "Envision"],
-  chrysler: ["300", "Pacifica", "Voyager"],
+  cadillac: [
+    // Current
+    "CT4", "CT5", "Escalade", "Escalade ESV", "Lyriq", "XT4", "XT5", "XT6",
+    // Classic
+    "CTS", "DeVille", "Eldorado", "Seville", "STS"
+  ],
+  lincoln: ["Aviator", "Corsair", "Nautilus", "Navigator", "Town Car", "Continental", "MKZ"],
+  buick: [
+    // Current
+    "Enclave", "Encore", "Encore GX", "Envision",
+    // Classic
+    "Century", "LeSabre", "Park Avenue", "Regal", "Riviera", "Skylark"
+  ],
+  chrysler: ["300", "Pacifica", "Voyager", "PT Cruiser", "Sebring", "Town & Country"],
   tesla: ["Model 3", "Model S", "Model X", "Model Y"],
   porsche: ["718 Boxster", "718 Cayman", "911", "Cayenne", "Macan", "Panamera", "Taycan"],
   "land-rover": ["Defender", "Discovery", "Discovery Sport", "Range Rover", "Range Rover Evoque", "Range Rover Sport", "Range Rover Velar"],
   volvo: ["C40 Recharge", "S60", "S90", "V60", "V90", "XC40", "XC60", "XC90"],
   mini: ["Clubman", "Convertible", "Countryman", "Hardtop 2 Door", "Hardtop 4 Door"],
-  mitsubishi: ["Eclipse Cross", "Mirage", "Outlander", "Outlander Sport"],
+  mitsubishi: ["Eclipse Cross", "Mirage", "Outlander", "Outlander Sport", "Eclipse", "Lancer"],
+  
+  // Defunct/classic brands
+  pontiac: [
+    "Firebird", "Trans Am", "GTO", "Grand Am", "Grand Prix", "Bonneville",
+    "Sunfire", "G6", "G8", "Solstice", "Vibe", "Aztek", "Montana"
+  ],
+  oldsmobile: [
+    "442", "Alero", "Aurora", "Bravada", "Cutlass", "Cutlass Supreme",
+    "Delta 88", "Intrigue", "Silhouette", "Toronado"
+  ],
+  saturn: [
+    "Astra", "Aura", "Ion", "L-Series", "Outlook", "Relay", 
+    "S-Series", "SC", "SL", "SW", "Sky", "Vue"
+  ],
+  mercury: [
+    "Cougar", "Grand Marquis", "Mariner", "Milan", "Montego",
+    "Monterey", "Mountaineer", "Sable", "Tracer", "Villager"
+  ],
+  plymouth: [
+    "Barracuda", "Breeze", "Duster", "Fury", "Grand Voyager",
+    "Neon", "Prowler", "Road Runner", "Sundance", "Voyager"
+  ],
+  hummer: ["H1", "H2", "H3", "H3T"],
+  scion: ["FR-S", "iA", "iM", "iQ", "tC", "xA", "xB", "xD"],
 };
 
 /**

@@ -311,6 +311,31 @@ export async function GET(req: Request) {
         rawTrim: f.displayTrim || undefined,
       }));
       
+      // Check if local only has "Base" trim - if so, try supplements for better data
+      const onlyBase = localResults.length === 1 && localResults[0].label === "Base";
+      if (onlyBase) {
+        const supplement = getSubmodelSupplement(year, make, model);
+        if (supplement && supplement.length > 0) {
+          console.log(`[trims] Local only has Base, using SUPPLEMENT: ${year} ${make} ${model} → ${supplement.length} options`);
+          const supplementWithIds: TrimOption[] = supplement.map(s => {
+            const modificationId = makeSupplementId(year, make, model, s.value);
+            return {
+              value: modificationId,
+              label: s.label,
+              modificationId,
+              rawTrim: s.value,
+            };
+          });
+          return NextResponse.json({
+            results: supplementWithIds,
+            source: "supplement",
+            count: supplementWithIds.length,
+            overridesApplied: false,
+            cached: false,
+          } as TrimResponse);
+        }
+      }
+      
       return NextResponse.json({
         results: localResults,
         source: "local",

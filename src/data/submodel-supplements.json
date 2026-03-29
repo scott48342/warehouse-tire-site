@@ -1420,5 +1420,150 @@
         { "value": "premium", "label": "Premium" }
       ]
     }
+  },
+  "pontiac": {
+    "firebird": {
+      "1993-2002": [
+        { "value": "base", "label": "Base" },
+        { "value": "formula", "label": "Formula" },
+        { "value": "trans-am", "label": "Trans Am" },
+        { "value": "trans-am-ws6", "label": "Trans Am WS6" },
+        { "value": "firehawk", "label": "Firehawk (SLP)" }
+      ],
+      "1982-1992": [
+        { "value": "base", "label": "Base" },
+        { "value": "se", "label": "SE" },
+        { "value": "formula", "label": "Formula" },
+        { "value": "trans-am", "label": "Trans Am" },
+        { "value": "trans-am-gta", "label": "Trans Am GTA" }
+      ],
+      "1970-1981": [
+        { "value": "base", "label": "Base" },
+        { "value": "esprit", "label": "Esprit" },
+        { "value": "formula", "label": "Formula" },
+        { "value": "trans-am", "label": "Trans Am" }
+      ],
+      "1967-1969": [
+        { "value": "base", "label": "Base" },
+        { "value": "ho", "label": "HO" },
+        { "value": "400", "label": "400" },
+        { "value": "sprint", "label": "Sprint" }
+      ]
+    },
+    "gto": {
+      "2004-2006": [
+        { "value": "base", "label": "Base" }
+      ],
+      "1964-1974": [
+        { "value": "base", "label": "Base" },
+        { "value": "judge", "label": "Judge" },
+        { "value": "ram-air", "label": "Ram Air" }
+      ]
+    },
+    "grand am": {
+      "1999-2005": [
+        { "value": "se", "label": "SE" },
+        { "value": "se1", "label": "SE1" },
+        { "value": "se2", "label": "SE2" },
+        { "value": "gt", "label": "GT" },
+        { "value": "gt1", "label": "GT1" }
+      ],
+      "1992-1998": [
+        { "value": "se", "label": "SE" },
+        { "value": "gt", "label": "GT" }
+      ],
+      "1985-1991": [
+        { "value": "le", "label": "LE" },
+        { "value": "se", "label": "SE" }
+      ]
+    },
+    "grand prix": {
+      "2004-2008": [
+        { "value": "base", "label": "Base" },
+        { "value": "gt", "label": "GT" },
+        { "value": "gt1", "label": "GT1" },
+        { "value": "gt2", "label": "GT2" },
+        { "value": "gxp", "label": "GXP" }
+      ],
+      "1997-2003": [
+        { "value": "se", "label": "SE" },
+        { "value": "gt", "label": "GT" },
+        { "value": "gtp", "label": "GTP" }
+      ],
+      "1988-1996": [
+        { "value": "le", "label": "LE" },
+        { "value": "se", "label": "SE" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "ste", "label": "STE" },
+        { "value": "gtp", "label": "GTP" }
+      ]
+    },
+    "bonneville": {
+      "2000-2005": [
+        { "value": "se", "label": "SE" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "sse", "label": "SSE" },
+        { "value": "ssei", "label": "SSEi" },
+        { "value": "gxp", "label": "GXP" }
+      ],
+      "1992-1999": [
+        { "value": "se", "label": "SE" },
+        { "value": "sle", "label": "SLE" },
+        { "value": "sse", "label": "SSE" },
+        { "value": "ssei", "label": "SSEi" }
+      ]
+    },
+    "g6": {
+      "2005-2010": [
+        { "value": "base", "label": "Base" },
+        { "value": "gt", "label": "GT" },
+        { "value": "gtp", "label": "GTP" },
+        { "value": "gxp", "label": "GXP" }
+      ]
+    },
+    "g8": {
+      "2008-2009": [
+        { "value": "base", "label": "Base" },
+        { "value": "gt", "label": "GT" },
+        { "value": "gxp", "label": "GXP" }
+      ]
+    },
+    "solstice": {
+      "2006-2010": [
+        { "value": "base", "label": "Base" },
+        { "value": "gxp", "label": "GXP" }
+      ]
+    },
+    "vibe": {
+      "2003-2010": [
+        { "value": "base", "label": "Base" },
+        { "value": "gt", "label": "GT" },
+        { "value": "awd", "label": "AWD" }
+      ]
+    },
+    "sunfire": {
+      "1995-2005": [
+        { "value": "se", "label": "SE" },
+        { "value": "gt", "label": "GT" }
+      ]
+    },
+    "trans am": {
+      "1993-2002": [
+        { "value": "base", "label": "Base" },
+        { "value": "ws6", "label": "WS6" },
+        { "value": "firehawk", "label": "Firehawk (SLP)" },
+        { "value": "ram-air", "label": "Ram Air" }
+      ],
+      "1982-1992": [
+        { "value": "base", "label": "Base" },
+        { "value": "gta", "label": "GTA" },
+        { "value": "ws6", "label": "WS6" }
+      ],
+      "1970-1981": [
+        { "value": "base", "label": "Base" },
+        { "value": "special-edition", "label": "Special Edition" },
+        { "value": "10th-anniversary", "label": "10th Anniversary" }
+      ]
+    }
   }
 }
