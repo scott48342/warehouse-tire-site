@@ -154,9 +154,9 @@ export function Header() {
     if (open !== "tires" && open !== "wheels" && open !== "vehicles" && open !== "packages") return;
 
     // Support opening the DiscountTire-style search modal directly.
-    // Example: /?open=tires&mode=size
-    if ((open === "tires" || open === "wheels") && mode === "size") {
-      openSearch(open, "size");
+    // Example: /?open=tires&mode=size or /?open=tires&mode=vehicle
+    if ((open === "tires" || open === "wheels") && (mode === "size" || mode === "vehicle")) {
+      openSearch(open, mode as "size" | "vehicle");
     } else {
       openLauncher(open as LauncherMode);
     }
