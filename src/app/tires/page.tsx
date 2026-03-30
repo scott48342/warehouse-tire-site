@@ -1207,8 +1207,8 @@ export default async function TiresPage({
           </div>
         ) : null}
 
-        {/* Legacy Size Selection - kept for non-compact header fallback */}
-        {hasVehicle && (displayedSizes.length > 0 || hasPlusSizes) ? (
+        {/* Legacy Size Selection - hidden when compact header is active (hasVehicle) */}
+        {!hasVehicle && (displayedSizes.length > 0 || hasPlusSizes) ? (
           <div className="mt-5 rounded-2xl border border-neutral-200 bg-white p-5">
             <div className="flex items-center justify-between mb-4">
               <div>
