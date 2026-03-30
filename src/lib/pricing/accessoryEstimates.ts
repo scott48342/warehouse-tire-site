@@ -12,10 +12,10 @@
  */
 
 // TPMS sensor typical pricing (per unit)
-// Based on HTS-A78ED and similar universal sensors
-export const TPMS_UNIT_PRICE_ESTIMATE = 24; // $24 per sensor
+// Based on HTS-A78ED pricing
+export const TPMS_UNIT_PRICE_ESTIMATE = 64; // $64 per sensor
 export const TPMS_QUANTITY_DEFAULT = 4;
-export const TPMS_SET_PRICE_ESTIMATE = TPMS_UNIT_PRICE_ESTIMATE * TPMS_QUANTITY_DEFAULT; // $96 for 4
+export const TPMS_SET_PRICE_ESTIMATE = TPMS_UNIT_PRICE_ESTIMATE * TPMS_QUANTITY_DEFAULT; // $256 for 4
 
 // Reference SKU for TPMS lookup
 export const TPMS_DEFAULT_SKU = "HTS-A78ED";
