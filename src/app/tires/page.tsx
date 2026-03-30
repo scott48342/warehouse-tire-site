@@ -12,6 +12,7 @@ import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { PackageSummary } from "@/components/PackageSummary";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { TiresGridWithSelection } from "@/components/TiresGridWithSelection";
+import { TirePageCompactHeader } from "@/components/TirePageCompactHeader";
 import {
   generatePlusSizeCandidates,
   generateAftermarketTireSizes,
@@ -1165,127 +1166,48 @@ export default async function TiresPage({
         />
       ) : null}
 
-      <div className="mx-auto max-w-screen-2xl px-4 py-8">
-        {/* Lifted Build Context Banner */}
-        {isLiftedBuild && hasVehicle ? (
-          <div className="mb-4 rounded-2xl border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
-            <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-xl">🚀</div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-amber-900">Lifted Build Mode</span>
-                  <span className="rounded-full bg-amber-200 px-2 py-0.5 text-xs font-bold text-amber-800">
-                    {liftedInches}" {liftedPresetLabel}
-                  </span>
-                </div>
-                <p className="mt-1 text-sm text-amber-800">
-                  Showing recommended tire sizes for your {liftedInches}" lift — designed for proper clearance and stance.
-                </p>
-                {tireSizesStrict.length > 0 ? (
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {tireSizesStrict.slice(0, 4).map((size) => (
-                      <span key={size} className="rounded-lg bg-white/80 border border-amber-200 px-2 py-1 text-xs font-semibold text-amber-900">
-                        {size}
-                      </span>
-                    ))}
-                    {tireSizesStrict.length > 4 ? (
-                      <span className="text-xs text-amber-700">+{tireSizesStrict.length - 4} more</span>
-                    ) : null}
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          </div>
-        ) : null}
-
-        {/* Package Context Header - when coming from wheel selection */}
-        {isPackageFlow && hasVehicle ? (
-          <div className="mb-6 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
-            <div className="flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-sm font-bold text-white">✓</div>
-                <div>
-                  <div className="text-xs font-semibold text-green-700 uppercase tracking-wide">Step 1 Complete</div>
-                  <div className="text-sm font-extrabold text-neutral-900">Wheels Selected</div>
-                </div>
-              </div>
-              <div className="hidden sm:block text-2xl text-neutral-300">→</div>
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-sm font-bold text-white">2</div>
-                <div>
-                  <div className="text-xs font-semibold text-red-700 uppercase tracking-wide">Now</div>
-                  <div className="text-sm font-extrabold text-neutral-900">Choose Matching Tires</div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 rounded-xl bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
-              Building package for <span className="font-bold">{year} {make} {model}</span>
-              {displayTrim ? <span className="text-neutral-500"> • {displayTrim}</span> : null}
-            </div>
-          </div>
-        ) : null}
-
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-neutral-900">
-              Tires
-            </h1>
-            <p className="mt-1 text-sm text-neutral-700">
-              {hasVehicle
-                ? `Showing tires for ${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}.`
-                : "Select your vehicle in the header to filter tires."}
-            </p>
-
-            {hasVehicle ? (
-              <>
-                <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
-                  <span className="text-neutral-500">Vehicle:</span>
-                  <span className="font-extrabold text-neutral-900">
-                    {year} {make} {model}
-                    {displayTrim ? ` ${displayTrim}` : ""}
-                  </span>
-                </div>
-                <GarageWidget type="tires" />
-              </>
-            ) : null}
-          </div>
-
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-semibold text-neutral-600">Sort</label>
-            <AutoSubmitSelect
-              name="sort"
-              defaultValue={sort}
-              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-              options={[
-                { value: "price_asc", label: "Price Low to High" },
-                { value: "best", label: "Best Match" },
-                { value: "price_desc", label: "Price High to Low" },
-                { value: "brand_asc", label: "Brand A–Z" },
-                { value: "stock_desc", label: "Most Stock" },
-              ]}
-            />
-          </div>
-        </div>
-
-        {/* Trust & Install Strip - matches wheels page */}
+      <div className="mx-auto max-w-screen-2xl px-4 py-4">
+        {/* ═══════════════════════════════════════════════════════════════════════
+            COMPACT HEADER - All info in minimal vertical space
+            Vehicle + Trust + Sort + Size selector
+            ═══════════════════════════════════════════════════════════════════════ */}
         {hasVehicle ? (
-          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl bg-gradient-to-r from-green-50 to-white border border-green-100 px-5 py-3">
-            <div className="flex items-center gap-2 text-sm font-medium text-green-800">
-              <span className="text-green-600 text-base">✓</span> Ship to your installer
-            </div>
-            <div className="flex items-center gap-2 text-sm font-medium text-green-800">
-              <span className="text-green-600 text-base">✓</span> Local installation available
-            </div>
-            <div className="flex items-center gap-2 text-sm font-medium text-green-800">
-              <span className="text-green-600 text-base">✓</span> Mount &amp; balance included
-            </div>
-            <div className="ml-auto text-xs font-bold text-green-700 bg-green-100 px-3 py-1 rounded-full">
-              Guaranteed fitment
-            </div>
+          <TirePageCompactHeader
+            year={year}
+            make={make}
+            model={model}
+            displayTrim={displayTrim}
+            modification={modification}
+            selectedSize={selectedSize}
+            availableSizes={displayedSizes}
+            wheelDia={wheelDia}
+            basePath={basePath}
+            sort={sort}
+            wheelSku={wheelSku}
+            isPackageFlow={isPackageFlow}
+            isLiftedBuild={isLiftedBuild}
+            liftedInches={liftedInches}
+            liftedPreset={liftedPresetLabel}
+            trim={trim}
+            liftedParams={isLiftedBuild ? `&liftedSource=${encodeURIComponent(liftedSource)}&liftedPreset=${encodeURIComponent(liftedPreset)}&liftedInches=${liftedInches}&liftedTireSizes=${encodeURIComponent(liftedTireSizesRaw)}${liftedTireDiaMin ? `&liftedTireDiaMin=${liftedTireDiaMin}` : ""}${liftedTireDiaMax ? `&liftedTireDiaMax=${liftedTireDiaMax}` : ""}` : ""}
+          />
+        ) : (
+          <div className="mb-4">
+            <h1 className="text-2xl font-extrabold tracking-tight text-neutral-900">Tires</h1>
+            <p className="mt-1 text-sm text-neutral-600">Select your vehicle in the header to see compatible tires.</p>
+          </div>
+        )}
+
+        {/* Lifted Build Context Banner - only show for lifted builds */}
+        {isLiftedBuild && hasVehicle ? (
+          <div className="mb-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 flex items-center gap-2 text-xs">
+            <span className="text-amber-600">🚀</span>
+            <span className="font-semibold text-amber-800">{liftedInches}" {liftedPresetLabel} Lift</span>
+            <span className="text-amber-700">— Showing recommended sizes</span>
           </div>
         ) : null}
 
-        {/* Size Selection with Guided UX */}
+        {/* Legacy Size Selection - kept for non-compact header fallback */}
         {hasVehicle && (displayedSizes.length > 0 || hasPlusSizes) ? (
           <div className="mt-5 rounded-2xl border border-neutral-200 bg-white p-5">
             <div className="flex items-center justify-between mb-4">
