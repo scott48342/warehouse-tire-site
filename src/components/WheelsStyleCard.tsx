@@ -331,7 +331,7 @@ export function WheelsStyleCard({
   // Selection state props
   isSelected?: boolean;
   hasSelection?: boolean;
-  onSelect?: () => void;
+  onSelect?: (wheelState: { imageUrl?: string; price?: number; finish?: string; sku: string }) => void;
 }) {
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -723,7 +723,13 @@ export function WheelsStyleCard({
           onClick={() => {
             if (isSelected) return; // Already selected, no action
             if (onSelect) {
-              onSelect();
+              // Pass current wheel state including selectedImage
+              onSelect({
+                imageUrl: selectedImage,
+                price: selectedPrice,
+                finish: selectedFinish,
+                sku: selectedSku || baseSku,
+              });
             } else {
               addToPackage();
             }

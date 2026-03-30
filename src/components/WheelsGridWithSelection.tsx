@@ -433,18 +433,20 @@ export function WheelsGridWithSelection({
           // Selection props
           isSelected={isSelected}
           hasSelection={!!selectedWheel}
-          onSelect={() => {
-            const setPrice = typeof w.price === "number" ? w.price * 4 : 0;
+          onSelect={(wheelState) => {
+            // Use current card state (may have changed if user selected a different finish)
+            const effectivePrice = wheelState?.price ?? w.price;
+            const setPrice = typeof effectivePrice === "number" ? effectivePrice * 4 : 0;
             handleWheelSelect({
-              sku: String(w.sku || ""),
+              sku: wheelState?.sku || String(w.sku || ""),
               brand,
               model,
-              finish: w.finish,
+              finish: wheelState?.finish ?? w.finish,
               diameter: w.diameter,
               width: w.width,
               offset: w.offset,
-              imageUrl: w.imageUrl,
-              price: w.price,
+              imageUrl: wheelState?.imageUrl ?? w.imageUrl,
+              price: effectivePrice,
               setPrice,
               fitmentClass: w.fitmentClass,
             });
