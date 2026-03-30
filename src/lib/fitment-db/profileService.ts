@@ -1,21 +1,18 @@
 /**
- * Fitment Profile Service (ModificationId-First with Alias Resolution)
+ * Fitment Profile Service (DB-First, No External API)
  * 
  * Provides complete fitment profiles for wheels/tires pages.
  * Uses vehicle_fitments table with canonical modificationId as PRIMARY key.
  * Supports alias mapping when requested modificationId differs from canonical.
  * 
- * Resolution Flow:
+ * Resolution Flow (DB-Only):
  * 1. Direct DB lookup by requested modificationId → "directCanonical"
  * 2. Alias lookup (requested → canonical mapping) → "canonicalAlias"
- * 3. API fetch + import (stores alias if different) → "importedAlias"
+ * 3. YMM fallback (any fitment for year/make/model) → "canonicalAlias"
  * 4. Failure → "not_found"
  * 
- * Resolution Paths:
- * - "directCanonical" - Found directly in vehicle_fitments by modificationId
- * - "canonicalAlias" - Found via alias mapping to different canonical ID
- * - "importedAlias" - Fetched from API, imported with different ID, alias stored
- * - "not_found" - Could not resolve
+ * NOTE: External API fallback has been removed. All fitment data must be
+ * imported via admin tools from static data sources.
  */
 
 import { db } from "./db";
@@ -25,7 +22,6 @@ import { eq, and } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
-// WHEEL-SIZE REMOVED: import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 import crypto from "crypto";
 import submodelSupplements from "@/data/submodel-supplements.json";
 import { getFitmentFromRules, matchFitmentRule } from "./vehicleFitmentRules";

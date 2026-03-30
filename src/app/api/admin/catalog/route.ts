@@ -1,24 +1,18 @@
 /**
- * Admin: Catalog Management
+ * Admin: Catalog Management (DB-Only)
  * 
  * GET /api/admin/catalog - Get catalog stats
- * POST /api/admin/catalog - Populate catalog from Wheel-Size API
+ * POST /api/admin/catalog - Manage catalog data
  * 
- * ⚠️ PROTECTED by Wheel-Size API guardrails
- * Batch operations require: { confirm: true, allowBatch: true }
+ * NOTE: External Wheel-Size API has been removed.
+ * Catalog data must be imported from static sources.
  */
 
 import { NextResponse } from "next/server";
 import * as catalogStore from "@/lib/catalog-store";
-import {
-  checkBatchJobAllowed,
-  startBatchJob,
-  endBatchJob,
-  getUsageStats,
-} from "@/lib/wheelSizeGuard";
 
 export const runtime = "nodejs";
-export const maxDuration = 300; // 5 minutes for full population
+export const maxDuration = 300; // 5 minutes for operations
 
 export async function GET() {
   try {
@@ -42,67 +36,10 @@ export async function POST(req: Request) {
   
   const action = body.action;
 
-  // Actions that don't need batch protection
-  const safeModeActions = ["stats", "clear"];
-  
-  // Actions that trigger batch Wheel-Size API calls
-  const batchActions = ["populate-makes", "populate-models", "populate-common"];
-
   try {
-    // ═══════════════════════════════════════════════════════════════════════════
-    // GUARDRAIL CHECK for batch operations
-    // ═══════════════════════════════════════════════════════════════════════════
-    if (batchActions.includes(action)) {
-      const batchCheck = checkBatchJobAllowed({
-        action,
-        confirm: body.confirm,
-        allowBatch: body.allowBatch,
-        adminId: body.adminId || "anonymous",
-      });
-      
-      if (!batchCheck.allowed) {
-        return NextResponse.json({
-          error: batchCheck.error,
-          warning: batchCheck.warning,
-          requiresConfirmation: batchCheck.requiresConfirmation,
-          usage: getUsageStats(),
-          hint: batchCheck.requiresConfirmation 
-            ? 'Add { "confirm": true, "allowBatch": true } to your request body'
-            : undefined,
-        }, { status: batchCheck.requiresConfirmation ? 400 : 429 });
-      }
-      
-      // Start batch job tracking
-      startBatchJob(body.adminId || "anonymous");
-    }
-    // ═══════════════════════════════════════════════════════════════════════════
-
     let result: any;
     
     switch (action) {
-      case "populate-makes": {
-        const count = await catalogStore.populateMakes();
-        result = { success: true, makes: count };
-        break;
-      }
-      
-      case "populate-models": {
-        const makeSlug = body.make;
-        if (!makeSlug) {
-          endBatchJob(false);
-          return NextResponse.json({ error: "Missing 'make' parameter" }, { status: 400 });
-        }
-        const count = await catalogStore.populateModels(makeSlug);
-        result = { success: true, make: makeSlug, models: count };
-        break;
-      }
-      
-      case "populate-common": {
-        const populateResult = await catalogStore.populateCommonMakes();
-        result = { success: true, ...populateResult };
-        break;
-      }
-      
       case "clear": {
         await catalogStore.clearCatalog();
         result = { success: true, message: "Catalog cleared" };
@@ -115,29 +52,30 @@ export async function POST(req: Request) {
         break;
       }
       
+      // Population actions are disabled - use static data import instead
+      case "populate-makes":
+      case "populate-models":
+      case "populate-common": {
+        return NextResponse.json({
+          error: "External API population is disabled",
+          message: "Use static data import tools instead. Wheel-Size API has been removed.",
+          action,
+        }, { status: 400 });
+      }
+      
       default:
         return NextResponse.json({ 
           error: "Unknown action",
           receivedAction: action,
-          validActions: ["populate-makes", "populate-models", "populate-common", "clear", "stats"],
-          protectedActions: batchActions,
-          note: "Batch actions require { confirm: true, allowBatch: true }",
+          validActions: ["clear", "stats"],
+          deprecatedActions: ["populate-makes", "populate-models", "populate-common"],
+          note: "External API population has been removed. Use static data import instead.",
         }, { status: 400 });
-    }
-    
-    // End batch job tracking (success)
-    if (batchActions.includes(action)) {
-      endBatchJob(true);
     }
     
     return NextResponse.json(result);
     
   } catch (err: any) {
-    // End batch job tracking (failure)
-    if (batchActions.includes(action)) {
-      endBatchJob(false);
-    }
-    
     console.error(`[admin/catalog] Error:`, err);
     return NextResponse.json({ 
       error: err?.message || "Operation failed",

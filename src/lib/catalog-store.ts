@@ -1,9 +1,8 @@
 /**
- * Wheel-Size Catalog Store (PostgreSQL)
+ * Catalog Store (PostgreSQL, DB-Only)
  * 
- * Persistent storage for catalog data from Wheel-Size API.
- * ONLY stores data from catalog endpoints (makes, models, years).
- * Does NOT store search results.
+ * Persistent storage for catalog data.
+ * No external API calls - data must be imported via admin tools.
  * 
  * Database tables:
  * - catalog_makes: { slug, name }
@@ -14,7 +13,6 @@
 import { db } from "./fitment-db/db";
 import { catalogMakes, catalogModels, catalogSyncLog } from "./fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
-import * as wheelSizeApi from "./wheelSizeApi";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -31,36 +29,26 @@ export interface CatalogModel {
   years: number[];
 }
 
-// Sync interval: only re-fetch from API if data is older than this
-const SYNC_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
-
 // ─────────────────────────────────────────────────────────────────────────────
 // PUBLIC API - READ
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Get all makes from catalog (DB first, API fallback)
+ * Get all makes from catalog (DB only)
  */
 export async function getMakes(): Promise<CatalogMake[]> {
   try {
-    // Check if we have makes in DB
     const dbMakes = await db.query.catalogMakes.findMany({
       orderBy: (makes, { asc }) => [asc(makes.name)],
     });
     
     if (dbMakes.length > 0) {
-      console.log(`[catalog-store] DB HIT: ${dbMakes.length} makes`);
+      console.log(`[catalog-store] DB: ${dbMakes.length} makes`);
       return dbMakes.map(m => ({ slug: m.slug, name: m.name }));
     }
     
-    // DB miss - populate from API
-    console.log(`[catalog-store] DB MISS for makes, fetching from API...`);
-    await populateMakes();
-    
-    const freshMakes = await db.query.catalogMakes.findMany({
-      orderBy: (makes, { asc }) => [asc(makes.name)],
-    });
-    return freshMakes.map(m => ({ slug: m.slug, name: m.name }));
+    console.log(`[catalog-store] No makes in catalog`);
+    return [];
   } catch (err) {
     console.error("[catalog-store] Error getting makes:", err);
     return [];
@@ -68,20 +56,19 @@ export async function getMakes(): Promise<CatalogMake[]> {
 }
 
 /**
- * Get models for a make from catalog (DB first, API fallback)
+ * Get models for a make from catalog (DB only)
  */
 export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
   const normalizedMake = makeSlug.toLowerCase();
   
   try {
-    // Check if we have models in DB
     const dbModels = await db.query.catalogModels.findMany({
       where: eq(catalogModels.makeSlug, normalizedMake),
       orderBy: (models, { asc }) => [asc(models.name)],
     });
     
     if (dbModels.length > 0) {
-      console.log(`[catalog-store] DB HIT: ${dbModels.length} models for ${makeSlug}`);
+      console.log(`[catalog-store] DB: ${dbModels.length} models for ${makeSlug}`);
       return dbModels.map(m => ({ 
         slug: m.slug, 
         name: m.name, 
@@ -89,19 +76,8 @@ export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
       }));
     }
     
-    // DB miss - populate from API
-    console.log(`[catalog-store] DB MISS for ${makeSlug} models, fetching from API...`);
-    await populateModels(normalizedMake);
-    
-    const freshModels = await db.query.catalogModels.findMany({
-      where: eq(catalogModels.makeSlug, normalizedMake),
-      orderBy: (models, { asc }) => [asc(models.name)],
-    });
-    return freshModels.map(m => ({ 
-      slug: m.slug, 
-      name: m.name, 
-      years: (m.years || []) as number[] 
-    }));
+    console.log(`[catalog-store] No models for ${makeSlug}`);
+    return [];
   } catch (err) {
     console.error(`[catalog-store] Error getting models for ${makeSlug}:`, err);
     return [];
@@ -110,7 +86,6 @@ export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
 
 /**
  * Get valid years for a make/model combination
- * Returns empty array if model not found
  */
 export async function getYears(makeSlug: string, modelSlug: string): Promise<number[]> {
   const model = await findModel(makeSlug, modelSlug);
@@ -184,162 +159,6 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Ca
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PUBLIC API - POPULATE (from Wheel-Size API)
-// ─────────────────────────────────────────────────────────────────────────────
-
-/**
- * Fetch and store all makes from Wheel-Size API
- */
-export async function populateMakes(): Promise<number> {
-  console.log("[catalog-store] Populating makes from API...");
-  
-  try {
-    const apiMakes = await wheelSizeApi.getMakes();
-    
-    // Upsert all makes
-    for (const make of apiMakes) {
-      await db
-        .insert(catalogMakes)
-        .values({
-          slug: make.slug.toLowerCase(),
-          name: make.name,
-        })
-        .onConflictDoUpdate({
-          target: catalogMakes.slug,
-          set: {
-            name: make.name,
-            updatedAt: new Date(),
-          },
-        });
-    }
-    
-    // Update sync log
-    await db
-      .insert(catalogSyncLog)
-      .values({
-        entityType: "makes",
-        entityKey: "all",
-        recordCount: apiMakes.length,
-      })
-      .onConflictDoUpdate({
-        target: [catalogSyncLog.entityType, catalogSyncLog.entityKey],
-        set: {
-          syncedAt: new Date(),
-          recordCount: apiMakes.length,
-        },
-      });
-    
-    console.log(`[catalog-store] Stored ${apiMakes.length} makes`);
-    return apiMakes.length;
-  } catch (err) {
-    console.error("[catalog-store] Error populating makes:", err);
-    throw err;
-  }
-}
-
-/**
- * Fetch and store models for a make, including valid years
- */
-export async function populateModels(makeSlug: string): Promise<number> {
-  const normalizedMake = makeSlug.toLowerCase();
-  console.log(`[catalog-store] Populating models for ${normalizedMake}...`);
-  
-  try {
-    const apiModels = await wheelSizeApi.getModels(normalizedMake);
-    let count = 0;
-    
-    for (const model of apiModels) {
-      // Fetch valid years for each model
-      let years: number[] = [];
-      try {
-        years = await wheelSizeApi.getYears(normalizedMake, model.slug);
-        years = years.sort((a, b) => b - a); // descending
-      } catch (err) {
-        console.warn(`[catalog-store] Failed to get years for ${normalizedMake}/${model.slug}`);
-      }
-      
-      // Upsert model
-      await db
-        .insert(catalogModels)
-        .values({
-          makeSlug: normalizedMake,
-          slug: model.slug.toLowerCase(),
-          name: model.name,
-          years: years,
-        })
-        .onConflictDoUpdate({
-          target: [catalogModels.makeSlug, catalogModels.slug],
-          set: {
-            name: model.name,
-            years: years,
-            updatedAt: new Date(),
-          },
-        });
-      
-      count++;
-    }
-    
-    // Update sync log
-    await db
-      .insert(catalogSyncLog)
-      .values({
-        entityType: "models",
-        entityKey: normalizedMake,
-        recordCount: count,
-      })
-      .onConflictDoUpdate({
-        target: [catalogSyncLog.entityType, catalogSyncLog.entityKey],
-        set: {
-          syncedAt: new Date(),
-          recordCount: count,
-        },
-      });
-    
-    console.log(`[catalog-store] Stored ${count} models for ${normalizedMake}`);
-    return count;
-  } catch (err) {
-    console.error(`[catalog-store] Error populating models for ${normalizedMake}:`, err);
-    throw err;
-  }
-}
-
-/**
- * Populate common US makes and their models with years
- */
-export async function populateCommonMakes(): Promise<{ makes: number; models: number }> {
-  const commonMakes = [
-    "acura", "audi", "bmw", "buick", "cadillac", "chevrolet", "chrysler",
-    "dodge", "ford", "genesis", "gmc", "honda", "hyundai", "infiniti",
-    "jaguar", "jeep", "kia", "land-rover", "lexus", "lincoln", "mazda",
-    "mercedes", "mini", "mitsubishi", "nissan", "porsche", "ram", "subaru",
-    "tesla", "toyota", "volkswagen", "volvo"
-  ];
-  
-  // First populate all makes
-  await populateMakes();
-  
-  let totalModels = 0;
-  
-  // Then populate models with years for common makes
-  for (const makeSlug of commonMakes) {
-    try {
-      const count = await populateModels(makeSlug);
-      totalModels += count;
-      // Small delay to avoid rate limiting
-      await new Promise(r => setTimeout(r, 50));
-    } catch (err) {
-      console.error(`[catalog-store] Failed to populate ${makeSlug}:`, err);
-    }
-  }
-  
-  const makesCount = await db.select({ count: sql<number>`count(*)` }).from(catalogMakes);
-  return { 
-    makes: Number(makesCount[0]?.count || 0), 
-    models: totalModels 
-  };
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
 // UTILITIES
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -371,27 +190,6 @@ export async function getStats(): Promise<{
 }
 
 /**
- * Check if sync is needed for an entity
- */
-export async function needsSync(entityType: string, entityKey: string = "all"): Promise<boolean> {
-  try {
-    const syncLog = await db.query.catalogSyncLog.findFirst({
-      where: and(
-        eq(catalogSyncLog.entityType, entityType),
-        eq(catalogSyncLog.entityKey, entityKey)
-      ),
-    });
-    
-    if (!syncLog) return true;
-    
-    const age = Date.now() - syncLog.syncedAt.getTime();
-    return age > SYNC_INTERVAL_MS;
-  } catch {
-    return true;
-  }
-}
-
-/**
  * Check if catalog has data for a make
  */
 export async function hasMake(makeSlug: string): Promise<boolean> {
@@ -401,12 +199,9 @@ export async function hasMake(makeSlug: string): Promise<boolean> {
 
 /**
  * Get all makes that have models available for a specific year.
- * Queries catalog_models where the year is in the years[] array.
  */
 export async function getMakesByYear(year: number): Promise<CatalogMake[]> {
   try {
-    // Query catalog_models where year is in the years array
-    // Then get distinct make_slugs and join with catalog_makes for names
     const results = await db.execute(sql`
       SELECT DISTINCT cm.make_slug, 
              COALESCE(mk.name, INITCAP(REPLACE(cm.make_slug, '-', ' '))) as name
@@ -431,7 +226,6 @@ export async function getMakesByYear(year: number): Promise<CatalogMake[]> {
 
 /**
  * Get all models for a make that are available for a specific year.
- * Filters catalog_models by make_slug and year in years[] array.
  */
 export async function getModelsByYear(makeSlug: string, year: number): Promise<CatalogModel[]> {
   const normalizedMake = makeSlug.toLowerCase();
@@ -470,8 +264,7 @@ export async function clearCatalog(): Promise<void> {
 }
 
 /**
- * Get makes from vehicle_fitments table (locally imported data) for a specific year.
- * This supplements catalog data with any manually imported fitment.
+ * Get makes from vehicle_fitments table for a specific year.
  */
 export async function getFitmentMakesByYear(year: number): Promise<string[]> {
   try {

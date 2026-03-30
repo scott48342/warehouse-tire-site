@@ -1,8 +1,8 @@
 /**
- * Fitment Import Service
+ * Fitment Import Service (STUB)
  * 
- * Imports fitment data from external APIs and stores in database.
- * Handles deduplication, change detection, and source tracking.
+ * External API import has been removed. This file provides stub exports
+ * for backwards compatibility. Use static data import tools instead.
  */
 
 import { db } from "./db";
@@ -11,10 +11,9 @@ import type { NewFitmentSourceRecord, NewVehicleFitment, NewFitmentImportJob } f
 import { eq, and } from "drizzle-orm";
 import { makePayloadChecksum, normalizeMake, normalizeModel, slugify } from "./keys";
 import { normalizeWheelSizeData, createWheelSizeSourceRecord } from "./normalize";
-import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 
 // ============================================================================
-// Single Record Import
+// Single Record Import (DB-only, from static data)
 // ============================================================================
 
 interface ImportResult {
@@ -26,9 +25,10 @@ interface ImportResult {
 }
 
 /**
- * Import a single fitment record from Wheel-Size API
+ * Import a single fitment record from static data
+ * NOTE: Wheel-Size API import has been removed. Use for static data only.
  */
-export async function importWheelSizeFitment(
+export async function importStaticFitment(
   year: number,
   make: string,
   model: string,
@@ -36,45 +36,46 @@ export async function importWheelSizeFitment(
     slug: string;
     name?: string;
     trim?: string;
-    engine?: unknown;
-    body?: string;
   },
-  wheelData?: unknown,
-  tireData?: unknown,
-  fullPayload?: unknown
+  fitmentData: {
+    boltPattern?: string;
+    centerBoreMm?: number;
+    threadSize?: string;
+    seatType?: string;
+    oemTireSizes?: string[];
+    oemWheelSizes?: any[];
+  }
 ): Promise<ImportResult> {
   try {
     const sourceId = modification.slug;
-    const checksum = makePayloadChecksum(fullPayload || modification);
+    const checksum = makePayloadChecksum({ modification, fitmentData });
     
     // Check if we already have this source record with same checksum
     const existingSource = await db.query.fitmentSourceRecords.findFirst({
       where: and(
-        eq(fitmentSourceRecords.source, "wheelsize"),
+        eq(fitmentSourceRecords.source, "static"),
         eq(fitmentSourceRecords.sourceId, sourceId)
       ),
     });
     
     if (existingSource && existingSource.checksum === checksum) {
-      // Data unchanged, skip
       return { success: true, action: "skipped", sourceRecordId: existingSource.id };
     }
     
     // Create or update source record
     const sourceRecord: NewFitmentSourceRecord = {
-      source: "wheelsize",
+      source: "static",
       sourceId,
       year,
       make: normalizeMake(make),
       model: normalizeModel(model),
-      rawPayload: (fullPayload || modification) as Record<string, unknown>,
+      rawPayload: { modification, fitmentData } as Record<string, unknown>,
       checksum,
     };
     
     let sourceRecordId: string;
     
     if (existingSource) {
-      // Update existing
       await db
         .update(fitmentSourceRecords)
         .set({
@@ -85,7 +86,6 @@ export async function importWheelSizeFitment(
         .where(eq(fitmentSourceRecords.id, existingSource.id));
       sourceRecordId = existingSource.id;
     } else {
-      // Insert new
       const [inserted] = await db
         .insert(fitmentSourceRecords)
         .values(sourceRecord)
@@ -93,18 +93,24 @@ export async function importWheelSizeFitment(
       sourceRecordId = inserted.id;
     }
     
-    // Normalize and upsert fitment record
-    const normalizedFitment = normalizeWheelSizeData(
-      year,
-      make,
-      model,
-      modification as any,
-      wheelData as any,
-      tireData as any
-    );
+    // Build fitment record
+    const modificationId = slugify(modification.slug);
+    const displayTrim = modification.trim || modification.name || "Base";
     
     const fitmentRecord: NewVehicleFitment = {
-      ...normalizedFitment,
+      year,
+      make: normalizeMake(make),
+      model: normalizeModel(model),
+      modificationId,
+      displayTrim,
+      rawTrim: modification.trim || null,
+      boltPattern: fitmentData.boltPattern || null,
+      centerBoreMm: fitmentData.centerBoreMm ? String(fitmentData.centerBoreMm) : null,
+      threadSize: fitmentData.threadSize || null,
+      seatType: fitmentData.seatType || null,
+      oemTireSizes: fitmentData.oemTireSizes || [],
+      oemWheelSizes: fitmentData.oemWheelSizes || [],
+      source: "static",
       sourceRecordId,
     };
     
@@ -122,7 +128,6 @@ export async function importWheelSizeFitment(
     let action: "created" | "updated";
     
     if (existingFitment) {
-      // Update existing
       await db
         .update(vehicleFitments)
         .set({
@@ -133,7 +138,6 @@ export async function importWheelSizeFitment(
       fitmentId = existingFitment.id;
       action = "updated";
     } else {
-      // Insert new
       const [inserted] = await db
         .insert(vehicleFitments)
         .values(fitmentRecord)
@@ -144,13 +148,35 @@ export async function importWheelSizeFitment(
     
     return { success: true, action, fitmentId, sourceRecordId };
   } catch (error: any) {
-    console.error("[importWheelSizeFitment] Error:", error?.message);
+    console.error("[importStaticFitment] Error:", error?.message);
     return { success: false, action: "error", error: error?.message };
   }
 }
 
 // ============================================================================
-// Batch Import Jobs
+// Deprecated exports (for backwards compatibility)
+// ============================================================================
+
+/**
+ * @deprecated Wheel-Size API import has been removed
+ */
+export async function importWheelSizeFitment(): Promise<ImportResult> {
+  return {
+    success: false,
+    action: "error",
+    error: "Wheel-Size API import is disabled. Use importStaticFitment instead.",
+  };
+}
+
+/**
+ * @deprecated Wheel-Size API import has been removed
+ */
+export async function importFromWheelSize(): Promise<void> {
+  throw new Error("Wheel-Size API import is disabled. Use static data import tools instead.");
+}
+
+// ============================================================================
+// Import Job Management (kept for compatibility)
 // ============================================================================
 
 /**
@@ -197,7 +223,7 @@ export async function updateImportJobProgress(
   
   if (progress.status) {
     updates.status = progress.status;
-    if (progress.status === "running" && !updates.startedAt) {
+    if (progress.status === "running") {
       updates.startedAt = new Date();
     }
     if (progress.status === "completed" || progress.status === "failed") {
@@ -224,171 +250,4 @@ export async function getImportJob(jobId: string) {
   return db.query.fitmentImportJobs.findFirst({
     where: eq(fitmentImportJobs.id, jobId),
   });
-}
-
-// ============================================================================
-// Import from Wheel-Size API (for batch operations)
-// ============================================================================
-
-const WHEELSIZE_API_BASE = "https://api.wheel-size.com/v2/";
-
-interface WheelSizeImportOptions {
-  yearStart: number;
-  yearEnd: number;
-  makes?: string[];
-  apiKey: string;
-  onProgress?: (current: number, total: number) => void;
-}
-
-/**
- * Import all fitments for a year range from Wheel-Size
- * This is for batch import jobs, not for runtime API calls
- */
-export async function importFromWheelSize(
-  jobId: string,
-  options: WheelSizeImportOptions
-): Promise<void> {
-  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
-  if (!isWheelSizeEnabled()) {
-    console.warn("[importFitment] Wheel-Size API DISABLED - blocking batch import");
-    await updateImportJobProgress(jobId, { 
-      status: "failed",
-      lastError: "Wheel-Size API is temporarily disabled"
-    });
-    throw new Error("Wheel-Size API is temporarily disabled");
-  }
-
-  const { yearStart, yearEnd, makes, apiKey, onProgress } = options;
-  
-  await updateImportJobProgress(jobId, { status: "running" });
-  
-  let totalProcessed = 0;
-  let totalImported = 0;
-  let totalSkipped = 0;
-  let totalErrors = 0;
-  
-  try {
-    // Get list of makes
-    const makesToProcess = makes || await fetchWheelSizeMakes(apiKey);
-    
-    for (let year = yearStart; year <= yearEnd; year++) {
-      for (const make of makesToProcess) {
-        try {
-          // Get models for this year/make
-          const models = await fetchWheelSizeModels(apiKey, year, make);
-          
-          for (const model of models) {
-            try {
-              // Get modifications for this year/make/model
-              const modifications = await fetchWheelSizeModifications(apiKey, year, make, model);
-              
-              for (const mod of modifications) {
-                totalProcessed++;
-                
-                const result = await importWheelSizeFitment(
-                  year,
-                  make,
-                  model,
-                  mod,
-                  undefined, // wheelData - would need separate API call
-                  undefined, // tireData - would need separate API call
-                  mod // fullPayload
-                );
-                
-                if (result.action === "created" || result.action === "updated") {
-                  totalImported++;
-                } else if (result.action === "skipped") {
-                  totalSkipped++;
-                } else {
-                  totalErrors++;
-                }
-                
-                // Update progress every 100 records
-                if (totalProcessed % 100 === 0) {
-                  await updateImportJobProgress(jobId, {
-                    processedRecords: totalProcessed,
-                    importedRecords: totalImported,
-                    skippedRecords: totalSkipped,
-                    errorCount: totalErrors,
-                  });
-                  onProgress?.(totalProcessed, 0); // Total unknown in streaming mode
-                }
-              }
-            } catch (modelErr: any) {
-              console.error(`[import] Error processing ${year} ${make} ${model}:`, modelErr?.message);
-              totalErrors++;
-            }
-          }
-        } catch (makeErr: any) {
-          console.error(`[import] Error processing ${year} ${make}:`, makeErr?.message);
-          totalErrors++;
-        }
-      }
-    }
-    
-    await updateImportJobProgress(jobId, {
-      status: "completed",
-      processedRecords: totalProcessed,
-      importedRecords: totalImported,
-      skippedRecords: totalSkipped,
-      errorCount: totalErrors,
-    });
-  } catch (error: any) {
-    await updateImportJobProgress(jobId, {
-      status: "failed",
-      lastError: error?.message,
-      processedRecords: totalProcessed,
-      importedRecords: totalImported,
-      skippedRecords: totalSkipped,
-      errorCount: totalErrors,
-    });
-    throw error;
-  }
-}
-
-// ============================================================================
-// Wheel-Size API Helpers
-// ============================================================================
-
-async function fetchWheelSizeMakes(apiKey: string): Promise<string[]> {
-  const url = new URL("makes/", WHEELSIZE_API_BASE);
-  url.searchParams.set("user_key", apiKey);
-  
-  const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`Wheel-Size makes API failed: ${res.status}`);
-  
-  const data = await res.json();
-  return (data?.data || []).map((m: any) => m.slug || m.name);
-}
-
-async function fetchWheelSizeModels(apiKey: string, year: number, make: string): Promise<string[]> {
-  const url = new URL("models/", WHEELSIZE_API_BASE);
-  url.searchParams.set("user_key", apiKey);
-  url.searchParams.set("make", make);
-  url.searchParams.set("year", String(year));
-  
-  const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`Wheel-Size models API failed: ${res.status}`);
-  
-  const data = await res.json();
-  return (data?.data || []).map((m: any) => m.slug || m.name);
-}
-
-async function fetchWheelSizeModifications(
-  apiKey: string,
-  year: number,
-  make: string,
-  model: string
-): Promise<any[]> {
-  const url = new URL("modifications/", WHEELSIZE_API_BASE);
-  url.searchParams.set("user_key", apiKey);
-  url.searchParams.set("make", make);
-  url.searchParams.set("model", model);
-  url.searchParams.set("year", String(year));
-  
-  const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`Wheel-Size modifications API failed: ${res.status}`);
-  
-  const data = await res.json();
-  return data?.data || [];
 }

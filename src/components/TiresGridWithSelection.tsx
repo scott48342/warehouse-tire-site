@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart/CartContext";
 import { FavoritesButton } from "@/components/FavoritesButton";
+import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -113,56 +114,8 @@ function formatPrice(price: number): string {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// SELECTED WHEEL SUMMARY
+// SELECTED WHEEL SUMMARY - REMOVED (displayed in TirePageCompactHeader)
 // ═══════════════════════════════════════════════════════════════════════════════
-function SelectedWheelSummary({ wheel }: { wheel: SelectedWheel }) {
-  return (
-    <div className="rounded-2xl border border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 p-4">
-      <div className="flex items-center gap-4">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-500 text-white">
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-green-700 uppercase tracking-wide">Wheels Selected</span>
-            <span className="rounded-full bg-green-200 px-2 py-0.5 text-[10px] font-bold text-green-800">
-              Step 1 Complete
-            </span>
-          </div>
-          <div className="mt-1 flex items-center gap-3">
-            {wheel.imageUrl && (
-              <img 
-                src={wheel.imageUrl} 
-                alt={wheel.model} 
-                className="h-12 w-12 rounded-lg object-contain bg-white border border-green-100"
-              />
-            )}
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-neutral-900 truncate">
-                {wheel.brand} {wheel.model}
-              </div>
-              <div className="text-xs text-neutral-600">
-                {wheel.diameter && `${wheel.diameter}"`}
-                {wheel.diameter && wheel.width && " × "}
-                {wheel.width && `${wheel.width}"`}
-                {wheel.finish && ` • ${wheel.finish}`}
-              </div>
-            </div>
-            <div className="ml-auto text-right">
-              <div className="text-lg font-extrabold text-green-700">
-                ${formatPrice(wheel.setPrice)}
-              </div>
-              <div className="text-[10px] text-neutral-500">set of 4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TIRE CARD
@@ -463,9 +416,9 @@ function PackageTotal({
   const tirePrice = tire?.setPrice || 0;
   const total = wheelPrice + tirePrice;
   
-  // Estimates for TPMS and install
-  const tpmsEstimate = 80;
-  const installEstimate = 100;
+  // Estimates for TPMS and install (from centralized pricing)
+  const tpmsEstimate = TPMS_SET_PRICE_ESTIMATE;
+  const installEstimate = MOUNT_BALANCE_ESTIMATE;
   const grandTotal = total + tpmsEstimate + installEstimate;
   
   return (
@@ -794,12 +747,7 @@ export function TiresGridWithSelection({
     <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
       {/* Main content */}
       <div>
-        {/* Selected wheel summary */}
-        {selectedWheel && (
-          <div className="mb-4">
-            <SelectedWheelSummary wheel={selectedWheel} />
-          </div>
-        )}
+        {/* Wheel summary is displayed in TirePageCompactHeader - no duplicate here */}
         
         {/* Tire selection confirmation */}
         {selectedTire && (

@@ -1711,8 +1711,8 @@ export default async function TiresPage({
                   model: wheelName || wheelSku,
                   diameter: wheelDia,
                   width: wheelWidth,
-                  setPrice: wheelUnit ? Number(wheelUnit) * (Number(wheelQty) || 4) : 0,
-                  imageUrl: undefined, // Would need to pass from wheel selection
+                  setPrice: wheelPrice || (wheelUnit ? Number(wheelUnit) * (Number(wheelQty) || 4) : 0),
+                  imageUrl: wheelImage || undefined,
                 } : null}
               />
             ) : (

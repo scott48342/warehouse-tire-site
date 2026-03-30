@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { WheelsStyleCard, type WheelFinishThumb, type WheelPair } from "./WheelsStyleCard";
 import { type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
+import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -235,10 +236,12 @@ function PackageEstimate({
   isSelected: boolean;
 }) {
   // Estimate tire price range
+  // Tire price range estimates
   const tireEstimateMin = 600; // ~$150/tire
   const tireEstimateMax = 1200; // ~$300/tire
-  const tpmsEstimate = 80;
-  const installEstimate = 100;
+  // Accessory estimates from centralized pricing
+  const tpmsEstimate = TPMS_SET_PRICE_ESTIMATE;
+  const installEstimate = MOUNT_BALANCE_ESTIMATE;
   
   if (wheelSetPrice === null) {
     return (
