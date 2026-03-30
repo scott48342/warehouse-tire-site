@@ -118,7 +118,7 @@ function formatPrice(price: number): string {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// TIRE CARD
+// TIRE CARD - Clean, conversion-focused design
 // ═══════════════════════════════════════════════════════════════════════════════
 function TireCard({
   tire,
@@ -147,12 +147,15 @@ function TireCard({
     ? `/tires/${encodeURIComponent(tire.partNumber)}?size=${encodeURIComponent(size)}`
     : "#";
   
-  // Category badge config
-  const categoryConfig = {
-    "best-value": { label: "Best Value", bg: "bg-emerald-100", text: "text-emerald-800", icon: "💰" },
-    "most-popular": { label: "Popular Choice", bg: "bg-blue-100", text: "text-blue-800", icon: "⭐" },
-    "premium": { label: "Premium", bg: "bg-purple-100", text: "text-purple-800", icon: "✨" },
-  }[category];
+  // Terrain type from badges or model name
+  const terrainType = tire.badges?.terrain || 
+    (model.toLowerCase().includes("all-terrain") || model.toLowerCase().includes("a/t") ? "All-Terrain" :
+     model.toLowerCase().includes("mud") || model.toLowerCase().includes("m/t") ? "Mud-Terrain" :
+     model.toLowerCase().includes("highway") || model.toLowerCase().includes("h/t") ? "Highway" :
+     "All-Season");
+  
+  // Popular indicator (high stock = popular)
+  const isPopular = category === "most-popular" || stock >= 20;
   
   return (
     <div 
@@ -173,16 +176,16 @@ function TireCard({
         </div>
       )}
       
-      {/* Category badge */}
-      <div className={`px-3 py-1.5 text-center ${categoryConfig.bg}`}>
-        <span className={`text-xs font-bold ${categoryConfig.text}`}>
-          {categoryConfig.icon} {categoryConfig.label}
+      {/* Guaranteed Fit badge */}
+      <div className="bg-green-600 px-3 py-1.5 text-center">
+        <span className="text-xs font-bold text-white tracking-wide">
+          🟢 GUARANTEED FIT
         </span>
       </div>
       
-      {/* Image */}
+      {/* Large Image */}
       <Link href={detailHref} className="block relative">
-        <div className="aspect-square w-full overflow-hidden bg-neutral-50 p-4">
+        <div className="aspect-square w-full overflow-hidden bg-neutral-50 p-6">
           {tire.imageUrl ? (
             <img
               src={tire.imageUrl}
@@ -192,10 +195,7 @@ function TireCard({
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl text-neutral-300">🚗</div>
-                <div className="mt-2 text-xs font-semibold text-neutral-500">Image coming soon</div>
-              </div>
+              <div className="text-6xl text-neutral-200">🛞</div>
             </div>
           )}
         </div>
@@ -214,72 +214,61 @@ function TireCard({
       
       {/* Content */}
       <div className="flex flex-1 flex-col p-4">
+        {/* Brand */}
         <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{brand}</div>
+        
+        {/* Model Name */}
         <Link href={detailHref}>
-          <h3 className="mt-0.5 text-base font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2 min-h-[2.5rem]">
+          <h3 className="mt-0.5 text-lg font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2">
             {model}
           </h3>
         </Link>
         
-        {/* Size */}
-        <div className="mt-1.5 inline-flex items-center gap-2">
-          <span className="rounded-lg bg-neutral-100 px-2 py-1 text-xs font-bold text-neutral-700">
-            {size}
-          </span>
-          {tire.badges?.speedRating && (
-            <span className="text-xs text-neutral-500">
-              {tire.badges.loadIndex}{tire.badges.speedRating}
+        {/* Size • Terrain */}
+        <div className="mt-1.5 text-sm text-neutral-600">
+          {size} • {terrainType}
+        </div>
+        
+        {/* Popular badge OR warranty */}
+        <div className="mt-2">
+          {isPopular ? (
+            <span className="inline-flex items-center gap-1 text-sm font-semibold text-amber-700">
+              🔥 Popular
             </span>
-          )}
+          ) : tire.badges?.warrantyMiles && tire.badges.warrantyMiles > 0 ? (
+            <span className="text-sm text-neutral-500">
+              {(tire.badges.warrantyMiles / 1000).toFixed(0)}k mile warranty
+            </span>
+          ) : null}
         </div>
-        
-        {/* Stock indicator */}
-        <div className="mt-2 flex items-center gap-1.5">
-          <div className={`h-2 w-2 rounded-full ${
-            stock >= 16 ? "bg-green-500" : stock >= 8 ? "bg-amber-500" : "bg-red-500"
-          }`} />
-          <span className="text-xs text-neutral-500">
-            {stock >= 16 ? "In stock" : stock >= 8 ? "Limited stock" : stock >= 4 ? "Low stock" : "Special order"}
-          </span>
-        </div>
-        
-        {/* Warranty if available */}
-        {tire.badges?.warrantyMiles && tire.badges.warrantyMiles > 0 && (
-          <div className="mt-1.5 text-xs text-neutral-500">
-            {(tire.badges.warrantyMiles / 1000).toFixed(0)}k mile warranty
-          </div>
-        )}
         
         <div className="flex-1" />
         
-        {/* Pricing */}
-        <div className="mt-4 rounded-xl bg-neutral-50 p-3">
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-2xl font-extrabold text-neutral-900">
-                {setPrice !== null 
-                  ? `$${formatPrice(setPrice)}`
-                  : "Call for price"
-                }
-              </div>
-              <div className="text-xs text-neutral-500">
-                for set of 4
-                {price !== null && (
-                  <span className="ml-1">
-                    (${formatPrice(price)} each)
-                  </span>
-                )}
-              </div>
+        {/* Price */}
+        <div className="mt-4">
+          <div className="text-2xl font-extrabold text-neutral-900">
+            {setPrice !== null 
+              ? `$${formatPrice(setPrice)} for 4`
+              : "Call for price"
+            }
+          </div>
+          {price !== null && (
+            <div className="text-sm text-neutral-500">
+              (${formatPrice(price)} each)
             </div>
-          </div>
-          
-          {/* Trust signals */}
-          <div className="mt-2 flex items-center gap-3 text-[11px] text-neutral-600">
-            <span className="flex items-center gap-1">
-              <span className="text-green-600">✓</span>
-              Free Shipping
-            </span>
-          </div>
+          )}
+        </div>
+        
+        {/* Trust signals */}
+        <div className="mt-2 flex items-center gap-4 text-xs text-neutral-600">
+          <span className="flex items-center gap-1">
+            <span className="text-green-600">✓</span>
+            Free Shipping
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="text-green-600">✓</span>
+            Fitment Guaranteed
+          </span>
         </div>
         
         {/* CTA */}
@@ -288,7 +277,7 @@ function TireCard({
           onClick={onSelect}
           disabled={isSelected}
           className={`
-            mt-3 flex h-12 w-full items-center justify-center gap-2 rounded-xl 
+            mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-xl 
             text-sm font-extrabold transition-all duration-200
             ${isSelected
               ? "bg-green-600 text-white cursor-default"
@@ -316,6 +305,14 @@ function TireCard({
             </>
           )}
         </button>
+        
+        {/* View specs link */}
+        <Link 
+          href={detailHref}
+          className="mt-2 text-center text-xs font-semibold text-neutral-500 hover:text-neutral-700"
+        >
+          View specs →
+        </Link>
       </div>
     </div>
   );
