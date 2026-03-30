@@ -454,7 +454,7 @@ export async function listAvailableModifications(
       modelSlug: foundModel.slug,
       modifications: mods.map(m => ({
         slug: m.slug,
-        name: m.name,
+        name: m.name || m.slug,
         engine: m.engine ? `${m.engine.capacity}L ${m.engine.type} ${m.engine.fuel}` : undefined,
         regions: m.regions || [],
       })),

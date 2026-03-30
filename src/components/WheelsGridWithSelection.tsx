@@ -309,9 +309,18 @@ export function WheelsGridWithSelection({
     if (viewParams.modification) params.set("modification", viewParams.modification);
     
     // Pass wheel specs for tire matching
+    if (selectedWheel?.sku) params.set("wheelSku", selectedWheel.sku);
     if (selectedWheel?.diameter) params.set("wheelDia", selectedWheel.diameter);
     if (selectedWheel?.width) params.set("wheelWidth", selectedWheel.width);
     if (selectedWheel?.offset) params.set("wheelOffset", selectedWheel.offset);
+    
+    // Pass wheel display info for tire page summary
+    if (selectedWheel?.brand && selectedWheel?.model) {
+      params.set("wheelName", `${selectedWheel.brand} ${selectedWheel.model}`);
+    }
+    if (selectedWheel?.imageUrl) params.set("wheelImage", selectedWheel.imageUrl);
+    if (selectedWheel?.setPrice) params.set("wheelPrice", String(selectedWheel.setPrice));
+    if (selectedWheel?.finish) params.set("wheelFinish", selectedWheel.finish);
     
     // Pass lifted context if present
     if (viewParams.liftedSource) params.set("liftedSource", viewParams.liftedSource);

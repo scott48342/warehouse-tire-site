@@ -283,6 +283,10 @@ export default async function TiresPage({
   const sizeRearRaw = safeString(Array.isArray((sp as any).sizeRear) ? (sp as any).sizeRear[0] : (sp as any).sizeRear);
 
   const wheelName = safeString(Array.isArray((sp as any).wheelName) ? (sp as any).wheelName[0] : (sp as any).wheelName);
+  const wheelImage = safeString(Array.isArray((sp as any).wheelImage) ? (sp as any).wheelImage[0] : (sp as any).wheelImage);
+  const wheelPriceRaw = safeString(Array.isArray((sp as any).wheelPrice) ? (sp as any).wheelPrice[0] : (sp as any).wheelPrice);
+  const wheelPrice = wheelPriceRaw ? parseFloat(wheelPriceRaw) : null;
+  const wheelFinish = safeString(Array.isArray((sp as any).wheelFinish) ? (sp as any).wheelFinish[0] : (sp as any).wheelFinish);
   const wheelUnit = safeString(Array.isArray((sp as any).wheelUnit) ? (sp as any).wheelUnit[0] : (sp as any).wheelUnit);
   const wheelQty = safeString(Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty);
   const wheelDia = safeString(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
@@ -315,7 +319,7 @@ export default async function TiresPage({
   
   // Lifted build is active when we have valid lifted context from URL params
   // liftedSource can be "lifted" (from /lifted page), "manual" (user-selected), or any truthy value
-  const isLiftedBuild = Boolean(liftedSource) && liftedPreset && liftedInches > 0;
+  const isLiftedBuild = Boolean(liftedSource) && Boolean(liftedPreset) && liftedInches > 0;
   
   if (isLiftedBuild) {
     console.log('[tires/page] 🚀 LIFTED BUILD DETECTED:', {
@@ -1181,9 +1185,14 @@ export default async function TiresPage({
             selectedSize={selectedSize}
             availableSizes={displayedSizes}
             wheelDia={wheelDia}
+            wheelWidth={wheelWidthActive || wheelWidth}
             basePath={basePath}
             sort={sort}
             wheelSku={wheelSku}
+            wheelName={wheelName}
+            wheelImage={wheelImage}
+            wheelPrice={wheelPrice}
+            wheelFinish={wheelFinish}
             isPackageFlow={isPackageFlow}
             isLiftedBuild={isLiftedBuild}
             liftedInches={liftedInches}

@@ -443,10 +443,10 @@ export async function upsertVehicleFitment(
   db: pg.Pool,
   vehicleId: number,
   data: {
-    boltPattern: string;
-    centerBore: number;
-    studHoles: number;
-    pcd: number;
+    boltPattern?: string;
+    centerBore?: number;
+    studHoles?: number;
+    pcd?: number;
     threadSize?: string;
     fastenerType?: string;
     torqueNm?: number;

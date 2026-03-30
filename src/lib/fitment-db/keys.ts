@@ -59,6 +59,24 @@ export function normalizeMake(make: string): string {
  * Pattern: "user-facing-slug" → "api-slug"
  */
 const modelAliases: Record<string, string> = {
+  // ===== Chevrolet =====
+  "silverado-1500": "silverado-1500",
+  "silverado-2500-hd": "silverado-2500hd",
+  "silverado-2500hd": "silverado-2500hd",
+  "silverado-2500": "silverado-2500hd",
+  "silverado-3500-hd": "silverado-3500hd",
+  "silverado-3500hd": "silverado-3500hd",
+  "silverado-3500": "silverado-3500hd",
+  
+  // ===== GMC =====
+  "sierra-1500": "sierra-1500",
+  "sierra-2500-hd": "sierra-2500hd",
+  "sierra-2500hd": "sierra-2500hd",
+  "sierra-2500": "sierra-2500hd",
+  "sierra-3500-hd": "sierra-3500hd",
+  "sierra-3500hd": "sierra-3500hd",
+  "sierra-3500": "sierra-3500hd",
+  
   // ===== Lexus =====
   "rx-350": "rx",
   "rx-450h": "rx",
