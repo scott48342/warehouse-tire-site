@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import * as catalogStore from "@/lib/catalog-store";
-import { normalizeMake } from "@/lib/fitment-db/keys";
+import { normalizeMake, normalizeModel, modelToDisplayName, getCanonicalModelKey } from "@/lib/fitment-db/keys";
 
 export const runtime = "nodejs";
 
@@ -74,24 +74,31 @@ export async function GET(req: Request) {
   const makeSlug = normalizeMake(make);
 
   /**
-   * Filter models by year if provided.
+   * Filter models by year if provided, with proper deduplication.
    */
   function filterByYear(models: { name: string; years?: number[] }[]): string[] {
-    if (!year || isNaN(year)) {
-      return models.map(m => m.name).sort();
+    const modelMap = new Map<string, string>();
+    
+    for (const m of models) {
+      // Year filter
+      if (year && !isNaN(year)) {
+        const years = m.years || [];
+        if (years.length > 0 && !years.includes(year)) continue;
+      }
+      
+      // Dedupe by canonical key
+      const key = getCanonicalModelKey(m.name);
+      const displayName = modelToDisplayName(m.name);
+      
+      // Skip null display names (suppressed) and don't override existing
+      if (displayName && !modelMap.has(key)) {
+        modelMap.set(key, displayName);
+      }
     }
     
-    const filtered = models
-      .filter(m => {
-        const years = m.years || [];
-        if (years.length === 0) return true;
-        return years.includes(year);
-      })
-      .map(m => m.name)
-      .sort();
-    
-    console.log(`[models] Year filter: ${year} ${make} → ${filtered.length}/${models.length} models`);
-    return filtered;
+    const result = Array.from(modelMap.values()).sort();
+    console.log(`[models] Year filter: ${year || "all"} ${make} → ${result.length}/${models.length} models`);
+    return result;
   }
 
   // Try year-specific catalog query first (most efficient)
@@ -101,19 +108,32 @@ export async function GET(req: Request) {
     // Also check vehicle_fitments for locally imported data
     const fitmentModels = await catalogStore.getFitmentModelsByYear(year, makeSlug);
     
-    // Merge results (deduped)
-    const modelSet = new Set<string>();
-    for (const m of yearModels) modelSet.add(m.name);
-    for (const m of fitmentModels) {
-      // Convert slug to display name
-      const displayName = m.split("-").map((w: string) => 
-        w.charAt(0).toUpperCase() + w.slice(1)
-      ).join(" ");
-      modelSet.add(displayName);
+    // Merge results using canonical keys for deduplication
+    // Map: canonical key → display name
+    const modelMap = new Map<string, string>();
+    
+    // Add catalog models (use name as-is, but dedupe by canonical key)
+    for (const m of yearModels) {
+      const key = getCanonicalModelKey(m.name);
+      const displayName = modelToDisplayName(m.name);
+      // Skip null display names (suppressed models like "Silverado HD")
+      if (displayName && !modelMap.has(key)) {
+        modelMap.set(key, displayName);
+      }
     }
     
-    if (modelSet.size > 0) {
-      const models = Array.from(modelSet).sort();
+    // Add fitment models (convert slugs to display names)
+    for (const slug of fitmentModels) {
+      const key = getCanonicalModelKey(slug);
+      const displayName = modelToDisplayName(slug);
+      // Skip null display names and don't override existing entries
+      if (displayName && !modelMap.has(key)) {
+        modelMap.set(key, displayName);
+      }
+    }
+    
+    if (modelMap.size > 0) {
+      const models = Array.from(modelMap.values()).sort();
       console.log(`[models] YEAR-SPECIFIC: ${year} ${make} → ${models.length} models (catalog: ${yearModels.length}, fitment: ${fitmentModels.length})`);
       return NextResponse.json({ 
         results: models,
