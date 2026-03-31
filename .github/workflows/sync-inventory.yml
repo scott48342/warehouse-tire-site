@@ -1,0 +1,34 @@
+name: Sync WheelPros Inventory
+
+on:
+  schedule:
+    # Every 2 hours
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run inventory sync
+        env:
+          WHEELPROS_SFTP_HOST: sftp.wheelpros.com
+          WHEELPROS_SFTP_USER: warehousetire
+          WHEELPROS_SFTP_PASS: ${{ secrets.WHEELPROS_SFTP_PASS }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        run: npx tsx scripts/sync-inventory.ts
