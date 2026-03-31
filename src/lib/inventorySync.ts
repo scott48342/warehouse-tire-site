@@ -11,8 +11,13 @@
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
-import Client from "ssh2-sftp-client";
 import { Redis } from "@upstash/redis";
+
+// Dynamic import to avoid Turbopack bundling issues with ssh2 native modules
+async function getSftpClient() {
+  const { default: Client } = await import("ssh2-sftp-client");
+  return new Client();
+}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -62,7 +67,7 @@ const CACHE_KEY_PREFIX = "wt:inv:";
 // ═══════════════════════════════════════════════════════════════════════════════
 
 async function downloadInventoryFeed(): Promise<Buffer> {
-  const sftp = new Client();
+  const sftp = await getSftpClient();
   
   try {
     await sftp.connect(SFTP_CONFIG);

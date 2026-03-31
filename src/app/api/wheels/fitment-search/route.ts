@@ -38,7 +38,7 @@ import {
 import {
   getInventoryBulk,
   type CachedInventory,
-} from "@/lib/inventorySync";
+} from "@/lib/inventoryCache";
 
 import {
   calculateConfidence,

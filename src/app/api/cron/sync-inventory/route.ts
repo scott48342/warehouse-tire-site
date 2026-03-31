@@ -8,10 +8,14 @@
  */
 
 import { NextResponse } from "next/server";
-import { runInventorySyncAndStore, getLastSyncResult } from "@/lib/inventorySync";
 
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max (feed is ~38MB)
+
+// Dynamic import to avoid Turbopack bundling ssh2 at build time
+async function getInventorySync() {
+  return import("@/lib/inventorySync");
+}
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -19,6 +23,7 @@ export async function GET(req: Request) {
   
   // Status check
   if (action === "status") {
+    const { getLastSyncResult } = await getInventorySync();
     const lastResult = getLastSyncResult();
     return NextResponse.json({
       ok: true,
@@ -33,6 +38,7 @@ export async function GET(req: Request) {
   const t0 = Date.now();
   
   try {
+    const { runInventorySyncAndStore } = await getInventorySync();
     const result = await runInventorySyncAndStore();
     
     console.log(`[cron/sync-inventory] Completed in ${result.durationMs}ms:`, {
