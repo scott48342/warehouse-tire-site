@@ -12,6 +12,8 @@ import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components
 import { type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
+import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
+import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diameterOptions";
 
 type Wheel = {
   sku?: string;
@@ -1090,6 +1092,67 @@ export default async function WheelsPage({
   });
   const boltPatternBuckets = buckets("bolt_pattern_metric");
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FITMENT DIAMETER CHIPS - Classic vs Modern
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Fetch classic fitment data to determine if this is a classic vehicle
+  let isClassicVehicle = false;
+  let classicStockDiameter: number | null = null;
+  let classicUpsizeRange: [number, number] = [15, 20];
+  
+  if (hasVehicle) {
+    try {
+      const classicData = await getClassicFitment(Number(year), make, model);
+      if (classicData?.isClassicVehicle) {
+        isClassicVehicle = true;
+        classicStockDiameter = classicData.stockReference?.wheelDiameter ?? null;
+        const recRange = classicData.recommendedRange?.diameter;
+        if (recRange) {
+          classicUpsizeRange = [recRange.min ?? 15, Math.max(recRange.max ?? 18, 20)];
+        }
+        console.log(`[wheels/page] 🏎️ CLASSIC VEHICLE: ${year} ${make} ${model}`);
+        console.log(`  Stock diameter: ${classicStockDiameter}"`);
+        console.log(`  Upsize range: ${classicUpsizeRange[0]}" - ${classicUpsizeRange[1]}"`);
+      }
+    } catch (err) {
+      console.warn("[wheels/page] Classic fitment check failed:", err);
+    }
+  }
+  
+  // Build fitment-valid diameter options
+  // For classic: stock + upsize range (e.g., 14-20")
+  // For modern: OEM wheel sizes from dbProfile
+  const fitmentDiameterOptions: DiameterOption[] = (() => {
+    if (!hasVehicle) return [];
+    
+    // Get OEM wheel sizes from dbProfile
+    const oemWheelSizes = (dbProfile?.oemWheelSizes || []) as Array<{ diameter?: number; width?: number }>;
+    
+    // Get stock diameters
+    const stockDiameters: number[] = [];
+    if (isClassicVehicle && classicStockDiameter) {
+      stockDiameters.push(classicStockDiameter);
+    } else {
+      // For modern vehicles, extract from OEM sizes
+      for (const size of oemWheelSizes) {
+        if (size.diameter && Number.isFinite(size.diameter)) {
+          const dia = Math.round(size.diameter);
+          if (!stockDiameters.includes(dia)) {
+            stockDiameters.push(dia);
+          }
+        }
+      }
+    }
+    
+    return buildDiameterOptions({
+      isClassicVehicle,
+      stockDiameters,
+      classicUpsizeRange: isClassicVehicle ? classicUpsizeRange : undefined,
+      oemWheelSizes,
+      inventoryFacets: diameterBuckets,
+    });
+  })();
+
   const basePath = year && make && model ? `/wheels/v/${vehicleSlug(year, make, model)}` : "/wheels";
 
   // URL construction: use 'modification' for fitment identity, omit 'trim' (legacy)
@@ -1736,6 +1799,10 @@ export default async function WheelsPage({
               diameterParam={diameterParam}
               widthParam={widthParam}
               showRecommended={hasVehicle && recommendedWheels.length > 0 && safePage === 1}
+              fitmentDiameters={fitmentDiameterOptions}
+              isClassicVehicle={isClassicVehicle}
+              stockDiameter={classicStockDiameter}
+              showDiameterChips={hasVehicle && fitmentDiameterOptions.length > 0}
               recommendedWheels={recommendedWheels.map(w => ({
                 sku: w.sku,
                 brand: w.brand,

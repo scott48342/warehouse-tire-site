@@ -5,6 +5,7 @@ import Link from "next/link";
 import { WheelsStyleCard, type WheelFinishThumb, type WheelPair } from "./WheelsStyleCard";
 import { type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
+import { FitmentDiameterChips, type DiameterOption } from "./FitmentDiameterChips";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -68,6 +69,14 @@ type WheelsGridProps = {
   widthParam?: string;
   showRecommended?: boolean;
   recommendedWheels?: WheelItem[];
+  /** Fitment-valid diameter options */
+  fitmentDiameters?: DiameterOption[];
+  /** Is this a classic vehicle */
+  isClassicVehicle?: boolean;
+  /** Stock wheel diameter */
+  stockDiameter?: number | null;
+  /** Show diameter chips */
+  showDiameterChips?: boolean;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -299,6 +308,10 @@ export function WheelsGridWithSelection({
   widthParam,
   showRecommended = false,
   recommendedWheels = [],
+  fitmentDiameters = [],
+  isClassicVehicle = false,
+  stockDiameter = null,
+  showDiameterChips = true,
 }: WheelsGridProps) {
   const [selectedWheel, setSelectedWheel] = useState<SelectedWheel | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
@@ -486,6 +499,19 @@ export function WheelsGridWithSelection({
           isSelected={!!selectedWheel}
         />
       </div>
+      
+      {/* Fitment Diameter Chips - positioned below estimate, above Top Picks */}
+      {showDiameterChips && fitmentDiameters.length > 0 && viewParams.year && viewParams.make && viewParams.model && (
+        <div className="mb-4">
+          <FitmentDiameterChips
+            diameters={fitmentDiameters}
+            selectedDiameter={diameterParam ? parseInt(diameterParam, 10) : null}
+            isClassicVehicle={isClassicVehicle}
+            stockDiameter={stockDiameter ?? undefined}
+            showCounts={true}
+          />
+        </div>
+      )}
       
       {/* Recommended Wheels */}
       {showRecommended && recommendedWheels.length > 0 && (
