@@ -142,7 +142,17 @@ export function RecommendedPackages({
       year: String(year),
       make,
       model,
+      // Pass wheel data directly to avoid lookup
+      wheelBrand: pkg.wheel.brand,
+      wheelModel: pkg.wheel.model,
+      wheelFinish: pkg.wheel.finish || "",
+      wheelDiameter: String(pkg.wheel.diameter),
+      wheelWidth: String(pkg.wheel.width),
+      wheelOffset: String(pkg.wheel.offset),
+      wheelPrice: String(pkg.wheel.price),
+      wheelBoltPattern: pkg.wheel.boltPattern,
     });
+    if (pkg.wheel.imageUrl) params.set("wheelImage", pkg.wheel.imageUrl);
     if (trim) params.set("trim", trim);
     
     router.push(`/package/customize?${params}`);

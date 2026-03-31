@@ -59,6 +59,17 @@ export default function PackageCustomizer() {
   const make = searchParams.get("make");
   const model = searchParams.get("model");
   const trim = searchParams.get("trim");
+  
+  // Wheel data passed directly from package selection
+  const wheelBrand = searchParams.get("wheelBrand");
+  const wheelModel = searchParams.get("wheelModel");
+  const wheelFinish = searchParams.get("wheelFinish");
+  const wheelDiameter = searchParams.get("wheelDiameter");
+  const wheelWidth = searchParams.get("wheelWidth");
+  const wheelOffset = searchParams.get("wheelOffset");
+  const wheelPrice = searchParams.get("wheelPrice");
+  const wheelImage = searchParams.get("wheelImage");
+  const wheelBoltPattern = searchParams.get("wheelBoltPattern");
 
   const [state, setState] = useState<PackageState>({
     wheel: null,
@@ -88,13 +99,45 @@ export default function PackageCustomizer() {
       setState(prev => ({ ...prev, loading: true, error: null }));
 
       try {
-        // Fetch wheel data
-        const wheelRes = await fetch(`/api/wheels/search?sku=${encodeURIComponent(wheelSku)}&limit=1`);
-        const wheelData = await wheelRes.json();
+        // Use wheel data from URL params if available (from package selection)
+        let wheel: WheelData | null = null;
         
-        const wheel = wheelData.results?.[0];
-        if (!wheel) {
-          throw new Error("Wheel not found");
+        if (wheelBrand && wheelDiameter && wheelWidth && wheelPrice) {
+          // We have wheel data passed directly - no API call needed
+          wheel = {
+            sku: wheelSku,
+            brand: wheelBrand,
+            model: wheelModel || "",
+            finish: wheelFinish || undefined,
+            diameter: Number(wheelDiameter) || 0,
+            width: Number(wheelWidth) || 0,
+            offset: Number(wheelOffset) || 0,
+            price: Number(wheelPrice) || 0,
+            imageUrl: wheelImage || null,
+            boltPattern: wheelBoltPattern || "",
+          };
+        } else {
+          // Fallback: try to fetch wheel data (may not work without proper API)
+          const wheelRes = await fetch(`/api/wheels/search?sku=${encodeURIComponent(wheelSku)}&limit=1`);
+          const wheelData = await wheelRes.json();
+          
+          const w = wheelData.results?.[0] || wheelData.styles?.[0];
+          if (!w) {
+            throw new Error("Wheel not found");
+          }
+          
+          wheel = {
+            sku: w.sku || wheelSku,
+            brand: w.brand?.description || w.brand?.code || w.brand || "Unknown",
+            model: w.title || w.model || "",
+            finish: w.properties?.abbreviated_finish_desc || w.finish,
+            diameter: Number(w.properties?.diameter || w.diameter) || 0,
+            width: Number(w.properties?.width || w.width) || 0,
+            offset: Number(w.properties?.offset || w.offset) || 0,
+            price: Number(w.prices?.msrp?.[0]?.currencyAmount || w.price) || 0,
+            imageUrl: w.images?.[0]?.imageUrlLarge || w.imageUrl || null,
+            boltPattern: w.properties?.boltPatternMetric || w.properties?.boltPattern || w.boltPattern || "",
+          };
         }
 
         // Fetch tires for this size
@@ -115,18 +158,7 @@ export default function PackageCustomizer() {
 
         if (!cancelled) {
           setState({
-            wheel: {
-              sku: wheel.sku,
-              brand: wheel.brand?.description || wheel.brand?.code || "Unknown",
-              model: wheel.title || "",
-              finish: wheel.properties?.abbreviated_finish_desc,
-              diameter: Number(wheel.properties?.diameter) || 0,
-              width: Number(wheel.properties?.width) || 0,
-              offset: Number(wheel.properties?.offset) || 0,
-              price: Number(wheel.prices?.msrp?.[0]?.currencyAmount) || 0,
-              imageUrl: wheel.images?.[0]?.imageUrlLarge || null,
-              boltPattern: wheel.properties?.boltPatternMetric || wheel.properties?.boltPattern || "",
-            },
+            wheel,
             tire: defaultTire,
             alternativeTires: tires.slice(1, 6),
             loading: false,
@@ -150,7 +182,7 @@ export default function PackageCustomizer() {
     return () => {
       cancelled = true;
     };
-  }, [wheelSku, tireSize]);
+  }, [wheelSku, tireSize, wheelBrand, wheelModel, wheelFinish, wheelDiameter, wheelWidth, wheelOffset, wheelPrice, wheelImage, wheelBoltPattern]);
 
   // Calculate totals
   const wheelTotal = (state.wheel?.price || 0) * quantity;
