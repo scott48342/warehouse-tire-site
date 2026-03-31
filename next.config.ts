@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname),
   },
   
+  // ssh2 has native bindings that can't be bundled by Turbopack
+  // Must be external for serverless functions
+  serverExternalPackages: ["ssh2", "ssh2-sftp-client"],
+  
   // Suppress middleware deprecation warnings during transition
   experimental: {
     // Placeholder for future proxy migration
