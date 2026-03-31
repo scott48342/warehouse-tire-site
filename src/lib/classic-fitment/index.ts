@@ -49,3 +49,16 @@ export {
   importClassicFitment,
   importClassicBatch,
 } from "./classicImport";
+
+// Tire Upsize
+export {
+  parseTireSize,
+  parseMultipleTireSizes,
+  calculateOverallDiameter,
+  generateClassicUpsizeTable,
+  getClassicTireSizesForWheelDiameter,
+  getRecommendedTireSize,
+  type TireSize,
+  type UpsizeResult,
+  type UpsizeOptions,
+} from "./classicTireUpsize";

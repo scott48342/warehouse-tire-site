@@ -32,3 +32,8 @@ export {
   type ClassicVerificationCheckboxProps,
 } from "./ClassicVerificationCheckbox";
 export { ClassicModeSection, type ClassicModeSectionProps } from "./ClassicModeSection";
+export {
+  ClassicTireRecommendations,
+  type TireSizeRecommendation,
+  type ClassicTireRecommendationsProps,
+} from "./ClassicTireRecommendations";
