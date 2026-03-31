@@ -1711,6 +1711,12 @@ export default async function TiresPage({
                   setPrice: wheelPrice || (wheelUnit ? Number(wheelUnit) * (Number(wheelQty) || 4) : 0),
                   imageUrl: wheelImage || undefined,
                 } : null}
+                dbProfile={dbProfile ? {
+                  threadSize: dbProfile.threadSize,
+                  seatType: dbProfile.seatType,
+                  centerBoreMm: dbProfile.centerBoreMm,
+                  boltPattern: dbProfile.boltPattern,
+                } : null}
               />
             ) : (
             <>

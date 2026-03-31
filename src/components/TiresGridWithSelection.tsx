@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart/CartContext";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
+import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -42,6 +43,8 @@ export type SelectedWheel = {
   offset?: string;
   imageUrl?: string;
   setPrice: number;
+  centerBore?: number; // Wheel center bore in mm (for hub ring calculation)
+  seatType?: string;   // Lug seat type (conical, ball, flat, mag)
 };
 
 export type SelectedTire = {
@@ -74,6 +77,8 @@ type TiresGridProps = {
   selectedSize: string;
   viewParams: ViewParams;
   selectedWheel?: SelectedWheel | null;
+  /** DB fitment profile for accessory calculation (threadSize, seatType, centerBoreMm) */
+  dbProfile?: DBProfileForAccessories | null;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -627,8 +632,9 @@ export function TiresGridWithSelection({
   selectedSize,
   viewParams,
   selectedWheel,
+  dbProfile,
 }: TiresGridProps) {
-  const { addItem, getTires, getWheels, removeItem } = useCart();
+  const { addItem, getTires, getWheels, removeItem, addAccessories, setAccessoryState, replaceAccessorySku } = useCart();
   const [selectedTire, setSelectedTire] = useState<SelectedTire | null>(null);
   const [showMobileBar, setShowMobileBar] = useState(false);
   const confirmationRef = useRef<HTMLDivElement>(null);
@@ -698,6 +704,75 @@ export function TiresGridWithSelection({
           quantity: 4,
           vehicle,
         });
+        
+        // ═══════════════════════════════════════════════════════════════════════
+        // ACCESSORY FITMENT - Calculate and auto-add required accessories
+        // ═══════════════════════════════════════════════════════════════════════
+        if (dbProfile) {
+          const wheelForFitment: WheelForAccessories = {
+            sku: selectedWheel.sku,
+            centerBore: selectedWheel.centerBore,
+            seatType: selectedWheel.seatType,
+          };
+          
+          const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
+          
+          console.log("[TiresGridWithSelection] Accessory fitment result:", {
+            wheelSku: selectedWheel.sku,
+            hasDbProfile: true,
+            lugNuts: fitmentResult.fitment?.lugNuts.status,
+            hubRings: fitmentResult.fitment?.hubRings.status,
+            requiredCount: fitmentResult.requiredItems.length,
+          });
+          
+          // Set accessory state for UI
+          if (fitmentResult.state) {
+            setAccessoryState(fitmentResult.state);
+          }
+          
+          // Auto-add required accessories
+          if (fitmentResult.requiredItems.length > 0) {
+            console.log("[TiresGridWithSelection] Auto-adding accessories:", 
+              fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`)
+            );
+            addAccessories(fitmentResult.requiredItems);
+            
+            // Replace lug kit placeholder SKU with real Gorilla kit SKU (server lookup)
+            const lug = fitmentResult.requiredItems.find(i => i.category === "lug_nut");
+            if (lug?.spec?.threadSize) {
+              const placeholderSku = lug.sku;
+              const qs = new URLSearchParams({ threadSize: lug.spec.threadSize });
+              if (lug.spec.seatType) qs.set("seatType", lug.spec.seatType);
+              
+              fetch(`/api/accessories/lugkits?${qs.toString()}`, {
+                headers: { Accept: "application/json" },
+              })
+                .then(r => r.json().catch(() => null).then(j => ({ ok: r.ok, j })))
+                .then(({ ok, j }) => {
+                  if (ok && j?.choice?.sku) {
+                    const next = {
+                      ...lug,
+                      sku: String(j.choice.sku),
+                      meta: {
+                        ...(lug.meta || {}),
+                        placeholder: false,
+                        source: "wheelpros",
+                        brandCode: j.choice.brandCode,
+                        nipCost: j.choice.nip,
+                        msrp: j.choice.msrp,
+                        title: j.choice.title,
+                        threadKey: j.choice.threadKey,
+                      },
+                    };
+                    replaceAccessorySku(placeholderSku, next);
+                  }
+                })
+                .catch(() => {});
+            }
+          }
+        } else {
+          console.log("[TiresGridWithSelection] Skipping accessory fitment - no dbProfile");
+        }
       }
     }
     
@@ -739,7 +814,7 @@ export function TiresGridWithSelection({
         confirmationRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 100);
-  }, [addItem, getTires, getWheels, removeItem, selectedSize, vehicle, selectedWheel]);
+  }, [addItem, getTires, getWheels, removeItem, selectedSize, vehicle, selectedWheel, dbProfile, addAccessories, setAccessoryState, replaceAccessorySku]);
   
   const handleClearSelection = useCallback(() => {
     if (selectedTire) {
