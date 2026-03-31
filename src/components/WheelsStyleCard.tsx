@@ -16,6 +16,7 @@ export type WheelFinishThumb = {
   sku: string;
   imageUrl?: string;
   price?: number;
+  stockQty?: number;
   pair?: WheelPair;
 };
 
@@ -280,6 +281,7 @@ export function WheelsStyleCard({
   baseFinish,
   baseImageUrl,
   price,
+  stockQty,
   sizeLabel,
   finishThumbs,
   viewParams,
@@ -309,6 +311,7 @@ export function WheelsStyleCard({
   baseFinish?: string;
   baseImageUrl?: string;
   price?: number;
+  stockQty?: number;
   sizeLabel?: { diameter?: string; width?: string };
   finishThumbs?: WheelFinishThumb[];
   viewParams?: Record<string, string | undefined>;
@@ -342,6 +345,7 @@ export function WheelsStyleCard({
   const [selectedImage, setSelectedImage] = useState<string | undefined>(baseImageUrl);
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
+  const [selectedStockQty, setSelectedStockQty] = useState<number | undefined>(stockQty);
   const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
   const [isAdding, setIsAdding] = useState(false);
 
@@ -634,6 +638,7 @@ export function WheelsStyleCard({
                       setSelectedFinish(t.finish);
                       if (t.imageUrl) setSelectedImage(t.imageUrl);
                       if (typeof t.price === "number") setSelectedPrice(t.price);
+                      if (typeof t.stockQty === "number") setSelectedStockQty(t.stockQty);
                       if (t.pair) setSelectedPair(t.pair);
                     }}
                     className={`h-9 w-9 overflow-hidden rounded-lg border-2 transition-all ${
@@ -710,6 +715,16 @@ export function WheelsStyleCard({
               Fitment Guarantee
             </span>
           </div>
+
+          {/* Stock availability */}
+          {typeof selectedStockQty === "number" && selectedStockQty > 0 && (
+            <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-green-700">
+              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-green-100 text-[10px]">
+                ✓
+              </span>
+              {selectedStockQty >= 20 ? "20+ in stock" : `${selectedStockQty} in stock`}
+            </div>
+          )}
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════

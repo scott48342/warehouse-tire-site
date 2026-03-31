@@ -21,6 +21,7 @@ export type WheelItem = {
   centerbore?: string;
   imageUrl?: string;
   price?: number;
+  stockQty?: number;
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended";
   finishThumbs?: WheelFinishThumb[];
@@ -412,6 +413,7 @@ export function WheelsGridWithSelection({
           baseFinish={w.finish ? String(w.finish) : undefined}
           baseImageUrl={w.imageUrl}
           price={w.price}
+          stockQty={w.stockQty}
           sizeLabel={
             diameterParam || widthParam
               ? { diameter: diameterParam || w.diameter, width: widthParam || w.width }

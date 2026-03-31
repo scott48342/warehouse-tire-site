@@ -25,9 +25,10 @@ type Wheel = {
   centerbore?: string; // Wheel center bore in mm (for hub ring calculation)
   imageUrl?: string;
   price?: number;
+  stockQty?: number; // Combined local + global inventory count
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended"; // Fitment classification from validation engine
-  finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number }[];
+  finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number }[];
   pair?: {
     staggered: boolean;
     front: { sku: string; diameter?: string; width?: string; offset?: string };
@@ -69,6 +70,10 @@ type WheelProsItem = {
     msrp?: WheelProsPrice[];
   };
   images?: WheelProsImage[];
+  inventory?: {
+    localStock?: number;
+    globalStock?: number;
+  };
   techfeed?: {
     style?: string;
     finish?: string;
@@ -632,6 +637,12 @@ export default async function WheelsPage({
     const fitmentValidation = (it as any)?.fitmentValidation;
     const fitmentClass = fitmentValidation?.fitmentClass as Wheel["fitmentClass"] | undefined;
 
+    // Extract inventory counts (local + global)
+    const inventory = it?.inventory;
+    const localStock = typeof inventory?.localStock === "number" ? inventory.localStock : 0;
+    const globalStock = typeof inventory?.globalStock === "number" ? inventory.globalStock : 0;
+    const stockQty = localStock + globalStock;
+
     return {
       sku: it?.sku,
       brand,
@@ -644,6 +655,7 @@ export default async function WheelsPage({
       centerbore,
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
+      stockQty: stockQty > 0 ? stockQty : undefined,
       styleKey,
       fitmentClass,
     };
@@ -700,7 +712,7 @@ export default async function WheelsPage({
       const inferredRearDia = NaN;
 
       // Finish dropdown options (also carries a finish-specific pair so selecting a finish updates both axles).
-      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; pair?: Wheel["pair"] }[] = [];
+      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number; pair?: Wheel["pair"] }[] = [];
       const seen = new Set<string>();
       for (const x of arr) {
         const fin = String(x.finish || "").trim();
@@ -757,6 +769,7 @@ export default async function WheelsPage({
           sku: pairFin?.front?.sku || x.sku || "",
           imageUrl: x.imageUrl,
           price: x.price,
+          stockQty: x.stockQty,
           pair: pairFin,
         });
       }
