@@ -25,6 +25,7 @@ import { normalizeTrimLabel } from "@/lib/trimNormalize";
 import crypto from "crypto";
 import submodelSupplements from "@/data/submodel-supplements.json";
 import { getFitmentFromRules, matchFitmentRule } from "./vehicleFitmentRules";
+import { getCachedFitment, setCachedFitment, type CachedFitmentProfile } from "./fitmentCache";
 
 // ============================================================================
 // Types
@@ -425,6 +426,41 @@ export async function getFitmentProfile(
   // NOTE: Don't slugify - manual imports use "manual_XXXX" with underscores
   const requestedModId = modificationId.toLowerCase().trim();
   
+  // ─────────────────────────────────────────────────────────────────────────
+  // Step 0: Check Redis cache first (unless forceRefresh)
+  // ─────────────────────────────────────────────────────────────────────────
+  if (!options?.forceRefresh) {
+    try {
+      const cached = await getCachedFitment(year, make, model, requestedModId);
+      if (cached) {
+        console.log(`[profileService] CACHE HIT: ${year} ${make} ${model} mod=${modificationId} (${Date.now() - t0}ms)`);
+        return {
+          profile: {
+            boltPattern: cached.boltPattern,
+            centerBoreMm: cached.centerBoreMm,
+            threadSize: cached.threadSize,
+            seatType: cached.seatType,
+            offsetMinMm: cached.offsetMinMm,
+            offsetMaxMm: cached.offsetMaxMm,
+            oemWheelSizes: cached.oemWheelSizes,
+            displayTrim: cached.displayTrim,
+            source: cached.source as any,
+          },
+          resolutionPath: "directCanonical",
+          requestedModificationId: requestedModId,
+          canonicalModificationId: requestedModId,
+          aliasUsed: false,
+          source: "cache",
+          apiCalled: false,
+          overridesApplied: false,
+          timing: { dbLookupMs: 0, cacheHit: true, totalMs: Date.now() - t0 },
+        };
+      }
+    } catch (e) {
+      // Cache miss or error - continue to DB lookup
+    }
+  }
+  
   let dbLookupMs = 0;
   let aliasLookupMs: number | undefined;
   let ymmFallbackMs: number | undefined;
@@ -454,8 +490,23 @@ export async function getFitmentProfile(
       if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
         console.log(`[profileService] RESOLVED (directCanonical): ${year} ${make} ${model} mod=${modificationId} (${dbLookupMs}ms)`);
         
+        const profile = dbRecordToProfile(overrideResult.fitment, "db");
+        
+        // Cache the result for future requests (fire and forget)
+        setCachedFitment(year, make, model, requestedModId, {
+          boltPattern: profile.boltPattern,
+          centerBoreMm: profile.centerBoreMm,
+          threadSize: profile.threadSize,
+          seatType: profile.seatType,
+          offsetMinMm: profile.offsetMinMm,
+          offsetMaxMm: profile.offsetMaxMm,
+          oemWheelSizes: profile.oemWheelSizes,
+          displayTrim: profile.displayTrim,
+          source: "db",
+        }).catch(() => {}); // Ignore cache write errors
+        
         return {
-          profile: dbRecordToProfile(overrideResult.fitment, "db"),
+          profile,
           resolutionPath: "directCanonical",
           requestedModificationId: requestedModId,
           canonicalModificationId: requestedModId,
@@ -497,8 +548,23 @@ export async function getFitmentProfile(
         if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
           console.log(`[profileService] RESOLVED (canonicalAlias): ${year} ${make} ${model} mod=${modificationId} → ${canonicalModificationId} (${dbLookupMs + aliasLookupMs}ms)`);
           
+          const profile = dbRecordToProfile(overrideResult.fitment, "db");
+          
+          // Cache the result (fire and forget)
+          setCachedFitment(year, make, model, requestedModId, {
+            boltPattern: profile.boltPattern,
+            centerBoreMm: profile.centerBoreMm,
+            threadSize: profile.threadSize,
+            seatType: profile.seatType,
+            offsetMinMm: profile.offsetMinMm,
+            offsetMaxMm: profile.offsetMaxMm,
+            oemWheelSizes: profile.oemWheelSizes,
+            displayTrim: profile.displayTrim,
+            source: "db",
+          }).catch(() => {});
+          
           return {
-            profile: dbRecordToProfile(overrideResult.fitment, "db"),
+            profile,
             resolutionPath: "canonicalAlias",
             requestedModificationId: requestedModId,
             canonicalModificationId: aliasResult.canonicalModificationId,
@@ -544,8 +610,23 @@ export async function getFitmentProfile(
             );
           }
           
+          const profile = dbRecordToProfile(overrideResult.fitment, "db");
+          
+          // Cache the result (fire and forget)
+          setCachedFitment(year, make, model, requestedModId, {
+            boltPattern: profile.boltPattern,
+            centerBoreMm: profile.centerBoreMm,
+            threadSize: profile.threadSize,
+            seatType: profile.seatType,
+            offsetMinMm: profile.offsetMinMm,
+            offsetMaxMm: profile.offsetMaxMm,
+            oemWheelSizes: profile.oemWheelSizes,
+            displayTrim: profile.displayTrim,
+            source: "db",
+          }).catch(() => {});
+          
           return {
-            profile: dbRecordToProfile(overrideResult.fitment, "db"),
+            profile,
             resolutionPath: "canonicalAlias", // Treat as alias since we're mapping IDs
             requestedModificationId: requestedModId,
             canonicalModificationId: ymmResult.usedModificationId,
