@@ -14,23 +14,29 @@ import * as schema from "./schema";
 // Detect environment - use Vercel Postgres in production, pg Pool locally
 const isVercel = process.env.VERCEL === "1" || process.env.VERCEL_ENV;
 
-let db: ReturnType<typeof drizzleVercel> | ReturnType<typeof drizzlePg>;
+// Use node-postgres type as the base (both have compatible APIs)
+// The schema type is preserved by using a single concrete return type
+type DbType = ReturnType<typeof drizzlePg<typeof schema>>;
 
-if (isVercel) {
-  // Vercel Postgres - optimized connection pooling for serverless
-  db = drizzleVercel(sql, { schema });
-} else {
-  // Local development - use pg Pool with sensible limits
-  const pool = new Pool({
-    connectionString: process.env.POSTGRES_URL,
-    max: 10,
-    idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 10000,
-    ssl: process.env.POSTGRES_URL?.includes('sslmode=require') 
-      ? { rejectUnauthorized: false } 
-      : undefined,
-  });
-  db = drizzlePg(pool, { schema });
+function createDb(): DbType {
+  if (isVercel) {
+    // Vercel Postgres - optimized connection pooling for serverless
+    return drizzleVercel(sql, { schema }) as unknown as DbType;
+  } else {
+    // Local development - use pg Pool with sensible limits
+    const pool = new Pool({
+      connectionString: process.env.POSTGRES_URL,
+      max: 10,
+      idleTimeoutMillis: 30000,
+      connectionTimeoutMillis: 10000,
+      ssl: process.env.POSTGRES_URL?.includes('sslmode=require') 
+        ? { rejectUnauthorized: false } 
+        : undefined,
+    });
+    return drizzlePg(pool, { schema });
+  }
 }
+
+const db = createDb();
 
 export { db, schema };

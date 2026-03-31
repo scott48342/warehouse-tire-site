@@ -8,7 +8,7 @@
 import { db } from "./db";
 import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, or, isNull, sql } from "drizzle-orm";
+import { eq, and, or, isNull, sql, asc } from "drizzle-orm";
 import { assessFitmentQuality, getFitmentProfile, type FitmentQuality } from "./profileService";
 
 // ============================================================================
@@ -86,11 +86,12 @@ export async function findProblematicRecords(options?: {
     }
   }
   
-  const records = await db.query.vehicleFitments.findMany({
-    where: whereClause,
-    limit,
-    orderBy: [vehicleFitments.year, vehicleFitments.make, vehicleFitments.model],
-  });
+  const records = await db
+    .select()
+    .from(vehicleFitments)
+    .where(whereClause)
+    .orderBy(asc(vehicleFitments.year), asc(vehicleFitments.make), asc(vehicleFitments.model))
+    .limit(limit);
   
   console.log(`[repairService] Found ${records.length} potentially problematic records`);
   return records;
@@ -107,9 +108,10 @@ export async function getQualityBreakdown(): Promise<{
   samples: { quality: FitmentQuality; vehicle: string }[];
 }> {
   // Get all records (or a sample)
-  const records = await db.query.vehicleFitments.findMany({
-    limit: 5000, // Reasonable sample size
-  });
+  const records = await db
+    .select()
+    .from(vehicleFitments)
+    .limit(5000); // Reasonable sample size
   
   let valid = 0;
   let partial = 0;
@@ -182,9 +184,11 @@ export async function repairSingleRecord(record: VehicleFitment): Promise<Repair
     }
     
     // Re-fetch the record to check new quality
-    const updatedRecord = await db.query.vehicleFitments.findFirst({
-      where: eq(vehicleFitments.id, record.id),
-    });
+    const [updatedRecord] = await db
+      .select()
+      .from(vehicleFitments)
+      .where(eq(vehicleFitments.id, record.id))
+      .limit(1);
     
     if (!updatedRecord) {
       result.error = "Record not found after repair attempt";

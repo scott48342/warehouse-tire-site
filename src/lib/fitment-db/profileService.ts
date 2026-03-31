@@ -80,10 +80,11 @@ export interface ProfileLookupResult {
     ymmFallbackMs?: number;
     apiCallMs?: number;
     importMs?: number;
+    cacheHit?: boolean;
     totalMs: number;
   };
   // Legacy compatibility
-  source: "db" | "api" | "not_found";
+  source: "db" | "api" | "not_found" | "cache";
 }
 
 // ============================================================================
@@ -436,15 +437,23 @@ export async function getFitmentProfile(
         console.log(`[profileService] CACHE HIT: ${year} ${make} ${model} mod=${modificationId} (${Date.now() - t0}ms)`);
         return {
           profile: {
+            modificationId: requestedModId,
+            year,
+            make: normalizedMake,
+            model: normalizedModel,
+            displayTrim: cached.displayTrim || "",
+            rawTrim: null,
             boltPattern: cached.boltPattern,
             centerBoreMm: cached.centerBoreMm,
             threadSize: cached.threadSize,
             seatType: cached.seatType,
             offsetMinMm: cached.offsetMinMm,
             offsetMaxMm: cached.offsetMaxMm,
-            oemWheelSizes: cached.oemWheelSizes,
-            displayTrim: cached.displayTrim,
-            source: cached.source as any,
+            oemWheelSizes: (cached.oemWheelSizes || []) as WheelSize[],
+            oemTireSizes: [],
+            source: (cached.source as "db" | "api") || "db",
+            apiCalled: false,
+            overridesApplied: false,
           },
           resolutionPath: "directCanonical",
           requestedModificationId: requestedModId,

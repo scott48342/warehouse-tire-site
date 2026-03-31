@@ -16,11 +16,11 @@ import { Redis } from "@upstash/redis";
 
 export type CachedFitmentProfile = {
   boltPattern: string | null;
-  centerBoreMm: string | null;
+  centerBoreMm: number | null;
   threadSize: string | null;
   seatType: string | null;
-  offsetMinMm: string | null;
-  offsetMaxMm: string | null;
+  offsetMinMm: number | null;
+  offsetMaxMm: number | null;
   oemWheelSizes: any[] | null;
   displayTrim: string | null;
   source: string;
