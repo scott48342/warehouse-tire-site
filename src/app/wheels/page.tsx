@@ -26,9 +26,10 @@ type Wheel = {
   imageUrl?: string;
   price?: number;
   stockQty?: number; // Combined local + global inventory count
+  inventoryType?: string; // WheelPros inventory type code (ST, BW, SO, CS, DB, etc.)
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended"; // Fitment classification from validation engine
-  finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number }[];
+  finishThumbs?: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number; inventoryType?: string }[];
   pair?: {
     staggered: boolean;
     front: { sku: string; diameter?: string; width?: string; offset?: string };
@@ -71,6 +72,7 @@ type WheelProsItem = {
   };
   images?: WheelProsImage[];
   inventory?: {
+    type?: string;
     localStock?: number;
     globalStock?: number;
   };
@@ -637,11 +639,12 @@ export default async function WheelsPage({
     const fitmentValidation = (it as any)?.fitmentValidation;
     const fitmentClass = fitmentValidation?.fitmentClass as Wheel["fitmentClass"] | undefined;
 
-    // Extract inventory counts (local + global)
+    // Extract inventory counts (local + global) and type
     const inventory = it?.inventory;
     const localStock = typeof inventory?.localStock === "number" ? inventory.localStock : 0;
     const globalStock = typeof inventory?.globalStock === "number" ? inventory.globalStock : 0;
     const stockQty = localStock + globalStock;
+    const inventoryType = typeof inventory?.type === "string" ? inventory.type.toUpperCase() : undefined;
 
     return {
       sku: it?.sku,
@@ -656,6 +659,7 @@ export default async function WheelsPage({
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
       stockQty: stockQty > 0 ? stockQty : undefined,
+      inventoryType,
       styleKey,
       fitmentClass,
     };
@@ -712,7 +716,7 @@ export default async function WheelsPage({
       const inferredRearDia = NaN;
 
       // Finish dropdown options (also carries a finish-specific pair so selecting a finish updates both axles).
-      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number; pair?: Wheel["pair"] }[] = [];
+      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number; inventoryType?: string; pair?: Wheel["pair"] }[] = [];
       const seen = new Set<string>();
       for (const x of arr) {
         const fin = String(x.finish || "").trim();
@@ -770,6 +774,7 @@ export default async function WheelsPage({
           imageUrl: x.imageUrl,
           price: x.price,
           stockQty: x.stockQty,
+          inventoryType: x.inventoryType,
           pair: pairFin,
         });
       }

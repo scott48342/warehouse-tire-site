@@ -17,6 +17,7 @@ export type WheelFinishThumb = {
   imageUrl?: string;
   price?: number;
   stockQty?: number;
+  inventoryType?: string;
   pair?: WheelPair;
 };
 
@@ -47,6 +48,20 @@ const CTA_TEXT: Record<CTAVariant, string> = {
 // SOCIAL PROOF TYPES
 // ═══════════════════════════════════════════════════════════════════════════════
 export type SocialProofType = "rating" | "popular" | "bestseller" | "trending" | "staff-pick";
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// INVENTORY TYPE LABELS - Map WheelPros codes to friendly display
+// ═══════════════════════════════════════════════════════════════════════════════
+const INVENTORY_TYPE_LABELS: Record<string, { label: string; className: string; show: boolean }> = {
+  ST: { label: "In Stock", className: "text-green-700 bg-green-100", show: true },
+  BW: { label: "In Stock", className: "text-green-700 bg-green-100", show: true },
+  NW: { label: "In Stock", className: "text-green-700 bg-green-100", show: true },
+  SO: { label: "Special Order", className: "text-blue-700 bg-blue-100", show: true },
+  CS: { label: "Custom Build", className: "text-purple-700 bg-purple-100", show: true },
+  DB: { label: "Available", className: "text-neutral-600 bg-neutral-100", show: true },
+  N2: { label: "Ships Soon", className: "text-amber-700 bg-amber-100", show: true },
+  RW: { label: "Special Order", className: "text-blue-700 bg-blue-100", show: true },
+};
 
 type SocialProofConfig = {
   rating?: { score: number; count: number };
@@ -282,6 +297,7 @@ export function WheelsStyleCard({
   baseImageUrl,
   price,
   stockQty,
+  inventoryType,
   sizeLabel,
   finishThumbs,
   viewParams,
@@ -312,6 +328,7 @@ export function WheelsStyleCard({
   baseImageUrl?: string;
   price?: number;
   stockQty?: number;
+  inventoryType?: string;
   sizeLabel?: { diameter?: string; width?: string };
   finishThumbs?: WheelFinishThumb[];
   viewParams?: Record<string, string | undefined>;
@@ -346,6 +363,7 @@ export function WheelsStyleCard({
   const [selectedFinish, setSelectedFinish] = useState<string | undefined>(baseFinish);
   const [selectedPrice, setSelectedPrice] = useState<number | undefined>(price);
   const [selectedStockQty, setSelectedStockQty] = useState<number | undefined>(stockQty);
+  const [selectedInventoryType, setSelectedInventoryType] = useState<string | undefined>(inventoryType);
   const [selectedPair, setSelectedPair] = useState<WheelPair | undefined>(pair);
   const [isAdding, setIsAdding] = useState(false);
 
@@ -639,6 +657,7 @@ export function WheelsStyleCard({
                       if (t.imageUrl) setSelectedImage(t.imageUrl);
                       if (typeof t.price === "number") setSelectedPrice(t.price);
                       if (typeof t.stockQty === "number") setSelectedStockQty(t.stockQty);
+                      if (t.inventoryType) setSelectedInventoryType(t.inventoryType);
                       if (t.pair) setSelectedPair(t.pair);
                     }}
                     className={`h-9 w-9 overflow-hidden rounded-lg border-2 transition-all ${
@@ -716,15 +735,22 @@ export function WheelsStyleCard({
             </span>
           </div>
 
-          {/* Stock availability */}
-          {typeof selectedStockQty === "number" && selectedStockQty > 0 && (
+          {/* Stock availability - show qty if available, otherwise inventory type */}
+          {typeof selectedStockQty === "number" && selectedStockQty > 0 ? (
             <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-green-700">
               <span className="flex h-4 w-4 items-center justify-center rounded-full bg-green-100 text-[10px]">
                 ✓
               </span>
               {selectedStockQty >= 20 ? "20+ in stock" : `${selectedStockQty} in stock`}
             </div>
-          )}
+          ) : selectedInventoryType && INVENTORY_TYPE_LABELS[selectedInventoryType]?.show ? (
+            <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${INVENTORY_TYPE_LABELS[selectedInventoryType].className.split(" ")[0]}`}>
+              <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] ${INVENTORY_TYPE_LABELS[selectedInventoryType].className.split(" ")[1]}`}>
+                ✓
+              </span>
+              {INVENTORY_TYPE_LABELS[selectedInventoryType].label}
+            </div>
+          ) : null}
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
