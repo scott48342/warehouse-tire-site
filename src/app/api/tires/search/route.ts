@@ -767,26 +767,36 @@ export async function GET(req: Request) {
     let matchMode: "exact" | "oem-fallback" | "direct-search" | "classic-upsize" = "exact";
     let sizesToSearch = searchableSizes.length > 0 ? searchableSizes : tireSizes;
     
-    if (wheelDiameter && sizesToSearch.length > 0) {
+    if (wheelDiameter) {
+      // First check: do we have OEM sizes matching this diameter?
       const filtered = sizesToSearch.filter((size) => {
         const rim = extractRimDiameter(size);
         return rim === wheelDiameter;
       });
       
       if (filtered.length > 0) {
+        // OEM sizes match the wheel diameter
         sizesToSearch = filtered;
         matchMode = "exact";
       } else if (isClassicVehicle && classicUpsizeSizes.length > 0) {
-        // CLASSIC VEHICLE: Use upsize engine sizes instead of generic fallback
+        // CLASSIC VEHICLE: Use upsize engine sizes
+        // This handles both:
+        // 1. OEM sizes exist but don't match wheel diameter
+        // 2. No OEM sizes at all (classic vehicle with no tire data in DB)
         sizesToSearch = classicUpsizeSizes;
         matchMode = "classic-upsize";
         console.log(`[tires/search] Using classic upsize sizes for ${wheelDiameter}" wheels`);
-      } else {
+      } else if (sizesToSearch.length > 0) {
         // No OEM tires match the wheel diameter - this is a plus/minus sizing scenario
         // Search directly for tires of the specified diameter
         sizesToSearch = [];
         matchMode = "direct-search";
         console.log(`[tires/search] No OEM tires for ${wheelDiameter}" wheel, using direct search`);
+      } else {
+        // No OEM sizes at all and not classic - direct search
+        sizesToSearch = [];
+        matchMode = "direct-search";
+        console.log(`[tires/search] No tire sizes for vehicle, using direct search for ${wheelDiameter}" wheel`);
       }
     }
     
@@ -800,10 +810,14 @@ export async function GET(req: Request) {
       // Search using modern P-metric sizes (converted from legacy if needed)
       const searchPromises: Promise<void>[] = [];
       
+      // Calculate limit per size - use sizesToSearch.length to avoid Infinity when tireSizes is empty
+      const searchCount = Math.min(sizesToSearch.length, 5);
+      const limitPerSize = Math.ceil(pageSize / searchCount) || pageSize;
+      
       for (const size of sizesToSearch.slice(0, 5)) {
         // WheelPros
         searchPromises.push(
-          searchTiresBySize(db, size, minQty, Math.ceil(pageSize / tireSizes.length))
+          searchTiresBySize(db, size, minQty, limitPerSize)
             .then((results) => { wpResults.push(...results); })
         );
         // Tirewire
