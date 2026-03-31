@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sql } from "@vercel/postgres";
+import { Pool } from "pg";
 
 export const runtime = "nodejs";
 
@@ -13,33 +13,42 @@ export async function GET(req: Request) {
     env: {
       isVercel: process.env.VERCEL === "1" || !!process.env.VERCEL_ENV,
       vercelEnv: process.env.VERCEL_ENV,
+      nodeEnv: process.env.NODE_ENV,
       hasPostgresUrl: !!process.env.POSTGRES_URL,
       postgresUrlPrefix: process.env.POSTGRES_URL?.substring(0, 50) + "...",
     },
   };
   
+  const pool = new Pool({
+    connectionString: process.env.POSTGRES_URL,
+    max: 1,
+    connectionTimeoutMillis: 10000,
+    ssl: { rejectUnauthorized: false },
+  });
+  
   try {
-    // Test 1: Check if table exists using raw SQL
-    const tableCheck = await sql`
+    // Test 1: Check if table exists
+    const tableCheck = await pool.query(`
       SELECT EXISTS (
         SELECT FROM information_schema.tables 
         WHERE table_name = 'vehicle_fitments'
       ) as exists
-    `;
+    `);
     results.tableExists = tableCheck.rows[0]?.exists;
     
     // Test 2: Count records if table exists
     if (tableCheck.rows[0]?.exists) {
-      const countResult = await sql`SELECT COUNT(*) as cnt FROM vehicle_fitments`;
+      const countResult = await pool.query('SELECT COUNT(*) as cnt FROM vehicle_fitments');
       results.recordCount = countResult.rows[0]?.cnt;
       
       // Test 3: Query specific vehicle
-      const fitmentResult = await sql`
+      const fitmentResult = await pool.query(`
         SELECT id, modification_id, bolt_pattern 
         FROM vehicle_fitments 
-        WHERE year = ${year} AND make = ${make.toLowerCase()} AND model = ${model.toLowerCase()}
+        WHERE year = $1 AND make = $2 AND model = $3
         LIMIT 5
-      `;
+      `, [year, make.toLowerCase(), model.toLowerCase()]);
+      
       results.vehicleQuery = {
         year,
         make: make.toLowerCase(),
@@ -56,5 +65,7 @@ export async function GET(req: Request) {
     results.error = error?.message || String(error);
     results.stack = error?.stack?.split("\n").slice(0, 5);
     return NextResponse.json(results, { status: 500 });
+  } finally {
+    await pool.end();
   }
 }
