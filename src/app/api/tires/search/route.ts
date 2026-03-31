@@ -807,6 +807,10 @@ export async function GET(req: Request) {
         hasLegacySizes,
         sizeConversions: hasLegacySizes ? sizeConversions : undefined,
         error: "No tire sizes found for vehicle",
+        fallbackMessage: tireSizes.length > 0
+          ? `No tires currently in stock for sizes ${tireSizes.slice(0, 3).join(", ")}. Please check back later or contact us for assistance.`
+          : "We couldn't determine the tire size for this vehicle. Please contact us for assistance.",
+        noResultsReason: "no_stock",
       });
     }
     
@@ -828,6 +832,8 @@ export async function GET(req: Request) {
         hasLegacySizes,
         sizeConversions: hasLegacySizes ? sizeConversions : undefined,
         error: `No tires found for ${wheelDiameter}" wheels. OEM sizes are ${tireSizes.join(", ")}`,
+        fallbackMessage: `No tires currently available for ${wheelDiameter}" wheels. We have tires for other wheel sizes - try a different diameter or contact us.`,
+        noResultsReason: "wheel_diameter_mismatch",
         matchMode,
       });
     }
@@ -842,6 +848,21 @@ export async function GET(req: Request) {
     const hiddenNoImage = withOverrides.length - finalResults.length;
     
     timing.totalMs = Date.now() - t0;
+    
+    // Build fallback message if no results
+    let fallbackMessage: string | undefined;
+    let noResultsReason: string | undefined;
+    if (finalResults.length === 0) {
+      if (hiddenNoImage > 0) {
+        fallbackMessage = `Found ${hiddenNoImage} tire(s) but they don't have images yet. Please check back soon or contact us.`;
+        noResultsReason = "hidden_no_image";
+      } else if (withOverrides.length === 0 && allResults.length === 0) {
+        fallbackMessage = tireSizes.length > 0
+          ? `No tires currently in stock for ${tireSizes.slice(0, 2).join(" or ")}. Check back later or contact us.`
+          : "No tires found for this vehicle configuration. Please contact us for assistance.";
+        noResultsReason = "no_stock";
+      }
+    }
     
     return NextResponse.json({
       results: finalResults,
@@ -867,6 +888,11 @@ export async function GET(req: Request) {
         km: kmResults.length,
       },
       hiddenNoImage, // Count of tires filtered out due to missing images
+      
+      // Fallback messaging for empty results (QA validation)
+      ...(fallbackMessage && { fallbackMessage }),
+      ...(noResultsReason && { noResultsReason }),
+      
       timing,
     });
   } catch (e: any) {
