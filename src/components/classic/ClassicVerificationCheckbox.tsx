@@ -12,7 +12,7 @@
  */
 
 import { useState } from "react";
-import { AlertTriangle, CheckCircle2 } from "lucide-react";
+// Using emoji instead of lucide-react icons for zero dependencies
 
 export interface ClassicVerificationCheckboxProps {
   /** Callback when checkbox state changes */
@@ -83,9 +83,9 @@ export function ClassicVerificationCheckbox({
         <div className="flex-1">
           <div className="flex items-center gap-2">
             {isChecked ? (
-              <CheckCircle2 className="h-5 w-5 text-green-600" />
+              <span className="text-green-600 text-lg">✅</span>
             ) : (
-              <AlertTriangle className="h-5 w-5 text-amber-600" />
+              <span className="text-amber-600 text-lg">⚠️</span>
             )}
             <span
               className={`font-semibold ${

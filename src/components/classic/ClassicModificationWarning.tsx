@@ -11,7 +11,7 @@
  * TRIGGER: Only shown when isClassicVehicle = true
  */
 
-import { AlertTriangle, Wrench, Info } from "lucide-react";
+// Using emoji instead of lucide-react icons for zero dependencies
 
 export type ModificationRisk = "low" | "medium" | "high";
 
@@ -74,7 +74,7 @@ export function ClassicModificationWarning({
       <div className="px-5 py-4 border-b border-neutral-200/50">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <AlertTriangle className={`h-5 w-5 ${riskConfig.textColor}`} />
+            <span className="text-lg">⚠️</span>
             <h3 className="font-semibold text-neutral-900">Modification Awareness</h3>
           </div>
           <span
@@ -91,7 +91,7 @@ export function ClassicModificationWarning({
           {/* Verification Note */}
           {verificationNote && (
             <div className="flex gap-3">
-              <Info className="h-4 w-4 mt-0.5 shrink-0 text-neutral-400" />
+              <span className="text-neutral-400 mt-0.5">ℹ️</span>
               <p className="text-sm text-neutral-700">{verificationNote}</p>
             </div>
           )}
@@ -100,7 +100,7 @@ export function ClassicModificationWarning({
           {commonModifications && commonModifications.length > 0 && (
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Wrench className="h-4 w-4 text-neutral-400" />
+                <span className="text-neutral-400">🔧</span>
                 <h4 className="text-sm font-medium text-neutral-700">
                   Common Modifications
                 </h4>

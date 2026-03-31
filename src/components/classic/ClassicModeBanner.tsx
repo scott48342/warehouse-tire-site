@@ -9,7 +9,7 @@
  * TRIGGER: Only shown when isClassicVehicle = true from classic API
  */
 
-import { AlertTriangle } from "lucide-react";
+// Using emoji instead of lucide-react icons for zero dependencies
 
 export interface ClassicModeBannerProps {
   /** Vehicle display name */
@@ -63,7 +63,7 @@ export function ClassicModeBanner({
             axle, or body modifications that affect wheel clearance.
           </p>
           <p className="mt-2 flex items-center gap-1.5 text-sm font-medium text-amber-900">
-            <AlertTriangle className="h-4 w-4" />
+            <span>⚠️</span>
             <span>Verify clearance before ordering</span>
           </p>
         </div>

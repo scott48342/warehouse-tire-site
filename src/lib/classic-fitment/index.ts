@@ -5,11 +5,31 @@
  * Platform-based fitment for classic/muscle cars.
  */
 
-// Schema
-export * from "./schema";
+// Schema (table + inferred types)
+export {
+  classicFitments,
+  type ClassicFitment,
+  type NewClassicFitment,
+  FITMENT_STYLES,
+  CONFIDENCE_LEVELS,
+  MODIFICATION_RISK,
+} from "./schema";
 
-// Types
-export * from "./types";
+// Types (interfaces + explicit types used by API)
+export type {
+  FitmentStyle,
+  ConfidenceLevel,
+  ModificationRisk,
+  ClassicPlatform,
+  ClassicFitmentRecord,
+  ClassicFitmentResponse,
+  ClassicFitmentNotFoundResponse,
+  ClassicLookupResult,
+  ClassicFitmentInput,
+  ClassicImportResult,
+  ClassicBatchImportResult,
+  ClassicValidationResult,
+} from "./types";
 
 // Lookup
 export {
