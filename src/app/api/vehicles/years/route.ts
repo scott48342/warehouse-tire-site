@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
 import * as catalogStore from "@/lib/catalog-store";
-import * as wheelSizeApi from "@/lib/wheelSizeApi";
 import { normalizeMake } from "@/lib/fitment-db/keys";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// All vehicle data comes from local catalog. No external API calls.
+// ============================================================================
 
 export const runtime = "nodejs";
 
@@ -42,34 +46,9 @@ export async function GET(req: Request) {
     });
   }
 
-  // Catalog miss - try API directly
-  try {
-    // Resolve make/model to slugs
-    const resolved = await wheelSizeApi.resolveMakeModel(make, model);
-    if (resolved) {
-      const years = await wheelSizeApi.getYears(resolved.makeSlug, resolved.modelSlug);
-      if (years.length > 0) {
-        console.log(`[years] API: ${make} ${model} → ${years.length} years`);
-        
-        // Store in catalog for future use
-        try {
-          await catalogStore.populateModels(resolved.makeSlug);
-        } catch (e) {
-          // Non-fatal - just log
-          console.warn(`[years] Failed to populate catalog:`, e);
-        }
-        
-        return NextResponse.json({ 
-          results: years.sort((a, b) => b - a).map(String),
-          source: "api",
-        }, {
-          headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
-        });
-      }
-    }
-  } catch (err: any) {
-    console.error(`[years] API error for ${make} ${model}:`, err?.message);
-  }
+  // REMOVED: Wheel-Size API fallback (Phase A - DB-first architecture)
+  // All vehicle data must come from local catalog
+  console.log(`[years] CATALOG MISS: ${make} ${model} - no API fallback (DB-first mode)`);
 
   // Final fallback: static range (but log warning)
   console.warn(`[years] FALLBACK to static range for ${make} ${model} - data not in catalog or API`);

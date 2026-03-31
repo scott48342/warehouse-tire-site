@@ -61,7 +61,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|f-250",
     make: "Ford",
     model: "F-250",
-    yearMin: 1999,  // Super Duty introduced 1999; all gens share similar lift fitment
+    yearMin: 1990,
     yearMax: 2026,
     platform: "Super Duty (all generations)",
     recommendations: {
@@ -122,7 +122,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|f-350",
     make: "Ford",
     model: "F-350",
-    yearMin: 1999,  // Super Duty introduced 1999; all gens share similar lift fitment
+    yearMin: 1990,
     yearMax: 2026,
     platform: "Super Duty (all generations)",
     recommendations: {
@@ -183,7 +183,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|f-150",
     make: "Ford",
     model: "F-150",
-    yearMin: 2015,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "13th/14th Gen",
     recommendations: {
@@ -247,7 +247,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|bronco",
     make: "Ford",
     model: "Bronco",
-    yearMin: 2021,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "6th Gen",
     recommendations: {
@@ -303,7 +303,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|ranger",
     make: "Ford",
     model: "Ranger",
-    yearMin: 2019,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "T6/P703",
     recommendations: {
@@ -358,7 +358,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ford|expedition",
     make: "Ford",
     model: "Expedition",
-    yearMin: 2018,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "T3/U553",
     recommendations: {
@@ -417,7 +417,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|silverado 2500 hd",
     make: "Chevrolet",
     model: "Silverado 2500 HD",
-    yearMin: 2001,  // HD designation introduced 2001; all gens share similar lift fitment
+    yearMin: 1990,
     yearMax: 2026,
     platform: "HD Truck (all generations)",
     recommendations: {
@@ -478,7 +478,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|silverado 3500 hd",
     make: "Chevrolet",
     model: "Silverado 3500 HD",
-    yearMin: 2001,  // HD designation introduced 2001; all gens share similar lift fitment
+    yearMin: 1990,
     yearMax: 2026,
     platform: "HD Truck (all generations)",
     recommendations: {
@@ -539,7 +539,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|silverado 1500",
     make: "Chevrolet",
     model: "Silverado 1500",
-    yearMin: 2014,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "K2XX/T1XX",
     recommendations: {
@@ -605,7 +605,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|tahoe",
     make: "Chevrolet",
     model: "Tahoe",
-    yearMin: 2015,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "K2XX/T1XX",
     recommendations: {
@@ -661,7 +661,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|colorado",
     make: "Chevrolet",
     model: "Colorado",
-    yearMin: 2015,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "GMT31XX",
     recommendations: {
@@ -716,7 +716,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "chevrolet|suburban",
     make: "Chevrolet",
     model: "Suburban",
-    yearMin: 2015,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "K2XX/T1XX",
     recommendations: {
@@ -775,7 +775,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ram|2500",
     make: "RAM",
     model: "2500",
-    yearMin: 2003,  // Includes 3rd gen Dodge Ram (2003-2009) + RAM era (2010+)
+    yearMin: 1990,
     yearMax: 2026,
     platform: "HD Truck (3rd gen Dodge + RAM)",
     recommendations: {
@@ -836,7 +836,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ram|3500",
     make: "RAM",
     model: "3500",
-    yearMin: 2003,  // Includes 3rd gen Dodge Ram (2003-2009) + RAM era (2010+)
+    yearMin: 1990,
     yearMax: 2026,
     platform: "HD Truck (3rd gen Dodge + RAM)",
     recommendations: {
@@ -897,7 +897,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "ram|1500",
     make: "RAM",
     model: "1500",
-    yearMin: 2013,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "DS/DT",
     recommendations: {
@@ -965,7 +965,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "toyota|tacoma",
     make: "Toyota",
     model: "Tacoma",
-    yearMin: 2016,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "3rd/4th Gen",
     recommendations: {
@@ -1020,7 +1020,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "toyota|4runner",
     make: "Toyota",
     model: "4Runner",
-    yearMin: 2010,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "5th Gen",
     recommendations: {
@@ -1072,11 +1072,74 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     },
   },
 
+  // 2nd Gen Tundra (2007-2013)
   {
     key: "toyota|tundra",
     make: "Toyota",
     model: "Tundra",
-    yearMin: 2014,
+    yearMin: 1990,
+    yearMax: 2013,
+    platform: "XK50 (2nd Gen)",
+    recommendations: {
+      daily: {
+        tireDiameterMin: 32,
+        tireDiameterMax: 33,
+        commonTireSizes: ["275/65R18", "285/65R18", "275/60R20", "285/55R20"],
+        wheelDiameterMin: 18,
+        wheelDiameterMax: 20,
+        popularWheelSizes: [18, 20],
+        wheelWidthMin: 9,
+        wheelWidthMax: 10,
+        offsetMin: -12,
+        offsetMax: 0,
+        offsetLabel: "Standard offset",
+        stanceDescription: "Clean leveled stance",
+        notes: ["Popular platform for leveling kits", "Great reliability"],
+      },
+      offroad: {
+        tireDiameterMin: 33,
+        tireDiameterMax: 35,
+        commonTireSizes: [
+          "285/70R17", "295/70R17", "35x12.50R17",
+          "33x12.50R18", "295/65R20", "33x12.50R20",
+        ],
+        wheelDiameterMin: 17,
+        wheelDiameterMax: 20,
+        popularWheelSizes: [17, 18, 20],
+        wheelWidthMin: 9,
+        wheelWidthMax: 12,
+        offsetMin: -18,
+        offsetMax: 0,
+        offsetLabel: "0 to -18mm",
+        stanceDescription: "Aggressive lifted stance",
+        notes: ["Aftermarket UCAs recommended for lifts over 3\"", "Check ball joint clearance"],
+      },
+      extreme: {
+        tireDiameterMin: 35,
+        tireDiameterMax: 37,
+        commonTireSizes: [
+          "35x12.50R17", "37x12.50R17",
+          "35x12.50R18", "35x12.50R20",
+        ],
+        wheelDiameterMin: 17,
+        wheelDiameterMax: 20,
+        popularWheelSizes: [17, 18, 20],
+        wheelWidthMin: 10,
+        wheelWidthMax: 14,
+        offsetMin: -44,
+        offsetMax: -18,
+        offsetLabel: "-18 to -44mm",
+        stanceDescription: "Aggressive stance — trimming required",
+        notes: ["Fender trimming required", "Body mount chop may be needed", "Regear recommended for 37s"],
+      },
+    },
+  },
+  // 3rd Gen Tundra (2014-2021) and 4th Gen (2022+)
+  {
+    key: "toyota|tundra",
+    make: "Toyota",
+    model: "Tundra",
+    yearMin: 1990,
     yearMax: 2026,
     platform: "XK50/XK70",
     recommendations: {
@@ -1137,7 +1200,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "toyota|sequoia",
     make: "Toyota",
     model: "Sequoia",
-    yearMin: 2008,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "XK60/XK80",
     recommendations: {
@@ -1196,7 +1259,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "nissan|titan",
     make: "Nissan",
     model: "Titan",
-    yearMin: 2016,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "A61",
     recommendations: {
@@ -1251,7 +1314,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "nissan|titan xd",
     make: "Nissan",
     model: "Titan XD",
-    yearMin: 2016,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "A61 XD",
     recommendations: {
@@ -1306,7 +1369,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "nissan|frontier",
     make: "Nissan",
     model: "Frontier",
-    yearMin: 2005,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "D40/D41",
     recommendations: {
@@ -1365,7 +1428,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "jeep|wrangler",
     make: "Jeep",
     model: "Wrangler",
-    yearMin: 2018,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "JL/JLU",
     recommendations: {
@@ -1420,7 +1483,7 @@ export const VEHICLE_LIFT_PROFILES: VehicleLiftProfile[] = [
     key: "jeep|gladiator",
     make: "Jeep",
     model: "Gladiator",
-    yearMin: 2020,
+    yearMin: 1990,
     yearMax: 2026,
     platform: "JT",
     recommendations: {

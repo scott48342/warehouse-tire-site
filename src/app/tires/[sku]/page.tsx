@@ -2,9 +2,9 @@ import Link from "next/link";
 import { NextResponse } from "next/server";
 import pg from "pg";
 import { BRAND } from "@/lib/brand";
-import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
+import { AddTiresToCartButton } from "@/components/AddTiresToCartButton";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle } from "@/lib/productFormat";
 
@@ -84,12 +84,6 @@ export default async function TireDetailPage({
   const trim = String((sp as any).trim || "");
   const modification = String((sp as any).modification || "");
 
-  // Quote carry-over (wheel selected on quote -> keep it when adding tires)
-  const wheelSku = String((sp as any).wheelSku || "");
-  const wheelName = String((sp as any).wheelName || "");
-  const wheelUnit = String((sp as any).wheelUnit || "");
-  const wheelQty = String((sp as any).wheelQty || "");
-  const wheelDia = String((sp as any).wheelDia || "");
   // Never show raw engine text - extract clean submodel or omit
   const displayTrim = extractDisplayTrim(trim);
   const vehicleLabel = [year, make, model, displayTrim].filter(Boolean).join(" ");
@@ -175,14 +169,14 @@ export default async function TireDetailPage({
 
   // Enrich with tire asset image if database doesn't have one
   let enrichedImageUrl: string | null = t.image_url || null;
-  
+
   if (!enrichedImageUrl) {
     // Use the same asset lookup as the listing page
     const description = String(t.tire_description || "").trim();
     if (description) {
       try {
-        const assetRes = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(description)}`, { 
-          cache: "no-store" 
+        const assetRes = await fetch(`${getBaseUrl()}/api/assets/tire?km=${encodeURIComponent(description)}`, {
+          cache: "no-store"
         });
         if (assetRes.ok) {
           const assetData = (await assetRes.json()) as { results?: TireAsset[] };
@@ -285,7 +279,7 @@ export default async function TireDetailPage({
             </div>
 
             <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Why you’ll like it</div>
+              <div className="text-xs font-extrabold text-neutral-900">Why you'll like it</div>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
                 {(highlights.length ? highlights : ["Fitment and availability confirmed before install."]).slice(0, 6).map((h) => (
                   <li key={h}>{h}</li>
@@ -295,49 +289,27 @@ export default async function TireDetailPage({
 
             {/* Fitment moved under photo */}
 
-            <div id="quote" className="mt-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Get your quote</div>
-              <div className="mt-1 text-xs text-neutral-600">
-                We’ll confirm pricing, availability, and the right fit before you commit.
-              </div>
-
-              <div className="mt-3 grid gap-2">
-                <div className="flex flex-wrap gap-2">
-                  <QuoteRequest productType="tire" sku={safeSku} productName={title} />
-                  <Link
-                    href={
-                      `/quote/new?${new URLSearchParams({
-                        year,
-                        make,
-                        model,
-                        trim,
-                        modification,
-                        wheelSku,
-                        wheelName,
-                        wheelUnit,
-                        wheelQty,
-                        wheelDia,
-                        tireSku: safeSku,
-                        tireName: title,
-                        tireUnit: typeof displayPrice === "number" && Number.isFinite(displayPrice) ? String(displayPrice) : "",
-                        tireQty: "4",
-                      }).toString()}`
-                    }
-                    className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:border-neutral-300"
-                  >
-                    Build quote
-                  </Link>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-2 text-[11px] text-neutral-600">
-                  <span>Fitment verified before install</span>
-                  <span className="text-neutral-300">•</span>
-                  <span>Local install scheduling</span>
-                  <span className="text-neutral-300">•</span>
-                  <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
-                    Prefer to talk? Call us
-                  </a>
-                </div>
+            <div id="add-to-cart" className="mt-4">
+              <AddTiresToCartButton
+                sku={safeSku}
+                brand={String(t.brand_desc || "Tire")}
+                model={title}
+                size={String(t.tire_size || t.simple_size || "")}
+                loadIndex={t.load_index ? String(t.load_index) : undefined}
+                speedRating={t.speed_rating ? String(t.speed_rating) : undefined}
+                imageUrl={enrichedImageUrl || undefined}
+                unitPrice={displayPrice ?? 0}
+                vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
+                quantity={4}
+              />
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-neutral-600">
+                <span>Fitment verified before install</span>
+                <span className="text-neutral-300">•</span>
+                <span>Local install scheduling</span>
+                <span className="text-neutral-300">•</span>
+                <a href={BRAND.links.tel} className="font-extrabold text-neutral-900 hover:underline">
+                  Prefer to talk? Call us
+                </a>
               </div>
             </div>
 
@@ -414,13 +386,13 @@ export default async function TireDetailPage({
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-1">
             <div>
               <div className="text-sm font-extrabold text-neutral-900">{displayPrice != null ? fmtMoney(displayPrice) : "Call for price"}</div>
-              <div className="text-[11px] text-neutral-600">Per tire • Quote in minutes</div>
+              <div className="text-[11px] text-neutral-600">Per tire • Set of 4</div>
             </div>
             <a
-              href="#quote"
+              href="#add-to-cart"
               className="h-10 rounded-xl bg-[var(--brand-red)] px-4 py-2 text-center text-sm font-extrabold text-white"
             >
-              Request quote
+              Add to Cart
             </a>
           </div>
         </div>

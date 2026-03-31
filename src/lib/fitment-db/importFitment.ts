@@ -11,7 +11,11 @@ import type { NewFitmentSourceRecord, NewVehicleFitment, NewFitmentImportJob } f
 import { eq, and } from "drizzle-orm";
 import { makePayloadChecksum, normalizeMake, normalizeModel, slugify } from "./keys";
 import { normalizeWheelSizeData, createWheelSizeSourceRecord } from "./normalize";
-import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// Runtime imports are blocked. Use bulk-import scripts only for data seeding.
+// ============================================================================
 
 // ============================================================================
 // Single Record Import
@@ -248,15 +252,13 @@ export async function importFromWheelSize(
   jobId: string,
   options: WheelSizeImportOptions
 ): Promise<void> {
-  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
-  if (!isWheelSizeEnabled()) {
-    console.warn("[importFitment] Wheel-Size API DISABLED - blocking batch import");
-    await updateImportJobProgress(jobId, { 
-      status: "failed",
-      lastError: "Wheel-Size API is temporarily disabled"
-    });
-    throw new Error("Wheel-Size API is temporarily disabled");
-  }
+  // HARD BLOCK: Wheel-Size API is forbidden in DB-first runtime
+  console.error("[importFitment] Wheel-Size API FORBIDDEN - DB-first architecture");
+  await updateImportJobProgress(jobId, { 
+    status: "failed",
+    lastError: "Wheel-Size API is forbidden in DB-first architecture"
+  });
+  throw new Error("Wheel-Size API is FORBIDDEN in DB-first runtime. Use bulk-import scripts for data seeding.");
 
   const { yearStart, yearEnd, makes, apiKey, onProgress } = options;
   

@@ -82,6 +82,41 @@ export default function CheckoutPage() {
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
+  
+  // Tax rate based on shipping state
+  const [taxRate, setTaxRate] = useState<number>(0);
+  const [taxLoading, setTaxLoading] = useState(false);
+
+  // Fetch tax rate when shipping state changes
+  useEffect(() => {
+    if (!shipping.state || shipping.state.length !== 2) {
+      setTaxRate(0);
+      return;
+    }
+
+    setTaxLoading(true);
+    fetch(`/api/tax?state=${encodeURIComponent(shipping.state)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.ok && typeof data.taxRate === "number") {
+          setTaxRate(data.taxRate);
+        } else {
+          setTaxRate(0);
+        }
+      })
+      .catch(() => setTaxRate(0))
+      .finally(() => setTaxLoading(false));
+  }, [shipping.state]);
+
+  // Calculate tax on taxable items (wheels + tires, not accessories)
+  const taxableSubtotal = useMemo(() => {
+    return items
+      .filter((item) => item.type === "wheel" || item.type === "tire")
+      .reduce((sum, item) => sum + (item.unitPrice || 0) * (item.quantity || 1), 0);
+  }, [items]);
+
+  const calculatedTax = taxableSubtotal * taxRate;
+  const totalWithTax = validation.totals.total + calculatedTax;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -153,6 +188,18 @@ export default function CheckoutPage() {
           items,
           customer,
           vehicle,
+          shipping: {
+            address: shipping.address,
+            address2: shipping.address2,
+            city: shipping.city,
+            state: shipping.state,
+            zip: shipping.zip,
+          },
+          tax: {
+            rate: taxRate,
+            amount: calculatedTax,
+            state: shipping.state,
+          },
         }),
       });
 
@@ -590,8 +637,18 @@ export default function CheckoutPage() {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-neutral-600">Tax</span>
-                  <span className="text-neutral-500 text-xs">Calculated at payment</span>
+                  <span className="text-neutral-600">
+                    Tax {shipping.state ? `(${shipping.state})` : ""}
+                  </span>
+                  {taxLoading ? (
+                    <span className="text-neutral-400 text-xs">Loading...</span>
+                  ) : shipping.state ? (
+                    <span className="font-semibold">
+                      {calculatedTax > 0 ? `$${calculatedTax.toFixed(2)}` : "$0.00"}
+                    </span>
+                  ) : (
+                    <span className="text-neutral-500 text-xs">Select state</span>
+                  )}
                 </div>
               </div>
 
@@ -599,9 +656,14 @@ export default function CheckoutPage() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-bold text-neutral-900">Total</span>
                   <span className="text-2xl font-extrabold text-neutral-900">
-                    ${validation.totals.total.toFixed(2)}
+                    ${totalWithTax.toFixed(2)}
                   </span>
                 </div>
+                {calculatedTax > 0 && (
+                  <p className="text-xs text-neutral-500 mt-1">
+                    Includes ${calculatedTax.toFixed(2)} tax ({(taxRate * 100).toFixed(2)}%)
+                  </p>
+                )}
                 {!totalCheck.matches && (
                   <p className="text-xs text-amber-600 mt-1">
                     ⚠️ Total verification pending (diff: ${totalCheck.difference.toFixed(2)})

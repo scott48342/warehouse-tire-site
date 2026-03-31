@@ -354,6 +354,12 @@ export default async function AdminDashboard() {
             description="Check system logs"
             href="/admin/logs"
           />
+          <QuickAction
+            icon="💰"
+            label="Tax Rates"
+            description="State sales tax rates"
+            href="/admin/tax-rates"
+          />
         </div>
       </div>
 

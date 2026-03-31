@@ -21,8 +21,12 @@ import {
   type CachedFitment,
 } from "@/lib/fitmentCache";
 import { normalizeModelForApi, normalizeMake, slugify } from "@/lib/fitment-db/keys";
-import * as wheelSizeApi from "@/lib/wheelSizeApi";
 import oemSizesData from "@/data/oem-tire-sizes.json";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// All tire size data comes from local DB, cache, or static fallback.
+// ============================================================================
 import { 
   convertLegacyTireSize, 
   convertTireSizesForSearch,
@@ -66,7 +70,18 @@ async function getDbFitmentSizes(
       return null;
     }
     
-    // Find matching modification or use first
+    // Helper to check if a fitment has tire sizes
+    const hasTireSizes = (f: any): boolean => {
+      if (f.oemTireSizes && Array.isArray(f.oemTireSizes) && f.oemTireSizes.length > 0) {
+        return true;
+      }
+      if (f.oemWheelSizes && Array.isArray(f.oemWheelSizes)) {
+        return f.oemWheelSizes.some((ws: any) => ws.tires?.length > 0 || ws.tireSize);
+      }
+      return false;
+    };
+    
+    // Find matching modification or prefer records with tire sizes
     let selectedFitment = fitments[0];
     if (modification) {
       const match = fitments.find(f => 
@@ -76,16 +91,31 @@ async function getDbFitmentSizes(
       if (match) selectedFitment = match;
     }
     
+    // If selected has no tire sizes, try to find one that does
+    if (!hasTireSizes(selectedFitment)) {
+      const withTires = fitments.find(f => hasTireSizes(f));
+      if (withTires) {
+        selectedFitment = withTires;
+      }
+    }
+    
     // Extract tire sizes from oem_tire_sizes JSON field
     const oemTireSizes = selectedFitment.oemTireSizes as string[] | null;
     if (!oemTireSizes || oemTireSizes.length === 0) {
       // Also check oemWheelSizes for tire info
-      const oemWheelSizes = selectedFitment.oemWheelSizes as Array<{ tires?: string[] }> | null;
+      const oemWheelSizes = selectedFitment.oemWheelSizes as Array<{ 
+        tires?: string[]; 
+        tireSize?: string; 
+      }> | null;
       if (oemWheelSizes) {
         const extractedSizes = new Set<string>();
         for (const ws of oemWheelSizes) {
+          // Handle both tires array and single tireSize
           if (ws.tires) {
             ws.tires.forEach(t => extractedSizes.add(t));
+          }
+          if (ws.tireSize) {
+            extractedSizes.add(ws.tireSize);
           }
         }
         if (extractedSizes.size > 0) {
@@ -96,6 +126,16 @@ async function getDbFitmentSizes(
             source: "db-first",
           };
         }
+      }
+      // No tire sizes found, but we might still have valid fitment data
+      // Return partial result with fitment but empty tire sizes
+      if (selectedFitment.boltPattern && selectedFitment.boltPattern.trim().length > 0) {
+        return {
+          tireSizes: [],
+          boltPattern: selectedFitment.boltPattern,
+          centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
+          source: "db-first-fitment-only",
+        };
       }
       return null;
     }
@@ -161,43 +201,18 @@ function getStaticOemSizes(year: string, make: string, model: string, modificati
   return yearData.default || [];
 }
 
+// ============================================================================
+// WHEEL-SIZE API PERMANENTLY DISABLED (Phase A - DB-First Architecture)
+// ============================================================================
+
 const BASE_URL = "https://api.wheel-size.com/v2/";
 
 function getApiKey(): string {
-  const key = process.env.WHEELSIZE_API_KEY;
-  if (!key) throw new Error("Missing WHEELSIZE_API_KEY");
-  return key;
+  throw new Error("Wheel-Size API is FORBIDDEN in DB-first runtime");
 }
 
-async function apiGet<T>(path: string, params?: Record<string, string>): Promise<T> {
-  if (!wheelSizeApi.isWheelSizeEnabled()) {
-    console.warn("[tire-sizes] Wheel-Size API DISABLED - blocking direct call");
-    throw new Error("Wheel-Size API is temporarily disabled");
-  }
-
-  const url = new URL(path, BASE_URL);
-  url.searchParams.set("user_key", getApiKey());
-  if (params) {
-    for (const [k, v] of Object.entries(params)) {
-      if (v) url.searchParams.set(k, v);
-    }
-  }
-
-  const res = await fetch(url.toString(), {
-    headers: { Accept: "application/json" },
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    if (res.status === 429) {
-      record429();
-      throw new Error(`Wheel-Size API rate limited (429)`);
-    }
-    throw new Error(`Wheel-Size API error: ${res.status}`);
-  }
-
-  recordSuccess();
-  return res.json();
+async function apiGet<T>(_path: string, _params?: Record<string, string>): Promise<T> {
+  throw new Error("Wheel-Size API is FORBIDDEN in DB-first runtime. All tire data must come from local database or static fallback.");
 }
 
 type WheelSetup = {
@@ -251,38 +266,53 @@ export async function GET(req: Request) {
   // ═══════════════════════════════════════════════════════════════════════════
   // STEP 1: DB-FIRST - Check imported fitment database BEFORE anything else
   // ═══════════════════════════════════════════════════════════════════════════
+  // Store db fitment for later use even if tire sizes need fallback
+  let dbFitmentData: { boltPattern?: string; centerBore?: number } | null = null;
+  
   if (!forceRefresh) {
     const dbFitment = await getDbFitmentSizes(year, make, model, modification);
-    if (dbFitment && dbFitment.tireSizes.length > 0) {
-      console.log(`[tire-sizes] DB-FIRST HIT: ${year} ${make} ${model} → ${dbFitment.tireSizes.join(", ")}`);
-      
-      // Convert legacy sizes if any
-      const { searchSizes } = convertTireSizesForSearch(dbFitment.tireSizes);
-      const dbConversions = dbFitment.tireSizes.map(size => {
-        const conv = convertLegacyTireSize(size);
-        return {
-          originalSize: conv.original,
-          recommendedSize: conv.recommended,
-          alternatives: conv.alternatives,
-          conversionMethod: conv.conversionMethod,
-          isLegacy: conv.isLegacy,
-        };
-      });
-      
-      return NextResponse.json({
-        tireSizes: dbFitment.tireSizes,
-        tireSizesStrict: dbFitment.tireSizes,
-        tireSizesAgg: [],
-        searchableSizes: searchSizes.length > 0 ? searchSizes : dbFitment.tireSizes,
-        sizeConversions: dbConversions,
-        hasLegacySizes: dbConversions.some(c => c.isLegacy),
-        fitment: {
+    if (dbFitment) {
+      // Store fitment data for potential use in fallback
+      if (dbFitment.boltPattern) {
+        dbFitmentData = {
           boltPattern: dbFitment.boltPattern,
           centerBore: dbFitment.centerBore,
-        },
-        source: dbFitment.source, // "db-first"
-        cacheStats: getCacheStats(),
-      });
+        };
+      }
+      
+      if (dbFitment.tireSizes.length > 0) {
+        console.log(`[tire-sizes] DB-FIRST HIT: ${year} ${make} ${model} → ${dbFitment.tireSizes.join(", ")}`);
+        
+        // Convert legacy sizes if any
+        const { searchSizes } = convertTireSizesForSearch(dbFitment.tireSizes);
+        const dbConversions = dbFitment.tireSizes.map(size => {
+          const conv = convertLegacyTireSize(size);
+          return {
+            originalSize: conv.original,
+            recommendedSize: conv.recommended,
+            alternatives: conv.alternatives,
+            conversionMethod: conv.conversionMethod,
+            isLegacy: conv.isLegacy,
+          };
+        });
+        
+        return NextResponse.json({
+          tireSizes: dbFitment.tireSizes,
+          tireSizesStrict: dbFitment.tireSizes,
+          tireSizesAgg: [],
+          searchableSizes: searchSizes.length > 0 ? searchSizes : dbFitment.tireSizes,
+          sizeConversions: dbConversions,
+          hasLegacySizes: dbConversions.some(c => c.isLegacy),
+          fitment: {
+            boltPattern: dbFitment.boltPattern,
+            centerBore: dbFitment.centerBore,
+          },
+          source: dbFitment.source, // "db-first"
+          cacheStats: getCacheStats(),
+        });
+      } else if (dbFitmentData) {
+        console.log(`[tire-sizes] DB has fitment but no tire sizes for ${year} ${make} ${model}, will use fallback for sizes`);
+      }
     }
   }
 
@@ -324,15 +354,14 @@ export async function GET(req: Request) {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // STEP 3: API unavailable? Use static fallback
+  // STEP 3: API unavailable - use static fallback (PHASE A - DB-FIRST)
+  // Wheel-Size API is PERMANENTLY DISABLED. Use DB data or static fallback only.
   // ═══════════════════════════════════════════════════════════════════════════
-  const apiUnavailable = isInCooldown() || !wheelSizeApi.isWheelSizeEnabled();
+  const apiUnavailable = true; // HARD BLOCK: Wheel-Size API is forbidden
   
   if (apiUnavailable) {
     const staticSizes = getStaticOemSizes(year, make, model, modification);
-    const reason = !wheelSizeApi.isWheelSizeEnabled() 
-      ? "Wheel-Size API is temporarily disabled" 
-      : "Rate limited - in cooldown";
+    const reason = "Wheel-Size API is permanently disabled (DB-first architecture)";
     
     if (staticSizes.length > 0) {
       console.log(`[tire-sizes] ${reason}, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
@@ -356,12 +385,15 @@ export async function GET(req: Request) {
         searchableSizes: searchSizes.length > 0 ? searchSizes : staticSizes,
         sizeConversions: staticConversions,
         hasLegacySizes: staticConversions.some(c => c.isLegacy),
-        source: "static-fallback",
+        // Merge db fitment data if available
+        fitment: dbFitmentData || undefined,
+        source: dbFitmentData ? "static-fallback+db-fitment" : "static-fallback",
         apiError: reason,
         cacheStats: getCacheStats(),
       });
     }
     
+    // No static fallback available - return db fitment if we have it
     return NextResponse.json({
       tireSizes: [],
       tireSizesStrict: [],
@@ -369,260 +401,19 @@ export async function GET(req: Request) {
       searchableSizes: [],
       sizeConversions: [],
       hasLegacySizes: false,
+      // Include db fitment even if no tire sizes
+      fitment: dbFitmentData || undefined,
       apiError: `${reason} (no static fallback for ${year} ${make} ${model})`,
-      source: "none",
+      source: dbFitmentData ? "db-fitment-only" : "none",
       cacheStats: getCacheStats(),
     });
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // STEP 4: Call Wheel-Size API (original logic)
+  // STEP 4: REMOVED - Wheel-Size API (Phase A - DB-first architecture)
+  // All API call logic has been removed. The code above returns from
+  // DB, cache, or static fallback. This path should never be reached.
   // ═══════════════════════════════════════════════════════════════════════════
-  const fallbackMakeSlug = normalizeMake(make || "");
-  const fallbackModelSlug = normalizeModelForApi(model);
-
-  let makeSlug = fallbackMakeSlug;
-  let modelSlug = fallbackModelSlug;
-  let resolved: { makeSlug: string; modelSlug: string; modelName?: string } | null = null;
-
-  try {
-    resolved = await wheelSizeApi.resolveMakeModel(make, model);
-    if (resolved) {
-      makeSlug = resolved.makeSlug;
-      modelSlug = resolved.modelSlug;
-    }
-  } catch {
-    // proceed with fallback slugs
-  }
-
-  const debug: any = {
-    input: { year, make, model, modification, modificationRaw },
-    slugs: { makeSlug, modelSlug, resolved, fallback: { makeSlug: fallbackMakeSlug, modelSlug: fallbackModelSlug } },
-  };
-
-  try {
-    const modsResponse = await apiGet<{ data: Modification[] }>("modifications/", {
-      make: makeSlug,
-      model: modelSlug,
-      year,
-    });
-    const allMods = modsResponse.data || [];
-    const usMods = allMods.filter(m => m.regions?.includes("usdm"));
-    const mods = usMods.length > 0 ? usMods : allMods;
-
-    debug.modifications = {
-      total: allMods.length,
-      usMarket: usMods.length,
-      available: mods.map(m => ({ slug: m.slug, name: m.name, trim: m.trim })),
-    };
-
-    if (mods.length === 0) {
-      return NextResponse.json({
-        tireSizes: [],
-        tireSizesStrict: [],
-        tireSizesAgg: [],
-        debug,
-        error: "No modifications found for this vehicle",
-      });
-    }
-
-    let selectedMod: Modification | null = null;
-    if (modification) {
-      selectedMod = mods.find(m => m.slug === modification) || null;
-    }
-    if (!selectedMod) {
-      selectedMod = mods[0];
-    }
-
-    debug.selectedModification = selectedMod;
-
-    const vehicleResponse = await apiGet<{ data: VehicleData[] }>("search/by_model/", {
-      make: makeSlug,
-      model: modelSlug,
-      year,
-      modification: selectedMod.slug,
-    });
-
-    const vehicleData = vehicleResponse.data?.[0];
-    debug.vehicleDataFound = !!vehicleData;
-    debug.wheelsCount = vehicleData?.wheels?.length || 0;
-
-    if (!vehicleData?.wheels?.length) {
-      return NextResponse.json({
-        tireSizes: [],
-        tireSizesStrict: [],
-        tireSizesAgg: [],
-        debug,
-        error: "No wheel/tire data found for this modification",
-      });
-    }
-
-    const tireSizesSet = new Set<string>();
-    const stockTireSizes: string[] = [];
-    const allTireSizes: string[] = [];
-
-    for (const wheel of vehicleData.wheels) {
-      const frontTire = wheel.front?.tire;
-      const rearTire = wheel.rear?.tire;
-
-      if (frontTire && frontTire.trim()) {
-        const normalized = normalizeTireSize(frontTire);
-        if (normalized) {
-          allTireSizes.push(normalized);
-          tireSizesSet.add(normalized);
-          if (wheel.is_stock) stockTireSizes.push(normalized);
-        }
-      }
-
-      if (rearTire && rearTire.trim() && rearTire !== frontTire) {
-        const normalized = normalizeTireSize(rearTire);
-        if (normalized) {
-          allTireSizes.push(normalized);
-          tireSizesSet.add(normalized);
-          if (wheel.is_stock) stockTireSizes.push(normalized);
-        }
-      }
-    }
-
-    const aggTireSizes: string[] = [];
-    const otherMods = mods.filter(m => m.slug !== selectedMod?.slug).slice(0, 3);
-    
-    for (const mod of otherMods) {
-      try {
-        const otherResponse = await apiGet<{ data: VehicleData[] }>("search/by_model/", {
-          make: makeSlug,
-          model: modelSlug,
-          year,
-          modification: mod.slug,
-        });
-        
-        const otherData = otherResponse.data?.[0];
-        if (otherData?.wheels) {
-          for (const wheel of otherData.wheels) {
-            const frontTire = wheel.front?.tire;
-            if (frontTire) {
-              const normalized = normalizeTireSize(frontTire);
-              if (normalized && !tireSizesSet.has(normalized)) {
-                aggTireSizes.push(normalized);
-                tireSizesSet.add(normalized);
-              }
-            }
-          }
-        }
-      } catch {
-        // Ignore errors for aggregate data
-      }
-    }
-
-    debug.rawTireSizes = { stock: stockTireSizes, all: allTireSizes, aggregate: aggTireSizes };
-
-    const tireSizes = Array.from(tireSizesSet);
-    const fitment = {
-      boltPattern: vehicleData.technical?.bolt_pattern,
-      centerBore: vehicleData.technical?.centre_bore,
-    };
-
-    const { searchSizes, displayMap } = convertTireSizesForSearch(tireSizes);
-    
-    const sizeConversions: Array<{
-      originalSize: string;
-      recommendedSize: string;
-      alternatives: string[];
-      conversionMethod: string;
-      isLegacy: boolean;
-    }> = [];
-    
-    for (const size of tireSizes) {
-      const conversion = convertLegacyTireSize(size);
-      sizeConversions.push({
-        originalSize: conversion.original,
-        recommendedSize: conversion.recommended,
-        alternatives: conversion.alternatives,
-        conversionMethod: conversion.conversionMethod,
-        isLegacy: conversion.isLegacy,
-      });
-    }
-    
-    const searchableSizes = searchSizes.length > 0 ? searchSizes : tireSizes;
-    
-    debug.legacyConversion = {
-      hasLegacySizes: sizeConversions.some(c => c.isLegacy),
-      originalSizes: tireSizes,
-      searchSizes: searchableSizes,
-      conversions: sizeConversions,
-    };
-
-    const strictSizes = stockTireSizes.length > 0 ? [...new Set(stockTireSizes)] : allTireSizes;
-    setCache(cacheKey, {
-      tireSizes: strictSizes,
-      boltPattern: fitment.boltPattern,
-      centerBore: fitment.centerBore ? parseFloat(String(fitment.centerBore)) : undefined,
-      vehicle: { year: Number(year), make, model, submodel: selectedMod.name },
-      source: "wheelsize",
-      cachedAt: Date.now(),
-      expiresAt: Date.now() + 3600000,
-    });
-
-    return NextResponse.json({
-      tireSizes,
-      tireSizesStrict: strictSizes,
-      tireSizesAgg: aggTireSizes,
-      searchableSizes,
-      sizeConversions,
-      hasLegacySizes: sizeConversions.some(c => c.isLegacy),
-      fitment,
-      selectedModification: { slug: selectedMod.slug, name: selectedMod.name },
-      source: "api",
-      debug,
-    });
-
-  } catch (err: any) {
-    debug.error = err?.message || String(err);
-    const is429 = err?.message?.includes("429") || err?.message?.includes("rate limit");
-    
-    const staticSizes = getStaticOemSizes(year, make, model, modification);
-    if (staticSizes.length > 0) {
-      console.log(`[tire-sizes] API error, using static fallback for ${year} ${make} ${model}: ${staticSizes.join(", ")}`);
-      
-      const { searchSizes: fallbackSearchSizes } = convertTireSizesForSearch(staticSizes);
-      const fallbackConversions = staticSizes.map(size => {
-        const conv = convertLegacyTireSize(size);
-        return {
-          originalSize: conv.original,
-          recommendedSize: conv.recommended,
-          alternatives: conv.alternatives,
-          conversionMethod: conv.conversionMethod,
-          isLegacy: conv.isLegacy,
-        };
-      });
-      
-      return NextResponse.json({
-        tireSizes: staticSizes,
-        tireSizesStrict: staticSizes,
-        tireSizesAgg: [],
-        searchableSizes: fallbackSearchSizes.length > 0 ? fallbackSearchSizes : staticSizes,
-        sizeConversions: fallbackConversions,
-        hasLegacySizes: fallbackConversions.some(c => c.isLegacy),
-        source: "static-fallback",
-        apiError: err?.message || String(err),
-        cacheStats: getCacheStats(),
-        debug,
-      });
-    }
-    
-    return NextResponse.json(
-      { 
-        tireSizes: [],
-        tireSizesStrict: [],
-        tireSizesAgg: [],
-        error: is429 ? "Rate limited - please try again later" : (err?.message || String(err)),
-        rateLimited: is429,
-        cacheStats: getCacheStats(),
-        debug,
-      },
-      { status: is429 ? 429 : 500 }
-    );
-  }
 }
 
 function normalizeTireSize(size: string): string | null {

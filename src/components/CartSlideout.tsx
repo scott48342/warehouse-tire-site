@@ -314,7 +314,7 @@ export function CartSlideout() {
   }
 
   const tiresUrl = `/tires?${tiresParams.toString()}`;
-  const installUrl = `/quote/new?${tiresParams.toString()}`;
+  const checkoutUrl = `/checkout`;
 
   return (
     <>
@@ -329,9 +329,12 @@ export function CartSlideout() {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-5 py-4">
           <div>
-            <h2 className="text-lg font-extrabold text-neutral-900">
-              {lastAddedItem ? "Added to Cart!" : "Your Cart"}
-            </h2>
+            <div className="flex items-center gap-2">
+              <span className="text-xl">📦</span>
+              <h2 className="text-lg font-extrabold text-neutral-900">
+                {lastAddedItem ? "Added to Package!" : "Your Package"}
+              </h2>
+            </div>
             <p className="text-sm text-neutral-600">
               {itemCount} {itemCount === 1 ? "item" : "items"} • ${total.toFixed(2)}
             </p>
@@ -423,15 +426,23 @@ export function CartSlideout() {
           )}
         </div>
 
-        {/* Upsell Section */}
+        {/* Package Progress */}
         {hasWheels() && !hasTires() ? (
-          <div className="mx-5 mb-4 rounded-xl bg-amber-50 border border-amber-200 p-4">
+          <div className="mx-5 mb-4 rounded-xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-4">
             <div className="flex items-start gap-3">
-              <span className="text-xl">🛞</span>
-              <div>
-                <div className="font-bold text-amber-900">Complete your setup</div>
+              <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
+                <span className="text-xl">🛞</span>
+              </div>
+              <div className="flex-1">
+                <div className="font-bold text-amber-900">Step 2: Add Tires</div>
                 <div className="text-sm text-amber-800 mt-1">
-                  Add tires that match your new wheels for the complete package.
+                  Select tires sized for your wheels to complete your package.
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <div className="flex-1 h-2 bg-amber-200 rounded-full overflow-hidden">
+                    <div className="h-full w-1/2 bg-green-500 rounded-full" />
+                  </div>
+                  <span className="text-xs font-bold text-amber-700">50%</span>
                 </div>
               </div>
             </div>
@@ -451,28 +462,30 @@ export function CartSlideout() {
             <Link
               href={tiresUrl}
               onClick={() => setIsOpen(false)}
-              className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors"
+              className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors gap-2"
             >
-              Add Tires to Complete Setup
+              <span>Select Tires</span>
+              <span className="text-red-200">→</span>
             </Link>
           ) : (
             <Link
               href="/cart"
               onClick={() => setIsOpen(false)}
-              className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors"
+              className="flex h-12 w-full items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors gap-2"
             >
-              View Cart / Checkout
+              <span>Review Package</span>
+              <span className="text-red-200">→</span>
             </Link>
           )}
 
           {/* Secondary actions */}
           <div className="grid grid-cols-2 gap-2">
             <Link
-              href={installUrl}
+              href={checkoutUrl}
               onClick={() => setIsOpen(false)}
               className="flex h-10 items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 text-sm font-bold text-neutral-900 hover:bg-neutral-50 transition-colors"
             >
-              Continue to Install
+              Checkout
             </Link>
             <button
               onClick={() => setIsOpen(false)}

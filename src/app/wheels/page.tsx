@@ -6,6 +6,7 @@ import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
+import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { FitmentConfidenceStrip, type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { vehicleSlug } from "@/lib/vehicleSlug";
@@ -1275,6 +1276,17 @@ export default async function WheelsPage({
         {!isBlocked && fitmentConfidence === "medium" && hasVehicle && confidenceWarningMessage ? (
           <div className="mt-5">
             <FitmentMediumConfidenceWarning message={confidenceWarningMessage} />
+          </div>
+        ) : null}
+
+        {/* Package Journey Bar - frames the shopping experience */}
+        {hasVehicle && !isBlocked && !data?.error ? (
+          <div className="mt-5">
+            <PackageJourneyBar
+              currentStep="wheels"
+              vehicle={{ year, make, model }}
+              estimatedRange={{ min: 1800, max: 3500 }}
+            />
           </div>
         ) : null}
 

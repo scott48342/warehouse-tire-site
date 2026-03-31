@@ -1,24 +1,21 @@
 /**
- * Admin: Catalog Management
+ * Admin: Catalog Management - PARTIALLY DISABLED (Phase A - DB-First Architecture)
  * 
- * GET /api/admin/catalog - Get catalog stats
- * POST /api/admin/catalog - Populate catalog from Wheel-Size API
+ * GET /api/admin/catalog - Get catalog stats (still works)
+ * POST /api/admin/catalog - Populate catalog - DISABLED (Wheel-Size API forbidden)
  * 
- * ⚠️ PROTECTED by Wheel-Size API guardrails
- * Batch operations require: { confirm: true, allowBatch: true }
+ * Use bulk-import scripts for catalog population.
  */
 
 import { NextResponse } from "next/server";
 import * as catalogStore from "@/lib/catalog-store";
-import {
-  checkBatchJobAllowed,
-  startBatchJob,
-  endBatchJob,
-  getUsageStats,
-} from "@/lib/wheelSizeGuard";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// Batch population endpoints are disabled. Use bulk-import scripts.
+// ============================================================================
 
 export const runtime = "nodejs";
-export const maxDuration = 300; // 5 minutes for full population
 
 export async function GET() {
   try {
@@ -42,106 +39,42 @@ export async function POST(req: Request) {
   
   const action = body.action;
 
-  // Actions that don't need batch protection
+  // Safe actions that don't call external APIs
   const safeModeActions = ["stats", "clear"];
   
-  // Actions that trigger batch Wheel-Size API calls
+  // Batch actions that would call Wheel-Size API - now DISABLED
   const batchActions = ["populate-makes", "populate-models", "populate-common"];
 
   try {
-    // ═══════════════════════════════════════════════════════════════════════════
-    // GUARDRAIL CHECK for batch operations
-    // ═══════════════════════════════════════════════════════════════════════════
     if (batchActions.includes(action)) {
-      const batchCheck = checkBatchJobAllowed({
-        action,
-        confirm: body.confirm,
-        allowBatch: body.allowBatch,
-        adminId: body.adminId || "anonymous",
-      });
-      
-      if (!batchCheck.allowed) {
-        return NextResponse.json({
-          error: batchCheck.error,
-          warning: batchCheck.warning,
-          requiresConfirmation: batchCheck.requiresConfirmation,
-          usage: getUsageStats(),
-          hint: batchCheck.requiresConfirmation 
-            ? 'Add { "confirm": true, "allowBatch": true } to your request body'
-            : undefined,
-        }, { status: batchCheck.requiresConfirmation ? 400 : 429 });
-      }
-      
-      // Start batch job tracking
-      startBatchJob(body.adminId || "anonymous");
+      console.warn(`[admin/catalog] Action "${action}" DISABLED - Wheel-Size API is forbidden`);
+      return NextResponse.json({
+        error: "Wheel-Size API is permanently disabled (DB-first architecture)",
+        disabled: true,
+        migration: "Use bulk-import scripts for catalog population",
+      }, { status: 410 }); // 410 Gone
     }
-    // ═══════════════════════════════════════════════════════════════════════════
 
-    let result: any;
-    
     switch (action) {
-      case "populate-makes": {
-        const count = await catalogStore.populateMakes();
-        result = { success: true, makes: count };
-        break;
-      }
-      
-      case "populate-models": {
-        const makeSlug = body.make;
-        if (!makeSlug) {
-          endBatchJob(false);
-          return NextResponse.json({ error: "Missing 'make' parameter" }, { status: 400 });
-        }
-        const count = await catalogStore.populateModels(makeSlug);
-        result = { success: true, make: makeSlug, models: count };
-        break;
-      }
-      
-      case "populate-common": {
-        const populateResult = await catalogStore.populateCommonMakes();
-        result = { success: true, ...populateResult };
-        break;
-      }
-      
-      case "clear": {
-        await catalogStore.clearCatalog();
-        result = { success: true, message: "Catalog cleared" };
-        break;
-      }
-      
-      case "stats": {
+      case "stats":
         const stats = await catalogStore.getStats();
-        result = stats;
-        break;
-      }
-      
+        return NextResponse.json(stats);
+        
+      case "clear":
+        await catalogStore.clearCatalog();
+        return NextResponse.json({ success: true, message: "Catalog cleared" });
+        
       default:
         return NextResponse.json({ 
-          error: "Unknown action",
-          receivedAction: action,
-          validActions: ["populate-makes", "populate-models", "populate-common", "clear", "stats"],
-          protectedActions: batchActions,
-          note: "Batch actions require { confirm: true, allowBatch: true }",
+          error: `Unknown action: ${action}`,
+          availableActions: [...safeModeActions],
+          disabledActions: batchActions,
         }, { status: 400 });
     }
-    
-    // End batch job tracking (success)
-    if (batchActions.includes(action)) {
-      endBatchJob(true);
-    }
-    
-    return NextResponse.json(result);
-    
   } catch (err: any) {
-    // End batch job tracking (failure)
-    if (batchActions.includes(action)) {
-      endBatchJob(false);
-    }
-    
     console.error(`[admin/catalog] Error:`, err);
-    return NextResponse.json({ 
+    return NextResponse.json({
       error: err?.message || "Operation failed",
-      action,
     }, { status: 500 });
   }
 }

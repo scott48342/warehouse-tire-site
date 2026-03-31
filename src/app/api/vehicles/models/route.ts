@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
 import * as catalogStore from "@/lib/catalog-store";
-import * as wheelSizeApi from "@/lib/wheelSizeApi";
 import { normalizeMake } from "@/lib/fitment-db/keys";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// All vehicle data comes from local catalog. No external API calls.
+// ============================================================================
 
 export const runtime = "nodejs";
 
@@ -143,13 +147,31 @@ export async function GET(req: Request) {
     
     // Merge results (deduped)
     const modelSet = new Set<string>();
-    for (const m of yearModels) modelSet.add(m.name);
+    
+    // Helper to normalize model names for deduping
+    const normalizeForDedupe = (name: string): string => {
+      return name.toLowerCase()
+        .replace(/super-?duty/gi, "")  // Remove "super duty" variants
+        .replace(/[-\s]+/g, " ")        // Normalize spaces/dashes
+        .trim();
+    };
+    
+    const seenNormalized = new Set<string>();
+    const addModel = (displayName: string) => {
+      const normalized = normalizeForDedupe(displayName);
+      if (!seenNormalized.has(normalized)) {
+        seenNormalized.add(normalized);
+        modelSet.add(displayName);
+      }
+    };
+    
+    for (const m of yearModels) addModel(m.name);
     for (const m of fitmentModels) {
       // Convert slug to display name
       const displayName = m.split("-").map((w: string) => 
         w.charAt(0).toUpperCase() + w.slice(1)
       ).join(" ");
-      modelSet.add(displayName);
+      addModel(displayName);
     }
     
     if (modelSet.size > 0) {
@@ -179,28 +201,9 @@ export async function GET(req: Request) {
     });
   }
 
-  // Catalog miss - try API
-  try {
-    const foundMake = await wheelSizeApi.findMake(make);
-    if (foundMake) {
-      // Populate catalog with models AND their valid years
-      const count = await catalogStore.populateModels(foundMake.slug);
-      if (count > 0) {
-        const models = await catalogStore.getModels(foundMake.slug);
-        const filtered = filterByYear(models);
-        console.log(`[models] API → CATALOG: ${year || "all"} ${make} → ${filtered.length} models (with years)`);
-        return NextResponse.json({ 
-          results: filtered,
-          source: "api",
-          yearFiltered: !!year,
-        }, {
-          headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
-        });
-      }
-    }
-  } catch (err: any) {
-    console.error(`[models] API error for ${make}:`, err?.message);
-  }
+  // REMOVED: Wheel-Size API fallback (Phase A - DB-first architecture)
+  // All vehicle data must come from local catalog/static lists
+  console.log(`[models] CATALOG MISS: ${make} - no API fallback (DB-first mode)`);
 
   // Final fallback: static list (no year filtering available)
   const staticKey = makeSlug.replace(/-/g, "");

@@ -14,7 +14,11 @@
 import { db } from "./fitment-db/db";
 import { catalogMakes, catalogModels, catalogSyncLog } from "./fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
-import * as wheelSizeApi from "./wheelSizeApi";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// Populate functions are blocked. Use bulk-import scripts for data seeding.
+// ============================================================================
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -188,155 +192,29 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Ca
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Fetch and store all makes from Wheel-Size API
+ * DISABLED: Wheel-Size API is forbidden (Phase A - DB-first architecture)
+ * Use bulk-import scripts for catalog population.
  */
 export async function populateMakes(): Promise<number> {
-  console.log("[catalog-store] Populating makes from API...");
-  
-  try {
-    const apiMakes = await wheelSizeApi.getMakes();
-    
-    // Upsert all makes
-    for (const make of apiMakes) {
-      await db
-        .insert(catalogMakes)
-        .values({
-          slug: make.slug.toLowerCase(),
-          name: make.name,
-        })
-        .onConflictDoUpdate({
-          target: catalogMakes.slug,
-          set: {
-            name: make.name,
-            updatedAt: new Date(),
-          },
-        });
-    }
-    
-    // Update sync log
-    await db
-      .insert(catalogSyncLog)
-      .values({
-        entityType: "makes",
-        entityKey: "all",
-        recordCount: apiMakes.length,
-      })
-      .onConflictDoUpdate({
-        target: [catalogSyncLog.entityType, catalogSyncLog.entityKey],
-        set: {
-          syncedAt: new Date(),
-          recordCount: apiMakes.length,
-        },
-      });
-    
-    console.log(`[catalog-store] Stored ${apiMakes.length} makes`);
-    return apiMakes.length;
-  } catch (err) {
-    console.error("[catalog-store] Error populating makes:", err);
-    throw err;
-  }
+  console.error("[catalog-store] populateMakes DISABLED - Wheel-Size API is forbidden (DB-first architecture)");
+  throw new Error("Wheel-Size API is FORBIDDEN. Use bulk-import scripts for catalog population.");
 }
 
 /**
- * Fetch and store models for a make, including valid years
+ * DISABLED: Wheel-Size API is forbidden (Phase A - DB-first architecture)
+ * Use bulk-import scripts for catalog population.
  */
-export async function populateModels(makeSlug: string): Promise<number> {
-  const normalizedMake = makeSlug.toLowerCase();
-  console.log(`[catalog-store] Populating models for ${normalizedMake}...`);
-  
-  try {
-    const apiModels = await wheelSizeApi.getModels(normalizedMake);
-    let count = 0;
-    
-    for (const model of apiModels) {
-      // Fetch valid years for each model
-      let years: number[] = [];
-      try {
-        years = await wheelSizeApi.getYears(normalizedMake, model.slug);
-        years = years.sort((a, b) => b - a); // descending
-      } catch (err) {
-        console.warn(`[catalog-store] Failed to get years for ${normalizedMake}/${model.slug}`);
-      }
-      
-      // Upsert model
-      await db
-        .insert(catalogModels)
-        .values({
-          makeSlug: normalizedMake,
-          slug: model.slug.toLowerCase(),
-          name: model.name,
-          years: years,
-        })
-        .onConflictDoUpdate({
-          target: [catalogModels.makeSlug, catalogModels.slug],
-          set: {
-            name: model.name,
-            years: years,
-            updatedAt: new Date(),
-          },
-        });
-      
-      count++;
-    }
-    
-    // Update sync log
-    await db
-      .insert(catalogSyncLog)
-      .values({
-        entityType: "models",
-        entityKey: normalizedMake,
-        recordCount: count,
-      })
-      .onConflictDoUpdate({
-        target: [catalogSyncLog.entityType, catalogSyncLog.entityKey],
-        set: {
-          syncedAt: new Date(),
-          recordCount: count,
-        },
-      });
-    
-    console.log(`[catalog-store] Stored ${count} models for ${normalizedMake}`);
-    return count;
-  } catch (err) {
-    console.error(`[catalog-store] Error populating models for ${normalizedMake}:`, err);
-    throw err;
-  }
+export async function populateModels(_makeSlug: string): Promise<number> {
+  console.error("[catalog-store] populateModels DISABLED - Wheel-Size API is forbidden (DB-first architecture)");
+  throw new Error("Wheel-Size API is FORBIDDEN. Use bulk-import scripts for catalog population.");
 }
 
 /**
- * Populate common US makes and their models with years
+ * DISABLED: Wheel-Size API is forbidden (Phase A - DB-first architecture)
  */
 export async function populateCommonMakes(): Promise<{ makes: number; models: number }> {
-  const commonMakes = [
-    "acura", "audi", "bmw", "buick", "cadillac", "chevrolet", "chrysler",
-    "dodge", "ford", "genesis", "gmc", "honda", "hyundai", "infiniti",
-    "jaguar", "jeep", "kia", "land-rover", "lexus", "lincoln", "mazda",
-    "mercedes", "mini", "mitsubishi", "nissan", "porsche", "ram", "subaru",
-    "tesla", "toyota", "volkswagen", "volvo"
-  ];
-  
-  // First populate all makes
-  await populateMakes();
-  
-  let totalModels = 0;
-  
-  // Then populate models with years for common makes
-  for (const makeSlug of commonMakes) {
-    try {
-      const count = await populateModels(makeSlug);
-      totalModels += count;
-      // Small delay to avoid rate limiting
-      await new Promise(r => setTimeout(r, 50));
-    } catch (err) {
-      console.error(`[catalog-store] Failed to populate ${makeSlug}:`, err);
-    }
-  }
-  
-  const makesCount = await db.select({ count: sql<number>`count(*)` }).from(catalogMakes);
-  return { 
-    makes: Number(makesCount[0]?.count || 0), 
-    models: totalModels 
-  };
+  console.error("[catalog-store] populateCommonMakes DISABLED - Wheel-Size API is forbidden");
+  throw new Error("Wheel-Size API is FORBIDDEN. Use bulk-import scripts for catalog population.");
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

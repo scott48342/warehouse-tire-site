@@ -25,8 +25,12 @@ import { eq, and } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
-import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
 import crypto from "crypto";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// Runtime paths are 100% DB-only. No external API calls allowed.
+// ============================================================================
 import submodelSupplements from "@/data/submodel-supplements.json";
 import { getFitmentFromRules, matchFitmentRule } from "./vehicleFitmentRules";
 
@@ -95,13 +99,14 @@ export interface ProfileLookupResult {
 
 const WHEELSIZE_API_BASE = "https://api.wheel-size.com/v2/";
 
+// ============================================================================
+// WHEEL-SIZE API PERMANENTLY DISABLED (DB-First Architecture)
+// ============================================================================
+
 function getApiKey(): string | null {
-  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
-  if (!isWheelSizeEnabled()) {
-    console.warn("[profileService] Wheel-Size API DISABLED - returning null API key");
-    return null;
-  }
-  return process.env.WHEELSIZE_API_KEY || null;
+  // HARD BLOCK: Wheel-Size API is forbidden in DB-first runtime
+  console.warn("[profileService] Wheel-Size API FORBIDDEN - DB-first architecture");
+  return null;
 }
 
 interface WheelSizeModification {
@@ -268,118 +273,20 @@ function findModificationByTrimLevel(
   return undefined;
 }
 
+// ============================================================================
+// WHEEL-SIZE API FUNCTION - HARD BLOCKED
+// This function is preserved for type compatibility but will throw if called
+// ============================================================================
+
 async function fetchModificationFromApi(
-  apiKey: string,
-  year: number,
-  make: string,
-  model: string,
-  requestedModificationId: string
+  _apiKey: string,
+  _year: number,
+  _make: string,
+  _model: string,
+  _requestedModificationId: string
 ): Promise<{ modification: WheelSizeModification; vehicleData: WheelSizeVehicleData } | null> {
-  const makeSlug = normalizeMake(make);
-  const modelSlug = normalizeModelForApi(model);
+  throw new Error("Wheel-Size API is FORBIDDEN in DB-first runtime. All fitment must come from local database.");
   
-  const modsUrl = new URL("modifications/", WHEELSIZE_API_BASE);
-  modsUrl.searchParams.set("user_key", apiKey);
-  modsUrl.searchParams.set("make", makeSlug);
-  modsUrl.searchParams.set("model", modelSlug);
-  modsUrl.searchParams.set("year", String(year));
-  
-  const modsRes = await fetch(modsUrl.toString(), {
-    headers: { Accept: "application/json" },
-  });
-  
-  if (!modsRes.ok) {
-    console.log(`[profileService] API modifications call failed: ${modsRes.status}`);
-    return null;
-  }
-  
-  const modsData = await modsRes.json();
-  const allMods: WheelSizeModification[] = modsData?.data || [];
-  
-  if (allMods.length === 0) {
-    console.log(`[profileService] API returned 0 modifications for ${year} ${makeSlug} ${modelSlug}`);
-    return null;
-  }
-  
-  // Prefer USDM
-  const usMods = allMods.filter(m => m.regions?.includes("usdm"));
-  const mods = usMods.length > 0 ? usMods : allMods;
-  
-  // Try to find exact match by slug
-  let mod = allMods.find(m => m.slug === requestedModificationId);
-  
-  // Try slugified match
-  if (!mod) {
-    mod = allMods.find(m => slugify(m.slug) === slugify(requestedModificationId));
-  }
-  
-  // ═══════════════════════════════════════════════════════════════════════════
-  // FIX: Handle supplement IDs (s_XXXXXXXX) by resolving to original trim value
-  // and finding a modification that contains that trim in trim_levels[]
-  // ═══════════════════════════════════════════════════════════════════════════
-  if (!mod && isSupplementId(requestedModificationId)) {
-    const trimValue = resolveSupplementTrimValue(requestedModificationId, year, make, model);
-    
-    if (trimValue) {
-      // Search for a modification containing this trim level
-      mod = findModificationByTrimLevel(mods, trimValue);
-      
-      if (mod) {
-        console.log(`[profileService] SUPPLEMENT RESOLVED: ${requestedModificationId} → trim "${trimValue}" → mod ${mod.slug}`);
-      } else {
-        console.log(`[profileService] SUPPLEMENT PARTIAL: Found trim "${trimValue}" but no modification contains it in trim_levels`);
-        // Fall back to first USDM mod only for supplement IDs where we found the trim
-        // This is acceptable because the trim is a marketing level, not a technical spec
-        // All F-150 XLT/Lariat/etc share the same fitment specs for a given engine
-        if (mods.length > 0) {
-          mod = mods[0];
-          console.log(`[profileService] Using first USDM mod ${mod.slug} for supplement trim "${trimValue}"`);
-        }
-      }
-    } else {
-      console.warn(`[profileService] SUPPLEMENT UNKNOWN: Could not resolve ${requestedModificationId} - no matching trim in supplements`);
-      // DO NOT fall back to first mod for UNKNOWN supplement IDs - return null
-      return null;
-    }
-  }
-  
-  // ═══════════════════════════════════════════════════════════════════════════
-  // FALLBACK: For non-supplement IDs that don't match any slug exactly,
-  // fall back to first USDM modification. This is SAFE because:
-  // - Non-supplement IDs are typically engine/configuration slugs
-  // - All configurations of the same model/year share fitment specs
-  // - Only supplement IDs (trim levels) need exact matching
-  // ═══════════════════════════════════════════════════════════════════════════
-  if (!mod && mods.length > 0) {
-    mod = mods[0];
-    console.log(`[profileService] FALLBACK: Using first USDM mod ${mod.slug} for unmatched ID "${requestedModificationId}"`);
-  }
-  
-  if (!mod) {
-    console.log(`[profileService] No modifications available for ${requestedModificationId}`);
-    return null;
-  }
-  
-  // Fetch vehicle data
-  const vehicleUrl = new URL("search/by_model/", WHEELSIZE_API_BASE);
-  vehicleUrl.searchParams.set("user_key", apiKey);
-  vehicleUrl.searchParams.set("make", makeSlug);
-  vehicleUrl.searchParams.set("model", modelSlug);
-  vehicleUrl.searchParams.set("year", String(year));
-  vehicleUrl.searchParams.set("modification", mod.slug);
-  
-  const vehicleRes = await fetch(vehicleUrl.toString(), {
-    headers: { Accept: "application/json" },
-  });
-  
-  if (!vehicleRes.ok) {
-    return { modification: mod, vehicleData: {} };
-  }
-  
-  const vehicleRaw = await vehicleRes.json();
-  const vehicleData = vehicleRaw?.data?.[0] || {};
-  
-  return { modification: mod, vehicleData };
 }
 
 // ============================================================================

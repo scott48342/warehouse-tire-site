@@ -123,6 +123,10 @@ export async function POST(req: Request) {
     }
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
+    const shippingInfo = body.shipping && typeof body.shipping === "object" ? body.shipping : {};
+    const taxInfo = body.tax && typeof body.tax === "object" ? body.tax : {};
+    const taxAmount = Number(taxInfo.amount) || 0;
+    const taxState = String(taxInfo.state || "").toUpperCase();
 
     // Convert cart items to quote lines.
     // IMPORTANT: keep $0 REQUIRED install hardware in the quote snapshot / order payload.
@@ -152,6 +156,19 @@ export async function POST(req: Request) {
 
     if (linesAll.length === 0) {
       return NextResponse.json({ ok: false, error: "empty_cart" }, { status: 400 });
+    }
+
+    // Add tax as a quote line if applicable
+    if (taxAmount > 0) {
+      linesAll.push({
+        kind: "product",
+        name: `Sales Tax${taxState ? ` (${taxState})` : ""}`,
+        sku: undefined,
+        unitPriceUsd: taxAmount,
+        qty: 1,
+        taxable: false,
+        meta: { type: "tax", state: taxState },
+      });
     }
 
     // Stripe line items: exclude $0 lines (Stripe doesn't allow meaningful $0 charges).
@@ -187,26 +204,50 @@ export async function POST(req: Request) {
 
     const origin = new URL(req.url).origin;
 
-    const session = await stripeConn.stripe.checkout.sessions.create({
-      mode: "payment",
-      customer_email: email || undefined,
-      line_items: stripeLines.map((l) => ({
-        quantity: l.qty,
+    // Build Stripe line items
+    const stripeLineItems = stripeLines.map((l) => ({
+      quantity: l.qty,
+      price_data: {
+        currency: "usd",
+        unit_amount: moneyToCents(l.unitPriceUsd),
+        product_data: {
+          name: l.name,
+          metadata: l.sku ? { sku: l.sku } : undefined,
+        },
+      },
+    }));
+
+    // Add tax as a line item if applicable
+    if (taxAmount > 0) {
+      stripeLineItems.push({
+        quantity: 1,
         price_data: {
           currency: "usd",
-          unit_amount: moneyToCents(l.unitPriceUsd),
+          unit_amount: moneyToCents(taxAmount),
           product_data: {
-            name: l.name,
-            metadata: l.sku ? { sku: l.sku } : undefined,
+            name: `Sales Tax${taxState ? ` (${taxState})` : ""}`,
+            metadata: undefined, // No SKU for tax line
           },
         },
-      })),
+      });
+    }
+
+    const sessionParams = {
+      mode: "payment" as const,
+      customer_email: email || undefined,
+      line_items: stripeLineItems,
       metadata: {
         quoteId,
+        taxState: taxState || undefined,
+        taxAmount: taxAmount > 0 ? String(taxAmount.toFixed(2)) : undefined,
+      },
+      shipping_address_collection: {
+        allowed_countries: ["US"] as const,
       },
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout?canceled=1`,
-    });
+    };
+    const session = await (stripeConn.stripe.checkout.sessions.create as Function)(sessionParams);
 
     return NextResponse.json({ ok: true, url: session.url, quoteId }, { status: 200 });
   } catch (e: any) {

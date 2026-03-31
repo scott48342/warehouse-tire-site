@@ -26,14 +26,12 @@ export async function GET(req: Request) {
     );
   }
 
-  const result = await listAvailableModifications(
-    Number(year),
-    make,
-    model,
-    { usMarketOnly }
-  );
-
-  return NextResponse.json(result, { status: result.success ? 200 : 404 });
+  // DISABLED: Wheel-Size API removed (DB-first architecture)
+  return NextResponse.json({
+    error: "Wheel-Size API is permanently disabled (DB-first architecture)",
+    disabled: true,
+    migration: "Use bulk-import scripts for fitment data",
+  }, { status: 410 }); // 410 Gone
 }
 
 /**

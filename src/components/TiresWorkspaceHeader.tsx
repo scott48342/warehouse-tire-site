@@ -299,18 +299,10 @@ export function TiresWorkspaceHeader({
                 {wheelSku ? (
                   <div className="mt-3">
                     <Link
-                      href={`/quote/new?${new URLSearchParams({
-                        year,
-                        make,
-                        model,
-                        trim,
-                        modification,
-                        wheelSku,
-                        tireSku,
-                      }).toString()}`}
+                      href="/cart"
                       className="inline-flex h-10 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-extrabold text-white hover:bg-red-700"
                     >
-                      Add to quote
+                      View Cart
                     </Link>
                   </div>
                 ) : null}

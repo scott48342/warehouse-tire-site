@@ -16,7 +16,11 @@ import { eq, and, or, isNull, desc } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { importWheelSizeFitment } from "./importFitment";
 import { applyOverrides } from "./applyOverrides";
-import { isWheelSizeEnabled } from "@/lib/wheelSizeApi";
+
+// ============================================================================
+// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
+// Runtime paths are 100% DB-only. No external API calls allowed.
+// ============================================================================
 
 // ============================================================================
 // Types
@@ -40,27 +44,15 @@ interface WheelSizeApiConfig {
   baseUrl?: string;
 }
 
-// Cache for API config to avoid repeated env lookups
-let wheelSizeConfig: WheelSizeApiConfig | null = null;
+// ============================================================================
+// WHEEL-SIZE API PERMANENTLY DISABLED (DB-First Architecture)
+// ============================================================================
 
 function getWheelSizeConfig(): WheelSizeApiConfig | null {
-  // KILL SWITCH - Block ALL Wheel-Size API calls when disabled
-  if (!isWheelSizeEnabled()) {
-    console.warn("[getFitment] Wheel-Size API DISABLED - returning null config");
-    return null;
-  }
-
-  if (wheelSizeConfig) return wheelSizeConfig;
-  
-  const apiKey = process.env.WHEELSIZE_API_KEY;
-  if (!apiKey) return null;
-  
-  wheelSizeConfig = {
-    apiKey,
-    baseUrl: process.env.WHEELSIZE_API_BASE_URL || "https://api.wheel-size.com/v2/",
-  };
-  
-  return wheelSizeConfig;
+  // HARD BLOCK: Wheel-Size API is forbidden in DB-first runtime
+  // All fitment data must come from local database
+  console.warn("[getFitment] Wheel-Size API FORBIDDEN - DB-first architecture");
+  return null;
 }
 
 // ============================================================================
@@ -203,9 +195,14 @@ export async function listFitments(
       orderBy: [vehicleFitments.displayTrim],
     });
     
-    if (dbFitments.length > 0) {
-      // Apply overrides to all
-      const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
+    // FILTER: Exclude records with empty/null bolt patterns
+    const validFitments = dbFitments.filter(f => 
+      f.boltPattern && f.boltPattern.trim().length > 0
+    );
+    
+    if (validFitments.length > 0) {
+      // Apply overrides to all valid fitments
+      const withOverrides = await Promise.all(validFitments.map(f => applyOverrides(f)));
       return {
         fitments: withOverrides,
         source: "db",
@@ -307,6 +304,9 @@ export async function getTrimOptions(
  * Does NOT call Wheel-Size API. Used by trims endpoint to serve locally imported data.
  * 
  * This is different from listFitments() which falls back to API.
+ * 
+ * IMPORTANT: Filters out records with empty/null bolt patterns to ensure
+ * only valid fitment data is used in customer-facing flows.
  */
 export async function listLocalFitments(
   year: number,
@@ -315,6 +315,8 @@ export async function listLocalFitments(
 ): Promise<VehicleFitment[]> {
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
+  
+  console.log(`[listLocalFitments] Query: year=${year}, make="${normalizedMake}" (from "${make}"), model="${normalizedModel}" (from "${model}")`);
   
   const dbFitments = await db.query.vehicleFitments.findMany({
     where: and(
@@ -325,8 +327,18 @@ export async function listLocalFitments(
     orderBy: [vehicleFitments.displayTrim],
   });
   
-  // Apply overrides to all
-  const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
+  console.log(`[listLocalFitments] Raw DB results: ${dbFitments.length} records`);
+  
+  // FILTER: Exclude records with empty/null bolt patterns
+  // These are invalid legacy imports that should not be used
+  const validFitments = dbFitments.filter(f => 
+    f.boltPattern && f.boltPattern.trim().length > 0
+  );
+  
+  console.log(`[listLocalFitments] After bolt filter: ${validFitments.length} valid (${dbFitments.length - validFitments.length} filtered)`);
+  
+  // Apply overrides to all valid fitments
+  const withOverrides = await Promise.all(validFitments.map(f => applyOverrides(f)));
   return withOverrides;
 }
 
@@ -334,55 +346,31 @@ export async function listLocalFitments(
 // Wheel-Size API Helpers
 // ============================================================================
 
+// ============================================================================
+// WHEEL-SIZE API FUNCTIONS - HARD BLOCKED
+// These functions are preserved for type compatibility but will throw if called
+// ============================================================================
+
 async function fetchWheelSizeModifications(
-  config: WheelSizeApiConfig,
-  year: number,
-  make: string,
-  model: string
+  _config: WheelSizeApiConfig,
+  _year: number,
+  _make: string,
+  _model: string
 ): Promise<any[]> {
-  const makeSlug = make.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  const modelSlug = model.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  
-  const url = new URL("modifications/", config.baseUrl);
-  url.searchParams.set("user_key", config.apiKey);
-  url.searchParams.set("make", makeSlug);
-  url.searchParams.set("model", modelSlug);
-  url.searchParams.set("year", String(year));
-  
-  const res = await fetch(url.toString(), {
-    headers: { Accept: "application/json" },
-  });
-  
-  if (!res.ok) {
-    throw new Error(`Wheel-Size modifications API failed: ${res.status}`);
-  }
-  
-  const data = await res.json();
-  return data?.data || [];
+  throw new Error("Wheel-Size API is FORBIDDEN in DB-first runtime. All fitment must come from local database.");
 }
 
 async function fetchWheelSizeModificationData(
-  config: WheelSizeApiConfig,
-  year: number,
-  make: string,
-  model: string,
-  modificationId: string
+  _config: WheelSizeApiConfig,
+  _year: number,
+  _make: string,
+  _model: string,
+  _modificationId: string
 ): Promise<{
   modification: any;
   wheels?: any;
   tires?: any;
   fullPayload: any;
 } | null> {
-  // First get the modification details
-  const modifications = await fetchWheelSizeModifications(config, year, make, model);
-  const mod = modifications.find(m => m.slug === modificationId);
-  
-  if (!mod) return null;
-  
-  // TODO: Fetch wheel and tire data from separate endpoints if needed
-  // For now, just return the modification
-  return {
-    modification: mod,
-    fullPayload: mod,
-  };
+  throw new Error("Wheel-Size API is FORBIDDEN in DB-first runtime. All fitment must come from local database.");
 }
