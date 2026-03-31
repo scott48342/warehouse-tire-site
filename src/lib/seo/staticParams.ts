@@ -95,18 +95,13 @@ export async function getTopVehiclesForSEO(limit: number = 400): Promise<TopVehi
         make, 
         model, 
         COUNT(*) as trim_count,
-        COUNT(DISTINCT display_trim) as unique_trims,
-        CASE 
-          WHEN bolt_pattern IS NOT NULL AND array_length(oem_tire_sizes::text[], 1) > 0 THEN 1
-          ELSE 0
-        END as has_complete_data
+        COUNT(DISTINCT display_trim) as unique_trims
       FROM vehicle_fitments
       WHERE year >= 2015
         AND bolt_pattern IS NOT NULL
-      GROUP BY year, make, model, bolt_pattern, oem_tire_sizes
+      GROUP BY year, make, model
       HAVING COUNT(*) >= 1
       ORDER BY 
-        has_complete_data DESC,
         year DESC, 
         trim_count DESC
       LIMIT ${Math.floor(limit * 1.5)}

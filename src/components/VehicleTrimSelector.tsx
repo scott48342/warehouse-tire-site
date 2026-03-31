@@ -17,7 +17,7 @@ type TrimApiResponse = {
   source?: string
 }
 
-function buildResultsUrl(year: string, make: string, model: string, modificationId: string, trimLabel?: string) {
+function buildResultsUrl(year: string, make: string, model: string, modificationId: string, productType: string, trimLabel?: string) {
   const params = new URLSearchParams({
     year,
     make,
@@ -25,24 +25,24 @@ function buildResultsUrl(year: string, make: string, model: string, modification
     modification: modificationId,
   })
   if (trimLabel) params.set('trim', trimLabel)
-  return `/tires?${params.toString()}`
+  return `/${productType}?${params.toString()}`
 }
 
-function buildFallbackUrl(year: string, make: string, model: string) {
+function buildFallbackUrl(year: string, make: string, model: string, productType: string) {
   const params = new URLSearchParams({ year, make, model })
-  return `/tires?${params.toString()}`
+  return `/${productType}?${params.toString()}`
 }
 
 export function VehicleTrimSelector({
   year,
   make,
   model,
-  vehicleName,
+  productType = 'tires',
 }: {
   year: string
   make: string
   model: string
-  vehicleName: string
+  productType?: 'wheels' | 'tires' | 'packages'
 }) {
   const router = useRouter()
   const [loading, setLoading] = useState(true)
@@ -79,7 +79,8 @@ export function VehicleTrimSelector({
     }
   }, [year, make, model])
 
-  const fallbackUrl = useMemo(() => buildFallbackUrl(year, make, model), [year, make, model])
+  const fallbackUrl = useMemo(() => buildFallbackUrl(year, make, model, productType), [year, make, model, productType])
+  const vehicleNameLoading = `${year} ${make} ${model}` // Used in loading/error states
 
   // Auto-redirect when no trims available (skip showing "fitment not available")
   useEffect(() => {
@@ -93,7 +94,7 @@ export function VehicleTrimSelector({
     return (
       <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
         <h2 className="text-xl font-bold mb-2">Loading fitment options…</h2>
-        <p className="text-gray-600">We're finding trims/options for your {vehicleName}.</p>
+        <p className="text-gray-600">We're finding trims/options for your {vehicleNameLoading}.</p>
       </div>
     )
   }
@@ -102,7 +103,7 @@ export function VehicleTrimSelector({
   if (error) {
     return (
       <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-        <h2 className="text-xl font-bold mb-2">Shop tires for your {vehicleName}</h2>
+        <h2 className="text-xl font-bold mb-2">Shop tires for your {vehicleNameLoading}</h2>
         <p className="text-gray-600 mb-4">
           We couldn't load trim options right now. You can still continue and select your trim on the next page.
         </p>
@@ -118,19 +119,22 @@ export function VehicleTrimSelector({
 
   // Note: if !trims.length, the useEffect above will auto-redirect to fallbackUrl
 
+  const vehicleName = `${year} ${make} ${model}`
+  const productLabel = productType === 'wheels' ? 'Wheels' : productType === 'packages' ? 'Packages' : 'Tires'
+
   if (trims.length === 1) {
     const t = trims[0]
-    const url = buildResultsUrl(year, make, model, t.modificationId, t.label)
+    const url = buildResultsUrl(year, make, model, t.modificationId, productType, t.label)
 
     return (
       <div className="bg-blue-600 rounded-lg shadow-lg p-8 text-center text-white mb-8">
-        <h2 className="text-2xl font-bold mb-4">Ready to Find Your Tires?</h2>
-        <p className="text-blue-100 mb-6">Browse tires that fit your {vehicleName}</p>
+        <h2 className="text-2xl font-bold mb-4">Ready to Find Your {productLabel}?</h2>
+        <p className="text-blue-100 mb-6">Browse {productLabel.toLowerCase()} that fit your {vehicleName}</p>
         <Link
           href={url}
           className="inline-block bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-50 transition-colors"
         >
-          Shop Tires for this Vehicle
+          Shop {productLabel} for this Vehicle
         </Link>
       </div>
     )
@@ -141,14 +145,14 @@ export function VehicleTrimSelector({
     <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
       <h2 className="text-2xl font-bold mb-2">Select Your Trim</h2>
       <p className="text-gray-600 mb-6">
-        Choose your {vehicleName} trim/option to see tires that fit.
+        Choose your {vehicleName} trim/option to see {productLabel.toLowerCase()} that fit.
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2">
         {trims.map((t) => (
           <Link
             key={t.modificationId}
-            href={buildResultsUrl(year, make, model, t.modificationId, t.label)}
+            href={buildResultsUrl(year, make, model, t.modificationId, productType, t.label)}
             className="block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition-all group"
           >
             <div className="flex items-center justify-between">

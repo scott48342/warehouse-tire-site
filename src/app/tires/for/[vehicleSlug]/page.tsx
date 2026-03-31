@@ -158,7 +158,7 @@ export default async function VehicleTiresPage({
               year={String(vehicle.year)}
               make={vehicle.make}
               model={vehicle.model}
-              vehicleName={vehicleName}
+              productType="tires"
             />
 
             {/* Why Choose Us */}

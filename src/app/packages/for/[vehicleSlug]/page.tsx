@@ -247,7 +247,7 @@ export default async function PackagesForVehiclePage({
             Select Your Trim for Best Results
           </h2>
           <VehicleTrimSelector
-            year={vehicle.year}
+            year={String(vehicle.year)}
             make={vehicle.make}
             model={vehicle.model}
             productType="packages"
