@@ -628,7 +628,7 @@ export function TiresGridWithSelection({
   viewParams,
   selectedWheel,
 }: TiresGridProps) {
-  const { addItem, getTires, removeItem } = useCart();
+  const { addItem, getTires, getWheels, removeItem } = useCart();
   const [selectedTire, setSelectedTire] = useState<SelectedTire | null>(null);
   const [showMobileBar, setShowMobileBar] = useState(false);
   const confirmationRef = useRef<HTMLDivElement>(null);
@@ -677,6 +677,30 @@ export function TiresGridWithSelection({
       removeItem(t.sku, "tire");
     }
     
+    // Add wheel to cart if part of package build (from URL params)
+    // Check if wheel already in cart to avoid duplicates
+    if (selectedWheel && selectedWheel.sku) {
+      const existingWheels = getWheels();
+      const wheelAlreadyInCart = existingWheels.some(w => w.sku === selectedWheel.sku);
+      
+      if (!wheelAlreadyInCart) {
+        addItem({
+          type: "wheel",
+          sku: selectedWheel.sku,
+          brand: selectedWheel.brand || "Wheel",
+          model: selectedWheel.model || "",
+          finish: selectedWheel.finish,
+          diameter: selectedWheel.diameter,
+          width: selectedWheel.width,
+          offset: selectedWheel.offset,
+          imageUrl: selectedWheel.imageUrl,
+          unitPrice: typeof selectedWheel.setPrice === "number" ? selectedWheel.setPrice / 4 : 0,
+          quantity: 4,
+          vehicle,
+        });
+      }
+    }
+    
     // Add new tire to cart
     addItem({
       type: "tire",
@@ -715,7 +739,7 @@ export function TiresGridWithSelection({
         confirmationRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 100);
-  }, [addItem, getTires, removeItem, selectedSize, vehicle]);
+  }, [addItem, getTires, getWheels, removeItem, selectedSize, vehicle, selectedWheel]);
   
   const handleClearSelection = useCallback(() => {
     if (selectedTire) {
