@@ -6,6 +6,7 @@ import { fitmentLabel, type Fitment } from "@/lib/fitment";
 type NormalizedFitment = {
   boltPattern?: string;
   centerBoreMm?: number;
+  threadSize?: string;
   wheelDiameterRangeIn?: [number, number];
   wheelWidthRangeIn?: [number, number];
   offsetRangeMm?: [number, number];
@@ -199,6 +200,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
               displayTrim: string;
               boltPattern: string | null;
               centerBoreMm: number | null;
+              threadSize: string | null;
               offsetRange: { min: number | null; max: number | null };
               oemWheelSizes: Array<{ diameter: number; width: number; offset: number | null }>;
               oemTireSizes: string[];
@@ -227,6 +229,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
           setDetails({
             boltPattern: dbProfile.boltPattern || undefined,
             centerBoreMm: dbProfile.centerBoreMm || undefined,
+            threadSize: dbProfile.threadSize || undefined,
             wheelDiameterRangeIn: oemWheelDias.length ? [Math.min(...oemWheelDias), Math.max(...oemWheelDias)] : undefined,
             wheelWidthRangeIn: oemWheelWidths.length ? [Math.min(...oemWheelWidths), Math.max(...oemWheelWidths)] : undefined,
             offsetRangeMm: dbProfile.offsetRange?.min != null && dbProfile.offsetRange?.max != null 
@@ -469,6 +472,13 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
             <div className="flex items-center justify-between gap-3">
               <span className="text-neutral-600">Center bore</span>
               <span className="font-semibold">{fmtMaybe(details.centerBoreMm, "mm")}</span>
+            </div>
+          ) : null}
+
+          {details?.threadSize ? (
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-neutral-600">Lug thread</span>
+              <span className="font-semibold">{details.threadSize}</span>
             </div>
           ) : null}
 

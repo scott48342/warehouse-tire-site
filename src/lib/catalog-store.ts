@@ -1,9 +1,8 @@
 /**
- * Wheel-Size Catalog Store (PostgreSQL)
+ * Catalog Store (PostgreSQL, DB-Only)
  * 
- * Persistent storage for catalog data from Wheel-Size API.
- * ONLY stores data from catalog endpoints (makes, models, years).
- * Does NOT store search results.
+ * Persistent storage for catalog data.
+ * No external API calls - data must be imported via admin tools.
  * 
  * Database tables:
  * - catalog_makes: { slug, name }
@@ -14,11 +13,6 @@
 import { db } from "./fitment-db/db";
 import { catalogMakes, catalogModels, catalogSyncLog } from "./fitment-db/schema";
 import { eq, and, ilike, sql } from "drizzle-orm";
-
-// ============================================================================
-// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
-// Populate functions are blocked. Use bulk-import scripts for data seeding.
-// ============================================================================
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -35,36 +29,26 @@ export interface CatalogModel {
   years: number[];
 }
 
-// Sync interval: only re-fetch from API if data is older than this
-const SYNC_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
-
 // ─────────────────────────────────────────────────────────────────────────────
 // PUBLIC API - READ
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Get all makes from catalog (DB first, API fallback)
+ * Get all makes from catalog (DB only)
  */
 export async function getMakes(): Promise<CatalogMake[]> {
   try {
-    // Check if we have makes in DB
     const dbMakes = await db.query.catalogMakes.findMany({
       orderBy: (makes, { asc }) => [asc(makes.name)],
     });
     
     if (dbMakes.length > 0) {
-      console.log(`[catalog-store] DB HIT: ${dbMakes.length} makes`);
+      console.log(`[catalog-store] DB: ${dbMakes.length} makes`);
       return dbMakes.map(m => ({ slug: m.slug, name: m.name }));
     }
     
-    // DB miss - populate from API
-    console.log(`[catalog-store] DB MISS for makes, fetching from API...`);
-    await populateMakes();
-    
-    const freshMakes = await db.query.catalogMakes.findMany({
-      orderBy: (makes, { asc }) => [asc(makes.name)],
-    });
-    return freshMakes.map(m => ({ slug: m.slug, name: m.name }));
+    console.log(`[catalog-store] No makes in catalog`);
+    return [];
   } catch (err) {
     console.error("[catalog-store] Error getting makes:", err);
     return [];
@@ -72,20 +56,19 @@ export async function getMakes(): Promise<CatalogMake[]> {
 }
 
 /**
- * Get models for a make from catalog (DB first, API fallback)
+ * Get models for a make from catalog (DB only)
  */
 export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
   const normalizedMake = makeSlug.toLowerCase();
   
   try {
-    // Check if we have models in DB
     const dbModels = await db.query.catalogModels.findMany({
       where: eq(catalogModels.makeSlug, normalizedMake),
       orderBy: (models, { asc }) => [asc(models.name)],
     });
     
     if (dbModels.length > 0) {
-      console.log(`[catalog-store] DB HIT: ${dbModels.length} models for ${makeSlug}`);
+      console.log(`[catalog-store] DB: ${dbModels.length} models for ${makeSlug}`);
       return dbModels.map(m => ({ 
         slug: m.slug, 
         name: m.name, 
@@ -93,19 +76,8 @@ export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
       }));
     }
     
-    // DB miss - populate from API
-    console.log(`[catalog-store] DB MISS for ${makeSlug} models, fetching from API...`);
-    await populateModels(normalizedMake);
-    
-    const freshModels = await db.query.catalogModels.findMany({
-      where: eq(catalogModels.makeSlug, normalizedMake),
-      orderBy: (models, { asc }) => [asc(models.name)],
-    });
-    return freshModels.map(m => ({ 
-      slug: m.slug, 
-      name: m.name, 
-      years: (m.years || []) as number[] 
-    }));
+    console.log(`[catalog-store] No models for ${makeSlug}`);
+    return [];
   } catch (err) {
     console.error(`[catalog-store] Error getting models for ${makeSlug}:`, err);
     return [];
@@ -114,7 +86,6 @@ export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
 
 /**
  * Get valid years for a make/model combination
- * Returns empty array if model not found
  */
 export async function getYears(makeSlug: string, modelSlug: string): Promise<number[]> {
   const model = await findModel(makeSlug, modelSlug);
@@ -188,36 +159,6 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Ca
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PUBLIC API - POPULATE (from Wheel-Size API)
-// ─────────────────────────────────────────────────────────────────────────────
-
-/**
- * DISABLED: Wheel-Size API is forbidden (Phase A - DB-first architecture)
- * Use bulk-import scripts for catalog population.
- */
-export async function populateMakes(): Promise<number> {
-  console.error("[catalog-store] populateMakes DISABLED - Wheel-Size API is forbidden (DB-first architecture)");
-  throw new Error("Wheel-Size API is FORBIDDEN. Use bulk-import scripts for catalog population.");
-}
-
-/**
- * DISABLED: Wheel-Size API is forbidden (Phase A - DB-first architecture)
- * Use bulk-import scripts for catalog population.
- */
-export async function populateModels(_makeSlug: string): Promise<number> {
-  console.error("[catalog-store] populateModels DISABLED - Wheel-Size API is forbidden (DB-first architecture)");
-  throw new Error("Wheel-Size API is FORBIDDEN. Use bulk-import scripts for catalog population.");
-}
-
-/**
- * DISABLED: Wheel-Size API is forbidden (Phase A - DB-first architecture)
- */
-export async function populateCommonMakes(): Promise<{ makes: number; models: number }> {
-  console.error("[catalog-store] populateCommonMakes DISABLED - Wheel-Size API is forbidden");
-  throw new Error("Wheel-Size API is FORBIDDEN. Use bulk-import scripts for catalog population.");
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
 // UTILITIES
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -249,27 +190,6 @@ export async function getStats(): Promise<{
 }
 
 /**
- * Check if sync is needed for an entity
- */
-export async function needsSync(entityType: string, entityKey: string = "all"): Promise<boolean> {
-  try {
-    const syncLog = await db.query.catalogSyncLog.findFirst({
-      where: and(
-        eq(catalogSyncLog.entityType, entityType),
-        eq(catalogSyncLog.entityKey, entityKey)
-      ),
-    });
-    
-    if (!syncLog) return true;
-    
-    const age = Date.now() - syncLog.syncedAt.getTime();
-    return age > SYNC_INTERVAL_MS;
-  } catch {
-    return true;
-  }
-}
-
-/**
  * Check if catalog has data for a make
  */
 export async function hasMake(makeSlug: string): Promise<boolean> {
@@ -279,12 +199,9 @@ export async function hasMake(makeSlug: string): Promise<boolean> {
 
 /**
  * Get all makes that have models available for a specific year.
- * Queries catalog_models where the year is in the years[] array.
  */
 export async function getMakesByYear(year: number): Promise<CatalogMake[]> {
   try {
-    // Query catalog_models where year is in the years array
-    // Then get distinct make_slugs and join with catalog_makes for names
     const results = await db.execute(sql`
       SELECT DISTINCT cm.make_slug, 
              COALESCE(mk.name, INITCAP(REPLACE(cm.make_slug, '-', ' '))) as name
@@ -309,7 +226,6 @@ export async function getMakesByYear(year: number): Promise<CatalogMake[]> {
 
 /**
  * Get all models for a make that are available for a specific year.
- * Filters catalog_models by make_slug and year in years[] array.
  */
 export async function getModelsByYear(makeSlug: string, year: number): Promise<CatalogModel[]> {
   const normalizedMake = makeSlug.toLowerCase();
@@ -348,8 +264,7 @@ export async function clearCatalog(): Promise<void> {
 }
 
 /**
- * Get makes from vehicle_fitments table (locally imported data) for a specific year.
- * This supplements catalog data with any manually imported fitment.
+ * Get makes from vehicle_fitments table for a specific year.
  */
 export async function getFitmentMakesByYear(year: number): Promise<string[]> {
   try {

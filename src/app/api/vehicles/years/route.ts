@@ -1,20 +1,22 @@
+/**
+ * Vehicle Years API (DB-Only)
+ * 
+ * GET /api/vehicles/years?make=Buick&model=Encore
+ * 
+ * Returns VALID years for a make/model from the database catalog.
+ * No external API calls.
+ */
+
 import { NextResponse } from "next/server";
 import * as catalogStore from "@/lib/catalog-store";
 import { normalizeMake } from "@/lib/fitment-db/keys";
-
-// ============================================================================
-// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
-// All vehicle data comes from local catalog. No external API calls.
-// ============================================================================
 
 export const runtime = "nodejs";
 
 /**
  * GET /api/vehicles/years?make=Buick&model=Encore
  * 
- * Returns VALID years for a make/model from the Wheel-Size catalog.
- * This prevents invalid combinations like "2006 Buick Encore" (Encore started 2013).
- * 
+ * Returns VALID years for a make/model from the catalog.
  * Falls back to static range if catalog data unavailable.
  */
 export async function GET(req: Request) {
@@ -46,12 +48,8 @@ export async function GET(req: Request) {
     });
   }
 
-  // REMOVED: Wheel-Size API fallback (Phase A - DB-first architecture)
-  // All vehicle data must come from local catalog
-  console.log(`[years] CATALOG MISS: ${make} ${model} - no API fallback (DB-first mode)`);
-
-  // Final fallback: static range (but log warning)
-  console.warn(`[years] FALLBACK to static range for ${make} ${model} - data not in catalog or API`);
+  // Final fallback: static range
+  console.warn(`[years] FALLBACK to static range for ${make} ${model} - data not in catalog`);
   const currentYear = new Date().getFullYear();
   const results: string[] = [];
   for (let y = currentYear + 1; y >= 2000; y--) {

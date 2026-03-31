@@ -4,7 +4,8 @@ import {
   buildFitmentProfile, 
   ensureFitmentTables,
 } from "@/lib/vehicleFitment";
-import { importVehicleFitment } from "@/lib/fitmentImport";
+// DB-FIRST: External API imports blocked. Use admin/fitment for manual import.
+// import { importVehicleFitment } from "@/lib/fitmentImport";
 import { 
   getFitmentProfile, 
   type FitmentProfile as DBFitmentProfile,
@@ -1152,54 +1153,20 @@ async function handleLegacyPath(
   // Try to get profile from legacy database
   let profile = await buildFitmentProfile(db, Number(year), make, model, trim);
   
-  // If no profile found, try legacy import
+  // ═══════════════════════════════════════════════════════════════════════════
+  // DB-FIRST: No external API fallback. If profile not in DB, return error.
+  // Wheel-Size API is BLOCKED in this path. Use admin/fitment for manual import.
+  // ═══════════════════════════════════════════════════════════════════════════
   if (!profile) {
-    console.log(`[fitment-search] LEGACY Import: ${year} ${make} ${model} trim=${trim || "(none)"}`);
+    console.log(`[fitment-search] DB-FIRST: No profile for ${year} ${make} ${model} trim=${trim || "(none)"} - NOT calling external API`);
     
-    const importRes = await importVehicleFitment(Number(year), make, model, {
-      desiredTrim: trim,
-      usMarketOnly: true,
-      debug: true,
-    });
-
-    if (!importRes.success) {
-      return NextResponse.json({
-        error: "No fitment profile found and import failed",
-        importError: importRes.error,
-        vehicle: { year, make, model, trim },
-        resolutionPath: "invalid",
-      }, { status: 404 });
-    }
-
-    // Try multiple lookup strategies after import
-    profile = await buildFitmentProfile(db, Number(year), make, model, trim);
-    
-    if (!profile && importRes.modificationSlug && importRes.modificationSlug !== trim) {
-      profile = await buildFitmentProfile(db, Number(year), make, model, importRes.modificationSlug);
-    }
-    
-    if (!profile && importRes.vehicle?.trim && importRes.vehicle.trim !== trim) {
-      profile = await buildFitmentProfile(db, Number(year), make, model, importRes.vehicle.trim);
-    }
-    
-    if (!profile && importRes.vehicle?.slug) {
-      profile = await buildFitmentProfile(db, Number(year), make, model, importRes.vehicle.slug);
-    }
-
-    if (!profile) {
-      return NextResponse.json({
-        error: "Import succeeded but fitment profile still not found in DB",
-        vehicle: { year, make, model, trim },
-        resolutionPath: "invalid",
-        debug: {
-          importedVehicleId: importRes.vehicle?.id,
-          importedTrim: importRes.vehicle?.trim,
-          importedSlug: importRes.vehicle?.slug,
-          modificationSlug: importRes.modificationSlug,
-          searchedTrim: trim,
-        }
-      }, { status: 500 });
-    }
+    return NextResponse.json({
+      error: "No fitment profile found in local database",
+      vehicle: { year, make, model, trim },
+      resolutionPath: "invalid",
+      dbFirst: true,
+      suggestion: "Use admin/fitment to manually import this vehicle's fitment data",
+    }, { status: 404 });
   }
 
   const profileMs = Date.now() - t0;

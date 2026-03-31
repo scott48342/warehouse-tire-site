@@ -59,6 +59,24 @@ export function normalizeMake(make: string): string {
  * Pattern: "user-facing-slug" → "api-slug"
  */
 const modelAliases: Record<string, string> = {
+  // ===== Chevrolet =====
+  "silverado-1500": "silverado-1500",
+  "silverado-2500-hd": "silverado-2500hd",
+  "silverado-2500hd": "silverado-2500hd",
+  "silverado-2500": "silverado-2500hd",
+  "silverado-3500-hd": "silverado-3500hd",
+  "silverado-3500hd": "silverado-3500hd",
+  "silverado-3500": "silverado-3500hd",
+  
+  // ===== GMC =====
+  "sierra-1500": "sierra-1500",
+  "sierra-2500-hd": "sierra-2500hd",
+  "sierra-2500hd": "sierra-2500hd",
+  "sierra-2500": "sierra-2500hd",
+  "sierra-3500-hd": "sierra-3500hd",
+  "sierra-3500hd": "sierra-3500hd",
+  "sierra-3500": "sierra-3500hd",
+  
   // ===== Lexus =====
   "rx-350": "rx",
   "rx-450h": "rx",
@@ -291,6 +309,135 @@ const modelAliases: Record<string, string> = {
 export function normalizeModel(model: string): string {
   const slugified = slugify(model);
   return modelAliases[slugified] || slugified;
+}
+
+/**
+ * Canonical display names for models
+ * Maps normalized slugs to customer-facing display names
+ */
+const modelDisplayNames: Record<string, string> = {
+  // Chevrolet HD trucks
+  "silverado-1500": "Silverado 1500",
+  "silverado-2500hd": "Silverado 2500 HD",
+  "silverado-3500hd": "Silverado 3500 HD",
+  "silverado-hd": null as any, // Suppress - use specific model
+  
+  // GMC HD trucks
+  "sierra-1500": "Sierra 1500",
+  "sierra-2500hd": "Sierra 2500 HD",
+  "sierra-3500hd": "Sierra 3500 HD",
+  "sierra-hd": null as any, // Suppress - use specific model
+  
+  // Ford F-Series
+  "f-150": "F-150",
+  "f-250": "F-250",
+  "f-350": "F-350",
+  "f-450": "F-450",
+  "f-250-super-duty": "F-250",
+  "f-350-super-duty": "F-350",
+  "f-450-super-duty": "F-450",
+  
+  // Ram
+  "1500": "1500",
+  "2500": "2500",
+  "3500": "3500",
+  
+  // BMW Series (display with space)
+  "2-series": "2 Series",
+  "3-series": "3 Series",
+  "4-series": "4 Series",
+  "5-series": "5 Series",
+  "6-series": "6 Series",
+  "7-series": "7 Series",
+  "8-series": "8 Series",
+  
+  // Mercedes Classes
+  "a-class": "A-Class",
+  "c-class": "C-Class",
+  "e-class": "E-Class",
+  "s-class": "S-Class",
+  "cla": "CLA",
+  "cle": "CLE",
+  "cls": "CLS",
+  "gla": "GLA",
+  "glb": "GLB",
+  "glc": "GLC",
+  "gle": "GLE",
+  "gls": "GLS",
+  
+  // Tesla
+  "model-3": "Model 3",
+  "model-y": "Model Y",
+  "model-s": "Model S",
+  "model-x": "Model X",
+  
+  // Jeep
+  "grand-cherokee": "Grand Cherokee",
+  "grand-cherokee-l": "Grand Cherokee L",
+  "grand-wagoneer": "Grand Wagoneer",
+  
+  // Common models with specific formatting
+  "cr-v": "CR-V",
+  "hr-v": "HR-V",
+  "rav4": "RAV4",
+  "cx-5": "CX-5",
+  "cx-30": "CX-30",
+  "cx-50": "CX-50",
+  "cx-9": "CX-9",
+  "cx-90": "CX-90",
+  "mx-5-miata": "MX-5 Miata",
+  "id4": "ID.4",
+  "id-4": "ID.4",
+  "ev6": "EV6",
+  "ev9": "EV9",
+  "ioniq-5": "Ioniq 5",
+  "ioniq-6": "Ioniq 6",
+  "4runner": "4Runner",
+  "brz": "BRZ",
+  "wrx": "WRX",
+  "gr86": "GR86",
+  "gr-86": "GR86",
+};
+
+/**
+ * Convert a model slug or raw model name to a clean display name
+ * Handles HD trucks, BMW series, Mercedes classes, etc.
+ */
+export function modelToDisplayName(modelInput: string): string | null {
+  const normalized = normalizeModel(modelInput);
+  
+  // Check for explicit display name (may be null to suppress)
+  if (normalized in modelDisplayNames) {
+    return modelDisplayNames[normalized];
+  }
+  
+  // Generic slug-to-display conversion
+  // "silverado-1500" → "Silverado 1500"
+  // "grand-cherokee" → "Grand Cherokee"
+  return normalized
+    .split("-")
+    .map((word, idx) => {
+      // Special handling for numbers at end (keep uppercase)
+      if (/^\d+$/.test(word)) return word;
+      // HD suffix
+      if (word.toLowerCase() === "hd") return "HD";
+      // XL suffix
+      if (word.toLowerCase() === "xl") return "XL";
+      // 4WD/AWD
+      if (word.toLowerCase() === "4wd") return "4WD";
+      if (word.toLowerCase() === "awd") return "AWD";
+      // Title case
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+}
+
+/**
+ * Get canonical model key for deduplication
+ * Returns the normalized slug that should be used as the key
+ */
+export function getCanonicalModelKey(modelInput: string): string {
+  return normalizeModel(modelInput);
 }
 
 /**

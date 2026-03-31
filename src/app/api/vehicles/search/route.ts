@@ -1,17 +1,21 @@
-import { NextResponse } from "next/server";
+/**
+ * Vehicle Search API (DB-Only)
+ * 
+ * GET /api/vehicles/search?year=2024&make=Ford&model=F-150&modification=xyz
+ * 
+ * Returns vehicle fitment data from the database.
+ * No external API calls - all data comes from vehicle_fitments table.
+ */
 
-// ============================================================================
-// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
-// This endpoint is DEPRECATED. Use /api/wheels/fitment-search instead.
-// ============================================================================
+import { NextResponse } from "next/server";
+import { getFitmentProfile } from "@/lib/fitment-db/profileService";
 
 export const runtime = "nodejs";
 
 /**
- * GET /api/vehicles/search - DEPRECATED
+ * GET /api/vehicles/search?year=2024&make=Ford&model=F-150&modification=s_abc123
  * 
- * This endpoint previously called Wheel-Size API directly.
- * In DB-first architecture, use /api/wheels/fitment-search instead.
+ * Returns vehicle fitment data (bolt pattern, tire sizes, wheel specs) from database.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -19,12 +23,77 @@ export async function GET(req: Request) {
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
   
-  console.warn(`[vehicles/search] DEPRECATED: ${year} ${make} ${model} - Wheel-Size API is forbidden (DB-first mode). Use /api/wheels/fitment-search instead.`);
+  // PARAM SEPARATION: prefer modification, fall back to trim for backward compat
+  const modificationParam = url.searchParams.get("modification") || "";
+  const trimParam = url.searchParams.get("trim") || "";
+  const modificationRaw = modificationParam || trimParam;
   
-  return NextResponse.json({
-    fitment: null,
-    error: "This endpoint is deprecated. Wheel-Size API is forbidden in DB-first architecture.",
-    deprecated: true,
-    migration: "Use /api/wheels/fitment-search instead for vehicle fitment data",
-  }, { status: 410 }); // 410 Gone - resource no longer available
+  if (!modificationParam && trimParam) {
+    console.warn(`[vehicles/search] DEPRECATION: Using 'trim' param. Migrate to 'modification=${trimParam}'`);
+  }
+  
+  // Handle composite modification values like "bfd36e8a76__xlt__"
+  const modification = modificationRaw.includes("__") 
+    ? modificationRaw.split("__")[0] 
+    : modificationRaw;
+
+  if (!year || !make || !model) {
+    return NextResponse.json({
+      fitment: null,
+      error: "Missing required params: year, make, model",
+    });
+  }
+
+  try {
+    // Use the profile service which is now DB-only
+    const result = await getFitmentProfile(
+      parseInt(year, 10),
+      make,
+      model,
+      modification || "base"
+    );
+
+    if (!result.profile) {
+      return NextResponse.json({ 
+        fitment: null, 
+        error: "No fitment data found in database",
+        resolutionPath: result.resolutionPath,
+      });
+    }
+
+    // Convert to the expected fitment format
+    const fitment = {
+      boltPattern: result.profile.boltPattern,
+      centerBore: result.profile.centerBoreMm?.toString() || null,
+      tireSizes: result.profile.oemTireSizes,
+      wheelDiameterRangeIn: result.profile.oemWheelSizes.length > 0
+        ? [
+            Math.min(...result.profile.oemWheelSizes.map(w => w.diameter)),
+            Math.max(...result.profile.oemWheelSizes.map(w => w.diameter)),
+          ]
+        : null,
+      wheelWidthRangeIn: result.profile.oemWheelSizes.length > 0
+        ? [
+            Math.min(...result.profile.oemWheelSizes.map(w => w.width)),
+            Math.max(...result.profile.oemWheelSizes.map(w => w.width)),
+          ]
+        : null,
+      offsetRangeMm: (result.profile.offsetMinMm !== null && result.profile.offsetMaxMm !== null)
+        ? [result.profile.offsetMinMm, result.profile.offsetMaxMm]
+        : null,
+      modification: {
+        slug: result.profile.modificationId,
+        name: result.profile.displayTrim,
+      },
+    };
+
+    return NextResponse.json({ 
+      fitment,
+      source: "database",
+      resolutionPath: result.resolutionPath,
+    });
+  } catch (err: any) {
+    console.error(`[vehicles/search] Error:`, err?.message || err);
+    return NextResponse.json({ fitment: null, error: err?.message || "Unknown error" });
+  }
 }

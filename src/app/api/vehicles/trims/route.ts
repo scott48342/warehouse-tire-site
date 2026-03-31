@@ -1,3 +1,11 @@
+/**
+ * Vehicle Trims API (DB-Only)
+ * 
+ * GET /api/vehicles/trims?year=2022&make=Ford&model=F-150
+ * 
+ * Returns available trims from database. No external API calls.
+ */
+
 import { NextResponse } from "next/server";
 import crypto from "crypto";
 import { normalizeMake, normalizeModel, slugify } from "@/lib/fitment-db/keys";
@@ -5,17 +13,8 @@ import * as catalogStore from "@/lib/catalog-store";
 import submodelSupplements from "@/data/submodel-supplements.json";
 import { listLocalFitments } from "@/lib/fitment-db/getFitment";
 
-// ============================================================================
-// WHEEL-SIZE API REMOVED (Phase A - DB-First Architecture)
-// All trim data comes from local fitment DB or supplements. No external API calls.
-// ============================================================================
-
 /**
  * Generate a canonical modificationId for supplement data.
- * Since supplements don't have API slugs, we generate a deterministic
- * hash-based ID that's unique per vehicle+trim combination.
- * 
- * Format: s_{8-char-hash} where hash is based on year:make:model:trimValue
  */
 function makeSupplementId(year: number, make: string, model: string, trimValue: string): string {
   const input = `${year}:${normalizeMake(make)}:${normalizeModel(model)}:${slugify(trimValue)}`;
@@ -36,10 +35,6 @@ type MakeMap = { [make: string]: ModelMap };
 
 /**
  * TrimOption returned to the selector
- * - value: backwards-compatible, same as modificationId
- * - label: customer-facing display text
- * - modificationId: canonical fitment identity (REQUIRED for downstream)
- * - rawTrim: original value from source (for debugging)
  */
 type TrimOption = {
   value: string;
@@ -50,14 +45,16 @@ type TrimOption = {
 
 interface TrimResponse {
   results: TrimOption[];
-  source?: "api" | "supplement" | "fallback" | "local";
+  source?: "local" | "supplement" | "fallback" | "invalid";
   count?: number;
   overridesApplied?: boolean;
   cached?: boolean;
+  error?: string;
+  validYears?: number[];
 }
 
 // ============================================================================
-// Supplement Lookup (fallback for vehicles without good API data)
+// Supplement Lookup
 // ============================================================================
 
 function getSubmodelSupplement(year: number, make: string, model: string): SubmodelEntry[] | null {
@@ -80,18 +77,13 @@ function getSubmodelSupplement(year: number, make: string, model: string): Submo
 }
 
 // ============================================================================
-// WHEEL-SIZE API HELPERS REMOVED (Phase A - DB-First Architecture)
-// All API-dependent code has been removed. Local DB + supplements are authoritative.
-// ============================================================================
-
-// ============================================================================
 // Main Route Handler
 // ============================================================================
 
 /**
  * GET /api/vehicles/trims?year=2022&make=Ford&model=F-150
  * 
- * Wheel-Size API first, supplements as fallback for poor data.
+ * Database first, supplements as fallback.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -108,12 +100,10 @@ export async function GET(req: Request) {
     return NextResponse.json({ results: [] });
   }
 
-  const debug = url.searchParams.get("debug") === "1";
   const makeSlug = normalizeMake(make);
 
   // -------------------------------------------------------------------------
-  // Step 0: Check local fitment DB FIRST (for manually imported data)
-  // Local fitment is authoritative - bypass catalog validation if we have data
+  // Step 1: Check local fitment DB FIRST
   // -------------------------------------------------------------------------
   
   try {
@@ -160,7 +150,6 @@ export async function GET(req: Request) {
         count: localResults.length,
         overridesApplied: false,
         cached: true,
-        ...(debug ? { debug: { localFitmentIds: localFitments.map(f => f.modificationId) } } : {}),
       } as TrimResponse);
     }
   } catch (localErr: any) {
@@ -168,8 +157,7 @@ export async function GET(req: Request) {
   }
 
   // -------------------------------------------------------------------------
-  // Step 1: Validate year against catalog (only for vehicles without local fitment)
-  // This prevents invalid combos like 2006 Buick Encore
+  // Step 2: Validate year against catalog
   // -------------------------------------------------------------------------
   
   const catalogModel = await catalogStore.findModel(makeSlug, model);
@@ -186,13 +174,9 @@ export async function GET(req: Request) {
   }
 
   // -------------------------------------------------------------------------
-  // Step 2: No local fitment found - try supplements then fallback
-  // REMOVED: Wheel-Size API call (Phase A - DB-first architecture)
+  // Step 3: Check supplements
   // -------------------------------------------------------------------------
-  
-  console.log(`[trims] NO LOCAL FITMENT: ${year} ${make} ${model} - checking supplements (DB-first mode)`);
-  
-  // Check supplements
+
   const supplement = getSubmodelSupplement(year, make, model);
   if (supplement && supplement.length > 0) {
     console.log(`[trims] SUPPLEMENT: ${year} ${make} ${model} → ${supplement.length} options`);
@@ -213,10 +197,13 @@ export async function GET(req: Request) {
       cached: false,
     } as TrimResponse);
   }
+    
+  // -------------------------------------------------------------------------
+  // Step 4: Return a "Base" fallback
+  // -------------------------------------------------------------------------
   
-  // No local data, no supplements - return Base fallback
   const fallbackModificationId = makeSupplementId(year, make, model, "base");
-  console.log(`[trims] FALLBACK to Base: ${year} ${make} ${model} (no local fitment or supplements)`);
+  console.log(`[trims] Returning Base fallback for ${year} ${make} ${model}`);
   
   return NextResponse.json({ 
     results: [{
@@ -229,6 +216,5 @@ export async function GET(req: Request) {
     count: 1,
     overridesApplied: false,
     cached: false,
-    warning: "No fitment data available - using Base fallback",
   });
 }

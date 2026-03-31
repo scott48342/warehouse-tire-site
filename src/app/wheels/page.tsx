@@ -2,13 +2,14 @@ import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
+import { WheelsGridWithSelection } from "@/components/WheelsGridWithSelection";
 import { FilterGroup } from "./FilterGroup";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
-import { FitmentConfidenceStrip, type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
+import { type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 
@@ -307,20 +308,6 @@ export default async function WheelsPage({
     trim: resolvedTrimLabel || trim, // Use resolved label if available
     submodel: _submodelCandidate,
     displayTrim: wpSubmodel || undefined,
-  });
-
-  // DEBUG: Trace vehicle label values (remove after confirming fix)
-  const DEBUG_BUILD = "2026-03-23-2";
-  console.log(`[wheels DEBUG_BUILD=${DEBUG_BUILD}] Vehicle label trace:`, {
-    rawTrimFromURL: trim,
-    resolvedTrimLabel: resolvedTrimLabel || "(none)",
-    fitVehicleTrim: fit?.vehicle?.trim,
-    fitTrim: fit?.trim,
-    fitmentVehicleTrim: (fitment as any)?.vehicle?.trim,
-    submodelCandidate: _submodelCandidate,
-    wpSubmodel,
-    displayTrimResult: displayTrim,
-    finalLabel: `${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`,
   });
 
   function rimDiaFromTireSize(s: string) {
@@ -1095,6 +1082,23 @@ export default async function WheelsPage({
 
   return (
     <main className="bg-neutral-50">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle ? (
+        <PackageJourneyBar
+          currentStep="wheels"
+          wheelSetPrice={null}
+          tireSetPrice={null}
+          vehicleParams={{
+            year,
+            make,
+            model,
+            modification: modification || undefined,
+          }}
+        />
+      ) : null}
+
       <div className="mx-auto max-w-screen-2xl px-4 py-8">
         {/* Lifted Build Context Banner */}
         {isLiftedBuild && hasVehicle ? (
@@ -1140,48 +1144,53 @@ export default async function WheelsPage({
                 : "Select your vehicle in the header to filter wheels."}
             </p>
 
-            {/* Fitment confidence summary (only when vehicle selected and not blocked) */}
-            {hasVehicle && !isBlocked && !data?.error ? (
-              <div className="mt-3">
-                <FitmentConfidenceStrip
-                  confidence={fitmentConfidence}
-                  vehicle={{ year, make, model, trim: displayTrim || undefined }}
-                  warningMessage={fitmentConfidence === "medium" ? (confidenceWarningMessage || null) : null}
-                />
-              </div>
-            ) : null}
-            {/* DEBUG MARKER - REMOVE AFTER CONFIRMING DEPLOY */}
-            <p className="mt-1 text-[10px] font-mono text-orange-600">
-              DEBUG_BUILD=2026-03-23-2 | rawTrim={trim || "(none)"} | displayTrim={displayTrim || "(null)"} | submodel={_submodelCandidate || "(none)"}
-            </p>
-
+            {/* Unified Vehicle Summary - merges vehicle info + fitment confidence into one block */}
             {year && make && model ? (
-              <>
-                <div className="mt-3 inline-flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-3 py-2 text-xs font-semibold text-neutral-800">
-                  <span className="text-neutral-500">Vehicle:</span>
-                  <span className="font-extrabold text-neutral-900">
+              <div className="mt-3 inline-flex flex-wrap items-center gap-3 rounded-2xl border border-neutral-200 bg-white px-4 py-2.5">
+                {/* Vehicle info with verification checkmark */}
+                <div className="flex items-center gap-2">
+                  <span className="text-green-600 text-sm">✓</span>
+                  <span className="text-sm font-extrabold text-neutral-900">
                     {year} {make} {model}
                     {displayTrim ? ` ${displayTrim}` : ""}
                   </span>
-                  {/* Only show staggered badge if vehicle fitment profile indicates staggered */}
-                  {vehicleCallsForStaggered ? (
-                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">
-                      STAGGERED
+                </div>
+                {/* Fitment badges - combined */}
+                <div className="flex items-center gap-2">
+                  {hasVehicle && !isBlocked && !data?.error && fitmentConfidence === "high" ? (
+                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-bold text-green-700">
+                      Verified Fit
+                    </span>
+                  ) : hasVehicle && !isBlocked && !data?.error && fitmentConfidence === "medium" ? (
+                    <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-700">
+                      Good Fit
                     </span>
                   ) : null}
+                  {vehicleCallsForStaggered ? (
+                    <span className="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-bold text-purple-700">
+                      Staggered
+                    </span>
+                  ) : null}
+                  {primaryBoltPattern ? (
+                    <span className="text-xs text-neutral-500">{primaryBoltPattern}</span>
+                  ) : null}
                 </div>
-                {/* Debug: show staggered fitment info */}
-                {staggeredDebug && process.env.NODE_ENV === "development" ? (
-                  <div className="mt-2 rounded-lg bg-neutral-100 px-3 py-2 text-[10px] font-mono text-neutral-600">
-                    <span className="font-bold">Staggered:</span> {staggeredDebug.isStaggered ? "YES" : "NO"} — {staggeredDebug.reason}
-                    {staggeredDebug.frontSpec ? (
-                      <> | Front: {staggeredDebug.frontSpec.diameter}&quot;×{staggeredDebug.frontSpec.width}&quot; ET{staggeredDebug.frontSpec.offset}</>
-                    ) : null}
-                    {staggeredDebug.rearSpec ? (
-                      <> | Rear: {staggeredDebug.rearSpec.diameter}&quot;×{staggeredDebug.rearSpec.width}&quot; ET{staggeredDebug.rearSpec.offset}</>
-                    ) : null}
-                  </div>
+              </div>
+            ) : null}
+            {/* Debug: show staggered fitment info (dev only) */}
+            {year && make && model && staggeredDebug && process.env.NODE_ENV === "development" ? (
+              <div className="mt-2 rounded-lg bg-neutral-100 px-3 py-2 text-[10px] font-mono text-neutral-600">
+                <span className="font-bold">Staggered:</span> {staggeredDebug.isStaggered ? "YES" : "NO"} — {staggeredDebug.reason}
+                {staggeredDebug.frontSpec ? (
+                  <> | Front: {staggeredDebug.frontSpec.diameter}&quot;×{staggeredDebug.frontSpec.width}&quot; ET{staggeredDebug.frontSpec.offset}</>
                 ) : null}
+                {staggeredDebug.rearSpec ? (
+                  <> | Rear: {staggeredDebug.rearSpec.diameter}&quot;×{staggeredDebug.rearSpec.width}&quot; ET{staggeredDebug.rearSpec.offset}</>
+                ) : null}
+              </div>
+            ) : null}
+            {year && make && model ? (
+              <>
                 {/* Workspace header (Tireweb-style guided flow) */}
                 {isPackageFlow ? (
                   <div className="mt-4 md:hidden grid gap-3 rounded-3xl border border-neutral-200 bg-white p-4">
@@ -1215,16 +1224,16 @@ export default async function WheelsPage({
             ) : null}
           </div>
 
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-semibold text-neutral-600">Sort</label>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-neutral-500">Show me</span>
             <AutoSubmitSelect
               name="sort"
               defaultValue={sort}
-              className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
+              className="h-10 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-semibold"
               options={[
-                { value: "price_asc", label: "Price Low to High" },
-                { value: "price_desc", label: "Price High to Low" },
-                { value: "brand_asc", label: "Brand A-Z" },
+                { value: "price_asc", label: "Best value first" },
+                { value: "price_desc", label: "Premium options first" },
+                { value: "brand_asc", label: "Brands A–Z" },
               ]}
             />
           </div>
@@ -1612,9 +1621,9 @@ export default async function WheelsPage({
               </div>
             ) : null}
 
-            <div className="flex flex-wrap items-center justify-between gap-2 text-sm font-semibold text-neutral-600">
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-neutral-500">
               <div>
-                Showing {itemsPage.length} styles (page {safePage} of {totalPages})
+                Showing <span className="font-semibold text-neutral-700">{itemsPage.length}</span> styles (page {safePage} of {totalPages})
               </div>
 
               {hasVehicle ? (
@@ -1649,10 +1658,10 @@ export default async function WheelsPage({
               ) : null}
             </div>
 
-            {/* Install & Trust Strip */}
+            {/* Install & Trust Strip - tighter spacing */}
             {hasVehicle ? (
-              <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-100 px-4 py-3">
-                <div className="flex flex-wrap items-center gap-4 text-sm">
+              <div className="mt-2 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-100 px-4 py-2.5">
+                <div className="flex flex-wrap items-center gap-4 text-xs">
                   <span className="flex items-center gap-1.5 text-green-800 font-medium">
                     <span className="text-green-600">✓</span> Ship to your installer
                   </span>
@@ -1669,139 +1678,77 @@ export default async function WheelsPage({
               </div>
             ) : null}
 
-            {/* Top Picks section - curated recommendations */}
-            {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
-              <div className="mt-4 mb-8 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-5">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl">⭐</span>
-                      <h2 className="text-xl font-extrabold text-neutral-900">
-                        Top Picks for Your {year} {make} {model}
-                      </h2>
-                    </div>
-                    <p className="mt-1 text-sm text-neutral-600">
-                      Hand-picked based on fitment, popularity, and value
-                    </p>
-                    <p className="mt-0.5 text-xs text-neutral-500">
-                      Start here — most customers choose from these options
-                    </p>
-                  </div>
-                  <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-800 whitespace-nowrap">
-                    ✓ Top Pick
-                  </span>
-                </div>
-                
-                {/* Featured grid */}
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-4">
-                  {recommendedWheels.slice(0, 4).map((w, idx) => (
-                    <WheelsStyleCard
-                      key={`rec-${w.sku || idx}`}
-                      brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
-                      title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
-                      baseSku={String(w.sku || "")}
-                      baseFinish={w.finish ? String(w.finish) : undefined}
-                      baseImageUrl={w.imageUrl}
-                      price={w.price}
-                      sizeLabel={w.diameter || w.width ? { diameter: w.diameter, width: w.width } : undefined}
-                      pair={w.pair}
-                      specLabel={{
-                        boltPattern: (w as any).boltPattern,
-                        offset: (w as any).offset,
-                      }}
-                      finishThumbs={w.finishThumbs}
-                      fitmentClass={w.fitmentClass}
-                      isPopular={idx === 0 || idx === 1}
-                      viewParams={{
-                        year,
-                        make,
-                        model,
-                        trim,
-                        modification,
-                        sort,
-                        page: String(page),
-                        // LIFTED BUILD CONTEXT: Pass through to wheel detail and tire pages
-                        ...(isLiftedBuild ? {
-                          liftedSource,
-                          liftedPreset,
-                          liftedInches: String(liftedInches),
-                          liftedTireSizes: liftedTireSizesRaw,
-                          liftedTireDiaMin,
-                          liftedTireDiaMax,
-                        } : {}),
-                      }}
-                      dbProfile={dbProfile}
-                      wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
-                    />
-                  ))}
-                </div>
-              </div>
-            ) : null}
-
-            {/* All Wheels section header */}
-            {hasVehicle && recommendedWheels.length > 0 && safePage === 1 ? (
-              <div className="mb-4">
-                <h3 className="text-lg font-extrabold text-neutral-900">All Wheels</h3>
-                <p className="text-sm text-neutral-600">Browse all {itemsFinal.length} styles that fit your vehicle</p>
-              </div>
-            ) : null}
-
-            <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {itemsPage.length ? (
-                itemsPage.map((w, idx) => (
-                  <WheelsStyleCard
-                    key={w.sku || `${w.styleKey || "wheel"}-${idx}`}
-                    brand={typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel")}
-                    title={typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel"}
-                    baseSku={String(w.sku || "")}
-                    baseFinish={w.finish ? String(w.finish) : undefined}
-                    baseImageUrl={w.imageUrl}
-                    price={w.price}
-                    sizeLabel={
-                      diameterParam || widthParam
-                        ? {
-                            diameter: diameterParam || w.diameter,
-                            width: widthParam || w.width,
-                          }
-                        : w.diameter || w.width
-                          ? { diameter: w.diameter, width: w.width }
-                          : undefined
-                    }
-                    pair={w.pair}
-                    specLabel={{
-                      boltPattern: (w as any).boltPattern,
-                      offset: (w as any).offset,
-                    }}
-                    finishThumbs={w.finishThumbs}
-                    fitmentClass={w.fitmentClass}
-                    viewParams={{
-                      year,
-                      make,
-                      model,
-                      trim,
-                      modification,
-                      sort,
-                      page: String(page),
-                      // LIFTED BUILD CONTEXT: Pass through to wheel detail and tire pages
-                      ...(isLiftedBuild ? {
-                        liftedSource,
-                        liftedPreset,
-                        liftedInches: String(liftedInches),
-                        liftedTireSizes: liftedTireSizesRaw,
-                        liftedTireDiaMin,
-                        liftedTireDiaMax,
-                      } : {}),
-                    }}
-                    dbProfile={dbProfile}
-                    wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
-                  />
-                ))
-              ) : (
-                <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-                  No wheel results. Try clearing filters.
-                </div>
-              )}
-            </div>
+            {/* ═══════════════════════════════════════════════════════════════════════
+                WHEELS GRID WITH SELECTION - Enhanced conversion flow
+                Features:
+                - Selection confirmation block
+                - Selected state highlighting  
+                - Dynamic pricing ("Typical" → "Your Package")
+                - Next step guidance
+                - CTA evolution (Selected/Compare or Switch)
+                - Micro-animations on selection
+                - Mobile sticky bar
+                ═══════════════════════════════════════════════════════════════════════ */}
+            <WheelsGridWithSelection
+              wheels={itemsPage.map(w => ({
+                sku: w.sku,
+                brand: w.brand,
+                brandCode: w.brandCode,
+                model: w.model,
+                finish: w.finish,
+                diameter: diameterParam || w.diameter,
+                width: widthParam || w.width,
+                offset: w.offset,
+                centerbore: w.centerbore,
+                imageUrl: w.imageUrl,
+                price: w.price,
+                styleKey: w.styleKey,
+                fitmentClass: w.fitmentClass,
+                finishThumbs: w.finishThumbs,
+                pair: w.pair,
+                boltPattern: (w as any).boltPattern,
+              }))}
+              viewParams={{
+                year,
+                make,
+                model,
+                trim,
+                modification,
+                sort,
+                page: String(page),
+                // LIFTED BUILD CONTEXT
+                ...(isLiftedBuild ? {
+                  liftedSource,
+                  liftedPreset,
+                  liftedInches: String(liftedInches),
+                  liftedTireSizes: liftedTireSizesRaw,
+                  liftedTireDiaMin,
+                  liftedTireDiaMax,
+                } : {}),
+              }}
+              dbProfile={dbProfile}
+              diameterParam={diameterParam}
+              widthParam={widthParam}
+              showRecommended={hasVehicle && recommendedWheels.length > 0 && safePage === 1}
+              recommendedWheels={recommendedWheels.map(w => ({
+                sku: w.sku,
+                brand: w.brand,
+                brandCode: w.brandCode,
+                model: w.model,
+                finish: w.finish,
+                diameter: w.diameter,
+                width: w.width,
+                offset: w.offset,
+                centerbore: w.centerbore,
+                imageUrl: w.imageUrl,
+                price: w.price,
+                styleKey: w.styleKey,
+                fitmentClass: w.fitmentClass,
+                finishThumbs: w.finishThumbs,
+                pair: w.pair,
+                boltPattern: (w as any).boltPattern,
+              }))}
+            />
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
               <div className="text-sm font-semibold text-neutral-600">

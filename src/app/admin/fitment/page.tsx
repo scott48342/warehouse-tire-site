@@ -755,7 +755,7 @@ function DiagnosticsPanel({
           <div className="text-neutral-300 space-y-1">
             <p>Possible reasons:</p>
             <ul className="list-disc list-inside text-neutral-400 ml-2">
-              <li>Vehicle year/make/model may not exist in Wheel-Size database</li>
+              <li>Vehicle year/make/model may not exist in the fitment database</li>
               <li>Check spelling of make and model</li>
               <li>Try a different model year (coverage varies by year)</li>
               <li>Some specialty/limited vehicles may not be covered</li>
