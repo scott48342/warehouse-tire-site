@@ -59,10 +59,11 @@ export async function POST(req: NextRequest) {
     console.log(`[fitment/enrich] Starting generation-based enrichment (dryRun=${dryRun}, limit=${limit})`);
     
     // Step 1: Get all records
-    const allRecords = await db.query.vehicleFitments.findMany({
-      limit,
-      orderBy: [vehicleFitments.year, vehicleFitments.make, vehicleFitments.model],
-    });
+    const allRecords = await db
+      .select()
+      .from(vehicleFitments)
+      .orderBy(vehicleFitments.year, vehicleFitments.make, vehicleFitments.model)
+      .limit(limit);
     
     console.log(`[fitment/enrich] Fetched ${allRecords.length} records`);
     

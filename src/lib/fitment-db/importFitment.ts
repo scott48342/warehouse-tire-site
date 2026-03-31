@@ -51,12 +51,16 @@ export async function importStaticFitment(
     const checksum = makePayloadChecksum({ modification, fitmentData });
     
     // Check if we already have this source record with same checksum
-    const existingSource = await db.query.fitmentSourceRecords.findFirst({
-      where: and(
-        eq(fitmentSourceRecords.source, "static"),
-        eq(fitmentSourceRecords.sourceId, sourceId)
-      ),
-    });
+    const [existingSource] = await db
+      .select()
+      .from(fitmentSourceRecords)
+      .where(
+        and(
+          eq(fitmentSourceRecords.source, "static"),
+          eq(fitmentSourceRecords.sourceId, sourceId)
+        )
+      )
+      .limit(1);
     
     if (existingSource && existingSource.checksum === checksum) {
       return { success: true, action: "skipped", sourceRecordId: existingSource.id };
@@ -115,14 +119,18 @@ export async function importStaticFitment(
     };
     
     // Check if fitment exists
-    const existingFitment = await db.query.vehicleFitments.findFirst({
-      where: and(
-        eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, fitmentRecord.make),
-        eq(vehicleFitments.model, fitmentRecord.model),
-        eq(vehicleFitments.modificationId, fitmentRecord.modificationId)
-      ),
-    });
+    const [existingFitment] = await db
+      .select()
+      .from(vehicleFitments)
+      .where(
+        and(
+          eq(vehicleFitments.year, year),
+          eq(vehicleFitments.make, fitmentRecord.make),
+          eq(vehicleFitments.model, fitmentRecord.model),
+          eq(vehicleFitments.modificationId, fitmentRecord.modificationId)
+        )
+      )
+      .limit(1);
     
     let fitmentId: string;
     let action: "created" | "updated";
@@ -247,7 +255,10 @@ export async function updateImportJobProgress(
  * Get import job status
  */
 export async function getImportJob(jobId: string) {
-  return db.query.fitmentImportJobs.findFirst({
-    where: eq(fitmentImportJobs.id, jobId),
-  });
+  const [job] = await db
+    .select()
+    .from(fitmentImportJobs)
+    .where(eq(fitmentImportJobs.id, jobId))
+    .limit(1);
+  return job ?? null;
 }

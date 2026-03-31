@@ -5,7 +5,7 @@
  * Overrides are matched by scope (most specific wins):
  * 1. modification - exact match on year/make/model/modification
  * 2. model - matches all modifications for a year/make/model
- * 3. make - matches all models for a year/make
+ * 3. make - matches all makes for a year/make
  * 4. year - matches all makes for a year
  * 5. global - matches everything
  */
@@ -36,48 +36,51 @@ export async function findApplicableOverrides(
   const normalizedModel = normalizeModel(fitment.model);
   
   // Query for all potentially matching overrides
-  const overrides = await db.query.fitmentOverrides.findMany({
-    where: and(
-      eq(fitmentOverrides.active, true),
-      or(
-        // Global overrides
-        eq(fitmentOverrides.scope, "global"),
-        // Year overrides
-        and(
-          eq(fitmentOverrides.scope, "year"),
-          eq(fitmentOverrides.year, fitment.year)
-        ),
-        // Make overrides
-        and(
-          eq(fitmentOverrides.scope, "make"),
-          or(
-            isNull(fitmentOverrides.year),
+  const overrides = await db
+    .select()
+    .from(fitmentOverrides)
+    .where(
+      and(
+        eq(fitmentOverrides.active, true),
+        or(
+          // Global overrides
+          eq(fitmentOverrides.scope, "global"),
+          // Year overrides
+          and(
+            eq(fitmentOverrides.scope, "year"),
             eq(fitmentOverrides.year, fitment.year)
           ),
-          eq(fitmentOverrides.make, normalizedMake)
-        ),
-        // Model overrides
-        and(
-          eq(fitmentOverrides.scope, "model"),
-          or(
-            isNull(fitmentOverrides.year),
-            eq(fitmentOverrides.year, fitment.year)
+          // Make overrides
+          and(
+            eq(fitmentOverrides.scope, "make"),
+            or(
+              isNull(fitmentOverrides.year),
+              eq(fitmentOverrides.year, fitment.year)
+            ),
+            eq(fitmentOverrides.make, normalizedMake)
           ),
-          eq(fitmentOverrides.make, normalizedMake),
-          eq(fitmentOverrides.model, normalizedModel)
-        ),
-        // Modification overrides (most specific)
-        and(
-          eq(fitmentOverrides.scope, "modification"),
-          eq(fitmentOverrides.year, fitment.year),
-          eq(fitmentOverrides.make, normalizedMake),
-          eq(fitmentOverrides.model, normalizedModel),
-          eq(fitmentOverrides.modificationId, fitment.modificationId)
+          // Model overrides
+          and(
+            eq(fitmentOverrides.scope, "model"),
+            or(
+              isNull(fitmentOverrides.year),
+              eq(fitmentOverrides.year, fitment.year)
+            ),
+            eq(fitmentOverrides.make, normalizedMake),
+            eq(fitmentOverrides.model, normalizedModel)
+          ),
+          // Modification overrides (most specific)
+          and(
+            eq(fitmentOverrides.scope, "modification"),
+            eq(fitmentOverrides.year, fitment.year),
+            eq(fitmentOverrides.make, normalizedMake),
+            eq(fitmentOverrides.model, normalizedModel),
+            eq(fitmentOverrides.modificationId, fitment.modificationId)
+          )
         )
       )
-    ),
-    orderBy: [desc(fitmentOverrides.createdAt)],
-  });
+    )
+    .orderBy(desc(fitmentOverrides.createdAt));
   
   // Sort by scope priority (most specific first)
   return overrides.sort((a, b) => {
@@ -306,9 +309,11 @@ export async function updateOverride(
  * Get a single override by ID
  */
 export async function getOverride(overrideId: string): Promise<FitmentOverride | null> {
-  const override = await db.query.fitmentOverrides.findFirst({
-    where: eq(fitmentOverrides.id, overrideId),
-  });
+  const [override] = await db
+    .select()
+    .from(fitmentOverrides)
+    .where(eq(fitmentOverrides.id, overrideId))
+    .limit(1);
   return override ?? null;
 }
 
@@ -326,30 +331,33 @@ export async function findOverrideByVehicle(
   const normalizedModId = modificationId ? slugify(modificationId) : null;
   
   // Find most specific matching override
-  const overrides = await db.query.fitmentOverrides.findMany({
-    where: and(
-      eq(fitmentOverrides.active, true),
-      or(
-        // Exact modification match
-        and(
-          eq(fitmentOverrides.scope, "modification"),
-          eq(fitmentOverrides.year, year),
-          eq(fitmentOverrides.make, normalizedMake),
-          eq(fitmentOverrides.model, normalizedModel),
-          normalizedModId ? eq(fitmentOverrides.modificationId, normalizedModId) : isNull(fitmentOverrides.modificationId)
-        ),
-        // Model match
-        and(
-          eq(fitmentOverrides.scope, "model"),
-          or(isNull(fitmentOverrides.year), eq(fitmentOverrides.year, year)),
-          eq(fitmentOverrides.make, normalizedMake),
-          eq(fitmentOverrides.model, normalizedModel)
+  const overrides = await db
+    .select()
+    .from(fitmentOverrides)
+    .where(
+      and(
+        eq(fitmentOverrides.active, true),
+        or(
+          // Exact modification match
+          and(
+            eq(fitmentOverrides.scope, "modification"),
+            eq(fitmentOverrides.year, year),
+            eq(fitmentOverrides.make, normalizedMake),
+            eq(fitmentOverrides.model, normalizedModel),
+            normalizedModId ? eq(fitmentOverrides.modificationId, normalizedModId) : isNull(fitmentOverrides.modificationId)
+          ),
+          // Model match
+          and(
+            eq(fitmentOverrides.scope, "model"),
+            or(isNull(fitmentOverrides.year), eq(fitmentOverrides.year, year)),
+            eq(fitmentOverrides.make, normalizedMake),
+            eq(fitmentOverrides.model, normalizedModel)
+          )
         )
       )
-    ),
-    orderBy: [desc(fitmentOverrides.createdAt)],
-    limit: 1,
-  });
+    )
+    .orderBy(desc(fitmentOverrides.createdAt))
+    .limit(1);
   
   return overrides[0] ?? null;
 }
@@ -368,8 +376,9 @@ export async function deactivateOverride(overrideId: string): Promise<void> {
  * List all active overrides
  */
 export async function listOverrides(): Promise<FitmentOverride[]> {
-  return db.query.fitmentOverrides.findMany({
-    where: eq(fitmentOverrides.active, true),
-    orderBy: [desc(fitmentOverrides.createdAt)],
-  });
+  return db
+    .select()
+    .from(fitmentOverrides)
+    .where(eq(fitmentOverrides.active, true))
+    .orderBy(desc(fitmentOverrides.createdAt));
 }

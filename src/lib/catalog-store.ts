@@ -12,7 +12,7 @@
 
 import { db } from "./fitment-db/db";
 import { catalogMakes, catalogModels, catalogSyncLog } from "./fitment-db/schema";
-import { eq, and, ilike, sql } from "drizzle-orm";
+import { eq, and, ilike, sql, asc, desc } from "drizzle-orm";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES
@@ -38,9 +38,10 @@ export interface CatalogModel {
  */
 export async function getMakes(): Promise<CatalogMake[]> {
   try {
-    const dbMakes = await db.query.catalogMakes.findMany({
-      orderBy: (makes, { asc }) => [asc(makes.name)],
-    });
+    const dbMakes = await db
+      .select()
+      .from(catalogMakes)
+      .orderBy(asc(catalogMakes.name));
     
     if (dbMakes.length > 0) {
       console.log(`[catalog-store] DB: ${dbMakes.length} makes`);
@@ -62,10 +63,11 @@ export async function getModels(makeSlug: string): Promise<CatalogModel[]> {
   const normalizedMake = makeSlug.toLowerCase();
   
   try {
-    const dbModels = await db.query.catalogModels.findMany({
-      where: eq(catalogModels.makeSlug, normalizedMake),
-      orderBy: (models, { asc }) => [asc(models.name)],
-    });
+    const dbModels = await db
+      .select()
+      .from(catalogModels)
+      .where(eq(catalogModels.makeSlug, normalizedMake))
+      .orderBy(asc(catalogModels.name));
     
     if (dbModels.length > 0) {
       console.log(`[catalog-store] DB: ${dbModels.length} models for ${makeSlug}`);
@@ -109,12 +111,16 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Ca
   
   try {
     // First try exact slug match
-    const exactMatch = await db.query.catalogModels.findFirst({
-      where: and(
-        eq(catalogModels.makeSlug, normalizedMake),
-        eq(catalogModels.slug, normalizedModel)
-      ),
-    });
+    const [exactMatch] = await db
+      .select()
+      .from(catalogModels)
+      .where(
+        and(
+          eq(catalogModels.makeSlug, normalizedMake),
+          eq(catalogModels.slug, normalizedModel)
+        )
+      )
+      .limit(1);
     
     if (exactMatch) {
       return { 
@@ -125,12 +131,16 @@ export async function findModel(makeSlug: string, modelName: string): Promise<Ca
     }
     
     // Try case-insensitive name match
-    const nameMatch = await db.query.catalogModels.findFirst({
-      where: and(
-        eq(catalogModels.makeSlug, normalizedMake),
-        ilike(catalogModels.name, modelName)
-      ),
-    });
+    const [nameMatch] = await db
+      .select()
+      .from(catalogModels)
+      .where(
+        and(
+          eq(catalogModels.makeSlug, normalizedMake),
+          ilike(catalogModels.name, modelName)
+        )
+      )
+      .limit(1);
     
     if (nameMatch) {
       return { 
@@ -174,9 +184,11 @@ export async function getStats(): Promise<{
     const makesCount = await db.select({ count: sql<number>`count(*)` }).from(catalogMakes);
     const modelsCount = await db.select({ count: sql<number>`count(*)` }).from(catalogModels);
     
-    const lastSync = await db.query.catalogSyncLog.findFirst({
-      orderBy: (log, { desc }) => [desc(log.syncedAt)],
-    });
+    const [lastSync] = await db
+      .select()
+      .from(catalogSyncLog)
+      .orderBy(desc(catalogSyncLog.syncedAt))
+      .limit(1);
     
     return {
       makes: Number(makesCount[0]?.count || 0),

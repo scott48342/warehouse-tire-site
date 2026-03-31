@@ -226,14 +226,18 @@ async function resolveAlias(
   // Don't slugify - preserve underscores in manual_XXXX IDs
   const normalizedReqId = requestedModificationId.toLowerCase().trim();
   
-  const alias = await db.query.modificationAliases.findFirst({
-    where: and(
-      eq(modificationAliases.year, year),
-      eq(modificationAliases.make, normalizedMake),
-      eq(modificationAliases.model, normalizedModel),
-      eq(modificationAliases.requestedModificationId, normalizedReqId)
-    ),
-  });
+  const [alias] = await db
+    .select()
+    .from(modificationAliases)
+    .where(
+      and(
+        eq(modificationAliases.year, year),
+        eq(modificationAliases.make, normalizedMake),
+        eq(modificationAliases.model, normalizedModel),
+        eq(modificationAliases.requestedModificationId, normalizedReqId)
+      )
+    )
+    .limit(1);
   
   if (alias) {
     return {
@@ -272,14 +276,18 @@ async function storeAlias(
   
   try {
     // Upsert the alias
-    const existing = await db.query.modificationAliases.findFirst({
-      where: and(
-        eq(modificationAliases.year, year),
-        eq(modificationAliases.make, normalizedMake),
-        eq(modificationAliases.model, normalizedModel),
-        eq(modificationAliases.requestedModificationId, normalizedReqId)
-      ),
-    });
+    const [existing] = await db
+      .select()
+      .from(modificationAliases)
+      .where(
+        and(
+          eq(modificationAliases.year, year),
+          eq(modificationAliases.make, normalizedMake),
+          eq(modificationAliases.model, normalizedModel),
+          eq(modificationAliases.requestedModificationId, normalizedReqId)
+        )
+      )
+      .limit(1);
     
     if (existing) {
       await db.update(modificationAliases)
@@ -323,15 +331,19 @@ async function getProfileByModificationIdDirect(
   
   const t0 = Date.now();
   
-  // Use query API pattern (same as listLocalFitments which works)
-  const fitment = await db.query.vehicleFitments.findFirst({
-    where: and(
-      eq(vehicleFitments.year, year),
-      eq(vehicleFitments.make, normalizedMake),
-      eq(vehicleFitments.model, normalizedModel),
-      eq(vehicleFitments.modificationId, normalizedModId)
-    ),
-  });
+  // Use standard select pattern for Vercel Postgres compatibility
+  const [fitment] = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        eq(vehicleFitments.model, normalizedModel),
+        eq(vehicleFitments.modificationId, normalizedModId)
+      )
+    )
+    .limit(1);
   
   return {
     fitment: fitment || null,
@@ -363,15 +375,18 @@ async function getProfileByYMMFallback(
   const t0 = Date.now();
   
   // Find any fitment for this YMM - prioritize those with good data
-  // Use query API pattern (same as listLocalFitments which works)
-  const fitments = await db.query.vehicleFitments.findMany({
-    where: and(
-      eq(vehicleFitments.year, year),
-      eq(vehicleFitments.make, normalizedMake),
-      eq(vehicleFitments.model, normalizedModel)
-    ),
-    limit: 10,
-  });
+  // Use standard select pattern for Vercel Postgres compatibility
+  const fitments = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        eq(vehicleFitments.model, normalizedModel)
+      )
+    )
+    .limit(10);
   
   if (fitments.length === 0) {
     return {
@@ -826,12 +841,16 @@ async function importApiDataToDb(
   const checksum = makePayloadChecksum({ modification, vehicleData });
   
   // Upsert source record
-  const existingSource = await db.query.fitmentSourceRecords.findFirst({
-    where: and(
-      eq(fitmentSourceRecords.source, "wheelsize"),
-      eq(fitmentSourceRecords.sourceId, sourceId)
-    ),
-  });
+  const [existingSource] = await db
+    .select()
+    .from(fitmentSourceRecords)
+    .where(
+      and(
+        eq(fitmentSourceRecords.source, "wheelsize"),
+        eq(fitmentSourceRecords.sourceId, sourceId)
+      )
+    )
+    .limit(1);
   
   let sourceRecordId: string;
   
@@ -980,14 +999,18 @@ async function importApiDataToDb(
   }
   
   // Upsert fitment record
-  const existingFitment = await db.query.vehicleFitments.findFirst({
-    where: and(
-      eq(vehicleFitments.year, year),
-      eq(vehicleFitments.make, make),
-      eq(vehicleFitments.model, model),
-      eq(vehicleFitments.modificationId, modificationId)
-    ),
-  });
+  const [existingFitment] = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, make),
+        eq(vehicleFitments.model, model),
+        eq(vehicleFitments.modificationId, modificationId)
+      )
+    )
+    .limit(1);
   
   let fitmentId: string;
   

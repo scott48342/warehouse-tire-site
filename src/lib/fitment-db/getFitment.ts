@@ -10,7 +10,7 @@
 import { db } from "./db";
 import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and } from "drizzle-orm";
+import { eq, and, asc } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { applyOverrides } from "./applyOverrides";
 
@@ -47,14 +47,18 @@ export async function getFitment(
   const normalizedModel = normalizeModel(model);
   const normalizedModId = slugify(modificationId);
   
-  const dbFitment = await db.query.vehicleFitments.findFirst({
-    where: and(
-      eq(vehicleFitments.year, year),
-      eq(vehicleFitments.make, normalizedMake),
-      eq(vehicleFitments.model, normalizedModel),
-      eq(vehicleFitments.modificationId, normalizedModId)
-    ),
-  });
+  const [dbFitment] = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        eq(vehicleFitments.model, normalizedModel),
+        eq(vehicleFitments.modificationId, normalizedModId)
+      )
+    )
+    .limit(1);
   
   if (!dbFitment) {
     return { fitment: null, source: "not_found", overridesApplied: false };
@@ -85,14 +89,17 @@ export async function listFitments(
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
   
-  const dbFitments = await db.query.vehicleFitments.findMany({
-    where: and(
-      eq(vehicleFitments.year, year),
-      eq(vehicleFitments.make, normalizedMake),
-      eq(vehicleFitments.model, normalizedModel)
-    ),
-    orderBy: [vehicleFitments.displayTrim],
-  });
+  const dbFitments = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        eq(vehicleFitments.model, normalizedModel)
+      )
+    )
+    .orderBy(asc(vehicleFitments.displayTrim));
   
   // Apply overrides to all
   const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
@@ -151,14 +158,17 @@ export async function listLocalFitments(
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
   
-  const dbFitments = await db.query.vehicleFitments.findMany({
-    where: and(
-      eq(vehicleFitments.year, year),
-      eq(vehicleFitments.make, normalizedMake),
-      eq(vehicleFitments.model, normalizedModel)
-    ),
-    orderBy: [vehicleFitments.displayTrim],
-  });
+  const dbFitments = await db
+    .select()
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        eq(vehicleFitments.model, normalizedModel)
+      )
+    )
+    .orderBy(asc(vehicleFitments.displayTrim));
   
   // Apply overrides to all
   const withOverrides = await Promise.all(dbFitments.map(f => applyOverrides(f)));
