@@ -757,7 +757,7 @@ export default function LiftedPage() {
                   {POPULAR_VEHICLES.slice(0, 6).map((v) => (
                     <Link
                       key={`${v.year}-${v.make}-${v.model}`}
-                      href={`/tires/for/${v.year.toLowerCase()}-${v.make.toLowerCase()}-${v.model.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={`/tires/for/${v.year}-${v.make.toLowerCase()}-${v.model.toLowerCase().replace(/\s+/g, "-")}`}
                       className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:border-amber-300 hover:bg-amber-50"
                     >
                       {v.year} {v.make} {v.model}

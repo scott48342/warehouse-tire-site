@@ -77,7 +77,7 @@ function generateStructuredData(vehicle: { year: string; make: string; model: st
             '@type': 'ListItem',
             'position': 2,
             'name': vehicle.make,
-            'item': `${BASE_URL}/tires/for/${vehicle.year.toLowerCase()}-${vehicle.make.toLowerCase()}`,
+            'item': `${BASE_URL}/tires/for/${vehicle.year}-${vehicle.make.toLowerCase()}`,
           },
           {
             '@type': 'ListItem',
