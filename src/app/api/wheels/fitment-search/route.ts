@@ -766,8 +766,19 @@ async function handleDbFirstWheelResults(opts: {
     };
   });
   
-  // Sort by score (descending)
-  scoredCandidates.sort((a, b) => b.score - a.score);
+  // Sort by availability tier FIRST (in_stock > limited > check_availability),
+  // then by score within each tier. This ensures in-stock wheels always appear first.
+  const availabilityTierOrder: Record<string, number> = {
+    "in_stock": 0,
+    "limited": 1,
+    "check_availability": 2,
+  };
+  scoredCandidates.sort((a, b) => {
+    const tierA = availabilityTierOrder[a.availabilityLabel] ?? 2;
+    const tierB = availabilityTierOrder[b.availabilityLabel] ?? 2;
+    if (tierA !== tierB) return tierA - tierB; // Availability tier first
+    return b.score - a.score; // Then by score within tier
+  });
   
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 4b: MERCHANDISING POST-PROCESSING
