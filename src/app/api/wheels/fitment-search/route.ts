@@ -19,12 +19,19 @@ import {
   validateWheel,
   // summarizeValidations,
   autoDetectFitmentMode,
+  applyClassicEnvelopeOverride,
   type FitmentMode,
   type WheelSpec,
   type OEMSpecs,
   type FitmentValidation,
+  type ClassicFitmentRange,
   EXPANSION_PRESETS,
 } from "@/lib/aftermarketFitment";
+
+import {
+  isClassicVehicle,
+  getClassicFitment,
+} from "@/lib/classic-fitment/classicLookup";
 
 import {
   getTechfeedCandidatesByBoltPattern,
@@ -263,6 +270,74 @@ export async function GET(req: Request) {
     }
 
     // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 3.7: Classic Fitment Fallback (No vehicle_fitments, but has classic_fitments)
+    // For classic vehicles without vehicle_fitments records, construct profile from classic_fitments
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    if (!dbProfile && isClassicVehicle(Number(year), make)) {
+      console.log(`[fitment-search] TRYING CLASSIC FALLBACK: ${year} ${make} ${model}`);
+      
+      try {
+        const classicResult = await getClassicFitment(Number(year), make, model);
+        
+        if (classicResult.isClassicVehicle && classicResult.fitmentMode === "classic") {
+          console.log(`[fitment-search] CLASSIC FALLBACK HIT: ${year} ${make} ${model} → platform=${classicResult.platform.code}`);
+          
+          // Construct a minimal DB profile from classic fitment
+          const classicModificationId = `classic_${classicResult.platform.code}_${year}`;
+          
+          dbProfile = {
+            modificationId: classicModificationId,
+            year: Number(year),
+            make: make.toLowerCase(),
+            model: model.toLowerCase(),
+            displayTrim: "Base",
+            rawTrim: null,
+            boltPattern: classicResult.specs.boltPattern,
+            centerBoreMm: classicResult.specs.centerBore,
+            threadSize: classicResult.specs.threadSize,
+            seatType: classicResult.specs.seatType,
+            offsetMinMm: classicResult.recommendedRange.offset.min,
+            offsetMaxMm: classicResult.recommendedRange.offset.max,
+            // Use classic stock reference for OEM wheel sizes
+            oemWheelSizes: classicResult.stockReference.wheelDiameter ? [{
+              diameter: classicResult.stockReference.wheelDiameter,
+              width: classicResult.stockReference.wheelWidth || 6,
+              offset: null,
+              tireSize: classicResult.stockReference.tireSize,
+              axle: "both" as const,
+              isStock: true,
+            }] : [],
+            oemTireSizes: classicResult.stockReference.tireSize ? [classicResult.stockReference.tireSize] : [],
+            source: "classic",
+            apiCalled: false,
+            overridesApplied: false,
+          };
+          
+          resolutionPath = "directCanonical";
+          canonicalModificationId = classicModificationId;
+          
+          // Classic fitment always has high confidence
+          const confidenceResult: ConfidenceResult = {
+            confidence: "high",
+            canShowWheels: true,
+            reasons: [`Classic fitment: ${classicResult.platform.name}`, `Bolt pattern: ${classicResult.specs.boltPattern} (verified)`],
+          };
+          
+          console.log(`[fitment-search] Classic profile constructed:`, {
+            boltPattern: dbProfile.boltPattern,
+            recommendedDiameter: [classicResult.recommendedRange.diameter.min, classicResult.recommendedRange.diameter.max],
+          });
+          
+          // Now go through handleDbProfilePath which will apply the classic override
+          return await handleDbProfilePath(url, dbProfile, resolutionPath, canonicalModificationId, false, modeParam, debug, t0, confidenceResult);
+        }
+      } catch (classicErr: any) {
+        console.error(`[fitment-search] Classic fallback failed:`, classicErr?.message || classicErr);
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
     // STEP 4: Legacy Fallback (Only When ModificationId-First Fails)
     // ═══════════════════════════════════════════════════════════════════════════
     
@@ -347,7 +422,48 @@ async function handleDbProfilePath(
     wheelSpecs,
   };
 
-  const envelope = buildFitmentEnvelope(oem, mode);
+  let envelope = buildFitmentEnvelope(oem, mode);
+  let isClassic = false;
+  let classicFitmentUsed = false;
+
+  // ========================================================================
+  // CLASSIC VEHICLE OVERRIDE
+  // For classic vehicles, the classic_fitments table is the source of truth
+  // for diameter/width/offset ranges - NOT the legacy oemWheelSizes data
+  // ========================================================================
+  if (isClassicVehicle(Number(year), make)) {
+    isClassic = true;
+    console.log(`[fitment-search] CLASSIC VEHICLE detected: ${year} ${make} ${model}`);
+    
+    try {
+      const classicResult = await getClassicFitment(Number(year), make, model);
+      
+      if (classicResult.isClassicVehicle && classicResult.fitmentMode === "classic") {
+        const classicRange: ClassicFitmentRange = classicResult.recommendedRange;
+        
+        console.log(`[fitment-search] Classic fitment found:`, {
+          platform: classicResult.platform.code,
+          stockDiameter: classicResult.stockReference.wheelDiameter,
+          range: classicRange,
+        });
+        
+        // Apply classic override - classic ranges become the source of truth
+        envelope = applyClassicEnvelopeOverride(envelope, classicRange);
+        classicFitmentUsed = true;
+        
+        console.log(`[fitment-search] Envelope after classic override:`, {
+          diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
+          width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
+          offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
+        });
+      } else {
+        console.log(`[fitment-search] No classic fitment record for ${year} ${make} ${model}, using modern envelope`);
+      }
+    } catch (classicErr: any) {
+      console.error(`[fitment-search] Classic fitment lookup failed:`, classicErr?.message || classicErr);
+      // Fall back to modern envelope
+    }
+  }
 
   // ========================================================================
   // Production path: DB-first candidate filtering + live availability validation
@@ -377,6 +493,9 @@ async function handleDbProfilePath(
     t0,
     // Confidence result for response
     confidenceResult,
+    // Classic vehicle info
+    isClassicVehicle: isClassic,
+    classicFitmentUsed,
     // Include dbProfile in response for accessory fitment calculation
     dbProfileForResponse: {
       modificationId: dbProfile.modificationId,
@@ -466,6 +585,9 @@ async function handleDbFirstWheelResults(opts: {
   t0: number;
   // Confidence result from safety check
   confidenceResult?: ConfidenceResult;
+  // Classic vehicle info
+  isClassicVehicle?: boolean;
+  classicFitmentUsed?: boolean;
   // DB profile for accessory fitment calculation (threadSize, seatType, centerBoreMm)
   dbProfileForResponse?: {
     modificationId: string;
@@ -1080,6 +1202,9 @@ async function handleDbFirstWheelResults(opts: {
       validationMode: "strict",
       // NEW: Availability mode for DB-first architecture
       availabilityMode: "catalog", // Search uses DB only, no live calls
+      // Classic vehicle detection - classic_fitments is source of truth for classics
+      isClassicVehicle: Boolean(opts.isClassicVehicle),
+      classicFitmentUsed: Boolean(opts.classicFitmentUsed),
       // Confidence information (SAFETY-FIRST)
       confidence: opts.confidenceResult?.confidence || "high",
       confidenceReasons: opts.confidenceResult?.reasons || [],

@@ -734,3 +734,65 @@ export function summarizeValidations(validations: FitmentValidation[]): {
   
   return summary;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CLASSIC VEHICLE ENVELOPE OVERRIDE
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Classic fitment range specification (from classic_fitments table)
+ */
+export interface ClassicFitmentRange {
+  diameter: { min: number; max: number };
+  width: { min: number; max: number };
+  offset: { min: number; max: number };
+}
+
+/**
+ * Override a fitment envelope with classic vehicle ranges.
+ * 
+ * Classic vehicles use their own recommended ranges as the source of truth,
+ * NOT the legacy modern envelope logic based on oemWheelSizes.
+ * 
+ * This is necessary because:
+ * 1. Classic vehicles often have incorrect/default oemWheelSizes (e.g., 17" instead of 14")
+ * 2. Classic fitment ranges are researched and verified for restomod compatibility
+ * 3. Modern aftermarket expansion rules don't apply correctly to classics
+ * 
+ * @param envelope - The base envelope from buildFitmentEnvelope()
+ * @param classicRange - The recommended range from classic_fitments table
+ * @returns Modified envelope with classic ranges applied
+ */
+export function applyClassicEnvelopeOverride(
+  envelope: FitmentEnvelope,
+  classicRange: ClassicFitmentRange
+): FitmentEnvelope {
+  console.log(`[aftermarketFitment] Applying classic envelope override:`, {
+    before: {
+      diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
+      width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
+      offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
+    },
+    classicRange,
+  });
+
+  return {
+    ...envelope,
+    // OEM values are overridden by classic stock reference
+    oemMinDiameter: classicRange.diameter.min,
+    oemMaxDiameter: classicRange.diameter.max,
+    oemMinWidth: classicRange.width.min,
+    oemMaxWidth: classicRange.width.max,
+    oemMinOffset: classicRange.offset.min,
+    oemMaxOffset: classicRange.offset.max,
+    // Allowed values ARE the classic range (no further expansion)
+    allowedMinDiameter: classicRange.diameter.min,
+    allowedMaxDiameter: classicRange.diameter.max,
+    allowedMinWidth: classicRange.width.min,
+    allowedMaxWidth: classicRange.width.max,
+    allowedMinOffset: classicRange.offset.min,
+    allowedMaxOffset: classicRange.offset.max,
+    // Mark as classic mode
+    mode: "aftermarket_safe", // Classic uses its own rules, not modern modes
+  };
+}
