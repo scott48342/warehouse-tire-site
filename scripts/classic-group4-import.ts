@@ -42,8 +42,9 @@ const GROUP_4_PLATFORM = {
   
   // Recommended wheel ranges
   // Stock: 14x5.5-7, plus safe upgrade range
-  recWheelDiameterMin: 14,
-  recWheelDiameterMax: 17,        // Common restomod max
+  // Customer-facing: 15-20" for full restomod selection
+  recWheelDiameterMin: 15,
+  recWheelDiameterMax: 20,        // Modern restomod max
   recWheelWidthMin: 5.5,
   recWheelWidthMax: 8.0,          // Beyond 8" requires mods
   recOffsetMinMm: -6,             // Near zero for classic look

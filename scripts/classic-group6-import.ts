@@ -48,8 +48,9 @@ const GROUP_6_PLATFORM = {
   
   // Recommended wheel ranges
   // Stock evolved: 14x7 early → 15x7/15x8 late (Trans Am)
-  recWheelDiameterMin: 14,
-  recWheelDiameterMax: 17,        // Common restomod max
+  // Customer-facing: 15-20" for full restomod selection
+  recWheelDiameterMin: 15,
+  recWheelDiameterMax: 20,        // Modern restomod max
   recWheelWidthMin: 6.0,
   recWheelWidthMax: 9.0,          // Trans Am came with 8" from factory
   recOffsetMinMm: -6,             // Near zero typical

@@ -50,8 +50,9 @@ const GROUP_5_PLATFORM = {
   // Recommended wheel ranges
   // Stock: 14x5.5-6 base, 15x6-7 on performance models
   // B-Bodies are larger/heavier than E-Body pony cars
-  recWheelDiameterMin: 14,
-  recWheelDiameterMax: 17,        // Common restomod max
+  // Customer-facing: 15-20" for full restomod selection
+  recWheelDiameterMin: 15,
+  recWheelDiameterMax: 20,        // Modern restomod max
   recWheelWidthMin: 5.5,
   recWheelWidthMax: 8.0,          // Beyond 8" requires mods
   recOffsetMinMm: -6,             // Near zero typical
