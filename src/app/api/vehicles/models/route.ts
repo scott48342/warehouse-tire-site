@@ -96,7 +96,8 @@ export async function GET(req: Request) {
       }
     }
     
-    const result = Array.from(modelMap.values()).sort();
+    // Dedupe by display name (canonical keys may differ but display names can collide)
+    const result = [...new Set(Array.from(modelMap.values()))].sort();
     console.log(`[models] Year filter: ${year || "all"} ${make} → ${result.length}/${models.length} models`);
     return result;
   }
@@ -133,10 +134,11 @@ export async function GET(req: Request) {
     }
     
     if (modelMap.size > 0) {
-      const models = Array.from(modelMap.values()).sort();
-      console.log(`[models] YEAR-SPECIFIC: ${year} ${make} → ${models.length} models (catalog: ${yearModels.length}, fitment: ${fitmentModels.length})`);
+      // Dedupe by display name (canonical keys may differ but display names can collide)
+      const uniqueModels = [...new Set(Array.from(modelMap.values()))].sort();
+      console.log(`[models] YEAR-SPECIFIC: ${year} ${make} → ${uniqueModels.length} models (catalog: ${yearModels.length}, fitment: ${fitmentModels.length})`);
       return NextResponse.json({ 
-        results: models,
+        results: uniqueModels,
         source: "catalog",
         yearFiltered: true,
       }, {

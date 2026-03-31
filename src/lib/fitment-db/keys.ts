@@ -301,6 +301,18 @@ const modelAliases: Record<string, string> = {
   "ev6-gt-line": "ev6",
   "ev6-gt": "ev6",
   "ev9": "ev9",
+  
+  // ===== Ford F-Series (Super Duty variants → base model) =====
+  "f-150": "f-150",
+  "f-150-lightning": "f-150-lightning",
+  "f-250": "f-250",
+  "f-250-super-duty": "f-250",
+  "f-350": "f-350",
+  "f-350-super-duty": "f-350",
+  "f-450": "f-450",
+  "f-450-super-duty": "f-450",
+  "f-550": "f-550",
+  "f-550-super-duty": "f-550",
 };
 
 /**
