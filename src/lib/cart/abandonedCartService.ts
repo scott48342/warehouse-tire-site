@@ -92,9 +92,11 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
   // Skip tracking for empty or very low value carts
   if (items.length === 0 || estimatedTotal < MIN_CART_VALUE) {
     // Still return existing cart if any
-    const existing = await db.query.abandonedCarts.findFirst({
-      where: eq(abandonedCarts.cartId, cartId),
-    });
+    const [existing] = await db
+      .select()
+      .from(abandonedCarts)
+      .where(eq(abandonedCarts.cartId, cartId))
+      .limit(1);
     if (existing) {
       // Update to mark as expired if was tracked but now empty
       if (items.length === 0) {
@@ -147,9 +149,11 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
   const itemCount = items.reduce((sum: number, item: any) => sum + (item.quantity || 1), 0);
 
   // Check if cart exists
-  const existing = await db.query.abandonedCarts.findFirst({
-    where: eq(abandonedCarts.cartId, cartId),
-  });
+  const [existing] = await db
+    .select()
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.cartId, cartId))
+    .limit(1);
 
   if (existing) {
     // Don't update recovered carts (preserve the recovery record)
@@ -220,9 +224,11 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
  * Mark a cart as recovered when order is completed
  */
 export async function markCartRecovered(cartId: string, orderId: string): Promise<AbandonedCart | null> {
-  const existing = await db.query.abandonedCarts.findFirst({
-    where: eq(abandonedCarts.cartId, cartId),
-  });
+  const [existing] = await db
+    .select()
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.cartId, cartId))
+    .limit(1);
 
   if (!existing) {
     return null;
@@ -304,9 +310,11 @@ export async function expireOldCarts(): Promise<number> {
  * Get a cart by ID
  */
 export async function getCart(cartId: string): Promise<AbandonedCart | null> {
-  const cart = await db.query.abandonedCarts.findFirst({
-    where: eq(abandonedCarts.cartId, cartId),
-  });
+  const [cart] = await db
+    .select()
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.cartId, cartId))
+    .limit(1);
   return cart || null;
 }
 
@@ -420,16 +428,20 @@ export async function getStats(): Promise<AbandonedCartStats> {
  * Get cart by email (for recovery)
  */
 export async function getCartByEmail(email: string): Promise<AbandonedCart | null> {
-  const cart = await db.query.abandonedCarts.findFirst({
-    where: and(
-      eq(abandonedCarts.customerEmail, email.toLowerCase()),
-      or(
-        eq(abandonedCarts.status, "active"),
-        eq(abandonedCarts.status, "abandoned")
+  const [cart] = await db
+    .select()
+    .from(abandonedCarts)
+    .where(
+      and(
+        eq(abandonedCarts.customerEmail, email.toLowerCase()),
+        or(
+          eq(abandonedCarts.status, "active"),
+          eq(abandonedCarts.status, "abandoned")
+        )
       )
-    ),
-    orderBy: [desc(abandonedCarts.lastActivityAt)],
-  });
+    )
+    .orderBy(desc(abandonedCarts.lastActivityAt))
+    .limit(1);
   return cart || null;
 }
 

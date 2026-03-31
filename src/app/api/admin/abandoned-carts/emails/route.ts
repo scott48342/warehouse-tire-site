@@ -166,9 +166,11 @@ export async function POST(req: Request) {
           );
         }
 
-        const cart = await db.query.abandonedCarts.findFirst({
-          where: eq(abandonedCarts.cartId, cartId),
-        });
+        const [cart] = await db
+          .select()
+          .from(abandonedCarts)
+          .where(eq(abandonedCarts.cartId, cartId))
+          .limit(1);
 
         if (!cart) {
           return NextResponse.json(

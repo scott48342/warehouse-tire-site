@@ -557,9 +557,11 @@ export async function processAbandonedCartEmails(): Promise<ProcessEmailsResult>
  * Mark cart as recovered after email (for tracking effectiveness)
  */
 export async function markRecoveredAfterEmail(cartId: string): Promise<void> {
-  const cart = await db.query.abandonedCarts.findFirst({
-    where: eq(abandonedCarts.cartId, cartId),
-  });
+  const [cart] = await db
+    .select()
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.cartId, cartId))
+    .limit(1);
 
   if (cart && (cart.firstEmailSentAt || cart.secondEmailSentAt)) {
     await db
