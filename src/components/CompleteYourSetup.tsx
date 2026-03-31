@@ -42,7 +42,7 @@ const DEFAULT_ACCESSORIES: Omit<Accessory, "selected">[] = [
     price: 49.99,
     imageUrl: null,
     category: "tpms",
-    required: true,
+    required: false, // Optional - customer may reuse existing sensors
     quantity: 4,
   },
   {
@@ -52,7 +52,7 @@ const DEFAULT_ACCESSORIES: Omit<Accessory, "selected">[] = [
     price: 79.99,
     imageUrl: null,
     category: "lug_nut",
-    required: true,
+    required: false, // Optional - customer may reuse existing hardware
     quantity: 1,
   },
   {

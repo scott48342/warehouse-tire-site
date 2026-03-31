@@ -2195,7 +2195,7 @@ function TireCard({
         <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
           <span className={"inline-block h-2.5 w-2.5 rounded-full " + (inStock ? "bg-green-500" : "bg-red-500")} />
           <span className={inStock ? "text-green-800" : "text-red-800"}>
-            {inStock ? "In stock" : "Backordered"}
+            {inStock ? (maxQty >= 100 ? "100+ in stock" : `${maxQty} in stock`) : "Backordered"}
           </span>
         </div>
       </div>
