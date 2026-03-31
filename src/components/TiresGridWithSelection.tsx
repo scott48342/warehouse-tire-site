@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useCallback, useEffect, useMemo, useRef } from "react";
+import { useState, useCallback, useMemo, useRef } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useCart } from "@/lib/cart/CartContext";
 import { FavoritesButton } from "@/components/FavoritesButton";
-import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
+import { StickyPackageBar } from "@/components/StickyPackageBar";
 import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -123,7 +122,7 @@ function formatPrice(price: number): string {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// TIRE CARD - Clean, conversion-focused design
+// TIRE CARD - Clean, conversion-focused design with improved readability
 // ═══════════════════════════════════════════════════════════════════════════════
 function TireCard({
   tire,
@@ -169,7 +168,7 @@ function TireCard({
           ? "border-green-500 ring-2 ring-green-500 ring-offset-2 scale-[1.01]" 
           : hasSelection
             ? "border-neutral-200 opacity-75 hover:opacity-100"
-            : "border-neutral-200 hover:shadow-lg hover:border-neutral-300"
+            : "border-neutral-200 hover:shadow-md hover:border-neutral-300"
       }`}
     >
       {/* Selected badge */}
@@ -181,16 +180,16 @@ function TireCard({
         </div>
       )}
       
-      {/* Guaranteed Fit badge */}
-      <div className="bg-green-600 px-3 py-1.5 text-center">
-        <span className="text-xs font-bold text-white tracking-wide">
-          🟢 GUARANTEED FIT
+      {/* Guaranteed Fit badge - more compact */}
+      <div className="bg-green-600 px-2 py-1 text-center">
+        <span className="text-[10px] font-bold text-white tracking-wide">
+          ✓ GUARANTEED FIT
         </span>
       </div>
       
-      {/* Large Image */}
+      {/* Image - slightly smaller aspect for less vertical space */}
       <Link href={detailHref} className="block relative">
-        <div className="aspect-square w-full overflow-hidden bg-neutral-50 p-6">
+        <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-50 p-4">
           {tire.imageUrl ? (
             <img
               src={tire.imageUrl}
@@ -200,13 +199,13 @@ function TireCard({
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
-              <div className="text-6xl text-neutral-200">🛞</div>
+              <div className="text-5xl text-neutral-200">🛞</div>
             </div>
           )}
         </div>
         
         {/* Favorites button */}
-        <div className="absolute top-3 right-3">
+        <div className="absolute top-2 right-2">
           <FavoritesButton
             type="tire"
             sku={tire.partNumber || ""}
@@ -215,106 +214,105 @@ function TireCard({
             imageUrl={tire.imageUrl}
           />
         </div>
+        
+        {/* Popular badge overlay */}
+        {isPopular && (
+          <div className="absolute bottom-2 left-2">
+            <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 shadow-sm">
+              🔥 Popular
+            </span>
+          </div>
+        )}
       </Link>
       
-      {/* Content */}
+      {/* Content - improved spacing */}
       <div className="flex flex-1 flex-col p-4">
-        {/* Brand */}
-        <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{brand}</div>
+        {/* Brand - smaller */}
+        <div className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">{brand}</div>
         
-        {/* Model Name */}
+        {/* Model Name - max 2 lines, better sizing */}
         <Link href={detailHref}>
-          <h3 className="mt-0.5 text-lg font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2">
+          <h3 className="mt-0.5 text-base font-bold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2 leading-tight min-h-[2.5rem]">
             {model}
           </h3>
         </Link>
         
-        {/* Size • Terrain */}
-        <div className="mt-1.5 text-sm text-neutral-600">
-          {size} • {terrainType}
-        </div>
-        
-        {/* Popular badge OR warranty */}
-        <div className="mt-2">
-          {isPopular ? (
-            <span className="inline-flex items-center gap-1 text-sm font-semibold text-amber-700">
-              🔥 Popular
-            </span>
-          ) : tire.badges?.warrantyMiles && tire.badges.warrantyMiles > 0 ? (
-            <span className="text-sm text-neutral-500">
-              {(tire.badges.warrantyMiles / 1000).toFixed(0)}k mile warranty
-            </span>
-          ) : null}
-        </div>
-        
-        <div className="flex-1" />
-        
-        {/* Price */}
-        <div className="mt-4">
-          <div className="text-2xl font-extrabold text-neutral-900">
-            {setPrice !== null 
-              ? `$${formatPrice(setPrice)} for 4`
-              : "Call for price"
-            }
-          </div>
-          {price !== null && (
-            <div className="text-sm text-neutral-500">
-              (${formatPrice(price)} each)
-            </div>
+        {/* Secondary specs - smaller, muted */}
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-neutral-500">
+          <span className="font-medium text-neutral-600">{size}</span>
+          <span>•</span>
+          <span>{terrainType}</span>
+          {tire.badges?.warrantyMiles && tire.badges.warrantyMiles > 0 && (
+            <>
+              <span>•</span>
+              <span>{(tire.badges.warrantyMiles / 1000).toFixed(0)}k mi</span>
+            </>
           )}
         </div>
         
-        {/* Trust signals */}
-        <div className="mt-2 flex items-center gap-4 text-xs text-neutral-600">
-          <span className="flex items-center gap-1">
-            <span className="text-green-600">✓</span>
-            Free Shipping
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="text-green-600">✓</span>
-            Fitment Guaranteed
-          </span>
+        <div className="flex-1 min-h-2" />
+        
+        {/* Price block - cleaner layout */}
+        <div className="mt-3 pt-3 border-t border-neutral-100">
+          <div className="flex items-baseline justify-between gap-2">
+            <div>
+              <div className="text-xl font-extrabold text-neutral-900">
+                {setPrice !== null 
+                  ? `$${formatPrice(setPrice)}`
+                  : "Call"
+                }
+              </div>
+              {price !== null && (
+                <div className="text-[11px] text-neutral-500">
+                  ${formatPrice(price)}/ea × 4
+                </div>
+              )}
+            </div>
+            
+            {/* Trust signals - ultra compact */}
+            <div className="text-right text-[10px] text-neutral-500 hidden sm:block">
+              <div className="flex items-center gap-1 justify-end">
+                <span className="text-green-600">✓</span>
+                Free Ship
+              </div>
+            </div>
+          </div>
         </div>
         
-        {/* CTA */}
+        {/* CTA - stronger presence */}
         <button
           type="button"
           onClick={onSelect}
           disabled={isSelected}
           className={`
-            mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-xl 
-            text-sm font-extrabold transition-all duration-200
+            mt-3 flex h-11 w-full items-center justify-center gap-2 rounded-xl 
+            text-sm font-bold transition-all duration-200
             ${isSelected
               ? "bg-green-600 text-white cursor-default"
               : hasSelection
-                ? "bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-2 border-neutral-200"
-                : "bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] shadow-lg shadow-red-600/25"
+                ? "bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border border-neutral-200"
+                : "bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] shadow-lg shadow-red-600/20"
             }
           `}
         >
           {isSelected ? (
             <>
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
               Selected
             </>
           ) : hasSelection ? (
-            <>Switch to this tire</>
+            "Switch to this"
           ) : (
-            <>
-              Add to Package
-              {setPrice !== null && (
-                <span className="opacity-90">— ${formatPrice(setPrice)}</span>
-              )}
-            </>
+            "Add to Package"
           )}
         </button>
         
         {/* View specs link */}
         <Link 
           href={detailHref}
-          className="mt-2 text-center text-xs font-semibold text-neutral-500 hover:text-neutral-700"
+          className="mt-1.5 text-center text-[11px] font-medium text-neutral-400 hover:text-neutral-600"
         >
           View specs →
         </Link>
@@ -378,8 +376,8 @@ function CategorySection({
       </button>
       
       {expanded && (
-        <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {tires.slice(0, 8).map((tire, idx) => (
+        <div className="mt-4 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          {tires.slice(0, 10).map((tire, idx) => (
             <TireCard
               key={tire.partNumber || idx}
               tire={tire}
@@ -393,9 +391,9 @@ function CategorySection({
         </div>
       )}
       
-      {expanded && tires.length > 8 && (
-        <div className="mt-3 text-center">
-          <button className="text-sm font-semibold text-neutral-600 hover:text-neutral-900">
+      {expanded && tires.length > 10 && (
+        <div className="mt-4 text-center">
+          <button className="rounded-lg bg-neutral-100 px-6 py-2 text-sm font-semibold text-neutral-700 hover:bg-neutral-200 transition-colors">
             Show all {tires.length} options →
           </button>
         </div>
@@ -405,70 +403,8 @@ function CategorySection({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// PACKAGE TOTAL
+// PACKAGE TOTAL - REMOVED (replaced by StickyPackageBar)
 // ═══════════════════════════════════════════════════════════════════════════════
-function PackageTotal({
-  wheel,
-  tire,
-}: {
-  wheel: SelectedWheel | null;
-  tire: SelectedTire | null;
-}) {
-  const wheelPrice = wheel?.setPrice || 0;
-  const tirePrice = tire?.setPrice || 0;
-  const total = wheelPrice + tirePrice;
-  
-  // Estimates for TPMS and install (from centralized pricing)
-  const tpmsEstimate = TPMS_SET_PRICE_ESTIMATE;
-  const installEstimate = MOUNT_BALANCE_ESTIMATE;
-  const grandTotal = total + tpmsEstimate + installEstimate;
-  
-  return (
-    <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-      <div className="text-sm font-bold text-neutral-700 mb-3">Your Package</div>
-      
-      <div className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <span className={wheel ? "text-neutral-900" : "text-neutral-400"}>
-            {wheel ? `${wheel.brand} ${wheel.model}` : "Wheels"} × 4
-          </span>
-          <span className={`font-semibold ${wheel ? "text-neutral-900" : "text-neutral-400"}`}>
-            {wheel ? `$${formatPrice(wheelPrice)}` : "—"}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className={tire ? "text-neutral-900" : "text-neutral-400"}>
-            {tire ? `${tire.brand} ${tire.model}` : "Tires"} × 4
-          </span>
-          <span className={`font-semibold ${tire ? "text-neutral-900" : "text-neutral-400"}`}>
-            {tire ? `$${formatPrice(tirePrice)}` : "—"}
-          </span>
-        </div>
-        
-        <div className="border-t border-neutral-100 pt-2 mt-2">
-          <div className="flex justify-between text-xs text-neutral-500">
-            <span>TPMS sensors (est.)</span>
-            <span>${formatPrice(tpmsEstimate)}</span>
-          </div>
-          <div className="flex justify-between text-xs text-neutral-500">
-            <span>Mount & balance (est.)</span>
-            <span>${formatPrice(installEstimate)}</span>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-3 border-t border-neutral-200">
-        <div className="flex justify-between items-baseline">
-          <span className="text-sm font-bold text-neutral-900">Estimated Total</span>
-          <span className="text-xl font-extrabold text-neutral-900">
-            ${formatPrice(grandTotal)}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SELECTION CONFIRMATION
@@ -482,7 +418,6 @@ function TireSelectionConfirmation({
   wheel: SelectedWheel | null;
   onClear: () => void;
 }) {
-  const router = useRouter();
   const total = (wheel?.setPrice || 0) + tire.setPrice;
   
   return (
@@ -555,55 +490,8 @@ function TireSelectionConfirmation({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// MOBILE STICKY BAR
+// MOBILE STICKY BAR - REMOVED (replaced by unified StickyPackageBar)
 // ═══════════════════════════════════════════════════════════════════════════════
-function MobileStickyBar({
-  tire,
-  wheel,
-  isVisible,
-}: {
-  tire: SelectedTire | null;
-  wheel: SelectedWheel | null;
-  isVisible: boolean;
-}) {
-  if (!tire || !isVisible) return null;
-  
-  const total = (wheel?.setPrice || 0) + tire.setPrice;
-  
-  return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden animate-slide-up">
-      <div className="border-t border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 px-4 py-3 shadow-2xl shadow-green-900/20">
-        <div className="flex items-center justify-between gap-3">
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-500 text-white">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div className="min-w-0">
-                <div className="text-xs font-bold text-neutral-900">Package Complete</div>
-                <div className="text-xs font-extrabold text-green-700">
-                  ${formatPrice(total)}
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <Link
-            href="/cart"
-            className="flex h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-green-600 px-5 text-sm font-extrabold text-white shadow-lg shadow-green-600/30"
-          >
-            Checkout
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // SKIP TIRES OPTION
@@ -636,7 +524,6 @@ export function TiresGridWithSelection({
 }: TiresGridProps) {
   const { addItem, getTires, getWheels, removeItem, addAccessories, setAccessoryState, replaceAccessorySku } = useCart();
   const [selectedTire, setSelectedTire] = useState<SelectedTire | null>(null);
-  const [showMobileBar, setShowMobileBar] = useState(false);
   const confirmationRef = useRef<HTMLDivElement>(null);
   
   // Get vehicle from viewParams
@@ -805,10 +692,7 @@ export function TiresGridWithSelection({
       source: tire.rawSource,
     });
     
-    // Show mobile bar
-    setTimeout(() => setShowMobileBar(true), 300);
-    
-    // Scroll to confirmation
+    // Scroll to confirmation on mobile
     setTimeout(() => {
       if (confirmationRef.current && window.innerWidth < 768) {
         confirmationRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -821,31 +705,15 @@ export function TiresGridWithSelection({
       removeItem(selectedTire.sku, "tire");
     }
     setSelectedTire(null);
-    setShowMobileBar(false);
   }, [selectedTire, removeItem]);
   
-  // Track scroll for mobile bar
-  useEffect(() => {
-    if (!selectedTire) return;
-    
-    const handleScroll = () => {
-      if (confirmationRef.current) {
-        const rect = confirmationRef.current.getBoundingClientRect();
-        setShowMobileBar(rect.bottom < 0);
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [selectedTire]);
-  
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
-      {/* Main content */}
+    <div className="relative">
+      {/* Main content - full width, no sidebar */}
       <div>
         {/* Wheel summary is displayed in TirePageCompactHeader - no duplicate here */}
         
-        {/* Tire selection confirmation */}
+        {/* Tire selection confirmation - inline toast style */}
         {selectedTire && (
           <div ref={confirmationRef} className="sticky top-20 z-40 mb-4">
             <TireSelectionConfirmation
@@ -856,7 +724,7 @@ export function TiresGridWithSelection({
           </div>
         )}
         
-        {/* Category sections */}
+        {/* Category sections - full width grid */}
         <CategorySection
           title="Best Value"
           subtitle="Quality tires at great prices"
@@ -899,35 +767,22 @@ export function TiresGridWithSelection({
         )}
       </div>
       
-      {/* Sidebar - Package total */}
-      <div className="hidden lg:block">
-        <div className="sticky top-24">
-          <PackageTotal
-            wheel={selectedWheel || null}
-            tire={selectedTire}
-          />
-          
-          {/* Checkout CTA when complete */}
-          {selectedTire && (
-            <Link
-              href="/cart"
-              className="mt-4 flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-green-600 text-base font-extrabold text-white shadow-lg shadow-green-600/30 transition-all hover:bg-green-700 active:scale-[0.98]"
-            >
-              Review & Checkout
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-          )}
-        </div>
-      </div>
-      
-      {/* Mobile sticky bar */}
-      <MobileStickyBar
-        tire={selectedTire}
-        wheel={selectedWheel || null}
-        isVisible={showMobileBar}
-      />
+      {/* Sticky package bar - unified for desktop + mobile */}
+      {selectedWheel && (
+        <StickyPackageBar
+          wheelSku={selectedWheel.sku}
+          wheelBrand={selectedWheel.brand}
+          wheelModel={selectedWheel.model}
+          wheelPrice={selectedWheel.setPrice}
+          wheelImage={selectedWheel.imageUrl}
+          tireSku={selectedTire?.sku}
+          tireBrand={selectedTire?.brand}
+          tireModel={selectedTire?.model}
+          tirePrice={selectedTire ? selectedTire.setPrice / 4 : undefined}
+          tireSize={selectedTire?.size}
+          tireCount={4}
+        />
+      )}
     </div>
   );
 }
