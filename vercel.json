@@ -1,10 +1,6 @@
 {
   "crons": [
     {
-      "path": "/api/cron/prewarm",
-      "schedule": "*/25 * * * *"
-    },
-    {
       "path": "/api/cron/sync-inventory",
       "schedule": "0 */2 * * *"
     }

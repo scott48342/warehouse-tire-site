@@ -32,12 +32,13 @@ import {
 } from "@/lib/techfeed/wheels";
 
 // NOTE: getSupplierCredentials removed from search (DB-first architecture)
-// Live availability checks now happen at cart/checkout only
+// Inventory data now comes from SFTP feed (synced every 2 hours)
+// No more live API calls during search!
 
 import {
-  getCachedBulk,
-  getCacheStats as getAvailabilityCacheStats,
-} from "@/lib/availabilityCache";
+  getInventoryBulk,
+  type CachedInventory,
+} from "@/lib/inventorySync";
 
 import {
   calculateConfidence,
@@ -585,14 +586,14 @@ async function handleDbFirstWheelResults(opts: {
   timing.fitmentValidCount = fitmentValidCandidates.length;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // PHASE 3: Optional cached availability lookup (NO LIVE CALLS)
-  // Used only for displaying availability labels, NOT for filtering results
+  // PHASE 3: Inventory lookup from SFTP feed (synced every 2 hours)
+  // Used for displaying availability labels and stock info
   // ═══════════════════════════════════════════════════════════════════════════
   const tAvail0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
-  const cachedAvailability = await getCachedBulk(allSkus, minQty);
+  const inventoryData = await getInventoryBulk(allSkus);
   timing.cachedAvailabilityMs = Date.now() - tAvail0;
-  timing.cachedAvailabilityHits = cachedAvailability.size;
+  timing.cachedAvailabilityHits = inventoryData.size;
   timing.totalFitmentValid = fitmentValidCandidates.length;
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -639,16 +640,23 @@ async function handleDbFirstWheelResults(opts: {
     modelKey: string; // brand+style for deduping
   };
   
+  // Orderable inventory types from WheelPros
+  const ORDERABLE_TYPES = new Set(["ST", "BW", "NW", "SO", "CS"]);
+  
   const scoredCandidates: ScoredCandidate[] = fitmentValidCandidates.map(({ candidate: c, validation: v }) => {
-    const cached = cachedAvailability.get(c.sku);
-    const totalStock = cached ? (cached.localQty || 0) + (cached.globalQty || 0) : 0;
+    const inv = inventoryData.get(c.sku);
+    const totalStock = inv?.totalQty || 0;
+    const invType = inv?.inventoryType || "";
+    const isOrderable = ORDERABLE_TYPES.has(invType);
     
-    // Determine availability label
+    // Determine availability label based on inventory type and stock
     let availabilityLabel: "in_stock" | "limited" | "check_availability" = "check_availability";
-    if (cached?.ok && totalStock >= minQty * 2) {
+    if (isOrderable && totalStock >= minQty * 2) {
       availabilityLabel = "in_stock";
-    } else if (cached?.ok && totalStock >= minQty) {
+    } else if (isOrderable && totalStock >= minQty) {
       availabilityLabel = "limited";
+    } else if (isOrderable) {
+      availabilityLabel = "limited"; // Orderable but low/no stock
     }
     
     // ═══════════════════════════════════════════════════════════════════════
@@ -878,15 +886,14 @@ async function handleDbFirstWheelResults(opts: {
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
 
   const results = pageItems.map(({ candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey }) => {
-    // Get cached availability for inventory display
-    const cached = cachedAvailability.get(c.sku);
+    // Get inventory from SFTP feed (synced every 2 hours)
+    const inv = inventoryData.get(c.sku);
     
-    const availabilityData = cached ? {
+    const availabilityData = inv ? {
       confirmed: true,
-      inventoryType: cached.inventoryType,
-      localStock: cached.localQty,
-      globalStock: cached.globalQty,
-      checkedAt: cached.checkedAt,
+      inventoryType: inv.inventoryType,
+      totalQty: inv.totalQty,
+      cachedAt: inv.cachedAt,
     } : { confirmed: false };
     
     return {
@@ -894,11 +901,11 @@ async function handleDbFirstWheelResults(opts: {
       skuType: "WHEEL",
       title: c.product_desc || c.sku,
       brand: c.brand_cd ? { code: c.brand_cd, description: c.brand_desc || c.brand_cd } : undefined,
-      // Inventory shown from cache only (no live calls)
-      inventory: cached ? {
-        type: cached.inventoryType || "UNKNOWN",
-        localStock: cached.localQty || 0,
-        globalStock: cached.globalQty || 0,
+      // Inventory from SFTP feed
+      inventory: inv ? {
+        type: inv.inventoryType || "UNKNOWN",
+        localStock: inv.totalQty || 0,  // Feed only has total, not per-warehouse
+        globalStock: 0,
       } : {
         type: "UNKNOWN",
         localStock: 0,
@@ -1103,9 +1110,9 @@ async function handleDbFirstWheelResults(opts: {
       totalCountEligible: totalCount,
       candidates: filteredCandidates.length,
       fitmentValid: fitmentValidCandidates.length,
-      // DB-FIRST: No live availability checks during search
-      availabilityMode: "catalog",
-      availabilityCachedHits: cachedAvailability.size,
+      // SFTP-FIRST: Inventory from feed, no live API calls
+      availabilityMode: "sftp-feed",
+      availabilityCachedHits: inventoryData.size,
       resolutionPath: opts.resolutionPath,
       fitmentSource: opts.fitmentSource,
       aliasUsed: Boolean(opts.aliasUsed),
