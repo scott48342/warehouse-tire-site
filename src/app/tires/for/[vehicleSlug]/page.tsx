@@ -117,8 +117,8 @@ export default async function VehicleTiresPage({
   }
 
   const vehicleName = formatVehicleName(vehicle)
-  const relatedVehicles = getRelatedVehicles(vehicle.year, vehicle.make, vehicle.model)
-  const structuredData = generateStructuredData(vehicle, vehicleSlug)
+  const relatedVehicles = await getRelatedVehicles(vehicle.year, vehicle.make, vehicle.model)
+  const structuredData = generateStructuredData(vehicle as any, vehicleSlug)
 
   return (
     <>
@@ -155,7 +155,7 @@ export default async function VehicleTiresPage({
             
             {/* Client-side Trim Selector */}
             <VehicleTrimSelector
-              year={vehicle.year}
+              year={String(vehicle.year)}
               make={vehicle.make}
               model={vehicle.model}
               vehicleName={vehicleName}

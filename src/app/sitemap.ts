@@ -1,54 +1,65 @@
-import { MetadataRoute } from 'next'
-import { getAllVehicleSlugs } from '@/lib/seo'
+/**
+ * Sitemap Generator
+ * 
+ * Generates XML sitemap for search engines
+ */
 
-const BASE_URL = 'https://shop.warehousetiredirect.com'
+import { MetadataRoute } from "next";
+import { getTopVehicles, getAllMakes, buildVehicleUrl } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+const BASE_URL = "https://shop.warehousetiredirect.com";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const entries: MetadataRoute.Sitemap = [];
   
-  // Static pages (high priority)
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: now,
-      changeFrequency: 'daily',
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/wheels`,
-      lastModified: now,
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/tires`,
-      lastModified: now,
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/schedule`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-  ]
-
-  // SEO vehicle landing pages (2000+ vehicles)
-  const vehicleSlugs = getAllVehicleSlugs()
-  const vehiclePages: MetadataRoute.Sitemap = vehicleSlugs.map(slug => ({
-    url: `${BASE_URL}/tires/for/${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // Tire category pages
-  const categoryPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/tires/c/all-season`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${BASE_URL}/tires/c/all-terrain`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${BASE_URL}/tires/c/winter`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
-  ]
-
-  return [...staticPages, ...categoryPages, ...vehiclePages]
+  // ============================================================================
+  // Static Pages
+  // ============================================================================
+  
+  const staticPages = [
+    { path: "/", priority: 1.0, changeFrequency: "daily" as const },
+    { path: "/wheels", priority: 0.9, changeFrequency: "daily" as const },
+    { path: "/tires", priority: 0.9, changeFrequency: "daily" as const },
+    { path: "/package", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/schedule", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/lifted", priority: 0.7, changeFrequency: "weekly" as const },
+  ];
+  
+  for (const page of staticPages) {
+    entries.push({
+      url: `${BASE_URL}${page.path}`,
+      lastModified: new Date(),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    });
+  }
+  
+  // ============================================================================
+  // SEO Vehicle Pages
+  // ============================================================================
+  
+  try {
+    // Get top vehicles for SEO pages
+    const topVehicles = await getTopVehicles(200);
+    
+    // Generate URLs for each product type
+    const productTypes: Array<"wheels" | "tires" | "packages"> = ["wheels", "tires", "packages"];
+    
+    for (const vehicle of topVehicles) {
+      for (const productType of productTypes) {
+        const path = buildVehicleUrl(productType, vehicle.year, vehicle.make, vehicle.model);
+        
+        entries.push({
+          url: `${BASE_URL}${path}`,
+          lastModified: new Date(),
+          changeFrequency: "weekly",
+          priority: vehicle.priority * 0.7, // Scale down from 1.0
+        });
+      }
+    }
+  } catch (err) {
+    console.error("[sitemap] Error generating vehicle URLs:", err);
+  }
+  
+  return entries;
 }

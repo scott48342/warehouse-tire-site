@@ -1,21 +1,44 @@
-import { MetadataRoute } from 'next'
+/**
+ * Robots.txt Generator
+ * 
+ * Controls search engine crawling
+ */
+
+import { MetadataRoute } from "next";
+
+const BASE_URL = "https://shop.warehousetiredirect.com";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://shop.warehousetiredirect.com'
-  
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: '/',
+        userAgent: "*",
+        allow: "/",
         disallow: [
-          '/admin/',
-          '/api/',
-          '/checkout/',
-          '/quote/',
+          "/api/",
+          "/admin/",
+          "/cart",
+          "/checkout",
+          "/favorites",
+          "/_next/",
+          // Disallow filter/sort variations (canonicals handle this)
+          "/wheels?*",
+          "/tires?*",
+          "/package?*",
+        ],
+      },
+      {
+        // Googlebot-specific rules
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/admin/",
+          "/cart",
+          "/checkout",
         ],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-  }
+    sitemap: `${BASE_URL}/sitemap.xml`,
+  };
 }
