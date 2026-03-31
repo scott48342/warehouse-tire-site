@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/fitment-db/db";
-import { vehicleFitments } from "@/lib/fitment-db/schema";
-import { eq, and } from "drizzle-orm";
+import { sql } from "@vercel/postgres";
 
 export const runtime = "nodejs";
 
@@ -11,58 +9,52 @@ export async function GET(req: Request) {
   const make = url.searchParams.get("make") || "ford";
   const model = url.searchParams.get("model") || "f-150";
   
+  const results: Record<string, unknown> = {
+    env: {
+      isVercel: process.env.VERCEL === "1" || !!process.env.VERCEL_ENV,
+      vercelEnv: process.env.VERCEL_ENV,
+      hasPostgresUrl: !!process.env.POSTGRES_URL,
+      postgresUrlPrefix: process.env.POSTGRES_URL?.substring(0, 50) + "...",
+    },
+  };
+  
   try {
-    // Test 1: Simple count
-    const countResult = await db
-      .select()
-      .from(vehicleFitments)
-      .limit(1);
+    // Test 1: Check if table exists using raw SQL
+    const tableCheck = await sql`
+      SELECT EXISTS (
+        SELECT FROM information_schema.tables 
+        WHERE table_name = 'vehicle_fitments'
+      ) as exists
+    `;
+    results.tableExists = tableCheck.rows[0]?.exists;
     
-    // Test 2: Specific lookup
-    const fitments = await db
-      .select()
-      .from(vehicleFitments)
-      .where(
-        and(
-          eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, make.toLowerCase()),
-          eq(vehicleFitments.model, model.toLowerCase())
-        )
-      )
-      .limit(5);
+    // Test 2: Count records if table exists
+    if (tableCheck.rows[0]?.exists) {
+      const countResult = await sql`SELECT COUNT(*) as cnt FROM vehicle_fitments`;
+      results.recordCount = countResult.rows[0]?.cnt;
+      
+      // Test 3: Query specific vehicle
+      const fitmentResult = await sql`
+        SELECT id, modification_id, bolt_pattern 
+        FROM vehicle_fitments 
+        WHERE year = ${year} AND make = ${make.toLowerCase()} AND model = ${model.toLowerCase()}
+        LIMIT 5
+      `;
+      results.vehicleQuery = {
+        year,
+        make: make.toLowerCase(),
+        model: model.toLowerCase(),
+        found: fitmentResult.rows.length,
+        samples: fitmentResult.rows,
+      };
+    }
     
-    return NextResponse.json({
-      success: true,
-      env: {
-        isVercel: process.env.VERCEL === "1" || !!process.env.VERCEL_ENV,
-        vercelEnv: process.env.VERCEL_ENV,
-        hasPostgresUrl: !!process.env.POSTGRES_URL,
-      },
-      tests: {
-        anyRecord: countResult.length > 0,
-        vehicleQuery: {
-          year,
-          make: make.toLowerCase(),
-          model: model.toLowerCase(),
-          found: fitments.length,
-          samples: fitments.map(f => ({
-            id: f.id,
-            modificationId: f.modificationId,
-            boltPattern: f.boltPattern,
-          })),
-        },
-      },
-    });
+    results.success = true;
+    return NextResponse.json(results);
   } catch (error: any) {
-    return NextResponse.json({
-      success: false,
-      error: error?.message || String(error),
-      stack: error?.stack?.split("\n").slice(0, 5),
-      env: {
-        isVercel: process.env.VERCEL === "1" || !!process.env.VERCEL_ENV,
-        vercelEnv: process.env.VERCEL_ENV,
-        hasPostgresUrl: !!process.env.POSTGRES_URL,
-      },
-    }, { status: 500 });
+    results.success = false;
+    results.error = error?.message || String(error);
+    results.stack = error?.stack?.split("\n").slice(0, 5);
+    return NextResponse.json(results, { status: 500 });
   }
 }
