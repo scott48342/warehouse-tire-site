@@ -30,6 +30,7 @@ import {
 } from "@/lib/seo/counts";
 import { getFitmentFacts } from "@/lib/seo/fitment";
 import { VehicleTrimSelector } from "@/components/VehicleTrimSelector";
+import { RecommendedPackages } from "@/components/packages/RecommendedPackages";
 
 const BASE_URL = "https://shop.warehousetiredirect.com";
 
@@ -182,6 +183,19 @@ export default async function WheelsForVehiclePage({
             ? `Shop ${formatCount(counts.wheels)} wheels that fit your ${vehicleName}. ${fitment?.boltPattern ? `Your vehicle uses a ${fitment.boltPattern} bolt pattern.` : ""} Browse aftermarket and OEM-style options with guaranteed fitment.`
             : `Looking for wheels for your ${vehicleName}? Contact our team at (248) 332-4120 for fitment verification.`}
         </p>
+        
+        {/* Recommended Packages - Package-first experience */}
+        {hasResults && (
+          <div className="mb-8">
+            <RecommendedPackages
+              year={year}
+              make={make}
+              model={model}
+              maxPackages={4}
+              showTitle={true}
+            />
+          </div>
+        )}
         
         {/* Cross-links */}
         <div className="mb-8 flex flex-wrap gap-4">

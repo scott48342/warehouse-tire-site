@@ -12,6 +12,20 @@ const nextConfig: NextConfig = {
   experimental: {
     // Placeholder for future proxy migration
   },
+
+  // Allow external images from wheel/tire providers
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.wheelpros.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.wheelpros.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Script from 'next/script'
 import { VehicleTrimSelector } from '@/components/VehicleTrimSelector'
+import { RecommendedPackages } from '@/components/packages/RecommendedPackages'
 import { 
   getVehicleBySlug,
   formatVehicleName,
@@ -152,6 +153,17 @@ export default async function VehicleTiresPage({
         {/* Content Section */}
         <section className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
+            
+            {/* Recommended Packages - Package-first experience */}
+            <div className="mb-8">
+              <RecommendedPackages
+                year={Number(vehicle.year)}
+                make={vehicle.make}
+                model={vehicle.model}
+                maxPackages={4}
+                showTitle={true}
+              />
+            </div>
             
             {/* Client-side Trim Selector */}
             <VehicleTrimSelector

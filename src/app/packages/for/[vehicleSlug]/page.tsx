@@ -23,6 +23,7 @@ import {
 } from "@/lib/seo/counts";
 import { getFitmentFacts } from "@/lib/seo/fitment";
 import { VehicleTrimSelector } from "@/components/VehicleTrimSelector";
+import { RecommendedPackages } from "@/components/packages/RecommendedPackages";
 
 const BASE_URL = "https://shop.warehousetiredirect.com";
 
@@ -171,6 +172,17 @@ export default async function PackagesForVehiclePage({
               🔘 {formatCount(counts.tires)} Tires
             </Link>
           )}
+        </div>
+        
+        {/* Recommended Packages - Main attraction for this page */}
+        <div className="mb-8">
+          <RecommendedPackages
+            year={year}
+            make={make}
+            model={model}
+            maxPackages={6}
+            showTitle={false}
+          />
         </div>
         
         {/* Package Benefits */}

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { BRAND } from "@/lib/brand";
+import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
+import { CartTrustSection } from "@/components/TrustBadges";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -394,6 +396,11 @@ export default function CartPage() {
                 </div>
               </div>
             ) : null}
+            
+            {/* Complete Your Setup - Accessory Upsell */}
+            {(hasWheels() || hasTires()) && !hasAccessories() ? (
+              <CartAccessoryUpsell className="mt-4" />
+            ) : null}
           </div>
 
           {/* Order Summary */}
@@ -461,6 +468,9 @@ export default function CartPage() {
                 </a>
               </div>
             </div>
+            
+            {/* Trust Section */}
+            <CartTrustSection className="mt-4" />
           </div>
         </div>
       </div>
