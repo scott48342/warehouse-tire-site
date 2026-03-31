@@ -20,6 +20,8 @@ import { NextResponse } from "next/server";
 import pg from "pg";
 import { XMLParser } from "fast-xml-parser";
 import { searchTiresTirewire, tirewireTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
+import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
+import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -718,9 +720,51 @@ export async function GET(req: Request) {
     // Track original OEM sizes for response
     const oemTireSizes = [...tireSizes];
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CLASSIC VEHICLE UPSIZE LOGIC
+    // For classic vehicles, use the upsize engine to get proper tire sizes
+    // when the wheel diameter differs from stock
+    // ═══════════════════════════════════════════════════════════════════════════
+    let isClassicVehicle = false;
+    let classicUpsizeSizes: string[] = [];
+    let classicStockTire: string | null = null;
+    
+    if (wheelDiameter && year && make && model) {
+      try {
+        const classicData = await getClassicFitment(
+          parseInt(year, 10),
+          make,
+          model
+        );
+        
+        if (classicData && classicData.isClassicVehicle) {
+          isClassicVehicle = true;
+          classicStockTire = classicData.stockReference?.tireSize || null;
+          
+          if (classicStockTire) {
+            // Get upsize tire sizes for the selected wheel diameter
+            classicUpsizeSizes = getClassicTireSizesForWheelDiameter(
+              classicStockTire,
+              wheelDiameter,
+              5 // Get top 5 size options
+            );
+            
+            if (classicUpsizeSizes.length > 0) {
+              console.log(`[tires/search] CLASSIC UPSIZE: ${year} ${make} ${model}`);
+              console.log(`  Stock tire: ${classicStockTire}`);
+              console.log(`  Wheel: ${wheelDiameter}"`);
+              console.log(`  Upsize sizes: ${classicUpsizeSizes.join(", ")}`);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn("[tires/search] Classic fitment check failed:", err);
+      }
+    }
+    
     // Filter by wheel diameter if specified
     // Use searchableSizes (modern P-metric) for actual searching
-    let matchMode: "exact" | "oem-fallback" | "direct-search" = "exact";
+    let matchMode: "exact" | "oem-fallback" | "direct-search" | "classic-upsize" = "exact";
     let sizesToSearch = searchableSizes.length > 0 ? searchableSizes : tireSizes;
     
     if (wheelDiameter && sizesToSearch.length > 0) {
@@ -732,6 +776,11 @@ export async function GET(req: Request) {
       if (filtered.length > 0) {
         sizesToSearch = filtered;
         matchMode = "exact";
+      } else if (isClassicVehicle && classicUpsizeSizes.length > 0) {
+        // CLASSIC VEHICLE: Use upsize engine sizes instead of generic fallback
+        sizesToSearch = classicUpsizeSizes;
+        matchMode = "classic-upsize";
+        console.log(`[tires/search] Using classic upsize sizes for ${wheelDiameter}" wheels`);
       } else {
         // No OEM tires match the wheel diameter - this is a plus/minus sizing scenario
         // Search directly for tires of the specified diameter
@@ -879,6 +928,15 @@ export async function GET(req: Request) {
       // Legacy conversion info
       hasLegacySizes,
       sizeConversions: hasLegacySizes ? sizeConversions : undefined,
+      
+      // Classic vehicle upsize info
+      isClassicVehicle,
+      ...(isClassicVehicle && classicStockTire && {
+        classicInfo: {
+          stockTireSize: classicStockTire,
+          upsizeSizes: classicUpsizeSizes,
+        },
+      }),
       
       matchMode,
       fitmentSource,
