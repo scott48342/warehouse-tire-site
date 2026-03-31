@@ -1748,6 +1748,8 @@ export default async function WheelsPage({
                 centerbore: w.centerbore,
                 imageUrl: w.imageUrl,
                 price: w.price,
+                stockQty: w.stockQty,
+                inventoryType: w.inventoryType,
                 styleKey: w.styleKey,
                 fitmentClass: w.fitmentClass,
                 finishThumbs: w.finishThumbs,
