@@ -1088,13 +1088,10 @@ export default async function WheelsPage({
       {hasVehicle ? (
         <PackageJourneyBar
           currentStep="wheels"
-          wheelSetPrice={null}
-          tireSetPrice={null}
-          vehicleParams={{
+          vehicle={{
             year,
             make,
             model,
-            modification: modification || undefined,
           }}
         />
       ) : null}

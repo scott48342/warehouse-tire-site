@@ -603,15 +603,11 @@ export default function ReviewPackagePage() {
       {/* Package Journey Bar */}
       <PackageJourneyBar
         currentStep="review"
-        wheelSetPrice={wheelSubtotal}
-        tireSetPrice={tireSubtotal}
-        hasAccessories={accessories.length > 0}
-        vehicleParams={vehicle ? {
+        vehicle={vehicle ? {
           year: vehicle.year,
           make: vehicle.make,
           model: vehicle.model,
-          modification: vehicle.trim || undefined,
-        } : undefined}
+        } : null}
       />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
