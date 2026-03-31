@@ -118,15 +118,16 @@ function parseFeed(data: Buffer): WheelInventoryRecord[] {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 async function cacheToRedis(records: WheelInventoryRecord[]): Promise<number> {
-  if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+  // Support both Vercel KV naming and standard Upstash naming
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+  
+  if (!url || !token) {
     console.log("[sync] Redis not configured, skipping cache");
     return 0;
   }
   
-  const redis = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL,
-    token: process.env.UPSTASH_REDIS_REST_TOKEN,
-  });
+  const redis = new Redis({ url, token });
   
   // Build pipeline for batch insert
   const BATCH_SIZE = 500;
