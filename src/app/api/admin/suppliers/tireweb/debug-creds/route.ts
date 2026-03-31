@@ -37,11 +37,32 @@ export async function GET() {
       dbStatus = `failed: ${dbErr.message}`;
     }
     
+    // Also check credentials
+    let credsStatus = "not checked";
+    try {
+      const { Pool } = await import("pg");
+      const pool = new Pool({
+        connectionString: dbUrl,
+        ssl: { rejectUnauthorized: false },
+        max: 1,
+      });
+      const { rows } = await pool.query(
+        "SELECT key, LENGTH(value) as len FROM tireweb_config"
+      );
+      credsStatus = rows.length > 0 
+        ? rows.map((r: any) => `${r.key}: ${r.len} chars`).join(", ")
+        : "no credentials found";
+      await pool.end();
+    } catch (err: any) {
+      credsStatus = `error: ${err.message}`;
+    }
+    
     return NextResponse.json({
       dbUrlPrefix: dbUrl.slice(0, 30) + "...",
       pgStatus,
       dbStatus,
       connections: connectionRows,
+      credsStatus,
     });
   } catch (err: any) {
     return NextResponse.json({ 
