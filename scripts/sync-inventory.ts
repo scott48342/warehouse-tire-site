@@ -16,7 +16,7 @@ import { Redis } from "@upstash/redis";
 const SFTP_CONFIG = {
   host: process.env.WHEELPROS_SFTP_HOST || "sftp.wheelpros.com",
   port: 22,
-  username: process.env.WHEELPROS_SFTP_USER || "warehousetire",
+  username: process.env.WHEELPROS_SFTP_USER || "Warehouse1",
   password: process.env.WHEELPROS_SFTP_PASS,
 };
 
