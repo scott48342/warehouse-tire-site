@@ -125,6 +125,14 @@ export function SteppedVehicleSelector({
     return () => { cancelled = true; };
   }, [year, make]);
 
+  // Track if trims have been loaded at least once for current model
+  const [trimsLoadedOnce, setTrimsLoadedOnce] = useState(false);
+
+  // Reset trimsLoadedOnce when model changes
+  useEffect(() => {
+    setTrimsLoadedOnce(false);
+  }, [model]);
+
   // Load trims when model changes
   useEffect(() => {
     let cancelled = false;
@@ -163,19 +171,24 @@ export function SteppedVehicleSelector({
       } catch {
         if (!cancelled) setTrims([]);
       } finally {
-        if (!cancelled) setTrimsLoading(false);
+        if (!cancelled) {
+          setTrimsLoading(false);
+          setTrimsLoadedOnce(true);
+        }
       }
     })();
     return () => { cancelled = true; };
   }, [year, make, model]);
 
   // Auto-continue when no trims available (skip the trim step entirely)
+  // IMPORTANT: Only auto-continue after trims have actually loaded (trimsLoadedOnce)
+  // This prevents race condition where we skip before trims finish loading
   useEffect(() => {
-    if (step === "trim" && !trimsLoading && trims.length === 0 && year && make && model) {
+    if (step === "trim" && !trimsLoading && trimsLoadedOnce && trims.length === 0 && year && make && model) {
       // No trims available - auto-continue without showing the empty state
       onComplete({ year, make, model });
     }
-  }, [step, trimsLoading, trims.length, year, make, model, onComplete]);
+  }, [step, trimsLoading, trimsLoadedOnce, trims.length, year, make, model, onComplete]);
 
   function reset() {
     setStep("year");
@@ -185,6 +198,7 @@ export function SteppedVehicleSelector({
     setMakes([]);
     setModels([]);
     setTrims([]);
+    setTrimsLoadedOnce(false);
   }
 
   function goBack() {

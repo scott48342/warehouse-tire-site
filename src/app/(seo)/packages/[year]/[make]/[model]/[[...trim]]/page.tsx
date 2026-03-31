@@ -2,6 +2,12 @@
  * SEO Landing Page: Wheel & Tire Packages by Vehicle
  * 
  * Route: /packages/[year]/[make]/[model]/[[...trim]]
+ * 
+ * Features:
+ * - Real product counts (estimated from wheels × tires)
+ * - Cross-links to wheels and tires pages
+ * - 400+ prerendered vehicles
+ * - noindex for vehicles without inventory
  */
 
 import { notFound } from "next/navigation";
@@ -12,12 +18,14 @@ import {
   resolveVehicle,
   isValidYear,
   getFitmentFacts,
-  getTopVehicles,
   buildSEOMetadata,
   buildCanonicalUrl,
+  getAllCountsByFitment,
+  getPopularWheelSizes,
 } from "@/lib/seo";
 
 import { VehicleLandingPage } from "@/components/seo/VehicleLandingPage";
+import { getTopVehiclesForSEO } from "@/lib/seo/staticParams";
 
 // ============================================================================
 // Route Config
@@ -27,13 +35,13 @@ export const dynamic = "force-static";
 export const revalidate = 86400; // Revalidate daily
 
 // ============================================================================
-// Static Generation
+// Static Generation (Expanded to 400+ vehicles)
 // ============================================================================
 
 export async function generateStaticParams() {
-  const topVehicles = await getTopVehicles(100);
+  const vehicles = await getTopVehiclesForSEO(400);
   
-  return topVehicles.map(v => ({
+  return vehicles.map(v => ({
     year: String(v.year),
     make: v.make,
     model: v.model,
@@ -57,17 +65,32 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Not Found" };
   }
   
-  const fitment = await getFitmentFacts(vehicle);
+  const [fitment, counts] = await Promise.all([
+    getFitmentFacts(vehicle),
+    getAllCountsByFitment(vehicle.year, vehicle.make, vehicle.model, vehicle.trim),
+  ]);
+  
+  const hasResults = counts.hasFitment && counts.packages > 0;
   const canonical = buildCanonicalUrl("packages", vehicle.year, vehicle.make, vehicle.model, vehicle.trim);
   
-  return buildSEOMetadata({
+  const metadata = buildSEOMetadata({
     vehicle,
     fitment,
     productType: "packages",
-    hasResults: !!fitment?.boltPattern,
-    resultCount: fitment ? 200 : 0,
+    hasResults,
+    resultCount: counts.packages,
     canonical,
   });
+  
+  // noindex pages without inventory
+  if (!hasResults) {
+    metadata.robots = {
+      index: false,
+      follow: true,
+    };
+  }
+  
+  return metadata;
 }
 
 // ============================================================================
@@ -82,13 +105,20 @@ export default async function PackagesSEOPage({ params }: PageProps) {
     notFound();
   }
   
-  const fitment = await getFitmentFacts(vehicle);
+  // Fetch all data in parallel
+  const [fitment, counts, popularSizes] = await Promise.all([
+    getFitmentFacts(vehicle),
+    getAllCountsByFitment(vehicle.year, vehicle.make, vehicle.model, vehicle.trim),
+    getPopularWheelSizes(vehicle.year, vehicle.make, vehicle.model),
+  ]);
   
   return (
     <VehicleLandingPage
       productType="packages"
       vehicle={vehicle}
       fitment={fitment}
+      counts={counts}
+      popularWheelSizes={popularSizes}
     />
   );
 }

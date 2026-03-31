@@ -110,6 +110,9 @@ export function buildSEOMetadata(data: SEOPageData): Metadata {
   // Keywords based on vehicle and product type
   const keywords = buildKeywords(productType, vehicle, fitment);
   
+  // Build OG image URL
+  const ogImageUrl = `/api/og?year=${vehicle.year}&make=${encodeURIComponent(vehicle.make)}&model=${encodeURIComponent(vehicle.model)}&type=${productType}`;
+  
   const metadata: Metadata = {
     title,
     description,
@@ -124,11 +127,20 @@ export function buildSEOMetadata(data: SEOPageData): Metadata {
       siteName: "Warehouse Tire Direct",
       type: "website",
       locale: "en_US",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${vehicle.year} ${vehicle.displayMake} ${vehicle.displayModel} ${productType}`,
+        },
+      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
+      images: [ogImageUrl],
     },
   };
   

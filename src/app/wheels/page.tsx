@@ -1298,17 +1298,6 @@ export default async function WheelsPage({
           </div>
         ) : null}
 
-        {/* Package Journey Bar - frames the shopping experience */}
-        {hasVehicle && !isBlocked && !data?.error ? (
-          <div className="mt-5">
-            <PackageJourneyBar
-              currentStep="wheels"
-              vehicle={{ year, make, model }}
-              estimatedRange={{ min: 1800, max: 3500 }}
-            />
-          </div>
-        ) : null}
-
         {/* Main content grid - only show if NOT blocked */}
         {!isBlocked ? (
         <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">

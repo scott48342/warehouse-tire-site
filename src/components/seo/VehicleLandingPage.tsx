@@ -2,6 +2,7 @@
  * Vehicle Landing Page Component
  * 
  * Shared component for wheels/tires/packages SEO pages
+ * Now with real product counts and data-driven content
  */
 
 import Link from "next/link";
@@ -15,16 +16,26 @@ import {
   buildFAQJsonLd,
   buildProductListJsonLd,
   buildCanonicalUrl,
+  formatCount,
 } from "@/lib/seo";
 import { FitmentFactsCard } from "./FitmentFactsCard";
 import { RelatedLinks } from "./RelatedLinks";
 import { FAQSection } from "./FAQSection";
+import { ProductCountBadge } from "./ProductCountBadge";
+import { PopularSizesSection } from "./PopularSizesSection";
 
 interface Props {
   productType: ProductType;
   vehicle: ResolvedVehicle;
   fitment: FitmentFacts | null;
-  resultCount?: number;
+  counts: {
+    wheels: number;
+    tires: number;
+    packages: number;
+    hasFitment: boolean;
+  };
+  popularWheelSizes?: { diameter: number; count: number }[];
+  popularBrands?: { brand: string; count: number }[];
 }
 
 const productLabels: Record<ProductType, { singular: string; plural: string; action: string }> = {
@@ -39,13 +50,21 @@ const browseUrls: Record<ProductType, string> = {
   packages: "/package",
 };
 
-export function VehicleLandingPage({ productType, vehicle, fitment, resultCount = 1000 }: Props) {
+export function VehicleLandingPage({ 
+  productType, 
+  vehicle, 
+  fitment, 
+  counts,
+  popularWheelSizes = [],
+  popularBrands = [],
+}: Props) {
   const labels = productLabels[productType];
-  const hasResults = !!fitment?.boltPattern;
+  const hasResults = counts.hasFitment && getCountForType(counts, productType) > 0;
+  const resultCount = getCountForType(counts, productType);
   
   // Build content
   const h1 = buildH1(productType, vehicle);
-  const intro = buildIntroParagraph(productType, vehicle, fitment, hasResults ? resultCount : 0);
+  const intro = buildIntroParagraph(productType, vehicle, fitment, resultCount);
   const fitmentItems = buildFitmentFactItems(fitment);
   const relatedLinks = buildRelatedLinks(productType, vehicle);
   const faqs = buildFAQItems(productType, vehicle, fitment);
@@ -57,13 +76,16 @@ export function VehicleLandingPage({ productType, vehicle, fitment, resultCount 
     fitment,
     productType,
     hasResults,
-    resultCount: hasResults ? resultCount : 0,
+    resultCount,
     canonical,
   });
   const faqJsonLd = faqs.length > 0 ? buildFAQJsonLd(faqs) : null;
   
   // Build browse URL
   const browseUrl = `${browseUrls[productType]}?year=${vehicle.year}&make=${vehicle.make}&model=${vehicle.model}${vehicle.trim ? `&trim=${vehicle.trim}` : ""}`;
+  
+  // Build SEO URL for internal linking
+  const seoBaseUrl = `/${productType}/${vehicle.year}/${encodeURIComponent(vehicle.make)}/${encodeURIComponent(vehicle.model)}`;
   
   return (
     <>
@@ -93,20 +115,110 @@ export function VehicleLandingPage({ productType, vehicle, fitment, resultCount 
           </span>
         </nav>
         
-        {/* H1 */}
-        <h1 className="mb-4 text-3xl font-bold text-neutral-900 sm:text-4xl">
-          {h1}
-        </h1>
+        {/* H1 with Count Badge */}
+        <div className="mb-4 flex flex-wrap items-center gap-3">
+          <h1 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
+            {h1}
+          </h1>
+          {hasResults && (
+            <ProductCountBadge 
+              count={resultCount} 
+              productType={productType}
+            />
+          )}
+        </div>
         
         {/* Intro */}
         <p className="mb-8 max-w-3xl text-lg text-neutral-600">
           {intro}
         </p>
         
+        {/* Cross-linking to other product types */}
+        {counts.hasFitment && (
+          <div className="mb-8 flex flex-wrap gap-4">
+            {productType !== "wheels" && counts.wheels > 0 && (
+              <Link
+                href={`/wheels/${vehicle.year}/${encodeURIComponent(vehicle.make)}/${encodeURIComponent(vehicle.model)}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50"
+              >
+                <span>🛞</span>
+                <span>{formatCount(counts.wheels)} Wheels</span>
+              </Link>
+            )}
+            {productType !== "tires" && counts.tires > 0 && (
+              <Link
+                href={`/tires/${vehicle.year}/${encodeURIComponent(vehicle.make)}/${encodeURIComponent(vehicle.model)}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50"
+              >
+                <span>🔘</span>
+                <span>{formatCount(counts.tires)} Tires</span>
+              </Link>
+            )}
+            {productType !== "packages" && counts.packages > 0 && (
+              <Link
+                href={`/packages/${vehicle.year}/${encodeURIComponent(vehicle.make)}/${encodeURIComponent(vehicle.model)}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-700 transition hover:border-neutral-300 hover:bg-neutral-50"
+              >
+                <span>📦</span>
+                <span>{formatCount(counts.packages)} Packages</span>
+              </Link>
+            )}
+          </div>
+        )}
+        
         {/* Fitment Facts */}
         {fitmentItems.length > 0 && (
           <div className="mb-8">
             <FitmentFactsCard items={fitmentItems} />
+          </div>
+        )}
+        
+        {/* Popular Sizes Section (data-driven) */}
+        {productType === "wheels" && popularWheelSizes.length > 0 && (
+          <PopularSizesSection 
+            title={`Popular Wheel Sizes for ${vehicle.year} ${vehicle.displayMake} ${vehicle.displayModel}`}
+            sizes={popularWheelSizes}
+            vehicle={vehicle}
+          />
+        )}
+        
+        {/* Popular Brands Section (data-driven) */}
+        {productType === "wheels" && popularBrands.length > 0 && (
+          <div className="mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-neutral-900">
+              Top Wheel Brands for {vehicle.displayMake}
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {popularBrands.slice(0, 6).map(({ brand, count }) => (
+                <Link
+                  key={brand}
+                  href={`${browseUrl}&brand_cd=${encodeURIComponent(brand)}`}
+                  className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-700 transition hover:border-red-200 hover:bg-red-50"
+                >
+                  {brand}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+        
+        {/* Common Tire Sizes (data-driven) */}
+        {productType === "tires" && fitment?.oemTireSizes && fitment.oemTireSizes.length > 0 && (
+          <div className="mb-8">
+            <h2 className="mb-4 text-xl font-semibold text-neutral-900">
+              Factory Tire Sizes for {vehicle.year} {vehicle.displayMake} {vehicle.displayModel}
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {fitment.oemTireSizes.slice(0, 6).map((size) => (
+                <Link
+                  key={size}
+                  href={`/tires?year=${vehicle.year}&make=${vehicle.make}&model=${vehicle.model}&size=${encodeURIComponent(size)}`}
+                  className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-700 transition hover:border-red-200 hover:bg-red-50"
+                >
+                  {size}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
         
@@ -117,7 +229,7 @@ export function VehicleLandingPage({ productType, vehicle, fitment, resultCount 
               href={browseUrl}
               className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-red-700"
             >
-              {labels.action} {vehicle.displayModel} {labels.plural}
+              {labels.action} {formatCount(resultCount)} {vehicle.displayModel} {labels.plural}
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -168,4 +280,13 @@ export function VehicleLandingPage({ productType, vehicle, fitment, resultCount 
       </main>
     </>
   );
+}
+
+function getCountForType(counts: Props["counts"], type: ProductType): number {
+  switch (type) {
+    case "wheels": return counts.wheels;
+    case "tires": return counts.tires;
+    case "packages": return counts.packages;
+    default: return 0;
+  }
 }
