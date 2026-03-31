@@ -834,8 +834,13 @@ export async function GET(req: Request) {
     
     // Apply admin image overrides (for K&M tires without images, etc.)
     const tOverride0 = Date.now();
-    const finalResults = await applyImageOverrides(db, slicedResults);
+    const withOverrides = await applyImageOverrides(db, slicedResults);
     timing.imageOverrideMs = Date.now() - tOverride0;
+    
+    // Filter out tires without images (no image = no show)
+    const finalResults = withOverrides.filter(t => t.imageUrl && t.imageUrl.length > 0);
+    const hiddenNoImage = withOverrides.length - finalResults.length;
+    
     timing.totalMs = Date.now() - t0;
     
     return NextResponse.json({
@@ -861,6 +866,7 @@ export async function GET(req: Request) {
         tirewire: twResults.length,
         km: kmResults.length,
       },
+      hiddenNoImage, // Count of tires filtered out due to missing images
       timing,
     });
   } catch (e: any) {
