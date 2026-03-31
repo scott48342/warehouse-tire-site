@@ -1015,7 +1015,8 @@ export default async function TiresPage({
   const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
 
   function normalizeSizeKey(s: string) {
-    return String(s || "").toUpperCase().replace(/\s+/g, "").replace(/ZR/g, "R").replace(/-/g, "");
+    // Strip LT/P prefix, spaces, dashes, and convert ZR to R for consistent matching
+    return String(s || "").toUpperCase().replace(/^(LT|P)/i, "").replace(/\s+/g, "").replace(/ZR/g, "R").replace(/-/g, "");
   }
 
   function extractSizeFromText(s: string) {
