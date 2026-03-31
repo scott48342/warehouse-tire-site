@@ -4,7 +4,12 @@ import { getTirewireCredentials, getEnabledConnections } from "@/lib/tirewire/cl
 export const runtime = "nodejs";
 
 export async function GET() {
-  const results: Record<string, unknown> = {};
+  try {
+    const results: Record<string, unknown> = {};
+    
+    // Check DB URL
+    const dbUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL || "";
+    results.dbUrlPrefix = dbUrl.slice(0, 30) + "...";
   
   try {
     // Get credentials
@@ -72,5 +77,8 @@ export async function GET() {
     results.apiTest = "skipped (no creds or connections)";
   }
   
-  return NextResponse.json(results);
+    return NextResponse.json(results);
+  } catch (err: any) {
+    return NextResponse.json({ fatalError: err.message, stack: err.stack?.split('\n').slice(0, 5) }, { status: 200 });
+  }
 }
