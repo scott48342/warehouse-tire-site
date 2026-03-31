@@ -8,7 +8,7 @@
  * 
  * Usage:
  *   const enriched = await enrichTire(tire);
- *   if (!enriched.imageUrl) { /* hide from results */ }
+ *   if (!enriched.imageUrl) { // hide from results }
  */
 
 import pg from "pg";
