@@ -128,9 +128,19 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
       return null;
     }
 
+    const decryptedAccessKey = decrypt(accessKeyRow.value);
+    const decryptedGroupToken = decrypt(groupTokenRow.value);
+    
+    // Log credential status (not the actual values)
+    console.log("[tirewire] Credentials loaded:", {
+      accessKeyLength: decryptedAccessKey?.length || 0,
+      groupTokenLength: decryptedGroupToken?.length || 0,
+      accessKeyPreview: decryptedAccessKey ? `${decryptedAccessKey.slice(0, 4)}...` : "null",
+    });
+    
     const result = {
-      accessKey: decrypt(accessKeyRow.value),
-      groupToken: decrypt(groupTokenRow.value),
+      accessKey: decryptedAccessKey,
+      groupToken: decryptedGroupToken,
     };
     _credsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
     return result;
