@@ -21,8 +21,8 @@ const SFTP_CONFIG = {
 };
 
 const FEED_PATH = "/CommonFeed/USD/WHEEL/wheelInvPriceData.json";
-const REDIS_KEY_PREFIX = "inv:wheel:";
-const REDIS_TTL_SECONDS = 60 * 60 * 4; // 4 hours
+const REDIS_KEY_PREFIX = "wt:inv:";  // Must match inventoryCache.ts
+const REDIS_TTL_SECONDS = 60 * 60 * 3; // 3 hours (matches inventorySync.ts)
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -139,14 +139,12 @@ async function cacheToRedis(records: WheelInventoryRecord[]): Promise<number> {
     
     for (const record of batch) {
       const key = `${REDIS_KEY_PREFIX}${record.sku}`;
+      // Format must match what inventoryCache.ts expects: {t, q, m, u}
       const value = JSON.stringify({
-        type: record.inventoryType,
-        qty: record.totalQty,
-        map: record.mapPrice,
-        msrp: record.msrp,
-        brand: record.brand,
-        style: record.style,
-        run: record.runDate,
+        t: record.inventoryType,  // type
+        q: record.totalQty,       // quantity  
+        m: record.msrp,           // msrp
+        u: Date.now(),            // updated at
       });
       pipeline.setex(key, REDIS_TTL_SECONDS, value);
     }
