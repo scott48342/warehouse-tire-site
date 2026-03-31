@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getTirewireCredentials, getEnabledConnections } from "@/lib/tirewire/client";
+import pg from "pg";
 
 export const runtime = "nodejs";
 
@@ -7,6 +8,17 @@ export async function GET() {
   try {
     const creds = await getTirewireCredentials();
     const connections = await getEnabledConnections();
+    
+    // Direct database check
+    const pool = new pg.Pool({
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+      max: 1,
+    });
+    const { rows: directCheck } = await pool.query(
+      'SELECT provider, connection_id, enabled FROM tireweb_connections'
+    );
+    await pool.end();
     
     // Test the API directly
     let apiTestResult = "not tested";
@@ -54,6 +66,7 @@ export async function GET() {
       accessKeyLength: creds?.accessKey?.length || 0,
       groupTokenLength: creds?.groupToken?.length || 0,
       connections: connections.map(c => ({ provider: c.provider, id: c.connectionId })),
+      directDbCheck: directCheck,
       apiTestResult,
     });
   } catch (err: any) {
