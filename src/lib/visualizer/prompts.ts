@@ -16,25 +16,25 @@ interface PromptParams {
 
 /**
  * Base requirements for all vehicle images:
- * - Perfect side profile (90 degrees)
- * - White seamless studio background
- * - Vehicle centered in frame
- * - Full body visible from bumper to bumper
- * - Dark/black empty wheel wells (no wheels)
- * - Wheel openings clearly visible and unobstructed
- * - Clean, flat studio lighting
+ * - EXACT 90-degree side profile (critical for wheel overlay)
+ * - Pure white background
+ * - No wheels or tires - just empty dark wheel wells
+ * - Flat lighting for easy compositing
  */
 const BASE_REQUIREMENTS = `
-perfect side profile view at exactly 90 degrees,
-white seamless studio background,
-vehicle centered in frame,
-full body visible from front bumper to rear bumper,
-dark black empty wheel wells with absolutely no wheels or tires visible,
-wheel well openings clearly visible and unobstructed by any body panels,
-clean flat professional automotive studio lighting,
-no reflections on ground,
-no shadows on background,
-high resolution product photography style
+EXACT 90 degree side profile view looking directly at driver side,
+PURE WHITE #FFFFFF seamless background with no gradients shadows or environment,
+vehicle perfectly centered horizontally in frame,
+full vehicle body visible from front bumper to rear bumper,
+CRITICAL: wheel wells must be COMPLETELY EMPTY showing only dark black circular openings where wheels would go,
+NO WHEELS NO TIRES NO RIMS visible at all - only empty black wheel well openings,
+wheel well openings perfectly circular and unobstructed,
+completely flat even studio lighting with no dramatic shadows or highlights,
+no ground reflections,
+no environment or backdrop,
+vehicle appears to float on pure white,
+clean vector-like quality suitable for wheel overlay compositing,
+PNG style cutout look
 `.trim().replace(/\n/g, " ");
 
 /**
