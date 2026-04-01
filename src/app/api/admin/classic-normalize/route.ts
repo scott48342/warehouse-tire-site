@@ -8,7 +8,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/fitment-db/db";
 import { classicFitments } from "@/lib/classic-fitment/schema";
-import { eq, inArray } from "drizzle-orm";
+import { eq, or } from "drizzle-orm";
 
 export const runtime = "nodejs";
 
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       .from(classicFitments)
       .where(eq(classicFitments.isActive, true));
 
-    // Update
+    // Update all platforms
     await db
       .update(classicFitments)
       .set({
@@ -46,7 +46,14 @@ export async function POST(req: Request) {
         updatedAt: new Date(),
       })
       .where(
-        inArray(classicFitments.platformCode, PLATFORMS)
+        or(
+          eq(classicFitments.platformCode, "ford-mustang-1gen"),
+          eq(classicFitments.platformCode, "gm-a-body-2"),
+          eq(classicFitments.platformCode, "mopar-e-body"),
+          eq(classicFitments.platformCode, "mopar-b-body"),
+          eq(classicFitments.platformCode, "gm-f-body-2"),
+          eq(classicFitments.platformCode, "gm-f-body-1")
+        )
       );
 
     // Get after state
