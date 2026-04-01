@@ -322,11 +322,11 @@ export async function GET(req: Request) {
             confidence: "high",
             canShowWheels: true,
             canFilterByBoltPattern: true,
-            canFilterByHubBore: !!classicResult.specs.centerBoreMm,
+            canFilterByHubBore: !!classicResult.specs.centerBore,
             reasons: [`Classic fitment: ${classicResult.platform.name}`, `Bolt pattern: ${classicResult.specs.boltPattern} (verified)`],
             parsed: {
               boltPattern: { raw: classicResult.specs.boltPattern, normalized: classicResult.specs.boltPattern, studs: parseInt(classicResult.specs.boltPattern.split('x')[0]) || 5, pcdMm: parseFloat(classicResult.specs.boltPattern.split('x')[1]) || 114.3 },
-              centerBoreMm: classicResult.specs.centerBoreMm || null,
+              centerBoreMm: classicResult.specs.centerBore || null,
               hasWheelSizes: true,
               hasTireSizes: !!classicResult.stockReference.tireSize,
             },
