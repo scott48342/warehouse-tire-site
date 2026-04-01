@@ -581,10 +581,9 @@ function RecommendationPanel({
             }
           </p>
         </div>
-      </div>
 
         {/* Category Link */}
-        <div className="mt-4">
+        <div className="rounded-xl border-2 border-amber-200 bg-amber-50/50 p-4">
           <Link
             href={tireCategoryUrl}
             onClick={() => {
@@ -596,9 +595,9 @@ function RecommendationPanel({
                 model: vehicle.model,
               });
             }}
-            className="flex items-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-900 hover:border-amber-300 hover:bg-amber-50 transition-colors"
+            className="flex items-center gap-2 text-sm font-semibold text-neutral-900 hover:text-amber-700 transition-colors"
           >
-            <span>🏔️</span>
+            <span className="text-lg">🏔️</span>
             <div>
               <div>Browse All-Terrain Tires</div>
               <div className="text-xs font-normal text-neutral-500">Popular for lifted builds</div>
@@ -606,9 +605,9 @@ function RecommendationPanel({
           </Link>
         </div>
 
-        <div className="mt-3 text-xs text-neutral-500">
+        <p className="mt-3 text-xs text-neutral-500">
           💡 These are starting points based on typical setups. Larger wheels may require specific offsets and modifications.
-        </div>
+        </p>
       </div>
 
       {/* Notes */}
