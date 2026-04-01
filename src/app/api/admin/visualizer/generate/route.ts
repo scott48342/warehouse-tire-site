@@ -11,7 +11,7 @@ import { buildSlug } from "@/lib/visualizer/prompts";
 import type { VehicleCategory } from "@/lib/visualizer/prompts";
 import { eq, sql } from "drizzle-orm";
 
-// Ensure table exists
+// Ensure table exists with all columns
 async function ensureTable() {
   try {
     await visualizerDb.execute(sql`
@@ -38,8 +38,32 @@ async function ensureTable() {
         approved_at TIMESTAMP
       )
     `);
+    
+    // Add new columns if they don't exist (for existing tables)
+    const alterStatements = [
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS year INTEGER`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS make VARCHAR(100)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS model VARCHAR(100)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS category VARCHAR(50)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS source VARCHAR(50) DEFAULT 'manual'`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS generation_prompt TEXT`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS version INTEGER DEFAULT 1`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'draft'`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT false`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS review_notes TEXT`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS reviewed_by VARCHAR(100)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS approved_at TIMESTAMP`,
+    ];
+    
+    for (const stmt of alterStatements) {
+      try {
+        await visualizerDb.execute(sql.raw(stmt));
+      } catch (e) {
+        // Column might already exist
+      }
+    }
   } catch (e) {
-    // Table exists
+    console.error("Table setup error:", e);
   }
 }
 
