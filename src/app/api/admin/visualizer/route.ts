@@ -1,40 +1,78 @@
 /**
  * Visualizer Config API
  * 
- * GET - List all configs or get single config by slug
+ * GET - List all configs (optionally filter by status)
  * POST - Create/update config (upsert by slug)
  * DELETE - Delete config by slug
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { visualizerDb, schema } from "@/lib/visualizer/db";
-import { eq, sql } from "drizzle-orm";
+import { eq, sql, and } from "drizzle-orm";
 
-// Ensure table exists (auto-migrate)
+// Ensure table exists with all columns (auto-migrate)
 async function ensureTable() {
   try {
     await visualizerDb.execute(sql`
       CREATE TABLE IF NOT EXISTS visualizer_configs (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
         slug VARCHAR(255) NOT NULL UNIQUE,
+        year INTEGER,
+        make VARCHAR(100),
+        model VARCHAR(100),
+        category VARCHAR(50),
         vehicle VARCHAR(255) NOT NULL,
         image VARCHAR(500) NOT NULL,
         front_wheel JSONB NOT NULL,
         rear_wheel JSONB NOT NULL,
+        source VARCHAR(50) DEFAULT 'manual',
+        generation_prompt TEXT,
+        version INTEGER DEFAULT 1,
+        status VARCHAR(20) DEFAULT 'draft',
+        is_active BOOLEAN DEFAULT false,
+        review_notes TEXT,
+        reviewed_by VARCHAR(100),
         created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-        updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+        updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+        approved_at TIMESTAMP
       )
     `);
+    
+    // Add new columns if they don't exist (for existing tables)
+    const alterStatements = [
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS year INTEGER`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS make VARCHAR(100)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS model VARCHAR(100)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS category VARCHAR(50)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS source VARCHAR(50) DEFAULT 'manual'`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS generation_prompt TEXT`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS version INTEGER DEFAULT 1`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'draft'`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT false`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS review_notes TEXT`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS reviewed_by VARCHAR(100)`,
+      `ALTER TABLE visualizer_configs ADD COLUMN IF NOT EXISTS approved_at TIMESTAMP`,
+    ];
+    
+    for (const stmt of alterStatements) {
+      try {
+        await visualizerDb.execute(sql.raw(stmt));
+      } catch (e) {
+        // Column might already exist
+      }
+    }
   } catch (e) {
-    // Table might already exist, that's fine
     console.log("Table check:", e);
   }
 }
 
 export async function GET(request: NextRequest) {
   await ensureTable();
+  
   try {
+    const status = request.nextUrl.searchParams.get("status");
     const slug = request.nextUrl.searchParams.get("slug");
+    const activeOnly = request.nextUrl.searchParams.get("active") === "true";
 
     if (slug) {
       // Get single config
@@ -51,11 +89,18 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(config[0]);
     }
 
-    // List all configs
-    const configs = await visualizerDb
-      .select()
-      .from(schema.visualizerConfigs)
-      .orderBy(schema.visualizerConfigs.vehicle);
+    // Build query conditions
+    let query = visualizerDb.select().from(schema.visualizerConfigs);
+    
+    if (status) {
+      query = query.where(eq(schema.visualizerConfigs.status, status)) as typeof query;
+    }
+    
+    if (activeOnly) {
+      query = query.where(eq(schema.visualizerConfigs.isActive, true)) as typeof query;
+    }
+
+    const configs = await query.orderBy(schema.visualizerConfigs.createdAt);
 
     return NextResponse.json(configs);
   } catch (error) {
@@ -69,9 +114,24 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   await ensureTable();
+  
   try {
     const body = await request.json();
-    const { slug, vehicle, image, frontWheel, rearWheel } = body;
+    const { 
+      slug, 
+      vehicle, 
+      image, 
+      frontWheel, 
+      rearWheel,
+      year,
+      make,
+      model,
+      category,
+      source,
+      generationPrompt,
+      status,
+      reviewNotes,
+    } = body;
 
     if (!slug || !vehicle || !image || !frontWheel || !rearWheel) {
       return NextResponse.json(
@@ -80,7 +140,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Upsert: try to update, insert if not exists
+    // Check if exists
     const existing = await visualizerDb
       .select()
       .from(schema.visualizerConfigs)
@@ -96,6 +156,11 @@ export async function POST(request: NextRequest) {
           image,
           frontWheel,
           rearWheel,
+          year: year ?? existing[0].year,
+          make: make ?? existing[0].make,
+          model: model ?? existing[0].model,
+          category: category ?? existing[0].category,
+          reviewNotes: reviewNotes ?? existing[0].reviewNotes,
           updatedAt: new Date(),
         })
         .where(eq(schema.visualizerConfigs.slug, slug))
@@ -112,6 +177,13 @@ export async function POST(request: NextRequest) {
           image,
           frontWheel,
           rearWheel,
+          year,
+          make,
+          model,
+          category,
+          source: source || "manual",
+          generationPrompt,
+          status: status || "draft",
         })
         .returning();
 
@@ -127,6 +199,8 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+  await ensureTable();
+  
   try {
     const slug = request.nextUrl.searchParams.get("slug");
 
