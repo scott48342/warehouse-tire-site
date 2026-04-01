@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 export interface WheelPosition {
   top: number;    // % from top
@@ -18,10 +17,10 @@ export interface VehicleVisualizerConfig {
 }
 
 interface WheelVisualizerProps {
-  /** Vehicle config (or slug to load from /visualizer/config/) */
+  /** Vehicle config (or slug to load from API) */
   config?: VehicleVisualizerConfig;
   configSlug?: string;
-  /** Wheel image URL */
+  /** Wheel image URL - pass product.imageUrl here */
   wheelImage?: string;
   /** Container width */
   width?: number;
@@ -29,9 +28,26 @@ interface WheelVisualizerProps {
   showGuides?: boolean;
   /** Callback when wheel positions are adjusted (for dev mode) */
   onConfigChange?: (config: VehicleVisualizerConfig) => void;
+  /** Optional className for container */
+  className?: string;
 }
 
 const DEFAULT_WHEEL = "/visualizer/wheels/wheel-basic.png";
+
+// Shared wheel styling for realistic integration
+const wheelStyle = (position: WheelPosition, isRear: boolean = false) => ({
+  position: "absolute" as const,
+  width: position.size,
+  height: position.size,
+  top: `${position.top}%`,
+  left: `${position.left}%`,
+  transform: "translate(-50%, -50%)",
+  objectFit: "contain" as const,
+  // Depth effects - makes wheels look integrated, not "placed on top"
+  filter: "drop-shadow(0px 4px 6px rgba(0,0,0,0.4))",
+  opacity: isRear ? 0.92 : 0.95, // Rear slightly more faded for depth
+  transition: "all 0.3s ease-out", // Smooth wheel switching
+});
 
 export function WheelVisualizer({
   config: propConfig,
@@ -40,27 +56,40 @@ export function WheelVisualizer({
   width = 700,
   showGuides = false,
   onConfigChange,
+  className = "",
 }: WheelVisualizerProps) {
   const [config, setConfig] = useState<VehicleVisualizerConfig | null>(propConfig || null);
   const [loading, setLoading] = useState(!propConfig && !!configSlug);
   const [error, setError] = useState<string | null>(null);
+  const [imgError, setImgError] = useState(false);
 
-  // Load config from slug if not provided directly
+  // Sync config when prop changes
   useEffect(() => {
     if (propConfig) {
       setConfig(propConfig);
-      return;
     }
+  }, [propConfig]);
+
+  // Load config from slug if not provided directly
+  useEffect(() => {
+    if (propConfig) return;
     if (!configSlug) return;
 
     setLoading(true);
-    fetch(`/visualizer/config/${configSlug}.json`)
+    fetch(`/api/admin/visualizer?slug=${configSlug}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Config not found: ${configSlug}`);
         return res.json();
       })
       .then((data) => {
-        setConfig(data);
+        // Transform DB format to component format
+        setConfig({
+          vehicle: data.vehicle,
+          slug: data.slug,
+          image: data.image,
+          frontWheel: data.front_wheel || data.frontWheel,
+          rearWheel: data.rear_wheel || data.rearWheel,
+        });
         setLoading(false);
       })
       .catch((err) => {
@@ -69,9 +98,17 @@ export function WheelVisualizer({
       });
   }, [configSlug, propConfig]);
 
+  // Reset image error when wheel image changes
+  useEffect(() => {
+    setImgError(false);
+  }, [wheelImage]);
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center bg-neutral-100 rounded-xl" style={{ width, height: width * 0.5 }}>
+      <div 
+        className={`flex items-center justify-center bg-neutral-100 rounded-xl ${className}`} 
+        style={{ width, height: width * 0.5 }}
+      >
         <div className="text-neutral-500">Loading visualizer...</div>
       </div>
     );
@@ -79,14 +116,19 @@ export function WheelVisualizer({
 
   if (error || !config) {
     return (
-      <div className="flex items-center justify-center bg-neutral-100 rounded-xl" style={{ width, height: width * 0.5 }}>
+      <div 
+        className={`flex items-center justify-center bg-neutral-100 rounded-xl ${className}`} 
+        style={{ width, height: width * 0.5 }}
+      >
         <div className="text-red-500">{error || "No config provided"}</div>
       </div>
     );
   }
 
+  const currentWheel = imgError ? DEFAULT_WHEEL : wheelImage;
+
   return (
-    <div className="relative overflow-hidden rounded-xl bg-neutral-100" style={{ width }}>
+    <div className={`relative overflow-hidden rounded-xl bg-neutral-100 ${className}`} style={{ width }}>
       {/* Vehicle Image */}
       <img
         src={config.image}
@@ -95,34 +137,20 @@ export function WheelVisualizer({
         style={{ display: "block" }}
       />
 
-      {/* Rear Wheel */}
+      {/* Rear Wheel (rendered first, sits behind) */}
       <img
-        src={wheelImage}
+        src={currentWheel}
         alt="Rear wheel"
-        style={{
-          position: "absolute",
-          width: config.rearWheel.size,
-          height: config.rearWheel.size,
-          top: `${config.rearWheel.top}%`,
-          left: `${config.rearWheel.left}%`,
-          transform: "translate(-50%, -50%)",
-          objectFit: "contain",
-        }}
+        style={wheelStyle(config.rearWheel, true)}
+        onError={() => setImgError(true)}
       />
 
       {/* Front Wheel */}
       <img
-        src={wheelImage}
+        src={currentWheel}
         alt="Front wheel"
-        style={{
-          position: "absolute",
-          width: config.frontWheel.size,
-          height: config.frontWheel.size,
-          top: `${config.frontWheel.top}%`,
-          left: `${config.frontWheel.left}%`,
-          transform: "translate(-50%, -50%)",
-          objectFit: "contain",
-        }}
+        style={wheelStyle(config.frontWheel, false)}
+        onError={() => setImgError(true)}
       />
 
       {/* Alignment Guides (dev mode) */}
@@ -159,6 +187,77 @@ export function WheelVisualizer({
 }
 
 /**
+ * Interactive Visualizer with wheel picker
+ * Use this on product pages to let users see wheels on their vehicle
+ */
+export function WheelVisualizerWithPicker({
+  config,
+  configSlug,
+  wheels,
+  initialWheelIndex = 0,
+  width = 700,
+  onWheelSelect,
+}: {
+  config?: VehicleVisualizerConfig;
+  configSlug?: string;
+  wheels: Array<{ id: string; name: string; imageUrl: string; price?: number }>;
+  initialWheelIndex?: number;
+  width?: number;
+  onWheelSelect?: (wheel: { id: string; name: string; imageUrl: string }) => void;
+}) {
+  const [selectedIndex, setSelectedIndex] = useState(initialWheelIndex);
+  const selectedWheel = wheels[selectedIndex];
+
+  const handleSelect = (index: number) => {
+    setSelectedIndex(index);
+    if (onWheelSelect && wheels[index]) {
+      onWheelSelect(wheels[index]);
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Visualizer */}
+      <WheelVisualizer
+        config={config}
+        configSlug={configSlug}
+        wheelImage={selectedWheel?.imageUrl}
+        width={width}
+      />
+
+      {/* Wheel Picker */}
+      <div className="flex gap-2 overflow-x-auto pb-2">
+        {wheels.map((wheel, index) => (
+          <button
+            key={wheel.id}
+            onClick={() => handleSelect(index)}
+            className={`flex-shrink-0 p-2 rounded-lg border-2 transition-all ${
+              index === selectedIndex
+                ? "border-red-600 bg-red-50"
+                : "border-neutral-200 hover:border-neutral-400"
+            }`}
+          >
+            <img
+              src={wheel.imageUrl}
+              alt={wheel.name}
+              className="w-16 h-16 object-contain"
+            />
+            <div className="text-xs text-center mt-1 truncate max-w-[70px]">
+              {wheel.name}
+            </div>
+            {wheel.price && (
+              <div className="text-xs text-center font-semibold text-red-600">
+                ${wheel.price}
+              </div>
+            )}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/**
  * Dev tool for adjusting wheel positions
  */
 export function WheelVisualizerEditor({
@@ -171,6 +270,7 @@ export function WheelVisualizerEditor({
   onSave?: (config: VehicleVisualizerConfig) => Promise<void>;
 }) {
   const [config, setConfig] = useState(initialConfig);
+  const [currentWheel, setCurrentWheel] = useState(wheelImage || DEFAULT_WHEEL);
   const [saving, setSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -216,7 +316,24 @@ export function WheelVisualizerEditor({
 
   return (
     <div className="space-y-4">
-      <WheelVisualizer config={config} wheelImage={wheelImage} showGuides />
+      <WheelVisualizer config={config} wheelImage={currentWheel} showGuides />
+
+      {/* Wheel URL Input */}
+      <div className="p-4 bg-white border border-neutral-200 rounded-xl">
+        <label className="block text-sm font-semibold text-neutral-700 mb-1">
+          Test Wheel Image URL
+        </label>
+        <input
+          type="text"
+          value={currentWheel}
+          onChange={(e) => setCurrentWheel(e.target.value)}
+          placeholder="https://example.com/wheel.png or /visualizer/wheels/..."
+          className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm"
+        />
+        <p className="mt-1 text-xs text-neutral-500">
+          Paste any wheel image URL to preview (WheelPros, local, etc.)
+        </p>
+      </div>
 
       {/* Config Metadata */}
       <div className="grid grid-cols-2 gap-4 p-4 bg-white border border-neutral-200 rounded-xl">
