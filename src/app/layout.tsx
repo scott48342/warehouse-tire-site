@@ -7,6 +7,7 @@ import { CartProvider } from "@/lib/cart/CartContext";
 import { CartSlideout } from "@/components/CartSlideout";
 import { CartTracker } from "@/components/CartTracker";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { Analytics } from "@/components/Analytics";
 import { Suspense } from "react";
 
 const inter = Inter({
@@ -53,6 +54,9 @@ export default function RootLayout({
       <body className={`${inter.variable} ${oswald.variable} antialiased`}>
         <CartProvider>
           <CartTracker />
+          <Suspense fallback={null}>
+            <Analytics />
+          </Suspense>
           <Suspense fallback={<div className="h-16" />}>
             <Header />
           </Suspense>
