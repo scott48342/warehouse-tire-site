@@ -1,64 +1,65 @@
 /**
- * Vehicle Years API (DB-Only)
+ * Vehicle Years API (Coverage-Validated)
  * 
  * GET /api/vehicles/years?make=Buick&model=Encore
  * 
- * Returns VALID years for a make/model from the database catalog.
- * No external API calls.
+ * Returns ONLY years that have actual fitment data in the database.
+ * No fallback to static ranges - if no coverage exists, returns empty.
  */
 
 import { NextResponse } from "next/server";
-import * as catalogStore from "@/lib/catalog-store";
-import { normalizeMake } from "@/lib/fitment-db/keys";
+import { getYearsWithCoverage } from "@/lib/fitment-db/coverage";
 
 export const runtime = "nodejs";
 
 /**
  * GET /api/vehicles/years?make=Buick&model=Encore
  * 
- * Returns VALID years for a make/model from the catalog.
- * Falls back to static range if catalog data unavailable.
+ * Returns years with actual fitment coverage. No static fallback.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
 
-  // If no make/model provided, return reasonable default range
+  // Require make and model
   if (!make || !model) {
-    const currentYear = new Date().getFullYear();
-    const results: string[] = [];
-    for (let y = currentYear + 1; y >= 2000; y--) {
-      results.push(String(y));
-    }
-    return NextResponse.json({ results, source: "static" });
-  }
-
-  const makeSlug = normalizeMake(make);
-  
-  // Try catalog first (DB)
-  const catalogModel = await catalogStore.findModel(makeSlug, model);
-  if (catalogModel && catalogModel.years.length > 0) {
-    console.log(`[years] CATALOG HIT: ${make} ${model} → ${catalogModel.years.length} years`);
     return NextResponse.json({ 
-      results: catalogModel.years.map(String),
-      source: "catalog",
-    }, {
-      headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+      results: [],
+      source: "error",
+      error: "make and model parameters are required",
     });
   }
 
-  // Final fallback: static range
-  console.warn(`[years] FALLBACK to static range for ${make} ${model} - data not in catalog`);
-  const currentYear = new Date().getFullYear();
-  const results: string[] = [];
-  for (let y = currentYear + 1; y >= 2000; y--) {
-    results.push(String(y));
+  try {
+    // Get years with actual fitment coverage
+    const coverage = await getYearsWithCoverage(make, model);
+    
+    if (coverage.years.length > 0) {
+      console.log(`[years] COVERAGE: ${make} ${model} → ${coverage.years.length} years with fitment data`);
+      return NextResponse.json({ 
+        results: coverage.years.map(String),
+        source: "fitment_db",
+        count: coverage.years.length,
+      }, {
+        headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+      });
+    }
+    
+    // No coverage - return empty
+    console.warn(`[years] NO COVERAGE: ${make} ${model} has no fitment data`);
+    return NextResponse.json({ 
+      results: [],
+      source: "no_coverage",
+      warning: `No fitment data available for ${make} ${model}`,
+    });
+    
+  } catch (err: any) {
+    console.error(`[years] DB error for ${make} ${model}:`, err?.message);
+    return NextResponse.json({ 
+      results: [],
+      source: "error",
+      error: "Failed to check fitment coverage",
+    }, { status: 500 });
   }
-  
-  return NextResponse.json({ 
-    results,
-    source: "fallback",
-    warning: "No catalog data for this make/model - showing all years",
-  });
 }

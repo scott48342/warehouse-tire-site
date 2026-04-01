@@ -103,7 +103,8 @@ const modelAliases: Record<string, string> = {
   "335i": "3-series",
   "340i": "3-series",
   "m340i": "3-series",
-  "m3": "3-series",
+  // "m3": "3-series", // REMOVED: M3 is a distinct model in our DB
+  "m3": "m3",
   // 4-series
   "4-series": "4-series",
   "4 series": "4-series",
@@ -115,7 +116,8 @@ const modelAliases: Record<string, string> = {
   "440i": "4-series",
   "440i-xdrive": "4-series",
   "m440i": "4-series",
-  "m4": "4-series",
+  // "m4": "4-series", // REMOVED: M4 is a distinct model in our DB
+  "m4": "m4",
   // 5-series
   "5-series": "5-series",
   "5 series": "5-series",
@@ -127,13 +129,15 @@ const modelAliases: Record<string, string> = {
   "545i": "5-series",
   "550i": "5-series",
   "m550i": "5-series",
-  "m5": "5-series",
+  // "m5": "5-series", // REMOVED: M5 is a distinct model in our DB
+  "m5": "m5",
   // 6-series
   "6-series": "6-series",
   "6 series": "6-series",
   "640i": "6-series",
   "650i": "6-series",
-  "m6": "6-series",
+  // "m6": "6-series", // REMOVED: M6 is a distinct model in our DB
+  "m6": "m6",
   // 7-series
   "7-series": "7-series",
   "7 series": "7-series",
@@ -147,7 +151,8 @@ const modelAliases: Record<string, string> = {
   "840i": "8-series",
   "850i": "8-series",
   "m850i": "8-series",
-  "m8": "8-series",
+  // "m8": "8-series", // REMOVED: M8 is a distinct model in our DB
+  "m8": "m8",
   // X-series (already match, but include for completeness)
   "x1": "x1",
   "x2": "x2",
@@ -265,30 +270,32 @@ const modelAliases: Record<string, string> = {
   
   // ===== Audi =====
   "a3": "a3",
-  "s3": "a3",
-  "rs3": "a3",
+  // S/RS are distinct models - don't collapse to A-series
+  "s3": "s3",
+  "rs3": "rs3",
   "a4": "a4",
-  "s4": "a4",
-  "rs4": "a4",
+  "s4": "s4",
+  "rs4": "rs4",
   "a5": "a5",
-  "s5": "a5",
-  "rs5": "a5",
+  "s5": "s5",
+  "rs5": "rs5",
   "a6": "a6",
-  "s6": "a6",
-  "rs6": "a6",
+  "s6": "s6",
+  "rs6": "rs6",
   "a7": "a7",
-  "s7": "a7",
-  "rs7": "a7",
+  "s7": "s7",
+  "rs7": "rs7",
   "a8": "a8",
-  "s8": "a8",
+  "s8": "s8",
   "q3": "q3",
   "q5": "q5",
-  "sq5": "q5",
+  "sq5": "sq5",  // Distinct model
   "q7": "q7",
-  "sq7": "q7",
+  "sq7": "sq7",  // Distinct model
   "q8": "q8",
-  "sq8": "q8",
-  "rsq8": "q8",
+  // SQ8/RSQ8 are distinct models
+  "sq8": "sq8",
+  "rsq8": "rsq8",
   
   // ===== Hyundai EVs =====
   "ioniq-5": "ioniq-5",

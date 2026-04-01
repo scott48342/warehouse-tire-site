@@ -18,7 +18,7 @@
 import { db } from "./db";
 import { vehicleFitments, fitmentSourceRecords, modificationAliases } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and } from "drizzle-orm";
+import { eq, and, or, inArray } from "drizzle-orm";
 import { normalizeMake, normalizeModel, normalizeModelForApi, slugify, makePayloadChecksum } from "./keys";
 import { applyOverridesWithMeta } from "./applyOverrides";
 import { normalizeTrimLabel } from "@/lib/trimNormalize";
@@ -26,6 +26,8 @@ import crypto from "crypto";
 import submodelSupplements from "@/data/submodel-supplements.json";
 import { getFitmentFromRules, matchFitmentRule } from "./vehicleFitmentRules";
 import { getCachedFitment, setCachedFitment, type CachedFitmentProfile } from "./fitmentCache";
+import { getModelVariants, wasAliasUsed } from "./modelAliases";
+import { fitmentLog } from "./logger";
 
 // ============================================================================
 // Types
@@ -381,29 +383,55 @@ async function getProfileByModificationIdDirect(
   modificationId: string
 ): Promise<{ fitment: VehicleFitment | null; lookupMs: number }> {
   const normalizedMake = normalizeMake(make);
-  const normalizedModel = normalizeModel(model);
+  const modelVariants = getModelVariants(model);  // Try model aliases
   // NOTE: Don't use slugify() here - it converts underscores to hyphens
   // Manual imports use modificationIds like "manual_XXXX" with underscores
   const normalizedModId = modificationId.toLowerCase().trim();
   
   const t0 = Date.now();
   
-  // Use standard select pattern for Vercel Postgres compatibility
-  const [fitment] = await db
-    .select()
-    .from(vehicleFitments)
-    .where(
-      and(
-        eq(vehicleFitments.year, year),
-        eq(vehicleFitments.make, normalizedMake),
-        eq(vehicleFitments.model, normalizedModel),
-        eq(vehicleFitments.modificationId, normalizedModId)
+  // Try each model variant
+  for (const modelName of modelVariants) {
+    // First try: exact match on modificationId
+    const [fitment] = await db
+      .select()
+      .from(vehicleFitments)
+      .where(
+        and(
+          eq(vehicleFitments.year, year),
+          eq(vehicleFitments.make, normalizedMake),
+          eq(vehicleFitments.model, modelName),
+          eq(vehicleFitments.modificationId, normalizedModId)
+        )
       )
-    )
-    .limit(1);
+      .limit(1);
+    
+    if (fitment) {
+      return { fitment, lookupMs: Date.now() - t0 };
+    }
+    
+    // Second try: match by displayTrim (for URL compatibility)
+    // Handles URLs like /ford/f-250/XLT where XLT is the trim name
+    const [trimMatch] = await db
+      .select()
+      .from(vehicleFitments)
+      .where(
+        and(
+          eq(vehicleFitments.year, year),
+          eq(vehicleFitments.make, normalizedMake),
+          eq(vehicleFitments.model, modelName),
+          eq(vehicleFitments.displayTrim, modificationId)  // Original case
+        )
+      )
+      .limit(1);
+    
+    if (trimMatch) {
+      return { fitment: trimMatch, lookupMs: Date.now() - t0 };
+    }
+  }
   
   return {
-    fitment: fitment || null,
+    fitment: null,
     lookupMs: Date.now() - t0,
   };
 }
@@ -427,12 +455,13 @@ async function getProfileByYMMFallback(
   model: string
 ): Promise<{ fitment: VehicleFitment | null; lookupMs: number; usedModificationId: string | null; yearFallbackUsed?: number }> {
   const normalizedMake = normalizeMake(make);
-  const normalizedModel = normalizeModel(model);
+  const modelVariants = getModelVariants(model);  // Try model aliases
   
   const t0 = Date.now();
   
   // Find any fitment for this YMM - prioritize those with good data
   // Use standard select pattern for Vercel Postgres compatibility
+  // Try all model variants (e.g., f-250 and f-250-super-duty)
   const fitments = await db
     .select()
     .from(vehicleFitments)
@@ -440,7 +469,7 @@ async function getProfileByYMMFallback(
       and(
         eq(vehicleFitments.year, year),
         eq(vehicleFitments.make, normalizedMake),
-        eq(vehicleFitments.model, normalizedModel)
+        inArray(vehicleFitments.model, modelVariants)
       )
     )
     .limit(10);
@@ -461,7 +490,7 @@ async function getProfileByYMMFallback(
           and(
             eq(vehicleFitments.year, adjYear),
             eq(vehicleFitments.make, normalizedMake),
-            eq(vehicleFitments.model, normalizedModel)
+            inArray(vehicleFitments.model, modelVariants)  // Use model aliases
           )
         )
         .limit(5);
@@ -478,6 +507,14 @@ async function getProfileByYMMFallback(
         }
         
         console.warn(`[profileService] YEAR FALLBACK: ${year} ${make} ${model} → using ${adjYear} data (${best.modificationId})`);
+        
+        // Log fallback behavior
+        fitmentLog.fallback("year_inherit", {
+          from: `${year}`,
+          to: `${adjYear}`,
+          vehicle: `${year} ${make} ${model}`,
+          details: { usedModificationId: best.modificationId },
+        });
         
         return {
           fitment: best,
@@ -671,6 +708,13 @@ export async function getFitmentProfile(
         if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
           console.log(`[profileService] RESOLVED (canonicalAlias): ${year} ${make} ${model} mod=${modificationId} → ${canonicalModificationId} (${dbLookupMs + aliasLookupMs}ms)`);
           
+          // Log alias usage
+          fitmentLog.fallback("alias_used", {
+            from: modificationId,
+            to: aliasResult.canonicalModificationId,
+            vehicle: `${year} ${make} ${model}`,
+          });
+          
           const profile = dbRecordToProfile(overrideResult.fitment, "db");
           
           // Cache the result (fire and forget)
@@ -719,6 +763,13 @@ export async function getFitmentProfile(
         
         if (quality === "valid" || quality === "partial" || overrideResult.forceQuality) {
           console.log(`[profileService] RESOLVED (ymmFallback): ${year} ${make} ${model} mod=${modificationId} → used ${ymmResult.usedModificationId} (${ymmFallbackMs}ms)`);
+          
+          // Log YMM fallback
+          fitmentLog.fallback("canonical_fallback", {
+            from: modificationId,
+            to: ymmResult.usedModificationId || "unknown",
+            vehicle: `${year} ${make} ${model}`,
+          });
           
           // Store alias so future lookups are faster
           if (ymmResult.usedModificationId && ymmResult.usedModificationId !== requestedModId) {
@@ -771,6 +822,13 @@ export async function getFitmentProfile(
   // ─────────────────────────────────────────────────────────────────────────
   
   console.log(`[profileService] NOT FOUND (DB-first, no API fallback): ${year} ${make} ${model} mod=${modificationId}`);
+  
+  // Log resolution failure
+  fitmentLog.notFound(`${year} ${make} ${model} mod=${modificationId}`, [
+    "directCanonical",
+    "canonicalAlias",
+    "ymmFallback",
+  ]);
   return {
     profile: null,
     resolutionPath: "not_found",
@@ -1228,6 +1286,22 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     }
   }
   
+  // Log missing optional fields (low priority)
+  const vehicle = `${record.year} ${record.make} ${record.model}`;
+  if (offsetMinMm === null || offsetMaxMm === null) {
+    fitmentLog.missing("offset_data", { vehicle, severity: "low" });
+  }
+  
+  const wheelSizes = parseWheelSizes(record.oemWheelSizes);
+  if (wheelSizes.length === 0) {
+    fitmentLog.missing("wheel_sizes", { vehicle, severity: "medium" });
+  }
+  
+  const tireSizes = (record.oemTireSizes as string[]) || [];
+  if (tireSizes.length === 0) {
+    fitmentLog.missing("tire_sizes", { vehicle, severity: "low" });
+  }
+  
   return {
     modificationId: record.modificationId,
     year: record.year,
@@ -1241,8 +1315,8 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     seatType,
     offsetMinMm,
     offsetMaxMm,
-    oemWheelSizes: parseWheelSizes(record.oemWheelSizes),
-    oemTireSizes: (record.oemTireSizes as string[]) || [],
+    oemWheelSizes: wheelSizes,
+    oemTireSizes: tireSizes,
     source,
     apiCalled: source === "api",
     overridesApplied: rulesApplied,

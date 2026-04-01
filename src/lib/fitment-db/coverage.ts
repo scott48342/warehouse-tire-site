@@ -1,0 +1,190 @@
+/**
+ * Fitment Coverage Queries
+ * 
+ * Functions to check what vehicles actually have fitment data in the database.
+ * Used by selector APIs to prevent showing unsupported Y/M/M combinations.
+ */
+
+import { db } from "./db";
+import { vehicleFitments } from "./schema";
+import { sql, eq, and, or, inArray } from "drizzle-orm";
+import { normalizeMake, normalizeModel } from "./keys";
+import { getModelVariants } from "./modelAliases";
+
+// ============================================================================
+// Coverage Types
+// ============================================================================
+
+export interface YearCoverage {
+  years: number[];
+  source: "fitment_db";
+}
+
+export interface TrimCoverage {
+  trims: Array<{
+    modificationId: string;
+    displayTrim: string;
+  }>;
+  hasCoverage: boolean;
+  source: "fitment_db";
+}
+
+// ============================================================================
+// Get Years With Fitment Coverage
+// ============================================================================
+
+/**
+ * Get years that have actual fitment data for a make/model.
+ * Only returns years where at least one fitment record exists.
+ * Supports model aliases (e.g., f-350 -> f-350-super-duty)
+ */
+export async function getYearsWithCoverage(
+  make: string,
+  model: string
+): Promise<YearCoverage> {
+  const normalizedMake = normalizeMake(make);
+  const modelVariants = getModelVariants(model);
+  
+  const result = await db
+    .selectDistinct({ year: vehicleFitments.year })
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.make, normalizedMake),
+        inArray(vehicleFitments.model, modelVariants)
+      )
+    )
+    .orderBy(sql`${vehicleFitments.year} DESC`);
+  
+  return {
+    years: result.map(r => r.year),
+    source: "fitment_db",
+  };
+}
+
+// ============================================================================
+// Get Trims With Fitment Coverage
+// ============================================================================
+
+/**
+ * Get trims that have actual fitment data for a year/make/model.
+ * Returns empty array if no fitment data exists.
+ * Supports model aliases (e.g., f-350 -> f-350-super-duty)
+ */
+export async function getTrimsWithCoverage(
+  year: number,
+  make: string,
+  model: string
+): Promise<TrimCoverage> {
+  const normalizedMake = normalizeMake(make);
+  const modelVariants = getModelVariants(model);
+  
+  const result = await db
+    .selectDistinct({
+      modificationId: vehicleFitments.modificationId,
+      displayTrim: vehicleFitments.displayTrim,
+    })
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        inArray(vehicleFitments.model, modelVariants)
+      )
+    )
+    .orderBy(vehicleFitments.displayTrim);
+  
+  return {
+    trims: result,
+    hasCoverage: result.length > 0,
+    source: "fitment_db",
+  };
+}
+
+// ============================================================================
+// Check If Model Has Any Coverage
+// ============================================================================
+
+/**
+ * Quick check: does this make/model have ANY fitment data at all?
+ * Supports model aliases (e.g., f-350 -> f-350-super-duty)
+ */
+export async function hasAnyCoverage(
+  make: string,
+  model: string
+): Promise<boolean> {
+  const normalizedMake = normalizeMake(make);
+  const modelVariants = getModelVariants(model);
+  
+  const result = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.make, normalizedMake),
+        inArray(vehicleFitments.model, modelVariants)
+      )
+    )
+    .limit(1);
+  
+  return result[0]?.count > 0;
+}
+
+// ============================================================================
+// Get Models With Fitment Coverage
+// ============================================================================
+
+/**
+ * Get all models that have any fitment data for a given make.
+ * Optionally filtered by year.
+ */
+export async function getModelsWithCoverage(
+  make: string,
+  year?: number
+): Promise<string[]> {
+  const normalizedMake = normalizeMake(make);
+  
+  const whereConditions = [eq(vehicleFitments.make, normalizedMake)];
+  if (year) {
+    whereConditions.push(eq(vehicleFitments.year, year));
+  }
+  
+  const result = await db
+    .selectDistinct({ model: vehicleFitments.model })
+    .from(vehicleFitments)
+    .where(and(...whereConditions))
+    .orderBy(vehicleFitments.model);
+  
+  return result.map(r => r.model);
+}
+
+// ============================================================================
+// Check If Specific Year Has Coverage
+// ============================================================================
+
+/**
+ * Quick check: does this specific Y/M/M have fitment data?
+ * Supports model aliases (e.g., f-350 -> f-350-super-duty)
+ */
+export async function hasYearCoverage(
+  year: number,
+  make: string,
+  model: string
+): Promise<boolean> {
+  const normalizedMake = normalizeMake(make);
+  const modelVariants = getModelVariants(model);
+  
+  const result = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(vehicleFitments)
+    .where(
+      and(
+        eq(vehicleFitments.year, year),
+        eq(vehicleFitments.make, normalizedMake),
+        inArray(vehicleFitments.model, modelVariants)
+      )
+    )
+    .limit(1);
+  
+  return result[0]?.count > 0;
+}

@@ -36,9 +36,12 @@ export async function findApplicableOverrides(
   const normalizedModel = normalizeModel(fitment.model);
   
   // Query for all potentially matching overrides
-  const overrides = await db
-    .select()
-    .from(fitmentOverrides)
+  // Wrapped in try-catch to handle schema mismatches gracefully
+  let overrides: FitmentOverride[];
+  try {
+    overrides = await db
+      .select()
+      .from(fitmentOverrides)
     .where(
       and(
         eq(fitmentOverrides.active, true),
@@ -81,6 +84,11 @@ export async function findApplicableOverrides(
       )
     )
     .orderBy(desc(fitmentOverrides.createdAt));
+  } catch (err: any) {
+    // Handle schema mismatches gracefully - return empty array
+    console.warn(`[applyOverrides] Query failed, returning no overrides: ${err?.message?.slice(0, 100) || String(err)}`);
+    return [];
+  }
   
   // Sort by scope priority (most specific first)
   return overrides.sort((a, b) => {

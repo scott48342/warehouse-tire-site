@@ -1,63 +1,18 @@
+/**
+ * Vehicle Makes API (Coverage-Validated)
+ * 
+ * GET /api/vehicles/makes?year=2005
+ * 
+ * Returns ONLY makes that have actual fitment data in the database.
+ * Year parameter filters to makes that have fitment data for that specific year.
+ */
+
 import { NextResponse } from "next/server";
-import * as catalogStore from "@/lib/catalog-store";
+import { db } from "@/lib/fitment-db/db";
+import { vehicleFitments } from "@/lib/fitment-db/schema";
+import { sql, eq } from "drizzle-orm";
 
 export const runtime = "nodejs";
-
-// Static fallback list - used when no year specified or no catalog data
-// Includes both current and defunct brands
-const STATIC_MAKES = [
-  // Current manufacturers
-  "Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Buick",
-  "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari", "Fiat", "Ford",
-  "Genesis", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia",
-  "Lamborghini", "Land Rover", "Lexus", "Lincoln", "Lotus", "Maserati",
-  "Mazda", "McLaren", "Mercedes-Benz", "Mini", "Mitsubishi", "Nissan",
-  "Polestar", "Porsche", "Ram", "Rivian", "Rolls-Royce", "Subaru", "Tesla",
-  "Toyota", "Volkswagen", "Volvo",
-  // Defunct/classic brands
-  "AMC", "Daewoo", "Datsun", "DeLorean", "Eagle", "Geo", "Hummer", "Isuzu",
-  "Mercury", "Oldsmobile", "Plymouth", "Pontiac", "Saab", "Saturn", "Scion", "Suzuki",
-].sort();
-
-// Year ranges for makes (used for filtering when no catalog data)
-// Format: [startYear, endYear] - null means no limit
-const MAKE_YEAR_RANGES: Record<string, [number | null, number | null]> = {
-  // Defunct brands with known end dates
-  "AMC": [1954, 1988],
-  "Daewoo": [1982, 2001],
-  "DeLorean": [1981, 1983],
-  "Eagle": [1988, 1998],
-  "Geo": [1989, 1997],
-  "Hummer": [1992, 2010],
-  "Mercury": [1938, 2011],
-  "Oldsmobile": [1897, 2004],
-  "Plymouth": [1928, 2001],
-  "Pontiac": [1926, 2010],
-  "Saab": [1945, 2012],
-  "Saturn": [1990, 2010],
-  "Scion": [2003, 2016],
-  "Suzuki": [1985, 2012],
-  // Newer brands with known start dates
-  "Genesis": [2017, null],
-  "Polestar": [2017, null],
-  "Rivian": [2021, null],
-  "Tesla": [2008, null],
-};
-
-/**
- * Filter static makes by year using known production ranges
- */
-function filterStaticMakesByYear(year: number): string[] {
-  return STATIC_MAKES.filter(make => {
-    const range = MAKE_YEAR_RANGES[make];
-    if (!range) return true; // No range = always show
-    
-    const [start, end] = range;
-    if (start && year < start) return false;
-    if (end && year > end) return false;
-    return true;
-  });
-}
 
 /**
  * Normalize make slug to display name
@@ -71,6 +26,10 @@ function slugToDisplayName(slug: string): string {
     "alfa-romeo": "Alfa Romeo",
     "aston-martin": "Aston Martin",
     "rolls-royce": "Rolls-Royce",
+    "gmc": "GMC",
+    "bmw": "BMW",
+    "amg": "AMG",
+    "amc": "AMC",
   };
   
   if (specialCases[slug.toLowerCase()]) {
@@ -87,80 +46,65 @@ function slugToDisplayName(slug: string): string {
 /**
  * GET /api/vehicles/makes?year=2005
  * 
- * Returns available makes for vehicle selector.
- * When year is provided, only returns makes that have data for that year.
- * 
- * Data sources (merged in priority order):
- * 1. catalog_models table (makes with models for this year)
- * 2. vehicle_fitments table (locally imported fitment data)
- * 3. Static fallback (filtered by year ranges)
+ * Returns makes with actual fitment coverage. No static fallback.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const yearStr = url.searchParams.get("year");
   const year = yearStr ? parseInt(yearStr, 10) : null;
 
-  // If no year, return filtered static list
-  if (!year || isNaN(year)) {
-    return NextResponse.json(
-      { results: STATIC_MAKES, source: "static" },
-      { headers: { "Cache-Control": "public, max-age=86400, s-maxage=86400" } }
-    );
-  }
-
   try {
-    // Collect makes from all sources
-    const makeSet = new Set<string>();
-    const makeNames = new Map<string, string>(); // slug -> display name
-
-    // Source 1: Catalog (catalog_models where year in years[])
-    const catalogMakes = await catalogStore.getMakesByYear(year);
-    for (const make of catalogMakes) {
-      const slug = make.slug.toLowerCase();
-      makeSet.add(slug);
-      makeNames.set(slug, make.name);
-    }
-
-    // Source 2: Vehicle fitments (locally imported data)
-    const fitmentMakes = await catalogStore.getFitmentMakesByYear(year);
-    for (const slug of fitmentMakes) {
-      makeSet.add(slug.toLowerCase());
-      if (!makeNames.has(slug.toLowerCase())) {
-        makeNames.set(slug.toLowerCase(), slugToDisplayName(slug));
-      }
-    }
-
-    // If we have catalog/fitment data, use it
-    if (makeSet.size > 0) {
-      const makes = Array.from(makeSet)
-        .map(slug => makeNames.get(slug) || slugToDisplayName(slug))
-        .sort();
-      
-      console.log(`[makes] Year ${year}: ${makes.length} makes from catalog/fitment`);
-      
-      return NextResponse.json(
-        { results: makes, source: "catalog", count: makes.length },
-        { headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" } }
-      );
-    }
-
-    // Fallback: Static list filtered by year ranges
-    const filteredStatic = filterStaticMakesByYear(year);
-    console.log(`[makes] Year ${year}: ${filteredStatic.length} makes from static (filtered)`);
+    let makes: string[];
     
-    return NextResponse.json(
-      { results: filteredStatic, source: "static-filtered", count: filteredStatic.length },
-      { headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" } }
-    );
-
+    if (year && !isNaN(year)) {
+      // Get makes with fitment data for this specific year
+      const results = await db
+        .selectDistinct({ make: vehicleFitments.make })
+        .from(vehicleFitments)
+        .where(eq(vehicleFitments.year, year))
+        .orderBy(vehicleFitments.make);
+      
+      makes = results.map(r => slugToDisplayName(r.make));
+      console.log(`[makes] COVERAGE (year ${year}): ${makes.length} makes with fitment data`);
+    } else {
+      // Get all makes with any fitment data
+      const results = await db
+        .selectDistinct({ make: vehicleFitments.make })
+        .from(vehicleFitments)
+        .orderBy(vehicleFitments.make);
+      
+      makes = results.map(r => slugToDisplayName(r.make));
+      console.log(`[makes] COVERAGE (all): ${makes.length} makes with fitment data`);
+    }
+    
+    // Sort and dedupe
+    const uniqueMakes = [...new Set(makes)].sort();
+    
+    if (uniqueMakes.length === 0) {
+      return NextResponse.json({
+        results: [],
+        source: "no_coverage",
+        warning: year 
+          ? `No fitment data available for year ${year}`
+          : "No fitment data available",
+      });
+    }
+    
+    return NextResponse.json({
+      results: uniqueMakes,
+      source: "fitment_db",
+      count: uniqueMakes.length,
+      yearFiltered: !!year,
+    }, {
+      headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+    });
+    
   } catch (err: any) {
-    console.error(`[makes] Error for year ${year}:`, err?.message);
-    
-    // On error, return year-filtered static list
-    const filteredStatic = filterStaticMakesByYear(year);
-    return NextResponse.json(
-      { results: filteredStatic, source: "static-fallback", error: err?.message },
-      { headers: { "Cache-Control": "public, max-age=60" } }
-    );
+    console.error(`[makes] DB error:`, err?.message);
+    return NextResponse.json({
+      results: [],
+      source: "error",
+      error: "Failed to check fitment coverage",
+    }, { status: 500 });
   }
 }
