@@ -1,0 +1,15 @@
+{
+  "vehicle": "1969 Camaro",
+  "slug": "1969-chevrolet-camaro",
+  "image": "/visualizer/vehicles/1969-camaro.png",
+  "frontWheel": {
+    "top": 64,
+    "left": 64,
+    "size": 130
+  },
+  "rearWheel": {
+    "top": 64,
+    "left": 28,
+    "size": 130
+  }
+}
