@@ -6,6 +6,47 @@ import {
 } from "@/lib/fitment-db/repairService";
 import { Pool } from "pg";
 
+async function normalizeClassicDiameters() {
+  const pool = new Pool({
+    connectionString: process.env.POSTGRES_URL,
+    ssl: { rejectUnauthorized: false },
+    max: 1,
+  });
+  
+  try {
+    console.log("[admin/fitment-repair] normalizing classic diameter ranges to 15-20");
+    
+    const beforeResult = await pool.query(`
+      SELECT DISTINCT platform_code, platform_name, rec_wheel_diameter_min, rec_wheel_diameter_max 
+      FROM classic_fitments WHERE is_active = true ORDER BY platform_name
+    `);
+
+    const updateResult = await pool.query(`
+      UPDATE classic_fitments SET rec_wheel_diameter_min = 15, rec_wheel_diameter_max = 20, updated_at = NOW()
+      WHERE platform_code IN ('ford-mustang-1gen','gm-a-body-2','mopar-e-body','mopar-b-body','gm-f-body-2','gm-f-body-1') AND is_active = true
+    `);
+
+    const afterResult = await pool.query(`
+      SELECT DISTINCT platform_code, platform_name, rec_wheel_diameter_min, rec_wheel_diameter_max 
+      FROM classic_fitments WHERE is_active = true ORDER BY platform_name
+    `);
+
+    await pool.end();
+
+    return NextResponse.json({
+      success: true,
+      action: "normalize_classic_diameters",
+      targetRange: "15-20",
+      rowsAffected: updateResult.rowCount,
+      before: beforeResult.rows,
+      after: afterResult.rows,
+    });
+  } catch (err: any) {
+    await pool.end();
+    return NextResponse.json({ error: err?.message || String(err) }, { status: 500 });
+  }
+}
+
 /**
  * Admin API for fitment repair operations
  * 
@@ -17,6 +58,12 @@ export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const format = searchParams.get("format") || "json";
+    const action = searchParams.get("action");
+    
+    // Special action: normalize classic diameters
+    if (action === "normalize-classic") {
+      return await normalizeClassicDiameters();
+    }
     
     console.log("[admin/fitment-repair] GET - fetching quality breakdown");
     
