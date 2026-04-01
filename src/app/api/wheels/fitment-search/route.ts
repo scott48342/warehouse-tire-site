@@ -321,7 +321,15 @@ export async function GET(req: Request) {
           const confidenceResult: ConfidenceResult = {
             confidence: "high",
             canShowWheels: true,
+            canFilterByBoltPattern: true,
+            canFilterByHubBore: !!classicResult.specs.centerBoreMm,
             reasons: [`Classic fitment: ${classicResult.platform.name}`, `Bolt pattern: ${classicResult.specs.boltPattern} (verified)`],
+            parsed: {
+              boltPattern: { raw: classicResult.specs.boltPattern, normalized: classicResult.specs.boltPattern, studs: parseInt(classicResult.specs.boltPattern.split('x')[0]) || 5, pcdMm: parseFloat(classicResult.specs.boltPattern.split('x')[1]) || 114.3 },
+              centerBoreMm: classicResult.specs.centerBoreMm || null,
+              hasWheelSizes: true,
+              hasTireSizes: !!classicResult.stockReference.tireSize,
+            },
           };
           
           console.log(`[fitment-search] Classic profile constructed:`, {
