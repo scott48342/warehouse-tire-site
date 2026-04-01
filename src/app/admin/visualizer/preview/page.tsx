@@ -1,18 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { WheelVisualizer, WheelVisualizerWithPicker, VehicleVisualizerConfig } from "@/components/WheelVisualizer";
 
-// Sample vehicle config (same as editor default)
-const CAMARO_CONFIG: VehicleVisualizerConfig = {
-  vehicle: "1969 Camaro",
-  slug: "1969-chevrolet-camaro",
-  image: "/visualizer/vehicles/1969-camaro.png",
-  frontWheel: { top: 64, left: 64, size: 130 },
-  rearWheel: { top: 64, left: 28, size: 130 },
-};
-
-// Sample wheels to test with - mix of WheelPros and placeholder URLs
+// Sample wheels to test with
 const SAMPLE_WHEELS = [
   {
     id: "iroc",
@@ -32,17 +23,75 @@ const SAMPLE_WHEELS = [
     imageUrl: "https://assets.wheelpros.com/transform/5d3d3c91-9e08-4e58-9e5e-b8ccfff4f9a1/VN5077-png?size=500",
     price: 329,
   },
-  {
-    id: "pro2", 
-    name: "AR61 Outlaw",
-    imageUrl: "https://assets.wheelpros.com/transform/4c5c5c91-1234-4e58-9e5e-a1bcfff4f9b2/AR617-png?size=500",
-    price: 269,
-  },
 ];
 
+interface SavedConfig {
+  id: string;
+  slug: string;
+  vehicle: string;
+  image: string;
+  frontWheel?: { top: number; left: number; size: number };
+  rearWheel?: { top: number; left: number; size: number };
+  front_wheel?: { top: number; left: number; size: number };
+  rear_wheel?: { top: number; left: number; size: number };
+}
+
 export default function VisualizerPreviewPage() {
+  const [configs, setConfigs] = useState<VehicleVisualizerConfig[]>([]);
+  const [selectedConfig, setSelectedConfig] = useState<VehicleVisualizerConfig | null>(null);
   const [customUrl, setCustomUrl] = useState("");
   const [selectedWheel, setSelectedWheel] = useState(SAMPLE_WHEELS[0]);
+  const [loading, setLoading] = useState(true);
+
+  // Load saved configs from database
+  useEffect(() => {
+    fetch("/api/admin/visualizer")
+      .then((res) => res.json())
+      .then((data: SavedConfig[]) => {
+        const transformed = data.map((c) => ({
+          vehicle: c.vehicle,
+          slug: c.slug,
+          image: c.image,
+          frontWheel: c.front_wheel || c.frontWheel || { top: 60, left: 70, size: 100 },
+          rearWheel: c.rear_wheel || c.rearWheel || { top: 60, left: 30, size: 100 },
+        }));
+        setConfigs(transformed);
+        if (transformed.length > 0) {
+          setSelectedConfig(transformed[0]);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load configs:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-neutral-50 p-8">
+        <div className="mx-auto max-w-5xl text-center py-20">
+          <div className="text-neutral-500">Loading configurations...</div>
+        </div>
+      </main>
+    );
+  }
+
+  if (!selectedConfig) {
+    return (
+      <main className="min-h-screen bg-neutral-50 p-8">
+        <div className="mx-auto max-w-5xl text-center py-20">
+          <div className="text-neutral-500 mb-4">No vehicle configurations found.</div>
+          <a
+            href="/admin/visualizer"
+            className="text-red-600 hover:underline font-medium"
+          >
+            → Go to Editor to create one
+          </a>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-neutral-50 p-8">
@@ -52,9 +101,32 @@ export default function VisualizerPreviewPage() {
             🔍 Visualizer Preview
           </h1>
           <p className="text-neutral-600">
-            Test how the visualizer looks before going live. Try different wheel images.
+            Test how the visualizer looks with your saved configurations.
           </p>
         </div>
+
+        {/* Vehicle Selector */}
+        {configs.length > 1 && (
+          <div className="p-4 bg-white rounded-xl border border-neutral-200">
+            <label className="block text-sm font-semibold text-neutral-700 mb-2">
+              Select Vehicle
+            </label>
+            <select
+              value={selectedConfig.slug}
+              onChange={(e) => {
+                const found = configs.find((c) => c.slug === e.target.value);
+                if (found) setSelectedConfig(found);
+              }}
+              className="w-full px-3 py-2 border border-neutral-300 rounded-lg"
+            >
+              {configs.map((c) => (
+                <option key={c.slug} value={c.slug}>
+                  {c.vehicle}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
 
         {/* Section 1: With Picker Component */}
         <section className="p-6 bg-white rounded-2xl border border-neutral-200">
@@ -64,7 +136,7 @@ export default function VisualizerPreviewPage() {
           </p>
           
           <WheelVisualizerWithPicker
-            config={CAMARO_CONFIG}
+            config={selectedConfig}
             wheels={SAMPLE_WHEELS}
             width={600}
             onWheelSelect={(w) => console.log("Selected:", w)}
@@ -92,7 +164,7 @@ export default function VisualizerPreviewPage() {
           </div>
 
           <WheelVisualizer
-            config={CAMARO_CONFIG}
+            config={selectedConfig}
             wheelImage={customUrl || "/visualizer/wheels/wheel-basic.png"}
             width={600}
           />
@@ -109,7 +181,7 @@ export default function VisualizerPreviewPage() {
             {/* Visualizer */}
             <div>
               <WheelVisualizer
-                config={CAMARO_CONFIG}
+                config={selectedConfig}
                 wheelImage={selectedWheel.imageUrl}
                 width={450}
               />
@@ -146,18 +218,10 @@ export default function VisualizerPreviewPage() {
           </div>
         </section>
 
-        {/* Code Examples */}
+        {/* Current Config Display */}
         <section className="p-6 bg-neutral-900 rounded-2xl text-green-400 font-mono text-sm">
-          <h2 className="text-white font-bold mb-4">Integration Code:</h2>
-          <pre className="overflow-auto">{`// On wheel results page:
-import { WheelVisualizer } from "@/components/WheelVisualizer";
-
-// Pass the wheel's image URL dynamically
-<WheelVisualizer
-  configSlug="1969-chevrolet-camaro"  // or config={...}
-  wheelImage={selectedWheel.imageUrl}
-  width={500}
-/>`}</pre>
+          <h2 className="text-white font-bold mb-4">Current Configuration (from database):</h2>
+          <pre className="overflow-auto">{JSON.stringify(selectedConfig, null, 2)}</pre>
         </section>
 
         {/* Link back */}
