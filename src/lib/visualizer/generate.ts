@@ -2,11 +2,11 @@
  * Vehicle Image Generation & Analysis
  * 
  * Uses OpenAI DALL-E 3 for generation and GPT-4 Vision for wheel detection
+ * Images stored in Vercel Blob storage
  */
 
 import OpenAI from "openai";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { put } from "@vercel/blob";
 import {
   buildGenerationPrompt,
   buildSlug,
@@ -96,17 +96,13 @@ async function generateImage(prompt: string): Promise<string> {
 }
 
 /**
- * Download and save generated image to public folder
+ * Download and save generated image to Vercel Blob storage
  */
 async function saveGeneratedImage(
   imageUrl: string,
   slug: string
 ): Promise<string> {
-  // Ensure directory exists
-  const dir = path.join(process.cwd(), "public", "visualizer", "vehicles", "generated");
-  await mkdir(dir, { recursive: true });
-
-  // Download image
+  // Download image from DALL-E
   const response = await fetch(imageUrl);
   if (!response.ok) {
     throw new Error(`Failed to download image: ${response.status}`);
@@ -114,15 +110,17 @@ async function saveGeneratedImage(
 
   const buffer = Buffer.from(await response.arrayBuffer());
 
-  // Save with timestamp to allow versioning
+  // Upload to Vercel Blob with timestamp for versioning
   const timestamp = Date.now();
-  const filename = `${slug}-v${timestamp}.png`;
-  const filepath = path.join(dir, filename);
+  const filename = `visualizer/vehicles/${slug}-v${timestamp}.png`;
 
-  await writeFile(filepath, buffer);
+  const blob = await put(filename, buffer, {
+    access: "public",
+    contentType: "image/png",
+  });
 
-  // Return the public URL path
-  return `/visualizer/vehicles/generated/${filename}`;
+  // Return the blob URL
+  return blob.url;
 }
 
 /**
