@@ -182,9 +182,6 @@ Return ONLY a JSON object in this exact format, no other text:
     if (!jsonMatch) {
       console.warn("[Analyze] Could not parse vision response, using defaults");
       return {
-        ...DEFAULT_POSITIONS[category],
-        front: DEFAULT_POSITIONS[category].front,
-        rear: DEFAULT_POSITIONS[category].rear,
         frontWheel: DEFAULT_POSITIONS[category].front,
         rearWheel: DEFAULT_POSITIONS[category].rear,
         notes: "Vision analysis failed, using category defaults",
