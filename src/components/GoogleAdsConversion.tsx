@@ -2,12 +2,6 @@
 
 import { useEffect } from 'react'
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void
-  }
-}
-
 interface GoogleAdsConversionProps {
   orderId: string
   orderTotal: number // in dollars
@@ -19,8 +13,9 @@ export function GoogleAdsConversion({ orderId, orderTotal, currency = 'USD' }: G
     // Only fire once per order
     const firedKey = `gads_conversion_${orderId}`
     if (typeof window !== 'undefined' && !sessionStorage.getItem(firedKey)) {
-      if (window.gtag) {
-        window.gtag('event', 'conversion', {
+      const gtag = (window as any).gtag
+      if (gtag) {
+        gtag('event', 'conversion', {
           send_to: 'AW-410517185/A6xDCNzq474DEMH938MB',
           value: orderTotal,
           currency: currency,
