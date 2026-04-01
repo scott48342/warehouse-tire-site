@@ -2,85 +2,69 @@
  * POST /api/admin/classic-normalize
  * 
  * One-time migration to normalize classic diameter ranges to 15-20"
- * Protected by admin auth
  */
 
 import { NextResponse } from "next/server";
-import { db } from "@/lib/fitment-db/db";
-import { classicFitments } from "@/lib/classic-fitment/schema";
-import { eq, or } from "drizzle-orm";
+import { Pool } from "pg";
 
 export const runtime = "nodejs";
 
 const TARGET_MIN = 15;
 const TARGET_MAX = 20;
 
-const PLATFORMS = [
-  "ford-mustang-1gen",
-  "gm-a-body-2", 
-  "mopar-e-body",
-  "mopar-b-body",
-  "gm-f-body-2",
-  "gm-f-body-1",
-];
+async function getPool() {
+  return new Pool({
+    connectionString: process.env.POSTGRES_URL,
+    ssl: { rejectUnauthorized: false },
+    max: 1,
+  });
+}
 
-export async function POST(req: Request) {
+export async function POST() {
+  const pool = await getPool();
+  
   try {
-    // Get current state
-    const before = await db
-      .select({
-        platformCode: classicFitments.platformCode,
-        platformName: classicFitments.platformName,
-        min: classicFitments.recWheelDiameterMin,
-        max: classicFitments.recWheelDiameterMax,
-      })
-      .from(classicFitments)
-      .where(eq(classicFitments.isActive, true));
+    // Get before state
+    const beforeResult = await pool.query(`
+      SELECT DISTINCT platform_code, platform_name, rec_wheel_diameter_min, rec_wheel_diameter_max 
+      FROM classic_fitments 
+      WHERE is_active = true
+    `);
 
-    // Update all platforms
-    await db
-      .update(classicFitments)
-      .set({
-        recWheelDiameterMin: TARGET_MIN,
-        recWheelDiameterMax: TARGET_MAX,
-        updatedAt: new Date(),
-      })
-      .where(
-        or(
-          eq(classicFitments.platformCode, "ford-mustang-1gen"),
-          eq(classicFitments.platformCode, "gm-a-body-2"),
-          eq(classicFitments.platformCode, "mopar-e-body"),
-          eq(classicFitments.platformCode, "mopar-b-body"),
-          eq(classicFitments.platformCode, "gm-f-body-2"),
-          eq(classicFitments.platformCode, "gm-f-body-1")
-        )
-      );
+    // Update all classic platforms to 15-20"
+    await pool.query(`
+      UPDATE classic_fitments 
+      SET 
+        rec_wheel_diameter_min = $1,
+        rec_wheel_diameter_max = $2,
+        updated_at = NOW()
+      WHERE platform_code IN (
+        'ford-mustang-1gen',
+        'gm-a-body-2',
+        'mopar-e-body',
+        'mopar-b-body',
+        'gm-f-body-2',
+        'gm-f-body-1'
+      ) AND is_active = true
+    `, [TARGET_MIN, TARGET_MAX]);
 
     // Get after state
-    const after = await db
-      .select({
-        platformCode: classicFitments.platformCode,
-        platformName: classicFitments.platformName,
-        min: classicFitments.recWheelDiameterMin,
-        max: classicFitments.recWheelDiameterMax,
-      })
-      .from(classicFitments)
-      .where(eq(classicFitments.isActive, true));
+    const afterResult = await pool.query(`
+      SELECT DISTINCT platform_code, platform_name, rec_wheel_diameter_min, rec_wheel_diameter_max 
+      FROM classic_fitments 
+      WHERE is_active = true
+    `);
+
+    await pool.end();
 
     return NextResponse.json({
       success: true,
       targetRange: `${TARGET_MIN}-${TARGET_MAX}`,
-      platformsUpdated: PLATFORMS,
-      before: before.reduce((acc, r) => {
-        if (!acc[r.platformCode]) acc[r.platformCode] = `${r.min}-${r.max}`;
-        return acc;
-      }, {} as Record<string, string>),
-      after: after.reduce((acc, r) => {
-        if (!acc[r.platformCode]) acc[r.platformCode] = `${r.min}-${r.max}`;
-        return acc;
-      }, {} as Record<string, string>),
+      before: beforeResult.rows,
+      after: afterResult.rows,
     });
   } catch (err: any) {
+    await pool.end();
     return NextResponse.json(
       { error: err?.message || String(err) },
       { status: 500 }
@@ -89,34 +73,27 @@ export async function POST(req: Request) {
 }
 
 export async function GET() {
+  const pool = await getPool();
+  
   try {
-    const records = await db
-      .select({
-        platformCode: classicFitments.platformCode,
-        platformName: classicFitments.platformName,
-        min: classicFitments.recWheelDiameterMin,
-        max: classicFitments.recWheelDiameterMax,
-      })
-      .from(classicFitments)
-      .where(eq(classicFitments.isActive, true));
+    const result = await pool.query(`
+      SELECT DISTINCT platform_code, platform_name, rec_wheel_diameter_min, rec_wheel_diameter_max 
+      FROM classic_fitments 
+      WHERE is_active = true
+      ORDER BY platform_name
+    `);
 
-    const platforms: Record<string, { name: string; range: string; needsUpdate: boolean }> = {};
-    
-    for (const r of records) {
-      if (!platforms[r.platformCode]) {
-        platforms[r.platformCode] = {
-          name: r.platformName,
-          range: `${r.min}-${r.max}`,
-          needsUpdate: r.min !== TARGET_MIN || r.max !== TARGET_MAX,
-        };
-      }
-    }
+    await pool.end();
 
     return NextResponse.json({
       targetRange: `${TARGET_MIN}-${TARGET_MAX}`,
-      platforms,
+      platforms: result.rows.map(r => ({
+        ...r,
+        needsUpdate: r.rec_wheel_diameter_min !== TARGET_MIN || r.rec_wheel_diameter_max !== TARGET_MAX,
+      })),
     });
   } catch (err: any) {
+    await pool.end();
     return NextResponse.json(
       { error: err?.message || String(err) },
       { status: 500 }
