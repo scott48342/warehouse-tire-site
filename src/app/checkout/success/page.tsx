@@ -5,6 +5,7 @@ import { getStripeClient } from "@/lib/payments/stripeClient";
 import { getOrderByStripeSession, getOrderByQuote, createOrder, markOrderEmailSent, type OrderRecord } from "@/lib/orders";
 import { sendOrderConfirmationEmail } from "@/lib/email";
 import { CartRecoveryHandler } from "@/components/CartRecoveryHandler";
+import { GoogleAdsConversion } from "@/components/GoogleAdsConversion";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -143,6 +144,9 @@ export default async function CheckoutSuccessPage({
     <main className="bg-neutral-50 min-h-screen">
       {/* Mark cart as recovered */}
       <CartRecoveryHandler orderId={order.id} />
+      
+      {/* Google Ads conversion tracking */}
+      <GoogleAdsConversion orderId={order.id} orderTotal={totals.total} />
       
       <div className="mx-auto max-w-3xl px-4 py-8 md:py-12">
         
