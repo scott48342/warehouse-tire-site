@@ -82,7 +82,7 @@ export async function GET(request: NextRequest) {
       .orderBy(desc(count()))
       .limit(10);
 
-    // Top referrers (last 7 days, non-null only)
+    // Top referrers (last 7 days, non-null only, excluding internal)
     const topReferrers = await analyticsDb
       .select({
         referrer: schema.analyticsSessions.referrer,
@@ -94,6 +94,10 @@ export async function GET(request: NextRequest) {
           gte(schema.analyticsSessions.firstSeenAt, weekAgo),
           sql`${schema.analyticsSessions.referrer} IS NOT NULL`,
           sql`${schema.analyticsSessions.referrer} != ''`,
+          // Exclude internal referrers
+          sql`${schema.analyticsSessions.referrer} NOT LIKE '%vercel.app%'`,
+          sql`${schema.analyticsSessions.referrer} NOT LIKE '%warehousetiredirect.com%'`,
+          sql`${schema.analyticsSessions.referrer} NOT LIKE '%localhost%'`,
           botFilter || sql`1=1`
         )
       )
