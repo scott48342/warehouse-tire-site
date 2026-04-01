@@ -164,23 +164,96 @@ export function WheelVisualizer({
 export function WheelVisualizerEditor({
   config: initialConfig,
   wheelImage,
+  onSave,
 }: {
   config: VehicleVisualizerConfig;
   wheelImage?: string;
+  onSave?: (config: VehicleVisualizerConfig) => Promise<void>;
 }) {
   const [config, setConfig] = useState(initialConfig);
+  const [saving, setSaving] = useState(false);
+  const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
 
   const updateFront = (key: keyof WheelPosition, value: number) => {
     setConfig((c) => ({ ...c, frontWheel: { ...c.frontWheel, [key]: value } }));
+    setSaveStatus("idle");
   };
 
   const updateRear = (key: keyof WheelPosition, value: number) => {
     setConfig((c) => ({ ...c, rearWheel: { ...c.rearWheel, [key]: value } }));
+    setSaveStatus("idle");
+  };
+
+  const updateConfig = (key: keyof VehicleVisualizerConfig, value: string) => {
+    setConfig((c) => ({ ...c, [key]: value }));
+    setSaveStatus("idle");
+  };
+
+  const handleSave = async () => {
+    setSaving(true);
+    setSaveStatus("idle");
+    try {
+      if (onSave) {
+        await onSave(config);
+      } else {
+        // Default save to API
+        const res = await fetch("/api/admin/visualizer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(config),
+        });
+        if (!res.ok) throw new Error("Save failed");
+      }
+      setSaveStatus("success");
+      setTimeout(() => setSaveStatus("idle"), 3000);
+    } catch (err) {
+      console.error("Save error:", err);
+      setSaveStatus("error");
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (
     <div className="space-y-4">
       <WheelVisualizer config={config} wheelImage={wheelImage} showGuides />
+
+      {/* Config Metadata */}
+      <div className="grid grid-cols-2 gap-4 p-4 bg-white border border-neutral-200 rounded-xl">
+        <div>
+          <label className="block text-sm font-semibold text-neutral-700 mb-1">
+            Vehicle Name
+          </label>
+          <input
+            type="text"
+            value={config.vehicle}
+            onChange={(e) => updateConfig("vehicle", e.target.value)}
+            className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-neutral-700 mb-1">
+            Slug (URL-friendly)
+          </label>
+          <input
+            type="text"
+            value={config.slug}
+            onChange={(e) => updateConfig("slug", e.target.value)}
+            className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm"
+          />
+        </div>
+        <div className="col-span-2">
+          <label className="block text-sm font-semibold text-neutral-700 mb-1">
+            Vehicle Image Path
+          </label>
+          <input
+            type="text"
+            value={config.image}
+            onChange={(e) => updateConfig("image", e.target.value)}
+            className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm"
+          />
+        </div>
+      </div>
 
       <div className="grid grid-cols-2 gap-4 p-4 bg-neutral-100 rounded-xl">
         {/* Front Wheel Controls */}
@@ -258,6 +331,27 @@ export function WheelVisualizerEditor({
             />
           </label>
         </div>
+      </div>
+
+      {/* Save Button */}
+      <div className="flex items-center gap-4">
+        <button
+          onClick={handleSave}
+          disabled={saving}
+          className={`px-6 py-3 rounded-lg font-semibold text-white transition-colors ${
+            saving
+              ? "bg-neutral-400 cursor-not-allowed"
+              : "bg-red-600 hover:bg-red-700"
+          }`}
+        >
+          {saving ? "Saving..." : "💾 Save Configuration"}
+        </button>
+        {saveStatus === "success" && (
+          <span className="text-green-600 font-semibold">✓ Saved!</span>
+        )}
+        {saveStatus === "error" && (
+          <span className="text-red-600 font-semibold">✗ Save failed</span>
+        )}
       </div>
 
       {/* JSON Output */}
