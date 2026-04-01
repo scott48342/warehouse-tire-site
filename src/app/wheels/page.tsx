@@ -248,6 +248,16 @@ export default async function WheelsPage({
   const liftedTireDiaMin = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
   const liftedTireDiaMax = safeString(Array.isArray(sp.liftedTireDiaMax) ? sp.liftedTireDiaMax[0] : sp.liftedTireDiaMax);
   
+  // Lifted wheel diameter recommendations
+  const liftedWheelDiaMinRaw = safeString(Array.isArray(sp.liftedWheelDiaMin) ? sp.liftedWheelDiaMin[0] : sp.liftedWheelDiaMin);
+  const liftedWheelDiaMaxRaw = safeString(Array.isArray(sp.liftedWheelDiaMax) ? sp.liftedWheelDiaMax[0] : sp.liftedWheelDiaMax);
+  const liftedWheelDiaMin = liftedWheelDiaMinRaw ? parseInt(liftedWheelDiaMinRaw, 10) : null;
+  const liftedWheelDiaMax = liftedWheelDiaMaxRaw ? parseInt(liftedWheelDiaMaxRaw, 10) : null;
+  const liftedPopularWheelSizesRaw = safeString(Array.isArray(sp.liftedPopularWheelSizes) ? sp.liftedPopularWheelSizes[0] : sp.liftedPopularWheelSizes);
+  const liftedPopularWheelSizes = liftedPopularWheelSizesRaw 
+    ? liftedPopularWheelSizesRaw.split(",").map(s => parseInt(s, 10)).filter(n => Number.isFinite(n))
+    : [];
+  
   // Lifted build is active when we have valid lifted context from URL params
   const isLiftedBuild = liftedSource === "lifted" && liftedPreset && liftedInches > 0;
   
@@ -1152,8 +1162,12 @@ export default async function WheelsPage({
     
     return buildDiameterOptions({
       isClassicVehicle,
+      isLiftedBuild,
       stockDiameters,
       classicUpsizeRange: isClassicVehicle ? classicUpsizeRange : undefined,
+      liftedWheelDiaMin,
+      liftedWheelDiaMax,
+      liftedPopularWheelSizes,
       oemWheelSizes,
       inventoryFacets: diameterBuckets,
     });
@@ -1807,6 +1821,7 @@ export default async function WheelsPage({
               showRecommended={hasVehicle && recommendedWheels.length > 0 && safePage === 1}
               fitmentDiameters={fitmentDiameterOptions}
               isClassicVehicle={isClassicVehicle}
+              isLiftedBuild={isLiftedBuild}
               stockDiameter={effectiveStockDiameter}
               showDiameterChips={hasVehicle && fitmentDiameterOptions.length > 0}
               recommendedWheels={recommendedWheels.map(w => ({

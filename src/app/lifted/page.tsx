@@ -390,6 +390,11 @@ function RecommendationPanel({
     params.set("liftedTireDiaMin", String(recommendation.tireDiameterMin));
     params.set("liftedTireDiaMax", String(recommendation.tireDiameterMax));
     
+    // Include wheel diameter recommendations for size chips
+    params.set("liftedWheelDiaMin", String(recommendation.wheelDiameterMin));
+    params.set("liftedWheelDiaMax", String(recommendation.wheelDiameterMax));
+    params.set("liftedPopularWheelSizes", recommendation.popularWheelSizes.join(","));
+    
     return `/wheels?${params.toString()}`;
   }
 

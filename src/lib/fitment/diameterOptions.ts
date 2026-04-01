@@ -17,10 +17,17 @@ export interface DiameterOption {
 export interface BuildDiameterOptionsParams {
   /** Is this a classic vehicle? */
   isClassicVehicle: boolean;
+  /** Is this a lifted build? */
+  isLiftedBuild?: boolean;
   /** Stock wheel diameter(s) */
   stockDiameters?: number[];
   /** Classic upsize range (e.g., [15, 20]) */
   classicUpsizeRange?: [number, number];
+  /** Lifted wheel diameter range */
+  liftedWheelDiaMin?: number | null;
+  liftedWheelDiaMax?: number | null;
+  /** Popular wheel sizes for lifted builds */
+  liftedPopularWheelSizes?: number[];
   /** OEM wheel sizes from fitment profile */
   oemWheelSizes?: Array<{ diameter?: number }>;
   /** Inventory facets with counts */
@@ -29,8 +36,12 @@ export interface BuildDiameterOptionsParams {
 
 export function buildDiameterOptions({
   isClassicVehicle,
+  isLiftedBuild = false,
   stockDiameters = [],
   classicUpsizeRange,
+  liftedWheelDiaMin,
+  liftedWheelDiaMax,
+  liftedPopularWheelSizes = [],
   oemWheelSizes = [],
   inventoryFacets = [],
 }: BuildDiameterOptionsParams): DiameterOption[] {
@@ -45,7 +56,40 @@ export function buildDiameterOptions({
     }
   }
   
-  if (isClassicVehicle) {
+  // Lifted build: use lifted recommendations
+  if (isLiftedBuild && liftedWheelDiaMin && liftedWheelDiaMax) {
+    const popularSet = new Set(liftedPopularWheelSizes);
+    
+    // Add popular wheel sizes first (these are the recommended ones)
+    for (const dia of liftedPopularWheelSizes) {
+      const count = inventoryCounts.get(dia);
+      options.set(dia, {
+        diameter: dia,
+        label: `${dia}"`,
+        isStock: false,
+        isUpsize: false, // For lifted, they're all "recommended" not upsizes
+        hasInventory: count !== undefined ? count > 0 : undefined,
+        count,
+      });
+    }
+    
+    // Add other sizes in range that have inventory
+    for (let dia = liftedWheelDiaMin; dia <= liftedWheelDiaMax; dia++) {
+      if (!options.has(dia)) {
+        const count = inventoryCounts.get(dia);
+        if (count && count > 0) {
+          options.set(dia, {
+            diameter: dia,
+            label: `${dia}"`,
+            isStock: false,
+            isUpsize: !popularSet.has(dia),
+            hasInventory: true,
+            count,
+          });
+        }
+      }
+    }
+  } else if (isClassicVehicle) {
     // Classic vehicle: stock + upsize range
     const stockSet = new Set(stockDiameters);
     const [minDia, maxDia] = classicUpsizeRange || [15, 20];

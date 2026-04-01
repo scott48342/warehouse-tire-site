@@ -31,6 +31,8 @@ export interface FitmentDiameterChipsProps {
   selectedDiameter?: number | null;
   /** Whether this is a classic vehicle */
   isClassicVehicle?: boolean;
+  /** Whether this is a lifted build */
+  isLiftedBuild?: boolean;
   /** Stock tire/wheel diameter for reference */
   stockDiameter?: number;
   /** Callback when diameter changes (optional, defaults to URL update) */
@@ -47,6 +49,7 @@ export function FitmentDiameterChips({
   diameters,
   selectedDiameter,
   isClassicVehicle = false,
+  isLiftedBuild = false,
   stockDiameter,
   onDiameterChange,
   showCounts = false,
@@ -104,7 +107,12 @@ export function FitmentDiameterChips({
           <h3 className={`font-semibold text-neutral-900 ${compact ? "text-sm" : "text-base"}`}>
             Wheel Size
           </h3>
-          {isClassicVehicle && (
+          {isLiftedBuild && (
+            <span className="rounded-full bg-orange-100 px-2 py-0.5 text-xs font-medium text-orange-700">
+              Lifted
+            </span>
+          )}
+          {isClassicVehicle && !isLiftedBuild && (
             <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">
               Classic
             </span>
@@ -181,11 +189,15 @@ export function FitmentDiameterChips({
       </div>
 
       {/* Helper text showing stock size and upsize info */}
-      {stockDiameter && sortedDiameters.some(d => d.isUpsize) && (
+      {isLiftedBuild ? (
+        <p className="mt-2 text-xs text-neutral-500">
+          Recommended sizes for your lift • Select to filter
+        </p>
+      ) : stockDiameter && sortedDiameters.some(d => d.isUpsize) ? (
         <p className="mt-2 text-xs text-neutral-500">
           Stock: {stockDiameter}&quot; • Showing fitment-compatible upsizes
         </p>
-      )}
+      ) : null}
     </div>
   );
 }

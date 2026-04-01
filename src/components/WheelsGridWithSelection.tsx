@@ -73,6 +73,8 @@ type WheelsGridProps = {
   fitmentDiameters?: DiameterOption[];
   /** Is this a classic vehicle */
   isClassicVehicle?: boolean;
+  /** Is this a lifted build */
+  isLiftedBuild?: boolean;
   /** Stock wheel diameter */
   stockDiameter?: number | null;
   /** Show diameter chips */
@@ -310,6 +312,7 @@ export function WheelsGridWithSelection({
   recommendedWheels = [],
   fitmentDiameters = [],
   isClassicVehicle = false,
+  isLiftedBuild = false,
   stockDiameter = null,
   showDiameterChips = true,
 }: WheelsGridProps) {
@@ -507,6 +510,7 @@ export function WheelsGridWithSelection({
             diameters={fitmentDiameters}
             selectedDiameter={diameterParam ? parseInt(diameterParam, 10) : null}
             isClassicVehicle={isClassicVehicle}
+            isLiftedBuild={isLiftedBuild}
             stockDiameter={stockDiameter ?? undefined}
             showCounts={true}
           />
