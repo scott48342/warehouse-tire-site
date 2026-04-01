@@ -79,7 +79,7 @@ export function buildDiameterOptions({
       }
     }
   } else {
-    // Modern vehicle: OEM sizes only
+    // Modern vehicle: OEM sizes + upsizes with inventory
     const oemDiameters = new Set<number>();
     
     for (const size of oemWheelSizes) {
@@ -100,9 +100,13 @@ export function buildDiameterOptions({
       }
     }
     
+    // Find the smallest stock/OEM diameter
+    const minOemDia = Math.min(...oemDiameters);
+    
+    // Add OEM diameters first
     for (const dia of oemDiameters) {
       const count = inventoryCounts.get(dia);
-      const isStock = stockDiameters.includes(dia);
+      const isStock = stockDiameters.includes(dia) || dia === minOemDia;
       
       options.set(dia, {
         diameter: dia,
@@ -112,6 +116,22 @@ export function buildDiameterOptions({
         hasInventory: count !== undefined ? count > 0 : undefined,
         count,
       });
+    }
+    
+    // Add upsize options from inventory (up to +3" from stock)
+    // Only add if they have inventory and aren't already in OEM sizes
+    const maxUpsize = minOemDia + 3;
+    for (const [dia, count] of inventoryCounts) {
+      if (dia > minOemDia && dia <= maxUpsize && !oemDiameters.has(dia) && count > 0) {
+        options.set(dia, {
+          diameter: dia,
+          label: `${dia}"`,
+          isStock: false,
+          isUpsize: true,
+          hasInventory: true,
+          count,
+        });
+      }
     }
   }
   

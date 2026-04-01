@@ -156,8 +156,8 @@ export function FitmentDiameterChips({
                 </span>
               )}
               
-              {/* Upsize indicator for classic */}
-              {isClassicVehicle && option.isUpsize && !option.isStock && (
+              {/* Upsize indicator */}
+              {option.isUpsize && !option.isStock && (
                 <span className={`
                   rounded px-1 py-0.5 text-[10px] font-bold uppercase
                   ${isSelected ? "bg-red-200 text-red-800" : "bg-amber-100 text-amber-700"}
@@ -180,8 +180,8 @@ export function FitmentDiameterChips({
         })}
       </div>
 
-      {/* Helper text for classic vehicles */}
-      {isClassicVehicle && stockDiameter && (
+      {/* Helper text showing stock size and upsize info */}
+      {stockDiameter && sortedDiameters.some(d => d.isUpsize) && (
         <p className="mt-2 text-xs text-neutral-500">
           Stock: {stockDiameter}&quot; • Showing fitment-compatible upsizes
         </p>

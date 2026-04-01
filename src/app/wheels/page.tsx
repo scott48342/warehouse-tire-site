@@ -1121,28 +1121,34 @@ export default async function WheelsPage({
   
   // Build fitment-valid diameter options
   // For classic: stock + upsize range (e.g., 14-20")
-  // For modern: OEM wheel sizes from dbProfile
-  const fitmentDiameterOptions: DiameterOption[] = (() => {
-    if (!hasVehicle) return [];
-    
-    // Get OEM wheel sizes from dbProfile
-    const oemWheelSizes = (dbProfile?.oemWheelSizes || []) as Array<{ diameter?: number; width?: number }>;
-    
-    // Get stock diameters
-    const stockDiameters: number[] = [];
-    if (isClassicVehicle && classicStockDiameter) {
-      stockDiameters.push(classicStockDiameter);
-    } else {
-      // For modern vehicles, extract from OEM sizes
-      for (const size of oemWheelSizes) {
-        if (size.diameter && Number.isFinite(size.diameter)) {
-          const dia = Math.round(size.diameter);
-          if (!stockDiameters.includes(dia)) {
-            stockDiameters.push(dia);
-          }
+  // For modern: OEM wheel sizes from dbProfile + upsizes with inventory
+  
+  // Get OEM wheel sizes from dbProfile
+  const oemWheelSizes = hasVehicle 
+    ? (dbProfile?.oemWheelSizes || []) as Array<{ diameter?: number; width?: number }>
+    : [];
+  
+  // Get stock diameters (smallest OEM diameter is considered "stock")
+  const stockDiameters: number[] = [];
+  if (isClassicVehicle && classicStockDiameter) {
+    stockDiameters.push(classicStockDiameter);
+  } else {
+    // For modern vehicles, extract from OEM sizes
+    for (const size of oemWheelSizes) {
+      if (size.diameter && Number.isFinite(size.diameter)) {
+        const dia = Math.round(size.diameter);
+        if (!stockDiameters.includes(dia)) {
+          stockDiameters.push(dia);
         }
       }
     }
+  }
+  
+  // Effective stock diameter for display (smallest stock diameter)
+  const effectiveStockDiameter = classicStockDiameter ?? (stockDiameters.length > 0 ? Math.min(...stockDiameters) : null);
+  
+  const fitmentDiameterOptions: DiameterOption[] = (() => {
+    if (!hasVehicle) return [];
     
     return buildDiameterOptions({
       isClassicVehicle,
@@ -1801,7 +1807,7 @@ export default async function WheelsPage({
               showRecommended={hasVehicle && recommendedWheels.length > 0 && safePage === 1}
               fitmentDiameters={fitmentDiameterOptions}
               isClassicVehicle={isClassicVehicle}
-              stockDiameter={classicStockDiameter}
+              stockDiameter={effectiveStockDiameter}
               showDiameterChips={hasVehicle && fitmentDiameterOptions.length > 0}
               recommendedWheels={recommendedWheels.map(w => ({
                 sku: w.sku,
