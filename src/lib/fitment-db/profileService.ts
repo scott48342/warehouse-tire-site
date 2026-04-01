@@ -425,7 +425,7 @@ async function getProfileByYMMFallback(
   year: number,
   make: string,
   model: string
-): Promise<{ fitment: VehicleFitment | null; lookupMs: number; usedModificationId: string | null }> {
+): Promise<{ fitment: VehicleFitment | null; lookupMs: number; usedModificationId: string | null; yearFallbackUsed?: number }> {
   const normalizedMake = normalizeMake(make);
   const normalizedModel = normalizeModel(model);
   
@@ -446,6 +446,48 @@ async function getProfileByYMMFallback(
     .limit(10);
   
   if (fitments.length === 0) {
+    // ─────────────────────────────────────────────────────────────────────────
+    // YEAR-ADJACENT FALLBACK: Try ±1 year when exact year not found
+    // This helps when data has gaps (e.g., 2021 exists but 2020 doesn't)
+    // For most vehicles, fitment is identical within a generation (3-7 years)
+    // ─────────────────────────────────────────────────────────────────────────
+    const adjacentYears = [year + 1, year - 1];
+    
+    for (const adjYear of adjacentYears) {
+      const adjFitments = await db
+        .select()
+        .from(vehicleFitments)
+        .where(
+          and(
+            eq(vehicleFitments.year, adjYear),
+            eq(vehicleFitments.make, normalizedMake),
+            eq(vehicleFitments.model, normalizedModel)
+          )
+        )
+        .limit(5);
+      
+      if (adjFitments.length > 0) {
+        // Pick best fitment from adjacent year
+        let best = adjFitments[0];
+        for (const f of adjFitments) {
+          const hasFullData = f.boltPattern && f.centerBoreMm && f.oemWheelSizes;
+          const bestHasFullData = best.boltPattern && best.centerBoreMm && best.oemWheelSizes;
+          if (hasFullData && !bestHasFullData) {
+            best = f;
+          }
+        }
+        
+        console.warn(`[profileService] YEAR FALLBACK: ${year} ${make} ${model} → using ${adjYear} data (${best.modificationId})`);
+        
+        return {
+          fitment: best,
+          lookupMs: Date.now() - t0,
+          usedModificationId: best.modificationId,
+          yearFallbackUsed: adjYear,
+        };
+      }
+    }
+    
     return {
       fitment: null,
       lookupMs: Date.now() - t0,
