@@ -147,9 +147,11 @@ async function saveGeneratedImage(
   const timestamp = Date.now();
   const filename = `visualizer/vehicles/${slug}-v${timestamp}.png`;
 
+  // Don't specify access - works with both public and private stores
+  // Private stores return signed URLs that are still accessible
   const blob = await put(filename, buffer, {
-    access: "public",
     contentType: "image/png",
+    addRandomSuffix: false,
   });
 
   // Return the blob URL
