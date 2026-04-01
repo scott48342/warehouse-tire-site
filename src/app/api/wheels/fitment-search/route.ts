@@ -309,7 +309,7 @@ export async function GET(req: Request) {
               isStock: true,
             }] : [],
             oemTireSizes: classicResult.stockReference.tireSize ? [classicResult.stockReference.tireSize] : [],
-            source: "classic",
+            source: "db",  // classic fitment stored in our DB
             apiCalled: false,
             overridesApplied: false,
           };
