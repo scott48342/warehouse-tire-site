@@ -352,6 +352,31 @@ function RecommendationPanel({
   // Check if we have full vehicle context for vehicle-aware links
   const hasFullVehicleContext = !!(vehicle.year && vehicle.make && vehicle.model && vehicle.modification);
 
+  // Build vehicle-aware tire URL with lifted context
+  function buildTireUrl(tireSize: string): string {
+    const params = new URLSearchParams();
+    
+    if (hasFullVehicleContext) {
+      params.set("year", vehicle.year);
+      params.set("make", vehicle.make);
+      params.set("model", vehicle.model);
+      params.set("trim", vehicle.trim);
+      params.set("modification", vehicle.modification);
+    }
+    
+    params.set("size", tireSize);
+    
+    // Include lifted context
+    params.set("liftedSource", "lifted");
+    params.set("liftedPreset", liftPreset.id);
+    params.set("liftedInches", String(liftPreset.liftInches));
+    params.set("liftedTireSizes", recommendation.commonTireSizes.join(","));
+    params.set("liftedTireDiaMin", String(recommendation.tireDiameterMin));
+    params.set("liftedTireDiaMax", String(recommendation.tireDiameterMax));
+    
+    return `/tires?${params.toString()}`;
+  }
+
   // Build vehicle-aware wheel URL with offset params and lifted context
   // IMPORTANT: Always include offset params when we have a recommendation
   // This ensures lifted trucks get appropriate negative offsets, not OEM +35mm
@@ -456,18 +481,23 @@ function RecommendationPanel({
         </div>
       </div>
 
-      {/* Suggested Shopping Actions */}
-      <div className="mt-5">
-        <div className="text-xs font-semibold text-neutral-500 mb-3">Start Shopping</div>
+      {/* Shopping Sections - Redesigned with chips */}
+      <div className="mt-5 space-y-5">
         
-        {/* Common Tire Sizes */}
-        <div className="space-y-2">
-          <div className="text-xs text-neutral-600 mb-2">Shop popular tire sizes for this setup:</div>
+        {/* Tire Sizes Section */}
+        <div className="rounded-xl border-2 border-green-200 bg-green-50/50 p-4">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-lg">🛞</span>
+            <h4 className="font-bold text-neutral-900">Tire Sizes</h4>
+            <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">
+              Lifted
+            </span>
+          </div>
           <div className="flex flex-wrap gap-2">
-            {recommendation.commonTireSizes.slice(0, 4).map((size) => (
+            {recommendation.commonTireSizes.map((size, index) => (
               <Link
                 key={size}
-                href={`/tires?size=${encodeURIComponent(size)}`}
+                href={buildTireUrl(size)}
                 onClick={() => {
                   trackLiftedTireSuggestionClick({
                     liftPreset: liftPreset.id,
@@ -478,22 +508,40 @@ function RecommendationPanel({
                     model: vehicle.model,
                   });
                 }}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-green-300 bg-white px-3 py-2 text-sm font-semibold text-green-800 hover:bg-green-50 hover:border-green-400 transition-colors"
+                className={`
+                  inline-flex items-center gap-1.5 rounded-xl border-2 px-3 py-2 
+                  text-sm font-semibold transition-all duration-200
+                  ${index === 0 
+                    ? "border-green-500 bg-green-100 text-green-800" 
+                    : "border-neutral-200 bg-white text-neutral-700 hover:border-green-300 hover:bg-green-50"
+                  }
+                `}
               >
-                <span>🛞</span>
-                {size}
+                <span>{size}</span>
+                {index === 0 && (
+                  <span className="rounded bg-green-200 px-1 py-0.5 text-[10px] font-bold text-green-800">
+                    Popular
+                  </span>
+                )}
               </Link>
             ))}
           </div>
+          <p className="mt-2 text-xs text-neutral-500">
+            Recommended for {liftPreset.liftInches}" lift • Click to shop
+          </p>
         </div>
 
-        {/* Popular Wheel Sizes - now vehicle-aware */}
-        <div className="mt-4 space-y-2">
-          <div className="text-xs text-neutral-600 mb-2">
-            Shop popular wheel sizes for your {vehicle.year} {vehicle.make} {vehicle.model}:
+        {/* Wheel Sizes Section */}
+        <div className="rounded-xl border-2 border-blue-200 bg-blue-50/50 p-4">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-lg">⚙️</span>
+            <h4 className="font-bold text-neutral-900">Wheel Sizes</h4>
+            <span className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700">
+              Lifted
+            </span>
           </div>
           <div className="flex flex-wrap gap-2">
-            {recommendation.popularWheelSizes.map((dia) => (
+            {recommendation.popularWheelSizes.map((dia, index) => (
               <Link
                 key={dia}
                 href={buildWheelUrl(dia)}
@@ -508,19 +556,32 @@ function RecommendationPanel({
                     vehicleAwareLink: hasFullVehicleContext,
                   });
                 }}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-blue-300 bg-white px-3 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-50 hover:border-blue-400 transition-colors"
+                className={`
+                  inline-flex items-center gap-1.5 rounded-xl border-2 px-3 py-2 
+                  text-sm font-semibold transition-all duration-200
+                  ${index === 0 
+                    ? "border-blue-500 bg-blue-100 text-blue-800" 
+                    : "border-neutral-200 bg-white text-neutral-700 hover:border-blue-300 hover:bg-blue-50"
+                  }
+                `}
               >
-                <span>⚙️</span>
-                {dia}" Wheels
+                <span>{dia}"</span>
+                {index === 0 && (
+                  <span className="rounded bg-blue-200 px-1 py-0.5 text-[10px] font-bold text-blue-800">
+                    Popular
+                  </span>
+                )}
               </Link>
             ))}
           </div>
-          {hasFullVehicleContext && (
-            <div className="text-xs text-blue-600">
-              ✓ Links include your vehicle for better results
-            </div>
-          )}
+          <p className="mt-2 text-xs text-neutral-500">
+            {hasFullVehicleContext 
+              ? `Fitment verified for your ${vehicle.year} ${vehicle.make} ${vehicle.model}` 
+              : "Select your vehicle above for verified fitment"
+            }
+          </p>
         </div>
+      </div>
 
         {/* Category Link */}
         <div className="mt-4">
