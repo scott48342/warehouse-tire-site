@@ -76,7 +76,7 @@ export interface WheelSize {
  * Parse a single wheel size from string or object format.
  * Handles: "8.5Jx18", "10Jx20", {diameter: 18, width: 8.5}
  */
-function parseWheelSizeEntry(input: unknown): WheelSize | null {
+export function parseWheelSizeEntry(input: unknown): WheelSize | null {
   // String format: "8.5Jx18", "10Jx20"
   if (typeof input === "string") {
     const match = input.trim().match(/^(\d+(?:\.\d+)?)\s*[Jj]?\s*[xX]\s*(\d+(?:\.\d+)?)$/);
@@ -113,7 +113,7 @@ function parseWheelSizeEntry(input: unknown): WheelSize | null {
 /**
  * Parse array of wheel sizes, filtering out unparseable entries.
  */
-function parseWheelSizes(input: unknown): WheelSize[] {
+export function parseWheelSizes(input: unknown): WheelSize[] {
   if (!Array.isArray(input)) return [];
   const results: WheelSize[] = [];
   for (const item of input) {

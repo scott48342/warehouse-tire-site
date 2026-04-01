@@ -13,6 +13,7 @@
  */
 
 import { listLocalFitments } from "@/lib/fitment-db/getFitment";
+import { parseWheelSizes } from "@/lib/fitment-db/profileService";
 import type { VehicleFitment } from "@/lib/fitment-db/schema";
 import { getTechfeedCandidatesByBoltPattern, type TechfeedWheel } from "@/lib/techfeed/wheels";
 import { getCachedBulk } from "@/lib/availabilityCache";
@@ -271,18 +272,16 @@ async function getVehicleFitment(
 
   if (!bestFitment || !bestFitment.boltPattern) return null;
 
-  // Parse OEM wheel sizes
-  const oemWheelSizes = Array.isArray(bestFitment.oemWheelSizes) 
-    ? bestFitment.oemWheelSizes 
-    : [];
+  // Parse OEM wheel sizes (handles string formats like "8.5Jx18" from generation_template)
+  const parsedWheelSizes = parseWheelSizes(bestFitment.oemWheelSizes);
   
-  const oemDiameters = oemWheelSizes
-    .map((ws: any) => Number(ws.diameter || ws.rimDiameter || 0))
-    .filter((d: number) => d > 0);
+  const oemDiameters = parsedWheelSizes
+    .map((ws) => ws.diameter)
+    .filter((d) => d > 0);
   
-  const oemWidths = oemWheelSizes
-    .map((ws: any) => Number(ws.width || ws.rimWidth || 0))
-    .filter((w: number) => w > 0);
+  const oemWidths = parsedWheelSizes
+    .map((ws) => ws.width)
+    .filter((w) => w > 0);
 
   // Parse OEM tire sizes
   const oemTireSizes = Array.isArray(bestFitment.oemTireSizes)

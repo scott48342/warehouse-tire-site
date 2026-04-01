@@ -157,17 +157,10 @@ function parseWheelSize(input: unknown): ParsedWheelSize | null {
       };
     }
     
-    // If we have at least diameter or width, try to work with it
+    // REMOVED: Silent fallback that would fabricate width=8 or diameter=17
+    // If object has partial data, log and reject rather than guessing
     if (diameter > 0 || width > 0) {
-      console.warn(`[parseWheelSize] Unusual object values: diameter=${diameter}, width=${width}`);
-      return {
-        diameter: diameter > 0 ? diameter : 17,
-        width: width > 0 ? width : 8,
-        offset: obj.offset != null ? Number(obj.offset) : null,
-        tireSize: typeof obj.tireSize === "string" ? obj.tireSize : null,
-        axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle : "both",
-        isStock: obj.isStock !== false,
-      };
+      console.warn(`[parseWheelSize] REJECTED partial object: diameter=${diameter}, width=${width} (both required)`);
     }
     
     console.warn(`[parseWheelSize] Failed to parse object:`, JSON.stringify(obj));
@@ -436,6 +429,9 @@ export async function GET(req: Request) {
             offsetMinMm: classicResult.recommendedRange.offset.min,
             offsetMaxMm: classicResult.recommendedRange.offset.max,
             // Use classic stock reference for OEM wheel sizes
+            // NOTE: width || 6 is a valid historical default for classic cars (1950s-1980s)
+            // which commonly used 14x6 or 15x6 steel wheels. This is NOT the same as
+            // the fake 17x8 fallback for modern vehicles.
             oemWheelSizes: classicResult.stockReference.wheelDiameter ? [{
               diameter: classicResult.stockReference.wheelDiameter,
               width: classicResult.stockReference.wheelWidth || 6,
