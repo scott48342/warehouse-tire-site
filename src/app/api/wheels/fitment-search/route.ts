@@ -325,7 +325,7 @@ export async function GET(req: Request) {
             canFilterByHubBore: !!classicResult.specs.centerBore,
             reasons: [`Classic fitment: ${classicResult.platform.name}`, `Bolt pattern: ${classicResult.specs.boltPattern} (verified)`],
             parsed: {
-              boltPattern: { raw: classicResult.specs.boltPattern, normalized: classicResult.specs.boltPattern, studs: parseInt(classicResult.specs.boltPattern.split('x')[0]) || 5, pcdMm: parseFloat(classicResult.specs.boltPattern.split('x')[1]) || 114.3 },
+              boltPattern: { raw: classicResult.specs.boltPattern, normalized: classicResult.specs.boltPattern, lugCount: parseInt(classicResult.specs.boltPattern.split('x')[0]) || 5, pcd: parseFloat(classicResult.specs.boltPattern.split('x')[1]) || 114.3, isDualDrill: false, patterns: [] },
               centerBoreMm: classicResult.specs.centerBore || null,
               hasWheelSizes: true,
               hasTireSizes: !!classicResult.stockReference.tireSize,
