@@ -259,7 +259,7 @@ export default async function WheelsPage({
     : [];
   
   // Lifted build is active when we have valid lifted context from URL params
-  const isLiftedBuild = liftedSource === "lifted" && liftedPreset && liftedInches > 0;
+  const isLiftedBuild = Boolean(liftedSource === "lifted" && liftedPreset && liftedInches > 0);
   
   if (isLiftedBuild) {
     console.log('[wheels/page] 🚀 LIFTED BUILD DETECTED:', {
