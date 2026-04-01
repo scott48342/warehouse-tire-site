@@ -66,6 +66,63 @@ export interface WheelSize {
   isStock: boolean;
 }
 
+// ============================================================================
+// Wheel Size String Parser
+// ============================================================================
+// Parses wheel sizes stored as strings (e.g., "8.5Jx18") from generation_template
+// source into proper WheelSize objects.
+
+/**
+ * Parse a single wheel size from string or object format.
+ * Handles: "8.5Jx18", "10Jx20", {diameter: 18, width: 8.5}
+ */
+function parseWheelSizeEntry(input: unknown): WheelSize | null {
+  // String format: "8.5Jx18", "10Jx20"
+  if (typeof input === "string") {
+    const match = input.trim().match(/^(\d+(?:\.\d+)?)\s*[Jj]?\s*[xX]\s*(\d+(?:\.\d+)?)$/);
+    if (match) {
+      const width = parseFloat(match[1]);
+      const diameter = parseFloat(match[2]);
+      if (!isNaN(width) && !isNaN(diameter) && diameter >= 13 && diameter <= 30) {
+        return { diameter, width, offset: null, tireSize: null, axle: "both", isStock: true };
+      }
+    }
+    console.warn(`[parseWheelSizeEntry] Failed to parse: "${input}"`);
+    return null;
+  }
+  
+  // Object format: {diameter, width, ...}
+  if (input && typeof input === "object") {
+    const obj = input as Record<string, unknown>;
+    const diameter = Number(obj.diameter || obj.rimDiameter || 0);
+    const width = Number(obj.width || obj.rimWidth || 0);
+    if (diameter >= 13 && diameter <= 30 && width >= 4 && width <= 14) {
+      return {
+        diameter,
+        width,
+        offset: obj.offset != null ? Number(obj.offset) : null,
+        tireSize: typeof obj.tireSize === "string" ? obj.tireSize : null,
+        axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle : "both",
+        isStock: obj.isStock !== false,
+      };
+    }
+  }
+  return null;
+}
+
+/**
+ * Parse array of wheel sizes, filtering out unparseable entries.
+ */
+function parseWheelSizes(input: unknown): WheelSize[] {
+  if (!Array.isArray(input)) return [];
+  const results: WheelSize[] = [];
+  for (const item of input) {
+    const parsed = parseWheelSizeEntry(item);
+    if (parsed) results.push(parsed);
+  }
+  return results;
+}
+
 export interface ProfileLookupResult {
   profile: FitmentProfile | null;
   resolutionPath: ProfileResolutionPath;
@@ -464,7 +521,7 @@ export async function getFitmentProfile(
             seatType: cached.seatType,
             offsetMinMm: cached.offsetMinMm,
             offsetMaxMm: cached.offsetMaxMm,
-            oemWheelSizes: (cached.oemWheelSizes || []) as WheelSize[],
+            oemWheelSizes: parseWheelSizes(cached.oemWheelSizes),
             oemTireSizes: [],
             source: (cached.source as "db" | "api") || "db",
             apiCalled: false,
@@ -1142,7 +1199,7 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     seatType,
     offsetMinMm,
     offsetMaxMm,
-    oemWheelSizes: (record.oemWheelSizes as WheelSize[]) || [],
+    oemWheelSizes: parseWheelSizes(record.oemWheelSizes),
     oemTireSizes: (record.oemTireSizes as string[]) || [],
     source,
     apiCalled: source === "api",

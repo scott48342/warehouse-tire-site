@@ -59,6 +59,149 @@ import {
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// WHEEL SIZE STRING PARSER
+// ═══════════════════════════════════════════════════════════════════════════════
+// Parses wheel size strings like "8.5Jx18" or "10Jx20" into {width, diameter}
+// Also handles object-based formats for backward compatibility
+// ═══════════════════════════════════════════════════════════════════════════════
+
+interface ParsedWheelSize {
+  diameter: number;
+  width: number;
+  offset: number | null;
+  tireSize: string | null;
+  axle: "front" | "rear" | "both";
+  isStock: boolean;
+}
+
+/**
+ * Parse a wheel size from various formats:
+ * - String: "8.5Jx18", "10Jx20", "8.5x18", "18x8.5"
+ * - Object: {diameter: 18, width: 8.5, ...}
+ * 
+ * Returns null if parsing fails completely.
+ */
+function parseWheelSize(input: unknown): ParsedWheelSize | null {
+  // Handle string format (e.g., "8.5Jx18", "10Jx20")
+  if (typeof input === "string") {
+    const str = input.trim();
+    
+    // Pattern 1: "8.5Jx18" or "10Jx20" (width-J-x-diameter)
+    const jxMatch = str.match(/^(\d+(?:\.\d+)?)\s*[Jj]?\s*[xX]\s*(\d+(?:\.\d+)?)$/);
+    if (jxMatch) {
+      const width = parseFloat(jxMatch[1]);
+      const diameter = parseFloat(jxMatch[2]);
+      if (!isNaN(width) && !isNaN(diameter) && diameter >= 13 && diameter <= 30) {
+        return {
+          diameter,
+          width,
+          offset: null,
+          tireSize: null,
+          axle: "both",
+          isStock: true,
+        };
+      }
+    }
+    
+    // Pattern 2: "18x8.5" (diameter-x-width, reversed)
+    const reverseMatch = str.match(/^(\d+(?:\.\d+)?)\s*[xX]\s*(\d+(?:\.\d+)?)$/);
+    if (reverseMatch) {
+      const first = parseFloat(reverseMatch[1]);
+      const second = parseFloat(reverseMatch[2]);
+      // If first number is typical diameter range (14-26) and second is width range (4-14)
+      if (!isNaN(first) && !isNaN(second)) {
+        if (first >= 14 && first <= 26 && second >= 4 && second <= 14) {
+          return {
+            diameter: first,
+            width: second,
+            offset: null,
+            tireSize: null,
+            axle: "both",
+            isStock: true,
+          };
+        }
+        // Assume width-x-diameter if width < diameter
+        if (second > first && second >= 14 && second <= 26) {
+          return {
+            diameter: second,
+            width: first,
+            offset: null,
+            tireSize: null,
+            axle: "both",
+            isStock: true,
+          };
+        }
+      }
+    }
+    
+    console.warn(`[parseWheelSize] Failed to parse string: "${str}"`);
+    return null;
+  }
+  
+  // Handle object format (e.g., {diameter: 18, width: 8.5})
+  if (input && typeof input === "object") {
+    const obj = input as Record<string, unknown>;
+    const diameter = Number(obj.diameter || obj.rimDiameter || 0);
+    const width = Number(obj.width || obj.rimWidth || 0);
+    
+    // Validate: diameter should be 13-30, width should be 4-14
+    if (diameter >= 13 && diameter <= 30 && width >= 4 && width <= 14) {
+      return {
+        diameter,
+        width,
+        offset: obj.offset != null ? Number(obj.offset) : null,
+        tireSize: typeof obj.tireSize === "string" ? obj.tireSize : null,
+        axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle : "both",
+        isStock: obj.isStock !== false,
+      };
+    }
+    
+    // If we have at least diameter or width, try to work with it
+    if (diameter > 0 || width > 0) {
+      console.warn(`[parseWheelSize] Unusual object values: diameter=${diameter}, width=${width}`);
+      return {
+        diameter: diameter > 0 ? diameter : 17,
+        width: width > 0 ? width : 8,
+        offset: obj.offset != null ? Number(obj.offset) : null,
+        tireSize: typeof obj.tireSize === "string" ? obj.tireSize : null,
+        axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle : "both",
+        isStock: obj.isStock !== false,
+      };
+    }
+    
+    console.warn(`[parseWheelSize] Failed to parse object:`, JSON.stringify(obj));
+    return null;
+  }
+  
+  console.warn(`[parseWheelSize] Unknown input type: ${typeof input}`);
+  return null;
+}
+
+/**
+ * Parse an array of wheel sizes from various formats.
+ * Filters out any entries that fail to parse.
+ */
+function parseWheelSizes(input: unknown): ParsedWheelSize[] {
+  if (!Array.isArray(input)) {
+    return [];
+  }
+  
+  const results: ParsedWheelSize[] = [];
+  for (const item of input) {
+    const parsed = parseWheelSize(item);
+    if (parsed) {
+      results.push(parsed);
+    }
+  }
+  
+  if (results.length !== input.length) {
+    console.log(`[parseWheelSizes] Parsed ${results.length}/${input.length} wheel sizes successfully`);
+  }
+  
+  return results;
+}
+
 /**
  * Resolution paths for fitment profile lookup:
  * - directCanonical: Found directly in vehicle_fitments by modificationId
@@ -241,14 +384,7 @@ export async function GET(req: Request) {
               seatType: bestFitment.seatType,
               offsetMinMm: bestFitment.offsetMinMm ? Number(bestFitment.offsetMinMm) : null,
               offsetMaxMm: bestFitment.offsetMaxMm ? Number(bestFitment.offsetMaxMm) : null,
-              oemWheelSizes: (Array.isArray(bestFitment.oemWheelSizes) ? bestFitment.oemWheelSizes : []).map((ws: any) => ({
-                diameter: Number(ws.diameter || ws.rimDiameter || 17),
-                width: Number(ws.width || ws.rimWidth || 8),
-                offset: ws.offset != null ? Number(ws.offset) : null,
-                tireSize: ws.tireSize || null,
-                axle: ws.axle || "both",
-                isStock: ws.isStock !== false,
-              })),
+              oemWheelSizes: parseWheelSizes(bestFitment.oemWheelSizes),
               oemTireSizes: Array.isArray(bestFitment.oemTireSizes) ? bestFitment.oemTireSizes : [],
               source: "db",
               apiCalled: false,
@@ -394,10 +530,12 @@ async function handleDbProfilePath(
   const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
 
   // Build OEM specs from dbProfile (wheel-size based)
-  const wheelSpecs = (dbProfile.oemWheelSizes || []).map((ws: any) => ({
-    rimDiameter: Number(ws.diameter),
-    rimWidth: Number(ws.width),
-    offset: ws.offset != null ? Number(ws.offset) : null,
+  // Parse wheel sizes to handle both string formats ("8.5Jx18") and object formats
+  const parsedWheelSizes = parseWheelSizes(dbProfile.oemWheelSizes);
+  const wheelSpecs = parsedWheelSizes.map((ws) => ({
+    rimDiameter: ws.diameter,
+    rimWidth: ws.width,
+    offset: ws.offset,
   }));
 
   // Auto-detect fitment mode
