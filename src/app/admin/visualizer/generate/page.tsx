@@ -44,7 +44,10 @@ export default function GenerateVehiclePage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Generation failed");
+        const errorMsg = data.details 
+          ? `${data.error}: ${data.details}`
+          : data.error || "Generation failed";
+        throw new Error(errorMsg);
       }
 
       setProgress("Draft created! Redirecting to review...");

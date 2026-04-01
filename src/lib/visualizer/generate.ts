@@ -16,6 +16,11 @@ import {
 } from "./prompts";
 import type { WheelPosition } from "./schema";
 
+// Check for API key at module load
+if (!process.env.OPENAI_API_KEY) {
+  console.warn("[Generate] OPENAI_API_KEY not set");
+}
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -51,17 +56,45 @@ export async function generateVehicleAsset(
   console.log(`[Generate] Starting generation for ${vehicle}`);
   console.log(`[Generate] Prompt: ${prompt.substring(0, 100)}...`);
 
-  // 1. Generate image with DALL-E 3
-  const imageUrl = await generateImage(prompt);
-  console.log(`[Generate] Image generated, downloading...`);
+  // Check env vars
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error("OPENAI_API_KEY environment variable is not set");
+  }
 
-  // 2. Download and save image
-  const imagePath = await saveGeneratedImage(imageUrl, slug);
-  console.log(`[Generate] Image saved to ${imagePath}`);
+  // 1. Generate image with DALL-E 3
+  let imageUrl: string;
+  try {
+    imageUrl = await generateImage(prompt);
+    console.log(`[Generate] Image generated, downloading...`);
+  } catch (err) {
+    console.error(`[Generate] DALL-E error:`, err);
+    throw new Error(`DALL-E generation failed: ${err instanceof Error ? err.message : "Unknown error"}`);
+  }
+
+  // 2. Download and save image to Vercel Blob
+  let imagePath: string;
+  try {
+    imagePath = await saveGeneratedImage(imageUrl, slug);
+    console.log(`[Generate] Image saved to ${imagePath}`);
+  } catch (err) {
+    console.error(`[Generate] Blob storage error:`, err);
+    throw new Error(`Failed to save image: ${err instanceof Error ? err.message : "Unknown error"}. Check BLOB_READ_WRITE_TOKEN.`);
+  }
 
   // 3. Analyze image for wheel positions
-  const analysis = await analyzeWheelPositions(imageUrl, category);
-  console.log(`[Generate] Analysis complete:`, analysis);
+  let analysis;
+  try {
+    analysis = await analyzeWheelPositions(imageUrl, category);
+    console.log(`[Generate] Analysis complete:`, analysis);
+  } catch (err) {
+    console.error(`[Generate] Vision analysis error:`, err);
+    // Don't fail entirely, use defaults
+    analysis = {
+      frontWheel: DEFAULT_POSITIONS[category].front,
+      rearWheel: DEFAULT_POSITIONS[category].rear,
+      notes: `Vision analysis failed: ${err instanceof Error ? err.message : "Unknown"}`,
+    };
+  }
 
   return {
     slug,
