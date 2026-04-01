@@ -484,7 +484,7 @@ export async function GET(req: Request) {
     console.warn(`[fitment-search] LEGACY FALLBACK: ${year} ${make} ${model} mod=${modificationId || "(none)"} - dbProfile unavailable`);
     resolutionPath = "legacyFallback";
     
-    return await handleLegacyPath(url, year, make, model, modificationId, modeParam, debug, t0);
+    return await handleLegacyPath(url, year, make, model, modificationId, trimParam, modeParam, debug, t0);
 
   } catch (err: any) {
     console.error("[wheels/fitment-search] Error:", err);
@@ -1425,6 +1425,7 @@ async function handleLegacyPath(
   make: string,
   model: string,
   modificationId: string | undefined,
+  displayTrimParam: string | undefined,  // Original trim param for display (e.g., "Base")
   modeParam: string | null,
   debug: boolean,
   t0: number
@@ -1432,22 +1433,24 @@ async function handleLegacyPath(
   const db = getPool();
   await ensureFitmentTables(db);
 
-  // Use modificationId as trim for legacy lookup
-  const trim = modificationId;
+  // modificationId is used for lookup (e.g., "s_5b30d3b0")
+  // displayTrimParam is kept separate for display (e.g., "Base")
+  const lookupKey = modificationId;
+  const displayTrim = displayTrimParam || modificationId || null;  // Prefer original trim param
   
-  // Try to get profile from legacy database
-  let profile = await buildFitmentProfile(db, Number(year), make, model, trim);
+  // Try to get profile from legacy database (use modificationId for lookup)
+  let profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
   
   // ═══════════════════════════════════════════════════════════════════════════
   // DB-FIRST: No external API fallback. If profile not in DB, return error.
   // Wheel-Size API is BLOCKED in this path. Use admin/fitment for manual import.
   // ═══════════════════════════════════════════════════════════════════════════
   if (!profile) {
-    console.log(`[fitment-search] DB-FIRST: No profile for ${year} ${make} ${model} trim=${trim || "(none)"} - NOT calling external API`);
+    console.log(`[fitment-search] DB-FIRST: No profile for ${year} ${make} ${model} lookupKey=${lookupKey || "(none)"} - NOT calling external API`);
     
     return NextResponse.json({
       error: "No fitment profile found in local database",
-      vehicle: { year, make, model, trim },
+      vehicle: { year, make, model, trim: displayTrim },  // Use displayTrim, not lookupKey
       resolutionPath: "invalid",
       dbFirst: true,
       suggestion: "Use admin/fitment to manually import this vehicle's fitment data",
@@ -1465,12 +1468,12 @@ async function handleLegacyPath(
     make,
     model,
     rawModel: model,
-    trim: profile.vehicle?.trim || trim,
-    modificationId: trim,
+    trim: profile.vehicle?.trim || displayTrim || undefined,
+    modificationId: lookupKey,
   });
   
   if (ruleOverride && ruleOverride.boltPattern && ruleOverride.boltPattern !== profile.boltPattern) {
-    console.log(`[fitment-search] 🔧 LEGACY RULE OVERRIDE: ${year} ${make} ${model} trim=${trim || "(none)"}`);
+    console.log(`[fitment-search] 🔧 LEGACY RULE OVERRIDE: ${year} ${make} ${model} trim=${displayTrim || "(none)"}`);
     console.log(`  Bolt pattern: ${profile.boltPattern} → ${ruleOverride.boltPattern}`);
     console.log(`  Reason: ${ruleOverride.notes || "Fitment rule match"}`);
     
@@ -1513,7 +1516,7 @@ async function handleLegacyPath(
           year: Number(year),
           make,
           model,
-          trim: profile.vehicle.trim || modificationId || null,
+          trim: profile.vehicle.trim || displayTrim || null,
         },
         resolutionPath: "legacyFallback",
         profileFound: true,
