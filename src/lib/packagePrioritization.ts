@@ -182,11 +182,11 @@ export function applyPackagePriorityToWheels<T extends Record<string, any>>(
       return tierA - tierB;
     }
 
-    return a._pkgPriority.price - b._pkgPriority.price;
+    return (a._pkgPriority.price ?? 0) - (b._pkgPriority.price ?? 0);
   });
 
   // Remove temporary _pkgPriority field and return
-  return sorted.map(({ _pkgPriority, ...rest }) => rest as T);
+  return sorted.map(({ _pkgPriority, ...rest }) => rest as unknown as T);
 }
 
 /**
@@ -243,8 +243,8 @@ export function applyPackagePriorityToTires<T extends Record<string, any>>(
       return tierA - tierB;
     }
 
-    return a._pkgPriority.price - b._pkgPriority.price;
+    return (a._pkgPriority.price ?? 0) - (b._pkgPriority.price ?? 0);
   });
 
-  return sorted.map(({ _pkgPriority, ...rest }) => rest as T);
+  return sorted.map(({ _pkgPriority, ...rest }) => rest as unknown as T);
 }
