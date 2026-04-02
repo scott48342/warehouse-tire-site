@@ -223,6 +223,31 @@ async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]>
 }
 
 /**
+ * Look up K&M tire images from km_image_mappings table
+ */
+async function getKmImagesFromDb(partNumbers: string[]): Promise<Map<string, string>> {
+  if (partNumbers.length === 0) return new Map();
+  
+  try {
+    const db = getPool();
+    const { rows } = await db.query(`
+      SELECT part_number, image_url 
+      FROM km_image_mappings 
+      WHERE part_number = ANY($1) AND image_url IS NOT NULL
+    `, [partNumbers]);
+    
+    const map = new Map<string, string>();
+    for (const row of rows) {
+      map.set(row.part_number, row.image_url);
+    }
+    return map;
+  } catch (err) {
+    console.error("[tires/search] K&M image lookup error:", err);
+    return new Map();
+  }
+}
+
+/**
  * Search K&M/Keystone tires by size and convert to TireResult format
  */
 async function searchTiresKM(size: string): Promise<TireResult[]> {
@@ -485,19 +510,33 @@ function enrichKmWithTireLibraryImages(
  * Merge results from WheelPros, Tirewire, and K&M, deduplicating by product code.
  * Tirewire results are preferred when duplicates exist (better images).
  */
-function mergeTireResults(
+async function mergeTireResults(
   wpResults: TireResult[],
   twResults: TireResult[],
   kmResults: TireResult[],
   minQty: number
-): TireResult[] {
+): Promise<TireResult[]> {
   const merged = new Map<string, TireResult>();
   
-  // Build image lookup from Tirewire results for K&M enrichment
+  // First, look up K&M images from our database
+  const kmPartNumbers = kmResults.map(t => t.partNumber).filter(Boolean);
+  const kmDbImages = await getKmImagesFromDb(kmPartNumbers);
+  
+  // Apply database images to K&M results
+  const kmWithDbImages = kmResults.map(tire => {
+    if (tire.imageUrl) return tire; // Already has an image
+    const dbImage = kmDbImages.get(tire.partNumber);
+    if (dbImage) {
+      return { ...tire, imageUrl: dbImage };
+    }
+    return tire;
+  });
+  
+  // Build image lookup from Tirewire results for remaining K&M enrichment
   const imageLookup = buildPatternImageLookup(twResults);
   
-  // Enrich K&M results with TireLibrary images
-  const enrichedKmResults = enrichKmWithTireLibraryImages(kmResults, imageLookup);
+  // Enrich remaining K&M results (without images) with TireLibrary images
+  const enrichedKmResults = enrichKmWithTireLibraryImages(kmWithDbImages, imageLookup);
   
   // Helper to add/merge a tire, keeping lowest price
   const addTire = (tire: TireResult) => {
@@ -789,7 +828,7 @@ export async function GET(req: Request) {
       
       // Merge and dedupe by partNumber (prefer Tirewire for images)
       const tMerge0 = Date.now();
-      const merged = mergeTireResults(wpResults, twResults, kmResults, minQty);
+      const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
       timing.mergeMs = Date.now() - tMerge0;
       
       // Apply cached TireLibrary images (from Vercel Blob)
@@ -1021,7 +1060,7 @@ export async function GET(req: Request) {
     timing.searchMs = Date.now() - tSearch0;
     
     // Merge results from all sources
-    const allResults = mergeTireResults(wpResults, twResults, kmResults, minQty);
+    const allResults = await mergeTireResults(wpResults, twResults, kmResults, minQty);
     
     if (allResults.length === 0 && !wheelDiameter) {
       return NextResponse.json({
