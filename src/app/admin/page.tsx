@@ -51,7 +51,7 @@ async function getStats() {
     ]);
 
     // Fetch Fitment API stats
-    let apiStats = { pendingRequests: [], activeKeys: 0, requestsToday: 0, requestsMonth: 0 };
+    let apiStats: { pendingRequests: any[]; activeKeys: number; requestsToday: number; requestsMonth: number } = { pendingRequests: [], activeKeys: 0, requestsToday: 0, requestsMonth: 0 };
     try {
       const [pendingRes, keysRes, apiUsageRes] = await Promise.all([
         pool.query(`SELECT id, name, email, company, use_case, expected_usage, created_at FROM api_access_requests WHERE status = 'pending' ORDER BY created_at DESC LIMIT 5`),
