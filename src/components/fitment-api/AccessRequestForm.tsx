@@ -3,27 +3,64 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+// Use case options
+const USE_CASES = [
+  { value: 'ecommerce', label: 'Tire & Wheel Ecommerce' },
+  { value: 'marketplace', label: 'Automotive Marketplace' },
+  { value: 'dealership', label: 'Dealership / DMS Software' },
+  { value: 'developer', label: 'Developer / Side Project' },
+  { value: 'other', label: 'Other' },
+];
+
 export function AccessRequestForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
     
     if (!agreedToTerms) {
-      alert('Please agree to the Terms of Service and Privacy Policy to continue.');
+      setError('Please agree to the Terms of Service and Privacy Policy to continue.');
       return;
     }
     
     setLoading(true);
     
-    // For now, just simulate submission
-    // TODO: Connect to actual form handler / email
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const formData = new FormData(e.currentTarget);
     
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const response = await fetch('/api/fitment-api/request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          company: formData.get('company'),
+          website: formData.get('website') || undefined,
+          useCase: formData.get('useCase'),
+          useCaseDetails: formData.get('useCaseDetails') || undefined,
+          expectedUsage: formData.get('usage'),
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok || !data.success) {
+        setError(data.error || 'Failed to submit request. Please try again.');
+        setLoading(false);
+        return;
+      }
+      
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Request submission error:', err);
+      setError('An unexpected error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -35,8 +72,11 @@ export function AccessRequestForm() {
           </svg>
         </div>
         <h3 className="text-xl font-bold text-white mb-2">Request Received!</h3>
-        <p className="text-zinc-400">
+        <p className="text-zinc-400 mb-4">
           We&apos;ll review your application and get back to you within 24 hours with your API credentials.
+        </p>
+        <p className="text-zinc-500 text-sm">
+          Check your email for a confirmation message.
         </p>
       </div>
     );
@@ -44,6 +84,12 @@ export function AccessRequestForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+      {error && (
+        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+          <p className="text-red-400 text-sm">{error}</p>
+        </div>
+      )}
+      
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div>
           <label className="block text-zinc-300 text-sm font-medium mb-2">
@@ -53,18 +99,20 @@ export function AccessRequestForm() {
             type="text" 
             name="name"
             required
+            minLength={2}
             className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
             placeholder="John Smith"
           />
         </div>
         <div>
           <label className="block text-zinc-300 text-sm font-medium mb-2">
-            Company *
+            Company / Project *
           </label>
           <input 
             type="text" 
             name="company"
             required
+            minLength={2}
             className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
             placeholder="Acme Wheels Inc."
           />
@@ -96,6 +144,22 @@ export function AccessRequestForm() {
       
       <div className="mb-6">
         <label className="block text-zinc-300 text-sm font-medium mb-2">
+          What are you building? *
+        </label>
+        <select 
+          name="useCase"
+          required
+          className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+        >
+          <option value="">Select a use case...</option>
+          {USE_CASES.map(uc => (
+            <option key={uc.value} value={uc.value}>{uc.label}</option>
+          ))}
+        </select>
+      </div>
+      
+      <div className="mb-6">
+        <label className="block text-zinc-300 text-sm font-medium mb-2">
           Expected Monthly API Calls
         </label>
         <select 
@@ -111,13 +175,13 @@ export function AccessRequestForm() {
       
       <div className="mb-6">
         <label className="block text-zinc-300 text-sm font-medium mb-2">
-          Tell us about your use case
+          Tell us more (optional)
         </label>
         <textarea 
-          name="notes"
-          rows={4}
+          name="useCaseDetails"
+          rows={3}
           className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-          placeholder="What are you building? How will you use the fitment data?"
+          placeholder="Any additional details about your project or integration plans..."
         />
       </div>
       
@@ -169,7 +233,7 @@ export function AccessRequestForm() {
       <button 
         type="submit"
         disabled={loading}
-        className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-600/50 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+        className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-600/50 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
       >
         {loading ? (
           <>

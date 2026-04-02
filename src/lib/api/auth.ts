@@ -124,56 +124,71 @@ export interface ValidateKeyResult {
 
 /**
  * Validate API key from request headers or query params.
+ * Checks env-based keys first, then falls back to database keys.
  */
 export function validateApiKey(req: NextRequest): ValidateKeyResult {
   // Extract key from header or query param
   const apiKey = req.headers.get("x-api-key") || 
+                 req.headers.get("X-API-Key") ||
                  new URL(req.url).searchParams.get("api_key");
   
   if (!apiKey) {
     return { valid: false, error: "API key required", errorCode: "MISSING_KEY" };
   }
 
+  // Check env-based keys first
   const cache = getKeyCache();
   const keyConfig = cache.get(apiKey);
 
-  if (!keyConfig) {
-    return { valid: false, error: "Invalid API key", errorCode: "INVALID_KEY" };
-  }
-
-  // Check state
-  if (keyConfig.state === "suspended") {
-    return { 
-      valid: false, 
-      key: keyConfig,
-      error: "API key is suspended. Contact support.", 
-      errorCode: "SUSPENDED" 
-    };
-  }
-
-  if (keyConfig.state === "revoked") {
-    return { 
-      valid: false, 
-      key: keyConfig,
-      error: "API key has been revoked.", 
-      errorCode: "REVOKED" 
-    };
-  }
-
-  // Check expiration
-  if (keyConfig.expiresAt) {
-    const expiry = new Date(keyConfig.expiresAt);
-    if (expiry < new Date()) {
+  if (keyConfig) {
+    // Check state
+    if (keyConfig.state === "suspended") {
       return { 
         valid: false, 
         key: keyConfig,
-        error: "API key has expired.", 
-        errorCode: "EXPIRED" 
+        error: "API key is suspended. Contact support.", 
+        errorCode: "SUSPENDED" 
       };
     }
+
+    if (keyConfig.state === "revoked") {
+      return { 
+        valid: false, 
+        key: keyConfig,
+        error: "API key has been revoked.", 
+        errorCode: "REVOKED" 
+      };
+    }
+
+    // Check expiration
+    if (keyConfig.expiresAt) {
+      const expiry = new Date(keyConfig.expiresAt);
+      if (expiry < new Date()) {
+        return { 
+          valid: false, 
+          key: keyConfig,
+          error: "API key has expired.", 
+          errorCode: "EXPIRED" 
+        };
+      }
+    }
+
+    return { valid: true, key: keyConfig };
+  }
+  
+  // If key starts with "wtd_", it's a database-issued key
+  // Return pending for async validation (handled in middleware)
+  if (apiKey.startsWith("wtd_")) {
+    // Mark for async DB validation
+    return { 
+      valid: false, 
+      error: "Pending database validation",
+      errorCode: "PENDING_DB_VALIDATION" as any,
+      key: { key: apiKey } as any,
+    };
   }
 
-  return { valid: true, key: keyConfig };
+  return { valid: false, error: "Invalid API key", errorCode: "INVALID_KEY" };
 }
 
 // ============================================================================

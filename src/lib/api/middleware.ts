@@ -15,6 +15,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { validateApiKey, unauthorizedResponse, rateLimitedResponse } from "./auth";
+import { validateDbApiKey, extractApiKey } from "./db-auth";
 import { checkRateLimit, addRateLimitHeaders } from "./rate-limit";
 import { logRequest, createLogEntry } from "./usage-logger";
 import { getFromCache, setInCache, makeCacheKey } from "./cache";
@@ -95,8 +96,37 @@ export function withPublicApi(
                "unknown";
     const userAgent = req.headers.get("user-agent") || undefined;
 
-    // 1. Validate API key
-    const authResult = validateApiKey(req);
+    // 1. Validate API key (env-based first, then database)
+    let authResult = validateApiKey(req);
+    
+    // If env validation returns "PENDING_DB_VALIDATION", try database
+    if ((authResult.errorCode as any) === "PENDING_DB_VALIDATION") {
+      const plainKey = extractApiKey(req);
+      if (plainKey) {
+        const dbResult = await validateDbApiKey(plainKey, {
+          endpoint: url.pathname,
+          ip,
+          userAgent,
+        });
+        
+        if (dbResult) {
+          // Database found the key
+          if (dbResult.valid && dbResult.key) {
+            authResult = { valid: true, key: dbResult.key };
+          } else {
+            authResult = { 
+              valid: false, 
+              error: dbResult.error || "Invalid API key",
+              errorCode: dbResult.errorCode as any || "INVALID_KEY",
+            };
+          }
+        } else {
+          // Not found in database either
+          authResult = { valid: false, error: "Invalid API key", errorCode: "INVALID_KEY" };
+        }
+      }
+    }
+    
     if (!authResult.valid || !authResult.key) {
       // Log failed auth attempts
       if (process.env.NODE_ENV === "production") {
