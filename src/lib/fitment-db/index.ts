@@ -108,3 +108,23 @@ export {
   type RuleMatchInput,
   type RuleMatchResult,
 } from "./vehicleFitmentRules";
+
+// Unresolved fitment tracking (gap analysis)
+export {
+  logUnresolvedFitment,
+  getTopUnresolvedVehicles,
+  getRecentUnresolvedVehicles,
+  getUnresolvedCountsByMake,
+  getUnresolvedCountsByModel,
+  getUnresolvedDailyCounts,
+  getHighValueGaps,
+  markVehicleResolved,
+  getUnresolvedSummary,
+  isLikelyBotOrSpam,
+  unresolvedFitmentSearches,
+  type UnresolvedFitmentSearch,
+  type NewUnresolvedFitmentSearch,
+  type UnresolvedMetadata,
+  type UnresolvedVehicleReport,
+  type LogUnresolvedParams,
+} from "./unresolvedFitmentTracker";

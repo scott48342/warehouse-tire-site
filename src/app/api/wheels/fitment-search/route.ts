@@ -56,7 +56,7 @@ import {
   type ConfidenceResult,
 } from "@/lib/fitmentConfidence";
 
-import { logMissingVehicle } from "@/lib/missingVehicleLogger";
+import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -314,6 +314,19 @@ export async function GET(req: Request) {
       // Block if profile exists but has insufficient data
       if (!confidenceResult.canShowWheels) {
         console.warn(`[fitment-search] BLOCKED (${confidenceResult.confidence}): ${year} ${make} ${model} mod=${modificationId || "(none)"} - DB profile has insufficient data`);
+        
+        // Log as unresolved due to low confidence (data quality gap)
+        logUnresolvedFitment({
+          year,
+          make,
+          model,
+          trim: dbProfile.displayTrim || undefined,
+          searchType: "wheel",
+          source: "api",
+          path: url.pathname + url.search,
+          modificationId: modificationId || undefined,
+          resolutionAttempts: [`blocked:${confidenceResult.confidence}`],
+        }).catch(() => {}); // Fire and forget
         
         return NextResponse.json({
           results: [],
@@ -1450,10 +1463,17 @@ async function handleLegacyPath(
   if (!profile) {
     console.log(`[fitment-search] DB-FIRST: No profile for ${year} ${make} ${model} lookupKey=${lookupKey || "(none)"} - NOT calling external API`);
     
-    // Log missing vehicle for tracking and prioritization
-    logMissingVehicle(year, make, model, {
+    // Log unresolved fitment search for gap tracking and prioritization
+    logUnresolvedFitment({
+      year,
+      make,
+      model,
       trim: displayTrim || undefined,
+      searchType: "wheel",
+      source: "api",
       path: `/wheels?year=${year}&make=${make}&model=${model}`,
+      modificationId: lookupKey,
+      resolutionAttempts: ["legacyFallback"],
     }).catch(() => {}); // Fire and forget
     
     // Return a user-friendly response with clear flags

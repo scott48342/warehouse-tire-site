@@ -294,8 +294,24 @@ export async function GET(req: Request) {
     });
   }
   
-  // No data available
+  // No data available - log for gap tracking
   console.warn(`[tire-sizes] NO DATA for ${year} ${make} ${model}`);
+  
+  // Log unresolved fitment search (fire and forget)
+  import("@/lib/fitment-db/unresolvedFitmentTracker").then(({ logUnresolvedFitment }) => {
+    logUnresolvedFitment({
+      year,
+      make,
+      model,
+      trim: modification || undefined,
+      searchType: "tire",
+      source: "api",
+      path: `/api/vehicles/tire-sizes?year=${year}&make=${make}&model=${model}`,
+      modificationId: modification || undefined,
+      resolutionAttempts: ["db-first", "static-fallback"],
+    }).catch(() => {});
+  }).catch(() => {});
+  
   return NextResponse.json({
     tireSizes: [],
     tireSizesStrict: [],
