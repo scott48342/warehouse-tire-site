@@ -37,7 +37,7 @@ function required(name: string) {
 let pool: pg.Pool | null = null;
 function getPool() {
   if (pool) return pool;
-  const DATABASE_URL = required("DATABASE_URL");
+  const DATABASE_URL = required("POSTGRES_URL");
   pool = new Pool({
     connectionString: DATABASE_URL,
     ssl: { rejectUnauthorized: false },
@@ -975,3 +975,4 @@ export async function GET(req: Request) {
     );
   }
 }
+

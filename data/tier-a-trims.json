@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "source": "tiresize.com",
+    "researchDate": "2026-04-01",
+    "version": "1.0",
+    "scope": "Tier A - Performance Vehicles Only"
+  },
+  "vehicles": {
+    "ford-mustang": {
+      "make": "ford",
+      "model": "mustang",
+      "boltPattern": "5x114.3",
+      "centerBoreMm": 70.5,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "yearRange": [2015, 2024],
+      "trims": {
+        "ecoboost": {
+          "displayTrim": "EcoBoost",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 8, "offset": 45, "axle": "both", "isStock": true, "tireSize": "235/50R18"},
+            {"diameter": 19, "width": 8.5, "offset": 42, "axle": "both", "isStock": true, "tireSize": "255/40R19"},
+            {"diameter": 20, "width": 9, "offset": 40, "axle": "both", "isStock": true, "tireSize": "265/35R20"}
+          ],
+          "oemTireSizes": ["235/50R18", "255/40R19", "265/35R20"]
+        },
+        "gt": {
+          "displayTrim": "GT",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 9, "offset": 42, "axle": "both", "isStock": true, "tireSize": "255/45R18"},
+            {"diameter": 19, "width": 9, "offset": 40, "axle": "both", "isStock": true, "tireSize": "255/40R19"},
+            {"diameter": 20, "width": 9.5, "offset": 38, "axle": "both", "isStock": true, "tireSize": "265/35R20"}
+          ],
+          "oemTireSizes": ["255/45R18", "255/40R19", "265/35R20"]
+        },
+        "gt-performance-pack": {
+          "displayTrim": "GT Performance Pack",
+          "isStaggered": true,
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 9, "offset": 42, "axle": "front", "isStock": true, "tireSize": "255/40R19"},
+            {"diameter": 19, "width": 9.5, "offset": 40, "axle": "rear", "isStock": true, "tireSize": "275/40R19"}
+          ],
+          "oemTireSizes": ["255/40R19", "275/40R19"]
+        },
+        "mach-1": {
+          "displayTrim": "Mach 1",
+          "isStaggered": true,
+          "yearRange": [2021, 2024],
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 10.5, "offset": 35, "axle": "front", "isStock": true, "tireSize": "305/30R19"},
+            {"diameter": 19, "width": 11, "offset": 34, "axle": "rear", "isStock": true, "tireSize": "315/30R19"}
+          ],
+          "oemTireSizes": ["305/30R19", "315/30R19"]
+        },
+        "shelby-gt350": {
+          "displayTrim": "Shelby GT350",
+          "isStaggered": true,
+          "yearRange": [2016, 2020],
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 10.5, "offset": 45, "axle": "front", "isStock": true, "tireSize": "295/35R19"},
+            {"diameter": 19, "width": 11, "offset": 45, "axle": "rear", "isStock": true, "tireSize": "305/35R19"}
+          ],
+          "oemTireSizes": ["295/35R19", "305/35R19"]
+        },
+        "shelby-gt500": {
+          "displayTrim": "Shelby GT500",
+          "isStaggered": true,
+          "yearRange": [2020, 2024],
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 36, "axle": "front", "isStock": true, "tireSize": "305/30R20"},
+            {"diameter": 20, "width": 11.5, "offset": 33, "axle": "rear", "isStock": true, "tireSize": "315/30R20"}
+          ],
+          "oemTireSizes": ["305/30R20", "315/30R20"]
+        },
+        "dark-horse": {
+          "displayTrim": "Dark Horse",
+          "isStaggered": true,
+          "yearRange": [2024, 2026],
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 9, "offset": 42, "axle": "front", "isStock": true, "tireSize": "255/40R19"},
+            {"diameter": 19, "width": 9.5, "offset": 40, "axle": "rear", "isStock": true, "tireSize": "275/40R19"}
+          ],
+          "oemTireSizes": ["255/40R19", "275/40R19"]
+        },
+        "dark-horse-handling": {
+          "displayTrim": "Dark Horse Handling Package",
+          "isStaggered": true,
+          "yearRange": [2024, 2026],
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 10.5, "offset": 35, "axle": "front", "isStock": true, "tireSize": "305/30R19"},
+            {"diameter": 19, "width": 11, "offset": 34, "axle": "rear", "isStock": true, "tireSize": "315/30R19"}
+          ],
+          "oemTireSizes": ["305/30R19", "315/30R19"]
+        }
+      }
+    },
+    "chevrolet-camaro": {
+      "make": "chevrolet",
+      "model": "camaro",
+      "boltPattern": "5x120",
+      "centerBoreMm": 67.1,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "yearRange": [2016, 2024],
+      "trims": {
+        "ls": {
+          "displayTrim": "LS",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 8, "offset": 45, "axle": "both", "isStock": true, "tireSize": "245/50R18"}
+          ],
+          "oemTireSizes": ["245/50R18"]
+        },
+        "lt": {
+          "displayTrim": "LT",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 8, "offset": 45, "axle": "both", "isStock": true, "tireSize": "245/50R18"},
+            {"diameter": 20, "width": 8.5, "offset": 35, "axle": "both", "isStock": true, "tireSize": "245/40R20"}
+          ],
+          "oemTireSizes": ["245/50R18", "245/40R20"]
+        },
+        "lt-rs": {
+          "displayTrim": "LT RS Package",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8.5, "offset": 35, "axle": "both", "isStock": true, "tireSize": "245/40R20"}
+          ],
+          "oemTireSizes": ["245/40R20"]
+        },
+        "lt1": {
+          "displayTrim": "LT1",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8.5, "offset": 35, "axle": "both", "isStock": true, "tireSize": "245/40R20"}
+          ],
+          "oemTireSizes": ["245/40R20"]
+        },
+        "ss": {
+          "displayTrim": "SS",
+          "isStaggered": true,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8.5, "offset": 35, "axle": "front", "isStock": true, "tireSize": "245/40R20"},
+            {"diameter": 20, "width": 10, "offset": 35, "axle": "rear", "isStock": true, "tireSize": "275/35R20"}
+          ],
+          "oemTireSizes": ["245/40R20", "275/35R20"]
+        },
+        "ss-1le": {
+          "displayTrim": "SS 1LE Track Package",
+          "isStaggered": true,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 10, "offset": 30, "axle": "front", "isStock": true, "tireSize": "285/30R20"},
+            {"diameter": 20, "width": 11, "offset": 30, "axle": "rear", "isStock": true, "tireSize": "305/30R20"}
+          ],
+          "oemTireSizes": ["285/30R20", "305/30R20"]
+        },
+        "zl1": {
+          "displayTrim": "ZL1",
+          "isStaggered": true,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 10, "offset": 30, "axle": "front", "isStock": true, "tireSize": "285/30R20"},
+            {"diameter": 20, "width": 11, "offset": 30, "axle": "rear", "isStock": true, "tireSize": "305/30R20"}
+          ],
+          "oemTireSizes": ["285/30R20", "305/30R20"]
+        },
+        "zl1-1le": {
+          "displayTrim": "ZL1 1LE Extreme Track",
+          "isStaggered": true,
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 11, "offset": 28, "axle": "front", "isStock": true, "tireSize": "305/30R19"},
+            {"diameter": 19, "width": 11.5, "offset": 28, "axle": "rear", "isStock": true, "tireSize": "325/30R19"}
+          ],
+          "oemTireSizes": ["305/30R19", "325/30R19"]
+        }
+      }
+    },
+    "dodge-challenger": {
+      "make": "dodge",
+      "model": "challenger",
+      "boltPattern": "5x115",
+      "centerBoreMm": 71.5,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "yearRange": [2015, 2023],
+      "trims": {
+        "sxt": {
+          "displayTrim": "SXT",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 7.5, "offset": 24, "axle": "both", "isStock": true, "tireSize": "235/55R18"},
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"}
+          ],
+          "oemTireSizes": ["235/55R18", "245/45R20"]
+        },
+        "gt": {
+          "displayTrim": "GT",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"}
+          ],
+          "oemTireSizes": ["245/45R20"]
+        },
+        "rt": {
+          "displayTrim": "R/T",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"},
+            {"diameter": 20, "width": 9, "offset": 21, "axle": "both", "isStock": true, "tireSize": "275/40R20"}
+          ],
+          "oemTireSizes": ["245/45R20", "275/40R20"]
+        },
+        "scat-pack": {
+          "displayTrim": "R/T Scat Pack",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"},
+            {"diameter": 20, "width": 9, "offset": 21, "axle": "both", "isStock": true, "tireSize": "275/40R20"}
+          ],
+          "oemTireSizes": ["245/45R20", "275/40R20"]
+        },
+        "scat-pack-widebody": {
+          "displayTrim": "R/T Scat Pack Widebody",
+          "isStaggered": false,
+          "yearRange": [2019, 2023],
+          "note": "Widebody fenders allow wider 305mm tires all around - NOT staggered",
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "305/35R20"}
+          ],
+          "oemTireSizes": ["305/35R20"]
+        },
+        "hellcat": {
+          "displayTrim": "SRT Hellcat",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 9.5, "offset": 18, "axle": "both", "isStock": true, "tireSize": "275/40R20"}
+          ],
+          "oemTireSizes": ["275/40R20"]
+        },
+        "hellcat-widebody": {
+          "displayTrim": "SRT Hellcat Widebody",
+          "isStaggered": false,
+          "yearRange": [2018, 2023],
+          "note": "Widebody fenders allow wider 305mm tires all around - NOT staggered",
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "305/35R20"}
+          ],
+          "oemTireSizes": ["305/35R20"]
+        },
+        "hellcat-redeye": {
+          "displayTrim": "SRT Hellcat Redeye",
+          "isStaggered": false,
+          "yearRange": [2019, 2023],
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "305/35R20"}
+          ],
+          "oemTireSizes": ["305/35R20"]
+        },
+        "demon": {
+          "displayTrim": "SRT Demon",
+          "isStaggered": true,
+          "yearRange": [2018, 2018],
+          "note": "Drag spec - narrow front skinny tires, wide rear",
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 9.5, "offset": 22, "axle": "front", "isStock": true, "tireSize": "245/55R18"},
+            {"diameter": 18, "width": 11, "offset": 0, "axle": "rear", "isStock": true, "tireSize": "315/40R18"}
+          ],
+          "oemTireSizes": ["245/55R18", "315/40R18"]
+        },
+        "super-stock": {
+          "displayTrim": "SRT Super Stock",
+          "isStaggered": false,
+          "yearRange": [2020, 2023],
+          "note": "Drag spec with wide tires all around",
+          "oemWheelSizes": [
+            {"diameter": 18, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "315/40R18"}
+          ],
+          "oemTireSizes": ["315/40R18"]
+        }
+      }
+    },
+    "dodge-charger": {
+      "make": "dodge",
+      "model": "charger",
+      "boltPattern": "5x115",
+      "centerBoreMm": 71.5,
+      "threadSize": "M14x1.5",
+      "seatType": "conical",
+      "yearRange": [2015, 2023],
+      "note": "LC platform only. 2024+ is new STLA Large (Daytona) electric platform with different specs.",
+      "trims": {
+        "sxt": {
+          "displayTrim": "SXT",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 17, "width": 7, "offset": 24, "axle": "both", "isStock": true, "tireSize": "215/65R17"}
+          ],
+          "oemTireSizes": ["215/65R17"]
+        },
+        "sxt-awd": {
+          "displayTrim": "SXT AWD",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 19, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "235/55R19"},
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"}
+          ],
+          "oemTireSizes": ["235/55R19", "245/45R20"]
+        },
+        "gt": {
+          "displayTrim": "GT",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"}
+          ],
+          "oemTireSizes": ["245/45R20"]
+        },
+        "rt": {
+          "displayTrim": "R/T",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"}
+          ],
+          "oemTireSizes": ["245/45R20"]
+        },
+        "scat-pack": {
+          "displayTrim": "Scat Pack",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 8, "offset": 24, "axle": "both", "isStock": true, "tireSize": "245/45R20"},
+            {"diameter": 20, "width": 9, "offset": 21, "axle": "both", "isStock": true, "tireSize": "275/40R20"}
+          ],
+          "oemTireSizes": ["245/45R20", "275/40R20"]
+        },
+        "scat-pack-widebody": {
+          "displayTrim": "Scat Pack Widebody",
+          "isStaggered": false,
+          "yearRange": [2020, 2023],
+          "note": "Widebody fenders allow wider 305mm tires all around",
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "305/35R20"}
+          ],
+          "oemTireSizes": ["305/35R20"]
+        },
+        "hellcat": {
+          "displayTrim": "SRT Hellcat",
+          "isStaggered": false,
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 9.5, "offset": 18, "axle": "both", "isStock": true, "tireSize": "275/40R20"}
+          ],
+          "oemTireSizes": ["275/40R20"]
+        },
+        "hellcat-widebody": {
+          "displayTrim": "SRT Hellcat Widebody",
+          "isStaggered": false,
+          "yearRange": [2020, 2023],
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "305/35R20"}
+          ],
+          "oemTireSizes": ["305/35R20"]
+        },
+        "hellcat-redeye": {
+          "displayTrim": "SRT Hellcat Redeye",
+          "isStaggered": false,
+          "yearRange": [2021, 2023],
+          "oemWheelSizes": [
+            {"diameter": 20, "width": 11, "offset": 18, "axle": "both", "isStock": true, "tireSize": "305/35R20"}
+          ],
+          "oemTireSizes": ["305/35R20"]
+        }
+      }
+    }
+  }
+}

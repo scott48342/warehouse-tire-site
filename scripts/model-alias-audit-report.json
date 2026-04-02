@@ -1,0 +1,229 @@
+{
+  "timestamp": "2026-04-01T20:41:50.108Z",
+  "currentAliases": {
+    "300": [
+      "300c",
+      "300s",
+      "300m"
+    ],
+    "f-250": [
+      "f-250-super-duty"
+    ],
+    "f-350": [
+      "f-350-super-duty"
+    ],
+    "f-450": [
+      "f-450-super-duty"
+    ],
+    "300c": [
+      "300"
+    ],
+    "silverado": [
+      "silverado-1500"
+    ],
+    "sierra": [
+      "sierra-1500"
+    ],
+    "ram": [
+      "ram-1500"
+    ]
+  },
+  "totalModels": 353,
+  "collisions": [
+    {
+      "normalizedName": "silverado-2500hd",
+      "dbModels": [
+        "silverado-2500-hd",
+        "silverado-2500hd"
+      ],
+      "makes": [
+        "chevrolet"
+      ]
+    },
+    {
+      "normalizedName": "silverado-3500hd",
+      "dbModels": [
+        "silverado-3500-hd",
+        "silverado-3500hd"
+      ],
+      "makes": [
+        "chevrolet"
+      ]
+    },
+    {
+      "normalizedName": "f-250",
+      "dbModels": [
+        "f-250",
+        "f-250-super-duty"
+      ],
+      "makes": [
+        "ford"
+      ]
+    },
+    {
+      "normalizedName": "f-350",
+      "dbModels": [
+        "f-350",
+        "f-350-super-duty"
+      ],
+      "makes": [
+        "ford"
+      ]
+    },
+    {
+      "normalizedName": "sierra-2500hd",
+      "dbModels": [
+        "sierra-2500-hd",
+        "sierra-2500hd"
+      ],
+      "makes": [
+        "gmc"
+      ]
+    },
+    {
+      "normalizedName": "sierra-3500hd",
+      "dbModels": [
+        "sierra-3500-hd",
+        "sierra-3500hd"
+      ],
+      "makes": [
+        "gmc"
+      ]
+    }
+  ],
+  "needsAlias": [
+    {
+      "shortForm": "4",
+      "fullForm": "4c",
+      "make": "alfa-romeo",
+      "reason": "Users might search for \"4\" but only \"4c\" exists"
+    },
+    {
+      "shortForm": "silverado-2500",
+      "fullForm": "silverado-2500-hd",
+      "make": "chevrolet",
+      "reason": "Users might search for \"silverado-2500\" but only \"silverado-2500-hd\" exists"
+    },
+    {
+      "shortForm": "silverado-3500",
+      "fullForm": "silverado-3500-hd",
+      "make": "chevrolet",
+      "reason": "Users might search for \"silverado-3500\" but only \"silverado-3500-hd\" exists"
+    },
+    {
+      "shortForm": "silverado",
+      "fullForm": "silverado-hd",
+      "make": "chevrolet",
+      "reason": "Users might search for \"silverado\" but only \"silverado-hd\" exists"
+    },
+    {
+      "shortForm": "sierra-2500",
+      "fullForm": "sierra-2500-hd",
+      "make": "gmc",
+      "reason": "Users might search for \"sierra-2500\" but only \"sierra-2500-hd\" exists"
+    },
+    {
+      "shortForm": "sierra-3500",
+      "fullForm": "sierra-3500-hd",
+      "make": "gmc",
+      "reason": "Users might search for \"sierra-3500\" but only \"sierra-3500-hd\" exists"
+    },
+    {
+      "shortForm": "sierra",
+      "fullForm": "sierra-hd",
+      "make": "gmc",
+      "reason": "Users might search for \"sierra\" but only \"sierra-hd\" exists"
+    },
+    {
+      "shortForm": "ram",
+      "fullForm": "ram-2500",
+      "make": "ram",
+      "reason": "Users might search for \"ram\" but only \"ram-2500\" exists"
+    },
+    {
+      "shortForm": "ram",
+      "fullForm": "ram-3500",
+      "make": "ram",
+      "reason": "Users might search for \"ram\" but only \"ram-3500\" exists"
+    }
+  ],
+  "hasAlias": [
+    {
+      "model": "silverado-1500",
+      "make": "chevrolet",
+      "alias": "silverado"
+    },
+    {
+      "model": "300c",
+      "make": "chrysler",
+      "alias": "300"
+    },
+    {
+      "model": "ram-1500",
+      "make": "dodge",
+      "alias": "ram"
+    },
+    {
+      "model": "f-250-super-duty",
+      "make": "ford",
+      "alias": "f-250"
+    },
+    {
+      "model": "f-350-super-duty",
+      "make": "ford",
+      "alias": "f-350"
+    },
+    {
+      "model": "sierra-1500",
+      "make": "gmc",
+      "alias": "sierra"
+    },
+    {
+      "model": "ram-1500",
+      "make": "ram",
+      "alias": "ram"
+    }
+  ],
+  "transformations": [
+    {
+      "model": "silverado-2500-hd",
+      "normalized": "silverado-2500hd",
+      "make": "chevrolet"
+    },
+    {
+      "model": "silverado-3500-hd",
+      "normalized": "silverado-3500hd",
+      "make": "chevrolet"
+    },
+    {
+      "model": "f-250-super-duty",
+      "normalized": "f-250",
+      "make": "ford"
+    },
+    {
+      "model": "f-350-super-duty",
+      "normalized": "f-350",
+      "make": "ford"
+    },
+    {
+      "model": "sierra-2500-hd",
+      "normalized": "sierra-2500hd",
+      "make": "gmc"
+    },
+    {
+      "model": "sierra-3500-hd",
+      "normalized": "sierra-3500hd",
+      "make": "gmc"
+    },
+    {
+      "model": "id.4",
+      "normalized": "id-4",
+      "make": "volkswagen"
+    }
+  ],
+  "recommendations": [
+    "CRITICAL: 6 normalization collisions detected - data may be inaccessible",
+    "ADD ALIASES: 9 models may need alias rules for URL compatibility",
+    "REVIEW: 2 Super Duty models are collapsed by normalizeModel() - ensure aliases handle this"
+  ]
+}

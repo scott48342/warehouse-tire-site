@@ -134,6 +134,7 @@ export function SteppedVehicleSelector({
   }, [model]);
 
   // Load trims when model changes
+  // Priority: Fitment DB first (has Tier A differentiated trims), then WheelPros fallback
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -144,7 +145,26 @@ export function SteppedVehicleSelector({
       setTrimsLoading(true);
       const qs = new URLSearchParams({ year, make, model });
 
-      // Try WheelPros first, fall back to generic trims
+      // Try fitment DB first (has curated Tier A trims for performance vehicles)
+      try {
+        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
+          `/api/vehicles/trims?${qs.toString()}`
+        );
+        const dbResults = Array.isArray(data?.results) ? data.results : [];
+        // Use fitment DB if it has real trims (more than just "Base")
+        const hasRealTrims = dbResults.length > 1 || 
+          (dbResults.length === 1 && dbResults[0].label !== "Base");
+        if (hasRealTrims) {
+          if (!cancelled) setTrims(dbResults);
+          if (!cancelled) setTrimsLoading(false);
+          if (!cancelled) setTrimsLoadedOnce(true);
+          return;
+        }
+      } catch {
+        // fall through to WheelPros
+      }
+
+      // Fall back to WheelPros for vehicles not in fitment DB
       try {
         const wp = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
           `/api/wp/vehicles/submodels?${qs.toString()}`
@@ -157,25 +177,17 @@ export function SteppedVehicleSelector({
           }));
           if (!cancelled) setTrims(normalized);
           if (!cancelled) setTrimsLoading(false);
+          if (!cancelled) setTrimsLoadedOnce(true);
           return;
         }
       } catch {
         // fall through
       }
 
-      try {
-        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
-          `/api/vehicles/trims?${qs.toString()}`
-        );
-        if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
-      } catch {
-        if (!cancelled) setTrims([]);
-      } finally {
-        if (!cancelled) {
-          setTrimsLoading(false);
-          setTrimsLoadedOnce(true);
-        }
-      }
+      // Neither source had trims
+      if (!cancelled) setTrims([]);
+      if (!cancelled) setTrimsLoading(false);
+      if (!cancelled) setTrimsLoadedOnce(true);
     })();
     return () => { cancelled = true; };
   }, [year, make, model]);

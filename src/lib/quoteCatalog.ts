@@ -12,7 +12,7 @@ let pool: pg.Pool | null = null;
 export function getPool() {
   if (pool) return pool;
   pool = new Pool({
-    connectionString: required("DATABASE_URL"),
+    connectionString: required("POSTGRES_URL"),
     ssl: { rejectUnauthorized: false },
     max: 5,
   });
@@ -219,3 +219,4 @@ export async function upsertCatalogItem(db: pg.Pool, item: Omit<CatalogItem, "id
 
   return { id };
 }
+

@@ -1,0 +1,426 @@
+{
+  "timestamp": "2026-04-01T19:44:22.694Z",
+  "dryRun": false,
+  "derived": 4482,
+  "skipped": 24,
+  "sampleLogs": [
+    {
+      "year": 2013,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2014,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "ilx",
+      "tireSizes": [
+        "205/55R16",
+        "215/45R17",
+        "225/40R18"
+      ],
+      "derivedDiameters": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "year": 1986,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/70R14",
+        "195/60R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1987,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/70R14",
+        "195/60R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1988,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/70R14",
+        "195/60R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1989,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/70R14",
+        "195/60R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1990,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/60R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1991,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/60R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1992,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/60R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1993,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/60R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1994,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1995,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1996,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1997,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1998,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 1999,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 2000,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 2001,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "185/65R14",
+        "195/55R15"
+      ],
+      "derivedDiameters": [
+        14,
+        15
+      ]
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "225/45R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "derivedDiameters": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "225/45R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "derivedDiameters": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "225/45R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "derivedDiameters": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "integra",
+      "tireSizes": [
+        "225/45R17",
+        "235/40R18",
+        "265/30R19"
+      ],
+      "derivedDiameters": [
+        17,
+        18,
+        19
+      ]
+    }
+  ]
+}

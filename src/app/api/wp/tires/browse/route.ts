@@ -15,7 +15,7 @@ let pool: pg.Pool | null = null;
 function getPool() {
   if (pool) return pool;
   pool = new Pool({
-    connectionString: required("DATABASE_URL"),
+    connectionString: required("POSTGRES_URL"),
     ssl: { rejectUnauthorized: false },
     max: 5,
   });
@@ -275,3 +275,4 @@ export async function GET(req: Request) {
     return NextResponse.json({ items: [], error: e?.message || String(e) }, { status: 200 });
   }
 }
+

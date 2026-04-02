@@ -12,7 +12,13 @@
         "wp:init-db": "node scripts/wp-init-db.mjs",
         "wp:import:techguide": "node scripts/wp-import-techguide.mjs",
         "wp:import:inventory": "node scripts/wp-import-inventory.mjs",
-        "test": "jest"
+        "test": "jest",
+        "integrity-check": "tsx scripts/integrity-check.ts",
+        "selector-check": "tsx scripts/selector-coverage-check.ts",
+        "pre-deploy": "tsx scripts/pre-deploy.ts",
+        "audit": "tsx scripts/full-database-audit.ts",
+        "mod-audit": "tsx scripts/modification-integrity-audit.ts",
+        "ymm-audit": "tsx scripts/ymm-result-guarantee-audit.ts"
     },
     "dependencies": {
         "@upstash/redis": "^1.37.0",

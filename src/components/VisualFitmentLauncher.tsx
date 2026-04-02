@@ -212,6 +212,7 @@ export function VisualFitmentLauncher({
     };
   }, [draft.year, draft.make]);
 
+  // Load trims: Fitment DB first (Tier A differentiated trims), then WheelPros fallback
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -223,38 +224,48 @@ export function VisualFitmentLauncher({
 
       const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
 
-      // Prefer WheelPros submodels when available (best for wheel fitment + offset ranges).
-      // If WheelPros doesn't have coverage for this Y/M/M, fall back to the generic trims endpoint.
-      try {
-        if (!cancelled) setTrimsLoading(true);
+      if (!cancelled) setTrimsLoading(true);
 
+      // Try fitment DB first (has curated Tier A trims for performance vehicles)
+      try {
+        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
+          `/api/vehicles/trims?${qs.toString()}`
+        );
+        const dbResults = Array.isArray(data?.results) ? data.results : [];
+        // Use fitment DB if it has real trims (more than just "Base")
+        const hasRealTrims = dbResults.length > 1 || 
+          (dbResults.length === 1 && dbResults[0].label !== "Base");
+        if (hasRealTrims) {
+          if (!cancelled) setTrims(dbResults);
+          if (!cancelled) setTrimsLoading(false);
+          return;
+        }
+      } catch {
+        // fall through to WheelPros
+      }
+
+      // Fall back to WheelPros for vehicles not in fitment DB
+      try {
         const wp = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
           `/api/wp/vehicles/submodels?${qs.toString()}`
         );
         const wpResults = Array.isArray(wp?.results) ? wp.results : [];
         if (wpResults.length) {
-          // Normalize WheelPros submodels into our expected wp: token format.
           const normalized = wpResults.map((r) => ({
             value: `wp:${String(r.value)}`,
             label: String(r.label),
           }));
           if (!cancelled) setTrims(normalized);
+          if (!cancelled) setTrimsLoading(false);
           return;
         }
       } catch {
         // fall through
       }
 
-      try {
-        const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
-          `/api/vehicles/trims?${qs.toString()}`
-        );
-        if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
-      } catch {
-        if (!cancelled) setTrims([]);
-      } finally {
-        if (!cancelled) setTrimsLoading(false);
-      }
+      // Neither source had trims
+      if (!cancelled) setTrims([]);
+      if (!cancelled) setTrimsLoading(false);
     })();
     return () => {
       cancelled = true;

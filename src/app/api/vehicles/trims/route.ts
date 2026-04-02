@@ -81,7 +81,7 @@ export async function GET(req: Request) {
         count: results.length,
         hasCoverage: true,
       }, {
-        headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+        headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
       });
     }
     

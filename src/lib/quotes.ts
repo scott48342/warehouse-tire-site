@@ -14,7 +14,7 @@ let pool: pg.Pool | null = null;
 export function getPool() {
   if (pool) return pool;
   pool = new Pool({
-    connectionString: required("DATABASE_URL"),
+    connectionString: required("POSTGRES_URL"),
     ssl: { rejectUnauthorized: false },
     max: 5,
   });
@@ -241,3 +241,4 @@ export function defaultLinesFromCatalog(items: CatalogItem[], wheelQty: number, 
 
   return lines;
 }
+

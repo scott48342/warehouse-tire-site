@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-04-01T20:31:45.795Z",
+  "totalRecords": 8978,
+  "byClassification": {
+    "A": 7765,
+    "B": 1213,
+    "C": 0,
+    "D": 0
+  },
+  "issueBreakdown": {
+    "missing_offset_data": 755,
+    "invalid_tire_sizes:unrecognized_format": 209,
+    "missing_thread_size": 339,
+    "invalid_wheel_sizes:empty_or_null": 70,
+    "invalid_tire_sizes:empty_or_null": 46,
+    "invalid_wheel_sizes:unrecognized_format": 87,
+    "invalid_trim": 21
+  },
+  "missingFieldBreakdown": {
+    "oem_tire_sizes": 255,
+    "thread_size": 339,
+    "oem_wheel_sizes": 157,
+    "display_trim": 21
+  },
+  "incompleteRecords": [],
+  "invalidRecords": [],
+  "sampleProblematic": [],
+  "recommendations": [
+    "PRIORITY: 339 records missing thread_size - needs bulk backfill",
+    "PRIORITY: 157 records missing wheel sizes - needs derivation from tire sizes",
+    "PRIORITY: 255 records missing tire sizes - needs external data source"
+  ]
+}

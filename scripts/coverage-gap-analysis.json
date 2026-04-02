@@ -1,0 +1,8805 @@
+[
+  {
+    "make": "Chrysler",
+    "modelsInDB": [
+      "300",
+      "300c"
+    ],
+    "yearRange": {
+      "min": 2005,
+      "max": 2026
+    },
+    "totalTrims": 76,
+    "singleTrimYears": [
+      {
+        "model": "300",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "300",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "300",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "300",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "300",
+        "year": 2008,
+        "trim": "RWD"
+      },
+      {
+        "model": "300",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "300c",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "300c",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "300c",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "300c",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "300c",
+        "year": 2008,
+        "trim": "RWD"
+      },
+      {
+        "model": "300c",
+        "year": 2005,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": []
+  },
+  {
+    "make": "Dodge",
+    "modelsInDB": [
+      "Avenger",
+      "Caliber",
+      "Challenger",
+      "Charger",
+      "Dakota",
+      "Durango",
+      "Grand Caravan",
+      "Hornet",
+      "Journey",
+      "Magnum",
+      "Nitro",
+      "Ram 1500"
+    ],
+    "yearRange": {
+      "min": 1987,
+      "max": 2026
+    },
+    "totalTrims": 181,
+    "singleTrimYears": [
+      {
+        "model": "Avenger",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Avenger",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Caliber",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Caliber",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Caliber",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Caliber",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Caliber",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Caliber",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Challenger",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Charger",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Dakota",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Durango",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Grand Caravan",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Hornet",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Hornet",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Hornet",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Hornet",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Journey",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Magnum",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Magnum",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Magnum",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Magnum",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Nitro",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Nitro",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Nitro",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Nitro",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Nitro",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Nitro",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Ram 1500",
+        "year": 2002,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": [
+      {
+        "model": "Avenger",
+        "years": [
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007
+        ]
+      },
+      {
+        "model": "Durango",
+        "years": [
+          2010
+        ]
+      }
+    ]
+  },
+  {
+    "make": "Ford",
+    "modelsInDB": [
+      "Bronco",
+      "Edge",
+      "Escape",
+      "Expedition",
+      "Explorer",
+      "F-150",
+      "F-250",
+      "F-350",
+      "Mustang",
+      "Mustang Mach E",
+      "Ranger"
+    ],
+    "yearRange": {
+      "min": 1988,
+      "max": 2026
+    },
+    "totalTrims": 600,
+    "singleTrimYears": [
+      {
+        "model": "Bronco",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Bronco",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Edge",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Escape",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Expedition",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Explorer",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "F-150",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "F-250",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "F-350",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Mustang Mach E",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Mustang Mach E",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Mustang Mach E",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Mustang Mach E",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Mustang Mach E",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Mustang Mach E",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Ranger",
+        "year": 1993,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": [
+      {
+        "model": "Bronco",
+        "years": [
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020
+        ]
+      },
+      {
+        "model": "Ranger",
+        "years": [
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ]
+      }
+    ]
+  },
+  {
+    "make": "Chevrolet",
+    "modelsInDB": [
+      "Camaro",
+      "Caprice",
+      "Cavalier",
+      "Cobalt",
+      "Colorado",
+      "Corvette",
+      "Cruze",
+      "Equinox",
+      "Impala",
+      "Lumina",
+      "Malibu",
+      "Monte Carlo",
+      "Silverado 1500",
+      "Silverado 2500 HD",
+      "Silverado 3500 HD",
+      "Suburban",
+      "Tahoe",
+      "Traverse"
+    ],
+    "yearRange": {
+      "min": 1967,
+      "max": 2026
+    },
+    "totalTrims": 474,
+    "singleTrimYears": [
+      {
+        "model": "Camaro",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1981,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1980,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1979,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1978,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1977,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1976,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1975,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1974,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1973,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1972,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1971,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1970,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1969,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1968,
+        "trim": "Base"
+      },
+      {
+        "model": "Camaro",
+        "year": 1967,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1981,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1980,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1979,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1978,
+        "trim": "Base"
+      },
+      {
+        "model": "Caprice",
+        "year": 1977,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "Cavalier",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "Cobalt",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Cobalt",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Cobalt",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Cobalt",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Cobalt",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Cobalt",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Colorado",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1981,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1980,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1979,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1978,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1977,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1976,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1975,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1974,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1973,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1972,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1971,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1970,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1969,
+        "trim": "Base"
+      },
+      {
+        "model": "Corvette",
+        "year": 1968,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Cruze",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Equinox",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Impala",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Lumina",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Malibu",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1981,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1980,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1979,
+        "trim": "Base"
+      },
+      {
+        "model": "Monte Carlo",
+        "year": 1978,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 1500",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "Silverado 2500 HD",
+        "year": 2018,
+        "trim": "WT"
+      },
+      {
+        "model": "Silverado 2500 HD",
+        "year": 2017,
+        "trim": "WT"
+      },
+      {
+        "model": "Suburban",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Suburban",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "Tahoe",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Traverse",
+        "year": 2009,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": [
+      {
+        "model": "Camaro",
+        "years": [
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009
+        ]
+      },
+      {
+        "model": "Colorado",
+        "years": [
+          2013,
+          2014
+        ]
+      },
+      {
+        "model": "Corvette",
+        "years": [
+          1983
+        ]
+      },
+      {
+        "model": "Impala",
+        "years": [
+          1997,
+          1998,
+          1999
+        ]
+      },
+      {
+        "model": "Monte Carlo",
+        "years": [
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994
+        ]
+      },
+      {
+        "model": "Silverado 2500 HD",
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      }
+    ]
+  },
+  {
+    "make": "Toyota",
+    "modelsInDB": [
+      "4Runner",
+      "Camry",
+      "Corolla",
+      "Highlander",
+      "Prius",
+      "RAV4",
+      "Sequoia",
+      "Sienna",
+      "Tacoma",
+      "Tundra"
+    ],
+    "yearRange": {
+      "min": 1989,
+      "max": 2026
+    },
+    "totalTrims": 1076,
+    "singleTrimYears": [
+      {
+        "model": "Corolla",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Corolla",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Highlander",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Prius",
+        "year": 2004,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": []
+  },
+  {
+    "make": "Honda",
+    "modelsInDB": [
+      "Accord",
+      "CR-V",
+      "Civic",
+      "HR-V",
+      "Odyssey",
+      "Pilot",
+      "Ridgeline"
+    ],
+    "yearRange": {
+      "min": 1994,
+      "max": 2026
+    },
+    "totalTrims": 173,
+    "singleTrimYears": [
+      {
+        "model": "Accord",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Accord",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "CR-V",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Civic",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "HR-V",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Odyssey",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Pilot",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Ridgeline",
+        "year": 2006,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": []
+  },
+  {
+    "make": "Nissan",
+    "modelsInDB": [
+      "Altima",
+      "Armada",
+      "Frontier",
+      "Gt R",
+      "Kicks",
+      "Leaf",
+      "Maxima",
+      "Murano",
+      "Pathfinder",
+      "Rogue",
+      "Sentra",
+      "Titan",
+      "Titan Xd",
+      "Versa",
+      "Xterra",
+      "Z"
+    ],
+    "yearRange": {
+      "min": 1995,
+      "max": 2026
+    },
+    "totalTrims": 340,
+    "singleTrimYears": [
+      {
+        "model": "Altima",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Altima",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Armada",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Frontier",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Gt R",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Kicks",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Leaf",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Maxima",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Murano",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Pathfinder",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Rogue",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "Sentra",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Titan",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Versa",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "Xterra",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "Z",
+        "year": 2003,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": [
+      {
+        "model": "Armada",
+        "years": [
+          2016
+        ]
+      },
+      {
+        "model": "Maxima",
+        "years": [
+          2015
+        ]
+      },
+      {
+        "model": "Murano",
+        "years": [
+          2008
+        ]
+      },
+      {
+        "model": "Pathfinder",
+        "years": [
+          2021
+        ]
+      },
+      {
+        "model": "Z",
+        "years": [
+          2021,
+          2022
+        ]
+      }
+    ]
+  },
+  {
+    "make": "BMW",
+    "modelsInDB": [
+      "3 Series",
+      "4 Series",
+      "5 Series",
+      "M3",
+      "M5",
+      "X3",
+      "X5"
+    ],
+    "yearRange": {
+      "min": 1981,
+      "max": 2026
+    },
+    "totalTrims": 616,
+    "singleTrimYears": [
+      {
+        "model": "3 Series",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "3 Series",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "4 Series",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "5 Series",
+        "year": 1981,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "M3",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "M5",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "X3",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "X5",
+        "year": 2000,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": [
+      {
+        "model": "M3",
+        "years": [
+          2000,
+          2007,
+          2014,
+          2020
+        ]
+      },
+      {
+        "model": "M5",
+        "years": [
+          1996,
+          1997,
+          1998,
+          2004,
+          2011
+        ]
+      }
+    ]
+  },
+  {
+    "make": "Mercedes",
+    "modelsInDB": [
+      "A-Class",
+      "Amg Gt",
+      "C-Class",
+      "CLA",
+      "Cla Class",
+      "E-Class",
+      "GLC",
+      "GLE",
+      "GLS",
+      "S-Class"
+    ],
+    "yearRange": {
+      "min": 1980,
+      "max": 2026
+    },
+    "totalTrims": 556,
+    "singleTrimYears": [
+      {
+        "model": "Amg Gt",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Amg Gt",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "C-Class",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "Cla Class",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "E-Class",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "GLC",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "GLE",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2026,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2025,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2024,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2023,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2022,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2021,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2020,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2019,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2018,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2017,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2016,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2015,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2014,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2013,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2012,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2011,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2010,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2009,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2008,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2007,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2006,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2005,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2004,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2003,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2002,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2001,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 2000,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1999,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1998,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1997,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1996,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1995,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1994,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1993,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1992,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1991,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1990,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1989,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1988,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1987,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1986,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1985,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1984,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1983,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1982,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1981,
+        "trim": "Base"
+      },
+      {
+        "model": "S-Class",
+        "year": 1980,
+        "trim": "Base"
+      }
+    ],
+    "missingYears": []
+  }
+]

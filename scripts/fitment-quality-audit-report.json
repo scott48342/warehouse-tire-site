@@ -1,0 +1,1448 @@
+{
+  "timestamp": "2026-04-01T19:28:03.266Z",
+  "totalRecords": 8946,
+  "bySearchReadiness": {
+    "launch_ready": 3371,
+    "searchable": 0,
+    "needs_cleanup": 5155,
+    "block": 420
+  },
+  "byTrimQuality": {
+    "good": 2580,
+    "acceptable": 791,
+    "placeholder": 5155,
+    "junk": 420
+  },
+  "byFitmentCompleteness": {
+    "complete": 8876,
+    "usable": 70,
+    "partial": 0,
+    "missing": 0
+  },
+  "fieldCoverage": {
+    "boltPattern": {
+      "present": 8946,
+      "missing": 0,
+      "percent": 100
+    },
+    "centerBore": {
+      "present": 8946,
+      "missing": 0,
+      "percent": 100
+    },
+    "threadSize": {
+      "present": 8946,
+      "missing": 0,
+      "percent": 100
+    },
+    "offsetRange": {
+      "present": 8223,
+      "missing": 723,
+      "percent": 92
+    },
+    "oemWheelSizes": {
+      "present": 4032,
+      "missing": 4914,
+      "percent": 45
+    },
+    "oemTireSizes": {
+      "present": 8830,
+      "missing": 116,
+      "percent": 99
+    }
+  },
+  "trimIssuesByMakeModel": [
+    {
+      "make": "bmw",
+      "model": "5-series",
+      "issueCount": 165,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "issueCount": 158,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "gle",
+      "issueCount": 107,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "x5",
+      "issueCount": 106,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "c-class",
+      "issueCount": 105,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "e-class",
+      "issueCount": 104,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "x3",
+      "issueCount": 99,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "mazda",
+      "model": "mazda3",
+      "issueCount": 94,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "mazda",
+      "model": "cx-5",
+      "issueCount": 92,
+      "examples": [
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "glc",
+      "issueCount": 65,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "mazda",
+      "model": "mazda6",
+      "issueCount": 59,
+      "examples": [
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "chevrolet",
+      "model": "corvette",
+      "issueCount": 58,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "mazda",
+      "model": "cx-30",
+      "issueCount": 56,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "mazda",
+      "model": "cx-9",
+      "issueCount": 55,
+      "examples": [
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "issueCount": 55,
+      "examples": [
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "chevrolet",
+      "model": "camaro",
+      "issueCount": 53,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "issueCount": 47,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "s-class",
+      "issueCount": 47,
+      "examples": [
+        "placeholder_trim"
+      ]
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-1500",
+      "issueCount": 43,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "issueCount": 43,
+      "examples": [
+        "placeholder_trim",
+        "junk_trim"
+      ]
+    }
+  ],
+  "fitmentIssuesByMakeModel": [
+    {
+      "make": "bmw",
+      "model": "5-series",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 165
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 157
+    },
+    {
+      "make": "mercedes",
+      "model": "gle",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 107
+    },
+    {
+      "make": "bmw",
+      "model": "x5",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 106
+    },
+    {
+      "make": "mercedes",
+      "model": "c-class",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 105
+    },
+    {
+      "make": "mercedes",
+      "model": "e-class",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 104
+    },
+    {
+      "make": "bmw",
+      "model": "x3",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 99
+    },
+    {
+      "make": "mazda",
+      "model": "mazda3",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 94
+    },
+    {
+      "make": "mazda",
+      "model": "cx-5",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 92
+    },
+    {
+      "make": "mercedes",
+      "model": "glc",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 65
+    },
+    {
+      "make": "mazda",
+      "model": "cx-30",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 56
+    },
+    {
+      "make": "mazda",
+      "model": "cx-9",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 55
+    },
+    {
+      "make": "mazda",
+      "model": "mx-5-miata",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 55
+    },
+    {
+      "make": "mazda",
+      "model": "mazda6",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 48
+    },
+    {
+      "make": "mercedes",
+      "model": "s-class",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 47
+    },
+    {
+      "make": "mercedes",
+      "model": "cla",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 42
+    },
+    {
+      "make": "mercedes",
+      "model": "gls",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 40
+    },
+    {
+      "make": "ford",
+      "model": "mustang",
+      "missingFields": [
+        "offset_range"
+      ],
+      "recordCount": 38
+    },
+    {
+      "make": "lincoln",
+      "model": "continental",
+      "missingFields": [
+        "offset_range",
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 38
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "missingFields": [
+        "oem_wheel_sizes"
+      ],
+      "recordCount": 37
+    }
+  ],
+  "duplicateTrims": [
+    {
+      "year": 2002,
+      "make": "cadillac",
+      "model": "escalade",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2006,
+      "make": "cadillac",
+      "model": "escalade",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2007,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2007,
+      "make": "lincoln",
+      "model": "mkz",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "acadia",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2009,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "impala",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2010,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2011,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2012,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2013,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2014,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "3-series",
+      "trims": [
+        "320i",
+        "320i xDrive",
+        "328i",
+        "328i xDrive",
+        "330i",
+        "330i xDrive",
+        "340i",
+        "340i xDrive",
+        "340i xDrive",
+        "Base"
+      ],
+      "count": "10"
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "3-series",
+      "trims": [
+        "320i",
+        "320i xDrive",
+        "328i",
+        "328i xDrive",
+        "330i",
+        "330i xDrive",
+        "340i",
+        "340i xDrive",
+        "340i xDrive",
+        "Base"
+      ],
+      "count": "10"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "Hybrid XSE",
+        "LE",
+        "LE",
+        "SE",
+        "SE Nightshade",
+        "TRD",
+        "XLE",
+        "XSE"
+      ],
+      "count": "11"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "Hybrid XSE",
+        "LE",
+        "LE",
+        "SE",
+        "SE Nightshade",
+        "TRD",
+        "XLE",
+        "XSE"
+      ],
+      "count": "11"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "Hybrid XSE",
+        "LE",
+        "LE",
+        "SE",
+        "SE Nightshade",
+        "TRD",
+        "XLE",
+        "XSE"
+      ],
+      "count": "11"
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "trims": [
+        "Base",
+        "Base"
+      ],
+      "count": "2"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "Hybrid XSE",
+        "LE",
+        "LE",
+        "SE",
+        "SE Nightshade",
+        "TRD",
+        "XLE",
+        "XSE"
+      ],
+      "count": "11"
+    }
+  ],
+  "badRecordExamples": [
+    {
+      "id": "8e9d9392-c57e-4c97-9989-880a96814944",
+      "year": 2013,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_cb6458d7c12c",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "ae12bff5-e6c2-4f66-ac4c-94895a445d37",
+      "year": 2014,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_45d284eff2e7",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "bb0b43a8-455a-4c20-b9a2-57974472ff57",
+      "year": 2015,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_244d0e5afed3",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "319473a0-f894-4715-a401-391ee68b5fc8",
+      "year": 2016,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_6cef78e6cd92",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "22332186-c31d-41b4-9cba-9a4a87a620bb",
+      "year": 2017,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_24e36d0569f5",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "e7b95212-6dac-43f9-bd89-12758db1cfd6",
+      "year": 2018,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_b6eef3d7a13a",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "6479f441-bb3b-4dfd-a609-bf0ab032adf0",
+      "year": 2019,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_4b30c199bf9c",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "034a2c4a-2a56-4271-acd6-71053c6b7975",
+      "year": 2020,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_879d6b639457",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "3c9234d6-b6c2-4867-bf90-05b5f286c60f",
+      "year": 2021,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_6af7edb40b30",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "1141d2df-7e3d-4963-8f3f-14897a31bb45",
+      "year": 2022,
+      "make": "acura",
+      "model": "ilx",
+      "modificationId": "manual_a80f892dc117",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "99a8b6de-4c5f-4ac1-8d4d-eb3202aa3b23",
+      "year": 1986,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_27159a8d8431",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "8fa4e991-1411-44e2-8926-625d0a90f759",
+      "year": 1987,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_ea27fad533e7",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "73dc0872-f33a-41dc-b692-244599f125d5",
+      "year": 1988,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_7f053643f0fc",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "986ea50d-fbb3-47c5-80b8-f328bfaa92a2",
+      "year": 1989,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_6e9412c2cbde",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "d5823af1-5e0c-4d69-97ae-ac7d1c6c45ae",
+      "year": 1990,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_4285617d34e8",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "eee1aa62-a037-4620-8832-46a9c1286872",
+      "year": 1991,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_e07aba564e7f",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "601df9db-c721-4d33-b21a-56d7b09567b8",
+      "year": 1992,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_26ee5bad044b",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "18f70f2b-4521-47eb-aa52-e324149633d6",
+      "year": 1993,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_8c3f7244eb09",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "c7d60204-12de-413d-9737-24678afb22b5",
+      "year": 1994,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_872408146c33",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "20f65b6a-0636-4a63-99b6-123f8e7ee989",
+      "year": 1995,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_3c208edc3a58",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "5204d237-1f7b-452d-8136-dbd293f2315c",
+      "year": 1996,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_3661089735b8",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "727d37f2-f21a-489e-b802-8d58f992a5cb",
+      "year": 1997,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_5769e68d06c4",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "c7b62d30-a3a0-471f-955c-cc6efac06849",
+      "year": 1998,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_646aafdcc4a0",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "bdda87eb-a132-4c3c-b1ba-51a2a4cb9026",
+      "year": 1999,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_548467aea740",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "18e65480-b71e-4407-b784-d45a3658c007",
+      "year": 2000,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_c42f819f6be1",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "732ff50c-7aa5-4090-a15e-994bd6c40169",
+      "year": 2001,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_ab8a87d7f0f9",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "d175517c-35d3-4c91-8307-4ae9b4185fc8",
+      "year": 2023,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_ecb16a8cf9b5",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "d07aa6be-37d1-43df-89cc-f3d668d11ec0",
+      "year": 2024,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_3574c7bc4ab2",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "ffa6da4d-05d9-43da-a165-c7cd8caa9c50",
+      "year": 2025,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_3bed2fc557d6",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    },
+    {
+      "id": "ab1a445d-5cff-4475-b138-3ec5d907e0ca",
+      "year": 2026,
+      "make": "acura",
+      "model": "integra",
+      "modificationId": "manual_c2feda015aa7",
+      "displayTrim": "Base",
+      "source": "cache-import",
+      "trimQuality": "placeholder",
+      "fitmentCompleteness": "complete",
+      "searchReadiness": "needs_cleanup",
+      "issues": [
+        "missing_oem_wheel_sizes",
+        "placeholder_trim"
+      ],
+      "hasBoltPattern": true,
+      "hasCenterBore": true,
+      "hasThreadSize": true,
+      "hasOffsetRange": true,
+      "hasOemWheelSizes": false,
+      "hasOemTireSizes": true,
+      "hasStaggeredData": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "critical",
+      "issue": "420 records blocked from search (missing critical data or junk trims)",
+      "affectedRecords": 420,
+      "repair": "Either fix the data or remove these records to prevent dead-end searches"
+    },
+    {
+      "priority": "high",
+      "issue": "4914 records missing OEM wheel sizes",
+      "affectedRecords": 4914,
+      "repair": "Import OEM wheel size data from manufacturer specs or inherit from platform siblings"
+    },
+    {
+      "priority": "medium",
+      "issue": "5155 records have placeholder trims (generic 'Base' with generated IDs)",
+      "affectedRecords": 5155,
+      "repair": "Replace with real trim names from manufacturer data or mark as intentional 'Base' trim"
+    },
+    {
+      "priority": "medium",
+      "issue": "29 Y/M/M combinations have duplicate trims (022222222222222222102102211211211211 records)",
+      "affectedRecords": "022222222222222222102102211211211211",
+      "repair": "Deduplicate by keeping the most complete record or merging data"
+    }
+  ]
+}

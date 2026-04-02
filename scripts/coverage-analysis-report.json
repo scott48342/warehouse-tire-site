@@ -1,0 +1,791 @@
+{
+  "timestamp": "2026-04-01T23:15:00.087Z",
+  "overall": {
+    "total_ymm_combos": "67",
+    "total_fitments": "247",
+    "total_makes": "20",
+    "total_models": "50"
+  },
+  "quality": {
+    "real_trims": "44",
+    "only_base": "3",
+    "complete_specs": "4",
+    "total": "67"
+  },
+  "highValueVehicles": [
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ram",
+      "model": "1500",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Toyota",
+      "model": "Tundra",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Nissan",
+      "model": "Titan",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ford",
+      "model": "F-250",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ford",
+      "model": "F-350",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado 2500 HD",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado 3500 HD",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ram",
+      "model": "2500",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ram",
+      "model": "3500",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Colorado",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "GMC",
+      "model": "Canyon",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Nissan",
+      "model": "Frontier",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Honda",
+      "model": "Ridgeline",
+      "priority": 3,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Toyota",
+      "model": "RAV4",
+      "priority": 1,
+      "years": 1,
+      "totalTrims": 2,
+      "realTrims": 1,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.5 VVT-i",
+        "Base"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "CR-V",
+      "priority": 1,
+      "years": 1,
+      "totalTrims": 2,
+      "realTrims": 2,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "1.5 T",
+        "2.0 e:HEV"
+      ]
+    },
+    {
+      "make": "Tesla",
+      "model": "Model Y",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Toyota",
+      "model": "Highlander",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Honda",
+      "model": "Pilot",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Jeep",
+      "model": "Wrangler",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "priority": 1,
+      "years": 1,
+      "totalTrims": 4,
+      "realTrims": 4,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.3 EcoBoost",
+        "3.0 EcoBoost",
+        "3.3 Ti-VCT HEV"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "priority": 2,
+      "years": 1,
+      "totalTrims": 3,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ INCOMPLETE",
+      "sampleTrims": [
+        "Base"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Escape",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "priority": 2,
+      "years": 1,
+      "totalTrims": 3,
+      "realTrims": 3,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.2T Skyactiv-D",
+        "2.5 Skyactiv-G"
+      ]
+    },
+    {
+      "make": "Subaru",
+      "model": "Outback",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester",
+      "priority": 2,
+      "years": 1,
+      "totalTrims": 3,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ INCOMPLETE",
+      "sampleTrims": [
+        "Base"
+      ]
+    },
+    {
+      "make": "Hyundai",
+      "model": "Tucson",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Kia",
+      "model": "Sportage",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Tiguan",
+      "priority": 3,
+      "years": 1,
+      "totalTrims": 1,
+      "realTrims": 1,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.0 TSI"
+      ]
+    },
+    {
+      "make": "Ford",
+      "model": "Expedition",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Tahoe",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Suburban",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "GMC",
+      "model": "Yukon",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Toyota",
+      "model": "4Runner",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ford",
+      "model": "Bronco",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Jeep",
+      "model": "Gladiator",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "priority": 1,
+      "years": 2,
+      "totalTrims": 8,
+      "realTrims": 7,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.5 HEV",
+        "2.5 VVT-i"
+      ]
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "priority": 1,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "priority": 2,
+      "years": 1,
+      "totalTrims": 6,
+      "realTrims": 6,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "1.5 T",
+        "1.5 Turbo",
+        "2.0 e:HEV"
+      ]
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Tesla",
+      "model": "Model 3",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima",
+      "priority": 3,
+      "years": 1,
+      "totalTrims": 3,
+      "realTrims": 1,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.0i Turbo",
+        "Base"
+      ]
+    },
+    {
+      "make": "Hyundai",
+      "model": "Elantra",
+      "priority": 3,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "priority": 2,
+      "years": 1,
+      "totalTrims": 6,
+      "realTrims": 6,
+      "hasCompleteData": true,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "2.3 EcoBoost",
+        "2.3 EcoBoost HP",
+        "5.0 Ti-VCT"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "priority": 2,
+      "years": 1,
+      "totalTrims": 4,
+      "realTrims": 4,
+      "hasCompleteData": false,
+      "status": "✅ GOOD",
+      "sampleTrims": [
+        "6.2SC",
+        "LT",
+        "SS"
+      ]
+    },
+    {
+      "make": "Dodge",
+      "model": "Challenger",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Dodge",
+      "model": "Charger",
+      "priority": 2,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Corvette",
+      "priority": 3,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "priority": 3,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    },
+    {
+      "make": "BMW",
+      "model": "5 Series",
+      "priority": 3,
+      "years": 0,
+      "totalTrims": 0,
+      "realTrims": 0,
+      "hasCompleteData": false,
+      "status": "❌ MISSING",
+      "sampleTrims": []
+    }
+  ],
+  "makeCoverage": [
+    {
+      "make": "bmw",
+      "models": "3",
+      "total_trims": "24",
+      "real_trims": "24",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "mercedes",
+      "models": "5",
+      "total_trims": "22",
+      "real_trims": "22",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "tesla",
+      "models": "4",
+      "total_trims": "19",
+      "real_trims": "19",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "ford",
+      "models": "3",
+      "total_trims": "15",
+      "real_trims": "15",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "lexus",
+      "models": "1",
+      "total_trims": "8",
+      "real_trims": "8",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "honda",
+      "models": "2",
+      "total_trims": "8",
+      "real_trims": "8",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "kia",
+      "models": "2",
+      "total_trims": "5",
+      "real_trims": "5",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "audi",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "3",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "genesis",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "3",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "hyundai",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "3",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "mazda",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "3",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "volkswagen",
+      "models": "1",
+      "total_trims": "1",
+      "real_trims": "1",
+      "real_trim_pct": "100.0"
+    },
+    {
+      "make": "toyota",
+      "models": "3",
+      "total_trims": "12",
+      "real_trims": "8",
+      "real_trim_pct": "66.7"
+    },
+    {
+      "make": "chevrolet",
+      "models": "2",
+      "total_trims": "7",
+      "real_trims": "4",
+      "real_trim_pct": "57.1"
+    },
+    {
+      "make": "nissan",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "1",
+      "real_trim_pct": "33.3"
+    },
+    {
+      "make": "chrysler",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "0",
+      "real_trim_pct": "0.0"
+    },
+    {
+      "make": "subaru",
+      "models": "1",
+      "total_trims": "3",
+      "real_trims": "0",
+      "real_trim_pct": "0.0"
+    }
+  ]
+}

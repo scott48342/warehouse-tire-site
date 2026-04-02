@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-01T21:22:48.844Z",
+  "baseUrl": "http://localhost:3000",
+  "totalCombinations": 0,
+  "byClassification": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 0
+  },
+  "wheelReadiness": {
+    "ok": 0,
+    "empty": 0,
+    "error": 0,
+    "controlled": 0
+  },
+  "tireReadiness": {
+    "ok": 0,
+    "empty": 0,
+    "error": 0,
+    "controlled": 0
+  },
+  "failures": [],
+  "topFailingMakes": [],
+  "topFailingModels": [],
+  "unexpectedZeroResults": [],
+  "recommendations": []
+}

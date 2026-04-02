@@ -1,0 +1,465 @@
+{
+  "timestamp": "2026-04-01T19:41:18.796Z",
+  "dryRun": false,
+  "corruptedCleaned": 2787,
+  "backfilled": 275,
+  "stillMissing": 4639,
+  "stats": {
+    "sibling_trim": 58,
+    "adjacent_year": 115,
+    "same_generation": 102,
+    "no_donor": 4639
+  },
+  "sampleLogs": [
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2021,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2022,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2022,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2022,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2020,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a4",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2021,
+      "donorTrim": "40 TFSi Quattro"
+    },
+    {
+      "year": 2010,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2012,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2011,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2012,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2012,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2012,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2013,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2013,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2014,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2014,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2014,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2014,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2012,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2013,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a6",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2014,
+      "donorTrim": "3.0 TDi"
+    },
+    {
+      "year": 2012,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2017,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2013,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2017,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2014,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2017,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2015,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2017,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2016,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2017,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2017,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2017,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2018,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2018,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2019,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2018,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2020,
+      "make": "bmw",
+      "model": "3-series",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2018,
+      "donorTrim": "340i xDrive"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "avenger",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2013,
+      "donorTrim": "Base"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "avenger",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2013,
+      "donorTrim": "Base"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "avenger",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2013,
+      "donorTrim": "Base"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "avenger",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2013,
+      "donorTrim": "Base"
+    },
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "avenger",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2013,
+      "donorTrim": "Base"
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "avenger",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2013,
+      "donorTrim": "Base"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2018,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2018,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "same_generation",
+      "donorYear": 2018,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2018,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2018,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2018,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2020,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2020,
+      "donorTrim": "3.3 Ti-VCT"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2022,
+      "donorTrim": "2.7 EcoBoost"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2022,
+      "donorTrim": "2.7 EcoBoost"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2023,
+      "donorTrim": "XL"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "sibling_trim",
+      "donorYear": 2024,
+      "donorTrim": "XL"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "source": "adjacent_year",
+      "donorYear": 2024,
+      "donorTrim": "XL"
+    }
+  ]
+}

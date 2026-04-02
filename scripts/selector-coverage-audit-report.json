@@ -1,0 +1,1363 @@
+{
+  "timestamp": "2026-04-01T19:01:39.509Z",
+  "phase1": {
+    "totalSelectorCombinations": 32798,
+    "totalFitmentCombinations": 5722,
+    "fullyCovered": 4057,
+    "selectorOnly": 28741,
+    "dbOnly": 1665,
+    "byMake": {
+      "ram": {
+        "fullyCovered": 45,
+        "selectorOnly": 160,
+        "dbOnly": 123
+      },
+      "ford": {
+        "fullyCovered": 177,
+        "selectorOnly": 1919,
+        "dbOnly": 78
+      },
+      "subaru": {
+        "fullyCovered": 119,
+        "selectorOnly": 798,
+        "dbOnly": 13
+      },
+      "acura": {
+        "fullyCovered": 113,
+        "selectorOnly": 142,
+        "dbOnly": 1
+      },
+      "audi": {
+        "fullyCovered": 149,
+        "selectorOnly": 958,
+        "dbOnly": 12
+      },
+      "bmw": {
+        "fullyCovered": 227,
+        "selectorOnly": 687,
+        "dbOnly": 1
+      },
+      "dodge": {
+        "fullyCovered": 178,
+        "selectorOnly": 469,
+        "dbOnly": 1
+      },
+      "buick": {
+        "fullyCovered": 88,
+        "selectorOnly": 503,
+        "dbOnly": 38
+      },
+      "cadillac": {
+        "fullyCovered": 44,
+        "selectorOnly": 376,
+        "dbOnly": 24
+      },
+      "kia": {
+        "fullyCovered": 82,
+        "selectorOnly": 1058,
+        "dbOnly": 2
+      },
+      "chevrolet": {
+        "fullyCovered": 404,
+        "selectorOnly": 2132,
+        "dbOnly": 147
+      },
+      "chrysler": {
+        "fullyCovered": 6,
+        "selectorOnly": 394,
+        "dbOnly": 0
+      },
+      "genesis": {
+        "fullyCovered": 39,
+        "selectorOnly": 17,
+        "dbOnly": 0
+      },
+      "gmc": {
+        "fullyCovered": 144,
+        "selectorOnly": 470,
+        "dbOnly": 144
+      },
+      "honda": {
+        "fullyCovered": 117,
+        "selectorOnly": 1514,
+        "dbOnly": 1
+      },
+      "hyundai": {
+        "fullyCovered": 95,
+        "selectorOnly": 1471,
+        "dbOnly": 0
+      },
+      "infiniti": {
+        "fullyCovered": 58,
+        "selectorOnly": 179,
+        "dbOnly": 43
+      },
+      "jaguar": {
+        "fullyCovered": 64,
+        "selectorOnly": 169,
+        "dbOnly": 1
+      },
+      "jeep": {
+        "fullyCovered": 120,
+        "selectorOnly": 289,
+        "dbOnly": 7
+      },
+      "land-rover": {
+        "fullyCovered": 44,
+        "selectorOnly": 205,
+        "dbOnly": 21
+      },
+      "lexus": {
+        "fullyCovered": 223,
+        "selectorOnly": 135,
+        "dbOnly": 2
+      },
+      "lincoln": {
+        "fullyCovered": 151,
+        "selectorOnly": 96,
+        "dbOnly": 2
+      },
+      "mazda": {
+        "fullyCovered": 79,
+        "selectorOnly": 1431,
+        "dbOnly": 0
+      },
+      "mercedes": {
+        "fullyCovered": 156,
+        "selectorOnly": 1103,
+        "dbOnly": 59
+      },
+      "mitsubishi": {
+        "fullyCovered": 108,
+        "selectorOnly": 1461,
+        "dbOnly": 9
+      },
+      "mini": {
+        "fullyCovered": 56,
+        "selectorOnly": 209,
+        "dbOnly": 3
+      },
+      "nissan": {
+        "fullyCovered": 279,
+        "selectorOnly": 2195,
+        "dbOnly": 23
+      },
+      "porsche": {
+        "fullyCovered": 100,
+        "selectorOnly": 175,
+        "dbOnly": 11
+      },
+      "tesla": {
+        "fullyCovered": 47,
+        "selectorOnly": 124,
+        "dbOnly": 5
+      },
+      "toyota": {
+        "fullyCovered": 196,
+        "selectorOnly": 3246,
+        "dbOnly": 1
+      },
+      "volkswagen": {
+        "fullyCovered": 116,
+        "selectorOnly": 1986,
+        "dbOnly": 19
+      },
+      "volvo": {
+        "fullyCovered": 89,
+        "selectorOnly": 434,
+        "dbOnly": 0
+      },
+      "mercedesbenz": {
+        "fullyCovered": 0,
+        "selectorOnly": 308,
+        "dbOnly": 0
+      },
+      "landrover": {
+        "fullyCovered": 0,
+        "selectorOnly": 196,
+        "dbOnly": 0
+      },
+      "pontiac": {
+        "fullyCovered": 25,
+        "selectorOnly": 339,
+        "dbOnly": 109
+      },
+      "oldsmobile": {
+        "fullyCovered": 13,
+        "selectorOnly": 267,
+        "dbOnly": 50
+      },
+      "saturn": {
+        "fullyCovered": 22,
+        "selectorOnly": 314,
+        "dbOnly": 18
+      },
+      "mercury": {
+        "fullyCovered": 35,
+        "selectorOnly": 245,
+        "dbOnly": 71
+      },
+      "plymouth": {
+        "fullyCovered": 6,
+        "selectorOnly": 274,
+        "dbOnly": 58
+      },
+      "hummer": {
+        "fullyCovered": 19,
+        "selectorOnly": 93,
+        "dbOnly": 8
+      },
+      "scion": {
+        "fullyCovered": 24,
+        "selectorOnly": 200,
+        "dbOnly": 4
+      },
+      "geo": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 47
+      },
+      "suzuki": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 36
+      },
+      "isuzu": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 36
+      },
+      "daewoo": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 12
+      },
+      "polestar": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 8
+      },
+      "ferrari": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 32
+      },
+      "lamborghini": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 33
+      },
+      "alfa-romeo": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 24
+      },
+      "fiat": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 28
+      },
+      "saab": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 30
+      },
+      "rivian": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 12
+      },
+      "maserati": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 48
+      },
+      "mclaren": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 29
+      },
+      "aston-martin": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 40
+      },
+      "bentley": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 31
+      },
+      "rolls-royce": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 29
+      },
+      "lotus": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 31
+      },
+      "delorean": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 3
+      },
+      "eagle": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 27
+      },
+      "mercedes-benz": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 1
+      },
+      "datsun": {
+        "fullyCovered": 0,
+        "selectorOnly": 0,
+        "dbOnly": 19
+      }
+    },
+    "selectorOnlyExamples": [
+      {
+        "year": 2027,
+        "make": "audi",
+        "model": "a6-e-tron",
+        "status": "selector_only",
+        "selectorSource": "catalog",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "audi",
+        "model": "q6-e-tron",
+        "status": "selector_only",
+        "selectorSource": "catalog",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "audi",
+        "model": "q6-sportback-e-tron",
+        "status": "selector_only",
+        "selectorSource": "catalog",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "audi",
+        "model": "s6-e-tron",
+        "status": "selector_only",
+        "selectorSource": "catalog",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "audi",
+        "model": "sq6-e-tron",
+        "status": "selector_only",
+        "selectorSource": "catalog",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "audi",
+        "model": "sq6-sportback-e-tron",
+        "status": "selector_only",
+        "selectorSource": "catalog",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "ford",
+        "model": "broncosport",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "ford",
+        "model": "f150",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "ford",
+        "model": "f250",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "ford",
+        "model": "f350",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "chevrolet",
+        "model": "silverado1500",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "chevrolet",
+        "model": "silverado2500hd",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "chevrolet",
+        "model": "silverado3500hd",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "chevrolet",
+        "model": "montecarlo",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "toyota",
+        "model": "landcruiser",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "honda",
+        "model": "crv",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "honda",
+        "model": "hrv",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "jeep",
+        "model": "grandcherokee",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "jeep",
+        "model": "grandcherokeel",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "jeep",
+        "model": "grandwagoneer",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "gmc",
+        "model": "sierra1500",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "gmc",
+        "model": "sierra2500hd",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "gmc",
+        "model": "sierra3500hd",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "gmc",
+        "model": "yukonxl",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      },
+      {
+        "year": 2027,
+        "make": "dodge",
+        "model": "ram1500",
+        "status": "selector_only",
+        "selectorSource": "static",
+        "fitmentCount": 0
+      }
+    ],
+    "dbOnlyExamples": [
+      {
+        "year": 2016,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 10
+      },
+      {
+        "year": 2017,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 10
+      },
+      {
+        "year": 2018,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 10
+      },
+      {
+        "year": 2019,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 10
+      },
+      {
+        "year": 2025,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2021,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2022,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2023,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2024,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2026,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2020,
+        "make": "ford",
+        "model": "f-250-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2026,
+        "make": "toyota",
+        "model": "rav4",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2020,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2021,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2022,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2023,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2024,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2025,
+        "make": "mercedes",
+        "model": "gle",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 8
+      },
+      {
+        "year": 2018,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      },
+      {
+        "year": 2019,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      },
+      {
+        "year": 2020,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      },
+      {
+        "year": 2021,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      },
+      {
+        "year": 2022,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      },
+      {
+        "year": 2023,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      },
+      {
+        "year": 2025,
+        "make": "ford",
+        "model": "f-350-super-duty",
+        "status": "db_only",
+        "selectorSource": "fitment_db",
+        "fitmentCount": 7
+      }
+    ]
+  },
+  "phase2": {
+    "totalTrimsChecked": 10153,
+    "exactMatch": 441,
+    "selectorOnlyTrims": 1577,
+    "dbOnlyTrims": 8135,
+    "trimMismatchExamples": [
+      {
+        "year": 2000,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "SR5",
+        "modificationId": "manual_29349144d041",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2000,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "Limited",
+        "modificationId": "manual_be874805aa86",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2018,
+        "make": "jeep",
+        "model": "grand-cherokee",
+        "trim": "Base",
+        "modificationId": "manual_ec74f150f4dc",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2019,
+        "make": "jeep",
+        "model": "grand-cherokee",
+        "trim": "Base",
+        "modificationId": "manual_8d961e3d01f6",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2024,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "Pro",
+        "modificationId": "manual_f9508d8ef275",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2024,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "SLE",
+        "modificationId": "manual_2af857f7a350",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2024,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "SLT",
+        "modificationId": "manual_8e215fa4ff28",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2024,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "AT4",
+        "modificationId": "manual_637fb920188b",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2024,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "Denali",
+        "modificationId": "manual_466836acd87a",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2024,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "Denali Ultimate",
+        "modificationId": "manual_f4dc535386d5",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "Base",
+        "modificationId": "064bfce82c",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "Base",
+        "modificationId": "manual_99b0ae38fdb6",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "rubicon",
+        "modificationId": "supp_rubicon",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "sahara",
+        "modificationId": "supp_sahara",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "sport",
+        "modificationId": "supp_sport",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "sport-s",
+        "modificationId": "supp_sports",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "unlimited-rubicon",
+        "modificationId": "supp_unlimitedrubicon",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "unlimited-sahara",
+        "modificationId": "supp_unlimitedsahara",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "unlimited-sport",
+        "modificationId": "supp_unlimitedsport",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "unlimited-x",
+        "modificationId": "supp_unlimitedx",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2009,
+        "make": "jeep",
+        "model": "wrangler",
+        "trim": "x",
+        "modificationId": "supp_x",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "3.6 Pentastar",
+        "modificationId": "8a91ea7967",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "Base",
+        "modificationId": "manual_ca1ecbca8ef6",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "sport",
+        "modificationId": "supp_sport",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "sport-s",
+        "modificationId": "supp_sports",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "willys",
+        "modificationId": "supp_willys",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "overland",
+        "modificationId": "supp_overland",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "rubicon",
+        "modificationId": "supp_rubicon",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "mojave",
+        "modificationId": "supp_mojave",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "jeep",
+        "model": "gladiator",
+        "trim": "high-altitude",
+        "modificationId": "supp_highaltitude",
+        "status": "selector_only",
+        "source": "supplement"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "LE",
+        "modificationId": "940e5c2264",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "LE",
+        "modificationId": "manual_c534111a506d",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "SE",
+        "modificationId": "manual_ad2018751523",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "SE Nightshade",
+        "modificationId": "manual_9f6227d7e475",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "XLE",
+        "modificationId": "manual_e19b132655cb",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "XSE",
+        "modificationId": "manual_fb12d1d0d59c",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "TRD",
+        "modificationId": "manual_fa31ef02f3d6",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "Hybrid LE",
+        "modificationId": "manual_3b73bb0c91c4",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "Hybrid SE",
+        "modificationId": "manual_ac51115a0233",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "Hybrid XLE",
+        "modificationId": "manual_2401d6857d94",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2020,
+        "make": "toyota",
+        "model": "camry",
+        "trim": "Hybrid XSE",
+        "modificationId": "manual_bf1ac63d57f1",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "1794 Edition",
+        "modificationId": "manual_997f5bf3fc81",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "SR",
+        "modificationId": "manual_1193611411d4",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "SR5",
+        "modificationId": "manual_553e9ee8997d",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "Limited",
+        "modificationId": "manual_ea2884ad9231",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "Platinum",
+        "modificationId": "manual_38d8333480ca",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "TRD Pro",
+        "modificationId": "manual_775067828dc6",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "TRD Off-Road",
+        "modificationId": "manual_7f57e16faa95",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2007,
+        "make": "toyota",
+        "model": "tundra",
+        "trim": "TRD Sport",
+        "modificationId": "manual_c953ff78c074",
+        "status": "db_only",
+        "source": "fitment_db"
+      },
+      {
+        "year": 2025,
+        "make": "gmc",
+        "model": "sierra-2500-hd",
+        "trim": "Pro",
+        "modificationId": "manual_3eb0a8e5f8c2",
+        "status": "db_only",
+        "source": "fitment_db"
+      }
+    ]
+  },
+  "problemAreas": [
+    {
+      "make": "ford",
+      "model": "*",
+      "issue": "1919 selector-only combinations (92% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "subaru",
+      "model": "*",
+      "issue": "798 selector-only combinations (87% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "audi",
+      "model": "*",
+      "issue": "958 selector-only combinations (87% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "buick",
+      "model": "*",
+      "issue": "503 selector-only combinations (85% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "cadillac",
+      "model": "*",
+      "issue": "376 selector-only combinations (90% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "kia",
+      "model": "*",
+      "issue": "1058 selector-only combinations (93% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "chevrolet",
+      "model": "*",
+      "issue": "2132 selector-only combinations (84% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "chrysler",
+      "model": "*",
+      "issue": "394 selector-only combinations (99% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "honda",
+      "model": "*",
+      "issue": "1514 selector-only combinations (93% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "hyundai",
+      "model": "*",
+      "issue": "1471 selector-only combinations (94% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "land-rover",
+      "model": "*",
+      "issue": "205 selector-only combinations (82% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "mazda",
+      "model": "*",
+      "issue": "1431 selector-only combinations (95% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "mercedes",
+      "model": "*",
+      "issue": "1103 selector-only combinations (88% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "mitsubishi",
+      "model": "*",
+      "issue": "1461 selector-only combinations (93% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "nissan",
+      "model": "*",
+      "issue": "2195 selector-only combinations (89% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "toyota",
+      "model": "*",
+      "issue": "3246 selector-only combinations (94% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "volkswagen",
+      "model": "*",
+      "issue": "1986 selector-only combinations (94% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "volvo",
+      "model": "*",
+      "issue": "434 selector-only combinations (83% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "mercedesbenz",
+      "model": "*",
+      "issue": "308 selector-only combinations (100% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    },
+    {
+      "make": "landrover",
+      "model": "*",
+      "issue": "196 selector-only combinations (100% dead ends)",
+      "severity": "high",
+      "selectorYears": [],
+      "fitmentYears": []
+    }
+  ],
+  "recommendations": {
+    "blockImmediately": [],
+    "backfillFitmentDB": [
+      "Add mercedes gle (2016-2025) to catalog - 88 fitment records hidden",
+      "Add ford f-250-super-duty (2020-2026) to catalog - 56 fitment records hidden",
+      "Add toyota rav4 (2026) to catalog - 8 fitment records hidden",
+      "Add ford f-350-super-duty (2018-2025) to catalog - 49 fitment records hidden"
+    ],
+    "permanentValidation": [
+      "✅ IMPLEMENTED: Coverage validation in /api/vehicles/years",
+      "✅ IMPLEMENTED: Coverage validation in /api/vehicles/models",
+      "✅ IMPLEMENTED: Coverage validation in /api/vehicles/trims",
+      "Add coverage check to vehicle profile pages (show 'no fitment data' message)",
+      "Add admin dashboard showing coverage gaps",
+      "Schedule weekly audit cron job to detect new gaps"
+    ]
+  }
+}

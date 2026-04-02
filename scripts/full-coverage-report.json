@@ -1,0 +1,972 @@
+{
+  "timestamp": "2026-04-01T23:18:47.484Z",
+  "overall": {
+    "makes": 35,
+    "models": 247,
+    "ymmCombos": 1231,
+    "trims": 1232,
+    "yearRange": [
+      1969,
+      2026
+    ],
+    "vehiclesWithFitment": 1228,
+    "vehiclesWithSpecs": 1224
+  },
+  "highValueVehicles": [
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "priority": 1,
+      "category": "truck",
+      "yearCount": 9,
+      "uniqueTrims": 10,
+      "withFitment": 10,
+      "withSpecs": 10,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.7 EcoBoost"
+      ],
+      "sampleBolt": "6x135"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado 1500",
+      "priority": 1,
+      "category": "truck",
+      "yearCount": 7,
+      "uniqueTrims": 7,
+      "withFitment": 7,
+      "withSpecs": 7,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.7 TurboMax"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Ram",
+      "model": "1500",
+      "priority": 1,
+      "category": "truck",
+      "yearCount": 9,
+      "uniqueTrims": 17,
+      "withFitment": 17,
+      "withSpecs": 17,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.0 Hurricane HO",
+        "3.6 Pentastar"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Toyota",
+      "model": "RAV4",
+      "priority": 1,
+      "category": "suv",
+      "yearCount": 8,
+      "uniqueTrims": 8,
+      "withFitment": 8,
+      "withSpecs": 8,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.5 PHEV",
+        "2.5 VVT-i"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Honda",
+      "model": "CR-V",
+      "priority": 1,
+      "category": "suv",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.5 T"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model Y",
+      "priority": 1,
+      "category": "ev",
+      "yearCount": 3,
+      "uniqueTrims": 3,
+      "withFitment": 3,
+      "withSpecs": 3,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "Long Range"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Toyota",
+      "model": "Camry",
+      "priority": 1,
+      "category": "sedan",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.5 HEV"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "priority": 1,
+      "category": "sedan",
+      "yearCount": 2,
+      "uniqueTrims": 2,
+      "withFitment": 2,
+      "withSpecs": 2,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.5 VTEC"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Toyota",
+      "model": "Tacoma",
+      "priority": 1,
+      "category": "truck",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.4T"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Jeep",
+      "model": "Wrangler",
+      "priority": 1,
+      "category": "suv",
+      "yearCount": 8,
+      "uniqueTrims": 8,
+      "withFitment": 8,
+      "withSpecs": 7,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.0 Turbo PHEV"
+      ],
+      "sampleBolt": "5x127"
+    },
+    {
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "priority": 1,
+      "category": "suv",
+      "yearCount": 8,
+      "uniqueTrims": 8,
+      "withFitment": 8,
+      "withSpecs": 8,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.0 T4 PHEV"
+      ],
+      "sampleBolt": "5x127"
+    },
+    {
+      "make": "Ford",
+      "model": "Explorer",
+      "priority": 1,
+      "category": "suv",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.3 EcoBoost"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "GMC",
+      "model": "Sierra 1500",
+      "priority": 2,
+      "category": "truck",
+      "yearCount": 3,
+      "uniqueTrims": 3,
+      "withFitment": 3,
+      "withSpecs": 3,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.7 Turbo"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Toyota",
+      "model": "Highlander",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.4T"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "priority": 2,
+      "category": "sedan",
+      "yearCount": 5,
+      "uniqueTrims": 5,
+      "withFitment": 5,
+      "withSpecs": 5,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.5 Turbo",
+        "1.5 T"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "priority": 2,
+      "category": "performance",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "Extended Range"
+      ],
+      "sampleBolt": "5x108"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Camaro",
+      "priority": 2,
+      "category": "performance",
+      "yearCount": 1,
+      "uniqueTrims": 1,
+      "withFitment": 1,
+      "withSpecs": 1,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.0T"
+      ],
+      "sampleBolt": "5x120"
+    },
+    {
+      "make": "Dodge",
+      "model": "Challenger",
+      "priority": 2,
+      "category": "performance",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.6 Pentastar"
+      ],
+      "sampleBolt": "5x115"
+    },
+    {
+      "make": "Dodge",
+      "model": "Charger",
+      "priority": 2,
+      "category": "performance",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.6 Pentastar"
+      ],
+      "sampleBolt": "5x115"
+    },
+    {
+      "make": "Toyota",
+      "model": "Tundra",
+      "priority": 2,
+      "category": "truck",
+      "yearCount": 1,
+      "uniqueTrims": 1,
+      "withFitment": 1,
+      "withSpecs": 1,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.5T"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Ford",
+      "model": "Escape",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 1,
+      "uniqueTrims": 1,
+      "withFitment": 1,
+      "withSpecs": 1,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.5 EcoBoost"
+      ],
+      "sampleBolt": "5x108"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 3,
+      "uniqueTrims": 3,
+      "withFitment": 3,
+      "withSpecs": 3,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.5T"
+      ],
+      "sampleBolt": "5x115"
+    },
+    {
+      "make": "Honda",
+      "model": "Pilot",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 6,
+      "uniqueTrims": 6,
+      "withFitment": 6,
+      "withSpecs": 6,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.5i"
+      ],
+      "sampleBolt": "5x120"
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 2,
+      "uniqueTrims": 2,
+      "withFitment": 2,
+      "withSpecs": 2,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.5T",
+        "2.0"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model 3",
+      "priority": 2,
+      "category": "ev",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "Long Range"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Subaru",
+      "model": "Outback",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 1,
+      "uniqueTrims": 1,
+      "withFitment": 1,
+      "withSpecs": 1,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.5i"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Subaru",
+      "model": "Forester",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 2,
+      "uniqueTrims": 2,
+      "withFitment": 2,
+      "withSpecs": 2,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.5i",
+        "2.0T"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Ford",
+      "model": "F-250",
+      "priority": 2,
+      "category": "truck",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "6.7D HO"
+      ],
+      "sampleBolt": "8x170"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado 2500",
+      "priority": 2,
+      "category": "truck",
+      "yearCount": 2,
+      "uniqueTrims": 2,
+      "withFitment": 2,
+      "withSpecs": 2,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "6.6i",
+        "6.0i"
+      ],
+      "sampleBolt": "8x180"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Tahoe",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.0 Duramax"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Ford",
+      "model": "Expedition",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 6,
+      "uniqueTrims": 6,
+      "withFitment": 6,
+      "withSpecs": 6,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "3.5 EcoBoost HO"
+      ],
+      "sampleBolt": "6x135"
+    },
+    {
+      "make": "Ford",
+      "model": "Bronco",
+      "priority": 2,
+      "category": "suv",
+      "yearCount": 6,
+      "uniqueTrims": 6,
+      "withFitment": 6,
+      "withSpecs": 6,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.3 EcoBoost"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "priority": 3,
+      "category": "luxury",
+      "yearCount": 6,
+      "uniqueTrims": 6,
+      "withFitment": 6,
+      "withSpecs": 6,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "330i xDrive"
+      ],
+      "sampleBolt": "5x112"
+    },
+    {
+      "make": "BMW",
+      "model": "5 Series",
+      "priority": 3,
+      "category": "luxury",
+      "yearCount": 7,
+      "uniqueTrims": 7,
+      "withFitment": 7,
+      "withSpecs": 7,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "530i xDrive"
+      ],
+      "sampleBolt": "5x112"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "priority": 3,
+      "category": "luxury",
+      "yearCount": 2,
+      "uniqueTrims": 2,
+      "withFitment": 2,
+      "withSpecs": 2,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "GLC 300"
+      ],
+      "sampleBolt": "5x112"
+    },
+    {
+      "make": "Audi",
+      "model": "A4",
+      "priority": 3,
+      "category": "luxury",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "40 TFSi Quattro"
+      ],
+      "sampleBolt": "5x112"
+    },
+    {
+      "make": "Lexus",
+      "model": "RX",
+      "priority": 3,
+      "category": "luxury",
+      "yearCount": 5,
+      "uniqueTrims": 5,
+      "withFitment": 5,
+      "withSpecs": 5,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "RX350"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "priority": 3,
+      "category": "suv",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.5 Skyactiv-G",
+        "2.5 e-Skyactiv HEV"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Hyundai",
+      "model": "Tucson",
+      "priority": 3,
+      "category": "suv",
+      "yearCount": 4,
+      "uniqueTrims": 4,
+      "withFitment": 4,
+      "withSpecs": 4,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.6 T-GDi HEV"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Kia",
+      "model": "Sportage",
+      "priority": 3,
+      "category": "suv",
+      "yearCount": 5,
+      "uniqueTrims": 5,
+      "withFitment": 5,
+      "withSpecs": 5,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "1.6 T-GDi HEV"
+      ],
+      "sampleBolt": "5x114.3"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Colorado",
+      "priority": 3,
+      "category": "truck",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.7 TurboMax"
+      ],
+      "sampleBolt": "6x139.7"
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "priority": 3,
+      "category": "truck",
+      "yearCount": 9,
+      "uniqueTrims": 9,
+      "withFitment": 9,
+      "withSpecs": 9,
+      "status": "✅ COMPLETE",
+      "sampleTrims": [
+        "2.3 EcoBoost"
+      ],
+      "sampleBolt": "6x139.7"
+    }
+  ],
+  "makeCoverage": [
+    {
+      "make": "Ford",
+      "models": "14",
+      "trims": "70",
+      "with_fitment": "70",
+      "with_specs": "70",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Toyota",
+      "models": "13",
+      "trims": "62",
+      "with_fitment": "62",
+      "with_specs": "62",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Chevrolet",
+      "models": "15",
+      "trims": "49",
+      "with_fitment": "49",
+      "with_specs": "49",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Lexus",
+      "models": "9",
+      "trims": "37",
+      "with_fitment": "37",
+      "with_specs": "36",
+      "fitment_pct": "100.0",
+      "specs_pct": "97.3"
+    },
+    {
+      "make": "Jeep",
+      "models": "6",
+      "trims": "35",
+      "with_fitment": "35",
+      "with_specs": "34",
+      "fitment_pct": "100.0",
+      "specs_pct": "97.1"
+    },
+    {
+      "make": "Honda",
+      "models": "9",
+      "trims": "28",
+      "with_fitment": "28",
+      "with_specs": "28",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "BMW",
+      "models": "9",
+      "trims": "26",
+      "with_fitment": "26",
+      "with_specs": "26",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Audi",
+      "models": "10",
+      "trims": "25",
+      "with_fitment": "25",
+      "with_specs": "25",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Porsche",
+      "models": "5",
+      "trims": "24",
+      "with_fitment": "20",
+      "with_specs": "20",
+      "fitment_pct": "83.3",
+      "specs_pct": "83.3"
+    },
+    {
+      "make": "GMC",
+      "models": "9",
+      "trims": "24",
+      "with_fitment": "24",
+      "with_specs": "24",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Acura",
+      "models": "4",
+      "trims": "23",
+      "with_fitment": "23",
+      "with_specs": "23",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Hyundai",
+      "models": "9",
+      "trims": "22",
+      "with_fitment": "22",
+      "with_specs": "22",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Nissan",
+      "models": "12",
+      "trims": "21",
+      "with_fitment": "21",
+      "with_specs": "21",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Volkswagen",
+      "models": "9",
+      "trims": "21",
+      "with_fitment": "21",
+      "with_specs": "21",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Kia",
+      "models": "11",
+      "trims": "20",
+      "with_fitment": "20",
+      "with_specs": "20",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Dodge",
+      "models": "5",
+      "trims": "20",
+      "with_fitment": "20",
+      "with_specs": "20",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Lincoln",
+      "models": "4",
+      "trims": "20",
+      "with_fitment": "20",
+      "with_specs": "20",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Infiniti",
+      "models": "5",
+      "trims": "19",
+      "with_fitment": "19",
+      "with_specs": "19",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Ram",
+      "models": "2",
+      "trims": "18",
+      "with_fitment": "18",
+      "with_specs": "18",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Volvo",
+      "models": "7",
+      "trims": "18",
+      "with_fitment": "18",
+      "with_specs": "18",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Cadillac",
+      "models": "7",
+      "trims": "18",
+      "with_fitment": "18",
+      "with_specs": "18",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Subaru",
+      "models": "7",
+      "trims": "16",
+      "with_fitment": "16",
+      "with_specs": "16",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Tesla",
+      "models": "4",
+      "trims": "15",
+      "with_fitment": "15",
+      "with_specs": "15",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Jaguar",
+      "models": "5",
+      "trims": "14",
+      "with_fitment": "14",
+      "with_specs": "14",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Genesis",
+      "models": "5",
+      "trims": "10",
+      "with_fitment": "10",
+      "with_specs": "10",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Mazda",
+      "models": "6",
+      "trims": "8",
+      "with_fitment": "8",
+      "with_specs": "8",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Mitsubishi",
+      "models": "3",
+      "trims": "6",
+      "with_fitment": "6",
+      "with_specs": "6",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "models": "4",
+      "trims": "4",
+      "with_fitment": "4",
+      "with_specs": "4",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Fiat",
+      "models": "2",
+      "trims": "4",
+      "with_fitment": "4",
+      "with_specs": "4",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Chrysler",
+      "models": "2",
+      "trims": "3",
+      "with_fitment": "3",
+      "with_specs": "3",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Buick",
+      "models": "3",
+      "trims": "3",
+      "with_fitment": "3",
+      "with_specs": "3",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Rivian",
+      "models": "2",
+      "trims": "2",
+      "with_fitment": "2",
+      "with_specs": "2",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Polestar",
+      "models": "1",
+      "trims": "1",
+      "with_fitment": "1",
+      "with_specs": "1",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "Lucid",
+      "models": "1",
+      "trims": "1",
+      "with_fitment": "1",
+      "with_specs": "1",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    },
+    {
+      "make": "MINI",
+      "models": "1",
+      "trims": "1",
+      "with_fitment": "1",
+      "with_specs": "1",
+      "fitment_pct": "100.0",
+      "specs_pct": "100.0"
+    }
+  ],
+  "criticalGaps": []
+}

@@ -110,9 +110,17 @@ let pool: pg.Pool | null = null;
 
 export function getPool(): pg.Pool {
   if (pool) return pool;
+  // Use DATABASE_URL if available, fallback to POSTGRES_URL
+  const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!connectionString) {
+    throw new Error("Missing DATABASE_URL or POSTGRES_URL");
+  }
   pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString,
     max: 5,
+    ssl: connectionString.includes('sslmode=require') || connectionString.includes('prisma.io') 
+      ? { rejectUnauthorized: false } 
+      : undefined,
   });
   return pool;
 }
