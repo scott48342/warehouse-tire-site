@@ -131,6 +131,7 @@ function TireCard({
   hasSelection,
   onSelect,
   viewParams,
+  isPackageFlow = false,
 }: {
   tire: TireItem;
   size: string;
@@ -138,6 +139,7 @@ function TireCard({
   hasSelection: boolean;
   onSelect: () => void;
   viewParams: ViewParams;
+  isPackageFlow?: boolean;
 }) {
   const brand = tire.brand || "Tire";
   const model = tire.displayName || tire.prettyName || tire.description || "";
@@ -300,12 +302,12 @@ function TireCard({
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
-              Selected
+              {isPackageFlow ? "Selected" : "Added to Cart"}
             </>
           ) : hasSelection ? (
             "Switch to this"
           ) : (
-            "Add to Package"
+            isPackageFlow ? "Add to Package" : "Add to Cart"
           )}
         </button>
         
@@ -334,6 +336,7 @@ function CategorySection({
   onSelectTire,
   viewParams,
   defaultExpanded = true,
+  isPackageFlow = false,
 }: {
   title: string;
   subtitle: string;
@@ -344,6 +347,7 @@ function CategorySection({
   onSelectTire: (tire: TireItem) => void;
   viewParams: ViewParams;
   defaultExpanded?: boolean;
+  isPackageFlow?: boolean;
 }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
   
@@ -386,6 +390,7 @@ function CategorySection({
               hasSelection={!!selectedTire}
               onSelect={() => onSelectTire(tire)}
               viewParams={viewParams}
+              isPackageFlow={isPackageFlow}
             />
           ))}
         </div>
@@ -419,6 +424,7 @@ function TireSelectionConfirmation({
   onClear: () => void;
 }) {
   const total = (wheel?.setPrice || 0) + tire.setPrice;
+  const isPackageFlow = !!wheel;
   
   return (
     <div className="animate-slide-up rounded-2xl border-2 border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 p-4 shadow-lg shadow-green-100/50">
@@ -431,10 +437,14 @@ function TireSelectionConfirmation({
         
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-extrabold text-green-800">Tires Selected</span>
-            <span className="rounded-full bg-green-200 px-2 py-0.5 text-[10px] font-bold text-green-800">
-              Package Complete!
+            <span className="text-sm font-extrabold text-green-800">
+              {isPackageFlow ? "Tires Selected" : "Added to Cart"}
             </span>
+            {isPackageFlow && (
+              <span className="rounded-full bg-green-200 px-2 py-0.5 text-[10px] font-bold text-green-800">
+                Package Complete!
+              </span>
+            )}
           </div>
           
           <div className="mt-2 flex items-center gap-3">
@@ -456,14 +466,16 @@ function TireSelectionConfirmation({
             </div>
           </div>
           
-          {/* Package summary */}
-          <div className="mt-3 rounded-xl bg-white/80 border border-green-200 p-3">
-            <div className="text-xs font-bold text-neutral-700 mb-1">Package Summary</div>
-            <div className="flex items-center justify-between text-sm">
-              <span className="text-neutral-600">Wheels + Tires</span>
-              <span className="font-extrabold text-neutral-900">${formatPrice(total)}</span>
+          {/* Package summary - only show in package flow */}
+          {isPackageFlow && (
+            <div className="mt-3 rounded-xl bg-white/80 border border-green-200 p-3">
+              <div className="text-xs font-bold text-neutral-700 mb-1">Package Summary</div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-neutral-600">Wheels + Tires</span>
+                <span className="font-extrabold text-neutral-900">${formatPrice(total)}</span>
+              </div>
             </div>
-          </div>
+          )}
           
           {/* CTAs */}
           <div className="mt-3 flex items-center gap-3">
@@ -471,7 +483,7 @@ function TireSelectionConfirmation({
               href="/cart"
               className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-green-600 px-5 text-sm font-extrabold text-white shadow-lg shadow-green-600/30 transition-all hover:bg-green-700 hover:shadow-xl active:scale-[0.98]"
             >
-              Review & Checkout
+              {isPackageFlow ? "Review & Checkout" : "View Cart"}
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -480,7 +492,7 @@ function TireSelectionConfirmation({
               onClick={onClear}
               className="text-xs font-medium text-neutral-500 hover:text-neutral-700 transition-colors"
             >
-              Change selection
+              {isPackageFlow ? "Change selection" : "Remove"}
             </button>
           </div>
         </div>
@@ -735,6 +747,7 @@ export function TiresGridWithSelection({
           onSelectTire={handleSelectTire}
           viewParams={viewParams}
           defaultExpanded={true}
+          isPackageFlow={!!selectedWheel}
         />
         
         <CategorySection
@@ -747,6 +760,7 @@ export function TiresGridWithSelection({
           onSelectTire={handleSelectTire}
           viewParams={viewParams}
           defaultExpanded={true}
+          isPackageFlow={!!selectedWheel}
         />
         
         <CategorySection
@@ -759,6 +773,7 @@ export function TiresGridWithSelection({
           onSelectTire={handleSelectTire}
           viewParams={viewParams}
           defaultExpanded={categorized.bestValue.length === 0 && categorized.mostPopular.length === 0}
+          isPackageFlow={!!selectedWheel}
         />
         
         {/* Skip tires option */}
