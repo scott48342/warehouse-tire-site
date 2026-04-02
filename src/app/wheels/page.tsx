@@ -282,18 +282,17 @@ export default async function WheelsPage({
   const fitView = String(fitViewRaw || "").trim();
 
   // 1) Resolve fitment (bolt pattern, width/offset ranges, etc.)
-  const isWpSubmodel = modification.startsWith("wp:");
-  const wpSubmodel = isWpSubmodel ? modification.slice(3) : "";
+  // NOTE: WheelPros fitment fallback removed (2026-04-02). All fitment now from internal DB only.
+  // Legacy wp: prefixed modifications are stripped and resolved against internal data.
+  const cleanModification = modification.startsWith("wp:") ? modification.slice(3) : modification;
 
   const fitment = year && make && model
-    ? (isWpSubmodel
-        ? await fetch(`${getBaseUrl()}/api/wp/vehicles/fitment?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&submodel=${encodeURIComponent(wpSubmodel)}`, { cache: "no-store" }).then((r) => r.json())
-        : await fetchFitment({
-            year,
-            make,
-            model,
-            modification: modification || undefined,
-          }))
+    ? await fetchFitment({
+        year,
+        make,
+        model,
+        modification: cleanModification || undefined,
+      })
     : null;
 
   const fit = (fitment as any)?.fitment ? (fitment as any).fitment : fitment;

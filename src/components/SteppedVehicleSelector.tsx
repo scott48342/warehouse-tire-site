@@ -161,30 +161,13 @@ export function SteppedVehicleSelector({
           return;
         }
       } catch {
-        // fall through to WheelPros
+        // DB lookup failed - proceed with no trims
       }
 
-      // Fall back to WheelPros for vehicles not in fitment DB
-      try {
-        const wp = await fetchJson<{ results: Array<{ value: string; label: string }> }>(
-          `/api/wp/vehicles/submodels?${qs.toString()}`
-        );
-        const wpResults = Array.isArray(wp?.results) ? wp.results : [];
-        if (wpResults.length) {
-          const normalized = wpResults.map((r) => ({
-            value: `wp:${String(r.value)}`,
-            label: String(r.label),
-          }));
-          if (!cancelled) setTrims(normalized);
-          if (!cancelled) setTrimsLoading(false);
-          if (!cancelled) setTrimsLoadedOnce(true);
-          return;
-        }
-      } catch {
-        // fall through
-      }
+      // NOTE: WheelPros fallback removed (2026-04-02). All trim data from internal DB only.
+      // Vehicles not in DB will have no trims and auto-continue to fitment lookup.
 
-      // Neither source had trims
+      // No trims found in internal DB
       if (!cancelled) setTrims([]);
       if (!cancelled) setTrimsLoading(false);
       if (!cancelled) setTrimsLoadedOnce(true);

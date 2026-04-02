@@ -290,37 +290,10 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
         console.log('[RecommendedFitmentCard] ⚠️ fitment-search failed, using legacy API');
       }
 
-      // 1) If we have a WheelPros submodel, show WheelPros vehicle fitment details.
-      if (wpSubmodel) {
-        try {
-          const qs = new URLSearchParams({
-            year: String(fitment.year || ""),
-            make: String(fitment.make || ""),
-            model: String(fitment.model || ""),
-            submodel: String(wpSubmodel),
-          });
+      // NOTE: WheelPros fitment fallback removed (2026-04-02). All fitment from internal DB only.
+      // Legacy wp: submodels are no longer supported - treat as regular modification lookup.
 
-          const data = await fetchJson<{ fitment?: NormalizedFitment; error?: string }>(
-            `/api/wp/vehicles/fitment?${qs.toString()}`
-          );
-          if (cancelled) return;
-
-          if (data?.error) {
-            setError(String(data.error));
-            setDetails(null);
-            return;
-          }
-
-          setDetails(data?.fitment || null);
-          return;
-        } catch (e: any) {
-          if (cancelled) return;
-          setError(e?.message ? String(e.message) : "Failed to load fitment");
-          return;
-        }
-      }
-
-      // 2) Otherwise, fall back to our package engine vehicle search (OEM tires + wheel ranges).
+      // Fall back to our package engine vehicle search (OEM tires + wheel ranges).
       try {
         const qs = new URLSearchParams({
           year: String(fitment.year || ""),

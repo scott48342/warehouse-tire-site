@@ -295,7 +295,7 @@ export const kmImageMappings = pgTable(
 );
 
 // ============================================================================
-// catalog_makes - Vehicle makes from Wheel-Size API
+// catalog_makes - Vehicle makes (internal data)
 // ============================================================================
 
 export const catalogMakes = pgTable(

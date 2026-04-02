@@ -23,7 +23,7 @@ function getPool() {
  * 2. Without: Fetch trims from storefront API, join with DB data
  * 
  * Flow:
- * - Trims come from /api/vehicles/trims (Wheel-Size API, full coverage)
+ * - Trims come from /api/vehicles/trims (internal database)
  * - Current fitment data comes from vehicle_fitments (may not exist)
  * - Overrides come from admin_fitment_overrides
  * - If vehicle not in DB, current data is empty but override can be created

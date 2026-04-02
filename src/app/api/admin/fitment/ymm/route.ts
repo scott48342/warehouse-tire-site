@@ -20,7 +20,7 @@ const MAKES = [
  * GET /api/admin/fitment/ymm
  * 
  * Full-coverage Y/M/M/T picker for admin fitment overrides.
- * Uses same sources as storefront (static years/makes, Wheel-Size API for models/trims).
+ * Uses same sources as storefront (internal database for all Y/M/M/T data).
  * 
  * Query params:
  *   type=years                        → returns { years: string[] }

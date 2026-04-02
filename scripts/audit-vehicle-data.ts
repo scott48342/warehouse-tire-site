@@ -30,7 +30,7 @@ async function runAudit() {
   console.log("\n## 1. INVENTORY TABLES\n");
 
   const tables = [
-    { name: "catalog_makes", purpose: "Vehicle makes (from Wheel-Size API)" },
+    { name: "catalog_makes", purpose: "Vehicle makes (internal data)" },
     { name: "catalog_models", purpose: "Models with valid years array" },
     { name: "vehicle_fitments", purpose: "Normalized fitment data (bolt pattern, hub bore, tire sizes)" },
     { name: "fitment_source_records", purpose: "Raw API responses stored for debugging" },

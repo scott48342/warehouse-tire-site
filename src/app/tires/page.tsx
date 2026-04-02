@@ -404,8 +404,7 @@ export default async function TiresPage({
   // ═══════════════════════════════════════════════════════════════════════════
   // Priority:
   // 1. LIFTED BUILD: Use lifted tire recommendations (e.g., 35x12.50R20)
-  // 2. DB PROFILE: Use oemTireSizes from fitment database
-  // 3. LEGACY API: Fallback to WheelPros/external fitment data
+  // 2. DB PROFILE: Use oemTireSizes from fitment database (internal only, no external fallback)
   //
   // LEGACY SIZE CONVERSION:
   // Classic vehicles (pre-1975) often have legacy tire sizes like E70-14, G60-15.

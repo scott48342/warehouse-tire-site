@@ -14,11 +14,12 @@ async function fetchJson<T>(url: string): Promise<T> {
 
 export function FitmentSelector({
   onComplete,
-  provider,
+  provider: _provider, // DEPRECATED: Provider param ignored - all data from internal DB only
   blank,
 }: {
   onComplete?: (fitment: Fitment) => void;
-  provider?: "wheelsize" | "wheelpros";
+  /** @deprecated No longer used - all data from internal database */
+  provider?: string;
   /**
    * When true, the selector UI starts blank and ignores URL/localStorage prepopulation.
    * Intended for the mega menu SearchModal where we want an empty picker each time.
@@ -160,7 +161,8 @@ export function FitmentSelector({
       }
       try {
         const qs = new URLSearchParams({ year: draft.year, make: draft.make, model: draft.model });
-        const url = provider === "wheelpros" ? `/api/wp/vehicles/submodels?${qs.toString()}` : `/api/vehicles/trims?${qs.toString()}`;
+        // NOTE: WheelPros fallback removed (2026-04-02). All trim data from internal DB only.
+        const url = `/api/vehicles/trims?${qs.toString()}`;
         const data = await fetchJson<{ results: Array<{ value: string; label: string }> }>(url);
         if (!cancelled) setTrims(Array.isArray(data?.results) ? data.results : []);
       } catch {

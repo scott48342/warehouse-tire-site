@@ -1,7 +1,7 @@
 /**
  * Fitment Database - Public API
  * 
- * DB-first fitment system with Wheel-Size API fallback.
+ * DB-first fitment system. Internal database only.
  */
 
 // Core database
