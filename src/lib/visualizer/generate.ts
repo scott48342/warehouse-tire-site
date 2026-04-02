@@ -16,14 +16,20 @@ import {
 } from "./prompts";
 import type { WheelPosition } from "./schema";
 
-// Check for API key at module load
-if (!process.env.OPENAI_API_KEY) {
-  console.warn("[Generate] OPENAI_API_KEY not set");
-}
+// Lazy OpenAI client initialization to avoid build-time errors
+let _openai: OpenAI | null = null;
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+function getOpenAI(): OpenAI {
+  if (!_openai) {
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error("OPENAI_API_KEY environment variable is not set");
+    }
+    _openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return _openai;
+}
 
 interface GenerateVehicleParams {
   year: number;
@@ -111,7 +117,7 @@ export async function generateVehicleAsset(
  * Generate image using DALL-E 3
  */
 async function generateImage(prompt: string): Promise<string> {
-  const response = await openai.images.generate({
+  const response = await getOpenAI().images.generate({
     model: "dall-e-3",
     prompt,
     n: 1,
@@ -165,7 +171,7 @@ async function analyzeWheelPositions(
   category: VehicleCategory
 ): Promise<{ frontWheel: WheelPosition; rearWheel: WheelPosition; notes?: string }> {
   try {
-    const response = await openai.chat.completions.create({
+    const response = await getOpenAI().chat.completions.create({
       model: "gpt-4o",
       messages: [
         {
