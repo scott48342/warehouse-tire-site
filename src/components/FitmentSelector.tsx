@@ -235,8 +235,8 @@ export function FitmentSelector({
                 const next: Fitment = {
                   ...draft,
                   // Store modificationId as the canonical identifier
-                  // For WheelPros submodels, prefix with wp: so downstream can detect provider
-                  modification: v ? (provider === "wheelpros" ? `wp:${modificationId}` : modificationId) : undefined,
+                  // (DB-first: no provider prefixes needed, all data from internal DB)
+                  modification: v ? modificationId : undefined,
                   trim: sel?.label || undefined,
                 };
                 setDraft(next);
