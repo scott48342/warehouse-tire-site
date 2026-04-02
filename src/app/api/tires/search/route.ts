@@ -555,6 +555,100 @@ function normalizeProductKey(partNumber: string, brand: string | null): string {
   return `${(brand || "").toUpperCase()}:${normalized}`;
 }
 
+// ============================================================================
+// IMAGE VALIDATION
+// ============================================================================
+
+/**
+ * Check if an image URL is valid and not a placeholder/noimage
+ * Feature flag: set TIRE_ALLOW_NO_IMAGE=true to disable filtering (for testing)
+ */
+function isValidProductImage(imageUrl: string | null | undefined): boolean {
+  // Feature flag to disable image filtering for testing
+  if (process.env.TIRE_ALLOW_NO_IMAGE === "true") {
+    return true;
+  }
+  
+  // Must have a URL
+  if (!imageUrl || typeof imageUrl !== "string") return false;
+  
+  // Must not be empty/whitespace
+  const url = imageUrl.trim().toLowerCase();
+  if (!url || url.length < 10) return false;
+  
+  // Must start with http/https
+  if (!url.startsWith("http://") && !url.startsWith("https://")) return false;
+  
+  // Block known placeholder/noimage patterns
+  const invalidPatterns = [
+    "noimage",
+    "no-image",
+    "no_image",
+    "placeholder",
+    "default",
+    "missing",
+    "notfound",
+    "not-found",
+    "not_found",
+    "unavailable",
+    "blank",
+    "empty",
+    "/null",
+    "/undefined",
+    "data:image",  // Block inline data URIs (usually placeholders)
+  ];
+  
+  for (const pattern of invalidPatterns) {
+    if (url.includes(pattern)) return false;
+  }
+  
+  return true;
+}
+
+/**
+ * Filter tire results to only include products with valid images
+ * Returns { filtered, stats } with filtered results and filtering statistics
+ */
+function filterTiresWithValidImages(
+  tires: TireResult[],
+  debug: boolean = false
+): { filtered: TireResult[]; stats: { total: number; valid: number; invalid: number; invalidReasons: Record<string, number> } } {
+  const stats = {
+    total: tires.length,
+    valid: 0,
+    invalid: 0,
+    invalidReasons: {} as Record<string, number>,
+  };
+  
+  const filtered: TireResult[] = [];
+  
+  for (const tire of tires) {
+    if (isValidProductImage(tire.imageUrl)) {
+      filtered.push(tire);
+      stats.valid++;
+    } else {
+      stats.invalid++;
+      // Track reason for filtering (for debug)
+      let reason = "missing";
+      if (tire.imageUrl) {
+        const url = tire.imageUrl.toLowerCase();
+        if (url.includes("noimage") || url.includes("no-image") || url.includes("no_image")) reason = "noimage";
+        else if (url.includes("placeholder")) reason = "placeholder";
+        else if (url.includes("default")) reason = "default";
+        else if (!url.startsWith("http")) reason = "invalid_url";
+        else reason = "other";
+      }
+      stats.invalidReasons[reason] = (stats.invalidReasons[reason] || 0) + 1;
+      
+      if (debug) {
+        console.log(`[tires/search] Filtered out (${reason}): ${tire.partNumber} - ${tire.brand} - imageUrl: ${tire.imageUrl?.slice(0, 50) || "null"}`);
+      }
+    }
+  }
+  
+  return { filtered, stats };
+}
+
 /**
  * Apply overrides from admin_product_flags table
  * This allows admins to set custom images and display names for products
@@ -651,18 +745,33 @@ export async function GET(req: Request) {
       
       // Apply admin image overrides (for K&M tires without images, etc.)
       const tOverride0 = Date.now();
-      const resultsWithOverrides = await applyImageOverrides(db, merged.slice(0, pageSize));
+      const resultsWithOverrides = await applyImageOverrides(db, merged.slice(0, pageSize * 2)); // Fetch extra to account for filtering
       timing.imageOverrideMs = Date.now() - tOverride0;
+      
+      // Filter out tires without valid images
+      const debug = url.searchParams.get("debug") === "true";
+      const { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(resultsWithOverrides, debug);
+      
+      if (imageStats.invalid > 0) {
+        console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
+      }
+      
       timing.totalMs = Date.now() - t0;
       
       return NextResponse.json({
-        results: resultsWithOverrides,
+        results: finalResults.slice(0, pageSize),
         mode: "size",
         size: sizeRaw,
         sources: {
           wheelpros: wpResults.length,
           tirewire: twResults.length,
           km: kmResults.length,
+        },
+        imageFiltering: {
+          totalBeforeFilter: imageStats.total,
+          validImages: imageStats.valid,
+          filteredOut: imageStats.invalid,
+          ...(debug && { reasons: imageStats.invalidReasons }),
         },
         timing,
       });
@@ -906,9 +1015,13 @@ export async function GET(req: Request) {
     const withOverrides = await applyImageOverrides(db, slicedResults);
     timing.imageOverrideMs = Date.now() - tOverride0;
     
-    // Filter out tires without images (no image = no show)
-    const finalResults = withOverrides.filter(t => t.imageUrl && t.imageUrl.length > 0);
-    const hiddenNoImage = withOverrides.length - finalResults.length;
+    // Filter out tires without valid images (using enhanced validation)
+    const debug = url.searchParams.get("debug") === "true";
+    const { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(withOverrides, debug);
+    
+    if (imageStats.invalid > 0) {
+      console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
+    }
     
     timing.totalMs = Date.now() - t0;
     
@@ -916,8 +1029,8 @@ export async function GET(req: Request) {
     let fallbackMessage: string | undefined;
     let noResultsReason: string | undefined;
     if (finalResults.length === 0) {
-      if (hiddenNoImage > 0) {
-        fallbackMessage = `Found ${hiddenNoImage} tire(s) but they don't have images yet. Please check back soon or contact us.`;
+      if (imageStats.invalid > 0) {
+        fallbackMessage = `Found ${imageStats.invalid} tire(s) but they don't have valid images yet. Please check back soon or contact us.`;
         noResultsReason = "hidden_no_image";
       } else if (withOverrides.length === 0 && allResults.length === 0) {
         fallbackMessage = tireSizes.length > 0
@@ -959,7 +1072,12 @@ export async function GET(req: Request) {
         tirewire: twResults.length,
         km: kmResults.length,
       },
-      hiddenNoImage, // Count of tires filtered out due to missing images
+      imageFiltering: {
+        totalBeforeFilter: imageStats.total,
+        validImages: imageStats.valid,
+        filteredOut: imageStats.invalid,
+        ...(debug && { reasons: imageStats.invalidReasons }),
+      },
       
       // Fallback messaging for empty results (QA validation)
       ...(fallbackMessage && { fallbackMessage }),
