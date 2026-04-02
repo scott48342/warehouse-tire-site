@@ -238,6 +238,81 @@ export default function SuppliersPage() {
         </p>
       </div>
 
+      {/* Connection Status Overview */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* WheelPros Status */}
+        {wheelSuppliers.filter(s => s.provider === "wheelpros").map(s => (
+          <div key={s.id} className={`bg-neutral-800 rounded-xl border p-4 ${s.enabled && s.credentialsConfigured ? "border-green-600/50" : "border-neutral-700"}`}>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-xl">🛞</span>
+              <span className="font-bold text-white">WheelPros</span>
+            </div>
+            <div className={`text-sm ${s.enabled && s.credentialsConfigured ? "text-green-400" : s.credentialsConfigured ? "text-amber-400" : "text-red-400"}`}>
+              {s.enabled && s.credentialsConfigured ? "● Connected" : s.credentialsConfigured ? "● Disabled" : "○ Not configured"}
+            </div>
+            {s.last_test_at && (
+              <div className="text-xs text-neutral-500 mt-1">
+                Last sync: {new Date(s.last_test_at).toLocaleDateString()}
+              </div>
+            )}
+          </div>
+        ))}
+        
+        {/* K&M Tire Status */}
+        <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-xl">🚗</span>
+            <span className="font-bold text-white">K&M Tire</span>
+          </div>
+          <div className="text-sm text-green-400">● Connected (ENV)</div>
+          <div className="text-xs text-neutral-500 mt-1">Via TireConnect API</div>
+        </div>
+
+        {/* TireWeb/ATD Status */}
+        {(() => {
+          const atd = tirewebConnections.find(c => c.provider === "tireweb_atd");
+          const isConnected = atd?.enabled && atd?.connection_id && tirewebConfig.configured;
+          return (
+            <div className={`bg-neutral-800 rounded-xl border p-4 ${isConnected ? "border-green-600/50" : "border-neutral-700"}`}>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🚚</span>
+                <span className="font-bold text-white">ATD</span>
+              </div>
+              <div className={`text-sm ${isConnected ? "text-green-400" : tirewebConfig.configured ? "text-amber-400" : "text-red-400"}`}>
+                {isConnected ? "● Connected" : tirewebConfig.configured ? "● Not enabled" : "○ Not configured"}
+              </div>
+              {atd?.last_test_at && (
+                <div className="text-xs text-neutral-500 mt-1">
+                  Last sync: {new Date(atd.last_test_at).toLocaleDateString()}
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {/* TireWeb/NTW Status */}
+        {(() => {
+          const ntw = tirewebConnections.find(c => c.provider === "tireweb_ntw");
+          const isConnected = ntw?.enabled && ntw?.connection_id && tirewebConfig.configured;
+          return (
+            <div className={`bg-neutral-800 rounded-xl border p-4 ${isConnected ? "border-green-600/50" : "border-neutral-700"}`}>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">📦</span>
+                <span className="font-bold text-white">NTW</span>
+              </div>
+              <div className={`text-sm ${isConnected ? "text-green-400" : tirewebConfig.configured ? "text-amber-400" : "text-red-400"}`}>
+                {isConnected ? "● Connected" : tirewebConfig.configured ? "● Not enabled" : "○ Not configured"}
+              </div>
+              {ntw?.last_test_at && (
+                <div className="text-xs text-neutral-500 mt-1">
+                  Last sync: {new Date(ntw.last_test_at).toLocaleDateString()}
+                </div>
+              )}
+            </div>
+          );
+        })()}
+      </div>
+
       {/* ============ WHEEL SUPPLIERS ============ */}
       <section>
         <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">

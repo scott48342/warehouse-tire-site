@@ -50,6 +50,24 @@ async function getStats() {
       `),
     ]);
 
+    // Fetch Fitment API stats
+    let apiStats = { pendingRequests: [], activeKeys: 0, requestsToday: 0, requestsMonth: 0 };
+    try {
+      const [pendingRes, keysRes, apiUsageRes] = await Promise.all([
+        pool.query(`SELECT id, name, email, company, use_case, expected_usage, created_at FROM api_access_requests WHERE status = 'pending' ORDER BY created_at DESC LIMIT 5`),
+        pool.query(`SELECT COUNT(*) as count FROM api_keys WHERE active = true`),
+        pool.query(`SELECT COALESCE(SUM(monthly_request_count), 0) as month_total FROM api_keys`),
+      ]);
+      apiStats = {
+        pendingRequests: pendingRes.rows,
+        activeKeys: parseInt(keysRes.rows[0]?.count || "0", 10),
+        requestsToday: 0, // Would need api_usage_logs table
+        requestsMonth: parseInt(apiUsageRes.rows[0]?.month_total || "0", 10),
+      };
+    } catch (apiErr) {
+      console.warn("[admin] Error fetching API stats (tables may not exist):", apiErr);
+    }
+
     // Get recent logs for issues panel
     const recentIssuesRes = await pool.query(`
       SELECT log_type, vehicle_params, details, created_at
@@ -93,6 +111,7 @@ async function getStats() {
         totalSearches: parseInt(perfRes.rows[0]?.total_searches || "0", 10),
       },
       carts: cartStats,
+      api: apiStats,
     };
   } catch (err) {
     console.error("[admin] Error fetching stats:", err);
@@ -106,6 +125,7 @@ async function getStats() {
       recentIssues: [],
       performance: { avgSearchTime: 0, maxSearchTime: 0, totalSearches: 0 },
       carts: { active: 0, abandoned: 0, recovered: 0, expired: 0, abandonedValue: 0, recoveredValue: 0, recentAbandoned: [] },
+      api: { pendingRequests: [], activeKeys: 0, requestsToday: 0, requestsMonth: 0 },
     };
   } finally {
     await pool.end();
@@ -326,6 +346,69 @@ export default async function AdminDashboard() {
         )}
       </div>
 
+      {/* Fitment API Section */}
+      <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <span>🔑</span> Fitment API
+            {stats.api.pendingRequests.length > 0 && (
+              <span className="text-xs bg-amber-500 text-black px-2 py-0.5 rounded-full ml-2">
+                {stats.api.pendingRequests.length} pending
+              </span>
+            )}
+          </h2>
+          <Link href="/admin/fitment-api" className="text-sm text-blue-400 hover:text-blue-300">
+            Manage API →
+          </Link>
+        </div>
+        
+        {/* API Stats */}
+        <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="bg-neutral-700/50 rounded-lg p-3 text-center">
+            <div className="text-2xl font-bold text-green-400">{stats.api.activeKeys}</div>
+            <div className="text-xs text-neutral-400">Active Keys</div>
+          </div>
+          <div className="bg-neutral-700/50 rounded-lg p-3 text-center">
+            <div className="text-2xl font-bold text-white">{stats.api.requestsMonth.toLocaleString()}</div>
+            <div className="text-xs text-neutral-400">Requests (Month)</div>
+          </div>
+          <div className="bg-neutral-700/50 rounded-lg p-3 text-center">
+            <div className="text-2xl font-bold text-amber-400">{stats.api.pendingRequests.length}</div>
+            <div className="text-xs text-neutral-400">Pending Requests</div>
+          </div>
+        </div>
+
+        {/* Pending Requests */}
+        {stats.api.pendingRequests.length > 0 ? (
+          <div className="space-y-2">
+            <div className="text-xs text-neutral-400 mb-2">Pending Access Requests</div>
+            {stats.api.pendingRequests.map((req: any) => (
+              <div key={req.id} className="flex items-center justify-between bg-neutral-700/30 rounded-lg p-3">
+                <div className="flex-1">
+                  <div className="text-white font-medium">{req.name}</div>
+                  <div className="text-xs text-neutral-400">{req.company} • {req.use_case}</div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-neutral-500">
+                    {new Date(req.created_at).toLocaleDateString()}
+                  </span>
+                  <Link
+                    href={`/admin/fitment-api?request=${req.id}`}
+                    className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium rounded"
+                  >
+                    Review
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-neutral-500 text-sm text-center py-4">
+            ✅ No pending access requests
+          </div>
+        )}
+      </div>
+
       {/* Quick Actions */}
       <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-6">
         <h2 className="text-lg font-bold text-white mb-4">Quick Actions</h2>
@@ -337,28 +420,22 @@ export default async function AdminDashboard() {
             href="/admin/orders"
           />
           <QuickAction
+            icon="🔑"
+            label="Fitment API"
+            description="Manage API access & keys"
+            href="/admin/fitment-api"
+          />
+          <QuickAction
             icon="🔧"
-            label="Fitment Overrides"
-            description="Edit vehicle fitment data"
+            label="Fitment Data"
+            description="Edit vehicle fitment"
             href="/admin/fitment"
           />
           <QuickAction
             icon="🛞"
-            label="Product Controls"
+            label="Products"
             description="Flag or hide products"
             href="/admin/products"
-          />
-          <QuickAction
-            icon="📋"
-            label="View Logs"
-            description="Check system logs"
-            href="/admin/logs"
-          />
-          <QuickAction
-            icon="💰"
-            label="Tax Rates"
-            description="State sales tax rates"
-            href="/admin/tax-rates"
           />
         </div>
       </div>

@@ -29,6 +29,8 @@ export default function LogsPage() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [logType, setLogType] = useState<string>("");
+  const [timeFilter, setTimeFilter] = useState<"all" | "24h" | "1h">("all");
+  const [errorsOnly, setErrorsOnly] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const fetchLogs = async () => {
@@ -36,12 +38,23 @@ export default function LogsPage() {
     try {
       const params = new URLSearchParams();
       if (logType) params.set("type", logType);
+      if (errorsOnly) params.set("type", "search_error");
       params.set("limit", "100");
 
       const res = await fetch(`/api/admin/logs?${params.toString()}`);
       const data = await res.json();
 
-      setLogs(data.logs || []);
+      let filteredLogs = data.logs || [];
+      
+      // Client-side time filtering
+      if (timeFilter !== "all") {
+        const cutoff = new Date();
+        if (timeFilter === "24h") cutoff.setHours(cutoff.getHours() - 24);
+        if (timeFilter === "1h") cutoff.setHours(cutoff.getHours() - 1);
+        filteredLogs = filteredLogs.filter((l: LogEntry) => new Date(l.created_at) >= cutoff);
+      }
+
+      setLogs(filteredLogs);
       setCounts(data.counts || {});
       setTotal(data.total || 0);
     } catch (err) {
@@ -53,7 +66,7 @@ export default function LogsPage() {
 
   useEffect(() => {
     fetchLogs();
-  }, [logType]);
+  }, [logType, errorsOnly, timeFilter]);
 
   const handleClearOld = async () => {
     if (!confirm("Delete logs older than 30 days?")) return;
@@ -97,14 +110,54 @@ export default function LogsPage() {
         </button>
       </div>
 
+      {/* Quick Filters */}
+      <div className="flex flex-wrap items-center gap-4">
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-neutral-400">Time:</span>
+          {[
+            { value: "all", label: "All time" },
+            { value: "24h", label: "Last 24h" },
+            { value: "1h", label: "Last hour" },
+          ].map((t) => (
+            <button
+              key={t.value}
+              onClick={() => setTimeFilter(t.value as typeof timeFilter)}
+              className={`px-3 py-1 rounded text-sm ${
+                timeFilter === t.value
+                  ? "bg-neutral-600 text-white"
+                  : "bg-neutral-800 text-neutral-400 hover:text-white"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={() => { setErrorsOnly(!errorsOnly); setLogType(""); }}
+          className={`px-3 py-1 rounded text-sm flex items-center gap-1 ${
+            errorsOnly
+              ? "bg-red-600 text-white"
+              : "bg-neutral-800 text-neutral-400 hover:text-white"
+          }`}
+        >
+          <span>❌</span> Errors only
+        </button>
+        <button
+          onClick={fetchLogs}
+          className="px-3 py-1 rounded text-sm bg-neutral-800 text-neutral-400 hover:text-white"
+        >
+          ↻ Refresh
+        </button>
+      </div>
+
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
         <LogTypeCard
           type=""
           label="All Logs"
           count={Object.values(counts).reduce((a, b) => a + b, 0)}
-          active={logType === ""}
-          onClick={() => setLogType("")}
+          active={logType === "" && !errorsOnly}
+          onClick={() => { setLogType(""); setErrorsOnly(false); }}
         />
         {Object.entries(LOG_TYPE_LABELS).map(([type, info]) => (
           <LogTypeCard
@@ -114,7 +167,8 @@ export default function LogsPage() {
             icon={info.icon}
             count={counts[type] || 0}
             active={logType === type}
-            onClick={() => setLogType(type)}
+            color={info.color}
+            onClick={() => { setLogType(type); setErrorsOnly(false); }}
           />
         ))}
       </div>
@@ -136,11 +190,19 @@ export default function LogsPage() {
                 color: "neutral",
               };
               const isExpanded = expandedId === log.id;
+              const isError = log.log_type === "search_error";
+              const isWarning = log.log_type === "warning";
 
               return (
                 <div
                   key={log.id}
-                  className="p-4 hover:bg-neutral-700/30 cursor-pointer"
+                  className={`p-4 cursor-pointer ${
+                    isError 
+                      ? "bg-red-900/20 hover:bg-red-900/30 border-l-4 border-red-600" 
+                      : isWarning
+                      ? "bg-amber-900/10 hover:bg-amber-900/20 border-l-4 border-amber-600"
+                      : "hover:bg-neutral-700/30"
+                  }`}
                   onClick={() => setExpandedId(isExpanded ? null : log.id)}
                 >
                   <div className="flex items-start justify-between gap-4">
@@ -216,6 +278,7 @@ function LogTypeCard({
   icon,
   count,
   active,
+  color,
   onClick,
 }: {
   type: string;
@@ -223,14 +286,27 @@ function LogTypeCard({
   icon?: string;
   count: number;
   active: boolean;
+  color?: string;
   onClick: () => void;
 }) {
+  const colorClasses: Record<string, string> = {
+    red: "border-red-600 bg-red-600/20",
+    amber: "border-amber-600 bg-amber-600/20",
+    green: "border-green-600 bg-green-600/20",
+    blue: "border-blue-600 bg-blue-600/20",
+  };
+  
+  const countColors: Record<string, string> = {
+    red: "text-red-400",
+    amber: "text-amber-400",
+  };
+  
   return (
     <button
       onClick={onClick}
       className={`p-3 rounded-xl border text-left transition-colors ${
         active
-          ? "bg-red-600/20 border-red-600"
+          ? colorClasses[color || ""] || "bg-red-600/20 border-red-600"
           : "bg-neutral-800 border-neutral-700 hover:border-neutral-600"
       }`}
     >
@@ -238,7 +314,9 @@ function LogTypeCard({
         {icon && <span>{icon}</span>}
         <span className="text-sm font-medium text-white">{label}</span>
       </div>
-      <div className="text-2xl font-bold text-white mt-1">{count}</div>
+      <div className={`text-2xl font-bold mt-1 ${count > 0 && (color === "red" || color === "amber") ? countColors[color] : "text-white"}`}>
+        {count}
+      </div>
     </button>
   );
 }

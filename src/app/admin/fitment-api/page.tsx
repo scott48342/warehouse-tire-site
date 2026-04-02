@@ -201,6 +201,17 @@ export default function FitmentApiAdminPage() {
                 setInternalNotes(r.review_notes || "");
                 setSelectedPlan("starter");
               }}
+              onQuickAction={(action, requestId) => {
+                if (action === "approve") {
+                  if (confirm("Approve with Starter plan?")) {
+                    handleAction("approve", { requestId, plan: "starter" });
+                  }
+                } else if (action === "reject") {
+                  if (confirm("Reject this request?")) {
+                    handleAction("reject", { requestId });
+                  }
+                }
+              }}
             />
           )}
           {tab === "keys" && (
@@ -378,10 +389,12 @@ export default function FitmentApiAdminPage() {
 
 function RequestsTab({ 
   requests, 
-  onSelect 
+  onSelect,
+  onQuickAction,
 }: { 
   requests: AccessRequest[]; 
   onSelect: (r: AccessRequest) => void;
+  onQuickAction: (action: string, requestId: string) => void;
 }) {
   const [filter, setFilter] = useState<"all" | "pending" | "approved" | "rejected">("all");
   
@@ -445,12 +458,32 @@ function RequestsTab({
                   <td className="px-4 py-3"><StatusBadge status={r.status} /></td>
                   <td className="px-4 py-3 text-neutral-400 text-sm">{formatDate(r.created_at)}</td>
                   <td className="px-4 py-3">
-                    <button
-                      onClick={() => onSelect(r)}
-                      className="text-blue-400 hover:text-blue-300 text-sm"
-                    >
-                      View →
-                    </button>
+                    <div className="flex items-center gap-2">
+                      {r.status === "pending" && (
+                        <>
+                          <button
+                            onClick={() => onQuickAction("approve", r.id)}
+                            className="px-2 py-1 bg-green-600 hover:bg-green-500 text-white text-xs font-medium rounded"
+                            title="Quick approve with Starter plan"
+                          >
+                            ✓
+                          </button>
+                          <button
+                            onClick={() => onQuickAction("reject", r.id)}
+                            className="px-2 py-1 bg-red-600 hover:bg-red-500 text-white text-xs font-medium rounded"
+                            title="Reject request"
+                          >
+                            ✗
+                          </button>
+                        </>
+                      )}
+                      <button
+                        onClick={() => onSelect(r)}
+                        className="text-blue-400 hover:text-blue-300 text-sm"
+                      >
+                        {r.status === "pending" ? "Review" : "View"}
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))
@@ -528,7 +561,10 @@ function KeysTab({
                 </td>
               </tr>
             ) : (
-              filtered.map((k) => (
+              filtered.map((k) => {
+                const usagePercent = Math.min(100, Math.round((k.monthly_request_count / k.monthly_limit) * 100));
+                const usageColor = usagePercent > 90 ? "bg-red-500" : usagePercent > 70 ? "bg-amber-500" : "bg-green-500";
+                return (
                 <tr key={k.id} className="hover:bg-neutral-700/30">
                   <td className="px-4 py-3">
                     <code className="text-blue-400 text-sm">{k.key_prefix}...</code>
@@ -539,11 +575,20 @@ function KeysTab({
                   </td>
                   <td className="px-4 py-3"><PlanBadge plan={k.plan} /></td>
                   <td className="px-4 py-3">
-                    <div className="text-white">{k.monthly_request_count.toLocaleString()}</div>
-                    <div className="text-xs text-neutral-400">/ {k.monthly_limit.toLocaleString()}</div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 max-w-24">
+                        <div className="h-2 bg-neutral-700 rounded-full overflow-hidden">
+                          <div className={`h-full ${usageColor} rounded-full`} style={{ width: `${usagePercent}%` }} />
+                        </div>
+                      </div>
+                      <span className="text-xs text-neutral-400 whitespace-nowrap">{usagePercent}%</span>
+                    </div>
+                    <div className="text-xs text-neutral-500 mt-1">
+                      {k.monthly_request_count.toLocaleString()} / {k.monthly_limit.toLocaleString()}
+                    </div>
                   </td>
                   <td className="px-4 py-3 text-neutral-400 text-sm">
-                    {k.last_request_at ? formatDate(k.last_request_at) : "Never"}
+                    {k.last_request_at ? formatDate(k.last_request_at) : <span className="text-neutral-600">Never</span>}
                   </td>
                   <td className="px-4 py-3">
                     {k.active ? (
@@ -553,15 +598,35 @@ function KeysTab({
                     )}
                   </td>
                   <td className="px-4 py-3">
-                    <button
-                      onClick={() => onSelect(k)}
-                      className="text-blue-400 hover:text-blue-300 text-sm"
-                    >
-                      Manage →
-                    </button>
+                    <div className="flex items-center gap-2">
+                      {k.active ? (
+                        <button
+                          onClick={() => onAction("disable_key", { keyId: k.id })}
+                          className="px-2 py-1 bg-neutral-700 hover:bg-red-600 text-neutral-300 hover:text-white text-xs rounded"
+                          title="Disable key"
+                        >
+                          Disable
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => onAction("enable_key", { keyId: k.id })}
+                          className="px-2 py-1 bg-green-700 hover:bg-green-600 text-white text-xs rounded"
+                          title="Re-enable key"
+                        >
+                          Enable
+                        </button>
+                      )}
+                      <button
+                        onClick={() => onSelect(k)}
+                        className="text-blue-400 hover:text-blue-300 text-sm"
+                      >
+                        Details
+                      </button>
+                    </div>
                   </td>
                 </tr>
-              ))
+                );
+              })
             )}
           </tbody>
         </table>
