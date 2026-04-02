@@ -69,14 +69,15 @@ export async function GET(req: Request) {
     if (coverage.hasCoverage) {
       console.log(`[trims] COVERAGE: ${year} ${make} ${model} → ${coverage.trims.length} trim(s) with fitment data`);
       
-      // Split grouped trim labels (e.g., "LS, LT, RST, Z71") into individual options
+      // Split grouped trim labels (e.g., "LS, LT, RST" or "SE/ZX3/ZX5") into individual options
       // All split trims share the same modificationId since they have identical specs
       const results: TrimOption[] = [];
       for (const t of coverage.trims) {
         const label = t.displayTrim || "Base";
-        // Check if this is a grouped trim (contains comma)
-        if (label.includes(",")) {
-          const individualTrims = label.split(",").map(s => s.trim()).filter(Boolean);
+        // Check if this is a grouped trim (contains comma or slash)
+        if (label.includes(",") || label.includes("/")) {
+          // Split on comma or slash
+          const individualTrims = label.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
           for (const trimName of individualTrims) {
             results.push({
               value: t.modificationId,
