@@ -295,6 +295,46 @@ export const kmImageMappings = pgTable(
 );
 
 // ============================================================================
+// tire_images - TireLibrary image cache (uploaded to Vercel Blob)
+// ============================================================================
+
+export const tireImages = pgTable(
+  "tire_images",
+  {
+    // TireLibrary pattern ID (from TireWire API)
+    patternId: integer("pattern_id").primaryKey(),
+    
+    // Brand/model info for reference
+    brand: varchar("brand", { length: 100 }),
+    pattern: varchar("pattern", { length: 200 }), // model name
+    
+    // Original TireLibrary URL
+    sourceUrl: text("source_url").notNull(),
+    
+    // Our cached URL (Vercel Blob)
+    blobUrl: text("blob_url"),
+    
+    // Status: pending, uploaded, failed, not_found
+    status: varchar("status", { length: 20 }).notNull().default("pending"),
+    
+    // Error info if failed
+    errorMessage: text("error_message"),
+    
+    // File metadata
+    contentType: varchar("content_type", { length: 50 }),
+    fileSize: integer("file_size"),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    uploadedAt: timestamp("uploaded_at"),
+  },
+  (table) => ({
+    statusIdx: index("tire_images_status_idx").on(table.status),
+    brandIdx: index("tire_images_brand_idx").on(table.brand),
+  })
+);
+
+// ============================================================================
 // catalog_makes - Vehicle makes (internal data)
 // ============================================================================
 
@@ -444,6 +484,9 @@ export type NewCatalogSyncLog = typeof catalogSyncLog.$inferInsert;
 
 export type KmImageMapping = typeof kmImageMappings.$inferSelect;
 export type NewKmImageMapping = typeof kmImageMappings.$inferInsert;
+
+export type TireImage = typeof tireImages.$inferSelect;
+export type NewTireImage = typeof tireImages.$inferInsert;
 
 export type FitmentSourceRecord = typeof fitmentSourceRecords.$inferSelect;
 export type NewFitmentSourceRecord = typeof fitmentSourceRecords.$inferInsert;

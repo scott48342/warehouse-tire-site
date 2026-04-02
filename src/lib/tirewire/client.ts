@@ -400,8 +400,9 @@ export interface UnifiedTire {
 export function tirewireTireToUnified(tire: TirewireTire, provider: string): UnifiedTire {
   const size = `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${Math.round(tire.rim)}`;
   
-  // Use PatternID to construct TireLibrary product image URL
-  // Falls back to brand logo if no patternId
+  // Image URL will be resolved later via getCachedTireImage()
+  // Store the patternId for batch lookup in the caller
+  // Fall back to TireLibrary URL for now (service will swap for cached version)
   let imageUrl = tire.imageUrl || null;
   if (tire.patternId && tire.patternId > 0) {
     imageUrl = `https://tireweb.tirelibrary.com/images/Products/${tire.patternId}.jpg`;

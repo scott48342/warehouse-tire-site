@@ -22,6 +22,7 @@ import { XMLParser } from "fast-xml-parser";
 import { searchTiresTirewire, tirewireTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
+import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -555,6 +556,53 @@ function normalizeProductKey(partNumber: string, brand: string | null): string {
   return `${(brand || "").toUpperCase()}:${normalized}`;
 }
 
+/**
+ * Replace TireLibrary URLs with cached Vercel Blob URLs where available
+ */
+async function applyCachedImages(results: TireResult[]): Promise<TireResult[]> {
+  // Extract patternIds from TireLibrary URLs
+  const patternIdMap = new Map<number, number[]>(); // patternId -> indices in results
+  
+  for (let i = 0; i < results.length; i++) {
+    const tire = results[i];
+    if (!tire.imageUrl) continue;
+    
+    // Check if it's a TireLibrary URL
+    const match = tire.imageUrl.match(/tirelibrary\.com\/images\/Products\/(\d+)\./i);
+    if (match) {
+      const patternId = parseInt(match[1], 10);
+      if (!patternIdMap.has(patternId)) {
+        patternIdMap.set(patternId, []);
+      }
+      patternIdMap.get(patternId)!.push(i);
+    }
+  }
+  
+  if (patternIdMap.size === 0) return results;
+  
+  try {
+    // Batch lookup cached URLs
+    const cachedUrls = await getCachedTireImagesBatch(Array.from(patternIdMap.keys()));
+    
+    // Replace URLs where we have cached versions
+    const updated = [...results];
+    for (const [patternId, indices] of patternIdMap) {
+      const cachedUrl = cachedUrls.get(patternId);
+      if (cachedUrl && !cachedUrl.includes("tirelibrary.com")) {
+        // We have a locally cached version
+        for (const idx of indices) {
+          updated[idx] = { ...updated[idx], imageUrl: cachedUrl };
+        }
+      }
+    }
+    
+    return updated;
+  } catch (err) {
+    console.error("[tires/search] Cached image lookup failed:", err);
+    return results; // Return original results on error
+  }
+}
+
 // ============================================================================
 // IMAGE VALIDATION
 // ============================================================================
@@ -744,9 +792,14 @@ export async function GET(req: Request) {
       const merged = mergeTireResults(wpResults, twResults, kmResults, minQty);
       timing.mergeMs = Date.now() - tMerge0;
       
+      // Apply cached TireLibrary images (from Vercel Blob)
+      const tCache0 = Date.now();
+      const withCachedImages = await applyCachedImages(merged.slice(0, pageSize * 2));
+      timing.cachedImagesMs = Date.now() - tCache0;
+      
       // Apply admin image overrides (for K&M tires without images, etc.)
       const tOverride0 = Date.now();
-      const resultsWithOverrides = await applyImageOverrides(db, merged.slice(0, pageSize * 2)); // Fetch extra to account for filtering
+      const resultsWithOverrides = await applyImageOverrides(db, withCachedImages); // Fetch extra to account for filtering
       timing.imageOverrideMs = Date.now() - tOverride0;
       
       // Filter out tires without valid images
@@ -1011,9 +1064,14 @@ export async function GET(req: Request) {
       });
     }
     
+    // Apply cached TireLibrary images (from Vercel Blob)
+    const tCache0 = Date.now();
+    const withCachedImages = await applyCachedImages(slicedResults);
+    timing.cachedImagesMs = Date.now() - tCache0;
+    
     // Apply admin image overrides (for K&M tires without images, etc.)
     const tOverride0 = Date.now();
-    const withOverrides = await applyImageOverrides(db, slicedResults);
+    const withOverrides = await applyImageOverrides(db, withCachedImages);
     timing.imageOverrideMs = Date.now() - tOverride0;
     
     // Filter out tires without valid images (using enhanced validation)
