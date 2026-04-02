@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { MobileActionBar } from "@/components/MobileActionBar";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CartSlideout } from "@/components/CartSlideout";
@@ -51,7 +52,7 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
       </head>
-      <body className={`${inter.variable} ${oswald.variable} antialiased`}>
+      <body className={`${inter.variable} ${oswald.variable} antialiased flex min-h-screen flex-col`}>
         <CartProvider>
           <CartTracker />
           <Suspense fallback={null}>
@@ -60,7 +61,10 @@ export default function RootLayout({
           <Suspense fallback={<div className="h-16" />}>
             <Header />
           </Suspense>
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
           <MobileActionBar />
           <CartSlideout />
         </CartProvider>
