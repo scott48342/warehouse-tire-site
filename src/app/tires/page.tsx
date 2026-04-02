@@ -729,7 +729,22 @@ export default async function TiresPage({
   // modern P-metric equivalent for the actual tire search.
   // Display shows original size, but search uses converted size.
   const searchSizeForFetch = (() => {
-    // If we have a metricSizeOverride from URL, use that
+    // For flotation sizes (33x12.50R20 format), ALWAYS use the flotation format for search
+    // because K&M returns different tires for flotation vs metric equivalent
+    const flotationParam = safeString(Array.isArray((sp as any).flotation) ? (sp as any).flotation[0] : (sp as any).flotation);
+    if (flotationParam && /^\d{2,3}x\d{1,2}(\.\d{2})?R\d{2}$/i.test(flotationParam)) {
+      // Convert flotation to simple size format: 33x12.50R20 -> 33125020
+      const m = flotationParam.match(/^(\d{2,3})x(\d{1,2})(?:\.(\d{2}))?R(\d{2})$/i);
+      if (m) {
+        const whole = m[1];
+        const width = m[2];
+        const decimal = m[3] || "00";
+        const rim = m[4];
+        return `${whole}${width}${decimal}${rim}`;
+      }
+    }
+    
+    // If we have a metricSizeOverride from URL and no flotation, use that
     if (metricSizeOverride) return metricSizeOverride;
     
     // If selectedSize is in our legacy conversion map, use the converted size
