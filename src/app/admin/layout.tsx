@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { href: "/admin/abandoned-carts", label: "Abandoned Carts", icon: "🛒" },
   { href: "/admin/analytics", label: "Analytics", icon: "📈" },
   { href: "/admin/fitment", label: "Fitment", icon: "🔧" },
+  { href: "/admin/fitment-api", label: "Fitment API", icon: "🔑" },
   { href: "/admin/validation", label: "Validation", icon: "✅" },
   { href: "/admin/products", label: "Products", icon: "🛞" },
   { href: "/admin/suppliers", label: "Suppliers", icon: "🏭" },
