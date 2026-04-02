@@ -36,18 +36,35 @@ const BRAND_PREFIXES: Record<string, string> = {
   'YO': 'Yokohama',
 };
 
+// Words that should NOT be expanded (protect before applying expansions)
+const PROTECTED_WORDS = [
+  'THRASHER', 'THRASHR', 'THRASH',  // Don't expand AS in THRASHER
+  'TRASHER',
+  'MASSIV', 'MASSIVE',
+  'BEAST', 'BASHER',
+  'MASTER', 'DISASTER',
+  'COASTAL', 'ASTRO',
+];
+
 // Common model abbreviations → full names
 const MODEL_EXPANSIONS: Record<string, string> = {
   // Goodyear
   'ASSUR WTHRDY': 'Assurance WeatherReady',
+  'ASSUR WTHRRDY2': 'Assurance WeatherReady 2',
   'ASSUR AS': 'Assurance All-Season',
   'ASSUR MXLF': 'Assurance MaxLife',
+  'ASSUR MXLIFE 2': 'Assurance MaxLife 2',
   'ASSUR CSTOUR': 'Assurance ComfortDrive',
+  'COMFORTDRIVE': 'Assurance ComfortDrive',
   'EGL F1 ASYM': 'Eagle F1 Asymmetric',
   'EGL SPRT AS': 'Eagle Sport All-Season',
   'WRNGLR AT': 'Wrangler All-Terrain',
   'WRNGLR DRTK': 'Wrangler DuraTrac',
   'WRNGLR TRRN': 'Wrangler Workhorse',
+  'WRG STEADFAST': 'Wrangler Steadfast',
+  'WRG WKHRS': 'Wrangler Workhorse',
+  'WGR FORT': 'Wrangler Fortitude',
+  'CS FUEL MAX': 'CrossClimate Fuel Max',
   
   // Michelin
   'DEF LTX MS': 'Defender LTX M/S',
@@ -151,13 +168,144 @@ const MODEL_EXPANSIONS: Record<string, string> = {
   'TRRA GRPLR': 'Terra Grappler',
   'NT421Q': 'NT421Q',
   
-  // Common generic terms
-  'TOUR': 'Touring',
-  'TOURING': 'Touring',
+  // Ironhead / Thunderer
+  'THRASHR': 'Thrasher',
+  'RNGR': 'Ranger',
+  'TRAC GRP': 'Trac Grip',
+  
+  // RBP
+  'RPLSR': 'Repulsor',
+  'RPLSR XT': 'Repulsor XT',
+  'RPLSR RT': 'Repulsor R/T',
+  
+  // Milestar
+  'PTGN': 'Patagonia',
+  'PTGN XT': 'Patagonia XT',
+  
+  // Kenda
+  'KLEV': 'Klever',
+  'KLEV RT': 'Klever R/T',
+  
+  // Kumho
+  'RD VNT': 'Road Venture',
+  'RD VNTR': 'Road Venture',
+  
+  // Venom / Generic Off-Road
+  'TERRA HNTER': 'Terra Hunter',
+  'TERRA HNTR': 'Terra Hunter',
+  'TRAIL HNTR': 'Trail Hunter',
+  'TRAIL HNTER': 'Trail Hunter',
+  'HNTER': 'Hunter',
+  'HNTR': 'Hunter',
+  'SWAMPTHING': 'Swamp Thing',
+  
+  // Mastercraft
+  'COURS': 'Courser',
+  'COURS TRL': 'Courser Trail',
+  'COURS QUEST': 'Courser Quest',
+  'SRT TOURING': 'SRT Touring',
+  'STRATUS': 'Stratus',
+  
+  // More Goodyear
+  'INTEGRITY': 'Integrity',
+  
+  // Starfire
+  'SOLARUS': 'Solarus',
+  
+  // More Firestone  
+  'FZN TOURING': 'Fuzion Touring',
+  'AFFINITY': 'Affinity',
+  'WEATHERGRIP': 'WeatherGrip',
+  
+  // Continental
+  'PROCONT': 'ProContact',
+  'PROCONT TX': 'ProContact TX',
+  'TRUECNT': 'TrueContact',
+  'VIKINGCNT': 'VikingContact',
+  'SECURCNT': 'SecuriContact',
+  'CRSCNT': 'CrossContact',
+  'CRSCNT ATR': 'CrossContact ATR',
+  'CRSCNT LX': 'CrossContact LX',
+  'CRSCNT LX25': 'CrossContact LX25',
+  
+  // Bridgestone
+  'ALZ': 'Alenza',
+  'ALZ AS': 'Alenza AS',
+  'ALZ PRESTGE': 'Alenza Prestige',
+  'TRZ EVRDRVE': 'Turanza EverDrive',
+  'ECOPIA': 'Ecopia',
+  'DRVGRD': 'DriveGuard',
+  'DLR': 'Dueler',
+  'DLR HP SPT': 'Dueler H/P Sport',
+  'DLR AT': 'Dueler A/T',
+  
+  // More Hankook
+  'DYN': 'Dynapro',
+  'DYN AT2X': 'Dynapro AT2 Xtreme',
+  'DYN HT': 'Dynapro HT',
+  'DYN HT2': 'Dynapro HT2',
+  'DYN HPX': 'Dynapro HPX',
+  'WTHRFLX': 'Weatherflex',
+  'IPIKE': 'i*Pike',
+  
+  // More General
+  'ALTMX': 'AltiMAX',
+  'ALTMX 365AW': 'AltiMAX 365 AW',
+  'GRAB APT': 'Grabber APT',
+  
+  // More Nexen
+  'RDN': 'Roadian',
+  'RDN GTX': 'Roadian GTX',
+  'RDN ATX': 'Roadian ATX',
+  'NBLU': 'N-Blue',
+  'N-PRIZ': "N'Priz",
+  
+  // More Toyo
+  'OPCNTRY': 'Open Country',
+  'OPCNTRY HT2': 'Open Country H/T II',
+  'OPCNTRY AT3': 'Open Country A/T III',
+  'EXTENSA': 'Extensa',
+  'CELSUS': 'Celsius',
+  
+  // More Yokohama
+  'GEO': 'Geolandar',
+  'GEO CV': 'Geolandar CV',
+  'GEO HT': 'Geolandar H/T',
+  'AVID': 'AVID',
+  'ASCEND': 'Ascend',
+  
+  // More Falken
+  'WDPK': 'Wildpeak',
+  'WDPK AT TRL': 'Wildpeak A/T Trail',
+  'WDPK AT4W': 'Wildpeak A/T4W',
+  'SNC': 'Sincera',
+  'ZX': 'Ziex',
+  'AKLIMATE': 'aKlimate',
+  
+  // More Cooper
+  'DSC': 'Discoverer',
+  'DSC RD TRL': 'Discoverer Road+Trail',
+  'TRACTCOMAND': 'Traction Command',
+  'ENDEAVOR': 'Endeavor',
+  
+  // Lexani
+  'LXHT': 'LX-HT',
+  
+  // Kelly/Goodyear
+  'EDGE TOUR': 'Edge Touring',
+  'SAFARI': 'Safari',
+  
+  // NOTE: Single-letter/short expansions at END to avoid breaking longer matches
+  // These should only apply as standalone words, handled specially
+};
+
+// Standalone terrain/type abbreviations (only expand as whole words)
+const STANDALONE_EXPANSIONS: Record<string, string> = {
   'AS': 'All-Season',
   'AT': 'All-Terrain',
   'HT': 'Highway Terrain',
   'MT': 'Mud-Terrain',
+  'RT': 'Rugged Terrain',
   'HP': 'High Performance',
   'UHP': 'Ultra High Performance',
 };
@@ -184,15 +332,45 @@ export function expandKmDescription(
   }
   
   // Remove size from description (we show it separately)
-  // Matches patterns like: 225/65R17, 225/65R17/SL, P225/65R17, LT265/70R17
-  desc = desc.replace(/^[P|LT]?\d{3}\/\d{2}[A-Z]*R\d{2}[\/\*>]?[A-Z0-9]*\s*/i, '');
+  // Matches patterns like: 225/65R17, 225/65R17/SL, P225/65R17, LT265/70R17, 33/1250R20
+  desc = desc.replace(/^[P|LT]?\d{2,3}\/?\d{2,4}[A-Z]*R\d{2}[\/\*>]?[A-Z0-9]*\s*/i, '');
   
-  // Expand known model abbreviations
-  let expanded = desc;
-  for (const [abbrev, full] of Object.entries(MODEL_EXPANSIONS)) {
-    // Case-insensitive replacement
-    const regex = new RegExp(abbrev.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  // Protect words that shouldn't be partially expanded
+  const protectedPlaceholders: Record<string, string> = {};
+  let protectedDesc = desc;
+  PROTECTED_WORDS.forEach((word, idx) => {
+    const regex = new RegExp(word, 'gi');
+    const placeholder = `__PROTECTED_${idx}__`;
+    if (regex.test(protectedDesc)) {
+      protectedPlaceholders[placeholder] = word;
+      protectedDesc = protectedDesc.replace(regex, placeholder);
+    }
+  });
+  
+  // Expand known model abbreviations (longer patterns first)
+  let expanded = protectedDesc;
+  
+  // Sort by length descending to match longer patterns first
+  const sortedExpansions = Object.entries(MODEL_EXPANSIONS)
+    .sort((a, b) => b[0].length - a[0].length);
+  
+  for (const [abbrev, full] of sortedExpansions) {
+    // Case-insensitive replacement, but only as word boundaries
+    const escaped = abbrev.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${escaped}\\b`, 'gi');
     expanded = expanded.replace(regex, full);
+  }
+  
+  // Expand standalone terrain abbreviations (AS, AT, MT, etc.)
+  // Only as whole words with word boundaries
+  for (const [abbrev, full] of Object.entries(STANDALONE_EXPANSIONS)) {
+    const regex = new RegExp(`\\b${abbrev}\\b`, 'g');
+    expanded = expanded.replace(regex, full);
+  }
+  
+  // Restore protected words
+  for (const [placeholder, original] of Object.entries(protectedPlaceholders)) {
+    expanded = expanded.replace(new RegExp(placeholder, 'g'), original);
   }
   
   // Clean up any remaining artifacts
@@ -200,6 +378,8 @@ export function expandKmDescription(
     .replace(/\s+/g, ' ')  // Multiple spaces → single space
     .replace(/^\s+|\s+$/g, '')  // Trim
     .replace(/^[>*]\s*/, '')  // Remove leading > or *
+    .replace(/^NW\s+/i, '')  // Remove "NW" prefix (sometimes appears)
+    .replace(/^NEW\s+/i, '')  // Remove "NEW" prefix
     .trim();
   
   // If we have a brand and the expanded name doesn't include it, prepend it
