@@ -124,8 +124,8 @@ export default function TireImagesAdminPage() {
           </Link>
         </div>
 
-        {/* Add New Form */}
-        <div className="mb-6 rounded-xl border border-neutral-200 bg-white p-4">
+        {/* Add New Form - Sticky */}
+        <div className="sticky top-0 z-10 mb-6 rounded-xl border border-neutral-200 bg-white p-4 shadow-md">
           <h2 className="mb-4 text-lg font-bold text-neutral-900">Add New Model Image</h2>
           <form onSubmit={handleAdd} className="flex flex-wrap gap-3">
             <input
