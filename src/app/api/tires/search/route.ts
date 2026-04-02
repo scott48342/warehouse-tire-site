@@ -564,8 +564,9 @@ function normalizeProductKey(partNumber: string, brand: string | null): string {
  * Feature flag: set TIRE_ALLOW_NO_IMAGE=true to disable filtering (for testing)
  */
 function isValidProductImage(imageUrl: string | null | undefined): boolean {
-  // Feature flag to disable image filtering for testing
-  if (process.env.TIRE_ALLOW_NO_IMAGE === "true") {
+  // TEMPORARY: Disable image filtering until we have better image coverage
+  // Feature flag: set TIRE_ALLOW_NO_IMAGE=false to re-enable filtering
+  if (process.env.TIRE_ALLOW_NO_IMAGE !== "false") {
     return true;
   }
   
