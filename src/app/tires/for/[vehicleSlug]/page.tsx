@@ -17,10 +17,25 @@ const BASE_URL = 'https://shop.warehousetiredirect.com'
 // ISR: Regenerate pages daily (trims loaded client-side)
 export const revalidate = 86400
 
+// Force dynamic rendering to avoid build-time DB access
+// Pages will be generated on first request and cached via ISR
+export const dynamic = 'force-dynamic';
+
 // Pre-build top ~200 vehicles for fast initial load
-// Remaining 2000+ vehicles generated on-demand via ISR
+// Returns empty during Vercel build to avoid DB access failures
 export async function generateStaticParams() {
-  return getStaticVehicleParams()
+  // Skip during build - rely on ISR for generation
+  if (process.env.VERCEL_ENV === 'production' && process.env.NEXT_PHASE === 'phase-production-build') {
+    console.log("[tires/for] Build time - skipping static params generation");
+    return [];
+  }
+  
+  try {
+    return await getStaticVehicleParams()
+  } catch (err) {
+    console.error("[tires/for] Error generating static params:", err);
+    return [];
+  }
 }
 
 // Dynamic metadata for SEO

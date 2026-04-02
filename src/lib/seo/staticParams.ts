@@ -6,10 +6,28 @@
  * - Most fitment data in the database
  * - Multiple trims (indicates comprehensive coverage)
  * - Recent model years (higher search volume)
+ * 
+ * NOTE: During Vercel builds, DB may be unreachable. We return a static
+ * fallback list to allow ISR to handle these pages at request time.
  */
 
-import { db } from "@/lib/fitment-db/db";
-import { sql } from "drizzle-orm";
+// Lazy import to prevent build-time DB connection attempts
+let dbModule: typeof import("@/lib/fitment-db/db") | null = null;
+let sqlModule: typeof import("drizzle-orm") | null = null;
+
+async function getDb() {
+  if (!dbModule) {
+    dbModule = await import("@/lib/fitment-db/db");
+  }
+  return dbModule.db;
+}
+
+async function getSql() {
+  if (!sqlModule) {
+    sqlModule = await import("drizzle-orm");
+  }
+  return sqlModule.sql;
+}
 
 interface TopVehicle {
   year: number;
@@ -87,7 +105,19 @@ const MUST_INCLUDE_YEARS = [2024, 2023, 2022, 2021, 2020];
  * 4. Return up to the requested limit
  */
 export async function getTopVehiclesForSEO(limit: number = 400): Promise<TopVehicle[]> {
+  // During build time, skip DB queries entirely and use static fallback
+  // This prevents build failures when Prisma Postgres is unreachable
+  const isBuildTime = process.env.VERCEL_ENV === 'production' && process.env.NEXT_PHASE === 'phase-production-build';
+  
+  if (isBuildTime) {
+    console.log("[seo/staticParams] Build time detected - using static fallback (skipping DB)");
+    return getStaticFallbackVehicles(limit);
+  }
+  
   try {
+    const db = await getDb();
+    const sql = await getSql();
+    
     // Query vehicles with best coverage from database
     const dbVehicles = await db.execute(sql`
       SELECT 
@@ -155,22 +185,28 @@ export async function getTopVehiclesForSEO(limit: number = 400): Promise<TopVehi
     return vehicles.slice(0, limit);
   } catch (err) {
     console.error("[seo/staticParams] Error getting top vehicles:", err);
-    
-    // Fallback: return must-include vehicles only
-    const fallback: TopVehicle[] = [];
-    for (const year of MUST_INCLUDE_YEARS) {
-      for (const v of MUST_INCLUDE_VEHICLES) {
-        fallback.push({
-          year,
-          make: v.make,
-          model: v.model,
-          trimCount: 1,
-          priority: 0.8,
-        });
-      }
-    }
-    return fallback.slice(0, limit);
+    return getStaticFallbackVehicles(limit);
   }
+}
+
+/**
+ * Static fallback vehicles for build time (no DB required)
+ * Used when Prisma Postgres is unreachable during Vercel build
+ */
+function getStaticFallbackVehicles(limit: number): TopVehicle[] {
+  const fallback: TopVehicle[] = [];
+  for (const year of MUST_INCLUDE_YEARS) {
+    for (const v of MUST_INCLUDE_VEHICLES) {
+      fallback.push({
+        year,
+        make: v.make,
+        model: v.model,
+        trimCount: 1,
+        priority: 0.8,
+      });
+    }
+  }
+  return fallback.slice(0, limit);
 }
 
 /**
@@ -184,6 +220,9 @@ export async function getVehicleCoverageStats(): Promise<{
   yearDistribution: { year: number; count: number }[];
 }> {
   try {
+    const db = await getDb();
+    const sql = await getSql();
+    
     const stats = await db.execute(sql`
       SELECT 
         COUNT(DISTINCT CONCAT(year, ':', make, ':', model)) as total_vehicles,

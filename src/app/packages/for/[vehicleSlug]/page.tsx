@@ -29,11 +29,26 @@ const BASE_URL = "https://shop.warehousetiredirect.com";
 
 export const revalidate = 86400;
 
+// Force dynamic rendering to avoid build-time DB access
+// Pages will be generated on first request and cached via ISR
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
-  const vehicles = await getTopVehiclesForSEO(400);
-  return vehicles.map((v) => ({
-    vehicleSlug: slugifyVehicle({ year: String(v.year), make: v.make, model: v.model }),
-  }));
+  // Skip static generation during Vercel build - rely on ISR instead
+  if (process.env.VERCEL_ENV === 'production' && process.env.NEXT_PHASE === 'phase-production-build') {
+    console.log("[packages/for] Build time - skipping static params generation");
+    return [];
+  }
+  
+  try {
+    const vehicles = await getTopVehiclesForSEO(400);
+    return vehicles.map((v) => ({
+      vehicleSlug: slugifyVehicle({ year: String(v.year), make: v.make, model: v.model }),
+    }));
+  } catch (err) {
+    console.error("[packages/for] Error generating static params:", err);
+    return [];
+  }
 }
 
 export async function generateMetadata({

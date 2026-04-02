@@ -100,6 +100,7 @@ export function formatVehicleName(
 
 /**
  * Get vehicle by slug
+ * Returns parsed vehicle info even if DB is unavailable
  */
 export async function getVehicleBySlug(slug: string): Promise<LegacyVehicle | null> {
   const parsed = parseVehicleSlug(slug);
@@ -139,14 +140,31 @@ export async function getVehicleBySlug(slug: string): Promise<LegacyVehicle | nu
     };
   } catch (err) {
     console.error("[seo/legacy] Error getting vehicle by slug:", err);
-    return null;
+    // Fallback: return parsed vehicle info without DB validation
+    // This allows the page to render with basic info even if DB is unavailable
+    return {
+      year: parsed.year,
+      make: parsed.make,
+      model: parsed.model,
+      slug,
+      displayName: formatVehicleName(parsed.year, parsed.make, parsed.model),
+    };
   }
 }
 
 /**
  * Get static vehicle params for pre-rendering
+ * Returns empty array during Vercel build to avoid DB access failures
  */
 export async function getStaticVehicleParams(): Promise<Array<{ vehicleSlug: string }>> {
+  // Skip DB access during Vercel build - rely on ISR instead
+  const isBuildTime = process.env.VERCEL_ENV === 'production' && process.env.NEXT_PHASE === 'phase-production-build';
+  
+  if (isBuildTime) {
+    console.log("[seo/legacy] Build time detected - returning empty static params");
+    return [];
+  }
+  
   try {
     const results = await db.execute(sql`
       SELECT DISTINCT year, make, model
