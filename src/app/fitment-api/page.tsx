@@ -8,8 +8,8 @@ import {
 } from '@/components/fitment-api';
 
 export const metadata: Metadata = {
-  title: 'Vehicle Fitment API | 14,000+ Verified Fitments | Production-Ready',
-  description: 'Production-ready vehicle fitment API with bolt patterns, center bore, wheel sizes, tire sizes, and staggered fitment detection. No external dependencies. Built for tire and wheel ecommerce.',
+  title: 'Vehicle Fitment API | 14,000+ Verified Fitments | Production-Grade',
+  description: 'Production-grade vehicle fitment API with bolt patterns, center bore, wheel sizes, tire sizes, and staggered fitment detection. No external dependencies. Fully controlled dataset for tire and wheel ecommerce.',
 };
 
 // Primary API Example for hero section
@@ -41,8 +41,8 @@ const faqItems = [
     answer: 'Yes. We encourage reasonable caching (24-48 hours recommended) to optimize your application performance. Vehicle fitment data changes infrequently, so caching is both allowed and smart.'
   },
   {
-    question: 'Is this a replacement for Wheel-Size?',
-    answer: 'Yes. If you\'re currently using Wheel-Size, scraping data, or maintaining your own fitment database, this API is a drop-in replacement with cleaner data, better reliability, and zero external dependencies.'
+    question: 'Can I migrate from my current fitment data source?',
+    answer: 'Yes. Our API provides clean, structured JSON responses that integrate easily with any platform. If you\'re currently relying on external providers, scraped data, or maintaining your own database, this API offers a production-grade alternative with zero external dependencies.'
   },
   {
     question: 'What rate limits apply?',
@@ -75,19 +75,19 @@ export default function FitmentApiPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-8">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span className="text-blue-400 text-sm font-medium">Production Ready</span>
+              <span className="text-blue-400 text-sm font-medium">Production-Grade</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Stop Guessing Fitment.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                Get Production-Ready Vehicle Data Instantly.
+                Get Production-Grade Vehicle Data Instantly.
               </span>
             </h1>
             
             <p className="text-xl text-zinc-400 mb-8 max-w-3xl mx-auto leading-relaxed">
               14,000+ verified vehicle fitments including bolt patterns, offsets, and tire sizes — 
-              built for real ecommerce platforms.
+              a fully controlled dataset built for real ecommerce platforms.
             </p>
 
             {/* Key Benefits */}
@@ -108,13 +108,13 @@ export default function FitmentApiPage() {
                 <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                No third-party dependencies
+                No external dependencies
               </div>
               <div className="flex items-center gap-2 text-zinc-300">
                 <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                Built for production use
+                Fully controlled dataset
               </div>
             </div>
             
@@ -172,13 +172,75 @@ export default function FitmentApiPage() {
         </div>
       </section>
 
-      {/* Built For Section */}
+      {/* Eliminate Unreliable Sources Section - NEW */}
       <section className="py-20 bg-zinc-950">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Eliminate Unreliable Fitment Sources</h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Take control of your fitment data layer with a production-grade API you can depend on.
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+              <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">No External Data Provider Dependency</h3>
+              <p className="text-zinc-400 text-sm">
+                Avoid relying on external services that can change pricing, enforce new limits, or shut down without notice. Own your data layer.
+              </p>
+            </div>
+            
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+              <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Eliminate Fragile Scraping Workflows</h3>
+              <p className="text-zinc-400 text-sm">
+                Stop maintaining brittle scrapers that break every time a website changes. Get clean, structured JSON from a stable API.
+              </p>
+            </div>
+            
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Consistent, Production-Ready Responses</h3>
+              <p className="text-zinc-400 text-sm">
+                Every response follows the same schema. No surprises, no inconsistencies, no missing fields. Predictable data you can build on.
+              </p>
+            </div>
+            
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Full Control Over Your Fitment Data</h3>
+              <p className="text-zinc-400 text-sm">
+                We validate, maintain, and update the dataset. You get reliable data without the overhead of managing it yourself.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Built For Section */}
+      <section className="py-20 border-t border-zinc-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Built For</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
-              Whether you&apos;re replacing an existing solution or building from scratch, this API fits your stack.
+              Whether you&apos;re starting fresh or modernizing your fitment infrastructure, this API fits your stack.
             </p>
           </div>
           
@@ -200,14 +262,14 @@ export default function FitmentApiPage() {
                 desc: 'Integrate fitment into DMS and service systems'
               },
               { 
-                icon: '🔄', 
-                title: 'Replacing Wheel-Size',
-                desc: 'Drop-in alternative with no scraping required'
+                icon: '🔧', 
+                title: 'Modernizing Legacy Systems',
+                desc: 'Upgrade outdated fitment infrastructure'
               },
               { 
-                icon: '🧹', 
-                title: 'Replacing Scraping Solutions',
-                desc: 'Clean API instead of brittle scrapers'
+                icon: '⚡', 
+                title: 'New Platform Builds',
+                desc: 'Start with production-grade data from day one'
               },
               { 
                 icon: '📊', 
@@ -228,12 +290,12 @@ export default function FitmentApiPage() {
       </section>
 
       {/* What You Get Section */}
-      <section className="py-20 border-t border-zinc-900">
+      <section className="py-20 bg-zinc-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What You Get</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
-              Every API response includes complete fitment data. No nulls. No missing fields.
+              Every API response includes complete fitment data. No nulls. No missing fields. Consistent performance.
             </p>
           </div>
           
@@ -258,12 +320,12 @@ export default function FitmentApiPage() {
       </section>
 
       {/* Why This API - Positioning Section */}
-      <section className="py-20 bg-zinc-950">
+      <section className="py-20 border-t border-zinc-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Why Warehouse Tire Direct Fitment API</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
-              Built different. No external dependencies. Fully controlled.
+              Production-grade. No external dependencies. Fully controlled dataset.
             </p>
           </div>
           
@@ -274,9 +336,9 @@ export default function FitmentApiPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">No External API Dependency</h3>
+              <h3 className="text-lg font-semibold mb-2">Zero External Dependencies</h3>
               <p className="text-zinc-400 text-sm">
-                We own the data. No third-party APIs that can change pricing, rate limits, or disappear overnight.
+                We own and control the entire data pipeline. No upstream services that can fail, throttle, or change terms.
               </p>
             </div>
             
@@ -288,7 +350,7 @@ export default function FitmentApiPage() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Consistent Performance</h3>
               <p className="text-zinc-400 text-sm">
-                Fast, reliable responses. No unpredictable latency from chained external calls.
+                Fast, reliable responses with predictable latency. No chained calls to external services slowing you down.
               </p>
             </div>
             
@@ -298,21 +360,21 @@ export default function FitmentApiPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Real Ecommerce Data</h3>
+              <h3 className="text-lg font-semibold mb-2">Battle-Tested Data</h3>
               <p className="text-zinc-400 text-sm">
-                Built from fitment data that powers a live store processing real orders daily.
+                This API powers a live ecommerce store processing real customer orders. The data is proven in production.
               </p>
             </div>
             
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">No Scraping Required</h3>
+              <h3 className="text-lg font-semibold mb-2">Clean, Structured JSON</h3>
               <p className="text-zinc-400 text-sm">
-                Stop maintaining brittle scrapers. Get clean, structured JSON from a real API.
+                Predictable response schemas. Every field documented. No parsing headaches or data normalization needed.
               </p>
             </div>
             
@@ -324,7 +386,7 @@ export default function FitmentApiPage() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Fully Controlled Dataset</h3>
               <p className="text-zinc-400 text-sm">
-                We validate, maintain, and update the data. You focus on building your product.
+                We validate, maintain, and continuously improve the data. You get reliability without the maintenance burden.
               </p>
             </div>
             
@@ -334,9 +396,9 @@ export default function FitmentApiPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Staggered Detection</h3>
+              <h3 className="text-lg font-semibold mb-2">Staggered Fitment Detection</h3>
               <p className="text-zinc-400 text-sm">
-                Automatically identifies vehicles with different front/rear sizes. No manual mapping.
+                Automatically identifies vehicles with different front/rear sizes. No manual configuration required.
               </p>
             </div>
           </div>
@@ -344,7 +406,7 @@ export default function FitmentApiPage() {
       </section>
 
       {/* Trust / Credibility Stats */}
-      <section className="py-20 border-t border-zinc-900">
+      <section className="py-20 bg-zinc-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -370,7 +432,7 @@ export default function FitmentApiPage() {
       </section>
 
       {/* API Endpoints */}
-      <section id="endpoints" className="py-20 bg-zinc-950">
+      <section id="endpoints" className="py-20 border-t border-zinc-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">API Endpoints</h2>
@@ -389,7 +451,7 @@ export default function FitmentApiPage() {
               { method: 'GET', path: '/api/public/fitment/models?year=2024&make=ford', desc: 'Models for year + make' },
               { method: 'GET', path: '/api/public/fitment/trims?year=2024&make=ford&model=mustang', desc: 'Trims for vehicle' },
               { method: 'GET', path: '/api/public/fitment/specs?...', desc: 'Full fitment specifications' },
-              { method: 'GET', path: '/api/public/fitment/search?vin=...', desc: 'VIN decode (coming soon)' },
+              { method: 'GET', path: '/api/public/fitment/test', desc: 'Test your API key' },
             ].map((endpoint, i) => (
               <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
@@ -406,7 +468,7 @@ export default function FitmentApiPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 border-t border-zinc-900">
+      <section className="py-20 bg-zinc-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Simple, Predictable Pricing</h2>
@@ -465,7 +527,7 @@ export default function FitmentApiPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-zinc-950">
+      <section className="py-20 border-t border-zinc-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -476,13 +538,13 @@ export default function FitmentApiPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 border-t border-zinc-900">
+      <section className="py-20 bg-zinc-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Start Building with Reliable Fitment Data
+            Start Building with Production-Grade Fitment Data
           </h2>
           <p className="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-            Stop guessing. Stop scraping. Get production-ready fitment data that works.
+            Take control of your fitment data layer. Get consistent, reliable vehicle data with zero external dependencies.
           </p>
           <a 
             href="#request-access" 
@@ -497,7 +559,7 @@ export default function FitmentApiPage() {
       </section>
 
       {/* Access Request Form */}
-      <section id="request-access" className="py-20 bg-zinc-950">
+      <section id="request-access" className="py-20 border-t border-zinc-900">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Request API Access</h2>
