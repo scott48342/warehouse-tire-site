@@ -106,76 +106,62 @@ export default function TireImagesAdminPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50 p-6">
-      <div className="mx-auto max-w-6xl">
-        {/* Header */}
-        <div className="mb-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-neutral-900">Tire Model Images</h1>
-            <p className="text-sm text-neutral-500">
-              One image per tire model — works for all sizes
-            </p>
+    <div className="min-h-screen bg-neutral-50">
+      {/* Fixed Add Form */}
+      <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-neutral-200 shadow-md p-4">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex items-center justify-between mb-3">
+            <h1 className="text-lg font-bold text-neutral-900">Tire Model Images</h1>
+            <Link
+              href="/admin"
+              className="rounded-lg bg-neutral-200 px-3 py-1.5 text-sm font-medium text-neutral-700 hover:bg-neutral-300"
+            >
+              ← Back
+            </Link>
           </div>
-          <Link
-            href="/admin"
-            className="rounded-lg bg-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-300"
-          >
-            ← Back to Admin
-          </Link>
-        </div>
-
-        {/* Add New Form - Sticky */}
-        <div className="sticky top-0 z-10 mb-6 rounded-xl border border-neutral-200 bg-white p-4 shadow-md">
-          <h2 className="mb-4 text-lg font-bold text-neutral-900">Add New Model Image</h2>
-          <form onSubmit={handleAdd} className="flex flex-wrap gap-3">
+          <form onSubmit={handleAdd} className="flex flex-wrap gap-2">
             <input
               type="text"
-              placeholder="Brand (e.g., Michelin)"
+              placeholder="Brand"
               value={newBrand}
               onChange={(e) => setNewBrand(e.target.value)}
-              className="flex-1 min-w-[150px] rounded-lg border border-neutral-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-32 rounded-lg border border-neutral-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               required
             />
             <input
               type="text"
-              placeholder="Model Pattern (e.g., Defender)"
+              placeholder="Model Pattern"
               value={newPattern}
               onChange={(e) => setNewPattern(e.target.value)}
-              className="flex-1 min-w-[200px] rounded-lg border border-neutral-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-40 rounded-lg border border-neutral-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               required
             />
             <input
               type="url"
-              placeholder="Image URL (https://...)"
+              placeholder="Image URL"
               value={newImageUrl}
               onChange={(e) => setNewImageUrl(e.target.value)}
-              className="flex-[2] min-w-[300px] rounded-lg border border-neutral-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="flex-1 min-w-[200px] rounded-lg border border-neutral-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               required
             />
-            <button
-              type="submit"
-              disabled={saving}
-              className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-bold text-white hover:bg-blue-700 disabled:opacity-50"
-            >
-              {saving ? "Adding..." : "Add"}
-            </button>
-          </form>
-          
-          {/* Preview */}
-          {newImageUrl && (
-            <div className="mt-3 flex items-center gap-3">
-              <span className="text-xs text-neutral-500">Preview:</span>
+            {newImageUrl && (
               <img
                 src={newImageUrl}
                 alt="Preview"
-                className="h-16 w-16 rounded-lg border border-neutral-200 object-contain bg-white"
+                className="h-8 w-8 rounded border border-neutral-200 object-contain bg-white"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
               />
-            </div>
-          )}
-          
+            )}
+            <button
+              type="submit"
+              disabled={saving}
+              className="rounded-lg bg-blue-600 px-4 py-1.5 text-sm font-bold text-white hover:bg-blue-700 disabled:opacity-50"
+            >
+              {saving ? "..." : "Add"}
+            </button>
+          </form>
           {saveMessage && (
-            <div className={`mt-3 rounded-lg px-3 py-2 text-sm ${
+            <div className={`mt-2 rounded-lg px-3 py-1.5 text-sm ${
               saveMessage.type === "success" 
                 ? "bg-green-50 text-green-700" 
                 : "bg-red-50 text-red-700"
@@ -184,7 +170,10 @@ export default function TireImagesAdminPage() {
             </div>
           )}
         </div>
+      </div>
 
+      {/* Main content with top padding to account for fixed header */}
+      <div className="mx-auto max-w-6xl px-6 pt-28 pb-6">
         {/* Filters */}
         <div className="mb-4 flex gap-3">
           <input
