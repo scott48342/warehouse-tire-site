@@ -1,0 +1,4087 @@
+{
+  "timestamp": "2026-04-02T01:03:12.157Z",
+  "summary": {
+    "totalRecords": 9900,
+    "totalYMM": 6442,
+    "A_complete_multi": 862,
+    "B_safe_single": 4709,
+    "C_likely_missing": 871,
+    "D_collapsed_filtered": 0,
+    "E_broken": 0
+  },
+  "likelyMissingByModel": [
+    {
+      "make": "chevrolet",
+      "model": "corvette",
+      "count": 58,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985,
+        1984,
+        1982,
+        1981,
+        1980,
+        1979,
+        1978,
+        1977,
+        1976,
+        1975,
+        1974,
+        1973,
+        1972,
+        1971,
+        1970,
+        1969,
+        1968
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "s-class",
+      "count": 47,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985,
+        1984,
+        1983,
+        1982,
+        1981,
+        1980
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "m3",
+      "count": 37,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "m5",
+      "count": 37,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985
+      ]
+    },
+    {
+      "make": "gmc",
+      "model": "sierra-1500",
+      "count": 35,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2019,
+        2017,
+        2016,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988
+      ]
+    },
+    {
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "count": 33,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "e-class",
+      "count": 33,
+      "years": [
+        2026,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985
+      ]
+    },
+    {
+      "make": "ram",
+      "model": "ram-2500",
+      "count": 33,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994
+      ]
+    },
+    {
+      "make": "ram",
+      "model": "ram-3500",
+      "count": 33,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "3-series",
+      "count": 31,
+      "years": [
+        2026,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985,
+        1984,
+        1983,
+        1982
+      ]
+    },
+    {
+      "make": "bmw",
+      "model": "5-series",
+      "count": 31,
+      "years": [
+        2026,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985,
+        1984,
+        1983,
+        1982,
+        1981
+      ]
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "count": 31,
+      "years": [
+        2026,
+        2025,
+        2021,
+        2017,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988
+      ]
+    },
+    {
+      "make": "ford",
+      "model": "f-150",
+      "count": 30,
+      "years": [
+        2026,
+        2025,
+        2021,
+        2019,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992
+      ]
+    },
+    {
+      "make": "audi",
+      "model": "a4",
+      "count": 28,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996
+      ]
+    },
+    {
+      "make": "chevrolet",
+      "model": "camaro",
+      "count": 28,
+      "years": [
+        2026,
+        2025,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988,
+        1987,
+        1986,
+        1985,
+        1984,
+        1983,
+        1982,
+        1981,
+        1980,
+        1979,
+        1978,
+        1977,
+        1976,
+        1975,
+        1974,
+        1973,
+        1972,
+        1971,
+        1970,
+        1969,
+        1968,
+        1967
+      ]
+    },
+    {
+      "make": "audi",
+      "model": "a6",
+      "count": 26,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998
+      ]
+    },
+    {
+      "make": "subaru",
+      "model": "wrx",
+      "count": 25,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002
+      ]
+    },
+    {
+      "make": "audi",
+      "model": "s4",
+      "count": 24,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2002,
+        2001,
+        2000
+      ]
+    },
+    {
+      "make": "nissan",
+      "model": "titan",
+      "count": 23,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004
+      ]
+    },
+    {
+      "make": "mercedes",
+      "model": "c-class",
+      "count": 22,
+      "years": [
+        2026,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009,
+        2008,
+        2007,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994
+      ]
+    },
+    {
+      "make": "chevrolet",
+      "model": "silverado-2500hd",
+      "count": 19,
+      "years": [
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997,
+        1996,
+        1995,
+        1994,
+        1993,
+        1992,
+        1991,
+        1990,
+        1989,
+        1988
+      ]
+    },
+    {
+      "make": "nissan",
+      "model": "gt-r",
+      "count": 18,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009
+      ]
+    },
+    {
+      "make": "ram",
+      "model": "1500",
+      "count": 18,
+      "years": [
+        2026,
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010,
+        2009
+      ]
+    },
+    {
+      "make": "jeep",
+      "model": "wrangler",
+      "count": 17,
+      "years": [
+        2026,
+        2025,
+        2023,
+        2022,
+        2019,
+        2018,
+        2008,
+        2006,
+        2005,
+        2004,
+        2003,
+        2002,
+        2001,
+        2000,
+        1999,
+        1998,
+        1997
+      ]
+    },
+    {
+      "make": "ford",
+      "model": "f-250",
+      "count": 15,
+      "years": [
+        2026,
+        2023,
+        2022,
+        2021,
+        2020,
+        2019,
+        2018,
+        2017,
+        2016,
+        2015,
+        2014,
+        2013,
+        2012,
+        2011,
+        2010
+      ]
+    }
+  ],
+  "specialFocus": {
+    "chevrolet/camaro": [
+      {
+        "year": 2026,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2025,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2024,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "LS",
+          "LT",
+          "LT RS Package",
+          "LT1",
+          "SS",
+          "SS 1LE Track Package",
+          "ZL1",
+          "ZL1 1LE Extreme Track"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 7,
+        "trims": [
+          "1LE",
+          "Base",
+          "LS",
+          "LT",
+          "SS",
+          "Z/28",
+          "ZL1"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 7,
+        "trims": [
+          "1LE",
+          "Base",
+          "LS",
+          "LT",
+          "SS",
+          "Z/28",
+          "ZL1"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 6,
+        "trims": [
+          "1LE",
+          "Base",
+          "LS",
+          "LT",
+          "SS",
+          "ZL1"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 6,
+        "trims": [
+          "1LE",
+          "Base",
+          "LS",
+          "LT",
+          "SS",
+          "ZL1"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 6,
+        "trims": [
+          "1LE",
+          "Base",
+          "LS",
+          "LT",
+          "SS",
+          "ZL1"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 6,
+        "trims": [
+          "1LE",
+          "Base",
+          "LS",
+          "LT",
+          "SS",
+          "ZL1"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2002,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "SS",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2001,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "SS",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2000,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "SS",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1999,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "SS",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1998,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "SS",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1997,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1996,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1995,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1994,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1993,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "Z28"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1992,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1991,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1990,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1989,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1988,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1987,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1986,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1985,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1984,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1983,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1982,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1981,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1980,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1979,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1978,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1977,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1976,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1975,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1974,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1973,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1972,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1971,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1970,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1969,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1968,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1967,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      }
+    ],
+    "chrysler/300": [
+      {
+        "year": 2026,
+        "trimCount": 5,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2025,
+        "trimCount": 5,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2024,
+        "trimCount": 5,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 7,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "SRT8",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 7,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "SRT8",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 7,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "SRT8",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 6,
+        "trims": [
+          "300C",
+          "300S",
+          "Base",
+          "Limited",
+          "Touring",
+          "Touring L"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "Limited",
+          "Touring"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "Limited",
+          "Touring"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "Limited",
+          "Touring"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2007,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "Limited",
+          "Touring"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2006,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "Limited",
+          "Touring"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2005,
+        "trimCount": 3,
+        "trims": [
+          "Base",
+          "Limited",
+          "Touring"
+        ],
+        "classification": "A: Complete multi-trim"
+      }
+    ],
+    "chrysler/300c": [
+      {
+        "year": 2023,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 5,
+        "trims": [
+          "AWD",
+          "Base",
+          "John Varvatos",
+          "Platinum",
+          "RWD"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 4,
+        "trims": [
+          "AWD",
+          "Base",
+          "RWD",
+          "SRT8"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 4,
+        "trims": [
+          "AWD",
+          "Base",
+          "RWD",
+          "SRT8"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 3,
+        "trims": [
+          "AWD",
+          "RWD",
+          "SRT8"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2007,
+        "trimCount": 4,
+        "trims": [
+          "AWD",
+          "Base",
+          "RWD",
+          "SRT8"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2006,
+        "trimCount": 4,
+        "trims": [
+          "AWD",
+          "Base",
+          "RWD",
+          "SRT8"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2005,
+        "trimCount": 4,
+        "trims": [
+          "AWD",
+          "Base",
+          "RWD",
+          "SRT8"
+        ],
+        "classification": "A: Complete multi-trim"
+      }
+    ],
+    "dodge/challenger": [
+      {
+        "year": 2024,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "R/T Scat Pack Widebody",
+          "SRT Demon 170",
+          "SRT Hellcat",
+          "SRT Hellcat Widebody",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "R/T Scat Pack Widebody",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SRT Super Stock",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "R/T Scat Pack Widebody",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SRT Super Stock",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "R/T Scat Pack Widebody",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SRT Super Stock",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "R/T Scat Pack Widebody",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SRT Super Stock",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "R/T Scat Pack Widebody",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "SRT Demon",
+          "SRT Hellcat",
+          "SRT Hellcat Widebody",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "SRT Hellcat",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "SRT Hellcat",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "R/T Scat Pack",
+          "SRT Hellcat",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "R/T",
+          "R/T Classic",
+          "SE",
+          "SRT8",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      }
+    ],
+    "dodge/charger": [
+      {
+        "year": 2026,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "Daytona Scat Pack",
+          "Sixpack",
+          "Sixpack Stage 2"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2025,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "Daytona Scat Pack",
+          "Sixpack",
+          "Sixpack Stage 2"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2024,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "Daytona Scat Pack",
+          "Sixpack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack",
+          "Scat Pack Widebody"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack",
+          "Scat Pack Widebody"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 10,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SRT Hellcat Redeye",
+          "SRT Hellcat Widebody",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack",
+          "Scat Pack Widebody"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 9,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SRT Hellcat Widebody",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack",
+          "Scat Pack Widebody"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "GT",
+          "R/T",
+          "SRT Hellcat",
+          "SXT",
+          "SXT AWD",
+          "Scat Pack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2007,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2006,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "Daytona R/T",
+          "R/T",
+          "SE",
+          "SRT8",
+          "SRT8 Super Bee",
+          "SXT"
+        ],
+        "classification": "A: Complete multi-trim"
+      }
+    ],
+    "ford/f-250": [
+      {
+        "year": 2026,
+        "trimCount": 1,
+        "trims": [
+          "6.7D HO"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2025,
+        "trimCount": 7,
+        "trims": [
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2024,
+        "trimCount": 7,
+        "trims": [
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2022,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2021,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2020,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2019,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2018,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2017,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2016,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2015,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2014,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2013,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2012,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2011,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2010,
+        "trimCount": 1,
+        "trims": [
+          "5.4"
+        ],
+        "classification": "C: Likely missing trims"
+      }
+    ],
+    "ford/f-250-super-duty": [
+      {
+        "year": 2026,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2025,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2024,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 8,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "Tremor",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2007,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2006,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2005,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2004,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2003,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2002,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2001,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2000,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1999,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1998,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1997,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1996,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1995,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1994,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1993,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1992,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1991,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1990,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1989,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1988,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      }
+    ],
+    "ford/f-350": [
+      {
+        "year": 2026,
+        "trimCount": 1,
+        "trims": [
+          "6.7D HO"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2025,
+        "trimCount": 6,
+        "trims": [
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2024,
+        "trimCount": 6,
+        "trims": [
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2022,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2021,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2020,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2019,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2018,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2017,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2016,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2015,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2014,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2013,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2012,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2011,
+        "trimCount": 1,
+        "trims": [
+          "6.2"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 2010,
+        "trimCount": 1,
+        "trims": [
+          "5.4"
+        ],
+        "classification": "C: Likely missing trims"
+      }
+    ],
+    "ford/f-350-super-duty": [
+      {
+        "year": 2026,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2025,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2024,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 7,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Limited",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 6,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "Platinum",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2007,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2006,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2005,
+        "trimCount": 5,
+        "trims": [
+          "Base",
+          "King Ranch",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2004,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2003,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2002,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2001,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2000,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1999,
+        "trimCount": 4,
+        "trims": [
+          "Base",
+          "Lariat",
+          "XL",
+          "XLT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 1998,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1997,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1996,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1995,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1994,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1993,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1992,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1991,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1990,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1989,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      },
+      {
+        "year": 1988,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "C: Likely missing trims"
+      }
+    ],
+    "ford/mustang": [
+      {
+        "year": 2024,
+        "trimCount": 7,
+        "trims": [
+          "Dark Horse",
+          "Dark Horse Handling Package",
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Mach 1",
+          "Shelby GT500"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2023,
+        "trimCount": 5,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Mach 1",
+          "Shelby GT500"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2022,
+        "trimCount": 5,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Mach 1",
+          "Shelby GT500"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2021,
+        "trimCount": 5,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Mach 1",
+          "Shelby GT500"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 5,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Shelby GT350",
+          "Shelby GT500"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2019,
+        "trimCount": 4,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Shelby GT350"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2018,
+        "trimCount": 4,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Shelby GT350"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2017,
+        "trimCount": 4,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Shelby GT350"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2016,
+        "trimCount": 4,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack",
+          "Shelby GT350"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2015,
+        "trimCount": 3,
+        "trims": [
+          "EcoBoost",
+          "GT",
+          "GT Performance Pack"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2014,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2013,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2012,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2011,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2010,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2009,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2008,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2007,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2006,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      },
+      {
+        "year": 2005,
+        "trimCount": 2,
+        "trims": [
+          "Base",
+          "GT"
+        ],
+        "classification": "A: Complete multi-trim"
+      }
+    ],
+    "ford/mustang mach-e": [
+      {
+        "year": 2023,
+        "trimCount": 1,
+        "trims": [
+          "Extended Range"
+        ],
+        "classification": "B: Safe single-trim"
+      },
+      {
+        "year": 2020,
+        "trimCount": 1,
+        "trims": [
+          "Extended Range"
+        ],
+        "classification": "B: Safe single-trim"
+      }
+    ],
+    "ford/mustang-mach-e": [
+      {
+        "year": 2026,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 2025,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 2024,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 2023,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 2022,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 2021,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      }
+    ],
+    "mitsubishi/3000gt": [
+      {
+        "year": 1999,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1998,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1997,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1996,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1995,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1994,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1993,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1992,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      },
+      {
+        "year": 1991,
+        "trimCount": 1,
+        "trims": [
+          "Base"
+        ],
+        "classification": "B: Safe single-trim (Base)"
+      }
+    ]
+  },
+  "cleanupPriorities": {
+    "tierA": [
+      "chevrolet/camaro"
+    ],
+    "trucks": [
+      "chevrolet/silverado-1500",
+      "chevrolet/silverado-2500hd",
+      "dodge/ram-1500",
+      "ford/f-150",
+      "ford/f-250",
+      "ford/f-250-super-duty",
+      "ford/f-350",
+      "ford/f-350-super-duty",
+      "gmc/sierra-1500",
+      "gmc/sierra-2500hd",
+      "nissan/titan",
+      "ram/ram-1500",
+      "ram/ram-2500",
+      "ram/ram-3500"
+    ],
+    "other": [
+      "audi/a4",
+      "audi/a6",
+      "audi/s4",
+      "bmw/3-series",
+      "bmw/5-series",
+      "bmw/m3",
+      "bmw/m5",
+      "chevrolet/corvette",
+      "ford/bronco",
+      "jeep/grand-cherokee",
+      "jeep/wrangler",
+      "mercedes/amg-gt",
+      "mercedes/c-class",
+      "mercedes/e-class",
+      "mercedes/s-class"
+    ]
+  }
+}
