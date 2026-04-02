@@ -250,6 +250,36 @@ export async function logUnresolvedFitment(params: LogUnresolvedParams): Promise
         .where(eq(unresolvedFitmentSearches.id, record.id));
       
       console.log(`[unresolvedFitment] Updated: ${year} ${make} ${model} (count: ${record.occurrenceCount + 1})`);
+      
+      // Check for alert conditions (threshold crossing)
+      const newCount = record.occurrenceCount + 1;
+      const config = await import("./gapAlerts").then(m => m.getAlertConfig());
+      const thresholdCrossed = record.occurrenceCount < config.threshold && newCount >= config.threshold;
+      
+      // Calculate priority score for alert decision
+      const daysSinceFirstSeen = (now.getTime() - record.firstSeen.getTime()) / (24 * 60 * 60 * 1000);
+      const recencyBoost = Math.max(0, 1 - daysSinceFirstSeen / 14);
+      const priorityScore = newCount * (1 + recencyBoost);
+      
+      // Check and send alert (fire and forget)
+      import("./gapAlerts").then(({ checkAndSendAlert }) => {
+        checkAndSendAlert({
+          year,
+          make,
+          model,
+          trim,
+          searchType: params.searchType,
+          occurrenceCount: newCount,
+          firstSeen: record.firstSeen,
+          lastSeen: now,
+          source: params.source,
+          samplePaths: (record.metadata as UnresolvedMetadata)?.samplePaths,
+          priorityScore,
+          isNewVehicle: false,
+          thresholdCrossed,
+        }).catch(() => {});
+      }).catch(() => {});
+      
     } else {
       // Insert new record
       const metadata: UnresolvedMetadata = {};
@@ -272,6 +302,25 @@ export async function logUnresolvedFitment(params: LogUnresolvedParams): Promise
       });
       
       console.log(`[unresolvedFitment] New: ${year} ${make} ${model} ${trim || ""} (${params.searchType})`);
+      
+      // Check for new vehicle alert (fire and forget)
+      import("./gapAlerts").then(({ checkAndSendAlert }) => {
+        checkAndSendAlert({
+          year,
+          make,
+          model,
+          trim,
+          searchType: params.searchType,
+          occurrenceCount: 1,
+          firstSeen: now,
+          lastSeen: now,
+          source: params.source,
+          samplePaths: metadata.samplePaths,
+          priorityScore: 1, // New vehicle starts with score 1
+          isNewVehicle: true,
+          thresholdCrossed: false,
+        }).catch(() => {});
+      }).catch(() => {});
     }
   } catch (err: any) {
     // Don't let logging errors break the main flow

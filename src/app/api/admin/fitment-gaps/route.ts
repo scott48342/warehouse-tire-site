@@ -26,6 +26,7 @@ import {
   getUnresolvedSummary,
   markVehicleResolved,
 } from "@/lib/fitment-db/unresolvedFitmentTracker";
+import { getAlertConfig, getAlertHistory } from "@/lib/fitment-db/gapAlerts";
 
 export async function GET(req: Request) {
   try {
@@ -43,6 +44,7 @@ export async function GET(req: Request) {
         const topVehicles = await getTopUnresolvedVehicles({ limit: 10 });
         const topMakes = await getUnresolvedCountsByMake({ limit: 10 });
         const priority = await getHighValueGaps({ limit: 5 });
+        const alertConfig = getAlertConfig();
         
         return NextResponse.json({
           success: true,
@@ -66,6 +68,13 @@ export async function GET(req: Request) {
               priorityScore: v.priorityScore,
               daysAgo: v.daysSinceLastSeen,
             })),
+          },
+          alerting: {
+            enabled: alertConfig.enabled,
+            threshold: alertConfig.threshold,
+            cooldownHours: alertConfig.cooldownHours,
+            highPriorityScore: alertConfig.highPriorityScore,
+            recipientConfigured: !!alertConfig.recipientEmail,
           },
           description: "Overview of unresolved fitment searches",
         });

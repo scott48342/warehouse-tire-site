@@ -128,3 +128,17 @@ export {
   type UnresolvedVehicleReport,
   type LogUnresolvedParams,
 } from "./unresolvedFitmentTracker";
+
+// Gap alerting
+export {
+  checkAndSendAlert,
+  sendDailySummary,
+  getAlertHistory,
+  getAlertConfig,
+  wasAlertRecentlySent,
+  fitmentGapAlerts,
+  type FitmentGapAlert,
+  type AlertType,
+  type AlertContext,
+  type CheckAlertResult,
+} from "./gapAlerts";
