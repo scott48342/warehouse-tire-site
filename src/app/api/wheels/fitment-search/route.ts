@@ -58,6 +58,12 @@ import {
 
 import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker";
 
+import {
+  shouldApplyPackagePriority,
+  getPackagePriorityTier,
+  type PackagePriorityTier,
+} from "@/lib/packagePrioritization";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -1164,9 +1170,69 @@ async function handleDbFirstWheelResults(opts: {
     return result;
   }
   
-  const rankedCandidates = applyMerchandisingRules(scoredCandidates);
+  let rankedCandidates = applyMerchandisingRules(scoredCandidates);
   
   timing.rankingMs = Date.now() - tRanking0;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 4c: PACKAGE PRIORITY SORTING (Optional Overlay)
+  // Apply ONLY when: searchType === 'package' OR buildType === 'lifted'
+  // Prioritizes: WheelPros + image + stock > image + stock > WheelPros + stock > rest
+  // ═══════════════════════════════════════════════════════════════════════════
+  const packageParam = url.searchParams.get("package");
+  const buildTypeParam = url.searchParams.get("buildType");
+  const searchTypeParam = url.searchParams.get("searchType");
+  
+  const applyPackagePriority = shouldApplyPackagePriority({
+    searchType: searchTypeParam || undefined,
+    buildType: buildTypeParam || undefined,
+    package: packageParam || undefined,
+  });
+  
+  let packagePriorityApplied = false;
+  
+  if (applyPackagePriority) {
+    const tPkgPriority0 = Date.now();
+    
+    // Re-sort by package priority tiers, then by price within each tier
+    rankedCandidates = [...rankedCandidates].sort((a, b) => {
+      // Extract fields for priority calculation
+      const aHasImage = (a.candidate.images || []).length > 0;
+      const bHasImage = (b.candidate.images || []).length > 0;
+      const aStock = inventoryData.get(a.candidate.sku)?.totalQty || 0;
+      const bStock = inventoryData.get(b.candidate.sku)?.totalQty || 0;
+      const aPrice = Number(a.candidate.map_price || a.candidate.msrp || 0) || Infinity;
+      const bPrice = Number(b.candidate.map_price || b.candidate.msrp || 0) || Infinity;
+      
+      // All wheels from our DB are WheelPros, so supplier is always "wheelpros"
+      const aIsWheelPros = true;
+      const bIsWheelPros = true;
+      
+      // Calculate priority tier (1-4)
+      const getTier = (isWP: boolean, hasImg: boolean, stock: number): PackagePriorityTier => {
+        if (isWP && hasImg && stock > 0) return 1;
+        if (hasImg && stock > 0) return 2;
+        if (isWP && stock > 0) return 3;
+        return 4;
+      };
+      
+      const aTier = getTier(aIsWheelPros, aHasImage, aStock);
+      const bTier = getTier(bIsWheelPros, bHasImage, bStock);
+      
+      // Sort by tier first (ascending: 1 → 4)
+      if (aTier !== bTier) {
+        return aTier - bTier;
+      }
+      
+      // Within same tier, sort by price ascending
+      return aPrice - bPrice;
+    });
+    
+    timing.packagePriorityMs = Date.now() - tPkgPriority0;
+    packagePriorityApplied = true;
+    
+    console.log(`[fitment-search] 📦 PACKAGE PRIORITY applied: reordered ${rankedCandidates.length} results`);
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 5: Build paginated results from ranked candidates
@@ -1421,6 +1487,8 @@ async function handleDbFirstWheelResults(opts: {
     // DB-FIRST architecture flag
     dbFirstMode: true,
     dealerlineMode: false,
+    // Package prioritization flag
+    packagePriorityApplied,
   });
 }
 

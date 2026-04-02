@@ -24,6 +24,7 @@ import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
 import { expandKmDescription, extractModelName } from "@/lib/km/nameExpander";
+import { shouldApplyPackagePriority, applyPackagePriorityToTires } from "@/lib/packagePrioritization";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -918,10 +919,27 @@ export async function GET(req: Request) {
       
       // Filter out tires without valid images
       const debug = url.searchParams.get("debug") === "true";
-      const { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(resultsWithOverrides, debug);
+      let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(resultsWithOverrides, debug);
       
       if (imageStats.invalid > 0) {
         console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
+      }
+      
+      // Package priority sorting (size mode)
+      const packageParam = url.searchParams.get("package");
+      const buildTypeParam = url.searchParams.get("buildType");
+      const searchTypeParam = url.searchParams.get("searchType");
+      
+      const applyPkgPriority = shouldApplyPackagePriority({
+        searchType: searchTypeParam || undefined,
+        buildType: buildTypeParam || undefined,
+        package: packageParam || undefined,
+      });
+      
+      let packagePriorityApplied = false;
+      if (applyPkgPriority && finalResults.length > 0) {
+        finalResults = applyPackagePriorityToTires(finalResults);
+        packagePriorityApplied = true;
       }
       
       timing.totalMs = Date.now() - t0;
@@ -941,6 +959,7 @@ export async function GET(req: Request) {
           filteredOut: imageStats.invalid,
           ...(debug && { reasons: imageStats.invalidReasons }),
         },
+        packagePriorityApplied,
         timing,
       });
     }
@@ -1190,10 +1209,35 @@ export async function GET(req: Request) {
     
     // Filter out tires without valid images (using enhanced validation)
     const debug = url.searchParams.get("debug") === "true";
-    const { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(withOverrides, debug);
+    let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(withOverrides, debug);
     
     if (imageStats.invalid > 0) {
       console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // PACKAGE PRIORITY SORTING (Optional Overlay)
+    // Apply ONLY when: searchType === 'package' OR buildType === 'lifted'
+    // Prioritizes: WheelPros + image + stock > image + stock > WheelPros + stock > rest
+    // ═══════════════════════════════════════════════════════════════════════════
+    const packageParam = url.searchParams.get("package");
+    const buildTypeParam = url.searchParams.get("buildType");
+    const searchTypeParam = url.searchParams.get("searchType");
+    
+    const applyPackagePriority = shouldApplyPackagePriority({
+      searchType: searchTypeParam || undefined,
+      buildType: buildTypeParam || undefined,
+      package: packageParam || undefined,
+    });
+    
+    let packagePriorityApplied = false;
+    
+    if (applyPackagePriority && finalResults.length > 0) {
+      const tPkgPriority0 = Date.now();
+      finalResults = applyPackagePriorityToTires(finalResults);
+      timing.packagePriorityMs = Date.now() - tPkgPriority0;
+      packagePriorityApplied = true;
+      console.log(`[tires/search] 📦 PACKAGE PRIORITY applied: reordered ${finalResults.length} results`);
     }
     
     timing.totalMs = Date.now() - t0;
@@ -1255,6 +1299,9 @@ export async function GET(req: Request) {
       // Fallback messaging for empty results (QA validation)
       ...(fallbackMessage && { fallbackMessage }),
       ...(noResultsReason && { noResultsReason }),
+      
+      // Package prioritization flag
+      packagePriorityApplied,
       
       timing,
     });
