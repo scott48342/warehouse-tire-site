@@ -325,7 +325,6 @@ export default async function WheelsPage({
   const displayTrim = getDisplayTrim({
     trim: resolvedTrimLabel || trim, // Use resolved label if available
     submodel: _submodelCandidate,
-    displayTrim: wpSubmodel || undefined,
   });
 
   function rimDiaFromTireSize(s: string) {
