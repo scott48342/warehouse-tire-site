@@ -249,6 +249,61 @@ async function getKmImagesFromDb(partNumbers: string[]): Promise<Map<string, str
 }
 
 /**
+ * Look up tire images by brand + model pattern from tire_model_images table
+ * This enables image sharing across all sizes of the same tire model
+ */
+async function getModelImagesFromDb(): Promise<Map<string, string>> {
+  try {
+    const db = getPool();
+    const { rows } = await db.query(`
+      SELECT LOWER(brand) as brand, LOWER(model_pattern) as pattern, image_url 
+      FROM tire_model_images 
+      WHERE image_url IS NOT NULL
+    `);
+    
+    const map = new Map<string, string>();
+    for (const row of rows) {
+      // Key: "brand:pattern" (lowercase for case-insensitive matching)
+      map.set(`${row.brand}:${row.pattern}`, row.image_url);
+    }
+    return map;
+  } catch (err) {
+    console.error("[tires/search] Model image lookup error:", err);
+    return new Map();
+  }
+}
+
+/**
+ * Find image URL for a tire by matching brand + model pattern
+ */
+function findModelImage(
+  brand: string | null,
+  model: string | null,
+  description: string | null,
+  modelImages: Map<string, string>
+): string | null {
+  if (!brand || modelImages.size === 0) return null;
+  
+  const brandLower = brand.toLowerCase();
+  const modelText = (model || description || "").toLowerCase();
+  
+  // Try each pattern from our mapping
+  for (const [key, imageUrl] of modelImages) {
+    const [mapBrand, mapPattern] = key.split(":");
+    
+    // Brand must match
+    if (mapBrand !== brandLower) continue;
+    
+    // Check if model text contains the pattern
+    if (modelText.includes(mapPattern)) {
+      return imageUrl;
+    }
+  }
+  
+  return null;
+}
+
+/**
  * Search K&M/Keystone tires by size and convert to TireResult format
  */
 async function searchTiresKM(size: string): Promise<TireResult[]> {
@@ -526,17 +581,29 @@ async function mergeTireResults(
 ): Promise<TireResult[]> {
   const merged = new Map<string, TireResult>();
   
-  // First, look up K&M images from our database
+  // First, look up K&M images from our database (by part number)
   const kmPartNumbers = kmResults.map(t => t.partNumber).filter(Boolean);
   const kmDbImages = await getKmImagesFromDb(kmPartNumbers);
   
-  // Apply database images to K&M results
+  // Also load model-based image mappings (brand+model → image)
+  const modelImages = await getModelImagesFromDb();
+  
+  // Apply database images to K&M results (try part number first, then model-based)
   const kmWithDbImages = kmResults.map(tire => {
     if (tire.imageUrl) return tire; // Already has an image
+    
+    // Try exact part number match first
     const dbImage = kmDbImages.get(tire.partNumber);
     if (dbImage) {
       return { ...tire, imageUrl: dbImage };
     }
+    
+    // Try model-based match (same image for all sizes of a model)
+    const modelImage = findModelImage(tire.brand, tire.model, tire.description, modelImages);
+    if (modelImage) {
+      return { ...tire, imageUrl: modelImage };
+    }
+    
     return tire;
   });
   
