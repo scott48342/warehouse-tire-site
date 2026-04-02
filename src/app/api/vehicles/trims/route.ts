@@ -69,11 +69,29 @@ export async function GET(req: Request) {
     if (coverage.hasCoverage) {
       console.log(`[trims] COVERAGE: ${year} ${make} ${model} → ${coverage.trims.length} trim(s) with fitment data`);
       
-      const results: TrimOption[] = coverage.trims.map(t => ({
-        value: t.modificationId,
-        label: t.displayTrim || "Base",
-        modificationId: t.modificationId,
-      }));
+      // Split grouped trim labels (e.g., "LS, LT, RST, Z71") into individual options
+      // All split trims share the same modificationId since they have identical specs
+      const results: TrimOption[] = [];
+      for (const t of coverage.trims) {
+        const label = t.displayTrim || "Base";
+        // Check if this is a grouped trim (contains comma)
+        if (label.includes(",")) {
+          const individualTrims = label.split(",").map(s => s.trim()).filter(Boolean);
+          for (const trimName of individualTrims) {
+            results.push({
+              value: t.modificationId,
+              label: trimName,
+              modificationId: t.modificationId,
+            });
+          }
+        } else {
+          results.push({
+            value: t.modificationId,
+            label,
+            modificationId: t.modificationId,
+          });
+        }
+      }
       
       return NextResponse.json<TrimResponse>({
         results,
