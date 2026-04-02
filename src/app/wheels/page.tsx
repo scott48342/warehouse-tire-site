@@ -521,6 +521,7 @@ export default async function WheelsPage({
   // When the fitment engine doesn't have enough confidence in the data,
   // it returns blocked=true and we should NOT show wheel results.
   const isBlocked = Boolean(data?.blocked);
+  const isProfileNotFound = Boolean(data?.profileNotFound);
   const blockReason = data?.blockReason || null;
   const blockSuggestions: string[] = Array.isArray(data?.suggestions) ? data.suggestions : [];
   
@@ -1362,16 +1363,21 @@ export default async function WheelsPage({
         ) : null}
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            BLOCKED STATE: Show FitmentUnavailable when confidence is too low
+            BLOCKED STATE: Show FitmentUnavailable when confidence too low OR vehicle not found
             ═══════════════════════════════════════════════════════════════════════ */}
         {isBlocked && hasVehicle && !data?.error ? (
           <div className="mt-5">
             <FitmentUnavailable
               vehicle={{ year, make, model, trim: displayTrim }}
               blockReason={blockReason}
-              suggestions={blockSuggestions}
+              suggestions={blockSuggestions.length > 0 ? blockSuggestions : (isProfileNotFound ? [
+                "Contact us for assistance with your specific vehicle",
+                "Check back soon — we're constantly adding new vehicles",
+                "Try a different model year if available",
+              ] : undefined)}
               confidenceReasons={confidenceReasons}
               showAlternatives={true}
+              variant={isProfileNotFound ? "not-found" : "blocked"}
             />
           </div>
         ) : null}

@@ -56,6 +56,8 @@ import {
   type ConfidenceResult,
 } from "@/lib/fitmentConfidence";
 
+import { logMissingVehicle } from "@/lib/missingVehicleLogger";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -1442,19 +1444,37 @@ async function handleLegacyPath(
   let profile = await buildFitmentProfile(db, Number(year), make, model, lookupKey);
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // DB-FIRST: No external API fallback. If profile not in DB, return error.
+  // DB-FIRST: No external API fallback. If profile not in DB, return user-friendly error.
   // Wheel-Size API is BLOCKED in this path. Use admin/fitment for manual import.
   // ═══════════════════════════════════════════════════════════════════════════
   if (!profile) {
     console.log(`[fitment-search] DB-FIRST: No profile for ${year} ${make} ${model} lookupKey=${lookupKey || "(none)"} - NOT calling external API`);
     
+    // Log missing vehicle for tracking and prioritization
+    logMissingVehicle(year, make, model, {
+      trim: displayTrim || undefined,
+      path: `/wheels?year=${year}&make=${make}&model=${model}`,
+    }).catch(() => {}); // Fire and forget
+    
+    // Return a user-friendly response with clear flags
     return NextResponse.json({
-      error: "No fitment profile found in local database",
-      vehicle: { year, make, model, trim: displayTrim },  // Use displayTrim, not lookupKey
+      results: [],
+      totalCount: 0,
+      profileNotFound: true,
+      blocked: true, // Also set blocked so page shows FitmentUnavailable
+      blockReason: "We don't have verified fitment data for this vehicle yet.",
+      vehicle: { year: Number(year), make, model, trim: displayTrim },
       resolutionPath: "invalid",
       dbFirst: true,
-      suggestion: "Use admin/fitment to manually import this vehicle's fitment data",
-    }, { status: 404 });
+      suggestions: [
+        "Contact us for assistance with your specific vehicle",
+        "Check back soon as we're constantly adding new vehicles",
+        "Try a similar model year if available",
+      ],
+      timing: {
+        totalMs: Date.now() - t0,
+      },
+    });
   }
 
   const profileMs = Date.now() - t0;

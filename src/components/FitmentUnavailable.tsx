@@ -37,6 +37,9 @@ export interface FitmentUnavailableProps {
   /** Whether to show alternative options */
   showAlternatives?: boolean;
   
+  /** Whether this is a "not found" vs "blocked" scenario */
+  variant?: "blocked" | "not-found";
+  
   /** Additional CSS classes */
   className?: string;
 }
@@ -52,6 +55,10 @@ const DEFAULT_SUGGESTIONS = [
  * 
  * Friendly error state when wheel results can't be shown.
  * Provides helpful alternatives and support contact.
+ * 
+ * Variants:
+ * - "blocked" (default): Vehicle found but data confidence too low
+ * - "not-found": Vehicle not in our database at all
  */
 export function FitmentUnavailable({
   vehicle,
@@ -60,32 +67,47 @@ export function FitmentUnavailable({
   confidenceReasons = [],
   supportPhone = "(248) 332-4120",
   showAlternatives = true,
+  variant = "blocked",
   className = "",
 }: FitmentUnavailableProps) {
   const vehicleLabel = vehicle
     ? [vehicle.year, vehicle.make, vehicle.model, vehicle.trim].filter(Boolean).join(" ")
     : "your vehicle";
 
+  const isNotFound = variant === "not-found";
+  
+  // Different styling for not-found vs blocked
+  const borderColor = isNotFound ? "border-blue-200" : "border-amber-200";
+  const bgGradient = isNotFound ? "from-blue-50 to-white" : "from-amber-50 to-white";
+  const iconBg = isNotFound ? "bg-blue-100" : "bg-amber-100";
+  const reasonBg = isNotFound ? "bg-blue-100" : "bg-amber-100";
+  const reasonText = isNotFound ? "text-blue-800" : "text-amber-800";
+
   return (
-    <div className={`rounded-2xl border-2 border-amber-200 bg-gradient-to-b from-amber-50 to-white p-6 ${className}`}>
+    <div className={`rounded-2xl border-2 ${borderColor} bg-gradient-to-b ${bgGradient} p-6 ${className}`}>
       {/* Header */}
       <div className="flex items-start gap-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-2xl">
-          🔍
+        <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${iconBg} text-2xl`}>
+          {isNotFound ? "🚗" : "🔍"}
         </div>
         
         <div className="flex-1">
           <h2 className="text-xl font-extrabold text-neutral-900">
-            Wheel Fitment Data Unavailable
+            {isNotFound 
+              ? "Fitment Data Not Yet Available" 
+              : "Wheel Fitment Data Unavailable"}
           </h2>
           
           <p className="mt-1 text-neutral-700">
-            We don't have verified fitment data for {vehicleLabel} at this time.
+            {isNotFound
+              ? <>We don't have verified fitment data for <span className="font-semibold">{vehicleLabel}</span> yet.</>
+              : <>We don't have verified fitment data for {vehicleLabel} at this time.</>
+            }
           </p>
           
           {blockReason && (
-            <p className="mt-2 text-sm text-amber-800 bg-amber-100 rounded-lg px-3 py-2">
-              <span className="font-semibold">Reason:</span> {blockReason}
+            <p className={`mt-2 text-sm ${reasonText} ${reasonBg} rounded-lg px-3 py-2`}>
+              {isNotFound ? blockReason : <><span className="font-semibold">Reason:</span> {blockReason}</>}
             </p>
           )}
         </div>
