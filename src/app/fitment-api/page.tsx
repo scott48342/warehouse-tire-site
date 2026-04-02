@@ -520,9 +520,76 @@ export default function FitmentApiPage() {
             />
           </div>
           
-          <p className="text-center text-zinc-500 mt-8">
-            Need more? <a href="#request-access" className="text-blue-400 hover:text-blue-300">Contact us</a> for enterprise pricing.
-          </p>
+          {/* Enterprise Tier */}
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="relative rounded-2xl bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 border border-zinc-700 p-8 md:p-10 overflow-hidden">
+              {/* Premium accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl" />
+              
+              <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                {/* Left: Plan info */}
+                <div className="lg:max-w-xl">
+                  <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-3 py-1 mb-4">
+                    <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <span className="text-amber-400 text-sm font-medium">Enterprise</span>
+                  </div>
+                  
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    Enterprise
+                  </h3>
+                  <div className="flex items-baseline gap-2 mb-4">
+                    <span className="text-3xl font-bold text-white">Custom</span>
+                    <span className="text-zinc-400">pricing</span>
+                  </div>
+                  <p className="text-zinc-300 mb-6">
+                    Built for high-volume platforms that require dedicated support, custom limits, and guaranteed performance.
+                  </p>
+                  <p className="text-amber-400/80 text-sm italic mb-6">
+                    Designed for platforms where fitment accuracy directly impacts revenue.
+                  </p>
+                  
+                  <a 
+                    href="#request-access"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black font-semibold py-3 px-6 rounded-lg transition-all"
+                  >
+                    Request Enterprise Access
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                </div>
+                
+                {/* Right: Features */}
+                <div className="lg:pl-8 lg:border-l lg:border-zinc-700">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+                    {[
+                      'High-volume / custom request limits',
+                      'Priority infrastructure access',
+                      'Dedicated account support',
+                      'Custom rate limiting configuration',
+                      'SLA-backed reliability guarantees',
+                      'Early access to new features',
+                      'Optional custom data extensions',
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-center gap-3">
+                        <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-zinc-300 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              
+              <p className="text-zinc-500 text-xs mt-8 text-center lg:text-left">
+                Custom pricing based on usage, scale, and platform needs.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
