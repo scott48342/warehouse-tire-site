@@ -23,6 +23,7 @@ import { searchTiresTirewire, tirewireTireToUnified, type UnifiedTire } from "@/
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
+import { expandKmDescription, extractModelName } from "@/lib/km/nameExpander";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -340,11 +341,18 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
       const qtyAlternate = qty?.Alternate != null ? Number(qty.Alternate) : 0;
       const qtyNational = qty?.National != null ? Number(qty.National) : 0;
       
+      // Clean up K&M description - expand abbreviations and format nicely
+      const brandStr = brand ? String(brand).trim() : null;
+      const rawDesc = desc ? String(desc).trim() : displaySize;
+      const cleanDescription = expandKmDescription(rawDesc, brandStr);
+      const modelName = extractModelName(rawDesc);
+      
       return {
         partNumber: String(it?.PartNumber || ""),
         mfgPartNumber: String(it?.MfgPartNumber || it?.PartNumber || ""),
-        brand: brand ? String(brand).trim() : null,
-        description: desc ? String(desc).trim() : displaySize,
+        brand: brandStr,
+        model: modelName,
+        description: cleanDescription,
         cost: cost != null && Number.isFinite(cost) ? cost : null,
         quantity: {
           primary: qtyPrimary,
