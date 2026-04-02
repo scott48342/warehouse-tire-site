@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
 import { approveAccessRequest, rejectAccessRequest } from "@/lib/fitment-api/requests";
-import { generateApiKey, hashApiKey } from "@/lib/fitment-api/apiKeys";
+import { generateApiKey } from "@/lib/fitment-api/apiKeys";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -223,21 +223,19 @@ export async function POST(req: NextRequest) {
           return NextResponse.json({ error: "Missing keyId" }, { status: 400 });
         }
 
-        // Generate new key
-        const newKey = generateApiKey();
-        const newHash = hashApiKey(newKey);
-        const newPrefix = newKey.substring(0, 12);
+        // Generate new key - returns { plainKey, keyHash, keyPrefix }
+        const { plainKey, keyHash, keyPrefix } = generateApiKey();
 
         await pool.query(
           `UPDATE api_keys 
            SET key_hash = $1, key_prefix = $2, updated_at = NOW()
            WHERE id = $3`,
-          [newHash, newPrefix, keyId]
+          [keyHash, keyPrefix, keyId]
         );
 
         return NextResponse.json({
           success: true,
-          apiKey: newKey, // Only shown once!
+          apiKey: plainKey, // Only shown once!
         });
       }
 
