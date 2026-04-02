@@ -165,9 +165,9 @@ export function QuickAddTireButton({
 }) {
   const { addItem, hasWheels } = useCart();
   const [isAdding, setIsAdding] = useState(false);
-
-  // Only show quick-add if there are wheels in cart (completing a package)
-  if (!hasWheels()) return null;
+  
+  // Check if this is a package flow (user has wheels in cart)
+  const isPackageFlow = hasWheels();
 
   const handleAdd = () => {
     setIsAdding(true);
@@ -192,25 +192,37 @@ export function QuickAddTireButton({
 
   const total = unitPrice * quantity;
 
+  // Use green styling for package flow, red for standalone tire purchase
+  const buttonStyles = isPackageFlow
+    ? "w-full rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-sm font-bold text-green-800 hover:bg-green-100 transition-colors disabled:opacity-60"
+    : "w-full rounded-xl bg-red-600 px-4 py-3 text-sm font-extrabold text-white hover:bg-red-700 active:scale-[0.98] transition-all disabled:opacity-60";
+
   return (
     <button
       onClick={handleAdd}
       disabled={isAdding}
-      className="w-full rounded-xl border border-green-300 bg-green-50 px-4 py-2 text-xs font-bold text-green-800 hover:bg-green-100 transition-colors disabled:opacity-60"
+      className={buttonStyles}
     >
       {isAdding ? (
         <span className="flex items-center justify-center gap-1.5">
-          <svg className="animate-spin h-3 w-3" viewBox="0 0 24 24">
+          <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
           </svg>
           Adding...
         </span>
-      ) : (
+      ) : isPackageFlow ? (
         <span>
           ✓ Add to Package
           {Number.isFinite(total) && total > 0 ? (
             <span className="ml-1 text-green-600">• ${total.toFixed(0)}</span>
+          ) : null}
+        </span>
+      ) : (
+        <span>
+          Add to Cart
+          {Number.isFinite(total) && total > 0 ? (
+            <span className="ml-1 opacity-80">• ${total.toFixed(0)}</span>
           ) : null}
         </span>
       )}
