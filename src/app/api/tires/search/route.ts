@@ -277,9 +277,9 @@ async function getModelImagesFromDb(): Promise<Map<string, string>> {
  * Find image URL for a tire by matching brand + model pattern
  */
 function findModelImage(
-  brand: string | null,
-  model: string | null,
-  description: string | null,
+  brand: string | null | undefined,
+  model: string | null | undefined,
+  description: string | null | undefined,
   modelImages: Map<string, string>
 ): string | null {
   if (!brand || modelImages.size === 0) return null;
