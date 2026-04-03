@@ -8,6 +8,13 @@ export {
   type IndexingDecision,
 } from "./indexingStrategy";
 
+// Slug utilities
+export {
+  slugifyVehicle,
+  parseVehicleSlug,
+  type VehicleSlugParts,
+} from "./slugifyVehicle";
+
 // Content generation
 export {
   generatePageContent,
