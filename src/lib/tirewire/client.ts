@@ -256,14 +256,7 @@ async function callTirewireApi(soapBody: string): Promise<string> {
     throw new Error(`Tirewire API error: ${res.status} ${res.statusText}`);
   }
 
-  const text = await res.text();
-  console.log("[tirewire] API response length:", text.length);
-  if (text.length < 1000) {
-    console.log("[tirewire] FULL response:", text);
-  } else {
-    console.log("[tirewire] first 300 chars:", text.slice(0, 300));
-  }
-  return text;
+  return res.text();
 }
 
 function parseGetTiresResponse(xml: string, connectionId: number, provider: string): TirewireSearchResult {
@@ -386,7 +379,6 @@ export async function searchTiresTirewire(
   for (let i = 0; i < results.length; i++) {
     const result = results[i];
     if (result.status === "fulfilled") {
-      console.log(`[tirewire] Connection ${connections[i].provider} returned ${result.value.tires.length} tires`);
       successfulResults.push(result.value);
     } else {
       console.error(`[tirewire] Connection ${connections[i].provider} failed:`, result.reason);

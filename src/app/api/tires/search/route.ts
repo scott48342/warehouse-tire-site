@@ -226,9 +226,7 @@ async function searchTiresBySize(
  */
 async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]> {
   try {
-    console.log("[tires/search] Calling Tirewire for size:", size);
     const results = await searchTiresTirewire(size);
-    console.log("[tires/search] Tirewire returned:", results.length, "connections, tires:", results.reduce((sum, r) => sum + r.tires.length, 0));
     const tires: TireResult[] = [];
     
     for (const result of results) {
@@ -359,16 +357,12 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     ""
   ).trim();
   
-  console.log("[tires/search] KM API key check:", apiKey ? `present (${apiKey.slice(0,4)}...)` : "MISSING");
-  
   if (!apiKey) {
-    console.warn("[tires/search] No K&M API key configured");
     return [];
   }
   
   // Convert size to K&M format (7-8 digit compact)
   const tireSize = toKmSizeFormat(size);
-  console.log("[tires/search] KM size conversion:", size, "→", tireSize || "(failed)");
   if (!tireSize) {
     console.warn("[tires/search] Could not convert size for K&M:", size);
     return [];
@@ -399,7 +393,6 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     }
     
     const text = await res.text();
-    console.log("[tires/search] KM response length:", text.length, "first 200 chars:", text.slice(0, 200));
     const parser = new XMLParser({
       ignoreAttributes: false,
       cdataPropName: "__cdata",
@@ -409,7 +402,6 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     const resp = data?.InventoryResponse || data?.inventoryresponse || data;
     const itemsRaw = resp?.Item;
     const items = Array.isArray(itemsRaw) ? itemsRaw : itemsRaw ? [itemsRaw] : [];
-    console.log("[tires/search] KM parsed items:", items.length);
     
     return items.map((it: any) => {
       const qty = it?.Quantity || {};
@@ -936,11 +928,12 @@ export async function GET(req: Request) {
     if (sizeRaw) {
       const tSearch0 = Date.now();
       // Query all sources in parallel
-      // NOTE: KM disabled for testing (invalid API key)
+      // KM disabled: API key returns "Invalid Security Information" (needs new key from K&M)
+      // Tirewire enabled but may be rate-limited after testing
       const [wpResults, twResults, kmResults] = await Promise.all([
         searchTiresBySize(db, sizeRaw, minQty, pageSize),
         searchTiresTirewireFormatted(sizeRaw),
-        Promise.resolve([]), // searchTiresKM(sizeRaw) - disabled
+        Promise.resolve([]), // searchTiresKM disabled until valid API key obtained
       ]);
       timing.searchMs = Date.now() - tSearch0;
       
