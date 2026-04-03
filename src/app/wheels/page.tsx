@@ -189,15 +189,15 @@ export default async function WheelsPage({
   const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
   const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
   const model = safeString(Array.isArray(sp.model) ? sp.model[0] : sp.model);
-  
+
   // PARAM SEPARATION: modification = fitment identity, trim = display label only
   const modificationRaw = safeString(Array.isArray(sp.modification) ? sp.modification[0] : sp.modification);
   const trimRaw = safeString(Array.isArray(sp.trim) ? sp.trim[0] : sp.trim);
-  
+
   // Resolve canonical modificationId: prefer 'modification' param, fallback to 'trim' if it looks like a modificationId
   let modification = modificationRaw;
   let trimLabel = trimRaw;
-  
+
   if (!modification && trimRaw) {
     // Check if trim looks like a modificationId (hash or hex slug)
     if (/^s_[a-f0-9]{8}$/.test(trimRaw) || /^[a-f0-9]{10}$/.test(trimRaw)) {
@@ -207,13 +207,13 @@ export default async function WheelsPage({
       console.warn(`[wheels] DEPRECATION: Using 'trim' as modificationId. Migrate to 'modification=${trimRaw}'`);
     }
   }
-  
+
   // For backward compat, also support plain trim slugs (e.g., "ltz") as modification
   // but only if modification is not set
   if (!modification && trimRaw && !trimRaw.includes(" ")) {
     modification = trimRaw;
   }
-  
+
   // Alias for places still using 'trim' variable
   // IMPORTANT: Never use modification as display trim - it's a hex ID, not a customer-facing label
   // Only use trimLabel (actual display text) or empty string
@@ -252,20 +252,20 @@ export default async function WheelsPage({
   const liftedTireSizes = liftedTireSizesRaw ? liftedTireSizesRaw.split(",").filter(Boolean) : [];
   const liftedTireDiaMin = safeString(Array.isArray(sp.liftedTireDiaMin) ? sp.liftedTireDiaMin[0] : sp.liftedTireDiaMin);
   const liftedTireDiaMax = safeString(Array.isArray(sp.liftedTireDiaMax) ? sp.liftedTireDiaMax[0] : sp.liftedTireDiaMax);
-  
+
   // Lifted wheel diameter recommendations
   const liftedWheelDiaMinRaw = safeString(Array.isArray(sp.liftedWheelDiaMin) ? sp.liftedWheelDiaMin[0] : sp.liftedWheelDiaMin);
   const liftedWheelDiaMaxRaw = safeString(Array.isArray(sp.liftedWheelDiaMax) ? sp.liftedWheelDiaMax[0] : sp.liftedWheelDiaMax);
   const liftedWheelDiaMin = liftedWheelDiaMinRaw ? parseInt(liftedWheelDiaMinRaw, 10) : null;
   const liftedWheelDiaMax = liftedWheelDiaMaxRaw ? parseInt(liftedWheelDiaMaxRaw, 10) : null;
   const liftedPopularWheelSizesRaw = safeString(Array.isArray(sp.liftedPopularWheelSizes) ? sp.liftedPopularWheelSizes[0] : sp.liftedPopularWheelSizes);
-  const liftedPopularWheelSizes = liftedPopularWheelSizesRaw 
+  const liftedPopularWheelSizes = liftedPopularWheelSizesRaw
     ? liftedPopularWheelSizesRaw.split(",").map(s => parseInt(s, 10)).filter(n => Number.isFinite(n))
     : [];
-  
+
   // Lifted build is active when we have valid lifted context from URL params
   const isLiftedBuild = Boolean(liftedSource === "lifted" && liftedPreset && liftedInches > 0);
-  
+
   if (isLiftedBuild) {
     console.log('[wheels/page] 🚀 LIFTED BUILD DETECTED:', {
       presetId: liftedPreset,
@@ -340,7 +340,7 @@ export default async function WheelsPage({
   const tireDias = Array.isArray(fit?.tireSizes)
     ? (fit.tireSizes as any[]).map((x) => rimDiaFromTireSize(String(x))).filter((n) => Number.isFinite(n))
     : [];
-  
+
   // Only treat as staggered if fitment data explicitly indicates it
   // (e.g., fit.staggered === true or separate front/rear specs).
   // Multiple tire size OPTIONS (17", 18", 20") does NOT mean staggered.
@@ -402,7 +402,7 @@ export default async function WheelsPage({
   // when the USER explicitly sets them (via offset filter UI or fitLevel=lifted).
   // This ensures we show ALL valid wheels (specfit + extended + surefit) instead of
   // only those within the narrow OEM offset range.
-  
+
   // Only pass user-explicit offset filters (not auto-derived OEM range)
   const minOffsetFinal = offsetMinUser != null ? String(offsetMinUser) : undefined;
   const maxOffsetFinal = offsetMaxUser != null ? String(offsetMaxUser) : undefined;
@@ -455,10 +455,10 @@ export default async function WheelsPage({
   // Use WheelPros API for accurate fitment and full inventory
   // (Local techfeed browse was showing wrong bolt patterns in facets)
   const useFastBrowse = false;
-  
+
   let data: any;
   let fastBrowseData: any = null;
-  
+
   if (useFastBrowse) {
     // Fast path: query local techfeed data
     fastBrowseData = await fetchWheelsFast({
@@ -474,7 +474,7 @@ export default async function WheelsPage({
       priceMin: priceMin != null ? String(priceMin) : undefined,
       priceMax: priceMax != null ? String(priceMax) : undefined,
     });
-    
+
     // If no results with bolt pattern, try without
     if (fastBrowseData?.totalStyles === 0 && hasVehicle && bp) {
       fastBrowseData = await fetchWheelsFast({
@@ -488,7 +488,7 @@ export default async function WheelsPage({
         priceMax: priceMax != null ? String(priceMax) : undefined,
       });
     }
-    
+
     // Convert fast browse format to expected format
     data = { results: [], totalCount: fastBrowseData?.totalStyles || 0, facets: fastBrowseData?.facets || {} };
   } else {
@@ -528,11 +528,11 @@ export default async function WheelsPage({
   const isProfileNotFound = Boolean(data?.profileNotFound);
   const blockReason = data?.blockReason || null;
   const blockSuggestions: string[] = Array.isArray(data?.suggestions) ? data.suggestions : [];
-  
+
   // Extract confidence level and UI metadata
   const fitmentConfidence = (data?.fitment?.confidence || "none") as FitmentConfidenceLevel;
-  const confidenceReasons: string[] = Array.isArray(data?.fitment?.confidenceReasons) 
-    ? data.fitment.confidenceReasons 
+  const confidenceReasons: string[] = Array.isArray(data?.fitment?.confidenceReasons)
+    ? data.fitment.confidenceReasons
     : [];
   const confidenceWarningMessage = data?.fitment?.ui?.warningMessage || null;
 
@@ -545,7 +545,7 @@ export default async function WheelsPage({
   // dbProfile is the canonical fitment data from our own database.
   // It takes precedence over legacy envelope data when present.
   const dbProfile = data?.fitment?.dbProfile || null;
-  
+
   if (dbProfile) {
     console.log('[wheels/page] ✅ DB PROFILE CONSUMED:', {
       modificationId: dbProfile.modificationId,
@@ -560,7 +560,7 @@ export default async function WheelsPage({
   } else if (hasVehicle) {
     console.log('[wheels/page] ⚠️ NO DB PROFILE - falling back to legacy envelope');
   }
-  
+
   // Use dbProfile values as primary, fallback to legacy envelope
   const primaryBoltPattern = dbProfile?.boltPattern || fitmentSearchBp || bp;
   const primaryCenterBore = dbProfile?.centerBoreMm || data?.fitment?.envelope?.centerBore;
@@ -578,7 +578,7 @@ export default async function WheelsPage({
   let fastTotalCount = 0;
   let fastFacets: any = {};
   let fastTotalPages = 1;
-  
+
   if (useFastBrowse && fastBrowseData?.styles) {
     // Fast path: data is already grouped by style
     fastItems = (fastBrowseData.styles as any[]).map((style: any) => ({
@@ -601,10 +601,10 @@ export default async function WheelsPage({
       })),
       pair: undefined, // Fast browse doesn't compute staggered pairs yet
     }));
-    
+
     fastTotalCount = fastBrowseData.totalStyles || 0;
     fastTotalPages = fastBrowseData.totalPages || 1;
-    
+
     // Convert facets format
     fastFacets = {
       abbreviated_finish_desc: { buckets: fastBrowseData.facets?.finishes?.map((f: any) => ({ value: f.value, count: f.count })) || [] },
@@ -614,7 +614,7 @@ export default async function WheelsPage({
       width: { buckets: fastBrowseData.facets?.widths?.map((f: any) => ({ value: f.value, count: f.count })) || [] },
     };
   }
-  
+
   // Slow path: process WheelPros data
   const maybeData = data as {
     items?: unknown[];
@@ -786,7 +786,7 @@ export default async function WheelsPage({
   const maxOffN2 = typeof maxOffsetFinal === "string" ? Number(maxOffsetFinal) : NaN;
 
   // Only apply offset filter if user EXPLICITLY set offset range (offsetMinUser/offsetMaxUser)
-  const shouldApplyOffsetFilter = hasVehicle && (offsetMinUser != null || offsetMaxUser != null) && 
+  const shouldApplyOffsetFilter = hasVehicle && (offsetMinUser != null || offsetMaxUser != null) &&
     Number.isFinite(minOffN2) && Number.isFinite(maxOffN2);
 
   const itemsFilteredOffset = shouldApplyOffsetFilter
@@ -822,10 +822,10 @@ export default async function WheelsPage({
   const stylesPerPage = 24;
   const totalPages = useFastBrowse ? fastTotalPages : Math.max(1, Math.ceil(itemsFinal.length / stylesPerPage));
   const safePage = Math.min(page, totalPages);
-  
+
   // For fast browse, items are already paginated server-side
-  const itemsPage: Wheel[] = useFastBrowse 
-    ? itemsFinal 
+  const itemsPage: Wheel[] = useFastBrowse
+    ? itemsFinal
     : itemsFinal.slice((safePage - 1) * stylesPerPage, safePage * stylesPerPage);
 
   // Still show raw SKU count for reference.
@@ -837,7 +837,7 @@ export default async function WheelsPage({
     acc[fc] = (acc[fc] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
-  
+
   // Log in development
   if (process.env.NODE_ENV === "development") {
     console.log("[wheels/page] FitmentClass breakdown:", fitmentClassCounts);
@@ -850,32 +850,32 @@ export default async function WheelsPage({
 
     // Common diameters for trucks (18-22) - adjust based on vehicle type
     const preferredDiameters = [18, 19, 20, 21, 22];
-    
+
     // Score each wheel for recommendation
     const scored = itemsFinal
       .filter((w) => w.imageUrl) // Only recommend wheels with images
       .map((w) => {
         let score = 0;
-        
+
         // Fitment class priority (higher = better)
         if (w.fitmentClass === "surefit") score += 100;
         else if (w.fitmentClass === "specfit") score += 50;
         else if (w.fitmentClass === "extended") score += 10;
-        
+
         // Prefer common diameters
         const dia = Number(String(w.diameter || "").trim());
         if (Number.isFinite(dia) && preferredDiameters.includes(Math.round(dia))) {
           score += 20;
         }
-        
+
         // Prefer mid-range price ($200-$600 sweet spot)
         const price = typeof w.price === "number" ? w.price : 0;
         if (price >= 200 && price <= 600) score += 15;
         else if (price >= 100 && price <= 800) score += 5;
-        
+
         // Slight bonus for having multiple finishes (popular styles)
         if (w.finishThumbs && w.finishThumbs.length > 2) score += 5;
-        
+
         return { wheel: w, score };
       })
       .sort((a, b) => b.score - a.score);
@@ -883,22 +883,22 @@ export default async function WheelsPage({
     // Take top 8, ensuring variety (avoid same brand twice in a row)
     const picks: Wheel[] = [];
     const usedBrands = new Set<string>();
-    
+
     for (const { wheel } of scored) {
       if (picks.length >= 8) break;
-      
+
       const brand = String(wheel.brand || wheel.brandCode || "").toLowerCase();
-      
+
       // Allow same brand only if we have fewer than 4 picks or it's been used only once
-      const brandCount = picks.filter(p => 
+      const brandCount = picks.filter(p =>
         String(p.brand || p.brandCode || "").toLowerCase() === brand
       ).length;
-      
+
       if (brandCount < 2) {
         picks.push(wheel);
       }
     }
-    
+
     // If we don't have enough, fill with remaining top scored
     if (picks.length < 6) {
       for (const { wheel } of scored) {
@@ -908,7 +908,7 @@ export default async function WheelsPage({
         }
       }
     }
-    
+
     return picks;
   })();
 
@@ -962,7 +962,7 @@ export default async function WheelsPage({
   let isClassicVehicle = false;
   let classicStockDiameter: number | null = null;
   let classicUpsizeRange: [number, number] = [15, 20];
-  
+
   if (hasVehicle) {
     try {
       const classicData = await getClassicFitment(Number(year), make, model);
@@ -981,16 +981,16 @@ export default async function WheelsPage({
       console.warn("[wheels/page] Classic fitment check failed:", err);
     }
   }
-  
+
   // Build fitment-valid diameter options
   // For classic: stock + upsize range (e.g., 14-20")
   // For modern: OEM wheel sizes from dbProfile + upsizes with inventory
-  
+
   // Get OEM wheel sizes from dbProfile
-  const oemWheelSizes = hasVehicle 
+  const oemWheelSizes = hasVehicle
     ? (dbProfile?.oemWheelSizes || []) as Array<{ diameter?: number; width?: number }>
     : [];
-  
+
   // Get stock diameters (smallest OEM diameter is considered "stock")
   const stockDiameters: number[] = [];
   if (isClassicVehicle && classicStockDiameter) {
@@ -1006,13 +1006,13 @@ export default async function WheelsPage({
       }
     }
   }
-  
+
   // Effective stock diameter for display (smallest stock diameter)
   const effectiveStockDiameter = classicStockDiameter ?? (stockDiameters.length > 0 ? Math.min(...stockDiameters) : null);
-  
+
   const fitmentDiameterOptions: DiameterOption[] = (() => {
     if (!hasVehicle) return [];
-    
+
     return buildDiameterOptions({
       isClassicVehicle,
       isLiftedBuild,
@@ -1131,7 +1131,7 @@ export default async function WheelsPage({
             {/* Debug: show staggered fitment info (dev only) */}
             {year && make && model && staggeredDebug && process.env.NODE_ENV === "development" ? (
               <div className="mt-2 rounded-lg bg-neutral-100 px-3 py-2 text-[10px] font-mono text-neutral-600">
-                <span className="font-bold">Staggered:</span> {staggeredDebug.isStaggered ? "YES" : "NO"} — {staggeredDebug.reason}
+                <span className="font-bold">Staggered:</span> {staggeredDebug.isStaggered ? "YES" : "NO"} - {staggeredDebug.reason}
                 {staggeredDebug.frontSpec ? (
                   <> | Front: {staggeredDebug.frontSpec.diameter}&quot;×{staggeredDebug.frontSpec.width}&quot; ET{staggeredDebug.frontSpec.offset}</>
                 ) : null}
@@ -1182,9 +1182,9 @@ export default async function WheelsPage({
               defaultValue={sort}
               className="h-10 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-semibold"
               options={[
-                { value: "price_asc", label: "Best value first" },
-                { value: "price_desc", label: "Premium options first" },
-                { value: "brand_asc", label: "Brands A–Z" },
+                { value: "price_asc", label: "Price: Low to High" },
+                { value: "price_desc", label: "Price: High to Low" },
+                { value: "brand_asc", label: "Brand: A to Z" },
               ]}
             />
           </div>
@@ -1225,7 +1225,7 @@ export default async function WheelsPage({
               blockReason={blockReason}
               suggestions={blockSuggestions.length > 0 ? blockSuggestions : (isProfileNotFound ? [
                 "Contact us for assistance with your specific vehicle",
-                "Check back soon — we're constantly adding new vehicles",
+                "Check back soon - we're constantly adding new vehicles",
                 "Try a different model year if available",
               ] : undefined)}
               confidenceReasons={confidenceReasons}
@@ -1287,7 +1287,7 @@ export default async function WheelsPage({
                   const vehicleBp = fitmentSearchBp || bp;
                   const hasSinglePattern = boltPatternBuckets.length === 1;
                   const hasMultiplePatterns = boltPatternBuckets.length > 1;
-                  
+
                   return (
                     <>
                       {/* Show vehicle bolt pattern - always visible when vehicle is selected */}
@@ -1297,7 +1297,7 @@ export default async function WheelsPage({
                           <span className="font-bold text-neutral-800">{vehicleBp}</span>
                         </div>
                       ) : null}
-                      
+
                       {/* Case 1: No vehicle - show full dropdown */}
                       {/* Case 2: Vehicle + multiple patterns (dual-drill wheels) - show dropdown */}
                       {/* Case 3: Vehicle + single pattern - show locked value */}
@@ -1370,8 +1370,8 @@ export default async function WheelsPage({
                   </a>
                 </div>
                 <div className="mt-2 text-xs text-neutral-500">
-                  {fitLevel === "oem" 
-                    ? `Showing all validated wheels (OEM offset: ${offRange[0]}–${offRange[1]}mm)`
+                  {fitLevel === "oem"
+                    ? `Showing all validated wheels (OEM offset: ${offRange[0]}-${offRange[1]}mm)`
                     : "Showing all wheels regardless of offset"}
                 </div>
               </div>
@@ -1539,7 +1539,7 @@ export default async function WheelsPage({
                     <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
                       <div className="text-xs font-semibold text-neutral-600">Step 1</div>
                       <div className="mt-1 text-sm font-extrabold text-neutral-900">Select a wheel to load details</div>
-                      <div className="mt-1 text-xs text-neutral-600">Pick a style below—details will appear on the wheel page.</div>
+                      <div className="mt-1 text-xs text-neutral-600">Pick a style below-details will appear on the wheel page.</div>
                     </div>
 
                     <div className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-4">
@@ -1618,7 +1618,7 @@ export default async function WheelsPage({
                   </span>
                 </div>
                 <div className="text-xs text-green-700 font-semibold">
-                  No guesswork — guaranteed fitment
+                  No guesswork - guaranteed fitment
                 </div>
               </div>
             ) : null}
@@ -1627,7 +1627,7 @@ export default async function WheelsPage({
                 WHEELS GRID WITH SELECTION - Enhanced conversion flow
                 Features:
                 - Selection confirmation block
-                - Selected state highlighting  
+                - Selected state highlighting
                 - Dynamic pricing ("Typical" → "Your Package")
                 - Next step guidance
                 - CTA evolution (Selected/Compare or Switch)
