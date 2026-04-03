@@ -503,6 +503,19 @@ export const emailSubscribers = pgTable(
     unsubscribed: boolean("unsubscribed").notNull().default(false),
     unsubscribedAt: timestamp("unsubscribed_at"),
     
+    // Unsubscribe token for one-click unsubscribe
+    unsubscribeToken: varchar("unsubscribe_token", { length: 64 }),
+    
+    // Suppression (hard bounce, complaint, spam report)
+    suppressionReason: varchar("suppression_reason", { length: 50 }),
+    suppressedAt: timestamp("suppressed_at"),
+    
+    // Activity tracking for segmentation
+    lastActiveAt: timestamp("last_active_at"),
+    lastCartAt: timestamp("last_cart_at"),
+    lastOrderAt: timestamp("last_order_at"),
+    lastCampaignSentAt: timestamp("last_campaign_sent_at"),
+    
     // Timestamps
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
@@ -526,6 +539,158 @@ export const emailSubscribers = pgTable(
     vehicleIdx: index("email_subscribers_vehicle_idx").on(table.vehicleYear, table.vehicleMake, table.vehicleModel),
     // Cart linking
     cartIdIdx: index("email_subscribers_cart_id_idx").on(table.cartId),
+  })
+);
+
+// ============================================================================
+// email_campaigns - Marketing campaign definitions
+// ============================================================================
+
+export const emailCampaigns = pgTable(
+  "email_campaigns",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Basic info
+    name: varchar("name", { length: 255 }).notNull(),
+    campaignType: varchar("campaign_type", { length: 50 }).notNull(), // tire_promo, wheel_promo, package_promo, newsletter, announcement
+    
+    // Status: draft, scheduled, sending, paused, sent, cancelled
+    status: varchar("status", { length: 20 }).notNull().default("draft"),
+    
+    // Email content
+    subject: varchar("subject", { length: 255 }).notNull(),
+    previewText: varchar("preview_text", { length: 255 }),
+    fromName: varchar("from_name", { length: 100 }),
+    replyTo: varchar("reply_to", { length: 255 }),
+    
+    // Template system
+    templateKey: varchar("template_key", { length: 100 }),
+    contentJson: jsonb("content_json"), // Block-based content structure
+    
+    // Audience targeting
+    audienceRulesJson: jsonb("audience_rules_json").notNull().default({}),
+    
+    // Scheduling
+    scheduledFor: timestamp("scheduled_for"),
+    sendMode: varchar("send_mode", { length: 20 }).notNull().default("once"), // once, recurring_monthly
+    monthlyRuleJson: jsonb("monthly_rule_json"), // For recurring campaigns
+    
+    // Content flags
+    includeFreeShippingBanner: boolean("include_free_shipping_banner").notNull().default(true),
+    includePriceMatch: boolean("include_price_match").notNull().default(true),
+    
+    // Tracking
+    utmCampaign: varchar("utm_campaign", { length: 100 }),
+    
+    // Stats (denormalized)
+    totalRecipients: integer("total_recipients").notNull().default(0),
+    sentCount: integer("sent_count").notNull().default(0),
+    deliveredCount: integer("delivered_count").notNull().default(0),
+    openCount: integer("open_count").notNull().default(0),
+    clickCount: integer("click_count").notNull().default(0),
+    bounceCount: integer("bounce_count").notNull().default(0),
+    complaintCount: integer("complaint_count").notNull().default(0),
+    unsubscribeCount: integer("unsubscribe_count").notNull().default(0),
+    
+    // Test data exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+    startedAt: timestamp("started_at"),
+    completedAt: timestamp("completed_at"),
+    
+    // Metadata
+    createdBy: varchar("created_by", { length: 100 }),
+    notes: text("notes"),
+  },
+  (table) => ({
+    statusIdx: index("email_campaigns_status_idx").on(table.status),
+    typeIdx: index("email_campaigns_type_idx").on(table.campaignType),
+    scheduledIdx: index("email_campaigns_scheduled_idx").on(table.scheduledFor),
+  })
+);
+
+// ============================================================================
+// email_campaign_recipients - Snapshot of recipients at send time
+// ============================================================================
+
+export const emailCampaignRecipients = pgTable(
+  "email_campaign_recipients",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Foreign keys
+    campaignId: uuid("campaign_id").notNull().references(() => emailCampaigns.id, { onDelete: "cascade" }),
+    subscriberId: uuid("subscriber_id").references(() => emailSubscribers.id, { onDelete: "set null" }),
+    
+    // Denormalized email
+    email: varchar("email", { length: 255 }).notNull(),
+    
+    // Status: pending, sent, delivered, bounced, complained, failed
+    status: varchar("status", { length: 20 }).notNull().default("pending"),
+    
+    // Engagement tracking
+    sentAt: timestamp("sent_at"),
+    deliveredAt: timestamp("delivered_at"),
+    openedAt: timestamp("opened_at"),
+    clickedAt: timestamp("clicked_at"),
+    bouncedAt: timestamp("bounced_at"),
+    complainedAt: timestamp("complained_at"),
+    unsubscribedAt: timestamp("unsubscribed_at"),
+    
+    // Email provider reference
+    messageId: varchar("message_id", { length: 255 }),
+    
+    // Error info
+    errorMessage: text("error_message"),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    campaignIdx: index("email_campaign_recipients_campaign_idx").on(table.campaignId),
+    statusIdx: index("email_campaign_recipients_status_idx").on(table.campaignId, table.status),
+    emailIdx: index("email_campaign_recipients_email_idx").on(table.email),
+    uniqueRecipient: uniqueIndex("email_campaign_recipients_unique").on(table.campaignId, table.email),
+  })
+);
+
+// ============================================================================
+// email_campaign_events - Detailed event log
+// ============================================================================
+
+export const emailCampaignEvents = pgTable(
+  "email_campaign_events",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Foreign keys
+    campaignId: uuid("campaign_id").notNull().references(() => emailCampaigns.id, { onDelete: "cascade" }),
+    recipientId: uuid("recipient_id").references(() => emailCampaignRecipients.id, { onDelete: "set null" }),
+    
+    // Event type
+    eventType: varchar("event_type", { length: 30 }).notNull(), // sent, delivered, opened, clicked, bounced, complained, unsubscribed
+    
+    // Event details
+    email: varchar("email", { length: 255 }),
+    linkUrl: text("link_url"), // For click events
+    userAgent: text("user_agent"),
+    ipAddress: varchar("ip_address", { length: 45 }),
+    
+    // Provider data
+    providerEventId: varchar("provider_event_id", { length: 255 }),
+    rawData: jsonb("raw_data"),
+    
+    // Timestamp
+    occurredAt: timestamp("occurred_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    campaignIdx: index("email_campaign_events_campaign_idx").on(table.campaignId),
+    typeIdx: index("email_campaign_events_type_idx").on(table.campaignId, table.eventType),
+    timeIdx: index("email_campaign_events_time_idx").on(table.occurredAt),
   })
 );
 
@@ -568,3 +733,12 @@ export type NewFitmentImportJob = typeof fitmentImportJobs.$inferInsert;
 
 export type ModificationAlias = typeof modificationAliases.$inferSelect;
 export type NewModificationAlias = typeof modificationAliases.$inferInsert;
+
+export type EmailCampaign = typeof emailCampaigns.$inferSelect;
+export type NewEmailCampaign = typeof emailCampaigns.$inferInsert;
+
+export type EmailCampaignRecipient = typeof emailCampaignRecipients.$inferSelect;
+export type NewEmailCampaignRecipient = typeof emailCampaignRecipients.$inferInsert;
+
+export type EmailCampaignEvent = typeof emailCampaignEvents.$inferSelect;
+export type NewEmailCampaignEvent = typeof emailCampaignEvents.$inferInsert;

@@ -58,6 +58,8 @@ import {
 
 import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker";
 
+import { calculateWheelSellPrice } from "@/lib/pricing";
+
 import {
   shouldApplyPackagePriority,
   getPackagePriorityTier,
@@ -806,8 +808,8 @@ async function handleDbFirstWheelResults(opts: {
     if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
     if (width && c.width && Number(c.width) !== Number(width)) return false;
 
-    // valid pricing fields (required)
-    const p = Number(c.map_price || c.msrp || 0) || 0;
+    // valid pricing fields (required) - use pricing service
+    const p = calculateWheelSellPrice({ map: Number(c.map_price) || null, msrp: Number(c.msrp) || null });
     if (p <= 0) return false;
 
     // best-effort: skip obviously discontinued items if present in text
@@ -898,9 +900,12 @@ async function handleDbFirstWheelResults(opts: {
   const oemMidDiameter = (envelope.oemMinDiameter + envelope.oemMaxDiameter) / 2;
   const oemMidOffset = (envelope.oemMinOffset + envelope.oemMaxOffset) / 2;
   
-  // Calculate price statistics for tiered pricing
+  // Calculate price statistics for tiered pricing (using pricing service)
   const allPrices = fitmentValidCandidates
-    .map(item => Number(item.candidate.map_price || item.candidate.msrp || 0))
+    .map(item => calculateWheelSellPrice({ 
+      map: Number(item.candidate.map_price) || null, 
+      msrp: Number(item.candidate.msrp) || null 
+    }))
     .filter(p => p > 0)
     .sort((a, b) => a - b);
   const priceP25 = allPrices.length > 0 ? allPrices[Math.floor(allPrices.length * 0.25)] : 200;
@@ -989,7 +994,7 @@ async function handleDbFirstWheelResults(opts: {
     
     // 5. Price Range Score (0-100, weight: 15%)
     // All price tiers are viable, slight preference for mid-range
-    const price = Number(c.map_price || c.msrp || 0);
+    const price = calculateWheelSellPrice({ map: Number(c.map_price) || null, msrp: Number(c.msrp) || null });
     let priceRangeScore = 50;
     let priceTier: "value" | "mid" | "premium" = "mid";
     
@@ -1201,8 +1206,8 @@ async function handleDbFirstWheelResults(opts: {
       const bHasImage = (b.candidate.images || []).length > 0;
       const aStock = inventoryData.get(a.candidate.sku)?.totalQty || 0;
       const bStock = inventoryData.get(b.candidate.sku)?.totalQty || 0;
-      const aPrice = Number(a.candidate.map_price || a.candidate.msrp || 0) || Infinity;
-      const bPrice = Number(b.candidate.map_price || b.candidate.msrp || 0) || Infinity;
+      const aPrice = calculateWheelSellPrice({ map: Number(a.candidate.map_price) || null, msrp: Number(a.candidate.msrp) || null }) || Infinity;
+      const bPrice = calculateWheelSellPrice({ map: Number(b.candidate.map_price) || null, msrp: Number(b.candidate.msrp) || null }) || Infinity;
       
       // All wheels from our DB are WheelPros, so supplier is always "wheelpros"
       const aIsWheelPros = true;
@@ -1270,7 +1275,8 @@ async function handleDbFirstWheelResults(opts: {
       prices: {
         msrp: [
           {
-            currencyAmount: String(Number(c.map_price || c.msrp || 0) || 0),
+            // Use pricing service for 35% markup model
+            currencyAmount: String(calculateWheelSellPrice({ map: Number(c.map_price) || null, msrp: Number(c.msrp) || null })),
             currencyCode: "USD",
           },
         ],

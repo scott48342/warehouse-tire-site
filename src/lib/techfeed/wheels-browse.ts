@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import zlib from "node:zlib";
+import { calculateWheelSellPrice } from "@/lib/pricing";
 
 export type TechfeedWheel = {
   sku: string;
@@ -98,7 +99,11 @@ function buildStylesIndex(data: WheelsBySkuFile): Map<string, WheelStyle> {
     const offset = w.offset || "";
     const centerbore = w.centerbore || "";
     const finish = w.abbreviated_finish_desc || w.fancy_finish_desc || "";
-    const price = w.msrp ? parseFloat(w.msrp) : undefined;
+    // Use pricing service for 35% markup model
+    const price = calculateWheelSellPrice({ 
+      map: w.map_price ? parseFloat(w.map_price) : null, 
+      msrp: w.msrp ? parseFloat(w.msrp) : null 
+    }) || undefined;
     const imageUrl = w.images?.[0];
     
     let style = styles.get(styleKey);

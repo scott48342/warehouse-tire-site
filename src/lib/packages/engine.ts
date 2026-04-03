@@ -17,6 +17,7 @@ import { parseWheelSizes } from "@/lib/fitment-db/profileService";
 import type { VehicleFitment } from "@/lib/fitment-db/schema";
 import { getTechfeedCandidatesByBoltPattern, type TechfeedWheel } from "@/lib/techfeed/wheels";
 import { getCachedBulk } from "@/lib/availabilityCache";
+import { calculateWheelSellPrice } from "@/lib/pricing";
 
 // ============================================================================
 // Types
@@ -467,7 +468,11 @@ function findBestWheel(
   for (const wheel of wheels) {
     const diameter = Number(wheel.diameter || 0);
     const offset = Number(wheel.offset || 0);
-    const price = Number(wheel.map_price || wheel.msrp || 0);
+    // Use pricing service for 35% markup model
+    const price = calculateWheelSellPrice({ 
+      map: Number(wheel.map_price) || null, 
+      msrp: Number(wheel.msrp) || null 
+    });
     
     // Skip if missing critical data
     if (!diameter || !price || price <= 0) continue;
