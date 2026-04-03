@@ -15,6 +15,7 @@
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts, type AbandonedCart, type NewAbandonedCart } from "@/lib/fitment-db/schema";
 import { eq, and, lt, gt, or, desc, sql, count } from "drizzle-orm";
+import { detectTestData, type TestDetectionContext } from "@/lib/testData";
 
 // ============================================================================
 // Configuration
@@ -56,6 +57,11 @@ export interface CartTrackingData {
   source?: string;
   userAgent?: string;
   ipAddress?: string;
+  // Test data detection context
+  testContext?: Partial<TestDetectionContext>;
+  // Explicit test marking
+  isTest?: boolean;
+  testReason?: string;
 }
 
 export interface AbandonedCartStats {
@@ -148,6 +154,22 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
 
   const itemCount = items.reduce((sum: number, item: any) => sum + (item.quantity || 1), 0);
 
+  // Detect test data
+  let isTest = data.isTest || false;
+  let testReason = data.testReason || null;
+
+  if (!isTest) {
+    const testDetection = detectTestData({
+      email: customer?.email,
+      ipAddress,
+      ...data.testContext,
+    });
+    if (testDetection.isTest) {
+      isTest = true;
+      testReason = testDetection.reason;
+    }
+  }
+
   // Check if cart exists
   const [existing] = await db
     .select()
@@ -185,6 +207,9 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
         source: source || existing.source,
         userAgent: userAgent || existing.userAgent,
         ipAddress: ipAddress || existing.ipAddress,
+        // Test data - only upgrade to test, never downgrade
+        isTest: isTest || existing.isTest,
+        testReason: testReason || existing.testReason,
       })
       .where(eq(abandonedCarts.cartId, cartId))
       .returning();
@@ -214,6 +239,9 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
       source,
       userAgent,
       ipAddress,
+      // Test data
+      isTest,
+      testReason,
     })
     .returning();
 
@@ -326,18 +354,29 @@ export async function listCarts(options: {
   limit?: number;
   offset?: number;
   orderBy?: "lastActivity" | "createdAt" | "value";
+  /** Include test data (default: false) */
+  includeTest?: boolean;
 }): Promise<{ carts: AbandonedCart[]; total: number }> {
-  const { status, limit = 50, offset = 0, orderBy = "lastActivity" } = options;
+  const { status, limit = 50, offset = 0, orderBy = "lastActivity", includeTest = false } = options;
 
-  // Build where clause
-  let where: any = undefined;
+  // Build where conditions
+  const conditions: any[] = [];
+  
+  // Status filter
   if (status) {
     if (Array.isArray(status)) {
-      where = or(...status.map(s => eq(abandonedCarts.status, s)));
+      conditions.push(or(...status.map(s => eq(abandonedCarts.status, s))));
     } else {
-      where = eq(abandonedCarts.status, status);
+      conditions.push(eq(abandonedCarts.status, status));
     }
   }
+
+  // Exclude test data by default
+  if (!includeTest) {
+    conditions.push(eq(abandonedCarts.isTest, false));
+  }
+
+  const where = conditions.length > 0 ? and(...conditions) : undefined;
 
   // Get total count
   const [countResult] = await db
@@ -366,18 +405,23 @@ export async function listCarts(options: {
 
 /**
  * Get abandoned cart statistics for dashboard
+ * @param includeTest Include test data in stats (default: false)
  */
-export async function getStats(): Promise<AbandonedCartStats> {
+export async function getStats(includeTest: boolean = false): Promise<AbandonedCartStats> {
   // Process any newly abandoned carts first
   await processAbandonedCarts();
   
-  // Count by status
+  // Base condition: exclude test data unless requested
+  const testCondition = includeTest ? undefined : eq(abandonedCarts.isTest, false);
+  
+  // Count by status (excluding test data)
   const statusCounts = await db
     .select({
       status: abandonedCarts.status,
       count: count(),
     })
     .from(abandonedCarts)
+    .where(testCondition)
     .groupBy(abandonedCarts.status);
 
   const countMap: Record<string, number> = {};
@@ -385,17 +429,24 @@ export async function getStats(): Promise<AbandonedCartStats> {
     countMap[row.status] = Number(row.count);
   }
 
-  // Sum values for abandoned and recovered
+  // Sum values for abandoned and recovered (excluding test data)
+  const valueConditions = [
+    or(
+      eq(abandonedCarts.status, "abandoned"),
+      eq(abandonedCarts.status, "recovered")
+    ),
+  ];
+  if (!includeTest) {
+    valueConditions.push(eq(abandonedCarts.isTest, false));
+  }
+
   const valueResults = await db
     .select({
       status: abandonedCarts.status,
       totalValue: sql<string>`SUM(${abandonedCarts.estimatedTotal})`,
     })
     .from(abandonedCarts)
-    .where(or(
-      eq(abandonedCarts.status, "abandoned"),
-      eq(abandonedCarts.status, "recovered")
-    ))
+    .where(and(...valueConditions))
     .groupBy(abandonedCarts.status);
 
   let abandonedValue = 0;
@@ -405,11 +456,16 @@ export async function getStats(): Promise<AbandonedCartStats> {
     if (row.status === "recovered") recoveredValue = Number(row.totalValue || 0);
   }
 
-  // Get recent abandoned carts
+  // Get recent abandoned carts (excluding test data)
+  const recentConditions = [eq(abandonedCarts.status, "abandoned")];
+  if (!includeTest) {
+    recentConditions.push(eq(abandonedCarts.isTest, false));
+  }
+
   const recentAbandoned = await db
     .select()
     .from(abandonedCarts)
-    .where(eq(abandonedCarts.status, "abandoned"))
+    .where(and(...recentConditions))
     .orderBy(desc(abandonedCarts.abandonedAt))
     .limit(5);
 

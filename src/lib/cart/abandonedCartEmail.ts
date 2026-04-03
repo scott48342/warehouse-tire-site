@@ -376,6 +376,11 @@ export async function sendRecoveryEmail(
 ): Promise<EmailResult> {
   const cartId = cart.cartId;
 
+  // Skip test data
+  if (cart.isTest) {
+    return { success: false, cartId, step, action: "skipped", reason: "test_data" };
+  }
+
   // Validation
   if (!cart.customerEmail) {
     return { success: false, cartId, step, action: "skipped", reason: "no_email" };
@@ -500,6 +505,8 @@ async function findCartsForStep(step: EmailStep): Promise<AbandonedCart[]> {
     isNull(sentAtColumn),
     lt(abandonedCarts.abandonedAt, cutoffTime),
     eq(abandonedCarts.unsubscribed, false),
+    // Exclude test data from recovery emails
+    eq(abandonedCarts.isTest, false),
   ];
 
   if (step === "second") {

@@ -454,6 +454,10 @@ export const abandonedCarts = pgTable(
     lastEmailStatus: varchar("last_email_status", { length: 50 }), // sent, failed, bounced
     recoveredAfterEmail: boolean("recovered_after_email").default(false),
     unsubscribed: boolean("unsubscribed").default(false),
+    
+    // Test data exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    testReason: varchar("test_reason", { length: 100 }), // internal_email, test_mode, admin_marked, stripe_test, internal_ip
   },
   (table) => ({
     // Unique cart id
@@ -465,6 +469,8 @@ export const abandonedCarts = pgTable(
     // Time-based queries
     lastActivityIdx: index("abandoned_carts_last_activity_idx").on(table.lastActivityAt),
     createdAtIdx: index("abandoned_carts_created_at_idx").on(table.createdAt),
+    // Test data filtering
+    isTestIdx: index("abandoned_carts_is_test_idx").on(table.isTest),
   })
 );
 
@@ -504,6 +510,10 @@ export const emailSubscribers = pgTable(
     // Metadata
     ipAddress: varchar("ip_address", { length: 45 }),
     userAgent: text("user_agent"),
+    
+    // Test data exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    testReason: varchar("test_reason", { length: 100 }), // internal_email, test_mode, admin_marked
   },
   (table) => ({
     // Unique email per source (allow same email from different sources)

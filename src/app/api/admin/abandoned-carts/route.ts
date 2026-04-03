@@ -36,6 +36,13 @@ export const runtime = "nodejs";
 
 /**
  * GET /api/admin/abandoned-carts
+ * 
+ * Query params:
+ * - status: filter by status
+ * - includeTest: "1" to show test data (default: hidden)
+ * - stats: "1" to include stats
+ * - emailStatus: "1" to include email status for each cart
+ * - recoverable: "1" to show only recoverable carts
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -44,6 +51,7 @@ export async function GET(req: Request) {
   const offset = Number(url.searchParams.get("offset") || "0") || 0;
   const includeStats = url.searchParams.get("stats") === "1";
   const includeEmailStatus = url.searchParams.get("emailStatus") === "1";
+  const includeTest = url.searchParams.get("includeTest") === "1";
   const cartId = url.searchParams.get("cartId");
   const recoverableOnly = url.searchParams.get("recoverable") === "1";
 
@@ -80,6 +88,7 @@ export async function GET(req: Request) {
       status: statusFilter,
       limit,
       offset,
+      includeTest,
     });
 
     // Format carts with full email tracking
@@ -124,6 +133,9 @@ export async function GET(req: Request) {
           nextEmailDue: emailStatus.nextEmailDue,
           canSendMore: emailStatus.canSendMore,
         } : null,
+        // Test data
+        isTest: cart.isTest || false,
+        testReason: cart.testReason || null,
       };
     }));
 
@@ -139,8 +151,14 @@ export async function GET(req: Request) {
     };
 
     if (includeStats) {
-      response.stats = await getStats();
+      response.stats = await getStats(includeTest);
     }
+
+    // Include test data filter state
+    response.testDataFilter = {
+      includeTest,
+      hint: includeTest ? "Showing all data including test" : "Test data hidden (add includeTest=1 to show)",
+    };
 
     return NextResponse.json(response);
   } catch (err: any) {

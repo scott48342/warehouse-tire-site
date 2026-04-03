@@ -19,6 +19,7 @@
 import { db } from "@/lib/fitment-db/db";
 import { emailSubscribers, abandonedCarts, type EmailSubscriber, type NewEmailSubscriber } from "@/lib/fitment-db/schema";
 import { eq, and, or, desc, sql, count } from "drizzle-orm";
+import { detectTestData, type TestDetectionContext } from "@/lib/testData";
 
 // ============================================================================
 // Types
@@ -39,6 +40,10 @@ export interface SubscribeInput {
   marketingConsent?: boolean;
   ipAddress?: string;
   userAgent?: string;
+  // Test data detection
+  testContext?: Partial<TestDetectionContext>;
+  isTest?: boolean;
+  testReason?: string;
 }
 
 export interface SubscriberStats {
@@ -69,6 +74,22 @@ export async function subscribe(input: SubscribeInput): Promise<EmailSubscriber>
 
   const normalizedEmail = email.toLowerCase().trim();
 
+  // Detect test data
+  let isTest = input.isTest || false;
+  let testReason = input.testReason || null;
+
+  if (!isTest) {
+    const testDetection = detectTestData({
+      email: normalizedEmail,
+      ipAddress,
+      ...input.testContext,
+    });
+    if (testDetection.isTest) {
+      isTest = true;
+      testReason = testDetection.reason;
+    }
+  }
+
   // Check if this email+source combo exists
   const [existing] = await db
     .select()
@@ -98,6 +119,9 @@ export async function subscribe(input: SubscribeInput): Promise<EmailSubscriber>
         // If they're re-subscribing, clear unsubscribed flag
         unsubscribed: false,
         unsubscribedAt: null,
+        // Test data - only upgrade to test, never downgrade
+        isTest: isTest || existing.isTest,
+        testReason: testReason || existing.testReason,
       })
       .where(eq(emailSubscribers.id, existing.id))
       .returning();
@@ -119,6 +143,9 @@ export async function subscribe(input: SubscribeInput): Promise<EmailSubscriber>
       marketingConsent,
       ipAddress,
       userAgent,
+      // Test data
+      isTest,
+      testReason,
     })
     .returning();
 
@@ -218,14 +245,21 @@ export async function getMarketingList(options?: {
   hasVehicle?: boolean;
   limit?: number;
   offset?: number;
+  /** Include test data (default: false) */
+  includeTest?: boolean;
 }): Promise<{ subscribers: EmailSubscriber[]; total: number }> {
-  const { source, hasVehicle, limit = 100, offset = 0 } = options || {};
+  const { source, hasVehicle, limit = 100, offset = 0, includeTest = false } = options || {};
 
   // Build conditions
   const conditions = [
     eq(emailSubscribers.unsubscribed, false),
     eq(emailSubscribers.marketingConsent, true),
   ];
+
+  // Exclude test data by default
+  if (!includeTest) {
+    conditions.push(eq(emailSubscribers.isTest, false));
+  }
 
   if (source) {
     conditions.push(eq(emailSubscribers.source, source));
@@ -258,20 +292,26 @@ export async function getMarketingList(options?: {
 
 /**
  * Get subscriber statistics
+ * @param includeTest Include test data in stats (default: false)
  */
-export async function getStats(): Promise<SubscriberStats> {
-  // Total subscribers (unique emails)
+export async function getStats(includeTest: boolean = false): Promise<SubscriberStats> {
+  // Base condition: exclude test data unless requested
+  const testCondition = includeTest ? undefined : eq(emailSubscribers.isTest, false);
+
+  // Total subscribers (unique emails, excluding test)
   const [totalResult] = await db
     .select({ count: sql<number>`COUNT(DISTINCT ${emailSubscribers.email})` })
-    .from(emailSubscribers);
+    .from(emailSubscribers)
+    .where(testCondition);
 
-  // By source
+  // By source (excluding test)
   const sourceResults = await db
     .select({
       source: emailSubscribers.source,
       count: count(),
     })
     .from(emailSubscribers)
+    .where(testCondition)
     .groupBy(emailSubscribers.source);
 
   const bySource: Record<string, number> = {};
@@ -279,24 +319,33 @@ export async function getStats(): Promise<SubscriberStats> {
     bySource[row.source] = Number(row.count);
   }
 
-  // Unsubscribed
+  // Unsubscribed (excluding test)
+  const unsubConditions = [eq(emailSubscribers.unsubscribed, true)];
+  if (!includeTest) unsubConditions.push(eq(emailSubscribers.isTest, false));
+
   const [unsubResult] = await db
     .select({ count: sql<number>`COUNT(DISTINCT ${emailSubscribers.email})` })
     .from(emailSubscribers)
-    .where(eq(emailSubscribers.unsubscribed, true));
+    .where(and(...unsubConditions));
 
-  // With vehicle
+  // With vehicle (excluding test)
+  const vehicleConditions = [sql`${emailSubscribers.vehicleYear} IS NOT NULL`];
+  if (!includeTest) vehicleConditions.push(eq(emailSubscribers.isTest, false));
+
   const [vehicleResult] = await db
     .select({ count: sql<number>`COUNT(DISTINCT ${emailSubscribers.email})` })
     .from(emailSubscribers)
-    .where(sql`${emailSubscribers.vehicleYear} IS NOT NULL`);
+    .where(and(...vehicleConditions));
 
-  // Last 7 days
+  // Last 7 days (excluding test)
   const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const recentConditions = [sql`${emailSubscribers.createdAt} > ${sevenDaysAgo}`];
+  if (!includeTest) recentConditions.push(eq(emailSubscribers.isTest, false));
+
   const [recentResult] = await db
     .select({ count: sql<number>`COUNT(DISTINCT ${emailSubscribers.email})` })
     .from(emailSubscribers)
-    .where(sql`${emailSubscribers.createdAt} > ${sevenDaysAgo}`);
+    .where(and(...recentConditions));
 
   return {
     total: Number(totalResult?.count || 0),
