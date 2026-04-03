@@ -24,6 +24,7 @@ export {
 // Vehicle data
 export {
   getRelatedVehicles,
+  getStaticVehicleParams,
 } from "./vehicleData";
 
 // Content generation (from content/ directory)
