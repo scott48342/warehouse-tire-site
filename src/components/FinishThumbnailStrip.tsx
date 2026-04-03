@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export type FinishThumb = {
   finish: string;
@@ -16,7 +16,26 @@ export function FinishThumbnailStrip({
   selectedFinish?: string;
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   if (!items?.length) return null;
+
+  // Preserve vehicle context when switching finishes
+  const buildUrl = (sku: string) => {
+    const base = `/wheels/${encodeURIComponent(sku)}`;
+    // Preserve these params when navigating between finishes
+    const preserveKeys = [
+      "year", "make", "model", "trim", "modification",
+      "liftedSource", "liftedPreset", "liftedInches", "liftedTireSizes",
+      "liftedTireDiaMin", "liftedTireDiaMax",
+    ];
+    const params = new URLSearchParams();
+    for (const key of preserveKeys) {
+      const val = searchParams.get(key);
+      if (val) params.set(key, val);
+    }
+    const qs = params.toString();
+    return qs ? `${base}?${qs}` : base;
+  };
 
   return (
     <div className="mt-3">
@@ -28,7 +47,7 @@ export function FinishThumbnailStrip({
             <button
               key={`${it.finish}-${it.sku}`}
               type="button"
-              onClick={() => router.push(`/wheels/${encodeURIComponent(it.sku)}`)}
+              onClick={() => router.push(buildUrl(it.sku))}
               className={
                 "flex items-center gap-2 rounded-xl border px-2 py-1 text-left text-xs font-semibold " +
                 (active

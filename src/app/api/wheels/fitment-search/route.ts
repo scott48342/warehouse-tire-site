@@ -834,7 +834,7 @@ async function handleDbFirstWheelResults(opts: {
     candidate: typeof diversifiedCandidates[0];
     validation: FitmentValidation;
   };
-  const fitmentValidCandidates: FitmentValidCandidate[] = [];
+  let fitmentValidCandidates: FitmentValidCandidate[] = [];
 
   for (const c of diversifiedCandidates) {
     const wheelSpec: WheelSpec = {
@@ -874,7 +874,7 @@ async function handleDbFirstWheelResults(opts: {
 
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 3: Inventory lookup from SFTP feed (synced every 2 hours)
-  // Used for displaying availability labels and stock info
+  // FILTER: Only show SKUs that exist in inventory (removes discontinued products)
   // ═══════════════════════════════════════════════════════════════════════════
   const tAvail0 = Date.now();
   const allSkus = fitmentValidCandidates.map(item => item.candidate.sku);
@@ -882,6 +882,22 @@ async function handleDbFirstWheelResults(opts: {
   timing.cachedAvailabilityMs = Date.now() - tAvail0;
   timing.cachedAvailabilityHits = inventoryData.size;
   timing.totalFitmentValid = fitmentValidCandidates.length;
+  
+  // INVENTORY FILTER: Only include SKUs that exist in inventory with sufficient qty
+  // This filters out discontinued/stale products AND low-stock items
+  // Minimum qty = 4 (need at least 4 wheels to sell a set)
+  const MIN_INVENTORY_QTY = 4;
+  const preFilterCount = fitmentValidCandidates.length;
+  fitmentValidCandidates = fitmentValidCandidates.filter(item => {
+    const inv = inventoryData.get(item.candidate.sku);
+    // Must exist in inventory feed AND have sufficient quantity
+    return inv !== undefined && inv.totalQty >= MIN_INVENTORY_QTY;
+  });
+  timing.inventoryFilteredOut = preFilterCount - fitmentValidCandidates.length;
+  
+  if (debug && timing.inventoryFilteredOut > 0) {
+    console.log(`[fitment-search] 🗑️ Inventory filter removed ${timing.inventoryFilteredOut} SKUs (not in feed or qty < ${MIN_INVENTORY_QTY})`);
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 4: RANKING & SCORING (v2 - Merchandising Refinement)

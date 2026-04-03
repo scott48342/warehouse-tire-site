@@ -218,8 +218,9 @@ export async function GET(req: Request) {
       data.results = enriched;
     }
     
-    // INVENTORY VERIFICATION: Filter out SKUs not in SFTP inventory feed
-    // This removes discontinued/stale products that WheelPros API may still return
+    // INVENTORY VERIFICATION: Filter out SKUs not in SFTP inventory feed or with insufficient qty
+    // This removes discontinued/stale products AND low-stock items (need 4 for a set)
+    const MIN_INVENTORY_QTY = 4;
     const verifyInventory = sp.has("sku"); // Only strict verify for single-SKU lookups
     if (verifyInventory && data.results?.length) {
       const verified = await Promise.all(
@@ -227,15 +228,15 @@ export async function GET(req: Request) {
           const sku = it?.sku ? String(it.sku) : "";
           if (!sku) return null;
           const inv = await getInventoryForSku(sku);
-          // SKU must exist in inventory feed (indicates it's an active product)
-          return inv ? it : null;
+          // SKU must exist in inventory feed AND have sufficient quantity
+          return (inv && inv.totalQty >= MIN_INVENTORY_QTY) ? it : null;
         })
       );
       const beforeCount = data.results.length;
       data.results = verified.filter(Boolean);
       
       if (debug && data.results.length < beforeCount) {
-        console.log(`[wheelpros/search] ⚠️ Inventory verify filtered ${beforeCount - data.results.length} SKUs not in SFTP feed`);
+        console.log(`[wheelpros/search] ⚠️ Inventory verify filtered ${beforeCount - data.results.length} SKUs (not in feed or qty < ${MIN_INVENTORY_QTY})`);
       }
     }
   }
