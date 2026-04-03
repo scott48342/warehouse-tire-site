@@ -226,7 +226,9 @@ async function searchTiresBySize(
  */
 async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]> {
   try {
+    console.log("[tires/search] Calling Tirewire for size:", size);
     const results = await searchTiresTirewire(size);
+    console.log("[tires/search] Tirewire returned:", results.length, "connections, tires:", results.reduce((sum, r) => sum + r.tires.length, 0));
     const tires: TireResult[] = [];
     
     for (const result of results) {
@@ -357,6 +359,8 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     ""
   ).trim();
   
+  console.log("[tires/search] KM API key check:", apiKey ? `present (${apiKey.slice(0,4)}...)` : "MISSING");
+  
   if (!apiKey) {
     console.warn("[tires/search] No K&M API key configured");
     return [];
@@ -364,6 +368,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
   
   // Convert size to K&M format (7-8 digit compact)
   const tireSize = toKmSizeFormat(size);
+  console.log("[tires/search] KM size conversion:", size, "→", tireSize || "(failed)");
   if (!tireSize) {
     console.warn("[tires/search] Could not convert size for K&M:", size);
     return [];
@@ -394,6 +399,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     }
     
     const text = await res.text();
+    console.log("[tires/search] KM response length:", text.length, "first 200 chars:", text.slice(0, 200));
     const parser = new XMLParser({
       ignoreAttributes: false,
       cdataPropName: "__cdata",
@@ -403,6 +409,7 @@ async function searchTiresKM(size: string): Promise<TireResult[]> {
     const resp = data?.InventoryResponse || data?.inventoryresponse || data;
     const itemsRaw = resp?.Item;
     const items = Array.isArray(itemsRaw) ? itemsRaw : itemsRaw ? [itemsRaw] : [];
+    console.log("[tires/search] KM parsed items:", items.length);
     
     return items.map((it: any) => {
       const qty = it?.Quantity || {};
@@ -867,35 +874,27 @@ async function applyAdminOverrides(db: pg.Pool, results: TireResult[]): Promise<
   
   try {
     const { rows } = await db.query(`
-      SELECT sku, image_url, display_name 
+      SELECT sku, image_url 
       FROM admin_product_flags 
       WHERE sku = ANY($1) 
         AND product_type = 'tire' 
-        AND (
-          (image_url IS NOT NULL AND image_url != '')
-          OR (display_name IS NOT NULL AND display_name != '')
-        )
+        AND image_url IS NOT NULL AND image_url != ''
     `, [skus]);
     
     if (rows.length === 0) return results;
     
-    const overrides = new Map<string, { imageUrl?: string; displayName?: string }>();
+    const overrides = new Map<string, string>();
     for (const row of rows) {
-      overrides.set(row.sku, {
-        imageUrl: row.image_url || undefined,
-        displayName: row.display_name || undefined,
-      });
+      if (row.image_url) {
+        overrides.set(row.sku, row.image_url);
+      }
     }
     
-    // Apply overrides
+    // Apply image overrides
     return results.map(tire => {
-      const override = overrides.get(tire.partNumber);
-      if (override) {
-        return {
-          ...tire,
-          imageUrl: override.imageUrl || tire.imageUrl,
-          description: override.displayName || tire.description,
-        };
+      const imageUrl = overrides.get(tire.partNumber);
+      if (imageUrl) {
+        return { ...tire, imageUrl };
       }
       return tire;
     });
@@ -937,10 +936,11 @@ export async function GET(req: Request) {
     if (sizeRaw) {
       const tSearch0 = Date.now();
       // Query all sources in parallel
+      // NOTE: KM disabled for testing (invalid API key)
       const [wpResults, twResults, kmResults] = await Promise.all([
         searchTiresBySize(db, sizeRaw, minQty, pageSize),
         searchTiresTirewireFormatted(sizeRaw),
-        searchTiresKM(sizeRaw),
+        Promise.resolve([]), // searchTiresKM(sizeRaw) - disabled
       ]);
       timing.searchMs = Date.now() - tSearch0;
       
