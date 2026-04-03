@@ -676,7 +676,7 @@ export default function CheckoutPage() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-bold text-neutral-900">Total</span>
                   <span className="text-2xl font-extrabold text-neutral-900">
-                    ${totalWithTax.toFixed(2)}
+                    ${totalWithTaxAndShipping.toFixed(2)}
                   </span>
                 </div>
                 {calculatedTax > 0 && (
