@@ -72,6 +72,27 @@ function toSimpleSize(s: string): string {
   return "";
 }
 
+function normalizeFlotationSize(s: string): string | null {
+  // Handle flotation/LT sizes like:
+  // - 35/12.50R20 → 35X12.50R20 (normalized)
+  // - 35X12.50R20 → 35X12.50R20
+  // - 37/12.50R17 → 37X12.50R17
+  const v = String(s || "").trim().toUpperCase();
+  // Match: 35/12.50R20 or 35X12.50R20 or 35-12.50R20
+  const m = v.match(/^(\d{2,3})\s*[\/X\-]\s*(\d{1,2}(?:\.\d+)?)\s*[A-Z]*\s*R?\s*(\d{2})/i);
+  if (m) {
+    // Return normalized format: 35X12.50R20
+    return `${m[1]}X${m[2]}R${m[3]}`;
+  }
+  return null;
+}
+
+function isFlotationSize(s: string): boolean {
+  // Flotation sizes start with 2-digit number (overall diameter) not 3-digit (width)
+  const v = String(s || "").trim();
+  return /^\d{2}[\/X\-]/.test(v);
+}
+
 function extractRimDiameter(size: string): number | null {
   // Extract rim diameter from tire size
   // 245/50R18 → 18
@@ -117,6 +138,23 @@ async function searchTiresBySize(
   limit: number
 ): Promise<TireResult[]> {
   const simple = toSimpleSize(size) || size;
+  const flotation = normalizeFlotationSize(size);
+  const isFlotation = isFlotationSize(size);
+  
+  // For flotation sizes (35/12.50R20), search with multiple patterns
+  // Database may store as: 35X12.50R20, 35/12.50R20, LT35X12.50R20, etc.
+  let flotationPatterns: string[] = [];
+  if (isFlotation && flotation) {
+    const m = size.match(/^(\d{2,3})\s*[\/X\-]\s*(\d{1,2}(?:\.\d+)?)\s*[A-Z]*\s*R?\s*(\d{2})/i);
+    if (m) {
+      // Create multiple search patterns
+      flotationPatterns = [
+        `%${m[1]}X${m[2]}%R${m[3]}%`,  // 35X12.50R20
+        `%${m[1]}/${m[2]}%R${m[3]}%`,  // 35/12.50R20
+        `%${m[1]}X${m[2].replace('.', '')}%R${m[3]}%`,  // 35X1250R20 (no decimal)
+      ];
+    }
+  }
   
   const { rows } = await db.query({
     text: `
@@ -140,12 +178,16 @@ async function searchTiresBySize(
         on i.sku = t.sku
        and i.product_type = 'tire'
        and i.location_id = 'TOTAL'
-      where (t.simple_size = $1 or t.tire_size ilike $2)
+      where (
+        t.simple_size = $1 
+        or t.tire_size ilike $2
+        or ($5::boolean and (t.tire_size ilike any($6::text[])))
+      )
         and ($3::int is null or coalesce(i.qoh, 0) >= $3::int)
       order by coalesce(i.qoh, 0) desc, t.brand_desc asc, t.sku asc
       limit $4
     `,
-    values: [simple, `%${simple}%`, minQty || null, limit],
+    values: [simple, `%${simple}%`, minQty || null, limit, isFlotation, flotationPatterns.length > 0 ? flotationPatterns : ['__NOMATCH__']],
   });
 
   return rows.map((r) => {
