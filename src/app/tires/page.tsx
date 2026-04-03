@@ -303,6 +303,29 @@ export default async function TiresPage({
   const isPackageFlow = Boolean(wheelSku);
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // 🔍 DEBUG: RENDER FLOW AUDIT (2026-04-03)
+  // Trace route path, query params, resolved mode, and component selection
+  // ═══════════════════════════════════════════════════════════════════════════
+  console.log('[TIRES_AUDIT] 📍 Route: /tires (or /tires/v/[slug])');
+  console.log('[TIRES_AUDIT] 🔧 Query params:', {
+    year, make, model, modification, trim,
+    wheelSku: wheelSku || '(none)',
+    package: sp.package || '(none)',
+    size: sp.size || '(auto)',
+  });
+  console.log('[TIRES_AUDIT] 📊 Render decision:', {
+    isPackageFlow,
+    hasVehicle,
+    showPackageJourneyBar: hasVehicle && isPackageFlow,
+    componentMode: 'TIRES',
+  });
+  if (isPackageFlow) {
+    console.log('[TIRES_AUDIT] 📦 PACKAGE FLOW - showing PackageJourneyBar (user came from wheel selection)');
+  } else {
+    console.log('[TIRES_AUDIT] ✅ STANDARD TIRE SEARCH - PackageJourneyBar hidden');
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // LIFTED BUILD CONTEXT
   // ═══════════════════════════════════════════════════════════════════════════
   // When user comes from /lifted page, use lifted tire recommendations instead of OEM
@@ -1169,9 +1192,10 @@ export default async function TiresPage({
   return (
     <main className="bg-neutral-50">
       {/* ═══════════════════════════════════════════════════════════════════════
-          PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
+          PACKAGE JOURNEY BAR - Only shows when user is building a package
+          (came from wheel selection with wheelSku in URL)
           ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle ? (
+      {hasVehicle && isPackageFlow ? (
         <PackageJourneyBar
           currentStep="tires"
           vehicle={{

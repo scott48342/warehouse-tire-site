@@ -127,8 +127,17 @@ export function VisualFitmentLauncher({
   useEffect(() => {
     // When opened externally (e.g. HomeFitmentEntry), start a fresh flow and skip the entry tiles.
     if (isOpen && !wasOpen.current) {
+      // 🔍 DEBUG: RENDER FLOW AUDIT (2026-04-03)
+      console.log('[VFL_AUDIT] 🚀 Modal opened');
+      console.log('[VFL_AUDIT] 📊 startMode prop:', startMode || '(none - will default to vehicles)');
+      
       resetAll();
-      if (startMode) setMode(startMode);
+      if (startMode) {
+        console.log('[VFL_AUDIT] ✅ Setting mode to startMode:', startMode);
+        setMode(startMode);
+      } else {
+        console.log('[VFL_AUDIT] ⚠️ No startMode - mode is:', mode);
+      }
       setStep("year");
     }
     wasOpen.current = isOpen;
@@ -257,6 +266,17 @@ export function VisualFitmentLauncher({
   }, [draft.year, draft.make, draft.model]);
 
   function complete(next: Fitment) {
+    // 🔍 DEBUG: RENDER FLOW AUDIT (2026-04-03)
+    console.log('[VFL_AUDIT] 📍 complete() called');
+    console.log('[VFL_AUDIT] 🔧 Current mode:', mode);
+    console.log('[VFL_AUDIT] 📊 Fitment:', next);
+    console.log('[VFL_AUDIT] 🎯 Will route to:', 
+      mode === "tires" ? "/tires" : 
+      mode === "wheels" ? "/wheels" : 
+      mode === "packages" ? "/wheels?package=1" : 
+      "/wheels?package=1 (vehicles default)"
+    );
+    
     try {
       localStorage.setItem("wt_fitment", JSON.stringify(next));
       localStorage.setItem("wt_fitment_draft", JSON.stringify(next));

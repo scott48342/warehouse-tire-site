@@ -107,6 +107,8 @@ export function Header() {
   const [searchMode, setSearchMode] = useState<"vehicle" | "size">("vehicle");
 
   function openLauncher(mode: LauncherMode) {
+    // 🔍 DEBUG: RENDER FLOW AUDIT (2026-04-03)
+    console.log('[HEADER_AUDIT] 🚀 openLauncher called with mode:', mode);
     closeMenus();
     setLauncherMode(mode);
     setLauncherOpen(true);
