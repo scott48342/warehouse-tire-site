@@ -124,6 +124,9 @@ export async function POST(req: Request) {
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
     const shippingInfo = body.shipping && typeof body.shipping === "object" ? body.shipping : {};
+    const shippingAmount = Number(shippingInfo.amount) || 0;
+    const shippingIsFree = !!shippingInfo.isFree;
+    
     const taxInfo = body.tax && typeof body.tax === "object" ? body.tax : {};
     const taxAmount = Number(taxInfo.amount) || 0;
     const taxState = String(taxInfo.state || "").toUpperCase();
@@ -156,6 +159,19 @@ export async function POST(req: Request) {
 
     if (linesAll.length === 0) {
       return NextResponse.json({ ok: false, error: "empty_cart" }, { status: 400 });
+    }
+
+    // Add shipping as a quote line if applicable
+    if (shippingAmount > 0 && !shippingIsFree) {
+      linesAll.push({
+        kind: "product",
+        name: "Shipping & Handling",
+        sku: undefined,
+        unitPriceUsd: shippingAmount,
+        qty: 1,
+        taxable: false,
+        meta: { type: "shipping", zip: shippingInfo.zip },
+      });
     }
 
     // Add tax as a quote line if applicable
@@ -217,6 +233,21 @@ export async function POST(req: Request) {
       },
     }));
 
+    // Add shipping as a line item if not free
+    if (shippingAmount > 0 && !shippingIsFree) {
+      stripeLineItems.push({
+        quantity: 1,
+        price_data: {
+          currency: "usd",
+          unit_amount: moneyToCents(shippingAmount),
+          product_data: {
+            name: "Shipping & Handling",
+            metadata: undefined,
+          },
+        },
+      });
+    }
+
     // Add tax as a line item if applicable
     if (taxAmount > 0) {
       stripeLineItems.push({
@@ -240,6 +271,8 @@ export async function POST(req: Request) {
         quoteId,
         taxState: taxState || undefined,
         taxAmount: taxAmount > 0 ? String(taxAmount.toFixed(2)) : undefined,
+        shippingAmount: shippingAmount > 0 ? String(shippingAmount.toFixed(2)) : undefined,
+        shippingZip: shippingInfo.zip || undefined,
       },
       shipping_address_collection: {
         allowed_countries: ["US"] as const,

@@ -9,6 +9,7 @@ import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/
 import { BRAND } from "@/lib/brand";
 import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking } from "@/lib/cart/useCartTracking";
+import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
 
 /**
  * Checkout Page
@@ -116,7 +117,24 @@ export default function CheckoutPage() {
   }, [items]);
 
   const calculatedTax = taxableSubtotal * taxRate;
-  const totalWithTax = validation.totals.total + calculatedTax;
+
+  // Calculate shipping based on ZIP code and cart items
+  const shippingEstimate = useMemo(() => {
+    const shippingItems: ShippingItem[] = items.map((item) => ({
+      type: item.type as "wheel" | "tire" | "accessory",
+      quantity: item.quantity || 1,
+      unitPrice: item.unitPrice,
+    }));
+    
+    return calculateShipping({
+      zipCode: shipping.zip,
+      items: shippingItems,
+      subtotal: validation.totals.total,
+    });
+  }, [items, shipping.zip, validation.totals.total]);
+
+  const shippingAmount = shippingEstimate.isFree ? 0 : shippingEstimate.amount;
+  const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -194,6 +212,8 @@ export default function CheckoutPage() {
             city: shipping.city,
             state: shipping.state,
             zip: shipping.zip,
+            amount: shippingAmount,
+            isFree: shippingEstimate.isFree,
           },
           tax: {
             rate: taxRate,

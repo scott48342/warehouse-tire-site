@@ -12,7 +12,7 @@ import {
 import { EmailCartButton } from "./EmailCartButton";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { ZipCodeInput, FreeShippingProgress } from "./ShippingEstimate";
-import { formatCurrency } from "@/lib/shipping/shippingService";
+import { formatCurrency, FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -567,7 +567,7 @@ export function CartSlideout() {
 
           {/* Trust badges */}
           <div className="pt-3 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
-            <span>✓ Free shipping over $1,500</span>
+            <span>✓ Free shipping over {formatCurrency(FREE_SHIPPING_THRESHOLD)}</span>
             <span>✓ Expert support</span>
           </div>
         </div>
