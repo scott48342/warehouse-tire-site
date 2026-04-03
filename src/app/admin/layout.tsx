@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
   { href: "/admin/orders", label: "Orders", icon: "📦" },
   { href: "/admin/abandoned-carts", label: "Abandoned Carts", icon: "🛒" },
+  { href: "/admin/email-campaigns", label: "Email Campaigns", icon: "📧" },
   { href: "/admin/fitment-api", label: "Fitment API", icon: "🔑" },
   { href: "/admin/fitment", label: "Fitment", icon: "🔧" },
   { href: "/admin/products", label: "Products", icon: "🛞" },
