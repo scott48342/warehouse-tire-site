@@ -33,7 +33,8 @@ export async function GET(req: NextRequest, { params }: Params) {
         recipientId: emailCampaignEvents.recipientId,
         email: emailCampaignRecipients.email,
         eventType: emailCampaignEvents.eventType,
-        metadata: emailCampaignEvents.metadata,
+        linkUrl: emailCampaignEvents.linkUrl,
+        rawData: emailCampaignEvents.rawData,
         occurredAt: emailCampaignEvents.occurredAt,
       })
       .from(emailCampaignEvents)
@@ -48,9 +49,15 @@ export async function GET(req: NextRequest, { params }: Params) {
 
     return NextResponse.json({
       events: events.map((e) => ({
-        ...e,
         id: e.id.toString(),
-        recipientId: e.recipientId.toString(),
+        recipientId: e.recipientId?.toString(),
+        email: e.email,
+        eventType: e.eventType,
+        metadata: {
+          url: e.linkUrl,
+          ...(e.rawData as Record<string, any> || {}),
+        },
+        occurredAt: e.occurredAt,
       })),
     });
   } catch (err: any) {
