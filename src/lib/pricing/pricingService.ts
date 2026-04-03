@@ -3,14 +3,16 @@
  * 
  * Centralized pricing calculation for all products.
  * 
- * WHEELS (30% markup model):
- * - If cost exists: price = cost × 1.30
- * - Fallback #1: map × 1.30
- * - Fallback #2: msrp × 0.85
+ * WHEELS:
+ * - If cost exists: price = cost × 1.30 (30% margin), **capped at MSRP**
+ * - Fallback #1: MAP (Minimum Advertised Price), capped at MSRP
+ * - Fallback #2: MSRP passthrough
+ * - MSRP is always the price ceiling — never sell above it
  * 
- * TIRES: Unchanged (uses existing MAP/MSRP logic)
+ * TIRES: Passthrough (uses MAP or MSRP directly)
  * 
  * @created 2026-04-03
+ * @updated 2026-07-15 - Added MSRP ceiling to all pricing paths
  */
 
 // ============================================================================
@@ -29,7 +31,7 @@ export interface PricingInput {
 
 export interface PricingResult {
   sellPrice: number;
-  pricingMethod: "cost_markup" | "map_markup" | "msrp_discount" | "passthrough" | "no_price";
+  pricingMethod: "cost_markup" | "map_passthrough" | "msrp_discount" | "passthrough" | "no_price";
   originalInput: {
     cost: number | null;
     map: number | null;
@@ -45,8 +47,8 @@ export interface PricingResult {
 /** Markup multiplier for wheels (30% markup) */
 const WHEEL_MARKUP = 1.30;
 
-/** MSRP discount multiplier for wheels when no cost/MAP available */
-const WHEEL_MSRP_DISCOUNT = 0.85;
+/** @deprecated MSRP is now used as-is (no discount) — kept for backwards compat */
+const WHEEL_MSRP_DISCOUNT = 1.0;
 
 /** Minimum valid price threshold */
 const MIN_VALID_PRICE = 1;
@@ -76,43 +78,61 @@ export function calculateSellPrice(input: PricingInput): PricingResult {
   };
   
   // ═══════════════════════════════════════════════════════════════════════════
-  // WHEEL PRICING (30% markup model)
+  // WHEEL PRICING (30% markup model with MSRP ceiling)
   // ═══════════════════════════════════════════════════════════════════════════
   if (productType === "wheel") {
-    // Priority 1: Cost-based pricing (30% markup)
+    // Priority 1: Cost-based pricing (30% markup, capped at MSRP)
     if (costValue !== null) {
-      const sellPrice = Math.round(costValue * WHEEL_MARKUP * 100) / 100;
+      let sellPrice = Math.round(costValue * WHEEL_MARKUP * 100) / 100;
+      let pricingMethod: PricingResult["pricingMethod"] = "cost_markup";
+      
+      // Cap at MSRP if markup exceeds it
+      if (msrpValue !== null && sellPrice > msrpValue) {
+        if (sku) {
+          console.log(`[pricing] MSRP_CAP wheel ${sku}: cost markup (${sellPrice}) > MSRP (${msrpValue}), using MSRP`);
+        }
+        sellPrice = Math.round(msrpValue * 100) / 100;
+        pricingMethod = "msrp_discount"; // Treated as MSRP-based pricing
+      }
+      
       return {
         sellPrice,
-        pricingMethod: "cost_markup",
+        pricingMethod,
         originalInput,
         margin: ((sellPrice - costValue) / sellPrice) * 100,
       };
     }
     
-    // Priority 2: MAP-based pricing (30% markup)
+    // Priority 2: MAP (Minimum Advertised Price) — use as-is, capped at MSRP
     if (mapValue !== null) {
-      const sellPrice = Math.round(mapValue * WHEEL_MARKUP * 100) / 100;
+      let sellPrice = Math.round(mapValue * 100) / 100;
+      let pricingMethod: PricingResult["pricingMethod"] = "map_passthrough";
       
-      // Log missing cost for monitoring
-      if (sku) {
-        console.log(`[pricing] MISSING_COST wheel ${sku}: using MAP fallback (${mapValue} → ${sellPrice})`);
+      // Cap at MSRP if MAP exceeds it (shouldn't happen but defensive)
+      if (msrpValue !== null && sellPrice > msrpValue) {
+        if (sku) {
+          console.log(`[pricing] MSRP_CAP wheel ${sku}: MAP (${sellPrice}) > MSRP (${msrpValue}), using MSRP`);
+        }
+        sellPrice = Math.round(msrpValue * 100) / 100;
+        pricingMethod = "msrp_discount";
+      } else if (sku) {
+        console.log(`[pricing] MISSING_COST wheel ${sku}: using MAP (${mapValue})`);
       }
       
       return {
         sellPrice,
-        pricingMethod: "map_markup",
+        pricingMethod,
         originalInput,
       };
     }
     
-    // Priority 3: MSRP discount (15% off)
+    // Priority 3: MSRP passthrough (was 15% off, now just use MSRP)
     if (msrpValue !== null) {
-      const sellPrice = Math.round(msrpValue * WHEEL_MSRP_DISCOUNT * 100) / 100;
+      const sellPrice = Math.round(msrpValue * 100) / 100;
       
       // Log missing cost and MAP for monitoring
       if (sku) {
-        console.log(`[pricing] MISSING_COST_MAP wheel ${sku}: using MSRP fallback (${msrpValue} → ${sellPrice})`);
+        console.log(`[pricing] MISSING_COST_MAP wheel ${sku}: using MSRP (${msrpValue})`);
       }
       
       return {
