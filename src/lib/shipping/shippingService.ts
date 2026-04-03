@@ -16,8 +16,8 @@
 // Configuration
 // ============================================================================
 
-/** Free shipping threshold */
-export const FREE_SHIPPING_THRESHOLD = 1000;
+/** Free shipping threshold (0 = always free) */
+export const FREE_SHIPPING_THRESHOLD = 0;
 
 /** Base shipping rates by zone (for a standard 4-wheel set) */
 const ZONE_BASE_RATES: Record<number, number> = {
