@@ -10,6 +10,9 @@ import {
   getLiftedTireSizesForWheel,
 } from "@/lib/liftedBuildContext";
 import { EmailCartButton } from "./EmailCartButton";
+import { useCartShipping } from "@/lib/shipping/useCartShipping";
+import { ZipCodeInput, FreeShippingProgress } from "./ShippingEstimate";
+import { formatCurrency } from "@/lib/shipping/shippingService";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -218,6 +221,20 @@ export function CartSlideout() {
     accessoryState,
   } = useCart();
 
+  const subtotal = getTotal();
+  
+  // Shipping estimation
+  const {
+    zipCode,
+    setZipCode,
+    clearZipCode,
+    estimate: shippingEstimate,
+    isFreeShipping,
+    amountToFreeShipping,
+    estimatedTotal,
+    isValidZip,
+  } = useCartShipping(items, subtotal);
+
   const slideoutRef = useRef<HTMLDivElement>(null);
 
   // Close on escape key
@@ -274,7 +291,6 @@ export function CartSlideout() {
   const wheelVehicle = wheels[0]?.vehicle;
   const lastWheelItem = lastAddedItem?.type === "wheel" ? lastAddedItem as CartWheelItem : null;
   const vehicle = lastWheelItem?.vehicle || wheelVehicle;
-  const total = getTotal();
   const itemCount = getItemCount();
 
   // Build tires URL with vehicle, wheel, and lifted info
@@ -337,7 +353,7 @@ export function CartSlideout() {
               </h2>
             </div>
             <p className="text-sm text-neutral-600">
-              {itemCount} {itemCount === 1 ? "item" : "items"} • ${total.toFixed(2)}
+              {itemCount} {itemCount === 1 ? "item" : "items"} • ${subtotal.toFixed(2)}
             </p>
           </div>
           <button
@@ -452,10 +468,58 @@ export function CartSlideout() {
 
         {/* Actions */}
         <div className="border-t border-neutral-200 bg-white px-5 py-4 space-y-3">
-          {/* Total */}
-          <div className="flex items-center justify-between text-lg">
-            <span className="font-semibold text-neutral-700">Total</span>
-            <span className="font-extrabold text-neutral-900">${total.toFixed(2)}</span>
+          {/* Shipping estimate */}
+          {items.length > 0 && (
+            <div className="space-y-2">
+              {isFreeShipping ? (
+                <div className="flex items-center gap-2 text-green-700 text-sm">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-semibold">Free Shipping!</span>
+                </div>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-neutral-600">Shipping to:</span>
+                    <ZipCodeInput
+                      value={zipCode}
+                      onChange={setZipCode}
+                      onClear={clearZipCode}
+                      compact
+                    />
+                    {isValidZip && shippingEstimate && (
+                      <span className="text-sm font-semibold">{shippingEstimate.displayAmount}</span>
+                    )}
+                  </div>
+                  <div className="text-xs text-amber-700">
+                    {formatCurrency(amountToFreeShipping)} away from free shipping
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+
+          {/* Totals */}
+          <div className="space-y-1 pt-2 border-t border-neutral-100">
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-neutral-600">Subtotal</span>
+              <span className="text-neutral-900">${subtotal.toFixed(2)}</span>
+            </div>
+            {isValidZip && !isFreeShipping && shippingEstimate && (
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-neutral-600">Shipping (est.)</span>
+                <span className="text-neutral-900">{shippingEstimate.displayAmount}</span>
+              </div>
+            )}
+            <div className="flex items-center justify-between text-lg pt-1">
+              <span className="font-semibold text-neutral-700">
+                {isValidZip ? "Est. Total" : "Subtotal"}
+              </span>
+              <span className="font-extrabold text-neutral-900">
+                ${isValidZip ? estimatedTotal.toFixed(2) : subtotal.toFixed(2)}
+              </span>
+            </div>
           </div>
 
           {/* Primary CTA - changes based on cart contents */}
@@ -503,7 +567,7 @@ export function CartSlideout() {
 
           {/* Trust badges */}
           <div className="pt-3 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
-            <span>✓ Free shipping over $500</span>
+            <span>✓ Free shipping over $1,500</span>
             <span>✓ Expert support</span>
           </div>
         </div>

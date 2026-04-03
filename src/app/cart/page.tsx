@@ -5,6 +5,9 @@ import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem 
 import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
+import { ShippingEstimator } from "@/components/ShippingEstimate";
+import { useCartShipping } from "@/lib/shipping/useCartShipping";
+import { formatCurrency } from "@/lib/shipping/shippingService";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -258,10 +261,21 @@ export default function CartPage() {
     getWheels,
   } = useCart();
 
-  const total = getTotal();
+  const subtotal = getTotal();
   const itemCount = getItemCount();
   const wheels = getWheels();
   const vehicle = wheels[0]?.vehicle;
+
+  // Shipping estimation
+  const {
+    zipCode,
+    setZipCode,
+    estimate: shippingEstimate,
+    isFreeShipping,
+    amountToFreeShipping,
+    estimatedTotal,
+    isValidZip,
+  } = useCartShipping(items, subtotal);
 
   // Build URLs for next steps
   const tiresParams = new URLSearchParams();
@@ -404,18 +418,31 @@ export default function CartPage() {
           </div>
 
           {/* Order Summary */}
-          <div className="lg:sticky lg:top-24 h-fit">
+          <div className="lg:sticky lg:top-24 h-fit space-y-4">
+            {/* Shipping Estimator */}
+            <ShippingEstimator
+              items={items.map(i => ({ type: i.type, quantity: i.quantity, unitPrice: i.unitPrice }))}
+              subtotal={subtotal}
+              variant="card"
+            />
+
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900">Order Summary</h2>
 
               <div className="mt-4 space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Subtotal</span>
-                  <span className="font-semibold text-neutral-900">${total.toFixed(2)}</span>
+                  <span className="font-semibold text-neutral-900">${subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Shipping</span>
-                  <span className="font-semibold text-green-700">FREE</span>
+                  {isFreeShipping ? (
+                    <span className="font-semibold text-green-700">FREE</span>
+                  ) : isValidZip && shippingEstimate ? (
+                    <span className="font-semibold text-neutral-900">{shippingEstimate.displayAmount} (est.)</span>
+                  ) : (
+                    <span className="text-neutral-500">Enter ZIP above</span>
+                  )}
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Tax</span>
@@ -425,7 +452,9 @@ export default function CartPage() {
 
               <div className="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center">
                 <span className="text-lg font-bold text-neutral-900">Estimated Total</span>
-                <span className="text-2xl font-extrabold text-neutral-900">${total.toFixed(2)}</span>
+                <span className="text-2xl font-extrabold text-neutral-900">
+                  ${(isFreeShipping || !isValidZip ? subtotal : estimatedTotal).toFixed(2)}
+                </span>
               </div>
 
               <div className="mt-5 space-y-3">
