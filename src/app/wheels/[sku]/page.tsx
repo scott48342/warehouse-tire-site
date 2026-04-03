@@ -238,7 +238,9 @@ export default async function WheelDetailPage({
   params: Promise<{ sku: string }>;
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const { sku } = await params;
+  const { sku: rawSku } = await params;
+  // Decode URL-encoded characters (e.g., %2B → +) in the SKU
+  const sku = decodeURIComponent(rawSku);
   const sp = (await searchParams) || {};
   const year = safeString(Array.isArray(sp.year) ? sp.year[0] : sp.year);
   const make = safeString(Array.isArray(sp.make) ? sp.make[0] : sp.make);
