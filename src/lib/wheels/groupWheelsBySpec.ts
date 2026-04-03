@@ -91,6 +91,40 @@ export interface GroupedWheel {
 // ============================================================================
 
 /**
+ * Extract model name from title (removes size, finish, specs)
+ * 
+ * Examples:
+ * - "KM708 17X8 5X4.5 M-BRONZE 38MM" → "KM708"
+ * - "BLQ 18X8.5 5X4.5 72 BD +38" → "BLQ"
+ * - "Maverick D538 20X9 6X135 BLK" → "Maverick D538"
+ */
+function extractModelFromTitle(title: string | undefined | null): string {
+  if (!title) return "";
+  
+  const t = String(title).trim();
+  
+  // Find the first size pattern (e.g., "17X8", "18X8.5", "20X9")
+  const sizeMatch = t.match(/\b\d{2}X\d+(?:\.\d+)?\b/i);
+  
+  if (sizeMatch && sizeMatch.index !== undefined && sizeMatch.index > 0) {
+    // Take everything before the size pattern
+    return t.substring(0, sizeMatch.index).trim();
+  }
+  
+  // Fallback: take first 2 words (usually brand + model code)
+  const words = t.split(/\s+/);
+  if (words.length >= 2) {
+    // Check if second word looks like a model code (alphanumeric)
+    if (/^[A-Z0-9-]+$/i.test(words[1])) {
+      return words.slice(0, 2).join(" ");
+    }
+  }
+  
+  // Last resort: first word only
+  return words[0] || t;
+}
+
+/**
  * Normalize string for grouping key (lowercase, trim, collapse whitespace)
  */
 function normalizeString(s: string | undefined | null): string {
@@ -145,6 +179,21 @@ function normalizeFinish(s: string | undefined | null): string {
 // ============================================================================
 
 /**
+ * Get normalized model name for grouping
+ * If model looks like a full title (contains size specs), extract just the model part
+ */
+function getNormalizedModel(wheel: WheelVariantInput): string {
+  const model = wheel.model || "";
+  
+  // Check if model looks like a full title (contains size pattern like "17X8")
+  if (/\b\d{2}X\d+/i.test(model)) {
+    return normalizeString(extractModelFromTitle(model));
+  }
+  
+  return normalizeString(model);
+}
+
+/**
  * Generate grouping key from wheel specs
  * Same key = merge into one card with finish options
  * Different key = separate cards
@@ -152,7 +201,7 @@ function normalizeFinish(s: string | undefined | null): string {
 function generateGroupingKey(wheel: WheelVariantInput): string {
   const parts = [
     normalizeString(wheel.brandCode || wheel.brand),
-    normalizeString(wheel.model),
+    getNormalizedModel(wheel),
     normalizeNumeric(wheel.diameter),
     normalizeNumeric(wheel.width),
     normalizeBoltPattern(wheel.boltPattern),

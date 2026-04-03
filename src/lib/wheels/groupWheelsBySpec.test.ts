@@ -380,7 +380,55 @@ describe("groupWheelsBySpec", () => {
   });
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // Test Case 9: In-stock preference for default
+  // Test Case 9: Model name extraction from title (handles WheelPros titles)
+  // ═══════════════════════════════════════════════════════════════════════════
+  it("should extract model name from title and group correctly", () => {
+    const wheels: WheelVariantInput[] = [
+      {
+        sku: "KM70878012638",
+        brand: "KMC",
+        // Model is the full title with size/finish
+        model: "KM708 17X8 5X4.5 M-BRONZE 38MM",
+        diameter: "17",
+        width: "8",
+        offset: "38",
+        boltPattern: "5X114.3",
+        centerbore: "72.56",
+        finish: "BRONZE",
+        imageUrl: "https://example.com/bronze.jpg",
+        price: 250,
+      },
+      {
+        sku: "KM70878012738",
+        brand: "KMC",
+        // Same model (KM708) but different title due to finish
+        model: "KM708 17X8 5X4.5 S-BLK 38MM",
+        diameter: "17",
+        width: "8",
+        offset: "38",
+        boltPattern: "5X114.3",
+        centerbore: "72.56",
+        finish: "BLACK",
+        imageUrl: "https://example.com/black.jpg",
+        price: 250,
+      },
+    ];
+
+    const result = groupWheelsBySpec(wheels);
+
+    // Should merge into ONE card (same model KM708, same size)
+    expect(result).toHaveLength(1);
+    
+    // Should have both finishes
+    expect(result[0].finishOptions).toHaveLength(2);
+    
+    const finishes = result[0].finishOptions.map(f => f.finish);
+    expect(finishes).toContain("BRONZE");
+    expect(finishes).toContain("BLACK");
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Test Case 10: In-stock preference for default
   // ═══════════════════════════════════════════════════════════════════════════
   it("should prefer in-stock finishes over out-of-stock for default", () => {
     const wheels: WheelVariantInput[] = [
