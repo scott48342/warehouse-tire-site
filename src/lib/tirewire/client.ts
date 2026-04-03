@@ -114,6 +114,18 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
     return _credsCache.data;
   }
   
+  // PRIORITY 1: Check environment variables (works in Vercel serverless)
+  const envAccessKey = process.env.TIREWIRE_ACCESS_KEY;
+  const envGroupToken = process.env.TIREWIRE_GROUP_TOKEN;
+  
+  if (envAccessKey && envGroupToken) {
+    console.log("[tirewire] Using credentials from env vars");
+    const result = { accessKey: envAccessKey, groupToken: envGroupToken };
+    _credsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
+    return result;
+  }
+  
+  // PRIORITY 2: Fall back to database (for local dev if env vars not set)
   const pool = getPool();
   try {
     const { rows } = await pool.query(`
@@ -132,7 +144,7 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
     const decryptedGroupToken = decrypt(groupTokenRow.value);
     
     // Log credential status (not the actual values)
-    console.log("[tirewire] Credentials loaded:", {
+    console.log("[tirewire] Credentials loaded from DB:", {
       accessKeyLength: decryptedAccessKey?.length || 0,
       groupTokenLength: decryptedGroupToken?.length || 0,
       accessKeyPreview: decryptedAccessKey ? `${decryptedAccessKey.slice(0, 4)}...` : "null",
@@ -145,11 +157,18 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
     _credsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
     return result;
   } catch (err) {
-    console.error("[tirewire] Failed to get credentials:", err);
+    console.error("[tirewire] Failed to get credentials from DB:", err);
     return null;
   }
   // NOTE: No longer ending pool - it's reused
 }
+
+// Default connections when using env var credentials (avoids DB query)
+const DEFAULT_CONNECTIONS: TirewireConnection[] = [
+  { provider: "tireweb_atd", connectionId: 488677, enabled: true },
+  { provider: "tireweb_ntw", connectionId: 488546, enabled: true },
+  { provider: "tireweb_usautoforce", connectionId: 488548, enabled: true },
+];
 
 export async function getEnabledConnections(): Promise<TirewireConnection[]> {
   // Return from cache if valid
@@ -157,6 +176,14 @@ export async function getEnabledConnections(): Promise<TirewireConnection[]> {
     return _connsCache.data;
   }
   
+  // PRIORITY 1: Use defaults if env var credentials are set (avoids DB)
+  if (process.env.TIREWIRE_ACCESS_KEY && process.env.TIREWIRE_GROUP_TOKEN) {
+    console.log("[tirewire] Using default connections (env var mode)");
+    _connsCache = { data: DEFAULT_CONNECTIONS, expiresAt: Date.now() + CACHE_TTL_MS };
+    return DEFAULT_CONNECTIONS;
+  }
+  
+  // PRIORITY 2: Query database
   const pool = getPool();
   try {
     const { rows } = await pool.query(`
@@ -173,7 +200,7 @@ export async function getEnabledConnections(): Promise<TirewireConnection[]> {
     _connsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
     return result;
   } catch (err) {
-    console.error("[tirewire] Failed to get connections:", err);
+    console.error("[tirewire] Failed to get connections from DB:", err);
     return [];
   }
   // NOTE: No longer ending pool - it's reused
