@@ -29,6 +29,10 @@ export default function TireImagesAdminPage() {
   
   // Preview
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  
+  // Inline editing
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const [editingUrl, setEditingUrl] = useState("");
 
   const fetchItems = useCallback(async () => {
     setLoading(true);
@@ -99,6 +103,38 @@ export default function TireImagesAdminPage() {
       
       if (!res.ok) throw new Error(data.error || "Failed to delete");
       
+      fetchItems();
+    } catch (err: any) {
+      alert(`Error: ${err.message}`);
+    }
+  };
+
+  const handleStartEdit = (item: TireModelImage) => {
+    setEditingId(item.id);
+    setEditingUrl(item.image_url);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingId(null);
+    setEditingUrl("");
+  };
+
+  const handleSaveEdit = async (id: number) => {
+    if (!editingUrl.trim()) return;
+    
+    try {
+      const res = await fetch("/api/admin/tire-images", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, image_url: editingUrl }),
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) throw new Error(data.error || "Failed to update");
+      
+      setEditingId(null);
+      setEditingUrl("");
       fetchItems();
     } catch (err: any) {
       alert(`Error: ${err.message}`);
@@ -219,17 +255,33 @@ export default function TireImagesAdminPage() {
                   <tr key={item.id} className="hover:bg-neutral-50">
                     <td className="px-4 py-3">
                       <img
-                        src={item.image_url}
+                        src={editingId === item.id ? editingUrl : item.image_url}
                         alt={`${item.brand} ${item.model_pattern}`}
                         className="h-12 w-12 rounded-lg border border-neutral-200 object-contain bg-white cursor-pointer hover:scale-150 transition-transform"
-                        onClick={() => setPreviewUrl(item.image_url)}
+                        onClick={() => setPreviewUrl(editingId === item.id ? editingUrl : item.image_url)}
                         onError={(e) => { 
                           (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" x="50" text-anchor="middle" font-size="40">🛞</text></svg>';
                         }}
                       />
                     </td>
                     <td className="px-4 py-3 font-medium text-neutral-900">{item.brand}</td>
-                    <td className="px-4 py-3 text-neutral-700">{item.model_pattern}</td>
+                    <td className="px-4 py-3 text-neutral-700">
+                      {editingId === item.id ? (
+                        <div className="flex flex-col gap-1">
+                          <span className="text-xs text-neutral-500">{item.model_pattern}</span>
+                          <input
+                            type="url"
+                            value={editingUrl}
+                            onChange={(e) => setEditingUrl(e.target.value)}
+                            className="w-full rounded border border-blue-300 px-2 py-1 text-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                            placeholder="Image URL"
+                            autoFocus
+                          />
+                        </div>
+                      ) : (
+                        item.model_pattern
+                      )}
+                    </td>
                     <td className="px-4 py-3">
                       <span className={`inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${
                         item.source === 'admin' 
@@ -240,12 +292,37 @@ export default function TireImagesAdminPage() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right">
-                      <button
-                        onClick={() => handleDelete(item.id, item.brand, item.model_pattern)}
-                        className="rounded-lg px-3 py-1 text-xs font-medium text-red-600 hover:bg-red-50"
-                      >
-                        Delete
-                      </button>
+                      {editingId === item.id ? (
+                        <div className="flex justify-end gap-1">
+                          <button
+                            onClick={() => handleSaveEdit(item.id)}
+                            className="rounded-lg px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700"
+                          >
+                            Save
+                          </button>
+                          <button
+                            onClick={handleCancelEdit}
+                            className="rounded-lg px-3 py-1 text-xs font-medium text-neutral-600 hover:bg-neutral-100"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="flex justify-end gap-1">
+                          <button
+                            onClick={() => handleStartEdit(item)}
+                            className="rounded-lg px-3 py-1 text-xs font-medium text-blue-600 hover:bg-blue-50"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            onClick={() => handleDelete(item.id, item.brand, item.model_pattern)}
+                            className="rounded-lg px-3 py-1 text-xs font-medium text-red-600 hover:bg-red-50"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      )}
                     </td>
                   </tr>
                 ))}

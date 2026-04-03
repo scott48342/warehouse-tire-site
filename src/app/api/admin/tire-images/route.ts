@@ -103,6 +103,42 @@ export async function POST(req: Request) {
   }
 }
 
+// PUT - Update a tire model image URL
+export async function PUT(req: Request) {
+  try {
+    const body = await req.json();
+    const { id, image_url } = body;
+    
+    if (!id || !image_url) {
+      return NextResponse.json(
+        { error: "Missing required fields: id, image_url" },
+        { status: 400 }
+      );
+    }
+    
+    const db = getPool();
+    
+    const { rows, rowCount } = await db.query(`
+      UPDATE tire_model_images
+      SET image_url = $2, source = 'admin'
+      WHERE id = $1
+      RETURNING id, brand, model_pattern, image_url, source, created_at
+    `, [id, image_url.trim()]);
+    
+    if (rowCount === 0) {
+      return NextResponse.json({ error: "Image not found" }, { status: 404 });
+    }
+    
+    return NextResponse.json({
+      success: true,
+      item: rows[0],
+    });
+  } catch (err: any) {
+    console.error("[admin/tire-images] PUT error:", err);
+    return NextResponse.json({ error: err.message }, { status: 500 });
+  }
+}
+
 // DELETE - Remove a tire model image
 export async function DELETE(req: Request) {
   try {
