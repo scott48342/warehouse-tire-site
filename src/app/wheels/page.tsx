@@ -66,6 +66,7 @@ type WheelProsItem = {
   properties?: {
     model?: string;
     finish?: string;
+    abbreviated_finish_desc?: string; // Finish name from WheelPros API
     diameter?: string;
     width?: string;
     offset?: string;
@@ -633,7 +634,8 @@ export default async function WheelsPage({
     const brandObj = it?.brand && typeof it.brand === "object" ? (it.brand as WheelProsBrand) : null;
     const brandCode = brandObj?.code || undefined;
     const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
-    const finish = it?.techfeed?.finish || it?.properties?.finish;
+    // Extract finish (try multiple possible field names)
+    const finish = it?.techfeed?.finish || it?.properties?.abbreviated_finish_desc || it?.properties?.finish;
     const model = it?.properties?.model || it?.title;
     const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
     const width = it?.properties?.width ? String(it.properties.width) : undefined;
