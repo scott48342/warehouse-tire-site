@@ -15,7 +15,7 @@ export {
   type VehicleSlugParts,
 } from "./slugifyVehicle";
 
-// Content generation
+// Content generation (from content/ directory)
 export {
   generatePageContent,
   shouldGenerateContent,
@@ -28,4 +28,4 @@ export {
   type VehicleCategory,
   type VehiclePersona,
   type PageType,
-} from "./content";
+} from "./content/index";
