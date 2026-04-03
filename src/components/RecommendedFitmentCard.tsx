@@ -156,6 +156,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
   const [oemTireSizes, setOemTireSizes] = useState<string[]>([]);
   const [error, setError] = useState<string>("");
   const [vehicleIsStaggered, setVehicleIsStaggered] = useState<boolean>(false);
+  const [availableDiameters, setAvailableDiameters] = useState<number[]>([]);
 
   useEffect(() => {
     let cancelled = false;
@@ -166,6 +167,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
       setOemTireSizes([]);
       setError("");
       setVehicleIsStaggered(false);
+      setAvailableDiameters([]);
 
       if (!hasVehicle) return;
 
@@ -207,9 +209,20 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
               source: string;
             };
           };
+          filters?: {
+            diameters?: Array<{ value: number; count: number }>;
+            widths?: Array<{ value: number; count: number }>;
+          };
         }>(`/api/wheels/fitment-search?${fitmentQs.toString()}`);
 
         if (cancelled) return;
+
+        // Extract available diameters from filters
+        const filterDiameters = fitmentData?.filters?.diameters;
+        if (filterDiameters && filterDiameters.length > 0) {
+          const diams = filterDiameters.map(d => d.value).sort((a, b) => a - b);
+          setAvailableDiameters(diams);
+        }
 
         // Extract dbProfile (primary source of truth)
         const dbProfile = fitmentData?.fitment?.dbProfile;
@@ -418,10 +431,14 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
             </div>
           ) : (
             <>
-              {details?.wheelDiameterRangeIn ? (
+              {(availableDiameters.length > 0 || details?.wheelDiameterRangeIn) ? (
                 <div className="flex items-center justify-between gap-3">
                   <span className="text-neutral-600">Diameter</span>
-                  <span className="font-semibold">{fmtRange(details.wheelDiameterRangeIn[0], details.wheelDiameterRangeIn[1], "\"")}</span>
+                  <span className="font-semibold">
+                    {availableDiameters.length > 0 
+                      ? fmtRange(availableDiameters[0], availableDiameters[availableDiameters.length - 1], "\"")
+                      : fmtRange(details?.wheelDiameterRangeIn?.[0], details?.wheelDiameterRangeIn?.[1], "\"")}
+                  </span>
                 </div>
               ) : null}
 
