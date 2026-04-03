@@ -9,6 +9,7 @@ import {
   liftedContextMatchesVehicle,
   getLiftedTireSizesForWheel,
 } from "@/lib/liftedBuildContext";
+import { EmailCartButton } from "./EmailCartButton";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -495,8 +496,13 @@ export function CartSlideout() {
             </button>
           </div>
 
+          {/* Email cart link */}
+          <div className="pt-3 border-t border-neutral-100 flex justify-center">
+            <EmailCartButton variant="inline" />
+          </div>
+
           {/* Trust badges */}
-          <div className="pt-3 border-t border-neutral-100 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
+          <div className="pt-3 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
             <span>✓ Free shipping over $500</span>
             <span>✓ Expert support</span>
           </div>

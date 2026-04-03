@@ -7,6 +7,7 @@ import { MobileActionBar } from "@/components/MobileActionBar";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CartSlideout } from "@/components/CartSlideout";
 import { CartTracker } from "@/components/CartTracker";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@/components/Analytics";
 import { Suspense } from "react";
@@ -67,6 +68,7 @@ export default function RootLayout({
           <Footer />
           <MobileActionBar />
           <CartSlideout />
+          <ExitIntentPopup />
         </CartProvider>
       </body>
     </html>

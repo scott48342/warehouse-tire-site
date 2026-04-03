@@ -3,6 +3,10 @@
     {
       "path": "/api/cron/sync-inventory",
       "schedule": "0 */2 * * *"
+    },
+    {
+      "path": "/api/cron/abandoned-cart-emails",
+      "schedule": "*/15 * * * *"
     }
   ]
 }

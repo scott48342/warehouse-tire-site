@@ -4,12 +4,8 @@
  * POST /api/admin/abandoned-carts/emails
  * Process and send recovery emails for abandoned carts.
  * 
- * Actions:
- * - process: Find and send emails to eligible carts
- * - test: Send test email to specific cart
- * - status: Get email processing status
- * 
  * @created 2026-03-25
+ * @updated 2026-04-03 - Updated for 3-email sequence
  */
 
 import { NextResponse } from "next/server";
@@ -18,10 +14,11 @@ import {
   sendRecoveryEmail,
   findCartsForFirstEmail,
   findCartsForSecondEmail,
-  abandonedCartEmailService,
+  findCartsForThirdEmail,
+  EMAIL_SAFE_MODE,
+  EMAIL_SCHEDULE,
+  type EmailStep,
 } from "@/lib/cart/abandonedCartEmail";
-
-const { EMAIL_SAFE_MODE } = abandonedCartEmailService;
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts } from "@/lib/fitment-db/schema";
 import { eq } from "drizzle-orm";
@@ -34,20 +31,20 @@ export const runtime = "nodejs";
  */
 export async function GET() {
   try {
-    const pendingFirst = await findCartsForFirstEmail();
-    const pendingSecond = await findCartsForSecondEmail();
+    const [pendingFirst, pendingSecond, pendingThird] = await Promise.all([
+      findCartsForFirstEmail(),
+      findCartsForSecondEmail(),
+      findCartsForThirdEmail(),
+    ]);
 
     return NextResponse.json({
       safeMode: EMAIL_SAFE_MODE,
+      schedule: EMAIL_SCHEDULE,
       pending: {
         firstEmail: pendingFirst.length,
         secondEmail: pendingSecond.length,
-        total: pendingFirst.length + pendingSecond.length,
-      },
-      config: {
-        safeMode: EMAIL_SAFE_MODE,
-        firstEmailDelayHours: 1,
-        secondEmailDelayHours: 24,
+        thirdEmail: pendingThird.length,
+        total: pendingFirst.length + pendingSecond.length + pendingThird.length,
       },
     });
   } catch (err: any) {
@@ -65,20 +62,27 @@ export async function GET() {
  * Body:
  * - action: "process" | "test" | "preview" | "send-preview"
  * - cartId: (for test) cart to send test email to
+ * - step: "first" | "second" | "third" - which email to send
  * - email: (for send-preview) email address to send preview to
- * - variant: (for send-preview) "first" | "second" - which email variant
  */
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { action, cartId, email, variant } = body;
+    const { action, cartId, step, email } = body;
 
     switch (action) {
       case "send-preview": {
-        // Send preview email with mock data to specified address
         if (!email) {
           return NextResponse.json(
             { error: "email required for send-preview action" },
+            { status: 400 }
+          );
+        }
+
+        const emailStep: EmailStep = step || "first";
+        if (!["first", "second", "third"].includes(emailStep)) {
+          return NextResponse.json(
+            { error: "step must be first, second, or third" },
             { status: 400 }
           );
         }
@@ -97,13 +101,12 @@ export async function POST(req: Request) {
           vehicleModel: "F-150",
           vehicleTrim: "XLT",
           items: [
-            { type: "wheel", brand: "Fuel", model: "Rebel", finish: "Matte Black", quantity: 4 },
-            { type: "tire", brand: "Nitto", model: "Ridge Grappler", size: "275/65R20", quantity: 4 },
-            { type: "accessory", name: "Gorilla Lug Nuts (Black)", quantity: 1 },
+            { type: "wheel", brand: "Fuel", model: "Rebel", finish: "Matte Black", diameter: "20", width: "9", quantity: 4, unitPrice: 350, imageUrl: null },
+            { type: "tire", brand: "Nitto", model: "Ridge Grappler", size: "275/65R20", quantity: 4, unitPrice: 280, imageUrl: null },
           ],
-          itemCount: 5,
-          subtotal: "1847",
-          estimatedTotal: "1847",
+          itemCount: 8,
+          subtotal: "2520",
+          estimatedTotal: "2520",
           status: "abandoned" as const,
           recoveredOrderId: null,
           recoveredAt: null,
@@ -114,9 +117,11 @@ export async function POST(req: Request) {
           source: "preview",
           userAgent: null,
           ipAddress: null,
-          firstEmailSentAt: variant === "second" ? new Date(Date.now() - 24 * 60 * 60 * 1000) : null,
-          secondEmailSentAt: null,
-          emailSentCount: variant === "second" ? 1 : 0,
+          firstEmailSentAt: emailStep !== "first" ? new Date(Date.now() - 24 * 60 * 60 * 1000) : null,
+          secondEmailSentAt: emailStep === "third" ? new Date(Date.now() - 12 * 60 * 60 * 1000) : null,
+          thirdEmailSentAt: null,
+          emailSentCount: emailStep === "first" ? 0 : emailStep === "second" ? 1 : 2,
+          lastEmailStatus: null,
           unsubscribed: false,
           recoveredAfterEmail: false,
         };
@@ -126,18 +131,17 @@ export async function POST(req: Request) {
         process.env.EMAIL_SAFE_MODE = "false";
 
         try {
-          const result = await sendRecoveryEmail(mockCart as any, variant === "second");
+          const result = await sendRecoveryEmail(mockCart as any, emailStep);
           
           return NextResponse.json({
             success: result.success,
             action: "send-preview",
             sentTo: email,
-            variant: variant || "first",
+            step: emailStep,
             result,
           });
         } finally {
-          // Restore safe mode
-          if (originalSafeMode) {
+          if (originalSafeMode !== undefined) {
             process.env.EMAIL_SAFE_MODE = originalSafeMode;
           } else {
             delete process.env.EMAIL_SAFE_MODE;
@@ -146,7 +150,6 @@ export async function POST(req: Request) {
       }
 
       case "process": {
-        // Process all pending emails
         const result = await processAbandonedCartEmails();
         
         return NextResponse.json({
@@ -158,10 +161,17 @@ export async function POST(req: Request) {
       }
 
       case "test": {
-        // Send test email to specific cart
         if (!cartId) {
           return NextResponse.json(
             { error: "cartId required for test action" },
+            { status: 400 }
+          );
+        }
+
+        const emailStep: EmailStep = step || "first";
+        if (!["first", "second", "third"].includes(emailStep)) {
+          return NextResponse.json(
+            { error: "step must be first, second, or third" },
             { status: 400 }
           );
         }
@@ -179,7 +189,7 @@ export async function POST(req: Request) {
           );
         }
 
-        const result = await sendRecoveryEmail(cart, false);
+        const result = await sendRecoveryEmail(cart, emailStep);
         
         return NextResponse.json({
           success: result.success,
@@ -190,13 +200,16 @@ export async function POST(req: Request) {
       }
 
       case "preview": {
-        // Preview what emails would be sent
-        const firstEmailCarts = await findCartsForFirstEmail();
-        const secondEmailCarts = await findCartsForSecondEmail();
+        const [firstEmailCarts, secondEmailCarts, thirdEmailCarts] = await Promise.all([
+          findCartsForFirstEmail(),
+          findCartsForSecondEmail(),
+          findCartsForThirdEmail(),
+        ]);
 
         return NextResponse.json({
           action: "preview",
           safeMode: EMAIL_SAFE_MODE,
+          schedule: EMAIL_SCHEDULE,
           firstEmail: {
             count: firstEmailCarts.length,
             carts: firstEmailCarts.map(c => ({
@@ -213,6 +226,15 @@ export async function POST(req: Request) {
               email: c.customerEmail,
               value: Number(c.estimatedTotal),
               firstEmailSentAt: c.firstEmailSentAt,
+            })),
+          },
+          thirdEmail: {
+            count: thirdEmailCarts.length,
+            carts: thirdEmailCarts.map(c => ({
+              cartId: c.cartId,
+              email: c.customerEmail,
+              value: Number(c.estimatedTotal),
+              secondEmailSentAt: c.secondEmailSentAt,
             })),
           },
         });

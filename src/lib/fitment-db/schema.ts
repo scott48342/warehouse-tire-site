@@ -449,7 +449,9 @@ export const abandonedCarts = pgTable(
     // Email tracking
     firstEmailSentAt: timestamp("first_email_sent_at"),
     secondEmailSentAt: timestamp("second_email_sent_at"),
+    thirdEmailSentAt: timestamp("third_email_sent_at"),
     emailSentCount: integer("email_sent_count").notNull().default(0),
+    lastEmailStatus: varchar("last_email_status", { length: 50 }), // sent, failed, bounced
     recoveredAfterEmail: boolean("recovered_after_email").default(false),
     unsubscribed: boolean("unsubscribed").default(false),
   },
@@ -467,8 +469,62 @@ export const abandonedCarts = pgTable(
 );
 
 // ============================================================================
+// email_subscribers - Marketing email capture
+// ============================================================================
+
+export const emailSubscribers = pgTable(
+  "email_subscribers",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Core email
+    email: varchar("email", { length: 255 }).notNull(),
+    
+    // Source tracking
+    source: varchar("source", { length: 50 }).notNull(), // exit_intent, cart_save, checkout, newsletter, quote
+    
+    // Optional vehicle association
+    vehicleYear: varchar("vehicle_year", { length: 10 }),
+    vehicleMake: varchar("vehicle_make", { length: 100 }),
+    vehicleModel: varchar("vehicle_model", { length: 100 }),
+    vehicleTrim: varchar("vehicle_trim", { length: 255 }),
+    
+    // Link to cart (if applicable)
+    cartId: varchar("cart_id", { length: 64 }),
+    
+    // Consent & preferences
+    marketingConsent: boolean("marketing_consent").notNull().default(true),
+    unsubscribed: boolean("unsubscribed").notNull().default(false),
+    unsubscribedAt: timestamp("unsubscribed_at"),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+    
+    // Metadata
+    ipAddress: varchar("ip_address", { length: 45 }),
+    userAgent: text("user_agent"),
+  },
+  (table) => ({
+    // Unique email per source (allow same email from different sources)
+    emailSourceIdx: uniqueIndex("email_subscribers_email_source_idx").on(table.email, table.source),
+    // Fast email lookup
+    emailIdx: index("email_subscribers_email_idx").on(table.email),
+    // Source filtering
+    sourceIdx: index("email_subscribers_source_idx").on(table.source),
+    // Vehicle queries
+    vehicleIdx: index("email_subscribers_vehicle_idx").on(table.vehicleYear, table.vehicleMake, table.vehicleModel),
+    // Cart linking
+    cartIdIdx: index("email_subscribers_cart_id_idx").on(table.cartId),
+  })
+);
+
+// ============================================================================
 // Type exports for Drizzle
 // ============================================================================
+
+export type EmailSubscriber = typeof emailSubscribers.$inferSelect;
+export type NewEmailSubscriber = typeof emailSubscribers.$inferInsert;
 
 export type AbandonedCart = typeof abandonedCarts.$inferSelect;
 export type NewAbandonedCart = typeof abandonedCarts.$inferInsert;
