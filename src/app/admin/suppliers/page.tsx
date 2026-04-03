@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 // ============ Types ============
 
@@ -231,11 +232,20 @@ export default function SuppliersPage() {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-white">Suppliers</h1>
-        <p className="text-neutral-400 mt-1">
-          Manage wheel and tire supplier connections
-        </p>
+      <div className="flex items-start justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-white">Suppliers</h1>
+          <p className="text-neutral-400 mt-1">
+            Manage wheel and tire supplier connections
+          </p>
+        </div>
+        <Link
+          href="/admin/suppliers/status"
+          className="px-4 py-2 bg-neutral-700 text-white rounded-lg text-sm font-medium hover:bg-neutral-600 flex items-center gap-2"
+        >
+          <span>📊</span>
+          <span>View Status Dashboard</span>
+        </Link>
       </div>
 
       {/* Connection Status Overview */}
@@ -354,7 +364,7 @@ export default function SuppliersPage() {
                 <p className="text-xs text-neutral-400 mt-1">
                   {tirewebConfig.configured
                     ? "✓ Group token configured"
-                    : "⏳ Enter your group token from Tirewire"}
+                    : "⏳ Enter your group token from TireWeb"}
                 </p>
               </div>
             </div>
@@ -379,7 +389,7 @@ export default function SuppliersPage() {
                   value={groupToken}
                   onChange={(e) => setGroupToken(e.target.value)}
                   className="w-full h-10 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white"
-                  placeholder="Enter group token from Tirewire"
+                  placeholder="Enter group token from TireWeb"
                 />
                 <p className="text-xs text-neutral-500 mt-1">Required - provided by Tirewire</p>
               </div>
@@ -416,9 +426,9 @@ export default function SuppliersPage() {
                 </button>
               </div>
               <p className="text-xs text-neutral-500">
-                Contact Tirewire at{" "}
-                <a href="mailto:developer@tirewire.com" className="text-red-400 hover:underline">
-                  developer@tirewire.com
+                Contact TireWeb support at{" "}
+                <a href="mailto:support@tireweb.com" className="text-red-400 hover:underline">
+                  support@tireweb.com
                 </a>{" "}
                 if you need help with credentials.
               </p>
@@ -662,7 +672,7 @@ function TirewebSupplierCard({
                 if (!isNaN(val)) onUpdateConnectionId(val);
               }}
               className="w-full h-9 rounded-lg bg-neutral-700 border border-neutral-600 px-3 text-white text-sm"
-              placeholder="From Tirewire"
+              placeholder="from TireWeb"
             />
           </div>
         )}
