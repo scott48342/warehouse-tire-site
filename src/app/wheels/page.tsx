@@ -15,6 +15,8 @@ import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diameterOptions";
 import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
+import { getIndexingDecision, buildPageIndexingData, getRobotsContent } from "@/lib/seo";
+import type { Metadata } from "next";
 
 type Wheel = {
   sku?: string;
@@ -1034,8 +1036,49 @@ export default async function WheelsPage({
   // Lifted preset display name for UI
   const liftedPresetLabel = liftedPreset === "daily" ? "Daily Driver" : liftedPreset === "offroad" ? "Off-Road" : liftedPreset === "extreme" ? "Extreme" : liftedPreset;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEO INDEXING DECISION
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Determine whether this page should be indexed based on content quality
+  const seoDecision = getIndexingDecision(buildPageIndexingData({
+    pageType: "wheels",
+    products: itemsFinal.map(w => ({ imageUrl: w.imageUrl, price: w.price })),
+    year,
+    make,
+    model,
+    trim,
+    modification,
+    path: basePath,
+    fitmentConfidence: fitmentConfidence as "high" | "medium" | "low" | "none" | undefined,
+  }));
+  
+  const robotsContent = getRobotsContent(seoDecision);
+  
+  // Log SEO decision in development
+  if (process.env.NODE_ENV === "development") {
+    console.log("[wheels/page] SEO Decision:", {
+      noindex: seoDecision.noindex,
+      reason: seoDecision.reason,
+      canonical: seoDecision.canonicalUrl,
+      robots: robotsContent,
+      productCount: itemsFinal.length,
+      productsWithImages: itemsFinal.filter(w => w.imageUrl).length,
+    });
+  }
+
   return (
-    <main className="bg-neutral-50">
+    <>
+      {/* ═══════════════════════════════════════════════════════════════════════
+          DYNAMIC SEO META TAGS
+          ═══════════════════════════════════════════════════════════════════════ */}
+      <head>
+        <meta name="robots" content={robotsContent} />
+        {seoDecision.canonicalUrl && (
+          <link rel="canonical" href={`https://shop.warehousetiredirect.com${seoDecision.canonicalUrl}`} />
+        )}
+      </head>
+      
+      <main className="bg-neutral-50">
       {/* ═══════════════════════════════════════════════════════════════════════
           PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
           ═══════════════════════════════════════════════════════════════════════ */}
@@ -1756,5 +1799,6 @@ export default async function WheelsPage({
         ) : null}
       </div>
     </main>
+    </>
   );
 }
