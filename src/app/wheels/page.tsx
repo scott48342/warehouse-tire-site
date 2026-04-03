@@ -14,6 +14,7 @@ import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diameterOptions";
+import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
 
 type Wheel = {
   sku?: string;
@@ -24,6 +25,7 @@ type Wheel = {
   diameter?: string;
   width?: string;
   offset?: string;
+  boltPattern?: string; // Bolt pattern for grouping (e.g., "5x114.3")
   centerbore?: string; // Wheel center bore in mm (for hub ring calculation)
   imageUrl?: string;
   price?: number;
@@ -67,6 +69,8 @@ type WheelProsItem = {
     diameter?: string;
     width?: string;
     offset?: string;
+    boltPattern?: string; // Bolt pattern (from TechFeed)
+    boltPatternMetric?: string; // Metric bolt pattern (e.g., "5x114.3")
     centerbore?: string; // Wheel center bore in mm (from TechFeed)
   };
   prices?: {
@@ -634,6 +638,8 @@ export default async function WheelsPage({
     const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
     const width = it?.properties?.width ? String(it.properties.width) : undefined;
     const offset = it?.properties?.offset ? String(it.properties.offset) : undefined;
+    // Bolt pattern for grouping (prefer metric format, e.g., "5x114.3")
+    const boltPattern = it?.properties?.boltPatternMetric || it?.properties?.boltPattern || undefined;
     // Wheel center bore for hub ring calculation (from TechFeed via fitment-search API)
     const centerbore = it?.properties?.centerbore ? String(it.properties.centerbore) : undefined;
 
@@ -666,6 +672,7 @@ export default async function WheelsPage({
       diameter,
       width,
       offset,
+      boltPattern,
       centerbore,
       imageUrl,
       price: typeof price === "number" && Number.isFinite(price) ? price : undefined,
@@ -676,187 +683,32 @@ export default async function WheelsPage({
     };
   });
 
-  // Group wheels by styleKey so multiple finishes show as one block.
-  const grouped: Wheel[] = (() => {
-    const map = new Map<string, Wheel[]>();
-    const singles: Wheel[] = [];
-
-    for (const w of itemsUnsorted) {
-      const fallbackKey = `${String(w.brandCode || w.brand || "").trim()}::${String(w.model || "").trim()}`;
-      const k = String(w.styleKey || "").trim() || (fallbackKey.includes("::") ? fallbackKey : "");
-      if (!k || k === "::") {
-        singles.push(w);
-        continue;
-      }
-      const arr = map.get(k) || [];
-      arr.push(w);
-      map.set(k, arr);
-    }
-
-    const out: Wheel[] = [];
-
-    for (const [k, arr] of map.entries()) {
-      // representative: first with image, else first.
-      const rep = arr.find((x) => x.imageUrl) || arr[0];
-
-      function n(v: any) {
-        const x = Number(String(v || "").trim());
-        return Number.isFinite(x) ? x : NaN;
-      }
-
-      const variants = arr
-        .map((x) => ({
-          sku: String(x.sku || ""),
-          diameter: x.diameter,
-          width: x.width,
-          offset: x.offset,
-          d: n(x.diameter),
-          w: n(x.width),
-        }))
-        .filter((v) => v.sku && Number.isFinite(v.d) && Number.isFinite(v.w));
-
-      function rimDiaFromTireSize(s: string) {
-        const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);
-        return m ? Number(m[1]) : NaN;
-      }
-
-      // Only compute staggered pairs for vehicles that explicitly support staggered fitment.
-      // Multiple tire size OPTIONS does not mean staggered (e.g., F-150 has 17/18/20" options but not staggered).
-      const useMixedDia = vehicleCallsForStaggered;
-      const inferredFrontDia = NaN;
-      const inferredRearDia = NaN;
-
-      // Finish dropdown options (also carries a finish-specific pair so selecting a finish updates both axles).
-      const thumbs: { finish: string; sku: string; imageUrl?: string; price?: number; stockQty?: number; inventoryType?: string; pair?: Wheel["pair"] }[] = [];
-      const seen = new Set<string>();
-      for (const x of arr) {
-        const fin = String(x.finish || "").trim();
-        if (!fin || seen.has(fin)) continue;
-        seen.add(fin);
-
-        const arrFin = arr.filter((z) => String(z.finish || "").trim() === fin);
-        const variantsFin = arrFin
-          .map((z) => ({
-            sku: String(z.sku || ""),
-            diameter: z.diameter,
-            width: z.width,
-            offset: z.offset,
-            d: n(z.diameter),
-            w: n(z.width),
-          }))
-          .filter((v) => v.sku && Number.isFinite(v.d) && Number.isFinite(v.w));
-
-        const maxDiaFin = variantsFin.length ? Math.max(...variantsFin.map((v) => v.d)) : NaN;
-
-        const frontPoolFin = useMixedDia
-          ? variantsFin.filter((v) => Math.abs(v.d - inferredFrontDia) < 0.11)
-          : (Number.isFinite(maxDiaFin) ? variantsFin.filter((v) => Math.abs(v.d - maxDiaFin) < 0.06) : []);
-
-        const rearPoolFin = useMixedDia
-          ? variantsFin.filter((v) => Math.abs(v.d - inferredRearDia) < 0.11)
-          : frontPoolFin;
-
-        const poolFrontFin = frontPoolFin.length ? frontPoolFin : variantsFin;
-        const poolRearFin = rearPoolFin.length ? rearPoolFin : variantsFin;
-
-        let pairFin: Wheel["pair"] | undefined = undefined;
-        if (poolFrontFin.length) {
-          const frontV = [...poolFrontFin].sort((a, b) => a.w - b.w)[0];
-          const rearV = [...poolRearFin].sort((a, b) => b.w - a.w)[0];
-
-          // IMPORTANT: Only allow staggered pairs if the VEHICLE supports staggered fitment.
-          // Don't infer staggered from wheel style variants (different widths available).
-          const staggered = vehicleCallsForStaggered &&
-            Boolean(rearV && frontV) &&
-            (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0);
-
-          pairFin = {
-            staggered,
-            front: { sku: frontV.sku, diameter: frontV.diameter, width: frontV.width, offset: frontV.offset },
-            rear: staggered
-              ? { sku: rearV.sku, diameter: rearV.diameter, width: rearV.width, offset: rearV.offset }
-              : undefined,
-          };
-        }
-
-        thumbs.push({
-          finish: fin,
-          sku: pairFin?.front?.sku || x.sku || "",
-          imageUrl: x.imageUrl,
-          price: x.price,
-          stockQty: x.stockQty,
-          inventoryType: x.inventoryType,
-          pair: pairFin,
-        });
-      }
-
-      const maxDia = variants.length ? Math.max(...variants.map((v) => v.d)) : NaN;
-
-      const frontPool = useMixedDia
-        ? variants.filter((v) => Math.abs(v.d - inferredFrontDia) < 0.11)
-        : (Number.isFinite(maxDia) ? variants.filter((v) => Math.abs(v.d - maxDia) < 0.06) : []);
-
-      const rearPool = useMixedDia
-        ? variants.filter((v) => Math.abs(v.d - inferredRearDia) < 0.11)
-        : frontPool;
-
-      const poolFront = frontPool.length ? frontPool : variants;
-      const poolRear = rearPool.length ? rearPool : variants;
-
-      let pair: Wheel["pair"] | undefined = undefined;
-      if (poolFront.length) {
-        const frontV = [...poolFront].sort((a, b) => a.w - b.w)[0];
-        const rearV = [...poolRear].sort((a, b) => b.w - a.w)[0];
-
-        // IMPORTANT: Only allow staggered pairs if the VEHICLE supports staggered fitment.
-        // Don't infer staggered from wheel style variants (different widths available).
-        const staggered = vehicleCallsForStaggered &&
-          Boolean(rearV && frontV) &&
-          (rearV.d - frontV.d >= 1 || rearV.w - frontV.w >= 1.0);
-
-        pair = {
-          staggered,
-          front: {
-            sku: frontV.sku,
-            diameter: frontV.diameter,
-            width: frontV.width,
-            offset: frontV.offset,
-          },
-          rear: staggered
-            ? {
-                sku: rearV.sku,
-                diameter: rearV.diameter,
-                width: rearV.width,
-                offset: rearV.offset,
-              }
-            : undefined,
-        };
-      }
-
-      // Determine best fitmentClass for this style (prioritize surefit > specfit > extended)
-      const fitmentPriority = (fc: string | undefined) => {
-        if (fc === "surefit") return 0;
-        if (fc === "specfit") return 1;
-        if (fc === "extended") return 2;
-        return 3; // unknown
-      };
-      const bestFitmentClass = arr.reduce((best, w) => {
-        if (!best) return w.fitmentClass;
-        if (fitmentPriority(w.fitmentClass) < fitmentPriority(best)) return w.fitmentClass;
-        return best;
-      }, undefined as Wheel["fitmentClass"]);
-
-      out.push({
-        ...rep,
-        styleKey: k,
-        finishThumbs: thumbs.filter((t) => t.sku),
-        pair,
-        fitmentClass: bestFitmentClass,
-      });
-    }
-
-    return [...out, ...singles];
-  })();
+  // ═══════════════════════════════════════════════════════════════════════════
+  // WHEEL GROUPING - Deduplicate by size/spec, merge finishes
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Group wheels by: brand + model + diameter + width + bolt pattern + offset + centerbore
+  // Same specs → merge into one card with finish options
+  // Different specs → separate cards
+  const grouped: Wheel[] = groupWheelsBySpec(itemsUnsorted as WheelVariantInput[]).map((g) => ({
+    sku: g.sku,
+    brand: g.brand,
+    brandCode: g.brandCode,
+    model: g.model,
+    finish: g.selectedFinish,
+    diameter: g.diameter,
+    width: g.width,
+    offset: g.offset,
+    boltPattern: g.boltPattern,
+    centerbore: g.centerbore,
+    imageUrl: g.imageUrl,
+    price: g.price,
+    stockQty: g.stockQty,
+    inventoryType: g.inventoryType,
+    styleKey: g.styleKey,
+    fitmentClass: g.fitmentClass,
+    pair: g.pair,
+    finishThumbs: g.finishOptions,
+  }));
 
   // Sort by fitmentClass first (surefit > specfit > extended), then by user's sort preference
   const fitmentClassRank = (fc: Wheel["fitmentClass"]) => {
