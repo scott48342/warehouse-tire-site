@@ -1291,8 +1291,11 @@ async function handleDbFirstWheelResults(opts: {
       prices: {
         msrp: [
           {
-            // Use pricing service for 35% markup model
-            currencyAmount: String(calculateWheelSellPrice({ map: Number(c.map_price) || null, msrp: Number(c.msrp) || null })),
+            // Use pricing service - prefer inventory cache pricing (2hr sync) over techfeed (stale CSV)
+            currencyAmount: String(calculateWheelSellPrice({ 
+              map: inv?.mapPrice ?? (Number(c.map_price) || null), 
+              msrp: inv?.msrp ?? (Number(c.msrp) || null) 
+            })),
             currencyCode: "USD",
           },
         ],

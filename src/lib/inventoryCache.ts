@@ -17,6 +17,7 @@ export type CachedInventory = {
   inventoryType: string;
   totalQty: number;
   msrp: number | null;
+  mapPrice: number | null;
   cachedAt: number;
 };
 
@@ -61,6 +62,7 @@ export async function getInventoryForSku(sku: string): Promise<CachedInventory |
       inventoryType: data.t || "UNKNOWN",
       totalQty: data.q || 0,
       msrp: data.m || null,
+      mapPrice: data.p || null,
       cachedAt: data.u || 0,
     };
   } catch {
@@ -86,6 +88,7 @@ export async function getInventoryBulk(skus: string[]): Promise<Map<string, Cach
         inventoryType: data.t || "UNKNOWN",
         totalQty: data.q || 0,
         msrp: data.m || null,
+        mapPrice: data.p || null,
         cachedAt: data.u || 0,
       });
     } catch {

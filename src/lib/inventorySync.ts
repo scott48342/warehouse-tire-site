@@ -173,6 +173,7 @@ async function cacheInventoryData(records: WheelInventoryRecord[]): Promise<numb
       t: record.inventoryType,  // type
       q: record.totalQty,       // quantity
       m: record.msrp,           // msrp
+      p: record.mapPrice,       // map price
       u: Date.now(),            // updated at
     });
     
