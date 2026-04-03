@@ -15,6 +15,17 @@ export {
   type VehicleSlugParts,
 } from "./slugifyVehicle";
 
+// Vehicle lookup
+export {
+  getVehicleBySlug,
+  formatVehicleName,
+} from "./getVehicleBySlug";
+
+// Vehicle data
+export {
+  getRelatedVehicles,
+} from "./vehicleData";
+
 // Content generation (from content/ directory)
 export {
   generatePageContent,
