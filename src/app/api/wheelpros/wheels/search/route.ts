@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { getTechfeedWheelBySku } from "@/lib/techfeed/wheels";
+import { calculateWheelSellPrice } from "@/lib/pricing";
+import { getInventoryForSku } from "@/lib/inventoryCache";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -161,10 +163,24 @@ export async function GET(req: Request) {
         if (tf.abbreviated_finish_desc && !it.properties.finish)
           it.properties.finish = tf.abbreviated_finish_desc;
 
-        // MSRP: you asked to apply MSRP for WheelPros wheels.
-        if (tf.msrp) {
+        // Apply pricing service for consistent pricing across all surfaces.
+        // Priority: API pricing (fresh) > techfeed pricing (can be stale)
+        // WheelPros API returns current MSRP; techfeed CSV may have outdated values.
+        const apiMsrp = it.prices?.msrp?.[0]?.currencyAmount 
+          ? Number(it.prices.msrp[0].currencyAmount) 
+          : null;
+        const apiMap = it.prices?.map?.[0]?.currencyAmount
+          ? Number(it.prices.map[0].currencyAmount)
+          : null;
+        
+        // Use API pricing when available, fall back to techfeed
+        const sellPrice = calculateWheelSellPrice({
+          map: apiMap ?? (tf.map_price ? Number(tf.map_price) : null),
+          msrp: apiMsrp ?? (tf.msrp ? Number(tf.msrp) : null),
+        });
+        if (sellPrice !== null) {
           it.prices = it.prices || {};
-          it.prices.msrp = [{ currencyAmount: String(tf.msrp), currencyCode: "USD" }];
+          it.prices.msrp = [{ currencyAmount: String(sellPrice), currencyCode: "USD" }];
         }
 
         // Images: use techfeed when WheelPros images are missing.
@@ -200,6 +216,27 @@ export async function GET(req: Request) {
       data.results = filtered.length >= minKeep ? filtered : enriched;
     } else {
       data.results = enriched;
+    }
+    
+    // INVENTORY VERIFICATION: Filter out SKUs not in SFTP inventory feed
+    // This removes discontinued/stale products that WheelPros API may still return
+    const verifyInventory = sp.has("sku"); // Only strict verify for single-SKU lookups
+    if (verifyInventory && data.results?.length) {
+      const verified = await Promise.all(
+        data.results.map(async (it) => {
+          const sku = it?.sku ? String(it.sku) : "";
+          if (!sku) return null;
+          const inv = await getInventoryForSku(sku);
+          // SKU must exist in inventory feed (indicates it's an active product)
+          return inv ? it : null;
+        })
+      );
+      const beforeCount = data.results.length;
+      data.results = verified.filter(Boolean);
+      
+      if (debug && data.results.length < beforeCount) {
+        console.log(`[wheelpros/search] ⚠️ Inventory verify filtered ${beforeCount - data.results.length} SKUs not in SFTP feed`);
+      }
     }
   }
 
