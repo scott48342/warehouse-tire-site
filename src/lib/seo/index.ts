@@ -32,6 +32,29 @@ export {
   formatCount,
 } from "./counts";
 
+// Content builders (from content.ts file)
+export {
+  buildH1,
+  buildIntroParagraph,
+  buildFitmentFactItems,
+  buildRelatedLinks,
+  buildFAQItems,
+  buildFAQJsonLd,
+  type FitmentFactItem,
+  type RelatedLink,
+  type FAQItem,
+} from "./content";
+
+// Metadata
+export {
+  buildProductListJsonLd,
+} from "./metadata";
+
+// URL/slug builders
+export {
+  buildCanonicalUrl,
+} from "./slugs";
+
 // Content generation (from content/ directory)
 export {
   generatePageContent,
