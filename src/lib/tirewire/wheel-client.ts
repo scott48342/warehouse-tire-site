@@ -1,17 +1,18 @@
 /**
- * Tirewire Connections Center WHEEL API Client
+ * TireWeb Connections Center WHEEL API Client
  * 
  * Queries wheel inventory from suppliers (ATD, NTW, US AutoForce)
- * via the Tirewire SOAP API. Mirrors tire client structure.
+ * via the TireWeb SOAP API (ws.tirewire.com). Mirrors tire client structure.
  * 
+ * NOTE: The API domain is "tirewire.com" but the product is "TireWeb".
  * Uses same credentials as tire API (GroupToken, AccessKey, ConnectionID).
  */
 
-import { getTirewireCredentials, getEnabledConnections, type TirewireConnection } from "./client";
+import { getTireWebCredentials, getEnabledConnections, type TireWebConnection } from "./client";
 
 // ============ Types ============
 
-export interface TirewireWheel {
+export interface TireWebWheel {
   id: number;
   productCode: string;
   clientProductCode: string;
@@ -41,12 +42,18 @@ export interface TirewireWheel {
   connectionId: number;
 }
 
-export interface TirewireWheelSearchResult {
-  wheels: TirewireWheel[];
+export interface TireWebWheelSearchResult {
+  wheels: TireWebWheel[];
   message: string | null;
   connectionId: number;
   provider: string;
 }
+
+// Legacy type aliases for backward compatibility
+/** @deprecated Use TireWebWheel instead */
+export type TirewireWheel = TireWebWheel;
+/** @deprecated Use TireWebWheelSearchResult instead */
+export type TirewireWheelSearchResult = TireWebWheelSearchResult;
 
 export interface WheelSearchOptions {
   rimDiameter?: number;
@@ -63,6 +70,7 @@ export interface WheelSearchOptions {
 
 // ============ SOAP API ============
 
+// NOTE: API domain is "tirewire.com" but product name is "TireWeb"
 const WHEELS_SERVICE_URL = "http://ws.tirewire.com/connectionscenter/wheelsservice.asmx";
 
 function escapeXml(str: string): string {
@@ -163,14 +171,14 @@ async function callWheelsApi(soapBody: string, action: string): Promise<string> 
   });
 
   if (!res.ok) {
-    throw new Error(`Tirewire Wheels API error: ${res.status} ${res.statusText}`);
+    throw new Error(`TireWeb Wheels API error: ${res.status} ${res.statusText}`);
   }
 
   return res.text();
 }
 
-function parseGetWheelsResponse(xml: string, connectionId: number, provider: string): TirewireWheelSearchResult {
-  const wheels: TirewireWheel[] = [];
+function parseGetWheelsResponse(xml: string, connectionId: number, provider: string): TireWebWheelSearchResult {
+  const wheels: TireWebWheel[] = [];
   
   // Extract Wheel elements
   const wheelMatches = xml.matchAll(/<Wheel>([\s\S]*?)<\/Wheel>/g);
@@ -178,7 +186,7 @@ function parseGetWheelsResponse(xml: string, connectionId: number, provider: str
   for (const match of wheelMatches) {
     const wheelXml = match[1];
     
-    const wheel: TirewireWheel = {
+    const wheel: TireWebWheel = {
       id: extractInt(wheelXml, "ID") || 0,
       productCode: extractString(wheelXml, "ProductCode") || "",
       clientProductCode: extractString(wheelXml, "ClientProductCode") || "",
@@ -239,24 +247,24 @@ function extractFloat(xml: string, tag: string): number | null {
 
 // ============ Main Search Function ============
 
-export async function searchWheelsTirewire(
+export async function searchWheelsTireWeb(
   options: WheelSearchOptions
-): Promise<TirewireWheelSearchResult[]> {
+): Promise<TireWebWheelSearchResult[]> {
   // Get credentials
-  const creds = await getTirewireCredentials();
+  const creds = await getTireWebCredentials();
   if (!creds) {
-    console.warn("[tirewire-wheels] No credentials configured");
+    console.warn("[tireweb-wheels] No credentials configured");
     return [];
   }
   
   // Get enabled connections
   const connections = await getEnabledConnections();
   if (connections.length === 0) {
-    console.warn("[tirewire-wheels] No enabled connections");
+    console.warn("[tireweb-wheels] No enabled connections");
     return [];
   }
   
-  console.log(`[tirewire-wheels] Searching ${connections.length} connections:`, 
+  console.log(`[tireweb-wheels] Searching ${connections.length} connections:`, 
     connections.map(c => c.provider).join(", "));
   
   // Query each connection in parallel
@@ -275,20 +283,24 @@ export async function searchWheelsTirewire(
   );
   
   // Collect successful results
-  const successfulResults: TirewireWheelSearchResult[] = [];
+  const successfulResults: TireWebWheelSearchResult[] = [];
   
   for (let i = 0; i < results.length; i++) {
     const result = results[i];
     if (result.status === "fulfilled") {
-      console.log(`[tirewire-wheels] ${connections[i].provider}: ${result.value.wheels.length} wheels`);
+      console.log(`[tireweb-wheels] ${connections[i].provider}: ${result.value.wheels.length} wheels`);
       successfulResults.push(result.value);
     } else {
-      console.error(`[tirewire-wheels] ${connections[i].provider} failed:`, result.reason);
+      console.error(`[tireweb-wheels] ${connections[i].provider} failed:`, result.reason);
     }
   }
   
   return successfulResults;
 }
+
+// Legacy alias for backward compatibility
+/** @deprecated Use searchWheelsTireWeb instead */
+export const searchWheelsTirewire = searchWheelsTireWeb;
 
 // ============ Unified Format ============
 
@@ -314,10 +326,10 @@ export interface UnifiedWheel {
   msrp: number | null;
   map: number | null;
   quantity: { primary: number; alternate: number };
-  source: string; // "tirewire:atd", "tirewire:ntw", etc.
+  source: string; // "tireweb:atd", "tireweb:ntw", etc.
 }
 
-export function tirewireWheelToUnified(wheel: TirewireWheel, provider: string): UnifiedWheel {
+export function tireWebWheelToUnified(wheel: TireWebWheel, provider: string): UnifiedWheel {
   return {
     sku: wheel.clientProductCode || wheel.productCode,
     mfgPartNumber: wheel.productCode,
@@ -343,9 +355,13 @@ export function tirewireWheelToUnified(wheel: TirewireWheel, provider: string): 
       primary: wheel.quantity,
       alternate: wheel.quantitySecondary,
     },
-    source: `tirewire:${provider.replace("tireweb_", "")}`,
+    source: `tireweb:${provider.replace("tireweb_", "")}`, // FIXED: "tireweb:atd" not "tirewire:atd"
   };
 }
+
+// Legacy alias for backward compatibility
+/** @deprecated Use tireWebWheelToUnified instead */
+export const tirewireWheelToUnified = tireWebWheelToUnified;
 
 // ============ Test/Debug ============
 
@@ -361,7 +377,7 @@ export async function getWheelElements(connectionId: number): Promise<{
   error?: string;
 }> {
   try {
-    const creds = await getTirewireCredentials();
+    const creds = await getTireWebCredentials();
     if (!creds) {
       return { success: false, brands: [], diameters: [], finishes: [], error: "No credentials" };
     }
@@ -450,7 +466,7 @@ export async function testWheelConnection(connectionId: number): Promise<{
   error?: string;
 }> {
   try {
-    const creds = await getTirewireCredentials();
+    const creds = await getTireWebCredentials();
     if (!creds) {
       return { success: false, wheelCount: 0, sampleBrands: [], availableDiameters: [], error: "No credentials" };
     }

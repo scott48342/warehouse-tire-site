@@ -55,7 +55,7 @@ export type CartTireItem = {
     modification?: string;
   };
   staggered?: boolean;
-  /** Supplier source (e.g., "tirewire:atd", "km") - for internal use only */
+  /** Supplier source (e.g., "tireweb:atd", "km") - for internal use only */
   source?: string;
 };
 

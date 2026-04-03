@@ -1,9 +1,12 @@
 /**
- * Tirewire Connections Center API Client
+ * TireWeb Connections Center API Client
  * 
  * Queries tire inventory from multiple suppliers (ATD, NTW, US AutoForce)
- * via the Tirewire SOAP API. Returns TireLibrary-enriched data including
- * images, specs, and pricing.
+ * via the TireWeb SOAP API (ws.tirewire.com). Returns TireLibrary-enriched 
+ * data including images, specs, and pricing.
+ * 
+ * NOTE: The API domain is "tirewire.com" but the product is "TireWeb".
+ * We use "TireWeb" internally for consistency with the admin UI.
  */
 
 import crypto from "crypto";
@@ -13,18 +16,18 @@ const { Pool } = pg;
 
 // ============ Types ============
 
-export interface TirewireCredentials {
+export interface TireWebCredentials {
   accessKey: string;
   groupToken: string;
 }
 
-export interface TirewireConnection {
+export interface TireWebConnection {
   provider: string;
   connectionId: number;
   enabled: boolean;
 }
 
-export interface TirewireTire {
+export interface TireWebTire {
   id: number; // TireLibrary ID
   productCode: string;
   clientProductCode: string;
@@ -58,13 +61,23 @@ export interface TirewireTire {
   supplierSystemId: number;
 }
 
-export interface TirewireSearchResult {
-  tires: TirewireTire[];
+export interface TireWebSearchResult {
+  tires: TireWebTire[];
   unmappedCount: number;
   message: string | null;
   connectionId: number;
   provider: string;
 }
+
+// ============ Legacy type aliases (for backward compatibility) ============
+/** @deprecated Use TireWebCredentials instead */
+export type TirewireCredentials = TireWebCredentials;
+/** @deprecated Use TireWebConnection instead */
+export type TirewireConnection = TireWebConnection;
+/** @deprecated Use TireWebTire instead */
+export type TirewireTire = TireWebTire;
+/** @deprecated Use TireWebSearchResult instead */
+export type TirewireSearchResult = TireWebSearchResult;
 
 // ============ Encryption ============
 
@@ -90,36 +103,37 @@ function decrypt(encrypted: string): string {
 // ============ Database ============
 
 // OPTIMIZATION: Reuse pool instead of creating/destroying per call
-let _tirewirePool: pg.Pool | null = null;
+let _tirewebPool: pg.Pool | null = null;
 function getPool(): pg.Pool {
-  if (_tirewirePool) return _tirewirePool;
+  if (_tirewebPool) return _tirewebPool;
   const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
   if (!url) throw new Error("Missing DATABASE_URL");
-  _tirewirePool = new Pool({
+  _tirewebPool = new Pool({
     connectionString: url,
     ssl: { rejectUnauthorized: false },
     max: 3,
   });
-  return _tirewirePool;
+  return _tirewebPool;
 }
 
 // OPTIMIZATION: Cache credentials and connections for 5 minutes
-let _credsCache: { data: TirewireCredentials | null; expiresAt: number } | null = null;
-let _connsCache: { data: TirewireConnection[]; expiresAt: number } | null = null;
+let _credsCache: { data: TireWebCredentials | null; expiresAt: number } | null = null;
+let _connsCache: { data: TireWebConnection[]; expiresAt: number } | null = null;
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
-export async function getTirewireCredentials(): Promise<TirewireCredentials | null> {
+export async function getTireWebCredentials(): Promise<TireWebCredentials | null> {
   // Return from cache if valid
   if (_credsCache && _credsCache.expiresAt > Date.now()) {
     return _credsCache.data;
   }
   
   // PRIORITY 1: Check environment variables (works in Vercel serverless)
-  const envAccessKey = process.env.TIREWIRE_ACCESS_KEY;
-  const envGroupToken = process.env.TIREWIRE_GROUP_TOKEN;
+  // Support both TIREWEB_* (preferred) and TIREWIRE_* (legacy) env var names
+  const envAccessKey = process.env.TIREWEB_ACCESS_KEY || process.env.TIREWIRE_ACCESS_KEY;
+  const envGroupToken = process.env.TIREWEB_GROUP_TOKEN || process.env.TIREWIRE_GROUP_TOKEN;
   
   if (envAccessKey && envGroupToken) {
-    console.log("[tirewire] Using credentials from env vars");
+    console.log("[tireweb] Using credentials from env vars");
     const result = { accessKey: envAccessKey, groupToken: envGroupToken };
     _credsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
     return result;
@@ -144,7 +158,7 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
     const decryptedGroupToken = decrypt(groupTokenRow.value);
     
     // Log credential status (not the actual values)
-    console.log("[tirewire] Credentials loaded from DB:", {
+    console.log("[tireweb] Credentials loaded from DB:", {
       accessKeyLength: decryptedAccessKey?.length || 0,
       groupTokenLength: decryptedGroupToken?.length || 0,
       accessKeyPreview: decryptedAccessKey ? `${decryptedAccessKey.slice(0, 4)}...` : "null",
@@ -157,28 +171,34 @@ export async function getTirewireCredentials(): Promise<TirewireCredentials | nu
     _credsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
     return result;
   } catch (err) {
-    console.error("[tirewire] Failed to get credentials from DB:", err);
+    console.error("[tireweb] Failed to get credentials from DB:", err);
     return null;
   }
   // NOTE: No longer ending pool - it's reused
 }
 
+// Legacy alias for backward compatibility
+/** @deprecated Use getTireWebCredentials instead */
+export const getTirewireCredentials = getTireWebCredentials;
+
 // Default connections when using env var credentials (avoids DB query)
-const DEFAULT_CONNECTIONS: TirewireConnection[] = [
+const DEFAULT_CONNECTIONS: TireWebConnection[] = [
   { provider: "tireweb_atd", connectionId: 488677, enabled: true },
   { provider: "tireweb_ntw", connectionId: 488546, enabled: true },
   { provider: "tireweb_usautoforce", connectionId: 488548, enabled: true },
 ];
 
-export async function getEnabledConnections(): Promise<TirewireConnection[]> {
+export async function getEnabledConnections(): Promise<TireWebConnection[]> {
   // Return from cache if valid
   if (_connsCache && _connsCache.expiresAt > Date.now()) {
     return _connsCache.data;
   }
   
   // PRIORITY 1: Use defaults if env var credentials are set (avoids DB)
-  if (process.env.TIREWIRE_ACCESS_KEY && process.env.TIREWIRE_GROUP_TOKEN) {
-    console.log("[tirewire] Using default connections (env var mode)");
+  const hasEnvCreds = (process.env.TIREWEB_ACCESS_KEY || process.env.TIREWIRE_ACCESS_KEY) && 
+                      (process.env.TIREWEB_GROUP_TOKEN || process.env.TIREWIRE_GROUP_TOKEN);
+  if (hasEnvCreds) {
+    console.log("[tireweb] Using default connections (env var mode)");
     _connsCache = { data: DEFAULT_CONNECTIONS, expiresAt: Date.now() + CACHE_TTL_MS };
     return DEFAULT_CONNECTIONS;
   }
@@ -200,7 +220,7 @@ export async function getEnabledConnections(): Promise<TirewireConnection[]> {
     _connsCache = { data: result, expiresAt: Date.now() + CACHE_TTL_MS };
     return result;
   } catch (err) {
-    console.error("[tirewire] Failed to get connections from DB:", err);
+    console.error("[tireweb] Failed to get connections from DB:", err);
     return [];
   }
   // NOTE: No longer ending pool - it's reused
@@ -208,6 +228,7 @@ export async function getEnabledConnections(): Promise<TirewireConnection[]> {
 
 // ============ SOAP API ============
 
+// NOTE: API domain is "tirewire.com" but product name is "TireWeb"
 const PRODUCTS_SERVICE_URL = "http://ws.tirewire.com/connectionscenter/productsservice.asmx";
 
 function buildGetTiresRequest(
@@ -242,7 +263,7 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
-async function callTirewireApi(soapBody: string): Promise<string> {
+async function callTireWebApi(soapBody: string): Promise<string> {
   const res = await fetch(PRODUCTS_SERVICE_URL, {
     method: "POST",
     headers: {
@@ -253,14 +274,24 @@ async function callTirewireApi(soapBody: string): Promise<string> {
   });
 
   if (!res.ok) {
-    throw new Error(`Tirewire API error: ${res.status} ${res.statusText}`);
+    throw new Error(`TireWeb API error: ${res.status} ${res.statusText}`);
   }
 
   return res.text();
 }
 
-function parseGetTiresResponse(xml: string, connectionId: number, provider: string): TirewireSearchResult {
-  const tires: TirewireTire[] = [];
+function parseGetTiresResponse(xml: string, connectionId: number, provider: string): TireWebSearchResult {
+  const tires: TireWebTire[] = [];
+  
+  // Check for error response
+  const errorCode = extractInt(xml, "ErrorCode");
+  const errorMessage = extractString(xml, "ErrorMessage");
+  if (errorCode && errorCode !== 0) {
+    console.log(`[tireweb] API response length: ${xml.length}`);
+    console.log(`[tireweb] FULL response:`, xml);
+    console.log(`[tireweb] Connection ${provider} returned ${tires.length} tires`);
+    return { tires: [], unmappedCount: 0, message: errorMessage, connectionId, provider };
+  }
   
   // Extract Tire elements
   const tireMatches = xml.matchAll(/<Tire>([\s\S]*?)<\/Tire>/g);
@@ -268,7 +299,7 @@ function parseGetTiresResponse(xml: string, connectionId: number, provider: stri
   for (const match of tireMatches) {
     const tireXml = match[1];
     
-    const tire: TirewireTire = {
+    const tire: TireWebTire = {
       id: extractInt(tireXml, "ID") || 0,
       productCode: extractString(tireXml, "ProductCode") || "",
       clientProductCode: extractString(tireXml, "ClientProductCode") || "",
@@ -334,27 +365,27 @@ function extractFloat(xml: string, tag: string): number | null {
 
 // ============ Main Search Function ============
 
-export async function searchTiresTirewire(
+export async function searchTiresTireWeb(
   tireSize: string // e.g., "225/60R16" or "2256016"
-): Promise<TirewireSearchResult[]> {
+): Promise<TireWebSearchResult[]> {
   // Normalize size to simple format (2256016)
   const simpleSize = toSimpleSize(tireSize);
   if (!simpleSize) {
-    console.warn("[tirewire] Invalid tire size:", tireSize);
+    console.warn("[tireweb] Invalid tire size:", tireSize);
     return [];
   }
   
   // Get credentials
-  const creds = await getTirewireCredentials();
+  const creds = await getTireWebCredentials();
   if (!creds) {
-    console.warn("[tirewire] No credentials configured");
+    console.warn("[tireweb] No credentials configured");
     return [];
   }
   
   // Get enabled connections
   const connections = await getEnabledConnections();
   if (connections.length === 0) {
-    console.warn("[tirewire] No enabled connections");
+    console.warn("[tireweb] No enabled connections");
     return [];
   }
   
@@ -368,25 +399,29 @@ export async function searchTiresTirewire(
         simpleSize
       );
       
-      const response = await callTirewireApi(soapRequest);
+      const response = await callTireWebApi(soapRequest);
       return parseGetTiresResponse(response, conn.connectionId, conn.provider);
     })
   );
   
   // Collect successful results
-  const successfulResults: TirewireSearchResult[] = [];
+  const successfulResults: TireWebSearchResult[] = [];
   
   for (let i = 0; i < results.length; i++) {
     const result = results[i];
     if (result.status === "fulfilled") {
       successfulResults.push(result.value);
     } else {
-      console.error(`[tirewire] Connection ${connections[i].provider} failed:`, result.reason);
+      console.error(`[tireweb] Connection ${connections[i].provider} failed:`, result.reason);
     }
   }
   
   return successfulResults;
 }
+
+// Legacy alias for backward compatibility
+/** @deprecated Use searchTiresTireWeb instead */
+export const searchTiresTirewire = searchTiresTireWeb;
 
 function toSimpleSize(s: string): string {
   const v = String(s || "").trim().toUpperCase();
@@ -413,7 +448,7 @@ export interface UnifiedTire {
   simpleSize: string;
   rimDiameter: number | null;
   tireLibraryId: number | null;
-  source: string; // "tirewire:atd", "tirewire:ntw", "km", etc.
+  source: string; // "tireweb:atd", "tireweb:ntw", "km", etc.
   badges: {
     terrain: string | null;
     construction: string | null;
@@ -424,7 +459,7 @@ export interface UnifiedTire {
   };
 }
 
-export function tirewireTireToUnified(tire: TirewireTire, provider: string): UnifiedTire {
+export function tireWebTireToUnified(tire: TireWebTire, provider: string): UnifiedTire {
   const size = `${Math.round(tire.width)}/${Math.round(tire.aspectRatio)}R${Math.round(tire.rim)}`;
   
   // Image URL will be resolved later via getCachedTireImage()
@@ -453,9 +488,9 @@ export function tirewireTireToUnified(tire: TirewireTire, provider: string): Uni
     simpleSize: `${Math.round(tire.width)}${Math.round(tire.aspectRatio)}${Math.round(tire.rim)}`,
     rimDiameter: Math.round(tire.rim),
     tireLibraryId: tire.id || null,
-    source: `tirewire:${provider.replace("tireweb_", "")}`,
+    source: `tireweb:${provider.replace("tireweb_", "")}`, // FIXED: "tireweb:atd" not "tirewire:atd"
     badges: {
-      terrain: null, // Tirewire doesn't have terrain classification
+      terrain: null, // TireWeb doesn't have terrain classification
       construction: null,
       warrantyMiles: tire.warranty ? parseInt(tire.warranty) || null : null,
       loadIndex: tire.loadRating || null,
@@ -464,3 +499,7 @@ export function tirewireTireToUnified(tire: TirewireTire, provider: string): Uni
     },
   };
 }
+
+// Legacy alias for backward compatibility
+/** @deprecated Use tireWebTireToUnified instead */
+export const tirewireTireToUnified = tireWebTireToUnified;

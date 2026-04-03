@@ -6,7 +6,7 @@
  * 
  * Sources:
  * - WheelPros local database (wp_tires)
- * - Tirewire (ATD, NTW, US AutoForce) via SOAP API
+ * - TireWeb (ATD, NTW, US AutoForce) via SOAP API
  * 
  * Flow:
  * 1. If size param provided → direct size search
@@ -19,7 +19,7 @@
 import { NextResponse } from "next/server";
 import pg from "pg";
 import { XMLParser } from "fast-xml-parser";
-import { searchTiresTirewire, tirewireTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
+import { searchTiresTireWeb, tireWebTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
@@ -120,7 +120,7 @@ interface TireResult {
   simpleSize: string;
   rimDiameter: number | null;
   tireLibraryId?: number | null;
-  source?: string; // "wheelpros", "tirewire:atd", "tirewire:ntw", etc.
+  source?: string; // "wheelpros", "tireweb:atd", "tireweb:ntw", etc.
   badges: {
     terrain: string | null;
     construction: string | null;
@@ -222,16 +222,16 @@ async function searchTiresBySize(
 }
 
 /**
- * Search Tirewire suppliers and convert to TireResult format
+ * Search TireWeb suppliers and convert to TireResult format
  */
-async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]> {
+async function searchTiresTireWebFormatted(size: string): Promise<TireResult[]> {
   try {
-    const results = await searchTiresTirewire(size);
+    const results = await searchTiresTireWeb(size);
     const tires: TireResult[] = [];
     
     for (const result of results) {
       for (const tire of result.tires) {
-        const unified = tirewireTireToUnified(tire, result.provider);
+        const unified = tireWebTireToUnified(tire, result.provider);
         tires.push({
           partNumber: unified.partNumber,
           mfgPartNumber: unified.mfgPartNumber,
@@ -261,7 +261,7 @@ async function searchTiresTirewireFormatted(size: string): Promise<TireResult[]>
     
     return tires;
   } catch (err) {
-    console.error("[tires/search] Tirewire error:", err);
+    console.error("[tires/search] TireWeb error:", err);
     return [];
   }
 }
@@ -519,7 +519,7 @@ function toKmSizeFormat(size: string): string {
 }
 
 /**
- * Build a lookup map of brand+pattern → imageUrl from Tirewire results
+ * Build a lookup map of brand+pattern → imageUrl from TireWeb results
  * Used to enrich K&M results with TireLibrary images
  */
 function buildPatternImageLookup(twResults: TireResult[]): Map<string, string> {
@@ -612,8 +612,8 @@ function enrichKmWithTireLibraryImages(
 }
 
 /**
- * Merge results from WheelPros, Tirewire, and K&M, deduplicating by product code.
- * Tirewire results are preferred when duplicates exist (better images).
+ * Merge results from WheelPros, TireWeb, and K&M, deduplicating by product code.
+ * TireWeb results are preferred when duplicates exist (better images).
  */
 async function mergeTireResults(
   wpResults: TireResult[],
@@ -649,7 +649,7 @@ async function mergeTireResults(
     return tire;
   });
   
-  // Build image lookup from Tirewire results for remaining K&M enrichment
+  // Build image lookup from TireWeb results for remaining K&M enrichment
   const imageLookup = buildPatternImageLookup(twResults);
   
   // Enrich remaining K&M results (without images) with TireLibrary images
@@ -689,7 +689,7 @@ async function mergeTireResults(
     }
   };
   
-  // Add all results - Tirewire first (best images), then K&M, then WheelPros
+  // Add all results - TireWeb first (best images), then K&M, then WheelPros
   for (const tire of twResults) addTire(tire);
   for (const tire of enrichedKmResults) addTire(tire);
   for (const tire of wpResults) addTire(tire);
@@ -929,15 +929,15 @@ export async function GET(req: Request) {
       const tSearch0 = Date.now();
       // Query all sources in parallel
       // KM disabled: API key returns "Invalid Security Information" (needs new key from K&M)
-      // Tirewire enabled but may be rate-limited after testing
+      // TireWeb enabled but may be rate-limited after testing
       const [wpResults, twResults, kmResults] = await Promise.all([
         searchTiresBySize(db, sizeRaw, minQty, pageSize),
-        searchTiresTirewireFormatted(sizeRaw),
+        searchTiresTireWebFormatted(sizeRaw),
         Promise.resolve([]), // searchTiresKM disabled until valid API key obtained
       ]);
       timing.searchMs = Date.now() - tSearch0;
       
-      // Merge and dedupe by partNumber (prefer Tirewire for images)
+      // Merge and dedupe by partNumber (prefer TireWeb for images)
       const tMerge0 = Date.now();
       const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
       timing.mergeMs = Date.now() - tMerge0;
@@ -985,7 +985,7 @@ export async function GET(req: Request) {
         size: sizeRaw,
         sources: {
           wheelpros: wpResults.length,
-          tirewire: twResults.length,
+          tireweb: twResults.length,
           km: kmResults.length,
         },
         imageFiltering: {
@@ -1151,9 +1151,9 @@ export async function GET(req: Request) {
           searchTiresBySize(db, size, minQty, limitPerSize)
             .then((results) => { wpResults.push(...results); })
         );
-        // Tirewire
+        // TireWeb
         searchPromises.push(
-          searchTiresTirewireFormatted(size)
+          searchTiresTireWebFormatted(size)
             .then((results) => { twResults.push(...results); })
         );
         // K&M/Keystone
@@ -1176,7 +1176,7 @@ export async function GET(req: Request) {
             .then((results) => { wpResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
         );
         searchPromises.push(
-          searchTiresTirewireFormatted(size)
+          searchTiresTireWebFormatted(size)
             .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
         );
         searchPromises.push(
@@ -1321,7 +1321,7 @@ export async function GET(req: Request) {
       fitmentSource,
       sources: {
         wheelpros: wpResults.length,
-        tirewire: twResults.length,
+        tireweb: twResults.length,
         km: kmResults.length,
       },
       imageFiltering: {

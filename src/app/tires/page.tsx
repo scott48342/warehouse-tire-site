@@ -23,7 +23,7 @@ import { cleanTireDisplayTitle } from "@/lib/productFormat";
 
 type Tire = {
   source?: "wp" | "km" | "tw";
-  /** Raw source from API (e.g., "tirewire:atd", "km", "wheelpros") for cart tracking */
+  /** Raw source from API (e.g., "tireweb:atd", "km", "wheelpros") for cart tracking */
   rawSource?: string;
   partNumber?: string;
   mfgPartNumber?: string;
@@ -115,10 +115,10 @@ async function fetchActiveRebates() {
 }
 
 /**
- * Fetch tires from TireWire (ATD, NTW, US AutoForce)
+ * Fetch tires from TireWeb (ATD, NTW, US AutoForce)
  * Returns TireLibrary-enriched data including images
  */
-async function fetchTireWireTires(tireSize: string) {
+async function fetchTireWebTires(tireSize: string) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
   try {
     const res = await fetch(`${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(sizeQ)}&minQty=4`, {
@@ -128,7 +128,7 @@ async function fetchTireWireTires(tireSize: string) {
     const data = await res.json();
     return data;
   } catch (err) {
-    console.error("[fetchTireWireTires] Error:", err);
+    console.error("[fetchTireWebTires] Error:", err);
     return { results: [] };
   }
 }
@@ -781,10 +781,10 @@ export default async function TiresPage({
     return selectedSize;
   })();
   
-  // Fetch tires from unified search (includes K&M, WheelPros, Tirewire + admin overrides)
+  // Fetch tires from unified search (includes K&M, WheelPros, TireWeb + admin overrides)
   const wpSize = searchSizeForFetch;
   const [unifiedTires, rebates] = await Promise.all([
-    (wpSize || selectedSize) ? fetchTireWireTires(wpSize || selectedSize) : null,
+    (wpSize || selectedSize) ? fetchTireWebTires(wpSize || selectedSize) : null,
     fetchActiveRebates(),
   ]);
   
@@ -801,8 +801,8 @@ export default async function TiresPage({
     if (!rebatesByBrand.has(b)) rebatesByBrand.set(b, r);
   }
 
-  // Map TireWire results to our Tire format
-  type TireWireResult = {
+  // Map TireWeb results to our Tire format
+  type TireWebResult = {
     partNumber?: string;
     mfgPartNumber?: string;
     brand?: string;
@@ -817,16 +817,16 @@ export default async function TiresPage({
     badges?: any;
   };
   
-  const itemsTw: Tire[] = (Array.isArray(tw?.results) ? tw.results : []).map((t: TireWireResult) => {
-    // Map source from unified search: "km" → "km", "wheelpros" → "wp", "tirewire:*" → "tw"
+  const itemsTw: Tire[] = (Array.isArray(tw?.results) ? tw.results : []).map((t: TireWebResult) => {
+    // Map source from unified search: "km" → "km", "wheelpros" → "wp", "TireWeb:*" → "tw"
     let mappedSource: "wp" | "km" | "tw" = "tw";
     if (t.source === "km") mappedSource = "km";
     else if (t.source === "wheelpros") mappedSource = "wp";
-    else if (t.source?.startsWith("tirewire")) mappedSource = "tw";
+    else if (t.source?.startsWith("TireWeb")) mappedSource = "tw";
     
     return {
       source: mappedSource,
-      rawSource: t.source, // Preserve full source for cart tracking (e.g., "tirewire:atd")
+      rawSource: t.source, // Preserve full source for cart tracking (e.g., "tireweb:atd")
       partNumber: t.partNumber,
       mfgPartNumber: t.mfgPartNumber,
       brand: t.brand,
@@ -842,7 +842,7 @@ export default async function TiresPage({
   const itemsKm: Tire[] = (Array.isArray(km?.items) ? km.items : []).map((t: Tire) => ({ ...t, source: "km" as const, rawSource: "km" }));
   const itemsWp: Tire[] = (Array.isArray(wp?.items) ? wp.items : []).map((t: Tire) => ({ ...t, source: "wp" as const, rawSource: "wheelpros" }));
 
-  // Build deduped map: TireWire first (has images), then K&M, then WP
+  // Build deduped map: TireWeb first (has images), then K&M, then WP
   // Key by brand + normalized part number for matching
   const byId = new Map<string, Tire>();
   
@@ -852,21 +852,21 @@ export default async function TiresPage({
     return `${b}:${p}`;
   }
   
-  // Add TireWire results first (they have TireLibrary images)
+  // Add TireWeb results first (they have TireLibrary images)
   for (const t of itemsTw) {
     const key = normalizeKey(t.brand, t.mfgPartNumber || t.partNumber);
     if (!key || key === ":") continue;
     byId.set(key, t);
   }
   
-  // Add K&M results - if matching TireWire exists, enrich K&M with TireWire image
+  // Add K&M results - if matching TireWeb exists, enrich K&M with TireWeb image
   for (const t of itemsKm) {
     const key = normalizeKey(t.brand, t.mfgPartNumber || t.partNumber);
     if (!key || key === ":") continue;
     
     const existing = byId.get(key);
     if (existing?.imageUrl) {
-      // TireWire has this tire with image - use K&M data but keep TireWire image
+      // TireWeb has this tire with image - use K&M data but keep TireWeb image
       byId.set(key, { ...t, imageUrl: existing.imageUrl, displayName: existing.displayName || t.displayName });
     } else {
       byId.set(key, t);

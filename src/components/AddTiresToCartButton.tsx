@@ -26,7 +26,7 @@ type AddTiresToCartButtonProps = {
   className?: string;
   variant?: "primary" | "secondary" | "compact";
   showPriceInButton?: boolean;
-  /** Supplier source (e.g., "tirewire:atd", "km") - for internal tracking */
+  /** Supplier source (e.g., "tireweb:atd", "km") - for internal tracking */
   source?: string;
 };
 

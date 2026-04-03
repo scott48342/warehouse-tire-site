@@ -15,7 +15,7 @@ export type SelectedTire = {
   season?: string;
   runFlat?: boolean;
   xl?: boolean;
-  /** Supplier source (e.g., "tirewire:atd", "km", "wheelpros") for internal tracking */
+  /** Supplier source (e.g., "tireweb:atd", "km", "wheelpros") for internal tracking */
   source?: string;
 };
 

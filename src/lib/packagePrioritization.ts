@@ -21,7 +21,7 @@
 
 export interface PackagePrioritizableItem {
   sku: string;
-  supplier?: string;          // 'wheelpros', 'tirewire', 'km', etc.
+  supplier?: string;          // 'wheelpros', 'tireweb', 'km', etc.
   imageUrl?: string | null;   // Any truthy image URL
   stock?: number;             // Total stock qty (localStock + globalStock or similar)
   price?: number;             // For secondary sort within tier
@@ -202,7 +202,7 @@ export function applyPackagePriorityToTires<T extends Record<string, any>>(
     if (item.source) {
       supplier = String(item.source);
       // Normalize supplier names
-      if (supplier.startsWith('tirewire:')) supplier = 'tirewire';
+      if (supplier.startsWith('tireweb:')) supplier = 'tireweb';
       if (supplier === 'wheelpros' || supplier === 'wp') supplier = 'wheelpros';
     }
 

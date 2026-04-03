@@ -198,18 +198,18 @@ function formatMoney(cents: number): string {
 
 /**
  * Format supplier source code into readable name
- * e.g., "tirewire:atd" → "ATD", "km" → "K&M/Keystone", "wheelpros" → "WheelPros"
+ * e.g., "tireweb:atd" → "ATD", "km" → "K&M/Keystone", "wheelpros" → "WheelPros"
  */
 function formatSupplierName(source: string): string {
   if (!source) return "";
   
   const s = source.toLowerCase();
   
-  // Tirewire suppliers
-  if (s.includes("tirewire:atd") || s === "atd") return "ATD";
-  if (s.includes("tirewire:ntw") || s === "ntw") return "NTW";
-  if (s.includes("tirewire:usautoforce") || s === "usautoforce" || s === "usaf") return "US AutoForce";
-  if (s.includes("tirewire")) return "TireWeb";
+  // TireWeb suppliers
+  if (s.includes("tireweb:atd") || s === "atd") return "ATD";
+  if (s.includes("tireweb:ntw") || s === "ntw") return "NTW";
+  if (s.includes("tireweb:usautoforce") || s === "usautoforce" || s === "usaf") return "US AutoForce";
+  if (s.includes("tireweb")) return "TireWeb";
   
   // Other suppliers
   if (s === "km" || s.includes("keystone") || s.includes("meyer")) return "K&M/Keystone";
