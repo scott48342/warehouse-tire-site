@@ -27,6 +27,11 @@ export {
   getStaticVehicleParams,
 } from "./vehicleData";
 
+// Counts
+export {
+  formatCount,
+} from "./counts";
+
 // Content generation (from content/ directory)
 export {
   generatePageContent,
