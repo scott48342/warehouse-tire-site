@@ -14,6 +14,11 @@
  *    a. Get tire sizes for vehicle from tire-sizes API
  *    b. Filter to wheelDiameter if provided
  *    c. Search tires matching those sizes from all sources
+ * 
+ * Caching (2025-07-14):
+ * - Full search results cached at size level (12h TTL)
+ * - Single-flight deduping eliminates burst patterns
+ * - Stale-while-revalidate for smooth freshness
  */
 
 import { NextResponse } from "next/server";
@@ -34,6 +39,12 @@ import {
   type TreadCategory,
 } from "@/lib/tires/normalization";
 import { protectedFetch, getCircuitStatus } from "@/lib/tireweb/protection";
+import { 
+  cachedTireSearch, 
+  buildSizeCacheKey, 
+  buildVehicleCacheKey,
+  getSearchCacheDiagnostics,
+} from "@/lib/tires/searchCache";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -1008,41 +1019,56 @@ export async function GET(req: Request) {
     
     // Case 1: Direct size search
     if (sizeRaw) {
+      const cacheKey = buildSizeCacheKey(sizeRaw);
       const tSearch0 = Date.now();
-      // Query all sources in parallel
-      // KM disabled: API key returns "Invalid Security Information" (needs new key from K&M)
-      // TireWeb enabled but may be rate-limited after testing
-      const [wpResults, twResults, kmResults] = await Promise.all([
-        searchTiresBySize(db, sizeRaw, minQty, pageSize),
-        searchTiresTireWebFormatted(sizeRaw),
-        Promise.resolve([]), // searchTiresKM disabled until valid API key obtained
-      ]);
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // CACHED SEARCH: Check cache first, single-flight dedupe, stale-while-revalidate
+      // Cache stores merged + enriched results (before package priority/image filtering)
+      // ═══════════════════════════════════════════════════════════════════════
+      const cacheResult = await cachedTireSearch({
+        cacheKey,
+        searchFn: async () => {
+          // Query all sources in parallel
+          // KM disabled: API key returns "Invalid Security Information" (needs new key from K&M)
+          // TireWeb enabled but may be rate-limited after testing
+          const [wpResults, twResults, kmResults] = await Promise.all([
+            searchTiresBySize(db, sizeRaw, minQty, pageSize * 2), // Fetch extra for filtering
+            searchTiresTireWebFormatted(sizeRaw),
+            Promise.resolve([]), // searchTiresKM disabled until valid API key obtained
+          ]);
+          
+          // Merge and dedupe by partNumber (prefer TireWeb for images)
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          
+          // Apply cached TireLibrary images (from Vercel Blob)
+          const withCachedImages = await applyCachedImages(merged);
+          
+          // Apply admin image overrides
+          const withOverrides = await applyImageOverrides(db, withCachedImages);
+          
+          return {
+            results: withOverrides,
+            sources: {
+              wheelpros: wpResults.length,
+              tireweb: twResults.length,
+              km: kmResults.length,
+            },
+          };
+        },
+      });
+      
       timing.searchMs = Date.now() - tSearch0;
       
-      // Merge and dedupe by partNumber (prefer TireWeb for images)
-      const tMerge0 = Date.now();
-      const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
-      timing.mergeMs = Date.now() - tMerge0;
-      
-      // Apply cached TireLibrary images (from Vercel Blob)
-      const tCache0 = Date.now();
-      const withCachedImages = await applyCachedImages(merged.slice(0, pageSize * 2));
-      timing.cachedImagesMs = Date.now() - tCache0;
-      
-      // Apply admin image overrides (for K&M tires without images, etc.)
-      const tOverride0 = Date.now();
-      const resultsWithOverrides = await applyImageOverrides(db, withCachedImages); // Fetch extra to account for filtering
-      timing.imageOverrideMs = Date.now() - tOverride0;
-      
-      // Filter out tires without valid images
+      // Filter out tires without valid images (dynamic - not cached)
       const debug = url.searchParams.get("debug") === "true";
-      let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(resultsWithOverrides, debug);
+      let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(cacheResult.results, debug);
       
       if (imageStats.invalid > 0) {
         console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
       }
       
-      // Package priority sorting (size mode)
+      // Package priority sorting (size mode) - dynamic based on request params
       const packageParam = url.searchParams.get("package");
       const buildTypeParam = url.searchParams.get("buildType");
       const searchTypeParam = url.searchParams.get("searchType");
@@ -1065,10 +1091,10 @@ export async function GET(req: Request) {
         results: finalResults.slice(0, pageSize),
         mode: "size",
         size: sizeRaw,
-        sources: {
-          wheelpros: wpResults.length,
-          tireweb: twResults.length,
-          km: kmResults.length,
+        sources: cacheResult.sources,
+        cache: {
+          hit: cacheResult.source === "cache",
+          stale: cacheResult.stale,
         },
         imageFiltering: {
           totalBeforeFilter: imageStats.total,
@@ -1217,65 +1243,132 @@ export async function GET(req: Request) {
       }
     }
     
-    // Build results from all sources
+    // ═══════════════════════════════════════════════════════════════════════════
+    // BUILD RESULTS FROM ALL SOURCES (with caching)
+    // Each unique set of sizes gets cached independently
+    // ═══════════════════════════════════════════════════════════════════════════
     const tSearch0 = Date.now();
-    let wpResults: TireResult[] = [];
-    let twResults: TireResult[] = [];
-    let kmResults: TireResult[] = [];
+    let allResults: TireResult[] = [];
+    let wpResultsCount = 0;
+    let twResultsCount = 0;
+    let kmResultsCount = 0;
+    let vehicleCacheHit = false;
+    let vehicleCacheStale = false;
     
     if (sizesToSearch.length > 0) {
-      // Search using modern P-metric sizes (converted from legacy if needed)
-      const searchPromises: Promise<void>[] = [];
+      // Build cache key for this set of sizes
+      const vehicleCacheKey = buildVehicleCacheKey(sizesToSearch.slice(0, 5), wheelDiameter || undefined);
       
-      // Calculate limit per size - use sizesToSearch.length to avoid Infinity when tireSizes is empty
-      const searchCount = Math.min(sizesToSearch.length, 5);
-      const limitPerSize = Math.ceil(pageSize / searchCount) || pageSize;
+      const cacheResult = await cachedTireSearch({
+        cacheKey: vehicleCacheKey,
+        searchFn: async () => {
+          let wpResults: TireResult[] = [];
+          let twResults: TireResult[] = [];
+          let kmResults: TireResult[] = [];
+          
+          // Search using modern P-metric sizes (converted from legacy if needed)
+          const searchPromises: Promise<void>[] = [];
+          
+          // Calculate limit per size
+          const searchCount = Math.min(sizesToSearch.length, 5);
+          const limitPerSize = Math.ceil(pageSize / searchCount) || pageSize;
+          
+          for (const size of sizesToSearch.slice(0, 5)) {
+            // WheelPros
+            searchPromises.push(
+              searchTiresBySize(db, size, minQty, limitPerSize)
+                .then((results) => { wpResults.push(...results); })
+            );
+            // TireWeb
+            searchPromises.push(
+              searchTiresTireWebFormatted(size)
+                .then((results) => { twResults.push(...results); })
+            );
+            // K&M/Keystone (disabled)
+            searchPromises.push(
+              Promise.resolve().then(() => { /* kmResults stays empty */ })
+            );
+          }
+          
+          await Promise.all(searchPromises);
+          
+          // Merge results from all sources
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          
+          // Apply cached TireLibrary images
+          const withCachedImages = await applyCachedImages(merged);
+          
+          // Apply admin image overrides
+          const withOverrides = await applyImageOverrides(db, withCachedImages);
+          
+          return {
+            results: withOverrides,
+            sources: {
+              wheelpros: wpResults.length,
+              tireweb: twResults.length,
+              km: kmResults.length,
+            },
+          };
+        },
+      });
       
-      for (const size of sizesToSearch.slice(0, 5)) {
-        // WheelPros
-        searchPromises.push(
-          searchTiresBySize(db, size, minQty, limitPerSize)
-            .then((results) => { wpResults.push(...results); })
-        );
-        // TireWeb
-        searchPromises.push(
-          searchTiresTireWebFormatted(size)
-            .then((results) => { twResults.push(...results); })
-        );
-        // K&M/Keystone
-        searchPromises.push(
-          searchTiresKM(size)
-            .then((results) => { kmResults.push(...results); })
-        );
-      }
+      allResults = cacheResult.results;
+      wpResultsCount = cacheResult.sources.wheelpros;
+      twResultsCount = cacheResult.sources.tireweb;
+      kmResultsCount = cacheResult.sources.km;
+      vehicleCacheHit = cacheResult.source === "cache";
+      vehicleCacheStale = cacheResult.stale;
       
-      await Promise.all(searchPromises);
-    } else if (wheelDiameter && matchMode === "direct-search" && sizesToSearch.length === 0) {
+    } else if (wheelDiameter && matchMode === "direct-search") {
       // Direct search by rim diameter when no OEM sizes match
       // Search for common sizes with this rim diameter
       const commonSizes = [`205/55R${wheelDiameter}`, `225/45R${wheelDiameter}`, `245/40R${wheelDiameter}`];
+      const directCacheKey = buildVehicleCacheKey(commonSizes, wheelDiameter);
       
-      const searchPromises: Promise<void>[] = [];
-      for (const size of commonSizes) {
-        searchPromises.push(
-          searchTiresBySize(db, size, minQty, Math.ceil(pageSize / 3))
-            .then((results) => { wpResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
-        );
-        searchPromises.push(
-          searchTiresTireWebFormatted(size)
-            .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
-        );
-        searchPromises.push(
-          searchTiresKM(size)
-            .then((results) => { kmResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
-        );
-      }
-      await Promise.all(searchPromises);
+      const cacheResult = await cachedTireSearch({
+        cacheKey: directCacheKey,
+        searchFn: async () => {
+          let wpResults: TireResult[] = [];
+          let twResults: TireResult[] = [];
+          let kmResults: TireResult[] = [];
+          
+          const searchPromises: Promise<void>[] = [];
+          for (const size of commonSizes) {
+            searchPromises.push(
+              searchTiresBySize(db, size, minQty, Math.ceil(pageSize / 3))
+                .then((results) => { wpResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+            );
+            searchPromises.push(
+              searchTiresTireWebFormatted(size)
+                .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+            );
+          }
+          await Promise.all(searchPromises);
+          
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const withCachedImages = await applyCachedImages(merged);
+          const withOverrides = await applyImageOverrides(db, withCachedImages);
+          
+          return {
+            results: withOverrides,
+            sources: {
+              wheelpros: wpResults.length,
+              tireweb: twResults.length,
+              km: kmResults.length,
+            },
+          };
+        },
+      });
+      
+      allResults = cacheResult.results;
+      wpResultsCount = cacheResult.sources.wheelpros;
+      twResultsCount = cacheResult.sources.tireweb;
+      kmResultsCount = cacheResult.sources.km;
+      vehicleCacheHit = cacheResult.source === "cache";
+      vehicleCacheStale = cacheResult.stale;
     }
-    timing.searchMs = Date.now() - tSearch0;
     
-    // Merge results from all sources
-    const allResults = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+    timing.searchMs = Date.now() - tSearch0;
     
     if (allResults.length === 0 && !wheelDiameter) {
       return NextResponse.json({
@@ -1291,6 +1384,7 @@ export async function GET(req: Request) {
           ? `No tires currently in stock for sizes ${tireSizes.slice(0, 3).join(", ")}. Please check back later or contact us for assistance.`
           : "We couldn't determine the tire size for this vehicle. Please contact us for assistance.",
         noResultsReason: "no_stock",
+        cache: { hit: vehicleCacheHit, stale: vehicleCacheStale },
       });
     }
     
@@ -1299,7 +1393,7 @@ export async function GET(req: Request) {
       ? allResults.filter((t) => t.rimDiameter === wheelDiameter)
       : allResults;
     
-    const slicedResults = filteredResults.slice(0, pageSize);
+    const slicedResults = filteredResults.slice(0, pageSize * 2); // Fetch extra for image filtering
     
     // If strict filtering leaves us empty but we have results, return error
     if (wheelDiameter && slicedResults.length === 0 && allResults.length > 0) {
@@ -1315,22 +1409,14 @@ export async function GET(req: Request) {
         fallbackMessage: `No tires currently available for ${wheelDiameter}" wheels. We have tires for other wheel sizes - try a different diameter or contact us.`,
         noResultsReason: "wheel_diameter_mismatch",
         matchMode,
+        cache: { hit: vehicleCacheHit, stale: vehicleCacheStale },
       });
     }
     
-    // Apply cached TireLibrary images (from Vercel Blob)
-    const tCache0 = Date.now();
-    const withCachedImages = await applyCachedImages(slicedResults);
-    timing.cachedImagesMs = Date.now() - tCache0;
-    
-    // Apply admin image overrides (for K&M tires without images, etc.)
-    const tOverride0 = Date.now();
-    const withOverrides = await applyImageOverrides(db, withCachedImages);
-    timing.imageOverrideMs = Date.now() - tOverride0;
-    
-    // Filter out tires without valid images (using enhanced validation)
+    // Note: Image caching and admin overrides already applied in cached search
+    // Just filter for valid images (dynamic per request)
     const debug = url.searchParams.get("debug") === "true";
-    let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(withOverrides, debug);
+    let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(slicedResults, debug);
     
     if (imageStats.invalid > 0) {
       console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
@@ -1370,7 +1456,7 @@ export async function GET(req: Request) {
       if (imageStats.invalid > 0) {
         fallbackMessage = `Found ${imageStats.invalid} tire(s) but they don't have valid images yet. Please check back soon or contact us.`;
         noResultsReason = "hidden_no_image";
-      } else if (withOverrides.length === 0 && allResults.length === 0) {
+      } else if (slicedResults.length === 0 && allResults.length === 0) {
         fallbackMessage = tireSizes.length > 0
           ? `No tires currently in stock for ${tireSizes.slice(0, 2).join(" or ")}. Check back later or contact us.`
           : "No tires found for this vehicle configuration. Please contact us for assistance.";
@@ -1406,9 +1492,13 @@ export async function GET(req: Request) {
       matchMode,
       fitmentSource,
       sources: {
-        wheelpros: wpResults.length,
-        tireweb: twResults.length,
-        km: kmResults.length,
+        wheelpros: wpResultsCount,
+        tireweb: twResultsCount,
+        km: kmResultsCount,
+      },
+      cache: {
+        hit: vehicleCacheHit,
+        stale: vehicleCacheStale,
       },
       imageFiltering: {
         totalBeforeFilter: imageStats.total,
