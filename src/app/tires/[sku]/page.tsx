@@ -135,25 +135,25 @@ function QuickSpecs(props: QuickSpecsProps) {
 function getCategoryTagline(category: TreadCategory | null): { label: string; tagline: string } {
   switch (category) {
     case 'All-Season':
-      return { label: "All-Season Tire", tagline: "Handles rain, sun, and light snow — your everyday go-to" };
+      return { label: "All-Season Tire", tagline: "Rain, shine, or light snow — confident grip year-round" };
     case 'All-Weather':
-      return { label: "All-Weather Tire", tagline: "True year-round confidence, even in winter storms" };
+      return { label: "All-Weather Tire", tagline: "3-peak rated for real winters, no seasonal swaps needed" };
     case 'All-Terrain':
-      return { label: "All-Terrain Tire", tagline: "Daily driver comfort with weekend trail capability" };
+      return { label: "All-Terrain Tire", tagline: "Highway quiet, trail capable — best of both worlds" };
     case 'Mud-Terrain':
-      return { label: "Mud-Terrain Tire", tagline: "Aggressive grip for serious off-road adventures" };
+      return { label: "Mud-Terrain Tire", tagline: "Self-cleaning tread that bites through anything" };
     case 'Highway/Touring':
-      return { label: "Highway Touring Tire", tagline: "Quiet, comfortable, and built for the long haul" };
+      return { label: "Highway Touring Tire", tagline: "Whisper-quiet comfort for long highway miles" };
     case 'Performance':
-      return { label: "Performance Tire", tagline: "Responsive handling when you want to feel the road" };
+      return { label: "Performance Tire", tagline: "Sticky compound, sharp turn-in, track-day ready" };
     case 'Summer':
-      return { label: "Summer Tire", tagline: "Maximum grip when the pavement heats up" };
+      return { label: "Summer Tire", tagline: "Max dry grip + confident wet braking above 45°F" };
     case 'Winter':
-      return { label: "Winter Tire", tagline: "Engineered confidence in ice, snow, and freezing temps" };
+      return { label: "Winter Tire", tagline: "Soft compound stays grippy below freezing" };
     case 'Rugged-Terrain':
-      return { label: "Rugged Terrain Tire", tagline: "Trail-tough protection with on-road manners" };
+      return { label: "Rugged Terrain Tire", tagline: "Puncture-resistant sidewalls, smooth on pavement" };
     default:
-      return { label: "Quality Tire", tagline: "Reliable performance for everyday driving" };
+      return { label: "Quality Tire", tagline: "Balanced grip and comfort for everyday driving" };
   }
 }
 
@@ -255,15 +255,15 @@ function getConfidenceSignal(qty: number, category: TreadCategory | null): strin
 // DELIVERY MESSAGE - Confident and specific
 // ============================================================================
 
-function getDeliveryMessage(qty: number): { text: string; color: string; icon: string } {
+function getDeliveryMessage(qty: number): { text: string; color: string; icon: string; urgency: string | null } {
   if (qty >= 8) {
-    return { text: "In stock · Ships tomorrow", color: "text-green-700 font-semibold", icon: "🚀" };
+    return { text: "In stock · Ships tomorrow", color: "text-green-700 font-semibold", icon: "🚀", urgency: null };
   } else if (qty >= 4) {
-    return { text: "In stock · Ships in 1-2 days", color: "text-green-700 font-semibold", icon: "📦" };
+    return { text: "In stock · Ships in 1-2 days", color: "text-green-700 font-semibold", icon: "📦", urgency: null };
   } else if (qty > 0) {
-    return { text: `Only ${qty} left · Ships in 1-2 days`, color: "text-amber-700 font-semibold", icon: "⚡" };
+    return { text: "Ships in 1-2 days", color: "text-green-700 font-semibold", icon: "📦", urgency: `Only ${qty} left in stock` };
   } else {
-    return { text: "Available to order · Ships in 1-2 weeks", color: "text-amber-600", icon: "📋" };
+    return { text: "Available to order · Ships in 1-2 weeks", color: "text-neutral-600", icon: "📋", urgency: null };
   }
 }
 
@@ -534,8 +534,28 @@ export default async function TireDetailPage({
                       )}
                     </div>
 
+                    {/* Key benefits - above the fold */}
+                    {whyPoints.length > 0 && (
+                      <div className="flex flex-wrap gap-2 text-sm text-neutral-700">
+                        {whyPoints.slice(0, 2).map((point, i) => (
+                          <span key={i} className="inline-flex items-center gap-1.5">
+                            <span className="text-green-600">✓</span>
+                            <span>{point}</span>
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
                     {/* Price + CTA Block - THE CONVERSION ZONE */}
-                    <div id="add-to-cart" className="rounded-2xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-4 shadow-lg shadow-green-100/50">
+                    <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
+                      {/* Urgency banner */}
+                      {delivery.urgency && (
+                        <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
+                          <span>⚡</span>
+                          <span>{delivery.urgency}</span>
+                        </div>
+                      )}
+
                       {/* Price */}
                       <div className="flex items-baseline gap-2">
                         {displayPrice != null ? (
@@ -553,7 +573,7 @@ export default async function TireDetailPage({
                         </div>
                       )}
 
-                      {/* Delivery - confident */}
+                      {/* Delivery */}
                       <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
                         <span className="text-base">{delivery.icon}</span>
                         <span>{delivery.text}</span>
@@ -576,8 +596,8 @@ export default async function TireDetailPage({
                       )}
                       
                       {/* Confidence line */}
-                      <div className="mt-3 text-center text-sm text-green-800">
-                        Ships fast, verified to fit your vehicle perfectly.
+                      <div className="mt-3 text-center text-sm font-medium text-green-800">
+                        Guaranteed fit • Ships fast
                       </div>
                       
                       {/* Trust signals */}
@@ -587,15 +607,15 @@ export default async function TireDetailPage({
                     </div>
 
                     {/* ═══════════════════════════════════════════════════════════════════
-                        BELOW THE FOLD: Why this tire
+                        BELOW THE FOLD: Additional benefits (if any)
                         ═══════════════════════════════════════════════════════════════════ */}
                     
-                    {/* Why this tire - benefit-driven */}
-                    {whyPoints.length > 0 && (
+                    {/* Additional benefits - show remaining points not shown above */}
+                    {whyPoints.length > 2 && (
                       <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You&apos;ll Love It</div>
+                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">More to Love</div>
                         <ul className="space-y-2">
-                          {whyPoints.map((point, i) => (
+                          {whyPoints.slice(2).map((point, i) => (
                             <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
                               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs mt-0.5">✓</span>
                               <span className="leading-snug">{point}</span>
@@ -835,8 +855,28 @@ export default async function TireDetailPage({
               )}
             </div>
 
+            {/* Key benefits - above the fold */}
+            {whyPoints.length > 0 && (
+              <div className="flex flex-wrap gap-2 text-sm text-neutral-700">
+                {whyPoints.slice(0, 2).map((point, i) => (
+                  <span key={i} className="inline-flex items-center gap-1.5">
+                    <span className="text-green-600">✓</span>
+                    <span>{point}</span>
+                  </span>
+                ))}
+              </div>
+            )}
+
             {/* Price + CTA Block - THE CONVERSION ZONE */}
-            <div id="add-to-cart" className="rounded-2xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-4 shadow-lg shadow-green-100/50">
+            <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
+              {/* Urgency banner */}
+              {delivery.urgency && (
+                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
+                  <span>⚡</span>
+                  <span>{delivery.urgency}</span>
+                </div>
+              )}
+
               {/* Price */}
               <div className="flex items-baseline gap-2">
                 {displayPrice != null ? (
@@ -854,7 +894,7 @@ export default async function TireDetailPage({
                 </div>
               )}
 
-              {/* Delivery - confident */}
+              {/* Delivery */}
               <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
                 <span className="text-base">{delivery.icon}</span>
                 <span>{delivery.text}</span>
@@ -877,8 +917,8 @@ export default async function TireDetailPage({
               </div>
               
               {/* Confidence line */}
-              <div className="mt-3 text-center text-sm text-green-800">
-                Ships fast, verified to fit your vehicle perfectly.
+              <div className="mt-3 text-center text-sm font-medium text-green-800">
+                Guaranteed fit • Ships fast
               </div>
               
               {/* Trust signals */}
@@ -888,15 +928,15 @@ export default async function TireDetailPage({
             </div>
 
             {/* ═══════════════════════════════════════════════════════════════════
-                BELOW THE FOLD: Why this tire
+                BELOW THE FOLD: Additional benefits (if any)
                 ═══════════════════════════════════════════════════════════════════ */}
             
-            {/* Why this tire - benefit-driven */}
-            {whyPoints.length > 0 && (
+            {/* Additional benefits - show remaining points not shown above */}
+            {whyPoints.length > 2 && (
               <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You&apos;ll Love It</div>
+                <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">More to Love</div>
                 <ul className="space-y-2">
-                  {whyPoints.map((point, i) => (
+                  {whyPoints.slice(2).map((point, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
                       <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs mt-0.5">✓</span>
                       <span className="leading-snug">{point}</span>
