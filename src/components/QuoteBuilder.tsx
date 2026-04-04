@@ -412,14 +412,8 @@ export function QuoteBuilder({
         </div>
       </div>
 
-      <div className="grid gap-2 md:grid-cols-2">
+      <div className="flex justify-center">
         <SaveQuoteModal linesJson={JSON.stringify(lines)} vehicle={vehicle} />
-        <Link
-          href="/schedule"
-          className="inline-flex h-11 items-center justify-center rounded-xl bg-neutral-900 px-5 text-sm font-extrabold text-white"
-        >
-          Schedule install
-        </Link>
       </div>
     </div>
   );

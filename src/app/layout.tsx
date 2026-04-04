@@ -3,7 +3,6 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MobileActionBar } from "@/components/MobileActionBar";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CartSlideout } from "@/components/CartSlideout";
 import { CartTracker } from "@/components/CartTracker";
@@ -66,7 +65,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <MobileActionBar />
           <CartSlideout />
           <ExitIntentPopup />
         </CartProvider>
