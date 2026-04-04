@@ -117,20 +117,19 @@ const VALUE_BRANDS = ["westlake", "lionhart", "lexani", "atturo", "fullway", "ro
 
 /**
  * Calculate display price for a tire
- * - Uses retail price (MAP/MSRP) only if it's actually higher than cost
- * - When sellPrice = buyPrice (no real markup), apply $50 margin
- * - Falls back to cost + $50 margin for all sources
+ * - WheelPros: Use MSRP (passed as price field)
+ * - TireWeb: Use price if available, else cost + $50
  */
 function getDisplayPrice(tire: TireItem): number | null {
-  const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
   const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
+  const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
   
-  // Use retail price only if it's actually higher than cost (real markup from supplier)
-  if (price && cost && price > cost) {
+  // Use price (MSRP for WheelPros, sellPrice for TireWeb) if available
+  if (price) {
     return price;
   }
   
-  // Apply $50 markup to cost (consistent across all sources)
+  // Fallback: cost + $50 margin (TireWeb when no sellPrice)
   if (cost) {
     return cost + 50;
   }

@@ -55,11 +55,12 @@ function fmtMoney(v: number) {
 }
 
 function priceFromRow(r: any): number | null {
-  const mapUsd0 = n(r?.map_usd);
   const msrpUsd0 = n(r?.msrp_usd);
-  const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+  const mapUsd0 = n(r?.map_usd);
   const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
-  return mapUsd ?? (msrpUsd != null ? msrpUsd + 50 : null);
+  const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+  // Use MSRP as display price, fall back to MAP if no MSRP
+  return msrpUsd ?? mapUsd;
 }
 
 // ============================================================================

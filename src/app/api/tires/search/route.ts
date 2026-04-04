@@ -231,11 +231,12 @@ async function searchTiresBySize(
   });
 
   return rows.map((r) => {
-    const mapUsd0 = n(r.map_usd);
     const msrpUsd0 = n(r.msrp_usd);
-    const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+    const mapUsd0 = n(r.map_usd);
     const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
-    const cost = mapUsd != null ? Math.max(0.01, mapUsd - 50) : msrpUsd;
+    const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
+    // Use MSRP as display price, fall back to MAP
+    const price = msrpUsd ?? mapUsd;
     const tireSize = r.tire_size || r.simple_size || "";
     const description = r.tire_description || tireSize || r.sku;
 
@@ -250,7 +251,7 @@ async function searchTiresBySize(
       mfgPartNumber: String(r.sku),
       brand: r.brand_desc || null,
       description,
-      cost: cost != null && Number.isFinite(cost) ? cost : null,
+      price: price != null && Number.isFinite(price) ? price : null,
       quantity: { primary: 0, alternate: 0, national: i(r.qoh) },
       imageUrl: r.image_url || null,
       size: tireSize,
