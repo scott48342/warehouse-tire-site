@@ -1,0 +1,338 @@
+/**
+ * Performance Indicators for Tire Cards
+ * 
+ * Displays simple bar ratings (1-10 style) derived from UTQG + category.
+ * Similar to Belle Tire's performance ratings display.
+ */
+
+import React from "react";
+import type { PerformanceRatings } from "@/lib/tires/tireSpecs";
+
+// ============================================================================
+// TYPES
+// ============================================================================
+
+export interface PerformanceIndicatorsProps {
+  /** Performance ratings object */
+  ratings: PerformanceRatings | null;
+  /** Which ratings to show (default: primary 4) */
+  show?: ('treadLife' | 'wetTraction' | 'dryTraction' | 'comfort' | 'noise' | 'offRoad' | 'winter')[];
+  /** Compact mode for card view */
+  compact?: boolean;
+  /** Show labels */
+  showLabels?: boolean;
+  /** Show numeric values */
+  showValues?: boolean;
+}
+
+// ============================================================================
+// RATING BAR
+// ============================================================================
+
+interface RatingBarProps {
+  /** Rating name */
+  label: string;
+  /** Rating value 1-10 */
+  value: number;
+  /** Color based on rating */
+  color?: 'auto' | 'green' | 'amber' | 'red' | 'blue';
+  /** Compact mode */
+  compact?: boolean;
+  /** Show numeric value */
+  showValue?: boolean;
+}
+
+function RatingBar({ 
+  label, 
+  value, 
+  color = 'auto',
+  compact = false,
+  showValue = true,
+}: RatingBarProps) {
+  // Determine color based on value or explicit color
+  const getBarColor = () => {
+    if (color !== 'auto') {
+      switch (color) {
+        case 'green': return 'bg-green-500';
+        case 'amber': return 'bg-amber-500';
+        case 'red': return 'bg-red-500';
+        case 'blue': return 'bg-blue-500';
+      }
+    }
+    
+    // Auto color based on value
+    if (value >= 8) return 'bg-green-500';
+    if (value >= 6) return 'bg-blue-500';
+    if (value >= 4) return 'bg-amber-500';
+    return 'bg-red-400';
+  };
+  
+  const percentage = Math.max(0, Math.min(100, value * 10));
+  
+  if (compact) {
+    return (
+      <div className="flex items-center gap-1.5">
+        <span className="text-[9px] font-medium text-neutral-500 w-14 truncate">
+          {label}
+        </span>
+        <div className="flex-1 h-1.5 bg-neutral-200 rounded-full overflow-hidden">
+          <div 
+            className={`h-full rounded-full transition-all ${getBarColor()}`}
+            style={{ width: `${percentage}%` }}
+          />
+        </div>
+        {showValue && (
+          <span className="text-[9px] font-bold text-neutral-700 w-4 text-right">
+            {value}
+          </span>
+        )}
+      </div>
+    );
+  }
+  
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-xs font-medium text-neutral-600 w-24 truncate">
+        {label}
+      </span>
+      <div className="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden">
+        <div 
+          className={`h-full rounded-full transition-all ${getBarColor()}`}
+          style={{ width: `${percentage}%` }}
+        />
+      </div>
+      {showValue && (
+        <span className="text-xs font-bold text-neutral-800 w-6 text-right">
+          {value}
+        </span>
+      )}
+    </div>
+  );
+}
+
+// ============================================================================
+// RATING LABELS
+// ============================================================================
+
+const RATING_LABELS: Record<string, string> = {
+  treadLife: 'Tread Life',
+  wetTraction: 'Wet Traction',
+  dryTraction: 'Dry Traction',
+  comfort: 'Ride Comfort',
+  noise: 'Noise',
+  offRoad: 'Off-Road',
+  winter: 'Winter',
+  overall: 'Overall',
+};
+
+const RATING_LABELS_SHORT: Record<string, string> = {
+  treadLife: 'Tread',
+  wetTraction: 'Wet',
+  dryTraction: 'Dry',
+  comfort: 'Comfort',
+  noise: 'Noise',
+  offRoad: 'Off-Road',
+  winter: 'Winter',
+  overall: 'Overall',
+};
+
+// ============================================================================
+// MAIN COMPONENT
+// ============================================================================
+
+export function PerformanceIndicators({
+  ratings,
+  show = ['treadLife', 'wetTraction', 'comfort', 'winter'],
+  compact = false,
+  showLabels = true,
+  showValues = true,
+}: PerformanceIndicatorsProps) {
+  if (!ratings) return null;
+  
+  const labels = compact ? RATING_LABELS_SHORT : RATING_LABELS;
+  
+  return (
+    <div className={compact ? "space-y-1" : "space-y-1.5"}>
+      {show.map((key) => {
+        const value = ratings[key as keyof PerformanceRatings];
+        if (typeof value !== 'number') return null;
+        
+        return (
+          <RatingBar
+            key={key as string}
+            label={showLabels ? labels[key as string] || key : ''}
+            value={value}
+            compact={compact}
+            showValue={showValues}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+// ============================================================================
+// MINI RATINGS (for card summary)
+// ============================================================================
+
+export interface MiniRatingsProps {
+  /** Performance ratings */
+  ratings: PerformanceRatings | null;
+  /** Category to highlight relevant ratings */
+  category?: string | null;
+}
+
+export function MiniRatings({ ratings, category }: MiniRatingsProps) {
+  if (!ratings) return null;
+  
+  // Choose 3 most relevant ratings based on category
+  let keys: (keyof PerformanceRatings)[] = ['treadLife', 'wetTraction', 'comfort'];
+  
+  switch (category) {
+    case 'All-Terrain':
+    case 'Mud-Terrain':
+    case 'Rugged-Terrain':
+    case 'Off-Road':
+      keys = ['offRoad', 'treadLife', 'wetTraction'];
+      break;
+    case 'Winter':
+      keys = ['winter', 'wetTraction', 'treadLife'];
+      break;
+    case 'Performance':
+    case 'Summer':
+      keys = ['dryTraction', 'wetTraction', 'comfort'];
+      break;
+    case 'Highway/Touring':
+      keys = ['comfort', 'noise', 'treadLife'];
+      break;
+  }
+  
+  return (
+    <div className="flex items-center gap-2">
+      {keys.map((key) => {
+        const value = ratings[key as keyof PerformanceRatings];
+        if (typeof value !== 'number') return null;
+        
+        const label = RATING_LABELS_SHORT[key as string] || key;
+        const color = value >= 8 ? 'text-green-600' : value >= 6 ? 'text-blue-600' : value >= 4 ? 'text-amber-600' : 'text-red-500';
+        
+        return (
+          <div 
+            key={key as string} 
+            className="flex items-center gap-0.5"
+            title={`${RATING_LABELS[key as string]}: ${value}/10`}
+          >
+            <span className={`text-[10px] font-bold ${color}`}>{value}</span>
+            <span className="text-[9px] text-neutral-400">{label}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// ============================================================================
+// FULL RATINGS CARD (for PDP)
+// ============================================================================
+
+export interface FullRatingsCardProps {
+  /** Performance ratings */
+  ratings: PerformanceRatings;
+  /** Optional title */
+  title?: string;
+}
+
+export function FullRatingsCard({ 
+  ratings,
+  title = 'Performance Ratings',
+}: FullRatingsCardProps) {
+  const allKeys: (keyof PerformanceRatings)[] = [
+    'treadLife', 'wetTraction', 'dryTraction', 'comfort', 'noise', 'offRoad', 'winter'
+  ];
+  
+  return (
+    <div className="rounded-xl border border-neutral-200 bg-white p-4">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-bold text-neutral-900">{title}</h3>
+        <div className="flex items-center gap-1">
+          <span className="text-lg font-extrabold text-neutral-900">{ratings.overall}</span>
+          <span className="text-xs text-neutral-500">/10</span>
+        </div>
+      </div>
+      
+      <div className="space-y-2">
+        {allKeys.map((key) => (
+          <RatingBar
+            key={key}
+            label={RATING_LABELS[key]}
+            value={ratings[key]}
+            showValue={true}
+          />
+        ))}
+      </div>
+      
+      <p className="mt-3 text-[10px] text-neutral-400">
+        Ratings derived from UTQG specifications and tire category
+      </p>
+    </div>
+  );
+}
+
+// ============================================================================
+// UTQG DISPLAY
+// ============================================================================
+
+export interface UTQGDisplayProps {
+  /** Raw UTQG string */
+  utqg: string | null;
+  /** Parsed treadwear */
+  treadwear?: number | null;
+  /** Parsed traction grade */
+  traction?: string | null;
+  /** Parsed temperature grade */
+  temperature?: string | null;
+  /** Compact mode */
+  compact?: boolean;
+}
+
+export function UTQGDisplay({
+  utqg,
+  treadwear,
+  traction,
+  temperature,
+  compact = false,
+}: UTQGDisplayProps) {
+  if (!utqg && !treadwear && !traction && !temperature) return null;
+  
+  if (compact) {
+    // Show just the raw UTQG string
+    return (
+      <span className="text-[10px] font-mono text-neutral-500">
+        UTQG: {utqg || `${treadwear || '?'}${traction || '?'}${temperature || '?'}`}
+      </span>
+    );
+  }
+  
+  return (
+    <div className="flex items-center gap-3 text-xs">
+      {treadwear && (
+        <div className="text-center">
+          <div className="text-lg font-bold text-neutral-900">{treadwear}</div>
+          <div className="text-[10px] text-neutral-500">Treadwear</div>
+        </div>
+      )}
+      {traction && (
+        <div className="text-center">
+          <div className="text-lg font-bold text-neutral-900">{traction}</div>
+          <div className="text-[10px] text-neutral-500">Traction</div>
+        </div>
+      )}
+      {temperature && (
+        <div className="text-center">
+          <div className="text-lg font-bold text-neutral-900">{temperature}</div>
+          <div className="text-[10px] text-neutral-500">Temperature</div>
+        </div>
+      )}
+    </div>
+  );
+}

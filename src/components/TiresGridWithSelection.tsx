@@ -5,7 +5,11 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart/CartContext";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { StickyPackageBar } from "@/components/StickyPackageBar";
+import { TireBadges, StockBadge, DeliveryBadge } from "@/components/TireBadges";
+import { MiniRatings } from "@/components/PerformanceIndicators";
 import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
+import { derivePerformanceRatings, parseUTQG, getStockInfo } from "@/lib/tires/tireSpecs";
+import type { TreadCategory } from "@/lib/tires/normalization";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -30,6 +34,25 @@ export type TireItem = {
     speedRating?: string | null;
   };
   tireLibraryId?: number;
+  // ════════════════════════════════════════════════════════════════════════════
+  // ENRICHED SPEC FIELDS (will populate when TireWeb enables TireLibrary access)
+  // ════════════════════════════════════════════════════════════════════════════
+  /** UTQG rating string (e.g., "620AB") */
+  utqg?: string | null;
+  /** Tread depth in 32nds of an inch */
+  treadDepth?: number | null;
+  /** Overall diameter in inches */
+  diameter?: number | null;
+  /** Tire weight in lbs */
+  weight?: number | null;
+  /** Has 3-Peak Mountain Snowflake rating */
+  has3PMSF?: boolean;
+  /** Is run-flat tire */
+  isRunFlat?: boolean;
+  /** Normalized tread category */
+  treadCategory?: TreadCategory | null;
+  /** Is on sale */
+  onSale?: boolean;
 };
 
 export type SelectedWheel = {
@@ -122,7 +145,7 @@ function formatPrice(price: number): string {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// TIRE CARD - Clean, conversion-focused design with improved readability
+// TIRE CARD - Clean, conversion-focused design with badges & performance indicators
 // ═══════════════════════════════════════════════════════════════════════════════
 function TireCard({
   tire,
@@ -145,7 +168,6 @@ function TireCard({
   const model = tire.displayName || tire.prettyName || tire.description || "";
   const price = typeof tire.cost === "number" ? tire.cost : null;
   const setPrice = price !== null ? price * 4 : null;
-  const stock = getStockLevel(tire);
   const category = categorizeTire(tire);
   
   // Build detail URL
@@ -153,15 +175,26 @@ function TireCard({
     ? `/tires/${encodeURIComponent(tire.partNumber)}?size=${encodeURIComponent(size)}`
     : "#";
   
-  // Terrain type from badges or model name
-  const terrainType = tire.badges?.terrain || 
+  // Get normalized tread category (from enrichment or badges or model name)
+  const treadCategory = tire.treadCategory || tire.badges?.terrain || 
     (model.toLowerCase().includes("all-terrain") || model.toLowerCase().includes("a/t") ? "All-Terrain" :
      model.toLowerCase().includes("mud") || model.toLowerCase().includes("m/t") ? "Mud-Terrain" :
-     model.toLowerCase().includes("highway") || model.toLowerCase().includes("h/t") ? "Highway" :
+     model.toLowerCase().includes("highway") || model.toLowerCase().includes("h/t") ? "Highway/Touring" :
      "All-Season");
   
-  // Popular indicator (high stock = popular)
-  const isPopular = category === "most-popular" || stock >= 20;
+  // Parse UTQG and derive performance ratings
+  const utqgParsed = parseUTQG(tire.utqg);
+  const performanceRatings = derivePerformanceRatings(
+    utqgParsed,
+    treadCategory as TreadCategory,
+    tire.has3PMSF || false
+  );
+  
+  // Get stock info
+  const stockInfo = getStockInfo(tire.quantity);
+  
+  // Popular indicator (high stock + mid-tier = popular)
+  const isPopular = category === "most-popular" || stockInfo.total >= 20;
   
   return (
     <div 
@@ -217,14 +250,19 @@ function TireCard({
           />
         </div>
         
-        {/* Popular badge overlay */}
-        {isPopular && (
-          <div className="absolute bottom-2 left-2">
+        {/* Badge overlays (Sale, Popular) */}
+        <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
+          {tire.onSale && (
+            <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
+              SALE
+            </span>
+          )}
+          {isPopular && !tire.onSale && (
             <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 shadow-sm">
               🔥 Popular
             </span>
-          </div>
-        )}
+          )}
+        </div>
       </Link>
       
       {/* Content - improved spacing */}
@@ -239,20 +277,56 @@ function TireCard({
           </h3>
         </Link>
         
-        {/* Secondary specs - smaller, muted */}
-        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-neutral-500">
+        {/* Visual Badges - terrain, mileage, 3PMSF */}
+        <div className="mt-2">
+          <TireBadges
+            treadCategory={treadCategory}
+            warrantyMiles={tire.badges?.warrantyMiles}
+            has3PMSF={tire.has3PMSF}
+            isRunFlat={tire.isRunFlat}
+            freeShipping={true}
+            compact={true}
+            maxBadges={3}
+          />
+        </div>
+        
+        {/* Size + Basic Specs */}
+        <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-neutral-500">
           <span className="font-medium text-neutral-600">{size}</span>
-          <span>•</span>
-          <span>{terrainType}</span>
-          {tire.badges?.warrantyMiles && tire.badges.warrantyMiles > 0 && (
+          {tire.badges?.loadIndex && (
             <>
               <span>•</span>
-              <span>{(tire.badges.warrantyMiles / 1000).toFixed(0)}k mi</span>
+              <span>Load {tire.badges.loadIndex}</span>
+            </>
+          )}
+          {tire.badges?.speedRating && (
+            <>
+              <span>•</span>
+              <span>Speed {tire.badges.speedRating}</span>
             </>
           )}
         </div>
         
+        {/* Mini Performance Ratings (if UTQG available) */}
+        {utqgParsed && (
+          <div className="mt-2">
+            <MiniRatings ratings={performanceRatings} category={treadCategory} />
+          </div>
+        )}
+        
         <div className="flex-1 min-h-2" />
+        
+        {/* Stock + Delivery messaging */}
+        <div className="mt-2 flex items-center gap-2">
+          <StockBadge 
+            quantity={stockInfo.total} 
+            status={stockInfo.status}
+            compact={true}
+          />
+          {stockInfo.deliveryDays && (
+            <DeliveryBadge days={stockInfo.deliveryDays} compact={true} />
+          )}
+        </div>
         
         {/* Price block - cleaner layout */}
         <div className="mt-3 pt-3 border-t border-neutral-100">
@@ -271,13 +345,13 @@ function TireCard({
               )}
             </div>
             
-            {/* Trust signals - ultra compact */}
-            <div className="text-right text-[10px] text-neutral-500 hidden sm:block">
-              <div className="flex items-center gap-1 justify-end">
-                <span className="text-green-600">✓</span>
-                Free Ship
+            {/* UTQG display (if available) */}
+            {utqgParsed?.raw && (
+              <div className="text-right">
+                <div className="text-[9px] text-neutral-400 uppercase">UTQG</div>
+                <div className="text-xs font-mono font-bold text-neutral-600">{utqgParsed.raw}</div>
               </div>
-            </div>
+            )}
           </div>
         </div>
         
