@@ -1597,7 +1597,7 @@ export default async function TiresPage({
                 brandOptions: allBrands.map(b => ({ value: b, count: brandCounts.get(b) || 0 })),
                 treadCategoryOptions: treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 })),
                 speedOptions: speedsAvailable.map(s => ({ value: s, count: speedCounts.get(s) || 0 })),
-                loadRangeOptions: LOAD_RANGES.map(lr => ({ value: lr, count: loadRangeCounts.get(lr) || 0 })),
+                loadRangeOptions: LOAD_RANGES.map(lr => ({ value: lr.value, count: loadRangeCounts.get(lr.value) || 0 })),
                 mileageOptions: [
                   { value: "40K+" as const, count: mileage40kCount },
                   { value: "60K+" as const, count: mileage60kCount },
