@@ -39,7 +39,10 @@ type Tire = {
   mfgPartNumber?: string;
   brand?: string;
   description?: string;
+  /** Supplier cost (what we pay) */
   cost?: number;
+  /** Retail price / MAP (what customer pays) - use this for display when available */
+  price?: number;
   quantity?: { primary?: number; alternate?: number; national?: number };
   imageUrl?: string;
   displayName?: string;
@@ -71,6 +74,29 @@ type TireAsset = {
 // Premium tire brands for scoring
 const PREMIUM_BRANDS = ["michelin", "bridgestone", "continental", "goodyear", "pirelli"];
 const MID_TIER_BRANDS = ["cooper", "toyo", "bfgoodrich", "yokohama", "hankook", "falken", "general", "kumho", "nexen"];
+
+/**
+ * Calculate display price for a tire
+ * - Uses retail price (MAP/MSRP) if available from TireWeb
+ * - Falls back to cost + $50 margin for WheelPros
+ * - Falls back to cost * 1.30 (30% margin) for TireWeb without price
+ */
+function getDisplayPrice(tire: Tire): number | null {
+  // If we have a retail price (from TireWeb sellPrice), use it
+  if (typeof tire.price === "number" && tire.price > 0) {
+    return tire.price;
+  }
+  // If we have cost, apply appropriate markup
+  if (typeof tire.cost === "number" && tire.cost > 0) {
+    // TireWeb tires without sellPrice: 30% margin
+    if (tire.source === "tw") {
+      return Math.round(tire.cost * 1.30 * 100) / 100;
+    }
+    // WheelPros/K&M: $50 flat margin (cost is already MAP-50 or MSRP)
+    return tire.cost + 50;
+  }
+  return null;
+}
 
 function getBaseUrl() {
   if (process.env.NEXT_PUBLIC_BASE_URL) return process.env.NEXT_PUBLIC_BASE_URL;
@@ -154,7 +180,7 @@ async function fetchTireWebTires(tireSize: string) {
 // Score tires for "Top Picks" selection
 function scoreTireForPicks(tire: Tire): number {
   let score = 0;
-  const price = typeof tire.cost === "number" ? tire.cost + 50 : 0;
+  const price = getDisplayPrice(tire) || 0;
   const brand = String(tire.brand || "").toLowerCase();
   
   // Price sweet spot ($80-$200 per tire)
@@ -865,6 +891,7 @@ export default async function TiresPage({
       brand: t.brand,
       description: t.description || (t.brand && t.model ? `${t.brand} ${t.model}` : undefined),
       cost: t.cost,
+      price: t.price, // Retail price / MAP from TireWeb
       quantity: t.quantity,
       imageUrl: t.imageUrl, // TireLibrary images!
       displayName: t.model ? `${t.brand || ''} ${t.model}`.trim() : undefined,
@@ -1182,7 +1209,7 @@ export default async function TiresPage({
       if (!tireTread || !treadCategories.includes(tireTread)) return false;
     }
 
-    const p = typeof t.cost === "number" ? t.cost + 50 : null;
+    const p = getDisplayPrice(t);
     if (typeof priceMin === "number" && Number.isFinite(priceMin)) {
       if (p == null || p < priceMin) return false;
     }
@@ -1194,8 +1221,8 @@ export default async function TiresPage({
   });
 
   const items: Tire[] = [...itemsFiltered].sort((a, b) => {
-    const aPrice = typeof a.cost === "number" ? a.cost + 50 : Number.POSITIVE_INFINITY;
-    const bPrice = typeof b.cost === "number" ? b.cost + 50 : Number.POSITIVE_INFINITY;
+    const aPrice = getDisplayPrice(a) ?? Number.POSITIVE_INFINITY;
+    const bPrice = getDisplayPrice(b) ?? Number.POSITIVE_INFINITY;
     const aBrand = (a.brand || "").toLowerCase();
     const bBrand = (b.brand || "").toLowerCase();
     const aStock = (a.quantity?.primary ?? 0) + (a.quantity?.alternate ?? 0) + (a.quantity?.national ?? 0);
@@ -1869,6 +1896,7 @@ export default async function TiresPage({
                   displayName: t.displayName,
                   prettyName: t.prettyName,
                   cost: t.cost,
+                  price: t.price,
                   quantity: t.quantity,
                   imageUrl: t.imageUrl,
                   badges: t.badges,
@@ -2444,18 +2472,21 @@ function TireCard({
       <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">
         <div className="flex items-end justify-between">
           <div>
-            {typeof t.cost === "number" ? (
-              <>
-                <div className="text-2xl font-extrabold text-neutral-900">
-                  ${((t.cost + 50) * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
-                </div>
-                <div className="text-xs text-neutral-500">
-                  ${(t.cost + 50).toFixed(2)}/ea × 4 tires
-                </div>
-              </>
-            ) : (
-              <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
-            )}
+            {(() => {
+              const unitPrice = getDisplayPrice(t);
+              return unitPrice != null ? (
+                <>
+                  <div className="text-2xl font-extrabold text-neutral-900">
+                    ${(unitPrice * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                  </div>
+                  <div className="text-xs text-neutral-500">
+                    ${unitPrice.toFixed(2)}/ea × 4 tires
+                  </div>
+                </>
+              ) : (
+                <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
+              );
+            })()}
           </div>
           {/* Stock indicator dot */}
           <div className="flex items-center gap-1.5 text-xs font-semibold">
@@ -2484,7 +2515,7 @@ function TireCard({
                 brand: String(t.brand || ""),
                 title: String(displayTitle),
                 size: selectedSize,
-                price: typeof t.cost === "number" ? t.cost + 50 : undefined,
+                price: getDisplayPrice(t),
                 imageUrl: t.imageUrl,
                 speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
                 loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
@@ -2502,7 +2533,7 @@ function TireCard({
                 brand: String(t.brand || ""),
                 title: String(displayTitle),
                 size: selectedSize,
-                price: typeof t.cost === "number" ? t.cost + 50 : undefined,
+                price: getDisplayPrice(t),
                 imageUrl: t.imageUrl,
                 speed: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
                 loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
@@ -2513,14 +2544,14 @@ function TireCard({
               }}
             />
           )
-        ) : typeof t.cost === "number" ? (
+        ) : getDisplayPrice(t) != null ? (
           <QuickAddTireButton
             sku={tireSku}
             brand={String(t.brand || "Tire")}
             model={String(displayTitle)}
             size={selectedSize}
             imageUrl={t.imageUrl}
-            unitPrice={t.cost + 50}
+            unitPrice={getDisplayPrice(t)!}
             vehicle={year && make && model ? { year, make, model, trim, modification } : undefined}
             quantity={4}
             source={t.rawSource}

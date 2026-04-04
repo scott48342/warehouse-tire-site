@@ -372,7 +372,12 @@ export default async function TireDetailPage({
         const searchData = await searchRes.json();
         const tire = searchData?.results?.[0];
         if (tire) {
-          const displayPrice = typeof tire.cost === "number" ? tire.cost : null;
+          // Use retail price (sellPrice/MAP) if available, otherwise markup cost by 30%
+          const displayPrice = typeof tire.price === "number" && tire.price > 0
+            ? tire.price
+            : typeof tire.cost === "number" && tire.cost > 0
+              ? Math.round(tire.cost * 1.30 * 100) / 100
+              : null;
           const rawTitle = tire.displayName || tire.prettyName || tire.description || tire.model || safeSku;
           const title = cleanTireDisplayTitle(rawTitle, tire.brand);
           

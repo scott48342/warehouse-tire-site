@@ -21,7 +21,10 @@ export type TireItem = {
   description?: string;
   displayName?: string;
   prettyName?: string;
+  /** Supplier cost (what we pay) */
   cost?: number;
+  /** Retail price / MAP (what customer pays) - use for display when available */
+  price?: number;
   quantity?: { primary?: number; alternate?: number; national?: number };
   imageUrl?: string;
   badges?: {
@@ -111,9 +114,33 @@ const VALUE_BRANDS = ["westlake", "lionhart", "lexani", "atturo", "fullway", "ro
 // ═══════════════════════════════════════════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Calculate display price for a tire
+ * - Uses retail price (MAP/MSRP) if available from TireWeb
+ * - Falls back to cost + $50 margin for WheelPros
+ * - Falls back to cost * 1.30 (30% margin) for TireWeb without price
+ */
+function getDisplayPrice(tire: TireItem): number | null {
+  // If we have a retail price (from TireWeb sellPrice), use it
+  if (typeof tire.price === "number" && tire.price > 0) {
+    return tire.price;
+  }
+  // If we have cost, apply appropriate markup
+  if (typeof tire.cost === "number" && tire.cost > 0) {
+    // TireWeb tires without sellPrice: 30% margin
+    if (tire.source === "tw") {
+      return Math.round(tire.cost * 1.30 * 100) / 100;
+    }
+    // WheelPros/K&M: $50 flat margin (cost is already MAP-50 or MSRP)
+    return tire.cost + 50;
+  }
+  return null;
+}
+
 function categorizeTire(tire: TireItem): TireCategory {
   const brand = String(tire.brand || "").toLowerCase();
-  const price = typeof tire.cost === "number" ? tire.cost : 999;
+  const price = getDisplayPrice(tire) ?? 999;
   
   // Premium: known premium brands OR very expensive
   if (PREMIUM_BRANDS.includes(brand) || price >= 200) {
@@ -186,7 +213,7 @@ function TireCard({
 }) {
   const brand = tire.brand || "Tire";
   const model = tire.displayName || tire.prettyName || tire.description || "";
-  const price = typeof tire.cost === "number" ? tire.cost : null;
+  const price = getDisplayPrice(tire);
   const setPrice = price !== null ? price * 4 : null;
   const category = categorizeTire(tire);
   
@@ -772,7 +799,7 @@ export function TiresGridWithSelection({
     }
     
     const sortByPrice = (a: TireItem, b: TireItem) => 
-      (a.cost || 999) - (b.cost || 999);
+      (getDisplayPrice(a) || 999) - (getDisplayPrice(b) || 999);
     
     return {
       bestValue: bestValue.sort(sortByPrice),
@@ -783,7 +810,7 @@ export function TiresGridWithSelection({
   
   // Handle tire selection
   const handleSelectTire = useCallback((tire: TireItem) => {
-    const price = typeof tire.cost === "number" ? tire.cost : 0;
+    const price = getDisplayPrice(tire) || 0;
     const setPrice = price * 4;
     
     // Remove existing tires from cart
