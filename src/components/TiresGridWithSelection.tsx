@@ -217,14 +217,59 @@ function TireCard({
   };
   const detailHref = buildDetailHref();
   
-  // Get normalized tread category
-  const treadCategory = tire.treadCategory || tire.badges?.terrain || 
-    (model.toLowerCase().includes("all-terrain") || model.toLowerCase().includes("a/t") ? "All-Terrain" :
-     model.toLowerCase().includes("mud") || model.toLowerCase().includes("m/t") ? "Mud-Terrain" :
-     model.toLowerCase().includes("highway") || model.toLowerCase().includes("h/t") ? "Highway/Touring" :
-     model.toLowerCase().includes("winter") || model.toLowerCase().includes("blizzak") ? "Winter" :
-     model.toLowerCase().includes("pilot sport") || model.toLowerCase().includes("potenza") ? "Performance" :
-     "All-Season");
+  // Get normalized tread category with strict hierarchy:
+  // 1. tire.treadCategory (already normalized by API)
+  // 2. tire.badges.terrain (supplier metadata)
+  // 3. Model name parsing (last resort)
+  const inferCategoryFromModel = (modelName: string): string => {
+    const m = modelName.toUpperCase();
+    
+    // Winter patterns (check first - most specific)
+    if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
+      return "Winter";
+    }
+    
+    // Mud-Terrain patterns (M/T, MT, MUD)
+    if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
+      return "Mud-Terrain";
+    }
+    
+    // Rugged-Terrain patterns (R/T, RT, RUGGED)
+    if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
+      return "Rugged-Terrain";
+    }
+    
+    // All-Terrain patterns (A/T, AT, AT2, ATX, AT-X, TERRA TRAC, KO2, GRAPPLER without MUD)
+    if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
+      return "All-Terrain";
+    }
+    
+    // Highway/Touring patterns (H/T, HT, HT2, HTX, TOURING, HIGHWAY)
+    if (/\bH[\/\-]?T\d*[A-Z]?\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
+      return "Highway/Touring";
+    }
+    
+    // Performance patterns
+    if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b|\bCONTI\s*SPORT\b/.test(m)) {
+      return "Performance";
+    }
+    
+    // All-Weather patterns
+    if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
+      return "All-Weather";
+    }
+    
+    // Summer patterns
+    if (/\bSUMMER\b/.test(m) && !/ALL/.test(m)) {
+      return "Summer";
+    }
+    
+    // Default
+    return "All-Season";
+  };
+  
+  // Apply hierarchy
+  const treadCategory = tire.treadCategory || tire.badges?.terrain || inferCategoryFromModel(model);
   
   // Get stock info
   const stockInfo = getStockInfo(tire.quantity);

@@ -2344,23 +2344,33 @@ function TireCard({
           {/* Category badge with icon - infer from model name if not in data */}
           {(() => {
             // Determine category from enrichment, badges, or model name inference
-            const modelName = (displayTitle + ' ' + (t.description || '')).toUpperCase();
+            // Hierarchy: enrichment.treadCategory → badges.terrain → model name patterns
+            const m = (displayTitle + ' ' + (t.description || '')).toUpperCase();
             let category = t.enrichment?.treadCategory || t.badges?.terrain || null;
             
-            // Infer from model name patterns if not set
+            // Infer from model name patterns if not set (improved regex)
             if (!category) {
-              if (/\bM\/T\b|\bMUD[\s-]?TERRAIN\b|\bMUD\b/.test(modelName)) {
-                category = 'Mud-Terrain';
-              } else if (/\bA\/T\b|\bALL[\s-]?TERRAIN\b|\bTERRA\b/.test(modelName)) {
-                category = 'All-Terrain';
-              } else if (/\bH\/T\b|\bHIGHWAY\b|\bTOURING\b/.test(modelName)) {
-                category = 'Highway/Touring';
-              } else if (/\bR\/T\b|\bRUGGED\b/.test(modelName)) {
-                category = 'Rugged-Terrain';
-              } else if (/\bWINTER\b|\bBLIZZAK\b|\bICE\b|\bSNOW\b|\bX-ICE\b|\bWS\d+\b/.test(modelName)) {
+              // Winter patterns (check first - most specific)
+              if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
                 category = 'Winter';
-              } else if (/\bPILOT SPORT\b|\bPOTENZA\b|\bPS4\b|\bSPORT\b/.test(modelName)) {
+              // Mud-Terrain patterns (M/T, MT, MUD) - before A/T
+              } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
+                category = 'Mud-Terrain';
+              // Rugged-Terrain patterns (R/T, RT, RUGGED)
+              } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
+                category = 'Rugged-Terrain';
+              // All-Terrain: A/T, AT, AT2, ATX, AT-X, TERRA TRAC, KO2, GRAPPLER (without MUD)
+              } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
+                category = 'All-Terrain';
+              // Highway/Touring: H/T, HT, HT2, HTX, HTX2, TOURING, HIGHWAY
+              } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
+                category = 'Highway/Touring';
+              // Performance patterns
+              } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S?\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
                 category = 'Performance';
+              // All-Weather patterns
+              } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
+                category = 'All-Weather';
               } else {
                 category = 'All-Season'; // Default fallback
               }

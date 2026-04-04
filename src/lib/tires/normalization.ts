@@ -138,37 +138,55 @@ export function normalizeTreadCategory(
     }
   }
   
-  // Fall back to description parsing
+  // Fall back to description/model name parsing with improved regex patterns
   if (description) {
-    const upperDesc = description.toUpperCase();
+    const m = description.toUpperCase();
     
-    // Check for specific patterns in description
-    if (/\bBLIZZAK\b|\bWINTER\b|\bSNOW\b|\bICE\b|\bWS\d+\b|\bX-ICE\b/.test(upperDesc)) {
+    // Winter patterns (check first - most specific)
+    if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b|\bFROST\b/.test(m)) {
       return 'Winter';
     }
-    if (/\bM\/T\b|\bMUD[\s-]?TERRAIN\b/.test(upperDesc)) {
+    
+    // Mud-Terrain patterns (M/T, MT, MUD) - before A/T since some have both
+    if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
       return 'Mud-Terrain';
     }
-    if (/\bA\/T\b|\bALL[\s-]?TERRAIN\b/.test(upperDesc)) {
-      return 'All-Terrain';
-    }
-    if (/\bR\/T\b|\bRUGGED[\s-]?TERRAIN\b/.test(upperDesc)) {
+    
+    // Rugged-Terrain patterns (R/T, RT, RUGGED)
+    if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
       return 'Rugged-Terrain';
     }
-    if (/\bH\/T\b|\bHIGHWAY[\s-]?TOURING\b|\bHIGHWAY\b|\bTOURING\b/.test(upperDesc)) {
+    
+    // All-Terrain patterns: A/T, AT, AT2, ATX, AT-X, TERRA TRAC, KO2, GRAPPLER (without MUD)
+    // Matches: "AT", "A/T", "AT2", "ATX", "AT-X", "AT4W", etc.
+    if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
+      return 'All-Terrain';
+    }
+    
+    // Highway/Touring patterns: H/T, HT, HT2, HTX, HTX2, TOURING, HIGHWAY
+    // Matches: "HT", "H/T", "HT02", "HTX2", etc.
+    if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
       return 'Highway/Touring';
     }
-    if (/\bUHP\b|\bULTRA[\s-]?HIGH[\s-]?PERFORMANCE\b|\bMAX[\s-]?PERFORMANCE\b/.test(upperDesc)) {
+    
+    // Performance patterns
+    if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b|\bCONTI\s*SPORT\b|\bULTRA[\s\-]?HIGH[\s\-]?PERF/.test(m)) {
       return 'Performance';
     }
-    if (/\bA\/S\b|\bALL[\s-]?SEASON\b/.test(upperDesc)) {
-      return 'All-Season';
-    }
-    if (/\bA\/W\b|\bALL[\s-]?WEATHER\b/.test(upperDesc)) {
+    
+    // All-Weather patterns
+    if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
       return 'All-Weather';
     }
-    if (/\bSUMMER\b/.test(upperDesc)) {
+    
+    // Summer patterns (without ALL prefix)
+    if (/\bSUMMER\b/.test(m) && !/ALL/.test(m)) {
       return 'Summer';
+    }
+    
+    // Explicit All-Season patterns
+    if (/\bA[\/\-]?S\b|\bALL[\s\-]?SEASON\b/.test(m)) {
+      return 'All-Season';
     }
   }
   
