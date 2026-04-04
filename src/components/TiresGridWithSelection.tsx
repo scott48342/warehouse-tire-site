@@ -5,10 +5,8 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart/CartContext";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { StickyPackageBar } from "@/components/StickyPackageBar";
-import { TireBadges, StockBadge, DeliveryBadge } from "@/components/TireBadges";
-import { MiniRatings } from "@/components/PerformanceIndicators";
 import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
-import { derivePerformanceRatings, parseUTQG, getStockInfo } from "@/lib/tires/tireSpecs";
+import { getStockInfo } from "@/lib/tires/tireSpecs";
 import type { TreadCategory } from "@/lib/tires/normalization";
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -145,8 +143,30 @@ function formatPrice(price: number): string {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// TIRE CARD - Clean, conversion-focused design with badges & performance indicators
+// TIRE CARD - Conversion-Optimized Design
+// Answers: What kind? How long? Can I get it? Can I trust it?
 // ═══════════════════════════════════════════════════════════════════════════════
+
+// Badge style maps for tread categories
+const CATEGORY_BADGE_STYLES: Record<string, { bg: string; text: string; icon: string }> = {
+  'All-Season': { bg: 'bg-green-500', text: 'text-white', icon: '🌤️' },
+  'All-Weather': { bg: 'bg-teal-500', text: 'text-white', icon: '🌦️' },
+  'Summer': { bg: 'bg-yellow-500', text: 'text-white', icon: '☀️' },
+  'Winter': { bg: 'bg-sky-500', text: 'text-white', icon: '❄️' },
+  'All-Terrain': { bg: 'bg-amber-600', text: 'text-white', icon: '🏔️' },
+  'Mud-Terrain': { bg: 'bg-orange-600', text: 'text-white', icon: '🪨' },
+  'Highway/Touring': { bg: 'bg-blue-500', text: 'text-white', icon: '🛣️' },
+  'Performance': { bg: 'bg-red-500', text: 'text-white', icon: '🏎️' },
+  'Rugged-Terrain': { bg: 'bg-stone-600', text: 'text-white', icon: '⛰️' },
+};
+
+function getMileageBadgeStyle(miles: number): { label: string; bg: string } {
+  if (miles >= 80000) return { label: '80K WARRANTY', bg: 'bg-purple-600' };
+  if (miles >= 60000) return { label: '60K WARRANTY', bg: 'bg-indigo-600' };
+  if (miles >= 40000) return { label: '40K WARRANTY', bg: 'bg-blue-600' };
+  return { label: '', bg: '' };
+}
+
 function TireCard({
   tire,
   size,
@@ -175,26 +195,50 @@ function TireCard({
     ? `/tires/${encodeURIComponent(tire.partNumber)}?size=${encodeURIComponent(size)}`
     : "#";
   
-  // Get normalized tread category (from enrichment or badges or model name)
+  // Get normalized tread category
   const treadCategory = tire.treadCategory || tire.badges?.terrain || 
     (model.toLowerCase().includes("all-terrain") || model.toLowerCase().includes("a/t") ? "All-Terrain" :
      model.toLowerCase().includes("mud") || model.toLowerCase().includes("m/t") ? "Mud-Terrain" :
      model.toLowerCase().includes("highway") || model.toLowerCase().includes("h/t") ? "Highway/Touring" :
+     model.toLowerCase().includes("winter") || model.toLowerCase().includes("blizzak") ? "Winter" :
+     model.toLowerCase().includes("pilot sport") || model.toLowerCase().includes("potenza") ? "Performance" :
      "All-Season");
-  
-  // Parse UTQG and derive performance ratings
-  const utqgParsed = parseUTQG(tire.utqg);
-  const performanceRatings = derivePerformanceRatings(
-    utqgParsed,
-    treadCategory as TreadCategory,
-    tire.has3PMSF || false
-  );
   
   // Get stock info
   const stockInfo = getStockInfo(tire.quantity);
   
-  // Popular indicator (high stock + mid-tier = popular)
+  // Popular / Top Pick indicator
   const isPopular = category === "most-popular" || stockInfo.total >= 20;
+  const isTopPick = category === "premium" && stockInfo.total >= 8;
+  
+  // Mileage warranty
+  const warrantyMiles = tire.badges?.warrantyMiles || 0;
+  const mileageBadge = warrantyMiles >= 40000 ? getMileageBadgeStyle(warrantyMiles) : null;
+  
+  // Category badge style
+  const catStyle = CATEGORY_BADGE_STYLES[treadCategory] || CATEGORY_BADGE_STYLES['All-Season'];
+  
+  // Build spec summary (only show available fields)
+  const specs: string[] = [];
+  if (tire.utqg) specs.push(`UTQG ${tire.utqg}`);
+  if (tire.treadDepth) specs.push(`${tire.treadDepth}/32" depth`);
+  if (tire.diameter) specs.push(`${tire.diameter}" OD`);
+  if (tire.badges?.loadIndex) specs.push(`Load ${tire.badges.loadIndex}`);
+  
+  // Availability messaging
+  const getAvailabilityMessage = () => {
+    if (stockInfo.status === 'in-stock') {
+      if (stockInfo.deliveryDays && stockInfo.deliveryDays <= 2) {
+        return { icon: '✓', text: 'In stock • Install as soon as Friday', color: 'text-green-700' };
+      }
+      return { icon: '✓', text: `${stockInfo.total} in stock • Ships in 1–2 days`, color: 'text-green-700' };
+    }
+    if (stockInfo.status === 'low-stock') {
+      return { icon: '⚡', text: `Only ${stockInfo.total} left • Ships in 3–5 days`, color: 'text-amber-700' };
+    }
+    return { icon: '📦', text: 'Available • Ships in 1–2 weeks', color: 'text-neutral-600' };
+  };
+  const availability = getAvailabilityMessage();
   
   return (
     <div 
@@ -206,23 +250,9 @@ function TireCard({
             : "border-neutral-200 hover:shadow-md hover:border-neutral-300"
       }`}
     >
-      {/* Selected badge */}
-      {isSelected && (
-        <div className="absolute -top-2 -right-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-white shadow-lg animate-bounce-once">
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-      )}
-      
-      {/* Guaranteed Fit badge - more compact */}
-      <div className="bg-green-600 px-2 py-1 text-center">
-        <span className="text-[10px] font-bold text-white tracking-wide">
-          ✓ GUARANTEED FIT
-        </span>
-      </div>
-      
-      {/* Image - slightly smaller aspect for less vertical space */}
+      {/* ══════════════════════════════════════════════════════════════════════
+          1. IMAGE WITH BADGE STACK
+          ══════════════════════════════════════════════════════════════════════ */}
       <Link href={detailHref} className="block relative">
         <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-50 p-4">
           {tire.imageUrl ? (
@@ -240,7 +270,7 @@ function TireCard({
         </div>
         
         {/* Favorites button */}
-        <div className="absolute top-2 right-2">
+        <div className="absolute top-2 right-2 z-10">
           <FavoritesButton
             type="tire"
             sku={tire.partNumber || ""}
@@ -250,118 +280,152 @@ function TireCard({
           />
         </div>
         
-        {/* Badge overlays (Sale, Popular) */}
-        <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
-          {tire.onSale && (
-            <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
-              SALE
+        {/* Badge Stack - Top Left */}
+        <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
+          {/* Tread Category Badge */}
+          <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm ${catStyle.bg} ${catStyle.text}`}>
+            <span className="text-xs">{catStyle.icon}</span>
+            {treadCategory}
+          </span>
+          
+          {/* Mileage Warranty Badge */}
+          {mileageBadge && (
+            <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${mileageBadge.bg}`}>
+              📏 {mileageBadge.label}
             </span>
           )}
-          {isPopular && !tire.onSale && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 shadow-sm">
+          
+          {/* Top Pick / Sale Badge */}
+          {tire.onSale && (
+            <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
+              🔥 SALE
+            </span>
+          )}
+          {isTopPick && !tire.onSale && (
+            <span className="inline-flex items-center rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
+              ⭐ TOP PICK
+            </span>
+          )}
+          {isPopular && !isTopPick && !tire.onSale && (
+            <span className="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 shadow-sm">
               🔥 Popular
             </span>
           )}
         </div>
+        
+        {/* Selected checkmark overlay */}
+        {isSelected && (
+          <div className="absolute inset-0 bg-green-500/10 flex items-center justify-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-lg">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          </div>
+        )}
       </Link>
       
-      {/* Content - improved spacing */}
+      {/* ══════════════════════════════════════════════════════════════════════
+          2. CORE CONTENT BLOCK
+          ══════════════════════════════════════════════════════════════════════ */}
       <div className="flex flex-1 flex-col p-4">
-        {/* Brand - smaller */}
+        {/* Brand */}
         <div className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">{brand}</div>
         
-        {/* Model Name - max 2 lines, better sizing */}
+        {/* Model Name */}
         <Link href={detailHref}>
           <h3 className="mt-0.5 text-base font-bold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-2 leading-tight min-h-[2.5rem]">
             {model}
           </h3>
         </Link>
         
-        {/* Visual Badges - terrain, mileage, 3PMSF */}
-        <div className="mt-2">
-          <TireBadges
-            treadCategory={treadCategory}
-            warrantyMiles={tire.badges?.warrantyMiles}
-            has3PMSF={tire.has3PMSF}
-            isRunFlat={tire.isRunFlat}
-            freeShipping={true}
-            compact={true}
-            maxBadges={3}
-          />
-        </div>
+        {/* Full tire size/spec */}
+        <div className="mt-1 text-sm font-medium text-neutral-700">{size}</div>
         
-        {/* Size + Basic Specs */}
-        <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-neutral-500">
-          <span className="font-medium text-neutral-600">{size}</span>
-          {tire.badges?.loadIndex && (
-            <>
-              <span>•</span>
-              <span>Load {tire.badges.loadIndex}</span>
-            </>
-          )}
-          {tire.badges?.speedRating && (
-            <>
-              <span>•</span>
-              <span>Speed {tire.badges.speedRating}</span>
-            </>
-          )}
-        </div>
-        
-        {/* Mini Performance Ratings (if UTQG available) */}
-        {utqgParsed && (
-          <div className="mt-2">
-            <MiniRatings ratings={performanceRatings} category={treadCategory} />
+        {/* ══════════════════════════════════════════════════════════════════════
+            3. SPEC SUMMARY ROW (only available fields)
+            ══════════════════════════════════════════════════════════════════════ */}
+        {specs.length > 0 && (
+          <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-neutral-500">
+            {specs.map((spec, i) => (
+              <span key={spec}>
+                {i > 0 && <span className="mr-2">•</span>}
+                {spec}
+              </span>
+            ))}
           </div>
         )}
         
-        <div className="flex-1 min-h-2" />
+        {/* Speed rating if no other specs */}
+        {specs.length === 0 && tire.badges?.speedRating && (
+          <div className="mt-2 text-[11px] text-neutral-500">
+            Speed Rating: {tire.badges.speedRating}
+          </div>
+        )}
         
-        {/* Stock + Delivery messaging */}
-        <div className="mt-2 flex items-center gap-2">
-          <StockBadge 
-            quantity={stockInfo.total} 
-            status={stockInfo.status}
-            compact={true}
-          />
-          {stockInfo.deliveryDays && (
-            <DeliveryBadge days={stockInfo.deliveryDays} compact={true} />
-          )}
+        <div className="flex-1 min-h-3" />
+        
+        {/* ══════════════════════════════════════════════════════════════════════
+            4. AVAILABILITY ROW
+            ══════════════════════════════════════════════════════════════════════ */}
+        <div className={`mt-2 flex items-center gap-1.5 text-[11px] font-medium ${availability.color}`}>
+          <span>{availability.icon}</span>
+          <span>{availability.text}</span>
         </div>
         
-        {/* Price block - cleaner layout */}
+        {/* ══════════════════════════════════════════════════════════════════════
+            5. PRICE BLOCK
+            ══════════════════════════════════════════════════════════════════════ */}
         <div className="mt-3 pt-3 border-t border-neutral-100">
-          <div className="flex items-baseline justify-between gap-2">
+          <div className="flex items-end justify-between gap-2">
             <div>
-              <div className="text-xl font-extrabold text-neutral-900">
+              {/* Set of 4 total - primary */}
+              <div className="text-2xl font-extrabold text-neutral-900">
                 {setPrice !== null 
                   ? `$${formatPrice(setPrice)}`
-                  : "Call"
+                  : "Call for Price"
                 }
               </div>
+              {/* Per tire price - secondary */}
               {price !== null && (
                 <div className="text-[11px] text-neutral-500">
-                  ${formatPrice(price)}/ea × 4
+                  ${formatPrice(price)}/ea × 4 tires
                 </div>
               )}
             </div>
             
-            {/* UTQG display (if available) */}
-            {utqgParsed?.raw && (
-              <div className="text-right">
-                <div className="text-[9px] text-neutral-400 uppercase">UTQG</div>
-                <div className="text-xs font-mono font-bold text-neutral-600">{utqgParsed.raw}</div>
+            {/* UTQG compact display (if available) */}
+            {tire.utqg && (
+              <div className="text-right shrink-0">
+                <div className="text-[9px] text-neutral-400 uppercase tracking-wide">UTQG</div>
+                <div className="text-sm font-mono font-bold text-neutral-700">{tire.utqg}</div>
               </div>
             )}
           </div>
         </div>
         
-        {/* CTA - stronger presence */}
+        {/* ══════════════════════════════════════════════════════════════════════
+            6. TRUST ROW
+            ══════════════════════════════════════════════════════════════════════ */}
+        <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-neutral-500">
+          <span className="inline-flex items-center gap-0.5">
+            <span className="text-green-600">✓</span> Fitment Confirmed
+          </span>
+          <span className="inline-flex items-center gap-0.5">
+            <span className="text-green-600">✓</span> Free Shipping
+          </span>
+          <span className="inline-flex items-center gap-0.5 hidden sm:inline-flex">
+            <span className="text-green-600">✓</span> Price Match
+          </span>
+        </div>
+        
+        {/* CTA Button */}
         <button
           type="button"
           onClick={onSelect}
           disabled={isSelected}
           className={`
-            mt-3 flex h-11 w-full items-center justify-center gap-2 rounded-xl 
+            mt-3 flex h-12 w-full items-center justify-center gap-2 rounded-xl 
             text-sm font-bold transition-all duration-200
             ${isSelected
               ? "bg-green-600 text-white cursor-default"
@@ -373,24 +437,29 @@ function TireCard({
         >
           {isSelected ? (
             <>
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
               {isPackageFlow ? "Selected" : "Added to Cart"}
             </>
           ) : hasSelection ? (
-            "Switch to this"
+            "Switch to this tire"
           ) : (
-            isPackageFlow ? "Add to Package" : "Add to Cart"
+            <>
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              {isPackageFlow ? "Add to Package" : "Add Set of 4"}
+            </>
           )}
         </button>
         
-        {/* View specs link */}
+        {/* View full specs link */}
         <Link 
           href={detailHref}
-          className="mt-1.5 text-center text-[11px] font-medium text-neutral-400 hover:text-neutral-600"
+          className="mt-2 text-center text-[11px] font-medium text-neutral-400 hover:text-neutral-600 transition-colors"
         >
-          View specs →
+          View full specs & reviews →
         </Link>
       </div>
     </div>
