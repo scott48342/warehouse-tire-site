@@ -23,6 +23,14 @@ interface AbandonedCart {
   secondEmailSentAt: string | null;
   emailSentCount: number;
   recoveredAfterEmail: boolean;
+  // Test data
+  isTest: boolean;
+  testReason: string | null;
+  // Product types
+  cartType: "package" | "wheels" | "tires" | "accessories" | "mixed" | "empty";
+  hasWheels: boolean;
+  hasTires: boolean;
+  hasAccessories: boolean;
 }
 
 interface Stats {
@@ -40,6 +48,110 @@ const STATUS_CONFIG: Record<string, { label: string; color: string; bgColor: str
   recovered: { label: "Recovered", color: "text-blue-400", bgColor: "bg-blue-900/50" },
   expired: { label: "Expired", color: "text-neutral-400", bgColor: "bg-neutral-700" },
 };
+
+const CART_TYPE_CONFIG: Record<string, { label: string; icon: string; color: string; bgColor: string }> = {
+  package: { label: "Package", icon: "📦", color: "text-purple-300", bgColor: "bg-purple-900/50" },
+  wheels: { label: "Wheels", icon: "🛞", color: "text-blue-300", bgColor: "bg-blue-900/50" },
+  tires: { label: "Tires", icon: "⭕", color: "text-green-300", bgColor: "bg-green-900/50" },
+  accessories: { label: "Acc", icon: "🔧", color: "text-neutral-300", bgColor: "bg-neutral-700" },
+  mixed: { label: "Mixed", icon: "🛒", color: "text-neutral-300", bgColor: "bg-neutral-700" },
+  empty: { label: "Empty", icon: "❌", color: "text-neutral-500", bgColor: "bg-neutral-800" },
+};
+
+// ============================================================================
+// Triage Badge Components
+// ============================================================================
+
+function ValueBadge({ value }: { value: number }) {
+  if (value >= 1000) {
+    return (
+      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-900/50 text-green-300 border border-green-700">
+        💰 ${Math.round(value / 1000)}K+
+      </span>
+    );
+  }
+  if (value >= 500) {
+    return (
+      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-900/30 text-emerald-400">
+        $500+
+      </span>
+    );
+  }
+  return null;
+}
+
+function EmailBadge({ hasEmail }: { hasEmail: boolean }) {
+  if (hasEmail) {
+    return (
+      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-900/30 text-blue-400" title="Email captured">
+        ✉️
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] text-neutral-500" title="No email">
+      👤
+    </span>
+  );
+}
+
+function RecencyBadge({ lastActivityAt }: { lastActivityAt: string }) {
+  const now = new Date();
+  const lastActivity = new Date(lastActivityAt);
+  const diffHours = (now.getTime() - lastActivity.getTime()) / (1000 * 60 * 60);
+  
+  if (diffHours < 1) {
+    return (
+      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-red-900/50 text-red-300 animate-pulse" title="Active now">
+        🔴 NOW
+      </span>
+    );
+  }
+  if (diffHours < 24) {
+    return (
+      <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-amber-900/30 text-amber-400" title="Last 24h">
+        🟡 24H
+      </span>
+    );
+  }
+  return null;
+}
+
+function CartTypeBadge({ cartType }: { cartType: string }) {
+  const config = CART_TYPE_CONFIG[cartType] || CART_TYPE_CONFIG.mixed;
+  return (
+    <span 
+      className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold ${config.bgColor} ${config.color}`}
+      title={config.label}
+    >
+      {config.icon}
+    </span>
+  );
+}
+
+function TestBadge({ isTest, testReason }: { isTest: boolean; testReason: string | null }) {
+  if (!isTest) return null;
+  return (
+    <span 
+      className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-orange-900/50 text-orange-400 border border-orange-700"
+      title={testReason || "Test data"}
+    >
+      🧪
+    </span>
+  );
+}
+
+function TriageBadges({ cart }: { cart: AbandonedCart }) {
+  return (
+    <div className="flex flex-wrap items-center gap-1">
+      <TestBadge isTest={cart.isTest} testReason={cart.testReason} />
+      <ValueBadge value={cart.value} />
+      <EmailBadge hasEmail={Boolean(cart.email)} />
+      <RecencyBadge lastActivityAt={cart.lastActivityAt} />
+      <CartTypeBadge cartType={cart.cartType} />
+    </div>
+  );
+}
 
 function StatCard({ 
   title, 
@@ -350,106 +462,96 @@ export default function AbandonedCartsPage() {
             <table className="w-full text-sm">
               <thead className="bg-neutral-900/50">
                 <tr className="text-left text-neutral-400 border-b border-neutral-700">
-                  <th className="px-4 py-3 font-medium">Cart ID</th>
-                  <th className="px-4 py-3 font-medium">Customer</th>
-                  <th className="px-4 py-3 font-medium">Vehicle</th>
-                  <th className="px-4 py-3 font-medium text-center">Contents</th>
-                  <th className="px-4 py-3 font-medium text-right">Value</th>
-                  <th className="px-4 py-3 font-medium">Status</th>
-                  <th className="px-4 py-3 font-medium">Last Activity</th>
-                  <th className="px-4 py-3 font-medium">Actions</th>
+                  <th className="px-3 py-3 font-medium">Triage</th>
+                  <th className="px-3 py-3 font-medium text-right">Value</th>
+                  <th className="px-3 py-3 font-medium">Customer</th>
+                  <th className="px-3 py-3 font-medium">Vehicle</th>
+                  <th className="px-3 py-3 font-medium text-center">Contents</th>
+                  <th className="px-3 py-3 font-medium">Status</th>
+                  <th className="px-3 py-3 font-medium">Activity</th>
+                  <th className="px-3 py-3 font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {carts.map((cart) => {
                   const statusConfig = STATUS_CONFIG[cart.status] || STATUS_CONFIG.active;
                   return (
-                    <tr key={cart.id} className="border-b border-neutral-700/50 hover:bg-neutral-700/30">
-                      <td className="px-4 py-3">
-                        <span className="font-mono text-xs text-neutral-400">
-                          {cart.cartId.slice(0, 8)}...
+                    <tr key={cart.id} className={`border-b border-neutral-700/50 hover:bg-neutral-700/30 ${cart.isTest ? "opacity-60" : ""}`}>
+                      {/* Triage badges */}
+                      <td className="px-3 py-3">
+                        <TriageBadges cart={cart} />
+                      </td>
+                      {/* Value - prominent */}
+                      <td className="px-3 py-3 text-right">
+                        <span className={`font-bold ${cart.value >= 1000 ? "text-green-400 text-lg" : cart.value >= 500 ? "text-white" : "text-neutral-300"}`}>
+                          {formatCurrency(cart.value)}
                         </span>
                       </td>
-                      <td className="px-4 py-3">
+                      {/* Customer */}
+                      <td className="px-3 py-3">
                         {cart.customer || cart.email ? (
                           <div>
-                            <div className="text-white">{cart.customer || "Unknown"}</div>
+                            <div className="text-white text-sm">{cart.customer || "Unknown"}</div>
                             {cart.email && (
-                              <div className="text-xs text-neutral-500">{cart.email}</div>
+                              <div className="text-xs text-neutral-500 truncate max-w-[150px]">{cart.email}</div>
                             )}
                           </div>
                         ) : (
-                          <span className="text-neutral-500">Anonymous</span>
+                          <span className="text-neutral-500 text-sm">Anonymous</span>
                         )}
                       </td>
-                      <td className="px-4 py-3">
+                      {/* Vehicle */}
+                      <td className="px-3 py-3">
                         {cart.vehicle ? (
-                          <span className="text-neutral-300">{cart.vehicle}</span>
+                          <span className="text-neutral-300 text-sm">{cart.vehicle}</span>
                         ) : (
                           <span className="text-neutral-500">-</span>
                         )}
                       </td>
-                      <td className="px-4 py-3 text-center">
+                      {/* Contents */}
+                      <td className="px-3 py-3 text-center">
                         <Link 
                           href={`/admin/abandoned-carts/${cart.cartId}`}
-                          className="inline-block bg-neutral-700 hover:bg-neutral-600 px-2 py-0.5 rounded text-neutral-300 hover:text-white transition-colors"
+                          className="inline-block bg-neutral-700 hover:bg-neutral-600 px-2 py-0.5 rounded text-neutral-300 hover:text-white transition-colors text-xs"
                           title="View cart contents"
                         >
-                          {cart.itemCount} items →
+                          {cart.itemCount} →
                         </Link>
                       </td>
-                      <td className="px-4 py-3 text-right">
-                        <span className="font-medium text-white">
-                          {formatCurrency(cart.value)}
-                        </span>
-                      </td>
-                      <td className="px-4 py-3">
+                      {/* Status */}
+                      <td className="px-3 py-3">
                         <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusConfig.bgColor} ${statusConfig.color}`}>
                           {statusConfig.label}
                         </span>
-                        {cart.recoveredOrderId && (
-                          <div className="text-xs text-blue-400 mt-1">
-                            Order: {cart.recoveredOrderId.slice(0, 8)}...
-                          </div>
-                        )}
                         {cart.recoveredAfterEmail && (
-                          <div className="text-xs text-green-400 mt-1">
-                            ✉️ Recovered via email
-                          </div>
+                          <div className="text-[10px] text-green-400 mt-0.5">via email</div>
                         )}
                       </td>
-                      <td className="px-4 py-3">
-                        <div className="text-neutral-300">{formatTimeAgo(cart.lastActivityAt)}</div>
-                        {cart.abandonedAt && (
-                          <div className="text-xs text-yellow-500">
-                            Abandoned {formatTimeAgo(cart.abandonedAt)}
-                          </div>
-                        )}
-                        {/* Email status */}
+                      {/* Activity */}
+                      <td className="px-3 py-3">
+                        <div className="text-neutral-300 text-sm">{formatTimeAgo(cart.lastActivityAt)}</div>
                         {cart.emailSentCount > 0 && (
-                          <div className="text-xs text-purple-400 mt-1">
-                            📧 {cart.emailSentCount} email{cart.emailSentCount > 1 ? "s" : ""} sent
-                            {cart.firstEmailSentAt && (
-                              <span className="text-neutral-500"> • {formatTimeAgo(cart.firstEmailSentAt)}</span>
-                            )}
+                          <div className="text-[10px] text-purple-400">
+                            {cart.emailSentCount}× 📧
                           </div>
                         )}
                       </td>
-                      <td className="px-4 py-3">
-                        <div className="flex flex-col gap-1">
+                      {/* Actions */}
+                      <td className="px-3 py-3">
+                        <div className="flex flex-col gap-0.5">
                           <Link
                             href={`/admin/abandoned-carts/${cart.cartId}`}
                             className="text-xs text-blue-400 hover:text-blue-300"
                           >
-                            View Details
+                            View
                           </Link>
                           {cart.status === "active" && (
                             <button
                               onClick={() => handleTestAbandon(cart.cartId)}
-                              className="text-xs text-yellow-400 hover:text-yellow-300"
+                              className="text-xs text-yellow-400 hover:text-yellow-300 text-left"
                               title="Test: Mark as abandoned"
                             >
-                              Test Abandon
+                              Abandon
                             </button>
                           )}
                           {cart.status === "abandoned" && cart.email && cart.emailSentCount === 0 && (

@@ -97,6 +97,26 @@ export async function GET(req: Request) {
         ? await getCartEmailStatus(cart.cartId)
         : null;
 
+      // Compute product types from items
+      const items = Array.isArray(cart.items) ? cart.items : [];
+      const hasWheels = items.some((i: { type?: string }) => i.type === "wheel");
+      const hasTires = items.some((i: { type?: string }) => i.type === "tire");
+      const hasAccessories = items.some((i: { type?: string }) => i.type === "accessory");
+      
+      // Determine cart type
+      let cartType: "package" | "wheels" | "tires" | "accessories" | "mixed" | "empty" = "empty";
+      if (hasWheels && hasTires) {
+        cartType = "package";
+      } else if (hasWheels) {
+        cartType = "wheels";
+      } else if (hasTires) {
+        cartType = "tires";
+      } else if (hasAccessories) {
+        cartType = "accessories";
+      } else if (items.length > 0) {
+        cartType = "mixed";
+      }
+
       return {
         id: cart.id,
         cartId: cart.cartId,
@@ -136,6 +156,11 @@ export async function GET(req: Request) {
         // Test data
         isTest: cart.isTest || false,
         testReason: cart.testReason || null,
+        // Product types
+        cartType,
+        hasWheels,
+        hasTires,
+        hasAccessories,
       };
     }));
 
