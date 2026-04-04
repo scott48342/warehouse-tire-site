@@ -311,19 +311,33 @@ export function normalizeLoadRange(
     if (upper.includes('12') || upper === 'F') return 'F';
   }
   
-  // Try to extract from description
+  // Try to extract from description - multiple patterns
   if (description) {
     const upper = description.toUpperCase();
-    // Look for patterns like "/E " or "/D " or "10-ply"
-    const match = upper.match(/\/([CDEF])\s|(\d+)[\s-]?PLY/);
-    if (match) {
-      if (match[1]) return match[1];
-      const ply = parseInt(match[2], 10);
+    
+    // Pattern 1: "123/Q E" or "128R F" - load range at end after speed rating
+    // Matches: "123Q E", "128R F", "118/Q E", "125Q F"
+    const endPattern = upper.match(/\d{2,3}[A-Z]?\s+([CDEF])\b/);
+    if (endPattern) return endPattern[1];
+    
+    // Pattern 2: "/E " or "/F " in the middle
+    const slashPattern = upper.match(/\/([CDEF])[\s\b]/);
+    if (slashPattern) return slashPattern[1];
+    
+    // Pattern 3: "10-ply" or "10PLY" or "10 ply"
+    const plyMatch = upper.match(/(\d+)[\s-]?PLY/);
+    if (plyMatch) {
+      const ply = parseInt(plyMatch[1], 10);
       if (ply === 6) return 'C';
       if (ply === 8) return 'D';
       if (ply === 10) return 'E';
       if (ply === 12) return 'F';
     }
+    
+    // Pattern 4: Standalone " E " or " F " (careful - could match other letters)
+    // Only match if preceded by a number (load index) to avoid false positives
+    const standalonePattern = upper.match(/\d{2,3}\s+([EF])\s+\d/);
+    if (standalonePattern) return standalonePattern[1];
     
     // XL indicator
     if (/\bXL\b/.test(upper) && !upper.includes('NON-XL')) {
@@ -431,8 +445,10 @@ export const TREAD_CATEGORIES: TreadCategory[] = [
   'Winter',
   'All-Terrain',
   'Mud-Terrain',
+  'Rugged-Terrain',
   'Highway/Touring',
   'Performance',
+  'Off-Road',
 ];
 
 export const MILEAGE_BANDS: MileageBand[] = ['40K+', '60K+', '80K+'];
