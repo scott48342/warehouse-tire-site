@@ -4,6 +4,7 @@ import { BRAND } from "@/lib/brand";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddTiresToCartButton } from "@/components/AddTiresToCartButton";
+import { BackToTiresButton } from "@/components/BackToTiresButton";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle } from "@/lib/productFormat";
 import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tires/normalization";
@@ -402,9 +403,7 @@ export default async function TireDetailPage({
             <main className="bg-neutral-50">
               <div className="mx-auto max-w-6xl px-4 py-8">
                 {/* Breadcrumb */}
-                <Link href="/tires" className="text-sm font-semibold text-neutral-600 hover:text-neutral-900">
-                  ← Back to tires
-                </Link>
+                <BackToTiresButton />
 
                 <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
                   {/* Left: Image */}
@@ -558,7 +557,9 @@ export default async function TireDetailPage({
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-10">
           <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">Tire not found.</div>
-          <Link href="/tires" className="mt-4 inline-block text-sm font-semibold text-neutral-900 hover:underline">← Back to tires</Link>
+          <div className="mt-4">
+            <BackToTiresButton className="text-sm font-semibold text-neutral-900 hover:underline" />
+          </div>
         </div>
       </main>
     );
@@ -622,7 +623,9 @@ export default async function TireDetailPage({
       <main className="bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-10">
           <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">Tire not found.</div>
-          <Link href="/tires" className="mt-4 inline-block text-sm font-semibold text-neutral-900 hover:underline">← Back to tires</Link>
+          <div className="mt-4">
+            <BackToTiresButton className="text-sm font-semibold text-neutral-900 hover:underline" />
+          </div>
         </div>
       </main>
     );
@@ -662,9 +665,7 @@ export default async function TireDetailPage({
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
         {/* Breadcrumb */}
-        <Link href="/tires" className="text-sm font-semibold text-neutral-600 hover:text-neutral-900">
-          ← Back to tires
-        </Link>
+        <BackToTiresButton />
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
           {/* Left: Image */}
