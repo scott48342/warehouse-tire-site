@@ -23,12 +23,20 @@ type FilterData = {
   allWeather: boolean;
   xlOnly: boolean;
   
+  // New size-based filters
+  rimDiameters: number[];
+  overallDiameters: string[];
+  
   // Available options with counts
   brandOptions: Array<{ value: string; count: number }>;
   treadCategoryOptions: Array<{ value: TreadCategory; count: number }>;
   speedOptions: Array<{ value: string; count: number }>;
   loadRangeOptions: Array<{ value: string; count: number }>;
   mileageOptions: Array<{ value: MileageBand; count: number }>;
+  
+  // New size-based options
+  rimDiameterOptions: Array<{ value: number; count: number }>;
+  overallDiameterOptions: Array<{ value: string; count: number }>;
   
   // Feature counts
   runFlatCount: number;
@@ -288,6 +296,8 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     snowRated: null,
     allWeather: null,
     xl: null,
+    rimDia: null,
+    overallDia: null,
   });
   
   // Count total active filters
@@ -302,7 +312,9 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     (data.runFlat ? 1 : 0) +
     (data.snowRated ? 1 : 0) +
     (data.allWeather ? 1 : 0) +
-    (data.xlOnly ? 1 : 0);
+    (data.xlOnly ? 1 : 0) +
+    data.rimDiameters.length +
+    data.overallDiameters.length;
 
   return (
     <div>
@@ -434,6 +446,44 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               checked={data.mileageBand === value}
               count={count}
               onChange={() => setSingleFilter("mileageBand", data.mileageBand === value ? null : value)}
+            />
+          ))}
+        </div>
+      </AccordionSection>
+      
+      {/* Rim Diameter Section (for mixed size searches) */}
+      <AccordionSection
+        title="Wheel Size"
+        selectedCount={data.rimDiameters.length}
+        hidden={data.rimDiameterOptions.length <= 1}
+      >
+        <div className="space-y-0.5">
+          {data.rimDiameterOptions.map(({ value, count }) => (
+            <FilterCheckbox
+              key={value}
+              label={`${value}" wheels`}
+              checked={data.rimDiameters.includes(value)}
+              count={count}
+              onChange={() => toggleArrayFilter("rimDia", String(value), data.rimDiameters.map(String))}
+            />
+          ))}
+        </div>
+      </AccordionSection>
+      
+      {/* Overall Diameter Section (for mixed size searches) */}
+      <AccordionSection
+        title="Tire Height"
+        selectedCount={data.overallDiameters.length}
+        hidden={data.overallDiameterOptions.length <= 1}
+      >
+        <div className="space-y-0.5">
+          {data.overallDiameterOptions.map(({ value, count }) => (
+            <FilterCheckbox
+              key={value}
+              label={value}
+              checked={data.overallDiameters.includes(value)}
+              count={count}
+              onChange={() => toggleArrayFilter("overallDia", value, data.overallDiameters)}
             />
           ))}
         </div>

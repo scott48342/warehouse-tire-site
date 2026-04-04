@@ -76,6 +76,92 @@ type TireAsset = {
 const PREMIUM_BRANDS = ["michelin", "bridgestone", "continental", "goodyear", "pirelli"];
 const MID_TIER_BRANDS = ["cooper", "toyo", "bfgoodrich", "yokohama", "hankook", "falken", "general", "kumho", "nexen"];
 
+// ============================================================================
+// TIRE SIZE PARSING UTILITIES (for mixed flotation + metric filtering)
+// ============================================================================
+
+interface ParsedTireSize {
+  rimDiameter: number | null;       // 20 from both "35X12.50R20" and "285/65R20"
+  sectionWidth: number | null;      // 12.5 from flotation, 285 from metric (normalized to inches: 285mm ≈ 11.2")
+  overallDiameter: number | null;   // 35 from flotation, calculated from metric
+  isFlotation: boolean;
+  original: string;
+}
+
+function parseTireSize(size: string, description?: string): ParsedTireSize {
+  const s = String(size || description || "").trim().toUpperCase();
+  
+  // Try flotation format first: 35X12.50R20, 35/12.50R20, 33X12.5R17
+  const flotation = s.match(/(\d{2,3})\s*[X\/\-]\s*(\d{1,2}(?:\.\d+)?)\s*[A-Z]*\s*R(\d{2})/i);
+  if (flotation) {
+    const overallDia = parseFloat(flotation[1]);
+    const width = parseFloat(flotation[2]);
+    const rim = parseInt(flotation[3], 10);
+    return {
+      rimDiameter: rim,
+      sectionWidth: width,
+      overallDiameter: overallDia,
+      isFlotation: true,
+      original: s,
+    };
+  }
+  
+  // Try metric format: 285/65R20, P245/50R18, LT285/70R17
+  const metric = s.match(/(?:LT|P)?(\d{3})\s*\/\s*(\d{2})\s*[A-Z]*R(\d{2})/i);
+  if (metric) {
+    const widthMm = parseInt(metric[1], 10);
+    const aspect = parseInt(metric[2], 10);
+    const rim = parseInt(metric[3], 10);
+    
+    // Convert width to inches: mm / 25.4
+    const widthInches = widthMm / 25.4;
+    
+    // Calculate overall diameter: 2 × (width × aspect% / 25.4) + rim
+    // Sidewall height = width × aspect% = widthMm × (aspect/100)
+    // Sidewall in inches = sidewall / 25.4
+    // Overall = 2 × sidewall_inches + rim_diameter
+    const sidewallInches = (widthMm * (aspect / 100)) / 25.4;
+    const overallDia = Math.round((2 * sidewallInches + rim) * 10) / 10; // Round to 1 decimal
+    
+    return {
+      rimDiameter: rim,
+      sectionWidth: Math.round(widthInches * 10) / 10, // Normalize to inches
+      overallDiameter: overallDia,
+      isFlotation: false,
+      original: s,
+    };
+  }
+  
+  // Fallback: try to extract just rim diameter
+  const rimMatch = s.match(/R(\d{2})/i);
+  return {
+    rimDiameter: rimMatch ? parseInt(rimMatch[1], 10) : null,
+    sectionWidth: null,
+    overallDiameter: null,
+    isFlotation: false,
+    original: s,
+  };
+}
+
+// Round overall diameter to nearest standard size (33, 34, 35, 37, etc.)
+function normalizeOverallDiameter(dia: number | null): string | null {
+  if (dia === null) return null;
+  // Standard flotation diameters: 30, 31, 32, 33, 34, 35, 37, 38, 40
+  // For metric tires, round to nearest inch
+  return `${Math.round(dia)}"`;
+}
+
+// Format section width for display
+function formatSectionWidth(width: number | null, isFlotation: boolean): string | null {
+  if (width === null) return null;
+  if (isFlotation) {
+    return `${width}"`;
+  }
+  // Convert back to mm for display (metric convention)
+  const mm = Math.round(width * 25.4 / 5) * 5; // Round to nearest 5mm
+  return `${mm}mm`;
+}
+
 /**
  * Calculate display price for a tire
  * - WheelPros: Use MSRP (passed as price field)
@@ -287,6 +373,22 @@ export default async function TiresPage({
     ? treadCategoriesRaw.filter((t): t is TreadCategory => TREAD_CATEGORIES.includes(t as TreadCategory))
     : treadCategoriesRaw && TREAD_CATEGORIES.includes(treadCategoriesRaw as TreadCategory)
       ? [treadCategoriesRaw as TreadCategory]
+      : [];
+
+  // Rim diameter filter (for mixed size searches)
+  const rimDiaRaw = (sp as any).rimDia;
+  const rimDiameters: number[] = Array.isArray(rimDiaRaw)
+    ? rimDiaRaw.map(Number).filter(n => Number.isFinite(n) && n > 0)
+    : rimDiaRaw && Number.isFinite(Number(rimDiaRaw))
+      ? [Number(rimDiaRaw)]
+      : [];
+
+  // Overall diameter filter (for mixed size searches)
+  const overallDiaRaw = (sp as any).overallDia;
+  const overallDiameters: string[] = Array.isArray(overallDiaRaw)
+    ? overallDiaRaw.map(String).filter(Boolean)
+    : overallDiaRaw
+      ? [String(overallDiaRaw)]
       : [];
 
   // Use safeString to handle potential object values (fixes [object Object] bug)
@@ -1127,6 +1229,38 @@ export default async function TiresPage({
 
   const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
 
+  // Size-based facets (rim diameter, overall diameter) for mixed flotation + metric results
+  const rimDiameterCounts = new Map<number, number>();
+  const overallDiameterCounts = new Map<string, number>();
+
+  for (const t of itemsEnriched) {
+    const sizeStr = (t as any).size || (t as any).description || "";
+    const parsed = parseTireSize(sizeStr, t.description);
+    
+    if (parsed.rimDiameter) {
+      rimDiameterCounts.set(parsed.rimDiameter, (rimDiameterCounts.get(parsed.rimDiameter) || 0) + 1);
+    }
+    
+    const normalizedDia = normalizeOverallDiameter(parsed.overallDiameter);
+    if (normalizedDia) {
+      overallDiameterCounts.set(normalizedDia, (overallDiameterCounts.get(normalizedDia) || 0) + 1);
+    }
+  }
+
+  // Sort rim diameters numerically
+  const rimDiametersAvailable = Array.from(rimDiameterCounts.entries())
+    .sort((a, b) => a[0] - b[0])
+    .map(([rim]) => rim);
+
+  // Sort overall diameters by numeric value
+  const overallDiametersAvailable = Array.from(overallDiameterCounts.entries())
+    .sort((a, b) => {
+      const numA = parseInt(a[0]) || 0;
+      const numB = parseInt(b[0]) || 0;
+      return numA - numB;
+    })
+    .map(([dia]) => dia);
+
   function normalizeSizeKey(s: string) {
     // Strip LT/P prefix, spaces, dashes, and convert ZR to R for consistent matching
     return String(s || "").toUpperCase().replace(/^(LT|P)/i, "").replace(/\s+/g, "").replace(/ZR/g, "R").replace(/-/g, "");
@@ -1205,6 +1339,21 @@ export default async function TiresPage({
     }
     if (typeof priceMax === "number" && Number.isFinite(priceMax)) {
       if (p == null || p > priceMax) return false;
+    }
+
+    // Rim diameter filter (for mixed size searches)
+    if (rimDiameters.length > 0) {
+      const sizeStr = (t as any).size || t.description || "";
+      const parsed = parseTireSize(sizeStr, t.description);
+      if (!parsed.rimDiameter || !rimDiameters.includes(parsed.rimDiameter)) return false;
+    }
+
+    // Overall diameter filter (for mixed size searches)
+    if (overallDiameters.length > 0) {
+      const sizeStr = (t as any).size || t.description || "";
+      const parsed = parseTireSize(sizeStr, t.description);
+      const normalizedDia = normalizeOverallDiameter(parsed.overallDiameter);
+      if (!normalizedDia || !overallDiameters.includes(normalizedDia)) return false;
     }
 
     return true;
@@ -1591,6 +1740,8 @@ export default async function TiresPage({
                 snowRated,
                 allWeather,
                 xlOnly,
+                rimDiameters,
+                overallDiameters,
                 
                 // Available options with counts
                 brandOptions: allBrands.map(b => ({ value: b, count: brandCounts.get(b) || 0 })),
@@ -1602,6 +1753,8 @@ export default async function TiresPage({
                   { value: "60K+" as const, count: mileage60kCount },
                   { value: "80K+" as const, count: mileage80kCount },
                 ],
+                rimDiameterOptions: rimDiametersAvailable.map(rim => ({ value: rim, count: rimDiameterCounts.get(rim) || 0 })),
+                overallDiameterOptions: overallDiametersAvailable.map(dia => ({ value: dia, count: overallDiameterCounts.get(dia) || 0 })),
                 
                 // Feature counts
                 runFlatCount,
