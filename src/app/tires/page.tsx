@@ -996,6 +996,7 @@ export default async function TiresPage({
       imageUrl: t.imageUrl, // TireLibrary images!
       displayName: t.model ? `${t.brand || ''} ${t.model}`.trim() : undefined,
       badges: t.badges,
+      enrichment: (t as any).enrichment, // Preserve enrichment data for filters!
     };
   });
 
