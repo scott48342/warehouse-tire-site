@@ -1030,6 +1030,9 @@ export async function GET(req: Request) {
     // Pagination
     const minQty = i(url.searchParams.get("minQty"));
     const pageSize = Math.min(Math.max(i(url.searchParams.get("pageSize") || url.searchParams.get("limit")) || 50, 1), 200);
+    
+    // Single-tire lookup by partNumber (for PDP detail pages)
+    const partNumberFilter = url.searchParams.get("partNumber")?.trim();
 
     const tDb0 = Date.now();
     const db = getPool();
@@ -1081,6 +1084,25 @@ export async function GET(req: Request) {
       // Filter out tires without valid images (dynamic - not cached)
       const debug = url.searchParams.get("debug") === "true";
       let { filtered: finalResults, stats: imageStats } = filterTiresWithValidImages(cacheResult.results, debug);
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // SINGLE-TIRE LOOKUP BY PART NUMBER (for PDP detail pages)
+      // When partNumber param is provided, filter to exact match only
+      // ═══════════════════════════════════════════════════════════════════════
+      if (partNumberFilter) {
+        const normalizedFilter = partNumberFilter.toUpperCase().replace(/[^A-Z0-9]/g, "");
+        const matched = finalResults.filter(t => {
+          const pn = (t.partNumber || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+          const mpn = (t.mfgPartNumber || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+          return pn === normalizedFilter || mpn === normalizedFilter;
+        });
+        if (matched.length > 0) {
+          finalResults = matched;
+          console.log(`[tires/search] partNumber filter: ${partNumberFilter} → ${matched.length} match(es)`);
+        } else {
+          console.log(`[tires/search] partNumber filter: ${partNumberFilter} → no matches in ${finalResults.length} results`);
+        }
+      }
       
       if (imageStats.invalid > 0) {
         console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
@@ -1453,6 +1475,25 @@ export async function GET(req: Request) {
     
     if (imageStats.invalid > 0) {
       console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // SINGLE-TIRE LOOKUP BY PART NUMBER (for PDP detail pages)
+    // When partNumber param is provided, filter to exact match only
+    // ═══════════════════════════════════════════════════════════════════════
+    if (partNumberFilter) {
+      const normalizedFilter = partNumberFilter.toUpperCase().replace(/[^A-Z0-9]/g, "");
+      const matched = finalResults.filter(t => {
+        const pn = (t.partNumber || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+        const mpn = (t.mfgPartNumber || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+        return pn === normalizedFilter || mpn === normalizedFilter;
+      });
+      if (matched.length > 0) {
+        finalResults = matched;
+        console.log(`[tires/search:vehicle] partNumber filter: ${partNumberFilter} → ${matched.length} match(es)`);
+      } else {
+        console.log(`[tires/search:vehicle] partNumber filter: ${partNumberFilter} → no matches in ${finalResults.length} results`);
+      }
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
