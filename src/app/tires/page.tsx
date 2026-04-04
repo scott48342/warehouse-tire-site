@@ -2333,29 +2333,48 @@ function TireCard({
         
         {/* Badge stack - top left of image */}
         <div className="absolute top-2 left-2 flex flex-col gap-1">
-          {/* Category badge with icon */}
-          {t.enrichment?.treadCategory ? (
-            <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${
-              t.enrichment.treadCategory === 'All-Terrain' ? 'bg-amber-600' :
-              t.enrichment.treadCategory === 'Mud-Terrain' ? 'bg-orange-600' :
-              t.enrichment.treadCategory === 'Winter' ? 'bg-sky-500' :
-              t.enrichment.treadCategory === 'Performance' ? 'bg-red-500' :
-              t.enrichment.treadCategory === 'Highway/Touring' ? 'bg-blue-500' :
-              'bg-green-500'
-            }`}>
-              {t.enrichment.treadCategory === 'All-Terrain' && '🏔️ '}
-              {t.enrichment.treadCategory === 'Mud-Terrain' && '🪨 '}
-              {t.enrichment.treadCategory === 'Winter' && '❄️ '}
-              {t.enrichment.treadCategory === 'Performance' && '🏎️ '}
-              {t.enrichment.treadCategory === 'Highway/Touring' && '🛣️ '}
-              {t.enrichment.treadCategory === 'All-Season' && '🌤️ '}
-              {t.enrichment.treadCategory}
-            </span>
-          ) : t.badges?.terrain ? (
-            <span className="inline-flex items-center gap-1 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
-              🌤️ {String(t.badges.terrain)}
-            </span>
-          ) : null}
+          {/* Category badge with icon - infer from model name if not in data */}
+          {(() => {
+            // Determine category from enrichment, badges, or model name inference
+            const modelName = (displayTitle + ' ' + (t.description || '')).toUpperCase();
+            let category = t.enrichment?.treadCategory || t.badges?.terrain || null;
+            
+            // Infer from model name patterns if not set
+            if (!category) {
+              if (/\bM\/T\b|\bMUD[\s-]?TERRAIN\b|\bMUD\b/.test(modelName)) {
+                category = 'Mud-Terrain';
+              } else if (/\bA\/T\b|\bALL[\s-]?TERRAIN\b|\bTERRA\b/.test(modelName)) {
+                category = 'All-Terrain';
+              } else if (/\bH\/T\b|\bHIGHWAY\b|\bTOURING\b/.test(modelName)) {
+                category = 'Highway/Touring';
+              } else if (/\bR\/T\b|\bRUGGED\b/.test(modelName)) {
+                category = 'Rugged-Terrain';
+              } else if (/\bWINTER\b|\bBLIZZAK\b|\bICE\b|\bSNOW\b|\bX-ICE\b|\bWS\d+\b/.test(modelName)) {
+                category = 'Winter';
+              } else if (/\bPILOT SPORT\b|\bPOTENZA\b|\bPS4\b|\bSPORT\b/.test(modelName)) {
+                category = 'Performance';
+              } else {
+                category = 'All-Season'; // Default fallback
+              }
+            }
+            
+            const catStyle = {
+              'All-Terrain': { bg: 'bg-amber-600', icon: '🏔️' },
+              'Mud-Terrain': { bg: 'bg-orange-600', icon: '🪨' },
+              'Rugged-Terrain': { bg: 'bg-stone-600', icon: '⛰️' },
+              'Winter': { bg: 'bg-sky-500', icon: '❄️' },
+              'Performance': { bg: 'bg-red-500', icon: '🏎️' },
+              'Highway/Touring': { bg: 'bg-blue-500', icon: '🛣️' },
+              'All-Season': { bg: 'bg-green-500', icon: '🌤️' },
+              'All-Weather': { bg: 'bg-teal-500', icon: '🌦️' },
+            }[category] || { bg: 'bg-green-500', icon: '🌤️' };
+            
+            return (
+              <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${catStyle.bg}`}>
+                {catStyle.icon} {category}
+              </span>
+            );
+          })()}
           
           {/* Mileage warranty badge */}
           {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
