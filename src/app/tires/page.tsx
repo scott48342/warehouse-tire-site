@@ -21,6 +21,16 @@ import {
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle } from "@/lib/productFormat";
 
+import { 
+  type TreadCategory, 
+  TREAD_CATEGORIES,
+  MILEAGE_BANDS,
+  LOAD_RANGES,
+  formatMileageDisplay,
+  meetsMinimumMileage,
+  type MileageBand,
+} from "@/lib/tires/normalization";
+
 type Tire = {
   source?: "wp" | "km" | "tw";
   /** Raw source from API (e.g., "tireweb:atd", "km", "wheelpros") for cart tracking */
@@ -42,6 +52,14 @@ type Tire = {
   };
   prettyName?: string;
   tireLibraryId?: number;
+  // Enrichment data for filtering and display
+  enrichment?: {
+    mileage: number | null;
+    treadCategory: TreadCategory | null;
+    mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
+    loadRange: string | null;
+    isRunFlat: boolean;
+  };
 };
 
 type TireAsset = {
@@ -233,6 +251,21 @@ export default async function TiresPage({
     ? loadRangesRaw.map(String).map((s) => s.trim().toUpperCase()).filter(Boolean)
     : loadRangesRaw
       ? [String(loadRangesRaw).trim().toUpperCase()].filter(Boolean)
+      : [];
+
+  // Mileage band filter (40K+, 60K+, 80K+)
+  const mileageBandRaw = (sp as any).mileageBand;
+  const mileageBand = Array.isArray(mileageBandRaw) ? mileageBandRaw[0] : mileageBandRaw;
+  const selectedMileageBand = (mileageBand && MILEAGE_BANDS.includes(mileageBand as MileageBand)) 
+    ? mileageBand as MileageBand 
+    : null;
+
+  // Tread category filter (All-Season, All-Terrain, etc.)
+  const treadCategoriesRaw = (sp as any).treadCategory;
+  const treadCategories: TreadCategory[] = Array.isArray(treadCategoriesRaw)
+    ? treadCategoriesRaw.filter((t): t is TreadCategory => TREAD_CATEGORIES.includes(t as TreadCategory))
+    : treadCategoriesRaw && TREAD_CATEGORIES.includes(treadCategoriesRaw as TreadCategory)
+      ? [treadCategoriesRaw as TreadCategory]
       : [];
 
   // Use safeString to handle potential object values (fixes [object Object] bug)
@@ -1048,6 +1081,29 @@ export default async function TiresPage({
     if (lr) loadRangeCounts.set(lr, (loadRangeCounts.get(lr) || 0) + 1);
   }
 
+  // Tread category counts (from enrichment data)
+  const treadCategoryCounts = new Map<TreadCategory, number>();
+  let mileage40kCount = 0;
+  let mileage60kCount = 0;
+  let mileage80kCount = 0;
+
+  for (const t of itemsEnriched) {
+    const tread = t.enrichment?.treadCategory;
+    if (tread) {
+      treadCategoryCounts.set(tread, (treadCategoryCounts.get(tread) || 0) + 1);
+    }
+    
+    const mileage = t.enrichment?.mileage ?? t.badges?.warrantyMiles;
+    if (mileage && mileage >= 40000) mileage40kCount++;
+    if (mileage && mileage >= 60000) mileage60kCount++;
+    if (mileage && mileage >= 80000) mileage80kCount++;
+  }
+
+  // Sort tread categories by count, keeping only those with items
+  const treadCategoriesAvailable = TREAD_CATEGORIES
+    .filter(tc => treadCategoryCounts.get(tc))
+    .sort((a, b) => (treadCategoryCounts.get(b) || 0) - (treadCategoryCounts.get(a) || 0));
+
   const seasonsAvailable = Array.from(seasonCounts.entries()).sort((a, b) => b[1] - a[1]).map(([s]) => s);
   const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
 
@@ -1112,6 +1168,18 @@ export default async function TiresPage({
       const lrRaw = (t as any)?.loadRange;
       const lr = lrRaw != null ? String(lrRaw).trim().toUpperCase() : "";
       if (!lr || !loadRanges.includes(lr)) return false;
+    }
+
+    // Mileage band filter
+    if (selectedMileageBand) {
+      const mileage = t.enrichment?.mileage ?? t.badges?.warrantyMiles;
+      if (!meetsMinimumMileage(mileage ?? null, selectedMileageBand)) return false;
+    }
+
+    // Tread category filter
+    if (treadCategories.length > 0) {
+      const tireTread = t.enrichment?.treadCategory;
+      if (!tireTread || !treadCategories.includes(tireTread)) return false;
     }
 
     const p = typeof t.cost === "number" ? t.cost + 50 : null;
@@ -1706,6 +1774,82 @@ export default async function TiresPage({
                 <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
               </FilterGroup>
             </form>
+
+            {/* Mileage Warranty Filter */}
+            <form action={basePath} method="get">
+              <input type="hidden" name="year" value={year} />
+              <input type="hidden" name="make" value={make} />
+              <input type="hidden" name="model" value={model} />
+              <input type="hidden" name="trim" value={trim} />
+              <input type="hidden" name="modification" value={modification} />
+              <input type="hidden" name="size" value={selectedSize} />
+              <input type="hidden" name="sort" value={sort} />
+              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
+              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+              {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
+              {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
+              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
+              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
+              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
+              {loadRanges.map((lr) => (<input key={lr} type="hidden" name="loadRange" value={lr} />))}
+              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
+
+              <FilterGroup title="Mileage Warranty">
+                <div className="grid gap-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <Check label="40K+ miles" name="mileageBand" value="40K+" defaultChecked={selectedMileageBand === "40K+"} />
+                    <span className="text-xs font-semibold text-neutral-500">{mileage40kCount}</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-2">
+                    <Check label="60K+ miles" name="mileageBand" value="60K+" defaultChecked={selectedMileageBand === "60K+"} />
+                    <span className="text-xs font-semibold text-neutral-500">{mileage60kCount}</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-2">
+                    <Check label="80K+ miles" name="mileageBand" value="80K+" defaultChecked={selectedMileageBand === "80K+"} />
+                    <span className="text-xs font-semibold text-neutral-500">{mileage80kCount}</span>
+                  </div>
+                </div>
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
+              </FilterGroup>
+            </form>
+
+            {/* Tread Style Filter */}
+            {treadCategoriesAvailable.length > 0 ? (
+              <form action={basePath} method="get">
+                <input type="hidden" name="year" value={year} />
+                <input type="hidden" name="make" value={make} />
+                <input type="hidden" name="model" value={model} />
+                <input type="hidden" name="trim" value={trim} />
+                <input type="hidden" name="modification" value={modification} />
+                <input type="hidden" name="size" value={selectedSize} />
+                <input type="hidden" name="sort" value={sort} />
+                {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
+                <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
+                <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
+                {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
+                {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
+                <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
+                <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
+                <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
+                <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
+                {loadRanges.map((lr) => (<input key={lr} type="hidden" name="loadRange" value={lr} />))}
+                <input type="hidden" name="mileageBand" value={selectedMileageBand || ""} />
+
+                <FilterGroup title="Tread Style">
+                  <div className="grid gap-3">
+                    {treadCategoriesAvailable.map((tc) => (
+                      <div key={tc} className="flex items-center justify-between gap-2">
+                        <Check label={tc} name="treadCategory" value={tc} defaultChecked={treadCategories.includes(tc)} />
+                        <span className="text-xs font-semibold text-neutral-500">{treadCategoryCounts.get(tc) || 0}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
+                </FilterGroup>
+              </form>
+            ) : null}
           </aside>
 
           <section>
@@ -2145,6 +2289,24 @@ function TireCard({
         {displayTitle}
       </h3>
 
+      {/* Mileage & Tread Info - below title, above badges */}
+      {(t.enrichment?.mileage || t.enrichment?.treadCategory) ? (
+        <div className="relative z-10 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-600">
+          {t.enrichment?.mileage && t.enrichment.mileage >= 20000 ? (
+            <span className="flex items-center gap-1">
+              <span className="text-green-600">✓</span>
+              {formatMileageDisplay(t.enrichment.mileage)}
+            </span>
+          ) : null}
+          {t.enrichment?.treadCategory ? (
+            <span className="flex items-center gap-1">
+              <span className="text-neutral-400">•</span>
+              {t.enrichment.treadCategory}
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+
       {/* Badges row - matching wheels card */}
       <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
         {isTopPick ? (
@@ -2152,12 +2314,26 @@ function TireCard({
             ⭐ Top Pick
           </span>
         ) : null}
+        {/* Long Life badges */}
+        {t.enrichment?.mileageBadge === "Ultra Long Life" ? (
+          <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800">
+            🛡️ Ultra Long Life
+          </span>
+        ) : t.enrichment?.mileageBadge === "Long Life" ? (
+          <span className="rounded-full border border-green-200 bg-green-50 px-2 py-0.5 text-[10px] font-bold text-green-800">
+            ✓ Long Life
+          </span>
+        ) : null}
         {rebateLabel ? (
           <span className="rounded-full border border-red-200 bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-900">
             {rebateLabel}
           </span>
         ) : null}
-        {t.badges?.terrain ? (
+        {t.enrichment?.treadCategory ? (
+          <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
+            {t.enrichment.treadCategory}
+          </span>
+        ) : t.badges?.terrain ? (
           <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
             {String(t.badges.terrain)}
           </span>

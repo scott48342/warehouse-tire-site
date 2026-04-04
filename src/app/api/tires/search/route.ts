@@ -25,6 +25,14 @@ import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/class
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
 import { expandKmDescription, extractModelName } from "@/lib/km/nameExpander";
 import { shouldApplyPackagePriority, applyPackagePriorityToTires } from "@/lib/packagePrioritization";
+import { 
+  normalizeTreadCategory, 
+  normalizeMileage, 
+  getMileageBadge,
+  normalizeLoadRange,
+  isRunFlat,
+  type TreadCategory,
+} from "@/lib/tires/normalization";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -129,6 +137,14 @@ interface TireResult {
     speedRating: string | null;
     utqg?: string | null;
   };
+  // Enriched fields for filtering and display
+  enrichment?: {
+    mileage: number | null;
+    treadCategory: TreadCategory | null;
+    mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
+    loadRange: string | null;
+    isRunFlat: boolean;
+  };
 }
 
 async function searchTiresBySize(
@@ -197,12 +213,19 @@ async function searchTiresBySize(
     const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
     const cost = mapUsd != null ? Math.max(0.01, mapUsd - 50) : msrpUsd;
     const tireSize = r.tire_size || r.simple_size || "";
+    const description = r.tire_description || tireSize || r.sku;
+
+    // Compute enrichment data from WheelPros fields
+    const mileage = normalizeMileage(r.mileage_warranty);
+    const treadCategory = normalizeTreadCategory(r.terrain, description);
+    const loadRange = normalizeLoadRange(r.construction_type, null, description);
+    const runFlat = isRunFlat(null, description, null);
 
     return {
       partNumber: String(r.sku),
       mfgPartNumber: String(r.sku),
       brand: r.brand_desc || null,
-      description: r.tire_description || tireSize || r.sku,
+      description,
       cost: cost != null && Number.isFinite(cost) ? cost : null,
       quantity: { primary: 0, alternate: 0, national: i(r.qoh) },
       imageUrl: r.image_url || null,
@@ -213,9 +236,16 @@ async function searchTiresBySize(
       badges: {
         terrain: r.terrain || null,
         construction: r.construction_type || null,
-        warrantyMiles: r.mileage_warranty != null ? i(r.mileage_warranty) : null,
+        warrantyMiles: mileage,
         loadIndex: r.load_index || null,
         speedRating: r.speed_rating || null,
+      },
+      enrichment: {
+        mileage,
+        treadCategory,
+        mileageBadge: getMileageBadge(mileage),
+        loadRange,
+        isRunFlat: runFlat,
       },
     };
   });
@@ -255,6 +285,7 @@ async function searchTiresTireWebFormatted(size: string): Promise<TireResult[]> 
             speedRating: unified.badges.speedRating,
             utqg: unified.badges.utqg,
           },
+          enrichment: unified.enrichment,
         });
       }
     }

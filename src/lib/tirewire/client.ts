@@ -434,6 +434,15 @@ function toSimpleSize(s: string): string {
 
 // ============ Utility: Convert to unified format ============
 
+import { 
+  normalizeTreadCategory, 
+  normalizeMileage, 
+  getMileageBadge,
+  normalizeLoadRange,
+  isRunFlat,
+  type TreadCategory,
+} from "@/lib/tires/normalization";
+
 export interface UnifiedTire {
   partNumber: string;
   mfgPartNumber: string;
@@ -457,6 +466,14 @@ export interface UnifiedTire {
     speedRating: string | null;
     utqg: string | null;
   };
+  // Enriched fields
+  enrichment?: {
+    mileage: number | null;
+    treadCategory: TreadCategory | null;
+    mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
+    loadRange: string | null;
+    isRunFlat: boolean;
+  };
 }
 
 export function tireWebTireToUnified(tire: TireWebTire, provider: string): UnifiedTire {
@@ -470,12 +487,19 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
     imageUrl = `https://tireweb.tirelibrary.com/images/Products/${tire.patternId}.jpg`;
   }
   
+  // Compute enrichment data
+  const descriptionText = tire.name || tire.description || `${tire.make} ${tire.pattern}`.trim();
+  const mileage = normalizeMileage(tire.warranty);
+  const treadCategory = normalizeTreadCategory(null, descriptionText);
+  const loadRange = normalizeLoadRange(tire.loadRange, tire.plyRating, descriptionText);
+  const runFlat = isRunFlat(tire.sidewall, descriptionText, tire.features);
+  
   return {
     partNumber: tire.clientProductCode || tire.productCode,
     mfgPartNumber: tire.productCode,
     brand: tire.make || null,
     model: tire.pattern || null,
-    description: tire.name || tire.description || `${tire.make} ${tire.pattern}`.trim(),
+    description: descriptionText,
     cost: tire.buyPrice > 0 ? tire.buyPrice : null,
     price: tire.sellPrice && tire.sellPrice > 0 ? tire.sellPrice : null,
     quantity: {
@@ -490,12 +514,19 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
     tireLibraryId: tire.id || null,
     source: `tireweb:${provider.replace("tireweb_", "")}`, // FIXED: "tireweb:atd" not "tirewire:atd"
     badges: {
-      terrain: null, // TireWeb doesn't have terrain classification
-      construction: null,
-      warrantyMiles: tire.warranty ? parseInt(tire.warranty) || null : null,
+      terrain: treadCategory, // Now populated from description parsing
+      construction: loadRange,
+      warrantyMiles: mileage,
       loadIndex: tire.loadRating || null,
       speedRating: tire.speedRating || null,
       utqg: tire.utqg || null,
+    },
+    enrichment: {
+      mileage,
+      treadCategory,
+      mileageBadge: getMileageBadge(mileage),
+      loadRange,
+      isRunFlat: runFlat,
     },
   };
 }
