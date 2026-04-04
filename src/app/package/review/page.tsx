@@ -319,32 +319,18 @@ function ActionButtons({
 }) {
   return (
     <div className="space-y-3">
-      {/* Primary CTA: Schedule Install */}
-      <button
-        onClick={onSchedule}
-        disabled={!isComplete}
+      {/* Primary CTA: Proceed to Checkout */}
+      <Link
+        href="/checkout"
         className={`flex h-14 w-full items-center justify-center gap-2 rounded-xl px-6 text-base font-extrabold transition
           ${isComplete 
             ? "bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-600/25" 
-            : "bg-neutral-200 text-neutral-500 cursor-not-allowed"
+            : "bg-neutral-200 text-neutral-500 cursor-not-allowed pointer-events-none"
           }
         `}
       >
-        <span className="text-xl">📅</span>
-        <span>Schedule Install</span>
-      </button>
-
-      {/* Secondary CTA: Checkout (DIY) */}
-      <Link
-        href="/checkout"
-        className={`flex h-12 w-full items-center justify-center gap-2 rounded-xl border px-6 text-sm font-bold transition
-          ${isComplete
-            ? "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50"
-            : "border-neutral-100 bg-neutral-50 text-neutral-400 pointer-events-none"
-          }
-        `}
-      >
-        <span>Checkout Without Install</span>
+        <span className="text-xl">🛒</span>
+        <span>Proceed to Checkout</span>
       </Link>
 
       {!isComplete && (
@@ -365,7 +351,7 @@ function TrustBadges() {
       </div>
       <div className="flex items-center gap-2 text-neutral-700">
         <span className="text-green-600">✓</span>
-        <span>Professional installation available</span>
+        <span>Ships mounted & balanced</span>
       </div>
       <div className="flex items-center gap-2 text-neutral-700">
         <span className="text-green-600">✓</span>
@@ -656,7 +642,7 @@ export default function ReviewPackagePage() {
               <div>
                 <h2 className="text-lg font-bold text-neutral-900 mb-3 flex items-center gap-2">
                   <span className="text-green-600">✓</span> Accessories
-                  <span className="text-xs font-normal text-neutral-500">(auto-added for proper installation)</span>
+                  <span className="text-xs font-normal text-neutral-500">(included for proper fitment)</span>
                 </h2>
                 <div className="space-y-3">
                   {accessories.map((accessory) => (
@@ -672,8 +658,8 @@ export default function ReviewPackagePage() {
                 <div className="flex items-start gap-3">
                   <span className="text-amber-600">⚠️</span>
                   <div className="text-sm text-amber-800">
-                    <strong>No accessories detected.</strong> Our technicians will verify if additional 
-                    hardware (lug nuts, hub rings) is needed during installation.
+                    <strong>No accessories detected.</strong> Your local installer can advise if additional 
+                    hardware (lug nuts, hub rings) is needed for your vehicle.
                   </div>
                 </div>
               </div>

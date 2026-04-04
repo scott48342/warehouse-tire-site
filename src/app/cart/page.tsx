@@ -398,7 +398,7 @@ export default function CartPage() {
                   <div className="flex-1">
                     <h3 className="font-bold text-amber-900">Complete your setup with tires</h3>
                     <p className="mt-1 text-sm text-amber-800">
-                      Add matching tires for your new wheels and save on installation.
+                      Add matching tires for your new wheels — ships together for faster delivery.
                     </p>
                     <Link
                       href={tiresUrl}

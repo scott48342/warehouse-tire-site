@@ -239,48 +239,14 @@ export default async function Home() {
               <div className="text-xs text-neutral-500">Most orders ship same day</div>
             </div>
             <div>
-              <div className="text-2xl">🔧</div>
-              <div className="mt-1 text-sm font-bold text-neutral-900">Installation</div>
-              <div className="text-xs text-neutral-500">Schedule at checkout</div>
+              <div className="text-2xl">↩️</div>
+              <div className="mt-1 text-sm font-bold text-neutral-900">Easy Returns</div>
+              <div className="text-xs text-neutral-500">Hassle-free process</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== INSTALL CTA - Compact ===== */}
-      <section className="mx-auto max-w-6xl px-4 py-10">
-        <div className="rounded-2xl border border-neutral-200 bg-white p-6 md:p-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
-                <span>🔧</span>
-                <span>Professional Installation</span>
-              </div>
-              <h2 className="mt-3 text-xl font-extrabold text-neutral-900">
-                Get it installed
-              </h2>
-              <p className="mt-2 text-sm text-neutral-600 max-w-md">
-                Schedule your tire or wheel installation at checkout. Mounting, balancing, and TPMS included.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/schedule"
-                className="inline-flex h-11 items-center justify-center rounded-xl bg-neutral-900 px-5 text-sm font-extrabold text-white transition-colors hover:bg-neutral-800"
-              >
-                Schedule Install
-              </Link>
-              <a
-                href="tel:+12483324120"
-                className="inline-flex h-11 items-center justify-center rounded-xl border border-neutral-300 px-5 text-sm font-extrabold text-neutral-900 transition-colors hover:bg-neutral-50"
-              >
-                <span className="mr-2">📞</span>
-                248-332-4120
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

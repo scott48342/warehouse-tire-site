@@ -315,9 +315,6 @@ export function Header() {
               </div>
             </details>
 
-            <Link href="/schedule" className="px-2 py-2 text-sm font-extrabold text-neutral-900 hover:underline">
-              SCHEDULE
-            </Link>
           </div>
 
           <button
@@ -336,12 +333,13 @@ export function Header() {
           <CartIcon />
 
           <PillLink href={BRAND.links.tel}>Call</PillLink>
-          <Link
-            href="/schedule"
+          <button
+            type="button"
+            onClick={() => openLauncher("tires")}
             className="inline-flex items-center justify-center rounded-full bg-[var(--brand-red)] px-4 py-2 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)]"
           >
-            Schedule Install
-          </Link>
+            Shop Tires
+          </button>
         </nav>
       </div>
 

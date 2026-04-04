@@ -101,10 +101,10 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/installation" 
+                  href="/returns" 
                   className="text-sm text-neutral-400 hover:text-white transition-colors"
                 >
-                  Installation
+                  Returns & Exchanges
                 </Link>
               </li>
               <li>
