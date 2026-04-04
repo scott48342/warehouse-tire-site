@@ -2,7 +2,6 @@ import Link from "next/link";
 import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
 import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
-import { QuoteRequest } from "@/components/QuoteRequest";
 import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddToCartButton } from "@/components/AddToCartButton";
@@ -980,7 +979,6 @@ export default async function WheelDetailPage({
                     dbProfile={dbProfile}
                     wheelCenterBore={tfSelf?.centerbore ? Number(tfSelf.centerbore) : (it?.properties?.centerbore ? Number(it.properties.centerbore) : undefined)}
                   />
-                  <QuoteRequest productType="wheel" sku={sku} productName={it?.title || sku} />
                 </div>
 
                 <div className="mt-3 pt-3 border-t border-green-200">
@@ -1015,13 +1013,13 @@ export default async function WheelDetailPage({
               <div className="text-sm font-extrabold text-neutral-900">
                 {typeof price === "number" && Number.isFinite(price) ? `$${price.toFixed(2)}` : "Call for price"}
               </div>
-              <div className="text-[11px] text-neutral-600">Per wheel • Quote in minutes</div>
+              <div className="text-[11px] text-neutral-600">Per wheel • Set of 4: ${typeof price === "number" ? (price * 4).toFixed(0) : "—"}</div>
             </div>
             <a
               href="#quote"
               className="h-10 rounded-xl bg-[var(--brand-red)] px-4 py-2 text-center text-sm font-extrabold text-white"
             >
-              Request quote
+              Add to Cart
             </a>
           </div>
         </div>
