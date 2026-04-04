@@ -1298,7 +1298,7 @@ export default async function WheelsPage({
 
             {year && make && model ? (
               <div className="mb-4">
-                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} productType="wheels" />
               </div>
             ) : null}
 

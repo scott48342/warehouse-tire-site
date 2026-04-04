@@ -144,7 +144,13 @@ async function fetchJson<T>(url: string): Promise<T> {
   return (await res.json()) as T;
 }
 
-export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
+export function RecommendedFitmentCard({ 
+  fitment, 
+  productType = "tires" 
+}: { 
+  fitment: Fitment;
+  productType?: "tires" | "wheels";
+}) {
   const hasVehicle = Boolean(fitment?.year && fitment?.make && fitment?.model);
   const wpSubmodel = useMemo(() => {
     const mod = fitment?.modification || "";
@@ -370,7 +376,7 @@ export function RecommendedFitmentCard({ fitment }: { fitment: Fitment }) {
 
       <div className="p-4">
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3">
-        <div className="text-xs font-extrabold text-neutral-900">Sizing guide</div>
+        <div className="text-xs font-extrabold text-neutral-900">{productType === "wheels" ? "Wheel Sizing Guide" : "Sizing guide"}</div>
         <div className="mt-2 grid gap-2 text-[12px] text-neutral-800">
           {details?.boltPattern ? (
             <div className="flex items-center justify-between gap-3">

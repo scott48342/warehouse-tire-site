@@ -770,7 +770,7 @@ export default async function WheelDetailPage({
                   </div>
                 </div>
 
-                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} />
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} productType="wheels" />
                 <div className="mt-2">
                   <Link
                     href={`/wheels?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`}
