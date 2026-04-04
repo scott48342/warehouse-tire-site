@@ -45,6 +45,7 @@ import {
   buildVehicleCacheKey,
   getSearchCacheDiagnostics,
 } from "@/lib/tires/searchCache";
+import { enrichTireWebResultsWithSpecs } from "@/lib/tires/patternSpecsCache";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -148,6 +149,7 @@ interface TireResult {
     loadIndex: string | null;
     speedRating: string | null;
     utqg?: string | null;
+    treadDepth?: number | null;
   };
   // Enriched fields for filtering and display
   enrichment?: {
@@ -200,7 +202,13 @@ async function searchTiresBySize(
         t.image_url,
         t.map_usd,
         t.msrp_usd,
-        coalesce(i.qoh, 0) as qoh
+        coalesce(i.qoh, 0) as qoh,
+        -- Extract additional specs from raw JSON
+        t.raw->>'utqg' as utqg,
+        t.raw->>'tread_depth' as tread_depth,
+        t.raw->>'treadwear' as treadwear,
+        t.raw->>'traction' as traction,
+        t.raw->>'temperature' as temperature
       from wp_tires t
       left join wp_inventory i
         on i.sku = t.sku
@@ -251,6 +259,8 @@ async function searchTiresBySize(
         warrantyMiles: mileage,
         loadIndex: r.load_index || null,
         speedRating: r.speed_rating || null,
+        utqg: r.utqg || null,
+        treadDepth: r.tread_depth ? parseFloat(r.tread_depth) : null,
       },
       enrichment: {
         mileage,
@@ -747,6 +757,10 @@ async function mergeTireResults(
   
   // Enrich remaining K&M results (without images) with TireLibrary images
   const enrichedKmResults = enrichKmWithTireLibraryImages(kmWithDbImages, imageLookup);
+  
+  // Enrich TireWeb results with cached pattern specs (UTQG, warranty, etc.)
+  // This fills in specs that TireWeb search doesn't return
+  await enrichTireWebResultsWithSpecs(twResults);
   
   // Helper to add/merge a tire, keeping lowest price
   const addTire = (tire: TireResult) => {
