@@ -137,7 +137,36 @@ function QuickSpecs(props: QuickSpecsProps) {
 }
 
 // ============================================================================
-// WHY THIS TIRE - 3 bullets max, benefit-driven
+// CATEGORY TAGLINE - Short, benefit-driven description
+// ============================================================================
+
+function getCategoryTagline(category: TreadCategory | null): { label: string; tagline: string } {
+  switch (category) {
+    case 'All-Season':
+      return { label: "All-Season Tire", tagline: "Handles rain, sun, and light snow — your everyday go-to" };
+    case 'All-Weather':
+      return { label: "All-Weather Tire", tagline: "True year-round confidence, even in winter storms" };
+    case 'All-Terrain':
+      return { label: "All-Terrain Tire", tagline: "Daily driver comfort with weekend trail capability" };
+    case 'Mud-Terrain':
+      return { label: "Mud-Terrain Tire", tagline: "Aggressive grip for serious off-road adventures" };
+    case 'Highway/Touring':
+      return { label: "Highway Touring Tire", tagline: "Quiet, comfortable, and built for the long haul" };
+    case 'Performance':
+      return { label: "Performance Tire", tagline: "Responsive handling when you want to feel the road" };
+    case 'Summer':
+      return { label: "Summer Tire", tagline: "Maximum grip when the pavement heats up" };
+    case 'Winter':
+      return { label: "Winter Tire", tagline: "Engineered confidence in ice, snow, and freezing temps" };
+    case 'Rugged-Terrain':
+      return { label: "Rugged Terrain Tire", tagline: "Trail-tough protection with on-road manners" };
+    default:
+      return { label: "Quality Tire", tagline: "Reliable performance for everyday driving" };
+  }
+}
+
+// ============================================================================
+// WHY THIS TIRE - Benefit-driven, conversational
 // ============================================================================
 
 function getWhyThisTirePoints(
@@ -148,55 +177,86 @@ function getWhyThisTirePoints(
 ): string[] {
   const points: string[] = [];
   
-  // One category-specific benefit
+  // Primary benefit based on category
   switch (category) {
     case 'All-Season':
-      points.push("Reliable grip in rain, dry roads, and light snow");
+      points.push("Keeps you confident in changing weather");
+      points.push("Smooth, comfortable ride on any road");
       break;
     case 'All-Weather':
-      points.push("Year-round performance with winter capability");
+      points.push("No seasonal tire swaps needed");
+      points.push("Rated for severe snow conditions");
       break;
     case 'All-Terrain':
-      points.push("On-road comfort meets off-road capability");
+      points.push("Take the scenic route without worry");
+      points.push("Quiet enough for your daily commute");
       break;
     case 'Mud-Terrain':
-      points.push("Maximum traction in mud, rock, and loose terrain");
+      points.push("Gets you through when trails get gnarly");
+      points.push("Self-cleaning tread throws mud fast");
       break;
     case 'Highway/Touring':
-      points.push("Smooth, quiet ride optimized for highway miles");
+      points.push("Quiet cabin, comfortable long drives");
+      points.push("Designed to go the distance");
       break;
     case 'Performance':
-      points.push("Precise handling and responsive cornering");
+      points.push("Sharp handling when it matters");
+      points.push("Confident grip through every curve");
       break;
     case 'Summer':
-      points.push("Maximum grip in warm weather conditions");
+      points.push("Sticks to the road in heat and rain");
+      points.push("Responsive feel for spirited driving");
       break;
     case 'Winter':
-      points.push("Engineered for ice, snow, and freezing temps");
+      points.push("Bites into ice and packed snow");
+      points.push("Stays flexible in freezing temps");
       break;
     case 'Rugged-Terrain':
-      points.push("Tough sidewalls for trail protection");
+      points.push("Sidewalls built to shrug off trail damage");
+      points.push("On-road comfort you'll actually enjoy");
       break;
     default:
-      points.push("Quality tire with reliable performance");
+      points.push("Reliable grip in everyday conditions");
+      points.push("Quality construction you can trust");
   }
   
-  // Add warranty benefit if significant
+  // Add warranty as value signal
   if (mileageWarranty) {
     const miles = parseInt(mileageWarranty, 10);
     if (miles >= 60000) {
-      points.push(`Backed by ${Math.round(miles/1000)}K mile warranty`);
+      points.push(`${Math.round(miles/1000)}K mile warranty backs it up`);
+    } else if (miles >= 40000) {
+      points.push(`${Math.round(miles/1000)}K mile warranty included`);
     }
   }
   
   // Add special features
   if (isRunFlatTire) {
-    points.push("Drive safely to service even with a flat");
+    points.push("Run-flat tech gets you home safely");
   } else if (has3PMSF) {
-    points.push("Certified for severe snow conditions");
+    points.push("3-peak rated for real winter grip");
   }
   
-  return points.slice(0, 3); // Max 3
+  return points.slice(0, 4); // Max 4 for persuasion without clutter
+}
+
+// ============================================================================
+// CONFIDENCE SIGNAL - Trust builder near CTA
+// ============================================================================
+
+function getConfidenceSignal(qty: number, category: TreadCategory | null): string | null {
+  if (qty >= 50) {
+    return "Popular choice — customers love this one";
+  } else if (qty >= 20) {
+    return "Frequently purchased in this size";
+  } else if (category === 'Highway/Touring' || category === 'All-Season') {
+    return "Great everyday choice for most drivers";
+  } else if (category === 'All-Terrain') {
+    return "Top pick for trucks and SUVs";
+  } else if (category === 'Performance') {
+    return "Enthusiast favorite for spirited driving";
+  }
+  return null;
 }
 
 // ============================================================================
@@ -397,10 +457,12 @@ export default async function TireDetailPage({
           
           const ratings = derivePerformanceRatings(null, category, has3PMSF);
           const whyPoints = getWhyThisTirePoints(category, tire.badges?.warrantyMiles ? String(tire.badges.warrantyMiles) : null, isRunFlatTire, has3PMSF);
+          const categoryTagline = getCategoryTagline(category);
           
           const q = tire.quantity || {};
           const totalQty = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
           const delivery = getDeliveryMessage(totalQty);
+          const confidenceSignal = getConfidenceSignal(totalQty, category);
           
           return (
             <main className="bg-neutral-50">
@@ -438,8 +500,14 @@ export default async function TireDetailPage({
                       {/* Title */}
                       <h1 className="mt-1 text-xl font-extrabold tracking-tight text-neutral-900">{title}</h1>
                       
+                      {/* Category tagline */}
+                      <div className="mt-1.5">
+                        <span className="text-sm font-semibold text-neutral-700">{categoryTagline.label}</span>
+                        <p className="text-sm text-neutral-500">{categoryTagline.tagline}</p>
+                      </div>
+                      
                       {/* Quick specs */}
-                      <div className="mt-2">
+                      <div className="mt-3">
                         <QuickSpecs
                           mileageWarranty={tire.badges?.warrantyMiles ? String(tire.badges.warrantyMiles) : null}
                           category={category}
@@ -470,6 +538,14 @@ export default async function TireDetailPage({
                         <span>{delivery.text}</span>
                       </div>
 
+                      {/* Confidence signal */}
+                      {confidenceSignal && (
+                        <div className="mt-3 flex items-center gap-1.5 text-sm text-neutral-600">
+                          <span className="text-amber-500">⭐</span>
+                          <span>{confidenceSignal}</span>
+                        </div>
+                      )}
+
                       {/* CTA - DOMINANT */}
                       {displayPrice != null && (
                         <div id="add-to-cart" className="mt-4">
@@ -492,10 +568,10 @@ export default async function TireDetailPage({
                       </div>
                     </div>
 
-                    {/* Why this tire - benefit-driven with subtle styling */}
+                    {/* Why this tire - benefit-driven */}
                     {whyPoints.length > 0 && (
                       <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why This Tire</div>
+                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You'll Love It</div>
                         <ul className="space-y-2">
                           {whyPoints.map((point, i) => (
                             <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
@@ -635,7 +711,10 @@ export default async function TireDetailPage({
   
   const ratings = derivePerformanceRatings(null, category, has3PMSF);
   const whyPoints = getWhyThisTirePoints(category, t.mileage_warranty ? String(t.mileage_warranty) : null, isRunFlatTire, has3PMSF);
-  const delivery = getDeliveryMessage(Number(t.qoh) || 0);
+  const categoryTagline = getCategoryTagline(category);
+  const totalQty = Number(t.qoh) || 0;
+  const delivery = getDeliveryMessage(totalQty);
+  const confidenceSignal = getConfidenceSignal(totalQty, category);
 
   // Enrich with tire asset image if needed
   let enrichedImageUrl: string | null = t.image_url || null;
@@ -692,15 +771,21 @@ export default async function TireDetailPage({
             )}
 
             {/* Main buy box card */}
-            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+            <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-lg shadow-neutral-200/50 ring-1 ring-neutral-100">
               {/* Brand */}
               <p className="text-sm font-medium text-neutral-500">{String(t.brand_desc || "Tire")}</p>
               
               {/* Title */}
               <h1 className="mt-1 text-xl font-extrabold tracking-tight text-neutral-900">{title}</h1>
               
+              {/* Category tagline */}
+              <div className="mt-1.5">
+                <span className="text-sm font-semibold text-neutral-700">{categoryTagline.label}</span>
+                <p className="text-sm text-neutral-500">{categoryTagline.tagline}</p>
+              </div>
+              
               {/* Quick specs */}
-              <div className="mt-2">
+              <div className="mt-3">
                 <QuickSpecs
                   mileageWarranty={t.mileage_warranty ? String(t.mileage_warranty) : null}
                   category={category}
@@ -730,6 +815,14 @@ export default async function TireDetailPage({
                 {delivery.text}
               </div>
 
+              {/* Confidence signal */}
+              {confidenceSignal && (
+                <div className="mt-3 flex items-center gap-1.5 text-sm text-neutral-600">
+                  <span className="text-amber-500">⭐</span>
+                  <span>{confidenceSignal}</span>
+                </div>
+              )}
+
               {/* CTA - DOMINANT */}
               <div id="add-to-cart" className="mt-4">
                 <AddTiresToCartButton
@@ -752,14 +845,15 @@ export default async function TireDetailPage({
               </div>
             </div>
 
-            {/* Why this tire - compact */}
+            {/* Why this tire - benefit-driven */}
             {whyPoints.length > 0 && (
-              <div className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
-                <ul className="space-y-1">
+              <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
+                <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You'll Love It</div>
+                <ul className="space-y-2">
                   {whyPoints.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-neutral-700">
-                      <span className="text-green-600 mt-0.5">✓</span>
-                      <span>{point}</span>
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs mt-0.5">✓</span>
+                      <span className="leading-snug">{point}</span>
                     </li>
                   ))}
                 </ul>
