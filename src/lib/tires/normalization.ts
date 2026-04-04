@@ -340,8 +340,16 @@ export function normalizeLoadRange(
     if (standalonePattern) return standalonePattern[1];
     
     // XL indicator
-    if (/\bXL\b/.test(upper) && !upper.includes('NON-XL')) {
+    if (/\bXL\b/.test(upper) && !/NON[\s-]?XL/.test(upper)) {
       return 'XL';
+    }
+    
+    // Default passenger tires to SL (Standard Load)
+    // Passenger tires: P-metric (P245/50R18) or metric without LT prefix
+    // If no LT prefix and no ply rating detected, assume SL
+    const isLightTruck = /\bLT\b|^LT\d/.test(upper);
+    if (!isLightTruck) {
+      return 'SL';
     }
   }
   
