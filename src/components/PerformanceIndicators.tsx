@@ -49,40 +49,40 @@ function RatingBar({
   compact = false,
   showValue = true,
 }: RatingBarProps) {
-  // Determine color based on value or explicit color
+  // Determine color based on value or explicit color - using gradients for premium feel
   const getBarColor = () => {
     if (color !== 'auto') {
       switch (color) {
-        case 'green': return 'bg-green-500';
-        case 'amber': return 'bg-amber-500';
-        case 'red': return 'bg-red-500';
-        case 'blue': return 'bg-blue-500';
+        case 'green': return 'bg-gradient-to-r from-green-500 to-emerald-400';
+        case 'amber': return 'bg-gradient-to-r from-amber-500 to-yellow-400';
+        case 'red': return 'bg-gradient-to-r from-red-500 to-rose-400';
+        case 'blue': return 'bg-gradient-to-r from-blue-500 to-cyan-400';
       }
     }
     
-    // Auto color based on value
-    if (value >= 8) return 'bg-green-500';
-    if (value >= 6) return 'bg-blue-500';
-    if (value >= 4) return 'bg-amber-500';
-    return 'bg-red-400';
+    // Auto color based on value - premium gradients
+    if (value >= 8) return 'bg-gradient-to-r from-green-500 to-emerald-400';
+    if (value >= 6) return 'bg-gradient-to-r from-blue-500 to-cyan-400';
+    if (value >= 4) return 'bg-gradient-to-r from-amber-500 to-yellow-400';
+    return 'bg-gradient-to-r from-red-400 to-rose-300';
   };
   
   const percentage = Math.max(0, Math.min(100, value * 10));
   
   if (compact) {
     return (
-      <div className="flex items-center gap-1.5">
-        <span className="text-[9px] font-medium text-neutral-500 w-14 truncate">
+      <div className="flex items-center gap-2">
+        <span className="text-[10px] font-semibold text-neutral-600 w-16 truncate">
           {label}
         </span>
-        <div className="flex-1 h-1.5 bg-neutral-200 rounded-full overflow-hidden">
+        <div className="flex-1 h-2.5 bg-neutral-100 rounded-full overflow-hidden shadow-inner">
           <div 
-            className={`h-full rounded-full transition-all ${getBarColor()}`}
+            className={`h-full rounded-full transition-all duration-300 ease-out ${getBarColor()}`}
             style={{ width: `${percentage}%` }}
           />
         </div>
         {showValue && (
-          <span className="text-[9px] font-bold text-neutral-700 w-4 text-right">
+          <span className="text-[10px] font-bold text-neutral-800 w-5 text-right">
             {value}
           </span>
         )}
@@ -91,18 +91,18 @@ function RatingBar({
   }
   
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-xs font-medium text-neutral-600 w-24 truncate">
+    <div className="flex items-center gap-3">
+      <span className="text-xs font-semibold text-neutral-700 w-24 truncate">
         {label}
       </span>
-      <div className="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden">
+      <div className="flex-1 h-3 bg-neutral-100 rounded-full overflow-hidden shadow-inner">
         <div 
-          className={`h-full rounded-full transition-all ${getBarColor()}`}
+          className={`h-full rounded-full transition-all duration-300 ease-out ${getBarColor()}`}
           style={{ width: `${percentage}%` }}
         />
       </div>
       {showValue && (
-        <span className="text-xs font-bold text-neutral-800 w-6 text-right">
+        <span className="text-xs font-bold text-neutral-900 w-6 text-right">
           {value}
         </span>
       )}

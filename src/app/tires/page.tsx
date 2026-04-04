@@ -1739,24 +1739,33 @@ export default async function TiresPage({
               </div>
             </div>
 
-            {/* Top Picks Section - matches wheels page styling */}
+            {/* Top Picks Section - Premium styling with visual separation */}
             {hasVehicle && topPicks.length > 0 && safePage === 1 ? (
-              <div className="mt-5 mb-8 rounded-2xl bg-gradient-to-b from-neutral-50 to-white border border-neutral-200 p-6 shadow-sm">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl">⭐</span>
-                      <h2 className="text-xl font-extrabold text-neutral-900">
-                        Top Tire Picks for Your {year} {make} {model}
-                      </h2>
+              <div className="mt-5 mb-10 relative">
+                {/* Decorative background */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-green-50 via-emerald-50/50 to-white -z-10" />
+                <div className="absolute inset-0 rounded-3xl border-2 border-green-100 -z-10" />
+                
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg shadow-green-500/25">
+                          <span className="text-lg text-white">⭐</span>
+                        </div>
+                        <div>
+                          <h2 className="text-xl font-extrabold text-neutral-900">
+                            Top Picks for Your {year} {make} {model}
+                          </h2>
+                          <p className="text-sm text-neutral-600">
+                            Expert-selected for value, performance, and fit
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <p className="mt-1 text-sm text-neutral-600">
-                      Hand-picked based on fitment, value, and popularity
-                    </p>
                   </div>
-                </div>
 
-                <div className="tire-grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="tire-grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
                   {topPicks.slice(0, 4).map((t, idx) => (
                     <TireCard
                       key={`top-${t.partNumber || t.mfgPartNumber || idx}`}
@@ -1782,6 +1791,7 @@ export default async function TiresPage({
                       isPackageFlow={isPackageFlow}
                     />
                   ))}
+                  </div>
                 </div>
               </div>
             ) : null}
@@ -2028,10 +2038,36 @@ function TireCard({
     t.displayName || t.prettyName || t.description || t.partNumber || "Tire";
   const displayTitle = cleanTireDisplayTitle(rawTitle, t.brand);
 
+  // Determine highlight label (selective - only for standout items)
+  const highlightLabel = (() => {
+    if (isTopPick) return null; // Top picks already have badge
+    const mileage = t.enrichment?.mileage ?? t.badges?.warrantyMiles;
+    if (mileage && mileage >= 80000) return { text: "Long Life", bg: "bg-emerald-600" };
+    // Best Value could be based on price-to-quality ratio (simplified: mid-range brands with good stock)
+    const price = getDisplayPrice(t);
+    if (price && price >= 80 && price <= 150 && maxQty >= 16 && MID_TIER_BRANDS.includes(brandKey)) {
+      return { text: "Best Value", bg: "bg-blue-600" };
+    }
+    // Popular: high stock levels suggest popularity
+    if (maxQty >= 50 && PREMIUM_BRANDS.includes(brandKey)) return { text: "Popular", bg: "bg-violet-600" };
+    return null;
+  })();
+
   return (
-    <article className={`tire-card group relative overflow-hidden rounded-2xl border bg-white p-5 transition-shadow ${isTopPick ? "border-green-200 ring-1 ring-green-100" : "border-neutral-200 hover:border-red-300"}`}>
+    <article className={`tire-card group relative overflow-hidden rounded-2xl border bg-white p-5 transition-all duration-200 ${
+      isTopPick 
+        ? "border-green-200 ring-1 ring-green-100 shadow-sm" 
+        : "border-neutral-200 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-0.5"
+    }`}>
       {/* Left accent bar - matching wheels card */}
       <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${isTopPick ? "bg-green-500" : "bg-neutral-800"}`} />
+      
+      {/* Highlight label - top right corner */}
+      {highlightLabel && (
+        <div className={`absolute top-3 right-3 z-20 rounded-full ${highlightLabel.bg} px-2.5 py-1 text-[10px] font-bold text-white shadow-md`}>
+          {highlightLabel.text}
+        </div>
+      )}
 
       {t.source === "wp" && t.mfgPartNumber ? (
         <Link
@@ -2163,19 +2199,19 @@ function TireCard({
             }
             
             const catStyle = {
-              'All-Terrain': { bg: 'bg-amber-600', icon: '🏔️' },
-              'Mud-Terrain': { bg: 'bg-orange-600', icon: '🪨' },
-              'Rugged-Terrain': { bg: 'bg-stone-600', icon: '⛰️' },
-              'Winter': { bg: 'bg-sky-500', icon: '❄️' },
-              'Performance': { bg: 'bg-red-500', icon: '🏎️' },
-              'Highway/Touring': { bg: 'bg-blue-500', icon: '🛣️' },
-              'All-Season': { bg: 'bg-green-500', icon: '🌤️' },
-              'All-Weather': { bg: 'bg-teal-500', icon: '🌦️' },
-            }[category] || { bg: 'bg-green-500', icon: '🌤️' };
+              'All-Terrain': { bg: 'bg-gradient-to-r from-amber-600 to-amber-500', icon: '🏔️' },
+              'Mud-Terrain': { bg: 'bg-gradient-to-r from-orange-700 to-orange-600', icon: '🪨' },
+              'Rugged-Terrain': { bg: 'bg-gradient-to-r from-stone-700 to-stone-600', icon: '⛰️' },
+              'Winter': { bg: 'bg-gradient-to-r from-sky-600 to-sky-500', icon: '❄️' },
+              'Performance': { bg: 'bg-gradient-to-r from-red-600 to-red-500', icon: '🏎️' },
+              'Highway/Touring': { bg: 'bg-gradient-to-r from-blue-600 to-blue-500', icon: '🛣️' },
+              'All-Season': { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' },
+              'All-Weather': { bg: 'bg-gradient-to-r from-teal-600 to-teal-500', icon: '🌦️' },
+            }[category] || { bg: 'bg-gradient-to-r from-green-600 to-green-500', icon: '🌤️' };
             
             return (
-              <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${catStyle.bg}`}>
-                {catStyle.icon} {category}
+              <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold text-white shadow-md ${catStyle.bg}`}>
+                <span className="drop-shadow-sm">{catStyle.icon}</span> {category}
               </span>
             );
           })()}

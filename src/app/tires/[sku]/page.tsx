@@ -199,15 +199,15 @@ function getWhyThisTirePoints(
 // DELIVERY MESSAGE - Confident and specific
 // ============================================================================
 
-function getDeliveryMessage(qty: number): { text: string; color: string } {
+function getDeliveryMessage(qty: number): { text: string; color: string; icon: string } {
   if (qty >= 8) {
-    return { text: "In stock · Ships tomorrow", color: "text-green-700" };
+    return { text: "In stock · Ships tomorrow", color: "text-green-700 font-semibold", icon: "🚀" };
   } else if (qty >= 4) {
-    return { text: "In stock · Ships in 1-2 days", color: "text-green-700" };
+    return { text: "In stock · Ships in 1-2 days", color: "text-green-700 font-semibold", icon: "📦" };
   } else if (qty > 0) {
-    return { text: `Only ${qty} left · Ships in 1-2 days`, color: "text-amber-700" };
+    return { text: `Only ${qty} left · Ships in 1-2 days`, color: "text-amber-700 font-semibold", icon: "⚡" };
   } else {
-    return { text: "Available to order · Ships in 1-2 weeks", color: "text-amber-700" };
+    return { text: "Available to order · Ships in 1-2 weeks", color: "text-amber-600", icon: "📋" };
   }
 }
 
@@ -243,13 +243,13 @@ function FullSpecs(props: FullSpecsProps) {
   if (rows.length === 0) return null;
   
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-      <div className="text-xs font-extrabold text-neutral-900 mb-3">Full Specifications</div>
-      <div className="grid gap-2 text-sm">
-        {rows.map((row) => (
-          <div key={row.label} className="flex justify-between items-center py-1 border-b border-neutral-100 last:border-0">
-            <span className="text-neutral-600">{row.label}</span>
-            <span className="font-semibold text-neutral-900">{row.value}</span>
+    <div className="rounded-2xl border border-neutral-200 bg-gradient-to-br from-white to-neutral-50 p-5 shadow-sm">
+      <div className="text-sm font-extrabold text-neutral-900 mb-4">Full Specifications</div>
+      <div className="grid gap-0 text-sm">
+        {rows.map((row, i) => (
+          <div key={row.label} className={`flex justify-between items-center py-2.5 ${i < rows.length - 1 ? 'border-b border-neutral-100' : ''}`}>
+            <span className="text-neutral-500 font-medium">{row.label}</span>
+            <span className="font-bold text-neutral-900">{row.value}</span>
           </div>
         ))}
       </div>
@@ -294,10 +294,13 @@ function PerformanceSection({
   }
   
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-      <div className="flex items-center justify-between mb-3">
-        <div className="text-xs font-extrabold text-neutral-900">Performance</div>
-        <div className="text-xs text-neutral-500">{ratings.overall}/10 overall</div>
+    <div className="rounded-2xl border border-neutral-200 bg-gradient-to-br from-white to-neutral-50 p-5 shadow-sm">
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-sm font-extrabold text-neutral-900">Performance</div>
+        <div className="flex items-center gap-1.5 rounded-full bg-neutral-900 px-3 py-1">
+          <span className="text-sm font-bold text-white">{ratings.overall}</span>
+          <span className="text-[10px] text-neutral-400">/10</span>
+        </div>
       </div>
       <PerformanceIndicators 
         ratings={ratings} 
@@ -433,8 +436,8 @@ export default async function TireDetailPage({
                       </div>
                     )}
 
-                    {/* Main buy box card */}
-                    <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+                    {/* Main buy box card - elevated decision area */}
+                    <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-lg shadow-neutral-200/50 ring-1 ring-neutral-100">
                       {/* Brand */}
                       <p className="text-sm font-medium text-neutral-500">{tire.brand || "Tire"}</p>
                       
@@ -467,9 +470,10 @@ export default async function TireDetailPage({
                         )}
                       </div>
 
-                      {/* Delivery - confident */}
-                      <div className={`mt-2 text-sm font-medium ${delivery.color}`}>
-                        {delivery.text}
+                      {/* Delivery - confident and emphasized */}
+                      <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
+                        <span className="text-base">{delivery.icon}</span>
+                        <span>{delivery.text}</span>
                       </div>
 
                       {/* CTA - DOMINANT */}
@@ -494,14 +498,15 @@ export default async function TireDetailPage({
                       </div>
                     </div>
 
-                    {/* Why this tire - compact */}
+                    {/* Why this tire - benefit-driven with subtle styling */}
                     {whyPoints.length > 0 && (
-                      <div className="rounded-xl border border-neutral-200 bg-white px-4 py-3">
-                        <ul className="space-y-1">
+                      <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
+                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why This Tire</div>
+                        <ul className="space-y-2">
                           {whyPoints.map((point, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-neutral-700">
-                              <span className="text-green-600 mt-0.5">✓</span>
-                              <span>{point}</span>
+                            <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
+                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs mt-0.5">✓</span>
+                              <span className="leading-snug">{point}</span>
                             </li>
                           ))}
                         </ul>
