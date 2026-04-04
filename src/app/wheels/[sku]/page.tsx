@@ -865,10 +865,15 @@ export default async function WheelDetailPage({
                 />
               </div>
               
+              {/* Confidence line */}
+              <div className="mt-3 text-center text-sm text-green-800">
+                Ships fast, verified to fit your vehicle perfectly.
+              </div>
+              
               {/* Trust signals - compact */}
-              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-green-700">
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-green-700">
                 <span>✓ Free shipping</span>
-                <span>✓ Fitment guaranteed</span>
+                <span>✓ Guaranteed fit for your vehicle</span>
                 <span>✓ Expert support</span>
               </div>
             </div>
