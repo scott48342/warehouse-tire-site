@@ -82,7 +82,7 @@ export function AddTiresToCartButton({
   const total = unitPrice * quantity;
 
   const baseStyles = {
-    primary: "flex h-12 items-center justify-center rounded-xl px-4 text-sm font-extrabold bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] transition-all",
+    primary: "flex h-12 items-center justify-center rounded-xl px-4 text-sm font-extrabold bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] transition-all shadow-lg shadow-red-600/30 hover:shadow-xl hover:shadow-red-600/40",
     secondary: "flex h-11 items-center justify-center rounded-xl px-4 text-sm font-bold border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 transition-all",
     compact: "flex h-9 items-center justify-center rounded-lg px-3 text-xs font-bold border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-all",
   };
@@ -122,8 +122,10 @@ export function AddTiresToCartButton({
         </span>
       ) : (
         <span>
-          Add Tires — Set of {quantity}
-          {showPriceInButton && Number.isFinite(total) && total > 0 ? ` • $${total.toFixed(2)}` : ""}
+          {showPriceInButton && Number.isFinite(total) && total > 0 
+            ? `Add Set of ${quantity} — $${total.toFixed(2)}`
+            : `Add Set of ${quantity} to Cart`
+          }
         </span>
       )}
     </button>

@@ -66,23 +66,15 @@ function priceFromRow(r: any): number | null {
 }
 
 // ============================================================================
-// TRUST STRIP - Compact inline row
+// TRUST STRIP - Matches wheel PDP style
 // ============================================================================
 
 function TrustStrip({ hasVehicle }: { hasVehicle: boolean }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-neutral-600">
-      {hasVehicle && (
-        <span className="inline-flex items-center gap-1 text-green-700">
-          <span>✓</span> Fits your vehicle
-        </span>
-      )}
-      <span className="inline-flex items-center gap-1">
-        <span>🚚</span> Free shipping
-      </span>
-      <span className="inline-flex items-center gap-1">
-        <span>💰</span> Price match
-      </span>
+    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-green-700">
+      <span>✓ Free shipping</span>
+      {hasVehicle && <span>✓ Guaranteed fit for your vehicle</span>}
+      <span>✓ Expert support</span>
     </div>
   );
 }
@@ -471,84 +463,105 @@ export default async function TireDetailPage({
                 <BackToTiresButton />
 
                 <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
-                  {/* Left: Image */}
-                  <div className="rounded-3xl border border-neutral-200 bg-white p-3">
+                  {/* Left: Image - Clean with zoom hint */}
+                  <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🔍</span>
+                        <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
+                      </div>
+                    </div>
                     <ImageGallery images={tire.imageUrl ? [tire.imageUrl] : []} alt={title} />
                   </div>
 
-                  {/* Right: Buy Box */}
-                  <div className="space-y-4">
-                    {/* Vehicle confirmation */}
-                    {hasVehicle && (
-                      <div className="rounded-xl border border-green-200 bg-green-50 px-3 py-2">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-semibold text-green-800">
-                            ✓ Fits {year} {make} {model}
-                          </span>
-                          <Link href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`} className="text-xs text-green-700 hover:underline">
-                            Change
-                          </Link>
+                  {/* Right: Buy Box - Matches wheel PDP conversion structure */}
+                  <div className="lg:sticky lg:top-6 space-y-4">
+                    {/* Compact fitment bar */}
+                    {hasVehicle ? (
+                      <div className="flex items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-200 px-3 py-2">
+                        <div className="flex items-center gap-2">
+                          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-xs">✓</span>
+                          <div>
+                            <div className="text-sm font-bold text-green-900">Fits {year} {make} {model}</div>
+                            <div className="text-[11px] text-green-700">Guaranteed fitment</div>
+                          </div>
                         </div>
+                        <Link href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`} className="text-xs font-semibold text-green-700 hover:underline">
+                          Change
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-between rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+                        <span className="text-sm text-amber-800">Select vehicle to confirm fit</span>
+                        <Link href="/tires" className="text-xs font-semibold text-amber-700 hover:underline">Select</Link>
                       </div>
                     )}
 
-                    {/* Main buy box card - elevated decision area */}
-                    <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-lg shadow-neutral-200/50 ring-1 ring-neutral-100">
-                      {/* Brand */}
-                      <p className="text-sm font-medium text-neutral-500">{tire.brand || "Tire"}</p>
-                      
-                      {/* Title */}
-                      <h1 className="mt-1 text-xl font-extrabold tracking-tight text-neutral-900">{title}</h1>
-                      
-                      {/* Category tagline */}
-                      <div className="mt-1.5">
-                        <span className="text-sm font-semibold text-neutral-700">{categoryTagline.label}</span>
-                        <p className="text-sm text-neutral-500">{categoryTagline.tagline}</p>
-                      </div>
-                      
-                      {/* Quick specs */}
-                      <div className="mt-3">
-                        <QuickSpecs
-                          mileageWarranty={tire.badges?.warrantyMiles ? String(tire.badges.warrantyMiles) : null}
-                          category={category}
-                          loadIndex={tire.badges?.loadIndex ? String(tire.badges.loadIndex) : null}
-                          speedRating={tire.badges?.speedRating ? String(tire.badges.speedRating) : null}
-                          isRunFlatTire={isRunFlatTire}
-                          has3PMSF={has3PMSF}
-                        />
-                      </div>
+                    {/* ═══════════════════════════════════════════════════════════════════
+                        ABOVE THE FOLD: Title → Specs → Price → CTA
+                        ═══════════════════════════════════════════════════════════════════ */}
+                    
+                    {/* Brand */}
+                    <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">{tire.brand || "Tire"}</div>
+                    
+                    {/* Title */}
+                    <h1 className="-mt-2 text-2xl font-extrabold text-neutral-900 leading-tight">{title}</h1>
+                    
+                    {/* Category tagline */}
+                    <p className="-mt-2 text-sm text-neutral-600">{categoryTagline.tagline}</p>
 
-                      {/* Price - DOMINANT */}
-                      <div className="mt-4 pt-4 border-t border-neutral-100">
+                    {/* Key spec chips */}
+                    <div className="flex flex-wrap items-center gap-2">
+                      {(tire.size || size) && (
+                        <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
+                          {tire.size || size}
+                        </span>
+                      )}
+                      {tire.badges?.loadIndex && tire.badges?.speedRating && (
+                        <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                          {String(tire.badges.loadIndex)}{String(tire.badges.speedRating)}
+                        </span>
+                      )}
+                      {category && (
+                        <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                          {category}
+                        </span>
+                      )}
+                      {tire.badges?.warrantyMiles && Number(tire.badges.warrantyMiles) >= 40000 && (
+                        <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                          {Math.round(Number(tire.badges.warrantyMiles)/1000)}K warranty
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Price + CTA Block - THE CONVERSION ZONE */}
+                    <div id="add-to-cart" className="rounded-2xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-4 shadow-lg shadow-green-100/50">
+                      {/* Price */}
+                      <div className="flex items-baseline gap-2">
                         {displayPrice != null ? (
                           <>
                             <div className="text-3xl font-extrabold text-neutral-900">{fmtMoney(displayPrice)}</div>
-                            <div className="text-sm text-neutral-500">
-                              per tire · <span className="font-semibold text-neutral-700">{fmtMoney(displayPrice * 4)} for 4</span>
-                            </div>
+                            <div className="text-sm text-neutral-500">per tire</div>
                           </>
                         ) : (
                           <div className="text-xl font-bold text-neutral-700">Call for pricing</div>
                         )}
                       </div>
+                      {displayPrice != null && (
+                        <div className="mt-1 text-sm text-neutral-600">
+                          Set of 4: <span className="font-bold text-green-700">{fmtMoney(displayPrice * 4)}</span>
+                        </div>
+                      )}
 
-                      {/* Delivery - confident and emphasized */}
+                      {/* Delivery - confident */}
                       <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
                         <span className="text-base">{delivery.icon}</span>
                         <span>{delivery.text}</span>
                       </div>
-
-                      {/* Confidence signal */}
-                      {confidenceSignal && (
-                        <div className="mt-3 flex items-center gap-1.5 text-sm text-neutral-600">
-                          <span className="text-amber-500">⭐</span>
-                          <span>{confidenceSignal}</span>
-                        </div>
-                      )}
-
-                      {/* CTA - DOMINANT */}
+                      
+                      {/* Primary CTA */}
                       {displayPrice != null && (
-                        <div id="add-to-cart" className="mt-4">
+                        <div className="mt-4">
                           <AddTiresToCartButton
                             sku={tire.partNumber || safeSku}
                             brand={tire.brand || "Tire"}
@@ -561,17 +574,26 @@ export default async function TireDetailPage({
                           />
                         </div>
                       )}
-
-                      {/* Trust strip - subtle, below CTA */}
-                      <div className="mt-3 pt-3 border-t border-neutral-100">
+                      
+                      {/* Confidence line */}
+                      <div className="mt-3 text-center text-sm text-green-800">
+                        Ships fast, verified to fit your vehicle perfectly.
+                      </div>
+                      
+                      {/* Trust signals */}
+                      <div className="mt-2">
                         <TrustStrip hasVehicle={hasVehicle} />
                       </div>
                     </div>
 
+                    {/* ═══════════════════════════════════════════════════════════════════
+                        BELOW THE FOLD: Why this tire
+                        ═══════════════════════════════════════════════════════════════════ */}
+                    
                     {/* Why this tire - benefit-driven */}
                     {whyPoints.length > 0 && (
                       <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You'll Love It</div>
+                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You&apos;ll Love It</div>
                         <ul className="space-y-2">
                           {whyPoints.map((point, i) => (
                             <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
@@ -742,89 +764,104 @@ export default async function TireDetailPage({
         <BackToTiresButton />
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
-          {/* Left: Image */}
-          <div className="rounded-3xl border border-neutral-200 bg-white p-3">
+          {/* Left: Image - Clean with zoom hint */}
+          <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <span className="text-lg">🔍</span>
+                <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
+              </div>
+            </div>
             <ImageGallery images={enrichedImageUrl ? [String(enrichedImageUrl)] : []} alt={title} />
           </div>
 
-          {/* Right: Buy Box */}
-          <div className="space-y-4">
-            {/* Vehicle confirmation */}
+          {/* Right: Buy Box - Matches wheel PDP conversion structure */}
+          <div className="lg:sticky lg:top-6 space-y-4">
+            {/* Compact fitment bar */}
             {hasVehicle ? (
-              <div className="rounded-xl border border-green-200 bg-green-50 px-3 py-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-green-800">
-                    ✓ Fits {year} {make} {model}
-                  </span>
-                  <Link href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`} className="text-xs text-green-700 hover:underline">
-                    Change
-                  </Link>
+              <div className="flex items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-200 px-3 py-2">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-xs">✓</span>
+                  <div>
+                    <div className="text-sm font-bold text-green-900">Fits {year} {make} {model}</div>
+                    <div className="text-[11px] text-green-700">Guaranteed fitment</div>
+                  </div>
                 </div>
+                <Link href={`/tires?${new URLSearchParams({ year, make, model, trim, modification }).toString()}`} className="text-xs font-semibold text-green-700 hover:underline">
+                  Change
+                </Link>
               </div>
             ) : (
-              <div className="rounded-xl border border-neutral-200 bg-white px-3 py-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-600">Select vehicle to confirm fit</span>
-                  <Link href="/tires" className="text-xs font-semibold text-neutral-900 hover:underline">Select</Link>
-                </div>
+              <div className="flex items-center justify-between rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+                <span className="text-sm text-amber-800">Select vehicle to confirm fit</span>
+                <Link href="/tires" className="text-xs font-semibold text-amber-700 hover:underline">Select</Link>
               </div>
             )}
 
-            {/* Main buy box card */}
-            <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-lg shadow-neutral-200/50 ring-1 ring-neutral-100">
-              {/* Brand */}
-              <p className="text-sm font-medium text-neutral-500">{String(t.brand_desc || "Tire")}</p>
-              
-              {/* Title */}
-              <h1 className="mt-1 text-xl font-extrabold tracking-tight text-neutral-900">{title}</h1>
-              
-              {/* Category tagline */}
-              <div className="mt-1.5">
-                <span className="text-sm font-semibold text-neutral-700">{categoryTagline.label}</span>
-                <p className="text-sm text-neutral-500">{categoryTagline.tagline}</p>
-              </div>
-              
-              {/* Quick specs */}
-              <div className="mt-3">
-                <QuickSpecs
-                  mileageWarranty={t.mileage_warranty ? String(t.mileage_warranty) : null}
-                  category={category}
-                  loadIndex={t.load_index ? String(t.load_index) : null}
-                  speedRating={t.speed_rating ? String(t.speed_rating) : null}
-                  isRunFlatTire={isRunFlatTire}
-                  has3PMSF={has3PMSF}
-                />
-              </div>
+            {/* ═══════════════════════════════════════════════════════════════════
+                ABOVE THE FOLD: Title → Specs → Price → CTA
+                ═══════════════════════════════════════════════════════════════════ */}
+            
+            {/* Brand */}
+            <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">{String(t.brand_desc || "Tire")}</div>
+            
+            {/* Title */}
+            <h1 className="-mt-2 text-2xl font-extrabold text-neutral-900 leading-tight">{title}</h1>
+            
+            {/* Category tagline */}
+            <p className="-mt-2 text-sm text-neutral-600">{categoryTagline.tagline}</p>
 
-              {/* Price - DOMINANT */}
-              <div className="mt-4 pt-4 border-t border-neutral-100">
+            {/* Key spec chips - size, load, speed */}
+            <div className="flex flex-wrap items-center gap-2">
+              {(t.tire_size || t.simple_size) && (
+                <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
+                  {String(t.tire_size || t.simple_size)}
+                </span>
+              )}
+              {t.load_index && t.speed_rating && (
+                <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                  {String(t.load_index)}{String(t.speed_rating)}
+                </span>
+              )}
+              {category && (
+                <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                  {category}
+                </span>
+              )}
+              {t.mileage_warranty && Number(t.mileage_warranty) >= 40000 && (
+                <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                  {Math.round(Number(t.mileage_warranty)/1000)}K warranty
+                </span>
+              )}
+            </div>
+
+            {/* Price + CTA Block - THE CONVERSION ZONE */}
+            <div id="add-to-cart" className="rounded-2xl border-2 border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 p-4 shadow-lg shadow-green-100/50">
+              {/* Price */}
+              <div className="flex items-baseline gap-2">
                 {displayPrice != null ? (
                   <>
                     <div className="text-3xl font-extrabold text-neutral-900">{fmtMoney(displayPrice)}</div>
-                    <div className="text-sm text-neutral-500">
-                      per tire · <span className="font-semibold text-neutral-700">{fmtMoney(displayPrice * 4)} for 4</span>
-                    </div>
+                    <div className="text-sm text-neutral-500">per tire</div>
                   </>
                 ) : (
                   <div className="text-xl font-bold text-neutral-700">Call for pricing</div>
                 )}
               </div>
-
-              {/* Delivery - confident */}
-              <div className={`mt-2 text-sm font-medium ${delivery.color}`}>
-                {delivery.text}
-              </div>
-
-              {/* Confidence signal */}
-              {confidenceSignal && (
-                <div className="mt-3 flex items-center gap-1.5 text-sm text-neutral-600">
-                  <span className="text-amber-500">⭐</span>
-                  <span>{confidenceSignal}</span>
+              {displayPrice != null && (
+                <div className="mt-1 text-sm text-neutral-600">
+                  Set of 4: <span className="font-bold text-green-700">{fmtMoney(displayPrice * 4)}</span>
                 </div>
               )}
 
-              {/* CTA - DOMINANT */}
-              <div id="add-to-cart" className="mt-4">
+              {/* Delivery - confident */}
+              <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
+                <span className="text-base">{delivery.icon}</span>
+                <span>{delivery.text}</span>
+              </div>
+              
+              {/* Primary CTA */}
+              <div className="mt-4">
                 <AddTiresToCartButton
                   sku={safeSku}
                   brand={String(t.brand_desc || "Tire")}
@@ -838,17 +875,26 @@ export default async function TireDetailPage({
                   quantity={4}
                 />
               </div>
-
-              {/* Trust strip - subtle, below CTA */}
-              <div className="mt-3 pt-3 border-t border-neutral-100">
+              
+              {/* Confidence line */}
+              <div className="mt-3 text-center text-sm text-green-800">
+                Ships fast, verified to fit your vehicle perfectly.
+              </div>
+              
+              {/* Trust signals */}
+              <div className="mt-2">
                 <TrustStrip hasVehicle={hasVehicle} />
               </div>
             </div>
 
+            {/* ═══════════════════════════════════════════════════════════════════
+                BELOW THE FOLD: Why this tire
+                ═══════════════════════════════════════════════════════════════════ */}
+            
             {/* Why this tire - benefit-driven */}
             {whyPoints.length > 0 && (
               <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You'll Love It</div>
+                <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">Why You&apos;ll Love It</div>
                 <ul className="space-y-2">
                   {whyPoints.map((point, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
