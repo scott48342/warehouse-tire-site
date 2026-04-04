@@ -19,7 +19,7 @@
 import { NextResponse } from "next/server";
 import pg from "pg";
 import { XMLParser } from "fast-xml-parser";
-import { searchTiresTireWeb, tireWebTireToUnified, type UnifiedTire } from "@/lib/tirewire/client";
+import { searchTiresTireWeb, tireWebTireToUnified, type UnifiedTire, type TireWebSearchResult } from "@/lib/tirewire/client";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
@@ -33,6 +33,7 @@ import {
   isRunFlat,
   type TreadCategory,
 } from "@/lib/tires/normalization";
+import { protectedFetch, getCircuitStatus } from "@/lib/tireweb/protection";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -252,49 +253,99 @@ async function searchTiresBySize(
 }
 
 /**
- * Search TireWeb suppliers and convert to TireResult format
+ * Convert TireWeb results to TireResult format
+ */
+function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
+  const tires: TireResult[] = [];
+  
+  for (const result of results) {
+    for (const tire of result.tires) {
+      const unified = tireWebTireToUnified(tire, result.provider);
+      tires.push({
+        partNumber: unified.partNumber,
+        mfgPartNumber: unified.mfgPartNumber,
+        brand: unified.brand,
+        model: unified.model,
+        description: unified.description,
+        cost: unified.cost,
+        price: unified.price,
+        quantity: unified.quantity,
+        imageUrl: unified.imageUrl,
+        size: unified.size,
+        simpleSize: unified.simpleSize,
+        rimDiameter: unified.rimDiameter,
+        tireLibraryId: unified.tireLibraryId,
+        source: unified.source,
+        badges: {
+          terrain: unified.badges.terrain,
+          construction: unified.badges.construction,
+          warrantyMiles: unified.badges.warrantyMiles,
+          loadIndex: unified.badges.loadIndex,
+          speedRating: unified.badges.speedRating,
+          utqg: unified.badges.utqg,
+        },
+        enrichment: unified.enrichment,
+      });
+    }
+  }
+  
+  return tires;
+}
+
+/**
+ * Check if TireWeb results contain rate limit error
+ */
+function hasRateLimitError(results: TireWebSearchResult[]): boolean {
+  for (const result of results) {
+    // ErrorCode 127 is the rate limit / harvesting error
+    if (result.message?.includes("127") || result.message?.toLowerCase().includes("harvesting")) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Search TireWeb suppliers with protection layer
+ * - Read-through cache
+ * - Single-flight deduping
+ * - Stale-while-revalidate
+ * - Circuit breaker on ErrorCode 127
+ * - Falls back to empty array (WheelPros is always primary)
  */
 async function searchTiresTireWebFormatted(size: string): Promise<TireResult[]> {
-  try {
-    const results = await searchTiresTireWeb(size);
-    const tires: TireResult[] = [];
+  // Normalize size for cache key
+  const cacheKey = `tires:${toSimpleSize(size) || size}`;
+  
+  const result = await protectedFetch<TireWebSearchResult[]>({
+    cacheKey,
     
-    for (const result of results) {
-      for (const tire of result.tires) {
-        const unified = tireWebTireToUnified(tire, result.provider);
-        tires.push({
-          partNumber: unified.partNumber,
-          mfgPartNumber: unified.mfgPartNumber,
-          brand: unified.brand,
-          model: unified.model,
-          description: unified.description,
-          cost: unified.cost,
-          price: unified.price,
-          quantity: unified.quantity,
-          imageUrl: unified.imageUrl,
-          size: unified.size,
-          simpleSize: unified.simpleSize,
-          rimDiameter: unified.rimDiameter,
-          tireLibraryId: unified.tireLibraryId,
-          source: unified.source,
-          badges: {
-            terrain: unified.badges.terrain,
-            construction: unified.badges.construction,
-            warrantyMiles: unified.badges.warrantyMiles,
-            loadIndex: unified.badges.loadIndex,
-            speedRating: unified.badges.speedRating,
-            utqg: unified.badges.utqg,
-          },
-          enrichment: unified.enrichment,
-        });
-      }
-    }
+    // Actual TireWeb fetch
+    fetchFn: async () => {
+      return searchTiresTireWeb(size);
+    },
     
-    return tires;
-  } catch (err) {
-    console.error("[tires/search] TireWeb error:", err);
-    return [];
+    // Fallback: return empty (WheelPros is always queried separately)
+    fallbackFn: async () => {
+      return [];
+    },
+    
+    // Detect rate limiting
+    isRateLimitError: hasRateLimitError,
+    
+    // Don't cache empty results
+    isEmptyResult: (results) => {
+      const totalTires = results.reduce((sum, r) => sum + r.tires.length, 0);
+      return totalTires === 0;
+    },
+  });
+  
+  // Log source for monitoring
+  if (result.source !== "api") {
+    console.log(`[tires/search] TireWeb ${cacheKey}: source=${result.source}, stale=${result.stale}, circuit=${result.circuitOpen ? "open" : "closed"}`);
   }
+  
+  return convertTireWebResults(result.data);
 }
 
 /**
@@ -1027,6 +1078,10 @@ export async function GET(req: Request) {
         },
         packagePriorityApplied,
         timing,
+        // TireWeb protection status (for monitoring)
+        tirewebProtection: {
+          circuit: getCircuitStatus().status,
+        },
       });
     }
     
@@ -1370,6 +1425,11 @@ export async function GET(req: Request) {
       packagePriorityApplied,
       
       timing,
+      
+      // TireWeb protection status (for monitoring)
+      tirewebProtection: {
+        circuit: getCircuitStatus().status,
+      },
     });
   } catch (e: any) {
     console.error("[tires/search] Error:", e);
