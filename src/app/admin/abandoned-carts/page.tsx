@@ -340,6 +340,81 @@ export default function AbandonedCartsPage() {
     }
   };
 
+  // =========================================================================
+  // Quick Actions
+  // =========================================================================
+
+  const handleCopyRecoveryLink = async (cartId: string) => {
+    const link = `https://shop.warehousetiredirect.com/cart/recover/${cartId}`;
+    try {
+      await navigator.clipboard.writeText(link);
+      // Show brief confirmation
+      const btn = document.querySelector(`[data-copy-link="${cartId}"]`);
+      if (btn) {
+        const original = btn.textContent;
+        btn.textContent = "✓ Copied!";
+        setTimeout(() => { btn.textContent = original; }, 1500);
+      }
+    } catch {
+      // Fallback for older browsers
+      prompt("Recovery Link:", link);
+    }
+  };
+
+  const handleCopyCartSummary = async (cart: AbandonedCart) => {
+    const lines: string[] = [];
+    lines.push(`Cart ID: ${cart.cartId}`);
+    lines.push(`Status: ${cart.status}`);
+    lines.push(`Value: ${formatCurrency(cart.value)}`);
+    lines.push(`Items: ${cart.itemCount}`);
+    if (cart.customer || cart.email) {
+      lines.push(`Customer: ${cart.customer || cart.email}`);
+    }
+    if (cart.vehicle) {
+      lines.push(`Vehicle: ${cart.vehicle}`);
+    }
+    lines.push(`Last Activity: ${formatTimeAgo(cart.lastActivityAt)}`);
+    lines.push(`Recovery Link: https://shop.warehousetiredirect.com/cart/recover/${cart.cartId}`);
+
+    const summary = lines.join("\n");
+    try {
+      await navigator.clipboard.writeText(summary);
+      const btn = document.querySelector(`[data-copy-summary="${cart.cartId}"]`);
+      if (btn) {
+        const original = btn.textContent;
+        btn.textContent = "✓ Copied!";
+        setTimeout(() => { btn.textContent = original; }, 1500);
+      }
+    } catch {
+      prompt("Cart Summary:", summary);
+    }
+  };
+
+  const handleQuickSendEmail = async (cartId: string, email: string) => {
+    if (!confirm(`Send recovery email to ${email}?`)) return;
+    
+    try {
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "send-email", cartId }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        const action = data.result?.action || "sent";
+        alert(data.safeMode 
+          ? `📝 Logged (safe mode): ${email}` 
+          : `✅ Email ${action} to ${email}`);
+        fetchData();
+      } else {
+        alert(`❌ Failed: ${data.error || data.result?.reason || "Unknown error"}`);
+      }
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Unknown error";
+      alert(`Error: ${msg}`);
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       {/* Header */}
@@ -538,37 +613,56 @@ export default function AbandonedCartsPage() {
                       </td>
                       {/* Actions */}
                       <td className="px-3 py-3">
-                        <div className="flex flex-col gap-0.5">
+                        <div className="flex flex-wrap gap-1">
+                          {/* Quick action buttons */}
+                          <button
+                            data-copy-link={cart.cartId}
+                            onClick={() => handleCopyRecoveryLink(cart.cartId)}
+                            className="px-2 py-1 text-[10px] font-medium bg-neutral-700 hover:bg-neutral-600 text-neutral-300 hover:text-white rounded transition-colors"
+                            title="Copy recovery link"
+                          >
+                            🔗 Link
+                          </button>
+                          <button
+                            data-copy-summary={cart.cartId}
+                            onClick={() => handleCopyCartSummary(cart)}
+                            className="px-2 py-1 text-[10px] font-medium bg-neutral-700 hover:bg-neutral-600 text-neutral-300 hover:text-white rounded transition-colors"
+                            title="Copy cart summary"
+                          >
+                            📋 Copy
+                          </button>
+                          {cart.email && cart.status === "abandoned" && (
+                            <button
+                              onClick={() => handleQuickSendEmail(cart.cartId, cart.email!)}
+                              className="px-2 py-1 text-[10px] font-medium bg-purple-900/50 hover:bg-purple-800/50 text-purple-300 hover:text-purple-200 rounded transition-colors"
+                              title={`Send recovery email to ${cart.email}`}
+                            >
+                              ✉️ Email
+                            </button>
+                          )}
                           <Link
                             href={`/admin/abandoned-carts/${cart.cartId}`}
-                            className="text-xs text-blue-400 hover:text-blue-300"
+                            className="px-2 py-1 text-[10px] font-medium bg-blue-900/50 hover:bg-blue-800/50 text-blue-300 hover:text-blue-200 rounded transition-colors"
+                            title="View full cart details"
                           >
-                            View
+                            👁️ View
                           </Link>
                           {cart.status === "active" && (
                             <button
                               onClick={() => handleTestAbandon(cart.cartId)}
-                              className="text-xs text-yellow-400 hover:text-yellow-300 text-left"
+                              className="px-2 py-1 text-[10px] font-medium bg-yellow-900/50 hover:bg-yellow-800/50 text-yellow-300 hover:text-yellow-200 rounded transition-colors"
                               title="Test: Mark as abandoned"
                             >
-                              Abandon
-                            </button>
-                          )}
-                          {cart.status === "abandoned" && cart.email && cart.emailSentCount === 0 && (
-                            <button
-                              onClick={() => handleSendTestEmail(cart.cartId)}
-                              className="text-xs text-purple-400 hover:text-purple-300"
-                              title="Send recovery email"
-                            >
-                              Send Email
+                              ⏰ Abandon
                             </button>
                           )}
                           {cart.recoveredOrderId && (
                             <Link
                               href={`/admin/orders/${cart.recoveredOrderId}`}
-                              className="text-xs text-green-400 hover:text-green-300"
+                              className="px-2 py-1 text-[10px] font-medium bg-green-900/50 hover:bg-green-800/50 text-green-300 hover:text-green-200 rounded transition-colors"
+                              title="View recovered order"
                             >
-                              View Order
+                              ✅ Order
                             </Link>
                           )}
                         </div>
