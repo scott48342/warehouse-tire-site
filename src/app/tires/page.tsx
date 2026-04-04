@@ -2289,63 +2289,33 @@ function TireCard({
         {displayTitle}
       </h3>
 
-      {/* Mileage & Tread Info - below title, above badges */}
-      {(t.enrichment?.mileage || t.enrichment?.treadCategory) ? (
-        <div className="relative z-10 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-600">
-          {t.enrichment?.mileage && t.enrichment.mileage >= 20000 ? (
-            <span className="flex items-center gap-1">
-              <span className="text-green-600">✓</span>
-              {formatMileageDisplay(t.enrichment.mileage)}
-            </span>
-          ) : null}
-          {t.enrichment?.treadCategory ? (
-            <span className="flex items-center gap-1">
-              <span className="text-neutral-400">•</span>
-              {t.enrichment.treadCategory}
-            </span>
-          ) : null}
-        </div>
-      ) : null}
-
-      {/* Badges row - matching wheels card */}
-      <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
-        {isTopPick ? (
-          <span className="rounded-full border border-green-200 bg-green-100 px-2 py-0.5 text-[10px] font-bold text-green-800">
-            ⭐ Top Pick
-          </span>
-        ) : null}
-        {/* Long Life badges */}
-        {t.enrichment?.mileageBadge === "Ultra Long Life" ? (
-          <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800">
-            🛡️ Ultra Long Life
-          </span>
-        ) : t.enrichment?.mileageBadge === "Long Life" ? (
-          <span className="rounded-full border border-green-200 bg-green-50 px-2 py-0.5 text-[10px] font-bold text-green-800">
-            ✓ Long Life
-          </span>
-        ) : null}
-        {rebateLabel ? (
-          <span className="rounded-full border border-red-200 bg-red-50 px-2 py-0.5 text-[10px] font-bold text-red-900">
-            {rebateLabel}
-          </span>
-        ) : null}
-        {t.enrichment?.treadCategory ? (
-          <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
-            {t.enrichment.treadCategory}
-          </span>
-        ) : t.badges?.terrain ? (
-          <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
-            {String(t.badges.terrain)}
-          </span>
-        ) : null}
+      {/* Tire size - prominent display */}
+      <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
+        {selectedSize}
         {t.badges?.loadIndex && t.badges?.speedRating ? (
-          <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-bold text-neutral-700">
+          <span className="ml-1 text-neutral-500">
             {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
           </span>
         ) : null}
       </div>
 
-      {/* Product image - standardized container for consistency */}
+      {/* Badges row - only Top Pick and Rebate (category moved to image) */}
+      {(isTopPick || rebateLabel) ? (
+        <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
+          {isTopPick ? (
+            <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white">
+              ⭐ Top Pick
+            </span>
+          ) : null}
+          {rebateLabel ? (
+            <span className="rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white">
+              🔥 {rebateLabel}
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+
+      {/* Product image with badge stack overlay */}
       <div className="tire-card-image-container relative z-10 mt-3">
         {t.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -2360,14 +2330,51 @@ function TireCard({
             <div className="mt-1 text-[11px] text-neutral-600">{t.brand || "Tire"}</div>
           </div>
         )}
+        
+        {/* Badge stack - top left of image */}
+        <div className="absolute top-2 left-2 flex flex-col gap-1">
+          {/* Category badge with icon */}
+          {t.enrichment?.treadCategory ? (
+            <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${
+              t.enrichment.treadCategory === 'All-Terrain' ? 'bg-amber-600' :
+              t.enrichment.treadCategory === 'Mud-Terrain' ? 'bg-orange-600' :
+              t.enrichment.treadCategory === 'Winter' ? 'bg-sky-500' :
+              t.enrichment.treadCategory === 'Performance' ? 'bg-red-500' :
+              t.enrichment.treadCategory === 'Highway/Touring' ? 'bg-blue-500' :
+              'bg-green-500'
+            }`}>
+              {t.enrichment.treadCategory === 'All-Terrain' && '🏔️ '}
+              {t.enrichment.treadCategory === 'Mud-Terrain' && '🪨 '}
+              {t.enrichment.treadCategory === 'Winter' && '❄️ '}
+              {t.enrichment.treadCategory === 'Performance' && '🏎️ '}
+              {t.enrichment.treadCategory === 'Highway/Touring' && '🛣️ '}
+              {t.enrichment.treadCategory === 'All-Season' && '🌤️ '}
+              {t.enrichment.treadCategory}
+            </span>
+          ) : t.badges?.terrain ? (
+            <span className="inline-flex items-center gap-1 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
+              🌤️ {String(t.badges.terrain)}
+            </span>
+          ) : null}
+          
+          {/* Mileage warranty badge */}
+          {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
+            <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${
+              t.enrichment.mileage >= 80000 ? 'bg-purple-600' :
+              t.enrichment.mileage >= 60000 ? 'bg-indigo-600' :
+              'bg-blue-600'
+            }`}>
+              📏 {Math.round(t.enrichment.mileage / 1000)}K WARRANTY
+            </span>
+          ) : null}
+        </div>
       </div>
 
-      {/* Fitment messaging - matching wheels card */}
+      {/* Fitment confirmation - single line */}
       {hasVehicle ? (
-        <div className="relative z-10 mt-3 rounded-lg bg-neutral-50 px-3 py-2 text-xs space-y-1">
+        <div className="relative z-10 mt-2 text-[11px] font-medium text-green-700">
+          <span className="text-green-600">✓</span> Fits {year} {make} {model}
           {(() => {
-            // CRITICAL: Only show "Matches your selected wheels" if tire rim diameter
-            // actually equals the selected wheel diameter
             const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
             const tireRimDia = (() => {
               const desc = String(t.description || selectedSize || "").toUpperCase();
@@ -2376,43 +2383,65 @@ function TireCard({
             })();
             const wheelMatches = isPackageFlow && Number.isFinite(wheelDiaN) && Number.isFinite(tireRimDia)
               && Math.round(wheelDiaN) === Math.round(tireRimDia);
-            
             return wheelMatches ? (
-              <div className="flex items-center gap-1.5 text-blue-700 font-medium">
-                <span className="text-blue-600">✓</span>
-                <span>Matches your selected {Math.round(wheelDiaN)}&quot; wheels</span>
-              </div>
-            ) : isPackageFlow && Number.isFinite(wheelDiaN) ? (
-              <div className="flex items-center gap-1.5 text-amber-700 font-medium">
-                <span className="text-amber-500">⚠</span>
-                <span>Size doesn&apos;t match {Math.round(wheelDiaN)}&quot; wheels</span>
-              </div>
+              <span className="ml-2 text-blue-600">• Matches {Math.round(wheelDiaN)}&quot; wheels</span>
             ) : null;
           })()}
-          <div className="flex items-center gap-1.5 text-green-700 font-medium">
-            <span className="text-green-600">✓</span>
-            <span>Fits your {year} {make} {model}</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-neutral-600">
-            <span>📍</span>
-            <span>Install available near you</span>
-          </div>
         </div>
       ) : null}
 
-      {/* Price and stock - matching wheels card */}
-      <div className="relative z-10 mt-4">
-        <div className="text-2xl font-extrabold text-neutral-900">
-          {typeof t.cost === "number" ? `$${(t.cost + 50).toFixed(2)}` : "Call for price"}
-        </div>
-        <div className="text-sm text-neutral-600">each</div>
+      {/* Availability row - concise */}
+      <div className="relative z-10 mt-3 flex items-center gap-1.5 text-[11px] font-medium">
+        {inStock ? (
+          <>
+            <span className="text-green-600">✓</span>
+            <span className="text-green-700">
+              {maxQty >= 20 ? 'In stock' : `${maxQty} in stock`} • Ships 1–2 days
+            </span>
+          </>
+        ) : (
+          <>
+            <span className="text-amber-500">📦</span>
+            <span className="text-amber-700">Available • Ships 1–2 weeks</span>
+          </>
+        )}
+      </div>
 
-        <div className="mt-2 flex items-center gap-2 text-sm font-semibold">
-          <span className={"inline-block h-2.5 w-2.5 rounded-full " + (inStock ? "bg-green-500" : "bg-red-500")} />
-          <span className={inStock ? "text-green-800" : "text-red-800"}>
-            {inStock ? (maxQty >= 100 ? "100+ in stock" : `${maxQty} in stock`) : "Backordered"}
-          </span>
+      {/* Price block - set of 4 primary */}
+      <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">
+        <div className="flex items-end justify-between">
+          <div>
+            {typeof t.cost === "number" ? (
+              <>
+                <div className="text-2xl font-extrabold text-neutral-900">
+                  ${((t.cost + 50) * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                </div>
+                <div className="text-xs text-neutral-500">
+                  ${(t.cost + 50).toFixed(2)}/ea × 4 tires
+                </div>
+              </>
+            ) : (
+              <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
+            )}
+          </div>
+          {/* Stock indicator dot */}
+          <div className="flex items-center gap-1.5 text-xs font-semibold">
+            <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
+            <span className={inStock ? "text-green-700" : "text-amber-700"}>
+              {inStock ? (maxQty >= 100 ? "100+" : maxQty) : "Order"}
+            </span>
+          </div>
         </div>
+      </div>
+      
+      {/* Trust row - compact */}
+      <div className="relative z-10 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-neutral-500">
+        <span className="inline-flex items-center gap-0.5">
+          <span className="text-green-600">✓</span> Free Shipping
+        </span>
+        <span className="inline-flex items-center gap-0.5">
+          <span className="text-green-600">✓</span> Price Match
+        </span>
       </div>
 
       {/* CTA buttons - matching wheels card structure */}
