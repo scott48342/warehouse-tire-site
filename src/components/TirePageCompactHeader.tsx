@@ -236,9 +236,27 @@ export function TirePageCompactHeader({
         const hiddenCount = displaySizes.length - MAX_VISIBLE;
         const hasMore = hiddenCount > 0 && !showSizeSelector;
         
-        // Build href for a given size
-        const buildSizeHref = (s: string) => 
-          `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(s)}${liftedParams}`;
+        // Build href for a given size (preserve all wheel params for package flow)
+        const buildSizeHref = (s: string) => {
+          const params = new URLSearchParams();
+          params.set("year", year);
+          params.set("make", make);
+          params.set("model", model);
+          if (trim) params.set("trim", trim);
+          if (modification) params.set("modification", modification);
+          if (wheelSku) params.set("wheelSku", wheelSku);
+          if (wheelDia) params.set("wheelDia", wheelDia);
+          if (wheelWidth) params.set("wheelWidth", wheelWidth);
+          if (wheelName) params.set("wheelName", wheelName);
+          if (wheelImage) params.set("wheelImage", wheelImage);
+          if (wheelPrice != null) params.set("wheelPrice", String(wheelPrice));
+          if (wheelFinish) params.set("wheelFinish", wheelFinish);
+          if (sort) params.set("sort", sort);
+          params.set("size", s);
+          // Append lifted params (already formatted as &key=value string)
+          const base = `${basePath}?${params.toString()}`;
+          return liftedParams ? `${base}${liftedParams}` : base;
+        };
         
         return (
           <div className="space-y-1.5">
