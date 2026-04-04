@@ -783,13 +783,20 @@ export function TiresGridWithSelection({
     modification: viewParams.modification,
   } : undefined;
   
-  // Categorize tires
+  // Categorize tires with minimum population enforcement
+  // Each visible category should have at least MIN_PER_CATEGORY items to avoid
+  // sparse rows that look incomplete (e.g., "Best Value" with only 1 tire)
   const categorized = useMemo(() => {
+    const MIN_PER_CATEGORY = 4; // Minimum tires to populate a category row
+    
+    const sortByPrice = (a: TireItem, b: TireItem) => 
+      (getDisplayPrice(a) || 999) - (getDisplayPrice(b) || 999);
+    
+    // Step 1: Initial categorization
     const bestValue: TireItem[] = [];
     const mostPopular: TireItem[] = [];
     const premium: TireItem[] = [];
     
-    // Sort each category by price
     for (const tire of tires) {
       const category = categorizeTire(tire);
       if (category === "best-value") bestValue.push(tire);
@@ -797,13 +804,37 @@ export function TiresGridWithSelection({
       else premium.push(tire);
     }
     
-    const sortByPrice = (a: TireItem, b: TireItem) => 
-      (getDisplayPrice(a) || 999) - (getDisplayPrice(b) || 999);
+    // Sort all by price (cheapest first)
+    bestValue.sort(sortByPrice);
+    mostPopular.sort(sortByPrice);
+    premium.sort(sortByPrice);
+    
+    // Step 2: Ensure minimum population for Best Value
+    // If Best Value has fewer than MIN items, pull cheapest from Most Popular
+    if (bestValue.length > 0 && bestValue.length < MIN_PER_CATEGORY) {
+      const needed = MIN_PER_CATEGORY - bestValue.length;
+      // Take cheapest from mostPopular (they're adjacent in price)
+      const toMove = mostPopular.splice(0, needed);
+      bestValue.push(...toMove);
+      bestValue.sort(sortByPrice);
+    }
+    
+    // Step 3: Ensure minimum population for Most Popular  
+    // If Most Popular has fewer than MIN items, pull cheapest from Premium
+    if (mostPopular.length > 0 && mostPopular.length < MIN_PER_CATEGORY) {
+      const needed = MIN_PER_CATEGORY - mostPopular.length;
+      const toMove = premium.splice(0, needed);
+      mostPopular.push(...toMove);
+      mostPopular.sort(sortByPrice);
+    }
+    
+    // Note: We don't fill Premium from below since it represents top-tier brands
+    // A sparse Premium section is acceptable (or we could hide it entirely)
     
     return {
-      bestValue: bestValue.sort(sortByPrice),
-      mostPopular: mostPopular.sort(sortByPrice),
-      premium: premium.sort(sortByPrice),
+      bestValue,
+      mostPopular,
+      premium,
     };
   }, [tires]);
   
