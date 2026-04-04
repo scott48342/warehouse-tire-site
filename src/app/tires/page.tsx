@@ -253,12 +253,7 @@ export default async function TiresPage({
   const priceMin = priceMinRaw ? Number(String(priceMinRaw)) : null;
   const priceMax = priceMaxRaw ? Number(String(priceMaxRaw)) : null;
 
-  const seasonsRaw = sp.season;
-  const seasons = Array.isArray(seasonsRaw)
-    ? seasonsRaw.map(String).map((s) => s.trim()).filter(Boolean)
-    : seasonsRaw
-      ? [String(seasonsRaw).trim()].filter(Boolean)
-      : [];
+  // NOTE: Old "season" filter removed - use treadCategory instead (normalized categories)
 
   const speedsRaw = sp.speed;
   const speeds = Array.isArray(speedsRaw)
@@ -1086,7 +1081,6 @@ export default async function TiresPage({
   const topBrands = brandsByCount.slice(0, 6).map(([b]) => b);
   const restBrands = brandsByCount.slice(6).map(([b]) => b).sort((a, b) => a.localeCompare(b));
 
-  const seasonCounts = new Map<string, number>();
   const speedCounts = new Map<string, number>();
   let runFlatCount = 0;
   let snowRatedCount = 0;
@@ -1096,7 +1090,6 @@ export default async function TiresPage({
 
   for (const t of itemsEnriched) {
     const parsed = parseFromDescription(String(t.description || ""));
-    if (parsed.season) seasonCounts.set(parsed.season, (seasonCounts.get(parsed.season) || 0) + 1);
     if (parsed.speed) speedCounts.set(parsed.speed, (speedCounts.get(parsed.speed) || 0) + 1);
     if (parsed.isRunFlat) runFlatCount++;
     if (parsed.isSnowRated) snowRatedCount++;
@@ -1131,7 +1124,6 @@ export default async function TiresPage({
     .filter(tc => treadCategoryCounts.get(tc))
     .sort((a, b) => (treadCategoryCounts.get(b) || 0) - (treadCategoryCounts.get(a) || 0));
 
-  const seasonsAvailable = Array.from(seasonCounts.entries()).sort((a, b) => b[1] - a[1]).map(([s]) => s);
   const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
 
   function normalizeSizeKey(s: string) {
@@ -1176,10 +1168,7 @@ export default async function TiresPage({
       if (!ok) return false;
     }
 
-    if (seasons.length) {
-      const s = parsed.season || "";
-      if (!seasons.includes(s)) return false;
-    }
+    // NOTE: Old season filter removed - treadCategory filter below handles category filtering
 
     if (speeds.length) {
       const spd = parsed.speed || "";
@@ -1678,20 +1667,21 @@ export default async function TiresPage({
               <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
               <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
 
-              <FilterGroup title="Season">
-                {seasonsAvailable.length ? (
+              {/* Category filter - uses normalized treadCategory (matches card badges) */}
+              <FilterGroup title="Category">
+                {treadCategoriesAvailable.length > 0 ? (
                   <div className="grid gap-3">
-                    {seasonsAvailable.map((s) => (
-                      <div key={s} className="flex items-center justify-between gap-2">
-                        <Check label={s} name="season" value={s} defaultChecked={seasons.includes(s)} />
-                        <span className="text-xs font-semibold text-neutral-500">{seasonCounts.get(s) || 0}</span>
+                    {treadCategoriesAvailable.map((tc) => (
+                      <div key={tc} className="flex items-center justify-between gap-2">
+                        <Check label={tc} name="treadCategory" value={tc} defaultChecked={treadCategories.includes(tc)} />
+                        <span className="text-xs font-semibold text-neutral-500">{treadCategoryCounts.get(tc) || 0}</span>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <div className="text-xs text-neutral-600">No season data yet.</div>
+                  <div className="text-xs text-neutral-600">No category data available.</div>
                 )}
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply season</button>
+                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
               </FilterGroup>
             </form>
 
@@ -1706,7 +1696,7 @@ export default async function TiresPage({
               {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
               <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
+              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
               <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
               <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
               <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
@@ -1740,7 +1730,7 @@ export default async function TiresPage({
               {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
               <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
+              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
               {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
               <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
               <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
@@ -1780,7 +1770,7 @@ export default async function TiresPage({
               {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
               <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
+              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
               {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
               <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
               <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
@@ -1814,7 +1804,7 @@ export default async function TiresPage({
               {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
               <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
               <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
+              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
               {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
               <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
               <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
@@ -1842,41 +1832,6 @@ export default async function TiresPage({
               </FilterGroup>
             </form>
 
-            {/* Tread Style Filter */}
-            {treadCategoriesAvailable.length > 0 ? (
-              <form action={basePath} method="get">
-                <input type="hidden" name="year" value={year} />
-                <input type="hidden" name="make" value={make} />
-                <input type="hidden" name="model" value={model} />
-                <input type="hidden" name="trim" value={trim} />
-                <input type="hidden" name="modification" value={modification} />
-                <input type="hidden" name="size" value={selectedSize} />
-                <input type="hidden" name="sort" value={sort} />
-                {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-                <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-                <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-                {seasons.map((s) => (<input key={s} type="hidden" name="season" value={s} />))}
-                {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
-                <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
-                <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
-                <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
-                <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
-                {loadRanges.map((lr) => (<input key={lr} type="hidden" name="loadRange" value={lr} />))}
-                <input type="hidden" name="mileageBand" value={selectedMileageBand || ""} />
-
-                <FilterGroup title="Tread Style">
-                  <div className="grid gap-3">
-                    {treadCategoriesAvailable.map((tc) => (
-                      <div key={tc} className="flex items-center justify-between gap-2">
-                        <Check label={tc} name="treadCategory" value={tc} defaultChecked={treadCategories.includes(tc)} />
-                        <span className="text-xs font-semibold text-neutral-500">{treadCategoryCounts.get(tc) || 0}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
-                </FilterGroup>
-              </form>
-            ) : null}
           </aside>
 
           <section>
