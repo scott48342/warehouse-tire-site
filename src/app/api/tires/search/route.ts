@@ -235,8 +235,8 @@ async function searchTiresBySize(
     const mapUsd0 = n(r.map_usd);
     const msrpUsd = msrpUsd0 != null && msrpUsd0 > 0.01 ? msrpUsd0 : null;
     const mapUsd = mapUsd0 != null && mapUsd0 > 0.01 ? mapUsd0 : null;
-    // Use MSRP as display price, fall back to MAP
-    const price = msrpUsd ?? mapUsd;
+    // Sell price = (MSRP × 0.85) + $50, fall back to MAP
+    const price = msrpUsd ? (msrpUsd * 0.85) + 50 : mapUsd;
     const tireSize = r.tire_size || r.simple_size || "";
     const description = r.tire_description || tireSize || r.sku;
 
