@@ -647,13 +647,13 @@ export function SearchModal({
                                         })();
 
                                         const next = new URLSearchParams();
-                                        // Keep the original flotation selection for UI/debug.
+                                        // Keep the original flotation selection for UI/display.
                                         next.set("flotation", final);
 
-                                        // For KM, use rawSize digits if available.
-                                        // For WP, keep a best-effort metric mapping.
+                                        // Use rawSize digits for API search (normalizes flotation for tire lookup)
+                                        // NOTE: Do NOT set metricSize - flotation and metric are mutually exclusive formats.
+                                        // The tire search API handles flotation format directly now.
                                         if (rawSize) next.set("size", rawSize);
-                                        if (mapped) next.set("metricSize", mapped);
 
                                         if (tenPly) next.set("load", "10ply");
 
