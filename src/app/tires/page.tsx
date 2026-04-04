@@ -20,6 +20,7 @@ import {
 } from "@/lib/tirePlusSizing";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle } from "@/lib/productFormat";
+import { TireFilterSidebar } from "@/components/TireFilterSidebar";
 
 import { 
   type TreadCategory, 
@@ -1080,6 +1081,7 @@ export default async function TiresPage({
 
   const topBrands = brandsByCount.slice(0, 6).map(([b]) => b);
   const restBrands = brandsByCount.slice(6).map(([b]) => b).sort((a, b) => a.localeCompare(b));
+  const allBrands = [...topBrands, ...restBrands];
 
   const speedCounts = new Map<string, number>();
   let runFlatCount = 0;
@@ -1562,9 +1564,9 @@ export default async function TiresPage({
           />
         ) : null}
 
-        <div className="mt-5 grid gap-6 md:grid-cols-[340px_1fr]">
-          {/* Filters Sidebar - matching wheels page spacing */}
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-5 md:block">
+        <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
+          {/* Filters Sidebar - Accordion style */}
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
             {/* Package Summary - shows when building a package */}
             <div className="mb-4">
               <PackageSummary variant="sidebar" showCheckout={true} />
@@ -1576,261 +1578,55 @@ export default async function TiresPage({
               </div>
             ) : null}
 
-            <div className="flex items-center justify-between">
-              <h2 className="text-base font-extrabold">Filters</h2>
-              <Link
-                href={`${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${selectedSize ? `&size=${encodeURIComponent(selectedSize)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}`}
-                className="text-sm font-semibold text-neutral-600 hover:underline"
-              >
-                Clear all
-              </Link>
-            </div>
-
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="wheelSku" value={wheelSku} />
-              <input type="hidden" name="wheelDia" value={wheelDia} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-
-              <FilterGroup title="Brand">
-                {topBrands.length ? (
-                  <div className="grid gap-3">
-                    {topBrands.map((b) => (
-                      <div key={b} className="flex items-center justify-between gap-2">
-                        <Check label={b} name="brand" value={b} defaultChecked={brands.includes(b)} />
-                        <span className="text-xs font-semibold text-neutral-500">{brandCounts.get(b) || 0}</span>
-                      </div>
-                    ))}
-                    {restBrands.length ? (
-                      <details className="rounded-xl border border-neutral-200 bg-white p-3">
-                        <summary className="cursor-pointer select-none text-xs font-extrabold text-neutral-900">
-                          More brands ({restBrands.length})
-                        </summary>
-                        <div className="mt-3 grid gap-3">
-                          {restBrands.map((b) => (
-                            <div key={b} className="flex items-center justify-between gap-2">
-                              <Check label={b} name="brand" value={b} defaultChecked={brands.includes(b)} />
-                              <span className="text-xs font-semibold text-neutral-500">{brandCounts.get(b) || 0}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </details>
-                    ) : null}
-                  </div>
-                ) : (
-                  <div className="text-xs text-neutral-600">No brand data yet.</div>
-                )}
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply brand</button>
-              </FilterGroup>
-            </form>
-
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-
-              <FilterGroup title="Price">
-                <div className="grid grid-cols-2 gap-3">
-                  <input name="priceMin" defaultValue={priceMinRaw ? String(priceMinRaw) : ""} placeholder="$ min" className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold" />
-                  <input name="priceMax" defaultValue={priceMaxRaw ? String(priceMaxRaw) : ""} placeholder="$ max" className="h-12 rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold" />
-                </div>
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply price</button>
-              </FilterGroup>
-            </form>
-
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
-              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
-              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
-              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
-              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
-
-              {/* Category filter - uses normalized treadCategory (matches card badges) */}
-              <FilterGroup title="Category">
-                {treadCategoriesAvailable.length > 0 ? (
-                  <div className="grid gap-3">
-                    {treadCategoriesAvailable.map((tc) => (
-                      <div key={tc} className="flex items-center justify-between gap-2">
-                        <Check label={tc} name="treadCategory" value={tc} defaultChecked={treadCategories.includes(tc)} />
-                        <span className="text-xs font-semibold text-neutral-500">{treadCategoryCounts.get(tc) || 0}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-xs text-neutral-600">No category data available.</div>
-                )}
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
-              </FilterGroup>
-            </form>
-
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
-              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
-              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
-              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
-              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
-
-              <FilterGroup title="Speed Rating">
-                {speedsAvailable.length ? (
-                  <div className="grid gap-3">
-                    {speedsAvailable.slice(0, 12).map((s) => (
-                      <div key={s} className="flex items-center justify-between gap-2">
-                        <Check label={s} name="speed" value={s} defaultChecked={speeds.includes(s)} />
-                        <span className="text-xs font-semibold text-neutral-500">{speedCounts.get(s) || 0}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-xs text-neutral-600">No speed rating data yet.</div>
-                )}
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply speed</button>
-              </FilterGroup>
-            </form>
-
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
-              {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
-              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
-              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
-              {loadRanges.map((lr) => (<input key={lr} type="hidden" name="loadRange" value={lr} />))}
-
-              <FilterGroup title="Features">
-                <div className="grid gap-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="Run-flat" name="runFlat" value="1" defaultChecked={runFlat} />
-                    <span className="text-xs font-semibold text-neutral-500">{runFlatCount}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="XL (Extra Load)" name="xl" value="1" defaultChecked={xlOnly} />
-                    <span className="text-xs font-semibold text-neutral-500">{xlCount}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="Snow rated (3PMSF)" name="snowRated" value="1" defaultChecked={snowRated} />
-                    <span className="text-xs font-semibold text-neutral-500">{snowRatedCount}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="All Weather" name="allWeather" value="1" defaultChecked={allWeather} />
-                    <span className="text-xs font-semibold text-neutral-500">{allWeatherCount}</span>
-                  </div>
-                </div>
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
-              </FilterGroup>
-            </form>
-
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
-              {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
-              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
-              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
-              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
-              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
-
-              <FilterGroup title="Load Range">
-                <div className="grid gap-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="Load Range E" name="loadRange" value="E" defaultChecked={loadRanges.includes("E")} />
-                    <span className="text-xs font-semibold text-neutral-500">{loadRangeCounts.get("E") || 0}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="Load Range F" name="loadRange" value="F" defaultChecked={loadRanges.includes("F")} />
-                    <span className="text-xs font-semibold text-neutral-500">{loadRangeCounts.get("F") || 0}</span>
-                  </div>
-                </div>
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
-              </FilterGroup>
-            </form>
-
-            {/* Mileage Warranty Filter */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="trim" value={trim} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="sort" value={sort} />
-              {brands.map((b) => (<input key={b} type="hidden" name="brand" value={b} />))}
-              <input type="hidden" name="priceMin" value={priceMinRaw ? String(priceMinRaw) : ""} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw ? String(priceMaxRaw) : ""} />
-              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
-              {speeds.map((s) => (<input key={s} type="hidden" name="speed" value={s} />))}
-              <input type="hidden" name="runFlat" value={runFlat ? "1" : ""} />
-              <input type="hidden" name="snowRated" value={snowRated ? "1" : ""} />
-              <input type="hidden" name="allWeather" value={allWeather ? "1" : ""} />
-              <input type="hidden" name="xl" value={xlOnly ? "1" : ""} />
-              {loadRanges.map((lr) => (<input key={lr} type="hidden" name="loadRange" value={lr} />))}
-              {treadCategories.map((tc) => (<input key={tc} type="hidden" name="treadCategory" value={tc} />))}
-
-              <FilterGroup title="Mileage Warranty">
-                <div className="grid gap-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="40K+ miles" name="mileageBand" value="40K+" defaultChecked={selectedMileageBand === "40K+"} />
-                    <span className="text-xs font-semibold text-neutral-500">{mileage40kCount}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="60K+ miles" name="mileageBand" value="60K+" defaultChecked={selectedMileageBand === "60K+"} />
-                    <span className="text-xs font-semibold text-neutral-500">{mileage60kCount}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <Check label="80K+ miles" name="mileageBand" value="80K+" defaultChecked={selectedMileageBand === "80K+"} />
-                    <span className="text-xs font-semibold text-neutral-500">{mileage80kCount}</span>
-                  </div>
-                </div>
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">Apply</button>
-              </FilterGroup>
-            </form>
+            <TireFilterSidebar
+              data={{
+                // Current filter state
+                brands,
+                priceMin,
+                priceMax,
+                treadCategories,
+                speeds,
+                loadRanges,
+                mileageBand: selectedMileageBand,
+                runFlat,
+                snowRated,
+                allWeather,
+                xlOnly,
+                
+                // Available options with counts
+                brandOptions: allBrands.map(b => ({ value: b, count: brandCounts.get(b) || 0 })),
+                treadCategoryOptions: treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 })),
+                speedOptions: speedsAvailable.map(s => ({ value: s, count: speedCounts.get(s) || 0 })),
+                loadRangeOptions: LOAD_RANGES.map(lr => ({ value: lr, count: loadRangeCounts.get(lr) || 0 })),
+                mileageOptions: [
+                  { value: "40K+" as const, count: mileage40kCount },
+                  { value: "60K+" as const, count: mileage60kCount },
+                  { value: "80K+" as const, count: mileage80kCount },
+                ],
+                
+                // Feature counts
+                runFlatCount,
+                snowRatedCount,
+                allWeatherCount,
+                xlCount,
+                
+                // Context for URL building
+                basePath,
+                year,
+                make,
+                model,
+                trim,
+                modification,
+                selectedSize,
+                sort,
+                wheelSku,
+                wheelDia,
+                
+                // Stock info
+                inStockCount: items.length,
+                totalCount: itemsEnriched.length,
+              }}
+            />
 
           </aside>
 
