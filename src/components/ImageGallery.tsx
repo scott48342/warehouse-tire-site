@@ -125,17 +125,19 @@ function Lightbox({ src, alt, onClose, images, currentIndex, onNavigate }: Light
         </>
       )}
 
-      {/* Main image container */}
+      {/* Main image container - sized to fill viewport */}
       <div 
-        className="relative max-h-[85vh] max-w-5xl"
+        className="relative flex items-center justify-center"
+        style={{ width: 'min(90vw, 800px)', height: 'min(80vh, 800px)' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Image with zoom */}
         <div
           ref={imageRef}
-          className={`relative overflow-hidden rounded-lg bg-white ${
+          className={`relative flex items-center justify-center overflow-hidden rounded-lg bg-white ${
             isZoomed ? "cursor-zoom-out" : "cursor-zoom-in"
           }`}
+          style={{ width: '100%', height: '100%' }}
           onClick={toggleZoom}
           onMouseMove={handleMouseMove}
           onMouseLeave={() => isZoomed && setZoomPosition({ x: 50, y: 50 })}
@@ -144,7 +146,7 @@ function Lightbox({ src, alt, onClose, images, currentIndex, onNavigate }: Light
           <img
             src={src}
             alt={alt}
-            className={`max-h-[80vh] w-auto transition-transform duration-200 ${
+            className={`max-w-full max-h-full object-contain transition-transform duration-200 ${
               isZoomed ? "scale-[2.5]" : "scale-100"
             }`}
             style={isZoomed ? {
