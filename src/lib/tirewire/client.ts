@@ -473,6 +473,9 @@ export interface UnifiedTire {
     mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
     loadRange: string | null;
     isRunFlat: boolean;
+    isXL: boolean;
+    is3PMSF: boolean;
+    isAllWeather: boolean;
   };
 }
 
@@ -489,10 +492,20 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
   
   // Compute enrichment data
   const descriptionText = tire.name || tire.description || `${tire.make} ${tire.pattern}`.trim();
+  const upperDesc = descriptionText.toUpperCase();
   const mileage = normalizeMileage(tire.warranty);
   const treadCategory = normalizeTreadCategory(null, descriptionText);
-  const loadRange = normalizeLoadRange(tire.loadRange, tire.plyRating, descriptionText);
-  const runFlat = isRunFlat(tire.sidewall, descriptionText, tire.features);
+  const loadRangeVal = normalizeLoadRange(tire.loadRange, tire.plyRating, descriptionText);
+  const runFlatFlag = isRunFlat(tire.sidewall, descriptionText, tire.features);
+  
+  // Detect XL from description
+  const xlFlag = /\bXL\b/.test(upperDesc) && !/NON[\s-]?XL/.test(upperDesc);
+  
+  // Detect 3PMSF (severe snow rating)
+  const snowFlag = /\b3[\s-]?P(MS|MSF|EAK)\b|\bMOUNTAIN[\s-]?SNOWFLAKE\b|\bSEVERE[\s-]?SNOW\b|\b3[\s-]?PEAK\b/.test(upperDesc);
+  
+  // Detect All-Weather
+  const allWeatherFlag = /\bALL[\s-]?WEATHER\b|\bCROSS[\s-]?CLIMATE\b|\bWEATHER[\s-]?READY\b|\b4[\s-]?SEASON\b/.test(upperDesc);
   
   return {
     partNumber: tire.clientProductCode || tire.productCode,
@@ -515,7 +528,7 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
     source: `tireweb:${provider.replace("tireweb_", "")}`, // FIXED: "tireweb:atd" not "tirewire:atd"
     badges: {
       terrain: treadCategory, // Now populated from description parsing
-      construction: loadRange,
+      construction: loadRangeVal,
       warrantyMiles: mileage,
       loadIndex: tire.loadRating || null,
       speedRating: tire.speedRating || null,
@@ -525,8 +538,11 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
       mileage,
       treadCategory,
       mileageBadge: getMileageBadge(mileage),
-      loadRange,
-      isRunFlat: runFlat,
+      loadRange: loadRangeVal,
+      isRunFlat: runFlatFlag,
+      isXL: xlFlag,
+      is3PMSF: snowFlag,
+      isAllWeather: allWeatherFlag,
     },
   };
 }

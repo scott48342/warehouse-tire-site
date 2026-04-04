@@ -32,8 +32,11 @@ export interface TireEnrichment {
   mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
   /** Load range (C, D, E, F, SL, XL) */
   loadRange: string | null;
-  /** Is run flat tire */
+  /** Feature flags */
   isRunFlat: boolean;
+  isXL: boolean;
+  is3PMSF: boolean;         // Severe snow rated (3-peak mountain snowflake)
+  isAllWeather: boolean;    // All-weather with snow rating
 }
 
 // ============================================================================
@@ -332,7 +335,7 @@ export function normalizeLoadRange(
 }
 
 // ============================================================================
-// RUN FLAT DETECTION
+// FEATURE DETECTION
 // ============================================================================
 
 /**
@@ -348,7 +351,37 @@ export function isRunFlat(
     .join(' ')
     .toUpperCase();
     
-  return /\bRUN[\s-]?FLAT\b|\bRFT\b|\bSSR\b|\bEMT\b|\bZP\b|\bROF\b/.test(text);
+  return /\bRUN[\s-]?FLAT\b|\bRFT\b|\bSSR\b|\bEMT\b|\bZP\b|\bROF\b|\bSEAL\s*GUARD\b/.test(text);
+}
+
+/**
+ * Detect if tire is XL (Extra Load)
+ */
+export function isXL(description?: string | null, loadIndex?: string | null): boolean {
+  const text = [description, loadIndex].filter(Boolean).join(' ').toUpperCase();
+  // XL suffix on load index (e.g., "106H XL") or in description
+  // Avoid matching brand names like "NEXEN" or model names with XL in them
+  return /\bXL\b/.test(text) && !/NON[\s-]?XL/.test(text);
+}
+
+/**
+ * Detect if tire has 3-Peak Mountain Snowflake (3PMSF) severe snow rating
+ * This is different from M+S (mud and snow) - 3PMSF is a performance standard
+ */
+export function is3PMSF(description?: string | null, features?: string | null): boolean {
+  const text = [description, features].filter(Boolean).join(' ').toUpperCase();
+  // 3PMSF, 3-PEAK, 3PMS, SEVERE SNOW, MOUNTAIN SNOWFLAKE
+  // Note: M+S alone is NOT 3PMSF - that's just mud & snow rated
+  return /\b3[\s-]?P(MS|MSF|EAK)\b|\bMOUNTAIN[\s-]?SNOWFLAKE\b|\bSEVERE[\s-]?SNOW\b|\b3[\s-]?PEAK\b/.test(text);
+}
+
+/**
+ * Detect if tire is All-Weather (different from All-Season - has snow rating)
+ */
+export function isAllWeather(description?: string | null, terrain?: string | null): boolean {
+  const text = [description, terrain].filter(Boolean).join(' ').toUpperCase();
+  // All-Weather, CrossClimate, WeatherReady, 4Season
+  return /\bALL[\s-]?WEATHER\b|\bCROSS[\s-]?CLIMATE\b|\bWEATHER[\s-]?READY\b|\b4[\s-]?SEASON\b/.test(text);
 }
 
 // ============================================================================
@@ -361,6 +394,7 @@ export interface TireRawData {
   warranty?: string | number | null;
   mileageWarranty?: string | number | null;
   loadRange?: string | null;
+  loadIndex?: string | null;
   plyRating?: string | null;
   sidewall?: string | null;
   features?: string | null;
@@ -372,14 +406,17 @@ export interface TireRawData {
 export function enrichTireData(raw: TireRawData): TireEnrichment {
   const mileage = normalizeMileage(raw.warranty ?? raw.mileageWarranty);
   const treadCategory = normalizeTreadCategory(raw.terrain, raw.description);
-  const loadRange = normalizeLoadRange(raw.loadRange, raw.plyRating, raw.description);
+  const loadRangeVal = normalizeLoadRange(raw.loadRange, raw.plyRating, raw.description);
   
   return {
     mileage,
     treadCategory,
     mileageBadge: getMileageBadge(mileage),
-    loadRange,
+    loadRange: loadRangeVal,
     isRunFlat: isRunFlat(raw.sidewall, raw.description, raw.features),
+    isXL: isXL(raw.description, raw.loadIndex),
+    is3PMSF: is3PMSF(raw.description, raw.features),
+    isAllWeather: isAllWeather(raw.description, raw.terrain),
   };
 }
 

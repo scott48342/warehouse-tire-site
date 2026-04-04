@@ -63,6 +63,9 @@ type Tire = {
     mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
     loadRange: string | null;
     isRunFlat: boolean;
+    isXL: boolean;
+    is3PMSF: boolean;
+    isAllWeather: boolean;
   };
 };
 
@@ -1186,21 +1189,25 @@ export default async function TiresPage({
 
   const speedCounts = new Map<string, number>();
   let runFlatCount = 0;
-  let snowRatedCount = 0;
+  let snowRatedCount = 0;  // 3PMSF
   let allWeatherCount = 0;
   let xlCount = 0;
   const loadRangeCounts = new Map<string, number>();
 
   for (const t of itemsEnriched) {
-    const parsed = parseFromDescription(String(t.description || ""));
-    if (parsed.speed) speedCounts.set(parsed.speed, (speedCounts.get(parsed.speed) || 0) + 1);
-    if (parsed.isRunFlat) runFlatCount++;
-    if (parsed.isSnowRated) snowRatedCount++;
-    if (parsed.isAllWeather) allWeatherCount++;
-    if (parsed.isXL) xlCount++;
+    // Extract speed rating from description
+    const d = String(t.description || "").toUpperCase();
+    const speedMatch = d.match(/\b\d{2,3}([A-Z])\b(?!.*\b\d{2,3}[A-Z]\b)/);
+    if (speedMatch) speedCounts.set(speedMatch[1], (speedCounts.get(speedMatch[1]) || 0) + 1);
+    
+    // Use enrichment data for feature flags (API normalizes these)
+    if (t.enrichment?.isRunFlat) runFlatCount++;
+    if (t.enrichment?.is3PMSF) snowRatedCount++;
+    if (t.enrichment?.isAllWeather) allWeatherCount++;
+    if (t.enrichment?.isXL) xlCount++;
 
-    const lrRaw = (t as any)?.loadRange;
-    const lr = lrRaw != null ? String(lrRaw).trim().toUpperCase() : "";
+    // Load range from enrichment
+    const lr = t.enrichment?.loadRange;
     if (lr) loadRangeCounts.set(lr, (loadRangeCounts.get(lr) || 0) + 1);
   }
 
@@ -1310,14 +1317,15 @@ export default async function TiresPage({
       if (!speeds.includes(spd)) return false;
     }
 
-    if (runFlat && !parsed.isRunFlat) return false;
-    if (snowRated && !parsed.isSnowRated) return false;
-    if (allWeather && !parsed.isAllWeather) return false;
-    if (xlOnly && !parsed.isXL) return false;
+    // Feature filters - use enrichment data from API
+    if (runFlat && !t.enrichment?.isRunFlat) return false;
+    if (snowRated && !t.enrichment?.is3PMSF) return false;
+    if (allWeather && !t.enrichment?.isAllWeather) return false;
+    if (xlOnly && !t.enrichment?.isXL) return false;
 
+    // Load range filter - use enrichment data
     if (loadRanges.length) {
-      const lrRaw = (t as any)?.loadRange;
-      const lr = lrRaw != null ? String(lrRaw).trim().toUpperCase() : "";
+      const lr = t.enrichment?.loadRange || "";
       if (!lr || !loadRanges.includes(lr)) return false;
     }
 

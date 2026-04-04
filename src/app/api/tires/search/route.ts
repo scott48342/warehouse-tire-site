@@ -162,6 +162,9 @@ interface TireResult {
     mileageBadge: 'Long Life' | 'Ultra Long Life' | null;
     loadRange: string | null;
     isRunFlat: boolean;
+    isXL: boolean;
+    is3PMSF: boolean;
+    isAllWeather: boolean;
   };
 }
 
@@ -243,8 +246,18 @@ async function searchTiresBySize(
     // Compute enrichment data from WheelPros fields
     const mileage = normalizeMileage(r.mileage_warranty);
     const treadCategory = normalizeTreadCategory(r.terrain, description);
-    const loadRange = normalizeLoadRange(r.construction_type, null, description);
-    const runFlat = isRunFlat(null, description, null);
+    const loadRangeVal = normalizeLoadRange(r.construction_type, null, description);
+    const runFlatFlag = isRunFlat(null, description, null);
+    
+    // Detect XL from description or load index
+    const xlFlag = /\bXL\b/.test(description.toUpperCase()) && !/NON[\s-]?XL/.test(description.toUpperCase());
+    
+    // Detect 3PMSF (severe snow rating) from description
+    const snowFlag = /\b3[\s-]?P(MS|MSF|EAK)\b|\bMOUNTAIN[\s-]?SNOWFLAKE\b|\bSEVERE[\s-]?SNOW\b|\b3[\s-]?PEAK\b/.test(description.toUpperCase());
+    
+    // Detect All-Weather (not same as All-Season)
+    const allWeatherFlag = /\bALL[\s-]?WEATHER\b|\bCROSS[\s-]?CLIMATE\b|\bWEATHER[\s-]?READY\b|\b4[\s-]?SEASON\b/.test(description.toUpperCase()) ||
+                          /\bALL[\s-]?WEATHER\b/.test((r.terrain || '').toUpperCase());
 
     return {
       partNumber: String(r.sku),
@@ -272,8 +285,11 @@ async function searchTiresBySize(
         mileage,
         treadCategory,
         mileageBadge: getMileageBadge(mileage),
-        loadRange,
-        isRunFlat: runFlat,
+        loadRange: loadRangeVal,
+        isRunFlat: runFlatFlag,
+        isXL: xlFlag,
+        is3PMSF: snowFlag,
+        isAllWeather: allWeatherFlag,
       },
     };
   });
