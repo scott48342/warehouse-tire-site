@@ -29,7 +29,11 @@ import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { getClassicTireSizesForWheelDiameter } from "@/lib/classic-fitment/classicTireUpsize";
 import { getCachedTireImagesBatch } from "@/lib/images/tireImageService";
 import { expandKmDescription, extractModelName } from "@/lib/km/nameExpander";
-import { shouldApplyPackagePriority, applyPackagePriorityToTires } from "@/lib/packagePrioritization";
+import { 
+  shouldApplyPackagePriority, 
+  applyPackagePriorityToTires,
+  applySupplierPrioritization,
+} from "@/lib/packagePrioritization";
 import { 
   normalizeTreadCategory, 
   normalizeMileage, 
@@ -1082,21 +1086,35 @@ export async function GET(req: Request) {
         console.log(`[tires/search] Image filter: ${imageStats.valid}/${imageStats.total} valid, filtered ${imageStats.invalid} (${JSON.stringify(imageStats.invalidReasons)})`);
       }
       
-      // Package priority sorting (size mode) - dynamic based on request params
+      // ═══════════════════════════════════════════════════════════════════════
+      // SUPPLIER PRIORITIZATION (size mode)
+      // Standard: TireWeb first | Package: WheelPros boosted
+      // ═══════════════════════════════════════════════════════════════════════
       const packageParam = url.searchParams.get("package");
       const buildTypeParam = url.searchParams.get("buildType");
       const searchTypeParam = url.searchParams.get("searchType");
       
-      const applyPkgPriority = shouldApplyPackagePriority({
+      const isPackageFlow = shouldApplyPackagePriority({
         searchType: searchTypeParam || undefined,
         buildType: buildTypeParam || undefined,
         package: packageParam || undefined,
       });
       
       let packagePriorityApplied = false;
-      if (applyPkgPriority && finalResults.length > 0) {
-        finalResults = applyPackagePriorityToTires(finalResults);
-        packagePriorityApplied = true;
+      let supplierPriorityApplied = false;
+      
+      if (finalResults.length > 0) {
+        if (isPackageFlow) {
+          // PACKAGE FLOW: Boost WheelPros to top
+          finalResults = applyPackagePriorityToTires(finalResults);
+          packagePriorityApplied = true;
+          console.log(`[tires/search:size] 📦 PACKAGE PRIORITY applied: ${finalResults.length} results`);
+        } else {
+          // STANDARD SEARCH: TireWeb first
+          finalResults = applySupplierPrioritization(finalResults);
+          supplierPriorityApplied = true;
+          console.log(`[tires/search:size] 🏷️ SUPPLIER PRIORITY applied: ${finalResults.length} results`);
+        }
       }
       
       timing.totalMs = Date.now() - t0;
@@ -1117,6 +1135,7 @@ export async function GET(req: Request) {
           ...(debug && { reasons: imageStats.invalidReasons }),
         },
         packagePriorityApplied,
+        supplierPriorityApplied,
         timing,
         // TireWeb protection status (for monitoring)
         tirewebProtection: {
@@ -1437,28 +1456,40 @@ export async function GET(req: Request) {
     }
     
     // ═══════════════════════════════════════════════════════════════════════════
-    // PACKAGE PRIORITY SORTING (Optional Overlay)
-    // Apply ONLY when: searchType === 'package' OR buildType === 'lifted'
-    // Prioritizes: WheelPros + image + stock > image + stock > WheelPros + stock > rest
+    // SUPPLIER PRIORITIZATION (Applied AFTER merge + enrichment)
+    // 
+    // Standard searches: TireWeb first > K&M > WheelPros (maximize selection)
+    // Package searches:  WheelPros boosted to top (fulfillment efficiency)
     // ═══════════════════════════════════════════════════════════════════════════
     const packageParam = url.searchParams.get("package");
     const buildTypeParam = url.searchParams.get("buildType");
     const searchTypeParam = url.searchParams.get("searchType");
     
-    const applyPackagePriority = shouldApplyPackagePriority({
+    const isPackageFlow = shouldApplyPackagePriority({
       searchType: searchTypeParam || undefined,
       buildType: buildTypeParam || undefined,
       package: packageParam || undefined,
     });
     
     let packagePriorityApplied = false;
+    let supplierPriorityApplied = false;
     
-    if (applyPackagePriority && finalResults.length > 0) {
-      const tPkgPriority0 = Date.now();
-      finalResults = applyPackagePriorityToTires(finalResults);
-      timing.packagePriorityMs = Date.now() - tPkgPriority0;
-      packagePriorityApplied = true;
-      console.log(`[tires/search] 📦 PACKAGE PRIORITY applied: reordered ${finalResults.length} results`);
+    if (finalResults.length > 0) {
+      const tPriority0 = Date.now();
+      
+      if (isPackageFlow) {
+        // PACKAGE FLOW: Boost WheelPros to top for fulfillment efficiency
+        finalResults = applyPackagePriorityToTires(finalResults);
+        packagePriorityApplied = true;
+        console.log(`[tires/search] 📦 PACKAGE PRIORITY applied: WheelPros boosted, ${finalResults.length} results`);
+      } else {
+        // STANDARD SEARCH: TireWeb first for maximum selection
+        finalResults = applySupplierPrioritization(finalResults);
+        supplierPriorityApplied = true;
+        console.log(`[tires/search] 🏷️ SUPPLIER PRIORITY applied: TireWeb first, ${finalResults.length} results`);
+      }
+      
+      timing.prioritizationMs = Date.now() - tPriority0;
     }
     
     timing.totalMs = Date.now() - t0;
@@ -1525,8 +1556,9 @@ export async function GET(req: Request) {
       ...(fallbackMessage && { fallbackMessage }),
       ...(noResultsReason && { noResultsReason }),
       
-      // Package prioritization flag
+      // Prioritization flags
       packagePriorityApplied,
+      supplierPriorityApplied,
       
       timing,
       

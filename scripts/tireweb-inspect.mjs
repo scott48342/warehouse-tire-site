@@ -18,10 +18,11 @@ if (!ACCESS_KEY || !GROUP_TOKEN) {
 
 const PRODUCTS_SERVICE_URL = "http://ws.tirewire.com/connectionscenter/productsservice.asmx";
 
-// Default connections
+// Default connections - check all three
 const CONNECTIONS = [
   { provider: "tireweb_atd", connectionId: 488677 },
-  // { provider: "tireweb_ntw", connectionId: 488546 },
+  { provider: "tireweb_ntw", connectionId: 488546 },
+  { provider: "tireweb_usautoforce", connectionId: 488548 },
 ];
 
 function buildGetTiresRequest(connectionId, tireSize, detailLevel = 10) {
@@ -200,7 +201,10 @@ async function main() {
     // Summary of what's populated across all tires
     console.log('\n=== FIELD POPULATION SUMMARY ===');
     const fieldCounts = {};
+    const uniqueMakes = new Set();
     for (const t of tireXmls) {
+      const make = extractField(t, 'Make');
+      if (make) uniqueMakes.add(make);
       for (const field of SPEC_FIELDS) {
         const val = extractField(t, field);
         if (val) {
@@ -215,6 +219,9 @@ async function main() {
       const pct = total > 0 ? Math.round(100 * count / total) : 0;
       console.log(`${field}: ${count}/${total} (${pct}%)`);
     }
+    
+    console.log(`\n=== UNIQUE MAKES (${uniqueMakes.size}) ===`);
+    console.log([...uniqueMakes].sort().join(', '));
   }
 }
 

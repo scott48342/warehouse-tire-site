@@ -1,22 +1,32 @@
 /**
- * Package Prioritization Logic
+ * Supplier Prioritization Logic
  * 
- * Applies ONLY when: searchType === 'package' OR buildType === 'lifted'
+ * ═══════════════════════════════════════════════════════════════════════════
+ * STANDARD SEARCHES (tire-only, wheel-only):
+ * ═══════════════════════════════════════════════════════════════════════════
+ * - TireWeb is PRIMARY source for result ordering
+ * - WheelPros results included but NOT artificially boosted
+ * - Sort: supplier priority (TireWeb first), then price ascending
  * 
- * PRIORITY TIERS:
+ * ═══════════════════════════════════════════════════════════════════════════
+ * PACKAGE SEARCHES (searchType=package, buildType=lifted, package=1):
+ * ═══════════════════════════════════════════════════════════════════════════
+ * - WheelPros boosted to TOP for fulfillment efficiency
+ * - All other results remain visible after
+ * 
+ * PACKAGE PRIORITY TIERS:
  * Tier 1: supplier === 'wheelpros' AND imageUrl exists AND stock > 0
  * Tier 2: imageUrl exists AND stock > 0
  * Tier 3: supplier === 'wheelpros' AND stock > 0
  * Tier 4: everything else
  * 
- * SORTING RULE:
- * Sort by tier ASC (1 → 4)
- * Within same tier → sort by price ASC
- * 
- * NOTES:
+ * ═══════════════════════════════════════════════════════════════════════════
+ * IMPORTANT CONSTRAINTS:
+ * ═══════════════════════════════════════════════════════════════════════════
  * - Does NOT remove results (only reorders)
- * - Does NOT apply to tire-only or wheel-only searches
- * - Must work for both tires and wheels inside package builder
+ * - Does NOT increase API usage
+ * - Does NOT break cache layer
+ * - Apply AFTER merge + enrichment, BEFORE final display
  */
 
 export interface PackagePrioritizableItem {
@@ -27,6 +37,44 @@ export interface PackagePrioritizableItem {
   price?: number;             // For secondary sort within tier
   // Allow any other properties
   [key: string]: unknown;
+}
+
+/**
+ * Supplier priority for STANDARD searches (not package flows)
+ * Lower number = higher priority
+ */
+export type SupplierPriority = 1 | 2 | 3 | 4;
+
+const SUPPLIER_PRIORITY_MAP: Record<string, SupplierPriority> = {
+  'tireweb': 1,       // TireWeb is primary source
+  'tireweb:atd': 1,
+  'tireweb:ntw': 1,
+  'tireweb:usautoforce': 1,
+  'km': 2,            // K&M second
+  'wheelpros': 3,     // WheelPros third for standard searches
+  'wp': 3,
+};
+
+/**
+ * Get supplier priority for standard searches (TireWeb first)
+ */
+export function getSupplierPriority(supplier: string | undefined): SupplierPriority {
+  if (!supplier) return 4;
+  const normalized = supplier.toLowerCase();
+  
+  // Check exact match first
+  if (SUPPLIER_PRIORITY_MAP[normalized]) {
+    return SUPPLIER_PRIORITY_MAP[normalized];
+  }
+  
+  // Check prefix matches (e.g., "tireweb:atd" matches "tireweb")
+  for (const [key, priority] of Object.entries(SUPPLIER_PRIORITY_MAP)) {
+    if (normalized.startsWith(key)) {
+      return priority;
+    }
+  }
+  
+  return 4; // Unknown suppliers last
 }
 
 export type PackagePriorityTier = 1 | 2 | 3 | 4;
@@ -99,6 +147,40 @@ export function shouldApplyPackagePriority(params: {
   if (params.package === '1') return true;
   
   return false;
+}
+
+/**
+ * Apply supplier-based ordering for STANDARD tire searches
+ * 
+ * Priority: TireWeb first > K&M > WheelPros > unknown
+ * Within same supplier tier: sort by price ascending
+ * 
+ * @param results - Array of tire results after merge+enrichment
+ * @returns New sorted array (does not mutate input)
+ */
+export function applySupplierPrioritization<T extends Record<string, any>>(
+  results: T[]
+): T[] {
+  return [...results].sort((a, b) => {
+    // Get supplier from source field
+    const supplierA = getSupplierPriority(a.source);
+    const supplierB = getSupplierPriority(b.source);
+    
+    // Sort by supplier priority first (TireWeb = 1, WheelPros = 3)
+    if (supplierA !== supplierB) {
+      return supplierA - supplierB;
+    }
+    
+    // Within same supplier tier, sort by price ascending
+    const priceA = a.cost ?? a.price ?? Infinity;
+    const priceB = b.cost ?? b.price ?? Infinity;
+    if (priceA !== priceB) {
+      return priceA - priceB;
+    }
+    
+    // Tertiary sort by brand for consistency
+    return (a.brand || '').localeCompare(b.brand || '');
+  });
 }
 
 /**
