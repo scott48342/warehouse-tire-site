@@ -185,15 +185,14 @@ export default async function TireDetailPage({
                     {displayPrice != null && (
                       <div className="mt-6">
                         <AddTiresToCartButton
+                          sku={tire.partNumber || safeSku}
                           brand={tire.brand || "Tire"}
                           model={title}
-                          description={tire.description || title}
                           size={tire.size || size}
-                          partNumber={tire.partNumber || safeSku}
                           unitPrice={displayPrice}
                           imageUrl={tire.imageUrl}
                           source={tire.rawSource || tire.source || "tireweb"}
-                          variant="filled"
+                          variant="primary"
                         />
                       </div>
                     )}

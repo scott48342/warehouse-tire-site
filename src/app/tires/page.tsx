@@ -2297,6 +2297,13 @@ function TireCard({
         {displayTitle}
       </h3>
 
+      {/* Mileage warranty - text line under title */}
+      {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
+        <div className="relative z-10 mt-0.5 text-xs text-neutral-600">
+          ✓ {Math.round(t.enrichment.mileage / 1000)}K mile warranty
+        </div>
+      ) : null}
+
       {/* Tire size - prominent display */}
       <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
         {selectedSize}
@@ -2393,17 +2400,6 @@ function TireCard({
               </span>
             );
           })()}
-          
-          {/* Mileage warranty badge */}
-          {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
-            <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${
-              t.enrichment.mileage >= 80000 ? 'bg-purple-600' :
-              t.enrichment.mileage >= 60000 ? 'bg-indigo-600' :
-              'bg-blue-600'
-            }`}>
-              📏 {Math.round(t.enrichment.mileage / 1000)}K WARRANTY
-            </span>
-          ) : null}
         </div>
       </div>
 
@@ -2471,14 +2467,9 @@ function TireCard({
         </div>
       </div>
       
-      {/* Trust row - compact */}
-      <div className="relative z-10 mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-neutral-500">
-        <span className="inline-flex items-center gap-0.5">
-          <span className="text-green-600">✓</span> Free Shipping
-        </span>
-        <span className="inline-flex items-center gap-0.5">
-          <span className="text-green-600">✓</span> Price Match
-        </span>
+      {/* Trust row - single badge */}
+      <div className="relative z-10 mt-2 text-[10px] text-neutral-500">
+        <span className="text-green-600">✓</span> Free Shipping
       </div>
 
       {/* CTA buttons - matching wheels card structure */}
