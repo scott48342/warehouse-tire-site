@@ -190,10 +190,32 @@ function TireCard({
   const setPrice = price !== null ? price * 4 : null;
   const category = categorizeTire(tire);
   
-  // Build detail URL
-  const detailHref = tire.partNumber 
-    ? `/tires/${encodeURIComponent(tire.partNumber)}?size=${encodeURIComponent(size)}`
-    : "#";
+  // Build detail URL based on source
+  const buildDetailHref = () => {
+    const sku = tire.partNumber || tire.mfgPartNumber;
+    if (!sku) return "#";
+    
+    const params = new URLSearchParams();
+    params.set("size", size);
+    if (viewParams.year) params.set("year", viewParams.year);
+    if (viewParams.make) params.set("make", viewParams.make);
+    if (viewParams.model) params.set("model", viewParams.model);
+    if (viewParams.trim) params.set("trim", viewParams.trim);
+    
+    // Route based on source
+    const source = tire.rawSource || tire.source;
+    if (source === "km") {
+      return `/tires/km/${encodeURIComponent(sku)}?${params.toString()}`;
+    }
+    if (source?.startsWith("tireweb")) {
+      // TireWeb tires use the unified detail page with source param
+      params.set("source", "tireweb");
+      return `/tires/${encodeURIComponent(sku)}?${params.toString()}`;
+    }
+    // Default: WheelPros or unknown
+    return `/tires/${encodeURIComponent(sku)}?${params.toString()}`;
+  };
+  const detailHref = buildDetailHref();
   
   // Get normalized tread category
   const treadCategory = tire.treadCategory || tire.badges?.terrain || 

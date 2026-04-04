@@ -88,6 +88,9 @@ export default async function TireDetailPage({
   const displayTrim = extractDisplayTrim(trim);
   const vehicleLabel = [year, make, model, displayTrim].filter(Boolean).join(" ");
 
+  const source = String((sp as any).source || "");
+  const size = String((sp as any).size || "");
+
   if (!safeSku) {
     return (
       <main className="bg-neutral-50">
@@ -98,6 +101,133 @@ export default async function TireDetailPage({
     );
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // TireWeb tires: fetch from search API instead of DB
+  // ═══════════════════════════════════════════════════════════════════════════════
+  if (source === "tireweb" && size) {
+    try {
+      const searchRes = await fetch(
+        `${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(size)}&partNumber=${encodeURIComponent(safeSku)}&limit=1`,
+        { cache: "no-store" }
+      );
+      if (searchRes.ok) {
+        const searchData = await searchRes.json();
+        const tire = searchData?.results?.[0];
+        if (tire) {
+          // Render TireWeb tire detail
+          const displayPrice = typeof tire.cost === "number" ? tire.cost : null;
+          const rawTitle = tire.displayName || tire.prettyName || tire.description || tire.model || safeSku;
+          const title = cleanTireDisplayTitle(rawTitle, tire.brand);
+          
+          const badges: string[] = [];
+          if (tire.size) badges.push(String(tire.size));
+          if (tire.badges?.terrain) badges.push(String(tire.badges.terrain));
+          if (tire.badges?.construction) badges.push(String(tire.badges.construction));
+          if (tire.badges?.warrantyMiles) badges.push(`${tire.badges.warrantyMiles} mi warranty`);
+          if (tire.badges?.loadIndex) badges.push(`Load ${tire.badges.loadIndex}`);
+          if (tire.badges?.speedRating) badges.push(`Speed ${tire.badges.speedRating}`);
+          
+          const q = tire.quantity || {};
+          const totalQty = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
+          
+          return (
+            <main className="bg-neutral-50">
+              <div className="mx-auto max-w-6xl px-4 py-10">
+                <div className="flex items-center justify-between gap-3">
+                  <Link href="/tires" className="text-sm font-extrabold text-neutral-900 hover:underline">
+                    ← Back to tires
+                  </Link>
+                </div>
+
+                <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                  {/* Image */}
+                  <div className="flex items-center justify-center rounded-3xl border border-neutral-200 bg-white p-8">
+                    {tire.imageUrl ? (
+                      <img src={tire.imageUrl} alt={title} className="max-h-80 w-auto object-contain" />
+                    ) : (
+                      <div className="flex h-64 w-64 items-center justify-center rounded-2xl bg-neutral-100">
+                        <span className="text-6xl">🛞</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Info */}
+                  <div>
+                    <p className="text-sm font-semibold text-neutral-600">{tire.brand || "Tire"}</p>
+                    <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-neutral-900">{title}</h1>
+                    
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {badges.map((b, i) => <Badge key={i}>{b}</Badge>)}
+                    </div>
+
+                    {displayPrice != null ? (
+                      <div className="mt-6">
+                        <p className="text-sm text-neutral-600">Price per tire</p>
+                        <p className="text-4xl font-extrabold text-neutral-900">{fmtMoney(displayPrice)}</p>
+                        <p className="mt-1 text-sm text-neutral-500">
+                          Set of 4: <span className="font-bold">{fmtMoney(displayPrice * 4)}</span>
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="mt-6">
+                        <p className="text-lg font-bold text-neutral-700">Call for pricing</p>
+                      </div>
+                    )}
+
+                    <div className="mt-4 text-sm text-neutral-600">
+                      {totalQty > 0 ? (
+                        <span className="text-green-700">✓ {totalQty} in stock</span>
+                      ) : (
+                        <span className="text-amber-700">📦 Available to order</span>
+                      )}
+                    </div>
+
+                    {displayPrice != null && (
+                      <div className="mt-6">
+                        <AddTiresToCartButton
+                          brand={tire.brand || "Tire"}
+                          model={title}
+                          description={tire.description || title}
+                          size={tire.size || size}
+                          partNumber={tire.partNumber || safeSku}
+                          unitPrice={displayPrice}
+                          imageUrl={tire.imageUrl}
+                          source={tire.rawSource || tire.source || "tireweb"}
+                          variant="filled"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </main>
+          );
+        }
+      }
+    } catch (err) {
+      console.error("[tire-detail] TireWeb lookup failed:", err);
+    }
+    
+    // TireWeb lookup failed - show not found
+    return (
+      <main className="bg-neutral-50">
+        <div className="mx-auto max-w-6xl px-4 py-10">
+          <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-900">
+            Tire not found (SKU: {safeSku}).
+          </div>
+          <div className="mt-4">
+            <Link href="/tires" className="text-sm font-extrabold text-neutral-900 hover:underline">
+              ← Back to tires
+            </Link>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // WheelPros tires: fetch from database
+  // ═══════════════════════════════════════════════════════════════════════════════
   const db = getPool();
   const { rows } = await db.query({
     text: `
