@@ -93,9 +93,21 @@ const MID_TIER_BRANDS = ["cooper", "toyo", "bfgoodrich", "yokohama", "hankook", 
  * This MUST be used by both counting and filtering to ensure consistency.
  */
 function resolveTreadCategory(tire: Tire): TreadCategory {
-  // 1. Primary: enrichment.treadCategory
+  // 1. Primary: enrichment.treadCategory (normalize if needed)
   if (tire.enrichment?.treadCategory) {
-    return tire.enrichment.treadCategory;
+    const cat = tire.enrichment.treadCategory;
+    // Normalize uppercase variants (API may return "ALL SEASON" instead of "All-Season")
+    const upper = String(cat).toUpperCase();
+    if (upper === 'ALL SEASON' || upper === 'ALL-SEASON') return 'All-Season';
+    if (upper === 'ALL WEATHER' || upper === 'ALL-WEATHER') return 'All-Weather';
+    if (upper === 'ALL TERRAIN' || upper === 'ALL-TERRAIN') return 'All-Terrain';
+    if (upper === 'MUD TERRAIN' || upper === 'MUD-TERRAIN') return 'Mud-Terrain';
+    if (upper === 'RUGGED TERRAIN' || upper === 'RUGGED-TERRAIN') return 'Rugged-Terrain';
+    if (upper === 'HIGHWAY/TOURING' || upper === 'HIGHWAY TOURING') return 'Highway/Touring';
+    // If already properly cased, return as-is
+    if (TREAD_CATEGORIES.includes(cat as TreadCategory)) {
+      return cat as TreadCategory;
+    }
   }
   
   // 2. Fallback: badges.terrain (normalized)

@@ -316,7 +316,6 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     (data.runFlat ? 1 : 0) +
     (data.snowRated ? 1 : 0) +
     (data.allWeather ? 1 : 0) +
-    (data.xlOnly ? 1 : 0) +
     data.rimDiameters.length +
     data.overallDiameters.length;
 
@@ -537,14 +536,12 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         selectedCount={
           (data.runFlat ? 1 : 0) +
           (data.snowRated ? 1 : 0) +
-          (data.allWeather ? 1 : 0) +
-          (data.xlOnly ? 1 : 0)
+          (data.allWeather ? 1 : 0)
         }
         hidden={
           data.runFlatCount === 0 &&
           data.snowRatedCount === 0 &&
-          data.allWeatherCount === 0 &&
-          data.xlCount === 0
+          data.allWeatherCount === 0
         }
       >
         <div className="space-y-0.5">
@@ -556,14 +553,7 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               onChange={() => toggleBooleanFilter("runFlat", data.runFlat)}
             />
           )}
-          {data.xlCount > 0 && (
-            <FilterCheckbox
-              label="XL (Extra Load)"
-              checked={data.xlOnly}
-              count={data.xlCount}
-              onChange={() => toggleBooleanFilter("xl", data.xlOnly)}
-            />
-          )}
+          {/* XL removed from Features - it's shown in Load Range filter instead */}
           {data.snowRatedCount > 0 && (
             <FilterCheckbox
               label="Snow Rated (3PMSF)"
