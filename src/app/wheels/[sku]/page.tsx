@@ -602,10 +602,14 @@ export default async function WheelDetailPage({
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_420px]">
           <div className="grid gap-4">
-            <div className="rounded-3xl border border-neutral-200 bg-white p-3">
-              <div className="mb-2 flex items-center justify-between gap-3">
-                <div className="text-xs font-semibold text-neutral-600">Product photo</div>
-                <div className="text-[11px] text-neutral-500">Finish may vary by lighting</div>
+            <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
+              {/* Premium image header */}
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">🔍</span>
+                  <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
+                </div>
+                <div className="text-[11px] text-neutral-400 italic">Finish may vary by screen</div>
               </div>
               <ImageGallery images={galleryImages} alt={String(it?.title || sku)} note="Finish may vary by lighting" />
 
@@ -629,7 +633,7 @@ export default async function WheelDetailPage({
                     <div className="flex items-center gap-1.5 text-xs text-amber-800">
                       <span>🚀</span>
                       <span className="font-semibold">Lifted Build Mode</span>
-                      <span className="text-amber-600">• {liftedInches}" {liftedPreset}</span>
+                      <span className="text-amber-600">• {liftedInches}&quot; {liftedPreset}</span>
                     </div>
                   </div>
                 )}
@@ -716,7 +720,7 @@ export default async function WheelDetailPage({
                           }
                           className="rounded-xl bg-neutral-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-neutral-800"
                         >
-                          Find {wheelDiaN}" tires
+                          Find {wheelDiaN}&quot; tires
                         </Link>
                       );
                     }
@@ -755,16 +759,43 @@ export default async function WheelDetailPage({
             {/* Fitment Summary */}
             {year && make && model ? (
               <div className="mb-4">
-                {/* Fitment Confirmation Banner */}
-                <div className="rounded-2xl bg-green-50 border border-green-200 p-4 mb-3">
+                {/* Fitment Confirmation Banner - Enhanced with key specs */}
+                <div className="rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 p-4 mb-3 shadow-sm shadow-green-100/50">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">✓</span>
-                    <div>
-                      <div className="font-extrabold text-green-900">
-                        Fits your {year} {make} {model}
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white shadow-md">
+                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-extrabold text-green-900 text-lg">
+                        Confirmed Fit
                       </div>
-                      <div className="mt-1 text-sm text-green-800">
-                        Guaranteed fitment - no returns due to fitment issues
+                      <div className="mt-0.5 text-sm text-green-800">
+                        {year} {make} {model} {displayTrim}
+                      </div>
+                      
+                      {/* Key fitment specs inline */}
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {diameter && (
+                          <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-xs font-bold text-green-800">
+                            {diameter}&quot; wheel
+                          </span>
+                        )}
+                        {boltPattern && (
+                          <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-xs font-bold text-green-800">
+                            {boltPattern}
+                          </span>
+                        )}
+                        {offset && (
+                          <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-xs font-bold text-green-800">
+                            +{offset}mm offset
+                          </span>
+                        )}
+                      </div>
+                      
+                      <div className="mt-3 text-xs text-green-700">
+                        ✓ Guaranteed fitment • No returns due to sizing
                       </div>
                     </div>
                   </div>
@@ -787,7 +818,7 @@ export default async function WheelDetailPage({
                   <div>
                     <div className="font-extrabold text-amber-900">Select your vehicle</div>
                     <div className="mt-1 text-sm text-amber-800">
-                      We'll verify this wheel fits before you buy
+                      We&apos;ll verify this wheel fits before you buy
                     </div>
                     <div className="mt-3">
                       <Link
@@ -802,31 +833,81 @@ export default async function WheelDetailPage({
               </div>
             )}
 
-            <div className="mt-4 text-xs font-semibold text-neutral-600">{brand || "Wheel"}</div>
-            <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{it?.title || sku}</h1>
+            {/* Brand */}
+            <div className="mt-4 text-xs font-bold text-neutral-500 uppercase tracking-wider">{brand || "Wheel"}</div>
+            
+            {/* Title */}
+            <h1 className="mt-1 text-2xl font-extrabold text-neutral-900 leading-tight">{it?.title || sku}</h1>
+            
+            {/* Benefit-driven tagline */}
+            <p className="mt-1 text-sm text-neutral-600">
+              {(() => {
+                const cat = String(finish || "").toLowerCase();
+                if (cat.includes("black") || cat.includes("gloss")) return "Bold, modern style that commands attention.";
+                if (cat.includes("chrome") || cat.includes("polish")) return "Classic shine that elevates any vehicle.";
+                if (cat.includes("bronze") || cat.includes("copper")) return "Distinctive warmth with an aggressive edge.";
+                if (cat.includes("machined") || cat.includes("milled")) return "Precision-crafted detail that stands out.";
+                if (cat.includes("grey") || cat.includes("gray") || cat.includes("graphite")) return "Understated sophistication meets performance.";
+                return "Premium craftsmanship for your ride.";
+              })()}
+            </p>
 
-            <div className="mt-3 flex flex-wrap gap-2">
-              {diameter ? <Badge>{diameter}"</Badge> : null}
-              {width ? <Badge>{width} wide</Badge> : null}
-              {boltPattern ? <Badge>{boltPattern}</Badge> : null}
-              {offset ? <Badge>Offset {offset}mm</Badge> : null}
-              {finish ? <Badge>{finish}</Badge> : null}
-            </div>
-
-            <div className="mt-4">
-              <div className="text-3xl font-extrabold text-neutral-900">
-                {typeof price === "number" && Number.isFinite(price) ? `$${price.toFixed(2)}` : "Call for price"}
+            {/* Finish - Prominent display */}
+            {finish && (
+              <div className="mt-4 rounded-xl bg-gradient-to-r from-neutral-100 to-neutral-50 border border-neutral-200 p-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-neutral-200 shadow-sm">
+                    <span className="text-lg">🎨</span>
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider">Finish</div>
+                    <div className="text-base font-extrabold text-neutral-900">{finish}</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-xs text-neutral-600">each</div>
+            )}
+
+            {/* Key Specs - Clean scannable list */}
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              {diameter && (
+                <div className="rounded-lg bg-neutral-50 px-3 py-2">
+                  <div className="text-[10px] font-semibold text-neutral-500">Diameter</div>
+                  <div className="text-sm font-bold text-neutral-900">{diameter}&quot;</div>
+                </div>
+              )}
+              {width && (
+                <div className="rounded-lg bg-neutral-50 px-3 py-2">
+                  <div className="text-[10px] font-semibold text-neutral-500">Width</div>
+                  <div className="text-sm font-bold text-neutral-900">{width}&quot;</div>
+                </div>
+              )}
+              {boltPattern && (
+                <div className="rounded-lg bg-neutral-50 px-3 py-2">
+                  <div className="text-[10px] font-semibold text-neutral-500">Bolt Pattern</div>
+                  <div className="text-sm font-bold text-neutral-900">{boltPattern}</div>
+                </div>
+              )}
+              {offset && (
+                <div className="rounded-lg bg-neutral-50 px-3 py-2">
+                  <div className="text-[10px] font-semibold text-neutral-500">Offset</div>
+                  <div className="text-sm font-bold text-neutral-900">{offset}mm</div>
+                </div>
+              )}
             </div>
 
-            <div className="mt-4 rounded-2xl border border-neutral-200 bg-white p-4">
-              <div className="text-xs font-extrabold text-neutral-900">Why you'll like it</div>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700">
-                {(generated.bullets.length ? generated.bullets : [generated.paragraph]).slice(0, 5).map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
+            {/* Price - Premium styling */}
+            <div className="mt-5 rounded-xl bg-white border-2 border-neutral-900 p-4">
+              <div className="flex items-baseline gap-2">
+                <div className="text-3xl font-extrabold text-neutral-900">
+                  {typeof price === "number" && Number.isFinite(price) ? `$${price.toFixed(2)}` : "Call for price"}
+                </div>
+                <div className="text-sm text-neutral-500">per wheel</div>
+              </div>
+              {typeof price === "number" && Number.isFinite(price) && (
+                <div className="mt-1 text-sm text-neutral-600">
+                  Set of 4: <span className="font-bold text-neutral-900">${(price * 4).toFixed(2)}</span>
+                </div>
+              )}
             </div>
 
             <div className="mt-5 grid gap-3">
