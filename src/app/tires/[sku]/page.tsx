@@ -410,16 +410,8 @@ export default async function TireDetailPage({
 
                 <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
                   {/* Left: Image */}
-                  <div className="rounded-3xl border border-neutral-200 bg-white p-6">
-                    <div className="flex items-center justify-center min-h-[280px]">
-                      {tire.imageUrl ? (
-                        <img src={tire.imageUrl} alt={title} className="max-h-72 w-auto object-contain" />
-                      ) : (
-                        <div className="flex h-56 w-56 items-center justify-center rounded-2xl bg-neutral-100">
-                          <span className="text-5xl">🛞</span>
-                        </div>
-                      )}
-                    </div>
+                  <div className="rounded-3xl border border-neutral-200 bg-white p-3">
+                    <ImageGallery images={tire.imageUrl ? [tire.imageUrl] : []} alt={title} />
                   </div>
 
                   {/* Right: Buy Box */}
