@@ -251,6 +251,7 @@ async function searchTiresBySize(
       mfgPartNumber: String(r.sku),
       brand: r.brand_desc || null,
       description,
+      cost: null, // Not used for display - price is the sell price
       price: price != null && Number.isFinite(price) ? price : null,
       quantity: { primary: 0, alternate: 0, national: i(r.qoh) },
       imageUrl: r.image_url || null,
