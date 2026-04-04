@@ -221,8 +221,8 @@ export function ImageGallery({ images, alt, note }: Props) {
               loading="lazy"
               onClick={() => setOpen(true)}
             />
-            {/* Zoom hint overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/5 group-hover:opacity-100">
+            {/* Zoom hint overlay - pointer-events-none so clicks reach the img */}
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/5 group-hover:opacity-100">
               <div className="rounded-full bg-black/60 px-4 py-2 text-sm font-medium text-white">
                 🔍 Click to zoom
               </div>
