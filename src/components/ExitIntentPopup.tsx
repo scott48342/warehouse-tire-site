@@ -1,226 +1,288 @@
+/**
+ * Exit Intent Popup
+ * 
+ * Shows when user is about to leave the page.
+ * Captures email to save cart for recovery.
+ * 
+ * Features:
+ * - Smooth fade-in animation
+ * - Email validation
+ * - Saves email to cart record
+ * - Subscribes for marketing
+ * - Works on desktop (mouse leave) and mobile (scroll/back)
+ * 
+ * @created 2026-07-17
+ */
+
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useExitIntent } from "@/hooks/useExitIntent";
 import { useCart } from "@/lib/cart/CartContext";
 import { getCartId } from "@/lib/cart/useCartTracking";
 
-const STORAGE_KEY = "wt_exit_intent_shown";
-const COOLDOWN_HOURS = 24; // Don't show again for 24 hours after dismissing
-
 interface ExitIntentPopupProps {
-  /** Minimum cart value to show popup (default $50) */
+  /** Minimum cart value to show popup (default: $50) */
   minCartValue?: number;
-  /** Delay before enabling exit detection (default 5s) */
-  enableDelayMs?: number;
+  /** Delay before popup can trigger (ms) */
+  delayMs?: number;
 }
 
 export function ExitIntentPopup({
   minCartValue = 50,
-  enableDelayMs = 5000,
+  delayMs = 10000, // 10 seconds
 }: ExitIntentPopupProps) {
-  const { items } = useCart();
-  const [isOpen, setIsOpen] = useState(false);
+  const { items, getTotal } = useCart();
+  const { triggered, dismiss } = useExitIntent({
+    delayMs,
+    oncePerSession: true,
+  });
+
   const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const enabledRef = useRef(false);
-  const hasShownRef = useRef(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Calculate cart value
-  const cartValue = items.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
-  const hasQualifyingCart = items.length > 0 && cartValue >= minCartValue;
+  const cartTotal = getTotal();
+  const hasCart = items.length > 0 && cartTotal >= minCartValue;
 
-  // Extract vehicle from cart
-  const vehicle = items.find(i => i.type === "wheel" || i.type === "tire")?.vehicle;
-
-  // Check if we should show (not shown recently)
-  const shouldShow = useCallback(() => {
-    if (typeof window === "undefined") return false;
-    
-    const lastShown = localStorage.getItem(STORAGE_KEY);
-    if (!lastShown) return true;
-    
-    const lastShownTime = parseInt(lastShown, 10);
-    const cooldownMs = COOLDOWN_HOURS * 60 * 60 * 1000;
-    return Date.now() - lastShownTime > cooldownMs;
-  }, []);
-
-  // Handle mouse leave (exit intent)
-  const handleMouseLeave = useCallback((e: MouseEvent) => {
-    // Only trigger on mouse leaving through top of viewport
-    if (e.clientY > 50) return;
-    if (!enabledRef.current) return;
-    if (hasShownRef.current) return;
-    if (!hasQualifyingCart) return;
-    if (!shouldShow()) return;
-
-    hasShownRef.current = true;
-    setIsOpen(true);
-  }, [hasQualifyingCart, shouldShow]);
-
-  // Enable exit detection after delay
+  // Control visibility with animation delay
   useEffect(() => {
-    const timer = setTimeout(() => {
-      enabledRef.current = true;
-    }, enableDelayMs);
+    if (triggered && hasCart) {
+      // Small delay for fade-in animation
+      const timer = setTimeout(() => setIsVisible(true), 50);
+      return () => clearTimeout(timer);
+    } else {
+      setIsVisible(false);
+    }
+  }, [triggered, hasCart]);
 
-    return () => clearTimeout(timer);
-  }, [enableDelayMs]);
+  // Get vehicle from cart items
+  const getVehicle = useCallback(() => {
+    const wheelOrTire = items.find(
+      (i) => (i.type === "wheel" || i.type === "tire") && i.vehicle
+    );
+    return wheelOrTire?.vehicle || undefined;
+  }, [items]);
 
-  // Add mouse leave listener
-  useEffect(() => {
-    document.addEventListener("mouseleave", handleMouseLeave);
-    return () => document.removeEventListener("mouseleave", handleMouseLeave);
-  }, [handleMouseLeave]);
-
-  // Handle close
-  const handleClose = () => {
-    setIsOpen(false);
-    // Mark as shown
-    localStorage.setItem(STORAGE_KEY, Date.now().toString());
-  };
-
-  // Handle submit
+  // Handle email submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || isSubmitting) return;
-
-    setIsSubmitting(true);
     setError(null);
 
+    // Validate email
+    const trimmedEmail = email.trim().toLowerCase();
+    if (!trimmedEmail) {
+      setError("Please enter your email");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmedEmail)) {
+      setError("Please enter a valid email address");
+      return;
+    }
+
+    setLoading(true);
+
     try {
-      const res = await fetch("/api/email/subscribe", {
+      const cartId = getCartId();
+      const vehicle = getVehicle();
+
+      // Subscribe and link to cart
+      const response = await fetch("/api/email/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email,
+          email: trimmedEmail,
           source: "exit_intent",
-          vehicle: vehicle ? {
-            year: vehicle.year,
-            make: vehicle.make,
-            model: vehicle.model,
-            trim: vehicle.trim,
-          } : undefined,
-          cartId: getCartId(),
+          vehicle,
+          cartId,
+          marketingConsent: true,
         }),
       });
 
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || "Failed to save email");
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to save");
       }
 
-      setSubmitted(true);
-      // Close after showing success
+      // Also update cart with email
+      await fetch("/api/cart/track", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          cartId,
+          customer: { email: trimmedEmail },
+          items,
+          subtotal: cartTotal,
+          estimatedTotal: cartTotal,
+          vehicle,
+        }),
+      });
+
+      setSuccess(true);
+
+      // Auto-close after success
       setTimeout(() => {
-        handleClose();
-      }, 2000);
-    } catch (err: any) {
-      setError(err.message || "Something went wrong");
+        dismiss();
+      }, 3000);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setError(message);
     } finally {
-      setIsSubmitting(false);
+      setLoading(false);
     }
   };
 
-  if (!isOpen) return null;
+  // Handle close
+  const handleClose = () => {
+    dismiss();
+  };
+
+  // Handle backdrop click
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
+  // Don't render if not triggered or no cart
+  if (!triggered || !hasCart) {
+    return null;
+  }
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 p-4">
-      <div 
-        className="relative w-full max-w-md rounded-2xl bg-white shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
+    <div
+      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-300 ${
+        isVisible ? "bg-black/60 backdrop-blur-sm" : "bg-transparent"
+      }`}
+      onClick={handleBackdropClick}
+    >
+      <div
+        className={`relative w-full max-w-md transform transition-all duration-300 ${
+          isVisible
+            ? "translate-y-0 opacity-100 scale-100"
+            : "translate-y-8 opacity-0 scale-95"
+        }`}
       >
-        {/* Close button */}
-        <button
-          onClick={handleClose}
-          className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600"
-          aria-label="Close"
-        >
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        {/* Card */}
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          {/* Header with gradient */}
+          <div className="bg-gradient-to-br from-red-500 to-red-600 px-6 py-5 text-white">
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 p-1 text-white/80 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <div className="text-3xl mb-2">🛒</div>
+            <h2 className="text-xl font-bold">Wait! Don&apos;t lose your cart</h2>
+            <p className="text-sm text-white/90 mt-1">
+              Save your {formatCurrency(cartTotal)} selection and get exclusive deals
+            </p>
+          </div>
 
-        <div className="p-6 pt-8 text-center">
-          {!submitted ? (
-            <>
-              {/* Icon */}
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100">
-                <svg className="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-
-              {/* Heading */}
-              <h2 className="mb-2 text-xl font-bold text-neutral-900">
-                Wait! Don't lose your cart
-              </h2>
-              <p className="mb-1 text-sm text-neutral-600">
-                You have <span className="font-semibold">${cartValue.toLocaleString()}</span> worth of items
-              </p>
-              {vehicle && (
-                <p className="mb-4 text-xs text-neutral-500">
-                  for your {vehicle.year} {vehicle.make} {vehicle.model}
+          {/* Body */}
+          <div className="p-6">
+            {success ? (
+              <div className="text-center py-4">
+                <div className="text-4xl mb-3">✅</div>
+                <h3 className="text-lg font-semibold text-neutral-900">Cart Saved!</h3>
+                <p className="text-sm text-neutral-600 mt-1">
+                  We&apos;ll send you a link to recover your cart
                 </p>
-              )}
-
-              {/* Form */}
-              <form onSubmit={handleSubmit} className="mt-4">
-                <label className="block text-left text-xs font-medium text-neutral-700 mb-1">
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="exit-email" className="block text-sm font-medium text-neutral-700 mb-2">
                   Enter your email to save your cart
                 </label>
+                
                 <input
+                  id="exit-email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  required
-                  className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  placeholder="your@email.com"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-neutral-900 placeholder-neutral-400 focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                  autoFocus
+                  autoComplete="email"
+                  disabled={loading}
                 />
 
                 {error && (
-                  <p className="mt-2 text-xs text-red-600">{error}</p>
+                  <p className="mt-2 text-sm text-red-600">{error}</p>
                 )}
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="mt-3 w-full rounded-xl bg-[var(--brand-red,#dc2626)] py-3 text-sm font-bold text-white hover:bg-[var(--brand-red-700,#b91c1c)] disabled:opacity-50"
+                  disabled={loading}
+                  className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  {isSubmitting ? "Saving..." : "Save my cart"}
+                  {loading ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      </svg>
+                      Saving...
+                    </>
+                  ) : (
+                    <>
+                      Save My Cart
+                      <span className="text-white/80">→</span>
+                    </>
+                  )}
                 </button>
+
+                <p className="mt-3 text-xs text-neutral-500 text-center">
+                  We&apos;ll send a link to recover your cart. No spam, ever.
+                </p>
               </form>
+            )}
+          </div>
 
-              <p className="mt-3 text-[11px] text-neutral-400">
-                We'll send a link to restore your cart. No spam, ever.
-              </p>
-
-              <button
-                onClick={handleClose}
-                className="mt-3 text-xs text-neutral-500 hover:text-neutral-700 underline"
-              >
-                No thanks, I'll start over
-              </button>
-            </>
-          ) : (
-            <>
-              {/* Success state */}
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-                <svg className="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h2 className="mb-2 text-xl font-bold text-neutral-900">Cart saved!</h2>
-              <p className="text-sm text-neutral-600">
-                We've sent a recovery link to <span className="font-medium">{email}</span>
-              </p>
-            </>
-          )}
+          {/* Trust signals */}
+          <div className="px-6 pb-6">
+            <div className="flex items-center justify-center gap-4 text-xs text-neutral-500">
+              <span className="flex items-center gap-1">
+                <span className="text-green-500">✓</span> Free shipping
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="text-green-500">✓</span> Price match
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="text-green-500">✓</span> Easy returns
+              </span>
+            </div>
+          </div>
         </div>
+
+        {/* "No thanks" link */}
+        <button
+          onClick={handleClose}
+          className="mt-4 w-full text-center text-sm text-white/70 hover:text-white transition-colors"
+        >
+          No thanks, I&apos;ll remember my cart
+        </button>
       </div>
     </div>
   );
+}
+
+function formatCurrency(value: number): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(value);
 }
 
 export default ExitIntentPopup;
