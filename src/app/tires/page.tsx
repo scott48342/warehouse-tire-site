@@ -77,24 +77,24 @@ const MID_TIER_BRANDS = ["cooper", "toyo", "bfgoodrich", "yokohama", "hankook", 
 
 /**
  * Calculate display price for a tire
- * - Uses retail price (MAP/MSRP) if available from TireWeb
- * - Falls back to cost + $50 margin for WheelPros
- * - Falls back to cost * 1.30 (30% margin) for TireWeb without price
+ * - Uses retail price (MAP/MSRP) only if it's actually higher than cost
+ * - When sellPrice = buyPrice (no real markup), apply $50 margin
+ * - Falls back to cost + $50 margin for all sources
  */
 function getDisplayPrice(tire: Tire): number | null {
-  // If we have a retail price (from TireWeb sellPrice), use it
-  if (typeof tire.price === "number" && tire.price > 0) {
-    return tire.price;
+  const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
+  const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
+  
+  // Use retail price only if it's actually higher than cost (real markup from supplier)
+  if (price && cost && price > cost) {
+    return price;
   }
-  // If we have cost, apply appropriate markup
-  if (typeof tire.cost === "number" && tire.cost > 0) {
-    // TireWeb tires without sellPrice: 30% margin
-    if (tire.source === "tw") {
-      return Math.round(tire.cost * 1.30 * 100) / 100;
-    }
-    // WheelPros/K&M: $50 flat margin (cost is already MAP-50 or MSRP)
-    return tire.cost + 50;
+  
+  // Apply $50 markup to cost (consistent across all sources)
+  if (cost) {
+    return cost + 50;
   }
+  
   return null;
 }
 

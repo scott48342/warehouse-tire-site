@@ -372,11 +372,14 @@ export default async function TireDetailPage({
         const searchData = await searchRes.json();
         const tire = searchData?.results?.[0];
         if (tire) {
-          // Use retail price (sellPrice/MAP) if available, otherwise markup cost by 30%
-          const displayPrice = typeof tire.price === "number" && tire.price > 0
-            ? tire.price
-            : typeof tire.cost === "number" && tire.cost > 0
-              ? Math.round(tire.cost * 1.30 * 100) / 100
+          // Use retail price (sellPrice/MAP) only if it's actually higher than cost
+          // When sellPrice = buyPrice (no real markup), apply $50 margin
+          const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
+          const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
+          const displayPrice = (price && cost && price > cost)
+            ? price // Real retail markup from supplier
+            : cost
+              ? cost + 50 // Apply $50 margin (consistent with listing)
               : null;
           const rawTitle = tire.displayName || tire.prettyName || tire.description || tire.model || safeSku;
           const title = cleanTireDisplayTitle(rawTitle, tire.brand);
