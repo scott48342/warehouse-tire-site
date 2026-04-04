@@ -333,6 +333,15 @@ function TireCard({
   };
   const availability = getAvailabilityMessage();
   
+  // Determine single highlight badge for image (priority: SALE > TOP PICK > Popular)
+  const imageBadge = tire.onSale 
+    ? { label: "SALE", bg: "bg-red-500", text: "text-white", icon: "🔥" }
+    : isTopPick 
+      ? { label: "TOP PICK", bg: "bg-amber-500", text: "text-white", icon: "⭐" }
+      : isPopular 
+        ? { label: "Popular", bg: "bg-amber-100", text: "text-amber-700", icon: "🔥" }
+        : null;
+  
   return (
     <div 
       className={`relative flex flex-col overflow-hidden rounded-2xl border bg-white transition-all duration-200 ${
@@ -344,7 +353,7 @@ function TireCard({
       }`}
     >
       {/* ══════════════════════════════════════════════════════════════════════
-          1. IMAGE WITH BADGE STACK
+          1. CLEAN IMAGE AREA (single optional badge only)
           ══════════════════════════════════════════════════════════════════════ */}
       <Link href={detailHref} className="block relative">
         <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-50 p-4">
@@ -362,7 +371,7 @@ function TireCard({
           )}
         </div>
         
-        {/* Favorites button */}
+        {/* Favorites button - top right */}
         <div className="absolute top-2 right-2 z-10">
           <FavoritesButton
             type="tire"
@@ -373,38 +382,14 @@ function TireCard({
           />
         </div>
         
-        {/* Badge Stack - Top Left */}
-        <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
-          {/* Tread Category Badge */}
-          <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm ${catStyle.bg} ${catStyle.text}`}>
-            <span className="text-xs">{catStyle.icon}</span>
-            {treadCategory}
-          </span>
-          
-          {/* Mileage Warranty Badge */}
-          {mileageBadge && (
-            <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold text-white shadow-sm ${mileageBadge.bg}`}>
-              📏 {mileageBadge.label}
+        {/* Single highlight badge - top left (only one, if applicable) */}
+        {imageBadge && (
+          <div className="absolute top-2 left-2 z-10">
+            <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold shadow-sm ${imageBadge.bg} ${imageBadge.text}`}>
+              {imageBadge.icon} {imageBadge.label}
             </span>
-          )}
-          
-          {/* Top Pick / Sale Badge */}
-          {tire.onSale && (
-            <span className="inline-flex items-center rounded-full bg-red-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
-              🔥 SALE
-            </span>
-          )}
-          {isTopPick && !tire.onSale && (
-            <span className="inline-flex items-center rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white shadow-sm">
-              ⭐ TOP PICK
-            </span>
-          )}
-          {isPopular && !isTopPick && !tire.onSale && (
-            <span className="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 shadow-sm">
-              🔥 Popular
-            </span>
-          )}
-        </div>
+          </div>
+        )}
         
         {/* Selected checkmark overlay */}
         {isSelected && (
@@ -422,6 +407,18 @@ function TireCard({
           2. CORE CONTENT BLOCK
           ══════════════════════════════════════════════════════════════════════ */}
       <div className="flex flex-1 flex-col p-4">
+        {/* Category + Mileage pills - clean row below image */}
+        <div className="flex flex-wrap items-center gap-1.5 mb-2">
+          <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold ${catStyle.bg} ${catStyle.text}`}>
+            {catStyle.icon} {treadCategory}
+          </span>
+          {mileageBadge && (
+            <span className="inline-flex items-center rounded-full bg-neutral-100 px-2 py-0.5 text-[10px] font-semibold text-neutral-700">
+              {mileageBadge.label}
+            </span>
+          )}
+        </div>
+        
         {/* Brand */}
         <div className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">{brand}</div>
         
