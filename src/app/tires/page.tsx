@@ -1313,6 +1313,11 @@ export default async function TiresPage({
 
   const speedsAvailable = Array.from(speedCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([s]) => s);
 
+  // Load ranges available - only show options that exist in results
+  const loadRangesAvailable = LOAD_RANGES
+    .filter(lr => loadRangeCounts.get(lr.value))
+    .sort((a, b) => (loadRangeCounts.get(b.value) || 0) - (loadRangeCounts.get(a.value) || 0));
+
   // Size-based facets (rim diameter, overall diameter) for mixed flotation + metric results
   const rimDiameterCounts = new Map<number, number>();
   const overallDiameterCounts = new Map<string, number>();
@@ -1832,7 +1837,7 @@ export default async function TiresPage({
                 brandOptions: allBrands.map(b => ({ value: b, count: brandCounts.get(b) || 0 })),
                 treadCategoryOptions: treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 })),
                 speedOptions: speedsAvailable.map(s => ({ value: s, count: speedCounts.get(s) || 0 })),
-                loadRangeOptions: LOAD_RANGES.map(lr => ({ value: lr.value, count: loadRangeCounts.get(lr.value) || 0 })),
+                loadRangeOptions: loadRangesAvailable.map(lr => ({ value: lr.value, count: loadRangeCounts.get(lr.value) || 0 })),
                 mileageOptions: [
                   { value: "40K+" as const, count: mileage40kCount },
                   { value: "60K+" as const, count: mileage60kCount },
