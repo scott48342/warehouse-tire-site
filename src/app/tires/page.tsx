@@ -80,6 +80,75 @@ const PREMIUM_BRANDS = ["michelin", "bridgestone", "continental", "goodyear", "p
 const MID_TIER_BRANDS = ["cooper", "toyo", "bfgoodrich", "yokohama", "hankook", "falken", "general", "kumho", "nexen"];
 
 // ============================================================================
+// TREAD CATEGORY RESOLUTION (shared between counting and filtering)
+// ============================================================================
+
+/**
+ * Resolves tread category for a tire using consistent fallback chain:
+ * 1. enrichment.treadCategory (from API normalization)
+ * 2. badges.terrain (normalized to TreadCategory)
+ * 3. Model name pattern matching
+ * 4. Default to "All-Season"
+ * 
+ * This MUST be used by both counting and filtering to ensure consistency.
+ */
+function resolveTreadCategory(tire: Tire): TreadCategory {
+  // 1. Primary: enrichment.treadCategory
+  if (tire.enrichment?.treadCategory) {
+    return tire.enrichment.treadCategory;
+  }
+  
+  // 2. Fallback: badges.terrain (normalized)
+  if (tire.badges?.terrain) {
+    const terrain = String(tire.badges.terrain).toUpperCase();
+    if (terrain.includes('HIGHWAY') || terrain.includes('TOURING') || terrain.includes('H/T') || terrain.includes('HT')) {
+      return 'Highway/Touring';
+    } else if (terrain.includes('ALL-TERRAIN') || terrain.includes('ALL TERRAIN') || terrain.includes('A/T') || /\bAT\b/.test(terrain)) {
+      return 'All-Terrain';
+    } else if (terrain.includes('MUD') || terrain.includes('M/T') || /\bMT\b/.test(terrain)) {
+      return 'Mud-Terrain';
+    } else if (terrain.includes('RUGGED') || terrain.includes('R/T') || /\bRT\b/.test(terrain)) {
+      return 'Rugged-Terrain';
+    } else if (terrain.includes('ALL-SEASON') || terrain.includes('ALL SEASON') || terrain.includes('A/S')) {
+      return 'All-Season';
+    } else if (terrain.includes('WINTER') || terrain.includes('SNOW') || terrain.includes('ICE')) {
+      return 'Winter';
+    } else if (terrain.includes('SUMMER')) {
+      return 'Summer';
+    } else if (terrain.includes('PERFORMANCE') || terrain.includes('UHP')) {
+      return 'Performance';
+    } else if (terrain.includes('ALL-WEATHER') || terrain.includes('ALL WEATHER')) {
+      return 'All-Weather';
+    }
+  }
+  
+  // 3. Fallback: model name pattern matching
+  const m = String(tire.description || tire.displayName || '').toUpperCase();
+  if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b/.test(m)) {
+    return 'Winter';
+  } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
+    return 'Mud-Terrain';
+  } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
+    return 'Rugged-Terrain';
+  } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
+    return 'All-Terrain';
+  } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
+    return 'Highway/Touring';
+  } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
+    return 'Performance';
+  } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
+    return 'All-Weather';
+  } else if (/\bSUMMER\b/.test(m) && !/ALL/.test(m)) {
+    return 'Summer';
+  } else if (/\bA[\/\-]?S\b|\bALL[\s\-]?SEASON\b/.test(m)) {
+    return 'All-Season';
+  }
+  
+  // 4. Default
+  return 'All-Season';
+}
+
+// ============================================================================
 // TIRE SIZE PARSING UTILITIES (for mixed flotation + metric filtering)
 // ============================================================================
 
@@ -1220,71 +1289,16 @@ export default async function TiresPage({
     if (lr) loadRangeCounts.set(lr, (loadRangeCounts.get(lr) || 0) + 1);
   }
 
-  // Tread category counts - MUST match card display logic for consistent UX
-  // Card hierarchy: enrichment.treadCategory → badges.terrain → model name patterns → default "All-Season"
+  // Tread category counts - uses resolveTreadCategory() for consistency with filtering
   const treadCategoryCounts = new Map<TreadCategory, number>();
   let mileage40kCount = 0;
   let mileage60kCount = 0;
   let mileage80kCount = 0;
 
   for (const t of itemsEnriched) {
-    // Use the same category resolution logic as the tire card display
-    let category: TreadCategory | null = t.enrichment?.treadCategory || null;
-    
-    // Fallback to badges.terrain if no enrichment category
-    if (!category && t.badges?.terrain) {
-      const terrain = String(t.badges.terrain).toUpperCase();
-      if (terrain.includes('HIGHWAY') || terrain.includes('TOURING') || terrain.includes('H/T') || terrain.includes('HT')) {
-        category = 'Highway/Touring';
-      } else if (terrain.includes('ALL-TERRAIN') || terrain.includes('ALL TERRAIN') || terrain.includes('A/T') || /\bAT\b/.test(terrain)) {
-        category = 'All-Terrain';
-      } else if (terrain.includes('MUD') || terrain.includes('M/T') || /\bMT\b/.test(terrain)) {
-        category = 'Mud-Terrain';
-      } else if (terrain.includes('RUGGED') || terrain.includes('R/T') || /\bRT\b/.test(terrain)) {
-        category = 'Rugged-Terrain';
-      } else if (terrain.includes('ALL-SEASON') || terrain.includes('ALL SEASON') || terrain.includes('A/S')) {
-        category = 'All-Season';
-      } else if (terrain.includes('WINTER') || terrain.includes('SNOW') || terrain.includes('ICE')) {
-        category = 'Winter';
-      } else if (terrain.includes('SUMMER')) {
-        category = 'Summer';
-      } else if (terrain.includes('PERFORMANCE') || terrain.includes('UHP')) {
-        category = 'Performance';
-      } else if (terrain.includes('ALL-WEATHER') || terrain.includes('ALL WEATHER')) {
-        category = 'All-Weather';
-      }
-    }
-    
-    // Fallback to model name pattern matching (same as card display)
-    if (!category) {
-      const m = String(t.description || t.displayName || '').toUpperCase();
-      if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b/.test(m)) {
-        category = 'Winter';
-      } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
-        category = 'Mud-Terrain';
-      } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
-        category = 'Rugged-Terrain';
-      } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
-        category = 'All-Terrain';
-      } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
-        category = 'Highway/Touring';
-      } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
-        category = 'Performance';
-      } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
-        category = 'All-Weather';
-      } else if (/\bSUMMER\b/.test(m) && !/ALL/.test(m)) {
-        category = 'Summer';
-      } else if (/\bA[\/\-]?S\b|\bALL[\s\-]?SEASON\b/.test(m)) {
-        category = 'All-Season';
-      } else {
-        // Default fallback to All-Season (same as card display)
-        category = 'All-Season';
-      }
-    }
-    
-    if (category) {
-      treadCategoryCounts.set(category, (treadCategoryCounts.get(category) || 0) + 1);
-    }
+    // Use shared resolution function for consistent counting/filtering
+    const category = resolveTreadCategory(t);
+    treadCategoryCounts.set(category, (treadCategoryCounts.get(category) || 0) + 1);
     
     const mileage = t.enrichment?.mileage ?? t.badges?.warrantyMiles;
     if (mileage && mileage >= 40000) mileage40kCount++;
@@ -1398,10 +1412,10 @@ export default async function TiresPage({
       if (!meetsMinimumMileage(mileage ?? null, selectedMileageBand)) return false;
     }
 
-    // Tread category filter
+    // Tread category filter - uses shared resolveTreadCategory() for consistency with counts
     if (treadCategories.length > 0) {
-      const tireTread = t.enrichment?.treadCategory;
-      if (!tireTread || !treadCategories.includes(tireTread)) return false;
+      const tireTread = resolveTreadCategory(t);
+      if (!treadCategories.includes(tireTread)) return false;
     }
 
     const p = getDisplayPrice(t);
