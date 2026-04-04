@@ -353,7 +353,7 @@ export default function AbandonedCartsPage() {
                   <th className="px-4 py-3 font-medium">Cart ID</th>
                   <th className="px-4 py-3 font-medium">Customer</th>
                   <th className="px-4 py-3 font-medium">Vehicle</th>
-                  <th className="px-4 py-3 font-medium text-center">Items</th>
+                  <th className="px-4 py-3 font-medium text-center">Contents</th>
                   <th className="px-4 py-3 font-medium text-right">Value</th>
                   <th className="px-4 py-3 font-medium">Status</th>
                   <th className="px-4 py-3 font-medium">Last Activity</th>
@@ -390,9 +390,13 @@ export default function AbandonedCartsPage() {
                         )}
                       </td>
                       <td className="px-4 py-3 text-center">
-                        <span className="inline-block bg-neutral-700 px-2 py-0.5 rounded text-neutral-300">
-                          {cart.itemCount}
-                        </span>
+                        <Link 
+                          href={`/admin/abandoned-carts/${cart.cartId}`}
+                          className="inline-block bg-neutral-700 hover:bg-neutral-600 px-2 py-0.5 rounded text-neutral-300 hover:text-white transition-colors"
+                          title="View cart contents"
+                        >
+                          {cart.itemCount} items →
+                        </Link>
                       </td>
                       <td className="px-4 py-3 text-right">
                         <span className="font-medium text-white">
@@ -433,6 +437,12 @@ export default function AbandonedCartsPage() {
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex flex-col gap-1">
+                          <Link
+                            href={`/admin/abandoned-carts/${cart.cartId}`}
+                            className="text-xs text-blue-400 hover:text-blue-300"
+                          >
+                            View Details
+                          </Link>
                           {cart.status === "active" && (
                             <button
                               onClick={() => handleTestAbandon(cart.cartId)}
@@ -454,7 +464,7 @@ export default function AbandonedCartsPage() {
                           {cart.recoveredOrderId && (
                             <Link
                               href={`/admin/orders/${cart.recoveredOrderId}`}
-                              className="text-xs text-blue-400 hover:text-blue-300"
+                              className="text-xs text-green-400 hover:text-green-300"
                             >
                               View Order
                             </Link>
