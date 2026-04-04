@@ -227,77 +227,86 @@ export function TirePageCompactHeader({
       )}
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          ROW 3: Tire Size Selector with specs
+          ROW 3: Tire Size Chips (always visible, limited to common sizes)
           ═══════════════════════════════════════════════════════════════════════ */}
-      {displaySizes.length > 0 && (
-        <div className="space-y-1.5">
-          <div className="flex flex-wrap items-center gap-2">
-            {/* Compact size display */}
-            <button
-              onClick={() => setShowSizeSelector(!showSizeSelector)}
-              className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors ${
-                showSizeSelector 
-                  ? "bg-neutral-900 text-white" 
-                  : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
-              }`}
-            >
-              <span className="text-green-500">✓</span>
-              <span>{selectedSize || displaySizes[0]}</span>
-              {displaySizes.length > 1 && (
-                <svg className={`h-3 w-3 transition-transform ${showSizeSelector ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+      {displaySizes.length > 0 && (() => {
+        // Show up to 5 sizes by default, with "+N more" to expand
+        const MAX_VISIBLE = 5;
+        const visibleSizes = showSizeSelector ? displaySizes : displaySizes.slice(0, MAX_VISIBLE);
+        const hiddenCount = displaySizes.length - MAX_VISIBLE;
+        const hasMore = hiddenCount > 0 && !showSizeSelector;
+        
+        // Build href for a given size
+        const buildSizeHref = (s: string) => 
+          `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(s)}${liftedParams}`;
+        
+        return (
+          <div className="space-y-1.5">
+            {/* Label row */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-neutral-500">Tire Size</span>
+              {wheelDia && (
+                <span className="text-[11px] text-neutral-400">
+                  for {Math.round(parseFloat(wheelDia))}&quot; wheels
+                </span>
               )}
-            </button>
+              {isLiftedBuild && liftedInches && (
+                <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700">
+                  {liftedInches}&quot; Lift
+                </span>
+              )}
+            </div>
             
-            {/* Wheel diameter context */}
-            {wheelDia && (
-              <span className="text-xs text-neutral-500">
-                for {Math.round(parseFloat(wheelDia))}" wheels
-              </span>
-            )}
+            {/* Size chips - always visible */}
+            <div className="flex flex-wrap items-center gap-1.5">
+              {visibleSizes.map((s) => {
+                const active = s === selectedSize;
+                return (
+                  <Link
+                    key={s}
+                    href={buildSizeHref(s)}
+                    className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-all ${
+                      active
+                        ? "bg-neutral-900 text-white shadow-sm"
+                        : "bg-white border border-neutral-200 text-neutral-700 hover:border-neutral-400 hover:bg-neutral-50"
+                    }`}
+                  >
+                    {active && <span className="mr-1 text-green-400">✓</span>}
+                    {s}
+                  </Link>
+                );
+              })}
+              
+              {/* Show more button */}
+              {hasMore && (
+                <button
+                  onClick={() => setShowSizeSelector(true)}
+                  className="rounded-full border border-dashed border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-500 hover:border-neutral-400 hover:text-neutral-700 transition-colors"
+                >
+                  +{hiddenCount} more
+                </button>
+              )}
+              
+              {/* Collapse button when expanded */}
+              {showSizeSelector && displaySizes.length > MAX_VISIBLE && (
+                <button
+                  onClick={() => setShowSizeSelector(false)}
+                  className="rounded-full border border-neutral-200 px-2 py-1 text-[10px] font-medium text-neutral-400 hover:text-neutral-600 transition-colors"
+                >
+                  Show less
+                </button>
+              )}
+            </div>
             
-            {/* Lifted badge */}
-            {isLiftedBuild && liftedInches && (
-              <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700">
-                {liftedInches}" Lift
-              </span>
+            {/* Reassurance text when in package flow */}
+            {isPackageFlow && wheelSku && (
+              <p className="text-[11px] text-green-700">
+                ✓ Matched to your selected {wheelSizeDisplay ? `${wheelSizeDisplay} ` : ""}wheels
+              </p>
             )}
           </div>
-          
-          {/* Reassurance text when in package flow */}
-          {isPackageFlow && wheelSku && (
-            <p className="text-[11px] text-green-700 pl-1">
-              ✓ Matched to your selected {wheelSizeDisplay ? `${wheelSizeDisplay} ` : ""}wheels
-            </p>
-          )}
-        </div>
-      )}
-      
-      {/* Expanded size selector */}
-      {showSizeSelector && displaySizes.length > 1 && (
-        <div className="flex flex-wrap gap-1.5 rounded-lg bg-neutral-50 border border-neutral-200 p-2">
-          {displaySizes.map((s) => {
-            const active = s === selectedSize;
-            const href = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${trim ? `&trim=${encodeURIComponent(trim)}` : ""}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${wheelSku ? `&wheelSku=${encodeURIComponent(wheelSku)}` : ""}${wheelDia ? `&wheelDia=${encodeURIComponent(wheelDia)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}&size=${encodeURIComponent(s)}${liftedParams}`;
-            
-            return (
-              <Link
-                key={s}
-                href={href}
-                onClick={() => setShowSizeSelector(false)}
-                className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${
-                  active
-                    ? "bg-neutral-900 text-white"
-                    : "bg-white border border-neutral-200 text-neutral-700 hover:border-neutral-400"
-                }`}
-              >
-                {s}
-              </Link>
-            );
-          })}
-        </div>
-      )}
+        );
+      })()}
     </div>
   );
 }
