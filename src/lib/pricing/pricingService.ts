@@ -4,15 +4,16 @@
  * Centralized pricing calculation for all products.
  * 
  * WHEELS:
- * - If cost exists: price = cost × 1.30 (30% margin), **capped at MSRP**
+ * - If cost exists: price = cost × 1.30 (30% margin), capped at MSRP
  * - Fallback #1: MAP (Minimum Advertised Price), capped at MSRP
- * - Fallback #2: MSRP passthrough
- * - MSRP is always the price ceiling — never sell above it
+ * - Fallback #2: Derive cost from MSRP (cost = MSRP × 0.75), then apply markup
+ *   → Sell = (MSRP × 0.75) × 1.30 = MSRP × 0.975
  * 
- * TIRES: Passthrough (uses MAP or MSRP directly)
+ * TIRES (WheelPros): (MSRP × 0.85) + $50
+ * TIRES (TireWeb): sellPrice or cost + $50
  * 
  * @created 2026-04-03
- * @updated 2026-07-15 - Added MSRP ceiling to all pricing paths
+ * @updated 2026-04-04 - Wheel MSRP-derived pricing (cost = MSRP × 0.75)
  */
 
 // ============================================================================
@@ -126,19 +127,22 @@ export function calculateSellPrice(input: PricingInput): PricingResult {
       };
     }
     
-    // Priority 3: MSRP passthrough (was 15% off, now just use MSRP)
+    // Priority 3: MSRP-derived pricing
+    // Dealer cost = MSRP × 0.75, then apply 30% markup
+    // Sell = (MSRP × 0.75) × 1.30 = MSRP × 0.975
     if (msrpValue !== null) {
-      const sellPrice = Math.round(msrpValue * 100) / 100;
+      const derivedCost = msrpValue * 0.75;
+      const sellPrice = Math.round(derivedCost * WHEEL_MARKUP * 100) / 100;
       
-      // Log missing cost and MAP for monitoring
       if (sku) {
-        console.log(`[pricing] MISSING_COST_MAP wheel ${sku}: using MSRP (${msrpValue})`);
+        console.log(`[pricing] MSRP_DERIVED wheel ${sku}: MSRP (${msrpValue}) → cost (${derivedCost}) → sell (${sellPrice})`);
       }
       
       return {
         sellPrice,
         pricingMethod: "msrp_discount",
         originalInput,
+        margin: ((sellPrice - derivedCost) / sellPrice) * 100,
       };
     }
     
