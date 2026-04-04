@@ -137,7 +137,11 @@ function FilterCheckbox({
   onChange: (checked: boolean) => void;
 }) {
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-2 py-1 hover:bg-neutral-50 -mx-2 px-2 rounded-lg transition-colors">
+    <button
+      type="button"
+      onClick={() => onChange(!checked)}
+      className="flex w-full cursor-pointer items-center justify-between gap-2 py-1 hover:bg-neutral-50 -mx-2 px-2 rounded-lg transition-colors text-left"
+    >
       <div className="flex items-center gap-2.5">
         <div
           className={`flex h-4 w-4 items-center justify-center rounded border transition-colors ${
@@ -157,7 +161,7 @@ function FilterCheckbox({
       {typeof count === "number" && (
         <span className="text-xs font-medium text-neutral-400">{count}</span>
       )}
-    </label>
+    </button>
   );
 }
 

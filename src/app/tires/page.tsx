@@ -1220,16 +1220,70 @@ export default async function TiresPage({
     if (lr) loadRangeCounts.set(lr, (loadRangeCounts.get(lr) || 0) + 1);
   }
 
-  // Tread category counts (from enrichment data)
+  // Tread category counts - MUST match card display logic for consistent UX
+  // Card hierarchy: enrichment.treadCategory → badges.terrain → model name patterns → default "All-Season"
   const treadCategoryCounts = new Map<TreadCategory, number>();
   let mileage40kCount = 0;
   let mileage60kCount = 0;
   let mileage80kCount = 0;
 
   for (const t of itemsEnriched) {
-    const tread = t.enrichment?.treadCategory;
-    if (tread) {
-      treadCategoryCounts.set(tread, (treadCategoryCounts.get(tread) || 0) + 1);
+    // Use the same category resolution logic as the tire card display
+    let category: TreadCategory | null = t.enrichment?.treadCategory || null;
+    
+    // Fallback to badges.terrain if no enrichment category
+    if (!category && t.badges?.terrain) {
+      const terrain = String(t.badges.terrain).toUpperCase();
+      if (terrain.includes('HIGHWAY') || terrain.includes('TOURING') || terrain.includes('H/T') || terrain.includes('HT')) {
+        category = 'Highway/Touring';
+      } else if (terrain.includes('ALL-TERRAIN') || terrain.includes('ALL TERRAIN') || terrain.includes('A/T') || /\bAT\b/.test(terrain)) {
+        category = 'All-Terrain';
+      } else if (terrain.includes('MUD') || terrain.includes('M/T') || /\bMT\b/.test(terrain)) {
+        category = 'Mud-Terrain';
+      } else if (terrain.includes('RUGGED') || terrain.includes('R/T') || /\bRT\b/.test(terrain)) {
+        category = 'Rugged-Terrain';
+      } else if (terrain.includes('ALL-SEASON') || terrain.includes('ALL SEASON') || terrain.includes('A/S')) {
+        category = 'All-Season';
+      } else if (terrain.includes('WINTER') || terrain.includes('SNOW') || terrain.includes('ICE')) {
+        category = 'Winter';
+      } else if (terrain.includes('SUMMER')) {
+        category = 'Summer';
+      } else if (terrain.includes('PERFORMANCE') || terrain.includes('UHP')) {
+        category = 'Performance';
+      } else if (terrain.includes('ALL-WEATHER') || terrain.includes('ALL WEATHER')) {
+        category = 'All-Weather';
+      }
+    }
+    
+    // Fallback to model name pattern matching (same as card display)
+    if (!category) {
+      const m = String(t.description || t.displayName || '').toUpperCase();
+      if (/\bWINTER\b|\bBLIZZAK\b|\bX-ICE\b|\bICE\b|\bSNOW\b|\bWS\d+\b|\bARCTIC\b/.test(m)) {
+        category = 'Winter';
+      } else if (/\bM[\/\-]?T\b|\bMUD[\s\-]?TERRAIN\b|\bMUD[\s\-]?GRAPPLER\b/.test(m)) {
+        category = 'Mud-Terrain';
+      } else if (/\bR[\/\-]?T\b|\bRUGGED[\s\-]?TERRAIN\b/.test(m)) {
+        category = 'Rugged-Terrain';
+      } else if (/\bA[\/\-]?T\d*[A-Z]?\b|\bA[\/\-]?T[-]?[A-Z]\b|\bALL[\s\-]?TERRAIN\b|\bTERRA\s*TRAC\b|\bKO2\b|\bGRAPPLER\b/.test(m) && !/MUD/.test(m)) {
+        category = 'All-Terrain';
+      } else if (/\bH[\/\-]?T\d*[A-Z]?\d*\b|\bHIGHWAY\b|\bTOURING\b|\bGRAND\s*TOUR/.test(m)) {
+        category = 'Highway/Touring';
+      } else if (/\bPILOT\s*SPORT\b|\bPOTENZA\b|\bPS4S\b|\bPZERO\b|\bP\s*ZERO\b|\bUHP\b|\bSPORT\s*MAXX\b|\bEAGLE\s*F1\b/.test(m)) {
+        category = 'Performance';
+      } else if (/\bALL[\s\-]?WEATHER\b|\bWEATHER\s*READY\b|\b4SEASON\b|\bCROSS\s*CLIMATE\b/.test(m)) {
+        category = 'All-Weather';
+      } else if (/\bSUMMER\b/.test(m) && !/ALL/.test(m)) {
+        category = 'Summer';
+      } else if (/\bA[\/\-]?S\b|\bALL[\s\-]?SEASON\b/.test(m)) {
+        category = 'All-Season';
+      } else {
+        // Default fallback to All-Season (same as card display)
+        category = 'All-Season';
+      }
+    }
+    
+    if (category) {
+      treadCategoryCounts.set(category, (treadCategoryCounts.get(category) || 0) + 1);
     }
     
     const mileage = t.enrichment?.mileage ?? t.badges?.warrantyMiles;
