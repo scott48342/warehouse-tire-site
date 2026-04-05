@@ -162,16 +162,15 @@ export function buildDiameterOptions({
       });
     }
     
-    // Add upsize options from inventory (up to +3" from stock)
-    // Only add if they have inventory and aren't already in OEM sizes
-    const maxUpsize = minOemDia + 3;
+    // Add ALL sizes from inventory that have results
+    // Show any size with inventory, regardless of upsize distance from stock
     for (const [dia, count] of inventoryCounts) {
-      if (dia > minOemDia && dia <= maxUpsize && !oemDiameters.has(dia) && count > 0) {
+      if (!options.has(dia) && count > 0) {
         options.set(dia, {
           diameter: dia,
           label: `${dia}"`,
           isStock: false,
-          isUpsize: true,
+          isUpsize: dia > minOemDia,
           hasInventory: true,
           count,
         });
