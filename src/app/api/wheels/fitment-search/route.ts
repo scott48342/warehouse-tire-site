@@ -1368,13 +1368,171 @@ async function handleDbFirstWheelResults(opts: {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // PHASE 4d: STAGGERED PAIRING
+  // For staggered fitments, find wheels that exist in BOTH front and rear widths
+  // Mark them with pair.staggered = true so frontend can filter to complete sets
+  // ═══════════════════════════════════════════════════════════════════════════
+  const tStaggeredPairing0 = Date.now();
+  let staggeredPairsFound = 0;
+  
+  // Only do pairing if vehicle is staggered
+  if (opts.staggeredInfo?.isStaggered && opts.staggeredInfo.frontSpec && opts.staggeredInfo.rearSpec) {
+    const frontWidth = opts.staggeredInfo.frontSpec.width;
+    const rearWidth = opts.staggeredInfo.rearSpec.width;
+    const frontDiameter = opts.staggeredInfo.frontSpec.diameter;
+    const rearDiameter = opts.staggeredInfo.rearSpec.diameter;
+    
+    console.log(`[fitment-search] 🔄 STAGGERED PAIRING: looking for front ${frontDiameter}"×${frontWidth}" + rear ${rearDiameter}"×${rearWidth}"`);
+    
+    // Group candidates by style (brand + model)
+    const styleGroups = new Map<string, typeof rankedCandidates>();
+    for (const c of rankedCandidates) {
+      const brandCode = c.candidate.brand_cd || "";
+      // Use style or model name for grouping
+      const styleName = c.candidate.style || c.candidate.display_style_no || 
+                       (c.candidate.product_desc?.split(" ")[0]) || "";
+      const styleKey = `${brandCode}:${styleName}`.toLowerCase();
+      
+      if (!styleGroups.has(styleKey)) {
+        styleGroups.set(styleKey, []);
+      }
+      styleGroups.get(styleKey)!.push(c);
+    }
+    
+    // For each style, find wheels matching front and rear specs
+    const pairedCandidateSkus = new Set<string>();
+    const staggeredPairs: Array<{
+      styleKey: string;
+      frontSku: string;
+      rearSku: string;
+    }> = [];
+    
+    for (const [styleKey, candidates] of styleGroups) {
+      // ═══════════════════════════════════════════════════════════════════════════
+      // FLEXIBLE STAGGERED PAIRING
+      // For aftermarket wheels, we don't require exact OEM width match.
+      // Instead, find styles with TWO different widths where one is narrower (front)
+      // and one is wider (rear). This captures 9"/10.5" pairs, 8.5"/10" pairs, etc.
+      // ═══════════════════════════════════════════════════════════════════════════
+      
+      // Group candidates by width within this style
+      const byWidth = new Map<number, typeof candidates[0][]>();
+      for (const c of candidates) {
+        const w = Number(c.candidate.width) || 0;
+        const d = Number(c.candidate.diameter) || 0;
+        // Only consider wheels at the OEM diameter (allow ±1")
+        if (Math.abs(d - frontDiameter) > 1 && Math.abs(d - rearDiameter) > 1) continue;
+        
+        const widthKey = Math.round(w * 2) / 2; // Round to nearest 0.5"
+        if (!byWidth.has(widthKey)) byWidth.set(widthKey, []);
+        byWidth.get(widthKey)!.push(c);
+      }
+      
+      // Get sorted unique widths for this style
+      const availableWidths = Array.from(byWidth.keys()).sort((a, b) => a - b);
+      
+      // Need at least 2 different widths to form a staggered pair
+      if (availableWidths.length < 2) continue;
+      
+      // Find best front/rear combination:
+      // - Front: narrower width (prefer closest to OEM front, max 9.5")
+      // - Rear: wider width (prefer closest to OEM rear, min 9.5")
+      // - Must have at least 0.5" difference between front and rear
+      
+      const MAX_FRONT_WIDTH = 9.5;
+      const MIN_REAR_WIDTH = 9.5;
+      const MIN_WIDTH_DIFF = 0.5;
+      
+      // Find valid front widths (narrower)
+      const frontWidths = availableWidths.filter(w => w <= MAX_FRONT_WIDTH);
+      // Find valid rear widths (wider)
+      const rearWidths = availableWidths.filter(w => w >= MIN_REAR_WIDTH);
+      
+      // Find best pair: front closest to OEM front, rear closest to OEM rear
+      let bestFrontWidth: number | null = null;
+      let bestRearWidth: number | null = null;
+      let bestScore = -Infinity;
+      
+      for (const fw of frontWidths) {
+        for (const rw of rearWidths) {
+          if (rw - fw < MIN_WIDTH_DIFF) continue; // Need width difference
+          
+          // Score: prefer widths closer to OEM specs
+          const frontScore = 10 - Math.abs(fw - frontWidth);
+          const rearScore = 10 - Math.abs(rw - rearWidth);
+          const totalScore = frontScore + rearScore;
+          
+          if (totalScore > bestScore) {
+            bestScore = totalScore;
+            bestFrontWidth = fw;
+            bestRearWidth = rw;
+          }
+        }
+      }
+      
+      if (bestFrontWidth !== null && bestRearWidth !== null) {
+        const frontCandidates = byWidth.get(bestFrontWidth) || [];
+        const rearCandidates = byWidth.get(bestRearWidth) || [];
+        
+        if (frontCandidates.length > 0 && rearCandidates.length > 0) {
+          const bestFront = frontCandidates[0];
+          const bestRear = rearCandidates[0];
+          
+          pairedCandidateSkus.add(bestFront.candidate.sku);
+          pairedCandidateSkus.add(bestRear.candidate.sku);
+          
+          staggeredPairs.push({
+            styleKey,
+            frontSku: bestFront.candidate.sku,
+            rearSku: bestRear.candidate.sku,
+          });
+          
+          staggeredPairsFound++;
+        }
+      }
+    }
+    
+    // Store pairing info for result building
+    timing.staggeredPairingMs = Date.now() - tStaggeredPairing0;
+    timing.staggeredStylesChecked = styleGroups.size;
+    timing.staggeredPairsFound = staggeredPairsFound;
+    
+    console.log(`[fitment-search] ✅ STAGGERED PAIRING complete: ${staggeredPairsFound} pairs from ${styleGroups.size} styles`);
+    
+    // Attach pair info to ranked candidates (so it flows into results)
+    for (const pair of staggeredPairs) {
+      for (const c of rankedCandidates) {
+        if (c.candidate.sku === pair.frontSku) {
+          (c as any).staggeredPair = {
+            staggered: true,
+            role: "front",
+            frontSku: pair.frontSku,
+            rearSku: pair.rearSku,
+            styleKey: pair.styleKey,
+          };
+        } else if (c.candidate.sku === pair.rearSku) {
+          (c as any).staggeredPair = {
+            staggered: true,
+            role: "rear",
+            frontSku: pair.frontSku,
+            rearSku: pair.rearSku,
+            styleKey: pair.styleKey,
+          };
+        }
+      }
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 5: Build paginated results from ranked candidates
   // ═══════════════════════════════════════════════════════════════════════════
   const totalCount = rankedCandidates.length;
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
 
-  const results = pageItems.map(({ candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey }) => {
+  const results = pageItems.map((item) => {
+    const { candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey } = item;
+    const staggeredPair = (item as any).staggeredPair;
     // Get inventory from SFTP feed (synced every 2 hours)
     const inv = inventoryData.get(c.sku);
     
@@ -1457,6 +1615,22 @@ async function handleDbFirstWheelResults(opts: {
         modelKey: debug ? modelKey : undefined,
         breakdown: debug ? scoreBreakdown : undefined,
       },
+      // Staggered pair info (for staggered fitments)
+      pair: staggeredPair ? {
+        staggered: true,
+        front: {
+          sku: staggeredPair.frontSku,
+          diameter: staggeredPair.role === "front" ? c.diameter : undefined,
+          width: staggeredPair.role === "front" ? c.width : undefined,
+          offset: staggeredPair.role === "front" ? c.offset : undefined,
+        },
+        rear: {
+          sku: staggeredPair.rearSku,
+          diameter: staggeredPair.role === "rear" ? c.diameter : undefined,
+          width: staggeredPair.role === "rear" ? c.width : undefined,
+          offset: staggeredPair.role === "rear" ? c.offset : undefined,
+        },
+      } : undefined,
     };
   });
 
@@ -1608,6 +1782,7 @@ async function handleDbFirstWheelResults(opts: {
       totalCountEligible: totalCount,
       candidates: filteredCandidates.length,
       fitmentValid: fitmentValidCandidates.length,
+      staggeredPairsFound,
       // SFTP-FIRST: Inventory from feed, no live API calls
       availabilityMode: "sftp-feed",
       availabilityCachedHits: inventoryData.size,

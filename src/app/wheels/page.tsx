@@ -675,6 +675,9 @@ export default async function WheelsPage({
     const stockQty = localStock + globalStock;
     const inventoryType = typeof inventory?.type === "string" ? inventory.type.toUpperCase() : undefined;
 
+    // Extract staggered pair info from fitment-search API response
+    const pair = (it as any)?.pair;
+
     return {
       sku: it?.sku,
       brand,
@@ -692,6 +695,7 @@ export default async function WheelsPage({
       inventoryType,
       styleKey,
       fitmentClass,
+      pair,
     };
   });
 
@@ -866,6 +870,12 @@ export default async function WheelsPage({
       .filter((w) => w.imageUrl) // Only recommend wheels with images
       .map((w) => {
         let score = 0;
+
+        // For staggered vehicles, STRONGLY prefer wheels with pair data
+        // This ensures Top Picks shows actual staggered sets
+        if (vehicleCallsForStaggered && w.pair?.staggered) {
+          score += 200; // Highest priority for staggered pairs
+        }
 
         // Fitment class priority (higher = better)
         if (w.fitmentClass === "surefit") score += 100;

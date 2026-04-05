@@ -702,24 +702,12 @@ export function WheelsGridWithSelection({
       return wheels;
     }
     
-    const { frontSpec, rearSpec } = staggeredInfo;
-    
     if (setupMode === "staggered") {
       // ═══════════════════════════════════════════════════════════════════════════
-      // STAGGERED MODE: ONLY show wheels that are part of COMPLETE pairs
-      // A wheel is only shown if its style has both front AND rear available
+      // STAGGERED MODE: Trust API's pair property
+      // The fitment-search API computes staggered pairs server-side
       // ═══════════════════════════════════════════════════════════════════════════
-      if (!frontSpec || !rearSpec || !staggeredPairs) {
-        // Missing spec data or no complete pairs - show nothing or fallback
-        return wheels.filter(w => w.pair?.staggered === true);
-      }
-      
-      // Only include wheels whose style+diameter has a complete pair
-      return wheels.filter(w => {
-        const wheelDia = Math.round(parseFloat(w.diameter || "0"));
-        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}|${wheelDia}`.toLowerCase();
-        return completePairStyles.has(styleKey);
-      });
+      return wheels.filter(w => w.pair?.staggered === true);
     } else {
       // Square mode: Show wheels that work on all 4 corners
       // For staggered-capable vehicles, this means wheels that match FRONT spec
@@ -739,59 +727,30 @@ export function WheelsGridWithSelection({
     }
   }, [wheels, setupMode, supportsStaggered, staggeredInfo, staggeredPairs, completePairStyles, matchesStaggeredSpec]);
   
-  // For staggered mode, enhance wheels with pair data and deduplicate
+  // For staggered mode, deduplicate by style (show one card per style, not per SKU)
+  // The API already provides pair data, so we just need to dedupe
   const wheelsWithPairs = useMemo(() => {
-    if (setupMode !== "staggered" || !staggeredPairs) {
+    if (setupMode !== "staggered") {
       return filteredWheels;
     }
     
-    // Create a map of style -> pair for quick lookup
-    const pairMap = new Map<string, { front: WheelItem; rear: WheelItem }>();
-    for (const pair of staggeredPairs) {
-      pairMap.set(pair.styleKey, { front: pair.front, rear: pair.rear });
-    }
-    
-    // Deduplicate: only show one card per style+diameter (the front wheel with pair data attached)
+    // Deduplicate: only show one card per style (brand + model + finish)
+    // The API marks both front and rear SKUs with pair.staggered, so we pick one per style
     const seenStyles = new Set<string>();
     const result: WheelItem[] = [];
     
     for (const wheel of filteredWheels) {
-      const wheelDia = Math.round(parseFloat(wheel.diameter || "0"));
-      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}|${wheelDia}`.toLowerCase();
+      // Use brand + model + finish for style grouping (ignore diameter/width since those differ for front/rear)
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
       
       if (seenStyles.has(styleKey)) continue;
       seenStyles.add(styleKey);
       
-      const pair = pairMap.get(styleKey);
-      if (pair) {
-        // Enhance the front wheel with pair data
-        result.push({
-          ...pair.front,
-          pair: {
-            staggered: true,
-            front: {
-              sku: pair.front.sku || "",
-              diameter: pair.front.diameter,
-              width: pair.front.width,
-              offset: pair.front.offset,
-            },
-            rear: {
-              sku: pair.rear.sku || "",
-              diameter: pair.rear.diameter,
-              width: pair.rear.width,
-              offset: pair.rear.offset,
-            },
-          },
-        });
-      } else if (wheel.pair?.staggered) {
-        // Already has pair data
-        result.push(wheel);
-      }
-      // Skip wheels without valid pairs in staggered mode
+      result.push(wheel);
     }
     
     return result;
-  }, [filteredWheels, staggeredPairs, setupMode]);
+  }, [filteredWheels, setupMode]);
   
   // Final wheels to display
   const displayWheels = setupMode === "staggered" ? wheelsWithPairs : filteredWheels;
@@ -835,35 +794,20 @@ export function WheelsGridWithSelection({
     return pairs;
   }, [recommendedWheels, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
   
-  // For staggered mode, only show recommended wheels that have complete pairs
+  // For staggered mode, only show recommended wheels that have pair data from API
   const filteredRecommended = useMemo(() => {
     if (!supportsStaggered || !recommendedWheels.length) {
       return recommendedWheels;
     }
     
-    const { frontSpec } = staggeredInfo || {};
-    
     if (setupMode === "staggered") {
-      // In staggered mode, show recommended wheels that are part of complete pairs
-      // Check both allWheels pairs AND recommended-specific pairs
-      return recommendedWheels.filter(w => {
-        const wheelDia = Math.round(parseFloat(w.diameter || "0"));
-        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}|${wheelDia}`.toLowerCase();
-        return completePairStyles.has(styleKey) || 
-               recommendedStaggeredPairs.has(styleKey) || 
-               w.pair?.staggered === true;
-      });
+      // In staggered mode, show recommended wheels with pair.staggered from API
+      return recommendedWheels.filter(w => w.pair?.staggered === true);
     } else {
-      // Square mode: show wheels that match front spec or are generic square
-      if (frontSpec) {
-        return recommendedWheels.filter(w => 
-          matchesStaggeredSpec(w, frontSpec, 1.0, 0.5) || 
-          !w.pair?.staggered
-        );
-      }
+      // Square mode: show wheels that DON'T have staggered pair data
       return recommendedWheels.filter(w => !w.pair?.staggered);
     }
-  }, [recommendedWheels, setupMode, supportsStaggered, staggeredInfo, completePairStyles, recommendedStaggeredPairs, matchesStaggeredSpec]);
+  }, [recommendedWheels, setupMode, supportsStaggered]);
   
   // Cart context
   const { addItem, setIsOpen: setCartOpen } = useCart();
