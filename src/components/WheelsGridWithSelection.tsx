@@ -170,10 +170,10 @@ function SelectionConfirmation({
   isAddingToCart: boolean;
 }) {
   return (
-    <div className="animate-slide-up rounded-xl bg-neutral-50 border border-neutral-200 p-4">
-      {/* Selected wheel info */}
-      <div className="flex items-center gap-3">
-        {/* Green checkmark - selected state indicator */}
+    <div className="animate-slide-up rounded-xl bg-white border border-neutral-200 p-4 shadow-sm">
+      {/* Selected wheel summary */}
+      <div className="flex items-center gap-3 pb-4 border-b border-neutral-100">
+        {/* Green checkmark */}
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -184,7 +184,7 @@ function SelectionConfirmation({
           <img 
             src={wheel.imageUrl} 
             alt={wheel.model} 
-            className="h-12 w-12 rounded-lg object-contain bg-white border border-neutral-200"
+            className="h-12 w-12 rounded-lg object-contain bg-neutral-50"
           />
         )}
         
@@ -211,11 +211,22 @@ function SelectionConfirmation({
           </div>
           <div className="text-[10px] text-neutral-500">set of 4</div>
         </div>
+        
+        {/* Change selection - inline */}
+        <button
+          onClick={onClear}
+          className="text-xs text-neutral-400 hover:text-neutral-600 transition-colors"
+          title="Change selection"
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
       
-      {/* CTAs - clean hierarchy */}
-      <div className="mt-4 space-y-2">
-        {/* PRIMARY: Build Complete Package - RED */}
+      {/* Two clear CTAs */}
+      <div className="pt-4 space-y-3">
+        {/* PRIMARY: Add Tires & Complete Package - RED, full width */}
         <button
           onClick={onBuildPackage}
           disabled={isAddingToCart}
@@ -231,7 +242,7 @@ function SelectionConfirmation({
             </>
           ) : (
             <>
-              Build Complete Package
+              Add Tires & Complete Package
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -239,26 +250,32 @@ function SelectionConfirmation({
           )}
         </button>
         <p className="text-[11px] text-neutral-500 text-center">
-          Add matching tires for these wheels
+          We&apos;ll show tires that fit these wheels
         </p>
         
-        {/* SECONDARY: Wheels only - small, neutral */}
-        <div className="flex items-center justify-center gap-4 pt-2">
-          <button
-            onClick={onAddToCart}
-            disabled={isAddingToCart}
-            className="text-xs font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
-          >
-            Add wheels only →
-          </button>
-          <span className="text-neutral-300">|</span>
-          <button
-            onClick={onClear}
-            className="text-xs text-neutral-500 hover:text-neutral-700 transition-colors"
-          >
-            Change selection
-          </button>
-        </div>
+        {/* SECONDARY: Add Wheels Only - outline, full width */}
+        <button
+          onClick={onAddToCart}
+          disabled={isAddingToCart}
+          className="flex h-11 w-full items-center justify-center gap-2 rounded-lg border border-neutral-300 bg-white text-sm font-medium text-neutral-700 transition-all hover:bg-neutral-50 hover:border-neutral-400 active:scale-[0.98] disabled:opacity-60"
+        >
+          {isAddingToCart ? (
+            <>
+              <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+              </svg>
+              Adding...
+            </>
+          ) : (
+            <>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              Add Wheels Only to Cart
+            </>
+          )}
+        </button>
       </div>
     </div>
   );
@@ -378,7 +395,7 @@ function StaggeredSetupChooser({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// MOBILE STICKY BAR - Simplified single CTA
+// MOBILE STICKY BAR - REMOVED (duplicate CTA removed for cleaner UX)
 // ═══════════════════════════════════════════════════════════════════════════════
 function MobileStickyBar({ 
   wheel, 
@@ -393,56 +410,8 @@ function MobileStickyBar({
   onBuildPackage: () => void;
   isAddingToCart: boolean;
 }) {
-  if (!wheel || !isVisible) return null;
-  
-  return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden animate-slide-up">
-      <div className="border-t border-neutral-200 bg-white px-4 py-3 shadow-lg">
-        {/* Single row: info + primary CTA */}
-        <div className="flex items-center gap-3">
-          {/* Green check + wheel info */}
-          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
-            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="text-xs font-bold text-neutral-900 truncate">
-              {wheel.brand} {wheel.model}
-            </div>
-            <div className="text-xs text-neutral-600">
-              ${wheel.setPrice.toLocaleString()}
-            </div>
-          </div>
-          
-          {/* Primary CTA - RED */}
-          <button
-            onClick={onBuildPackage}
-            disabled={isAddingToCart}
-            className="flex h-10 items-center justify-center gap-1.5 rounded-lg bg-red-600 px-4 text-sm font-bold text-white disabled:opacity-60"
-          >
-            {isAddingToCart ? "Adding..." : "Add Tires"}
-            {!isAddingToCart && (
-              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            )}
-          </button>
-        </div>
-        
-        {/* Secondary link */}
-        <div className="mt-2 text-center">
-          <button
-            onClick={onAddToCart}
-            disabled={isAddingToCart}
-            className="text-[11px] text-neutral-500 hover:text-neutral-700"
-          >
-            or add wheels only →
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  // Removed - SelectionConfirmation now handles all CTAs in one place
+  return null;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
