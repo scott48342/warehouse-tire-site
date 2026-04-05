@@ -88,9 +88,12 @@ function FitmentTabs() {
       >
         Wheels
       </FitmentLink>
-      <span className={`${base} ${pill} pointer-events-none opacity-50`}>
-        Packages
-      </span>
+      <Link
+        href="/lifted"
+        className={`${base} ${pill}`}
+      >
+        Lifted Builds
+      </Link>
     </div>
   );
 }
