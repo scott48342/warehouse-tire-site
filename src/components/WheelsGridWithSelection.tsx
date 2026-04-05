@@ -97,6 +97,8 @@ type SetupMode = "square" | "staggered";
 
 type WheelsGridProps = {
   wheels: WheelItem[];
+  /** All wheels (unpaginated) - used for staggered pair matching across pages */
+  allWheels?: WheelItem[];
   viewParams: ViewParams;
   dbProfile?: DBProfileForAccessories | null;
   diameterParam?: string;
@@ -537,6 +539,7 @@ function PackageEstimate({
 // ═══════════════════════════════════════════════════════════════════════════════
 export function WheelsGridWithSelection({
   wheels,
+  allWheels,
   viewParams,
   dbProfile,
   diameterParam,
@@ -631,11 +634,14 @@ export function WheelsGridWithSelection({
     
     const { frontSpec, rearSpec } = staggeredInfo;
     
+    // Use allWheels (all unpaginated wheels) for pair matching if available,
+    // otherwise fall back to the paginated wheels prop
+    const wheelsToScan = allWheels || wheels;
+    
     // Group ALL wheels by style (brand + model + finish)
-    // We scan ALL wheels, not just filtered ones
     const styleGroups = new Map<string, { front: WheelItem | null; rear: WheelItem | null }>();
     
-    for (const wheel of wheels) {
+    for (const wheel of wheelsToScan) {
       const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
       
       if (!styleGroups.has(styleKey)) {
@@ -667,7 +673,7 @@ export function WheelsGridWithSelection({
     }
     
     return completePairs.length > 0 ? completePairs : null;
-  }, [wheels, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  }, [wheels, allWheels, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
   
   // Set of style keys that have complete pairs (for fast lookup)
   const completePairStyles = useMemo(() => {

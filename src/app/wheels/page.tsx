@@ -638,7 +638,15 @@ export default async function WheelsPage({
     const brand = brandObj?.description ?? brandObj?.parent ?? brandObj?.code ?? (typeof it?.brand === "string" ? it.brand : undefined);
     // Extract finish (try multiple possible field names)
     const finish = it?.techfeed?.finish || it?.properties?.abbreviated_finish_desc || it?.properties?.finish;
-    const model = it?.properties?.model || it?.title;
+    // Extract model name from title if properties.model is empty
+    // Title format: "MODEL SIZE BOLTPATTERN CB OFFSET FINISH" e.g. "GRZ 20X10 5X112/120 72 +50 M-BLK"
+    // We want just the model name (e.g. "GRZ") for style matching
+    let model = it?.properties?.model;
+    if (!model && it?.title) {
+      // Extract model name: everything before the first size pattern (e.g., "20X10")
+      const sizeMatch = it.title.match(/^(.+?)\s+\d+[Xx]\d/);
+      model = sizeMatch ? sizeMatch[1].trim() : it.title.split(' ')[0];
+    }
     const diameter = it?.properties?.diameter ? String(it.properties.diameter) : undefined;
     const width = it?.properties?.width ? String(it.properties.width) : undefined;
     const offset = it?.properties?.offset ? String(it.properties.offset) : undefined;
@@ -1686,6 +1694,26 @@ export default async function WheelsPage({
                 finish: w.finish,
                 diameter: diameterParam || w.diameter,
                 width: widthParam || w.width,
+                offset: w.offset,
+                centerbore: w.centerbore,
+                imageUrl: w.imageUrl,
+                price: w.price,
+                stockQty: w.stockQty,
+                inventoryType: w.inventoryType,
+                styleKey: w.styleKey,
+                fitmentClass: w.fitmentClass,
+                finishThumbs: w.finishThumbs,
+                pair: w.pair,
+                boltPattern: (w as any).boltPattern,
+              }))}
+              allWheels={itemsFinal.map(w => ({
+                sku: w.sku,
+                brand: w.brand,
+                brandCode: w.brandCode,
+                model: w.model,
+                finish: w.finish,
+                diameter: w.diameter,
+                width: w.width,
                 offset: w.offset,
                 centerbore: w.centerbore,
                 imageUrl: w.imageUrl,
