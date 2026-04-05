@@ -44,12 +44,12 @@ export function HeroVehicleEntry() {
 
         <button
           type="button"
-          onClick={() => openSearch("packages")}
+          onClick={() => router.push("/lifted")}
           className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 p-5 md:p-6 text-center transition-all hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
         >
-          <div className="text-4xl md:text-5xl mb-2">📦</div>
-          <div className="text-base md:text-lg font-extrabold text-neutral-900">Package</div>
-          <div className="text-xs md:text-sm text-amber-700 mt-1 hidden sm:block">Wheels + Tires</div>
+          <div className="text-4xl md:text-5xl mb-2">🚀</div>
+          <div className="text-base md:text-lg font-extrabold text-neutral-900">Lifted</div>
+          <div className="text-xs md:text-sm text-amber-700 mt-1 hidden sm:block">Trucks & SUVs</div>
         </button>
       </div>
 
