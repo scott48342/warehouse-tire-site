@@ -765,6 +765,10 @@ export default async function TiresPage({
   // Only show staggered pairs if front and rear are DIFFERENT diameters
   const isActuallyStaggered = actualFrontDia !== actualRearDia;
   
+  // CRITICAL: Override isStaggered for UI purposes
+  // If user selected a square setup (same size front/rear), don't show staggered UI
+  const showStaggeredUI = isStaggeredVehicle && isPackageFlow && isActuallyStaggered;
+  
   if (isStaggeredVehicle && isPackageFlow && actualFrontDia && actualRearDia && isActuallyStaggered) {
     // Generate recommended tire sizes based on wheel specs
     // Standard tire widths: 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315...
@@ -2157,8 +2161,8 @@ export default async function TiresPage({
               />
             ) : (
             <>
-            {/* Staggered tire pairs display */}
-            {isStaggered && staggeredTirePairs.length > 0 ? (
+            {/* Staggered tire pairs display - only when user's selection is actually staggered */}
+            {showStaggeredUI && staggeredTirePairs.length > 0 ? (
               <div className="mb-6">
                 <div className="mb-4 flex items-center gap-2">
                   <span className="text-lg font-bold text-neutral-900">🏁 Staggered Tire Sets</span>
@@ -2243,7 +2247,7 @@ export default async function TiresPage({
                   </div>
                 )}
               </div>
-            ) : isStaggered ? (
+            ) : showStaggeredUI ? (
               /* Fallback: show front/rear selector if no pairs found */
               <div className="mb-4 flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold text-neutral-500">Selecting:</span>
