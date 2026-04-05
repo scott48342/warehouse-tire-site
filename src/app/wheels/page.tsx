@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
-import { AutoSubmitInput } from "@/components/AutoSubmitInput";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { WheelsGridWithSelection } from "@/components/WheelsGridWithSelection";
-import { AccordionFilter } from "./AccordionFilter";
+import { WheelFilterSidebar } from "@/components/WheelFilterSidebar";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
@@ -1325,213 +1324,44 @@ export default async function WheelsPage({
               </div>
             ) : null}
 
-            <div className="flex items-center justify-between">
-              <h2 className="text-base font-extrabold">Filters</h2>
-              <a href={qBase} className="text-sm font-semibold text-neutral-600 hover:underline">
-                Clear all
-              </a>
-            </div>
-
-            {/* BOLT PATTERN - auto-submit on change */}
-            <AccordionFilter defaultOpen title="Bolt Pattern" selectedCount={boltPatternParam ? 1 : 0}>
-              {(() => {
-                // Use bolt pattern from fitment-search response (authoritative), fallback to fit data
-                const vehicleBp = fitmentSearchBp || bp;
-                const hasSinglePattern = boltPatternBuckets.length === 1;
-                const hasMultiplePatterns = boltPatternBuckets.length > 1;
-
-                return (
-                  <>
-                    {/* Show vehicle bolt pattern - always visible when vehicle is selected */}
-                    {hasVehicle && vehicleBp ? (
-                      <div className="mb-2 rounded-lg bg-neutral-100 px-3 py-2 text-xs">
-                        <span className="text-neutral-500">Vehicle spec:</span>{" "}
-                        <span className="font-bold text-neutral-800">{vehicleBp}</span>
-                      </div>
-                    ) : null}
-
-                    {/* Case 1: No vehicle - show full dropdown */}
-                    {/* Case 2: Vehicle + multiple patterns (dual-drill wheels) - show dropdown */}
-                    {/* Case 3: Vehicle + single pattern - show locked value */}
-                    {!hasVehicle || hasMultiplePatterns ? (
-                      <AutoSubmitSelect
-                        name="boltPattern"
-                        defaultValue={boltPatternParam || ""}
-                        resetPage
-                        className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                        options={[
-                          { value: "", label: hasVehicle && vehicleBp ? `All matching (${vehicleBp})` : "All bolt patterns" },
-                          ...boltPatternBuckets.map((b) => ({
-                            value: b.value,
-                            label: `${b.value}${b.count != null ? ` (${b.count})` : ""}`,
-                          })),
-                        ]}
-                      />
-                    ) : hasSinglePattern ? (
-                      /* Single bolt pattern for vehicle - show locked value (no dropdown) */
-                      <div className="rounded-xl border border-green-200 bg-green-50 px-3 py-2 text-sm font-semibold text-green-800">
-                        ✓ {boltPatternBuckets[0].value}
-                        {boltPatternBuckets[0].count != null ? (
-                          <span className="ml-1 text-xs text-green-600">({boltPatternBuckets[0].count} available)</span>
-                        ) : null}
-                      </div>
-                    ) : (
-                      /* No results / empty state */
-                      <div className="rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm text-neutral-500">
-                        {vehicleBp || "No bolt pattern data"}
-                      </div>
-                    )}
-                  </>
-                );
-              })()}
-            </AccordionFilter>
-
-            {/* Fitment Level Toggle - OEM vs Lifted/Modified */}
-            {hasVehicle && offRange?.[0] != null && offRange?.[1] != null ? (
-              <div className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-3">
-                <div className="text-xs font-semibold text-neutral-600 mb-2">Fitment Type</div>
-                <div className="flex gap-2">
-                  <a
-                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&fitLevel=oem&page=1`}
-                    className={`flex-1 rounded-lg px-3 py-2 text-center text-xs font-extrabold transition-colors ${
-                      fitLevel === "oem"
-                        ? "bg-neutral-900 text-white"
-                        : "bg-white border border-neutral-200 text-neutral-700 hover:bg-neutral-100"
-                    }`}
-                  >
-                    OEM Fit
-                  </a>
-                  <a
-                    href={`${qBase}${brandCd ? `&brand_cd=${encodeURIComponent(brandCd)}` : ""}${finish ? `&finish=${encodeURIComponent(finish)}` : ""}${diameterParam ? `&diameter=${encodeURIComponent(diameterParam)}` : ""}${widthParam ? `&width=${encodeURIComponent(widthParam)}` : ""}${boltPatternParam ? `&boltPattern=${encodeURIComponent(boltPatternParam)}` : ""}&fitLevel=lifted&page=1`}
-                    className={`flex-1 rounded-lg px-3 py-2 text-center text-xs font-extrabold transition-colors ${
-                      fitLevel === "lifted"
-                        ? "bg-neutral-900 text-white"
-                        : "bg-white border border-neutral-200 text-neutral-700 hover:bg-neutral-100"
-                    }`}
-                  >
-                    Lifted/Modified
-                  </a>
-                </div>
-                <div className="mt-2 text-xs text-neutral-500">
-                  {fitLevel === "oem"
-                    ? `Showing all validated wheels (OEM offset: ${offRange[0]}-${offRange[1]}mm)`
-                    : "Showing all wheels regardless of offset"}
-                </div>
-              </div>
-            ) : null}
-
-            {/* BRAND - auto-submit on change */}
-            <AccordionFilter defaultOpen title="Brand">
-              <AutoSubmitSelect
-                name="brand_cd"
-                defaultValue={brandCd}
-                resetPage
-                className="h-11 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                options={[
-                  { value: "", label: "All brands" },
-                  ...brandOptions.slice(0, 120).map((b) => ({
-                    value: b.code,
-                    label: b.desc,
-                  })),
-                ]}
-              />
-            </AccordionFilter>
-
-            {/* DIAMETER - auto-submit on change */}
-            <AccordionFilter defaultOpen title="Diameter">
-              <AutoSubmitSelect
-                name="diameter"
-                defaultValue={diameterParam}
-                resetPage
-                className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                options={[
-                  { value: "", label: "All diameters" },
-                  ...diameterBuckets.slice(0, 80).map((b) => {
-                    const label = String(b.value).replace(/\.0$/, "");
-                    return {
-                      value: b.value,
-                      label: `${label}${b.count != null ? ` (${b.count})` : ""}`,
-                    };
-                  }),
-                ]}
-              />
-            </AccordionFilter>
-
-            {/* PRICE - auto-submit on blur */}
-            <AccordionFilter defaultOpen title="Price" selectedCount={(priceMin ? 1 : 0) + (priceMax ? 1 : 0)}>
-              <div className="grid grid-cols-2 gap-2">
-                <AutoSubmitInput
-                  name="priceMin"
-                  defaultValue={priceMinRaw}
-                  placeholder="$ min"
-                  type="number"
-                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                />
-                <AutoSubmitInput
-                  name="priceMax"
-                  defaultValue={priceMaxRaw}
-                  placeholder="$ max"
-                  type="number"
-                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                />
-              </div>
-              <p className="mt-2 text-xs text-neutral-500">Press Enter or click away to apply</p>
-            </AccordionFilter>
-
-            {/* FINISH - auto-submit on change */}
-            <AccordionFilter defaultOpen={false} title="Finish">
-              <AutoSubmitSelect
-                name="finish"
-                defaultValue={finish}
-                resetPage
-                className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                options={[
-                  { value: "", label: "All finishes" },
-                  ...finishBuckets.slice(0, 80).map((b) => ({
-                    value: b.value,
-                    label: `${b.value}${b.count != null ? ` (${b.count})` : ""}`,
-                  })),
-                ]}
-              />
-            </AccordionFilter>
-
-            {/* OFFSET - auto-submit on blur */}
-            <AccordionFilter defaultOpen={false} title="Offset (mm)" selectedCount={(offsetMinRaw ? 1 : 0) + (offsetMaxRaw ? 1 : 0)}>
-              <div className="grid grid-cols-2 gap-2">
-                <AutoSubmitInput
-                  name="offsetMin"
-                  defaultValue={offsetMinRaw}
-                  placeholder="min"
-                  type="number"
-                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                />
-                <AutoSubmitInput
-                  name="offsetMax"
-                  defaultValue={offsetMaxRaw}
-                  placeholder="max"
-                  type="number"
-                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
-                />
-              </div>
-              <p className="mt-2 text-xs text-neutral-500">Press Enter or click away to apply</p>
-            </AccordionFilter>
-
-            {/* WIDTH - auto-submit on change */}
-            <AccordionFilter defaultOpen={false} title="Width">
-              <AutoSubmitSelect
-                name="width"
-                defaultValue={widthParam}
-                resetPage
-                className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                options={[
-                  { value: "", label: "All widths" },
-                  ...widthBuckets.slice(0, 80).map((b) => ({
-                    value: b.value,
-                    label: `${b.value}${b.count != null ? ` (${b.count})` : ""}`,
-                  })),
-                ]}
-              />
-            </AccordionFilter>
+            {/* Wheel Filter Sidebar - client component with checkboxes */}
+            <WheelFilterSidebar
+              data={{
+                // URL state (current selections)
+                brands: brandCd ? [brandCd] : [],
+                finishes: finish ? [finish] : [],
+                diameters: diameterParam ? [diameterParam] : [],
+                widths: widthParam ? [widthParam] : [],
+                priceMin: priceMin,
+                priceMax: priceMax,
+                offsetMin: offsetMinRaw ? Number(offsetMinRaw) : null,
+                offsetMax: offsetMaxRaw ? Number(offsetMaxRaw) : null,
+                boltPattern: boltPatternParam || "",
+                
+                // Available options with counts
+                brandOptions: brandOptions.slice(0, 50),
+                finishOptions: finishBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                diameterOptions: diameterBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                widthOptions: widthBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                boltPatternOptions: boltPatternBuckets.map(b => ({ value: b.value, count: b.count ?? undefined })),
+                
+                // Context
+                basePath: basePath,
+                year: year,
+                make: make,
+                model: model,
+                trim: trim,
+                modification: modification,
+                sort: sort,
+                fitLevel: fitLevel,
+                
+                // Vehicle bolt pattern
+                vehicleBoltPattern: fitmentSearchBp || bp || undefined,
+                
+                // Total count
+                totalCount: itemsFinal.length,
+              }}
+            />
           </aside>
 
           <section>
