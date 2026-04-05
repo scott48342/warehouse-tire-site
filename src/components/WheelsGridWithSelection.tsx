@@ -620,6 +620,61 @@ export function WheelsGridWithSelection({
     return Math.abs(wheelDia - spec.diameter) <= tolerance && Math.abs(wheelWidth - spec.width) <= tolerance;
   }, []);
   
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // STAGGERED PAIRS: Compute COMPLETE pairs first (both front + rear must exist)
+  // This is the source of truth for what can be shown in staggered mode
+  // ═══════════════════════════════════════════════════════════════════════════════
+  const staggeredPairs = useMemo(() => {
+    if (!supportsStaggered || !staggeredInfo?.frontSpec || !staggeredInfo?.rearSpec) {
+      return null;
+    }
+    
+    const { frontSpec, rearSpec } = staggeredInfo;
+    
+    // Group ALL wheels by style (brand + model + finish)
+    // We scan ALL wheels, not just filtered ones
+    const styleGroups = new Map<string, { front: WheelItem | null; rear: WheelItem | null }>();
+    
+    for (const wheel of wheels) {
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      
+      if (!styleGroups.has(styleKey)) {
+        styleGroups.set(styleKey, { front: null, rear: null });
+      }
+      
+      const group = styleGroups.get(styleKey)!;
+      
+      // Check if this wheel matches front spec
+      if (matchesStaggeredSpec(wheel, frontSpec)) {
+        if (!group.front || (wheel.imageUrl && !group.front.imageUrl)) {
+          group.front = wheel;
+        }
+      }
+      // Check if this wheel matches rear spec (can be same wheel if specs overlap)
+      if (matchesStaggeredSpec(wheel, rearSpec)) {
+        if (!group.rear || (wheel.imageUrl && !group.rear.imageUrl)) {
+          group.rear = wheel;
+        }
+      }
+    }
+    
+    // ONLY return COMPLETE pairs (both front AND rear available for same style)
+    const completePairs: Array<{ styleKey: string; front: WheelItem; rear: WheelItem }> = [];
+    for (const [styleKey, group] of styleGroups.entries()) {
+      if (group.front && group.rear) {
+        completePairs.push({ styleKey, front: group.front, rear: group.rear });
+      }
+    }
+    
+    return completePairs.length > 0 ? completePairs : null;
+  }, [wheels, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  
+  // Set of style keys that have complete pairs (for fast lookup)
+  const completePairStyles = useMemo(() => {
+    if (!staggeredPairs) return new Set<string>();
+    return new Set(staggeredPairs.map(p => p.styleKey));
+  }, [staggeredPairs]);
+  
   const filteredWheels = useMemo(() => {
     if (!supportsStaggered || !staggeredInfo) {
       // Non-staggered vehicle - show all wheels as-is
@@ -629,21 +684,19 @@ export function WheelsGridWithSelection({
     const { frontSpec, rearSpec } = staggeredInfo;
     
     if (setupMode === "staggered") {
-      // Staggered mode: Show wheels that match EITHER front OR rear spec
-      // These can be combined into a staggered set
-      if (!frontSpec || !rearSpec) {
-        // Missing spec data - fall back to pair-based filtering
+      // ═══════════════════════════════════════════════════════════════════════════
+      // STAGGERED MODE: ONLY show wheels that are part of COMPLETE pairs
+      // A wheel is only shown if its style has both front AND rear available
+      // ═══════════════════════════════════════════════════════════════════════════
+      if (!frontSpec || !rearSpec || !staggeredPairs) {
+        // Missing spec data or no complete pairs - show nothing or fallback
         return wheels.filter(w => w.pair?.staggered === true);
       }
       
+      // Only include wheels whose style has a complete pair
       return wheels.filter(w => {
-        // Check if wheel matches front spec
-        if (matchesStaggeredSpec(w, frontSpec)) return true;
-        // Check if wheel matches rear spec  
-        if (matchesStaggeredSpec(w, rearSpec)) return true;
-        // Also include wheels with explicit staggered pair data
-        if (w.pair?.staggered === true) return true;
-        return false;
+        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}`.toLowerCase();
+        return completePairStyles.has(styleKey);
       });
     } else {
       // Square mode: Show wheels that work on all 4 corners
@@ -661,52 +714,9 @@ export function WheelsGridWithSelection({
       // Fallback: show all non-staggered wheels
       return wheels.filter(w => !w.pair?.staggered);
     }
-  }, [wheels, setupMode, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  }, [wheels, setupMode, supportsStaggered, staggeredInfo, staggeredPairs, completePairStyles, matchesStaggeredSpec]);
   
-  // Group staggered wheels by style for paired display
-  const staggeredPairs = useMemo(() => {
-    if (setupMode !== "staggered" || !staggeredInfo?.frontSpec || !staggeredInfo?.rearSpec) {
-      return null;
-    }
-    
-    const { frontSpec, rearSpec } = staggeredInfo;
-    
-    // Group wheels by style (brand + model + finish)
-    const styleGroups = new Map<string, { front: WheelItem | null; rear: WheelItem | null }>();
-    
-    for (const wheel of filteredWheels) {
-      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
-      
-      if (!styleGroups.has(styleKey)) {
-        styleGroups.set(styleKey, { front: null, rear: null });
-      }
-      
-      const group = styleGroups.get(styleKey)!;
-      
-      if (matchesStaggeredSpec(wheel, frontSpec)) {
-        if (!group.front || (wheel.imageUrl && !group.front.imageUrl)) {
-          group.front = wheel;
-        }
-      }
-      if (matchesStaggeredSpec(wheel, rearSpec)) {
-        if (!group.rear || (wheel.imageUrl && !group.rear.imageUrl)) {
-          group.rear = wheel;
-        }
-      }
-    }
-    
-    // Return only complete pairs (both front and rear available)
-    const completePairs: Array<{ styleKey: string; front: WheelItem; rear: WheelItem }> = [];
-    for (const [styleKey, group] of styleGroups.entries()) {
-      if (group.front && group.rear) {
-        completePairs.push({ styleKey, front: group.front, rear: group.rear });
-      }
-    }
-    
-    return completePairs.length > 0 ? completePairs : null;
-  }, [filteredWheels, setupMode, staggeredInfo, matchesStaggeredSpec]);
-  
-  // For staggered mode, enhance wheels with pair data
+  // For staggered mode, enhance wheels with pair data and deduplicate
   const wheelsWithPairs = useMemo(() => {
     if (setupMode !== "staggered" || !staggeredPairs) {
       return filteredWheels;
@@ -763,24 +773,23 @@ export function WheelsGridWithSelection({
   const displayWheels = setupMode === "staggered" ? wheelsWithPairs : filteredWheels;
   
   // Also filter recommended wheels by setup mode
+  // For staggered mode, only show recommended wheels that have complete pairs
   const filteredRecommended = useMemo(() => {
     if (!supportsStaggered || !recommendedWheels.length) {
       return recommendedWheels;
     }
     
-    const { frontSpec, rearSpec } = staggeredInfo || {};
+    const { frontSpec } = staggeredInfo || {};
     
     if (setupMode === "staggered") {
-      if (!frontSpec || !rearSpec) {
-        return recommendedWheels.filter(w => w.pair?.staggered === true);
-      }
-      // For staggered, show wheels that match either front or rear spec
-      return recommendedWheels.filter(w => 
-        matchesStaggeredSpec(w, frontSpec) || 
-        matchesStaggeredSpec(w, rearSpec) ||
-        w.pair?.staggered === true
-      );
+      // In staggered mode, only show recommended wheels that are part of complete pairs
+      // Use the same completePairStyles set we already computed
+      return recommendedWheels.filter(w => {
+        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}`.toLowerCase();
+        return completePairStyles.has(styleKey) || w.pair?.staggered === true;
+      });
     } else {
+      // Square mode: show wheels that match front spec or are generic square
       if (frontSpec) {
         return recommendedWheels.filter(w => 
           matchesStaggeredSpec(w, frontSpec, 1.0) || 
@@ -789,7 +798,7 @@ export function WheelsGridWithSelection({
       }
       return recommendedWheels.filter(w => !w.pair?.staggered);
     }
-  }, [recommendedWheels, setupMode, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  }, [recommendedWheels, setupMode, supportsStaggered, staggeredInfo, completePairStyles, matchesStaggeredSpec]);
   
   // Cart context
   const { addItem, setIsOpen: setCartOpen } = useCart();
