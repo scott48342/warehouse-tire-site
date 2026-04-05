@@ -2240,15 +2240,27 @@ export default async function TiresPage({
             ) : (
             <>
             {/* Setup toggle for staggered vehicles - allows opting into staggered tires */}
-            {isStaggeredVehicle && isPackageFlow && inferredWidthsAreRealistic && !userSelectedStaggeredSetup && (
+            {isStaggeredVehicle && isPackageFlow && inferredWidthsAreRealistic && !userSelectedStaggeredSetup && (() => {
+              const baseParams: Record<string, string> = {};
+              if (year) baseParams.year = year;
+              if (make) baseParams.make = make;
+              if (model) baseParams.model = model;
+              if (modification) baseParams.modification = modification;
+              if (wheelSku) baseParams.wheelSku = wheelSku;
+              if (wheelDia) baseParams.wheelDia = wheelDia;
+              if (wheelWidth) baseParams.wheelWidth = wheelWidth;
+              if (wheelName) baseParams.wheelName = wheelName;
+              if (wheelImage) baseParams.wheelImage = wheelImage;
+              if (wheelPrice) baseParams.wheelPrice = wheelPrice.toString();
+              if (wheelFinish) baseParams.wheelFinish = wheelFinish;
+              const squareUrl = `?${new URLSearchParams(baseParams).toString()}`;
+              const staggeredUrl = `?${new URLSearchParams({ ...baseParams, setup: "staggered" }).toString()}`;
+              return (
               <div className="mb-4 flex items-center gap-3 rounded-xl bg-neutral-100 p-3">
                 <span className="text-sm font-medium text-neutral-700">Tire Setup:</span>
                 <div className="flex gap-2">
                   <a
-                    href={`?${new URLSearchParams(Object.fromEntries(
-                      Object.entries({ year, make, model, modification, wheelSku, wheelDia, wheelWidth, wheelName, wheelImage, wheelPrice: wheelPrice?.toString(), wheelFinish })
-                        .filter(([, v]) => v)
-                    )).toString()}`}
+                    href={squareUrl}
                     className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors ${
                       !forceStaggered 
                         ? "bg-neutral-900 text-white" 
@@ -2258,10 +2270,7 @@ export default async function TiresPage({
                     ⬛ Square
                   </a>
                   <a
-                    href={`?${new URLSearchParams(Object.fromEntries(
-                      Object.entries({ year, make, model, modification, wheelSku, wheelDia, wheelWidth, wheelName, wheelImage, wheelPrice: wheelPrice?.toString(), wheelFinish, setup: "staggered" })
-                        .filter(([, v]) => v)
-                    )).toString()}`}
+                    href={staggeredUrl}
                     className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors ${
                       forceStaggered 
                         ? "bg-neutral-900 text-white" 
@@ -2277,7 +2286,8 @@ export default async function TiresPage({
                     : "Same tire size all corners"}
                 </span>
               </div>
-            )}
+              );
+            })()}
             
             {/* Staggered tire pairs display - only when user's selection is actually staggered */}
             {showStaggeredUI && staggeredTirePairs.length > 0 ? (
