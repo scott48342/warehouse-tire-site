@@ -712,6 +712,7 @@ export function WheelsGridWithSelection({
       // Square mode: Show wheels that work on all 4 corners
       // For staggered-capable vehicles, this means wheels that match FRONT spec
       // (smaller/narrower - safe for all positions) OR generic square wheels
+      const frontSpec = staggeredInfo.frontSpec;
       if (frontSpec) {
         return wheels.filter(w => {
           // Include if it matches front spec (safe for all corners on square setup)
