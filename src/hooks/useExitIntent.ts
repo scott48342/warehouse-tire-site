@@ -3,9 +3,10 @@
  * 
  * Detects when user is about to leave the page:
  * - Desktop: Mouse leaving viewport (top edge)
- * - Mobile: Back button gesture or rapid scroll up
+ * - Mobile: Rapid scroll up near top of page
  * 
- * @created 2026-07-17
+ * @created 2026-04-05
+ * @fixed 2026-04-05 - Improved reliability, removed history manipulation
  */
 
 "use client";
@@ -25,19 +26,19 @@ interface ExitIntentOptions {
 
 interface ExitIntentState {
   triggered: boolean;
-  source: "mouse" | "scroll" | "back" | null;
+  source: "mouse" | "scroll" | null;
 }
 
 const SESSION_KEY = "wt_exit_intent_shown";
 
 export function useExitIntent(options: ExitIntentOptions = {}): {
   triggered: boolean;
-  source: "mouse" | "scroll" | "back" | null;
+  source: "mouse" | "scroll" | null;
   reset: () => void;
   dismiss: () => void;
 } {
   const {
-    delayMs = 5000, // 5 second delay before allowing
+    delayMs = 5000,
     oncePerSession = true,
     sessionKey = SESSION_KEY,
     disabled = false,
@@ -49,12 +50,14 @@ export function useExitIntent(options: ExitIntentOptions = {}): {
   });
   
   const allowedRef = useRef(false);
+  const mountedRef = useRef(false);
   const lastScrollYRef = useRef(0);
   const scrollUpCountRef = useRef(0);
 
   // Check if already shown this session
-  const alreadyShown = useCallback(() => {
+  const checkAlreadyShown = useCallback((): boolean => {
     if (!oncePerSession) return false;
+    if (typeof window === "undefined") return false;
     try {
       return sessionStorage.getItem(sessionKey) === "true";
     } catch {
@@ -64,109 +67,127 @@ export function useExitIntent(options: ExitIntentOptions = {}): {
 
   // Mark as shown
   const markShown = useCallback(() => {
-    if (oncePerSession) {
-      try {
-        sessionStorage.setItem(sessionKey, "true");
-      } catch {
-        // Ignore
-      }
+    if (!oncePerSession) return;
+    if (typeof window === "undefined") return;
+    try {
+      sessionStorage.setItem(sessionKey, "true");
+    } catch {
+      // Ignore storage errors
     }
   }, [oncePerSession, sessionKey]);
 
   // Trigger exit intent
-  const trigger = useCallback((source: "mouse" | "scroll" | "back") => {
-    if (disabled || !allowedRef.current || alreadyShown()) return;
+  const trigger = useCallback((source: "mouse" | "scroll") => {
+    if (disabled) return;
+    if (!allowedRef.current) return;
+    if (!mountedRef.current) return;
+    if (checkAlreadyShown()) return;
     
+    console.log("[ExitIntent] Triggered via:", source);
     setState({ triggered: true, source });
     markShown();
-  }, [disabled, alreadyShown, markShown]);
+  }, [disabled, checkAlreadyShown, markShown]);
 
   // Reset trigger
   const reset = useCallback(() => {
     setState({ triggered: false, source: null });
   }, []);
 
-  // Dismiss (mark as shown but reset trigger)
+  // Dismiss (mark as shown and reset)
   const dismiss = useCallback(() => {
     markShown();
     setState({ triggered: false, source: null });
   }, [markShown]);
 
-  // Enable after delay
+  // Track mount state
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  // Enable trigger after delay
   useEffect(() => {
     if (disabled) return;
+    if (typeof window === "undefined") return;
+    
+    // Check if already shown before setting up
+    if (checkAlreadyShown()) {
+      console.log("[ExitIntent] Already shown this session, skipping setup");
+      return;
+    }
 
+    console.log("[ExitIntent] Setting up, will enable after", delayMs, "ms");
+    
     const timer = setTimeout(() => {
       allowedRef.current = true;
+      console.log("[ExitIntent] Now enabled and listening");
     }, delayMs);
 
-    return () => clearTimeout(timer);
-  }, [delayMs, disabled]);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [delayMs, disabled, checkAlreadyShown]);
 
-  // Desktop: Mouse leaving viewport (top edge)
+  // Desktop: Mouse leaving viewport at top edge
   useEffect(() => {
-    if (disabled || typeof window === "undefined") return;
+    if (disabled) return;
+    if (typeof window === "undefined") return;
+    if (typeof document === "undefined") return;
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse leaves from top of viewport
-      if (e.clientY <= 0 && allowedRef.current && !alreadyShown()) {
-        trigger("mouse");
+    const handleMouseOut = (e: MouseEvent) => {
+      // Only trigger if mouse actually left the document
+      // relatedTarget is null when mouse leaves the window entirely
+      if (e.relatedTarget === null && e.clientY <= 5) {
+        if (allowedRef.current && mountedRef.current && !checkAlreadyShown()) {
+          trigger("mouse");
+        }
       }
     };
 
-    document.addEventListener("mouseleave", handleMouseLeave);
-    return () => document.removeEventListener("mouseleave", handleMouseLeave);
-  }, [disabled, trigger, alreadyShown]);
+    // Use mouseout on document.documentElement for better reliability
+    document.documentElement.addEventListener("mouseout", handleMouseOut);
+    
+    return () => {
+      document.documentElement.removeEventListener("mouseout", handleMouseOut);
+    };
+  }, [disabled, trigger, checkAlreadyShown]);
 
-  // Mobile: Rapid scroll up detection
+  // Mobile: Rapid scroll up detection near top of page
   useEffect(() => {
-    if (disabled || typeof window === "undefined") return;
+    if (disabled) return;
+    if (typeof window === "undefined") return;
+
+    let lastY = window.scrollY;
+    let upCount = 0;
 
     const handleScroll = () => {
       const currentY = window.scrollY;
-      const prevY = lastScrollYRef.current;
       
       // Detect scroll up
-      if (currentY < prevY) {
-        scrollUpCountRef.current++;
+      if (currentY < lastY && currentY < 200) {
+        upCount++;
         
-        // Trigger after 3 rapid scroll up events near top of page
-        if (scrollUpCountRef.current >= 3 && currentY < 100) {
+        // Trigger after 3+ scroll up events near top
+        if (upCount >= 3 && allowedRef.current && mountedRef.current && !checkAlreadyShown()) {
           trigger("scroll");
+          upCount = 0; // Reset after triggering
         }
-      } else {
+      } else if (currentY > lastY) {
         // Reset on scroll down
-        scrollUpCountRef.current = 0;
+        upCount = 0;
       }
       
-      lastScrollYRef.current = currentY;
+      lastY = currentY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [disabled, trigger]);
-
-  // Mobile: Back button detection (using popstate)
-  useEffect(() => {
-    if (disabled || typeof window === "undefined") return;
-
-    // Push a dummy state to detect back
-    const dummyState = { exitIntent: true };
-    history.pushState(dummyState, "");
-
-    const handlePopState = (e: PopStateEvent) => {
-      if (allowedRef.current && !alreadyShown()) {
-        // Re-push state and show popup instead of navigating
-        history.pushState(dummyState, "");
-        trigger("back");
-      }
-    };
-
-    window.addEventListener("popstate", handlePopState);
+    
     return () => {
-      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [disabled, trigger, alreadyShown]);
+  }, [disabled, trigger, checkAlreadyShown]);
 
   return {
     triggered: state.triggered,

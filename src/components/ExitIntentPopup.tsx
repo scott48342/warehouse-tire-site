@@ -1,7 +1,7 @@
 /**
  * Exit Intent Popup
  * 
- * Shows when user is about to leave the page.
+ * Shows when user is about to leave the page with items in cart.
  * Captures email to save cart for recovery.
  * 
  * Features:
@@ -9,9 +9,10 @@
  * - Email validation
  * - Saves email to cart record
  * - Subscribes for marketing
- * - Works on desktop (mouse leave) and mobile (scroll/back)
+ * - Works on desktop (mouse leave) and mobile (scroll up)
  * 
- * @created 2026-07-17
+ * @created 2026-04-05
+ * @fixed 2026-04-05 - Improved trigger reliability
  */
 
 "use client";
@@ -20,6 +21,7 @@ import { useState, useCallback, useEffect } from "react";
 import { useExitIntent } from "@/hooks/useExitIntent";
 import { useCart } from "@/lib/cart/CartContext";
 import { getCartId } from "@/lib/cart/useCartTracking";
+import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 
 interface ExitIntentPopupProps {
   /** Minimum cart value to show popup (default: $50) */
@@ -47,9 +49,21 @@ export function ExitIntentPopup({
   const cartTotal = getTotal();
   const hasCart = items.length > 0 && cartTotal >= minCartValue;
 
+  // Debug logging
+  useEffect(() => {
+    console.log("[ExitIntentPopup] State:", {
+      itemCount: items.length,
+      cartTotal,
+      minCartValue,
+      hasCart,
+      triggered,
+    });
+  }, [items.length, cartTotal, minCartValue, hasCart, triggered]);
+
   // Control visibility with animation delay
   useEffect(() => {
     if (triggered && hasCart) {
+      console.log("[ExitIntentPopup] Showing popup!");
       // Small delay for fade-in animation
       const timer = setTimeout(() => setIsVisible(true), 50);
       return () => clearTimeout(timer);
@@ -252,10 +266,7 @@ export function ExitIntentPopup({
           <div className="px-6 pb-6">
             <div className="flex items-center justify-center gap-4 text-xs text-neutral-500">
               <span className="flex items-center gap-1">
-                <span className="text-green-500">✓</span> Free shipping
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="text-green-500">✓</span> Price match
+                <span className="text-green-500">✓</span> Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}
               </span>
               <span className="flex items-center gap-1">
                 <span className="text-green-500">✓</span> Easy returns
