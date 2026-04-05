@@ -2306,64 +2306,97 @@ export default async function TiresPage({
                   {staggeredTirePairs.slice(0, 12).map((pair) => (
                     <div
                       key={pair.pairId}
-                      className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+                      className="overflow-hidden rounded-2xl border-2 border-green-500 bg-white shadow-sm hover:shadow-lg transition-shadow"
                     >
-                      {/* Tire image */}
-                      <div className="mb-3 flex justify-center">
-                        {pair.imageUrl ? (
-                          <img
-                            src={pair.imageUrl}
-                            alt={`${pair.brand} ${pair.model}`}
-                            className="h-24 w-24 object-contain"
-                          />
-                        ) : (
-                          <div className="flex h-24 w-24 items-center justify-center rounded-full bg-neutral-100 text-2xl">
-                            🛞
+                      {/* Green header banner */}
+                      <div className="bg-green-500 px-4 py-2">
+                        <div className="flex items-center gap-1.5 text-sm font-bold text-white">
+                          <span>⚡</span> Staggered Set
+                        </div>
+                        <div className="text-xs text-green-100">✓ Matched front &amp; rear pair</div>
+                      </div>
+                      
+                      <div className="p-4">
+                        {/* Brand & Model */}
+                        <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                          {pair.brand}
+                        </div>
+                        <div className="mb-1 text-base font-bold text-neutral-900">{pair.model}</div>
+                        
+                        {/* Mileage warranty */}
+                        {pair.mileage && pair.mileage >= 40000 && (
+                          <div className="mb-2 text-xs text-green-700">
+                            ✓ {Math.round(pair.mileage / 1000)}K mile warranty
                           </div>
                         )}
-                      </div>
-                      
-                      {/* Brand & Model */}
-                      <div className="mb-2 text-center">
-                        <div className="text-xs font-semibold uppercase text-neutral-500">{pair.brand}</div>
-                        <div className="text-sm font-bold text-neutral-900">{pair.model}</div>
-                      </div>
-                      
-                      {/* Sizes */}
-                      <div className="mb-3 grid grid-cols-2 gap-2 text-xs">
-                        <div className="rounded-lg bg-blue-50 p-2 text-center">
-                          <div className="font-semibold text-blue-700">Front</div>
-                          <div className="text-neutral-700">{pair.front.size}</div>
-                        </div>
-                        <div className="rounded-lg bg-orange-50 p-2 text-center">
-                          <div className="font-semibold text-orange-700">Rear</div>
-                          <div className="text-neutral-700">{pair.rear.size}</div>
-                        </div>
-                      </div>
-                      
-                      {/* Category badge */}
-                      {pair.treadCategory && (
-                        <div className="mb-2 text-center">
-                          <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-600">
-                            {pair.treadCategory}
+                        
+                        {/* Category badge */}
+                        {pair.treadCategory && (
+                          <span className="mb-3 inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800">
+                            🌤️ {pair.treadCategory}
                           </span>
+                        )}
+                        
+                        {/* Tire image */}
+                        <div className="relative my-3 flex justify-center">
+                          {pair.imageUrl ? (
+                            <img
+                              src={pair.imageUrl}
+                              alt={`${pair.brand} ${pair.model}`}
+                              className="h-32 w-32 object-contain"
+                            />
+                          ) : (
+                            <div className="flex h-32 w-32 items-center justify-center rounded-full bg-neutral-100 text-4xl">
+                              🛞
+                            </div>
+                          )}
                         </div>
-                      )}
-                      
-                      {/* Price & Select */}
-                      <div className="flex items-center justify-between border-t border-neutral-100 pt-3">
-                        <div>
-                          <div className="text-lg font-bold text-neutral-900">
+                        
+                        {/* Front/Rear specs in styled boxes */}
+                        <div className="mb-3 grid grid-cols-2 gap-2">
+                          <div className="rounded-lg border border-blue-200 bg-blue-50 p-2">
+                            <div className="text-[10px] font-semibold uppercase text-blue-600">Front ×2</div>
+                            <div className="text-sm font-bold text-neutral-900">{pair.front.size}</div>
+                          </div>
+                          <div className="rounded-lg border border-orange-200 bg-orange-50 p-2">
+                            <div className="text-[10px] font-semibold uppercase text-orange-600">Rear ×2</div>
+                            <div className="text-sm font-bold text-neutral-900">{pair.rear.size}</div>
+                          </div>
+                        </div>
+                        
+                        {/* Fits vehicle */}
+                        <div className="mb-2 text-xs text-green-700">
+                          ✓ Fits {year} {make} {model}
+                        </div>
+                        
+                        {/* Stock & shipping */}
+                        <div className="mb-3 text-xs text-green-700">
+                          ✓ In stock • Free Shipping
+                        </div>
+                        
+                        {/* Price section */}
+                        <div className="border-t border-neutral-100 pt-3">
+                          <div className="text-2xl font-bold text-neutral-900">
                             ${pair.setPrice.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                           </div>
-                          <div className="text-xs text-neutral-500">set of 4 tires</div>
+                          <div className="mb-3 text-xs text-neutral-500">
+                            ${(pair.setPrice / 4).toFixed(2)}/ea × 4 tires
+                          </div>
+                          
+                          {/* Select button */}
+                          <Link
+                            href={`/tires/${pair.front.partNumber}?size=${encodeURIComponent(pair.front.size)}&year=${year}&make=${make}&model=${model}&staggeredPair=${encodeURIComponent(pair.pairId)}&rearSku=${encodeURIComponent(pair.rear.partNumber)}&rearSize=${encodeURIComponent(pair.rear.size)}`}
+                            className="block w-full rounded-full bg-red-600 py-3 text-center text-sm font-bold text-white hover:bg-red-700 transition-colors"
+                          >
+                            Select Staggered Set
+                          </Link>
+                          <Link
+                            href={`/tires/${pair.front.partNumber}?size=${encodeURIComponent(pair.front.size)}&year=${year}&make=${make}&model=${model}`}
+                            className="mt-2 block w-full text-center text-xs font-medium text-neutral-500 hover:text-neutral-700"
+                          >
+                            View Details
+                          </Link>
                         </div>
-                        <Link
-                          href={`/tires/${pair.front.partNumber}?size=${encodeURIComponent(pair.front.size)}&year=${year}&make=${make}&model=${model}&staggeredPair=${encodeURIComponent(pair.pairId)}&rearSku=${encodeURIComponent(pair.rear.partNumber)}&rearSize=${encodeURIComponent(pair.rear.size)}`}
-                          className="rounded-full bg-red-600 px-4 py-2 text-xs font-bold text-white hover:bg-red-700 transition-colors"
-                        >
-                          Select Set
-                        </Link>
                       </div>
                     </div>
                   ))}
