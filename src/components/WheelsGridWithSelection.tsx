@@ -616,11 +616,13 @@ export function WheelsGridWithSelection({
   // ═══════════════════════════════════════════════════════════════════════════════
   
   // Helper to check if wheel matches front or rear spec
-  const matchesStaggeredSpec = useCallback((wheel: WheelItem, spec: NonNullable<StaggeredFitmentInfo>["frontSpec"], tolerance: number = 0.5): boolean => {
+  // Tolerance: 1.5" for width (staggered vehicles often use wider rear wheels like 11" instead of OEM 10")
+  // Tolerance: 0.5" for diameter (must be close to OEM diameter)
+  const matchesStaggeredSpec = useCallback((wheel: WheelItem, spec: NonNullable<StaggeredFitmentInfo>["frontSpec"], widthTolerance: number = 1.5, diaTolerance: number = 0.5): boolean => {
     if (!spec) return false;
     const wheelDia = parseFloat(wheel.diameter || "0");
     const wheelWidth = parseFloat(wheel.width || "0");
-    return Math.abs(wheelDia - spec.diameter) <= tolerance && Math.abs(wheelWidth - spec.width) <= tolerance;
+    return Math.abs(wheelDia - spec.diameter) <= diaTolerance && Math.abs(wheelWidth - spec.width) <= widthTolerance;
   }, []);
   
   // ═══════════════════════════════════════════════════════════════════════════════
@@ -711,7 +713,8 @@ export function WheelsGridWithSelection({
       if (frontSpec) {
         return wheels.filter(w => {
           // Include if it matches front spec (safe for all corners on square setup)
-          if (matchesStaggeredSpec(w, frontSpec, 1.0)) return true;
+          // Use tighter tolerance for square mode (1.0" width, 0.5" diameter)
+          if (matchesStaggeredSpec(w, frontSpec, 1.0, 0.5)) return true;
           // Include if wheel has no staggered pair data (generic square)
           if (!w.pair || !w.pair.staggered) return true;
           return false;
@@ -798,7 +801,7 @@ export function WheelsGridWithSelection({
       // Square mode: show wheels that match front spec or are generic square
       if (frontSpec) {
         return recommendedWheels.filter(w => 
-          matchesStaggeredSpec(w, frontSpec, 1.0) || 
+          matchesStaggeredSpec(w, frontSpec, 1.0, 0.5) || 
           !w.pair?.staggered
         );
       }
