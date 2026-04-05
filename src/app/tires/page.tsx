@@ -599,6 +599,11 @@ export default async function TiresPage({
   const wheelQty = safeString(Array.isArray((sp as any).wheelQty) ? (sp as any).wheelQty[0] : (sp as any).wheelQty);
   const wheelDia = safeString(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
   const wheelWidth = safeString(Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth);
+  
+  // Setup mode: "square" or "staggered" - allows user to override automatic staggered detection
+  const setupMode = safeString(Array.isArray((sp as any).setup) ? (sp as any).setup[0] : (sp as any).setup);
+  const forceSquare = setupMode === "square";
+  const forceStaggered = setupMode === "staggered";
 
   // Initial staggered check from URL - may be overridden by fitment detection later
   const isStaggeredFromUrlParams = Boolean(wheelSkuRear);
@@ -790,7 +795,8 @@ export default async function TiresPage({
       : staggeredRearDia;
   
   // For staggered vehicles: use inferred widths when realistic, else square
-  const useStaggeredWidths = userSelectedSquareSetup && isStaggeredFromFitment && inferredWidthsAreRealistic;
+  // forceSquare (setup=square URL param) overrides automatic staggered inference
+  const useStaggeredWidths = !forceSquare && userSelectedSquareSetup && isStaggeredFromFitment && inferredWidthsAreRealistic;
   
   const actualFrontWidth = userSelectedStaggeredSetup 
     ? Number(wheelWidthFront) || staggeredFrontWidth 
@@ -2229,6 +2235,44 @@ export default async function TiresPage({
               />
             ) : (
             <>
+            {/* Setup toggle for staggered vehicles - allows switching between staggered and square */}
+            {isStaggeredVehicle && isPackageFlow && inferredWidthsAreRealistic && (
+              <div className="mb-4 flex items-center gap-3 rounded-xl bg-neutral-100 p-3">
+                <span className="text-sm font-medium text-neutral-700">Tire Setup:</span>
+                <div className="flex gap-2">
+                  <a
+                    href={`?${new URLSearchParams(Object.fromEntries(
+                      Object.entries({ year, make, model, modification, wheelSku, wheelDia, wheelWidth, wheelName, wheelImage, wheelPrice: wheelPrice?.toString(), wheelFinish })
+                        .filter(([, v]) => v)
+                    )).toString()}`}
+                    className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors ${
+                      !forceSquare 
+                        ? "bg-neutral-900 text-white" 
+                        : "bg-white text-neutral-600 hover:bg-neutral-200"
+                    }`}
+                  >
+                    🏁 Staggered
+                  </a>
+                  <a
+                    href={`?${new URLSearchParams(Object.fromEntries(
+                      Object.entries({ year, make, model, modification, wheelSku, wheelDia, wheelWidth, wheelName, wheelImage, wheelPrice: wheelPrice?.toString(), wheelFinish, setup: "square" })
+                        .filter(([, v]) => v)
+                    )).toString()}`}
+                    className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition-colors ${
+                      forceSquare 
+                        ? "bg-neutral-900 text-white" 
+                        : "bg-white text-neutral-600 hover:bg-neutral-200"
+                    }`}
+                  >
+                    ⬛ Square
+                  </a>
+                </div>
+                <span className="text-xs text-neutral-500">
+                  {forceSquare ? "Same tire size all corners" : `${actualFrontWidth}" front / ${actualRearWidth}" rear`}
+                </span>
+              </div>
+            )}
+            
             {/* Staggered tire pairs display - only when user's selection is actually staggered */}
             {showStaggeredUI && staggeredTirePairs.length > 0 ? (
               <div className="mb-6">
