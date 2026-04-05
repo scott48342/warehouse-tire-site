@@ -1749,19 +1749,35 @@ async function handleDbFirstWheelResults(opts: {
       },
       // Staggered pair info (for staggered fitments)
       // Look up BOTH front and rear specs from the SKU lookup map
+      // VALIDATE: front should be narrower/smaller diameter than rear
       pair: staggeredPair ? (() => {
-        const frontSpecs = wheelSpecsBySku.get(staggeredPair.frontSku);
-        const rearSpecs = wheelSpecsBySku.get(staggeredPair.rearSku);
+        let frontSpecs = wheelSpecsBySku.get(staggeredPair.frontSku);
+        let rearSpecs = wheelSpecsBySku.get(staggeredPair.rearSku);
+        let frontSku = staggeredPair.frontSku;
+        let rearSku = staggeredPair.rearSku;
+        
+        // Swap if front is wider or has larger diameter than rear
+        if (frontSpecs && rearSpecs) {
+          const shouldSwap = 
+            (frontSpecs.diameter > rearSpecs.diameter) || // Front has larger diameter
+            (frontSpecs.diameter === rearSpecs.diameter && frontSpecs.width > rearSpecs.width); // Same dia but front wider
+          
+          if (shouldSwap) {
+            [frontSpecs, rearSpecs] = [rearSpecs, frontSpecs];
+            [frontSku, rearSku] = [rearSku, frontSku];
+          }
+        }
+        
         return {
           staggered: true,
           front: {
-            sku: staggeredPair.frontSku,
+            sku: frontSku,
             diameter: frontSpecs?.diameter,
             width: frontSpecs?.width,
             offset: frontSpecs?.offset,
           },
           rear: {
-            sku: staggeredPair.rearSku,
+            sku: rearSku,
             diameter: rearSpecs?.diameter,
             width: rearSpecs?.width,
             offset: rearSpecs?.offset,
