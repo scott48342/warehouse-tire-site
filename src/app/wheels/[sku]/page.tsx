@@ -6,6 +6,7 @@ import { ImageGallery } from "@/components/ImageGallery";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { BRAND } from "@/lib/brand";
+import { PDPTrustBlock, FloatingTrustIndicator } from "@/components/StoreReviews";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 
@@ -877,6 +878,9 @@ export default async function WheelDetailPage({
                 <span>✓ Expert support</span>
               </div>
             </div>
+
+            {/* Store Reviews - Social Proof */}
+            <PDPTrustBlock className="mt-4" />
 
             {/* ═══════════════════════════════════════════════════════════════════
                 BELOW THE FOLD: Options, Details, Secondary Info

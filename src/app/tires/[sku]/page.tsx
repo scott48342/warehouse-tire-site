@@ -10,6 +10,7 @@ import { cleanTireDisplayTitle } from "@/lib/productFormat";
 import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tires/normalization";
 import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
+import { PDPTrustBlock } from "@/components/StoreReviews";
 
 export const runtime = "nodejs";
 
@@ -624,6 +625,9 @@ export default async function TireDetailPage({
                         </ul>
                       </div>
                     )}
+                    
+                    {/* Store Reviews - Social Proof */}
+                    <PDPTrustBlock />
                   </div>
                 </div>
 
@@ -945,6 +949,9 @@ export default async function TireDetailPage({
                 </ul>
               </div>
             )}
+            
+            {/* Store Reviews - Social Proof */}
+            <PDPTrustBlock />
           </div>
         </div>
 

@@ -5,6 +5,7 @@ import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem 
 import { useRouter } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
+import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 
 /**
  * Review Package Page
@@ -342,25 +343,34 @@ function ActionButtons({
   );
 }
 
-function TrustBadges() {
+function TrustSection() {
   return (
-    <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
-      <div className="flex items-center gap-2 text-neutral-700">
-        <span className="text-green-600">✓</span>
-        <span>Free shipping on all orders</span>
+    <div className="space-y-4">
+      {/* Store Reviews Trust Strip */}
+      <CheckoutTrustStrip />
+      
+      {/* Service Guarantees */}
+      <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
+        <div className="flex items-center gap-2 text-neutral-700">
+          <span className="text-green-600">✓</span>
+          <span>Free shipping on all orders</span>
+        </div>
+        <div className="flex items-center gap-2 text-neutral-700">
+          <span className="text-green-600">✓</span>
+          <span>Ships mounted & balanced</span>
+        </div>
+        <div className="flex items-center gap-2 text-neutral-700">
+          <span className="text-green-600">✓</span>
+          <span>30-day hassle-free returns</span>
+        </div>
+        <div className="flex items-center gap-2 text-neutral-700">
+          <span className="text-green-600">✓</span>
+          <span>Expert support: {BRAND.phone.callDisplay}</span>
+        </div>
       </div>
-      <div className="flex items-center gap-2 text-neutral-700">
-        <span className="text-green-600">✓</span>
-        <span>Ships mounted & balanced</span>
-      </div>
-      <div className="flex items-center gap-2 text-neutral-700">
-        <span className="text-green-600">✓</span>
-        <span>30-day hassle-free returns</span>
-      </div>
-      <div className="flex items-center gap-2 text-neutral-700">
-        <span className="text-green-600">✓</span>
-        <span>Expert support: {BRAND.phone.callDisplay}</span>
-      </div>
+      
+      {/* Customer Reviews */}
+      <ReviewsMini count={2} />
     </div>
   );
 }
@@ -684,7 +694,7 @@ export default function ReviewPackagePage() {
               isComplete={isComplete}
             />
 
-            <TrustBadges />
+            <TrustSection />
 
             {/* Edit link */}
             <div className="text-center">

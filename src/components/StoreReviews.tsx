@@ -69,6 +69,14 @@ function SourceBadge({ source }: { source?: string }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// CONSISTENT TRUST LINE - Use this text everywhere
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export function getTrustLine() {
+  return `Rated ${meta.averageRating}★ by ${meta.totalReviews} local customers`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // COMPACT TRUST BADGE (for cart, checkout, headers)
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -79,10 +87,10 @@ export function ReviewTrustBadge({ className = "" }: { className?: string }) {
         <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
-        <span className="text-sm font-bold text-neutral-900">{meta.averageRating}</span>
+        <span className="text-sm font-bold text-neutral-900">{meta.averageRating}★</span>
       </div>
       <span className="text-xs text-neutral-500">
-        Rated by {meta.totalReviews} local customers
+        by {meta.totalReviews} local customers
       </span>
     </div>
   );
@@ -225,23 +233,28 @@ function ReviewCard({ review }: { review: Review }) {
 // CHECKOUT TRUST STRIP (for cart/checkout pages)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export function CheckoutTrustStrip() {
+export function CheckoutTrustStrip({ className = "" }: { className?: string }) {
   return (
-    <div className="flex items-center justify-center gap-6 rounded-lg bg-neutral-50 px-4 py-3 text-sm">
-      <div className="flex items-center gap-1.5">
-        <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-        <span className="font-bold text-neutral-900">{meta.averageRating}★</span>
-        <span className="text-neutral-500">by {meta.totalReviews} customers</span>
+    <div className={`rounded-lg border border-neutral-100 bg-neutral-50/80 px-4 py-3 ${className}`}>
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+        <div className="flex items-center gap-1.5">
+          <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          <span className="font-bold text-neutral-900">{meta.averageRating}★</span>
+          <span className="text-neutral-500">by {meta.totalReviews} local customers</span>
+        </div>
+        <div className="hidden sm:block h-4 w-px bg-neutral-200" />
+        <div className="flex items-center gap-1.5 text-neutral-600">
+          <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>Verified Local Business</span>
+        </div>
       </div>
-      <div className="h-4 w-px bg-neutral-200" />
-      <div className="flex items-center gap-1.5 text-neutral-600">
-        <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-        <span>Verified Local Business</span>
-      </div>
+      <p className="mt-2 text-center text-[10px] font-medium text-neutral-400 uppercase tracking-wide">
+        Real Customer Reviews from Our Stores
+      </p>
     </div>
   );
 }
@@ -250,13 +263,63 @@ export function CheckoutTrustStrip() {
 // FLOATING TRUST INDICATOR (subtle, for any page)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export function FloatingTrustIndicator() {
+export function FloatingTrustIndicator({ className = "" }: { className?: string }) {
   return (
-    <div className="inline-flex items-center gap-1 text-xs text-neutral-500">
+    <div className={`inline-flex items-center gap-1 text-xs text-neutral-500 ${className}`}>
       <svg className="h-3.5 w-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
       </svg>
-      <span>{meta.averageRating} from {meta.totalReviews} store reviews</span>
+      <span>Rated {meta.averageRating}★ by {meta.totalReviews} local customers</span>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PDP TRUST BLOCK (compact reviews + trust line for product pages)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+export function PDPTrustBlock({ className = "" }: { className?: string }) {
+  const displayReviews = reviews.slice(0, 2);
+  
+  return (
+    <div className={`rounded-xl border border-neutral-100 bg-neutral-50/60 p-3 ${className}`}>
+      {/* Trust line header */}
+      <div className="flex items-center gap-2 mb-2">
+        <div className="flex items-center gap-0.5">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <svg
+              key={star}
+              className={`h-3.5 w-3.5 ${star <= Math.round(meta.averageRating) ? "text-amber-400" : "text-neutral-200"}`}
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+        <span className="text-xs font-bold text-neutral-900">{meta.averageRating}</span>
+        <span className="text-[10px] text-neutral-500">({meta.totalReviews} reviews)</span>
+      </div>
+      
+      {/* Label */}
+      <p className="text-[9px] font-semibold text-neutral-400 uppercase tracking-wider mb-2">
+        Real Customer Reviews from Our Stores
+      </p>
+      
+      {/* Compact review snippets */}
+      <div className="space-y-1.5">
+        {displayReviews.map((review) => (
+          <div key={review.id} className="text-[11px]">
+            <p className="text-neutral-600 line-clamp-2 leading-snug">
+              &ldquo;{review.text.length > 100 ? review.text.slice(0, 100) + "..." : review.text}&rdquo;
+            </p>
+            <div className="flex items-center gap-1 mt-0.5">
+              <span className="font-medium text-neutral-700">{review.author}</span>
+              <span className="text-amber-500">★★★★★</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

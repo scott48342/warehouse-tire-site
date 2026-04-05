@@ -5,6 +5,7 @@ import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem 
 import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
+import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 import { ShippingEstimator } from "@/components/ShippingEstimate";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { formatCurrency } from "@/lib/shipping/shippingService";
@@ -498,8 +499,14 @@ export default function CartPage() {
               </div>
             </div>
             
-            {/* Trust Section */}
+            {/* Store Reviews Trust Strip */}
+            <CheckoutTrustStrip className="mt-4" />
+            
+            {/* Why Shop With Us */}
             <CartTrustSection className="mt-4" />
+            
+            {/* Customer Reviews */}
+            <ReviewsMini count={2} />
           </div>
         </div>
       </div>

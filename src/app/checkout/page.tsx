@@ -10,6 +10,7 @@ import { BRAND } from "@/lib/brand";
 import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
+import { CheckoutTrustStrip } from "@/components/StoreReviews";
 
 /**
  * Checkout Page
@@ -692,6 +693,9 @@ export default function CheckoutPage() {
               </div>
             </div>
 
+            {/* Store Reviews Trust Strip */}
+            <CheckoutTrustStrip />
+            
             {/* Trust badges */}
             <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
               <div className="flex items-center gap-2 text-neutral-700">
