@@ -801,19 +801,21 @@ export default async function TiresPage({
     // Standard tire widths: 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315...
     const STANDARD_TIRE_WIDTHS = [195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325, 335, 345];
     
-    const findNearestTireWidth = (wheelWidthInches: number): number => {
-      const targetMm = wheelWidthInches * 25.4 + 20; // +20mm typical stretch
+    const findNearestTireWidth = (wheelWidthInches: number, wheelDia: number): number => {
+      // Performance tires run wider - add 30mm for 20"+ wheels, 25mm for smaller
+      const stretchMm = wheelDia >= 20 ? 30 : 25;
+      const targetMm = wheelWidthInches * 25.4 + stretchMm;
       return STANDARD_TIRE_WIDTHS.reduce((prev, curr) => 
         Math.abs(curr - targetMm) < Math.abs(prev - targetMm) ? curr : prev
       );
     };
     
-    const frontTireWidth = findNearestTireWidth(actualFrontWidth || 8.5);
-    const rearTireWidth = findNearestTireWidth(actualRearWidth || 11);
+    const frontTireWidth = findNearestTireWidth(actualFrontWidth || 8.5, actualFrontDia);
+    const rearTireWidth = findNearestTireWidth(actualRearWidth || 11, actualRearDia);
     
-    // Calculate aspect ratio for a reasonable overall diameter
-    const frontAspect = actualFrontDia <= 19 ? 35 : 30;
-    const rearAspect = 30;
+    // Calculate aspect ratio - use 35 for most sizes, 30 for very wide (285mm+) tires
+    const frontAspect = frontTireWidth >= 285 ? 30 : 35;
+    const rearAspect = rearTireWidth >= 285 ? 30 : 35;
     
     staggeredFrontTireSize = `${frontTireWidth}/${frontAspect}R${actualFrontDia}`;
     staggeredRearTireSize = `${rearTireWidth}/${rearAspect}R${actualRearDia}`;
