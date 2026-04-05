@@ -737,18 +737,24 @@ export default async function TiresPage({
   
   if (isStaggeredVehicle && isPackageFlow && staggeredFrontDia && staggeredRearDia) {
     // Generate recommended tire sizes based on wheel specs
-    // Use a common formula: tire width ≈ wheel width × 25.4 + 15-25mm
-    const frontWidthMm = Math.round((staggeredFrontWidth || 8.5) * 25.4 + 20);
-    const rearWidthMm = Math.round((staggeredRearWidth || 11) * 25.4 + 20);
+    // Standard tire widths: 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315...
+    // Formula: tire width ≈ wheel width × 25.4 + 10-30mm, rounded to nearest 10mm
+    const STANDARD_TIRE_WIDTHS = [195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325, 335, 345];
     
-    // Round to nearest 5mm (standard tire width increments)
-    const frontTireWidth = Math.round(frontWidthMm / 5) * 5;
-    const rearTireWidth = Math.round(rearWidthMm / 5) * 5;
+    const findNearestTireWidth = (wheelWidthInches: number): number => {
+      const targetMm = wheelWidthInches * 25.4 + 20; // +20mm typical stretch
+      return STANDARD_TIRE_WIDTHS.reduce((prev, curr) => 
+        Math.abs(curr - targetMm) < Math.abs(prev - targetMm) ? curr : prev
+      );
+    };
+    
+    const frontTireWidth = findNearestTireWidth(staggeredFrontWidth || 8.5);
+    const rearTireWidth = findNearestTireWidth(staggeredRearWidth || 11);
     
     // Calculate aspect ratio for a reasonable overall diameter
     // Performance cars like Corvette typically use 30-40 aspect ratios
     const frontAspect = staggeredFrontDia <= 19 ? 35 : 30;
-    const rearAspect = staggeredRearDia <= 20 ? 30 : 30;
+    const rearAspect = 30; // Wide rear tires typically 30 aspect
     
     staggeredFrontTireSize = `${frontTireWidth}/${frontAspect}R${staggeredFrontDia}`;
     staggeredRearTireSize = `${rearTireWidth}/${rearAspect}R${staggeredRearDia}`;
