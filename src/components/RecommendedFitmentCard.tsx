@@ -146,10 +146,13 @@ async function fetchJson<T>(url: string): Promise<T> {
 
 export function RecommendedFitmentCard({ 
   fitment, 
-  productType = "tires" 
+  productType = "tires",
+  setupMode = "staggered",
 }: { 
   fitment: Fitment;
   productType?: "tires" | "wheels";
+  /** For staggered vehicles: "square" shows front specs for all corners, "staggered" shows front+rear */
+  setupMode?: "square" | "staggered";
 }) {
   const hasVehicle = Boolean(fitment?.year && fitment?.make && fitment?.model);
   const wpSubmodel = useMemo(() => {
@@ -385,7 +388,8 @@ export function RecommendedFitmentCard({
             </div>
           ) : null}
 
-          {axles?.front && axles?.rear ? (
+          {axles?.front && axles?.rear && setupMode === "staggered" ? (
+            /* STAGGERED MODE: Show front and rear separately */
             <div className="grid gap-2">
               <div className="rounded-xl border border-neutral-200 bg-white p-2">
                 <div className="text-[11px] font-extrabold text-neutral-900">Front sizes</div>
@@ -433,6 +437,31 @@ export function RecommendedFitmentCard({
                     </div>
                   ) : null}
                 </div>
+              </div>
+            </div>
+          ) : axles?.front && setupMode === "square" ? (
+            /* SQUARE MODE on staggered vehicle: Show front specs as "All corners" */
+            <div className="rounded-xl border border-neutral-200 bg-white p-2">
+              <div className="text-[11px] font-extrabold text-neutral-900">All corners (square)</div>
+              <div className="mt-1 grid gap-1">
+                {axles.front.wheelDiameterRangeIn ? (
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-neutral-600">Diameter</span>
+                    <span className="font-semibold">{fmtRange(axles.front.wheelDiameterRangeIn[0], axles.front.wheelDiameterRangeIn[1], "\"")}</span>
+                  </div>
+                ) : null}
+                {axles.front.wheelWidthRangeIn ? (
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-neutral-600">Width</span>
+                    <span className="font-semibold">{fmtRange(axles.front.wheelWidthRangeIn[0], axles.front.wheelWidthRangeIn[1], "\"")}</span>
+                  </div>
+                ) : null}
+                {axles.front.offsetRangeMm ? (
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-neutral-600">Offset</span>
+                    <span className="font-semibold">{fmtRange(axles.front.offsetRangeMm[0], axles.front.offsetRangeMm[1], "mm")}</span>
+                  </div>
+                ) : null}
               </div>
             </div>
           ) : (

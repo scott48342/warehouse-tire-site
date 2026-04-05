@@ -233,6 +233,10 @@ export default async function WheelsPage({
   const priceMin = priceMinRaw ? Number(String(priceMinRaw)) : null;
   const priceMax = priceMaxRaw ? Number(String(priceMaxRaw)) : null;
 
+  // Staggered setup mode (for staggered-capable vehicles)
+  const setupParam = (Array.isArray(sp.setup) ? sp.setup[0] : sp.setup) || "";
+  const initialSetupMode = (setupParam === "square" || setupParam === "staggered") ? setupParam : undefined;
+
   const offsetMinRaw = (Array.isArray(sp.offsetMin) ? sp.offsetMin[0] : sp.offsetMin) || "";
   const offsetMaxRaw = (Array.isArray(sp.offsetMax) ? sp.offsetMax[0] : sp.offsetMax) || "";
   const offsetMinUser = offsetMinRaw ? Number(String(offsetMinRaw)) : null;
@@ -1316,7 +1320,7 @@ export default async function WheelsPage({
 
             {year && make && model ? (
               <div className="mb-4">
-                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} productType="wheels" />
+                <RecommendedFitmentCard fitment={{ year, make, model, trim, modification }} productType="wheels" setupMode={initialSetupMode || "staggered"} />
               </div>
             ) : null}
 
@@ -1764,6 +1768,7 @@ export default async function WheelsPage({
               stockDiameter={effectiveStockDiameter}
               showDiameterChips={hasVehicle && fitmentDiameterOptions.length > 0}
               staggeredInfo={staggeredDebug}
+              initialSetupMode={initialSetupMode}
               recommendedWheels={recommendedWheels.map(w => ({
                 sku: w.sku,
                 brand: w.brand,

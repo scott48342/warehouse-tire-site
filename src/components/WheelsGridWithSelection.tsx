@@ -117,6 +117,10 @@ type WheelsGridProps = {
   showDiameterChips?: boolean;
   /** Staggered fitment info from API */
   staggeredInfo?: StaggeredFitmentInfo;
+  /** Initial setup mode from URL */
+  initialSetupMode?: SetupMode;
+  /** Callback when setup mode changes (for URL sync) */
+  onSetupModeChange?: (mode: SetupMode) => void;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -552,6 +556,8 @@ export function WheelsGridWithSelection({
   stockDiameter = null,
   showDiameterChips = true,
   staggeredInfo = null,
+  initialSetupMode,
+  onSetupModeChange,
 }: WheelsGridProps) {
   const [selectedWheel, setSelectedWheel] = useState<SelectedWheel | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
@@ -562,18 +568,23 @@ export function WheelsGridWithSelection({
   // Determine if this vehicle supports staggered fitment
   const supportsStaggered = Boolean(staggeredInfo?.isStaggered);
   
-  // Staggered setup mode state - default to staggered for OEM staggered vehicles (recommended)
-  const [setupMode, setSetupMode] = useState<SetupMode>(() => 
-    supportsStaggered ? "staggered" : "square"
-  );
+  // Staggered setup mode state
+  // Priority: URL param (initialSetupMode) > default (staggered if supported)
+  const [setupMode, setSetupMode] = useState<SetupMode>(() => {
+    if (initialSetupMode && (initialSetupMode === "square" || initialSetupMode === "staggered")) {
+      return initialSetupMode;
+    }
+    return supportsStaggered ? "staggered" : "square";
+  });
   
   // Sync setup mode when staggeredInfo becomes available (handles SSR hydration)
+  // Only auto-switch if no explicit mode was set via URL
   useEffect(() => {
-    if (supportsStaggered && setupMode === "square") {
+    if (supportsStaggered && setupMode === "square" && !initialSetupMode) {
       // If staggered is supported but mode is still square, switch to staggered (recommended)
       setSetupMode("staggered");
     }
-  }, [supportsStaggered]); // Only run when supportsStaggered changes
+  }, [supportsStaggered, initialSetupMode]); // Only run when supportsStaggered changes
   
   // Track when staggered chooser is shown (once per page view)
   const hasTrackedChooserRef = useRef(false);
@@ -596,9 +607,11 @@ export function WheelsGridWithSelection({
     }
   }, [supportsStaggered, staggeredInfo, viewParams]);
   
-  // Track setup mode selection for analytics
+  // Track setup mode selection for analytics + notify parent for URL sync
   const handleSetupModeChange = useCallback((mode: SetupMode) => {
     setSetupMode(mode);
+    // Notify parent for URL sync
+    onSetupModeChange?.(mode);
     // Track the selection
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "staggered_setup_select", {
@@ -609,7 +622,7 @@ export function WheelsGridWithSelection({
         vehicle_trim: viewParams.trim || viewParams.modification,
       });
     }
-  }, [viewParams]);
+  }, [viewParams, onSetupModeChange]);
   
   // ═══════════════════════════════════════════════════════════════════════════════
   // PHASE 2: Filter wheels based on setup mode + match to staggered specs
@@ -711,16 +724,30 @@ export function WheelsGridWithSelection({
     } else {
       // Square mode: Show wheels that work on all 4 corners
       // For staggered-capable vehicles, this means wheels that match FRONT spec
-      // (smaller/narrower - safe for all positions) OR generic square wheels
+      // (smaller/narrower - safe for all positions)
       const frontSpec = staggeredInfo.frontSpec;
+      const rearSpec = staggeredInfo.rearSpec;
       if (frontSpec) {
+        // Max width for square: front spec + 1" tolerance
+        // Exclude anything wider (even if it lacks pair data)
+        const maxSquareWidth = frontSpec.width + 1.0;
+        
         return wheels.filter(w => {
-          // Include if it matches front spec (safe for all corners on square setup)
-          // Use tighter tolerance for square mode (1.0" width, 0.5" diameter)
+          const wheelWidth = parseFloat(w.width || "0");
+          
+          // STRICT: If wheel is too wide for front position, exclude it
+          // This catches rear-width wheels that don't have pair data
+          if (wheelWidth > maxSquareWidth) return false;
+          
+          // If wheel matches front spec, include it
           if (matchesStaggeredSpec(w, frontSpec, 1.0, 0.5)) return true;
-          // Include if wheel has no staggered pair data (generic square)
-          if (!w.pair || !w.pair.staggered) return true;
-          return false;
+          
+          // If wheel has staggered pair data but didn't match front spec, exclude
+          // (it's a rear wheel that shouldn't be in square mode)
+          if (w.pair?.staggered) return false;
+          
+          // Generic wheel without pair data and within width limit - include
+          return true;
         });
       }
       // Fallback: show all non-staggered wheels
