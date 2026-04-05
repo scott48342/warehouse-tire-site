@@ -1530,6 +1530,18 @@ async function handleDbFirstWheelResults(opts: {
   const startIdx = (requestedPage - 1) * requestedPageSize;
   const pageItems = rankedCandidates.slice(startIdx, startIdx + requestedPageSize);
 
+  // Build a lookup map for staggered pair specs (SKU → wheel specs)
+  // This lets us populate BOTH front and rear specs on each paired wheel
+  const wheelSpecsBySku = new Map<string, { diameter: number; width: number; offset: number }>();
+  for (const item of rankedCandidates) {
+    const c = item.candidate;
+    wheelSpecsBySku.set(c.sku, {
+      diameter: Number(c.diameter) || 0,
+      width: Number(c.width) || 0,
+      offset: Number(c.offset) || 0,
+    });
+  }
+
   const results = pageItems.map((item) => {
     const { candidate: c, validation: v, score, scoreBreakdown, availabilityLabel, priceTier, modelKey } = item;
     const staggeredPair = (item as any).staggeredPair;
@@ -1616,21 +1628,26 @@ async function handleDbFirstWheelResults(opts: {
         breakdown: debug ? scoreBreakdown : undefined,
       },
       // Staggered pair info (for staggered fitments)
-      pair: staggeredPair ? {
-        staggered: true,
-        front: {
-          sku: staggeredPair.frontSku,
-          diameter: staggeredPair.role === "front" ? c.diameter : undefined,
-          width: staggeredPair.role === "front" ? c.width : undefined,
-          offset: staggeredPair.role === "front" ? c.offset : undefined,
-        },
-        rear: {
-          sku: staggeredPair.rearSku,
-          diameter: staggeredPair.role === "rear" ? c.diameter : undefined,
-          width: staggeredPair.role === "rear" ? c.width : undefined,
-          offset: staggeredPair.role === "rear" ? c.offset : undefined,
-        },
-      } : undefined,
+      // Look up BOTH front and rear specs from the SKU lookup map
+      pair: staggeredPair ? (() => {
+        const frontSpecs = wheelSpecsBySku.get(staggeredPair.frontSku);
+        const rearSpecs = wheelSpecsBySku.get(staggeredPair.rearSku);
+        return {
+          staggered: true,
+          front: {
+            sku: staggeredPair.frontSku,
+            diameter: frontSpecs?.diameter,
+            width: frontSpecs?.width,
+            offset: frontSpecs?.offset,
+          },
+          rear: {
+            sku: staggeredPair.rearSku,
+            diameter: rearSpecs?.diameter,
+            width: rearSpecs?.width,
+            offset: rearSpecs?.offset,
+          },
+        };
+      })() : undefined,
     };
   });
 
