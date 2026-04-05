@@ -743,10 +743,13 @@ export default async function TiresPage({
   // For staggered vehicles with single diameter selection, infer staggered widths from OEM DIFFERENCE
   // e.g., Corvette OEM is 8.5" front / 11" rear (difference 2.5"). 
   // If user selects 20x11 (closer to OEM rear) → front = 11 - 2.5 = 8.5"
-  // If user selects 22x9 (closer to OEM front) → rear = 9 + 2.5 = 11.5"
-  const oemWidthDiff = (staggeredFrontWidth && staggeredRearWidth) 
+  // If user selects 22x9 (closer to OEM front) → rear = 9 + 2 = 11" (capped for 22"+)
+  const rawOemWidthDiff = (staggeredFrontWidth && staggeredRearWidth) 
     ? staggeredRearWidth - staggeredFrontWidth 
     : 0;
+  // Cap width difference at 2" for 22"+ wheels (larger stagger = rare tire sizes)
+  const selectedDia = Number(wheelDia) || 0;
+  const oemWidthDiff = selectedDia >= 22 ? Math.min(rawOemWidthDiff, 2) : rawOemWidthDiff;
   const selectedWidth = Number(wheelWidth) || 0;
   
   // Determine if selected wheel is closer to OEM front or rear width
@@ -835,8 +838,9 @@ export default async function TiresPage({
     const STANDARD_TIRE_WIDTHS = [195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325, 335, 345];
     
     const findNearestTireWidth = (wheelWidthInches: number, wheelDia: number): number => {
-      // Performance tires run wider - add 30mm for 20"+ wheels, 25mm for smaller
-      const stretchMm = wheelDia >= 20 ? 30 : 25;
+      // Performance tires run wider - larger wheels get more stretch
+      // 22"+ wheels: +45mm (for better inventory match), 20-21": +30mm, smaller: +25mm
+      const stretchMm = wheelDia >= 22 ? 45 : wheelDia >= 20 ? 30 : 25;
       const targetMm = wheelWidthInches * 25.4 + stretchMm;
       return STANDARD_TIRE_WIDTHS.reduce((prev, curr) => 
         Math.abs(curr - targetMm) < Math.abs(prev - targetMm) ? curr : prev
@@ -844,7 +848,9 @@ export default async function TiresPage({
     };
     
     const frontTireWidth = findNearestTireWidth(actualFrontWidth || 8.5, actualFrontDia);
-    const rearTireWidth = findNearestTireWidth(actualRearWidth || 11, actualRearDia);
+    let rearTireWidth = findNearestTireWidth(actualRearWidth || 11, actualRearDia);
+    // Cap rear tire at 315mm for 22"+ (larger sizes have poor inventory)
+    if (actualRearDia >= 22 && rearTireWidth > 315) rearTireWidth = 315;
     
     // Calculate aspect ratio - use 35 for most sizes, 30 for very wide (285mm+) tires
     const frontAspect = frontTireWidth >= 285 ? 30 : 35;
