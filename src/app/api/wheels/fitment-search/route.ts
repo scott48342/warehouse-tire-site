@@ -165,8 +165,47 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
     };
   }
 
-  // If all specs are "both" (same front and rear), not staggered
+  // If all specs are "both", check if they differ significantly (hidden staggered)
+  // Some databases incorrectly mark staggered vehicles with axle="both" for all specs
   if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
+    // Sort by width to find narrowest (likely front) and widest (likely rear)
+    const sortedByWidth = [...bothSpecs].sort((a, b) => a.width - b.width);
+    const narrowest = sortedByWidth[0];
+    const widest = sortedByWidth[sortedByWidth.length - 1];
+    
+    // Check if there's significant difference suggesting staggered
+    // Different width OR different diameter indicates staggered
+    const widthDiff = widest.width - narrowest.width;
+    const diameterDiff = Math.abs(widest.diameter - narrowest.diameter);
+    
+    // If width differs by 1"+ OR diameter differs by 1"+, treat as staggered
+    // (Common staggered setups: 8.5/10, 9/11, 19/20, 19/21, etc.)
+    if (widthDiff >= 1.0 || diameterDiff >= 1) {
+      const reasons: string[] = [];
+      if (diameterDiff >= 1) reasons.push(`diameter (F:${narrowest.diameter}" R:${widest.diameter}")`);
+      if (widthDiff >= 1.0) reasons.push(`width (F:${narrowest.width}" R:${widest.width}")`);
+      
+      console.log(`[fitment-search] INFERRED STAGGERED from "both" specs: ${reasons.join(", ")}`);
+      
+      return {
+        isStaggered: true,
+        reason: `Inferred staggered from multiple wheel sizes: ${reasons.join(", ")}`,
+        frontSpec: {
+          diameter: narrowest.diameter,
+          width: narrowest.width,
+          offset: narrowest.offset,
+          tireSize: narrowest.tireSize,
+        },
+        rearSpec: {
+          diameter: widest.diameter,
+          width: widest.width,
+          offset: widest.offset,
+          tireSize: widest.tireSize,
+        },
+      };
+    }
+    
+    // Truly square - all specs are similar
     const sample = bothSpecs.find(s => s.isStock) || bothSpecs[0];
     return {
       isStaggered: false,
