@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { WheelsStyleCard, type WheelFinishThumb, type WheelPair } from "./WheelsStyleCard";
-import { type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
+import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
 import { FitmentDiameterChips, type DiameterOption } from "./FitmentDiameterChips";
 import { useCart, type CartWheelItem } from "@/lib/cart/CartContext";
@@ -51,6 +51,7 @@ export type SelectedWheel = {
   offset?: string;
   rearOffset?: string;
   boltPattern?: string;
+  centerbore?: string; // For accessory calculation
   imageUrl?: string;
   price?: number;
   setPrice: number;
@@ -838,7 +839,7 @@ export function WheelsGridWithSelection({
   }, [recommendedWheels, setupMode, supportsStaggered]);
   
   // Cart context
-  const { addItem, setIsOpen: setCartOpen } = useCart();
+  const { addItem, addAccessories, setAccessoryState, replaceAccessorySku, setIsOpen: setCartOpen } = useCart();
   
   // Build tires href with wheel context
   const tiresHref = (() => {
@@ -966,6 +967,73 @@ export function WheelsGridWithSelection({
       addItem(cartItem);
     }
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // ACCESSORY FITMENT - Calculate and auto-add required accessories
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (dbProfile) {
+      const wheelForFitment: WheelForAccessories = {
+        sku: selectedWheel.sku,
+        centerBore: selectedWheel.centerbore ? Number(selectedWheel.centerbore) : undefined,
+        boltPattern: selectedWheel.boltPattern,
+      };
+
+      const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
+      
+      console.log("[WheelsGrid] Accessory fitment result:", {
+        wheelSku: selectedWheel.sku,
+        wheelCenterBore: selectedWheel.centerbore,
+        vehicleCenterBore: dbProfile.centerBoreMm,
+        lugNuts: fitmentResult.fitment?.lugNuts,
+        hubRings: fitmentResult.fitment?.hubRings,
+        requiredItems: fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`),
+      });
+      
+      if (fitmentResult.state) {
+        setAccessoryState(fitmentResult.state);
+      }
+
+      // Auto-add required accessories
+      if (fitmentResult.requiredItems.length > 0) {
+        // Replace lug kit placeholder SKU with real Gorilla kit SKU
+        const lug = fitmentResult.requiredItems.find((i) => i.category === "lug_nut");
+        if (lug?.spec?.threadSize) {
+          const placeholderSku = lug.sku;
+          const qs = new URLSearchParams({
+            threadSize: lug.spec.threadSize,
+          });
+          if (lug.spec.seatType) qs.set("seatType", lug.spec.seatType);
+
+          fetch(`/api/accessories/lugkits?${qs.toString()}`, {
+            headers: { Accept: "application/json" },
+          })
+            .then((r) => r.json().catch(() => null).then((j) => ({ ok: r.ok, j })))
+            .then(({ ok, j }) => {
+              if (ok && j?.choice?.sku) {
+                const next = {
+                  ...lug,
+                  sku: String(j.choice.sku),
+                  meta: {
+                    ...(lug.meta || {}),
+                    placeholder: false,
+                    source: "wheelpros",
+                    brandCode: j.choice.brandCode,
+                    nipCost: j.choice.nip,
+                    msrp: j.choice.msrp,
+                    title: j.choice.title,
+                    threadKey: j.choice.threadKey,
+                  },
+                };
+                replaceAccessorySku(placeholderSku, next);
+              }
+            })
+            .catch(() => {});
+        }
+
+        console.log("[WheelsGrid] Auto-adding accessories:", fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`));
+        addAccessories(fitmentResult.requiredItems);
+      }
+    }
+    
     // Track add-to-cart with setup type
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "add_to_cart", {
@@ -993,7 +1061,7 @@ export function WheelsGridWithSelection({
       setSelectedWheel(null);
       setShowMobileBar(false);
     }, 300);
-  }, [selectedWheel, viewParams, addItem, setCartOpen]);
+  }, [selectedWheel, viewParams, addItem, addAccessories, setAccessoryState, replaceAccessorySku, setCartOpen, dbProfile]);
   
   // Track scroll for mobile bar visibility
   useEffect(() => {
@@ -1090,6 +1158,7 @@ export function WheelsGridWithSelection({
               offset: w.offset,
               rearOffset,
               boltPattern: w.boltPattern,
+              centerbore: w.centerbore,
               imageUrl: wheelState?.imageUrl ?? w.imageUrl,
               price: effectivePrice,
               setPrice,
