@@ -1362,52 +1362,9 @@ export function WheelsGridWithSelection({
           </div>
         )}
       </div>
+      {/* Desktop + Mobile sticky CTAs REMOVED - single CTA block in SelectionConfirmation only */}
       
-      {/* Persistent Next Step CTA - desktop */}
-      {selectedWheel && (
-        <div className="hidden md:block sticky bottom-4 z-40 mt-6">
-          <div className="mx-auto max-w-2xl">
-            <div className="flex gap-3 rounded-2xl bg-white/95 backdrop-blur-sm border border-green-200 p-3 shadow-2xl shadow-green-900/10">
-              {/* Primary: Build complete package */}
-              <Link
-                href={tiresHref}
-                className="flex h-14 flex-1 items-center justify-center gap-3 rounded-xl bg-green-600 text-base font-extrabold text-white shadow-lg shadow-green-600/30 transition-all hover:bg-green-700 hover:shadow-xl active:scale-[0.99]"
-              >
-                <span>Build Complete Package</span>
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-              
-              {/* Secondary: Wheels only */}
-              <button
-                onClick={handleAddWheelsToCart}
-                disabled={isAddingToCart}
-                className="flex h-14 items-center justify-center gap-2 rounded-xl border-2 border-neutral-300 bg-white px-5 text-sm font-bold text-neutral-700 transition-all hover:border-neutral-400 hover:bg-neutral-50 active:scale-[0.99] disabled:opacity-60"
-              >
-                {isAddingToCart ? (
-                  <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                  </svg>
-                ) : (
-                  <>
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    Wheels Only
-                  </>
-                )}
-              </button>
-            </div>
-            <div className="mt-2 text-center text-xs text-neutral-500">
-              ${selectedWheel.setPrice.toLocaleString()} for 4 wheels selected
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* Mobile Sticky Bar */}
+      {/* Mobile Sticky Bar - disabled */}
       <MobileStickyBar
         wheel={selectedWheel}
         isVisible={showMobileBar}
