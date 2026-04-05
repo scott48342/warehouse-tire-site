@@ -2352,14 +2352,14 @@ export default async function TiresPage({
                           )}
                         </div>
                         
-                        {/* Front/Rear specs in styled boxes */}
-                        <div className="mb-3 grid grid-cols-2 gap-2">
-                          <div className="rounded-lg border border-blue-200 bg-blue-50 p-2">
-                            <div className="text-[10px] font-semibold uppercase text-blue-600">Front ×2</div>
+                        {/* Front/Rear specs stacked */}
+                        <div className="mb-3 space-y-2">
+                          <div className="flex items-center justify-between rounded-lg border border-blue-200 bg-blue-50 px-3 py-2">
+                            <div className="text-xs font-semibold uppercase text-blue-600">Front ×2</div>
                             <div className="text-sm font-bold text-neutral-900">{pair.front.size}</div>
                           </div>
-                          <div className="rounded-lg border border-orange-200 bg-orange-50 p-2">
-                            <div className="text-[10px] font-semibold uppercase text-orange-600">Rear ×2</div>
+                          <div className="flex items-center justify-between rounded-lg border border-orange-200 bg-orange-50 px-3 py-2">
+                            <div className="text-xs font-semibold uppercase text-orange-600">Rear ×2</div>
                             <div className="text-sm font-bold text-neutral-900">{pair.rear.size}</div>
                           </div>
                         </div>
