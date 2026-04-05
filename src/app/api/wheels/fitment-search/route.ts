@@ -165,11 +165,54 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
     };
   }
 
-  // If all specs are "both", treat as SQUARE fitment
-  // Multiple wheel sizes with axle="both" are different trim OPTIONS, not staggered
-  // Only explicit front/rear specs indicate true staggered fitment
-  // (e.g., Camry has 16", 17", 18", 19" options but they're all square)
+  // If all specs are "both", check for implicit staggered fitment
+  // Multiple wheel sizes with axle="both" could be:
+  // 1. Different trim OPTIONS (Camry: 16", 17", 18", 19" - all square, same width)
+  // 2. Mislabeled staggered (Corvette C8: 19x8.5 front + 20x11 rear marked as "both")
+  //
+  // HEURISTIC: If we have exactly 2 sizes with DIFFERENT diameters OR widths differ by 1"+,
+  // it's likely staggered with mislabeled axle data. Smaller = front, larger = rear.
   if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
+    // Check for implicit staggered: exactly 2 specs with significant differences
+    if (bothSpecs.length === 2) {
+      const [spec1, spec2] = bothSpecs;
+      const diameterDiff = spec1.diameter !== spec2.diameter;
+      const widthDiff = Math.abs(spec1.width - spec2.width) >= 1; // 1" or more width difference
+      
+      if (diameterDiff || widthDiff) {
+        // Infer front/rear: smaller diameter/width = front, larger = rear
+        // (typical staggered: wider/larger wheels go on rear)
+        const frontInferred = spec1.width < spec2.width || (spec1.width === spec2.width && spec1.diameter < spec2.diameter)
+          ? spec1
+          : spec2;
+        const rearInferred = frontInferred === spec1 ? spec2 : spec1;
+        
+        const reasons: string[] = [];
+        if (diameterDiff) reasons.push(`diameter (F:${frontInferred.diameter}" R:${rearInferred.diameter}")`);
+        if (widthDiff) reasons.push(`width (F:${frontInferred.width}" R:${rearInferred.width}")`);
+        
+        console.log(`[detectStaggeredFromParsed] INFERRED STAGGERED: 2 specs with ${reasons.join(", ")} marked as "both" - likely mislabeled staggered`);
+        
+        return {
+          isStaggered: true,
+          reason: `Different front/rear (inferred from spec differences): ${reasons.join(", ")}`,
+          frontSpec: {
+            diameter: frontInferred.diameter,
+            width: frontInferred.width,
+            offset: frontInferred.offset,
+            tireSize: frontInferred.tireSize,
+          },
+          rearSpec: {
+            diameter: rearInferred.diameter,
+            width: rearInferred.width,
+            offset: rearInferred.offset,
+            tireSize: rearInferred.tireSize,
+          },
+        };
+      }
+    }
+    
+    // True square fitment: all specs are "both" and no significant differences
     const sample = bothSpecs.find(s => s.isStock) || bothSpecs[0];
     return {
       isStaggered: false,

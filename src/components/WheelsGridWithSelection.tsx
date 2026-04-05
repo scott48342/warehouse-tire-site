@@ -881,6 +881,24 @@ export function WheelsGridWithSelection({
     if (selectedWheel?.setPrice) params.set("wheelPrice", String(selectedWheel.setPrice));
     if (selectedWheel?.finish) params.set("wheelFinish", selectedWheel.finish);
     
+    // Pass staggered setup mode and specs if in staggered mode
+    if (setupMode === "staggered" && selectedWheel?.staggered) {
+      params.set("setup", "staggered");
+      // Pass staggered tire sizes from vehicle fitment for tire matching
+      if (staggeredInfo?.frontSpec?.tireSize) {
+        params.set("frontTireSize", staggeredInfo.frontSpec.tireSize);
+      }
+      if (staggeredInfo?.rearSpec?.tireSize) {
+        params.set("rearTireSize", staggeredInfo.rearSpec.tireSize);
+      }
+      // Also pass rear wheel specs for staggered packages (match tires page param names)
+      if (selectedWheel.rearSku) params.set("wheelSkuRear", selectedWheel.rearSku);
+      if (selectedWheel.rearWidth) params.set("wheelWidthRear", selectedWheel.rearWidth);
+      if (selectedWheel.rearOffset) params.set("wheelOffsetRear", selectedWheel.rearOffset);
+      // Pass rear diameter for proper tire matching
+      if (selectedWheel.diameter) params.set("wheelDiaRear", selectedWheel.diameter); // Same dia typically
+    }
+    
     // Pass lifted context if present
     if (viewParams.liftedSource) params.set("liftedSource", viewParams.liftedSource);
     if (viewParams.liftedPreset) params.set("liftedPreset", viewParams.liftedPreset);

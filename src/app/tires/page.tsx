@@ -679,10 +679,11 @@ export default async function TiresPage({
   const dbProfile = fitmentResult?.dbProfile || null;
   const fitmentStaggered = fitmentResult?.staggered || null;
   
-  // Staggered detection: from URL params (wheelSkuRear) OR from fitment profile
+  // Staggered detection: from URL params (wheelSkuRear) OR from fitment profile OR from setup=staggered param
   const isStaggeredFromFitment = Boolean(fitmentStaggered?.isStaggered);
   const isStaggeredFromUrl = Boolean(wheelSkuRear);
-  const isStaggeredVehicle = isStaggeredFromFitment || isStaggeredFromUrl;
+  // forceStaggered allows wheel page to pass setup=staggered to pre-select staggered mode
+  const isStaggeredVehicle = isStaggeredFromFitment || isStaggeredFromUrl || forceStaggered;
   
   // For package flow with staggered vehicles, use isStaggeredVehicle
   // This allows staggered detection even when only one wheel is in the URL
