@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { WheelsStyleCard, type WheelFinishThumb, type WheelPair } from "./WheelsStyleCard";
 import { type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
@@ -549,6 +549,189 @@ export function WheelsGridWithSelection({
   // Determine if this vehicle supports staggered fitment
   const supportsStaggered = Boolean(staggeredInfo?.isStaggered);
   
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // PHASE 2: Filter wheels based on setup mode + match to staggered specs
+  // ═══════════════════════════════════════════════════════════════════════════════
+  
+  // Helper to check if wheel matches front or rear spec
+  const matchesStaggeredSpec = useCallback((wheel: WheelItem, spec: NonNullable<StaggeredFitmentInfo>["frontSpec"], tolerance: number = 0.5): boolean => {
+    if (!spec) return false;
+    const wheelDia = parseFloat(wheel.diameter || "0");
+    const wheelWidth = parseFloat(wheel.width || "0");
+    return Math.abs(wheelDia - spec.diameter) <= tolerance && Math.abs(wheelWidth - spec.width) <= tolerance;
+  }, []);
+  
+  const filteredWheels = useMemo(() => {
+    if (!supportsStaggered || !staggeredInfo) {
+      // Non-staggered vehicle - show all wheels as-is
+      return wheels;
+    }
+    
+    const { frontSpec, rearSpec } = staggeredInfo;
+    
+    if (setupMode === "staggered") {
+      // Staggered mode: Show wheels that match EITHER front OR rear spec
+      // These can be combined into a staggered set
+      if (!frontSpec || !rearSpec) {
+        // Missing spec data - fall back to pair-based filtering
+        return wheels.filter(w => w.pair?.staggered === true);
+      }
+      
+      return wheels.filter(w => {
+        // Check if wheel matches front spec
+        if (matchesStaggeredSpec(w, frontSpec)) return true;
+        // Check if wheel matches rear spec  
+        if (matchesStaggeredSpec(w, rearSpec)) return true;
+        // Also include wheels with explicit staggered pair data
+        if (w.pair?.staggered === true) return true;
+        return false;
+      });
+    } else {
+      // Square mode: Show wheels that work on all 4 corners
+      // For staggered-capable vehicles, this means wheels that match FRONT spec
+      // (smaller/narrower - safe for all positions) OR generic square wheels
+      if (frontSpec) {
+        return wheels.filter(w => {
+          // Include if it matches front spec (safe for all corners on square setup)
+          if (matchesStaggeredSpec(w, frontSpec, 1.0)) return true;
+          // Include if wheel has no staggered pair data (generic square)
+          if (!w.pair || !w.pair.staggered) return true;
+          return false;
+        });
+      }
+      // Fallback: show all non-staggered wheels
+      return wheels.filter(w => !w.pair?.staggered);
+    }
+  }, [wheels, setupMode, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  
+  // Group staggered wheels by style for paired display
+  const staggeredPairs = useMemo(() => {
+    if (setupMode !== "staggered" || !staggeredInfo?.frontSpec || !staggeredInfo?.rearSpec) {
+      return null;
+    }
+    
+    const { frontSpec, rearSpec } = staggeredInfo;
+    
+    // Group wheels by style (brand + model + finish)
+    const styleGroups = new Map<string, { front: WheelItem | null; rear: WheelItem | null }>();
+    
+    for (const wheel of filteredWheels) {
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      
+      if (!styleGroups.has(styleKey)) {
+        styleGroups.set(styleKey, { front: null, rear: null });
+      }
+      
+      const group = styleGroups.get(styleKey)!;
+      
+      if (matchesStaggeredSpec(wheel, frontSpec)) {
+        if (!group.front || (wheel.imageUrl && !group.front.imageUrl)) {
+          group.front = wheel;
+        }
+      }
+      if (matchesStaggeredSpec(wheel, rearSpec)) {
+        if (!group.rear || (wheel.imageUrl && !group.rear.imageUrl)) {
+          group.rear = wheel;
+        }
+      }
+    }
+    
+    // Return only complete pairs (both front and rear available)
+    const completePairs: Array<{ styleKey: string; front: WheelItem; rear: WheelItem }> = [];
+    for (const [styleKey, group] of styleGroups.entries()) {
+      if (group.front && group.rear) {
+        completePairs.push({ styleKey, front: group.front, rear: group.rear });
+      }
+    }
+    
+    return completePairs.length > 0 ? completePairs : null;
+  }, [filteredWheels, setupMode, staggeredInfo, matchesStaggeredSpec]);
+  
+  // For staggered mode, enhance wheels with pair data
+  const wheelsWithPairs = useMemo(() => {
+    if (setupMode !== "staggered" || !staggeredPairs) {
+      return filteredWheels;
+    }
+    
+    // Create a map of style -> pair for quick lookup
+    const pairMap = new Map<string, { front: WheelItem; rear: WheelItem }>();
+    for (const pair of staggeredPairs) {
+      pairMap.set(pair.styleKey, { front: pair.front, rear: pair.rear });
+    }
+    
+    // Deduplicate: only show one card per style (the front wheel with pair data attached)
+    const seenStyles = new Set<string>();
+    const result: WheelItem[] = [];
+    
+    for (const wheel of filteredWheels) {
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      
+      if (seenStyles.has(styleKey)) continue;
+      seenStyles.add(styleKey);
+      
+      const pair = pairMap.get(styleKey);
+      if (pair) {
+        // Enhance the front wheel with pair data
+        result.push({
+          ...pair.front,
+          pair: {
+            staggered: true,
+            front: {
+              sku: pair.front.sku || "",
+              diameter: pair.front.diameter,
+              width: pair.front.width,
+              offset: pair.front.offset,
+            },
+            rear: {
+              sku: pair.rear.sku || "",
+              diameter: pair.rear.diameter,
+              width: pair.rear.width,
+              offset: pair.rear.offset,
+            },
+          },
+        });
+      } else if (wheel.pair?.staggered) {
+        // Already has pair data
+        result.push(wheel);
+      }
+      // Skip wheels without valid pairs in staggered mode
+    }
+    
+    return result;
+  }, [filteredWheels, staggeredPairs, setupMode]);
+  
+  // Final wheels to display
+  const displayWheels = setupMode === "staggered" ? wheelsWithPairs : filteredWheels;
+  
+  // Also filter recommended wheels by setup mode
+  const filteredRecommended = useMemo(() => {
+    if (!supportsStaggered || !recommendedWheels.length) {
+      return recommendedWheels;
+    }
+    
+    const { frontSpec, rearSpec } = staggeredInfo || {};
+    
+    if (setupMode === "staggered") {
+      if (!frontSpec || !rearSpec) {
+        return recommendedWheels.filter(w => w.pair?.staggered === true);
+      }
+      // For staggered, show wheels that match either front or rear spec
+      return recommendedWheels.filter(w => 
+        matchesStaggeredSpec(w, frontSpec) || 
+        matchesStaggeredSpec(w, rearSpec) ||
+        w.pair?.staggered === true
+      );
+    } else {
+      if (frontSpec) {
+        return recommendedWheels.filter(w => 
+          matchesStaggeredSpec(w, frontSpec, 1.0) || 
+          !w.pair?.staggered
+        );
+      }
+      return recommendedWheels.filter(w => !w.pair?.staggered);
+    }
+  }, [recommendedWheels, setupMode, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  
   // Cart context
   const { addItem, setIsOpen: setCartOpen } = useCart();
   
@@ -618,36 +801,65 @@ export function WheelsGridWithSelection({
     
     setIsAddingToCart(true);
     
-    // Build the cart item
-    const cartItem: CartWheelItem = {
-      type: "wheel",
-      sku: selectedWheel.sku,
-      rearSku: selectedWheel.rearSku,
-      brand: selectedWheel.brand,
-      model: selectedWheel.model,
-      finish: selectedWheel.finish,
-      diameter: selectedWheel.diameter,
-      width: selectedWheel.width,
-      rearWidth: selectedWheel.rearWidth,
-      offset: selectedWheel.offset,
-      rearOffset: selectedWheel.rearOffset,
-      boltPattern: selectedWheel.boltPattern,
-      imageUrl: selectedWheel.imageUrl,
-      unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
-      quantity: 4,
-      fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
-      vehicle: viewParams.year && viewParams.make && viewParams.model ? {
-        year: viewParams.year,
-        make: viewParams.make,
-        model: viewParams.model,
-        trim: viewParams.trim,
-        modification: viewParams.modification,
-      } : undefined,
-      staggered: selectedWheel.staggered,
-    };
+    const vehicleInfo = viewParams.year && viewParams.make && viewParams.model ? {
+      year: viewParams.year,
+      make: viewParams.make,
+      model: viewParams.model,
+      trim: viewParams.trim,
+      modification: viewParams.modification,
+    } : undefined;
     
-    // Add to cart
-    addItem(cartItem);
+    if (selectedWheel.staggered && selectedWheel.rearSku) {
+      // ═══════════════════════════════════════════════════════════════════════════
+      // STAGGERED: Add as single item with front/rear SKUs and quantity 4
+      // Cart will display as "2 front + 2 rear" but priced per wheel × 4
+      // ═══════════════════════════════════════════════════════════════════════════
+      const cartItem: CartWheelItem = {
+        type: "wheel",
+        sku: selectedWheel.sku,
+        rearSku: selectedWheel.rearSku,
+        brand: selectedWheel.brand,
+        model: selectedWheel.model,
+        finish: selectedWheel.finish,
+        diameter: selectedWheel.diameter,
+        width: selectedWheel.width,
+        rearWidth: selectedWheel.rearWidth,
+        offset: selectedWheel.offset,
+        rearOffset: selectedWheel.rearOffset,
+        boltPattern: selectedWheel.boltPattern,
+        imageUrl: selectedWheel.imageUrl,
+        unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
+        quantity: 4, // Total wheels (2 front + 2 rear)
+        fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+        vehicle: vehicleInfo,
+        staggered: true,
+      };
+      
+      addItem(cartItem);
+    } else {
+      // ═══════════════════════════════════════════════════════════════════════════
+      // SQUARE: Standard 4-wheel setup, all same SKU
+      // ═══════════════════════════════════════════════════════════════════════════
+      const cartItem: CartWheelItem = {
+        type: "wheel",
+        sku: selectedWheel.sku,
+        brand: selectedWheel.brand,
+        model: selectedWheel.model,
+        finish: selectedWheel.finish,
+        diameter: selectedWheel.diameter,
+        width: selectedWheel.width,
+        offset: selectedWheel.offset,
+        boltPattern: selectedWheel.boltPattern,
+        imageUrl: selectedWheel.imageUrl,
+        unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
+        quantity: 4,
+        fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+        vehicle: vehicleInfo,
+        staggered: false,
+      };
+      
+      addItem(cartItem);
+    }
     
     // Show cart drawer after short delay
     setTimeout(() => {
@@ -819,7 +1031,7 @@ export function WheelsGridWithSelection({
       )}
       
       {/* Recommended Wheels */}
-      {showRecommended && recommendedWheels.length > 0 && (
+      {showRecommended && filteredRecommended.length > 0 && (
         <div className="mb-6 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-4">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
@@ -829,33 +1041,67 @@ export function WheelsGridWithSelection({
                   Top Picks for Your {viewParams.year} {viewParams.make} {viewParams.model}
                 </h2>
                 <p className="text-xs text-neutral-500">
-                  Hand-picked based on fitment, popularity, and value
+                  {setupMode === "staggered" 
+                    ? "Staggered setups with matched front/rear wheels"
+                    : "Hand-picked based on fitment, popularity, and value"}
                 </p>
               </div>
             </div>
           </div>
           
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {recommendedWheels.slice(0, 4).map((w, idx) => renderWheelCard(w, idx, true))}
+            {filteredRecommended.slice(0, 4).map((w, idx) => renderWheelCard(w, idx, true))}
           </div>
         </div>
       )}
       
       {/* All Wheels Header */}
-      {showRecommended && recommendedWheels.length > 0 && (
+      {(showRecommended && filteredRecommended.length > 0) || displayWheels.length > 0 ? (
         <div className="mb-3 flex items-baseline justify-between">
-          <h3 className="text-sm font-extrabold text-neutral-900">All Wheels</h3>
-          <span className="text-xs text-neutral-500">{wheels.length} styles that fit</span>
+          <h3 className="text-sm font-extrabold text-neutral-900">
+            {setupMode === "staggered" ? "Staggered Wheel Sets" : "All Wheels"}
+          </h3>
+          <span className="text-xs text-neutral-500">
+            {displayWheels.length} {setupMode === "staggered" ? "staggered sets" : "styles"} that fit
+          </span>
+        </div>
+      ) : null}
+      
+      {/* Staggered Mode Info Banner */}
+      {setupMode === "staggered" && staggeredInfo && displayWheels.length > 0 && (
+        <div className="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-3">
+          <div className="flex items-center gap-2 text-sm text-amber-900">
+            <span className="text-lg">⚡</span>
+            <span className="font-medium">
+              Showing wheel sets with {staggeredInfo.frontSpec?.diameter}&quot;×{staggeredInfo.frontSpec?.width}&quot; front 
+              and {staggeredInfo.rearSpec?.diameter}&quot;×{staggeredInfo.rearSpec?.width}&quot; rear
+            </span>
+          </div>
+          <div className="mt-1 text-xs text-amber-700">
+            Each set includes 2 front + 2 rear wheels matched to your vehicle&apos;s staggered specs
+          </div>
         </div>
       )}
       
       {/* Main Grid */}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {wheels.length ? (
-          wheels.map((w, idx) => renderWheelCard(w, idx))
+        {displayWheels.length ? (
+          displayWheels.map((w, idx) => renderWheelCard(w, idx))
         ) : (
-          <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-sm text-neutral-700">
-            No wheel results. Try clearing filters.
+          <div className="col-span-full rounded-2xl border border-neutral-200 bg-white p-6 text-center">
+            <div className="text-neutral-700 font-medium">
+              {setupMode === "staggered" 
+                ? "No complete staggered wheel sets available. We need matching front and rear wheels in the same style."
+                : "No wheel results. Try clearing filters."}
+            </div>
+            {setupMode === "staggered" && supportsStaggered && (
+              <button
+                onClick={() => setSetupMode("square")}
+                className="mt-3 text-sm font-semibold text-blue-600 hover:text-blue-700"
+              >
+                Switch to Square Setup →
+              </button>
+            )}
           </div>
         )}
       </div>

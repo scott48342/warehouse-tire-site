@@ -575,7 +575,7 @@ export function WheelsStyleCard({
         {/* ═══════════════════════════════════════════════════════════════════════
             SIMPLIFIED TITLE STRUCTURE
             Line 1: Brand + Model name
-            Line 2: Size + Finish
+            Line 2: Size + Finish (or Staggered specs)
             ═══════════════════════════════════════════════════════════════════════ */}
         <div>
           <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{brand}</div>
@@ -584,20 +584,60 @@ export function WheelsStyleCard({
               {title}
             </h3>
           </Link>
-          {/* Line 2: Size + Finish */}
-          <div className="mt-0.5 text-sm text-neutral-600">
-            {(currentDiameter || currentWidth) && (
-              <span className="font-medium">
-                {currentDiameter && `${fmtSizePart(currentDiameter)}"`}
-                {currentDiameter && currentWidth && " × "}
-                {currentWidth && `${fmtSizePart(currentWidth)}"`}
+          
+          {/* Show staggered badge + front/rear specs for staggered wheels */}
+          {selectedPair?.staggered && selectedPair.rear ? (
+            <div className="mt-1.5">
+              {/* Staggered badge */}
+              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800 mb-1.5">
+                ⚡ Staggered Set
               </span>
-            )}
-            {(currentDiameter || currentWidth) && selectedFinish && (
-              <span className="mx-1.5 text-neutral-300">|</span>
-            )}
-            {selectedFinish && <span>{selectedFinish}</span>}
-          </div>
+              {/* Front/Rear specs */}
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="rounded-lg bg-blue-50 px-2 py-1.5">
+                  <div className="text-[10px] font-semibold text-blue-600 uppercase tracking-wide">Front (×2)</div>
+                  <div className="font-bold text-blue-900">
+                    {selectedPair.front.diameter && `${fmtSizePart(selectedPair.front.diameter)}"`}
+                    {selectedPair.front.diameter && selectedPair.front.width && " × "}
+                    {selectedPair.front.width && `${fmtSizePart(selectedPair.front.width)}"`}
+                  </div>
+                  {selectedPair.front.offset && (
+                    <div className="text-[10px] text-blue-600">ET{selectedPair.front.offset}</div>
+                  )}
+                </div>
+                <div className="rounded-lg bg-orange-50 px-2 py-1.5">
+                  <div className="text-[10px] font-semibold text-orange-600 uppercase tracking-wide">Rear (×2)</div>
+                  <div className="font-bold text-orange-900">
+                    {selectedPair.rear.diameter && `${fmtSizePart(selectedPair.rear.diameter)}"`}
+                    {selectedPair.rear.diameter && selectedPair.rear.width && " × "}
+                    {selectedPair.rear.width && `${fmtSizePart(selectedPair.rear.width)}"`}
+                  </div>
+                  {selectedPair.rear.offset && (
+                    <div className="text-[10px] text-orange-600">ET{selectedPair.rear.offset}</div>
+                  )}
+                </div>
+              </div>
+              {/* Finish below */}
+              {selectedFinish && (
+                <div className="mt-1.5 text-xs text-neutral-600">{selectedFinish}</div>
+              )}
+            </div>
+          ) : (
+            /* Standard square setup - Line 2: Size + Finish */
+            <div className="mt-0.5 text-sm text-neutral-600">
+              {(currentDiameter || currentWidth) && (
+                <span className="font-medium">
+                  {currentDiameter && `${fmtSizePart(currentDiameter)}"`}
+                  {currentDiameter && currentWidth && " × "}
+                  {currentWidth && `${fmtSizePart(currentWidth)}"`}
+                </span>
+              )}
+              {(currentDiameter || currentWidth) && selectedFinish && (
+                <span className="mx-1.5 text-neutral-300">|</span>
+              )}
+              {selectedFinish && <span>{selectedFinish}</span>}
+            </div>
+          )}
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
@@ -706,7 +746,11 @@ export function WheelsStyleCard({
                 }
               </div>
               <div className="text-xs text-neutral-500">
-                for set of 4
+                {selectedPair?.staggered && selectedPair.rear ? (
+                  <>for staggered set (2F + 2R)</>
+                ) : (
+                  <>for set of 4</>
+                )}
                 {typeof selectedPrice === "number" && (
                   <span className="ml-1">
                     (${selectedPrice.toFixed(0)} each)
