@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
+import { AutoSubmitInput } from "@/components/AutoSubmitInput";
 import { WheelsStyleCard } from "@/components/WheelsStyleCard";
 import { WheelsGridWithSelection } from "@/components/WheelsGridWithSelection";
-import { FilterGroup } from "./FilterGroup";
+import { AccordionFilter } from "./AccordionFilter";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
@@ -1331,82 +1332,59 @@ export default async function WheelsPage({
               </a>
             </div>
 
-            {/* BOLT PATTERN - moved to top for visibility */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
+            {/* BOLT PATTERN - auto-submit on change */}
+            <AccordionFilter defaultOpen title="Bolt Pattern" selectedCount={boltPatternParam ? 1 : 0}>
+              {(() => {
+                // Use bolt pattern from fitment-search response (authoritative), fallback to fit data
+                const vehicleBp = fitmentSearchBp || bp;
+                const hasSinglePattern = boltPatternBuckets.length === 1;
+                const hasMultiplePatterns = boltPatternBuckets.length > 1;
 
-              <input type="hidden" name="brand_cd" value={brandCd} />
-              <input type="hidden" name="finish" value={finish} />
-              <input type="hidden" name="diameter" value={diameterParam} />
-              <input type="hidden" name="width" value={widthParam} />
+                return (
+                  <>
+                    {/* Show vehicle bolt pattern - always visible when vehicle is selected */}
+                    {hasVehicle && vehicleBp ? (
+                      <div className="mb-2 rounded-lg bg-neutral-100 px-3 py-2 text-xs">
+                        <span className="text-neutral-500">Vehicle spec:</span>{" "}
+                        <span className="font-bold text-neutral-800">{vehicleBp}</span>
+                      </div>
+                    ) : null}
 
-              <FilterGroup title="Bolt Pattern">
-                {(() => {
-                  // Use bolt pattern from fitment-search response (authoritative), fallback to fit data
-                  const vehicleBp = fitmentSearchBp || bp;
-                  const hasSinglePattern = boltPatternBuckets.length === 1;
-                  const hasMultiplePatterns = boltPatternBuckets.length > 1;
-
-                  return (
-                    <>
-                      {/* Show vehicle bolt pattern - always visible when vehicle is selected */}
-                      {hasVehicle && vehicleBp ? (
-                        <div className="mb-2 rounded-lg bg-neutral-100 px-3 py-2 text-xs">
-                          <span className="text-neutral-500">Vehicle spec:</span>{" "}
-                          <span className="font-bold text-neutral-800">{vehicleBp}</span>
-                        </div>
-                      ) : null}
-
-                      {/* Case 1: No vehicle - show full dropdown */}
-                      {/* Case 2: Vehicle + multiple patterns (dual-drill wheels) - show dropdown */}
-                      {/* Case 3: Vehicle + single pattern - show locked value */}
-                      {!hasVehicle || hasMultiplePatterns ? (
-                        <>
-                          <select
-                            name="boltPattern"
-                            defaultValue={boltPatternParam || ""}
-                            className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                          >
-                            {hasVehicle && vehicleBp ? (
-                              <option value="">All matching ({vehicleBp})</option>
-                            ) : (
-                              <option value="">All bolt patterns</option>
-                            )}
-                            {boltPatternBuckets.map((b) => (
-                              <option key={b.value} value={b.value}>
-                                {b.value}{b.count != null ? ` (${b.count})` : ""}
-                              </option>
-                            ))}
-                          </select>
-                          <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                            Apply bolt pattern
-                          </button>
-                        </>
-                      ) : hasSinglePattern ? (
-                        /* Single bolt pattern for vehicle - show locked value (no dropdown) */
-                        <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
-                          ✓ {boltPatternBuckets[0].value}
-                          {boltPatternBuckets[0].count != null ? (
-                            <span className="ml-1 text-xs text-green-600">({boltPatternBuckets[0].count} available)</span>
-                          ) : null}
-                        </div>
-                      ) : (
-                        /* No results / empty state */
-                        <div className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-500">
-                          {vehicleBp || "No bolt pattern data"}
-                        </div>
-                      )}
-                    </>
-                  );
-                })()}
-              </FilterGroup>
-            </form>
+                    {/* Case 1: No vehicle - show full dropdown */}
+                    {/* Case 2: Vehicle + multiple patterns (dual-drill wheels) - show dropdown */}
+                    {/* Case 3: Vehicle + single pattern - show locked value */}
+                    {!hasVehicle || hasMultiplePatterns ? (
+                      <AutoSubmitSelect
+                        name="boltPattern"
+                        defaultValue={boltPatternParam || ""}
+                        resetPage
+                        className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                        options={[
+                          { value: "", label: hasVehicle && vehicleBp ? `All matching (${vehicleBp})` : "All bolt patterns" },
+                          ...boltPatternBuckets.map((b) => ({
+                            value: b.value,
+                            label: `${b.value}${b.count != null ? ` (${b.count})` : ""}`,
+                          })),
+                        ]}
+                      />
+                    ) : hasSinglePattern ? (
+                      /* Single bolt pattern for vehicle - show locked value (no dropdown) */
+                      <div className="rounded-xl border border-green-200 bg-green-50 px-3 py-2 text-sm font-semibold text-green-800">
+                        ✓ {boltPatternBuckets[0].value}
+                        {boltPatternBuckets[0].count != null ? (
+                          <span className="ml-1 text-xs text-green-600">({boltPatternBuckets[0].count} available)</span>
+                        ) : null}
+                      </div>
+                    ) : (
+                      /* No results / empty state */
+                      <div className="rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm text-neutral-500">
+                        {vehicleBp || "No bolt pattern data"}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
+            </AccordionFilter>
 
             {/* Fitment Level Toggle - OEM vs Lifted/Modified */}
             {hasVehicle && offRange?.[0] != null && offRange?.[1] != null ? (
@@ -1443,7 +1421,7 @@ export default async function WheelsPage({
             ) : null}
 
             {/* BRAND - auto-submit on change */}
-            <FilterGroup title="Brand">
+            <AccordionFilter defaultOpen title="Brand">
               <AutoSubmitSelect
                 name="brand_cd"
                 defaultValue={brandCd}
@@ -1457,10 +1435,10 @@ export default async function WheelsPage({
                   })),
                 ]}
               />
-            </FilterGroup>
+            </AccordionFilter>
 
             {/* DIAMETER - auto-submit on change */}
-            <FilterGroup title="Diameter">
+            <AccordionFilter defaultOpen title="Diameter">
               <AutoSubmitSelect
                 name="diameter"
                 defaultValue={diameterParam}
@@ -1477,50 +1455,31 @@ export default async function WheelsPage({
                   }),
                 ]}
               />
-            </FilterGroup>
+            </AccordionFilter>
 
-            {/* PRICE */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
-
-              <input type="hidden" name="brand_cd" value={brandCd} />
-              <input type="hidden" name="finish" value={finish} />
-              <input type="hidden" name="diameter" value={diameterParam} />
-              <input type="hidden" name="width" value={widthParam} />
-              <input type="hidden" name="boltPattern" value={boltPatternParam} />
-              <input type="hidden" name="offsetMin" value={offsetMinRaw} />
-              <input type="hidden" name="offsetMax" value={offsetMaxRaw} />
-
-              <FilterGroup title="Price">
-                <div className="grid grid-cols-2 gap-2">
-                  <input
-                    name="priceMin"
-                    defaultValue={priceMinRaw}
-                    placeholder="$ min"
-                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                  />
-                  <input
-                    name="priceMax"
-                    defaultValue={priceMaxRaw}
-                    placeholder="$ max"
-                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                  />
-                </div>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply price
-                </button>
-              </FilterGroup>
-            </form>
+            {/* PRICE - auto-submit on blur */}
+            <AccordionFilter defaultOpen title="Price" selectedCount={(priceMin ? 1 : 0) + (priceMax ? 1 : 0)}>
+              <div className="grid grid-cols-2 gap-2">
+                <AutoSubmitInput
+                  name="priceMin"
+                  defaultValue={priceMinRaw}
+                  placeholder="$ min"
+                  type="number"
+                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                />
+                <AutoSubmitInput
+                  name="priceMax"
+                  defaultValue={priceMaxRaw}
+                  placeholder="$ max"
+                  type="number"
+                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                />
+              </div>
+              <p className="mt-2 text-xs text-neutral-500">Press Enter or click away to apply</p>
+            </AccordionFilter>
 
             {/* FINISH - auto-submit on change */}
-            <FilterGroup title="Finish">
+            <AccordionFilter defaultOpen={false} title="Finish">
               <AutoSubmitSelect
                 name="finish"
                 defaultValue={finish}
@@ -1534,50 +1493,31 @@ export default async function WheelsPage({
                   })),
                 ]}
               />
-            </FilterGroup>
+            </AccordionFilter>
 
-            {/* OFFSET */}
-            <form action={basePath} method="get">
-              <input type="hidden" name="year" value={year} />
-              <input type="hidden" name="make" value={make} />
-              <input type="hidden" name="model" value={model} />
-              <input type="hidden" name="modification" value={modification} />
-              <input type="hidden" name="sort" value={sort} />
-              <input type="hidden" name="page" value={"1"} />
-              <input type="hidden" name="fitLevel" value={fitLevel} />
-
-              <input type="hidden" name="brand_cd" value={brandCd} />
-              <input type="hidden" name="finish" value={finish} />
-              <input type="hidden" name="diameter" value={diameterParam} />
-              <input type="hidden" name="width" value={widthParam} />
-              <input type="hidden" name="boltPattern" value={boltPatternParam} />
-              <input type="hidden" name="priceMin" value={priceMinRaw} />
-              <input type="hidden" name="priceMax" value={priceMaxRaw} />
-
-              <FilterGroup title="Offset (mm)">
-                <div className="grid grid-cols-2 gap-2">
-                  <input
-                    name="offsetMin"
-                    defaultValue={offsetMinRaw}
-                    placeholder="min"
-                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                  />
-                  <input
-                    name="offsetMax"
-                    defaultValue={offsetMaxRaw}
-                    placeholder="max"
-                    className="h-12 w-full rounded-xl border border-neutral-200 bg-white px-4 text-base font-semibold"
-                  />
-                </div>
-
-                <button className="mt-3 h-12 w-full rounded-xl px-4 text-base font-extrabold btn-outline-red">
-                  Apply offset
-                </button>
-              </FilterGroup>
-            </form>
+            {/* OFFSET - auto-submit on blur */}
+            <AccordionFilter defaultOpen={false} title="Offset (mm)" selectedCount={(offsetMinRaw ? 1 : 0) + (offsetMaxRaw ? 1 : 0)}>
+              <div className="grid grid-cols-2 gap-2">
+                <AutoSubmitInput
+                  name="offsetMin"
+                  defaultValue={offsetMinRaw}
+                  placeholder="min"
+                  type="number"
+                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                />
+                <AutoSubmitInput
+                  name="offsetMax"
+                  defaultValue={offsetMaxRaw}
+                  placeholder="max"
+                  type="number"
+                  className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-semibold"
+                />
+              </div>
+              <p className="mt-2 text-xs text-neutral-500">Press Enter or click away to apply</p>
+            </AccordionFilter>
 
             {/* WIDTH - auto-submit on change */}
-            <FilterGroup title="Width">
+            <AccordionFilter defaultOpen={false} title="Width">
               <AutoSubmitSelect
                 name="width"
                 defaultValue={widthParam}
@@ -1591,7 +1531,7 @@ export default async function WheelsPage({
                   })),
                 ]}
               />
-            </FilterGroup>
+            </AccordionFilter>
           </aside>
 
           <section>
