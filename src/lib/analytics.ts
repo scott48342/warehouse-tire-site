@@ -141,3 +141,67 @@ export function trackLiftedCategoryClick(params: {
     vehicle_model: params.model,
   });
 }
+
+// ─────────────────────────────────────────────────────────────
+// Staggered Fitment Events
+// ─────────────────────────────────────────────────────────────
+
+export function trackStaggeredSetupShown(params: {
+  year: string;
+  make: string;
+  model: string;
+  trim?: string;
+  frontSpec: { diameter: number; width: number };
+  rearSpec: { diameter: number; width: number };
+}) {
+  trackEvent("staggered_setup_shown", {
+    vehicle_year: params.year,
+    vehicle_make: params.make,
+    vehicle_model: params.model,
+    vehicle_trim: params.trim,
+    front_diameter: params.frontSpec.diameter,
+    front_width: params.frontSpec.width,
+    rear_diameter: params.rearSpec.diameter,
+    rear_width: params.rearSpec.width,
+  });
+}
+
+export function trackStaggeredSetupSelect(params: {
+  setupMode: "square" | "staggered";
+  year: string;
+  make: string;
+  model: string;
+  trim?: string;
+}) {
+  trackEvent("staggered_setup_select", {
+    setup_mode: params.setupMode,
+    vehicle_year: params.year,
+    vehicle_make: params.make,
+    vehicle_model: params.model,
+    vehicle_trim: params.trim,
+  });
+}
+
+export function trackStaggeredAddToCart(params: {
+  sku: string;
+  rearSku?: string;
+  brand: string;
+  model: string;
+  setupType: "square" | "staggered";
+  setPrice: number;
+  year?: string;
+  make?: string;
+  vehicleModel?: string;
+}) {
+  trackEvent("staggered_add_to_cart", {
+    wheel_sku: params.sku,
+    rear_sku: params.rearSku,
+    wheel_brand: params.brand,
+    wheel_model: params.model,
+    setup_type: params.setupType,
+    set_price: params.setPrice,
+    vehicle_year: params.year,
+    vehicle_make: params.make,
+    vehicle_model: params.vehicleModel,
+  });
+}

@@ -64,8 +64,11 @@ function WheelItemCard({ item }: { item: CartWheelItem }) {
         <div className="text-[10px] text-neutral-400 font-mono mt-0.5">{item.sku}</div>
 
         {item.staggered && item.rearSku ? (
-          <div className="mt-1 text-xs text-amber-700 font-medium">
-            Staggered setup (front + rear)
+          <div className="mt-1.5 flex items-center gap-1.5">
+            <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-100 to-orange-100 border border-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-800">
+              <span>🏁</span>
+              <span>Performance Staggered Set</span>
+            </span>
           </div>
         ) : null}
 

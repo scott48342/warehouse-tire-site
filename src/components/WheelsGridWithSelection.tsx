@@ -8,6 +8,13 @@ import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/a
 import { FitmentDiameterChips, type DiameterOption } from "./FitmentDiameterChips";
 import { useCart, type CartWheelItem } from "@/lib/cart/CartContext";
 
+// Add gtag type for analytics
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -292,13 +299,13 @@ function StaggeredSetupChooser({
   return (
     <div className="rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4 mb-4">
       <div className="flex items-center gap-2 mb-3">
-        <span className="text-lg">⚡</span>
+        <span className="text-lg">🏁</span>
         <div>
           <h3 className="text-sm font-extrabold text-neutral-900">
-            This Vehicle Supports Staggered Fitment
+            Choose Your Wheel Setup
           </h3>
           <p className="text-xs text-neutral-600">
-            Different wheel sizes for front and rear — common on performance vehicles
+            Your vehicle came with a staggered setup from the factory
           </p>
         </div>
       </div>
@@ -310,12 +317,12 @@ function StaggeredSetupChooser({
           onClick={() => onModeChange("square")}
           className={`relative rounded-xl border-2 p-3 text-left transition-all ${
             selectedMode === "square"
-              ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200"
+              ? "border-neutral-400 bg-neutral-50 ring-2 ring-neutral-200"
               : "border-neutral-200 bg-white hover:border-neutral-300"
           }`}
         >
           {selectedMode === "square" && (
-            <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-white">
+            <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-500 text-white">
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
@@ -323,47 +330,53 @@ function StaggeredSetupChooser({
           )}
           <div className="text-xs font-bold text-neutral-900 mb-1">Square Setup</div>
           <div className="text-[11px] text-neutral-600">
-            Same wheels all 4 corners
+            Same size all 4 corners
+          </div>
+          <div className="mt-1 text-[10px] text-neutral-400">
+            Easier tire rotation
           </div>
           {frontSpec && (
-            <div className="mt-2 text-[10px] font-medium text-neutral-500">
+            <div className="mt-2 text-[10px] font-medium text-neutral-500 bg-neutral-100 rounded px-2 py-1">
               All: {frontSpec.diameter}&quot; × {frontSpec.width}&quot;
             </div>
           )}
         </button>
         
-        {/* Staggered Setup */}
+        {/* Staggered Setup - Premium styling */}
         <button
           onClick={() => onModeChange("staggered")}
           className={`relative rounded-xl border-2 p-3 text-left transition-all ${
             selectedMode === "staggered"
-              ? "border-amber-500 bg-amber-50 ring-2 ring-amber-200"
-              : "border-neutral-200 bg-white hover:border-neutral-300"
+              ? "border-amber-500 bg-gradient-to-br from-amber-50 to-orange-50 ring-2 ring-amber-300 shadow-lg shadow-amber-200/50"
+              : "border-neutral-200 bg-white hover:border-amber-300 hover:bg-amber-50/50"
           }`}
         >
           {selectedMode === "staggered" && (
-            <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-white">
+            <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-white shadow-lg shadow-amber-500/30">
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
             </div>
           )}
-          <div className="flex items-center gap-1.5">
-            <span className="text-xs font-bold text-neutral-900">Staggered Setup</span>
-            <span className="rounded bg-amber-200 px-1.5 py-0.5 text-[9px] font-bold text-amber-800">OEM</span>
+          <div className="flex items-center gap-1.5 mb-1">
+            <span className="text-xs font-extrabold text-neutral-900">Performance Staggered</span>
           </div>
-          <div className="text-[11px] text-neutral-600">
-            Wider rear wheels
+          <div className="flex items-center gap-1.5">
+            <span className="rounded bg-amber-200 px-1.5 py-0.5 text-[9px] font-bold text-amber-800">OEM SPEC</span>
+            <span className="rounded bg-green-100 px-1.5 py-0.5 text-[9px] font-bold text-green-700">RECOMMENDED</span>
+          </div>
+          <div className="mt-1.5 text-[10px] text-amber-700 font-medium">
+            Better traction • Aggressive stance
           </div>
           {frontSpec && rearSpec && (
-            <div className="mt-2 space-y-0.5">
-              <div className="text-[10px] font-medium text-neutral-500">
-                F: {frontSpec.diameter}&quot; × {frontSpec.width}&quot;
-                {frontSpec.tireSize && <span className="text-neutral-400"> • {frontSpec.tireSize}</span>}
+            <div className="mt-2 space-y-0.5 bg-white/60 rounded px-2 py-1.5">
+              <div className="text-[10px] font-medium text-neutral-600">
+                Front: {frontSpec.diameter}&quot; × {frontSpec.width}&quot;
+                {frontSpec.tireSize && <span className="text-neutral-400 ml-1">{frontSpec.tireSize}</span>}
               </div>
-              <div className="text-[10px] font-medium text-neutral-500">
-                R: {rearSpec.diameter}&quot; × {rearSpec.width}&quot;
-                {rearSpec.tireSize && <span className="text-neutral-400"> • {rearSpec.tireSize}</span>}
+              <div className="text-[10px] font-medium text-neutral-600">
+                Rear: {rearSpec.diameter}&quot; × {rearSpec.width}&quot;
+                {rearSpec.tireSize && <span className="text-neutral-400 ml-1">{rearSpec.tireSize}</span>}
               </div>
             </div>
           )}
@@ -373,9 +386,9 @@ function StaggeredSetupChooser({
       {/* Info text based on selection */}
       <div className="mt-3 text-[11px] text-neutral-500">
         {selectedMode === "square" ? (
-          <>💡 Showing wheels that work on all 4 corners. Easier tire rotation.</>
+          <>💡 Square setup works great. Same wheels all around = easier tire rotation.</>
         ) : (
-          <>💡 Showing wheels for front/rear staggered setup. Matches OEM performance spec.</>
+          <>💡 <span className="font-medium text-amber-700">Performance staggered</span> — wider rear wheels for better grip and the aggressive factory look.</>
         )}
       </div>
     </div>
@@ -543,11 +556,57 @@ export function WheelsGridWithSelection({
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const confirmationRef = useRef<HTMLDivElement>(null);
   
-  // Staggered setup mode state - default to square for simplicity
-  const [setupMode, setSetupMode] = useState<SetupMode>("square");
-  
   // Determine if this vehicle supports staggered fitment
   const supportsStaggered = Boolean(staggeredInfo?.isStaggered);
+  
+  // Staggered setup mode state - default to staggered for OEM staggered vehicles (recommended)
+  const [setupMode, setSetupMode] = useState<SetupMode>(() => 
+    supportsStaggered ? "staggered" : "square"
+  );
+  
+  // Sync setup mode when staggeredInfo becomes available (handles SSR hydration)
+  useEffect(() => {
+    if (supportsStaggered && setupMode === "square") {
+      // If staggered is supported but mode is still square, switch to staggered (recommended)
+      setSetupMode("staggered");
+    }
+  }, [supportsStaggered]); // Only run when supportsStaggered changes
+  
+  // Track when staggered chooser is shown (once per page view)
+  const hasTrackedChooserRef = useRef(false);
+  useEffect(() => {
+    if (supportsStaggered && staggeredInfo && !hasTrackedChooserRef.current) {
+      hasTrackedChooserRef.current = true;
+      if (typeof window !== "undefined" && window.gtag && staggeredInfo.frontSpec && staggeredInfo.rearSpec) {
+        window.gtag("event", "staggered_chooser_shown", {
+          vehicle_year: viewParams.year,
+          vehicle_make: viewParams.make,
+          vehicle_model: viewParams.model,
+          vehicle_trim: viewParams.trim || viewParams.modification,
+          front_diameter: staggeredInfo.frontSpec.diameter,
+          front_width: staggeredInfo.frontSpec.width,
+          rear_diameter: staggeredInfo.rearSpec.diameter,
+          rear_width: staggeredInfo.rearSpec.width,
+          default_mode: "staggered", // We now default to staggered
+        });
+      }
+    }
+  }, [supportsStaggered, staggeredInfo, viewParams]);
+  
+  // Track setup mode selection for analytics
+  const handleSetupModeChange = useCallback((mode: SetupMode) => {
+    setSetupMode(mode);
+    // Track the selection
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "staggered_setup_select", {
+        setup_mode: mode,
+        vehicle_year: viewParams.year,
+        vehicle_make: viewParams.make,
+        vehicle_model: viewParams.model,
+        vehicle_trim: viewParams.trim || viewParams.modification,
+      });
+    }
+  }, [viewParams]);
   
   // ═══════════════════════════════════════════════════════════════════════════════
   // PHASE 2: Filter wheels based on setup mode + match to staggered specs
@@ -861,6 +920,25 @@ export function WheelsGridWithSelection({
       addItem(cartItem);
     }
     
+    // Track add-to-cart with setup type
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "add_to_cart", {
+        currency: "USD",
+        value: selectedWheel.setPrice,
+        items: [{
+          item_id: selectedWheel.sku,
+          item_name: `${selectedWheel.brand} ${selectedWheel.model}`,
+          item_brand: selectedWheel.brand,
+          item_category: "wheel",
+          quantity: 4,
+          price: selectedWheel.price || (selectedWheel.setPrice / 4),
+        }],
+        setup_type: selectedWheel.staggered ? "staggered" : "square",
+        staggered: selectedWheel.staggered,
+        rear_sku: selectedWheel.rearSku,
+      });
+    }
+    
     // Show cart drawer after short delay
     setTimeout(() => {
       setIsAddingToCart(false);
@@ -988,7 +1066,7 @@ export function WheelsGridWithSelection({
         <StaggeredSetupChooser
           staggeredInfo={staggeredInfo}
           selectedMode={setupMode}
-          onModeChange={setSetupMode}
+          onModeChange={handleSetupModeChange}
         />
       )}
       
