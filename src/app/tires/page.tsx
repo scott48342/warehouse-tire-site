@@ -735,10 +735,39 @@ export default async function TiresPage({
   let staggeredFrontTireSize: string | null = null;
   let staggeredRearTireSize: string | null = null;
   
-  if (isStaggeredVehicle && isPackageFlow && staggeredFrontDia && staggeredRearDia) {
+  // IMPORTANT: Check if user selected their own wheel sizes (override OEM staggered)
+  // If user has wheelDia without wheelDiaFront/wheelDiaRear, they chose a square setup
+  const userSelectedSquareSetup = wheelDia && !wheelDiaFront && !wheelDiaRear;
+  const userSelectedStaggeredSetup = wheelDiaFront && wheelDiaRear;
+  
+  // Determine actual wheel specs to use for tire generation
+  const actualFrontDia = userSelectedStaggeredSetup 
+    ? Number(wheelDiaFront) 
+    : userSelectedSquareSetup 
+      ? Number(wheelDia) 
+      : staggeredFrontDia;
+  const actualRearDia = userSelectedStaggeredSetup 
+    ? Number(wheelDiaRear) 
+    : userSelectedSquareSetup 
+      ? Number(wheelDia) 
+      : staggeredRearDia;
+  const actualFrontWidth = userSelectedStaggeredSetup 
+    ? Number(wheelWidthFront) || staggeredFrontWidth 
+    : userSelectedSquareSetup 
+      ? Number(wheelWidth) || 9 
+      : staggeredFrontWidth;
+  const actualRearWidth = userSelectedStaggeredSetup 
+    ? Number(wheelWidthRear) || staggeredRearWidth 
+    : userSelectedSquareSetup 
+      ? Number(wheelWidth) || 9 
+      : staggeredRearWidth;
+  
+  // Only show staggered pairs if front and rear are DIFFERENT diameters
+  const isActuallyStaggered = actualFrontDia !== actualRearDia;
+  
+  if (isStaggeredVehicle && isPackageFlow && actualFrontDia && actualRearDia && isActuallyStaggered) {
     // Generate recommended tire sizes based on wheel specs
     // Standard tire widths: 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315...
-    // Formula: tire width ≈ wheel width × 25.4 + 10-30mm, rounded to nearest 10mm
     const STANDARD_TIRE_WIDTHS = [195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325, 335, 345];
     
     const findNearestTireWidth = (wheelWidthInches: number): number => {
@@ -748,25 +777,27 @@ export default async function TiresPage({
       );
     };
     
-    const frontTireWidth = findNearestTireWidth(staggeredFrontWidth || 8.5);
-    const rearTireWidth = findNearestTireWidth(staggeredRearWidth || 11);
+    const frontTireWidth = findNearestTireWidth(actualFrontWidth || 8.5);
+    const rearTireWidth = findNearestTireWidth(actualRearWidth || 11);
     
     // Calculate aspect ratio for a reasonable overall diameter
-    // Performance cars like Corvette typically use 30-40 aspect ratios
-    const frontAspect = staggeredFrontDia <= 19 ? 35 : 30;
-    const rearAspect = 30; // Wide rear tires typically 30 aspect
+    const frontAspect = actualFrontDia <= 19 ? 35 : 30;
+    const rearAspect = 30;
     
-    staggeredFrontTireSize = `${frontTireWidth}/${frontAspect}R${staggeredFrontDia}`;
-    staggeredRearTireSize = `${rearTireWidth}/${rearAspect}R${staggeredRearDia}`;
+    staggeredFrontTireSize = `${frontTireWidth}/${frontAspect}R${actualFrontDia}`;
+    staggeredRearTireSize = `${rearTireWidth}/${rearAspect}R${actualRearDia}`;
     
     console.log('[tires/page] 🔄 STAGGERED TIRE SIZES GENERATED:', {
       front: staggeredFrontTireSize,
       rear: staggeredRearTireSize,
-      fromWheelSpecs: {
-        front: `${staggeredFrontDia}" × ${staggeredFrontWidth}"`,
-        rear: `${staggeredRearDia}" × ${staggeredRearWidth}"`,
+      userOverride: userSelectedSquareSetup ? 'square' : userSelectedStaggeredSetup ? 'staggered' : 'none',
+      actualSpecs: {
+        front: `${actualFrontDia}" × ${actualFrontWidth}"`,
+        rear: `${actualRearDia}" × ${actualRearWidth}"`,
       },
     });
+  } else if (isStaggeredVehicle && isPackageFlow && userSelectedSquareSetup) {
+    console.log('[tires/page] ℹ️ User selected SQUARE setup on staggered vehicle - showing single size search');
   }
   
   // ═══════════════════════════════════════════════════════════════════════════
