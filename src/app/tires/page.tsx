@@ -650,13 +650,15 @@ export default async function TiresPage({
   const staggeredRearDia = fitmentStaggered?.rearSpec?.diameter;
   const staggeredRearWidth = fitmentStaggered?.rearSpec?.width;
   
-  // Effective wheel specs for tire search - prefer URL params, fall back to fitment spec
+  // Effective wheel specs for tire search
+  // CRITICAL: For staggered vehicles, prioritize fitment spec over generic wheelDia URL param
+  // because wheelDia might be for one axle only (e.g., rear 20" in URL, but front is 19")
   const effectiveWheelDia = axle === "front"
-    ? (wheelDiaFront || wheelDia || (staggeredFrontDia ? String(staggeredFrontDia) : ""))
-    : (wheelDiaRear || wheelDia || (staggeredRearDia ? String(staggeredRearDia) : ""));
+    ? (wheelDiaFront || (isStaggeredFromFitment && staggeredFrontDia ? String(staggeredFrontDia) : wheelDia) || "")
+    : (wheelDiaRear || (isStaggeredFromFitment && staggeredRearDia ? String(staggeredRearDia) : wheelDia) || "");
   const effectiveWheelWidth = axle === "front"
-    ? (wheelWidthFront || wheelWidth || (staggeredFrontWidth ? String(staggeredFrontWidth) : ""))
-    : (wheelWidthRear || wheelWidth || (staggeredRearWidth ? String(staggeredRearWidth) : ""));
+    ? (wheelWidthFront || (isStaggeredFromFitment && staggeredFrontWidth ? String(staggeredFrontWidth) : wheelWidth) || "")
+    : (wheelWidthRear || (isStaggeredFromFitment && staggeredRearWidth ? String(staggeredRearWidth) : wheelWidth) || "");
   
   if (isStaggeredVehicle && isPackageFlow) {
     console.log('[tires/page] 🎯 STAGGERED TIRE SEARCH:', {
