@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "lastUpdated": "2026-04-05",
+    "totalReviews": 247,
+    "averageRating": 4.8,
+    "sources": [
+      { "id": "pontiac", "name": "Warehouse Tire Pontiac", "reviewCount": 142 },
+      { "id": "waterford", "name": "Warehouse Tire Waterford", "reviewCount": 105 }
+    ]
+  },
+  "featured": [
+    {
+      "id": "r1",
+      "author": "Mike T.",
+      "rating": 5,
+      "text": "Best tire shop I've ever been to. They matched the exact fitment for my lifted F-150 and the price was better than anywhere else.",
+      "location": "pontiac",
+      "date": "2026-03-15",
+      "vehicleType": "truck",
+      "tags": ["lifted", "fitment", "price"]
+    },
+    {
+      "id": "r2",
+      "author": "Sarah K.",
+      "rating": 5,
+      "text": "Super helpful staff. They took the time to explain the differences between tire options and helped me pick the right ones for Michigan winters.",
+      "location": "waterford",
+      "date": "2026-03-08",
+      "vehicleType": "suv",
+      "tags": ["service", "winter"]
+    },
+    {
+      "id": "r3",
+      "author": "James R.",
+      "rating": 5,
+      "text": "Got a full wheel and tire package for my Silverado. Installation was quick and everything looks amazing. Highly recommend!",
+      "location": "pontiac",
+      "date": "2026-02-22",
+      "vehicleType": "truck",
+      "tags": ["package", "installation", "wheels"]
+    },
+    {
+      "id": "r4",
+      "author": "Linda M.",
+      "rating": 4,
+      "text": "Great selection and fair prices. The team was knowledgeable and got me in and out quickly.",
+      "location": "waterford",
+      "date": "2026-02-18",
+      "vehicleType": "sedan",
+      "tags": ["selection", "quick"]
+    },
+    {
+      "id": "r5",
+      "author": "David H.",
+      "rating": 5,
+      "text": "These guys know trucks. They set me up with the perfect offset for my RAM and it looks incredible. No rubbing, perfect stance.",
+      "location": "pontiac",
+      "date": "2026-02-10",
+      "vehicleType": "truck",
+      "tags": ["truck", "offset", "fitment"]
+    },
+    {
+      "id": "r6",
+      "author": "Jennifer P.",
+      "rating": 5,
+      "text": "Finally found a shop that doesn't talk down to women. They answered all my questions and helped me understand what I was buying.",
+      "location": "waterford",
+      "date": "2026-01-28",
+      "vehicleType": "suv",
+      "tags": ["service", "helpful"]
+    },
+    {
+      "id": "r7",
+      "author": "Chris B.",
+      "rating": 5,
+      "text": "Ordered wheels online, picked up at the Pontiac location. Seamless experience and the guys helped me load them up.",
+      "location": "pontiac",
+      "date": "2026-01-20",
+      "vehicleType": "truck",
+      "tags": ["online", "pickup"]
+    },
+    {
+      "id": "r8",
+      "author": "Amanda W.",
+      "rating": 4,
+      "text": "Good prices and honest service. They told me my tires still had life left instead of pushing a sale. I'll be back when I actually need new ones.",
+      "location": "waterford",
+      "date": "2026-01-15",
+      "vehicleType": "sedan",
+      "tags": ["honest", "service"]
+    }
+  ]
+}

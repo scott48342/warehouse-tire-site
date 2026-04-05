@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
 import { HeroVehicleEntry } from "@/components/HeroVehicleEntry";
+import { ReviewsSection } from "@/components/StoreReviews";
 
 export const runtime = "nodejs";
 
@@ -217,6 +218,11 @@ export default async function Home() {
             <div className="hidden md:block text-7xl opacity-80">🛻</div>
           </div>
         </Link>
+      </section>
+
+      {/* ===== CUSTOMER REVIEWS ===== */}
+      <section className="mx-auto max-w-6xl px-4">
+        <ReviewsSection maxReviews={4} />
       </section>
 
       {/* ===== TRUST SECTION - Compact ===== */}
