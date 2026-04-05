@@ -745,9 +745,14 @@ export default async function TiresPage({
   const oemWidthRatio = (staggeredFrontWidth && staggeredRearWidth) 
     ? staggeredFrontWidth / staggeredRearWidth 
     : 1;
-  const inferredFrontWidth = (staggeredFrontWidth && staggeredRearWidth && Number(wheelWidth))
+  const rawInferredFrontWidth = (staggeredFrontWidth && staggeredRearWidth && Number(wheelWidth))
     ? Math.round(Number(wheelWidth) * oemWidthRatio * 2) / 2 // Round to nearest 0.5"
     : staggeredFrontWidth;
+  
+  // SANITY CHECK: If inferred width is unrealistic (<8" for performance cars), treat as square
+  // This handles cases like 22x9 where OEM ratio would give 7" front (nonsense)
+  const inferredWidthIsRealistic = rawInferredFrontWidth && rawInferredFrontWidth >= 8;
+  const inferredFrontWidth = inferredWidthIsRealistic ? rawInferredFrontWidth : null;
   
   // Determine actual wheel specs to use for tire generation
   const actualFrontDia = userSelectedStaggeredSetup 
@@ -761,18 +766,21 @@ export default async function TiresPage({
       ? Number(wheelDia) 
       : staggeredRearDia;
   
-  // For staggered vehicles: use OEM width ratio even when user selects single diameter
+  // For staggered vehicles: use OEM width ratio when realistic, else square
+  // If inferred front width is unrealistic (null), treat as square setup
+  const useStaggeredWidths = userSelectedSquareSetup && isStaggeredFromFitment && inferredFrontWidth;
+  
   const actualFrontWidth = userSelectedStaggeredSetup 
     ? Number(wheelWidthFront) || staggeredFrontWidth 
-    : userSelectedSquareSetup && isStaggeredFromFitment
-      ? inferredFrontWidth || staggeredFrontWidth // Use inferred width for staggered vehicle
+    : useStaggeredWidths
+      ? inferredFrontWidth // Use inferred width for staggered vehicle
       : userSelectedSquareSetup 
-        ? Number(wheelWidth) || 9 
+        ? Number(wheelWidth) || 9 // Square: same width front and rear
         : staggeredFrontWidth;
   const actualRearWidth = userSelectedStaggeredSetup 
     ? Number(wheelWidthRear) || staggeredRearWidth 
     : userSelectedSquareSetup 
-      ? Number(wheelWidth) || staggeredRearWidth || 9 
+      ? Number(wheelWidth) || 9 // Square: same width front and rear
       : staggeredRearWidth;
   
   // Staggered = different diameters OR different widths (same dia but 8.5" front vs 11" rear)
@@ -782,7 +790,9 @@ export default async function TiresPage({
   
   console.log('[tires/page] 🔧 STAGGERED WIDTH CALCULATION:', {
     oemWidthRatio,
-    inferredFrontWidth,
+    rawInferredFrontWidth,
+    inferredWidthIsRealistic,
+    useStaggeredWidths,
     urlWheelWidth: wheelWidth,
     actualFrontWidth,
     actualRearWidth,
