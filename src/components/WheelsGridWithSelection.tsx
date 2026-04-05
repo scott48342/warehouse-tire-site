@@ -159,12 +159,14 @@ function SelectionConfirmation({
   tiresHref,
   onClear,
   onAddToCart,
+  onBuildPackage,
   isAddingToCart,
 }: { 
   wheel: SelectedWheel;
   tiresHref: string;
   onClear: () => void;
   onAddToCart: () => void;
+  onBuildPackage: () => void;
   isAddingToCart: boolean;
 }) {
   return (
@@ -230,15 +232,28 @@ function SelectionConfirmation({
                 </span>
                 <span className="text-xs text-neutral-600">Save time with matched tires</span>
               </div>
-              <Link
-                href={tiresHref}
-                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-600 text-sm font-extrabold text-white shadow-lg shadow-green-600/30 transition-all hover:bg-green-700 hover:shadow-xl active:scale-[0.98]"
+              <button
+                onClick={onBuildPackage}
+                disabled={isAddingToCart}
+                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-600 text-sm font-extrabold text-white shadow-lg shadow-green-600/30 transition-all hover:bg-green-700 hover:shadow-xl active:scale-[0.98] disabled:opacity-60"
               >
-                Build Complete Package
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+                {isAddingToCart ? (
+                  <>
+                    <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    Adding wheels...
+                  </>
+                ) : (
+                  <>
+                    Build Complete Package
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </>
+                )}
+              </button>
               <p className="mt-2 text-[11px] text-neutral-500 text-center">
                 We&apos;ll show tires that fit these wheels perfectly
               </p>
@@ -407,15 +422,15 @@ function StaggeredSetupChooser({
 // ═══════════════════════════════════════════════════════════════════════════════
 function MobileStickyBar({ 
   wheel, 
-  tiresHref,
   isVisible,
   onAddToCart,
+  onBuildPackage,
   isAddingToCart,
 }: { 
   wheel: SelectedWheel | null;
-  tiresHref: string;
   isVisible: boolean;
   onAddToCart: () => void;
+  onBuildPackage: () => void;
   isAddingToCart: boolean;
 }) {
   if (!wheel || !isVisible) return null;
@@ -443,15 +458,18 @@ function MobileStickyBar({
           
           {/* CTA buttons row */}
           <div className="flex gap-2">
-            <Link
-              href={tiresHref}
-              className="flex h-11 flex-1 items-center justify-center gap-1.5 rounded-xl bg-green-600 text-sm font-extrabold text-white shadow-lg shadow-green-600/30"
+            <button
+              onClick={onBuildPackage}
+              disabled={isAddingToCart}
+              className="flex h-11 flex-1 items-center justify-center gap-1.5 rounded-xl bg-green-600 text-sm font-extrabold text-white shadow-lg shadow-green-600/30 disabled:opacity-60"
             >
-              + Tires
-              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
+              {isAddingToCart ? "Adding..." : "+ Tires"}
+              {!isAddingToCart && (
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              )}
+            </button>
             <button
               onClick={onAddToCart}
               disabled={isAddingToCart}
@@ -1063,6 +1081,115 @@ export function WheelsGridWithSelection({
     }, 300);
   }, [selectedWheel, viewParams, addItem, addAccessories, setAccessoryState, replaceAccessorySku, setCartOpen, dbProfile]);
   
+  // Build package: Add wheels + accessories, then navigate to tires
+  const handleBuildPackage = useCallback(() => {
+    if (!selectedWheel) return;
+    
+    setIsAddingToCart(true);
+    
+    const vehicleInfo = viewParams.year && viewParams.make && viewParams.model ? {
+      year: viewParams.year,
+      make: viewParams.make,
+      model: viewParams.model,
+      trim: viewParams.trim,
+      modification: viewParams.modification,
+    } : undefined;
+    
+    // Create cart item (same logic as handleAddWheelsToCart)
+    const cartItem: CartWheelItem = selectedWheel.staggered && selectedWheel.rearSku ? {
+      type: "wheel",
+      sku: selectedWheel.sku,
+      rearSku: selectedWheel.rearSku,
+      brand: selectedWheel.brand,
+      model: selectedWheel.model,
+      finish: selectedWheel.finish,
+      diameter: selectedWheel.diameter,
+      width: selectedWheel.width,
+      rearWidth: selectedWheel.rearWidth,
+      offset: selectedWheel.offset,
+      rearOffset: selectedWheel.rearOffset,
+      boltPattern: selectedWheel.boltPattern,
+      imageUrl: selectedWheel.imageUrl,
+      unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
+      quantity: 4,
+      fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+      vehicle: vehicleInfo,
+      staggered: true,
+    } : {
+      type: "wheel",
+      sku: selectedWheel.sku,
+      brand: selectedWheel.brand,
+      model: selectedWheel.model,
+      finish: selectedWheel.finish,
+      diameter: selectedWheel.diameter,
+      width: selectedWheel.width,
+      offset: selectedWheel.offset,
+      boltPattern: selectedWheel.boltPattern,
+      imageUrl: selectedWheel.imageUrl,
+      unitPrice: selectedWheel.price || (selectedWheel.setPrice / 4),
+      quantity: 4,
+      fitmentClass: selectedWheel.fitmentClass as "surefit" | "specfit" | "extended" | undefined,
+      vehicle: vehicleInfo,
+      staggered: false,
+    };
+    
+    addItem(cartItem);
+    
+    // Add accessories
+    if (dbProfile) {
+      const wheelForFitment: WheelForAccessories = {
+        sku: selectedWheel.sku,
+        centerBore: selectedWheel.centerbore ? Number(selectedWheel.centerbore) : undefined,
+        boltPattern: selectedWheel.boltPattern,
+      };
+
+      const fitmentResult = calculateAccessoryFitment(dbProfile, wheelForFitment);
+      
+      console.log("[WheelsGrid] Build package - accessory fitment:", {
+        wheelSku: selectedWheel.sku,
+        requiredItems: fitmentResult.requiredItems.map(i => `${i.category}: ${i.name}`),
+      });
+      
+      if (fitmentResult.state) {
+        setAccessoryState(fitmentResult.state);
+      }
+
+      if (fitmentResult.requiredItems.length > 0) {
+        const lug = fitmentResult.requiredItems.find((i) => i.category === "lug_nut");
+        if (lug?.spec?.threadSize) {
+          const placeholderSku = lug.sku;
+          const qs = new URLSearchParams({ threadSize: lug.spec.threadSize });
+          if (lug.spec.seatType) qs.set("seatType", lug.spec.seatType);
+
+          fetch(`/api/accessories/lugkits?${qs.toString()}`, {
+            headers: { Accept: "application/json" },
+          })
+            .then((r) => r.json().catch(() => null).then((j) => ({ ok: r.ok, j })))
+            .then(({ ok, j }) => {
+              if (ok && j?.choice?.sku) {
+                replaceAccessorySku(placeholderSku, {
+                  ...lug,
+                  sku: String(j.choice.sku),
+                  meta: { ...(lug.meta || {}), placeholder: false, source: "wheelpros" },
+                });
+              }
+            })
+            .catch(() => {});
+        }
+        addAccessories(fitmentResult.requiredItems);
+      }
+    }
+    
+    // Navigate to tires page after short delay
+    setTimeout(() => {
+      setIsAddingToCart(false);
+      setSelectedWheel(null);
+      setShowMobileBar(false);
+      // Navigate to tires page
+      window.location.href = tiresHref;
+    }, 300);
+  }, [selectedWheel, viewParams, addItem, addAccessories, setAccessoryState, replaceAccessorySku, dbProfile, tiresHref]);
+  
   // Track scroll for mobile bar visibility
   useEffect(() => {
     if (!selectedWheel) return;
@@ -1196,6 +1323,7 @@ export function WheelsGridWithSelection({
             tiresHref={tiresHref}
             onClear={handleClearSelection}
             onAddToCart={handleAddWheelsToCart}
+            onBuildPackage={handleBuildPackage}
             isAddingToCart={isAddingToCart}
           />
         </div>
@@ -1346,9 +1474,9 @@ export function WheelsGridWithSelection({
       {/* Mobile Sticky Bar */}
       <MobileStickyBar
         wheel={selectedWheel}
-        tiresHref={tiresHref}
         isVisible={showMobileBar}
         onAddToCart={handleAddWheelsToCart}
+        onBuildPackage={handleBuildPackage}
         isAddingToCart={isAddingToCart}
       />
     </>
