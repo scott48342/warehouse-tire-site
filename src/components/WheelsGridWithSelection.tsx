@@ -782,6 +782,34 @@ export function WheelsGridWithSelection({
   const displayWheels = setupMode === "staggered" ? wheelsWithPairs : filteredWheels;
   
   // Also filter recommended wheels by setup mode
+  // For staggered mode, compute pairs specifically for recommended wheels
+  // (they may not be in allWheels, so we need to scan them separately)
+  const recommendedStaggeredPairs = useMemo(() => {
+    if (!supportsStaggered || !staggeredInfo?.frontSpec || !staggeredInfo?.rearSpec || !recommendedWheels.length) {
+      return new Set<string>();
+    }
+    
+    const { frontSpec, rearSpec } = staggeredInfo;
+    const styleGroups = new Map<string, { front: boolean; rear: boolean }>();
+    
+    for (const wheel of recommendedWheels) {
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      if (!styleGroups.has(styleKey)) {
+        styleGroups.set(styleKey, { front: false, rear: false });
+      }
+      const group = styleGroups.get(styleKey)!;
+      if (matchesStaggeredSpec(wheel, frontSpec)) group.front = true;
+      if (matchesStaggeredSpec(wheel, rearSpec)) group.rear = true;
+    }
+    
+    // Return styleKeys that have both front and rear
+    const pairs = new Set<string>();
+    for (const [styleKey, group] of styleGroups.entries()) {
+      if (group.front && group.rear) pairs.add(styleKey);
+    }
+    return pairs;
+  }, [recommendedWheels, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
+  
   // For staggered mode, only show recommended wheels that have complete pairs
   const filteredRecommended = useMemo(() => {
     if (!supportsStaggered || !recommendedWheels.length) {
@@ -791,11 +819,13 @@ export function WheelsGridWithSelection({
     const { frontSpec } = staggeredInfo || {};
     
     if (setupMode === "staggered") {
-      // In staggered mode, only show recommended wheels that are part of complete pairs
-      // Use the same completePairStyles set we already computed
+      // In staggered mode, show recommended wheels that are part of complete pairs
+      // Check both allWheels pairs AND recommended-specific pairs
       return recommendedWheels.filter(w => {
         const styleKey = `${w.brand}|${w.model}|${w.finish || ""}`.toLowerCase();
-        return completePairStyles.has(styleKey) || w.pair?.staggered === true;
+        return completePairStyles.has(styleKey) || 
+               recommendedStaggeredPairs.has(styleKey) || 
+               w.pair?.staggered === true;
       });
     } else {
       // Square mode: show wheels that match front spec or are generic square
@@ -807,7 +837,7 @@ export function WheelsGridWithSelection({
       }
       return recommendedWheels.filter(w => !w.pair?.staggered);
     }
-  }, [recommendedWheels, setupMode, supportsStaggered, staggeredInfo, completePairStyles, matchesStaggeredSpec]);
+  }, [recommendedWheels, setupMode, supportsStaggered, staggeredInfo, completePairStyles, recommendedStaggeredPairs, matchesStaggeredSpec]);
   
   // Cart context
   const { addItem, setIsOpen: setCartOpen } = useCart();
