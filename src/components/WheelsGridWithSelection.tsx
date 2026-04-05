@@ -170,134 +170,94 @@ function SelectionConfirmation({
   isAddingToCart: boolean;
 }) {
   return (
-    <div className="animate-slide-up rounded-2xl border-2 border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 p-4 shadow-lg shadow-green-100/50">
-      <div className="flex items-start gap-4">
-        {/* Checkmark */}
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-500 text-white shadow-lg shadow-green-500/30">
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div className="animate-slide-up rounded-xl bg-neutral-50 border border-neutral-200 p-4">
+      {/* Selected wheel info */}
+      <div className="flex items-center gap-3">
+        {/* Green checkmark - selected state indicator */}
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
           </svg>
         </div>
         
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-extrabold text-green-800">Wheel Selected</span>
+        {wheel.imageUrl && (
+          <img 
+            src={wheel.imageUrl} 
+            alt={wheel.model} 
+            className="h-12 w-12 rounded-lg object-contain bg-white border border-neutral-200"
+          />
+        )}
+        
+        <div className="min-w-0 flex-1">
+          <div className="text-sm font-bold text-neutral-900 truncate">
+            {wheel.brand} {wheel.model}
             {wheel.staggered && (
-              <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">
-                Staggered Setup
-              </span>
+              <span className="ml-2 text-[10px] font-medium text-amber-700">(Staggered)</span>
             )}
           </div>
-          
-          <div className="mt-1 flex items-center gap-3">
-            {wheel.imageUrl && (
-              <img 
-                src={wheel.imageUrl} 
-                alt={wheel.model} 
-                className="h-14 w-14 rounded-lg object-contain bg-white border border-green-100"
-              />
+          <div className="text-xs text-neutral-500">
+            {wheel.staggered ? (
+              <>F: {wheel.diameter}&quot;×{wheel.width}&quot; • R: {wheel.diameter}&quot;×{wheel.rearWidth}&quot;</>
+            ) : (
+              <>{wheel.diameter}&quot; × {wheel.width}&quot;</>
             )}
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-neutral-900 truncate">
-                {wheel.brand} {wheel.model}
-              </div>
-              <div className="text-xs text-neutral-600">
-                {wheel.staggered ? (
-                  <>
-                    F: {wheel.diameter}&quot; × {wheel.width}&quot; • R: {wheel.diameter}&quot; × {wheel.rearWidth}&quot;
-                  </>
-                ) : (
-                  <>
-                    {wheel.diameter && `${wheel.diameter}"`}
-                    {wheel.diameter && wheel.width && " × "}
-                    {wheel.width && `${wheel.width}"`}
-                  </>
-                )}
-                {wheel.finish && ` • ${wheel.finish}`}
-              </div>
-              <div className="mt-0.5 text-sm font-extrabold text-green-700">
-                ${wheel.setPrice.toLocaleString()} for 4
-              </div>
-            </div>
+            {wheel.finish && ` • ${wheel.finish}`}
           </div>
-          
-          {/* What's next options */}
-          <div className="mt-4 space-y-3">
-            {/* Option 1: Complete Package (Wheels + Tires) - RECOMMENDED */}
-            <div className="rounded-xl border-2 border-green-300 bg-white p-3">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-bold text-white">
-                  RECOMMENDED
-                </span>
-                <span className="text-xs text-neutral-600">Save time with matched tires</span>
-              </div>
-              <button
-                onClick={onBuildPackage}
-                disabled={isAddingToCart}
-                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-600 text-sm font-extrabold text-white shadow-lg shadow-green-600/30 transition-all hover:bg-green-700 hover:shadow-xl active:scale-[0.98] disabled:opacity-60"
-              >
-                {isAddingToCart ? (
-                  <>
-                    <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    Adding wheels...
-                  </>
-                ) : (
-                  <>
-                    Build Complete Package
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </>
-                )}
-              </button>
-              <p className="mt-2 text-[11px] text-neutral-500 text-center">
-                We&apos;ll show tires that fit these wheels perfectly
-              </p>
-            </div>
-            
-            {/* Option 2: Wheels Only */}
-            <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-3">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-medium text-neutral-600">Already have tires?</span>
-              </div>
-              <button
-                onClick={onAddToCart}
-                disabled={isAddingToCart}
-                className="flex h-11 w-full items-center justify-center gap-2 rounded-xl border-2 border-neutral-300 bg-white text-sm font-bold text-neutral-700 transition-all hover:border-neutral-400 hover:bg-neutral-50 active:scale-[0.98] disabled:opacity-60"
-              >
-                {isAddingToCart ? (
-                  <>
-                    <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    Adding...
-                  </>
-                ) : (
-                  <>
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    Add Wheels Only to Cart
-                  </>
-                )}
-              </button>
-            </div>
+        </div>
+        
+        <div className="text-right">
+          <div className="text-base font-bold text-neutral-900">
+            ${wheel.setPrice.toLocaleString()}
           </div>
-          
-          {/* Change selection link */}
-          <div className="mt-3 text-center">
-            <button
-              onClick={onClear}
-              className="text-xs font-medium text-neutral-500 hover:text-neutral-700 transition-colors"
-            >
-              ← Change wheel selection
-            </button>
-          </div>
+          <div className="text-[10px] text-neutral-500">set of 4</div>
+        </div>
+      </div>
+      
+      {/* CTAs - clean hierarchy */}
+      <div className="mt-4 space-y-2">
+        {/* PRIMARY: Build Complete Package - RED */}
+        <button
+          onClick={onBuildPackage}
+          disabled={isAddingToCart}
+          className="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-red-600 text-sm font-bold text-white transition-all hover:bg-red-700 active:scale-[0.98] disabled:opacity-60"
+        >
+          {isAddingToCart ? (
+            <>
+              <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+              </svg>
+              Adding...
+            </>
+          ) : (
+            <>
+              Build Complete Package
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </>
+          )}
+        </button>
+        <p className="text-[11px] text-neutral-500 text-center">
+          Add matching tires for these wheels
+        </p>
+        
+        {/* SECONDARY: Wheels only - small, neutral */}
+        <div className="flex items-center justify-center gap-4 pt-2">
+          <button
+            onClick={onAddToCart}
+            disabled={isAddingToCart}
+            className="text-xs font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+          >
+            Add wheels only →
+          </button>
+          <span className="text-neutral-300">|</span>
+          <button
+            onClick={onClear}
+            className="text-xs text-neutral-500 hover:text-neutral-700 transition-colors"
+          >
+            Change selection
+          </button>
         </div>
       </div>
     </div>
@@ -418,7 +378,7 @@ function StaggeredSetupChooser({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// MOBILE STICKY BAR
+// MOBILE STICKY BAR - Simplified single CTA
 // ═══════════════════════════════════════════════════════════════════════════════
 function MobileStickyBar({ 
   wheel, 
@@ -437,59 +397,48 @@ function MobileStickyBar({
   
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden animate-slide-up">
-      <div className="border-t border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 px-4 py-3 shadow-2xl shadow-green-900/20">
-        <div className="space-y-2">
-          {/* Wheel info row */}
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-500 text-white">
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-              </svg>
+      <div className="border-t border-neutral-200 bg-white px-4 py-3 shadow-lg">
+        {/* Single row: info + primary CTA */}
+        <div className="flex items-center gap-3">
+          {/* Green check + wheel info */}
+          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="text-xs font-bold text-neutral-900 truncate">
+              {wheel.brand} {wheel.model}
             </div>
-            <div className="min-w-0 flex-1">
-              <div className="text-xs font-bold text-neutral-900 truncate">
-                {wheel.brand} {wheel.model}
-              </div>
-              <div className="text-xs font-extrabold text-green-700">
-                ${wheel.setPrice.toLocaleString()} for 4 wheels
-              </div>
+            <div className="text-xs text-neutral-600">
+              ${wheel.setPrice.toLocaleString()}
             </div>
           </div>
           
-          {/* CTA buttons row */}
-          <div className="flex gap-2">
-            <button
-              onClick={onBuildPackage}
-              disabled={isAddingToCart}
-              className="flex h-11 flex-1 items-center justify-center gap-1.5 rounded-xl bg-green-600 text-sm font-extrabold text-white shadow-lg shadow-green-600/30 disabled:opacity-60"
-            >
-              {isAddingToCart ? "Adding..." : "+ Tires"}
-              {!isAddingToCart && (
-                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              )}
-            </button>
-            <button
-              onClick={onAddToCart}
-              disabled={isAddingToCart}
-              className="flex h-11 flex-1 items-center justify-center gap-1.5 rounded-xl border-2 border-neutral-300 bg-white text-sm font-bold text-neutral-700 disabled:opacity-60"
-            >
-              {isAddingToCart ? (
-                <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                </svg>
-              ) : (
-                <>
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                  Wheels Only
-                </>
-              )}
-            </button>
-          </div>
+          {/* Primary CTA - RED */}
+          <button
+            onClick={onBuildPackage}
+            disabled={isAddingToCart}
+            className="flex h-10 items-center justify-center gap-1.5 rounded-lg bg-red-600 px-4 text-sm font-bold text-white disabled:opacity-60"
+          >
+            {isAddingToCart ? "Adding..." : "Add Tires"}
+            {!isAddingToCart && (
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            )}
+          </button>
+        </div>
+        
+        {/* Secondary link */}
+        <div className="mt-2 text-center">
+          <button
+            onClick={onAddToCart}
+            disabled={isAddingToCart}
+            className="text-[11px] text-neutral-500 hover:text-neutral-700"
+          >
+            or add wheels only →
+          </button>
         </div>
       </div>
     </div>
