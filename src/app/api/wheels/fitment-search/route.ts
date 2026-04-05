@@ -1448,85 +1448,166 @@ async function handleDbFirstWheelResults(opts: {
     
     for (const [styleKey, candidates] of styleGroups) {
       // ═══════════════════════════════════════════════════════════════════════════
-      // FLEXIBLE STAGGERED PAIRING
-      // For aftermarket wheels, we don't require exact OEM width match.
-      // Instead, find styles with TWO different widths where one is narrower (front)
-      // and one is wider (rear). This captures 9"/10.5" pairs, 8.5"/10" pairs, etc.
+      // FLEXIBLE STAGGERED PAIRING WITH PLUS-SIZING
+      // Support plus-sizes: 20/20, 20/22, 22/22 setups in addition to OEM 19/20
+      // Group by diameter first, then find width pairs at each diameter level
       // ═══════════════════════════════════════════════════════════════════════════
       
-      // Group candidates by width within this style
-      const byWidth = new Map<number, typeof candidates[0][]>();
+      // Group candidates by diameter, then by width
+      const byDiameterAndWidth = new Map<number, Map<number, typeof candidates[0][]>>();
       for (const c of candidates) {
         const w = Number(c.candidate.width) || 0;
         const d = Number(c.candidate.diameter) || 0;
-        // Only consider wheels at the OEM diameter (allow ±1")
-        if (Math.abs(d - frontDiameter) > 1 && Math.abs(d - rearDiameter) > 1) continue;
         
+        // Allow diameters from OEM up to +4" (e.g., 19" OEM -> up to 23")
+        const minDia = Math.min(frontDiameter, rearDiameter);
+        const maxDia = Math.max(frontDiameter, rearDiameter) + 4;
+        if (d < minDia - 1 || d > maxDia) continue;
+        
+        const diaKey = Math.round(d);
         const widthKey = Math.round(w * 2) / 2; // Round to nearest 0.5"
-        if (!byWidth.has(widthKey)) byWidth.set(widthKey, []);
-        byWidth.get(widthKey)!.push(c);
+        
+        if (!byDiameterAndWidth.has(diaKey)) {
+          byDiameterAndWidth.set(diaKey, new Map());
+        }
+        const widthMap = byDiameterAndWidth.get(diaKey)!;
+        if (!widthMap.has(widthKey)) widthMap.set(widthKey, []);
+        widthMap.get(widthKey)!.push(c);
       }
       
-      // Get sorted unique widths for this style
-      const availableWidths = Array.from(byWidth.keys()).sort((a, b) => a - b);
+      // Get available diameters for this style
+      const availableDiameters = Array.from(byDiameterAndWidth.keys()).sort((a, b) => a - b);
+      if (availableDiameters.length === 0) continue;
       
-      // Need at least 2 different widths to form a staggered pair
-      if (availableWidths.length < 2) continue;
+      // Calculate OEM width ratio for scaling
+      const oemWidthRatio = rearWidth / frontWidth; // e.g., 11/8.5 = 1.29
       
-      // Find best front/rear combination:
-      // - Front: narrower width (prefer closest to OEM front, max 9.5")
-      // - Rear: wider width (prefer closest to OEM rear, min 9.5")
-      // - Must have at least 0.5" difference between front and rear
-      
-      const MAX_FRONT_WIDTH = 9.5;
-      const MIN_REAR_WIDTH = 9.5;
+      // Find pairs at each diameter level (same diameter front/rear)
+      // AND pairs with front diameter <= rear diameter
       const MIN_WIDTH_DIFF = 0.5;
       
-      // Find valid front widths (narrower)
-      const frontWidths = availableWidths.filter(w => w <= MAX_FRONT_WIDTH);
-      // Find valid rear widths (wider)
-      const rearWidths = availableWidths.filter(w => w >= MIN_REAR_WIDTH);
-      
-      // Find best pair: front closest to OEM front, rear closest to OEM rear
-      let bestFrontWidth: number | null = null;
-      let bestRearWidth: number | null = null;
-      let bestScore = -Infinity;
-      
-      for (const fw of frontWidths) {
-        for (const rw of rearWidths) {
-          if (rw - fw < MIN_WIDTH_DIFF) continue; // Need width difference
+      // Try same-diameter pairs first (most common plus-size: 20/20, 22/22)
+      for (const dia of availableDiameters) {
+        const widthMap = byDiameterAndWidth.get(dia)!;
+        const availableWidths = Array.from(widthMap.keys()).sort((a, b) => a - b);
+        
+        if (availableWidths.length < 2) continue;
+        
+        // Find front (narrower) and rear (wider) widths
+        // Scale target widths based on diameter difference from OEM
+        const diaScale = dia / frontDiameter; // e.g., 22/19 = 1.16
+        const targetFrontWidth = frontWidth * diaScale;
+        const targetRearWidth = rearWidth * diaScale;
+        
+        let bestFront: number | null = null;
+        let bestRear: number | null = null;
+        let bestScore = -Infinity;
+        
+        for (const fw of availableWidths) {
+          for (const rw of availableWidths) {
+            if (rw - fw < MIN_WIDTH_DIFF) continue;
+            
+            // Score: prefer widths that maintain OEM ratio
+            const frontScore = 10 - Math.abs(fw - targetFrontWidth);
+            const rearScore = 10 - Math.abs(rw - targetRearWidth);
+            const ratioScore = 5 - Math.abs((rw / fw) - oemWidthRatio) * 3;
+            const totalScore = frontScore + rearScore + ratioScore;
+            
+            if (totalScore > bestScore) {
+              bestScore = totalScore;
+              bestFront = fw;
+              bestRear = rw;
+            }
+          }
+        }
+        
+        if (bestFront !== null && bestRear !== null) {
+          const frontCandidates = widthMap.get(bestFront) || [];
+          const rearCandidates = widthMap.get(bestRear) || [];
           
-          // Score: prefer widths closer to OEM specs
-          const frontScore = 10 - Math.abs(fw - frontWidth);
-          const rearScore = 10 - Math.abs(rw - rearWidth);
-          const totalScore = frontScore + rearScore;
-          
-          if (totalScore > bestScore) {
-            bestScore = totalScore;
-            bestFrontWidth = fw;
-            bestRearWidth = rw;
+          if (frontCandidates.length > 0 && rearCandidates.length > 0) {
+            const bestFrontCandidate = frontCandidates[0];
+            const bestRearCandidate = rearCandidates[0];
+            
+            pairedCandidateSkus.add(bestFrontCandidate.candidate.sku);
+            pairedCandidateSkus.add(bestRearCandidate.candidate.sku);
+            
+            staggeredPairs.push({
+              styleKey: `${styleKey}:${dia}`,
+              frontSku: bestFrontCandidate.candidate.sku,
+              rearSku: bestRearCandidate.candidate.sku,
+            });
+            
+            staggeredPairsFound++;
           }
         }
       }
       
-      if (bestFrontWidth !== null && bestRearWidth !== null) {
-        const frontCandidates = byWidth.get(bestFrontWidth) || [];
-        const rearCandidates = byWidth.get(bestRearWidth) || [];
-        
-        if (frontCandidates.length > 0 && rearCandidates.length > 0) {
-          const bestFront = frontCandidates[0];
-          const bestRear = rearCandidates[0];
+      // Also try different-diameter pairs (front smaller dia, rear larger dia)
+      // e.g., 20" front / 22" rear
+      for (let i = 0; i < availableDiameters.length; i++) {
+        for (let j = i + 1; j < availableDiameters.length; j++) {
+          const frontDia = availableDiameters[i];
+          const rearDia = availableDiameters[j];
           
-          pairedCandidateSkus.add(bestFront.candidate.sku);
-          pairedCandidateSkus.add(bestRear.candidate.sku);
+          // Skip if difference is too large (max 2" between front/rear)
+          if (rearDia - frontDia > 2) continue;
           
-          staggeredPairs.push({
-            styleKey,
-            frontSku: bestFront.candidate.sku,
-            rearSku: bestRear.candidate.sku,
-          });
+          const frontWidthMap = byDiameterAndWidth.get(frontDia)!;
+          const rearWidthMap = byDiameterAndWidth.get(rearDia)!;
           
-          staggeredPairsFound++;
+          const frontWidths = Array.from(frontWidthMap.keys()).sort((a, b) => a - b);
+          const rearWidths = Array.from(rearWidthMap.keys()).sort((a, b) => a - b);
+          
+          // Find narrowest front and widest rear
+          let bestFront: number | null = null;
+          let bestRear: number | null = null;
+          let bestScore = -Infinity;
+          
+          for (const fw of frontWidths) {
+            for (const rw of rearWidths) {
+              if (rw - fw < MIN_WIDTH_DIFF) continue;
+              
+              const ratioScore = 5 - Math.abs((rw / fw) - oemWidthRatio) * 3;
+              const totalScore = ratioScore;
+              
+              if (totalScore > bestScore) {
+                bestScore = totalScore;
+                bestFront = fw;
+                bestRear = rw;
+              }
+            }
+          }
+          
+          if (bestFront !== null && bestRear !== null) {
+            const frontCandidates = frontWidthMap.get(bestFront) || [];
+            const rearCandidates = rearWidthMap.get(bestRear) || [];
+            
+            if (frontCandidates.length > 0 && rearCandidates.length > 0) {
+              const bestFrontCandidate = frontCandidates[0];
+              const bestRearCandidate = rearCandidates[0];
+              
+              // Check if this pair already exists (same SKUs)
+              const pairKey = `${bestFrontCandidate.candidate.sku}:${bestRearCandidate.candidate.sku}`;
+              const existingPair = staggeredPairs.find(p => 
+                p.frontSku === bestFrontCandidate.candidate.sku && 
+                p.rearSku === bestRearCandidate.candidate.sku
+              );
+              
+              if (!existingPair) {
+                pairedCandidateSkus.add(bestFrontCandidate.candidate.sku);
+                pairedCandidateSkus.add(bestRearCandidate.candidate.sku);
+                
+                staggeredPairs.push({
+                  styleKey: `${styleKey}:${frontDia}/${rearDia}`,
+                  frontSku: bestFrontCandidate.candidate.sku,
+                  rearSku: bestRearCandidate.candidate.sku,
+                });
+                
+                staggeredPairsFound++;
+              }
+            }
+          }
         }
       }
     }
