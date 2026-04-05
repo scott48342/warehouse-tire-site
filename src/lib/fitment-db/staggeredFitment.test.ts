@@ -152,8 +152,8 @@ describe('Staggered Fitment Tests', () => {
         isLiftedBuild: false,
         stockDiameters: [19, 20],
         oemWheelSizes: [
-          { diameter: 19, width: 8.5 },
-          { diameter: 20, width: 11 },
+          { diameter: 19 },
+          { diameter: 20 },
         ],
         inventoryFacets: [],
       });

@@ -360,6 +360,61 @@ async function fetchTireWebTires(tireSize: string) {
   }
 }
 
+/**
+ * Staggered Tire Pair type - matched front + rear tires
+ */
+export type StaggeredTirePair = {
+  pairId: string;
+  brand: string;
+  model: string;
+  front: {
+    partNumber: string;
+    size: string;
+    price: number;
+    imageUrl: string | null;
+    loadIndex?: string | null;
+    speedRating?: string | null;
+    quantity?: number;
+  };
+  rear: {
+    partNumber: string;
+    size: string;
+    price: number;
+    imageUrl: string | null;
+    loadIndex?: string | null;
+    speedRating?: string | null;
+    quantity?: number;
+  };
+  setPrice: number;
+  imageUrl: string | null;
+  terrain?: string | null;
+  warrantyMiles?: number | null;
+  mileage?: number | null;
+  treadCategory?: string | null;
+};
+
+/**
+ * Fetch staggered tire pairs for vehicles with different front/rear wheel sizes
+ * Returns matched pairs (same brand/model in both sizes)
+ */
+async function fetchStaggeredTirePairs(frontSize: string, rearSize: string) {
+  try {
+    const res = await fetch(
+      `${getBaseUrl()}/api/tires/staggered-search?frontSize=${encodeURIComponent(frontSize)}&rearSize=${encodeURIComponent(rearSize)}&minQty=2`,
+      { cache: "no-store" }
+    );
+    if (!res.ok) {
+      console.error("[fetchStaggeredTirePairs] API error:", res.status);
+      return { pairs: [], pairCount: 0 };
+    }
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error("[fetchStaggeredTirePairs] Error:", err);
+    return { pairs: [], pairCount: 0 };
+  }
+}
+
 // Score tires for "Top Picks" selection
 function scoreTireForPicks(tire: Tire): number {
   let score = 0;
@@ -669,6 +724,42 @@ export default async function TiresPage({
       fitmentWidth: axle === "front" ? staggeredFrontWidth : staggeredRearWidth,
       effectiveWheelDia,
       effectiveWheelWidth,
+    });
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STAGGERED TIRE SIZE GENERATION
+  // ═══════════════════════════════════════════════════════════════════════════
+  // For staggered vehicles, generate tire sizes for BOTH front and rear wheels
+  // to enable paired tire search (same brand/model in both sizes)
+  let staggeredFrontTireSize: string | null = null;
+  let staggeredRearTireSize: string | null = null;
+  
+  if (isStaggeredVehicle && isPackageFlow && staggeredFrontDia && staggeredRearDia) {
+    // Generate recommended tire sizes based on wheel specs
+    // Use a common formula: tire width ≈ wheel width × 25.4 + 15-25mm
+    const frontWidthMm = Math.round((staggeredFrontWidth || 8.5) * 25.4 + 20);
+    const rearWidthMm = Math.round((staggeredRearWidth || 11) * 25.4 + 20);
+    
+    // Round to nearest 5mm (standard tire width increments)
+    const frontTireWidth = Math.round(frontWidthMm / 5) * 5;
+    const rearTireWidth = Math.round(rearWidthMm / 5) * 5;
+    
+    // Calculate aspect ratio for a reasonable overall diameter
+    // Performance cars like Corvette typically use 30-40 aspect ratios
+    const frontAspect = staggeredFrontDia <= 19 ? 35 : 30;
+    const rearAspect = staggeredRearDia <= 20 ? 30 : 30;
+    
+    staggeredFrontTireSize = `${frontTireWidth}/${frontAspect}R${staggeredFrontDia}`;
+    staggeredRearTireSize = `${rearTireWidth}/${rearAspect}R${staggeredRearDia}`;
+    
+    console.log('[tires/page] 🔄 STAGGERED TIRE SIZES GENERATED:', {
+      front: staggeredFrontTireSize,
+      rear: staggeredRearTireSize,
+      fromWheelSpecs: {
+        front: `${staggeredFrontDia}" × ${staggeredFrontWidth}"`,
+        rear: `${staggeredRearDia}" × ${staggeredRearWidth}"`,
+      },
     });
   }
   
@@ -1111,10 +1202,23 @@ export default async function TiresPage({
   
   // Fetch tires from unified search (includes K&M, WheelPros, TireWeb + admin overrides)
   const wpSize = searchSizeForFetch;
-  const [unifiedTires, rebates] = await Promise.all([
+  
+  // For staggered vehicles in package flow, also fetch tire pairs
+  const shouldFetchStaggeredPairs = isStaggeredVehicle && isPackageFlow && staggeredFrontTireSize && staggeredRearTireSize;
+  
+  const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
     (wpSize || selectedSize) ? fetchTireWebTires(wpSize || selectedSize) : null,
+    shouldFetchStaggeredPairs 
+      ? fetchStaggeredTirePairs(staggeredFrontTireSize!, staggeredRearTireSize!)
+      : Promise.resolve({ pairs: [], pairCount: 0 }),
     fetchActiveRebates(),
   ]);
+  
+  // Extract staggered tire pairs
+  const staggeredTirePairs: StaggeredTirePair[] = staggeredPairsData?.pairs || [];
+  if (shouldFetchStaggeredPairs) {
+    console.log(`[tires/page] 🔄 STAGGERED PAIRS FETCHED: ${staggeredTirePairs.length} pairs`);
+  }
   
   // Unified search returns all sources with overrides applied
   const tw = unifiedTires;
@@ -2016,8 +2120,94 @@ export default async function TiresPage({
               />
             ) : (
             <>
-            {/* Staggered axle selector */}
-            {isStaggered ? (
+            {/* Staggered tire pairs display */}
+            {isStaggered && staggeredTirePairs.length > 0 ? (
+              <div className="mb-6">
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="text-lg font-bold text-neutral-900">🏁 Staggered Tire Sets</span>
+                  <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-green-700">
+                    {staggeredTirePairs.length} matched pairs
+                  </span>
+                </div>
+                <p className="mb-4 text-sm text-neutral-600">
+                  Front: {staggeredFrontTireSize} • Rear: {staggeredRearTireSize}
+                </p>
+                
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {staggeredTirePairs.slice(0, 12).map((pair) => (
+                    <div
+                      key={pair.pairId}
+                      className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+                    >
+                      {/* Tire image */}
+                      <div className="mb-3 flex justify-center">
+                        {pair.imageUrl ? (
+                          <img
+                            src={pair.imageUrl}
+                            alt={`${pair.brand} ${pair.model}`}
+                            className="h-24 w-24 object-contain"
+                          />
+                        ) : (
+                          <div className="flex h-24 w-24 items-center justify-center rounded-full bg-neutral-100 text-2xl">
+                            🛞
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Brand & Model */}
+                      <div className="mb-2 text-center">
+                        <div className="text-xs font-semibold uppercase text-neutral-500">{pair.brand}</div>
+                        <div className="text-sm font-bold text-neutral-900">{pair.model}</div>
+                      </div>
+                      
+                      {/* Sizes */}
+                      <div className="mb-3 grid grid-cols-2 gap-2 text-xs">
+                        <div className="rounded-lg bg-blue-50 p-2 text-center">
+                          <div className="font-semibold text-blue-700">Front</div>
+                          <div className="text-neutral-700">{pair.front.size}</div>
+                        </div>
+                        <div className="rounded-lg bg-orange-50 p-2 text-center">
+                          <div className="font-semibold text-orange-700">Rear</div>
+                          <div className="text-neutral-700">{pair.rear.size}</div>
+                        </div>
+                      </div>
+                      
+                      {/* Category badge */}
+                      {pair.treadCategory && (
+                        <div className="mb-2 text-center">
+                          <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-600">
+                            {pair.treadCategory}
+                          </span>
+                        </div>
+                      )}
+                      
+                      {/* Price & Select */}
+                      <div className="flex items-center justify-between border-t border-neutral-100 pt-3">
+                        <div>
+                          <div className="text-lg font-bold text-neutral-900">
+                            ${pair.setPrice.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                          </div>
+                          <div className="text-xs text-neutral-500">set of 4 tires</div>
+                        </div>
+                        <Link
+                          href={`/tires/${pair.front.partNumber}?size=${encodeURIComponent(pair.front.size)}&year=${year}&make=${make}&model=${model}&staggeredPair=${encodeURIComponent(pair.pairId)}&rearSku=${encodeURIComponent(pair.rear.partNumber)}&rearSize=${encodeURIComponent(pair.rear.size)}`}
+                          className="rounded-full bg-red-600 px-4 py-2 text-xs font-bold text-white hover:bg-red-700 transition-colors"
+                        >
+                          Select Set
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {staggeredTirePairs.length > 12 && (
+                  <div className="mt-4 text-center text-sm text-neutral-500">
+                    Showing 12 of {staggeredTirePairs.length} matched pairs
+                  </div>
+                )}
+              </div>
+            ) : isStaggered ? (
+              /* Fallback: show front/rear selector if no pairs found */
               <div className="mb-4 flex flex-wrap items-center gap-2">
                 <span className="text-xs font-semibold text-neutral-500">Selecting:</span>
                 <a
