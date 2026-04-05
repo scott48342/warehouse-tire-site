@@ -669,11 +669,21 @@ export function WheelsGridWithSelection({
       }
     }
     
-    // ONLY return COMPLETE pairs (both front AND rear available for same style)
+    // ONLY return COMPLETE pairs where front and rear are ACTUALLY DIFFERENT
+    // (different SKUs or different widths - not the same wheel for both positions)
     const completePairs: Array<{ styleKey: string; front: WheelItem; rear: WheelItem }> = [];
     for (const [styleKey, group] of styleGroups.entries()) {
       if (group.front && group.rear) {
-        completePairs.push({ styleKey, front: group.front, rear: group.rear });
+        // Verify front and rear are different (not the same wheel matching both specs)
+        const frontWidth = parseFloat(group.front.width || "0");
+        const rearWidth = parseFloat(group.rear.width || "0");
+        const frontSku = group.front.sku || "";
+        const rearSku = group.rear.sku || "";
+        
+        // Must be different SKUs OR different widths to be a true staggered pair
+        if (frontSku !== rearSku || Math.abs(frontWidth - rearWidth) >= 0.5) {
+          completePairs.push({ styleKey, front: group.front, rear: group.rear });
+        }
       }
     }
     
@@ -795,23 +805,32 @@ export function WheelsGridWithSelection({
     }
     
     const { frontSpec, rearSpec } = staggeredInfo;
-    const styleGroups = new Map<string, { front: boolean; rear: boolean }>();
+    const styleGroups = new Map<string, { front: WheelItem | null; rear: WheelItem | null }>();
     
     for (const wheel of recommendedWheels) {
       const wheelDia = Math.round(parseFloat(wheel.diameter || "0"));
       const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}|${wheelDia}`.toLowerCase();
       if (!styleGroups.has(styleKey)) {
-        styleGroups.set(styleKey, { front: false, rear: false });
+        styleGroups.set(styleKey, { front: null, rear: null });
       }
       const group = styleGroups.get(styleKey)!;
-      if (matchesStaggeredSpec(wheel, frontSpec)) group.front = true;
-      if (matchesStaggeredSpec(wheel, rearSpec)) group.rear = true;
+      if (matchesStaggeredSpec(wheel, frontSpec)) group.front = wheel;
+      if (matchesStaggeredSpec(wheel, rearSpec)) group.rear = wheel;
     }
     
-    // Return styleKeys that have both front and rear
+    // Return styleKeys that have DIFFERENT front and rear wheels
     const pairs = new Set<string>();
     for (const [styleKey, group] of styleGroups.entries()) {
-      if (group.front && group.rear) pairs.add(styleKey);
+      if (group.front && group.rear) {
+        const frontWidth = parseFloat(group.front.width || "0");
+        const rearWidth = parseFloat(group.rear.width || "0");
+        const frontSku = group.front.sku || "";
+        const rearSku = group.rear.sku || "";
+        // Must be different to be a true staggered pair
+        if (frontSku !== rearSku || Math.abs(frontWidth - rearWidth) >= 0.5) {
+          pairs.add(styleKey);
+        }
+      }
     }
     return pairs;
   }, [recommendedWheels, supportsStaggered, staggeredInfo, matchesStaggeredSpec]);
