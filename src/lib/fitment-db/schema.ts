@@ -426,7 +426,7 @@ export const abandonedCarts = pgTable(
     subtotal: decimal("subtotal", { precision: 10, scale: 2 }).notNull().default("0"),
     estimatedTotal: decimal("estimated_total", { precision: 10, scale: 2 }).notNull().default("0"),
     
-    // Status: active, abandoned, recovered, expired
+    // Status: active, abandoned, recovered, expired, archived
     status: varchar("status", { length: 20 }).notNull().default("active"),
     
     // Recovery tracking
@@ -455,6 +455,12 @@ export const abandonedCarts = pgTable(
     recoveredAfterEmail: boolean("recovered_after_email").default(false),
     unsubscribed: boolean("unsubscribed").default(false),
     
+    // Email engagement tracking
+    emailOpenedAt: timestamp("email_opened_at"), // First open
+    emailClickedAt: timestamp("email_clicked_at"), // First click
+    emailOpenCount: integer("email_open_count").notNull().default(0),
+    emailClickCount: integer("email_click_count").notNull().default(0),
+    
     // Test data exclusion
     isTest: boolean("is_test").notNull().default(false),
     testReason: varchar("test_reason", { length: 100 }), // internal_email, test_mode, admin_marked, stripe_test, internal_ip
@@ -471,6 +477,8 @@ export const abandonedCarts = pgTable(
     createdAtIdx: index("abandoned_carts_created_at_idx").on(table.createdAt),
     // Test data filtering
     isTestIdx: index("abandoned_carts_is_test_idx").on(table.isTest),
+    // Email engagement (high-intent users who opened/clicked but didn't convert)
+    emailEngagementIdx: index("abandoned_carts_email_engagement_idx").on(table.emailOpenedAt, table.emailClickedAt),
   })
 );
 

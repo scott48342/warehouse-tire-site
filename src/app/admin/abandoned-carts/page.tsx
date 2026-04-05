@@ -12,7 +12,7 @@ interface AbandonedCart {
   vehicle: string | null;
   itemCount: number;
   value: number;
-  status: "active" | "abandoned" | "recovered" | "expired";
+  status: "active" | "abandoned" | "recovered" | "expired" | "archived";
   recoveredOrderId: string | null;
   createdAt: string;
   lastActivityAt: string;
@@ -23,6 +23,13 @@ interface AbandonedCart {
   secondEmailSentAt: string | null;
   emailSentCount: number;
   recoveredAfterEmail: boolean;
+  // Email engagement
+  emailTracking: {
+    openedAt: string | null;
+    clickedAt: string | null;
+    openCount: number;
+    clickCount: number;
+  };
   // Test data
   isTest: boolean;
   testReason: string | null;
@@ -38,15 +45,39 @@ interface Stats {
   abandoned: number;
   recovered: number;
   expired: number;
+  archived: number;
   abandonedValue: number;
   recoveredValue: number;
+  engagement?: {
+    emailsSent: number;
+    opened: number;
+    clicked: number;
+    highIntent: number;
+  };
+  funnel?: {
+    totalAbandoned: number;
+    emailsSent: number;
+    opened: number;
+    clicked: number;
+    recovered: number;
+    openRate: number;
+    clickRate: number;
+    recoveryRate: number;
+  };
 }
 
-const STATUS_CONFIG: Record<string, { label: string; color: string; bgColor: string }> = {
-  active: { label: "Active", color: "text-green-400", bgColor: "bg-green-900/50" },
-  abandoned: { label: "Abandoned", color: "text-yellow-400", bgColor: "bg-yellow-900/50" },
-  recovered: { label: "Recovered", color: "text-blue-400", bgColor: "bg-blue-900/50" },
-  expired: { label: "Expired", color: "text-neutral-400", bgColor: "bg-neutral-700" },
+interface LifecycleCounts {
+  testCarts: number;
+  expiredCarts: number;
+  archivedCarts: number;
+}
+
+const STATUS_CONFIG: Record<string, { label: string; color: string; bgColor: string; icon: string }> = {
+  active: { label: "Active", color: "text-green-400", bgColor: "bg-green-900/50", icon: "🟢" },
+  abandoned: { label: "Abandoned", color: "text-yellow-400", bgColor: "bg-yellow-900/50", icon: "⚠️" },
+  recovered: { label: "Recovered", color: "text-blue-400", bgColor: "bg-blue-900/50", icon: "✅" },
+  expired: { label: "Expired", color: "text-neutral-400", bgColor: "bg-neutral-700", icon: "⏰" },
+  archived: { label: "Archived", color: "text-neutral-500", bgColor: "bg-neutral-800", icon: "📁" },
 };
 
 const CART_TYPE_CONFIG: Record<string, { label: string; icon: string; color: string; bgColor: string }> = {
@@ -141,10 +172,75 @@ function TestBadge({ isTest, testReason }: { isTest: boolean; testReason: string
   );
 }
 
+function formatTimeSince(dateStr: string | null): string {
+  if (!dateStr) return "";
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  const diffHours = Math.floor(diffMs / 3600000);
+  const diffDays = Math.floor(diffMs / 86400000);
+
+  if (diffMins < 1) return "just now";
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return date.toLocaleDateString();
+}
+
+function EngagementBadge({ emailTracking, status }: { emailTracking: AbandonedCart["emailTracking"] | undefined; status: string }) {
+  if (!emailTracking) return null;
+  
+  const { openedAt, clickedAt, openCount, clickCount } = emailTracking;
+  
+  // HOT LEAD: clicked but didn't recover (status is still abandoned)
+  if (clickedAt && status === "abandoned") {
+    const timeSince = formatTimeSince(clickedAt);
+    return (
+      <span 
+        className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg shadow-orange-500/30 animate-pulse"
+        title={`Clicked ${clickCount}x • Last click: ${timeSince}`}
+      >
+        🔥 HOT LEAD
+        {timeSince && <span className="opacity-75">• {timeSince}</span>}
+      </span>
+    );
+  }
+  
+  // Clicked and recovered
+  if (clickedAt) {
+    return (
+      <span 
+        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-900/50 text-green-300"
+        title={`Clicked ${clickCount}x and recovered`}
+      >
+        🎯 Clicked
+      </span>
+    );
+  }
+  
+  // Opened but not clicked (interested but hesitant)
+  if (openedAt) {
+    const timeSince = formatTimeSince(openedAt);
+    return (
+      <span 
+        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-purple-900/30 text-purple-400"
+        title={`Opened ${openCount}x • Last open: ${timeSince}`}
+      >
+        👀 Opened
+        {timeSince && <span className="opacity-75 text-[9px]">• {timeSince}</span>}
+      </span>
+    );
+  }
+  
+  return null;
+}
+
 function TriageBadges({ cart }: { cart: AbandonedCart }) {
   return (
     <div className="flex flex-wrap items-center gap-1">
       <TestBadge isTest={cart.isTest} testReason={cart.testReason} />
+      <EngagementBadge emailTracking={cart.emailTracking} status={cart.status} />
       <ValueBadge value={cart.value} />
       <EmailBadge hasEmail={Boolean(cart.email)} />
       <RecencyBadge lastActivityAt={cart.lastActivityAt} />
@@ -215,10 +311,13 @@ function formatTimeAgo(dateStr: string): string {
 export default function AbandonedCartsPage() {
   const [carts, setCarts] = useState<AbandonedCart[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
+  const [lifecycleCounts, setLifecycleCounts] = useState<LifecycleCounts | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [statusFilter, setStatusFilter] = useState<string>("all");
+  const [statusFilter, setStatusFilter] = useState<string>("default"); // default = active + abandoned
+  const [engagementFilter, setEngagementFilter] = useState<string>(""); // "", opened, clicked, high-intent
   const [processing, setProcessing] = useState(false);
+  const [showLifecyclePanel, setShowLifecyclePanel] = useState(false);
 
   const fetchData = useCallback(async () => {
     try {
@@ -226,9 +325,10 @@ export default function AbandonedCartsPage() {
       const params = new URLSearchParams({
         stats: "1",
         limit: "100",
+        status: statusFilter,
       });
-      if (statusFilter !== "all") {
-        params.set("status", statusFilter);
+      if (engagementFilter) {
+        params.set("engagement", engagementFilter);
       }
 
       const res = await fetch(`/api/admin/abandoned-carts?${params}`);
@@ -243,11 +343,28 @@ export default function AbandonedCartsPage() {
     } finally {
       setLoading(false);
     }
-  }, [statusFilter]);
+  }, [statusFilter, engagementFilter]);
+
+  const fetchLifecycleCounts = useCallback(async () => {
+    try {
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "lifecycle-counts" }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setLifecycleCounts(data);
+      }
+    } catch {
+      // Ignore
+    }
+  }, []);
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+    fetchLifecycleCounts();
+  }, [fetchData, fetchLifecycleCounts]);
 
   const handleProcessAbandoned = async () => {
     try {
@@ -415,6 +532,149 @@ export default function AbandonedCartsPage() {
     }
   };
 
+  // =========================================================================
+  // Lifecycle Management
+  // =========================================================================
+
+  const handleArchiveCart = async (cartId: string) => {
+    if (!confirm("Archive this cart? It will be hidden from default view.")) return;
+    try {
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "archive", cartId }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        fetchData();
+        fetchLifecycleCounts();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e instanceof Error ? e.message : "Unknown"}`);
+    }
+  };
+
+  const handleRestoreCart = async (cartId: string) => {
+    try {
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "restore", cartId }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        fetchData();
+        fetchLifecycleCounts();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e instanceof Error ? e.message : "Unknown"}`);
+    }
+  };
+
+  const handleDeleteCart = async (cartId: string) => {
+    if (!confirm("⚠️ Permanently delete this cart? This cannot be undone.")) return;
+    try {
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "delete", cartId }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        fetchData();
+        fetchLifecycleCounts();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e instanceof Error ? e.message : "Unknown"}`);
+    }
+  };
+
+  const handleArchiveTestCarts = async () => {
+    if (!confirm("Archive all test carts?")) return;
+    try {
+      setProcessing(true);
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "archive-test" }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        alert(`Archived ${data.archivedCount} test carts`);
+        fetchData();
+        fetchLifecycleCounts();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e instanceof Error ? e.message : "Unknown"}`);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  const handleArchiveExpiredCarts = async () => {
+    if (!confirm("Archive all expired carts?")) return;
+    try {
+      setProcessing(true);
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "archive-expired" }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        alert(`Archived ${data.archivedCount} expired carts`);
+        fetchData();
+        fetchLifecycleCounts();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e instanceof Error ? e.message : "Unknown"}`);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  const handleDeleteOldTestCarts = async () => {
+    const days = prompt("Delete test carts older than how many days?", "30");
+    if (!days) return;
+    const daysNum = parseInt(days, 10);
+    if (isNaN(daysNum) || daysNum < 1) {
+      alert("Please enter a valid number of days");
+      return;
+    }
+    if (!confirm(`⚠️ Permanently delete test carts older than ${daysNum} days?`)) return;
+    
+    try {
+      setProcessing(true);
+      const res = await fetch("/api/admin/abandoned-carts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "delete-old-test", days: daysNum }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        alert(`Deleted ${data.deletedCount} test carts`);
+        fetchData();
+        fetchLifecycleCounts();
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (e) {
+      alert(`Error: ${e instanceof Error ? e.message : "Unknown"}`);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       {/* Header */}
@@ -501,25 +761,172 @@ export default function AbandonedCartsPage() {
         </div>
       )}
 
+      {/* Funnel Metrics */}
+      {stats?.funnel && (
+        <div className="mb-6 p-4 bg-neutral-800 border border-neutral-700 rounded-xl">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-bold text-white flex items-center gap-2">
+              📊 Email Recovery Funnel
+            </h3>
+            {stats.engagement?.highIntent ? (
+              <span className="px-2 py-1 bg-orange-900/50 text-orange-300 text-xs font-bold rounded-lg animate-pulse">
+                🔥 {stats.engagement.highIntent} HOT LEADS
+              </span>
+            ) : null}
+          </div>
+          <div className="flex items-center gap-2">
+            {/* Funnel visualization */}
+            <div className="flex-1 flex items-center">
+              <div className="flex-1 text-center">
+                <div className="text-2xl font-bold text-white">{stats.funnel.emailsSent}</div>
+                <div className="text-[10px] text-neutral-400 uppercase tracking-wide">Emails Sent</div>
+              </div>
+              <div className="text-neutral-600 text-lg">→</div>
+              <div className="flex-1 text-center">
+                <div className="text-2xl font-bold text-purple-400">{stats.funnel.opened}</div>
+                <div className="text-[10px] text-neutral-400 uppercase tracking-wide">Opened</div>
+                <div className="text-xs text-purple-400 font-semibold">{stats.funnel.openRate}%</div>
+              </div>
+              <div className="text-neutral-600 text-lg">→</div>
+              <div className="flex-1 text-center">
+                <div className="text-2xl font-bold text-orange-400">{stats.funnel.clicked}</div>
+                <div className="text-[10px] text-neutral-400 uppercase tracking-wide">Clicked</div>
+                <div className="text-xs text-orange-400 font-semibold">{stats.funnel.clickRate}%</div>
+              </div>
+              <div className="text-neutral-600 text-lg">→</div>
+              <div className="flex-1 text-center">
+                <div className="text-2xl font-bold text-green-400">{stats.funnel.recovered}</div>
+                <div className="text-[10px] text-neutral-400 uppercase tracking-wide">Recovered</div>
+                <div className="text-xs text-green-400 font-semibold">{stats.funnel.recoveryRate}%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Filters */}
+      <div className="flex items-center justify-between gap-4 mb-4">
+        <div className="flex items-center gap-4">
+          <span className="text-sm text-neutral-400">Status:</span>
+          <div className="flex gap-2">
+            {[
+              { key: "default", label: "Active + Abandoned", icon: "🔥" },
+              { key: "all", label: "All", icon: "📊" },
+              { key: "active", label: "Active", icon: "🟢" },
+              { key: "abandoned", label: "Abandoned", icon: "⚠️" },
+              { key: "recovered", label: "Recovered", icon: "✅" },
+              { key: "expired", label: "Expired", icon: "⏰" },
+              { key: "archived", label: "Archived", icon: "📁" },
+            ].map((filter) => (
+              <button
+                key={filter.key}
+                onClick={() => setStatusFilter(filter.key)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center gap-1.5 ${
+                  statusFilter === filter.key
+                    ? "bg-red-600 text-white"
+                    : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                }`}
+              >
+                <span>{filter.icon}</span>
+                <span>{filter.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <button
+          onClick={() => setShowLifecyclePanel(!showLifecyclePanel)}
+          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center gap-1.5 ${
+            showLifecyclePanel
+              ? "bg-neutral-600 text-white"
+              : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+          }`}
+        >
+          <span>⚙️</span>
+          <span>Manage</span>
+        </button>
+      </div>
+
+      {/* Email Engagement Filter */}
       <div className="flex items-center gap-4 mb-4">
-        <span className="text-sm text-neutral-400">Filter by status:</span>
+        <span className="text-sm text-neutral-400">Engagement:</span>
         <div className="flex gap-2">
-          {["all", "active", "abandoned", "recovered", "expired"].map((status) => (
+          {[
+            { key: "", label: "All", icon: "📧" },
+            { key: "opened", label: "Opened", icon: "👀" },
+            { key: "clicked", label: "Clicked", icon: "🖱️" },
+            { key: "opened-not-clicked", label: "Opened, Not Clicked", icon: "🤔" },
+            { key: "high-intent", label: "High Intent", icon: "🎯" },
+          ].map((filter) => (
             <button
-              key={status}
-              onClick={() => setStatusFilter(status)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                statusFilter === status
-                  ? "bg-red-600 text-white"
+              key={filter.key}
+              onClick={() => setEngagementFilter(filter.key)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center gap-1.5 ${
+                engagementFilter === filter.key
+                  ? "bg-purple-600 text-white"
                   : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
               }`}
             >
-              {status.charAt(0).toUpperCase() + status.slice(1)}
+              <span>{filter.icon}</span>
+              <span>{filter.label}</span>
             </button>
           ))}
         </div>
+        {stats?.engagement && (
+          <div className="flex items-center gap-3 text-xs text-neutral-500 ml-4">
+            <span>📧 {stats.engagement.emailsSent} sent</span>
+            <span>👀 {stats.engagement.opened} opened</span>
+            <span>🖱️ {stats.engagement.clicked} clicked</span>
+            <span className="text-orange-400">🎯 {stats.engagement.highIntent} high-intent</span>
+          </div>
+        )}
       </div>
+
+      {/* Lifecycle Management Panel */}
+      {showLifecyclePanel && (
+        <div className="mb-6 p-4 bg-neutral-800 border border-neutral-700 rounded-xl">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-sm font-bold text-white">Lifecycle Management</h3>
+            {lifecycleCounts && (
+              <div className="flex items-center gap-4 text-xs text-neutral-400">
+                <span>🧪 {lifecycleCounts.testCarts} test carts</span>
+                <span>⏰ {lifecycleCounts.expiredCarts} expired</span>
+                <span>📁 {lifecycleCounts.archivedCarts} archived</span>
+              </div>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={handleArchiveTestCarts}
+              disabled={processing || !lifecycleCounts?.testCarts}
+              className="px-3 py-2 bg-orange-900/50 hover:bg-orange-800/50 text-orange-300 text-xs font-medium rounded-lg disabled:opacity-50 flex items-center gap-1.5"
+            >
+              <span>🧪</span>
+              <span>Archive Test Carts</span>
+              {lifecycleCounts?.testCarts ? <span className="text-orange-400">({lifecycleCounts.testCarts})</span> : null}
+            </button>
+            <button
+              onClick={handleArchiveExpiredCarts}
+              disabled={processing || !lifecycleCounts?.expiredCarts}
+              className="px-3 py-2 bg-neutral-700 hover:bg-neutral-600 text-neutral-300 text-xs font-medium rounded-lg disabled:opacity-50 flex items-center gap-1.5"
+            >
+              <span>⏰</span>
+              <span>Archive Expired Carts</span>
+              {lifecycleCounts?.expiredCarts ? <span className="text-neutral-400">({lifecycleCounts.expiredCarts})</span> : null}
+            </button>
+            <button
+              onClick={handleDeleteOldTestCarts}
+              disabled={processing}
+              className="px-3 py-2 bg-red-900/50 hover:bg-red-800/50 text-red-300 text-xs font-medium rounded-lg disabled:opacity-50 flex items-center gap-1.5"
+            >
+              <span>🗑️</span>
+              <span>Delete Old Test Carts...</span>
+            </button>
+          </div>
+          <p className="mt-3 text-xs text-neutral-500">
+            Carts become abandoned after 30 min of inactivity • Expired after 7 days • Archived carts are hidden from default view
+          </p>
+        </div>
+      )}
 
       {/* Carts Table */}
       <div className="bg-neutral-800 border border-neutral-700 rounded-xl overflow-hidden">
@@ -550,8 +957,16 @@ export default function AbandonedCartsPage() {
               <tbody>
                 {carts.map((cart) => {
                   const statusConfig = STATUS_CONFIG[cart.status] || STATUS_CONFIG.active;
+                  const isHotLead = cart.emailTracking?.clickedAt && cart.status === "abandoned";
                   return (
-                    <tr key={cart.id} className={`border-b border-neutral-700/50 hover:bg-neutral-700/30 ${cart.isTest ? "opacity-60" : ""}`}>
+                    <tr 
+                      key={cart.id} 
+                      className={`border-b border-neutral-700/50 hover:bg-neutral-700/30 ${
+                        cart.isTest ? "opacity-60" : ""
+                      } ${
+                        isHotLead ? "bg-orange-950/30 border-l-4 border-l-orange-500" : ""
+                      }`}
+                    >
                       {/* Triage badges */}
                       <td className="px-3 py-3">
                         <TriageBadges cart={cart} />
@@ -595,8 +1010,9 @@ export default function AbandonedCartsPage() {
                       </td>
                       {/* Status */}
                       <td className="px-3 py-3">
-                        <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusConfig.bgColor} ${statusConfig.color}`}>
-                          {statusConfig.label}
+                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium ${statusConfig.bgColor} ${statusConfig.color}`}>
+                          <span>{statusConfig.icon}</span>
+                          <span>{statusConfig.label}</span>
                         </span>
                         {cart.recoveredAfterEmail && (
                           <div className="text-[10px] text-green-400 mt-0.5">via email</div>
@@ -665,6 +1081,31 @@ export default function AbandonedCartsPage() {
                               ✅ Order
                             </Link>
                           )}
+                          {/* Lifecycle actions */}
+                          {cart.status === "archived" ? (
+                            <button
+                              onClick={() => handleRestoreCart(cart.cartId)}
+                              className="px-2 py-1 text-[10px] font-medium bg-blue-900/50 hover:bg-blue-800/50 text-blue-300 hover:text-blue-200 rounded transition-colors"
+                              title="Restore cart"
+                            >
+                              ↩️ Restore
+                            </button>
+                          ) : cart.status !== "recovered" && (
+                            <button
+                              onClick={() => handleArchiveCart(cart.cartId)}
+                              className="px-2 py-1 text-[10px] font-medium bg-neutral-700 hover:bg-neutral-600 text-neutral-400 hover:text-neutral-300 rounded transition-colors"
+                              title="Archive cart"
+                            >
+                              📁
+                            </button>
+                          )}
+                          <button
+                            onClick={() => handleDeleteCart(cart.cartId)}
+                            className="px-2 py-1 text-[10px] font-medium bg-red-900/30 hover:bg-red-800/50 text-red-400 hover:text-red-300 rounded transition-colors"
+                            title="Delete cart permanently"
+                          >
+                            🗑️
+                          </button>
                         </div>
                       </td>
                     </tr>
@@ -678,7 +1119,7 @@ export default function AbandonedCartsPage() {
 
       {/* Footer info */}
       <div className="mt-4 text-center text-xs text-neutral-500">
-        Carts become abandoned after 1 hour of inactivity • Expired after 30 days
+        Carts become abandoned after 30 min of inactivity • Expired after 7 days
       </div>
     </div>
   );

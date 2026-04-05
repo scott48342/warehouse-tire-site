@@ -12,13 +12,28 @@ type TireModelImage = {
   created_at: string;
 };
 
+type TireModel = {
+  brand: string;
+  fullModel: string;
+  variantCount: number;
+  wheelprosImage: string | null;
+  hasImage: boolean;
+  matchType: "exact" | "partial" | "none";
+  matchedPattern: string | null;
+  imageUrl: string | null;
+};
+
 export default function TireImagesAdminPage() {
   const [items, setItems] = useState<TireModelImage[]>([]);
+  const [models, setModels] = useState<TireModel[]>([]);
   const [brands, setBrands] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [brandFilter, setBrandFilter] = useState("");
+  const [showMissingOnly, setShowMissingOnly] = useState(true);
+  const [activeTab, setActiveTab] = useState<"models" | "images">("models");
+  const [stats, setStats] = useState({ total: 0, withImage: 0, missing: 0 });
   
   // New item form
   const [newBrand, setNewBrand] = useState("");
@@ -34,7 +49,41 @@ export default function TireImagesAdminPage() {
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editingUrl, setEditingUrl] = useState("");
 
-  const fetchItems = useCallback(async () => {
+  // Fetch tire models from WheelPros database
+  const fetchModels = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const params = new URLSearchParams();
+      if (brandFilter) params.set("brand", brandFilter);
+      if (showMissingOnly) params.set("missing", "1");
+      
+      const res = await fetch(`/api/admin/tire-images/models?${params.toString()}`);
+      const data = await res.json();
+      
+      if (!res.ok) throw new Error(data.error || "Failed to fetch");
+      
+      let filteredModels = data.models || [];
+      if (search) {
+        const q = search.toLowerCase();
+        filteredModels = filteredModels.filter((m: TireModel) => 
+          m.brand.toLowerCase().includes(q) || 
+          m.fullModel.toLowerCase().includes(q)
+        );
+      }
+      
+      setModels(filteredModels);
+      setBrands(data.brands || []);
+      setStats(data.stats || { total: 0, withImage: 0, missing: 0 });
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [brandFilter, showMissingOnly, search]);
+
+  // Fetch existing image mappings
+  const fetchImages = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -57,8 +106,12 @@ export default function TireImagesAdminPage() {
   }, [search, brandFilter]);
 
   useEffect(() => {
-    fetchItems();
-  }, [fetchItems]);
+    if (activeTab === "models") {
+      fetchModels();
+    } else {
+      fetchImages();
+    }
+  }, [activeTab, fetchModels, fetchImages]);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,9 +139,40 @@ export default function TireImagesAdminPage() {
       setNewBrand("");
       setNewPattern("");
       setNewImageUrl("");
-      fetchItems();
+      fetchModels();
+      fetchImages();
     } catch (err: any) {
       setSaveMessage({ type: "error", text: err.message });
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleQuickAdd = async (model: TireModel) => {
+    if (!model.wheelprosImage) {
+      alert("No WheelPros image available for this model");
+      return;
+    }
+    
+    setSaving(true);
+    try {
+      const res = await fetch("/api/admin/tire-images", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          brand: model.brand,
+          model_pattern: model.fullModel,
+          image_url: model.wheelprosImage,
+        }),
+      });
+      
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to add");
+      
+      setSaveMessage({ type: "success", text: `Added ${model.brand} ${model.fullModel}` });
+      fetchModels();
+    } catch (err: any) {
+      alert(`Error: ${err.message}`);
     } finally {
       setSaving(false);
     }
@@ -103,7 +187,8 @@ export default function TireImagesAdminPage() {
       
       if (!res.ok) throw new Error(data.error || "Failed to delete");
       
-      fetchItems();
+      fetchImages();
+      fetchModels();
     } catch (err: any) {
       alert(`Error: ${err.message}`);
     }
@@ -135,7 +220,8 @@ export default function TireImagesAdminPage() {
       
       setEditingId(null);
       setEditingUrl("");
-      fetchItems();
+      fetchImages();
+      fetchModels();
     } catch (err: any) {
       alert(`Error: ${err.message}`);
     }
@@ -143,11 +229,17 @@ export default function TireImagesAdminPage() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Fixed Add Form */}
+      {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-neutral-200 shadow-md p-4">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-7xl">
           <div className="flex items-center justify-between mb-3">
-            <h1 className="text-lg font-bold text-neutral-900">Tire Model Images</h1>
+            <div>
+              <h1 className="text-lg font-bold text-neutral-900">Tire Model Images</h1>
+              <div className="text-sm text-neutral-500">
+                {stats.withImage} of {stats.total} models have images • 
+                <span className="text-red-600 font-semibold"> {stats.missing} missing</span>
+              </div>
+            </div>
             <Link
               href="/admin"
               className="rounded-lg bg-neutral-200 px-3 py-1.5 text-sm font-medium text-neutral-700 hover:bg-neutral-300"
@@ -155,7 +247,9 @@ export default function TireImagesAdminPage() {
               ← Back
             </Link>
           </div>
-          <form onSubmit={handleAdd} className="flex flex-wrap gap-2">
+          
+          {/* Add Form */}
+          <form onSubmit={handleAdd} className="flex flex-wrap gap-2 mb-3">
             <input
               type="text"
               placeholder="Brand"
@@ -166,10 +260,10 @@ export default function TireImagesAdminPage() {
             />
             <input
               type="text"
-              placeholder="Model Pattern"
+              placeholder="Full Model Name"
               value={newPattern}
               onChange={(e) => setNewPattern(e.target.value)}
-              className="w-40 rounded-lg border border-neutral-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-52 rounded-lg border border-neutral-300 px-2 py-1.5 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               required
             />
             <input
@@ -196,8 +290,9 @@ export default function TireImagesAdminPage() {
               {saving ? "..." : "Add"}
             </button>
           </form>
+          
           {saveMessage && (
-            <div className={`mt-2 rounded-lg px-3 py-1.5 text-sm ${
+            <div className={`mb-3 rounded-lg px-3 py-1.5 text-sm ${
               saveMessage.type === "success" 
                 ? "bg-green-50 text-green-700" 
                 : "bg-red-50 text-red-700"
@@ -205,11 +300,35 @@ export default function TireImagesAdminPage() {
               {saveMessage.text}
             </div>
           )}
+          
+          {/* Tabs */}
+          <div className="flex gap-2 border-b border-neutral-200">
+            <button
+              onClick={() => setActiveTab("models")}
+              className={`px-4 py-2 text-sm font-medium border-b-2 -mb-px ${
+                activeTab === "models"
+                  ? "border-blue-600 text-blue-600"
+                  : "border-transparent text-neutral-600 hover:text-neutral-900"
+              }`}
+            >
+              🔍 Missing Models ({stats.missing})
+            </button>
+            <button
+              onClick={() => setActiveTab("images")}
+              className={`px-4 py-2 text-sm font-medium border-b-2 -mb-px ${
+                activeTab === "images"
+                  ? "border-blue-600 text-blue-600"
+                  : "border-transparent text-neutral-600 hover:text-neutral-900"
+              }`}
+            >
+              🖼️ Existing Images ({items.length})
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Main content with top padding to account for fixed header */}
-      <div className="mx-auto max-w-6xl px-6 pt-28 pb-6">
+      {/* Main content */}
+      <div className="mx-auto max-w-7xl px-6 pt-52 pb-6">
         {/* Filters */}
         <div className="mb-4 flex gap-3">
           <input
@@ -229,6 +348,17 @@ export default function TireImagesAdminPage() {
               <option key={b} value={b}>{b}</option>
             ))}
           </select>
+          {activeTab === "models" && (
+            <label className="flex items-center gap-2 text-sm text-neutral-600">
+              <input
+                type="checkbox"
+                checked={showMissingOnly}
+                onChange={(e) => setShowMissingOnly(e.target.checked)}
+                className="rounded border-neutral-300"
+              />
+              Missing only
+            </label>
+          )}
         </div>
 
         {/* Results */}
@@ -236,103 +366,202 @@ export default function TireImagesAdminPage() {
           <div className="text-center py-8 text-neutral-500">Loading...</div>
         ) : error ? (
           <div className="text-center py-8 text-red-600">{error}</div>
-        ) : items.length === 0 ? (
-          <div className="text-center py-8 text-neutral-500">No model images found</div>
-        ) : (
-          <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden">
-            <table className="w-full text-sm">
-              <thead className="bg-neutral-50 border-b border-neutral-200">
-                <tr>
-                  <th className="px-4 py-3 text-left font-medium text-neutral-600">Image</th>
-                  <th className="px-4 py-3 text-left font-medium text-neutral-600">Brand</th>
-                  <th className="px-4 py-3 text-left font-medium text-neutral-600">Model Pattern</th>
-                  <th className="px-4 py-3 text-left font-medium text-neutral-600">Source</th>
-                  <th className="px-4 py-3 text-right font-medium text-neutral-600">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                {items.map((item) => (
-                  <tr key={item.id} className="hover:bg-neutral-50">
-                    <td className="px-4 py-3">
-                      <img
-                        src={editingId === item.id ? editingUrl : item.image_url}
-                        alt={`${item.brand} ${item.model_pattern}`}
-                        className="h-12 w-12 rounded-lg border border-neutral-200 object-contain bg-white cursor-pointer hover:scale-150 transition-transform"
-                        onClick={() => setPreviewUrl(editingId === item.id ? editingUrl : item.image_url)}
-                        onError={(e) => { 
-                          (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" x="50" text-anchor="middle" font-size="40">🛞</text></svg>';
-                        }}
-                      />
-                    </td>
-                    <td className="px-4 py-3 font-medium text-neutral-900">{item.brand}</td>
-                    <td className="px-4 py-3 text-neutral-700">
-                      {editingId === item.id ? (
-                        <div className="flex flex-col gap-1">
-                          <span className="text-xs text-neutral-500">{item.model_pattern}</span>
-                          <input
-                            type="url"
-                            value={editingUrl}
-                            onChange={(e) => setEditingUrl(e.target.value)}
-                            className="w-full rounded border border-blue-300 px-2 py-1 text-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                            placeholder="Image URL"
-                            autoFocus
-                          />
-                        </div>
-                      ) : (
-                        item.model_pattern
-                      )}
-                    </td>
-                    <td className="px-4 py-3">
-                      <span className={`inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${
-                        item.source === 'admin' 
-                          ? 'bg-blue-100 text-blue-700' 
-                          : 'bg-neutral-100 text-neutral-600'
-                      }`}>
-                        {item.source}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 text-right">
-                      {editingId === item.id ? (
-                        <div className="flex justify-end gap-1">
-                          <button
-                            onClick={() => handleSaveEdit(item.id)}
-                            className="rounded-lg px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700"
-                          >
-                            Save
-                          </button>
-                          <button
-                            onClick={handleCancelEdit}
-                            className="rounded-lg px-3 py-1 text-xs font-medium text-neutral-600 hover:bg-neutral-100"
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      ) : (
-                        <div className="flex justify-end gap-1">
-                          <button
-                            onClick={() => handleStartEdit(item)}
-                            className="rounded-lg px-3 py-1 text-xs font-medium text-blue-600 hover:bg-blue-50"
-                          >
-                            Edit
-                          </button>
-                          <button
-                            onClick={() => handleDelete(item.id, item.brand, item.model_pattern)}
-                            className="rounded-lg px-3 py-1 text-xs font-medium text-red-600 hover:bg-red-50"
-                          >
-                            Delete
-                          </button>
-                        </div>
-                      )}
-                    </td>
+        ) : activeTab === "models" ? (
+          /* Models Tab */
+          models.length === 0 ? (
+            <div className="text-center py-8 text-green-600 font-medium">
+              ✅ All models have images!
+            </div>
+          ) : (
+            <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden">
+              <table className="w-full text-sm">
+                <thead className="bg-neutral-50 border-b border-neutral-200">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">WP Image</th>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">Brand</th>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">Full Model Name</th>
+                    <th className="px-4 py-3 text-center font-medium text-neutral-600">Variants</th>
+                    <th className="px-4 py-3 text-center font-medium text-neutral-600">Status</th>
+                    <th className="px-4 py-3 text-right font-medium text-neutral-600">Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-neutral-100">
+                  {models.map((model, idx) => (
+                    <tr key={idx} className={`hover:bg-neutral-50 ${!model.hasImage ? "bg-red-50/30" : ""}`}>
+                      <td className="px-4 py-3">
+                        {model.wheelprosImage ? (
+                          <img
+                            src={model.wheelprosImage}
+                            alt={`${model.brand} ${model.fullModel}`}
+                            className="h-12 w-12 rounded-lg border border-neutral-200 object-contain bg-white cursor-pointer hover:scale-150 transition-transform"
+                            onClick={() => setPreviewUrl(model.wheelprosImage)}
+                            onError={(e) => { 
+                              (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" x="50" text-anchor="middle" font-size="40">🛞</text></svg>';
+                            }}
+                          />
+                        ) : (
+                          <div className="h-12 w-12 rounded-lg border border-neutral-200 bg-neutral-100 flex items-center justify-center text-neutral-400">
+                            ?
+                          </div>
+                        )}
+                      </td>
+                      <td className="px-4 py-3 font-medium text-neutral-900">{model.brand}</td>
+                      <td className="px-4 py-3">
+                        <div className="font-medium text-neutral-900">{model.fullModel}</div>
+                        {model.matchedPattern && (
+                          <div className="text-xs text-neutral-500">
+                            matched: "{model.matchedPattern}"
+                          </div>
+                        )}
+                      </td>
+                      <td className="px-4 py-3 text-center text-neutral-600">{model.variantCount}</td>
+                      <td className="px-4 py-3 text-center">
+                        {model.hasImage ? (
+                          <span className={`inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${
+                            model.matchType === 'exact' 
+                              ? 'bg-green-100 text-green-700' 
+                              : 'bg-yellow-100 text-yellow-700'
+                          }`}>
+                            {model.matchType === 'exact' ? '✓ Exact' : '~ Partial'}
+                          </span>
+                        ) : (
+                          <span className="inline-flex rounded-full px-2 py-0.5 text-xs font-medium bg-red-100 text-red-700">
+                            ❌ Missing
+                          </span>
+                        )}
+                      </td>
+                      <td className="px-4 py-3 text-right">
+                        {!model.hasImage && model.wheelprosImage && (
+                          <button
+                            onClick={() => handleQuickAdd(model)}
+                            disabled={saving}
+                            className="rounded-lg bg-green-600 px-3 py-1 text-xs font-medium text-white hover:bg-green-700 disabled:opacity-50"
+                          >
+                            + Add
+                          </button>
+                        )}
+                        {!model.hasImage && !model.wheelprosImage && (
+                          <button
+                            onClick={() => {
+                              setNewBrand(model.brand);
+                              setNewPattern(model.fullModel);
+                              window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className="rounded-lg bg-blue-600 px-3 py-1 text-xs font-medium text-white hover:bg-blue-700"
+                          >
+                            Fill Form
+                          </button>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )
+        ) : (
+          /* Images Tab */
+          items.length === 0 ? (
+            <div className="text-center py-8 text-neutral-500">No model images found</div>
+          ) : (
+            <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden">
+              <table className="w-full text-sm">
+                <thead className="bg-neutral-50 border-b border-neutral-200">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">Image</th>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">Brand</th>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">Model Pattern</th>
+                    <th className="px-4 py-3 text-left font-medium text-neutral-600">Source</th>
+                    <th className="px-4 py-3 text-right font-medium text-neutral-600">Actions</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-neutral-100">
+                  {items.map((item) => (
+                    <tr key={item.id} className="hover:bg-neutral-50">
+                      <td className="px-4 py-3">
+                        <img
+                          src={editingId === item.id ? editingUrl : item.image_url}
+                          alt={`${item.brand} ${item.model_pattern}`}
+                          className="h-12 w-12 rounded-lg border border-neutral-200 object-contain bg-white cursor-pointer hover:scale-150 transition-transform"
+                          onClick={() => setPreviewUrl(editingId === item.id ? editingUrl : item.image_url)}
+                          onError={(e) => { 
+                            (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" x="50" text-anchor="middle" font-size="40">🛞</text></svg>';
+                          }}
+                        />
+                      </td>
+                      <td className="px-4 py-3 font-medium text-neutral-900">{item.brand}</td>
+                      <td className="px-4 py-3 text-neutral-700">
+                        {editingId === item.id ? (
+                          <div className="flex flex-col gap-1">
+                            <span className="text-xs text-neutral-500">{item.model_pattern}</span>
+                            <input
+                              type="url"
+                              value={editingUrl}
+                              onChange={(e) => setEditingUrl(e.target.value)}
+                              className="w-full rounded border border-blue-300 px-2 py-1 text-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                              placeholder="Image URL"
+                              autoFocus
+                            />
+                          </div>
+                        ) : (
+                          item.model_pattern
+                        )}
+                      </td>
+                      <td className="px-4 py-3">
+                        <span className={`inline-flex rounded-full px-2 py-0.5 text-xs font-medium ${
+                          item.source === 'admin' 
+                            ? 'bg-blue-100 text-blue-700' 
+                            : 'bg-neutral-100 text-neutral-600'
+                        }`}>
+                          {item.source}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 text-right">
+                        {editingId === item.id ? (
+                          <div className="flex justify-end gap-1">
+                            <button
+                              onClick={() => handleSaveEdit(item.id)}
+                              className="rounded-lg px-3 py-1 text-xs font-medium text-white bg-blue-600 hover:bg-blue-700"
+                            >
+                              Save
+                            </button>
+                            <button
+                              onClick={handleCancelEdit}
+                              className="rounded-lg px-3 py-1 text-xs font-medium text-neutral-600 hover:bg-neutral-100"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        ) : (
+                          <div className="flex justify-end gap-1">
+                            <button
+                              onClick={() => handleStartEdit(item)}
+                              className="rounded-lg px-3 py-1 text-xs font-medium text-blue-600 hover:bg-blue-50"
+                            >
+                              Edit
+                            </button>
+                            <button
+                              onClick={() => handleDelete(item.id, item.brand, item.model_pattern)}
+                              className="rounded-lg px-3 py-1 text-xs font-medium text-red-600 hover:bg-red-50"
+                            >
+                              Delete
+                            </button>
+                          </div>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )
         )}
         
         <div className="mt-4 text-center text-sm text-neutral-500">
-          {items.length} model images
+          {activeTab === "models" 
+            ? `${models.length} models shown`
+            : `${items.length} image mappings`
+          }
         </div>
       </div>
 

@@ -129,11 +129,28 @@ async function hasEmailConsent(email: string): Promise<boolean> {
 }
 
 // ============================================================================
-// Recovery Link
+// Tracking URLs
 // ============================================================================
 
+/** Direct recovery link (for display/fallback) */
 export function generateRecoveryLink(cartId: string): string {
   return `${BASE_URL}/cart/recover/${encodeURIComponent(cartId)}`;
+}
+
+/** Tracked click link (records click event before redirecting to recovery) */
+export function generateTrackedClickLink(cartId: string): string {
+  return `${BASE_URL}/api/email/track/click/${encodeURIComponent(cartId)}`;
+}
+
+/** Tracking pixel URL (1x1 GIF that records open event) */
+export function generateTrackingPixelUrl(cartId: string): string {
+  return `${BASE_URL}/api/email/track/open/${encodeURIComponent(cartId)}`;
+}
+
+/** HTML for tracking pixel (invisible 1x1 image) */
+export function generateTrackingPixelHtml(cartId: string): string {
+  const url = generateTrackingPixelUrl(cartId);
+  return `<img src="${url}" alt="" width="1" height="1" style="display:block;width:1px;height:1px;border:0;" />`;
 }
 
 // ============================================================================
@@ -185,7 +202,8 @@ function buildSubject(cart: AbandonedCart, step: EmailStep): string {
 // ============================================================================
 
 function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
-  const recoveryLink = generateRecoveryLink(cart.cartId);
+  const recoveryLink = generateTrackedClickLink(cart.cartId); // Use tracked link
+  const trackingPixel = generateTrackingPixelHtml(cart.cartId);
   const customerName = cart.customerFirstName || null;
   
   const vehicleLabel = cart.vehicleYear && cart.vehicleMake
@@ -357,6 +375,9 @@ function buildEmailHtml(cart: AbandonedCart, step: EmailStep): string {
     </div>
 
   </div>
+
+  <!-- Email open tracking pixel -->
+  ${trackingPixel}
 
 </body>
 </html>

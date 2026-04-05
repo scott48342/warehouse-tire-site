@@ -5,27 +5,29 @@
  * 
  * Cart states:
  * - active: Has items, user is active
- * - abandoned: No activity for ABANDONMENT_THRESHOLD_MS (default 1 hour)
+ * - abandoned: No activity for ABANDONMENT_THRESHOLD_MS (default 30 min)
  * - recovered: Order was completed from this cart
- * - expired: Beyond EXPIRY_DAYS (default 30 days)
+ * - expired: No activity for EXPIRY_DAYS (default 7 days)
+ * - archived: Manually archived (hidden from default view)
  * 
  * @created 2026-03-25
+ * @updated 2026-04-04 - Added lifecycle management
  */
 
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts, type AbandonedCart, type NewAbandonedCart } from "@/lib/fitment-db/schema";
-import { eq, and, lt, gt, or, desc, sql, count } from "drizzle-orm";
+import { eq, and, lt, gt, or, desc, sql, count, inArray, notInArray, isNull, isNotNull } from "drizzle-orm";
 import { detectTestData, type TestDetectionContext } from "@/lib/testData";
 
 // ============================================================================
 // Configuration
 // ============================================================================
 
-/** Time after last activity before cart is considered abandoned (1 hour) */
-export const ABANDONMENT_THRESHOLD_MS = 60 * 60 * 1000;
+/** Time after last activity before cart is considered abandoned (30 minutes) */
+export const ABANDONMENT_THRESHOLD_MS = 30 * 60 * 1000;
 
-/** Days before cart expires (30 days) */
-export const EXPIRY_DAYS = 30;
+/** Days before cart expires (7 days) */
+export const EXPIRY_DAYS = 7;
 
 /** Minimum cart value to track (skip empty/tiny carts) */
 export const MIN_CART_VALUE = 10;
@@ -34,7 +36,7 @@ export const MIN_CART_VALUE = 10;
 // Types
 // ============================================================================
 
-export type CartStatus = "active" | "abandoned" | "recovered" | "expired";
+export type CartStatus = "active" | "abandoned" | "recovered" | "expired" | "archived";
 
 export interface CartTrackingData {
   cartId: string;
@@ -69,9 +71,28 @@ export interface AbandonedCartStats {
   abandoned: number;
   recovered: number;
   expired: number;
+  archived: number;
   abandonedValue: number;
   recoveredValue: number;
   recentAbandoned: AbandonedCart[];
+  // Engagement stats
+  engagement: {
+    emailsSent: number;
+    opened: number;
+    clicked: number;
+    highIntent: number; // clicked but not recovered
+  };
+  // Funnel metrics
+  funnel: {
+    totalAbandoned: number;
+    emailsSent: number;
+    opened: number;
+    clicked: number;
+    recovered: number;
+    openRate: number;  // opened / emailsSent
+    clickRate: number; // clicked / opened
+    recoveryRate: number; // recovered / abandoned
+  };
 }
 
 // ============================================================================
@@ -349,15 +370,19 @@ export async function getCart(cartId: string): Promise<AbandonedCart | null> {
 /**
  * List carts with filters
  */
+export type EngagementFilter = "any" | "opened" | "clicked" | "opened-not-clicked" | "high-intent";
+
 export async function listCarts(options: {
   status?: CartStatus | CartStatus[];
   limit?: number;
   offset?: number;
-  orderBy?: "lastActivity" | "createdAt" | "value";
+  orderBy?: "lastActivity" | "createdAt" | "value" | "priority";
   /** Include test data (default: false) */
   includeTest?: boolean;
+  /** Filter by email engagement level */
+  engagement?: EngagementFilter;
 }): Promise<{ carts: AbandonedCart[]; total: number }> {
-  const { status, limit = 50, offset = 0, orderBy = "lastActivity", includeTest = false } = options;
+  const { status, limit = 50, offset = 0, orderBy = "priority", includeTest = false, engagement } = options;
 
   // Build where conditions
   const conditions: any[] = [];
@@ -376,6 +401,30 @@ export async function listCarts(options: {
     conditions.push(eq(abandonedCarts.isTest, false));
   }
 
+  // Engagement filter
+  if (engagement) {
+    switch (engagement) {
+      case "opened":
+        // Opened at least once
+        conditions.push(isNotNull(abandonedCarts.emailOpenedAt));
+        break;
+      case "clicked":
+        // Clicked at least once
+        conditions.push(isNotNull(abandonedCarts.emailClickedAt));
+        break;
+      case "opened-not-clicked":
+        // Opened but never clicked (interested but hesitant)
+        conditions.push(isNotNull(abandonedCarts.emailOpenedAt));
+        conditions.push(isNull(abandonedCarts.emailClickedAt));
+        break;
+      case "high-intent":
+        // Clicked but didn't recover (high intent, needs help)
+        conditions.push(isNotNull(abandonedCarts.emailClickedAt));
+        conditions.push(eq(abandonedCarts.status, "abandoned"));
+        break;
+    }
+  }
+
   const where = conditions.length > 0 ? and(...conditions) : undefined;
 
   // Get total count
@@ -387,18 +436,41 @@ export async function listCarts(options: {
   const total = Number(countResult?.count || 0);
 
   // Get carts with ordering
-  const orderColumn = 
-    orderBy === "value" ? abandonedCarts.estimatedTotal :
-    orderBy === "createdAt" ? abandonedCarts.createdAt :
-    abandonedCarts.lastActivityAt;
+  let carts: AbandonedCart[];
+  
+  if (orderBy === "priority") {
+    // Priority sorting: clicked first, then opened, then high value, then recent
+    // Uses computed priority score: clicked=1000, opened=100, then value weight
+    carts = await db
+      .select()
+      .from(abandonedCarts)
+      .where(where)
+      .orderBy(
+        // First: clicked carts (hot leads)
+        desc(sql`CASE WHEN ${abandonedCarts.emailClickedAt} IS NOT NULL THEN 1 ELSE 0 END`),
+        // Second: opened carts
+        desc(sql`CASE WHEN ${abandonedCarts.emailOpenedAt} IS NOT NULL THEN 1 ELSE 0 END`),
+        // Third: high value
+        desc(abandonedCarts.estimatedTotal),
+        // Fourth: recent activity
+        desc(abandonedCarts.lastActivityAt)
+      )
+      .limit(limit)
+      .offset(offset);
+  } else {
+    const orderColumn = 
+      orderBy === "value" ? abandonedCarts.estimatedTotal :
+      orderBy === "createdAt" ? abandonedCarts.createdAt :
+      abandonedCarts.lastActivityAt;
 
-  const carts = await db
-    .select()
-    .from(abandonedCarts)
-    .where(where)
-    .orderBy(desc(orderColumn))
-    .limit(limit)
-    .offset(offset);
+    carts = await db
+      .select()
+      .from(abandonedCarts)
+      .where(where)
+      .orderBy(desc(orderColumn))
+      .limit(limit)
+      .offset(offset);
+  }
 
   return { carts, total };
 }
@@ -469,14 +541,84 @@ export async function getStats(includeTest: boolean = false): Promise<AbandonedC
     .orderBy(desc(abandonedCarts.abandonedAt))
     .limit(5);
 
+  // Engagement stats
+  const engagementConditions = includeTest ? [] : [eq(abandonedCarts.isTest, false)];
+  
+  const [emailsSentCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(and(
+      ...engagementConditions,
+      gt(abandonedCarts.emailSentCount, 0)
+    ));
+
+  const [openedCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(and(
+      ...engagementConditions,
+      isNotNull(abandonedCarts.emailOpenedAt)
+    ));
+
+  const [clickedCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(and(
+      ...engagementConditions,
+      isNotNull(abandonedCarts.emailClickedAt)
+    ));
+
+  const [highIntentCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(and(
+      ...engagementConditions,
+      isNotNull(abandonedCarts.emailClickedAt),
+      eq(abandonedCarts.status, "abandoned")
+    ));
+
+  // Count recovered carts that had emails sent
+  const [recoveredWithEmailCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(and(
+      ...engagementConditions,
+      eq(abandonedCarts.status, "recovered"),
+      gt(abandonedCarts.emailSentCount, 0)
+    ));
+
+  // Calculate funnel metrics
+  const emailsSent = Number(emailsSentCount?.count || 0);
+  const opened = Number(openedCount?.count || 0);
+  const clicked = Number(clickedCount?.count || 0);
+  const totalAbandoned = (countMap["abandoned"] || 0) + (countMap["recovered"] || 0);
+  const recoveredFromEmail = Number(recoveredWithEmailCount?.count || 0);
+
   return {
     active: countMap["active"] || 0,
     abandoned: countMap["abandoned"] || 0,
     recovered: countMap["recovered"] || 0,
     expired: countMap["expired"] || 0,
+    archived: countMap["archived"] || 0,
     abandonedValue,
     recoveredValue,
     recentAbandoned,
+    engagement: {
+      emailsSent,
+      opened,
+      clicked,
+      highIntent: Number(highIntentCount?.count || 0),
+    },
+    funnel: {
+      totalAbandoned,
+      emailsSent,
+      opened,
+      clicked,
+      recovered: recoveredFromEmail,
+      openRate: emailsSent > 0 ? Math.round((opened / emailsSent) * 100) : 0,
+      clickRate: opened > 0 ? Math.round((clicked / opened) * 100) : 0,
+      recoveryRate: totalAbandoned > 0 ? Math.round((countMap["recovered"] || 0) / totalAbandoned * 100) : 0,
+    },
   };
 }
 
@@ -501,6 +643,162 @@ export async function getCartByEmail(email: string): Promise<AbandonedCart | nul
   return cart || null;
 }
 
+// ============================================================================
+// Lifecycle Management
+// ============================================================================
+
+/**
+ * Archive a cart (hide from default view)
+ */
+export async function archiveCart(cartId: string): Promise<AbandonedCart | null> {
+  const [updated] = await db
+    .update(abandonedCarts)
+    .set({
+      status: "archived",
+      updatedAt: new Date(),
+    })
+    .where(eq(abandonedCarts.cartId, cartId))
+    .returning();
+  
+  if (updated) {
+    console.log(`[AbandonedCart] Archived cart ${cartId}`);
+  }
+  return updated || null;
+}
+
+/**
+ * Restore an archived cart to its previous state (abandoned)
+ */
+export async function restoreCart(cartId: string): Promise<AbandonedCart | null> {
+  const [updated] = await db
+    .update(abandonedCarts)
+    .set({
+      status: "abandoned",
+      updatedAt: new Date(),
+    })
+    .where(
+      and(
+        eq(abandonedCarts.cartId, cartId),
+        eq(abandonedCarts.status, "archived")
+      )
+    )
+    .returning();
+  
+  if (updated) {
+    console.log(`[AbandonedCart] Restored cart ${cartId}`);
+  }
+  return updated || null;
+}
+
+/**
+ * Hard delete a cart
+ */
+export async function deleteCart(cartId: string): Promise<boolean> {
+  const result = await db
+    .delete(abandonedCarts)
+    .where(eq(abandonedCarts.cartId, cartId));
+  
+  const deleted = (result as any).rowCount > 0;
+  if (deleted) {
+    console.log(`[AbandonedCart] Deleted cart ${cartId}`);
+  }
+  return deleted;
+}
+
+/**
+ * Archive all test carts
+ */
+export async function archiveTestCarts(): Promise<number> {
+  const result = await db
+    .update(abandonedCarts)
+    .set({
+      status: "archived",
+      updatedAt: new Date(),
+    })
+    .where(
+      and(
+        eq(abandonedCarts.isTest, true),
+        notInArray(abandonedCarts.status, ["archived", "recovered"])
+      )
+    );
+  
+  const count = (result as any).rowCount || 0;
+  console.log(`[AbandonedCart] Archived ${count} test carts`);
+  return count;
+}
+
+/**
+ * Archive all expired carts
+ */
+export async function archiveExpiredCarts(): Promise<number> {
+  const result = await db
+    .update(abandonedCarts)
+    .set({
+      status: "archived",
+      updatedAt: new Date(),
+    })
+    .where(eq(abandonedCarts.status, "expired"));
+  
+  const count = (result as any).rowCount || 0;
+  console.log(`[AbandonedCart] Archived ${count} expired carts`);
+  return count;
+}
+
+/**
+ * Delete test carts older than X days
+ */
+export async function deleteOldTestCarts(olderThanDays: number): Promise<number> {
+  const cutoffDate = new Date(Date.now() - olderThanDays * 24 * 60 * 60 * 1000);
+  
+  const result = await db
+    .delete(abandonedCarts)
+    .where(
+      and(
+        eq(abandonedCarts.isTest, true),
+        lt(abandonedCarts.createdAt, cutoffDate)
+      )
+    );
+  
+  const count = (result as any).rowCount || 0;
+  console.log(`[AbandonedCart] Deleted ${count} test carts older than ${olderThanDays} days`);
+  return count;
+}
+
+/**
+ * Get counts for lifecycle management
+ */
+export async function getLifecycleCounts(): Promise<{
+  testCarts: number;
+  expiredCarts: number;
+  archivedCarts: number;
+}> {
+  const [testCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(
+      and(
+        eq(abandonedCarts.isTest, true),
+        notInArray(abandonedCarts.status, ["archived", "recovered"])
+      )
+    );
+
+  const [expiredCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.status, "expired"));
+
+  const [archivedCount] = await db
+    .select({ count: count() })
+    .from(abandonedCarts)
+    .where(eq(abandonedCarts.status, "archived"));
+
+  return {
+    testCarts: Number(testCount?.count || 0),
+    expiredCarts: Number(expiredCount?.count || 0),
+    archivedCarts: Number(archivedCount?.count || 0),
+  };
+}
+
 export const abandonedCartService = {
   trackCart,
   markCartRecovered,
@@ -510,6 +808,15 @@ export const abandonedCartService = {
   listCarts,
   getStats,
   getCartByEmail,
+  // Lifecycle management
+  archiveCart,
+  restoreCart,
+  deleteCart,
+  archiveTestCarts,
+  archiveExpiredCarts,
+  deleteOldTestCarts,
+  getLifecycleCounts,
+  // Constants
   ABANDONMENT_THRESHOLD_MS,
   EXPIRY_DAYS,
   MIN_CART_VALUE,

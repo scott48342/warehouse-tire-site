@@ -5,10 +5,11 @@
  * List carts with filters, get stats, email status
  * 
  * POST /api/admin/abandoned-carts
- * Actions: process, expire, test-abandon, send-email, send-all-emails
+ * Actions: process, expire, test-abandon, send-email, send-all-emails,
+ *          archive, restore, delete, archive-test, archive-expired, delete-old-test
  * 
  * @created 2026-03-25
- * @updated 2026-04-03 - Full email tracking visibility
+ * @updated 2026-04-04 - Lifecycle management
  */
 
 import { NextResponse } from "next/server";
@@ -18,7 +19,15 @@ import {
   processAbandonedCarts,
   expireOldCarts,
   getCart,
+  archiveCart,
+  restoreCart,
+  deleteCart,
+  archiveTestCarts,
+  archiveExpiredCarts,
+  deleteOldTestCarts,
+  getLifecycleCounts,
   type CartStatus,
+  type EngagementFilter,
 } from "@/lib/cart/abandonedCartService";
 import {
   sendRecoveryEmail,
@@ -46,7 +55,7 @@ export const runtime = "nodejs";
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const statusParam = url.searchParams.get("status") || "all";
+  const statusParam = url.searchParams.get("status") || "default";
   const limit = Math.min(200, Number(url.searchParams.get("limit") || "50") || 50);
   const offset = Number(url.searchParams.get("offset") || "0") || 0;
   const includeStats = url.searchParams.get("stats") === "1";
@@ -54,6 +63,7 @@ export async function GET(req: Request) {
   const includeTest = url.searchParams.get("includeTest") === "1";
   const cartId = url.searchParams.get("cartId");
   const recoverableOnly = url.searchParams.get("recoverable") === "1";
+  const engagementParam = url.searchParams.get("engagement") as EngagementFilter | null;
 
   try {
     // Single cart lookup with email status
@@ -73,11 +83,21 @@ export async function GET(req: Request) {
     }
 
     // Determine status filter
+    // Default: show only active and abandoned (hide expired/archived)
     let statusFilter: CartStatus[] | undefined;
     if (recoverableOnly) {
       statusFilter = ["abandoned"];
-    } else if (statusParam !== "all") {
-      const validStatuses: CartStatus[] = ["active", "abandoned", "recovered", "expired"];
+    } else if (statusParam === "all") {
+      // Explicit "all" shows everything except archived
+      statusFilter = ["active", "abandoned", "recovered", "expired"];
+    } else if (statusParam === "all-including-archived") {
+      // Special: include archived too
+      statusFilter = undefined; // No filter
+    } else if (statusParam === "default" || !statusParam || statusParam === "") {
+      // Default view: active + abandoned only
+      statusFilter = ["active", "abandoned"];
+    } else {
+      const validStatuses: CartStatus[] = ["active", "abandoned", "recovered", "expired", "archived"];
       const statuses = statusParam.split(",").filter(s => validStatuses.includes(s as CartStatus)) as CartStatus[];
       if (statuses.length > 0) {
         statusFilter = statuses;
@@ -89,6 +109,7 @@ export async function GET(req: Request) {
       limit,
       offset,
       includeTest,
+      engagement: engagementParam || undefined,
     });
 
     // Format carts with full email tracking
@@ -145,6 +166,11 @@ export async function GET(req: Request) {
           lastStatus: cart.lastEmailStatus,
           recoveredAfterEmail: cart.recoveredAfterEmail || false,
           unsubscribed: cart.unsubscribed || false,
+          // Engagement tracking
+          openedAt: cart.emailOpenedAt,
+          clickedAt: cart.emailClickedAt,
+          openCount: cart.emailOpenCount || 0,
+          clickCount: cart.emailClickCount || 0,
         },
         // Computed status
         emailStatus: emailStatus ? {
@@ -308,6 +334,92 @@ export async function POST(req: Request) {
       case "stats": {
         const stats = await getStats();
         return NextResponse.json({ stats });
+      }
+
+      // ========================================
+      // Lifecycle Management Actions
+      // ========================================
+
+      case "archive": {
+        if (!cartId) {
+          return NextResponse.json({ error: "cartId required" }, { status: 400 });
+        }
+        const cart = await archiveCart(cartId);
+        if (!cart) {
+          return NextResponse.json({ error: "Cart not found" }, { status: 404 });
+        }
+        return NextResponse.json({
+          success: true,
+          action: "archive",
+          cartId,
+        });
+      }
+
+      case "restore": {
+        if (!cartId) {
+          return NextResponse.json({ error: "cartId required" }, { status: 400 });
+        }
+        const cart = await restoreCart(cartId);
+        if (!cart) {
+          return NextResponse.json({ error: "Cart not found or not archived" }, { status: 404 });
+        }
+        return NextResponse.json({
+          success: true,
+          action: "restore",
+          cartId,
+        });
+      }
+
+      case "delete": {
+        if (!cartId) {
+          return NextResponse.json({ error: "cartId required" }, { status: 400 });
+        }
+        const deleted = await deleteCart(cartId);
+        if (!deleted) {
+          return NextResponse.json({ error: "Cart not found" }, { status: 404 });
+        }
+        return NextResponse.json({
+          success: true,
+          action: "delete",
+          cartId,
+        });
+      }
+
+      case "archive-test": {
+        const count = await archiveTestCarts();
+        return NextResponse.json({
+          success: true,
+          action: "archive-test",
+          archivedCount: count,
+        });
+      }
+
+      case "archive-expired": {
+        const count = await archiveExpiredCarts();
+        return NextResponse.json({
+          success: true,
+          action: "archive-expired",
+          archivedCount: count,
+        });
+      }
+
+      case "delete-old-test": {
+        const days = Number(body.days) || 30;
+        const count = await deleteOldTestCarts(days);
+        return NextResponse.json({
+          success: true,
+          action: "delete-old-test",
+          deletedCount: count,
+          olderThanDays: days,
+        });
+      }
+
+      case "lifecycle-counts": {
+        const counts = await getLifecycleCounts();
+        return NextResponse.json({
+          success: true,
+          ...counts,
+        });
       }
 
       default:

@@ -85,6 +85,108 @@ interface ParsedWheelSize {
   isStock: boolean;
 }
 
+interface StaggeredInfo {
+  isStaggered: boolean;
+  reason: string;
+  frontSpec?: {
+    diameter: number;
+    width: number;
+    offset: number | null;
+    tireSize: string | null;
+  };
+  rearSpec?: {
+    diameter: number;
+    width: number;
+    offset: number | null;
+    tireSize: string | null;
+  };
+}
+
+/**
+ * Detect staggered fitment from parsed wheel sizes.
+ * Returns true if front and rear specs differ.
+ */
+function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo {
+  const frontSpecs = wheelSizes.filter(s => s.axle === "front");
+  const rearSpecs = wheelSizes.filter(s => s.axle === "rear");
+  const bothSpecs = wheelSizes.filter(s => s.axle === "both");
+
+  // If we have explicit front AND rear specs, compare them
+  if (frontSpecs.length > 0 && rearSpecs.length > 0) {
+    const front = frontSpecs.find(s => s.isStock) || frontSpecs[0];
+    const rear = rearSpecs.find(s => s.isStock) || rearSpecs[0];
+
+    const diameterDiff = rear.diameter !== front.diameter;
+    const widthDiff = rear.width !== front.width;
+    const offsetDiff = rear.offset !== null && front.offset !== null && rear.offset !== front.offset;
+    const tireSizeDiff = rear.tireSize && front.tireSize && rear.tireSize !== front.tireSize;
+
+    if (diameterDiff || widthDiff || offsetDiff || tireSizeDiff) {
+      const reasons: string[] = [];
+      if (diameterDiff) reasons.push(`diameter (F:${front.diameter}" R:${rear.diameter}")`);
+      if (widthDiff) reasons.push(`width (F:${front.width}" R:${rear.width}")`);
+      if (offsetDiff) reasons.push(`offset (F:${front.offset}mm R:${rear.offset}mm)`);
+      if (tireSizeDiff) reasons.push(`tire size (F:${front.tireSize} R:${rear.tireSize})`);
+
+      return {
+        isStaggered: true,
+        reason: `Different front/rear: ${reasons.join(", ")}`,
+        frontSpec: {
+          diameter: front.diameter,
+          width: front.width,
+          offset: front.offset,
+          tireSize: front.tireSize,
+        },
+        rearSpec: {
+          diameter: rear.diameter,
+          width: rear.width,
+          offset: rear.offset,
+          tireSize: rear.tireSize,
+        },
+      };
+    }
+
+    // Front and rear are identical
+    return {
+      isStaggered: false,
+      reason: "Front and rear specs are identical",
+      frontSpec: {
+        diameter: front.diameter,
+        width: front.width,
+        offset: front.offset,
+        tireSize: front.tireSize,
+      },
+      rearSpec: {
+        diameter: rear.diameter,
+        width: rear.width,
+        offset: rear.offset,
+        tireSize: rear.tireSize,
+      },
+    };
+  }
+
+  // If all specs are "both" (same front and rear), not staggered
+  if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
+    const sample = bothSpecs.find(s => s.isStock) || bothSpecs[0];
+    return {
+      isStaggered: false,
+      reason: "All wheel specs apply to both axles (square fitment)",
+      frontSpec: {
+        diameter: sample.diameter,
+        width: sample.width,
+        offset: sample.offset,
+        tireSize: sample.tireSize,
+      },
+    };
+  }
+
+  // Fallback: not enough data to determine
+  return {
+    isStaggered: false,
+    reason: "Insufficient axle-specific data (defaulting to square fitment)",
+  };
+}
+
 /**
  * Parse a wheel size from various formats:
  * - String: "8.5Jx18", "10Jx20", "8.5x18", "18x8.5"
@@ -556,6 +658,12 @@ async function handleDbProfilePath(
     rimWidth: ws.width,
     offset: ws.offset,
   }));
+  
+  // Detect staggered fitment from parsed wheel sizes
+  const staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
+  if (staggeredInfo.isStaggered) {
+    console.log(`[fitment-search] STAGGERED FITMENT detected: ${staggeredInfo.reason}`);
+  }
 
   // Auto-detect fitment mode
   let mode: FitmentMode = "aftermarket_safe";
@@ -658,6 +766,8 @@ async function handleDbProfilePath(
     t0,
     // Confidence result for response
     confidenceResult,
+    // Staggered fitment info
+    staggeredInfo,
     // Classic vehicle info
     isClassicVehicle: isClassic,
     classicFitmentUsed,
@@ -750,6 +860,8 @@ async function handleDbFirstWheelResults(opts: {
   t0: number;
   // Confidence result from safety check
   confidenceResult?: ConfidenceResult;
+  // Staggered fitment info
+  staggeredInfo?: StaggeredInfo;
   // Classic vehicle info
   isClassicVehicle?: boolean;
   classicFitmentUsed?: boolean;
@@ -1453,6 +1565,8 @@ async function handleDbFirstWheelResults(opts: {
       // Classic vehicle detection - classic_fitments is source of truth for classics
       isClassicVehicle: Boolean(opts.isClassicVehicle),
       classicFitmentUsed: Boolean(opts.classicFitmentUsed),
+      // Staggered fitment detection
+      staggered: opts.staggeredInfo || null,
       // Confidence information (SAFETY-FIRST)
       confidence: opts.confidenceResult?.confidence || "high",
       confidenceReasons: opts.confidenceResult?.reasons || [],
@@ -1703,6 +1817,20 @@ async function handleLegacyPath(
   // Wheel results must come from DB-first candidates + cached live availability.
   const requestedModificationId = url.searchParams.get("modification") || url.searchParams.get("trim") || null;
 
+  // Detect staggered fitment from legacy profile's wheelSpecs
+  const legacyParsedWheelSizes: ParsedWheelSize[] = profile.wheelSpecs.map((ws: any) => ({
+    diameter: Number(ws.rimDiameter),
+    width: Number(ws.rimWidth),
+    offset: ws.offset ?? null,
+    tireSize: ws.tireSize || null,
+    axle: ws.axle || "both",
+    isStock: ws.isStock !== false,
+  }));
+  const legacyStaggeredInfo = detectStaggeredFromParsed(legacyParsedWheelSizes);
+  if (legacyStaggeredInfo.isStaggered) {
+    console.log(`[fitment-search] LEGACY STAGGERED FITMENT detected: ${legacyStaggeredInfo.reason}`);
+  }
+
   // Build dbProfile-compatible response from legacy profile
   // NOTE: Legacy profiles do NOT have threadSize/seatType - those only come from DB-first path.
   // Accessory calculation will show a warning when these are missing.
@@ -1743,6 +1871,7 @@ async function handleLegacyPath(
     debug,
     t0,
     confidenceResult,  // Pass confidence to response
+    staggeredInfo: legacyStaggeredInfo,  // Pass staggered info
     dbProfileForResponse: legacyDbProfile,
   });
 }
