@@ -285,16 +285,29 @@ async function fetchFitment(params: Record<string, string | undefined>) {
 }
 
 // DB-first fitment profile fetch (primary source of truth when available)
-async function fetchDBProfile(params: Record<string, string | undefined>) {
+// Also returns staggered info for staggered fitment detection
+interface FitmentProfileResult {
+  dbProfile: any | null;
+  staggered: {
+    isStaggered: boolean;
+    reason?: string;
+    frontSpec?: { diameter?: number; width?: number; offset?: number | null; tireSize?: string | null };
+    rearSpec?: { diameter?: number; width?: number; offset?: number | null; tireSize?: string | null };
+  } | null;
+}
+async function fetchDBProfile(params: Record<string, string | undefined>): Promise<FitmentProfileResult | null> {
   const sp = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) {
     if (v) sp.set(k, v);
   }
-  // Use fitment-search which returns dbProfile
+  // Use fitment-search which returns dbProfile + staggered info
   const res = await fetch(`${getBaseUrl()}/api/wheels/fitment-search?${sp.toString()}&pageSize=1`, { cache: "no-store" });
   if (!res.ok) return null;
   const data = await res.json();
-  return data?.fitment?.dbProfile || null;
+  return {
+    dbProfile: data?.fitment?.dbProfile || null,
+    staggered: data?.fitment?.staggered || null,
+  };
 }
 
 async function fetchKmTires(tireSize: string) {
@@ -532,7 +545,9 @@ export default async function TiresPage({
   const wheelDia = safeString(Array.isArray((sp as any).wheelDia) ? (sp as any).wheelDia[0] : (sp as any).wheelDia);
   const wheelWidth = safeString(Array.isArray((sp as any).wheelWidth) ? (sp as any).wheelWidth[0] : (sp as any).wheelWidth);
 
-  const isStaggered = Boolean(wheelSkuRear);
+  // Initial staggered check from URL - may be overridden by fitment detection later
+  const isStaggeredFromUrlParams = Boolean(wheelSkuRear);
+  // Note: isStaggeredVehicle is computed after fetchDBProfile and considers fitment data
   const wheelDiaActive = axle === "rear" ? (wheelDiaRear || wheelDia) : (wheelDiaFront || wheelDia);
   const wheelWidthActive = axle === "rear" ? (wheelWidthRear || wheelWidth) : (wheelWidthFront || wheelWidth);
 
@@ -597,9 +612,63 @@ export default async function TiresPage({
   // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
   // ═══════════════════════════════════════════════════════════════════════════
   // Fetch dbProfile first when modification is known (canonical fitment data from our DB)
-  const dbProfile = year && make && model && modification
+  // Also extracts staggered fitment info for staggered vehicles (e.g., Corvette)
+  const fitmentResult = year && make && model && modification
     ? await fetchDBProfile({ year, make, model, modification })
     : null;
+  const dbProfile = fitmentResult?.dbProfile || null;
+  const fitmentStaggered = fitmentResult?.staggered || null;
+  
+  // Staggered detection: from URL params (wheelSkuRear) OR from fitment profile
+  const isStaggeredFromFitment = Boolean(fitmentStaggered?.isStaggered);
+  const isStaggeredFromUrl = Boolean(wheelSkuRear);
+  const isStaggeredVehicle = isStaggeredFromFitment || isStaggeredFromUrl;
+  
+  // For package flow with staggered vehicles, use isStaggeredVehicle
+  // This allows staggered detection even when only one wheel is in the URL
+  const isStaggered = isPackageFlow ? isStaggeredVehicle : isStaggeredFromUrl;
+  
+  if (isStaggeredVehicle) {
+    console.log('[tires/page] 🔄 STAGGERED VEHICLE DETECTED:', {
+      fromFitment: isStaggeredFromFitment,
+      fromUrl: isStaggeredFromUrl,
+      reason: fitmentStaggered?.reason,
+      frontSpec: fitmentStaggered?.frontSpec,
+      rearSpec: fitmentStaggered?.rearSpec,
+      isPackageFlow,
+    });
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STAGGERED WHEEL SPECS (for tire size generation)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // When vehicle is staggered (detected from fitment), use the correct wheel specs
+  // for each axle to generate appropriate tire sizes.
+  // This handles the case where URL only has one wheel but fitment tells us about both.
+  const staggeredFrontDia = fitmentStaggered?.frontSpec?.diameter;
+  const staggeredFrontWidth = fitmentStaggered?.frontSpec?.width;
+  const staggeredRearDia = fitmentStaggered?.rearSpec?.diameter;
+  const staggeredRearWidth = fitmentStaggered?.rearSpec?.width;
+  
+  // Effective wheel specs for tire search - prefer URL params, fall back to fitment spec
+  const effectiveWheelDia = axle === "front"
+    ? (wheelDiaFront || wheelDia || (staggeredFrontDia ? String(staggeredFrontDia) : ""))
+    : (wheelDiaRear || wheelDia || (staggeredRearDia ? String(staggeredRearDia) : ""));
+  const effectiveWheelWidth = axle === "front"
+    ? (wheelWidthFront || wheelWidth || (staggeredFrontWidth ? String(staggeredFrontWidth) : ""))
+    : (wheelWidthRear || wheelWidth || (staggeredRearWidth ? String(staggeredRearWidth) : ""));
+  
+  if (isStaggeredVehicle && isPackageFlow) {
+    console.log('[tires/page] 🎯 STAGGERED TIRE SEARCH:', {
+      axle,
+      urlWheelDia: wheelDiaActive,
+      urlWheelWidth: wheelWidthActive,
+      fitmentDia: axle === "front" ? staggeredFrontDia : staggeredRearDia,
+      fitmentWidth: axle === "front" ? staggeredFrontWidth : staggeredRearWidth,
+      effectiveWheelDia,
+      effectiveWheelWidth,
+    });
+  }
   
   // ═══════════════════════════════════════════════════════════════════════════
   // CLASSIC VEHICLE CHECK
@@ -792,8 +861,17 @@ export default async function TiresPage({
     return null;
   }
 
-  const wheelDiaNum = wheelDiaActive ? Number(String(wheelDiaActive).replace(/[^0-9.]/g, "")) : NaN;
-  const wheelWidthNum = wheelWidthActive ? Number(String(wheelWidthActive).replace(/[^0-9.]/g, "")) : NaN;
+  // For staggered vehicles, use effective wheel specs that consider fitment data
+  // This handles the case where URL only has one wheel but fitment tells us about both axles
+  const wheelDiaForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelDia
+    ? effectiveWheelDia
+    : wheelDiaActive;
+  const wheelWidthForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelWidth
+    ? effectiveWheelWidth
+    : wheelWidthActive;
+  
+  const wheelDiaNum = wheelDiaForTireSearch ? Number(String(wheelDiaForTireSearch).replace(/[^0-9.]/g, "")) : NaN;
+  const wheelWidthNum = wheelWidthForTireSearch ? Number(String(wheelWidthForTireSearch).replace(/[^0-9.]/g, "")) : NaN;
 
   // For legacy vehicles, match using either the original sizes OR the converted sizes
   // This ensures wheel matching works for both E70-14 (rim=14) and 205/75R14 (rim=14)
