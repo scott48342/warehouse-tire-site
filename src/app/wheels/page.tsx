@@ -1725,6 +1725,7 @@ export default async function WheelsPage({
               isLiftedBuild={isLiftedBuild}
               stockDiameter={effectiveStockDiameter}
               showDiameterChips={hasVehicle && fitmentDiameterOptions.length > 0}
+              staggeredInfo={staggeredDebug}
               recommendedWheels={recommendedWheels.map(w => ({
                 sku: w.sku,
                 brand: w.brand,

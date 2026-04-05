@@ -67,6 +67,27 @@ type ViewParams = {
   liftedTireDiaMax?: string;
 };
 
+/** Staggered fitment info from API */
+type StaggeredFitmentInfo = {
+  isStaggered: boolean;
+  reason: string;
+  frontSpec?: {
+    diameter: number;
+    width: number;
+    offset: number | null;
+    tireSize: string | null;
+  };
+  rearSpec?: {
+    diameter: number;
+    width: number;
+    offset: number | null;
+    tireSize: string | null;
+  };
+} | null;
+
+/** Setup mode for staggered-capable vehicles */
+type SetupMode = "square" | "staggered";
+
 type WheelsGridProps = {
   wheels: WheelItem[];
   viewParams: ViewParams;
@@ -85,6 +106,8 @@ type WheelsGridProps = {
   stockDiameter?: number | null;
   /** Show diameter chips */
   showDiameterChips?: boolean;
+  /** Staggered fitment info from API */
+  staggeredInfo?: StaggeredFitmentInfo;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -253,6 +276,113 @@ function SelectionConfirmation({
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// STAGGERED SETUP CHOOSER
+// ═══════════════════════════════════════════════════════════════════════════════
+function StaggeredSetupChooser({
+  staggeredInfo,
+  selectedMode,
+  onModeChange,
+}: {
+  staggeredInfo: NonNullable<StaggeredFitmentInfo>;
+  selectedMode: SetupMode;
+  onModeChange: (mode: SetupMode) => void;
+}) {
+  const { frontSpec, rearSpec } = staggeredInfo;
+  
+  return (
+    <div className="rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4 mb-4">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-lg">⚡</span>
+        <div>
+          <h3 className="text-sm font-extrabold text-neutral-900">
+            This Vehicle Supports Staggered Fitment
+          </h3>
+          <p className="text-xs text-neutral-600">
+            Different wheel sizes for front and rear — common on performance vehicles
+          </p>
+        </div>
+      </div>
+      
+      {/* Setup Options */}
+      <div className="grid grid-cols-2 gap-3">
+        {/* Square Setup */}
+        <button
+          onClick={() => onModeChange("square")}
+          className={`relative rounded-xl border-2 p-3 text-left transition-all ${
+            selectedMode === "square"
+              ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200"
+              : "border-neutral-200 bg-white hover:border-neutral-300"
+          }`}
+        >
+          {selectedMode === "square" && (
+            <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 text-white">
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          )}
+          <div className="text-xs font-bold text-neutral-900 mb-1">Square Setup</div>
+          <div className="text-[11px] text-neutral-600">
+            Same wheels all 4 corners
+          </div>
+          {frontSpec && (
+            <div className="mt-2 text-[10px] font-medium text-neutral-500">
+              All: {frontSpec.diameter}&quot; × {frontSpec.width}&quot;
+            </div>
+          )}
+        </button>
+        
+        {/* Staggered Setup */}
+        <button
+          onClick={() => onModeChange("staggered")}
+          className={`relative rounded-xl border-2 p-3 text-left transition-all ${
+            selectedMode === "staggered"
+              ? "border-amber-500 bg-amber-50 ring-2 ring-amber-200"
+              : "border-neutral-200 bg-white hover:border-neutral-300"
+          }`}
+        >
+          {selectedMode === "staggered" && (
+            <div className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-white">
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          )}
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs font-bold text-neutral-900">Staggered Setup</span>
+            <span className="rounded bg-amber-200 px-1.5 py-0.5 text-[9px] font-bold text-amber-800">OEM</span>
+          </div>
+          <div className="text-[11px] text-neutral-600">
+            Wider rear wheels
+          </div>
+          {frontSpec && rearSpec && (
+            <div className="mt-2 space-y-0.5">
+              <div className="text-[10px] font-medium text-neutral-500">
+                F: {frontSpec.diameter}&quot; × {frontSpec.width}&quot;
+                {frontSpec.tireSize && <span className="text-neutral-400"> • {frontSpec.tireSize}</span>}
+              </div>
+              <div className="text-[10px] font-medium text-neutral-500">
+                R: {rearSpec.diameter}&quot; × {rearSpec.width}&quot;
+                {rearSpec.tireSize && <span className="text-neutral-400"> • {rearSpec.tireSize}</span>}
+              </div>
+            </div>
+          )}
+        </button>
+      </div>
+      
+      {/* Info text based on selection */}
+      <div className="mt-3 text-[11px] text-neutral-500">
+        {selectedMode === "square" ? (
+          <>💡 Showing wheels that work on all 4 corners. Easier tire rotation.</>
+        ) : (
+          <>💡 Showing wheels for front/rear staggered setup. Matches OEM performance spec.</>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // MOBILE STICKY BAR
 // ═══════════════════════════════════════════════════════════════════════════════
 function MobileStickyBar({ 
@@ -405,12 +535,19 @@ export function WheelsGridWithSelection({
   isLiftedBuild = false,
   stockDiameter = null,
   showDiameterChips = true,
+  staggeredInfo = null,
 }: WheelsGridProps) {
   const [selectedWheel, setSelectedWheel] = useState<SelectedWheel | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [showMobileBar, setShowMobileBar] = useState(false);
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const confirmationRef = useRef<HTMLDivElement>(null);
+  
+  // Staggered setup mode state - default to square for simplicity
+  const [setupMode, setSetupMode] = useState<SetupMode>("square");
+  
+  // Determine if this vehicle supports staggered fitment
+  const supportsStaggered = Boolean(staggeredInfo?.isStaggered);
   
   // Cart context
   const { addItem, setIsOpen: setCartOpen } = useCart();
@@ -633,6 +770,15 @@ export function WheelsGridWithSelection({
     <>
       {/* Success Animation Overlay */}
       <SuccessCheckmark show={showSuccessAnimation} />
+      
+      {/* Staggered Setup Chooser - show for staggered-capable vehicles */}
+      {supportsStaggered && staggeredInfo && !selectedWheel && (
+        <StaggeredSetupChooser
+          staggeredInfo={staggeredInfo}
+          selectedMode={setupMode}
+          onModeChange={setSetupMode}
+        />
+      )}
       
       {/* Selection Confirmation - sticky on desktop */}
       {selectedWheel && (
