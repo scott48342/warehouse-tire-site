@@ -617,8 +617,8 @@ export function WheelsGridWithSelection({
   
   // Helper to check if wheel matches front or rear spec
   // Tolerance: 1.5" for width (staggered vehicles often use wider rear wheels like 11" instead of OEM 10")
-  // Tolerance: 0.5" for diameter (must be close to OEM diameter)
-  const matchesStaggeredSpec = useCallback((wheel: WheelItem, spec: NonNullable<StaggeredFitmentInfo>["frontSpec"], widthTolerance: number = 1.5, diaTolerance: number = 0.5): boolean => {
+  // Tolerance: 2.0" for diameter (allows plus-sizing: 20" OEM → 18"-22" range)
+  const matchesStaggeredSpec = useCallback((wheel: WheelItem, spec: NonNullable<StaggeredFitmentInfo>["frontSpec"], widthTolerance: number = 1.5, diaTolerance: number = 2.0): boolean => {
     if (!spec) return false;
     const wheelDia = parseFloat(wheel.diameter || "0");
     const wheelWidth = parseFloat(wheel.width || "0");
@@ -640,11 +640,14 @@ export function WheelsGridWithSelection({
     // otherwise fall back to the paginated wheels prop
     const wheelsToScan = allWheels || wheels;
     
-    // Group ALL wheels by style (brand + model + finish)
+    // Group wheels by style + diameter (brand + model + finish + diameter)
+    // This ensures front/rear pairs are at the SAME diameter (e.g., both 20", or both 22")
     const styleGroups = new Map<string, { front: WheelItem | null; rear: WheelItem | null }>();
     
     for (const wheel of wheelsToScan) {
-      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      // Round diameter to nearest inch for grouping (19.0, 20.0, 22.0, etc.)
+      const wheelDia = Math.round(parseFloat(wheel.diameter || "0"));
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}|${wheelDia}`.toLowerCase();
       
       if (!styleGroups.has(styleKey)) {
         styleGroups.set(styleKey, { front: null, rear: null });
@@ -652,7 +655,7 @@ export function WheelsGridWithSelection({
       
       const group = styleGroups.get(styleKey)!;
       
-      // Check if this wheel matches front spec
+      // Check if this wheel matches front spec (width-based, diameter already grouped)
       if (matchesStaggeredSpec(wheel, frontSpec)) {
         if (!group.front || (wheel.imageUrl && !group.front.imageUrl)) {
           group.front = wheel;
@@ -701,9 +704,10 @@ export function WheelsGridWithSelection({
         return wheels.filter(w => w.pair?.staggered === true);
       }
       
-      // Only include wheels whose style has a complete pair
+      // Only include wheels whose style+diameter has a complete pair
       return wheels.filter(w => {
-        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}`.toLowerCase();
+        const wheelDia = Math.round(parseFloat(w.diameter || "0"));
+        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}|${wheelDia}`.toLowerCase();
         return completePairStyles.has(styleKey);
       });
     } else {
@@ -737,12 +741,13 @@ export function WheelsGridWithSelection({
       pairMap.set(pair.styleKey, { front: pair.front, rear: pair.rear });
     }
     
-    // Deduplicate: only show one card per style (the front wheel with pair data attached)
+    // Deduplicate: only show one card per style+diameter (the front wheel with pair data attached)
     const seenStyles = new Set<string>();
     const result: WheelItem[] = [];
     
     for (const wheel of filteredWheels) {
-      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      const wheelDia = Math.round(parseFloat(wheel.diameter || "0"));
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}|${wheelDia}`.toLowerCase();
       
       if (seenStyles.has(styleKey)) continue;
       seenStyles.add(styleKey);
@@ -793,7 +798,8 @@ export function WheelsGridWithSelection({
     const styleGroups = new Map<string, { front: boolean; rear: boolean }>();
     
     for (const wheel of recommendedWheels) {
-      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}`.toLowerCase();
+      const wheelDia = Math.round(parseFloat(wheel.diameter || "0"));
+      const styleKey = `${wheel.brand}|${wheel.model}|${wheel.finish || ""}|${wheelDia}`.toLowerCase();
       if (!styleGroups.has(styleKey)) {
         styleGroups.set(styleKey, { front: false, rear: false });
       }
@@ -822,7 +828,8 @@ export function WheelsGridWithSelection({
       // In staggered mode, show recommended wheels that are part of complete pairs
       // Check both allWheels pairs AND recommended-specific pairs
       return recommendedWheels.filter(w => {
-        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}`.toLowerCase();
+        const wheelDia = Math.round(parseFloat(w.diameter || "0"));
+        const styleKey = `${w.brand}|${w.model}|${w.finish || ""}|${wheelDia}`.toLowerCase();
         return completePairStyles.has(styleKey) || 
                recommendedStaggeredPairs.has(styleKey) || 
                w.pair?.staggered === true;
