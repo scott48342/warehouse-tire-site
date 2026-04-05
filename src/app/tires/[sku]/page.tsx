@@ -73,8 +73,8 @@ function priceFromRow(r: any): number | null {
 function TrustStrip({ hasVehicle }: { hasVehicle: boolean }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-green-700">
-      <span>✓ Free shipping</span>
-      {hasVehicle && <span>✓ Guaranteed fit for your vehicle</span>}
+      <span>✓ Free shipping over $1,500</span>
+      {hasVehicle && <span>✓ Guaranteed fit</span>}
       <span>✓ Expert support</span>
     </div>
   );

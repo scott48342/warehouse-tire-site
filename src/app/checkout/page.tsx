@@ -651,11 +651,18 @@ export default function CheckoutPage() {
                   <span className="text-neutral-600">Subtotal</span>
                   <span className="font-semibold">${validation.totals.subtotal.toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                   <span className="text-neutral-600">Shipping</span>
-                  <span className={`font-semibold ${validation.totals.shipping === 0 ? "text-green-700" : ""}`}>
-                    {validation.totals.shipping === 0 ? "FREE" : `$${validation.totals.shipping.toFixed(2)}`}
-                  </span>
+                  {shippingEstimate.isFree ? (
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-semibold text-green-700">FREE</span>
+                      <span className="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-medium">
+                        Qualified!
+                      </span>
+                    </div>
+                  ) : (
+                    <span className="font-semibold">${shippingAmount.toFixed(2)}</span>
+                  )}
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-600">
@@ -704,7 +711,7 @@ export default function CheckoutPage() {
               </div>
               <div className="flex items-center gap-2 text-neutral-700">
                 <span className="text-green-600">✓</span>
-                <span>Free shipping over $500</span>
+                <span>Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
               </div>
               <div className="flex items-center gap-2 text-neutral-700">
                 <span className="text-green-600">✓</span>

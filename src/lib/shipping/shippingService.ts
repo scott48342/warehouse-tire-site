@@ -5,19 +5,24 @@
  * - Zone-based pricing using ZIP prefixes
  * - Product type multipliers (wheels heavier than tires)
  * - Quantity tiers
- * - Free shipping threshold: $1000
+ * - Free shipping threshold: $1500
  * 
  * No external API calls - instant response.
  * 
  * @created 2026-04-03
+ * @updated 2026-04-05 - Threshold model: $1500 for free shipping
  */
 
 // ============================================================================
 // Configuration
 // ============================================================================
 
-/** Free shipping threshold (0 = always free) */
-export const FREE_SHIPPING_THRESHOLD = 0;
+/** Free shipping threshold - orders over this amount ship free */
+export const FREE_SHIPPING_THRESHOLD = 1500;
+
+/** Free shipping messaging */
+export const FREE_SHIPPING_MESSAGE = "Free shipping on orders over $1,500";
+export const PACKAGE_SHIPPING_MESSAGE = "Most packages qualify for free shipping";
 
 /** Base shipping rates by zone (for a standard 4-wheel set) */
 const ZONE_BASE_RATES: Record<number, number> = {

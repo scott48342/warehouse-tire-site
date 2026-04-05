@@ -873,8 +873,8 @@ export default async function WheelDetailPage({
               
               {/* Trust signals - compact */}
               <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-green-700">
-                <span>✓ Free shipping</span>
-                <span>✓ Guaranteed fit for your vehicle</span>
+                <span>✓ Free shipping over $1,500</span>
+                <span>✓ Guaranteed fit</span>
                 <span>✓ Expert support</span>
               </div>
             </div>

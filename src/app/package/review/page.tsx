@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { BRAND } from "@/lib/brand";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
+import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 
 /**
  * Review Package Page
@@ -293,8 +294,17 @@ function PricingBreakdown({
 
         <div className="flex justify-between pt-3 border-t border-neutral-100">
           <span className="text-neutral-600">Shipping</span>
-          <span className="font-bold text-green-700">FREE</span>
+          {total >= FREE_SHIPPING_THRESHOLD ? (
+            <span className="font-bold text-green-700">FREE</span>
+          ) : (
+            <span className="text-neutral-500 text-xs">Calculated at checkout</span>
+          )}
         </div>
+        {total < FREE_SHIPPING_THRESHOLD && (
+          <div className="text-xs text-amber-700 bg-amber-50 px-2 py-1 rounded mt-1">
+            Add ${(FREE_SHIPPING_THRESHOLD - total).toFixed(0)} more for free shipping
+          </div>
+        )}
         <div className="flex justify-between">
           <span className="text-neutral-600">Tax</span>
           <span className="text-neutral-500 text-xs">Calculated at checkout</span>
@@ -353,7 +363,11 @@ function TrustSection() {
       <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
         <div className="flex items-center gap-2 text-neutral-700">
           <span className="text-green-600">✓</span>
-          <span>Free shipping on all orders</span>
+          <span>Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
+        </div>
+        <div className="flex items-center gap-2 text-neutral-700">
+          <span className="text-green-600">✓</span>
+          <span>Most packages qualify for free shipping</span>
         </div>
         <div className="flex items-center gap-2 text-neutral-700">
           <span className="text-green-600">✓</span>

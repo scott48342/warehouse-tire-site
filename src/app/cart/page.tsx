@@ -6,7 +6,8 @@ import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
-import { ShippingEstimator } from "@/components/ShippingEstimate";
+import { ShippingEstimator, FreeShippingProgress } from "@/components/ShippingEstimate";
+import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { formatCurrency } from "@/lib/shipping/shippingService";
 
@@ -327,7 +328,7 @@ export default function CartPage() {
   return (
     <main className="bg-neutral-50 min-h-screen">
       <div className="mx-auto max-w-6xl px-4 py-8">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-4">
           <h1 className="text-3xl font-extrabold text-neutral-900">
             Your Cart ({itemCount} {itemCount === 1 ? "item" : "items"})
           </h1>
@@ -335,6 +336,9 @@ export default function CartPage() {
             Clear cart
           </button>
         </div>
+
+        {/* Free Shipping Progress - Prominent placement */}
+        <FreeShippingProgress subtotal={subtotal} className="mb-6" />
 
         <div className="grid gap-6 lg:grid-cols-[1fr_380px]">
           {/* Cart Items */}
@@ -480,7 +484,7 @@ export default function CartPage() {
               <div className="mt-5 pt-4 border-t border-neutral-100 space-y-2 text-xs text-neutral-600">
                 <div className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>
-                  <span>Free shipping on orders over $500</span>
+                  <span>Free shipping on orders over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>
