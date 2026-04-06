@@ -127,6 +127,9 @@ export async function POST(req: Request) {
     const shippingAmount = Number(shippingInfo.amount) || 0;
     const shippingIsFree = !!shippingInfo.isFree;
     
+    // Cart ID for linking add-to-cart events to purchases
+    const cartId = typeof body.cartId === "string" ? body.cartId.trim() : undefined;
+    
     const taxInfo = body.tax && typeof body.tax === "object" ? body.tax : {};
     const taxAmount = Number(taxInfo.amount) || 0;
     const taxState = String(taxInfo.state || "").toUpperCase();
@@ -269,6 +272,7 @@ export async function POST(req: Request) {
       line_items: stripeLineItems,
       metadata: {
         quoteId,
+        cartId: cartId || undefined,
         taxState: taxState || undefined,
         taxAmount: taxAmount > 0 ? String(taxAmount.toFixed(2)) : undefined,
         shippingAmount: shippingAmount > 0 ? String(shippingAmount.toFixed(2)) : undefined,

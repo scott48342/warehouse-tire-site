@@ -703,8 +703,154 @@ export const emailCampaignEvents = pgTable(
 );
 
 // ============================================================================
+// cart_add_events - Track add-to-cart events for product popularity
+// ============================================================================
+
+export const cartAddEvents = pgTable(
+  "cart_add_events",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Product identification
+    productType: varchar("product_type", { length: 20 }).notNull(), // 'tire' or 'wheel'
+    sku: varchar("sku", { length: 100 }).notNull(),
+    rearSku: varchar("rear_sku", { length: 100 }), // For staggered setups
+    
+    // Product details (captured at time of add)
+    productName: varchar("product_name", { length: 255 }).notNull(),
+    brand: varchar("brand", { length: 100 }).notNull(),
+    priceAtTime: decimal("price_at_time", { precision: 10, scale: 2 }).notNull(),
+    quantity: integer("quantity").notNull().default(1),
+    
+    // Product specs
+    size: varchar("size", { length: 100 }), // Tire size or wheel diameter
+    specs: jsonb("specs"), // Additional specs (width, offset, etc.)
+    
+    // Cart/session tracking
+    cartId: varchar("cart_id", { length: 64 }).notNull(),
+    sessionId: varchar("session_id", { length: 255 }),
+    
+    // Vehicle context
+    vehicleYear: varchar("vehicle_year", { length: 10 }),
+    vehicleMake: varchar("vehicle_make", { length: 100 }),
+    vehicleModel: varchar("vehicle_model", { length: 100 }),
+    vehicleTrim: varchar("vehicle_trim", { length: 255 }),
+    
+    // Source/context
+    source: varchar("source", { length: 50 }), // pdp, package, search, etc.
+    referrer: text("referrer"),
+    
+    // Purchase tracking
+    purchased: boolean("purchased").notNull().default(false),
+    orderId: varchar("order_id", { length: 50 }),
+    purchasedAt: timestamp("purchased_at"),
+    
+    // Test data exclusion
+    isTest: boolean("is_test").notNull().default(false),
+    testReason: varchar("test_reason", { length: 100 }),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    
+    // Request metadata
+    ipAddress: varchar("ip_address", { length: 45 }),
+    userAgent: text("user_agent"),
+  },
+  (table) => ({
+    typeSkuIdx: index("cart_add_events_type_sku_idx").on(table.productType, table.sku),
+    createdAtIdx: index("cart_add_events_created_at_idx").on(table.createdAt),
+    isTestIdx: index("cart_add_events_is_test_idx").on(table.isTest),
+    cartIdIdx: index("cart_add_events_cart_id_idx").on(table.cartId),
+    brandIdx: index("cart_add_events_brand_idx").on(table.productType, table.brand),
+    purchasedIdx: index("cart_add_events_purchased_idx").on(table.purchased, table.productType),
+    reportIdx: index("cart_add_events_report_idx").on(table.productType, table.isTest, table.createdAt),
+  })
+);
+
+// ============================================================================
+// competitor_page_analysis - SRP/PDP comparison against competitors
+// ============================================================================
+
+export const competitorPageAnalysis = pgTable(
+  "competitor_page_analysis",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Page identification
+    pageType: varchar("page_type", { length: 10 }).notNull(), // 'srp' or 'pdp'
+    ourUrl: text("our_url").notNull(),
+    competitorName: varchar("competitor_name", { length: 100 }).notNull(),
+    competitorUrl: text("competitor_url").notNull(),
+    
+    // Context (optional)
+    vehicleContext: jsonb("vehicle_context"), // {year, make, model, trim}
+    productContext: jsonb("product_context"), // {sku, brand, productName}
+    
+    // SRP Scoring Fields (0-10 scale)
+    srpImageQualityScore: integer("srp_image_quality_score"),
+    srpPricingClarityScore: integer("srp_pricing_clarity_score"),
+    srpTrustSignalScore: integer("srp_trust_signal_score"),
+    srpFilterUsabilityScore: integer("srp_filter_usability_score"),
+    srpMerchandisingScore: integer("srp_merchandising_score"),
+    
+    // PDP Scoring Fields (0-10 scale)
+    pdpAboveFoldClarityScore: integer("pdp_above_fold_clarity_score"),
+    pdpImageExperienceScore: integer("pdp_image_experience_score"),
+    pdpProductInfoScore: integer("pdp_product_info_score"),
+    pdpTrustLayerScore: integer("pdp_trust_layer_score"),
+    pdpConversionDriverScore: integer("pdp_conversion_driver_score"),
+    pdpCtaStrengthScore: integer("pdp_cta_strength_score"),
+    
+    // Our Page Scores (for comparison)
+    ourSrpImageQualityScore: integer("our_srp_image_quality_score"),
+    ourSrpPricingClarityScore: integer("our_srp_pricing_clarity_score"),
+    ourSrpTrustSignalScore: integer("our_srp_trust_signal_score"),
+    ourSrpFilterUsabilityScore: integer("our_srp_filter_usability_score"),
+    ourSrpMerchandisingScore: integer("our_srp_merchandising_score"),
+    
+    ourPdpAboveFoldClarityScore: integer("our_pdp_above_fold_clarity_score"),
+    ourPdpImageExperienceScore: integer("our_pdp_image_experience_score"),
+    ourPdpProductInfoScore: integer("our_pdp_product_info_score"),
+    ourPdpTrustLayerScore: integer("our_pdp_trust_layer_score"),
+    ourPdpConversionDriverScore: integer("our_pdp_conversion_driver_score"),
+    ourPdpCtaStrengthScore: integer("our_pdp_cta_strength_score"),
+    
+    // Meta / Notes
+    notes: text("notes"),
+    strengths: text("strengths"),
+    weaknesses: text("weaknesses"),
+    opportunities: text("opportunities"),
+    
+    // Page metadata (optional)
+    competitorTitle: text("competitor_title"),
+    competitorMetaDescription: text("competitor_meta_description"),
+    ourTitle: text("our_title"),
+    ourMetaDescription: text("our_meta_description"),
+    
+    // Status
+    status: varchar("status", { length: 20 }).notNull().default("active"),
+    
+    // Timestamps
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    pageTypeIdx: index("competitor_page_analysis_page_type_idx").on(table.pageType),
+    competitorIdx: index("competitor_page_analysis_competitor_idx").on(table.competitorName),
+    statusIdx: index("competitor_page_analysis_status_idx").on(table.status),
+    createdIdx: index("competitor_page_analysis_created_idx").on(table.createdAt),
+  })
+);
+
+// ============================================================================
 // Type exports for Drizzle
 // ============================================================================
+
+export type CompetitorPageAnalysis = typeof competitorPageAnalysis.$inferSelect;
+export type NewCompetitorPageAnalysis = typeof competitorPageAnalysis.$inferInsert;
+
+export type CartAddEvent = typeof cartAddEvents.$inferSelect;
+export type NewCartAddEvent = typeof cartAddEvents.$inferInsert;
 
 export type EmailSubscriber = typeof emailSubscribers.$inferSelect;
 export type NewEmailSubscriber = typeof emailSubscribers.$inferInsert;

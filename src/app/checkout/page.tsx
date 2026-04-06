@@ -8,7 +8,7 @@ import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
 import { US_STATES } from "@/lib/geo/usStates";
-import { useCartTracking } from "@/lib/cart/useCartTracking";
+import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
 
@@ -207,6 +207,7 @@ export default function CheckoutPage() {
           items,
           customer,
           vehicle,
+          cartId: getCartId(), // For linking add-to-cart events to purchases
           shipping: {
             address: shipping.address,
             address2: shipping.address2,

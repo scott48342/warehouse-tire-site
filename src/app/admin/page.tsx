@@ -412,12 +412,24 @@ export default async function AdminDashboard() {
       {/* Quick Actions */}
       <div className="bg-neutral-800 rounded-xl border border-neutral-700 p-6">
         <h2 className="text-lg font-bold text-white mb-4">Quick Actions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
           <QuickAction
             icon="📦"
             label="View Orders"
             description="See all submitted orders"
             href="/admin/orders"
+          />
+          <QuickAction
+            icon="📊"
+            label="Cart Popularity"
+            description="Top tires & wheels added"
+            href="/admin/cart-popularity"
+          />
+          <QuickAction
+            icon="🎯"
+            label="Competitor Analysis"
+            description="Compare vs competitors"
+            href="/admin/competitor-analysis"
           />
           <QuickAction
             icon="🔑"

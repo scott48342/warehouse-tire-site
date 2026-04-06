@@ -4,6 +4,7 @@ import { getPool, getQuote } from "@/lib/quotes";
 import { getStripeClient } from "@/lib/payments/stripeClient";
 import { createOrder, getOrderByStripeSession, markOrderEmailSent } from "@/lib/orders";
 import { sendOrderConfirmationEmail } from "@/lib/email";
+import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
 
 export const runtime = "nodejs";
 
@@ -52,12 +53,13 @@ export async function POST(req: Request) {
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as any;
     const quoteId = session.metadata?.quoteId;
+    const cartId = session.metadata?.cartId;
     const sessionId = session.id;
     const paymentIntentId = session.payment_intent;
     const amountTotal = session.amount_total || 0;
     const customerEmail = session.customer_email || session.customer_details?.email;
 
-    console.log(`[stripe/webhook] checkout.session.completed: session=${sessionId}, quote=${quoteId}, amount=${amountTotal}`);
+    console.log(`[stripe/webhook] checkout.session.completed: session=${sessionId}, quote=${quoteId}, cart=${cartId || "none"}, amount=${amountTotal}`);
 
     if (!quoteId) {
       console.error("[stripe/webhook] No quoteId in session metadata");
@@ -90,6 +92,19 @@ export async function POST(req: Request) {
     });
 
     console.log(`[stripe/webhook] Created order: ${orderId}`);
+
+    // Mark cart add events as purchased (for product popularity analytics)
+    if (cartId) {
+      try {
+        const markedCount = await markCartEventsPurchased(cartId, orderId);
+        if (markedCount > 0) {
+          console.log(`[stripe/webhook] Marked ${markedCount} cart add events as purchased`);
+        }
+      } catch (err: any) {
+        // Don't fail the webhook for analytics tracking issues
+        console.warn(`[stripe/webhook] Failed to mark cart events purchased:`, err.message);
+      }
+    }
 
     // Send confirmation email
     const emailTo = customerEmail || quote.snapshot.customer.email;

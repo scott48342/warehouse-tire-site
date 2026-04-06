@@ -2,8 +2,80 @@
 
 import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from "react";
 import type { CartAccessoryItem, AccessoryRecommendationState } from "./accessoryTypes";
+import { getCartId } from "./useCartTracking";
 
 export type { CartAccessoryItem, AccessoryRecommendationState };
+
+/**
+ * Track add-to-cart event for product popularity analytics.
+ * Fire-and-forget: never blocks cart UX.
+ */
+async function trackAddToCartEvent(
+  item: CartWheelItem | CartTireItem,
+  source?: string
+): Promise<void> {
+  try {
+    const cartId = getCartId();
+    if (!cartId) return;
+
+    // Get session ID if available
+    const sessionId = typeof sessionStorage !== "undefined"
+      ? sessionStorage.getItem("wt_session_id")
+      : null;
+
+    // Build product name based on type
+    let productName: string;
+    let size: string | undefined;
+    let specs: Record<string, unknown> | undefined;
+
+    if (item.type === "wheel") {
+      const wheel = item as CartWheelItem;
+      productName = `${wheel.brand} ${wheel.model}${wheel.finish ? ` - ${wheel.finish}` : ""}`;
+      size = wheel.diameter ? `${wheel.diameter}"` : undefined;
+      specs = {
+        diameter: wheel.diameter,
+        width: wheel.width,
+        offset: wheel.offset,
+        boltPattern: wheel.boltPattern,
+        staggered: wheel.staggered,
+      };
+    } else {
+      const tire = item as CartTireItem;
+      productName = `${tire.brand} ${tire.model}`;
+      size = tire.size;
+      specs = {
+        size: tire.size,
+        loadIndex: tire.loadIndex,
+        speedRating: tire.speedRating,
+        staggered: tire.staggered,
+      };
+    }
+
+    await fetch("/api/cart/add-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        productType: item.type,
+        sku: item.sku,
+        rearSku: item.rearSku,
+        productName,
+        brand: item.brand,
+        price: item.unitPrice,
+        quantity: item.quantity,
+        size,
+        specs,
+        cartId,
+        sessionId,
+        vehicle: item.vehicle,
+        source: source || "unknown",
+        referrer: typeof document !== "undefined" ? document.referrer : undefined,
+      }),
+    });
+  } catch (err) {
+    // Silently fail - analytics should never block cart experience
+    console.warn("[CartTracking] Failed to track add-to-cart:", err);
+  }
+}
 
 export type CartWheelItem = {
   type: "wheel";
@@ -63,7 +135,8 @@ export type CartItem = CartWheelItem | CartTireItem | CartAccessoryItem;
 
 type CartContextValue = {
   items: CartItem[];
-  addItem: (item: CartItem) => void;
+  /** Add item to cart. Optional source for analytics (pdp, package, search, etc.) */
+  addItem: (item: CartItem, source?: string) => void;
   addAccessory: (item: CartAccessoryItem) => void;
   addAccessories: (items: CartAccessoryItem[]) => void;
   /** Update an accessory in-place by SKU (safe immutable update). */
@@ -129,7 +202,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [items, hydrated]);
 
-  const addItem = useCallback((item: CartItem) => {
+  const addItem = useCallback((item: CartItem, source?: string) => {
     setItems((prev) => {
       // Check if item already exists (same SKU and type)
       const existingIndex = prev.findIndex(
@@ -151,6 +224,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
     });
     setLastAddedItem(item);
     setIsOpen(true);
+
+    // Track add-to-cart event for tires/wheels (not accessories)
+    if (item.type === "tire" || item.type === "wheel") {
+      trackAddToCartEvent(item as CartWheelItem | CartTireItem, source);
+    }
   }, []);
 
   const removeItem = useCallback((sku: string, type: "wheel" | "tire" | "accessory") => {
