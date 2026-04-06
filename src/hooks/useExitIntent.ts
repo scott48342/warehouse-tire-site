@@ -83,7 +83,6 @@ export function useExitIntent(options: ExitIntentOptions = {}): {
     if (!mountedRef.current) return;
     if (checkAlreadyShown()) return;
     
-    console.log("[ExitIntent] Triggered via:", source);
     setState({ triggered: true, source });
     markShown();
   }, [disabled, checkAlreadyShown, markShown]);
@@ -114,15 +113,11 @@ export function useExitIntent(options: ExitIntentOptions = {}): {
     
     // Check if already shown before setting up
     if (checkAlreadyShown()) {
-      console.log("[ExitIntent] Already shown this session, skipping setup");
       return;
     }
 
-    console.log("[ExitIntent] Setting up, will enable after", delayMs, "ms");
-    
     const timer = setTimeout(() => {
       allowedRef.current = true;
-      console.log("[ExitIntent] Now enabled and listening");
     }, delayMs);
 
     return () => {

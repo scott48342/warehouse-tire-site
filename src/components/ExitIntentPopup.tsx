@@ -49,21 +49,9 @@ export function ExitIntentPopup({
   const cartTotal = getTotal();
   const hasCart = items.length > 0 && cartTotal >= minCartValue;
 
-  // Debug logging
-  useEffect(() => {
-    console.log("[ExitIntentPopup] State:", {
-      itemCount: items.length,
-      cartTotal,
-      minCartValue,
-      hasCart,
-      triggered,
-    });
-  }, [items.length, cartTotal, minCartValue, hasCart, triggered]);
-
   // Control visibility with animation delay
   useEffect(() => {
     if (triggered && hasCart) {
-      console.log("[ExitIntentPopup] Showing popup!");
       // Small delay for fade-in animation
       const timer = setTimeout(() => setIsVisible(true), 50);
       return () => clearTimeout(timer);
