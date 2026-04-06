@@ -30,6 +30,14 @@ import {
   type TopPickTire,
   type TireCategory as EnhancementCategory,
 } from "@/components/TireSRPEnhancements";
+// Behavior-driven popularity signals (2026-04-06)
+import {
+  getPopularitySignalsBatch,
+  getProductPopularityBatch,
+  computeBestValueScore,
+  type ProductPopularityData,
+  type PopularitySignal,
+} from "@/lib/analytics/productPopularity";
 
 import { 
   type TreadCategory, 
@@ -483,8 +491,15 @@ const ROLE_CONFIG: Record<TopPickRole, { label: string; icon: string }> = {
  * Select role-based Top Picks
  * Uses EXISTING data only - no new queries
  * Ensures distinct products (no duplicates)
+ * Now enhanced with real behavior data when available
+ * 
+ * @param tires - Filtered/sorted tire list
+ * @param popularityData - Optional behavior data map (SKU → PopularityData)
  */
-function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
+function selectRoleBasedPicks(
+  tires: Tire[], 
+  popularityData?: Map<string, ProductPopularityData>
+): RoleBasedPick[] {
   // Filter to only tires with images and pricing
   const candidates = tires.filter(t => t.imageUrl && typeof t.cost === "number");
   if (candidates.length < 3) return []; // Need at least 3 candidates
@@ -511,8 +526,16 @@ function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
     usedBrands.add(getBrand(t));
   };
   
+  // Helper to get popularity data for a tire
+  const getPopularity = (t: Tire): ProductPopularityData | null => {
+    if (!popularityData) return null;
+    const sku = getSku(t);
+    return sku ? popularityData.get(sku) || null : null;
+  };
+  
   // ─────────────────────────────────────────────────────────────────────────
   // 1. BEST OVERALL: Premium brand, balanced price, good stock
+  //    Behavior data supports selection but isn't primary factor
   // ─────────────────────────────────────────────────────────────────────────
   const bestOverall = candidates
     .filter(t => !isUsed(t))
@@ -535,6 +558,12 @@ function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
       // Then by stock
       const stockA = (a.quantity?.primary || 0) + (a.quantity?.alternate || 0) + (a.quantity?.national || 0);
       const stockB = (b.quantity?.primary || 0) + (b.quantity?.alternate || 0) + (b.quantity?.national || 0);
+      // Use popularity as tie-breaker when available
+      if (Math.abs(stockA - stockB) < 10) {
+        const popA = getPopularity(a)?.addToCartCount || 0;
+        const popB = getPopularity(b)?.addToCartCount || 0;
+        if (popA !== popB) return popB - popA;
+      }
       return stockB - stockA;
     })[0];
   
@@ -568,9 +597,10 @@ function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
   }
   
   // ─────────────────────────────────────────────────────────────────────────
-  // 2. BEST VALUE: Lower price, decent quality, good stock
+  // 2. BEST VALUE: Hybrid scoring with price + popularity + conversion
+  //    Formula: valueScore = (priceScore × 0.5) + (popularityScore × 0.3) + (conversionScore × 0.2)
   // ─────────────────────────────────────────────────────────────────────────
-  const bestValue = candidates
+  const valueCandidates = candidates
     .filter(t => !isUsed(t))
     .filter(t => {
       const price = getDisplayPrice(t) || 0;
@@ -578,17 +608,33 @@ function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
       const stock = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
       // Budget-friendly but not bottom-barrel
       return price >= 50 && price <= 150 && stock >= 4;
+    });
+  
+  // Calculate price range for normalization
+  const valuePrices = valueCandidates.map(t => getDisplayPrice(t) || 999);
+  const minPrice = Math.min(...valuePrices);
+  const maxPrice = Math.max(...valuePrices);
+  
+  // Find max popularity for normalization
+  const maxAddToCart = Math.max(
+    ...valueCandidates.map(t => getPopularity(t)?.addToCartCount || 0),
+    1 // Prevent division by zero
+  );
+  
+  // Sort by hybrid value score (price + popularity + conversion)
+  const bestValue = valueCandidates
+    .map(t => {
+      const price = getDisplayPrice(t) || 999;
+      const pop = getPopularity(t);
+      const valueScore = computeBestValueScore(price, minPrice, maxPrice, pop, maxAddToCart);
+      return { tire: t, valueScore, price };
     })
     .sort((a, b) => {
-      // Sort by price (lowest first), then by stock
-      const priceA = getDisplayPrice(a) || 999;
-      const priceB = getDisplayPrice(b) || 999;
-      if (Math.abs(priceA - priceB) > 10) return priceA - priceB;
-      // If similar price, prefer better stock
-      const stockA = (a.quantity?.primary || 0) + (a.quantity?.alternate || 0) + (a.quantity?.national || 0);
-      const stockB = (b.quantity?.primary || 0) + (b.quantity?.alternate || 0) + (b.quantity?.national || 0);
-      return stockB - stockA;
-    })[0];
+      // Higher score is better
+      if (Math.abs(a.valueScore - b.valueScore) > 0.05) return b.valueScore - a.valueScore;
+      // If scores are close, prefer lower price
+      return a.price - b.price;
+    })[0]?.tire;
   
   if (bestValue) {
     const valuePrice = getDisplayPrice(bestValue) || 0;
@@ -618,6 +664,7 @@ function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
   
   // ─────────────────────────────────────────────────────────────────────────
   // 3. LONGEST LIFE: Highest mileage warranty or touring category
+  //    Popularity used as tie-breaker only
   // ─────────────────────────────────────────────────────────────────────────
   const longestLife = candidates
     .filter(t => !isUsed(t))
@@ -636,7 +683,11 @@ function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
       const categoryB = b.enrichment?.treadCategory || b.badges?.terrain || '';
       const isLongLifeA = /touring|highway/i.test(categoryA) ? 1 : 0;
       const isLongLifeB = /touring|highway/i.test(categoryB) ? 1 : 0;
-      return isLongLifeB - isLongLifeA;
+      if (isLongLifeA !== isLongLifeB) return isLongLifeB - isLongLifeA;
+      // Use popularity as final tie-breaker
+      const popA = getPopularity(a)?.addToCartCount || 0;
+      const popB = getPopularity(b)?.addToCartCount || 0;
+      return popB - popA;
     })[0];
   
   if (longestLife) {
@@ -2001,10 +2052,33 @@ export default async function TiresPage({
     }
   });
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // POPULARITY SIGNALS - Fetch batch data for visible products (cached, non-blocking)
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  // Collect SKUs for batch lookup (top ~50 for Top Picks + current page)
+  const skusForPopularity = items.slice(0, 50).map(t => t.partNumber || t.mfgPartNumber || '').filter(Boolean);
+  
+  // Fetch popularity data and signals in parallel (cached, fast)
+  let popularityDataMap: Map<string, ProductPopularityData> = new Map();
+  let popularitySignalsMap: Map<string, PopularitySignal> = new Map();
+  
+  try {
+    const [dataMap, signalsMap] = await Promise.all([
+      getProductPopularityBatch("tire", skusForPopularity),
+      getPopularitySignalsBatch("tire", skusForPopularity),
+    ]);
+    popularityDataMap = dataMap;
+    popularitySignalsMap = signalsMap;
+  } catch {
+    // Silent fail - popularity is enhancement only, never breaks page
+  }
+  
   // Top Picks: role-based selection (Best Overall, Best Value, Longest Life)
+  // Now uses real behavior data when available
   const roleBasedPicks = (() => {
     if (!hasVehicle || items.length === 0) return [];
-    return selectRoleBasedPicks(items);
+    return selectRoleBasedPicks(items, popularityDataMap);
   })();
   
   // Legacy array for backwards compatibility (used by some card logic)
@@ -2730,6 +2804,7 @@ export default async function TiresPage({
                         hideTopPickBadge
                         hasVehicle={hasVehicle}
                         isPackageFlow={isPackageFlow}
+                        popularitySignal={popularitySignalsMap.get(pick.tire.partNumber || pick.tire.mfgPartNumber || '')}
                       />
                     </div>
                   ))}
@@ -2782,6 +2857,7 @@ export default async function TiresPage({
                     axle={axle}
                     hasVehicle={hasVehicle}
                     isPackageFlow={isPackageFlow}
+                    popularitySignal={popularitySignalsMap.get(t.partNumber || t.mfgPartNumber || '')}
                   />
                 ))
               ) : (
@@ -2940,6 +3016,7 @@ function TireCard({
   hideTopPickBadge,
   hasVehicle,
   isPackageFlow,
+  popularitySignal,
 }: {
   tire: Tire;
   stripSizeFromName: (name: string) => string;
@@ -2962,6 +3039,8 @@ function TireCard({
   hideTopPickBadge?: boolean; // Hide "Top Pick" badge (used when inside Top Picks section)
   hasVehicle: boolean;
   isPackageFlow?: boolean;
+  /** Real behavior-driven popularity signal (optional) */
+  popularitySignal?: PopularitySignal | null;
 }) {
   const brandKey = String(t.brand || "").trim().toLowerCase();
   const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
@@ -2983,17 +3062,24 @@ function TireCard({
   const displayTitle = cleanTireDisplayTitle(rawTitle, t.brand);
 
   // Determine highlight label (selective - only for standout items)
+  // PRIORITY: Real behavior signals > Long Life > legacy fallbacks
   const highlightLabel = (() => {
     if (isTopPick) return null; // Top picks already have badge
+    
+    // 1. Real behavior-driven signals (highest priority)
+    if (popularitySignal?.isTrending) {
+      return { text: "📈 Trending", bg: "bg-purple-600" };
+    }
+    if (popularitySignal?.isPopular) {
+      return { text: "🔥 Popular", bg: "bg-amber-600" };
+    }
+    
+    // 2. Long Life badge (product attribute)
     const mileage = t.enrichment?.mileage ?? t.badges?.warrantyMiles;
     if (mileage && mileage >= 80000) return { text: "Long Life", bg: "bg-emerald-600" };
-    // Best Value could be based on price-to-quality ratio (simplified: mid-range brands with good stock)
-    const price = getDisplayPrice(t);
-    if (price && price >= 80 && price <= 150 && maxQty >= 16 && MID_TIER_BRANDS.includes(brandKey)) {
-      return { text: "Best Value", bg: "bg-blue-600" };
-    }
-    // Popular: high stock levels suggest popularity
-    if (maxQty >= 50 && PREMIUM_BRANDS.includes(brandKey)) return { text: "Popular", bg: "bg-violet-600" };
+    
+    // 3. No fallback - only show badges backed by real data
+    // The old stock-based "Popular" logic was removed in favor of real behavior signals
     return null;
   })();
 
