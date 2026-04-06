@@ -25,6 +25,8 @@ import {
 // Real behavior-driven popularity signals (2026-04-06)
 import { PopularityBadge, type PopularitySignalData } from "@/components/PopularityBadge";
 import { getPopularitySignal } from "@/lib/analytics/productPopularity";
+// Buying guides (2026-04-06)
+import { TireSizeGuide, TireTypesGuide } from "@/components/BuyingGuides";
 
 export const runtime = "nodejs";
 
@@ -442,21 +444,23 @@ export default async function TireDetailPage({
                       isRunFlat={isRunFlatTire}
                     />
 
-                    {/* Key spec chips */}
+                    {/* Key spec chips + guides */}
                     <div className="flex flex-wrap items-center gap-2">
                       {(tire.size || size) && (
                         <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
                           {tire.size || size}
                         </span>
                       )}
+                      {(tire.size || size) && <TireSizeGuide variant="icon" />}
                       {tire.badges?.loadIndex && tire.badges?.speedRating && (
                         <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
                           {String(tire.badges.loadIndex)}{String(tire.badges.speedRating)}
                         </span>
                       )}
                       {category && (
-                        <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
                           {category}
+                          <TireTypesGuide variant="icon" />
                         </span>
                       )}
                       {tire.badges?.warrantyMiles && Number(tire.badges.warrantyMiles) >= 40000 && (
@@ -779,21 +783,23 @@ export default async function TireDetailPage({
               isRunFlat={isRunFlatTire}
             />
 
-            {/* Key spec chips */}
+            {/* Key spec chips + guides */}
             <div className="flex flex-wrap items-center gap-2">
               {(t.tire_size || t.simple_size) && (
                 <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
                   {String(t.tire_size || t.simple_size)}
                 </span>
               )}
+              {(t.tire_size || t.simple_size) && <TireSizeGuide variant="icon" />}
               {t.load_index && t.speed_rating && (
                 <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
                   {String(t.load_index)}{String(t.speed_rating)}
                 </span>
               )}
               {category && (
-                <span className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
+                <span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-semibold text-neutral-700">
                   {category}
+                  <TireTypesGuide variant="icon" />
                 </span>
               )}
               {t.mileage_warranty && Number(t.mileage_warranty) >= 40000 && (

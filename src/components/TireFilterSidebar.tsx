@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import type { TreadCategory, MileageBand } from "@/lib/tires/normalization";
+import { TireTypesGuide } from "@/components/BuyingGuides";
 
 /* =============================================================================
    TYPES
@@ -367,6 +368,10 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               onChange={() => toggleArrayFilter("treadCategory", value, data.treadCategories)}
             />
           ))}
+        </div>
+        {/* Tire Types Guide - below filter options */}
+        <div className="mt-3 pt-3 border-t border-neutral-100">
+          <TireTypesGuide variant="link" />
         </div>
       </AccordionSection>
       

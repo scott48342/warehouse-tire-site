@@ -40,6 +40,8 @@ import {
 } from "@/lib/analytics/productPopularity";
 // SEO content block (2026-04-06)
 import { SeoContentBlock } from "@/components/SeoContentBlock";
+// Buying guides (2026-04-06)
+import { TireSizeGuide, TireTypesGuide, StaggeredGuide } from "@/components/BuyingGuides";
 
 import { 
   type TreadCategory, 
@@ -2562,11 +2564,12 @@ export default async function TiresPage({
             {/* Staggered tire pairs display - only when user's selection is actually staggered */}
             {showStaggeredUI && staggeredTirePairs.length > 0 ? (
               <div className="mb-6">
-                <div className="mb-4 flex items-center gap-2">
+                <div className="mb-4 flex items-center gap-2 flex-wrap">
                   <span className="text-lg font-bold text-neutral-900">🏁 Staggered Tire Sets</span>
                   <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-green-700">
                     {staggeredTirePairs.length} matched pairs
                   </span>
+                  <StaggeredGuide variant="link" className="ml-auto" />
                 </div>
                 <p className="mb-4 text-sm text-neutral-600">
                   Front: {staggeredFrontTireSize} • Rear: {staggeredRearTireSize}
@@ -2729,9 +2732,10 @@ export default async function TiresPage({
               <div>
                 Showing {itemsPage.length} of {items.length} tires{totalPages > 1 ? ` (page ${safePage} of ${totalPages})` : ""}
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {displaySize ? <Chip active>{displaySize}</Chip> : null}
                 <Chip>In stock</Chip>
+                {displaySize ? <TireSizeGuide variant="icon" className="ml-1" /> : null}
               </div>
             </div>
 
