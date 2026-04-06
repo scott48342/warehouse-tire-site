@@ -11,16 +11,30 @@
  * Unsubscribe from marketing
  * 
  * @created 2026-04-03
+ * @updated 2026-04-05 - Added test data detection via ?test=1, cookie, header
  */
 
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { subscribe, unsubscribe, isSubscribed, getByEmail, type EmailSource } from "@/lib/email/subscriberService";
-import { getCartId } from "@/lib/cart/useCartTracking";
+import { hasTestModeParam, hasTestModeCookie, hasTestModeHeader, TEST_MODE_HEADER } from "@/lib/testData";
 
 export const runtime = "nodejs";
 
 const VALID_SOURCES: EmailSource[] = ["exit_intent", "cart_save", "checkout", "newsletter", "quote"];
+
+/**
+ * Parse cookies into a Record
+ */
+function parseCookies(cookieHeader: string | null): Record<string, string> {
+  if (!cookieHeader) return {};
+  const result: Record<string, string> = {};
+  cookieHeader.split(";").forEach(cookie => {
+    const [key, value] = cookie.trim().split("=");
+    if (key && value) result[key] = value;
+  });
+  return result;
+}
 
 /**
  * POST /api/email/subscribe
@@ -35,7 +49,17 @@ const VALID_SOURCES: EmailSource[] = ["exit_intent", "cart_save", "checkout", "n
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { email, source, vehicle, cartId, marketingConsent = true } = body;
+    const url = new URL(req.url);
+    const { 
+      email, 
+      source, 
+      vehicle, 
+      cartId, 
+      marketingConsent = true,
+      // Allow explicit test flag from client
+      isTest: clientIsTest,
+      testReason: clientTestReason,
+    } = body;
 
     // Validate email
     if (!email || typeof email !== "string") {
@@ -68,8 +92,37 @@ export async function POST(req: Request) {
                       headersList.get("x-real-ip") || 
                       "unknown";
     const userAgent = headersList.get("user-agent") || undefined;
+    
+    // Build test detection context
+    const cookieHeader = headersList.get("cookie");
+    const cookieRecord = parseCookies(cookieHeader);
+    const headerRecord: Record<string, string> = {};
+    const testHeader = headersList.get(TEST_MODE_HEADER);
+    if (testHeader) headerRecord[TEST_MODE_HEADER] = testHeader;
+    
+    // Detect test mode from URL, cookies, or headers
+    let isTest = clientIsTest || false;
+    let testReason = clientTestReason || null;
+    
+    if (!isTest) {
+      // Check URL param (?test=1)
+      if (hasTestModeParam(url)) {
+        isTest = true;
+        testReason = "manual_override";
+      }
+      // Check cookie
+      else if (hasTestModeCookie(cookieRecord)) {
+        isTest = true;
+        testReason = "test_cookie";
+      }
+      // Check header
+      else if (hasTestModeHeader(headerRecord)) {
+        isTest = true;
+        testReason = "test_header";
+      }
+    }
 
-    // Subscribe
+    // Subscribe with test context
     const subscriber = await subscribe({
       email,
       source,
@@ -78,6 +131,14 @@ export async function POST(req: Request) {
       marketingConsent,
       ipAddress,
       userAgent,
+      // Test context for additional detection (email patterns)
+      testContext: {
+        cookies: cookieRecord,
+        headers: headerRecord,
+      },
+      // Explicit test flags if detected
+      isTest,
+      testReason: testReason || undefined,
     });
 
     return NextResponse.json({
@@ -93,6 +154,7 @@ export async function POST(req: Request) {
           trim: subscriber.vehicleTrim,
         } : null,
         createdAt: subscriber.createdAt,
+        isTest: subscriber.isTest || false,
       },
     });
   } catch (err: any) {

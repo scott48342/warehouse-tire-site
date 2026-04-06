@@ -1,10 +1,13 @@
 /**
  * Core Analytics Tracking
+ * 
+ * @updated 2026-04-05 - Added test data detection and exclusion
  */
 
 import { analyticsDb, schema } from "./db";
 import { isBot, getDeviceType } from "./bot-detect";
 import { eq, sql } from "drizzle-orm";
+import { hasTestModeParam, hasTestModeCookie, hasTestModeHeader, isInternalEmail } from "@/lib/testData";
 
 interface TrackPageViewParams {
   sessionId: string;
@@ -14,6 +17,9 @@ interface TrackPageViewParams {
   userAgent?: string | null;
   country?: string | null;
   isNewSession: boolean;
+  // Test detection context
+  cookies?: Record<string, string>;
+  headers?: Record<string, string>;
 }
 
 /**
@@ -38,8 +44,20 @@ export async function ensureAnalyticsTables() {
         user_agent TEXT,
         is_bot BOOLEAN DEFAULT false,
         country VARCHAR(2),
-        page_view_count INTEGER DEFAULT 1
+        page_view_count INTEGER DEFAULT 1,
+        is_test BOOLEAN DEFAULT false,
+        test_reason VARCHAR(100)
       )
+    `);
+
+    // Add is_test column if missing (migration for existing tables)
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ADD COLUMN IF NOT EXISTS is_test BOOLEAN DEFAULT false
+    `);
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ADD COLUMN IF NOT EXISTS test_reason VARCHAR(100)
     `);
 
     await analyticsDb.execute(sql`
@@ -92,14 +110,49 @@ function extractUtmParams(url: string): Record<string, string | undefined> {
 }
 
 /**
+ * Detect if this is a test session
+ */
+function detectTestSession(params: {
+  fullUrl: string;
+  cookies?: Record<string, string>;
+  headers?: Record<string, string>;
+}): { isTest: boolean; reason: string | null } {
+  const { fullUrl, cookies, headers } = params;
+
+  // Check URL param: ?test=1 or ?_test=1
+  try {
+    if (hasTestModeParam(fullUrl)) {
+      return { isTest: true, reason: "url_param" };
+    }
+  } catch {
+    // Invalid URL
+  }
+
+  // Check cookie
+  if (hasTestModeCookie(cookies)) {
+    return { isTest: true, reason: "test_cookie" };
+  }
+
+  // Check header
+  if (hasTestModeHeader(headers)) {
+    return { isTest: true, reason: "test_header" };
+  }
+
+  return { isTest: false, reason: null };
+}
+
+/**
  * Track a page view
  */
 export async function trackPageView(params: TrackPageViewParams) {
-  const { sessionId, path, fullUrl, referrer, userAgent, country, isNewSession } = params;
+  const { sessionId, path, fullUrl, referrer, userAgent, country, isNewSession, cookies, headers } = params;
   
   const botFlag = isBot(userAgent);
   const deviceType = getDeviceType(userAgent);
   const utmParams = extractUtmParams(fullUrl);
+  
+  // Detect test mode
+  const testDetection = detectTestSession({ fullUrl, cookies, headers });
 
   try {
     await ensureAnalyticsTables();
@@ -116,6 +169,8 @@ export async function trackPageView(params: TrackPageViewParams) {
           deviceType,
           isBot: botFlag,
           country: country || null,
+          isTest: testDetection.isTest,
+          testReason: testDetection.reason,
           ...utmParams,
         })
         .onConflictDoNothing();
@@ -126,6 +181,11 @@ export async function trackPageView(params: TrackPageViewParams) {
         .set({
           lastSeenAt: new Date(),
           pageViewCount: sql`page_view_count + 1`,
+          // If test mode detected mid-session, mark it (only upgrade, never downgrade)
+          ...(testDetection.isTest && {
+            isTest: true,
+            testReason: testDetection.reason,
+          }),
         })
         .where(eq(schema.analyticsSessions.sessionId, sessionId));
     }
@@ -136,7 +196,7 @@ export async function trackPageView(params: TrackPageViewParams) {
       path,
     });
 
-    return { success: true, isBot: botFlag };
+    return { success: true, isBot: botFlag, isTest: testDetection.isTest };
   } catch (error) {
     console.error("[Analytics] Track error:", error);
     return { success: false, error };

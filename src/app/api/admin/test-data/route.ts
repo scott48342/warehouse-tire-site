@@ -2,31 +2,35 @@
  * Admin Test Data Management API
  * 
  * GET /api/admin/test-data
- * Get test data statistics
+ * Get test data statistics with 7-day breakdown
  * 
  * POST /api/admin/test-data
  * Mark records as test/production
  * 
  * @created 2026-04-03
+ * @updated 2026-04-05 - Added 7-day summary, analytics test count
  */
 
 import { NextResponse } from "next/server";
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts, emailSubscribers } from "@/lib/fitment-db/schema";
-import { eq, and, count, sql } from "drizzle-orm";
+import { analyticsDb, schema as analyticsSchema } from "@/lib/analytics/db";
+import { eq, and, count, sql, gte, desc } from "drizzle-orm";
 
 export const runtime = "nodejs";
 
 /**
  * GET /api/admin/test-data
- * Get test data statistics
+ * Get test data statistics with 7-day breakdown
  */
 export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
     const detailed = url.searchParams.get("detailed") === "1";
+    
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
 
-    // Count test carts
+    // Count test carts (total)
     const [testCartsResult] = await db
       .select({ count: count() })
       .from(abandonedCarts)
@@ -37,8 +41,17 @@ export async function GET(req: Request) {
       .select({ count: count() })
       .from(abandonedCarts)
       .where(eq(abandonedCarts.isTest, false));
+      
+    // Count test carts (last 7 days)
+    const [testCartsWeekResult] = await db
+      .select({ count: count() })
+      .from(abandonedCarts)
+      .where(and(
+        eq(abandonedCarts.isTest, true),
+        gte(abandonedCarts.createdAt, sevenDaysAgo)
+      ));
 
-    // Count test subscribers
+    // Count test subscribers (total)
     const [testSubsResult] = await db
       .select({ count: count() })
       .from(emailSubscribers)
@@ -49,8 +62,39 @@ export async function GET(req: Request) {
       .select({ count: count() })
       .from(emailSubscribers)
       .where(eq(emailSubscribers.isTest, false));
+      
+    // Count test subscribers (last 7 days)
+    const [testSubsWeekResult] = await db
+      .select({ count: count() })
+      .from(emailSubscribers)
+      .where(and(
+        eq(emailSubscribers.isTest, true),
+        gte(emailSubscribers.createdAt, sevenDaysAgo)
+      ));
+
+    // Count test analytics sessions (last 7 days)
+    let testSessionsWeek = 0;
+    try {
+      const [testSessionsResult] = await analyticsDb
+        .select({ count: count() })
+        .from(analyticsSchema.analyticsSessions)
+        .where(and(
+          eq(analyticsSchema.analyticsSessions.isTest, true),
+          gte(analyticsSchema.analyticsSessions.firstSeenAt, sevenDaysAgo)
+        ));
+      testSessionsWeek = Number(testSessionsResult?.count || 0);
+    } catch {
+      // Analytics table may not have is_test column yet
+    }
 
     const response: any = {
+      summary: {
+        last7Days: {
+          testCarts: Number(testCartsWeekResult?.count || 0),
+          testSubscribers: Number(testSubsWeekResult?.count || 0),
+          testSessions: testSessionsWeek,
+        },
+      },
       carts: {
         test: Number(testCartsResult?.count || 0),
         production: Number(prodCartsResult?.count || 0),
@@ -61,22 +105,27 @@ export async function GET(req: Request) {
       },
     };
 
-    // Include detailed test records if requested
+    // Include detailed test records if requested (or always for last 7 days)
     if (detailed) {
-      // Get test carts
+      // Get test carts (last 7 days, most recent first)
       const testCarts = await db
         .select({
           cartId: abandonedCarts.cartId,
           email: abandonedCarts.customerEmail,
           value: abandonedCarts.estimatedTotal,
           testReason: abandonedCarts.testReason,
+          status: abandonedCarts.status,
           createdAt: abandonedCarts.createdAt,
         })
         .from(abandonedCarts)
-        .where(eq(abandonedCarts.isTest, true))
+        .where(and(
+          eq(abandonedCarts.isTest, true),
+          gte(abandonedCarts.createdAt, sevenDaysAgo)
+        ))
+        .orderBy(desc(abandonedCarts.createdAt))
         .limit(50);
 
-      // Get test subscribers
+      // Get test subscribers (last 7 days, most recent first)
       const testSubs = await db
         .select({
           id: emailSubscribers.id,
@@ -86,7 +135,11 @@ export async function GET(req: Request) {
           createdAt: emailSubscribers.createdAt,
         })
         .from(emailSubscribers)
-        .where(eq(emailSubscribers.isTest, true))
+        .where(and(
+          eq(emailSubscribers.isTest, true),
+          gte(emailSubscribers.createdAt, sevenDaysAgo)
+        ))
+        .orderBy(desc(emailSubscribers.createdAt))
         .limit(50);
 
       response.testCarts = testCarts;

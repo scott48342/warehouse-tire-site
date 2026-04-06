@@ -33,10 +33,14 @@ export const analyticsSessions = pgTable(
     isBot: boolean("is_bot").default(false),
     country: varchar("country", { length: 2 }),
     pageViewCount: integer("page_view_count").default(1),
+    // Test data exclusion (added 2026-04-05)
+    isTest: boolean("is_test").default(false),
+    testReason: varchar("test_reason", { length: 100 }),
   },
   (table) => ({
     sessionIdx: index("analytics_sessions_session_id_idx").on(table.sessionId),
     firstSeenIdx: index("analytics_sessions_first_seen_idx").on(table.firstSeenAt),
+    isTestIdx: index("analytics_sessions_is_test_idx").on(table.isTest),
   })
 );
 

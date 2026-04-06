@@ -1,5 +1,7 @@
 /**
  * Admin Analytics Dashboard API
+ * 
+ * @updated 2026-04-05 - Added test data exclusion
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -12,33 +14,44 @@ export async function GET(request: NextRequest) {
     await ensureAnalyticsTables();
 
     const excludeBots = request.nextUrl.searchParams.get("bots") !== "include";
+    const includeTest = request.nextUrl.searchParams.get("includeTest") === "1";
     
     const now = new Date();
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const weekAgo = new Date(todayStart.getTime() - 7 * 24 * 60 * 60 * 1000);
 
-    // Build bot filter
-    const botFilter = excludeBots 
-      ? eq(schema.analyticsSessions.isBot, false)
+    // Build exclusion filters: bots + test data
+    const exclusionFilters: any[] = [];
+    if (excludeBots) {
+      exclusionFilters.push(eq(schema.analyticsSessions.isBot, false));
+    }
+    if (!includeTest) {
+      // Exclude test sessions (handle null as false for backwards compat)
+      exclusionFilters.push(sql`(${schema.analyticsSessions.isTest} = false OR ${schema.analyticsSessions.isTest} IS NULL)`);
+    }
+    
+    // Combined filter for sessions
+    const sessionFilter = exclusionFilters.length > 0 
+      ? and(...exclusionFilters)
       : undefined;
 
-    // Visits today (unique sessions)
+    // Visits today (unique sessions) - excludes bots and test data
     const visitsToday = await analyticsDb
       .select({ count: count() })
       .from(schema.analyticsSessions)
       .where(
-        botFilter
-          ? and(gte(schema.analyticsSessions.firstSeenAt, todayStart), botFilter)
+        sessionFilter
+          ? and(gte(schema.analyticsSessions.firstSeenAt, todayStart), sessionFilter)
           : gte(schema.analyticsSessions.firstSeenAt, todayStart)
       );
 
-    // Visits last 7 days
+    // Visits last 7 days - excludes bots and test data
     const visitsWeek = await analyticsDb
       .select({ count: count() })
       .from(schema.analyticsSessions)
       .where(
-        botFilter
-          ? and(gte(schema.analyticsSessions.firstSeenAt, weekAgo), botFilter)
+        sessionFilter
+          ? and(gte(schema.analyticsSessions.firstSeenAt, weekAgo), sessionFilter)
           : gte(schema.analyticsSessions.firstSeenAt, weekAgo)
       );
 
@@ -54,7 +67,7 @@ export async function GET(request: NextRequest) {
       .from(schema.analyticsPageviews)
       .where(gte(schema.analyticsPageviews.timestamp, weekAgo));
 
-    // Top landing pages (last 7 days)
+    // Top landing pages (last 7 days) - excludes bots and test data
     const topLandingPages = await analyticsDb
       .select({
         page: schema.analyticsSessions.landingPage,
@@ -62,8 +75,8 @@ export async function GET(request: NextRequest) {
       })
       .from(schema.analyticsSessions)
       .where(
-        botFilter
-          ? and(gte(schema.analyticsSessions.firstSeenAt, weekAgo), botFilter)
+        sessionFilter
+          ? and(gte(schema.analyticsSessions.firstSeenAt, weekAgo), sessionFilter)
           : gte(schema.analyticsSessions.firstSeenAt, weekAgo)
       )
       .groupBy(schema.analyticsSessions.landingPage)
@@ -82,7 +95,7 @@ export async function GET(request: NextRequest) {
       .orderBy(desc(count()))
       .limit(10);
 
-    // Top referrers (last 7 days, non-null only, excluding internal)
+    // Top referrers (last 7 days, non-null only, excluding internal) - excludes bots and test data
     const topReferrers = await analyticsDb
       .select({
         referrer: schema.analyticsSessions.referrer,
@@ -98,14 +111,14 @@ export async function GET(request: NextRequest) {
           sql`${schema.analyticsSessions.referrer} NOT LIKE '%vercel.app%'`,
           sql`${schema.analyticsSessions.referrer} NOT LIKE '%warehousetiredirect.com%'`,
           sql`${schema.analyticsSessions.referrer} NOT LIKE '%localhost%'`,
-          botFilter || sql`1=1`
+          sessionFilter || sql`1=1`
         )
       )
       .groupBy(schema.analyticsSessions.referrer)
       .orderBy(desc(count()))
       .limit(10);
 
-    // Top UTM campaigns (last 7 days)
+    // Top UTM campaigns (last 7 days) - excludes bots and test data
     const topCampaigns = await analyticsDb
       .select({
         source: schema.analyticsSessions.utmSource,
@@ -118,7 +131,7 @@ export async function GET(request: NextRequest) {
         and(
           gte(schema.analyticsSessions.firstSeenAt, weekAgo),
           sql`${schema.analyticsSessions.utmSource} IS NOT NULL`,
-          botFilter || sql`1=1`
+          sessionFilter || sql`1=1`
         )
       )
       .groupBy(
@@ -129,7 +142,7 @@ export async function GET(request: NextRequest) {
       .orderBy(desc(count()))
       .limit(10);
 
-    // Device breakdown (last 7 days)
+    // Device breakdown (last 7 days) - excludes bots and test data
     const deviceBreakdown = await analyticsDb
       .select({
         device: schema.analyticsSessions.deviceType,
@@ -137,8 +150,8 @@ export async function GET(request: NextRequest) {
       })
       .from(schema.analyticsSessions)
       .where(
-        botFilter
-          ? and(gte(schema.analyticsSessions.firstSeenAt, weekAgo), botFilter)
+        sessionFilter
+          ? and(gte(schema.analyticsSessions.firstSeenAt, weekAgo), sessionFilter)
           : gte(schema.analyticsSessions.firstSeenAt, weekAgo)
       )
       .groupBy(schema.analyticsSessions.deviceType)
@@ -155,15 +168,28 @@ export async function GET(request: NextRequest) {
         )
       );
 
+    // Test session count (for transparency)
+    const testCount = await analyticsDb
+      .select({ count: count() })
+      .from(schema.analyticsSessions)
+      .where(
+        and(
+          gte(schema.analyticsSessions.firstSeenAt, weekAgo),
+          eq(schema.analyticsSessions.isTest, true)
+        )
+      );
+
     return NextResponse.json({
       generated: new Date().toISOString(),
       excludingBots: excludeBots,
+      excludingTest: !includeTest,
       summary: {
         visitsToday: visitsToday[0]?.count || 0,
         visitsWeek: visitsWeek[0]?.count || 0,
         pageViewsToday: pageViewsToday[0]?.count || 0,
         pageViewsWeek: pageViewsWeek[0]?.count || 0,
         botsWeek: botCount[0]?.count || 0,
+        testSessionsWeek: testCount[0]?.count || 0,
       },
       topLandingPages,
       topPages,
