@@ -24,6 +24,7 @@ import {
 import { getFitmentFacts } from "@/lib/seo/fitment";
 import { VehicleTrimSelector } from "@/components/VehicleTrimSelector";
 import { RecommendedPackages } from "@/components/packages/RecommendedPackages";
+import { SeoContentBlock } from "@/components/SeoContentBlock";
 
 const BASE_URL = "https://shop.warehousetiredirect.com";
 
@@ -280,6 +281,16 @@ export default async function PackagesForVehiclePage({
             productType="packages"
           />
         </div>
+
+        {/* SEO Content Block */}
+        <SeoContentBlock
+          year={String(vehicle.year)}
+          make={vehicle.make}
+          model={vehicle.model}
+          type="packages"
+          defaultExpanded={true}
+          className="mb-8"
+        />
         
         {/* Related Vehicles */}
         {relatedVehicles.length > 0 && (

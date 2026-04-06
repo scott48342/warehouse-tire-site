@@ -16,6 +16,7 @@ import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
 import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diameterOptions";
 import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
 import { getIndexingDecision, buildPageIndexingData, getRobotsContent } from "@/lib/seo";
+import { SeoContentBlock } from "@/components/SeoContentBlock";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -1612,6 +1613,19 @@ export default async function WheelsPage({
         </div>
         ) : null}
       </div>
+
+      {/* SEO Content Block - Below products, above footer */}
+      {hasVehicle && itemsFinal.length >= 3 && (
+        <div className="mx-auto max-w-screen-2xl px-4 pb-8">
+          <SeoContentBlock
+            year={year}
+            make={make}
+            model={model}
+            type="wheels"
+            productCount={itemsFinal.length}
+          />
+        </div>
+      )}
     </main>
     </>
   );

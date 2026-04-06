@@ -38,6 +38,8 @@ import {
   type ProductPopularityData,
   type PopularitySignal,
 } from "@/lib/analytics/productPopularity";
+// SEO content block (2026-04-06)
+import { SeoContentBlock } from "@/components/SeoContentBlock";
 
 import { 
   type TreadCategory, 
@@ -2989,6 +2991,19 @@ export default async function TiresPage({
           </section>
         </div>
       </div>
+
+      {/* SEO Content Block - Below products, above footer */}
+      {hasVehicle && items.length >= 3 && (
+        <div className="mx-auto max-w-screen-2xl px-4 pb-8">
+          <SeoContentBlock
+            year={year}
+            make={make}
+            model={model}
+            type="tires"
+            productCount={items.length}
+          />
+        </div>
+      )}
     </main>
   );
 }
