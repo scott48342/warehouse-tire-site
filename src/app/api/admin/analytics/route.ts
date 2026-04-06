@@ -21,13 +21,13 @@ export async function GET(request: NextRequest) {
     const weekAgo = new Date(todayStart.getTime() - 7 * 24 * 60 * 60 * 1000);
 
     // Build exclusion filters: bots + test data
+    // Note: is_test column is NOT NULL with default false (backfilled + enforced)
     const exclusionFilters: any[] = [];
     if (excludeBots) {
       exclusionFilters.push(eq(schema.analyticsSessions.isBot, false));
     }
     if (!includeTest) {
-      // Exclude test sessions (handle null as false for backwards compat)
-      exclusionFilters.push(sql`(${schema.analyticsSessions.isTest} = false OR ${schema.analyticsSessions.isTest} IS NULL)`);
+      exclusionFilters.push(eq(schema.analyticsSessions.isTest, false));
     }
     
     // Combined filter for sessions

@@ -34,7 +34,7 @@ export const analyticsSessions = pgTable(
     country: varchar("country", { length: 2 }),
     pageViewCount: integer("page_view_count").default(1),
     // Test data exclusion (added 2026-04-05)
-    isTest: boolean("is_test").default(false),
+    isTest: boolean("is_test").notNull().default(false),
     testReason: varchar("test_reason", { length: 100 }),
   },
   (table) => ({

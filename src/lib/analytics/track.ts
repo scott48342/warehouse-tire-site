@@ -59,6 +59,17 @@ export async function ensureAnalyticsTables() {
       ALTER TABLE analytics_sessions 
       ADD COLUMN IF NOT EXISTS test_reason VARCHAR(100)
     `);
+    
+    // Backfill NULL values to false (safe, no locking)
+    await analyticsDb.execute(sql`
+      UPDATE analytics_sessions SET is_test = false WHERE is_test IS NULL
+    `);
+    
+    // Add NOT NULL constraint if missing (idempotent)
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ALTER COLUMN is_test SET NOT NULL
+    `).catch(() => { /* Already NOT NULL */ });
 
     await analyticsDb.execute(sql`
       CREATE TABLE IF NOT EXISTS analytics_pageviews (
