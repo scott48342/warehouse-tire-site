@@ -2736,7 +2736,8 @@ export default async function TiresPage({
             </div>
 
             {/* Top Picks Section - Role-based recommendations */}
-            {hasVehicle && roleBasedPicks.length > 0 && safePage === 1 ? (
+            {/* HIDE when staggered pairs are shown - they serve as the curated recommendation */}
+            {hasVehicle && roleBasedPicks.length > 0 && safePage === 1 && !(showStaggeredUI && staggeredTirePairs.length > 0) ? (
               <div className="mt-5 mb-10 relative">
                 {/* Decorative background */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-green-50 via-emerald-50/50 to-white -z-10" />
@@ -2815,8 +2816,8 @@ export default async function TiresPage({
               </div>
             ) : null}
 
-            {/* All Tires section header */}
-            {hasVehicle && roleBasedPicks.length > 0 && safePage === 1 ? (
+            {/* All Tires section header - only show when Top Picks is visible */}
+            {hasVehicle && roleBasedPicks.length > 0 && safePage === 1 && !(showStaggeredUI && staggeredTirePairs.length > 0) ? (
               <div className="mb-4">
                 <h3 className="text-lg font-extrabold text-neutral-900">All Tires</h3>
                 <p className="text-sm text-neutral-600">Browse all {items.length} tires that fit your vehicle</p>
