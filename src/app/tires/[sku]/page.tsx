@@ -19,10 +19,12 @@ import {
   WhyChooseThisTire,
   ComparisonContext,
   WhatHappensNext,
-  PopularChoiceSignal,
   WarrantySupport,
   type TireCategory as EnhancedTireCategory
 } from "@/components/TirePDPEnhancements";
+// Real behavior-driven popularity signals (2026-04-06)
+import { PopularityBadge, type PopularitySignalData } from "@/components/PopularityBadge";
+import { getPopularitySignal } from "@/lib/analytics/productPopularity";
 
 export const runtime = "nodejs";
 
@@ -374,6 +376,14 @@ export default async function TireDetailPage({
           const totalQty = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
           const delivery = getDeliveryMessage(totalQty);
           
+          // Fetch real popularity signal (non-blocking, cached)
+          let popularitySignal: PopularitySignalData | null = null;
+          try {
+            popularitySignal = await getPopularitySignal("tire", tire.partNumber || safeSku);
+          } catch {
+            // Silent fail - no signal is fine
+          }
+          
           return (
             <main className="bg-neutral-50">
               <div className="mx-auto max-w-6xl px-4 py-8">
@@ -520,11 +530,8 @@ export default async function TireDetailPage({
                       />
                     </div>
 
-                    {/* Popular choice signal (compact) */}
-                    <PopularChoiceSignal 
-                      category={category as EnhancedTireCategory}
-                      quantity={totalQty}
-                    />
+                    {/* Real behavior-driven popularity signal */}
+                    <PopularityBadge signal={popularitySignal} />
                   </div>
                 </div>
 
@@ -686,6 +693,14 @@ export default async function TireDetailPage({
   const categoryTagline = getCategoryTagline(category);
   const totalQty = Number(t.qoh) || 0;
   const delivery = getDeliveryMessage(totalQty);
+
+  // Fetch real popularity signal (non-blocking, cached)
+  let popularitySignal: PopularitySignalData | null = null;
+  try {
+    popularitySignal = await getPopularitySignal("tire", safeSku);
+  } catch {
+    // Silent fail - no signal is fine
+  }
 
   // Enrich with tire asset image if needed
   let enrichedImageUrl: string | null = t.image_url || null;
@@ -852,11 +867,8 @@ export default async function TireDetailPage({
               />
             </div>
 
-            {/* Popular choice signal (compact) */}
-            <PopularChoiceSignal 
-              category={category as EnhancedTireCategory}
-              quantity={totalQty}
-            />
+            {/* Real behavior-driven popularity signal */}
+            <PopularityBadge signal={popularitySignal} />
           </div>
         </div>
 

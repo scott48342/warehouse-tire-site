@@ -18,8 +18,10 @@ import {
   WheelTrustStrip,
   WheelWarrantySupport,
   WheelSpecsCard,
-  WheelPopularChoice,
 } from "@/components/WheelPDPEnhancements";
+// Real behavior-driven popularity signals (2026-04-06)
+import { PopularityBadge, type PopularitySignalData } from "@/components/PopularityBadge";
+import { getPopularitySignal } from "@/lib/analytics/productPopularity";
 
 type WheelProsBrand = {
   code?: string;
@@ -352,6 +354,14 @@ export default async function WheelDetailPage({
     "Premium quality construction",
   ].filter(Boolean).slice(0, 2);
 
+  // Fetch real popularity signal (non-blocking, cached)
+  let popularitySignal: PopularitySignalData | null = null;
+  try {
+    popularitySignal = await getPopularitySignal("wheel", sku);
+  } catch {
+    // Silent fail - no signal is fine
+  }
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -490,8 +500,8 @@ export default async function WheelDetailPage({
               <WheelTrustStrip hasVehicle={hasVehicle} />
             </div>
 
-            {/* Popular choice signal */}
-            <WheelPopularChoice finish={finish} />
+            {/* Real behavior-driven popularity signal */}
+            <PopularityBadge signal={popularitySignal} />
           </div>
         </div>
 
