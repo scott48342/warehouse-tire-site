@@ -13,6 +13,7 @@ import { EmailCartButton } from "./EmailCartButton";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { ZipCodeInput, FreeShippingProgress } from "./ShippingEstimate";
 import { formatCurrency, FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
+import { CartTPMSUpsell } from "./TPMSSuggestion";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -443,6 +444,13 @@ export function CartSlideout() {
               onAddAllRequired={(items) => addAccessories(items)}
               compact
             />
+          )}
+
+          {/* TPMS Upsell (if tires or wheels in cart, component handles duplicate check) */}
+          {(hasTires() || hasWheels()) && (
+            <div className="px-1">
+              <CartTPMSUpsell />
+            </div>
           )}
         </div>
 

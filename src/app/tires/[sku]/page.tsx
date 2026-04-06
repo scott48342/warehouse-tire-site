@@ -27,6 +27,8 @@ import { PopularityBadge, type PopularitySignalData } from "@/components/Popular
 import { getPopularitySignal } from "@/lib/analytics/productPopularity";
 // Buying guides (2026-04-06)
 import { TireSizeGuide, TireTypesGuide } from "@/components/BuyingGuides";
+// TPMS contextual upsell (2026-04-06)
+import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 
 export const runtime = "nodejs";
 
@@ -536,6 +538,14 @@ export default async function TireDetailPage({
 
                     {/* Real behavior-driven popularity signal */}
                     <PopularityBadge signal={popularitySignal} />
+
+                    {/* TPMS contextual upsell - only for 2007+ vehicles */}
+                    <TPMSSuggestion
+                      vehicleYear={hasVehicle ? year : null}
+                      vehicleMake={hasVehicle ? make : null}
+                      vehicleModel={hasVehicle ? model : null}
+                      context="pdp"
+                    />
                   </div>
                 </div>
 

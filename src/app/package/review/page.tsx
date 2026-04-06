@@ -7,6 +7,7 @@ import { BRAND } from "@/lib/brand";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
+import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 
 /**
  * Review Package Page
@@ -676,7 +677,17 @@ export default function ReviewPackagePage() {
               </div>
             )}
 
-            {/* Missing accessories warning */}
+            {/* TPMS Suggestion (if not already in accessories) */}
+            {!accessories.some(a => a.category === "tpms") && vehicle && (
+              <TPMSSuggestion
+                vehicleYear={vehicle.year}
+                vehicleMake={vehicle.make}
+                vehicleModel={vehicle.model}
+                context="package"
+              />
+            )}
+
+            {/* Missing accessories warning (if no accessories at all) */}
             {accessories.length === 0 && (
               <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
                 <div className="flex items-start gap-3">

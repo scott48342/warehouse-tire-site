@@ -22,6 +22,8 @@ import {
 // Real behavior-driven popularity signals (2026-04-06)
 import { PopularityBadge, type PopularitySignalData } from "@/components/PopularityBadge";
 import { getPopularitySignal } from "@/lib/analytics/productPopularity";
+// TPMS contextual upsell (2026-04-06)
+import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 
 type WheelProsBrand = {
   code?: string;
@@ -502,6 +504,14 @@ export default async function WheelDetailPage({
 
             {/* Real behavior-driven popularity signal */}
             <PopularityBadge signal={popularitySignal} />
+
+            {/* TPMS contextual upsell - only for 2007+ vehicles */}
+            <TPMSSuggestion
+              vehicleYear={hasVehicle ? year : null}
+              vehicleMake={hasVehicle ? make : null}
+              vehicleModel={hasVehicle ? model : null}
+              context="pdp"
+            />
           </div>
         </div>
 
