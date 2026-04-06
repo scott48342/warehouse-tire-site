@@ -45,13 +45,13 @@ const INTERNAL_IPS = [
 ];
 
 /** Test mode cookie name */
-const TEST_MODE_COOKIE = "wt_test_mode";
+export const TEST_MODE_COOKIE = "wt_test_mode";
 
 /** Test mode header name */
-const TEST_MODE_HEADER = "x-wt-test-mode";
+export const TEST_MODE_HEADER = "x-wt-test-mode";
 
 /** Test mode query param */
-const TEST_MODE_PARAM = "_test";
+export const TEST_MODE_PARAM = "_test";
 
 // ============================================================================
 // Types
@@ -231,12 +231,19 @@ export function setTestModeCookie(enabled: boolean = true): void {
 }
 
 /**
- * Check test mode from URL query param
+ * Check test mode from URL query param (?test=1 or ?_test=1)
  */
 export function hasTestModeParam(url: URL | string): boolean {
-  const urlObj = typeof url === "string" ? new URL(url) : url;
-  return urlObj.searchParams.get(TEST_MODE_PARAM) === "1" ||
-         urlObj.searchParams.get(TEST_MODE_PARAM) === "true";
+  try {
+    const urlObj = typeof url === "string" ? new URL(url) : url;
+    // Check both ?test=1 and ?_test=1
+    const testParam = urlObj.searchParams.get("test");
+    const underscoreTestParam = urlObj.searchParams.get(TEST_MODE_PARAM);
+    return testParam === "1" || testParam === "true" ||
+           underscoreTestParam === "1" || underscoreTestParam === "true";
+  } catch {
+    return false;
+  }
 }
 
 // ============================================================================
