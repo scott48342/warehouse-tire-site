@@ -142,6 +142,18 @@ export function trackLiftedCategoryClick(params: {
   });
 }
 
+export function trackLiftKitSuggestionClick(params: {
+  liftInches: number;
+  make: string;
+  model: string;
+}) {
+  trackEvent("lift_kit_suggestion_click", {
+    lift_inches: params.liftInches,
+    vehicle_make: params.make,
+    vehicle_model: params.model,
+  });
+}
+
 // ─────────────────────────────────────────────────────────────
 // Staggered Fitment Events
 // ─────────────────────────────────────────────────────────────

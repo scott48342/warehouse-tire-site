@@ -10,6 +10,7 @@ import {
   trackLiftedTireSuggestionClick,
   trackLiftedWheelSuggestionClick,
   trackLiftedCategoryClick,
+  trackLiftKitSuggestionClick,
 } from "@/lib/analytics";
 import {
   getLiftRecommendation,
@@ -21,6 +22,83 @@ import {
   type VehicleLiftProfile,
 } from "@/lib/liftedRecommendations";
 import { saveLiftedContext, type LiftedBuildContext } from "@/lib/liftedBuildContext";
+
+// Lift kit tire size mapping by lift height
+const LIFT_KIT_TIRE_SIZES: Record<number, string[]> = {
+  2: ["275/70R18", "285/70R17", "33x12.50R17"],
+  4: ["35x12.50R20", "295/60R20", "33x12.50R20", "305/55R20"],
+  6: ["37x12.50R20", "35x12.50R22", "37x13.50R18", "38x13.50R20"],
+};
+
+// Lift Kit Suggestion Component - contextual upsell for lift kits
+function LiftKitSuggestion({ 
+  liftInches, 
+  make, 
+  model 
+}: { 
+  liftInches: number; 
+  make: string; 
+  model: string;
+}) {
+  const tireSizes = LIFT_KIT_TIRE_SIZES[liftInches] || LIFT_KIT_TIRE_SIZES[4];
+  const displaySizes = tireSizes.slice(0, 2);
+
+  // Future: link to actual lift kit category filtered by vehicle + lift height
+  // For now, placeholder link that can be activated when category exists
+  const liftKitUrl = "#lift-kits-coming-soon";
+  const isEnabled = false; // Set to true when lift kit category is ready
+
+  return (
+    <div className="rounded-xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-4">
+      <div className="flex items-start gap-3">
+        <div className="flex-shrink-0 mt-0.5">
+          <span className="text-2xl">🔧</span>
+        </div>
+        <div className="flex-1">
+          <h4 className="font-bold text-neutral-900">Running a lift?</h4>
+          <p className="mt-1 text-sm text-neutral-700">
+            A <span className="font-semibold text-purple-700">{liftInches}" lift</span> supports larger tire sizes like:
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {displaySizes.map((size) => (
+              <span
+                key={size}
+                className="inline-flex items-center rounded-lg bg-white border border-purple-200 px-2.5 py-1 text-sm font-semibold text-purple-800"
+              >
+                • {size}
+              </span>
+            ))}
+          </div>
+          {isEnabled ? (
+            <Link
+              href={liftKitUrl}
+              onClick={() => {
+                trackLiftKitSuggestionClick({
+                  liftInches,
+                  make,
+                  model,
+                });
+              }}
+              className="mt-3 inline-flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-purple-700 transition-colors"
+            >
+              <span>View Compatible Lift Kits</span>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          ) : (
+            <div className="mt-3 flex items-center gap-2 text-sm text-purple-700">
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-semibold">
+                Coming Soon
+              </span>
+              <span>Lift kits available soon — call for recommendations</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Lift presets - extensible structure for future fitment logic
 const LIFT_PRESETS = [
@@ -581,6 +659,13 @@ function RecommendationPanel({
             }
           </p>
         </div>
+
+        {/* Lift Kit Suggestion - contextual upsell */}
+        <LiftKitSuggestion
+          liftInches={liftPreset.liftInches}
+          make={profile.make}
+          model={profile.model}
+        />
 
         {/* Category Link */}
         <div className="rounded-xl border-2 border-amber-200 bg-amber-50/50 p-4">
