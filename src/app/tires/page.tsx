@@ -21,6 +21,15 @@ import {
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle } from "@/lib/productFormat";
 import { TireFilterSidebar } from "@/components/TireFilterSidebar";
+import { 
+  CardReviewSummary, 
+  BestForLine, 
+  TrustMicroLine,
+  TopPicksStrip,
+  generateTopPicks,
+  type TopPickTire,
+  type TireCategory as EnhancementCategory,
+} from "@/components/TireSRPEnhancements";
 
 import { 
   type TreadCategory, 
@@ -444,6 +453,216 @@ function scoreTireForPicks(tire: Tire): number {
   if (tire.displayName || tire.prettyName) score += 5;
   
   return score;
+}
+
+// ============================================================================
+// ROLE-BASED TOP PICKS (Upgraded)
+// ============================================================================
+
+type TopPickRole = 'best-overall' | 'best-value' | 'longest-life';
+
+interface RoleBasedPick {
+  tire: Tire;
+  role: TopPickRole;
+  label: string;
+  reason: string;
+  icon: string;
+  /** For Best Value: savings vs Best Overall */
+  savingsVsOverall?: number;
+  /** For Longest Life: mileage warranty in thousands */
+  mileageK?: number;
+}
+
+const ROLE_CONFIG: Record<TopPickRole, { label: string; icon: string }> = {
+  'best-overall': { label: 'Best Overall', icon: '🏆' },
+  'best-value': { label: 'Best Value', icon: '💰' },
+  'longest-life': { label: 'Longest Life', icon: '🛡️' },
+};
+
+/**
+ * Select role-based Top Picks
+ * Uses EXISTING data only - no new queries
+ * Ensures distinct products (no duplicates)
+ */
+function selectRoleBasedPicks(tires: Tire[]): RoleBasedPick[] {
+  // Filter to only tires with images and pricing
+  const candidates = tires.filter(t => t.imageUrl && typeof t.cost === "number");
+  if (candidates.length < 3) return []; // Need at least 3 candidates
+  
+  const picks: RoleBasedPick[] = [];
+  const usedSkus = new Set<string>();
+  const usedBrands = new Set<string>();
+  
+  // Helper to get tire SKU for deduplication
+  const getSku = (t: Tire) => t.partNumber || t.mfgPartNumber || '';
+  const getBrand = (t: Tire) => String(t.brand || '').toLowerCase();
+  
+  // Helper to check if tire is already used
+  const isUsed = (t: Tire) => {
+    const sku = getSku(t);
+    const brand = getBrand(t);
+    // Exclude if same SKU or same brand (for variety)
+    return usedSkus.has(sku) || usedBrands.has(brand);
+  };
+  
+  // Helper to mark tire as used
+  const markUsed = (t: Tire) => {
+    usedSkus.add(getSku(t));
+    usedBrands.add(getBrand(t));
+  };
+  
+  // ─────────────────────────────────────────────────────────────────────────
+  // 1. BEST OVERALL: Premium brand, balanced price, good stock
+  // ─────────────────────────────────────────────────────────────────────────
+  const bestOverall = candidates
+    .filter(t => !isUsed(t))
+    .filter(t => {
+      const price = getDisplayPrice(t) || 0;
+      const brand = getBrand(t);
+      const q = t.quantity || {};
+      const stock = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
+      // Premium or mid-tier brand, reasonable price, in stock
+      return (PREMIUM_BRANDS.includes(brand) || MID_TIER_BRANDS.includes(brand)) &&
+             price >= 80 && price <= 300 && stock >= 4;
+    })
+    .sort((a, b) => {
+      // Prioritize: premium brand, then mid-tier, then by stock
+      const brandA = getBrand(a);
+      const brandB = getBrand(b);
+      const premiumA = PREMIUM_BRANDS.includes(brandA) ? 2 : MID_TIER_BRANDS.includes(brandA) ? 1 : 0;
+      const premiumB = PREMIUM_BRANDS.includes(brandB) ? 2 : MID_TIER_BRANDS.includes(brandB) ? 1 : 0;
+      if (premiumA !== premiumB) return premiumB - premiumA;
+      // Then by stock
+      const stockA = (a.quantity?.primary || 0) + (a.quantity?.alternate || 0) + (a.quantity?.national || 0);
+      const stockB = (b.quantity?.primary || 0) + (b.quantity?.alternate || 0) + (b.quantity?.national || 0);
+      return stockB - stockA;
+    })[0];
+  
+  // Track Best Overall price for comparison
+  let bestOverallPrice = 0;
+  
+  if (bestOverall) {
+    const brand = getBrand(bestOverall);
+    const category = bestOverall.enrichment?.treadCategory || bestOverall.badges?.terrain || '';
+    const mileage = bestOverall.enrichment?.mileage || bestOverall.badges?.warrantyMiles || 0;
+    bestOverallPrice = getDisplayPrice(bestOverall) || 0;
+    
+    // Build reason based on actual tire attributes
+    let reason = 'Balanced ride quality and reliable all-season grip';
+    if (mileage >= 60000) {
+      reason = `Strong tread life (${Math.round(mileage/1000)}K warranty) with dependable grip`;
+    } else if (/touring|highway/i.test(category)) {
+      reason = 'Smooth highway ride with reliable wet and dry traction';
+    } else if (/all-terrain/i.test(category)) {
+      reason = 'Versatile on and off-road with solid durability';
+    }
+    
+    picks.push({
+      tire: bestOverall,
+      role: 'best-overall',
+      label: ROLE_CONFIG['best-overall'].label,
+      icon: ROLE_CONFIG['best-overall'].icon,
+      reason,
+    });
+    markUsed(bestOverall);
+  }
+  
+  // ─────────────────────────────────────────────────────────────────────────
+  // 2. BEST VALUE: Lower price, decent quality, good stock
+  // ─────────────────────────────────────────────────────────────────────────
+  const bestValue = candidates
+    .filter(t => !isUsed(t))
+    .filter(t => {
+      const price = getDisplayPrice(t) || 0;
+      const q = t.quantity || {};
+      const stock = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
+      // Budget-friendly but not bottom-barrel
+      return price >= 50 && price <= 150 && stock >= 4;
+    })
+    .sort((a, b) => {
+      // Sort by price (lowest first), then by stock
+      const priceA = getDisplayPrice(a) || 999;
+      const priceB = getDisplayPrice(b) || 999;
+      if (Math.abs(priceA - priceB) > 10) return priceA - priceB;
+      // If similar price, prefer better stock
+      const stockA = (a.quantity?.primary || 0) + (a.quantity?.alternate || 0) + (a.quantity?.national || 0);
+      const stockB = (b.quantity?.primary || 0) + (b.quantity?.alternate || 0) + (b.quantity?.national || 0);
+      return stockB - stockA;
+    })[0];
+  
+  if (bestValue) {
+    const valuePrice = getDisplayPrice(bestValue) || 0;
+    const category = bestValue.enrichment?.treadCategory || bestValue.badges?.terrain || '';
+    
+    // Calculate savings vs Best Overall (set of 4)
+    const savingsPerSet = bestOverallPrice > valuePrice ? Math.round((bestOverallPrice - valuePrice) * 4) : 0;
+    
+    // Build reason based on category
+    let reason = 'Dependable all-season performance at a budget-friendly price';
+    if (/all-terrain/i.test(category)) {
+      reason = 'Affordable all-terrain capability for trucks and SUVs';
+    } else if (/touring|highway/i.test(category)) {
+      reason = 'Quiet highway ride without the premium price tag';
+    }
+    
+    picks.push({
+      tire: bestValue,
+      role: 'best-value',
+      label: ROLE_CONFIG['best-value'].label,
+      icon: ROLE_CONFIG['best-value'].icon,
+      reason,
+      savingsVsOverall: savingsPerSet >= 50 ? savingsPerSet : undefined,
+    });
+    markUsed(bestValue);
+  }
+  
+  // ─────────────────────────────────────────────────────────────────────────
+  // 3. LONGEST LIFE: Highest mileage warranty or touring category
+  // ─────────────────────────────────────────────────────────────────────────
+  const longestLife = candidates
+    .filter(t => !isUsed(t))
+    .filter(t => {
+      const q = t.quantity || {};
+      const stock = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
+      return stock >= 4;
+    })
+    .sort((a, b) => {
+      // Sort by mileage warranty (highest first)
+      const mileageA = a.enrichment?.mileage || a.badges?.warrantyMiles || 0;
+      const mileageB = b.enrichment?.mileage || b.badges?.warrantyMiles || 0;
+      if (mileageA !== mileageB) return mileageB - mileageA;
+      // If no warranty data, prefer touring/highway tires
+      const categoryA = a.enrichment?.treadCategory || a.badges?.terrain || '';
+      const categoryB = b.enrichment?.treadCategory || b.badges?.terrain || '';
+      const isLongLifeA = /touring|highway/i.test(categoryA) ? 1 : 0;
+      const isLongLifeB = /touring|highway/i.test(categoryB) ? 1 : 0;
+      return isLongLifeB - isLongLifeA;
+    })[0];
+  
+  if (longestLife) {
+    const mileage = longestLife.enrichment?.mileage || longestLife.badges?.warrantyMiles;
+    const mileageK = mileage ? Math.round(mileage / 1000) : 0;
+    
+    // Build decision-focused reason
+    let reason = 'Engineered for maximum tread life and long-term value';
+    if (mileageK >= 80) {
+      reason = `${mileageK}K mile warranty — built for drivers who keep their tires`;
+    } else if (mileageK >= 60) {
+      reason = `${mileageK}K warranty with durable compound for extended life`;
+    }
+    
+    picks.push({
+      tire: longestLife,
+      role: 'longest-life',
+      label: ROLE_CONFIG['longest-life'].label,
+      icon: ROLE_CONFIG['longest-life'].icon,
+      reason,
+      mileageK: mileageK >= 50 ? mileageK : undefined,
+    });
+    markUsed(longestLife);
+  }
+  
+  return picks;
 }
 
 // Helper to safely convert any value to string (fixes [object Object] bug)
@@ -1782,40 +2001,14 @@ export default async function TiresPage({
     }
   });
 
-  // Top Picks: curated selection based on value, brand, and stock
-  const topPicks: Tire[] = (() => {
+  // Top Picks: role-based selection (Best Overall, Best Value, Longest Life)
+  const roleBasedPicks = (() => {
     if (!hasVehicle || items.length === 0) return [];
-    
-    const scored = items
-      .filter((t) => t.imageUrl && typeof t.cost === "number")
-      .map((t) => ({ tire: t, score: scoreTireForPicks(t) }))
-      .sort((a, b) => b.score - a.score);
-    
-    // Take top 8, ensuring brand variety
-    const picks: Tire[] = [];
-    const usedBrands = new Map<string, number>();
-    
-    for (const { tire } of scored) {
-      if (picks.length >= 8) break;
-      const brand = String(tire.brand || "").toLowerCase();
-      const brandCount = usedBrands.get(brand) || 0;
-      
-      if (brandCount < 2) {
-        picks.push(tire);
-        usedBrands.set(brand, brandCount + 1);
-      }
-    }
-    
-    // Fill remaining slots if needed
-    if (picks.length < 4) {
-      for (const { tire } of scored) {
-        if (picks.length >= 8) break;
-        if (!picks.includes(tire)) picks.push(tire);
-      }
-    }
-    
-    return picks;
+    return selectRoleBasedPicks(items);
   })();
+  
+  // Legacy array for backwards compatibility (used by some card logic)
+  const topPicks: Tire[] = roleBasedPicks.map(p => p.tire);
 
   // Pagination
   const tiresPerPage = 24;
@@ -2466,8 +2659,8 @@ export default async function TiresPage({
               </div>
             </div>
 
-            {/* Top Picks Section - Premium styling with visual separation */}
-            {hasVehicle && topPicks.length > 0 && safePage === 1 ? (
+            {/* Top Picks Section - Role-based recommendations */}
+            {hasVehicle && roleBasedPicks.length > 0 && safePage === 1 ? (
               <div className="mt-5 mb-10 relative">
                 {/* Decorative background */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-green-50 via-emerald-50/50 to-white -z-10" />
@@ -2482,41 +2675,63 @@ export default async function TiresPage({
                         </div>
                         <div>
                           <h2 className="text-xl font-extrabold text-neutral-900">
-                            Top Picks for Your {year} {make} {model}
+                            Our Picks for Your {year} {make} {model}
                           </h2>
                           <p className="text-sm text-neutral-600">
-                            Expert-selected for value, performance, and fit
+                            Hand-selected based on your vehicle and priorities
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="tire-grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                  {topPicks.slice(0, 4).map((t, idx) => (
-                    <TireCard
-                      key={`top-${t.partNumber || t.mfgPartNumber || idx}`}
-                      tire={t}
-                      stripSizeFromName={stripSizeFromName}
-                      rebatesByBrand={rebatesByBrand}
-                      year={year}
-                      make={make}
-                      model={model}
-                      trim={trim}
-                      modification={modification}
-                      selectedSize={selectedSize}
-                      sort={sort}
-                      wheelSku={wheelSku}
-                      wheelName={wheelName}
-                      wheelUnit={wheelUnit}
-                      wheelQty={wheelQty}
-                      wheelDia={wheelDia}
-                      isStaggered={isStaggered}
-                      axle={axle}
-                      isTopPick
-                      hasVehicle={hasVehicle}
-                      isPackageFlow={isPackageFlow}
-                    />
+                  <div className={`grid gap-5 ${roleBasedPicks.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+                  {roleBasedPicks.slice(0, 3).map((pick, idx) => (
+                    <div key={`pick-${pick.tire.partNumber || pick.tire.mfgPartNumber || idx}`} className="relative">
+                      {/* Role label + reason - positioned above card */}
+                      <div className="mb-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg">{pick.icon}</span>
+                          <span className="text-sm font-bold text-neutral-900">{pick.label}</span>
+                          {/* Mileage badge for Longest Life */}
+                          {pick.mileageK && pick.mileageK >= 60 ? (
+                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                              {pick.mileageK}K mi
+                            </span>
+                          ) : null}
+                          {/* Savings badge for Best Value */}
+                          {pick.savingsVsOverall && pick.savingsVsOverall >= 100 ? (
+                            <span className="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-bold text-blue-700">
+                              Save ${pick.savingsVsOverall}
+                            </span>
+                          ) : null}
+                        </div>
+                        <p className="mt-0.5 text-xs text-neutral-600 line-clamp-2">{pick.reason}</p>
+                      </div>
+                      <TireCard
+                        tire={pick.tire}
+                        stripSizeFromName={stripSizeFromName}
+                        rebatesByBrand={rebatesByBrand}
+                        year={year}
+                        make={make}
+                        model={model}
+                        trim={trim}
+                        modification={modification}
+                        selectedSize={selectedSize}
+                        sort={sort}
+                        wheelSku={wheelSku}
+                        wheelName={wheelName}
+                        wheelUnit={wheelUnit}
+                        wheelQty={wheelQty}
+                        wheelDia={wheelDia}
+                        isStaggered={isStaggered}
+                        axle={axle}
+                        isTopPick
+                        hideTopPickBadge
+                        hasVehicle={hasVehicle}
+                        isPackageFlow={isPackageFlow}
+                      />
+                    </div>
                   ))}
                   </div>
                 </div>
@@ -2524,7 +2739,7 @@ export default async function TiresPage({
             ) : null}
 
             {/* All Tires section header */}
-            {hasVehicle && topPicks.length > 0 && safePage === 1 ? (
+            {hasVehicle && roleBasedPicks.length > 0 && safePage === 1 ? (
               <div className="mb-4">
                 <h3 className="text-lg font-extrabold text-neutral-900">All Tires</h3>
                 <p className="text-sm text-neutral-600">Browse all {items.length} tires that fit your vehicle</p>
@@ -2722,6 +2937,7 @@ function TireCard({
   isStaggered,
   axle,
   isTopPick,
+  hideTopPickBadge,
   hasVehicle,
   isPackageFlow,
 }: {
@@ -2743,6 +2959,7 @@ function TireCard({
   isStaggered: boolean;
   axle: "front" | "rear";
   isTopPick?: boolean;
+  hideTopPickBadge?: boolean; // Hide "Top Pick" badge (used when inside Top Picks section)
   hasVehicle: boolean;
   isPackageFlow?: boolean;
 }) {
@@ -2846,6 +3063,17 @@ function TireCard({
         </div>
       ) : null}
 
+      {/* Best For guidance line - quick scannable use case */}
+      <div className="relative z-10 mt-0.5">
+        <BestForLine 
+          category={(t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as EnhancementCategory}
+          mileageWarranty={t.enrichment?.mileage}
+          isRunFlat={t.enrichment?.isRunFlat}
+          is3PMSF={t.enrichment?.is3PMSF}
+          maxItems={2}
+        />
+      </div>
+
       {/* Tire size - prominent display */}
       <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
         {selectedSize}
@@ -2856,10 +3084,10 @@ function TireCard({
         ) : null}
       </div>
 
-      {/* Badges row - only Top Pick and Rebate (category moved to image) */}
-      {(isTopPick || rebateLabel) ? (
+      {/* Badges row - Top Pick (unless hidden) and Rebate */}
+      {((isTopPick && !hideTopPickBadge) || rebateLabel) ? (
         <div className="relative z-10 mt-2 flex flex-wrap gap-1.5">
-          {isTopPick ? (
+          {isTopPick && !hideTopPickBadge ? (
             <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white">
               ⭐ Top Pick
             </span>
@@ -3012,9 +3240,13 @@ function TireCard({
         </div>
       </div>
       
-      {/* Trust row - single badge */}
-      <div className="relative z-10 mt-2 text-[10px] text-neutral-500">
-        <span className="text-green-600">✓</span> Free Shipping
+      {/* Trust row - enhanced with vehicle verification */}
+      <div className="relative z-10 mt-2">
+        <TrustMicroLine 
+          hasVehicle={hasVehicle}
+          inStock={inStock}
+          hasWarranty={Boolean(t.enrichment?.mileage && t.enrichment.mileage > 0)}
+        />
       </div>
 
       {/* CTA buttons - matching wheels card structure */}

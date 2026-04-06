@@ -11,12 +11,16 @@ import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tir
 import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { PDPTrustBlock } from "@/components/StoreReviews";
-// PDP Conversion Enhancements (2026-04-06)
+// PDP Conversion Enhancements - Phase 2 (2026-04-06)
 import { 
   BestForMicro, 
   EnhancedTrustStrip, 
   ReviewSummary,
-  WhyThisTireSection,
+  WhyChooseThisTire,
+  ComparisonContext,
+  EnhancedPerformanceSnapshot,
+  WhatHappensNext,
+  PopularChoiceSignal,
   WarrantySupport,
   FinalTrustReminder,
   ConfidenceBadge,
@@ -530,8 +534,8 @@ export default async function TireDetailPage({
                       isRunFlat={isRunFlatTire}
                     />
 
-                    {/* ENHANCEMENT: Review Summary (placeholder) */}
-                    <ReviewSummary rating={null} reviewCount={null} showPlaceholder={true} />
+                    {/* ENHANCEMENT: Review Summary - shows only with real data */}
+                    <ReviewSummary rating={null} reviewCount={null} />
 
                     {/* Key spec chips */}
                     <div className="flex flex-wrap items-center gap-2">
@@ -568,6 +572,20 @@ export default async function TireDetailPage({
                         ))}
                       </div>
                     )}
+
+                    {/* PHASE 2: Why Choose This Tire - structured bullets */}
+                    <WhyChooseThisTire 
+                      category={category as EnhancedTireCategory}
+                      mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
+                      isRunFlat={isRunFlatTire}
+                      has3PMSF={has3PMSF}
+                    />
+
+                    {/* PHASE 2: Good/Better/Best Comparison Context */}
+                    <ComparisonContext 
+                      category={category as EnhancedTireCategory}
+                      mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
+                    />
 
                     {/* Price + CTA Block - THE CONVERSION ZONE */}
                     <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
@@ -630,8 +648,14 @@ export default async function TireDetailPage({
                       />
                     </div>
 
-                    {/* ENHANCEMENT: Confidence Badge (popularity signal) */}
-                    <ConfidenceBadge message={confidenceSignal} />
+                    {/* PHASE 2: Popular Choice Signal */}
+                    <PopularChoiceSignal 
+                      category={category as EnhancedTireCategory}
+                      quantity={totalQty}
+                    />
+
+                    {/* PHASE 2: What Happens Next - reduce post-purchase anxiety */}
+                    <WhatHappensNext />
 
                     {/* ═══════════════════════════════════════════════════════════════════
                         BELOW THE FOLD: Additional benefits (if any)
@@ -879,8 +903,8 @@ export default async function TireDetailPage({
               isRunFlat={isRunFlatTire}
             />
 
-            {/* ENHANCEMENT: Review Summary (placeholder) */}
-            <ReviewSummary rating={null} reviewCount={null} showPlaceholder={true} />
+            {/* ENHANCEMENT: Review Summary - shows only with real data */}
+            <ReviewSummary rating={null} reviewCount={null} />
 
             {/* Key spec chips - size, load, speed */}
             <div className="flex flex-wrap items-center gap-2">
@@ -917,6 +941,20 @@ export default async function TireDetailPage({
                 ))}
               </div>
             )}
+
+            {/* PHASE 2: Why Choose This Tire - structured bullets */}
+            <WhyChooseThisTire 
+              category={category as EnhancedTireCategory}
+              mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
+              isRunFlat={isRunFlatTire}
+              has3PMSF={has3PMSF}
+            />
+
+            {/* PHASE 2: Good/Better/Best Comparison Context */}
+            <ComparisonContext 
+              category={category as EnhancedTireCategory}
+              mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
+            />
 
             {/* Price + CTA Block - THE CONVERSION ZONE */}
             <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
@@ -979,8 +1017,14 @@ export default async function TireDetailPage({
               />
             </div>
 
-            {/* ENHANCEMENT: Confidence Badge (popularity signal) */}
-            <ConfidenceBadge message={confidenceSignal} />
+            {/* PHASE 2: Popular Choice Signal */}
+            <PopularChoiceSignal 
+              category={category as EnhancedTireCategory}
+              quantity={totalQty}
+            />
+
+            {/* PHASE 2: What Happens Next - reduce post-purchase anxiety */}
+            <WhatHappensNext />
 
             {/* ═══════════════════════════════════════════════════════════════════
                 BELOW THE FOLD: Additional benefits (if any)
