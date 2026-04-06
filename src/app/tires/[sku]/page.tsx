@@ -11,6 +11,18 @@ import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tir
 import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { PDPTrustBlock } from "@/components/StoreReviews";
+// PDP Conversion Enhancements (2026-04-06)
+import { 
+  BestForMicro, 
+  EnhancedTrustStrip, 
+  ReviewSummary,
+  WhyThisTireSection,
+  WarrantySupport,
+  FinalTrustReminder,
+  ConfidenceBadge,
+  CollapsibleSection,
+  type TireCategory as EnhancedTireCategory
+} from "@/components/TirePDPEnhancements";
 
 export const runtime = "nodejs";
 
@@ -511,6 +523,16 @@ export default async function TireDetailPage({
                     {/* Category tagline */}
                     <p className="-mt-2 text-sm text-neutral-600">{categoryTagline.tagline}</p>
 
+                    {/* ENHANCEMENT: Best For Micro Section */}
+                    <BestForMicro 
+                      category={category as EnhancedTireCategory} 
+                      mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
+                      isRunFlat={isRunFlatTire}
+                    />
+
+                    {/* ENHANCEMENT: Review Summary (placeholder) */}
+                    <ReviewSummary rating={null} reviewCount={null} showPlaceholder={true} />
+
                     {/* Key spec chips */}
                     <div className="flex flex-wrap items-center gap-2">
                       {(tire.size || size) && (
@@ -601,11 +623,15 @@ export default async function TireDetailPage({
                         Guaranteed fit • Ships fast
                       </div>
                       
-                      {/* Trust signals */}
-                      <div className="mt-2">
-                        <TrustStrip hasVehicle={hasVehicle} />
-                      </div>
+                      {/* ENHANCEMENT: Enhanced Trust Strip */}
+                      <EnhancedTrustStrip 
+                        hasVehicle={hasVehicle} 
+                        hasWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) > 0 : true} 
+                      />
                     </div>
+
+                    {/* ENHANCEMENT: Confidence Badge (popularity signal) */}
+                    <ConfidenceBadge message={confidenceSignal} />
 
                     {/* ═══════════════════════════════════════════════════════════════════
                         BELOW THE FOLD: Additional benefits (if any)
@@ -626,6 +652,9 @@ export default async function TireDetailPage({
                       </div>
                     )}
                     
+                    {/* ENHANCEMENT: Final Trust Reminder */}
+                    <FinalTrustReminder hasVehicle={hasVehicle} />
+                    
                     {/* Store Reviews - Social Proof */}
                     <PDPTrustBlock />
                   </div>
@@ -644,6 +673,14 @@ export default async function TireDetailPage({
                     loadIndex={tire.badges?.loadIndex ? String(tire.badges.loadIndex) : null}
                     speedRating={tire.badges?.speedRating ? String(tire.badges.speedRating) : null}
                     mileageWarranty={tire.badges?.warrantyMiles ? String(tire.badges.warrantyMiles) : null}
+                  />
+                </div>
+
+                {/* ENHANCEMENT: Warranty & Support Section */}
+                <div className="mt-6">
+                  <WarrantySupport 
+                    mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
+                    hasRoadHazard={true}
                   />
                 </div>
 
@@ -835,6 +872,16 @@ export default async function TireDetailPage({
             {/* Category tagline */}
             <p className="-mt-2 text-sm text-neutral-600">{categoryTagline.tagline}</p>
 
+            {/* ENHANCEMENT: Best For Micro Section */}
+            <BestForMicro 
+              category={category as EnhancedTireCategory} 
+              mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
+              isRunFlat={isRunFlatTire}
+            />
+
+            {/* ENHANCEMENT: Review Summary (placeholder) */}
+            <ReviewSummary rating={null} reviewCount={null} showPlaceholder={true} />
+
             {/* Key spec chips - size, load, speed */}
             <div className="flex flex-wrap items-center gap-2">
               {(t.tire_size || t.simple_size) && (
@@ -925,11 +972,15 @@ export default async function TireDetailPage({
                 Guaranteed fit • Ships fast
               </div>
               
-              {/* Trust signals */}
-              <div className="mt-2">
-                <TrustStrip hasVehicle={hasVehicle} />
-              </div>
+              {/* ENHANCEMENT: Enhanced Trust Strip */}
+              <EnhancedTrustStrip 
+                hasVehicle={hasVehicle} 
+                hasWarranty={t.mileage_warranty ? Number(t.mileage_warranty) > 0 : true} 
+              />
             </div>
+
+            {/* ENHANCEMENT: Confidence Badge (popularity signal) */}
+            <ConfidenceBadge message={confidenceSignal} />
 
             {/* ═══════════════════════════════════════════════════════════════════
                 BELOW THE FOLD: Additional benefits (if any)
@@ -950,6 +1001,9 @@ export default async function TireDetailPage({
               </div>
             )}
             
+            {/* ENHANCEMENT: Final Trust Reminder */}
+            <FinalTrustReminder hasVehicle={hasVehicle} />
+            
             {/* Store Reviews - Social Proof */}
             <PDPTrustBlock />
           </div>
@@ -968,6 +1022,14 @@ export default async function TireDetailPage({
             loadIndex={t.load_index ? String(t.load_index) : null}
             speedRating={t.speed_rating ? String(t.speed_rating) : null}
             mileageWarranty={t.mileage_warranty ? String(t.mileage_warranty) : null}
+          />
+        </div>
+
+        {/* ENHANCEMENT: Warranty & Support Section */}
+        <div className="mt-6">
+          <WarrantySupport 
+            mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
+            hasRoadHazard={true}
           />
         </div>
 
