@@ -11,20 +11,16 @@ import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tir
 import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { PDPTrustBlock } from "@/components/StoreReviews";
-// PDP Conversion Enhancements - Phase 2 (2026-04-06)
+// PDP Conversion Enhancements - Phase 2 Layout Balanced (2026-04-06)
 import { 
   BestForMicro, 
   EnhancedTrustStrip, 
   ReviewSummary,
   WhyChooseThisTire,
   ComparisonContext,
-  EnhancedPerformanceSnapshot,
   WhatHappensNext,
   PopularChoiceSignal,
   WarrantySupport,
-  FinalTrustReminder,
-  ConfidenceBadge,
-  CollapsibleSection,
   type TireCategory as EnhancedTireCategory
 } from "@/components/TirePDPEnhancements";
 
@@ -83,69 +79,6 @@ function priceFromRow(r: any): number | null {
 }
 
 // ============================================================================
-// TRUST STRIP - Matches wheel PDP style
-// ============================================================================
-
-function TrustStrip({ hasVehicle }: { hasVehicle: boolean }) {
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-green-700">
-      <span>✓ Free shipping over $1,500</span>
-      {hasVehicle && <span>✓ Guaranteed fit</span>}
-      <span>✓ Expert support</span>
-    </div>
-  );
-}
-
-// ============================================================================
-// QUICK SPECS - Inline, high-value only
-// ============================================================================
-
-interface QuickSpecsProps {
-  mileageWarranty: string | null;
-  category: TreadCategory | null;
-  loadIndex: string | null;
-  speedRating: string | null;
-  isRunFlatTire: boolean;
-  has3PMSF: boolean;
-}
-
-function QuickSpecs(props: QuickSpecsProps) {
-  const items: string[] = [];
-  
-  // High-value specs only, in priority order
-  if (props.mileageWarranty) {
-    const miles = parseInt(props.mileageWarranty, 10);
-    if (miles >= 1000) {
-      items.push(`${Math.round(miles/1000)}K mi warranty`);
-    }
-  }
-  if (props.category) {
-    items.push(props.category);
-  }
-  if (props.loadIndex && props.speedRating) {
-    items.push(`${props.loadIndex}${props.speedRating}`);
-  }
-  if (props.isRunFlatTire) {
-    items.push("Run-Flat");
-  }
-  if (props.has3PMSF) {
-    items.push("3PMSF ❄️");
-  }
-  
-  if (items.length === 0) return null;
-  
-  return (
-    <div className="flex flex-wrap gap-1.5">
-      {items.slice(0, 4).map((item) => (
-        <span key={item} className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-[10px] font-semibold text-neutral-700">
-          {item}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-// ============================================================================
 // CATEGORY TAGLINE - Short, benefit-driven description
 // ============================================================================
 
@@ -175,7 +108,7 @@ function getCategoryTagline(category: TreadCategory | null): { label: string; ta
 }
 
 // ============================================================================
-// WHY THIS TIRE - Benefit-driven, conversational
+// WHY THIS TIRE - Benefit-driven, conversational (for quick bullets)
 // ============================================================================
 
 function getWhyThisTirePoints(
@@ -229,24 +162,7 @@ function getWhyThisTirePoints(
       points.push("Quality construction you can trust");
   }
   
-  // Add warranty as value signal
-  if (mileageWarranty) {
-    const miles = parseInt(mileageWarranty, 10);
-    if (miles >= 60000) {
-      points.push(`${Math.round(miles/1000)}K mile warranty backs it up`);
-    } else if (miles >= 40000) {
-      points.push(`${Math.round(miles/1000)}K mile warranty included`);
-    }
-  }
-  
-  // Add special features
-  if (isRunFlatTire) {
-    points.push("Run-flat tech gets you home safely");
-  } else if (has3PMSF) {
-    points.push("3-peak rated for real winter grip");
-  }
-  
-  return points.slice(0, 4); // Max 4 for persuasion without clutter
+  return points.slice(0, 2); // Max 2 for above-the-fold
 }
 
 // ============================================================================
@@ -387,18 +303,6 @@ function PerformanceSection({
 }
 
 // ============================================================================
-// BADGE COMPONENT
-// ============================================================================
-
-function Badge({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-2.5 py-0.5 text-[11px] font-bold text-neutral-800">
-      {children}
-    </span>
-  );
-}
-
-// ============================================================================
 // MAIN PAGE COMPONENT
 // ============================================================================
 
@@ -448,14 +352,12 @@ export default async function TireDetailPage({
         const searchData = await searchRes.json();
         const tire = searchData?.results?.[0];
         if (tire) {
-          // Use retail price (sellPrice/MAP) only if it's actually higher than cost
-          // When sellPrice = buyPrice (no real markup), apply $50 margin
           const cost = typeof tire.cost === "number" && tire.cost > 0 ? tire.cost : null;
           const price = typeof tire.price === "number" && tire.price > 0 ? tire.price : null;
           const displayPrice = (price && cost && price > cost)
-            ? price // Real retail markup from supplier
+            ? price
             : cost
-              ? cost + 50 // Apply $50 margin (consistent with listing)
+              ? cost + 50
               : null;
           const rawTitle = tire.displayName || tire.prettyName || tire.description || tire.model || safeSku;
           const title = cleanTireDisplayTitle(rawTitle, tire.brand);
@@ -471,7 +373,6 @@ export default async function TireDetailPage({
           const q = tire.quantity || {};
           const totalQty = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
           const delivery = getDeliveryMessage(totalQty);
-          const confidenceSignal = getConfidenceSignal(totalQty, category);
           
           return (
             <main className="bg-neutral-50">
@@ -479,21 +380,22 @@ export default async function TireDetailPage({
                 {/* Breadcrumb */}
                 <BackToTiresButton />
 
+                {/* ═══════════════════════════════════════════════════════════════════
+                    ROW 1: Hero - Image + Buy Box (streamlined)
+                    ═══════════════════════════════════════════════════════════════════ */}
                 <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
-                  {/* Left: Image - Clean with zoom hint */}
+                  {/* Left: Image */}
                   <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
-                    <div className="mb-3 flex items-center justify-between gap-3">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg">🔍</span>
-                        <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
-                      </div>
+                    <div className="mb-3 flex items-center gap-2">
+                      <span className="text-lg">🔍</span>
+                      <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
                     </div>
                     <ImageGallery images={tire.imageUrl ? [tire.imageUrl] : []} alt={title} />
                   </div>
 
-                  {/* Right: Buy Box - Matches wheel PDP conversion structure */}
-                  <div className="lg:sticky lg:top-6 space-y-4">
-                    {/* Compact fitment bar */}
+                  {/* Right: Streamlined Buy Box */}
+                  <div className="lg:sticky lg:top-6 space-y-3">
+                    {/* Fitment bar */}
                     {hasVehicle ? (
                       <div className="flex items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-200 px-3 py-2">
                         <div className="flex items-center gap-2">
@@ -514,28 +416,21 @@ export default async function TireDetailPage({
                       </div>
                     )}
 
-                    {/* ═══════════════════════════════════════════════════════════════════
-                        ABOVE THE FOLD: Title → Specs → Price → CTA
-                        ═══════════════════════════════════════════════════════════════════ */}
-                    
                     {/* Brand */}
                     <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">{tire.brand || "Tire"}</div>
                     
                     {/* Title */}
-                    <h1 className="-mt-2 text-2xl font-extrabold text-neutral-900 leading-tight">{title}</h1>
+                    <h1 className="-mt-1 text-2xl font-extrabold text-neutral-900 leading-tight">{title}</h1>
                     
                     {/* Category tagline */}
-                    <p className="-mt-2 text-sm text-neutral-600">{categoryTagline.tagline}</p>
+                    <p className="-mt-1 text-sm text-neutral-600">{categoryTagline.tagline}</p>
 
-                    {/* ENHANCEMENT: Best For Micro Section */}
+                    {/* Best For (compact) */}
                     <BestForMicro 
                       category={category as EnhancedTireCategory} 
                       mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
                       isRunFlat={isRunFlatTire}
                     />
-
-                    {/* ENHANCEMENT: Review Summary - shows only with real data */}
-                    <ReviewSummary rating={null} reviewCount={null} />
 
                     {/* Key spec chips */}
                     <div className="flex flex-wrap items-center gap-2">
@@ -561,10 +456,10 @@ export default async function TireDetailPage({
                       )}
                     </div>
 
-                    {/* Key benefits - above the fold */}
+                    {/* 1-2 quick benefit bullets */}
                     {whyPoints.length > 0 && (
-                      <div className="flex flex-wrap gap-2 text-sm text-neutral-700">
-                        {whyPoints.slice(0, 2).map((point, i) => (
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-neutral-700">
+                        {whyPoints.map((point, i) => (
                           <span key={i} className="inline-flex items-center gap-1.5">
                             <span className="text-green-600">✓</span>
                             <span>{point}</span>
@@ -573,23 +468,8 @@ export default async function TireDetailPage({
                       </div>
                     )}
 
-                    {/* PHASE 2: Why Choose This Tire - structured bullets */}
-                    <WhyChooseThisTire 
-                      category={category as EnhancedTireCategory}
-                      mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
-                      isRunFlat={isRunFlatTire}
-                      has3PMSF={has3PMSF}
-                    />
-
-                    {/* PHASE 2: Good/Better/Best Comparison Context */}
-                    <ComparisonContext 
-                      category={category as EnhancedTireCategory}
-                      mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
-                    />
-
-                    {/* Price + CTA Block - THE CONVERSION ZONE */}
+                    {/* Price + CTA Block */}
                     <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
-                      {/* Urgency banner */}
                       {delivery.urgency && (
                         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
                           <span>⚡</span>
@@ -597,7 +477,6 @@ export default async function TireDetailPage({
                         </div>
                       )}
 
-                      {/* Price */}
                       <div className="flex items-baseline gap-2">
                         {displayPrice != null ? (
                           <>
@@ -614,13 +493,11 @@ export default async function TireDetailPage({
                         </div>
                       )}
 
-                      {/* Delivery */}
                       <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
                         <span className="text-base">{delivery.icon}</span>
                         <span>{delivery.text}</span>
                       </div>
                       
-                      {/* Primary CTA */}
                       {displayPrice != null && (
                         <div className="mt-4">
                           <AddTiresToCartButton
@@ -636,55 +513,41 @@ export default async function TireDetailPage({
                         </div>
                       )}
                       
-                      {/* Confidence line */}
-                      <div className="mt-3 text-center text-sm font-medium text-green-800">
-                        Guaranteed fit • Ships fast
-                      </div>
-                      
-                      {/* ENHANCEMENT: Enhanced Trust Strip */}
+                      {/* Compact trust line */}
                       <EnhancedTrustStrip 
                         hasVehicle={hasVehicle} 
                         hasWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) > 0 : true} 
                       />
                     </div>
 
-                    {/* PHASE 2: Popular Choice Signal */}
+                    {/* Popular choice signal (compact) */}
                     <PopularChoiceSignal 
                       category={category as EnhancedTireCategory}
                       quantity={totalQty}
                     />
-
-                    {/* PHASE 2: What Happens Next - reduce post-purchase anxiety */}
-                    <WhatHappensNext />
-
-                    {/* ═══════════════════════════════════════════════════════════════════
-                        BELOW THE FOLD: Additional benefits (if any)
-                        ═══════════════════════════════════════════════════════════════════ */}
-                    
-                    {/* Additional benefits - show remaining points not shown above */}
-                    {whyPoints.length > 2 && (
-                      <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                        <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">More to Love</div>
-                        <ul className="space-y-2">
-                          {whyPoints.slice(2).map((point, i) => (
-                            <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
-                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs mt-0.5">✓</span>
-                              <span className="leading-snug">{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    
-                    {/* ENHANCEMENT: Final Trust Reminder */}
-                    <FinalTrustReminder hasVehicle={hasVehicle} />
-                    
-                    {/* Store Reviews - Social Proof */}
-                    <PDPTrustBlock />
                   </div>
                 </div>
 
-                {/* Below the fold: Performance + Full specs */}
+                {/* ═══════════════════════════════════════════════════════════════════
+                    ROW 2: Supporting Cards (moved from right column)
+                    ═══════════════════════════════════════════════════════════════════ */}
+                <div className="mt-8 grid gap-4 md:grid-cols-3">
+                  <WhyChooseThisTire 
+                    category={category as EnhancedTireCategory}
+                    mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
+                    isRunFlat={isRunFlatTire}
+                    has3PMSF={has3PMSF}
+                  />
+                  <ComparisonContext 
+                    category={category as EnhancedTireCategory}
+                    mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
+                  />
+                  <WhatHappensNext />
+                </div>
+
+                {/* ═══════════════════════════════════════════════════════════════════
+                    ROW 3: Performance + Full Specs
+                    ═══════════════════════════════════════════════════════════════════ */}
                 <div className="mt-8 grid gap-6 lg:grid-cols-2">
                   <PerformanceSection ratings={ratings} category={category} />
                   <FullSpecs
@@ -700,12 +563,15 @@ export default async function TireDetailPage({
                   />
                 </div>
 
-                {/* ENHANCEMENT: Warranty & Support Section */}
-                <div className="mt-6">
+                {/* ═══════════════════════════════════════════════════════════════════
+                    ROW 4: Trust & Support
+                    ═══════════════════════════════════════════════════════════════════ */}
+                <div className="mt-8 grid gap-6 lg:grid-cols-2">
                   <WarrantySupport 
                     mileageWarranty={tire.badges?.warrantyMiles ? Number(tire.badges.warrantyMiles) : null}
                     hasRoadHazard={true}
                   />
+                  <PDPTrustBlock />
                 </div>
 
                 <div className="mt-6 text-xs text-neutral-400">SKU: {safeSku}</div>
@@ -811,7 +677,6 @@ export default async function TireDetailPage({
 
   const displayPrice = priceFromRow(t);
   
-  // Normalize category and detect features
   const category = normalizeTreadCategory(t.terrain, t.tire_description);
   const isRunFlatTire = isRunFlat(null, t.tire_description, null);
   const has3PMSF = /3PMSF|3-PEAK|MOUNTAIN.*SNOWFLAKE/i.test(t.tire_description || '');
@@ -821,7 +686,6 @@ export default async function TireDetailPage({
   const categoryTagline = getCategoryTagline(category);
   const totalQty = Number(t.qoh) || 0;
   const delivery = getDeliveryMessage(totalQty);
-  const confidenceSignal = getConfidenceSignal(totalQty, category);
 
   // Enrich with tire asset image if needed
   let enrichedImageUrl: string | null = t.image_url || null;
@@ -848,21 +712,22 @@ export default async function TireDetailPage({
         {/* Breadcrumb */}
         <BackToTiresButton />
 
+        {/* ═══════════════════════════════════════════════════════════════════
+            ROW 1: Hero - Image + Buy Box (streamlined)
+            ═══════════════════════════════════════════════════════════════════ */}
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_400px]">
-          {/* Left: Image - Clean with zoom hint */}
+          {/* Left: Image */}
           <div className="rounded-3xl border border-neutral-200 bg-white p-4 shadow-sm">
-            <div className="mb-3 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">🔍</span>
-                <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
-              </div>
+            <div className="mb-3 flex items-center gap-2">
+              <span className="text-lg">🔍</span>
+              <span className="text-xs font-medium text-neutral-500">Click image to zoom</span>
             </div>
             <ImageGallery images={enrichedImageUrl ? [String(enrichedImageUrl)] : []} alt={title} />
           </div>
 
-          {/* Right: Buy Box - Matches wheel PDP conversion structure */}
-          <div className="lg:sticky lg:top-6 space-y-4">
-            {/* Compact fitment bar */}
+          {/* Right: Streamlined Buy Box */}
+          <div className="lg:sticky lg:top-6 space-y-3">
+            {/* Fitment bar */}
             {hasVehicle ? (
               <div className="flex items-center justify-between gap-3 rounded-xl bg-green-50 border border-green-200 px-3 py-2">
                 <div className="flex items-center gap-2">
@@ -883,30 +748,23 @@ export default async function TireDetailPage({
               </div>
             )}
 
-            {/* ═══════════════════════════════════════════════════════════════════
-                ABOVE THE FOLD: Title → Specs → Price → CTA
-                ═══════════════════════════════════════════════════════════════════ */}
-            
             {/* Brand */}
             <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">{String(t.brand_desc || "Tire")}</div>
             
             {/* Title */}
-            <h1 className="-mt-2 text-2xl font-extrabold text-neutral-900 leading-tight">{title}</h1>
+            <h1 className="-mt-1 text-2xl font-extrabold text-neutral-900 leading-tight">{title}</h1>
             
             {/* Category tagline */}
-            <p className="-mt-2 text-sm text-neutral-600">{categoryTagline.tagline}</p>
+            <p className="-mt-1 text-sm text-neutral-600">{categoryTagline.tagline}</p>
 
-            {/* ENHANCEMENT: Best For Micro Section */}
+            {/* Best For (compact) */}
             <BestForMicro 
               category={category as EnhancedTireCategory} 
               mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
               isRunFlat={isRunFlatTire}
             />
 
-            {/* ENHANCEMENT: Review Summary - shows only with real data */}
-            <ReviewSummary rating={null} reviewCount={null} />
-
-            {/* Key spec chips - size, load, speed */}
+            {/* Key spec chips */}
             <div className="flex flex-wrap items-center gap-2">
               {(t.tire_size || t.simple_size) && (
                 <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
@@ -930,10 +788,10 @@ export default async function TireDetailPage({
               )}
             </div>
 
-            {/* Key benefits - above the fold */}
+            {/* 1-2 quick benefit bullets */}
             {whyPoints.length > 0 && (
-              <div className="flex flex-wrap gap-2 text-sm text-neutral-700">
-                {whyPoints.slice(0, 2).map((point, i) => (
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-neutral-700">
+                {whyPoints.map((point, i) => (
                   <span key={i} className="inline-flex items-center gap-1.5">
                     <span className="text-green-600">✓</span>
                     <span>{point}</span>
@@ -942,23 +800,8 @@ export default async function TireDetailPage({
               </div>
             )}
 
-            {/* PHASE 2: Why Choose This Tire - structured bullets */}
-            <WhyChooseThisTire 
-              category={category as EnhancedTireCategory}
-              mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
-              isRunFlat={isRunFlatTire}
-              has3PMSF={has3PMSF}
-            />
-
-            {/* PHASE 2: Good/Better/Best Comparison Context */}
-            <ComparisonContext 
-              category={category as EnhancedTireCategory}
-              mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
-            />
-
-            {/* Price + CTA Block - THE CONVERSION ZONE */}
+            {/* Price + CTA Block */}
             <div id="add-to-cart" className="rounded-2xl border border-green-300 bg-gradient-to-br from-green-50/80 to-emerald-50/60 p-4 shadow-sm">
-              {/* Urgency banner */}
               {delivery.urgency && (
                 <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-700">
                   <span>⚡</span>
@@ -966,7 +809,6 @@ export default async function TireDetailPage({
                 </div>
               )}
 
-              {/* Price */}
               <div className="flex items-baseline gap-2">
                 {displayPrice != null ? (
                   <>
@@ -983,13 +825,11 @@ export default async function TireDetailPage({
                 </div>
               )}
 
-              {/* Delivery */}
               <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
                 <span className="text-base">{delivery.icon}</span>
                 <span>{delivery.text}</span>
               </div>
               
-              {/* Primary CTA */}
               <div className="mt-4">
                 <AddTiresToCartButton
                   sku={safeSku}
@@ -1005,55 +845,41 @@ export default async function TireDetailPage({
                 />
               </div>
               
-              {/* Confidence line */}
-              <div className="mt-3 text-center text-sm font-medium text-green-800">
-                Guaranteed fit • Ships fast
-              </div>
-              
-              {/* ENHANCEMENT: Enhanced Trust Strip */}
+              {/* Compact trust line */}
               <EnhancedTrustStrip 
                 hasVehicle={hasVehicle} 
                 hasWarranty={t.mileage_warranty ? Number(t.mileage_warranty) > 0 : true} 
               />
             </div>
 
-            {/* PHASE 2: Popular Choice Signal */}
+            {/* Popular choice signal (compact) */}
             <PopularChoiceSignal 
               category={category as EnhancedTireCategory}
               quantity={totalQty}
             />
-
-            {/* PHASE 2: What Happens Next - reduce post-purchase anxiety */}
-            <WhatHappensNext />
-
-            {/* ═══════════════════════════════════════════════════════════════════
-                BELOW THE FOLD: Additional benefits (if any)
-                ═══════════════════════════════════════════════════════════════════ */}
-            
-            {/* Additional benefits - show remaining points not shown above */}
-            {whyPoints.length > 2 && (
-              <div className="rounded-xl bg-gradient-to-br from-neutral-50 to-white border border-neutral-100 px-4 py-3">
-                <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-wide mb-2">More to Love</div>
-                <ul className="space-y-2">
-                  {whyPoints.slice(2).map((point, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-800">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs mt-0.5">✓</span>
-                      <span className="leading-snug">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            
-            {/* ENHANCEMENT: Final Trust Reminder */}
-            <FinalTrustReminder hasVehicle={hasVehicle} />
-            
-            {/* Store Reviews - Social Proof */}
-            <PDPTrustBlock />
           </div>
         </div>
 
-        {/* Below the fold: Performance + Full specs */}
+        {/* ═══════════════════════════════════════════════════════════════════
+            ROW 2: Supporting Cards (moved from right column)
+            ═══════════════════════════════════════════════════════════════════ */}
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <WhyChooseThisTire 
+            category={category as EnhancedTireCategory}
+            mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
+            isRunFlat={isRunFlatTire}
+            has3PMSF={has3PMSF}
+          />
+          <ComparisonContext 
+            category={category as EnhancedTireCategory}
+            mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
+          />
+          <WhatHappensNext />
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════════════
+            ROW 3: Performance + Full Specs
+            ═══════════════════════════════════════════════════════════════════ */}
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           <PerformanceSection ratings={ratings} category={category} />
           <FullSpecs
@@ -1069,15 +895,18 @@ export default async function TireDetailPage({
           />
         </div>
 
-        {/* ENHANCEMENT: Warranty & Support Section */}
-        <div className="mt-6">
+        {/* ═══════════════════════════════════════════════════════════════════
+            ROW 4: Trust & Support
+            ═══════════════════════════════════════════════════════════════════ */}
+        <div className="mt-8 grid gap-6 lg:grid-cols-2">
           <WarrantySupport 
             mileageWarranty={t.mileage_warranty ? Number(t.mileage_warranty) : null}
             hasRoadHazard={true}
           />
+          <PDPTrustBlock />
         </div>
 
-        {/* Related tires - limit to 4 */}
+        {/* Related tires */}
         {related.rows?.length ? (
           <section className="mt-10">
             <h2 className="text-lg font-extrabold text-neutral-900">More in this size</h2>
