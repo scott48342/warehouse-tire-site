@@ -889,6 +889,17 @@ export default async function TiresPage({
   const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
   const hasVehicle = Boolean(year && make && model);
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SIZE SEARCH DETECTION - Allow direct tire size searches without YMM
+  // Supports: /tires?size=275-65-18 or /tires?width=275&aspectRatio=65&diameter=18
+  // ═══════════════════════════════════════════════════════════════════════════
+  const sizeParam = safeString(Array.isArray(sp.size) ? sp.size[0] : sp.size);
+  const widthParam = safeString(Array.isArray((sp as any).width) ? (sp as any).width[0] : (sp as any).width);
+  const aspectRatioParam = safeString(Array.isArray((sp as any).aspectRatio) ? (sp as any).aspectRatio[0] : (sp as any).aspectRatio);
+  const diameterParam = safeString(Array.isArray((sp as any).diameter) ? (sp as any).diameter[0] : (sp as any).diameter) ||
+                        safeString(Array.isArray((sp as any).rimDiameter) ? (sp as any).rimDiameter[0] : (sp as any).rimDiameter);
+  const hasSizeSearch = Boolean(sizeParam) || Boolean(widthParam && aspectRatioParam && diameterParam);
+
   // Package flow detection - user came from wheel selection
   const isPackageFlow = Boolean(wheelSku);
 
@@ -906,6 +917,7 @@ export default async function TiresPage({
   console.log('[TIRES_AUDIT] 📊 Render decision:', {
     isPackageFlow,
     hasVehicle,
+    hasSizeSearch,
     showPackageJourneyBar: hasVehicle && isPackageFlow,
     componentMode: 'TIRES',
   });
@@ -2102,10 +2114,11 @@ export default async function TiresPage({
   const liftedPresetLabel = liftedPreset === "daily" ? "Daily Driver" : liftedPreset === "offroad" ? "Off-Road" : liftedPreset === "extreme" ? "Extreme" : liftedPreset;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // VEHICLE ENTRY GATE - Show YMM selector when no vehicle context
-  // Prevents showing empty product grids and guides users into vehicle selection
+  // VEHICLE ENTRY GATE - Show YMM selector when no context exists
+  // Allow through if: vehicle present OR size search present
+  // Only block when user has neither (browsing /tires with no params)
   // ═══════════════════════════════════════════════════════════════════════════
-  if (!hasVehicle) {
+  if (!hasVehicle && !hasSizeSearch) {
     return (
       <main className="bg-neutral-50">
         <VehicleEntryGate productType="tires" packageFlow={isPackageFlow} />
