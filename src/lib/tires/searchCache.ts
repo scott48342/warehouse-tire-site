@@ -63,8 +63,9 @@ let _redis: Redis | null = null;
 function getRedis(): Redis | null {
   if (_redis) return _redis;
   
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  // Support both Vercel KV naming and Upstash direct naming
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   
   if (!url || !token) {
     console.warn("[tire-search-cache] Redis not configured, cache disabled");
