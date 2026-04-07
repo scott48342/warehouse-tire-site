@@ -182,19 +182,24 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
   // 1. Different trim OPTIONS (Camry: 16", 17", 18", 19" - all square, same width)
   // 2. Mislabeled staggered (Corvette C8: 19x8.5 front + 20x11 rear marked as "both")
   //
-  // HEURISTIC: Only infer staggered if WIDTHS differ by 1"+.
+  // HEURISTIC: Only infer staggered if WIDTHS differ by 2"+.
   // Different diameters alone are OEM options, NOT staggered.
   // True staggered (Corvette, Mustang GT, Camaro ZL1) ALWAYS has different widths.
   //
   // IMPORTANT FIX (2026-04-06): Removed diameterDiff check that was causing false positives
   // on trucks like Silverado 2500HD where 17"/18" are just trim options with same 8" width.
+  //
+  // IMPORTANT FIX (2026-04-07): Increased threshold from 1" to 2" to avoid false positives
+  // on sedans like Buick LaCrosse where 6.5"/7.5" widths are just different OEM options.
+  // True staggered vehicles (Corvette C8: 8.5" vs 11") have much larger width differences.
+  // Vehicles with smaller staggered differences should have explicit front/rear axle labels.
   if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
     // Check for implicit staggered: significant WIDTH difference indicates staggered
     // We check all pairs to catch cases where >2 specs exist but 2 of them are staggered
     const sortedByWidth = [...bothSpecs].sort((a, b) => a.width - b.width);
     const narrowest = sortedByWidth[0];
     const widest = sortedByWidth[sortedByWidth.length - 1];
-    const widthDiff = Math.abs(widest.width - narrowest.width) >= 1; // 1" or more width difference
+    const widthDiff = Math.abs(widest.width - narrowest.width) >= 2; // 2" or more width difference
     
     if (widthDiff) {
       // Width difference indicates staggered - narrower = front, wider = rear
