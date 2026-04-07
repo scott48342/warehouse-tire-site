@@ -191,10 +191,9 @@ export function detectVehicleType(
     if (body.includes("pickup") || body.includes("truck")) return "truck";
     if (body.includes("suv") || body.includes("crossover")) return "suv";
     
-    // Large wheel specs hint at truck/SUV
-    if (options.minDiameter && options.minDiameter >= 17 && options.maxWidth && options.maxWidth >= 8.5) {
-      return "suv";
-    }
+    // REMOVED: Wheel size heuristic was misclassifying modern sedans (e.g., Cadillac CT5)
+    // Many luxury cars now have 18"+ wheels with 8.5"+ width. Not reliable for vehicle type detection.
+    // Trust explicit model patterns and bolt patterns instead.
   }
   
   return "car";
