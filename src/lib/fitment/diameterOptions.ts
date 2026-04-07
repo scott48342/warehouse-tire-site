@@ -176,6 +176,24 @@ export function buildDiameterOptions({
         });
       }
     }
+    
+    // ALWAYS show common truck/SUV upsizes even if not in current facets
+    // This prevents chips from disappearing when a filter is applied
+    // (Facets only return filtered results, so we need to show options regardless)
+    const commonUpsizes = [17, 18, 20, 22, 24, 26];
+    for (const dia of commonUpsizes) {
+      if (!options.has(dia) && dia >= minOemDia - 2) {
+        const count = inventoryCounts.get(dia);
+        options.set(dia, {
+          diameter: dia,
+          label: `${dia}"`,
+          isStock: false,
+          isUpsize: dia > minOemDia,
+          hasInventory: count !== undefined ? count > 0 : undefined,
+          count,
+        });
+      }
+    }
   }
   
   return Array.from(options.values());
