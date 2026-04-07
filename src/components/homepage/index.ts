@@ -1,8 +1,9 @@
 /**
  * Homepage Components
- * Premium automotive UI components for the redesigned homepage
+ * Premium automotive UI components - MATCHES TEMPLATE EXACTLY
  */
 
+export { HomepageBackground } from "./HomepageBackground";
 export { PremiumHero } from "./PremiumHero";
 export { BuildStyleCards } from "./BuildStyleCards";
 export { TrustStrip } from "./TrustStrip";
