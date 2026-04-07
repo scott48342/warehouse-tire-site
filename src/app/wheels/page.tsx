@@ -890,6 +890,12 @@ export default async function WheelsPage({
     // Score each wheel for recommendation
     const scored = itemsFinal
       .filter((w) => w.imageUrl) // Only recommend wheels with images
+      .filter((w) => {
+        // EXCLUDE aggressive fitment from Top Picks
+        // Top Picks should only show: perfect, recommended, popular
+        const level = w.fitmentGuidance?.level;
+        return level !== "aggressive";
+      })
       .map((w) => {
         let score = 0;
 
@@ -899,7 +905,14 @@ export default async function WheelsPage({
           score += 200; // Highest priority for staggered pairs
         }
 
-        // Fitment class priority (higher = better)
+        // Fitment guidance priority (new system - 2026-04-07)
+        const fgLevel = w.fitmentGuidance?.level;
+        if (fgLevel === "perfect") score += 150;
+        else if (fgLevel === "recommended") score += 100;
+        else if (fgLevel === "popular") score += 50;
+        // aggressive is already filtered out above
+
+        // Fitment class priority (legacy system - still useful for bolt pattern match)
         if (w.fitmentClass === "surefit") score += 100;
         else if (w.fitmentClass === "specfit") score += 50;
         else if (w.fitmentClass === "extended") score += 10;

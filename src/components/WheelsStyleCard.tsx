@@ -525,14 +525,19 @@ export function WheelsStyleCard({
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
   const fitmentConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
+  
+  // Hide legacy "Good Fit" banner when fitmentGuidance shows "aggressive"
+  // Aggressive fitment should NOT show the misleading "Good Fit" label
+  const showLegacyFitmentBanner = fitmentConfig && fitmentLevel !== "aggressive";
 
   return (
     <div className="relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-shadow hover:shadow-lg">
       
       {/* ═══════════════════════════════════════════════════════════════════════
           TOP: FITMENT BADGE (Full width, prominent)
+          Hidden for aggressive fitment - those get the fitmentGuidance badge instead
           ═══════════════════════════════════════════════════════════════════════ */}
-      {fitmentConfig ? (
+      {showLegacyFitmentBanner ? (
         <div className={`${fitmentConfig.bgClass} ${fitmentConfig.textClass} px-4 py-2.5`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
