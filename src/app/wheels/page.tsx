@@ -1545,6 +1545,7 @@ export default async function WheelsPage({
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
+                fitmentGuidance: w.fitmentGuidance,
               }))}
               allWheels={itemsFinal.map(w => ({
                 sku: w.sku,
@@ -1565,6 +1566,7 @@ export default async function WheelsPage({
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
+                fitmentGuidance: w.fitmentGuidance,
               }))}
               viewParams={{
                 year,
@@ -1614,6 +1616,7 @@ export default async function WheelsPage({
                 finishThumbs: w.finishThumbs,
                 pair: w.pair,
                 boltPattern: (w as any).boltPattern,
+                fitmentGuidance: w.fitmentGuidance,
               }))}
             />
 
