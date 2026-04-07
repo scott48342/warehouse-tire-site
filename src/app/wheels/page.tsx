@@ -572,6 +572,12 @@ export default async function WheelsPage({
   const fitmentSearchBp = data?.fitment?.envelope?.boltPattern;
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // VEHICLE TYPE - Used for build style toggle visibility
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Only show build style toggle for trucks/SUVs where leveling/lifting makes sense
+  const fitmentVehicleType = (data?.fitment?.vehicleType as "truck" | "suv" | "car" | undefined) || undefined;
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // DB-FIRST FITMENT PROFILE (Primary Source of Truth)
   // ═══════════════════════════════════════════════════════════════════════════
   // dbProfile is the canonical fitment data from our own database.
@@ -598,6 +604,25 @@ export default async function WheelsPage({
   const primaryCenterBore = dbProfile?.centerBoreMm || data?.fitment?.envelope?.centerBore;
   const primaryOemTireSizes = dbProfile?.oemTireSizes || [];
   const primaryModificationId = dbProfile?.modificationId || modification;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BUILD STYLE TOGGLE VISIBILITY
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Determine if this vehicle supports build style selection (Stock/Level/Lifted)
+  // TRUE for: trucks, SUVs, 6-lug or 8-lug bolt patterns (indicates truck/SUV)
+  // FALSE for: cars, sedans, coupes, performance vehicles, EVs
+  const vehicleSupportsBuildStyles = (() => {
+    // Explicit truck/SUV type from API
+    if (fitmentVehicleType === "truck" || fitmentVehicleType === "suv") {
+      return true;
+    }
+    // Fallback: check bolt pattern (6-lug or 8-lug = almost always truck/SUV)
+    if (primaryBoltPattern && (primaryBoltPattern.startsWith("6x") || primaryBoltPattern.startsWith("8x"))) {
+      return true;
+    }
+    // Otherwise, assume car (hide build style toggle)
+    return false;
+  })();
 
   // Clear staggered fitView if vehicle doesn't support staggered
   // (prevents confusion when someone shares a URL with fitView=staggered for a non-staggered vehicle)
@@ -1542,13 +1567,14 @@ export default async function WheelsPage({
 
             {/* ═══════════════════════════════════════════════════════════════════════
                 BUILD STYLE TOGGLE - Guides users to stock/level/lifted results
-                Only shown for trucks/SUVs (cars don't have leveling kit option)
+                Only shown for trucks/SUVs where leveling/lifting makes sense
+                Hidden for: sedans, coupes, performance cars, EVs, etc.
                 ═══════════════════════════════════════════════════════════════════════ */}
-            {hasVehicle && !isLiftedBuild && (
+            {hasVehicle && !isLiftedBuild && vehicleSupportsBuildStyles && (
               <div className="mt-3 rounded-xl border border-neutral-200 bg-white p-4">
                 <BuildStyleToggle 
                   currentBuildType={buildTypeParam} 
-                  vehicleType={fit?.vehicleType || undefined}
+                  vehicleType={fitmentVehicleType}
                 />
               </div>
             )}
