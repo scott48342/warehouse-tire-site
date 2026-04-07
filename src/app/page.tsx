@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HomeWheelShortcut } from "@/components/HomeWheelShortcut";
 import { HeroVehicleEntry } from "@/components/HeroVehicleEntry";
 import { ReviewsSection } from "@/components/StoreReviews";
+import { BuildStyleHero } from "@/components/BuildStyleEntry";
 
 export const runtime = "nodejs";
 
@@ -133,6 +134,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* ===== BUILD STYLE ENTRY - Shop by build type ===== */}
+      <BuildStyleHero />
 
       {/* ===== POPULAR SEARCHES - Immediately visible ===== */}
       <section className="mx-auto max-w-6xl px-4 py-8">

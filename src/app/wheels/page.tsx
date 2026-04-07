@@ -19,6 +19,8 @@ import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
 import { getIndexingDecision, buildPageIndexingData, getRobotsContent } from "@/lib/seo";
 import { SeoContentBlock } from "@/components/SeoContentBlock";
 import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
+import { filterWheelsForBuildType, type BuildType as BuildTypeEnum } from "@/lib/fitment/buildTypeFilter";
+import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -261,6 +263,14 @@ export default async function WheelsPage({
   // Fitment level: "oem" (default, strict offset) vs "lifted" (show all offsets for modified vehicles)
   const fitLevelRaw = (Array.isArray(sp.fitLevel) ? sp.fitLevel[0] : sp.fitLevel) || "";
   const fitLevel = String(fitLevelRaw || "oem").trim();
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BUILD TYPE - Guided build style filtering (stock/level/lifted)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const buildTypeRaw = (Array.isArray(sp.buildType) ? sp.buildType[0] : sp.buildType) || "";
+  const buildTypeParam = buildTypeRaw === "stock" || buildTypeRaw === "level" || buildTypeRaw === "lifted" 
+    ? buildTypeRaw as BuildTypeEnum 
+    : null;
 
   // ═══════════════════════════════════════════════════════════════════════════
   // LIFTED BUILD CONTEXT
@@ -845,14 +855,36 @@ export default async function WheelsPage({
       })
     : itemsFilteredOffset;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BUILD TYPE FILTERING
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Apply build type filtering to rank/prioritize matching wheels
+  // NOTE: This does NOT hard-hide wheels; it ranks matching ones higher
+  const oemEnvelope = {
+    minDiameter: diaRange?.[0] ?? 16,
+    maxDiameter: diaRange?.[1] ?? 20,
+    minWidth: widthRange?.[0] ?? 6,
+    maxWidth: widthRange?.[1] ?? 8,
+    minOffset: offRange?.[0] ?? 30,
+    maxOffset: offRange?.[1] ?? 50,
+  };
+
+  // Apply build type filter (ranks matching wheels higher, optionally filters for stock mode)
+  const itemsFilteredBuildType = filterWheelsForBuildType(
+    itemsFilteredPrice,
+    buildTypeParam,
+    oemEnvelope,
+    { strictFilter: buildTypeParam === "stock" } // Stock mode uses strict filter
+  );
+
   // Use fast browse results if available, otherwise use processed WheelPros results
   const itemsFinal = useFastBrowse && fastItems.length > 0
     ? fastItems
     : (effectiveFitView === "staggered"
-        ? itemsFilteredPrice.filter((w) => Boolean(w.pair?.staggered))
+        ? itemsFilteredBuildType.filter((w) => Boolean(w.pair?.staggered))
         : effectiveFitView === "square"
-          ? itemsFilteredPrice.filter((w) => !w.pair?.staggered)
-          : itemsFilteredPrice);
+          ? itemsFilteredBuildType.filter((w) => !w.pair?.staggered)
+          : itemsFilteredBuildType);
 
   // Paginate styles client-side (we group SKUs into styles).
   const stylesPerPage = 24;
@@ -1110,7 +1142,8 @@ export default async function WheelsPage({
   const basePath = year && make && model ? `/wheels/v/${vehicleSlug(year, make, model)}` : "/wheels";
 
   // URL construction: use 'modification' for fitment identity, omit 'trim' (legacy)
-  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}${fitLevel !== "oem" ? `&fitLevel=${encodeURIComponent(fitLevel)}` : ""}`;
+  // IMPORTANT: buildType is preserved through all filter/pagination changes
+  const qBase = `${basePath}?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}${modification ? `&modification=${encodeURIComponent(modification)}` : ""}${sort ? `&sort=${encodeURIComponent(sort)}` : ""}${effectiveFitView ? `&fitView=${encodeURIComponent(effectiveFitView)}` : ""}${fitLevel !== "oem" ? `&fitLevel=${encodeURIComponent(fitLevel)}` : ""}${buildTypeParam ? `&buildType=${encodeURIComponent(buildTypeParam)}` : ""}`;
 
   // Lifted preset display name for UI
   const liftedPresetLabel = liftedPreset === "daily" ? "Daily Driver" : liftedPreset === "offroad" ? "Off-Road" : liftedPreset === "extreme" ? "Extreme" : liftedPreset;
@@ -1506,6 +1539,19 @@ export default async function WheelsPage({
                 </div>
               ) : null}
             </div>
+
+            {/* ═══════════════════════════════════════════════════════════════════════
+                BUILD STYLE TOGGLE - Guides users to stock/level/lifted results
+                Only shown for trucks/SUVs (cars don't have leveling kit option)
+                ═══════════════════════════════════════════════════════════════════════ */}
+            {hasVehicle && !isLiftedBuild && (
+              <div className="mt-3 rounded-xl border border-neutral-200 bg-white p-4">
+                <BuildStyleToggle 
+                  currentBuildType={buildTypeParam} 
+                  vehicleType={fit?.vehicleType || undefined}
+                />
+              </div>
+            )}
 
             {/* Install & Trust Strip - tighter spacing */}
             {hasVehicle ? (
