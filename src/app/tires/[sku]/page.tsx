@@ -29,6 +29,9 @@ import { getPopularitySignal } from "@/lib/analytics/productPopularity";
 import { TireSizeGuide, TireTypesGuide } from "@/components/BuyingGuides";
 // TPMS contextual upsell (2026-04-06)
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
+// Customers also added (2026-04-06)
+import { CustomersAlsoAdded } from "@/components/CustomersAlsoAdded";
+import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
 
 export const runtime = "nodejs";
 
@@ -387,6 +390,9 @@ export default async function TireDetailPage({
           } catch {
             // Silent fail - no signal is fine
           }
+
+          // Fetch co-add recommendations (non-blocking, cached)
+          const coAddedProducts = await getCoAddedProductsForPDP(tire.partNumber || safeSku, "tire");
           
           return (
             <main className="bg-neutral-50">
@@ -546,6 +552,15 @@ export default async function TireDetailPage({
                       vehicleModel={hasVehicle ? model : null}
                       context="pdp"
                     />
+
+                    {/* Customers also added - real co-purchase data */}
+                    {coAddedProducts.length > 0 && (
+                      <CustomersAlsoAdded
+                        products={coAddedProducts}
+                        context="pdp"
+                        sourceSku={tire.partNumber || safeSku}
+                      />
+                    )}
                   </div>
                 </div>
 
@@ -716,6 +731,9 @@ export default async function TireDetailPage({
     // Silent fail - no signal is fine
   }
 
+  // Fetch co-add recommendations (non-blocking, cached)
+  const coAddedProducts = await getCoAddedProductsForPDP(safeSku, "tire");
+
   // Enrich with tire asset image if needed
   let enrichedImageUrl: string | null = t.image_url || null;
   if (!enrichedImageUrl) {
@@ -885,6 +903,23 @@ export default async function TireDetailPage({
 
             {/* Real behavior-driven popularity signal */}
             <PopularityBadge signal={popularitySignal} />
+
+            {/* TPMS contextual upsell - only for 2007+ vehicles */}
+            <TPMSSuggestion
+              vehicleYear={hasVehicle ? year : null}
+              vehicleMake={hasVehicle ? make : null}
+              vehicleModel={hasVehicle ? model : null}
+              context="pdp"
+            />
+
+            {/* Customers also added - real co-purchase data */}
+            {coAddedProducts.length > 0 && (
+              <CustomersAlsoAdded
+                products={coAddedProducts}
+                context="pdp"
+                sourceSku={safeSku}
+              />
+            )}
           </div>
         </div>
 

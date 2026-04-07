@@ -146,7 +146,11 @@ export default async function CheckoutSuccessPage({
       <CartRecoveryHandler orderId={order.id} />
       
       {/* Google Ads conversion tracking */}
-      <GoogleAdsConversion orderId={order.id} orderTotal={totals.total} />
+      <GoogleAdsConversion 
+        orderId={order.id} 
+        orderTotal={totals.total} 
+        customerEmail={customer.email}
+      />
       
       <div className="mx-auto max-w-3xl px-4 py-8 md:py-12">
         

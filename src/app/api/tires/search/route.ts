@@ -1069,12 +1069,11 @@ export async function GET(req: Request) {
         cacheKey,
         searchFn: async () => {
           // Query all sources in parallel
-          // KM disabled: API key returns "Invalid Security Information" (needs new key from K&M)
-          // TireWeb enabled but may be rate-limited after testing
+          // TireWeb may be rate-limited (ErrorCode 127), K&M provides backup inventory
           const [wpResults, twResults, kmResults] = await Promise.all([
             searchTiresBySize(db, sizeRaw, minQty, pageSize * 2), // Fetch extra for filtering
             searchTiresTireWebFormatted(sizeRaw),
-            Promise.resolve([]), // searchTiresKM disabled until valid API key obtained
+            searchTiresKM(sizeRaw), // K&M/Keystone for additional inventory
           ]);
           
           // Merge and dedupe by partNumber (prefer TireWeb for images)
@@ -1357,9 +1356,10 @@ export async function GET(req: Request) {
               searchTiresTireWebFormatted(size)
                 .then((results) => { twResults.push(...results); })
             );
-            // K&M/Keystone (disabled)
+            // K&M/Keystone
             searchPromises.push(
-              Promise.resolve().then(() => { /* kmResults stays empty */ })
+              searchTiresKM(size)
+                .then((results) => { kmResults.push(...results); })
             );
           }
           

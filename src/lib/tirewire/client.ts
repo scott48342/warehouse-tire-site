@@ -236,7 +236,7 @@ function buildGetTiresRequest(
   groupToken: string,
   connectionId: number,
   tireSize: string, // e.g., "2256016"
-  detailLevel: number = 10 // 0=min, 6=standard, 10=all
+  detailLevel: number = 100 // 0=min, 6=standard, 10=default, 100=all extra data (per TireWeb support)
 ): string {
   return `<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://ws.tirewire.com/connectionscenter/productsservice">

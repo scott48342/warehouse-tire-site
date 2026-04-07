@@ -24,6 +24,9 @@ import { PopularityBadge, type PopularitySignalData } from "@/components/Popular
 import { getPopularitySignal } from "@/lib/analytics/productPopularity";
 // TPMS contextual upsell (2026-04-06)
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
+// Customers also added (2026-04-06)
+import { CustomersAlsoAdded } from "@/components/CustomersAlsoAdded";
+import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
 
 type WheelProsBrand = {
   code?: string;
@@ -364,6 +367,9 @@ export default async function WheelDetailPage({
     // Silent fail - no signal is fine
   }
 
+  // Fetch co-add recommendations (non-blocking, cached)
+  const coAddedProducts = await getCoAddedProductsForPDP(sku, "wheel");
+
   return (
     <main className="bg-neutral-50">
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -512,6 +518,15 @@ export default async function WheelDetailPage({
               vehicleModel={hasVehicle ? model : null}
               context="pdp"
             />
+
+            {/* Customers also added - real co-purchase data */}
+            {coAddedProducts.length > 0 && (
+              <CustomersAlsoAdded
+                products={coAddedProducts}
+                context="pdp"
+                sourceSku={sku}
+              />
+            )}
           </div>
         </div>
 

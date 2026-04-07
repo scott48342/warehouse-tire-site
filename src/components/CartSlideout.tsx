@@ -14,6 +14,7 @@ import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { ZipCodeInput, FreeShippingProgress } from "./ShippingEstimate";
 import { formatCurrency, FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { CartTPMSUpsell } from "./TPMSSuggestion";
+import { CartCoAdditions } from "./CartCoAdditions";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -450,6 +451,13 @@ export function CartSlideout() {
           {(hasTires() || hasWheels()) && (
             <div className="px-1">
               <CartTPMSUpsell />
+            </div>
+          )}
+
+          {/* Customers also added - real co-purchase data */}
+          {(hasTires() || hasWheels()) && (
+            <div className="px-1">
+              <CartCoAdditions />
             </div>
           )}
         </div>
