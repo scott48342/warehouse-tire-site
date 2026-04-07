@@ -419,35 +419,126 @@ function MobileStickyBar({
 // ═══════════════════════════════════════════════════════════════════════════════
 // DYNAMIC PACKAGE ESTIMATE
 // ═══════════════════════════════════════════════════════════════════════════════
+// Shows realistic price ranges based on selected/browsed wheel size
+// Ranges are conservative to avoid scaring users with inflated estimates
+// ═══════════════════════════════════════════════════════════════════════════════
+
+/**
+ * Get tire price estimate range based on wheel diameter
+ * Conservative estimates based on mid-market pricing
+ */
+function getTireEstimateForDiameter(diameter: number | null): { min: number; max: number } {
+  const dia = diameter ?? 17; // Default to 17" if unknown
+  
+  if (dia <= 17) {
+    // 15-17": Budget-friendly sizes
+    return { min: 400, max: 700 }; // ~$100-175/tire
+  } else if (dia <= 18) {
+    // 18": Common upgrade size
+    return { min: 480, max: 800 }; // ~$120-200/tire
+  } else if (dia <= 20) {
+    // 19-20": Popular truck/SUV sizes
+    return { min: 560, max: 960 }; // ~$140-240/tire
+  } else if (dia <= 22) {
+    // 21-22": Larger sizes
+    return { min: 680, max: 1200 }; // ~$170-300/tire
+  } else {
+    // 24"+: Premium sizes
+    return { min: 800, max: 1400 }; // ~$200-350/tire
+  }
+}
+
+/**
+ * Get wheel set price estimate based on diameter
+ * Used when no wheel is selected yet (browsing)
+ */
+function getWheelEstimateForDiameter(diameter: number | null, isLiftedBuild: boolean): { min: number; max: number } {
+  const dia = diameter ?? 17;
+  
+  // Lifted builds typically choose more expensive wheels
+  const liftMultiplier = isLiftedBuild ? 1.3 : 1.0;
+  
+  if (dia <= 17) {
+    return { 
+      min: Math.round(400 * liftMultiplier), 
+      max: Math.round(800 * liftMultiplier) 
+    };
+  } else if (dia <= 18) {
+    return { 
+      min: Math.round(500 * liftMultiplier), 
+      max: Math.round(1000 * liftMultiplier) 
+    };
+  } else if (dia <= 20) {
+    return { 
+      min: Math.round(600 * liftMultiplier), 
+      max: Math.round(1200 * liftMultiplier) 
+    };
+  } else if (dia <= 22) {
+    return { 
+      min: Math.round(800 * liftMultiplier), 
+      max: Math.round(1600 * liftMultiplier) 
+    };
+  } else {
+    return { 
+      min: Math.round(1000 * liftMultiplier), 
+      max: Math.round(2000 * liftMultiplier) 
+    };
+  }
+}
+
 function PackageEstimate({ 
   wheelSetPrice, 
-  isSelected 
+  isSelected,
+  selectedDiameter,
+  isLiftedBuild = false,
 }: { 
   wheelSetPrice: number | null;
   isSelected: boolean;
+  selectedDiameter?: number | null;
+  isLiftedBuild?: boolean;
 }) {
-  // Estimate tire price range
-  // Tire price range estimates
-  const tireEstimateMin = 600; // ~$150/tire
-  const tireEstimateMax = 1200; // ~$300/tire
   // Accessory estimates from centralized pricing
   const tpmsEstimate = TPMS_SET_PRICE_ESTIMATE;
   const installEstimate = MOUNT_BALANCE_ESTIMATE;
+  const accessoriesTotal = tpmsEstimate + installEstimate; // ~$356
   
+  // Get tire estimate based on diameter
+  const tireEstimate = getTireEstimateForDiameter(selectedDiameter ?? null);
+  
+  // When no wheel selected, show estimate based on browsed diameter
   if (wheelSetPrice === null) {
+    const wheelEstimate = getWheelEstimateForDiameter(selectedDiameter ?? null, isLiftedBuild);
+    
+    // Calculate total range
+    const minTotal = wheelEstimate.min + tireEstimate.min + accessoriesTotal;
+    const maxTotal = wheelEstimate.max + tireEstimate.max + accessoriesTotal;
+    
+    // Round to nearest $50
+    const minRounded = Math.round(minTotal / 50) * 50;
+    const maxRounded = Math.round(maxTotal / 50) * 50;
+    
+    // Cap max to avoid scary numbers (unless lifted)
+    const cappedMax = isLiftedBuild 
+      ? maxRounded 
+      : Math.min(maxRounded, selectedDiameter && selectedDiameter >= 22 ? 3500 : 2800);
+    
     return (
       <div className="rounded-xl bg-neutral-100 px-4 py-3">
-        <div className="text-xs font-semibold text-neutral-500">Typical Package Estimate</div>
+        <div className="text-xs font-semibold text-neutral-500">Estimated Price Range</div>
         <div className="text-lg font-extrabold text-neutral-700">
-          $2,500 – $4,500
+          ${minRounded.toLocaleString()} – ${cappedMax.toLocaleString()}
         </div>
-        <div className="text-[11px] text-neutral-500">Wheels + tires + install</div>
+        <div className="text-[11px] text-neutral-500">
+          Wheels + tires + install
+          {selectedDiameter ? ` (${selectedDiameter}" wheels)` : ""}
+        </div>
       </div>
     );
   }
   
-  const minPackage = wheelSetPrice + tireEstimateMin + tpmsEstimate + installEstimate;
-  const maxPackage = wheelSetPrice + tireEstimateMax + tpmsEstimate + installEstimate;
+  // When wheel is selected, calculate based on actual wheel price
+  const minPackage = wheelSetPrice + tireEstimate.min + accessoriesTotal;
+  const maxPackage = wheelSetPrice + tireEstimate.max + accessoriesTotal;
   
   // Round to nearest $50
   const minRounded = Math.round(minPackage / 50) * 50;
@@ -460,7 +551,7 @@ function PackageEstimate({
         : "bg-neutral-100"
     }`}>
       <div className={`text-xs font-semibold ${isSelected ? "text-green-700" : "text-neutral-500"}`}>
-        {isSelected ? "Your Package Estimate" : "Typical Package Estimate"}
+        {isSelected ? "Your Package Estimate" : "Estimated Price Range"}
       </div>
       <div className={`text-lg font-extrabold transition-colors ${
         isSelected ? "text-green-800" : "text-neutral-700"
@@ -1267,11 +1358,19 @@ export function WheelsGridWithSelection({
         </div>
       )}
       
-      {/* Package Estimate - updates dynamically */}
+      {/* Package Estimate - updates dynamically based on wheel size */}
       <div className="mb-4">
         <PackageEstimate 
           wheelSetPrice={selectedWheel?.setPrice ?? null}
           isSelected={!!selectedWheel}
+          selectedDiameter={
+            selectedWheel?.diameter 
+              ? parseInt(String(selectedWheel.diameter), 10) 
+              : diameterParam 
+                ? parseInt(diameterParam, 10) 
+                : stockDiameter
+          }
+          isLiftedBuild={isLiftedBuild}
         />
       </div>
       
