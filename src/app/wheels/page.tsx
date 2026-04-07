@@ -10,6 +10,7 @@ import { PackageSummary } from "@/components/PackageSummary";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
+import { VehicleEntryGate } from "@/components/VehicleEntryGate";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
@@ -1087,6 +1088,18 @@ export default async function WheelsPage({
       productCount: itemsFinal.length,
       productsWithImages: itemsFinal.filter(w => w.imageUrl).length,
     });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // VEHICLE ENTRY GATE - Show YMM selector when no vehicle context
+  // Prevents showing empty product grids and guides users into vehicle selection
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!hasVehicle) {
+    return (
+      <main className="bg-neutral-50">
+        <VehicleEntryGate productType="wheels" packageFlow={isPackageFlow} />
+      </main>
+    );
   }
 
   return (

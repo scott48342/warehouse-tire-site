@@ -13,6 +13,7 @@ import { PackageSummary } from "@/components/PackageSummary";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { TiresGridWithSelection } from "@/components/TiresGridWithSelection";
 import { TirePageCompactHeader } from "@/components/TirePageCompactHeader";
+import { VehicleEntryGate } from "@/components/VehicleEntryGate";
 import {
   generatePlusSizeCandidates,
   generateAftermarketTireSizes,
@@ -2099,6 +2100,18 @@ export default async function TiresPage({
 
   // Lifted preset display name for UI
   const liftedPresetLabel = liftedPreset === "daily" ? "Daily Driver" : liftedPreset === "offroad" ? "Off-Road" : liftedPreset === "extreme" ? "Extreme" : liftedPreset;
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // VEHICLE ENTRY GATE - Show YMM selector when no vehicle context
+  // Prevents showing empty product grids and guides users into vehicle selection
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!hasVehicle) {
+    return (
+      <main className="bg-neutral-50">
+        <VehicleEntryGate productType="tires" packageFlow={isPackageFlow} />
+      </main>
+    );
+  }
 
   return (
     <main className="bg-neutral-50">
