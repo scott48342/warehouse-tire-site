@@ -13,10 +13,9 @@ type WheelFilterData = {
   finishes: string[];
   diameters: string[];
   widths: string[];
+  offsets?: string[];
   priceMin: number | null;
   priceMax: number | null;
-  offsetMin: number | null;
-  offsetMax: number | null;
   boltPattern: string;
   
   // Available options with counts
@@ -24,6 +23,7 @@ type WheelFilterData = {
   finishOptions: Array<{ value: string; count?: number }>;
   diameterOptions: Array<{ value: string; count?: number }>;
   widthOptions: Array<{ value: string; count?: number }>;
+  offsetOptions?: Array<{ value: string; count?: number }>;
   boltPatternOptions: Array<{ value: string; count?: number }>;
   
   // Context
@@ -260,10 +260,9 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
     finish: null,
     diameter: null,
     width: null,
+    offset: null,
     priceMin: null,
     priceMax: null,
-    offsetMin: null,
-    offsetMax: null,
     boltPattern: null,
   });
 
@@ -408,19 +407,19 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
       <AccordionSection
         title="Offset (mm)"
         defaultOpen={false}
-        selectedCount={(data.offsetMin ? 1 : 0) + (data.offsetMax ? 1 : 0)}
+        selectedCount={(data.offsets || []).length}
+        hidden={!data.offsetOptions || data.offsetOptions.length === 0}
       >
-        <div className="grid grid-cols-2 gap-2">
-          <RangeInput
-            placeholder="min"
-            value={data.offsetMin?.toString() ?? ""}
-            onChange={(v) => navigate({ offsetMin: v || null })}
-          />
-          <RangeInput
-            placeholder="max"
-            value={data.offsetMax?.toString() ?? ""}
-            onChange={(v) => navigate({ offsetMax: v || null })}
-          />
+        <div className="max-h-48 overflow-y-auto space-y-0.5">
+          {(data.offsetOptions || []).map((opt) => (
+            <FilterCheckbox
+              key={opt.value}
+              label={`${Number(opt.value) >= 0 ? "+" : ""}${opt.value}mm`}
+              checked={(data.offsets || []).includes(opt.value)}
+              count={opt.count}
+              onChange={() => toggleArrayFilter("offset", data.offsets || [], opt.value)}
+            />
+          ))}
         </div>
       </AccordionSection>
     </div>

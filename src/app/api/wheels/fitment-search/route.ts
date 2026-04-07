@@ -29,6 +29,13 @@ import {
 } from "@/lib/aftermarketFitment";
 
 import {
+  calculateFitmentGuidance,
+  type FitmentGuidance,
+  type FitmentLevel,
+  type BuildRequirement,
+} from "@/lib/fitment/guidance";
+
+import {
   isClassicVehicle,
   getClassicFitment,
 } from "@/lib/classic-fitment/classicLookup";
@@ -1013,15 +1020,52 @@ async function handleDbFirstWheelResults(opts: {
     const v = validateWheel(wheelSpec, envelope);
     if (v.fitmentClass === "excluded") continue;
     
-    // HARD diameter filter: Exclude wheels outside the allowed diameter range
+    // ═══════════════════════════════════════════════════════════════════════
+    // DIAMETER HANDLING (April 2026 Update)
+    // 
+    // Diameter is now a RANKING SIGNAL with a SAFETY FLOOR, not a hard filter.
+    // validateWheel() classifies wheels as surefit/specfit/extended based on
+    // how close they are to OEM, but does NOT exclude based on diameter alone.
+    // 
+    // SAFETY FLOOR: We enforce a minimum based on vehicle type to prevent
+    // brake clearance issues:
+    // - Trucks (6-lug): max(17, OEM - 3) - can't go below 17" due to brake size
+    // - SUVs: max(17, OEM - 2)
+    // - Cars: max(15, OEM - 2) - smaller brakes allow smaller wheels
+    // 
+    // MAXIMUM: We allow generous upsizing (OEM + 8) but cap at 30" sanity check
+    // ═══════════════════════════════════════════════════════════════════════
     if (wheelSpec.diameter !== undefined) {
       const wheelDia = Number(wheelSpec.diameter);
-      if (wheelDia < envelope.allowedMinDiameter || wheelDia > envelope.allowedMaxDiameter) {
+      
+      // Sanity check: reject obviously invalid diameters (data errors)
+      if (wheelDia < 14 || wheelDia > 30) {
+        continue;
+      }
+      
+      // SAFETY FLOOR: Prevent dangerously small wheels based on vehicle type
+      // This prevents showing 15" wheels on trucks that need 17"+ for brake clearance
+      const isTruckOrSuv = opts.vehicleType === "truck" || opts.vehicleType === "suv" ||
+        envelope.boltPattern.startsWith("6x") || envelope.boltPattern.startsWith("8x");
+      
+      let safetyFloor: number;
+      if (isTruckOrSuv) {
+        // Trucks/SUVs: minimum 17" or OEM-3", whichever is larger
+        safetyFloor = Math.max(17, envelope.oemMinDiameter - 3);
+      } else {
+        // Cars: minimum 15" or OEM-2", whichever is larger
+        safetyFloor = Math.max(15, envelope.oemMinDiameter - 2);
+      }
+      
+      // Safety ceiling: OEM + 8" or 28", whichever is smaller
+      const safetyCeiling = Math.min(28, envelope.oemMaxDiameter + 8);
+      
+      if (wheelDia < safetyFloor || wheelDia > safetyCeiling) {
         continue;
       }
     }
     
-    // User-provided offset range filter (HARD filter)
+    // User-provided offset range filter (HARD filter - user explicitly requested)
     if (hasUserOffsetFilter && wheelSpec.offset !== undefined) {
       const wheelOffset = Number(wheelSpec.offset);
       if (Number.isFinite(wheelOffset)) {
@@ -1146,24 +1190,43 @@ async function handleDbFirstWheelResults(opts: {
     else if (TIER_2_BRANDS.has(brandCode)) brandTierScore = 75;
     
     // 3. Fitment Quality Score (0-100, weight: 20%)
+    // UPDATED (April 2026): OEM sizes get explicit boost, but extended sizes still shown
     let fitmentQualityScore = 50;
     const wheelDiameter = Number(c.diameter) || 0;
     const wheelOffset = Number(c.offset) || 0;
+    const wheelWidth = Number(c.width) || 0;
     
-    // Diameter: prefer near OEM midpoint
+    // Check if wheel is within OEM ranges (for priority ranking)
+    const isOemDiameter = wheelDiameter >= envelope.oemMinDiameter && wheelDiameter <= envelope.oemMaxDiameter;
+    const isOemWidth = wheelWidth >= envelope.oemMinWidth && wheelWidth <= envelope.oemMaxWidth;
+    const isOemOffset = wheelOffset >= envelope.oemMinOffset && wheelOffset <= envelope.oemMaxOffset;
+    
+    // Diameter scoring: OEM gets highest score, near-OEM is good, extended is acceptable
     if (wheelDiameter > 0) {
-      const diameterDiff = Math.abs(wheelDiameter - oemMidDiameter);
-      if (diameterDiff <= 1) fitmentQualityScore = 100;
-      else if (diameterDiff <= 2) fitmentQualityScore = 85;
-      else if (diameterDiff <= 3) fitmentQualityScore = 65;
-      else fitmentQualityScore = 45;
+      if (isOemDiameter) {
+        // OEM diameter: highest priority
+        fitmentQualityScore = 100;
+      } else {
+        // Extended diameter: score based on distance from OEM range
+        const distFromOem = wheelDiameter < envelope.oemMinDiameter
+          ? envelope.oemMinDiameter - wheelDiameter
+          : wheelDiameter - envelope.oemMaxDiameter;
+        
+        if (distFromOem <= 1) fitmentQualityScore = 80;       // +1" from OEM = good
+        else if (distFromOem <= 2) fitmentQualityScore = 65;  // +2" = acceptable
+        else if (distFromOem <= 4) fitmentQualityScore = 50;  // +3-4" = standard
+        else fitmentQualityScore = 35;                         // >4" = lower priority
+      }
     }
     
-    // Offset bonus for near midpoint
-    if (c.offset != null) {
+    // Width/Offset bonus: boost if within OEM ranges
+    if (isOemWidth) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
+    if (isOemOffset) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
+    
+    // Offset bonus for near midpoint (additional refinement)
+    if (c.offset != null && !isOemOffset) {
       const offsetDiff = Math.abs(wheelOffset - oemMidOffset);
-      if (offsetDiff <= 5) fitmentQualityScore = Math.min(100, fitmentQualityScore + 10);
-      else if (offsetDiff <= 15) fitmentQualityScore = Math.min(100, fitmentQualityScore + 5);
+      if (offsetDiff <= 15) fitmentQualityScore = Math.min(100, fitmentQualityScore + 3);
     }
     
     // 4. Visual Quality Score (0-100, weight: 15%)
@@ -1748,6 +1811,38 @@ async function handleDbFirstWheelResults(opts: {
             }
           : {}),
       },
+      // ═══════════════════════════════════════════════════════════════════════
+      // FITMENT GUIDANCE (2026-04-07)
+      // Provides user-friendly labels without hiding/blocking results
+      // ═══════════════════════════════════════════════════════════════════════
+      fitmentGuidance: (() => {
+        const wheelDia = Number(c.diameter) || 0;
+        const wheelWidth = Number(c.width) || 0;
+        const wheelOffset = Number(c.offset) || 0;
+        
+        if (wheelDia > 0 && wheelWidth > 0) {
+          const guidance = calculateFitmentGuidance(
+            { diameter: wheelDia, width: wheelWidth, offset: wheelOffset },
+            {
+              minDiameter: envelope.oemMinDiameter,
+              maxDiameter: envelope.oemMaxDiameter,
+              minWidth: envelope.oemMinWidth,
+              maxWidth: envelope.oemMaxWidth,
+              minOffset: envelope.oemMinOffset,
+              maxOffset: envelope.oemMaxOffset,
+              vehicleType: opts.vehicleType,
+            }
+          );
+          return {
+            level: guidance.level,
+            levelLabel: guidance.levelLabel,
+            buildRequirement: guidance.buildRequirement,
+            buildLabel: guidance.buildLabel,
+            ...(debug ? { reasoning: guidance.reasoning } : {}),
+          };
+        }
+        return null;
+      })(),
       // Availability with label
       availability: {
         ...availabilityData,
@@ -1817,6 +1912,92 @@ async function handleDbFirstWheelResults(opts: {
       boltPattern: e.candidate.bolt_pattern_standard,
     },
   })));
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // ADD FITMENT CATEGORIES TO SIZE FACETS (April 2026)
+  // Categorize sizes as "recommended" (within safe envelope) or "extended"
+  // This allows UI to show extended sizes in a separate section
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  // Calculate safe/recommended range for trucks vs cars
+  const isTruckOrSuv = opts.vehicleType === "truck" || opts.vehicleType === "suv" ||
+    envelope.boltPattern.startsWith("6x") || envelope.boltPattern.startsWith("8x");
+  
+  // Recommended diameter range (matches safety floor/ceiling logic)
+  const recommendedMinDia = isTruckOrSuv 
+    ? Math.max(17, envelope.oemMinDiameter - 3)
+    : Math.max(15, envelope.oemMinDiameter - 2);
+  const recommendedMaxDia = Math.min(28, envelope.oemMaxDiameter + 6);
+  
+  // Recommended width range
+  const recommendedMinWidth = envelope.oemMinWidth - 1;
+  const recommendedMaxWidth = envelope.oemMaxWidth + 3;
+  
+  if (facets.wheel_diameter?.buckets) {
+    // Categorize each diameter bucket
+    const categorized = facets.wheel_diameter.buckets.map((bucket: { value: string; count: number }) => {
+      const diaNum = parseFloat(bucket.value);
+      const isOem = !isNaN(diaNum) && diaNum >= envelope.oemMinDiameter && diaNum <= envelope.oemMaxDiameter;
+      const isRecommended = !isNaN(diaNum) && diaNum >= recommendedMinDia && diaNum <= recommendedMaxDia;
+      
+      return {
+        ...bucket,
+        isOem,
+        // "recommended" = within safe envelope, "extended" = outside but still compatible
+        fitmentCategory: isRecommended ? "recommended" : "extended",
+        label: isOem ? `${bucket.value}" ★` : `${bucket.value}"`,
+      };
+    });
+    
+    // Sort: recommended sizes first (by diameter), then extended sizes (by diameter)
+    const recommended = categorized.filter((b: any) => b.fitmentCategory === "recommended")
+      .sort((a: any, b: any) => parseFloat(a.value) - parseFloat(b.value));
+    const extended = categorized.filter((b: any) => b.fitmentCategory === "extended")
+      .sort((a: any, b: any) => parseFloat(a.value) - parseFloat(b.value));
+    
+    facets.wheel_diameter.buckets = [...recommended, ...extended];
+    
+    // Add metadata for UI to render section headers
+    (facets.wheel_diameter as any).sections = {
+      recommended: {
+        label: "Recommended Fitment",
+        count: recommended.length,
+        totalResults: recommended.reduce((sum: number, b: any) => sum + b.count, 0),
+      },
+      extended: extended.length > 0 ? {
+        label: "Extended Fitment",
+        description: "Compatible sizes beyond factory specs",
+        count: extended.length,
+        totalResults: extended.reduce((sum: number, b: any) => sum + b.count, 0),
+      } : null,
+    };
+  }
+  
+  // Also enhance width facet with categories
+  if (facets.width?.buckets) {
+    const categorized = facets.width.buckets.map((bucket: { value: string; count: number }) => {
+      const widNum = parseFloat(bucket.value);
+      const isOem = !isNaN(widNum) && widNum >= envelope.oemMinWidth && widNum <= envelope.oemMaxWidth;
+      const isRecommended = !isNaN(widNum) && widNum >= recommendedMinWidth && widNum <= recommendedMaxWidth;
+      
+      return {
+        ...bucket,
+        isOem,
+        fitmentCategory: isRecommended ? "recommended" : "extended",
+      };
+    });
+    
+    const recommended = categorized.filter((b: any) => b.fitmentCategory === "recommended")
+      .sort((a: any, b: any) => parseFloat(a.value) - parseFloat(b.value));
+    const extended = categorized.filter((b: any) => b.fitmentCategory === "extended")
+      .sort((a: any, b: any) => parseFloat(a.value) - parseFloat(b.value));
+    
+    facets.width.buckets = [...recommended, ...extended];
+    (facets.width as any).sections = {
+      recommended: { label: "Recommended", count: recommended.length },
+      extended: extended.length > 0 ? { label: "Extended Fitment", count: extended.length } : null,
+    };
+  }
   
   // Calculate ranking statistics for response
   const top20 = rankedCandidates.slice(0, 20);
@@ -1931,6 +2112,13 @@ async function handleDbFirstWheelResults(opts: {
           diameter: [envelope.allowedMinDiameter, envelope.allowedMaxDiameter],
           width: [envelope.allowedMinWidth, envelope.allowedMaxWidth],
           offset: [envelope.allowedMinOffset, envelope.allowedMaxOffset],
+        },
+        // Recommended fitment summary for UI display (human-readable)
+        recommended: {
+          diameter: `${recommendedMinDia}" to ${recommendedMaxDia}"`,
+          width: `${recommendedMinWidth}" to ${recommendedMaxWidth}"`,
+          offset: `${envelope.allowedMinOffset}mm to ${envelope.allowedMaxOffset}mm`,
+          boltPattern: envelope.boltPattern,
         },
       },
       userOffsetFilter: hasUserOffsetFilter ? {

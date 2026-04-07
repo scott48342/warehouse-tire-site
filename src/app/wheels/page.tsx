@@ -18,6 +18,7 @@ import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diamete
 import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
 import { getIndexingDecision, buildPageIndexingData, getRobotsContent } from "@/lib/seo";
 import { SeoContentBlock } from "@/components/SeoContentBlock";
+import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -42,6 +43,13 @@ type Wheel = {
     staggered: boolean;
     front: { sku: string; diameter?: string; width?: string; offset?: string };
     rear?: { sku: string; diameter?: string; width?: string; offset?: string };
+  };
+  // Fitment guidance (2026-04-07)
+  fitmentGuidance?: {
+    level: FitmentLevel;
+    levelLabel: string;
+    buildRequirement: BuildRequirement;
+    buildLabel: string;
   };
 };
 
@@ -229,6 +237,12 @@ export default async function WheelsPage({
   const boltPatternParam = (Array.isArray(sp.boltPattern) ? sp.boltPattern[0] : sp.boltPattern) || "";
   const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || "";
   const finish = (Array.isArray(sp.finish) ? sp.finish[0] : sp.finish) || "";
+  
+  // Offset filter - supports multiple values via checkbox selection
+  const offsetParamRaw = sp.offset;
+  const offsetParams: string[] = Array.isArray(offsetParamRaw) 
+    ? offsetParamRaw.filter(Boolean) 
+    : (offsetParamRaw ? [offsetParamRaw] : []);
 
   const priceMinRaw = (Array.isArray(sp.priceMin) ? sp.priceMin[0] : sp.priceMin) || "";
   const priceMaxRaw = (Array.isArray(sp.priceMax) ? sp.priceMax[0] : sp.priceMax) || "";
@@ -684,6 +698,15 @@ export default async function WheelsPage({
     // Extract staggered pair info from fitment-search API response
     const pair = (it as any)?.pair;
 
+    // Extract fitment guidance from API response (2026-04-07)
+    const fitmentGuidanceRaw = (it as any)?.fitmentGuidance;
+    const fitmentGuidance = fitmentGuidanceRaw ? {
+      level: fitmentGuidanceRaw.level as FitmentLevel,
+      levelLabel: fitmentGuidanceRaw.levelLabel || "",
+      buildRequirement: fitmentGuidanceRaw.buildRequirement as BuildRequirement,
+      buildLabel: fitmentGuidanceRaw.buildLabel || "",
+    } : undefined;
+
     return {
       sku: it?.sku,
       brand,
@@ -702,6 +725,7 @@ export default async function WheelsPage({
       styleKey,
       fitmentClass,
       pair,
+      fitmentGuidance,
     };
   });
 
@@ -730,6 +754,7 @@ export default async function WheelsPage({
     fitmentClass: g.fitmentClass,
     pair: g.pair,
     finishThumbs: g.finishOptions,
+    fitmentGuidance: g.fitmentGuidance,
   }));
 
   // Sort by fitmentClass first (surefit > specfit > extended), then by user's sort preference
@@ -798,24 +823,15 @@ export default async function WheelsPage({
     return true;
   });
 
-  // NOTE: Offset filtering is now handled by the fitment engine (fitment-search endpoint).
-  // The engine classifies wheels as surefit/specfit/extended based on offset and other specs.
-  // We only apply client-side offset filtering when the USER explicitly sets offset filters.
-  // This ensures specfit and extended wheels are shown (not just surefit/OEM-range).
-  const minOffN2 = typeof minOffsetFinal === "string" ? Number(minOffsetFinal) : NaN;
-  const maxOffN2 = typeof maxOffsetFinal === "string" ? Number(maxOffsetFinal) : NaN;
-
-  // Only apply offset filter if user EXPLICITLY set offset range (offsetMinUser/offsetMaxUser)
-  const shouldApplyOffsetFilter = hasVehicle && (offsetMinUser != null || offsetMaxUser != null) &&
-    Number.isFinite(minOffN2) && Number.isFinite(maxOffN2);
-
-  const itemsFilteredOffset = shouldApplyOffsetFilter
+  // NOTE: Offset filtering uses checkbox selection (multiple values).
+  // User can select specific offsets from the available facets.
+  // This replaces the old min/max range approach for better UX.
+  const itemsFilteredOffset = offsetParams.length > 0
     ? itemsFilteredBasic.filter((w) => {
         const raw = String(w.offset || "").trim();
         if (!raw) return false;
-        const n = Number(raw);
-        if (!Number.isFinite(n)) return false;
-        return n >= minOffN2 && n <= maxOffN2;
+        // Match if wheel's offset is in the selected offsets list
+        return offsetParams.includes(raw);
       })
     : itemsFilteredBasic;
 
@@ -979,6 +995,32 @@ export default async function WheelsPage({
     const bNum = parseFloat(b.value);
     return aNum - bNum;
   });
+  // Sort offset buckets numerically (smallest/most negative to largest/most positive)
+  // IMPORTANT: Recalculate counts from grouped results (not raw SKUs) so facet counts match displayed cards
+  const offsetBucketsRaw = buckets("offset");
+  const offsetBuckets = (() => {
+    // Count offsets from grouped/filtered results (itemsFilteredBasic = after grouping + diameter/width filters)
+    const groupedOffsetCounts = new Map<string, number>();
+    for (const w of itemsFilteredBasic) {
+      const off = String(w.offset || "").trim();
+      if (off) {
+        groupedOffsetCounts.set(off, (groupedOffsetCounts.get(off) || 0) + 1);
+      }
+    }
+    
+    // Update counts in offset buckets, filter out zeros
+    return offsetBucketsRaw
+      .map((b: { value: string; count?: number }) => ({
+        value: b.value,
+        count: groupedOffsetCounts.get(b.value) || 0,
+      }))
+      .filter((b: { value: string; count: number }) => b.count > 0)
+      .sort((a: { value: string; count: number }, b: { value: string; count: number }) => {
+        const aNum = parseFloat(a.value);
+        const bNum = parseFloat(b.value);
+        return aNum - bNum;
+      });
+  })();
   const boltPatternBuckets = buckets("bolt_pattern_metric");
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1346,10 +1388,9 @@ export default async function WheelsPage({
                 finishes: finish ? [finish] : [],
                 diameters: diameterParam ? [diameterParam] : [],
                 widths: widthParam ? [widthParam] : [],
+                offsets: offsetParams,
                 priceMin: priceMin,
                 priceMax: priceMax,
-                offsetMin: offsetMinRaw ? Number(offsetMinRaw) : null,
-                offsetMax: offsetMaxRaw ? Number(offsetMaxRaw) : null,
                 boltPattern: boltPatternParam || "",
                 
                 // Available options with counts
@@ -1357,6 +1398,7 @@ export default async function WheelsPage({
                 finishOptions: finishBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 diameterOptions: diameterBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 widthOptions: widthBuckets.slice(0, 30).map(b => ({ value: b.value, count: b.count ?? undefined })),
+                offsetOptions: offsetBuckets.slice(0, 50).map(b => ({ value: b.value, count: b.count ?? undefined })),
                 boltPatternOptions: boltPatternBuckets.map(b => ({ value: b.value, count: b.count ?? undefined })),
                 
                 // Context

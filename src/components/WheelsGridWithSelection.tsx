@@ -7,6 +7,7 @@ import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForA
 import { TPMS_SET_PRICE_ESTIMATE, MOUNT_BALANCE_ESTIMATE } from "@/lib/pricing/accessoryEstimates";
 import { FitmentDiameterChips, type DiameterOption } from "./FitmentDiameterChips";
 import { useCart, type CartWheelItem } from "@/lib/cart/CartContext";
+import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
 
 // Add gtag type for analytics
 declare global {
@@ -37,6 +38,13 @@ export type WheelItem = {
   finishThumbs?: WheelFinishThumb[];
   pair?: WheelPair;
   boltPattern?: string;
+  // Fitment guidance (2026-04-07)
+  fitmentGuidance?: {
+    level: FitmentLevel;
+    levelLabel: string;
+    buildRequirement: BuildRequirement;
+    buildLabel: string;
+  };
 };
 
 export type SelectedWheel = {
@@ -1288,6 +1296,9 @@ export function WheelsGridWithSelection({
           viewParams={viewParams}
           dbProfile={dbProfile}
           wheelCenterBore={w.centerbore ? Number(w.centerbore) : undefined}
+          // Fitment guidance (2026-04-07)
+          fitmentLevel={w.fitmentGuidance?.level}
+          buildRequirement={w.fitmentGuidance?.buildRequirement}
           // Selection props
           isSelected={isSelected}
           hasSelection={!!selectedWheel}

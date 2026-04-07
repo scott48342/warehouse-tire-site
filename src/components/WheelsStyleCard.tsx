@@ -10,6 +10,13 @@ import {
   safeAutoAddAccessories, 
   logAccessoryEvent 
 } from "@/lib/cart/accessoryAutoAdd";
+import {
+  type FitmentLevel,
+  type BuildRequirement,
+} from "@/lib/fitment/guidance";
+import {
+  FitmentGuidanceStrip,
+} from "@/components/FitmentGuidanceBadges";
 
 export type WheelFinishThumb = {
   finish: string;
@@ -316,6 +323,9 @@ export function WheelsStyleCard({
   stockDiameter,
   socialProof,
   ctaVariant = "A",
+  // Fitment guidance props (2026-04-07)
+  fitmentLevel,
+  buildRequirement,
   // Selection state props
   isSelected = false,
   hasSelection = false,
@@ -348,6 +358,9 @@ export function WheelsStyleCard({
   stockDiameter?: number;
   socialProof?: SocialProofConfig;
   ctaVariant?: CTAVariant;
+  // Fitment guidance props (2026-04-07)
+  fitmentLevel?: FitmentLevel;
+  buildRequirement?: BuildRequirement;
   // Selection state props
   isSelected?: boolean;
   hasSelection?: boolean;
@@ -650,9 +663,9 @@ export function WheelsStyleCard({
         )}
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            SIZE CONTEXT (Stock vs Upgraded)
+            SIZE CONTEXT (Stock vs Upgraded) - Deprecated, replaced by Fitment Guidance
             ═══════════════════════════════════════════════════════════════════════ */}
-        {sizeContext && (
+        {!fitmentLevel && sizeContext && (
           <div className={`mt-2 flex items-center gap-1.5 text-xs font-medium ${
             sizeContext.type === "stock" ? "text-green-700" : "text-blue-700"
           }`}>
@@ -662,6 +675,21 @@ export function WheelsStyleCard({
               {sizeContext.icon}
             </span>
             {sizeContext.text}
+          </div>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            FITMENT GUIDANCE BADGES (2026-04-07)
+            Shows: Perfect Fit / Recommended / Popular Upgrade / Aggressive Fitment
+            Plus: Works with Stock / Requires Level / Requires Lift / May Require Trimming
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {fitmentLevel && (
+          <div className="mt-2">
+            <FitmentGuidanceStrip
+              level={fitmentLevel}
+              buildRequirement={buildRequirement || "stock"}
+              variant="compact"
+            />
           </div>
         )}
 

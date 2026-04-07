@@ -239,8 +239,22 @@ export function autoDetectFitmentMode(
 // EXPANSION RULE PRESETS
 // ─────────────────────────────────────────────────────────────────────────────
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// EXPANSION PRESETS - GLOBAL FITMENT ENVELOPE (April 2026 Update)
+// 
+// These presets define the SAFE envelope for aftermarket wheel fitment.
+// OEM sizes are used for RANKING (priority), NOT for HARD FILTERING.
+// 
+// Philosophy:
+// - Show ALL safely compatible wheel sizes
+// - Rank OEM/near-OEM sizes higher
+// - Let customers see their options
+// - Never compromise safety (bolt pattern, center bore, load rating)
+// ═══════════════════════════════════════════════════════════════════════════════
+
 export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
   oem: {
+    // OEM-only mode: strict OEM sizing for exact replacement
     diameterPlusMin: 0,
     diameterPlusMax: 0,
     widthPlusMin: 0,
@@ -250,37 +264,40 @@ export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
   },
   
   aftermarket_safe: {
-    // Common aftermarket sizing: +2" diameter, +1" width, ±10mm offset
-    diameterPlusMin: 0,
-    diameterPlusMax: 2,
-    widthPlusMin: 0,
-    widthPlusMax: 1,
-    offsetExpandLow: 10,   // allow 10mm lower offset
-    offsetExpandHigh: 10,  // allow 10mm higher offset
+    // UPDATED (April 2026): Expanded to show more compatible sizes
+    // Safe aftermarket sizing for sedans, coupes, crossovers
+    // OEM sizes ranked higher but not hard-filtered
+    diameterPlusMin: -1,   // allow 1" smaller (e.g., 17" on 18" OEM car)
+    diameterPlusMax: 4,    // allow up to +4" (22" on 18" OEM)
+    widthPlusMin: -0.5,    // allow slightly narrower
+    widthPlusMax: 2,       // allow up to +2" wider
+    offsetExpandLow: 25,   // allow 25mm lower offset (mild poke)
+    offsetExpandHigh: 15,  // allow 15mm higher offset (tucked)
   },
   
   aggressive: {
-    // Truck/enthusiast fitment: +4" diameter, +3" width, very wide offset range
-    // Allows aggressive poke/stance for lifted trucks
+    // UPDATED (April 2026): Enthusiast fitment with wider range
+    // For sport compacts, muscle cars, enthusiast builds
     // NOTE: diameterPlusMin is ignored - we NEVER allow below OEM minimum
-    diameterPlusMin: 0,    // OEM minimum is the floor (safety)
-    diameterPlusMax: 4,
-    widthPlusMin: -0.5,    // allow slightly narrower
-    widthPlusMax: 3,
-    offsetExpandLow: 60,   // allow VERY low offset (aggressive poke, -26mm etc)
-    offsetExpandHigh: 20,  // allow higher offset (tucked)
+    diameterPlusMin: -1,   // allow 1" smaller
+    diameterPlusMax: 6,    // allow up to +6" (26" on 20" OEM)
+    widthPlusMin: -1,      // allow narrower
+    widthPlusMax: 4,       // allow up to +4" wider
+    offsetExpandLow: 70,   // allow aggressive poke
+    offsetExpandHigh: 25,  // allow tucked
   },
   
   truck: {
-    // Maximum flexibility for truck/SUV builds - matches Wheel Pros YMM behavior
-    // Essentially allows any wheel with correct bolt pattern and center bore
+    // UPDATED (April 2026): Maximum flexibility for truck/SUV builds
+    // Matches Wheel Pros YMM behavior - shows all compatible options
+    // Safety maintained via bolt pattern, center bore, and load rating
     // NOTE: diameterPlusMin is ignored - we NEVER allow below OEM minimum
-    diameterPlusMin: 0,    // OEM minimum is the floor (safety)
-    diameterPlusMax: 6,    // allow up to +6" (26" on 20" OEM)
+    diameterPlusMin: -1,   // allow 1" smaller (rare but valid)
+    diameterPlusMax: 8,    // allow up to +8" (28" on 20" OEM for lifted)
     widthPlusMin: -1,      // allow narrower
-    widthPlusMax: 5,       // allow up to 14" wide wheels
-    offsetExpandLow: 100,  // allow extreme negative offset (-56mm etc)
-    offsetExpandHigh: 30,  // allow higher offset
+    widthPlusMax: 6,       // allow up to 15"+ wide wheels
+    offsetExpandLow: 120,  // allow extreme negative offset (-76mm etc for lifted)
+    offsetExpandHigh: 35,  // allow higher offset
   },
 };
 
