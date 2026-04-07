@@ -5,6 +5,7 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import type { TreadCategory, MileageBand } from "@/lib/tires/normalization";
 import { TireTypesGuide } from "@/components/BuyingGuides";
+import { SearchableBrandFilter, PopularBrandBadges } from "./SearchableBrandFilter";
 
 /* =============================================================================
    TYPES
@@ -375,41 +376,24 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Brand Section */}
+      {/* Brand Section - Searchable with counts */}
       <AccordionSection
         title="Brand"
         selectedCount={data.brands.length}
         hidden={data.brandOptions.length === 0}
       >
-        <div className="space-y-0.5 max-h-64 overflow-y-auto">
-          {data.brandOptions.slice(0, 10).map(({ value, count }) => (
-            <FilterCheckbox
-              key={value}
-              label={value}
-              checked={data.brands.includes(value)}
-              count={count}
-              onChange={() => toggleArrayFilter("brand", value, data.brands)}
-            />
-          ))}
-          {data.brandOptions.length > 10 && (
-            <details className="mt-2">
-              <summary className="cursor-pointer text-xs font-semibold text-neutral-500 hover:text-neutral-900">
-                Show {data.brandOptions.length - 10} more brands
-              </summary>
-              <div className="mt-2 space-y-0.5">
-                {data.brandOptions.slice(10).map(({ value, count }) => (
-                  <FilterCheckbox
-                    key={value}
-                    label={value}
-                    checked={data.brands.includes(value)}
-                    count={count}
-                    onChange={() => toggleArrayFilter("brand", value, data.brands)}
-                  />
-                ))}
-              </div>
-            </details>
-          )}
-        </div>
+        <PopularBrandBadges
+          brands={data.brandOptions.map(b => ({ code: b.value, name: b.value, count: b.count }))}
+          selectedBrands={data.brands}
+          onToggle={(code) => toggleArrayFilter("brand", code, data.brands)}
+          maxShow={6}
+        />
+        <SearchableBrandFilter
+          brands={data.brandOptions.map(b => ({ code: b.value, name: b.value, count: b.count }))}
+          selectedBrands={data.brands}
+          onToggle={(code) => toggleArrayFilter("brand", code, data.brands)}
+          maxVisible={10}
+        />
       </AccordionSection>
       
       {/* Price Section */}

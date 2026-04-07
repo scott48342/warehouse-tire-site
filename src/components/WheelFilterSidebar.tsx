@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { SearchableBrandFilter, PopularBrandBadges } from "./SearchableBrandFilter";
 
 /* =============================================================================
    TYPES
@@ -308,23 +309,24 @@ export function WheelFilterSidebar({ data }: { data: WheelFilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Brand */}
+      {/* Brand - Searchable with counts */}
       <AccordionSection
         title="Brand"
         defaultOpen={true}
         selectedCount={data.brands.length}
       >
-        <div className="max-h-48 overflow-y-auto space-y-0.5">
-          {data.brandOptions.slice(0, 30).map((brand) => (
-            <FilterCheckbox
-              key={brand.code}
-              label={brand.desc}
-              checked={data.brands.includes(brand.code)}
-              count={brand.count}
-              onChange={() => toggleArrayFilter("brand_cd", data.brands, brand.code)}
-            />
-          ))}
-        </div>
+        <PopularBrandBadges
+          brands={data.brandOptions.map(b => ({ code: b.code, name: b.desc, count: b.count }))}
+          selectedBrands={data.brands}
+          onToggle={(code) => toggleArrayFilter("brand_cd", data.brands, code)}
+          maxShow={6}
+        />
+        <SearchableBrandFilter
+          brands={data.brandOptions.map(b => ({ code: b.code, name: b.desc, count: b.count }))}
+          selectedBrands={data.brands}
+          onToggle={(code) => toggleArrayFilter("brand_cd", data.brands, code)}
+          maxVisible={10}
+        />
       </AccordionSection>
       
       {/* Diameter */}
