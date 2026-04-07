@@ -170,46 +170,43 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
   // 1. Different trim OPTIONS (Camry: 16", 17", 18", 19" - all square, same width)
   // 2. Mislabeled staggered (Corvette C8: 19x8.5 front + 20x11 rear marked as "both")
   //
-  // HEURISTIC: If we have exactly 2 sizes with DIFFERENT diameters OR widths differ by 1"+,
-  // it's likely staggered with mislabeled axle data. Smaller = front, larger = rear.
+  // HEURISTIC: Only infer staggered if WIDTHS differ by 1"+.
+  // Different diameters alone are OEM options, NOT staggered.
+  // True staggered (Corvette, Mustang GT, Camaro ZL1) ALWAYS has different widths.
+  //
+  // IMPORTANT FIX (2026-04-06): Removed diameterDiff check that was causing false positives
+  // on trucks like Silverado 2500HD where 17"/18" are just trim options with same 8" width.
   if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
-    // Check for implicit staggered: exactly 2 specs with significant differences
-    if (bothSpecs.length === 2) {
-      const [spec1, spec2] = bothSpecs;
-      const diameterDiff = spec1.diameter !== spec2.diameter;
-      const widthDiff = Math.abs(spec1.width - spec2.width) >= 1; // 1" or more width difference
+    // Check for implicit staggered: significant WIDTH difference indicates staggered
+    // We check all pairs to catch cases where >2 specs exist but 2 of them are staggered
+    const sortedByWidth = [...bothSpecs].sort((a, b) => a.width - b.width);
+    const narrowest = sortedByWidth[0];
+    const widest = sortedByWidth[sortedByWidth.length - 1];
+    const widthDiff = Math.abs(widest.width - narrowest.width) >= 1; // 1" or more width difference
+    
+    if (widthDiff) {
+      // Width difference indicates staggered - narrower = front, wider = rear
+      const frontInferred = narrowest;
+      const rearInferred = widest;
       
-      if (diameterDiff || widthDiff) {
-        // Infer front/rear: smaller diameter/width = front, larger = rear
-        // (typical staggered: wider/larger wheels go on rear)
-        const frontInferred = spec1.width < spec2.width || (spec1.width === spec2.width && spec1.diameter < spec2.diameter)
-          ? spec1
-          : spec2;
-        const rearInferred = frontInferred === spec1 ? spec2 : spec1;
-        
-        const reasons: string[] = [];
-        if (diameterDiff) reasons.push(`diameter (F:${frontInferred.diameter}" R:${rearInferred.diameter}")`);
-        if (widthDiff) reasons.push(`width (F:${frontInferred.width}" R:${rearInferred.width}")`);
-        
-        console.log(`[detectStaggeredFromParsed] INFERRED STAGGERED: 2 specs with ${reasons.join(", ")} marked as "both" - likely mislabeled staggered`);
-        
-        return {
-          isStaggered: true,
-          reason: `Different front/rear (inferred from spec differences): ${reasons.join(", ")}`,
-          frontSpec: {
-            diameter: frontInferred.diameter,
-            width: frontInferred.width,
-            offset: frontInferred.offset,
-            tireSize: frontInferred.tireSize,
-          },
-          rearSpec: {
-            diameter: rearInferred.diameter,
-            width: rearInferred.width,
-            offset: rearInferred.offset,
-            tireSize: rearInferred.tireSize,
-          },
-        };
-      }
+      console.log(`[detectStaggeredFromParsed] INFERRED STAGGERED: width difference ${narrowest.width}" vs ${widest.width}" (axles marked as "both")`);
+      
+      return {
+        isStaggered: true,
+        reason: `Different front/rear (inferred from width): width (F:${frontInferred.width}" R:${rearInferred.width}")`,
+        frontSpec: {
+          diameter: frontInferred.diameter,
+          width: frontInferred.width,
+          offset: frontInferred.offset,
+          tireSize: frontInferred.tireSize,
+        },
+        rearSpec: {
+          diameter: rearInferred.diameter,
+          width: rearInferred.width,
+          offset: rearInferred.offset,
+          tireSize: rearInferred.tireSize,
+        },
+      };
     }
     
     // True square fitment: all specs are "both" and no significant differences

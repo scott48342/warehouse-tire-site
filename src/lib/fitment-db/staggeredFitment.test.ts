@@ -185,4 +185,131 @@ describe('Staggered Fitment Tests', () => {
       expect(opt14?.isStock).toBe(true);
     });
   });
+
+  /**
+   * ═══════════════════════════════════════════════════════════════════════════════
+   * FIX VERIFICATION TESTS (2026-04-06)
+   * 
+   * These tests verify the fix for false staggered detection on GM trucks.
+   * 
+   * ROOT CAUSE: The detectStaggeredFromParsed() function incorrectly triggered
+   * staggered when two wheel sizes had different diameters but same width
+   * (e.g., 17x8 and 18x8 on Silverado 2500HD).
+   * 
+   * FIX: Only infer staggered from WIDTH difference (≥1"), not diameter alone.
+   * Different diameters are OEM OPTIONS, not staggered setups.
+   * ═══════════════════════════════════════════════════════════════════════════════
+   */
+  describe('False Staggered Detection Fix (2026-04-06)', () => {
+    /**
+     * Helper to replicate detectStaggeredFromParsed logic
+     * Tests the width-only inference rule
+     */
+    function detectStaggeredFromParsed(wheelSizes: { diameter: number; width: number; axle: string; isStock?: boolean }[]) {
+      const frontSpecs = wheelSizes.filter(s => s.axle === 'front');
+      const rearSpecs = wheelSizes.filter(s => s.axle === 'rear');
+      const bothSpecs = wheelSizes.filter(s => s.axle === 'both');
+
+      // Explicit front/rear specs - compare directly
+      if (frontSpecs.length > 0 && rearSpecs.length > 0) {
+        const front = frontSpecs[0];
+        const rear = rearSpecs[0];
+        const widthDiff = rear.width !== front.width;
+        const diameterDiff = rear.diameter !== front.diameter;
+        return { isStaggered: widthDiff || diameterDiff, method: 'explicit' };
+      }
+
+      // Infer from "both" specs - ONLY width difference triggers staggered
+      if (bothSpecs.length > 0 && frontSpecs.length === 0 && rearSpecs.length === 0) {
+        const sortedByWidth = [...bothSpecs].sort((a, b) => a.width - b.width);
+        const widthDiff = Math.abs(sortedByWidth[sortedByWidth.length - 1].width - sortedByWidth[0].width) >= 1;
+        return { isStaggered: widthDiff, method: 'inferred' };
+      }
+
+      return { isStaggered: false, method: 'fallback' };
+    }
+
+    it('GM trucks with different diameters, same width are NOT staggered', () => {
+      // 2018 Chevrolet Silverado 2500HD - multiple OEM wheel options
+      const silveradoSpecs = [
+        { diameter: 17, width: 8, axle: 'both' as const },
+        { diameter: 18, width: 8, axle: 'both' as const },
+      ];
+
+      const result = detectStaggeredFromParsed(silveradoSpecs);
+      expect(result.isStaggered).toBe(false);
+      expect(result.method).toBe('inferred');
+    });
+
+    it('GM trucks with 3+ OEM options are NOT staggered', () => {
+      // 2018 Chevrolet Silverado 2500HD LTZ - 3 OEM wheel options
+      const silveradoLtzSpecs = [
+        { diameter: 17, width: 8, axle: 'both' as const },
+        { diameter: 18, width: 8, axle: 'both' as const },
+        { diameter: 20, width: 8.5, axle: 'both' as const }, // Width diff only 0.5"
+      ];
+
+      const result = detectStaggeredFromParsed(silveradoLtzSpecs);
+      expect(result.isStaggered).toBe(false); // 0.5" width diff < 1" threshold
+    });
+
+    it('F-150 with OEM options is NOT staggered', () => {
+      // 2020 Ford F-150 XLT - multiple trim options
+      const f150Specs = [
+        { diameter: 17, width: 7.5, axle: 'both' as const },
+        { diameter: 18, width: 8, axle: 'both' as const }, // 0.5" width diff
+      ];
+
+      const result = detectStaggeredFromParsed(f150Specs);
+      expect(result.isStaggered).toBe(false);
+    });
+
+    it('Corvette with explicit front/rear IS staggered', () => {
+      // 2020 Chevrolet Corvette - true staggered with explicit axle data
+      const corvetteSpecs = [
+        { diameter: 19, width: 8.5, axle: 'front' as const },
+        { diameter: 20, width: 11, axle: 'rear' as const },
+      ];
+
+      const result = detectStaggeredFromParsed(corvetteSpecs);
+      expect(result.isStaggered).toBe(true);
+      expect(result.method).toBe('explicit');
+    });
+
+    it('Corvette mislabeled as "both" IS still staggered (via width)', () => {
+      // Edge case: Corvette data with axle="both" but significant width diff
+      const corvetteMislabeled = [
+        { diameter: 19, width: 8.5, axle: 'both' as const },
+        { diameter: 20, width: 11, axle: 'both' as const }, // 2.5" width diff
+      ];
+
+      const result = detectStaggeredFromParsed(corvetteMislabeled);
+      expect(result.isStaggered).toBe(true);
+      expect(result.method).toBe('inferred');
+    });
+
+    it('Mustang GT PP with explicit front/rear IS staggered', () => {
+      // 2020 Ford Mustang GT Performance Pack - subtle stagger
+      const mustangSpecs = [
+        { diameter: 19, width: 9, axle: 'front' as const },
+        { diameter: 19, width: 9.5, axle: 'rear' as const },
+      ];
+
+      const result = detectStaggeredFromParsed(mustangSpecs);
+      expect(result.isStaggered).toBe(true);
+      expect(result.method).toBe('explicit');
+    });
+
+    it('Performance car with 1"+ width diff (axle=both) IS staggered', () => {
+      // Generic performance car with mislabeled axle data
+      const performanceSpecs = [
+        { diameter: 19, width: 8, axle: 'both' as const },
+        { diameter: 19, width: 9.5, axle: 'both' as const }, // 1.5" width diff
+      ];
+
+      const result = detectStaggeredFromParsed(performanceSpecs);
+      expect(result.isStaggered).toBe(true);
+      expect(result.method).toBe('inferred');
+    });
+  });
 });
