@@ -177,18 +177,20 @@ export function buildDiameterOptions({
       }
     }
     
-    // ALWAYS show common truck/SUV upsizes even if not in current facets
+    // ALWAYS show common wheel sizes even if not in current facets
     // This prevents chips from disappearing when a filter is applied
     // (Facets only return filtered results, so we need to show options regardless)
-    const commonUpsizes = [17, 18, 20, 22, 24, 26];
-    for (const dia of commonUpsizes) {
-      if (!options.has(dia) && dia >= minOemDia - 2) {
+    // Note: We don't restrict by minOemDia because that value gets corrupted when
+    // filters are applied (facets only return filtered diameters).
+    const commonSizes = [17, 18, 19, 20, 22, 24, 26];
+    for (const dia of commonSizes) {
+      if (!options.has(dia)) {
         const count = inventoryCounts.get(dia);
         options.set(dia, {
           diameter: dia,
           label: `${dia}"`,
           isStock: false,
-          isUpsize: dia > minOemDia,
+          isUpsize: true,
           hasInventory: count !== undefined ? count > 0 : undefined,
           count,
         });
