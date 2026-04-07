@@ -66,6 +66,11 @@ import {
   type PackagePriorityTier,
 } from "@/lib/packagePrioritization";
 
+import {
+  normalizeFinish,
+  sortFinishes,
+} from "@/lib/finishNormalization";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -959,7 +964,11 @@ async function handleDbFirstWheelResults(opts: {
   // Apply basic DB-level filters (cheap, no I/O)
   const filteredCandidates = candidates.filter((c) => {
     if (brandCd && c.brand_cd && c.brand_cd !== brandCd) return false;
-    if (finish && c.abbreviated_finish_desc && String(c.abbreviated_finish_desc) !== String(finish)) return false;
+    // Normalize candidate finish and compare with filter value
+    if (finish) {
+      const candidateFinish = normalizeFinish(c.fancy_finish_desc, c.abbreviated_finish_desc);
+      if (candidateFinish !== finish) return false;
+    }
     if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
     if (width && c.width && Number(c.width) !== Number(width)) return false;
 
@@ -1715,7 +1724,9 @@ async function handleDbFirstWheelResults(opts: {
       properties: {
         brand_cd: c.brand_cd,
         brand_desc: c.brand_desc,
-        abbreviated_finish_desc: c.abbreviated_finish_desc,
+        // Use normalized finish for filtering/display, keep raw for reference
+        abbreviated_finish_desc: normalizeFinish(c.fancy_finish_desc, c.abbreviated_finish_desc),
+        fancy_finish_desc: c.fancy_finish_desc,
         diameter: c.diameter,
         width: c.width,
         offset: c.offset,
@@ -1797,7 +1808,8 @@ async function handleDbFirstWheelResults(opts: {
     properties: {
       brand_cd: e.candidate.brand_cd,
       brand_desc: e.candidate.brand_desc,
-      abbreviated_finish_desc: e.candidate.abbreviated_finish_desc,
+      // Use normalized finish for facets
+      abbreviated_finish_desc: normalizeFinish(e.candidate.fancy_finish_desc, e.candidate.abbreviated_finish_desc),
       diameter: e.candidate.diameter,
       width: e.candidate.width,
       offset: e.candidate.offset,
@@ -2281,10 +2293,11 @@ function buildFacets(wheels: any[]) {
         .map(({ code, count }) => ({ value: code, count })),
     },
     // Finish facet - page uses buckets("abbreviated_finish_desc")
+    // Now uses normalized finish values with logical sorting
     abbreviated_finish_desc: {
-      buckets: Array.from(finishes.entries())
-        .sort((a, b) => b[1] - a[1])
-        .map(([value, count]) => ({ value, count })),
+      buckets: sortFinishes(
+        Array.from(finishes.entries()).map(([value, count]) => ({ value, count }))
+      ),
     },
     // Diameter facet - page uses buckets("wheel_diameter")
     wheel_diameter: {
