@@ -1205,6 +1205,19 @@ export async function GET(req: Request) {
       }
       
       // ═══════════════════════════════════════════════════════════════════════
+      // BRAND FILTER (size mode)
+      // Apply brand filter if provided in size-based searches
+      // ═══════════════════════════════════════════════════════════════════════
+      const brandFilter = (url.searchParams.get("brand") || "").trim();
+      if (brandFilter) {
+        const beforeCount = finalResults.length;
+        finalResults = finalResults.filter(t => 
+          (t.brand || "").toLowerCase() === brandFilter.toLowerCase()
+        );
+        console.log(`[tires/search] Brand filter "${brandFilter}": ${beforeCount} → ${finalResults.length} results`);
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════════
       // SUPPLIER PRIORITIZATION (size mode)
       // Standard: TireWeb first | Package: WheelPros boosted
       // ═══════════════════════════════════════════════════════════════════════
@@ -1241,6 +1254,7 @@ export async function GET(req: Request) {
         results: finalResults.slice(0, pageSize),
         mode: "size",
         size: sizeRaw,
+        ...(brandFilter && { brand: brandFilter }),
         sources: cacheResult.sources,
         cache: {
           hit: cacheResult.source === "cache",
@@ -1263,8 +1277,8 @@ export async function GET(req: Request) {
     }
     
     // Case 2: Brand-only search (no size or vehicle required)
-    const brandFilter = (url.searchParams.get("brand") || "").trim();
-    if (brandFilter && !year && !make && !model) {
+    const brandFilterOnly = (url.searchParams.get("brand") || "").trim();
+    if (brandFilterOnly && !year && !make && !model) {
       const tBrand0 = Date.now();
       
       // Query WheelPros database for tires matching the brand
@@ -1285,7 +1299,7 @@ export async function GET(req: Request) {
         limit $3
       `;
       
-      const { rows: brandRows } = await db.query(brandQuery, [brandFilter, minQty || 4, pageSize * 2]);
+      const { rows: brandRows } = await db.query(brandQuery, [brandFilterOnly, minQty || 4, pageSize * 2]);
       
       let brandResults: TireResult[] = brandRows.map((r: any) => {
         const size = String(r.tire_size || "").trim();
@@ -1344,7 +1358,7 @@ export async function GET(req: Request) {
       return NextResponse.json({
         results: finalBrandResults.slice(0, pageSize),
         mode: "brand",
-        brand: brandFilter,
+        brand: brandFilterOnly,
         imageFiltering: {
           totalBeforeFilter: brandImageStats.total,
           validImages: brandImageStats.valid,
