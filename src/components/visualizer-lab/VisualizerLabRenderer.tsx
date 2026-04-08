@@ -68,13 +68,27 @@ export function VisualizerLabRenderer({
 
   // Calculate effective values
   const stanceProfile = familyConfig.stanceProfiles[stanceMode];
-  const { baseDiameter, pixelsPerInch } = familyConfig.wheelScaling;
   
-  // Calculate wheel size change from base
-  const diameterDelta = wheelDiameter - baseDiameter;
-  const radiusDelta = (diameterDelta * pixelsPerInch) / 2;
+  // ─────────────────────────────────────────────────────────────────────────
+  // WHEEL-TO-TIRE RATIO MAPPING
+  // Maps wheel diameter to what % of tire outer diameter the wheel occupies.
+  // Larger wheel = larger ratio = thinner sidewall
+  // ─────────────────────────────────────────────────────────────────────────
+  const WHEEL_TO_TIRE_RATIO: Record<number, number> = {
+    17: 0.68,  // 32% sidewall - thick (off-road look)
+    18: 0.72,  // 28% sidewall - slightly thick
+    20: 0.78,  // 22% sidewall - baseline
+    22: 0.84,  // 16% sidewall - thinner
+    24: 0.89,  // 11% sidewall - low profile
+    26: 0.93,  // 7% sidewall - very low profile
+  };
   
-  // Calculate effective anchors with overrides
+  // Get wheel-to-tire ratio for selected diameter (default to 0.78 if unknown)
+  const wheelToTireRatio = WHEEL_TO_TIRE_RATIO[wheelDiameter] ?? 0.78;
+  
+  // Calculate effective anchors with NEW sizing logic:
+  // - tireOuterRadius: stable, based on anchor (represents the wheel well size)
+  // - wheelVisualRadius: varies based on wheel diameter ratio
   const effectiveAnchors = useMemo(() => {
     const frontBase = familyConfig.anchors.frontWheel;
     const rearBase = familyConfig.anchors.rearWheel;
@@ -82,20 +96,33 @@ export function VisualizerLabRenderer({
     const baseWheelScale = stanceProfile.wheelScale * overrides.wheelScale;
     const effectiveBodyYOffset = stanceProfile.bodyYOffset + overrides.bodyYOffset;
     
+    // Tire outer radius stays STABLE (based on anchor, not wheel diameter)
+    // This represents the overall tire size for the build
+    const frontTireOuterRadius = (frontBase.radius + (overrides.frontWheel.radius ?? 0)) * baseWheelScale;
+    const rearTireOuterRadius = (rearBase.radius + (overrides.rearWheel.radius ?? 0)) * baseWheelScale;
+    
+    // Wheel visual radius CHANGES based on selected diameter
+    // Larger wheel = higher ratio = wheel takes up more of the tire
+    const frontWheelVisualRadius = frontTireOuterRadius * wheelToTireRatio;
+    const rearWheelVisualRadius = rearTireOuterRadius * wheelToTireRatio;
+    
     return {
       front: {
         x: frontBase.x + (overrides.frontWheel.x ?? 0),
         y: frontBase.y + (overrides.frontWheel.y ?? 0) + effectiveBodyYOffset,
-        radius: (frontBase.radius + radiusDelta + (overrides.frontWheel.radius ?? 0)) * baseWheelScale,
+        radius: frontWheelVisualRadius,  // This is now the WHEEL radius
+        tireRadius: frontTireOuterRadius, // NEW: separate tire outer radius
       },
       rear: {
         x: rearBase.x + (overrides.rearWheel.x ?? 0),
         y: rearBase.y + (overrides.rearWheel.y ?? 0) + effectiveBodyYOffset,
-        radius: (rearBase.radius + radiusDelta + (overrides.rearWheel.radius ?? 0)) * baseWheelScale,
+        radius: rearWheelVisualRadius,
+        tireRadius: rearTireOuterRadius,
       },
       bodyYOffset: effectiveBodyYOffset,
+      wheelToTireRatio, // Expose for debug display
     };
-  }, [familyConfig, stanceProfile, overrides, radiusDelta]);
+  }, [familyConfig, stanceProfile, overrides, wheelToTireRatio]);
 
   // Store anchors in ref for use in event handlers
   const anchorsRef = useRef(effectiveAnchors);
@@ -407,14 +434,14 @@ export function VisualizerLabRenderer({
 
     // Draw contact shadows FIRST (beneath everything)
     if (showTire) {
-      drawContactShadow(ctx, effectiveAnchors.front, tireScale);
-      drawContactShadow(ctx, effectiveAnchors.rear, tireScale);
+      drawContactShadow(ctx, effectiveAnchors.front);
+      drawContactShadow(ctx, effectiveAnchors.rear);
     }
 
     // Draw tire layers BEHIND wheels (if enabled)
     if (showTire) {
-      drawTire(ctx, effectiveAnchors.front, tireScale, tireImgRef.current);
-      drawTire(ctx, effectiveAnchors.rear, tireScale, tireImgRef.current);
+      drawTire(ctx, effectiveAnchors.front, tireImgRef.current);
+      drawTire(ctx, effectiveAnchors.rear, tireImgRef.current);
     }
 
     // Draw wheel overlays ON TOP of tires (with inset for depth)
@@ -464,16 +491,16 @@ export function VisualizerLabRenderer({
    */
   const drawContactShadow = (
     ctx: CanvasRenderingContext2D,
-    wheelAnchor: { x: number; y: number; radius: number },
-    tireScaleFactor: number
+    anchor: { x: number; y: number; radius: number; tireRadius: number }
   ) => {
-    const tireRadius = wheelAnchor.radius * tireScaleFactor;
-    const { x, y } = wheelAnchor;
+    // Use the stable tire outer radius (not wheel radius)
+    const tireOuterRadius = anchor.tireRadius * tireScale; // Apply tireScale for overall size tuning
+    const { x, y } = anchor;
     
     // Shadow positioned at bottom of tire
-    const shadowY = y + tireRadius * 0.92; // Slightly inside tire bottom
-    const shadowWidth = tireRadius * 1.1;
-    const shadowHeight = tireRadius * 0.15;
+    const shadowY = y + tireOuterRadius * 0.92; // Slightly inside tire bottom
+    const shadowWidth = tireOuterRadius * 1.1;
+    const shadowHeight = tireOuterRadius * 0.15;
     
     ctx.save();
     
@@ -498,24 +525,28 @@ export function VisualizerLabRenderer({
   /**
    * Draw tire behind wheel.
    * Uses tire image if provided, otherwise draws a programmatic tire with realistic shading.
+   * 
+   * NEW: anchor.tireRadius = stable tire outer size
+   *      anchor.radius = wheel visual size (varies by diameter)
    */
   const drawTire = (
     ctx: CanvasRenderingContext2D,
-    wheelAnchor: { x: number; y: number; radius: number },
-    scale: number,
+    anchor: { x: number; y: number; radius: number; tireRadius: number },
     tireImg: HTMLImageElement | null
   ) => {
-    const tireRadius = wheelAnchor.radius * scale;
-    const innerRadius = wheelAnchor.radius * WHEEL_INSET; // Match wheel inset
-    const { x, y } = wheelAnchor;
+    // Tire outer radius is STABLE (from anchor.tireRadius), with optional tireScale tuning
+    const tireOuterRadius = anchor.tireRadius * tireScale;
+    // Wheel inner radius varies by selected diameter
+    const wheelInnerRadius = anchor.radius * WHEEL_INSET;
+    const { x, y } = anchor;
 
     if (tireImg) {
       // Draw tire image
-      const size = tireRadius * 2;
+      const size = tireOuterRadius * 2;
       ctx.drawImage(
         tireImg,
-        x - tireRadius,
-        y - tireRadius,
+        x - tireOuterRadius,
+        y - tireOuterRadius,
         size,
         size
       );
@@ -525,8 +556,8 @@ export function VisualizerLabRenderer({
       
       // Create radial gradient for tire body (darker outer edge, lighter inner)
       const tireGradient = ctx.createRadialGradient(
-        x, y, innerRadius,
-        x, y, tireRadius
+        x, y, wheelInnerRadius,
+        x, y, tireOuterRadius
       );
       tireGradient.addColorStop(0, "#2a2a2a");    // Lighter inner (near wheel)
       tireGradient.addColorStop(0.3, "#222222");  // Mid-tone
@@ -535,16 +566,19 @@ export function VisualizerLabRenderer({
       
       // Draw tire body with gradient
       ctx.beginPath();
-      ctx.arc(x, y, tireRadius, 0, Math.PI * 2);
+      ctx.arc(x, y, tireOuterRadius, 0, Math.PI * 2);
       ctx.fillStyle = tireGradient;
       ctx.fill();
       
       // Subtle tread texture (very light concentric lines)
+      // More lines when sidewall is thicker
       ctx.strokeStyle = "rgba(40, 40, 40, 0.5)";
       ctx.lineWidth = 1;
-      const treadStart = innerRadius + (tireRadius - innerRadius) * 0.3;
-      const treadEnd = tireRadius - 4;
-      for (let r = treadStart; r < treadEnd; r += 6) {
+      const sidewallThickness = tireOuterRadius - wheelInnerRadius;
+      const treadStart = wheelInnerRadius + sidewallThickness * 0.25;
+      const treadEnd = tireOuterRadius - 4;
+      const treadSpacing = Math.max(4, sidewallThickness * 0.15); // Adjust spacing based on sidewall
+      for (let r = treadStart; r < treadEnd; r += treadSpacing) {
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI * 2);
         ctx.stroke();
@@ -552,26 +586,26 @@ export function VisualizerLabRenderer({
       
       // Outer edge highlight (subtle rubber lip)
       ctx.beginPath();
-      ctx.arc(x, y, tireRadius - 1, 0, Math.PI * 2);
+      ctx.arc(x, y, tireOuterRadius - 1, 0, Math.PI * 2);
       ctx.strokeStyle = "rgba(50, 50, 50, 0.8)";
       ctx.lineWidth = 2;
       ctx.stroke();
       
       // Inner edge shadow (where tire meets wheel rim)
       ctx.beginPath();
-      ctx.arc(x, y, innerRadius + 1, 0, Math.PI * 2);
+      ctx.arc(x, y, wheelInnerRadius + 1, 0, Math.PI * 2);
       ctx.strokeStyle = "rgba(0, 0, 0, 0.6)";
       ctx.lineWidth = 3;
       ctx.stroke();
       
       // Very subtle sidewall highlight (top portion catches light)
-      const highlightGradient = ctx.createLinearGradient(x, y - tireRadius, x, y);
+      const highlightGradient = ctx.createLinearGradient(x, y - tireOuterRadius, x, y);
       highlightGradient.addColorStop(0, "rgba(60, 60, 60, 0.15)");
       highlightGradient.addColorStop(0.5, "rgba(60, 60, 60, 0)");
       highlightGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
       
       ctx.beginPath();
-      ctx.arc(x, y, tireRadius - 2, 0, Math.PI * 2);
+      ctx.arc(x, y, tireOuterRadius - 2, 0, Math.PI * 2);
       ctx.fillStyle = highlightGradient;
       ctx.fill();
       
@@ -654,14 +688,21 @@ export function VisualizerLabRenderer({
   const drawDebugOverlays = (
     ctx: CanvasRenderingContext2D,
     anchors: {
-      front: { x: number; y: number; radius: number };
-      rear: { x: number; y: number; radius: number };
+      front: { x: number; y: number; radius: number; tireRadius: number };
+      rear: { x: number; y: number; radius: number; tireRadius: number };
       bodyYOffset: number;
+      wheelToTireRatio: number;
     }
   ) => {
+    // Calculate sidewall info
+    const frontTireOuter = anchors.front.tireRadius * tireScale;
+    const frontWheelInner = anchors.front.radius * WHEEL_INSET;
+    const frontSidewall = frontTireOuter - frontWheelInner;
+    const sidewallPct = Math.round((1 - anchors.wheelToTireRatio) * 100);
+    
     // Info panel
     ctx.fillStyle = "rgba(0, 0, 0, 0.85)";
-    ctx.fillRect(10, 10, 320, 220);
+    ctx.fillRect(10, 10, 340, 280);
     ctx.fillStyle = "#fff";
     ctx.font = "14px monospace";
     ctx.textAlign = "left";
@@ -670,17 +711,21 @@ export function VisualizerLabRenderer({
       `Family: ${familyConfig.familyId}`,
       `Stance: ${stanceMode}`,
       `Wheel: ${wheelDiameter}"`,
-      `Body Y: ${anchors.bodyYOffset.toFixed(1)}px`,
       "",
-      `Front: (${Math.round(anchors.front.x)}, ${Math.round(anchors.front.y)}) r=${anchors.front.radius.toFixed(1)}`,
-      `Rear:  (${Math.round(anchors.rear.x)}, ${Math.round(anchors.rear.y)}) r=${anchors.rear.radius.toFixed(1)}`,
+      `── TIRE SIZING ──`,
+      `Wheel/Tire Ratio: ${(anchors.wheelToTireRatio * 100).toFixed(0)}%`,
+      `Sidewall: ${sidewallPct}% (${frontSidewall.toFixed(0)}px)`,
+      `Tire Outer: ${frontTireOuter.toFixed(0)}px`,
+      `Wheel Visual: ${frontWheelInner.toFixed(0)}px`,
+      "",
+      `Front: (${Math.round(anchors.front.x)}, ${Math.round(anchors.front.y)})`,
+      `Rear:  (${Math.round(anchors.rear.x)}, ${Math.round(anchors.rear.y)})`,
       "",
       `Selected: ${selectedWheel ?? "none"}`,
-      selectedWheel ? "Arrow keys: move | +/-: resize" : "Click wheel to select",
     ];
 
     lines.forEach((line, i) => {
-      ctx.fillText(line, 20, 30 + i * 20);
+      ctx.fillText(line, 20, 30 + i * 18);
     });
   };
 
