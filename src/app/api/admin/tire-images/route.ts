@@ -1,9 +1,13 @@
 /**
  * Admin API for tire model images
  * Manages brand+model → image mappings
+ * 
+ * When updating images, pass clearSizes=["33125022","2256517"] to auto-clear
+ * the tire search cache for those sizes.
  */
 import { NextResponse } from "next/server";
 import pg from "pg";
+import { clearSizeCache } from "@/lib/tires/searchCache";
 
 const { Pool } = pg;
 
@@ -73,7 +77,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { brand, model_pattern, image_url } = body;
+    const { brand, model_pattern, image_url, clearSizes } = body;
     
     if (!brand || !model_pattern || !image_url) {
       return NextResponse.json(
@@ -93,9 +97,21 @@ export async function POST(req: Request) {
       RETURNING id, brand, model_pattern, image_url, created_at
     `, [brand.trim(), model_pattern.trim(), image_url.trim()]);
     
+    // Auto-clear caches for specified sizes
+    const clearedCaches: string[] = [];
+    if (Array.isArray(clearSizes)) {
+      for (const size of clearSizes) {
+        if (typeof size === 'string' && size.trim()) {
+          const cleared = await clearSizeCache(size.trim());
+          if (cleared) clearedCaches.push(size.trim());
+        }
+      }
+    }
+    
     return NextResponse.json({
       success: true,
       item: rows[0],
+      clearedCaches,
     });
   } catch (err: any) {
     console.error("[admin/tire-images] POST error:", err);
@@ -107,7 +123,7 @@ export async function POST(req: Request) {
 export async function PUT(req: Request) {
   try {
     const body = await req.json();
-    const { id, image_url } = body;
+    const { id, image_url, clearSizes } = body;
     
     if (!id || !image_url) {
       return NextResponse.json(
@@ -129,9 +145,21 @@ export async function PUT(req: Request) {
       return NextResponse.json({ error: "Image not found" }, { status: 404 });
     }
     
+    // Auto-clear caches for specified sizes
+    const clearedCaches: string[] = [];
+    if (Array.isArray(clearSizes)) {
+      for (const size of clearSizes) {
+        if (typeof size === 'string' && size.trim()) {
+          const cleared = await clearSizeCache(size.trim());
+          if (cleared) clearedCaches.push(size.trim());
+        }
+      }
+    }
+    
     return NextResponse.json({
       success: true,
       item: rows[0],
+      clearedCaches,
     });
   } catch (err: any) {
     console.error("[admin/tire-images] PUT error:", err);

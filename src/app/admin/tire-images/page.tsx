@@ -48,6 +48,10 @@ export default function TireImagesAdminPage() {
   // Inline editing
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editingUrl, setEditingUrl] = useState("");
+  
+  // Cache clearing
+  const [clearCacheSize, setClearCacheSize] = useState("");
+  const [clearingCache, setClearingCache] = useState(false);
 
   // Fetch tire models from WheelPros database
   const fetchModels = useCallback(async () => {
@@ -227,6 +231,31 @@ export default function TireImagesAdminPage() {
     }
   };
 
+  const handleClearCache = async () => {
+    if (!clearCacheSize.trim()) {
+      alert("Enter a tire size to clear (e.g., 33125022 or 225/65R17)");
+      return;
+    }
+    
+    setClearingCache(true);
+    try {
+      const res = await fetch(`/api/admin/cache/tire-search?size=${encodeURIComponent(clearCacheSize.trim())}`, {
+        method: "POST",
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) throw new Error(data.error || "Failed to clear cache");
+      
+      setSaveMessage({ type: "success", text: `Cache cleared for ${clearCacheSize}` });
+      setClearCacheSize("");
+    } catch (err: any) {
+      alert(`Error: ${err.message}`);
+    } finally {
+      setClearingCache(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-neutral-50">
       {/* Fixed Header */}
@@ -289,6 +318,25 @@ export default function TireImagesAdminPage() {
             >
               {saving ? "..." : "Add"}
             </button>
+            
+            {/* Cache Clear */}
+            <div className="flex items-center gap-1 ml-4 pl-4 border-l border-neutral-300">
+              <input
+                type="text"
+                placeholder="Size to clear cache"
+                value={clearCacheSize}
+                onChange={(e) => setClearCacheSize(e.target.value)}
+                className="w-40 rounded-lg border border-neutral-300 px-2 py-1.5 text-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+              />
+              <button
+                type="button"
+                onClick={handleClearCache}
+                disabled={clearingCache}
+                className="rounded-lg bg-orange-500 px-3 py-1.5 text-sm font-bold text-white hover:bg-orange-600 disabled:opacity-50"
+              >
+                {clearingCache ? "..." : "Clear Cache"}
+              </button>
+            </div>
           </form>
           
           {saveMessage && (
