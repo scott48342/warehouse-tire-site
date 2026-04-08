@@ -31,6 +31,7 @@ interface VisualizerLabControlsProps {
   onOverridesChange: (overrides: VisualizerLabControlsProps["overrides"]) => void;
   onExportConfig: () => void;
   onResetOverrides: () => void;
+  onLoadConfig?: () => void;
 }
 
 // Slider + Input combo for precise control
@@ -166,6 +167,7 @@ export function VisualizerLabControls({
   onOverridesChange,
   onExportConfig,
   onResetOverrides,
+  onLoadConfig,
 }: VisualizerLabControlsProps) {
   const updateOverride = <K extends keyof typeof overrides>(
     key: K,
@@ -353,18 +355,28 @@ export function VisualizerLabControls({
       </div>
 
       {/* Actions */}
-      <div className="flex gap-2 pt-4 border-t border-neutral-700">
-        <button
-          onClick={onExportConfig}
-          className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
-        >
-          📋 Export Config
-        </button>
+      <div className="flex flex-col gap-2 pt-4 border-t border-neutral-700">
+        <div className="flex gap-2">
+          <button
+            onClick={onExportConfig}
+            className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+          >
+            📋 Export
+          </button>
+          {onLoadConfig && (
+            <button
+              onClick={onLoadConfig}
+              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+            >
+              📂 Load
+            </button>
+          )}
+        </div>
         <button
           onClick={onResetOverrides}
-          className="px-4 py-2 bg-neutral-700 text-neutral-300 rounded-lg font-medium hover:bg-neutral-600 transition"
+          className="w-full px-4 py-2 bg-neutral-700 text-neutral-300 rounded-lg font-medium hover:bg-neutral-600 transition"
         >
-          Reset
+          Reset to Defaults
         </button>
       </div>
     </div>

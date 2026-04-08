@@ -108,7 +108,51 @@ export default function VisualizerLabPage() {
   // Reset overrides
   const handleResetOverrides = useCallback(() => {
     setOverrides(DEFAULT_OVERRIDES);
+    setTireScale(1.02);
   }, []);
+
+  // Load config state
+  const [showLoadModal, setShowLoadModal] = useState(false);
+  const [loadConfigText, setLoadConfigText] = useState("");
+  const [loadError, setLoadError] = useState<string | null>(null);
+
+  // Load config handler
+  const handleLoadConfig = useCallback(() => {
+    setLoadError(null);
+    
+    try {
+      const parsed = JSON.parse(loadConfigText);
+      
+      // Support both old format (direct familyConfig) and new format (nested)
+      const config = parsed.familyConfig || parsed;
+      const settings = parsed.visualizerSettings;
+      const savedOverrides = parsed.overrides;
+      
+      // Apply overrides if present
+      if (savedOverrides) {
+        setOverrides({
+          wheelScale: savedOverrides.wheelScale ?? 1.0,
+          bodyYOffset: savedOverrides.bodyYOffset ?? 0,
+          frontWheel: savedOverrides.frontWheel ?? {},
+          rearWheel: savedOverrides.rearWheel ?? {},
+        });
+      }
+      
+      // Apply visualizer settings if present
+      if (settings) {
+        if (settings.tireScale) setTireScale(settings.tireScale);
+        if (settings.wheelDiameter) setWheelDiameter(settings.wheelDiameter as WheelDiameter);
+        if (settings.stanceMode) setStanceMode(settings.stanceMode as StanceMode);
+      }
+      
+      setShowLoadModal(false);
+      setLoadConfigText("");
+      setExportMessage("✅ Config loaded successfully!");
+      setTimeout(() => setExportMessage(null), 3000);
+    } catch (err) {
+      setLoadError("Invalid JSON. Please paste a valid exported config.");
+    }
+  }, [loadConfigText]);
 
   // Handle family change
   const handleFamilyChange = useCallback((familyId: FamilyId) => {
@@ -229,6 +273,7 @@ export default function VisualizerLabPage() {
             onOverridesChange={setOverrides}
             onExportConfig={handleExportConfig}
             onResetOverrides={handleResetOverrides}
+            onLoadConfig={() => setShowLoadModal(true)}
           />
         </div>
       </div>
@@ -264,6 +309,66 @@ export default function VisualizerLabPage() {
           {JSON.stringify(familyConfig, null, 2)}
         </pre>
       </details>
+
+      {/* Load Config Modal */}
+      {showLoadModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+          <div className="bg-neutral-800 rounded-xl border border-neutral-700 w-full max-w-2xl max-h-[80vh] flex flex-col">
+            <div className="p-4 border-b border-neutral-700 flex items-center justify-between">
+              <h2 className="text-lg font-bold text-white">📂 Load Config</h2>
+              <button
+                onClick={() => {
+                  setShowLoadModal(false);
+                  setLoadConfigText("");
+                  setLoadError(null);
+                }}
+                className="text-neutral-400 hover:text-white"
+              >
+                ✕
+              </button>
+            </div>
+            
+            <div className="p-4 flex-1 overflow-auto">
+              <p className="text-sm text-neutral-400 mb-3">
+                Paste a previously exported config JSON to restore settings:
+              </p>
+              
+              <textarea
+                value={loadConfigText}
+                onChange={(e) => setLoadConfigText(e.target.value)}
+                placeholder='{"familyConfig": {...}, "visualizerSettings": {...}}'
+                className="w-full h-64 px-3 py-2 bg-neutral-900 border border-neutral-600 rounded-lg text-sm text-white font-mono placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              />
+              
+              {loadError && (
+                <div className="mt-3 p-3 bg-red-900/50 border border-red-700 rounded-lg text-red-400 text-sm">
+                  {loadError}
+                </div>
+              )}
+            </div>
+            
+            <div className="p-4 border-t border-neutral-700 flex gap-3 justify-end">
+              <button
+                onClick={() => {
+                  setShowLoadModal(false);
+                  setLoadConfigText("");
+                  setLoadError(null);
+                }}
+                className="px-4 py-2 bg-neutral-700 text-neutral-300 rounded-lg font-medium hover:bg-neutral-600 transition"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleLoadConfig}
+                disabled={!loadConfigText.trim()}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+              >
+                Load Config
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
