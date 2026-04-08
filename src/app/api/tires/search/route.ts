@@ -1183,11 +1183,103 @@ export async function GET(req: Request) {
       });
     }
     
-    // Case 2: Vehicle-based search
+    // Case 2: Brand-only search (no size or vehicle required)
+    const brandFilter = (url.searchParams.get("brand") || "").trim();
+    if (brandFilter && !year && !make && !model) {
+      const tBrand0 = Date.now();
+      
+      // Query WheelPros database for tires matching the brand
+      // Join with inventory to only show in-stock items
+      const brandQuery = `
+        select
+          t.sku,
+          t.brand_desc,
+          t.tire_description,
+          t.tire_size,
+          coalesce(i.wholesale_cost, 0) as cost,
+          coalesce(i.qoh, 0) as qoh
+        from wp_tires t
+        left join wheelpros_inventory i on i.sku = t.sku
+        where lower(t.brand_desc) = lower($1)
+          and coalesce(i.qoh, 0) >= $2
+        order by coalesce(i.qoh, 0) desc, t.tire_size asc
+        limit $3
+      `;
+      
+      const { rows: brandRows } = await db.query(brandQuery, [brandFilter, minQty || 4, pageSize * 2]);
+      
+      let brandResults: TireResult[] = brandRows.map((r: any) => {
+        const size = String(r.tire_size || "").trim();
+        const description = String(r.tire_description || "").trim() || size;
+        
+        return {
+          partNumber: String(r.sku),
+          mfgPartNumber: String(r.sku),
+          brand: r.brand_desc || null,
+          description,
+          cost: null,
+          price: r.cost > 0 ? Math.round(r.cost * 1.30 * 100) / 100 : null, // 30% margin
+          quantity: { 
+            primary: Math.max(0, Math.trunc(r.qoh)), 
+            alternate: 0, 
+            national: 0 
+          },
+          imageUrl: null,
+          size,
+          simpleSize: toSimpleSize(size),
+          rimDiameter: extractRimDiameter(size),
+          source: "wheelpros",
+          badges: {
+            terrain: null,
+            construction: null,
+            warrantyMiles: null,
+            loadIndex: null,
+            speedRating: null,
+          },
+          enrichment: {
+            mileage: null,
+            treadCategory: null,
+            mileageBadge: null,
+            loadRange: null,
+            isRunFlat: false,
+            isXL: false,
+            is3PMSF: false,
+            isAllWeather: false,
+          },
+        };
+      });
+      
+      timing.brandQueryMs = Date.now() - tBrand0;
+      
+      // Apply cached TireLibrary images
+      const tImages0 = Date.now();
+      brandResults = await applyCachedImages(brandResults);
+      brandResults = await applyImageOverrides(db, brandResults);
+      timing.imagesMs = Date.now() - tImages0;
+      
+      // Filter for valid images
+      const { filtered: finalBrandResults, stats: brandImageStats } = filterTiresWithValidImages(brandResults);
+      
+      timing.totalMs = Date.now() - t0;
+      
+      return NextResponse.json({
+        results: finalBrandResults.slice(0, pageSize),
+        mode: "brand",
+        brand: brandFilter,
+        imageFiltering: {
+          totalBeforeFilter: brandImageStats.total,
+          validImages: brandImageStats.valid,
+          filteredOut: brandImageStats.invalid,
+        },
+        timing,
+      });
+    }
+    
+    // Case 3: Vehicle-based search
     if (!year || !make || !model) {
       return NextResponse.json({
         results: [],
-        error: "Vehicle params (year, make, model) or size required",
+        error: "Vehicle params (year, make, model), size, or brand required",
       });
     }
     

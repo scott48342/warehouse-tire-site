@@ -14,6 +14,9 @@ import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { TiresGridWithSelection } from "@/components/TiresGridWithSelection";
 import { TirePageCompactHeader } from "@/components/TirePageCompactHeader";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
+import { TireSearchModeSwitcher, type TireSearchMode } from "@/components/TireSearchModeSwitcher";
+import { TireSizeSearchForm } from "@/components/TireSizeSearchForm";
+import { TireBrandBrowser } from "@/components/TireBrandBrowser";
 import {
   generatePlusSizeCandidates,
   generateAftermarketTireSizes,
@@ -378,6 +381,24 @@ async function fetchTireWebTires(tireSize: string) {
     return data;
   } catch (err) {
     console.error("[fetchTireWebTires] Error:", err);
+    return { results: [] };
+  }
+}
+
+/**
+ * Fetch tires by brand only (no size required)
+ * Used for brand browsing mode
+ */
+async function fetchTiresByBrand(brand: string) {
+  try {
+    const res = await fetch(`${getBaseUrl()}/api/tires/search?brand=${encodeURIComponent(brand)}&minQty=4&pageSize=100`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return { results: [] };
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error("[fetchTiresByBrand] Error:", err);
     return { results: [] };
   }
 }
@@ -899,6 +920,32 @@ export default async function TiresPage({
   const diameterParam = safeString(Array.isArray((sp as any).diameter) ? (sp as any).diameter[0] : (sp as any).diameter) ||
                         safeString(Array.isArray((sp as any).rimDiameter) ? (sp as any).rimDiameter[0] : (sp as any).rimDiameter);
   const hasSizeSearch = Boolean(sizeParam) || Boolean(widthParam && aspectRatioParam && diameterParam);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SEARCH MODE DETECTION - Allows vehicle, size, or brand entry
+  // ═══════════════════════════════════════════════════════════════════════════
+  const searchModeParam = safeString(Array.isArray((sp as any).searchMode) ? (sp as any).searchMode[0] : (sp as any).searchMode);
+  const brandParam = safeString(Array.isArray((sp as any).brand) ? (sp as any).brand[0] : (sp as any).brand);
+  
+  // Determine effective search mode
+  // - If vehicle params present → vehicle mode (default)
+  // - If brand param present → brand mode  
+  // - If size params present → size mode
+  // - If searchMode explicitly set → use that
+  // - Default → vehicle
+  const searchMode: TireSearchMode = (() => {
+    // Explicit mode always wins
+    if (searchModeParam === "size" || searchModeParam === "brand" || searchModeParam === "vehicle") {
+      return searchModeParam;
+    }
+    // Infer from params
+    if (brandParam && !hasVehicle) return "brand";
+    if (hasSizeSearch && !hasVehicle) return "size";
+    return "vehicle";
+  })();
+  
+  // Brand search active = brand param present OR in brand mode with a brand selected
+  const hasBrandSearch = Boolean(brandParam);
 
   // Package flow detection - user came from wheel selection
   const isPackageFlow = Boolean(wheelSku);
@@ -1613,8 +1660,16 @@ export default async function TiresPage({
   // For staggered vehicles in package flow, also fetch tire pairs
   const shouldFetchStaggeredPairs = isStaggeredVehicle && isPackageFlow && staggeredFrontTireSize && staggeredRearTireSize;
   
+  // Determine fetch strategy based on search mode
+  // - Brand search: fetch by brand (no size needed)
+  // - Size search: fetch by size
+  // - Vehicle search: fetch by resolved size
   const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
-    (wpSize || selectedSize) ? fetchTireWebTires(wpSize || selectedSize) : null,
+    hasBrandSearch 
+      ? fetchTiresByBrand(brandParam) 
+      : (wpSize || selectedSize) 
+        ? fetchTireWebTires(wpSize || selectedSize) 
+        : null,
     shouldFetchStaggeredPairs 
       ? fetchStaggeredTirePairs(staggeredFrontTireSize!, staggeredRearTireSize!)
       : Promise.resolve({ pairs: [], pairCount: 0 }),
@@ -2114,14 +2169,80 @@ export default async function TiresPage({
   const liftedPresetLabel = liftedPreset === "daily" ? "Daily Driver" : liftedPreset === "offroad" ? "Off-Road" : liftedPreset === "extreme" ? "Extreme" : liftedPreset;
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // VEHICLE ENTRY GATE - Show YMM selector when no context exists
-  // Allow through if: vehicle present OR size search present
-  // Only block when user has neither (browsing /tires with no params)
+  // VEHICLE ENTRY GATE - Show search mode selector when no context exists
+  // Allow through if: vehicle present OR size search present OR brand search present
+  // Only show entry UI when user has no active search context
   // ═══════════════════════════════════════════════════════════════════════════
-  if (!hasVehicle && !hasSizeSearch) {
+  if (!hasVehicle && !hasSizeSearch && !hasBrandSearch) {
     return (
       <main className="bg-neutral-50">
-        <VehicleEntryGate productType="tires" packageFlow={isPackageFlow} />
+        <div className="min-h-[70vh] bg-gradient-to-b from-neutral-100 to-neutral-50">
+          {/* Hero Section */}
+          <div className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
+            {/* Headline */}
+            <div className="text-center mb-8">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+                Find the Right Tires
+              </h1>
+              <p className="mt-3 text-lg text-neutral-600 max-w-lg mx-auto">
+                Search by vehicle, tire size, or browse your favorite brands
+              </p>
+            </div>
+
+            {/* Search Mode Switcher */}
+            <div className="mb-8">
+              <TireSearchModeSwitcher currentMode={searchMode} />
+            </div>
+
+            {/* Entry UI based on search mode */}
+            {searchMode === "vehicle" && (
+              <VehicleEntryGate productType="tires" packageFlow={isPackageFlow} />
+            )}
+
+            {searchMode === "size" && (
+              <TireSizeSearchForm
+                initialWidth={widthParam}
+                initialAspectRatio={aspectRatioParam}
+                initialDiameter={diameterParam}
+              />
+            )}
+
+            {searchMode === "brand" && (
+              <TireBrandBrowser />
+            )}
+
+            {/* Trust Signals - shown for all modes */}
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="flex flex-col items-center text-center p-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 mb-3">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                  </svg>
+                </div>
+                <div className="text-sm font-extrabold text-neutral-900">Guaranteed Fit</div>
+                <div className="mt-1 text-xs text-neutral-500">Every tire verified for your vehicle</div>
+              </div>
+              <div className="flex flex-col items-center text-center p-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 mb-3">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                  </svg>
+                </div>
+                <div className="text-sm font-extrabold text-neutral-900">Free Shipping</div>
+                <div className="mt-1 text-xs text-neutral-500">On orders over $599</div>
+              </div>
+              <div className="flex flex-col items-center text-center p-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 mb-3">
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                </div>
+                <div className="text-sm font-extrabold text-neutral-900">Expert Support</div>
+                <div className="mt-1 text-xs text-neutral-500">Call 248-332-4120</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     );
   }
