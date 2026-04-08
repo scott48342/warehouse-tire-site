@@ -9,24 +9,37 @@ interface TireSearchModeSwitcherProps {
   className?: string;
 }
 
-const MODES: { id: TireSearchMode; label: string; icon: string; description: string }[] = [
+const MODES: { 
+  id: TireSearchMode; 
+  label: string; 
+  shortLabel: string;
+  icon: string; 
+  description: string;
+  activeColor: string;
+}[] = [
   { 
     id: "vehicle", 
     label: "Find by Vehicle", 
+    shortLabel: "Vehicle",
     icon: "🚗",
-    description: "We'll show tires that fit"
+    description: "We'll show tires that fit your exact vehicle",
+    activeColor: "bg-[var(--brand-red)] text-white shadow-lg shadow-red-500/25",
   },
   { 
     id: "size", 
     label: "Search by Size", 
+    shortLabel: "Size",
     icon: "📏",
-    description: "Know your tire size?"
+    description: "Enter your tire size directly",
+    activeColor: "bg-blue-600 text-white shadow-lg shadow-blue-500/25",
   },
   { 
     id: "brand", 
     label: "Browse by Brand", 
+    shortLabel: "Brand",
     icon: "🏷️",
-    description: "Shop your favorite brands"
+    description: "Shop your favorite tire brands",
+    activeColor: "bg-purple-600 text-white shadow-lg shadow-purple-500/25",
   },
 ];
 
@@ -55,30 +68,31 @@ export function TireSearchModeSwitcher({ currentMode, className = "" }: TireSear
   };
 
   return (
-    <div className={`flex flex-col items-center ${className}`}>
-      {/* Mode tabs */}
-      <div className="inline-flex rounded-2xl bg-neutral-100 p-1.5 shadow-inner">
+    <div className={`flex flex-col items-center justify-center w-full ${className}`}>
+      {/* Mode buttons - large, prominent, centered */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-2xl mx-auto">
         {MODES.map((mode) => (
           <button
             key={mode.id}
             onClick={() => handleModeChange(mode.id)}
             className={`
-              relative flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200
+              relative flex items-center justify-center gap-3 rounded-2xl px-6 py-4 w-full sm:w-auto sm:min-w-[180px]
+              text-base font-bold transition-all duration-200 border-2
               ${currentMode === mode.id 
-                ? "bg-white text-neutral-900 shadow-md" 
-                : "text-neutral-600 hover:text-neutral-900 hover:bg-white/50"
+                ? `${mode.activeColor} border-transparent scale-105` 
+                : "bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 hover:scale-[1.02]"
               }
             `}
           >
-            <span className="text-base">{mode.icon}</span>
+            <span className="text-xl">{mode.icon}</span>
             <span className="hidden sm:inline">{mode.label}</span>
-            <span className="sm:hidden">{mode.label.split(" ").pop()}</span>
+            <span className="sm:hidden">{mode.shortLabel}</span>
           </button>
         ))}
       </div>
       
       {/* Description text */}
-      <p className="mt-2 text-xs text-neutral-500">
+      <p className="mt-4 text-sm text-neutral-600 text-center">
         {MODES.find(m => m.id === currentMode)?.description}
       </p>
     </div>
