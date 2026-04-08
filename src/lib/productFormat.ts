@@ -262,10 +262,15 @@ export function cleanTireProductTitle(
   // STEP 4: Remove common K&M prefixes and artifacts
   // ═══════════════════════════════════════════════════════════════════════════
   cleaned = cleaned
-    .replace(/^RB\s+/i, '')           // Leading "RB " (K&M prefix)
+    .replace(/^RB\s+/i, '')           // Leading "RB " (RBP K&M prefix)
+    .replace(/^VN\s+/i, '')           // Leading "VN " (Venom Power K&M prefix)
+    .replace(/^VP\s+/i, '')           // Leading "VP " (Venom Power variant)
+    .replace(/^LX\s+/i, '')           // Leading "LX " (Lexani K&M prefix)
     .replace(/\s*\/e\s+/gi, ' ')      // "/e " economy tier prefix
     .replace(/\s*\/sl\b/gi, '')       // "/sl" standard load suffix
     .replace(/^\/[A-Z]\s*/i, '')      // Leading "/F", "/E" etc.
+    .replace(/^>\s*/i, '')            // Leading ">" separator artifact
+    .replace(/\s*>\s*/g, ' ')         // ">" used as separator → space
     .replace(/\s+/g, ' ')
     .trim();
   

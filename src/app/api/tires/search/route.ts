@@ -417,6 +417,61 @@ async function getKmImagesFromDb(partNumbers: string[]): Promise<Map<string, str
 }
 
 /**
+ * Look up tire name overrides by brand + model pattern
+ * Returns map of "brand:pattern" → display_name
+ */
+async function getNameOverridesFromDb(): Promise<Map<string, string>> {
+  try {
+    const db = getPool();
+    const { rows } = await db.query(`
+      SELECT LOWER(brand) as brand, LOWER(model_pattern) as pattern, display_name 
+      FROM tire_name_overrides 
+      WHERE display_name IS NOT NULL
+    `);
+    
+    const map = new Map<string, string>();
+    for (const row of rows) {
+      map.set(`${row.brand}:${row.pattern}`, row.display_name);
+    }
+    return map;
+  } catch (err) {
+    // Table may not exist yet - that's OK
+    console.error("[tires/search] Name override lookup error:", err);
+    return new Map();
+  }
+}
+
+/**
+ * Find display name override for a tire by matching brand + model pattern
+ */
+function findNameOverride(
+  brand: string | null | undefined,
+  model: string | null | undefined,
+  description: string | null | undefined,
+  nameOverrides: Map<string, string>
+): string | null {
+  if (!brand || nameOverrides.size === 0) return null;
+  
+  const brandLower = brand.toLowerCase();
+  const modelText = (model || description || "").toLowerCase();
+  
+  // Try each pattern from our mapping
+  for (const [key, displayName] of nameOverrides) {
+    const [mapBrand, mapPattern] = key.split(":");
+    
+    // Brand must match
+    if (mapBrand !== brandLower) continue;
+    
+    // Check if model text contains the pattern
+    if (modelText.includes(mapPattern)) {
+      return displayName;
+    }
+  }
+  
+  return null;
+}
+
+/**
  * Look up tire images by brand + model pattern from tire_model_images table
  * This enables image sharing across all sizes of the same tire model
  */

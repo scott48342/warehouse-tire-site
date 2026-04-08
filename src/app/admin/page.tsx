@@ -449,6 +449,18 @@ export default async function AdminDashboard() {
             description="Flag or hide products"
             href="/admin/products"
           />
+          <QuickAction
+            icon="🖼️"
+            label="Tire Images"
+            description="Manage tire model images"
+            href="/admin/tire-images"
+          />
+          <QuickAction
+            icon="✏️"
+            label="Tire Names"
+            description="Fix product name display"
+            href="/admin/tire-names"
+          />
         </div>
       </div>
 
