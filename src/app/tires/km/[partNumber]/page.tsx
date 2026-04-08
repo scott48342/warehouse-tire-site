@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
-import { cleanTireDisplayTitle } from "@/lib/productFormat";
+import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { ImageGallery } from "@/components/ImageGallery";
 
 export const runtime = "nodejs";
@@ -202,7 +202,7 @@ export default async function KmTireDetailPage({
             <h1 className="mt-1 text-2xl font-extrabold text-neutral-900">{title}</h1>
 
             <div className="mt-3 flex flex-wrap gap-2">
-              <Badge>{size}</Badge>
+              <Badge>{normalizeTireSize(size)}</Badge>
             </div>
 
             {/* Price */}
