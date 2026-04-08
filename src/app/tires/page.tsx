@@ -370,10 +370,17 @@ async function fetchActiveRebates() {
  * Fetch tires from TireWeb (ATD, NTW, US AutoForce)
  * Returns TireLibrary-enriched data including images
  */
-async function fetchTireWebTires(tireSize: string) {
+async function fetchTireWebTires(tireSize: string, brand?: string) {
   const sizeQ = normalizeTireSizeForQuery(tireSize);
   try {
-    const res = await fetch(`${getBaseUrl()}/api/tires/search?size=${encodeURIComponent(sizeQ)}&minQty=4`, {
+    const params = new URLSearchParams({
+      size: sizeQ,
+      minQty: "4",
+    });
+    if (brand) {
+      params.set("brand", brand);
+    }
+    const res = await fetch(`${getBaseUrl()}/api/tires/search?${params.toString()}`, {
       cache: "no-store",
     });
     if (!res.ok) return { results: [] };
@@ -1666,11 +1673,14 @@ export default async function TiresPage({
   // - Brand search: fetch by brand (no size needed)
   // - Size search: fetch by size
   // - Vehicle search: fetch by resolved size
+  // Fetch strategy:
+  // - If we have a size, always use size search (with optional brand filter)
+  // - If no size but have brand, use brand-only search
   const [unifiedTires, staggeredPairsData, rebates] = await Promise.all([
-    hasBrandSearch 
-      ? fetchTiresByBrand(brandParam) 
-      : (wpSize || selectedSize) 
-        ? fetchTireWebTires(wpSize || selectedSize) 
+    (wpSize || selectedSize) 
+      ? fetchTireWebTires(wpSize || selectedSize, brandParam || undefined) 
+      : hasBrandSearch 
+        ? fetchTiresByBrand(brandParam) 
         : null,
     shouldFetchStaggeredPairs 
       ? fetchStaggeredTirePairs(staggeredFrontTireSize!, staggeredRearTireSize!)
@@ -3331,7 +3341,7 @@ function TireCard({
 
       {/* Tire size - prominent display */}
       <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
-        {selectedSize}
+        {normalizeTireSize(selectedSize) || selectedSize}
         {t.badges?.loadIndex && t.badges?.speedRating ? (
           <span className="ml-1 text-neutral-500">
             {String(t.badges.loadIndex)}{String(t.badges.speedRating)}
