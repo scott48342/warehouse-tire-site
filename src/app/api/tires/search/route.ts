@@ -443,6 +443,7 @@ async function getNameOverridesFromDb(): Promise<Map<string, string>> {
 
 /**
  * Find display name override for a tire by matching brand + model pattern
+ * Checks BOTH model and description fields for pattern match
  */
 function findNameOverride(
   brand: string | null | undefined,
@@ -453,7 +454,10 @@ function findNameOverride(
   if (!brand || nameOverrides.size === 0) return null;
   
   const brandLower = brand.toLowerCase();
-  const modelText = (model || description || "").toLowerCase();
+  // Combine model + description for pattern matching (check both)
+  const modelText = (model || "").toLowerCase();
+  const descText = (description || "").toLowerCase();
+  const combinedText = `${modelText} ${descText}`.toLowerCase();
   
   // Try each pattern from our mapping
   for (const [key, displayName] of nameOverrides) {
@@ -462,8 +466,8 @@ function findNameOverride(
     // Brand must match
     if (mapBrand !== brandLower) continue;
     
-    // Check if model text contains the pattern
-    if (modelText.includes(mapPattern)) {
+    // Check if EITHER model or description contains the pattern
+    if (combinedText.includes(mapPattern)) {
       return displayName;
     }
   }
@@ -498,6 +502,7 @@ async function getModelImagesFromDb(): Promise<Map<string, string>> {
 
 /**
  * Find image URL for a tire by matching brand + model pattern
+ * Checks BOTH model and description fields for pattern match
  */
 function findModelImage(
   brand: string | null | undefined,
@@ -508,7 +513,10 @@ function findModelImage(
   if (!brand || modelImages.size === 0) return null;
   
   const brandLower = brand.toLowerCase();
-  const modelText = (model || description || "").toLowerCase();
+  // Combine model + description for pattern matching (check both)
+  const modelText = (model || "").toLowerCase();
+  const descText = (description || "").toLowerCase();
+  const combinedText = `${modelText} ${descText}`.toLowerCase();
   
   // Try each pattern from our mapping
   for (const [key, imageUrl] of modelImages) {
@@ -517,8 +525,8 @@ function findModelImage(
     // Brand must match
     if (mapBrand !== brandLower) continue;
     
-    // Check if model text contains the pattern
-    if (modelText.includes(mapPattern)) {
+    // Check if EITHER model or description contains the pattern
+    if (combinedText.includes(mapPattern)) {
       return imageUrl;
     }
   }
