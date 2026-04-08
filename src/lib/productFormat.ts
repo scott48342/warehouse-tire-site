@@ -356,6 +356,33 @@ export function formatTireDisplayName(
  * - "Continental ExtremeContact DWS06 Plus" → "ExtremeContact DWS06 Plus"
  * - "Michelin Defender LTX M/S" → "Defender LTX M/S" (M/S is meaningful, kept)
  */
+/**
+ * Brand-specific abbreviation expansions.
+ * Maps abbreviated/shortened names to their full proper names.
+ */
+const BRAND_ABBREVIATIONS: Record<string, Record<string, string>> = {
+  // Thunderer abbreviations
+  thunderer: {
+    "RNGR": "Ranger",
+    "TRAC": "Trac",
+  },
+  // Predator abbreviations
+  predator: {
+    "NW": "New",
+    "NEW": "New",
+  },
+  // Generic abbreviations (apply to all brands)
+  _generic: {
+    "WL": "White Letter",
+    "BLK": "Black",
+    "BSW": "Black Sidewall",
+    "OWL": "Outlined White Letter",
+    "RWL": "Raised White Letter",
+    "RL": "Raised Letter",
+    "QR": "", // Remove QR suffix (internal code)
+  },
+};
+
 export function cleanTireDisplayTitle(
   title: string | null | undefined,
   brand: string | null | undefined
@@ -364,6 +391,13 @@ export function cleanTireDisplayTitle(
   
   let cleaned = String(title).trim();
   const brandLower = (brand || "").trim().toLowerCase();
+  
+  // 0. Strip size prefix and ">" separator (e.g., "35/1250R20/F>NEW MUTANT" → "NEW MUTANT")
+  // Pattern: ##/####R##/X> or ##/####R##> at the start
+  cleaned = cleaned
+    .replace(/^\d{2}\/\d{3,4}[rR]\d{2}(?:\/[A-Z])?>/i, "") // "35/1250R20/F>" prefix
+    .replace(/^[^>]*>\s*/i, "") // Anything before ">" if still present
+    .trim();
   
   // 1. Remove leading brand name (case-insensitive) if it matches the brand
   // This handles: "Lexani /sl Lxht-206" → "/sl Lxht-206"
@@ -386,12 +420,26 @@ export function cleanTireDisplayTitle(
     .replace(/^[\/\-\s]+/, "") // Remove leading punctuation artifacts
     .trim();
   
-  // 4. If we stripped everything, fall back to original (safety net)
+  // 4. Expand brand-specific abbreviations
+  const brandAbbrevs = brandLower ? BRAND_ABBREVIATIONS[brandLower] || {} : {};
+  const genericAbbrevs = BRAND_ABBREVIATIONS._generic || {};
+  const allAbbrevs = { ...genericAbbrevs, ...brandAbbrevs };
+  
+  for (const [abbrev, expansion] of Object.entries(allAbbrevs)) {
+    // Match whole word only (case-insensitive)
+    const pattern = new RegExp(`\\b${abbrev}\\b`, "gi");
+    cleaned = cleaned.replace(pattern, expansion);
+  }
+  
+  // Clean up any double spaces from removed abbreviations
+  cleaned = cleaned.replace(/\s+/g, " ").trim();
+  
+  // 5. If we stripped everything, fall back to original (safety net)
   if (!cleaned) {
     return String(title).trim();
   }
   
-  // 5. Apply smart capitalization for premium presentation
+  // 6. Apply smart capitalization for premium presentation
   cleaned = smartCapitalizeTireTitle(cleaned);
   
   return cleaned;
