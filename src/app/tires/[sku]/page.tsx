@@ -6,7 +6,7 @@ import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { AddTiresToCartButton } from "@/components/AddTiresToCartButton";
 import { BackToTiresButton } from "@/components/BackToTiresButton";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
-import { cleanTireDisplayTitle } from "@/lib/productFormat";
+import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tires/normalization";
 import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
@@ -456,7 +456,7 @@ export default async function TireDetailPage({
                     <div className="flex flex-wrap items-center gap-2">
                       {(tire.size || size) && (
                         <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
-                          {tire.size || size}
+                          {normalizeTireSize(tire.size || size)}
                         </span>
                       )}
                       {(tire.size || size) && <TireSizeGuide variant="icon" />}
@@ -587,7 +587,7 @@ export default async function TireDetailPage({
                 <div className="mt-8 grid gap-6 lg:grid-cols-2">
                   <PerformanceSection ratings={ratings} category={category} />
                   <FullSpecs
-                    tireSize={tire.size}
+                    tireSize={normalizeTireSize(tire.size)}
                     rimDiameter={null}
                     tireDiameter={null}
                     sectionWidth={null}
@@ -815,7 +815,7 @@ export default async function TireDetailPage({
             <div className="flex flex-wrap items-center gap-2">
               {(t.tire_size || t.simple_size) && (
                 <span className="inline-flex items-center rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
-                  {String(t.tire_size || t.simple_size)}
+                  {normalizeTireSize(t.tire_size || t.simple_size)}
                 </span>
               )}
               {(t.tire_size || t.simple_size) && <TireSizeGuide variant="icon" />}

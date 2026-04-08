@@ -7,6 +7,7 @@ import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem 
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
 import { getFitmentMessaging, getFitmentColors, type FitmentClass } from "@/lib/package/fitment";
 import { BRAND } from "@/lib/brand";
+import { normalizeTireSize } from "@/lib/productFormat";
 import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
@@ -785,7 +786,7 @@ function CheckoutItem({
         <div className="flex-1 min-w-0">
           <div className="text-xs font-semibold text-neutral-500">{tire.brand}</div>
           <div className="font-bold text-neutral-900">{tire.model}</div>
-          <div className="text-sm text-neutral-600">{tire.size}</div>
+          <div className="text-sm text-neutral-600">{normalizeTireSize(tire.size)}</div>
         </div>
         <div className="text-right">
           <div className="text-xs text-neutral-500">×{tire.quantity}</div>

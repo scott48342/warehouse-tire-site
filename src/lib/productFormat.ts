@@ -3,6 +3,141 @@
  * Cleans up supplier data for customer-facing display
  */
 
+// ============================================================================
+// TIRE SIZE NORMALIZATION
+// ============================================================================
+
+/**
+ * Normalize tire size strings for display.
+ * 
+ * DISPLAY-ONLY: Does not modify underlying data.
+ * 
+ * Handles:
+ * 1. Already formatted sizes (pass through): "225/65R17", "33x12.50R22"
+ * 2. K&M encoded flotation: "33125022" → "33x12.50R22"
+ * 3. K&M encoded metric: "2256517" → "225/65R17"
+ * 
+ * Encoding patterns (K&M style):
+ * - Flotation (8 digits): DDWWWWRR where DD=diameter, WWWW=width×100, RR=rim
+ *   Example: 33125022 → 33 | 1250 | 22 → 33x12.50R22
+ * - Metric (7 digits): WWWAARR where WWW=width(mm), AA=aspect, RR=rim
+ *   Example: 2256517 → 225 | 65 | 17 → 225/65R17
+ * 
+ * @param size - Raw tire size string from supplier
+ * @returns Human-readable tire size
+ */
+export function normalizeTireSize(size: string | null | undefined): string {
+  if (!size) return "";
+  
+  const s = String(size).trim().toUpperCase();
+  
+  // Already formatted? Pass through.
+  // Matches: 225/65R17, P225/65R17, LT285/70R17, 33x12.50R22, 35X12.5R20
+  if (/^[PLT]*\d{3}\/\d{2}R\d{2}/.test(s) || /^\d{2,3}[Xx]\d{1,2}\.?\d*R\d{2}/.test(s)) {
+    return s;
+  }
+  
+  // Pure digits? Try to decode.
+  if (/^\d+$/.test(s)) {
+    const decoded = decodeEncodedTireSize(s);
+    if (decoded) return decoded;
+  }
+  
+  // Fallback: return as-is
+  return s;
+}
+
+/**
+ * Decode K&M-style encoded tire sizes.
+ * 
+ * Patterns detected:
+ * - 8 digits starting with 3x (flotation): 33125022 → 33x12.50R22
+ * - 7 digits starting with 1xx-3xx (metric): 2256517 → 225/65R17
+ * - 8 digits starting with 1xx-3xx (metric with extra): 22565170 → 225/65R17
+ */
+function decodeEncodedTireSize(encoded: string): string | null {
+  const len = encoded.length;
+  
+  // 8-digit flotation: DDWWWWRR (e.g., 33125022)
+  // First 2 digits are overall diameter (30-40 range typical for flotation)
+  if (len === 8) {
+    const firstTwo = parseInt(encoded.slice(0, 2), 10);
+    
+    // Flotation sizes have overall diameter 27-40"
+    if (firstTwo >= 27 && firstTwo <= 40) {
+      const diameter = encoded.slice(0, 2);        // 33
+      const widthRaw = encoded.slice(2, 6);        // 1250
+      const rim = encoded.slice(6, 8);             // 22
+      
+      // Convert width: 1250 → 12.50, 1150 → 11.50
+      const widthNum = parseInt(widthRaw, 10) / 100;
+      
+      // Validate reasonable width (8-15 inches for flotation)
+      if (widthNum >= 8 && widthNum <= 16) {
+        // Format width: show .50 or .00 only if meaningful
+        const widthStr = widthNum % 1 === 0 
+          ? widthNum.toFixed(0) 
+          : widthNum.toFixed(2).replace(/0$/, '');
+        
+        return `${diameter}x${widthStr}R${rim}`;
+      }
+    }
+    
+    // Could be metric with trailing 0: 22565170 → 225/65R17
+    const width3 = encoded.slice(0, 3);
+    const aspect2 = encoded.slice(3, 5);
+    const rim2 = encoded.slice(5, 7);
+    const widthNum = parseInt(width3, 10);
+    const aspectNum = parseInt(aspect2, 10);
+    const rimNum = parseInt(rim2, 10);
+    
+    if (widthNum >= 135 && widthNum <= 355 && 
+        aspectNum >= 25 && aspectNum <= 85 && 
+        rimNum >= 13 && rimNum <= 26) {
+      return `${width3}/${aspect2}R${rim2}`;
+    }
+  }
+  
+  // 7-digit metric: WWWAARR (e.g., 2256517)
+  if (len === 7) {
+    const width = encoded.slice(0, 3);     // 225
+    const aspect = encoded.slice(3, 5);    // 65
+    const rim = encoded.slice(5, 7);       // 17
+    
+    const widthNum = parseInt(width, 10);
+    const aspectNum = parseInt(aspect, 10);
+    const rimNum = parseInt(rim, 10);
+    
+    // Validate reasonable metric ranges
+    // Width: 135-355mm, Aspect: 25-85, Rim: 13-26"
+    if (widthNum >= 135 && widthNum <= 355 && 
+        aspectNum >= 25 && aspectNum <= 85 && 
+        rimNum >= 13 && rimNum <= 26) {
+      return `${width}/${aspect}R${rim}`;
+    }
+  }
+  
+  // 6-digit metric (compact): WWAARR (e.g., 225617 → 225/60R17)?
+  // Less common but possible
+  if (len === 6) {
+    const width = encoded.slice(0, 3);     // 225
+    const aspect = encoded.slice(3, 4);    // 6 (meaning 60)
+    const rim = encoded.slice(4, 6);       // 17
+    
+    const widthNum = parseInt(width, 10);
+    const aspectNum = parseInt(aspect, 10) * 10; // 6 → 60
+    const rimNum = parseInt(rim, 10);
+    
+    if (widthNum >= 135 && widthNum <= 355 && 
+        aspectNum >= 30 && aspectNum <= 80 && 
+        rimNum >= 13 && rimNum <= 26) {
+      return `${width}/${aspectNum}R${rim}`;
+    }
+  }
+  
+  return null;
+}
+
 /**
  * Cleans product names from supplier feeds for display.
  * - Removes K&M's "/e" (economy tier) prefix

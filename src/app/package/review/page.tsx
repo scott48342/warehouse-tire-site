@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { useRouter } from "next/navigation";
 import { BRAND } from "@/lib/brand";
+import { normalizeTireSize } from "@/lib/productFormat";
 import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
@@ -144,14 +145,14 @@ function TireItem({ item }: { item: CartTireItem }) {
         
         {/* Tire size with load/speed rating */}
         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
-          <span className="font-medium text-neutral-800">{item.size}</span>
+          <span className="font-medium text-neutral-800">{normalizeTireSize(item.size)}</span>
           {loadSpeedDisplay ? (
             <span className="text-neutral-600">• {loadSpeedDisplay}</span>
           ) : null}
         </div>
         
         {item.staggered && item.rearSize && (
-          <div className="text-sm text-neutral-500">Rear: {item.rearSize}</div>
+          <div className="text-sm text-neutral-500">Rear: {normalizeTireSize(item.rearSize)}</div>
         )}
         
         {/* SKU / Part Number */}

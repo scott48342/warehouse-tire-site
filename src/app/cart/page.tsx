@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
+import { normalizeTireSize } from "@/lib/productFormat";
 import { BRAND } from "@/lib/brand";
 import { CartAccessoryUpsell } from "@/components/CompleteYourSetup";
 import { CartTrustSection } from "@/components/TrustBadges";
@@ -131,7 +132,7 @@ function TireCartItem({
         
         {/* Tire size with load/speed rating */}
         <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
-          <span className="font-semibold text-neutral-900">{item.size}</span>
+          <span className="font-semibold text-neutral-900">{normalizeTireSize(item.size)}</span>
           {loadSpeedDisplay ? (
             <span className="text-neutral-600">• {loadSpeedDisplay}</span>
           ) : null}
@@ -139,7 +140,7 @@ function TireCartItem({
         
         {/* Staggered rear size */}
         {item.staggered && item.rearSize ? (
-          <div className="text-sm text-neutral-500">Rear: {item.rearSize}</div>
+          <div className="text-sm text-neutral-500">Rear: {normalizeTireSize(item.rearSize)}</div>
         ) : null}
 
         {/* SKU / Part Number */}
