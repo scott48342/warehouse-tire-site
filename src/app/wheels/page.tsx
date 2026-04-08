@@ -21,6 +21,8 @@ import { SeoContentBlock } from "@/components/SeoContentBlock";
 import { type FitmentLevel, type BuildRequirement } from "@/lib/fitment/guidance";
 import { filterWheelsForBuildType, type BuildType as BuildTypeEnum } from "@/lib/fitment/buildTypeFilter";
 import { BuildStyleToggle } from "@/components/BuildStyleToggle";
+import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
+import { HomepageIntentBar } from "@/components/HomepageIntentBar";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -307,6 +309,47 @@ export default async function WheelsPage({
     });
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // HOMEPAGE INTENT SYSTEM
+  // Only activates when entry=homepage is present in URL params.
+  // This provides specialized search flows for users entering from homepage blocks.
+  // ═══════════════════════════════════════════════════════════════════════════
+  const homepageIntentState = parseHomepageIntent(sp);
+  
+  // Track if this is a homepage intent lifted build (vs /lifted page flow)
+  const isHomepageIntentLiftedBuild = homepageIntentState.isActive && 
+    homepageIntentState.config?.id === "lifted_35";
+  
+  // Track if this is a street performance intent
+  const isStreetPerformanceIntent = homepageIntentState.isActive && 
+    homepageIntentState.config?.id === "street_performance";
+
+  // Apply intent-specific offset ranges if:
+  // 1. Homepage intent is active
+  // 2. User hasn't manually set offset params
+  // 3. Intent has resolved offset values
+  let effectiveOffsetMinUser = offsetMinUser;
+  let effectiveOffsetMaxUser = offsetMaxUser;
+
+  if (homepageIntentState.isActive && homepageIntentState.resolved) {
+    const { resolved } = homepageIntentState;
+    
+    // Only apply intent offsets if user hasn't manually overridden
+    if (offsetMinUser === null && resolved.offsetMin !== undefined) {
+      effectiveOffsetMinUser = resolved.offsetMin;
+    }
+    if (offsetMaxUser === null && resolved.offsetMax !== undefined) {
+      effectiveOffsetMaxUser = resolved.offsetMax;
+    }
+
+    console.log('[wheels/page] 🎯 HOMEPAGE INTENT ACTIVE:', {
+      intent: homepageIntentState.config?.id,
+      liftLevel: resolved.liftLevel,
+      buildType: resolved.buildType,
+      offsetRange: `${effectiveOffsetMinUser}mm to ${effectiveOffsetMaxUser}mm`,
+    });
+  }
+
   const needsTrimNotice = Boolean(year && make && model && !modification);
 
   // Only show the guided wheel+tire package UI when explicitly requested.
@@ -436,8 +479,9 @@ export default async function WheelsPage({
   // only those within the narrow OEM offset range.
 
   // Only pass user-explicit offset filters (not auto-derived OEM range)
-  const minOffsetFinal = offsetMinUser != null ? String(offsetMinUser) : undefined;
-  const maxOffsetFinal = offsetMaxUser != null ? String(offsetMaxUser) : undefined;
+  // Use effective offset values (may include homepage intent defaults)
+  const minOffsetFinal = effectiveOffsetMinUser != null ? String(effectiveOffsetMinUser) : undefined;
+  const maxOffsetFinal = effectiveOffsetMaxUser != null ? String(effectiveOffsetMaxUser) : undefined;
 
   // IMPORTANT: Don't auto-restrict diameter/width unless the user explicitly chose them.
   // Doing so can collapse results (e.g., WheelPros shows many fitments/sizes).
@@ -1239,6 +1283,18 @@ export default async function WheelsPage({
             make,
             model,
           }}
+        />
+      ) : null}
+
+      {/* ═══════════════════════════════════════════════════════════════════════
+          HOMEPAGE INTENT BAR - Shows intent-specific chips/toggles
+          Only renders when entry=homepage + valid intent is in URL
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle && homepageIntentState.isActive ? (
+        <HomepageIntentBar
+          intentState={homepageIntentState}
+          basePath={basePath}
+          vehicleSupportsStaggered={vehicleCallsForStaggered}
         />
       ) : null}
 

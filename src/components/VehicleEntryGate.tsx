@@ -1,8 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { SteppedVehicleSelector, type VehicleSelection } from "./SteppedVehicleSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
+import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 
 interface VehicleEntryGateProps {
   /** "tires" or "wheels" - determines the redirect path */
@@ -21,9 +22,21 @@ interface VehicleEntryGateProps {
  * - Clear headline with fitment benefit
  * - YMM selector above the fold
  * - Trust signals below selector
+ * 
+ * Homepage Intent Support:
+ * - Preserves entry=homepage and intent=xxx params through YMM selection
+ * - Applies intent-specific defaults (offset ranges, build type) after selection
  */
 export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Parse homepage intent from current URL
+  const currentParams: Record<string, string> = {};
+  searchParams.forEach((value, key) => {
+    currentParams[key] = value;
+  });
+  const intentState = parseHomepageIntent(currentParams);
 
   function handleComplete(selection: VehicleSelection) {
     const { year, make, model, modification, trim } = selection;
@@ -38,18 +51,69 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
     if (trim && trim !== modification) params.set("trim", trim);
     if (packageFlow) params.set("package", "1");
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // HOMEPAGE INTENT: Preserve intent params through YMM selection
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (intentState.isActive && intentState.config) {
+      // Preserve entry and intent params
+      params.set("entry", "homepage");
+      params.set("intent", intentState.config.id);
+      
+      // Apply intent-specific defaults
+      const { resolved } = intentState;
+      
+      // Build type
+      if (resolved.buildType) {
+        params.set("buildType", resolved.buildType);
+      }
+      
+      // Lift level and offset range (for lifted builds)
+      if (resolved.liftLevel) {
+        params.set("liftLevel", resolved.liftLevel);
+        const liftConfig = getLiftLevelConfig(resolved.liftLevel);
+        if (liftConfig) {
+          params.set("offsetMin", String(liftConfig.offsetMin));
+          params.set("offsetMax", String(liftConfig.offsetMax));
+          // Include lifted source params for the wheels page
+          params.set("liftedSource", "homepage-intent");
+          params.set("liftedInches", String(liftConfig.inches));
+        }
+      }
+    }
+    
     // Redirect to vehicle-specific page
     const path = `/${productType}/v/${slug}?${params.toString()}`;
     router.push(path);
   }
 
-  const headline = productType === "tires" 
-    ? "Find Tires That Fit Your Vehicle"
-    : "Find Wheels That Fit Your Vehicle";
+  // Customize headline based on intent
+  const headline = (() => {
+    if (intentState.isActive && intentState.config) {
+      if (intentState.config.id === "lifted_35") {
+        return 'Build Your 35" Lifted Truck';
+      }
+      if (intentState.config.id === "street_performance") {
+        return "Build Your Street Performance Setup";
+      }
+    }
+    return productType === "tires" 
+      ? "Find Tires That Fit Your Vehicle"
+      : "Find Wheels That Fit Your Vehicle";
+  })();
 
-  const subheadline = productType === "tires"
-    ? "Enter your vehicle to see tires guaranteed to fit perfectly."
-    : "Enter your vehicle to see wheels guaranteed to fit perfectly.";
+  const subheadline = (() => {
+    if (intentState.isActive && intentState.config) {
+      if (intentState.config.id === "lifted_35") {
+        return "Select your vehicle to see wheels and tires for your lifted build.";
+      }
+      if (intentState.config.id === "street_performance") {
+        return "Select your vehicle to see performance wheels matched to your ride.";
+      }
+    }
+    return productType === "tires"
+      ? "Enter your vehicle to see tires guaranteed to fit perfectly."
+      : "Enter your vehicle to see wheels guaranteed to fit perfectly.";
+  })();
 
   return (
     <div className="min-h-[70vh] bg-gradient-to-b from-neutral-100 to-neutral-50">

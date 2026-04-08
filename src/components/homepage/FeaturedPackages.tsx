@@ -8,6 +8,13 @@ import Image from "next/image";
  * 3 package cards with truck images
  */
 
+/**
+ * Featured Packages Configuration
+ * 
+ * NOTE: lifted-35 and street-22 now use the Homepage Intent system.
+ * They route through /wheels with entry=homepage&intent=xxx params,
+ * which triggers the VehicleEntryGate → specialized results flow.
+ */
 const FEATURED_PACKAGES = [
   {
     id: "daily-33",
@@ -26,9 +33,10 @@ const FEATURED_PACKAGES = [
     titleAccent: "Package",
     specs: "315/70R17 BFGoodrich All-Terrain T/A KO2",
     image: "/images/homepage/package-lifted-35.png",
-    buttonText: "Add to Package",
+    buttonText: "Shop This Build",
     buttonColor: "bg-orange-600 hover:bg-orange-500",
-    href: "/packages/lifted-35",
+    // Homepage Intent: lifted_35 (6" lift, 35" tires, aggressive offset)
+    href: "/wheels?entry=homepage&intent=lifted_35",
     badge: "Popular",
   },
   {
@@ -37,9 +45,10 @@ const FEATURED_PACKAGES = [
     titleAccent: "Package",
     specs: "305/40R22 Lionhart LH-Five",
     image: "/images/homepage/package-street.png",
-    buttonText: "Add to Package",
+    buttonText: "Shop This Build",
     buttonColor: "bg-red-700 hover:bg-red-600",
-    href: "/packages/street-22",
+    // Homepage Intent: street_performance (staggered-aware, performance wheels)
+    href: "/wheels?entry=homepage&intent=street_performance",
     badge: null,
   },
 ];
