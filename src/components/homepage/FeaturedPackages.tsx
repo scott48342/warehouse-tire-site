@@ -33,7 +33,7 @@ const FEATURED_PACKAGES = [
   },
   {
     id: "street-22",
-    title: 'Street Truck 22"',
+    title: 'Street Performance 22"',
     titleAccent: "Package",
     specs: "305/40R22 Lionhart LH-Five",
     image: "/images/homepage/package-street.png",
