@@ -86,8 +86,11 @@ export async function GET(req: Request) {
       };
     });
     
-    // Get unique brands for filter
-    const brands = [...new Set(models.map(m => m.brand))].sort();
+    // Get unique brands for filter - include WheelPros brands AND any brands already in tire_model_images
+    // This ensures K&M brands (RBP, etc.) appear if they've been manually added
+    const wpBrands = models.map(m => m.brand);
+    const existingImageBrands = imgRows.map(r => r.brand);
+    const brands = [...new Set([...wpBrands, ...existingImageBrands])].sort();
     
     // Filter if needed
     const filtered = missingOnly 
