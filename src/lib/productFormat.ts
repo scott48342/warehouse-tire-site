@@ -138,6 +138,165 @@ function decodeEncodedTireSize(encoded: string): string | null {
   return null;
 }
 
+// ============================================================================
+// TIRE PRODUCT TITLE CLEANING
+// ============================================================================
+
+/**
+ * Clean tire product titles that contain encoded/malformed size fragments.
+ * 
+ * DISPLAY-ONLY: Does not modify underlying data.
+ * 
+ * Problem: K&M supplier data often embeds raw encoded sizes in product names:
+ * - "RBP RB 33/1250r22/F RBP Repulsor MT3 QR"
+ * - "LEXANI 33/1250/22 LX-TRAIL"
+ * 
+ * Goal: Extract clean model name, optionally prepend normalized size.
+ * 
+ * @param title - Raw product title from supplier
+ * @param brand - Brand name (used to remove duplicate brand mentions)
+ * @param options.prependSize - If true, prepend normalized size to result
+ * @returns Cleaned title
+ * 
+ * @example
+ * cleanTireProductTitle("RBP RB 33/1250r22/F RBP Repulsor MT3 QR", "RBP")
+ * // → "Repulsor MT3 QR"
+ * 
+ * cleanTireProductTitle("RBP RB 33/1250r22/F RBP Repulsor MT3 QR", "RBP", { prependSize: true })
+ * // → "33x12.50R22 Repulsor MT3 QR"
+ * 
+ * cleanTireProductTitle("225/65R17 HTR-800", "Argus Advanta")
+ * // → "225/65R17 HTR-800" (already clean, pass through)
+ */
+export function cleanTireProductTitle(
+  title: string | null | undefined,
+  brand: string | null | undefined,
+  options?: { prependSize?: boolean }
+): string {
+  if (!title) return "";
+  
+  let cleaned = String(title).trim();
+  const brandLower = (brand || "").trim().toLowerCase();
+  const { prependSize = false } = options || {};
+  
+  // Track extracted size for optional prepending
+  let extractedSize: string | null = null;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 1: Detect if title is already clean (well-formatted TireWeb style)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Pattern: starts with proper metric size like "225/65R17 Model Name"
+  const cleanMetricStart = /^(\d{3}\/\d{2}R\d{2})\s+(.+)$/i;
+  const cleanFlotationStart = /^(\d{2,3}[Xx]\d{1,2}(?:\.\d+)?R\d{2})\s+(.+)$/i;
+  
+  const metricMatch = cleaned.match(cleanMetricStart);
+  const flotationMatch = cleaned.match(cleanFlotationStart);
+  
+  if (metricMatch || flotationMatch) {
+    // Already clean format - just pass through
+    return cleaned;
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 2: Remove encoded/malformed flotation size patterns
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Patterns to detect and remove:
+  // - 33/1250r22 (slashed flotation with lowercase r)
+  // - 33/1250R22 (slashed flotation)
+  // - 33/1250/22 (double-slashed)
+  // - 33/1250r22/F (with trailing suffix like /F, /E)
+  // - 33125022 (pure encoded, 8 digits)
+  // - RB 33/1250r22 (with prefix like "RB")
+  
+  // Pattern: DD/WWWWrRR or DD/WWWW/RR with optional prefix/suffix
+  const malformedFlotationPattern = /\b(?:RB\s+)?(\d{2})\/(\d{3,4})[rR\/](\d{2})(?:\/[A-Z])?\b/gi;
+  
+  let flotationSizeMatch: RegExpExecArray | null;
+  while ((flotationSizeMatch = malformedFlotationPattern.exec(cleaned)) !== null) {
+    const [fullMatch, dia, widthRaw, rim] = flotationSizeMatch;
+    
+    // Validate this looks like a real flotation size
+    const diaNum = parseInt(dia, 10);
+    const widthNum = parseInt(widthRaw, 10) / 100;
+    const rimNum = parseInt(rim, 10);
+    
+    if (diaNum >= 27 && diaNum <= 40 && widthNum >= 8 && widthNum <= 16 && rimNum >= 15 && rimNum <= 26) {
+      // Valid flotation size - extract and remove
+      const widthStr = widthNum % 1 === 0 
+        ? widthNum.toFixed(0) 
+        : widthNum.toFixed(2).replace(/0$/, '');
+      extractedSize = `${dia}x${widthStr}R${rim}`;
+    }
+  }
+  
+  // Remove the malformed patterns
+  cleaned = cleaned
+    .replace(/\b(?:RB\s+)?(\d{2})\/(\d{3,4})[rR\/](\d{2})(?:\/[A-Z])?\b/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  
+  // Also check for pure encoded 8-digit sizes embedded in title
+  const encodedPattern = /\b(\d{8})\b/g;
+  let encodedMatch: RegExpExecArray | null;
+  while ((encodedMatch = encodedPattern.exec(cleaned)) !== null) {
+    const decoded = decodeEncodedTireSize(encodedMatch[1]);
+    if (decoded && !extractedSize) {
+      extractedSize = decoded;
+    }
+  }
+  cleaned = cleaned.replace(/\b\d{8}\b/g, ' ').replace(/\s+/g, ' ').trim();
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 3: Remove duplicate brand mentions
+  // ═══════════════════════════════════════════════════════════════════════════
+  // "RBP RB ... RBP Repulsor" → "Repulsor"
+  if (brandLower) {
+    // Create pattern to match brand at word boundaries (case-insensitive)
+    const brandPattern = new RegExp(`\\b${escapeRegex(brandLower)}\\b`, 'gi');
+    
+    // Remove all brand occurrences
+    cleaned = cleaned.replace(brandPattern, ' ').replace(/\s+/g, ' ').trim();
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 4: Remove common K&M prefixes and artifacts
+  // ═══════════════════════════════════════════════════════════════════════════
+  cleaned = cleaned
+    .replace(/^RB\s+/i, '')           // Leading "RB " (K&M prefix)
+    .replace(/\s*\/e\s+/gi, ' ')      // "/e " economy tier prefix
+    .replace(/\s*\/sl\b/gi, '')       // "/sl" standard load suffix
+    .replace(/^\/[A-Z]\s*/i, '')      // Leading "/F", "/E" etc.
+    .replace(/\s+/g, ' ')
+    .trim();
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 5: If we stripped everything meaningful, try to salvage
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!cleaned || cleaned.length < 3) {
+    // Fall back to original with just basic cleaning
+    cleaned = String(title)
+      .replace(/\b(?:RB\s+)?(\d{2})\/(\d{3,4})[rR\/](\d{2})(?:\/[A-Z])?\b/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 6: Optionally prepend normalized size
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (prependSize && extractedSize && cleaned) {
+    return `${extractedSize} ${cleaned}`;
+  }
+  
+  return cleaned;
+}
+
+/**
+ * Escape special regex characters in a string
+ */
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 /**
  * Cleans product names from supplier feeds for display.
  * - Removes K&M's "/e" (economy tier) prefix
