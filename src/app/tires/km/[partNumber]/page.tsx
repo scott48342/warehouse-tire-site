@@ -299,7 +299,7 @@ export default async function KmTireDetailPage({
   const categoryTagline = getCategoryTagline(category);
   
   // Derive performance ratings based on category (since K&M doesn't have UTQG data)
-  const ratings = derivePerformanceRatings({ category });
+  const ratings = derivePerformanceRatings(null, category, category === 'Winter' || category === 'All-Weather');
   
   // Extract load/speed from badges if available
   const loadIndex = item.badges?.loadIndex ? String(item.badges.loadIndex) : null;
