@@ -365,6 +365,8 @@ export function WheelsStyleCard({
   isSelected?: boolean;
   hasSelection?: boolean;
   onSelect?: (wheelState: { imageUrl?: string; price?: number; finish?: string; sku: string }) => void;
+  // Homepage intent: show offset in size display (for lifted builds)
+  showOffset?: boolean;
 }) {
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -641,13 +643,19 @@ export function WheelsStyleCard({
               )}
             </div>
           ) : (
-            /* Standard square setup - Line 2: Size + Finish */
+            /* Standard square setup - Line 2: Size + Offset (if showOffset) + Finish */
             <div className="mt-0.5 text-sm text-neutral-600">
               {(currentDiameter || currentWidth) && (
                 <span className="font-medium">
                   {currentDiameter && `${fmtSizePart(currentDiameter)}"`}
                   {currentDiameter && currentWidth && " × "}
                   {currentWidth && `${fmtSizePart(currentWidth)}"`}
+                  {/* Show offset for lifted homepage intent builds */}
+                  {showOffset && specLabel?.offset && (
+                    <span className="ml-1 text-amber-700 font-bold">
+                      {Number(specLabel.offset) >= 0 ? `+${specLabel.offset}` : specLabel.offset}
+                    </span>
+                  )}
                 </span>
               )}
               {(currentDiameter || currentWidth) && selectedFinish && (

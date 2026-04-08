@@ -23,6 +23,7 @@ import { filterWheelsForBuildType, type BuildType as BuildTypeEnum } from "@/lib
 import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
+import { LiftLevelSelector } from "@/components/LiftLevelSelector";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -1626,7 +1627,17 @@ export default async function WheelsPage({
                 Only shown for trucks/SUVs where leveling/lifting makes sense
                 Hidden for: sedans, coupes, performance cars, EVs, etc.
                 ═══════════════════════════════════════════════════════════════════════ */}
-            {hasVehicle && !isLiftedBuild && vehicleSupportsBuildStyles && (
+            {/* Homepage Intent Lifted Build: Show lift level selector instead of build style toggle */}
+            {hasVehicle && isHomepageIntentLiftedBuild && (
+              <div className="mt-3 rounded-xl border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
+                <LiftLevelSelector 
+                  currentLiftLevel={homepageIntentState.resolved.liftLevel || "6in"} 
+                />
+              </div>
+            )}
+            
+            {/* Normal Build Style Toggle: Only show when NOT in lifted intent mode */}
+            {hasVehicle && !isLiftedBuild && !isHomepageIntentLiftedBuild && vehicleSupportsBuildStyles && (
               <div className="mt-3 rounded-xl border border-neutral-200 bg-white p-4">
                 <BuildStyleToggle 
                   currentBuildType={buildTypeParam} 
@@ -1738,6 +1749,7 @@ export default async function WheelsPage({
               showDiameterChips={hasVehicle && fitmentDiameterOptions.length > 0}
               staggeredInfo={staggeredDebug}
               initialSetupMode={initialSetupMode}
+              showOffset={isHomepageIntentLiftedBuild}
               recommendedWheels={recommendedWheels.map(w => ({
                 sku: w.sku,
                 brand: w.brand,

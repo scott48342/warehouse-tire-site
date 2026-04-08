@@ -130,6 +130,8 @@ type WheelsGridProps = {
   initialSetupMode?: SetupMode;
   /** Callback when setup mode changes (for URL sync) */
   onSetupModeChange?: (mode: SetupMode) => void;
+  /** Show offset in wheel card size display (for lifted homepage intent) */
+  showOffset?: boolean;
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -596,6 +598,7 @@ export function WheelsGridWithSelection({
   staggeredInfo = null,
   initialSetupMode,
   onSetupModeChange,
+  showOffset = false,
 }: WheelsGridProps) {
   const [selectedWheel, setSelectedWheel] = useState<SelectedWheel | null>(null);
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
@@ -1299,6 +1302,8 @@ export function WheelsGridWithSelection({
           // Fitment guidance (2026-04-07)
           fitmentLevel={w.fitmentGuidance?.level}
           buildRequirement={w.fitmentGuidance?.buildRequirement}
+          // Homepage intent: show offset for lifted builds
+          showOffset={showOffset}
           // Selection props
           isSelected={isSelected}
           hasSelection={!!selectedWheel}
