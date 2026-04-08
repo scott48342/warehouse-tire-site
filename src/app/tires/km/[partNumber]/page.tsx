@@ -434,7 +434,7 @@ export default async function KmTireDetailPage({
                     model={title}
                     size={normalizedSize}
                     unitPrice={displayPrice}
-                    imageUrl={enrichedImageUrl}
+                    imageUrl={enrichedImageUrl || undefined}
                     source={item.rawSource || item.source || "km"}
                     variant="primary"
                   />
