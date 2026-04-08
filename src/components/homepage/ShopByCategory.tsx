@@ -11,27 +11,27 @@ import Image from "next/image";
 const CATEGORIES = [
   {
     title: "All-Terrain Tires",
-    image: "/images/homepage/cat-all-terrain.jpg",
+    image: "/images/homepage/cat-all-terrain.png",
     href: "/tires/c/all-terrain",
   },
   {
     title: "Performance Tires",
-    image: "/images/homepage/cat-performance.jpg",
+    image: "/images/homepage/cat-performance.png",
     href: "/tires/c/performance",
   },
   {
     title: "Truck Wheels",
-    image: "/images/homepage/cat-truck-wheels.jpg",
+    image: "/images/homepage/cat-truck-wheels.png",
     href: "/wheels?category=truck",
   },
   {
     title: "Street Wheels",
-    image: "/images/homepage/cat-street-wheels.jpg",
+    image: "/images/homepage/cat-street-wheels.png",
     href: "/wheels?category=street",
   },
   {
     title: "Lifted Packages",
-    image: "/images/homepage/cat-lifted.jpg",
+    image: "/images/homepage/cat-lifted.png",
     href: "/lifted",
   },
 ];

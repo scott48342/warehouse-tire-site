@@ -14,7 +14,7 @@ export function HomepageBackground({ children }: HomepageBackgroundProps) {
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/homepage/bg-scenic.jpg')",
+          backgroundImage: "url('/images/homepage/bg-scenic.png')",
         }}
       />
       
