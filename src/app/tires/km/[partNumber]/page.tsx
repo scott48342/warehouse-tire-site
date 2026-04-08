@@ -6,6 +6,8 @@ import { ImageGallery } from "@/components/ImageGallery";
 import { normalizeTreadCategory, type TreadCategory } from "@/lib/tires/normalization";
 import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
+// Add to cart (same as main PDP)
+import { AddTiresToCartButton } from "@/components/AddTiresToCartButton";
 // PDP Conversion Enhancements (shared with main PDP)
 import { 
   BestForMicro, 
@@ -423,21 +425,21 @@ export default async function KmTireDetailPage({
                 <span>{delivery.text}</span>
               </div>
               
-              {/* CTA Buttons */}
-              <div className="mt-4 grid gap-2">
-                <a
-                  href={BRAND.links.tel}
-                  className="flex h-12 items-center justify-center rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-red-700 transition-colors"
-                >
-                  Call for Quote
-                </a>
-                <Link
-                  href="/schedule"
-                  className="flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:border-neutral-300 transition-colors"
-                >
-                  Schedule Install
-                </Link>
-              </div>
+              {/* Primary CTA: Add to Cart (same as main PDP) */}
+              {displayPrice != null && (
+                <div className="mt-4">
+                  <AddTiresToCartButton
+                    sku={safePart}
+                    brand={brand}
+                    model={title}
+                    size={normalizedSize}
+                    unitPrice={displayPrice}
+                    imageUrl={enrichedImageUrl}
+                    source={item.rawSource || item.source || "km"}
+                    variant="primary"
+                  />
+                </div>
+              )}
               
               {/* Trust strip */}
               <EnhancedTrustStrip hasVehicle={hasVehicle} hasWarranty={true} />
