@@ -35,7 +35,7 @@ export async function GET(req: Request) {
 
     const images = wheel.images || [];
     const analysis = analyzeWheelImages(images);
-    const bestImage = getBestVisualizerImage(images, "angled");
+    const bestImage = getBestVisualizerImage(images, false); // false = allow fallback to angled for preview
 
     return NextResponse.json({
       sku: singleSku,
@@ -90,7 +90,7 @@ export async function GET(req: Request) {
 
       const images = wheel.images || [];
       const analysis = analyzeWheelImages(images);
-      const bestImage = getBestVisualizerImage(images, "angled");
+      const bestImage = getBestVisualizerImage(images, false);
 
       if (analysis.visualizerCompatible) compatible++;
       if (analysis.hasFaceImage) withFace++;

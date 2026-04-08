@@ -100,16 +100,17 @@ export function analyzeWheelImages(imageUrls: string[]): WheelVisualizerMetadata
   const hasFaceImage = imagesByType.face.length > 0;
   const hasAngledImage = imagesByType.angled.length > 0;
   
-  // Determine primary image type (prefer angled for 3/4 visualizer)
+  // Determine primary image type (prefer face for front-facing visualizer)
   let imageType: WheelImageType = "unknown";
-  if (hasAngledImage) {
-    imageType = "angled";
-  } else if (hasFaceImage) {
+  if (hasFaceImage) {
     imageType = "face";
+  } else if (hasAngledImage) {
+    imageType = "angled";
   }
   
-  // Compatible if we have at least one usable image type
-  const visualizerCompatible = hasAngledImage || hasFaceImage;
+  // Compatible ONLY if we have FACE images
+  // ANGLED and UNKNOWN are NOT compatible (for now)
+  const visualizerCompatible = hasFaceImage;
   
   return {
     visualizerCompatible,
@@ -123,34 +124,33 @@ export function analyzeWheelImages(imageUrls: string[]): WheelVisualizerMetadata
 /**
  * Get the best image URL for the visualizer.
  * 
- * Priority:
- * 1. Angled (A1) - best for 3/4 view visualizer
- * 2. Face - fallback
+ * Priority (FACE only for compatibility):
+ * 1. Face - REQUIRED for visualizer compatibility
+ * 2. Angled - NOT compatible, but returned if no face available
  * 3. Any other image - last resort
  * 
  * @param imageUrls - Array of image URLs
- * @param preferredType - Preferred image type (default: angled for 3/4 visualizer)
+ * @param compatibleOnly - If true, only return FACE images (default: false)
  */
 export function getBestVisualizerImage(
   imageUrls: string[],
-  preferredType: "angled" | "face" = "angled"
+  compatibleOnly: boolean = false
 ): string | null {
   const analysis = analyzeWheelImages(imageUrls);
   
-  if (preferredType === "angled") {
-    if (analysis.imagesByType.angled.length > 0) {
-      return analysis.imagesByType.angled[0];
-    }
-    if (analysis.imagesByType.face.length > 0) {
-      return analysis.imagesByType.face[0];
-    }
-  } else {
-    if (analysis.imagesByType.face.length > 0) {
-      return analysis.imagesByType.face[0];
-    }
-    if (analysis.imagesByType.angled.length > 0) {
-      return analysis.imagesByType.angled[0];
-    }
+  // Face images are the only compatible type
+  if (analysis.imagesByType.face.length > 0) {
+    return analysis.imagesByType.face[0];
+  }
+  
+  // If compatibleOnly, don't fall back to incompatible images
+  if (compatibleOnly) {
+    return null;
+  }
+  
+  // Fallback to angled (NOT compatible, but may be useful for preview)
+  if (analysis.imagesByType.angled.length > 0) {
+    return analysis.imagesByType.angled[0];
   }
   
   // Fallback to any available image
