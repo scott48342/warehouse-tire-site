@@ -6,33 +6,40 @@ import Image from "next/image";
 /**
  * Shop by Category - MATCHES TEMPLATE
  * 5 circular image cards with labels below
+ * 
+ * All categories use Homepage Intent system for scoped post-YMM experience.
  */
 
 const CATEGORIES = [
   {
     title: "All-Terrain Tires",
     image: "/images/homepage/cat-all-terrain.png",
-    href: "/tires/c/all-terrain",
+    // Homepage Intent: all_terrain_tires (A/T focused results)
+    href: "/tires?entry=homepage&intent=all_terrain_tires",
   },
   {
     title: "Performance Tires",
     image: "/images/homepage/cat-performance.png",
-    href: "/tires/c/performance",
+    // Homepage Intent: performance_tires (UHP, summer, staggered-aware)
+    href: "/tires?entry=homepage&intent=performance_tires",
   },
   {
     title: "Truck Wheels",
     image: "/images/homepage/cat-truck-wheels.png",
-    href: "/wheels?category=truck",
+    // Homepage Intent: truck_wheels (truck-friendly styles and fitments)
+    href: "/wheels?entry=homepage&intent=truck_wheels",
   },
   {
     title: "Street Wheels",
     image: "/images/homepage/cat-street-wheels.png",
-    href: "/wheels?category=street",
+    // Homepage Intent: street_wheels (street style, staggered-aware)
+    href: "/wheels?entry=homepage&intent=street_wheels",
   },
   {
     title: "Lifted Packages",
     image: "/images/homepage/cat-lifted.png",
-    href: "/lifted",
+    // Homepage Intent: lifted_packages (package-oriented lifted results)
+    href: "/wheels?entry=homepage&intent=lifted_packages",
   },
 ];
 

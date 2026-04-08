@@ -318,8 +318,10 @@ export default async function WheelsPage({
   const homepageIntentState = parseHomepageIntent(sp);
   
   // Track if this is a homepage intent lifted build (vs /lifted page flow)
+  // Includes: lifted_35, lifted, leveled, lifted_packages
+  const liftedIntentIds = ["lifted_35", "lifted", "leveled", "lifted_packages"];
   const isHomepageIntentLiftedBuild = homepageIntentState.isActive && 
-    homepageIntentState.config?.id === "lifted_35";
+    homepageIntentState.config?.liftLevelAdjustable === true;
   
   // Track if this is a street performance intent
   const isStreetPerformanceIntent = homepageIntentState.isActive && 

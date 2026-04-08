@@ -22,9 +22,10 @@ const FEATURED_PACKAGES = [
     titleAccent: "Package",
     specs: "285/70R17 BFGoodrich All-Terrain T/A KO2",
     image: "/images/homepage/package-daily.png",
-    buttonText: "Shop Package",
+    buttonText: "Shop This Build",
     buttonColor: "bg-green-700 hover:bg-green-600",
-    href: "/packages/daily-33",
+    // Homepage Intent: daily_driver (practical, comfortable, 33" target)
+    href: "/wheels?entry=homepage&intent=daily_driver",
     badge: null,
   },
   {

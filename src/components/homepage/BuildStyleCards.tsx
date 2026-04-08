@@ -7,9 +7,11 @@ import Image from "next/image";
  * Premium Build Style Cards - EXACT MATCH TO TEMPLATE
  * 
  * Three cards with real truck photography:
- * - Factory Build (green CTA)
- * - Leveling Kit Build (blue CTA)
- * - Lifted Truck Build (orange CTA) - featured with POPULAR badge
+ * - Factory Build (green CTA) → intent=stock
+ * - Leveling Kit Build (blue CTA) → intent=leveled
+ * - Lifted Truck Build (orange CTA) → intent=lifted
+ * 
+ * All use Homepage Intent system for scoped post-YMM experience.
  */
 
 const BUILD_STYLES = [
@@ -20,7 +22,8 @@ const BUILD_STYLES = [
     image: "/images/homepage/truck-stock.png",
     buttonText: "Shop Factory Fit",
     buttonColor: "bg-green-700 hover:bg-green-600",
-    href: "/wheels?buildType=stock",
+    // Homepage Intent: stock (perfect fit, OEM-compatible)
+    href: "/wheels?entry=homepage&intent=stock",
     featured: false,
   },
   {
@@ -30,7 +33,8 @@ const BUILD_STYLES = [
     image: "/images/homepage/truck-leveled.png",
     buttonText: "Shop Leveled",
     buttonColor: "bg-blue-700 hover:bg-blue-600",
-    href: "/wheels?buildType=level",
+    // Homepage Intent: leveled (1-2" level, mild offset)
+    href: "/wheels?entry=homepage&intent=leveled",
     featured: false,
   },
   {
@@ -40,7 +44,8 @@ const BUILD_STYLES = [
     image: "/images/homepage/truck-lifted.png",
     buttonText: "Shop Lifted",
     buttonColor: "bg-orange-600 hover:bg-orange-500",
-    href: "/lifted",
+    // Homepage Intent: lifted (4" default, adjustable lift levels)
+    href: "/wheels?entry=homepage&intent=lifted",
     featured: true,
   },
 ];

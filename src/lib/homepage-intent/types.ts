@@ -6,13 +6,21 @@
  */
 
 export type HomepageIntentId = 
+  // Phase 1 (already implemented)
   | "street_performance"
   | "lifted_35"
-  // Future intents:
-  // | "daily_driver"
-  // | "stock"
-  // | "leveled"
-  // | "offroad_33"
+  // Phase 2 - Build Style Cards
+  | "stock"
+  | "leveled"
+  | "lifted"
+  // Phase 2 - Featured Packages
+  | "daily_driver"
+  // Phase 2 - Shop by Category
+  | "all_terrain_tires"
+  | "performance_tires"
+  | "truck_wheels"
+  | "street_wheels"
+  | "lifted_packages"
   ;
 
 export type LiftLevel = "leveled" | "4in" | "6in" | "8in";

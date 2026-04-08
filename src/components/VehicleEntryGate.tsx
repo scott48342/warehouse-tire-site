@@ -89,11 +89,29 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
   // Customize headline based on intent
   const headline = (() => {
     if (intentState.isActive && intentState.config) {
-      if (intentState.config.id === "lifted_35") {
-        return 'Build Your 35" Lifted Truck';
-      }
-      if (intentState.config.id === "street_performance") {
-        return "Build Your Street Performance Setup";
+      switch (intentState.config.id) {
+        case "lifted_35":
+          return 'Build Your 35" Lifted Truck';
+        case "street_performance":
+          return "Build Your Street Performance Setup";
+        case "stock":
+          return "Find Factory-Fit Wheels";
+        case "leveled":
+          return "Build Your Leveled Truck";
+        case "lifted":
+          return "Build Your Lifted Truck";
+        case "daily_driver":
+          return "Build Your Daily Driver Package";
+        case "all_terrain_tires":
+          return "Find All-Terrain Tires";
+        case "performance_tires":
+          return "Find Performance Tires";
+        case "truck_wheels":
+          return "Find Truck Wheels";
+        case "street_wheels":
+          return "Find Street Wheels";
+        case "lifted_packages":
+          return "Build Your Lifted Package";
       }
     }
     return productType === "tires" 
@@ -103,11 +121,29 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
 
   const subheadline = (() => {
     if (intentState.isActive && intentState.config) {
-      if (intentState.config.id === "lifted_35") {
-        return "Select your vehicle to see wheels and tires for your lifted build.";
-      }
-      if (intentState.config.id === "street_performance") {
-        return "Select your vehicle to see performance wheels matched to your ride.";
+      switch (intentState.config.id) {
+        case "lifted_35":
+          return "Select your vehicle to see wheels and tires for your 35\" lifted build.";
+        case "street_performance":
+          return "Select your vehicle to see performance wheels matched to your ride.";
+        case "stock":
+          return "Select your vehicle to see wheels that fit perfectly with no modifications.";
+        case "leveled":
+          return "Select your vehicle to see wheels for your leveled stance.";
+        case "lifted":
+          return "Select your vehicle to see wheels for your lifted build.";
+        case "daily_driver":
+          return "Select your vehicle to see practical wheel and tire packages.";
+        case "all_terrain_tires":
+          return "Select your vehicle to see all-terrain tires that fit.";
+        case "performance_tires":
+          return "Select your vehicle to see high-performance tires.";
+        case "truck_wheels":
+          return "Select your vehicle to see truck-style wheels that fit.";
+        case "street_wheels":
+          return "Select your vehicle to see street-style wheels.";
+        case "lifted_packages":
+          return "Select your vehicle to see lifted wheel and tire packages.";
       }
     }
     return productType === "tires"
