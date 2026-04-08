@@ -49,39 +49,53 @@ export default function VisualizerLabPage() {
     return getFamilyAssetPath(selectedFamily, stanceMode);
   }, [selectedFamily, stanceMode]);
 
-  // Export handler
+  // Export handler - saves ALL calibration settings
   const handleExportConfig = useCallback(() => {
     if (!familyConfig) return;
 
     // Apply overrides to create modified config
-    const exportConfig: TemplateFamilyConfig = {
-      ...familyConfig,
-      anchors: {
-        frontWheel: {
-          x: familyConfig.anchors.frontWheel.x + (overrides.frontWheel.x ?? 0),
-          y: familyConfig.anchors.frontWheel.y + (overrides.frontWheel.y ?? 0),
-          radius: familyConfig.anchors.frontWheel.radius + (overrides.frontWheel.radius ?? 0),
+    const exportConfig = {
+      // Family config with overrides applied
+      familyConfig: {
+        ...familyConfig,
+        anchors: {
+          frontWheel: {
+            x: familyConfig.anchors.frontWheel.x + (overrides.frontWheel.x ?? 0),
+            y: familyConfig.anchors.frontWheel.y + (overrides.frontWheel.y ?? 0),
+            radius: familyConfig.anchors.frontWheel.radius + (overrides.frontWheel.radius ?? 0),
+          },
+          rearWheel: {
+            x: familyConfig.anchors.rearWheel.x + (overrides.rearWheel.x ?? 0),
+            y: familyConfig.anchors.rearWheel.y + (overrides.rearWheel.y ?? 0),
+            radius: familyConfig.anchors.rearWheel.radius + (overrides.rearWheel.radius ?? 0),
+          },
         },
-        rearWheel: {
-          x: familyConfig.anchors.rearWheel.x + (overrides.rearWheel.x ?? 0),
-          y: familyConfig.anchors.rearWheel.y + (overrides.rearWheel.y ?? 0),
-          radius: familyConfig.anchors.rearWheel.radius + (overrides.rearWheel.radius ?? 0),
+        stanceProfiles: {
+          ...familyConfig.stanceProfiles,
+          [stanceMode]: {
+            bodyYOffset: familyConfig.stanceProfiles[stanceMode].bodyYOffset + overrides.bodyYOffset,
+            wheelScale: familyConfig.stanceProfiles[stanceMode].wheelScale * overrides.wheelScale,
+          },
         },
       },
-      stanceProfiles: {
-        ...familyConfig.stanceProfiles,
-        [stanceMode]: {
-          bodyYOffset: familyConfig.stanceProfiles[stanceMode].bodyYOffset + overrides.bodyYOffset,
-          wheelScale: familyConfig.stanceProfiles[stanceMode].wheelScale * overrides.wheelScale,
-        },
+      // Visualizer settings
+      visualizerSettings: {
+        tireScale,
+        wheelDiameter,
+        stanceMode,
       },
+      // Raw overrides (for reference)
+      overrides,
+      // Metadata
+      exportedAt: new Date().toISOString(),
+      exportedFrom: "visualizer-lab",
     };
 
     const json = JSON.stringify(exportConfig, null, 2);
 
     // Copy to clipboard
     navigator.clipboard.writeText(json).then(() => {
-      setExportMessage("✅ Config copied to clipboard!");
+      setExportMessage("✅ Full config copied to clipboard!");
       setTimeout(() => setExportMessage(null), 3000);
     }).catch(() => {
       // Fallback: log to console
@@ -89,7 +103,7 @@ export default function VisualizerLabPage() {
       setExportMessage("📋 Config logged to console (clipboard unavailable)");
       setTimeout(() => setExportMessage(null), 3000);
     });
-  }, [familyConfig, overrides, stanceMode]);
+  }, [familyConfig, overrides, stanceMode, tireScale, wheelDiameter]);
 
   // Reset overrides
   const handleResetOverrides = useCallback(() => {
