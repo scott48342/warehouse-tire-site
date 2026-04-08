@@ -1,6 +1,6 @@
 /**
  * Tire Brands API
- * Returns list of available tire brands from the database
+ * Returns list of available tire brands from WheelPros inventory
  */
 
 import { NextResponse } from "next/server";
@@ -28,13 +28,18 @@ export async function GET() {
   try {
     const db = getPool();
     
-    // Get distinct brands from WheelPros tires table
+    // Get distinct brands from WheelPros tires (only those with inventory)
     const { rows } = await db.query(`
-      SELECT DISTINCT brand_desc as brand, COUNT(*) as count
-      FROM wp_tires
-      WHERE brand_desc IS NOT NULL AND brand_desc != ''
-      GROUP BY brand_desc
-      ORDER BY brand_desc ASC
+      SELECT t.brand_desc as brand, COUNT(DISTINCT t.sku) as count
+      FROM wp_tires t
+      JOIN wp_inventory i ON i.sku = t.sku 
+        AND i.product_type = 'tire' 
+        AND i.location_id = 'TOTAL'
+      WHERE t.brand_desc IS NOT NULL 
+        AND t.brand_desc != ''
+        AND COALESCE(i.qoh, 0) >= 4
+      GROUP BY t.brand_desc
+      ORDER BY count DESC, t.brand_desc ASC
     `);
     
     const brands = rows.map(r => ({
