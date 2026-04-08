@@ -339,19 +339,6 @@ export function SearchModal({
               <div>
                 {isTires ? (
                   <div>
-                    <div className="mt-3 rounded-2xl border border-neutral-200 bg-white p-3">
-                      <label className="flex items-center justify-between gap-3">
-                        <div>
-                          <div className="text-sm font-extrabold text-neutral-900">10‑ply (E‑load) preference</div>
-                          <div className="mt-0.5 text-[11px] text-neutral-600">Default is standard load.</div>
-                        </div>
-                        <div className="flex items-center gap-2 text-xs font-extrabold text-neutral-900">
-                          <input type="checkbox" checked={tenPly} onChange={(e) => setTenPly(e.target.checked)} />
-                          {tenPly ? "ON" : "OFF"}
-                        </div>
-                      </label>
-                    </div>
-
                     <>
                       <div className="text-xs font-extrabold text-neutral-900">Metric sizes</div>
                       <div className="mt-3">
