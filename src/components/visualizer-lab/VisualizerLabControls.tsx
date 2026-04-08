@@ -14,6 +14,8 @@ interface VisualizerLabControlsProps {
   wheelDiameter: WheelDiameter;
   wheelImageUrl: string;
   showDebug: boolean;
+  showTire: boolean;
+  tireScale: number;
   overrides: {
     wheelScale: number;
     frontWheel: Partial<WheelAnchor>;
@@ -24,6 +26,8 @@ interface VisualizerLabControlsProps {
   onWheelDiameterChange: (diameter: WheelDiameter) => void;
   onWheelImageUrlChange: (url: string) => void;
   onShowDebugChange: (show: boolean) => void;
+  onShowTireChange: (show: boolean) => void;
+  onTireScaleChange: (scale: number) => void;
   onOverridesChange: (overrides: VisualizerLabControlsProps["overrides"]) => void;
   onExportConfig: () => void;
   onResetOverrides: () => void;
@@ -150,11 +154,15 @@ export function VisualizerLabControls({
   wheelDiameter,
   wheelImageUrl,
   showDebug,
+  showTire,
+  tireScale,
   overrides,
   onStanceModeChange,
   onWheelDiameterChange,
   onWheelImageUrlChange,
   onShowDebugChange,
+  onShowTireChange,
+  onTireScaleChange,
   onOverridesChange,
   onExportConfig,
   onResetOverrides,
@@ -254,6 +262,44 @@ export function VisualizerLabControls({
             }`}
           />
         </button>
+      </div>
+
+      {/* Tire Controls */}
+      <div className="p-3 bg-neutral-700/50 rounded-lg space-y-3">
+        <div className="flex items-center justify-between">
+          <label className="text-sm font-semibold text-neutral-300">
+            🛞 Show Tire
+          </label>
+          <button
+            onClick={() => onShowTireChange(!showTire)}
+            className={`relative w-12 h-6 rounded-full transition ${
+              showTire ? "bg-green-600" : "bg-neutral-600"
+            }`}
+          >
+            <span
+              className={`absolute top-1 w-4 h-4 bg-white rounded-full transition ${
+                showTire ? "left-7" : "left-1"
+              }`}
+            />
+          </button>
+        </div>
+        
+        {showTire && (
+          <SliderWithInput
+            label="Tire Scale"
+            value={tireScale}
+            onChange={onTireScaleChange}
+            min={1.05}
+            max={1.40}
+            step={0.01}
+            accentColor="green"
+            suffix="x"
+          />
+        )}
+        
+        <p className="text-xs text-neutral-500">
+          Tire radius = wheel radius × scale. Larger = more sidewall.
+        </p>
       </div>
 
       {/* Fine Tuning Section */}

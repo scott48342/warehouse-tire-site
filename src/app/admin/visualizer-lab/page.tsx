@@ -34,6 +34,8 @@ export default function VisualizerLabPage() {
   const [wheelDiameter, setWheelDiameter] = useState<WheelDiameter>(20);
   const [wheelImageUrl, setWheelImageUrl] = useState<string>("");
   const [showDebug, setShowDebug] = useState<boolean>(true);
+  const [showTire, setShowTire] = useState<boolean>(true);
+  const [tireScale, setTireScale] = useState<number>(1.18);
   const [overrides, setOverrides] = useState(DEFAULT_OVERRIDES);
   const [exportMessage, setExportMessage] = useState<string | null>(null);
 
@@ -156,6 +158,8 @@ export default function VisualizerLabPage() {
             overrides={overrides}
             showDebug={showDebug}
             onOverridesChange={setOverrides}
+            showTire={showTire}
+            tireScale={tireScale}
           />
 
           {/* Export message */}
@@ -199,11 +203,15 @@ export default function VisualizerLabPage() {
             wheelDiameter={wheelDiameter}
             wheelImageUrl={wheelImageUrl}
             showDebug={showDebug}
+            showTire={showTire}
+            tireScale={tireScale}
             overrides={overrides}
             onStanceModeChange={setStanceMode}
             onWheelDiameterChange={setWheelDiameter}
             onWheelImageUrlChange={setWheelImageUrl}
             onShowDebugChange={setShowDebug}
+            onShowTireChange={setShowTire}
+            onTireScaleChange={setTireScale}
             onOverridesChange={setOverrides}
             onExportConfig={handleExportConfig}
             onResetOverrides={handleResetOverrides}

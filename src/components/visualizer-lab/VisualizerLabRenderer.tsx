@@ -33,6 +33,12 @@ interface VisualizerLabRendererProps {
   showDebug: boolean;
   /** Callback when overrides change via drag */
   onOverridesChange?: (overrides: VisualizerLabRendererProps["overrides"]) => void;
+  /** Show tire layer behind wheel */
+  showTire?: boolean;
+  /** Tire scale multiplier (tire radius = wheel radius * tireScale) */
+  tireScale?: number;
+  /** Optional tire image URL (uses programmatic rendering if not provided) */
+  tireImageUrl?: string | null;
 }
 
 export function VisualizerLabRenderer({
@@ -44,11 +50,15 @@ export function VisualizerLabRenderer({
   overrides,
   showDebug,
   onOverridesChange,
+  showTire = true,
+  tireScale = 1.18,
+  tireImageUrl = null,
 }: VisualizerLabRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const vehicleImgRef = useRef<HTMLImageElement | null>(null);
   const wheelImgRef = useRef<HTMLImageElement | null>(null);
+  const tireImgRef = useRef<HTMLImageElement | null>(null);
 
   // Interaction state
   const [selectedWheel, setSelectedWheel] = useState<WheelTarget>(null);
@@ -338,10 +348,29 @@ export function VisualizerLabRenderer({
     }
   }, [wheelImageUrl]);
 
+  // Load tire image (optional - uses programmatic rendering if not provided)
+  useEffect(() => {
+    if (tireImageUrl) {
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.onload = () => {
+        tireImgRef.current = img;
+        renderCanvas();
+      };
+      img.onerror = () => {
+        tireImgRef.current = null;
+        renderCanvas();
+      };
+      img.src = tireImageUrl;
+    } else {
+      tireImgRef.current = null;
+    }
+  }, [tireImageUrl]);
+
   // Re-render when relevant props change
   useEffect(() => {
     renderCanvas();
-  }, [effectiveAnchors, showDebug, stanceMode, wheelDiameter, selectedWheel]);
+  }, [effectiveAnchors, showDebug, stanceMode, wheelDiameter, selectedWheel, showTire, tireScale]);
 
   const renderCanvas = () => {
     const canvas = canvasRef.current;
@@ -376,7 +405,13 @@ export function VisualizerLabRenderer({
       ctx.fillText("Add template images to /public/visualizer-lab/families/", width / 2, height / 2 + 40);
     }
 
-    // Draw wheel overlays
+    // Draw tire layers BEHIND wheels (if enabled)
+    if (showTire) {
+      drawTire(ctx, effectiveAnchors.front, tireScale, tireImgRef.current);
+      drawTire(ctx, effectiveAnchors.rear, tireScale, tireImgRef.current);
+    }
+
+    // Draw wheel overlays ON TOP of tires
     if (wheelImgRef.current) {
       drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.front);
       drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.rear);
@@ -409,6 +444,67 @@ export function VisualizerLabRenderer({
       size,
       size
     );
+  };
+
+  /**
+   * Draw tire behind wheel.
+   * Uses tire image if provided, otherwise draws a programmatic tire (donut shape).
+   */
+  const drawTire = (
+    ctx: CanvasRenderingContext2D,
+    wheelAnchor: { x: number; y: number; radius: number },
+    scale: number,
+    tireImg: HTMLImageElement | null
+  ) => {
+    const tireRadius = wheelAnchor.radius * scale;
+    const { x, y } = wheelAnchor;
+
+    if (tireImg) {
+      // Draw tire image
+      const size = tireRadius * 2;
+      ctx.drawImage(
+        tireImg,
+        x - tireRadius,
+        y - tireRadius,
+        size,
+        size
+      );
+    } else {
+      // Programmatic tire rendering (donut shape)
+      // Outer tire edge
+      ctx.save();
+      
+      // Draw tire body (dark rubber)
+      ctx.beginPath();
+      ctx.arc(x, y, tireRadius, 0, Math.PI * 2);
+      ctx.fillStyle = "#1a1a1a";
+      ctx.fill();
+      
+      // Add subtle tire tread texture (concentric rings)
+      ctx.strokeStyle = "#252525";
+      ctx.lineWidth = 2;
+      for (let r = wheelAnchor.radius + 5; r < tireRadius - 3; r += 8) {
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      
+      // Sidewall highlight (subtle rim on outer edge)
+      ctx.beginPath();
+      ctx.arc(x, y, tireRadius - 2, 0, Math.PI * 2);
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      
+      // Inner edge where tire meets wheel (slight shadow)
+      ctx.beginPath();
+      ctx.arc(x, y, wheelAnchor.radius + 2, 0, Math.PI * 2);
+      ctx.strokeStyle = "#111";
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      
+      ctx.restore();
+    }
   };
 
   const drawInteractionHandles = (
