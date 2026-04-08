@@ -223,12 +223,13 @@ export function VisualizerLabRenderer({
         });
       } else if (dragMode === "resize") {
         // Calculate distance from wheel center
+        // In new sizing system, dragging resizes the tire outer (anchor.tireRadius)
         const anchor = anchorsRef.current[selectedWheel];
         const distFromCenter = Math.sqrt((point.x - anchor.x) ** 2 + (point.y - anchor.y) ** 2);
         const baseRadius = selectedWheel === "front" 
           ? familyConfig.anchors.frontWheel.radius 
           : familyConfig.anchors.rearWheel.radius;
-        const scaledBaseRadius = (baseRadius + radiusDelta) * stanceProfile.wheelScale * overrides.wheelScale;
+        const scaledBaseRadius = baseRadius * stanceProfile.wheelScale * overrides.wheelScale;
         const radiusDiff = distFromCenter - scaledBaseRadius;
         
         onOverridesChange({
@@ -250,7 +251,7 @@ export function VisualizerLabRenderer({
         canvas.style.cursor = "default";
       }
     }
-  }, [isDragging, selectedWheel, dragMode, getCanvasCoords, getHitTarget, onOverridesChange, overrides, familyConfig, radiusDelta, stanceProfile]);
+  }, [isDragging, selectedWheel, dragMode, getCanvasCoords, getHitTarget, onOverridesChange, overrides, familyConfig, stanceProfile]);
 
   // Handle mouse up
   const handleMouseUp = useCallback(() => {
