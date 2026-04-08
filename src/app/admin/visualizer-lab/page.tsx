@@ -155,6 +155,7 @@ export default function VisualizerLabPage() {
             wheelImageUrl={wheelImageUrl || null}
             overrides={overrides}
             showDebug={showDebug}
+            onOverridesChange={setOverrides}
           />
 
           {/* Export message */}
@@ -209,13 +210,23 @@ export default function VisualizerLabPage() {
 
       {/* Instructions */}
       <div className="mt-8 p-4 bg-amber-900/30 border border-amber-700/50 rounded-xl">
-        <h3 className="font-bold text-amber-400 mb-2">📋 V1 Lab Instructions</h3>
+        <h3 className="font-bold text-amber-400 mb-2">📋 Visualizer Lab Controls</h3>
         <div className="text-sm text-amber-200/80 space-y-2">
-          <p><strong>1. Template Assets:</strong> Add vehicle images to <code className="bg-amber-800/50 px-1 rounded">/public/visualizer-lab/families/half_ton_truck_v1/</code></p>
-          <p><strong>2. Required files:</strong> stock.png, leveled.png, lift_4.png, lift_6.png, lift_8.png</p>
-          <p><strong>3. Wheel Images:</strong> Paste any wheel image URL from WheelPros CDN or your catalog</p>
-          <p><strong>4. Calibration:</strong> Use fine-tuning sliders to adjust anchor positions</p>
-          <p><strong>5. Export:</strong> Click "Export Config" to copy the updated JSON</p>
+          <p><strong>🖱️ Direct Manipulation:</strong></p>
+          <ul className="list-disc list-inside ml-4 space-y-1">
+            <li><strong>Click</strong> a wheel to select it</li>
+            <li><strong>Drag center</strong> to move the wheel position</li>
+            <li><strong>Drag edge</strong> to resize the wheel radius</li>
+          </ul>
+          <p className="mt-2"><strong>⌨️ Keyboard Controls</strong> (when wheel selected):</p>
+          <ul className="list-disc list-inside ml-4 space-y-1">
+            <li><strong>Arrow keys:</strong> move 1px (shift = 10px)</li>
+            <li><strong>+/-:</strong> resize radius (shift = 10px, alt = 1px)</li>
+            <li><strong>Tab:</strong> switch between front/rear wheel</li>
+            <li><strong>Esc:</strong> deselect</li>
+          </ul>
+          <p className="mt-2"><strong>📁 Assets:</strong> Add templates to <code className="bg-amber-800/50 px-1 rounded">/public/visualizer-lab/families/half_ton_truck_v1/</code></p>
+          <p><strong>📋 Export:</strong> Click "Export Config" to copy calibrated JSON</p>
         </div>
       </div>
 

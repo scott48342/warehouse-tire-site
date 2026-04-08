@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useEffect, useRef, useMemo } from "react";
+import React, { useEffect, useRef, useMemo, useState, useCallback } from "react";
 import type {
   TemplateFamilyConfig,
   StanceMode,
   WheelDiameter,
   WheelAnchor,
 } from "@/lib/visualizer-lab/types";
+
+type WheelTarget = "front" | "rear" | null;
+type DragMode = "move" | "resize" | null;
 
 interface VisualizerLabRendererProps {
   /** Family configuration */
@@ -28,6 +31,8 @@ interface VisualizerLabRendererProps {
   };
   /** Show debug overlays */
   showDebug: boolean;
+  /** Callback when overrides change via drag */
+  onOverridesChange?: (overrides: VisualizerLabRendererProps["overrides"]) => void;
 }
 
 export function VisualizerLabRenderer({
@@ -38,10 +43,18 @@ export function VisualizerLabRenderer({
   wheelImageUrl,
   overrides,
   showDebug,
+  onOverridesChange,
 }: VisualizerLabRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const vehicleImgRef = useRef<HTMLImageElement | null>(null);
   const wheelImgRef = useRef<HTMLImageElement | null>(null);
+
+  // Interaction state
+  const [selectedWheel, setSelectedWheel] = useState<WheelTarget>(null);
+  const [dragMode, setDragMode] = useState<DragMode>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartRef = useRef<{ x: number; y: number; startOverrides: typeof overrides } | null>(null);
 
   // Calculate effective values
   const stanceProfile = familyConfig.stanceProfiles[stanceMode];
@@ -73,6 +86,220 @@ export function VisualizerLabRenderer({
       bodyYOffset: effectiveBodyYOffset,
     };
   }, [familyConfig, stanceProfile, overrides, radiusDelta]);
+
+  // Store anchors in ref for use in event handlers
+  const anchorsRef = useRef(effectiveAnchors);
+  anchorsRef.current = effectiveAnchors;
+
+  // Get mouse position in canvas coordinates
+  const getCanvasCoords = useCallback((e: MouseEvent | React.MouseEvent): { x: number; y: number } => {
+    const canvas = canvasRef.current;
+    if (!canvas) return { x: 0, y: 0 };
+
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = familyConfig.canvas.width / rect.width;
+    const scaleY = familyConfig.canvas.height / rect.height;
+
+    return {
+      x: (e.clientX - rect.left) * scaleX,
+      y: (e.clientY - rect.top) * scaleY,
+    };
+  }, [familyConfig.canvas.width, familyConfig.canvas.height]);
+
+  // Check if point is near wheel center (for move)
+  const isNearWheelCenter = (point: { x: number; y: number }, anchor: { x: number; y: number; radius: number }): boolean => {
+    const dist = Math.sqrt((point.x - anchor.x) ** 2 + (point.y - anchor.y) ** 2);
+    return dist < anchor.radius * 0.7; // Inner 70% is move zone
+  };
+
+  // Check if point is near wheel edge (for resize)
+  const isNearWheelEdge = (point: { x: number; y: number }, anchor: { x: number; y: number; radius: number }): boolean => {
+    const dist = Math.sqrt((point.x - anchor.x) ** 2 + (point.y - anchor.y) ** 2);
+    return dist >= anchor.radius * 0.7 && dist <= anchor.radius * 1.3; // Edge zone
+  };
+
+  // Determine what's under the cursor
+  const getHitTarget = useCallback((point: { x: number; y: number }): { wheel: WheelTarget; mode: DragMode } => {
+    const anchors = anchorsRef.current;
+    
+    // Check front wheel first (typically in foreground)
+    if (isNearWheelEdge(point, anchors.front)) {
+      return { wheel: "front", mode: "resize" };
+    }
+    if (isNearWheelCenter(point, anchors.front)) {
+      return { wheel: "front", mode: "move" };
+    }
+    
+    // Check rear wheel
+    if (isNearWheelEdge(point, anchors.rear)) {
+      return { wheel: "rear", mode: "resize" };
+    }
+    if (isNearWheelCenter(point, anchors.rear)) {
+      return { wheel: "rear", mode: "move" };
+    }
+    
+    return { wheel: null, mode: null };
+  }, []);
+
+  // Handle mouse down
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    const point = getCanvasCoords(e);
+    const hit = getHitTarget(point);
+    
+    if (hit.wheel) {
+      setSelectedWheel(hit.wheel);
+      setDragMode(hit.mode);
+      setIsDragging(true);
+      dragStartRef.current = {
+        x: point.x,
+        y: point.y,
+        startOverrides: JSON.parse(JSON.stringify(overrides)),
+      };
+      e.preventDefault();
+    }
+  }, [getCanvasCoords, getHitTarget, overrides]);
+
+  // Handle mouse move
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const point = getCanvasCoords(e);
+    
+    if (isDragging && dragStartRef.current && selectedWheel && onOverridesChange) {
+      const dx = point.x - dragStartRef.current.x;
+      const dy = point.y - dragStartRef.current.y;
+      const startOverrides = dragStartRef.current.startOverrides;
+      
+      const wheelKey = selectedWheel === "front" ? "frontWheel" : "rearWheel";
+      const startWheelOverrides = startOverrides[wheelKey];
+      
+      if (dragMode === "move") {
+        // Update X/Y
+        onOverridesChange({
+          ...overrides,
+          [wheelKey]: {
+            ...overrides[wheelKey],
+            x: (startWheelOverrides.x ?? 0) + dx,
+            y: (startWheelOverrides.y ?? 0) + dy,
+          },
+        });
+      } else if (dragMode === "resize") {
+        // Calculate distance from wheel center
+        const anchor = anchorsRef.current[selectedWheel];
+        const distFromCenter = Math.sqrt((point.x - anchor.x) ** 2 + (point.y - anchor.y) ** 2);
+        const baseRadius = selectedWheel === "front" 
+          ? familyConfig.anchors.frontWheel.radius 
+          : familyConfig.anchors.rearWheel.radius;
+        const scaledBaseRadius = (baseRadius + radiusDelta) * stanceProfile.wheelScale * overrides.wheelScale;
+        const radiusDiff = distFromCenter - scaledBaseRadius;
+        
+        onOverridesChange({
+          ...overrides,
+          [wheelKey]: {
+            ...overrides[wheelKey],
+            radius: Math.round(radiusDiff),
+          },
+        });
+      }
+    } else {
+      // Update cursor based on what's under it
+      const hit = getHitTarget(point);
+      if (hit.mode === "move") {
+        canvas.style.cursor = "move";
+      } else if (hit.mode === "resize") {
+        canvas.style.cursor = "ew-resize";
+      } else {
+        canvas.style.cursor = "default";
+      }
+    }
+  }, [isDragging, selectedWheel, dragMode, getCanvasCoords, getHitTarget, onOverridesChange, overrides, familyConfig, radiusDelta, stanceProfile]);
+
+  // Handle mouse up
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+    setDragMode(null);
+    dragStartRef.current = null;
+  }, []);
+
+  // Handle keyboard events for precision control
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (!selectedWheel || !onOverridesChange) return;
+    
+    const wheelKey = selectedWheel === "front" ? "frontWheel" : "rearWheel";
+    const step = e.shiftKey ? 10 : 1;
+    const radiusStep = e.altKey ? 1 : (e.shiftKey ? 10 : 5);
+    
+    let handled = false;
+    const newOverrides = { ...overrides };
+    const wheelOverrides = { ...overrides[wheelKey] };
+    
+    switch (e.key) {
+      case "ArrowLeft":
+        wheelOverrides.x = (wheelOverrides.x ?? 0) - step;
+        handled = true;
+        break;
+      case "ArrowRight":
+        wheelOverrides.x = (wheelOverrides.x ?? 0) + step;
+        handled = true;
+        break;
+      case "ArrowUp":
+        wheelOverrides.y = (wheelOverrides.y ?? 0) - step;
+        handled = true;
+        break;
+      case "ArrowDown":
+        wheelOverrides.y = (wheelOverrides.y ?? 0) + step;
+        handled = true;
+        break;
+      case "+":
+      case "=":
+        wheelOverrides.radius = (wheelOverrides.radius ?? 0) + radiusStep;
+        handled = true;
+        break;
+      case "-":
+      case "_":
+        wheelOverrides.radius = (wheelOverrides.radius ?? 0) - radiusStep;
+        handled = true;
+        break;
+      case "Escape":
+        setSelectedWheel(null);
+        handled = true;
+        break;
+      case "Tab":
+        // Switch between front and rear
+        setSelectedWheel(selectedWheel === "front" ? "rear" : "front");
+        handled = true;
+        break;
+    }
+    
+    if (handled) {
+      e.preventDefault();
+      if (e.key !== "Escape" && e.key !== "Tab") {
+        newOverrides[wheelKey] = wheelOverrides;
+        onOverridesChange(newOverrides);
+      }
+    }
+  }, [selectedWheel, onOverridesChange, overrides]);
+
+  // Add global mouse up listener
+  useEffect(() => {
+    const handleGlobalMouseUp = () => {
+      if (isDragging) {
+        handleMouseUp();
+      }
+    };
+    
+    window.addEventListener("mouseup", handleGlobalMouseUp);
+    return () => window.removeEventListener("mouseup", handleGlobalMouseUp);
+  }, [isDragging, handleMouseUp]);
+
+  // Add keyboard listener when wheel is selected
+  useEffect(() => {
+    if (selectedWheel) {
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }
+  }, [selectedWheel, handleKeyDown]);
 
   // Load images
   useEffect(() => {
@@ -114,7 +341,7 @@ export function VisualizerLabRenderer({
   // Re-render when relevant props change
   useEffect(() => {
     renderCanvas();
-  }, [effectiveAnchors, showDebug, stanceMode, wheelDiameter]);
+  }, [effectiveAnchors, showDebug, stanceMode, wheelDiameter, selectedWheel]);
 
   const renderCanvas = () => {
     const canvas = canvasRef.current;
@@ -131,7 +358,6 @@ export function VisualizerLabRenderer({
 
     // Draw vehicle image
     if (vehicleImgRef.current) {
-      // Apply body Y offset by adjusting draw position
       ctx.drawImage(
         vehicleImgRef.current,
         0,
@@ -152,15 +378,21 @@ export function VisualizerLabRenderer({
 
     // Draw wheel overlays
     if (wheelImgRef.current) {
-      // Front wheel
       drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.front);
-      // Rear wheel
       drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.rear);
     }
 
-    // Debug overlays
-    if (showDebug) {
+    // Debug overlays (always show when interacting, or when debug is on)
+    if (showDebug || selectedWheel) {
       drawDebugOverlays(ctx, effectiveAnchors);
+    }
+
+    // Draw selection/interaction handles
+    if (selectedWheel === "front" || showDebug) {
+      drawInteractionHandles(ctx, effectiveAnchors.front, "FRONT", selectedWheel === "front");
+    }
+    if (selectedWheel === "rear" || showDebug) {
+      drawInteractionHandles(ctx, effectiveAnchors.rear, "REAR", selectedWheel === "rear");
     }
   };
 
@@ -179,6 +411,78 @@ export function VisualizerLabRenderer({
     );
   };
 
+  const drawInteractionHandles = (
+    ctx: CanvasRenderingContext2D,
+    anchor: { x: number; y: number; radius: number },
+    label: string,
+    isSelected: boolean
+  ) => {
+    const color = label === "FRONT" ? "#00ff00" : "#00ffff";
+    const alpha = isSelected ? 1 : 0.5;
+    
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    
+    // Outer circle (resize zone indicator)
+    ctx.strokeStyle = color;
+    ctx.lineWidth = isSelected ? 3 : 2;
+    ctx.setLineDash(isSelected ? [] : [8, 4]);
+    ctx.beginPath();
+    ctx.arc(anchor.x, anchor.y, anchor.radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    
+    // Resize handles (4 points on the edge)
+    if (isSelected) {
+      const handleSize = 8;
+      ctx.fillStyle = color;
+      
+      // Right handle
+      ctx.beginPath();
+      ctx.arc(anchor.x + anchor.radius, anchor.y, handleSize, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Left handle
+      ctx.beginPath();
+      ctx.arc(anchor.x - anchor.radius, anchor.y, handleSize, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Top handle
+      ctx.beginPath();
+      ctx.arc(anchor.x, anchor.y - anchor.radius, handleSize, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Bottom handle
+      ctx.beginPath();
+      ctx.arc(anchor.x, anchor.y + anchor.radius, handleSize, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    
+    // Center crosshair (move indicator)
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    const crossSize = isSelected ? 20 : 15;
+    ctx.beginPath();
+    ctx.moveTo(anchor.x - crossSize, anchor.y);
+    ctx.lineTo(anchor.x + crossSize, anchor.y);
+    ctx.moveTo(anchor.x, anchor.y - crossSize);
+    ctx.lineTo(anchor.x, anchor.y + crossSize);
+    ctx.stroke();
+    
+    // Center dot
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(anchor.x, anchor.y, isSelected ? 6 : 4, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Label
+    ctx.font = isSelected ? "bold 14px monospace" : "12px monospace";
+    ctx.textAlign = "center";
+    ctx.fillText(label, anchor.x, anchor.y - anchor.radius - 15);
+    
+    ctx.restore();
+  };
+
   const drawDebugOverlays = (
     ctx: CanvasRenderingContext2D,
     anchors: {
@@ -187,14 +491,9 @@ export function VisualizerLabRenderer({
       bodyYOffset: number;
     }
   ) => {
-    // Front wheel debug
-    drawAnchorDebug(ctx, anchors.front, "FRONT", "#00ff00");
-    // Rear wheel debug
-    drawAnchorDebug(ctx, anchors.rear, "REAR", "#00ffff");
-
     // Info panel
-    ctx.fillStyle = "rgba(0, 0, 0, 0.8)";
-    ctx.fillRect(10, 10, 300, 200);
+    ctx.fillStyle = "rgba(0, 0, 0, 0.85)";
+    ctx.fillRect(10, 10, 320, 220);
     ctx.fillStyle = "#fff";
     ctx.font = "14px monospace";
     ctx.textAlign = "left";
@@ -205,8 +504,11 @@ export function VisualizerLabRenderer({
       `Wheel: ${wheelDiameter}"`,
       `Body Y: ${anchors.bodyYOffset.toFixed(1)}px`,
       "",
-      `Front: (${anchors.front.x}, ${anchors.front.y}) r=${anchors.front.radius.toFixed(1)}`,
-      `Rear:  (${anchors.rear.x}, ${anchors.rear.y}) r=${anchors.rear.radius.toFixed(1)}`,
+      `Front: (${Math.round(anchors.front.x)}, ${Math.round(anchors.front.y)}) r=${anchors.front.radius.toFixed(1)}`,
+      `Rear:  (${Math.round(anchors.rear.x)}, ${Math.round(anchors.rear.y)}) r=${anchors.rear.radius.toFixed(1)}`,
+      "",
+      `Selected: ${selectedWheel ?? "none"}`,
+      selectedWheel ? "Arrow keys: move | +/-: resize" : "Click wheel to select",
     ];
 
     lines.forEach((line, i) => {
@@ -214,44 +516,36 @@ export function VisualizerLabRenderer({
     });
   };
 
-  const drawAnchorDebug = (
-    ctx: CanvasRenderingContext2D,
-    anchor: { x: number; y: number; radius: number },
-    label: string,
-    color: string
-  ) => {
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-
-    // Circle
-    ctx.beginPath();
-    ctx.arc(anchor.x, anchor.y, anchor.radius, 0, Math.PI * 2);
-    ctx.stroke();
-
-    // Center crosshair
-    ctx.beginPath();
-    ctx.moveTo(anchor.x - 10, anchor.y);
-    ctx.lineTo(anchor.x + 10, anchor.y);
-    ctx.moveTo(anchor.x, anchor.y - 10);
-    ctx.lineTo(anchor.x, anchor.y + 10);
-    ctx.stroke();
-
-    // Label
-    ctx.fillStyle = color;
-    ctx.font = "12px monospace";
-    ctx.textAlign = "center";
-    ctx.fillText(label, anchor.x, anchor.y - anchor.radius - 10);
-  };
-
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <canvas
         ref={canvasRef}
         width={familyConfig.canvas.width}
         height={familyConfig.canvas.height}
         className="w-full h-auto bg-neutral-900 rounded-xl border border-neutral-700"
         style={{ maxWidth: familyConfig.canvas.width }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={() => {
+          if (!isDragging) {
+            const canvas = canvasRef.current;
+            if (canvas) canvas.style.cursor = "default";
+          }
+        }}
+        tabIndex={0}
       />
+      
+      {/* Keyboard hint */}
+      {selectedWheel && (
+        <div className="absolute bottom-4 left-4 right-4 bg-black/80 text-white text-xs p-2 rounded-lg">
+          <span className="text-green-400 font-semibold">{selectedWheel.toUpperCase()} selected</span>
+          {" • "}
+          <span className="text-neutral-400">
+            Arrow keys: move (shift=10px) • +/-: resize • Tab: switch wheel • Esc: deselect
+          </span>
+        </div>
+      )}
     </div>
   );
 }
