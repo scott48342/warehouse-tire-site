@@ -28,7 +28,8 @@ export async function GET() {
   try {
     const db = getPool();
     
-    // Get distinct brands from WheelPros tires (only those with inventory)
+    // Get distinct brands from WheelPros tires (those with any inventory)
+    // Count = number of SKUs with qty > 0
     const { rows } = await db.query(`
       SELECT t.brand_desc as brand, COUNT(DISTINCT t.sku) as count
       FROM wp_tires t
@@ -37,7 +38,7 @@ export async function GET() {
         AND i.location_id = 'TOTAL'
       WHERE t.brand_desc IS NOT NULL 
         AND t.brand_desc != ''
-        AND COALESCE(i.qoh, 0) >= 4
+        AND COALESCE(i.qoh, 0) > 0
       GROUP BY t.brand_desc
       ORDER BY count DESC, t.brand_desc ASC
     `);
