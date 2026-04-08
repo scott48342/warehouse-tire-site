@@ -405,16 +405,22 @@ export function VisualizerLabRenderer({
       ctx.fillText("Add template images to /public/visualizer-lab/families/", width / 2, height / 2 + 40);
     }
 
+    // Draw contact shadows FIRST (beneath everything)
+    if (showTire) {
+      drawContactShadow(ctx, effectiveAnchors.front, tireScale);
+      drawContactShadow(ctx, effectiveAnchors.rear, tireScale);
+    }
+
     // Draw tire layers BEHIND wheels (if enabled)
     if (showTire) {
       drawTire(ctx, effectiveAnchors.front, tireScale, tireImgRef.current);
       drawTire(ctx, effectiveAnchors.rear, tireScale, tireImgRef.current);
     }
 
-    // Draw wheel overlays ON TOP of tires
+    // Draw wheel overlays ON TOP of tires (with inset for depth)
     if (wheelImgRef.current) {
-      drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.front);
-      drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.rear);
+      drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.front, showTire);
+      drawWheelOverlay(ctx, wheelImgRef.current, effectiveAnchors.rear, showTire);
     }
 
     // Debug overlays (always show when interacting, or when debug is on)
@@ -431,24 +437,67 @@ export function VisualizerLabRenderer({
     }
   };
 
+  // Wheel inset factor - makes wheel slightly smaller than tire opening for depth
+  const WHEEL_INSET = 0.97;
+
   const drawWheelOverlay = (
     ctx: CanvasRenderingContext2D,
     wheelImg: HTMLImageElement,
-    anchor: { x: number; y: number; radius: number }
+    anchor: { x: number; y: number; radius: number },
+    applyInset: boolean = false
   ) => {
-    const size = anchor.radius * 2;
+    // Apply inset when tire is shown (creates depth effect)
+    const effectiveRadius = applyInset ? anchor.radius * WHEEL_INSET : anchor.radius;
+    const size = effectiveRadius * 2;
     ctx.drawImage(
       wheelImg,
-      anchor.x - anchor.radius,
-      anchor.y - anchor.radius,
+      anchor.x - effectiveRadius,
+      anchor.y - effectiveRadius,
       size,
       size
     );
   };
 
   /**
+   * Draw contact shadow beneath tire for grounded feel.
+   * Elliptical shape, darker center, fades outward.
+   */
+  const drawContactShadow = (
+    ctx: CanvasRenderingContext2D,
+    wheelAnchor: { x: number; y: number; radius: number },
+    tireScaleFactor: number
+  ) => {
+    const tireRadius = wheelAnchor.radius * tireScaleFactor;
+    const { x, y } = wheelAnchor;
+    
+    // Shadow positioned at bottom of tire
+    const shadowY = y + tireRadius * 0.92; // Slightly inside tire bottom
+    const shadowWidth = tireRadius * 1.1;
+    const shadowHeight = tireRadius * 0.15;
+    
+    ctx.save();
+    
+    // Create elliptical gradient for soft shadow
+    const gradient = ctx.createRadialGradient(
+      x, shadowY, 0,
+      x, shadowY, shadowWidth
+    );
+    gradient.addColorStop(0, "rgba(0, 0, 0, 0.4)");
+    gradient.addColorStop(0.5, "rgba(0, 0, 0, 0.2)");
+    gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+    
+    // Draw elliptical shadow
+    ctx.beginPath();
+    ctx.ellipse(x, shadowY, shadowWidth, shadowHeight, 0, 0, Math.PI * 2);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    
+    ctx.restore();
+  };
+
+  /**
    * Draw tire behind wheel.
-   * Uses tire image if provided, otherwise draws a programmatic tire (donut shape).
+   * Uses tire image if provided, otherwise draws a programmatic tire with realistic shading.
    */
   const drawTire = (
     ctx: CanvasRenderingContext2D,
@@ -457,6 +506,7 @@ export function VisualizerLabRenderer({
     tireImg: HTMLImageElement | null
   ) => {
     const tireRadius = wheelAnchor.radius * scale;
+    const innerRadius = wheelAnchor.radius * WHEEL_INSET; // Match wheel inset
     const { x, y } = wheelAnchor;
 
     if (tireImg) {
@@ -470,38 +520,60 @@ export function VisualizerLabRenderer({
         size
       );
     } else {
-      // Programmatic tire rendering (donut shape)
-      // Outer tire edge
+      // Programmatic tire rendering with realistic shading
       ctx.save();
       
-      // Draw tire body (dark rubber)
+      // Create radial gradient for tire body (darker outer edge, lighter inner)
+      const tireGradient = ctx.createRadialGradient(
+        x, y, innerRadius,
+        x, y, tireRadius
+      );
+      tireGradient.addColorStop(0, "#2a2a2a");    // Lighter inner (near wheel)
+      tireGradient.addColorStop(0.3, "#222222");  // Mid-tone
+      tireGradient.addColorStop(0.7, "#1a1a1a");  // Darker toward edge
+      tireGradient.addColorStop(1, "#111111");    // Darkest outer edge
+      
+      // Draw tire body with gradient
       ctx.beginPath();
       ctx.arc(x, y, tireRadius, 0, Math.PI * 2);
-      ctx.fillStyle = "#1a1a1a";
+      ctx.fillStyle = tireGradient;
       ctx.fill();
       
-      // Add subtle tire tread texture (concentric rings)
-      ctx.strokeStyle = "#252525";
-      ctx.lineWidth = 2;
-      for (let r = wheelAnchor.radius + 5; r < tireRadius - 3; r += 8) {
+      // Subtle tread texture (very light concentric lines)
+      ctx.strokeStyle = "rgba(40, 40, 40, 0.5)";
+      ctx.lineWidth = 1;
+      const treadStart = innerRadius + (tireRadius - innerRadius) * 0.3;
+      const treadEnd = tireRadius - 4;
+      for (let r = treadStart; r < treadEnd; r += 6) {
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI * 2);
         ctx.stroke();
       }
       
-      // Sidewall highlight (subtle rim on outer edge)
+      // Outer edge highlight (subtle rubber lip)
       ctx.beginPath();
-      ctx.arc(x, y, tireRadius - 2, 0, Math.PI * 2);
-      ctx.strokeStyle = "#333";
+      ctx.arc(x, y, tireRadius - 1, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(50, 50, 50, 0.8)";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      
+      // Inner edge shadow (where tire meets wheel rim)
+      ctx.beginPath();
+      ctx.arc(x, y, innerRadius + 1, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.6)";
       ctx.lineWidth = 3;
       ctx.stroke();
       
-      // Inner edge where tire meets wheel (slight shadow)
+      // Very subtle sidewall highlight (top portion catches light)
+      const highlightGradient = ctx.createLinearGradient(x, y - tireRadius, x, y);
+      highlightGradient.addColorStop(0, "rgba(60, 60, 60, 0.15)");
+      highlightGradient.addColorStop(0.5, "rgba(60, 60, 60, 0)");
+      highlightGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+      
       ctx.beginPath();
-      ctx.arc(x, y, wheelAnchor.radius + 2, 0, Math.PI * 2);
-      ctx.strokeStyle = "#111";
-      ctx.lineWidth = 4;
-      ctx.stroke();
+      ctx.arc(x, y, tireRadius - 2, 0, Math.PI * 2);
+      ctx.fillStyle = highlightGradient;
+      ctx.fill();
       
       ctx.restore();
     }
