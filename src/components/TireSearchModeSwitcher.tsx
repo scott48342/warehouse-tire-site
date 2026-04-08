@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-export type TireSearchMode = "vehicle" | "size" | "brand";
+export type TireSearchMode = "vehicle" | "size";
 
 interface TireSearchModeSwitcherProps {
   currentMode: TireSearchMode;
@@ -32,14 +32,6 @@ const MODES: {
     icon: "📏",
     description: "Enter your tire size directly",
     activeColor: "bg-blue-600 text-white shadow-lg shadow-blue-500/25",
-  },
-  { 
-    id: "brand", 
-    label: "Browse by Brand", 
-    shortLabel: "Brand",
-    icon: "🏷️",
-    description: "Shop your favorite tire brands",
-    activeColor: "bg-purple-600 text-white shadow-lg shadow-purple-500/25",
   },
 ];
 

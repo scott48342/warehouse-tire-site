@@ -16,7 +16,6 @@ import { TirePageCompactHeader } from "@/components/TirePageCompactHeader";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
 import { TireSearchModeSwitcher, type TireSearchMode } from "@/components/TireSearchModeSwitcher";
 import { TireSizeSearchForm } from "@/components/TireSizeSearchForm";
-import { TireBrandBrowser } from "@/components/TireBrandBrowser";
 import {
   generatePlusSizeCandidates,
   generateAftermarketTireSizes,
@@ -936,17 +935,15 @@ export default async function TiresPage({
   
   // Determine effective search mode
   // - If vehicle params present → vehicle mode (default)
-  // - If brand param present → brand mode  
   // - If size params present → size mode
   // - If searchMode explicitly set → use that
   // - Default → vehicle
   const searchMode: TireSearchMode = (() => {
     // Explicit mode always wins
-    if (searchModeParam === "size" || searchModeParam === "brand" || searchModeParam === "vehicle") {
+    if (searchModeParam === "size" || searchModeParam === "vehicle") {
       return searchModeParam;
     }
     // Infer from params
-    if (brandParam && !hasVehicle) return "brand";
     if (hasSizeSearch && !hasVehicle) return "size";
     return "vehicle";
   })();
@@ -2217,10 +2214,6 @@ export default async function TiresPage({
                 initialAspectRatio={aspectRatioParam}
                 initialDiameter={diameterParam}
               />
-            )}
-
-            {searchMode === "brand" && (
-              <TireBrandBrowser />
             )}
 
             {/* Trust Signals - shown for all modes */}
