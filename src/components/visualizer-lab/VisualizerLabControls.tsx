@@ -289,8 +289,8 @@ export function VisualizerLabControls({
             label="Tire Scale"
             value={tireScale}
             onChange={onTireScaleChange}
-            min={1.05}
-            max={1.40}
+            min={0.92}
+            max={1.15}
             step={0.01}
             accentColor="green"
             suffix="x"
@@ -298,7 +298,7 @@ export function VisualizerLabControls({
         )}
         
         <p className="text-xs text-neutral-500">
-          Tire radius = wheel radius × scale. Larger = more sidewall.
+          Tire outer size multiplier. Lower = tighter fit in wheel well.
         </p>
       </div>
 

@@ -51,7 +51,7 @@ export function VisualizerLabRenderer({
   showDebug,
   onOverridesChange,
   showTire = true,
-  tireScale = 1.18,
+  tireScale = 1.02,  // Reduced from 1.18 for more natural fit in wheel well
   tireImageUrl = null,
 }: VisualizerLabRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -466,7 +466,8 @@ export function VisualizerLabRenderer({
   };
 
   // Wheel inset factor - makes wheel slightly smaller than tire opening for depth
-  const WHEEL_INSET = 0.97;
+  // Wheel inset - creates depth by making wheel slightly smaller than tire opening
+  const WHEEL_INSET = 0.95;  // Reduced from 0.97 for more visible depth
 
   const drawWheelOverlay = (
     ctx: CanvasRenderingContext2D,
@@ -498,20 +499,21 @@ export function VisualizerLabRenderer({
     const tireOuterRadius = anchor.tireRadius * tireScale; // Apply tireScale for overall size tuning
     const { x, y } = anchor;
     
-    // Shadow positioned at bottom of tire
-    const shadowY = y + tireOuterRadius * 0.92; // Slightly inside tire bottom
-    const shadowWidth = tireOuterRadius * 1.1;
-    const shadowHeight = tireOuterRadius * 0.15;
+    // Shadow positioned at bottom of tire - enhanced for better grounding
+    const shadowY = y + tireOuterRadius * 0.94; // Closer to tire bottom
+    const shadowWidth = tireOuterRadius * 1.25;  // Wider shadow (was 1.1)
+    const shadowHeight = tireOuterRadius * 0.18; // Slightly taller (was 0.15)
     
     ctx.save();
     
-    // Create elliptical gradient for soft shadow
+    // Create elliptical gradient for soft shadow - increased intensity
     const gradient = ctx.createRadialGradient(
       x, shadowY, 0,
       x, shadowY, shadowWidth
     );
-    gradient.addColorStop(0, "rgba(0, 0, 0, 0.4)");
-    gradient.addColorStop(0.5, "rgba(0, 0, 0, 0.2)");
+    gradient.addColorStop(0, "rgba(0, 0, 0, 0.55)");   // Darker center (was 0.4)
+    gradient.addColorStop(0.4, "rgba(0, 0, 0, 0.3)");  // Mid falloff
+    gradient.addColorStop(0.7, "rgba(0, 0, 0, 0.12)"); // Soft edge
     gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
     
     // Draw elliptical shadow
@@ -552,18 +554,20 @@ export function VisualizerLabRenderer({
         size
       );
     } else {
-      // Programmatic tire rendering with realistic shading
+      // Programmatic tire rendering with clean, product-focused shading
       ctx.save();
       
-      // Create radial gradient for tire body (darker outer edge, lighter inner)
+      // Create radial gradient for tire body
+      // Subtle: slightly lighter inner, darker outer edge
       const tireGradient = ctx.createRadialGradient(
         x, y, wheelInnerRadius,
         x, y, tireOuterRadius
       );
-      tireGradient.addColorStop(0, "#2a2a2a");    // Lighter inner (near wheel)
-      tireGradient.addColorStop(0.3, "#222222");  // Mid-tone
-      tireGradient.addColorStop(0.7, "#1a1a1a");  // Darker toward edge
-      tireGradient.addColorStop(1, "#111111");    // Darkest outer edge
+      tireGradient.addColorStop(0, "#2d2d2d");    // Lighter inner (near wheel)
+      tireGradient.addColorStop(0.2, "#262626");  // Quick transition
+      tireGradient.addColorStop(0.6, "#1e1e1e");  // Mid-tone sidewall
+      tireGradient.addColorStop(0.9, "#151515");  // Darker toward edge
+      tireGradient.addColorStop(1, "#0d0d0d");    // Darkest outer edge
       
       // Draw tire body with gradient
       ctx.beginPath();
@@ -571,42 +575,42 @@ export function VisualizerLabRenderer({
       ctx.fillStyle = tireGradient;
       ctx.fill();
       
-      // Subtle tread texture (very light concentric lines)
-      // More lines when sidewall is thicker
-      ctx.strokeStyle = "rgba(40, 40, 40, 0.5)";
-      ctx.lineWidth = 1;
+      // Very subtle tread texture (minimal, clean look)
       const sidewallThickness = tireOuterRadius - wheelInnerRadius;
-      const treadStart = wheelInnerRadius + sidewallThickness * 0.25;
-      const treadEnd = tireOuterRadius - 4;
-      const treadSpacing = Math.max(4, sidewallThickness * 0.15); // Adjust spacing based on sidewall
-      for (let r = treadStart; r < treadEnd; r += treadSpacing) {
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, Math.PI * 2);
-        ctx.stroke();
+      if (sidewallThickness > 15) {
+        ctx.strokeStyle = "rgba(35, 35, 35, 0.4)";
+        ctx.lineWidth = 1;
+        const treadStart = wheelInnerRadius + sidewallThickness * 0.35;
+        const treadEnd = tireOuterRadius - 6;
+        const treadSpacing = Math.max(6, sidewallThickness * 0.2);
+        for (let r = treadStart; r < treadEnd; r += treadSpacing) {
+          ctx.beginPath();
+          ctx.arc(x, y, r, 0, Math.PI * 2);
+          ctx.stroke();
+        }
       }
       
-      // Outer edge highlight (subtle rubber lip)
+      // Soft outer edge (slight feathering effect)
       ctx.beginPath();
-      ctx.arc(x, y, tireOuterRadius - 1, 0, Math.PI * 2);
-      ctx.strokeStyle = "rgba(50, 50, 50, 0.8)";
-      ctx.lineWidth = 2;
+      ctx.arc(x, y, tireOuterRadius - 0.5, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(40, 40, 40, 0.6)";
+      ctx.lineWidth = 1.5;
       ctx.stroke();
       
-      // Inner edge shadow (where tire meets wheel rim)
+      // Inner edge shadow (clean rim junction)
       ctx.beginPath();
-      ctx.arc(x, y, wheelInnerRadius + 1, 0, Math.PI * 2);
-      ctx.strokeStyle = "rgba(0, 0, 0, 0.6)";
-      ctx.lineWidth = 3;
+      ctx.arc(x, y, wheelInnerRadius + 1.5, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+      ctx.lineWidth = 2.5;
       ctx.stroke();
       
-      // Very subtle sidewall highlight (top portion catches light)
-      const highlightGradient = ctx.createLinearGradient(x, y - tireOuterRadius, x, y);
-      highlightGradient.addColorStop(0, "rgba(60, 60, 60, 0.15)");
-      highlightGradient.addColorStop(0.5, "rgba(60, 60, 60, 0)");
-      highlightGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+      // Subtle top highlight (very light - clean product look)
+      const highlightGradient = ctx.createLinearGradient(x, y - tireOuterRadius, x, y - tireOuterRadius * 0.3);
+      highlightGradient.addColorStop(0, "rgba(55, 55, 55, 0.12)");
+      highlightGradient.addColorStop(1, "rgba(55, 55, 55, 0)");
       
       ctx.beginPath();
-      ctx.arc(x, y, tireOuterRadius - 2, 0, Math.PI * 2);
+      ctx.arc(x, y, tireOuterRadius - 1.5, 0, Math.PI * 2);
       ctx.fillStyle = highlightGradient;
       ctx.fill();
       

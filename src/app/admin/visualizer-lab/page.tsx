@@ -35,7 +35,7 @@ export default function VisualizerLabPage() {
   const [wheelImageUrl, setWheelImageUrl] = useState<string>("");
   const [showDebug, setShowDebug] = useState<boolean>(true);
   const [showTire, setShowTire] = useState<boolean>(true);
-  const [tireScale, setTireScale] = useState<number>(1.18);
+  const [tireScale, setTireScale] = useState<number>(1.02);  // Reduced for natural fit
   const [overrides, setOverrides] = useState(DEFAULT_OVERRIDES);
   const [exportMessage, setExportMessage] = useState<string | null>(null);
 
