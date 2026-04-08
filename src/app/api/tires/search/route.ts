@@ -444,6 +444,7 @@ async function getNameOverridesFromDb(): Promise<Map<string, string>> {
 /**
  * Find display name override for a tire by matching brand + model pattern
  * Checks BOTH model and description fields for pattern match
+ * Prefers LONGER (more specific) patterns over shorter ones
  */
 function findNameOverride(
   brand: string | null | undefined,
@@ -459,7 +460,9 @@ function findNameOverride(
   const descText = (description || "").toLowerCase();
   const combinedText = `${modelText} ${descText}`.toLowerCase();
   
-  // Try each pattern from our mapping
+  // Collect all matching patterns, then pick the most specific (longest)
+  const matches: { pattern: string; displayName: string }[] = [];
+  
   for (const [key, displayName] of nameOverrides) {
     const [mapBrand, mapPattern] = key.split(":");
     
@@ -468,11 +471,16 @@ function findNameOverride(
     
     // Check if EITHER model or description contains the pattern
     if (combinedText.includes(mapPattern)) {
-      return displayName;
+      matches.push({ pattern: mapPattern, displayName });
     }
   }
   
-  return null;
+  if (matches.length === 0) return null;
+  
+  // Sort by pattern length descending (most specific first)
+  matches.sort((a, b) => b.pattern.length - a.pattern.length);
+  
+  return matches[0].displayName;
 }
 
 /**
@@ -503,6 +511,7 @@ async function getModelImagesFromDb(): Promise<Map<string, string>> {
 /**
  * Find image URL for a tire by matching brand + model pattern
  * Checks BOTH model and description fields for pattern match
+ * Prefers LONGER (more specific) patterns over shorter ones
  */
 function findModelImage(
   brand: string | null | undefined,
@@ -518,7 +527,9 @@ function findModelImage(
   const descText = (description || "").toLowerCase();
   const combinedText = `${modelText} ${descText}`.toLowerCase();
   
-  // Try each pattern from our mapping
+  // Collect all matching patterns, then pick the most specific (longest)
+  const matches: { pattern: string; imageUrl: string }[] = [];
+  
   for (const [key, imageUrl] of modelImages) {
     const [mapBrand, mapPattern] = key.split(":");
     
@@ -527,11 +538,16 @@ function findModelImage(
     
     // Check if EITHER model or description contains the pattern
     if (combinedText.includes(mapPattern)) {
-      return imageUrl;
+      matches.push({ pattern: mapPattern, imageUrl });
     }
   }
   
-  return null;
+  if (matches.length === 0) return null;
+  
+  // Sort by pattern length descending (most specific first)
+  matches.sort((a, b) => b.pattern.length - a.pattern.length);
+  
+  return matches[0].imageUrl;
 }
 
 /**

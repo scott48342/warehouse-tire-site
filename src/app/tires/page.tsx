@@ -1586,9 +1586,11 @@ export default async function TiresPage({
   // selectedSize is the normalized digits (33125020) for search, but we want to show
   // the human-readable flotation format (33x12.50R20) when available
   const flotationParam = safeString(Array.isArray((sp as any).flotation) ? (sp as any).flotation[0] : (sp as any).flotation);
-  const displaySize = flotationParam && /^\d{2,3}x\d{1,2}(\.\d{2})?R\d{2}$/i.test(flotationParam)
+  const displaySizeRaw = flotationParam && /^\d{2,3}x\d{1,2}(\.\d{2})?R\d{2}$/i.test(flotationParam)
     ? flotationParam  // Use flotation format for display: "33x12.50R20"
     : selectedSize;   // Fallback to metric/standard format
+  // Always normalize for display (converts 33125020 → 33x12.50R20)
+  const displaySize = normalizeTireSize(displaySizeRaw);
 
   // Debug logging for wheel→tire size resolution (now that lockedSizes is computed)
   if (hasVehicle && hasWheelDiameter) {
