@@ -424,14 +424,15 @@ export function generateAftermarketTireSizes(
     const od = calculateOdFromParsed(parsed);
     
     // For trucks/SUVs, prefer larger aspect ratios (60-75) for comfort
-    // For cars, prefer lower aspect ratios (35-55) for performance
+    // For cars, prefer lower aspect ratios (30-45) for performance
     let aspectScore = 0;
     if (vehicleClass === 'truck' || vehicleClass === 'suv') {
       if (parsed.aspect >= 60 && parsed.aspect <= 75) aspectScore = 2;
       else if (parsed.aspect >= 50 && parsed.aspect <= 80) aspectScore = 1;
     } else if (vehicleClass === 'car') {
-      if (parsed.aspect >= 35 && parsed.aspect <= 55) aspectScore = 2;
-      else if (parsed.aspect >= 30 && parsed.aspect <= 65) aspectScore = 1;
+      // Performance cars: 30-40 is primary (sports cars), 25-50 is acceptable
+      if (parsed.aspect >= 30 && parsed.aspect <= 40) aspectScore = 2;
+      else if (parsed.aspect >= 25 && parsed.aspect <= 55) aspectScore = 1;
     } else {
       // Default: prefer middle-of-road aspect ratios
       if (parsed.aspect >= 45 && parsed.aspect <= 70) aspectScore = 1;
@@ -450,15 +451,19 @@ export function generateAftermarketTireSizes(
     });
   }
   
-  // Sort: primary first, then by width (common sizes tend to be rounder numbers)
+  // Sort: primary first, then by width
+  // For cars: prefer wider tires (performance vehicles run wider)
+  // For trucks/SUVs: prefer narrower tires (better off-road)
   candidates.sort((a, b) => {
     if (a.isPrimary !== b.isPrimary) return a.isPrimary ? -1 : 1;
     // Prefer common widths (divisible by 5)
     const aCommon = a.widthMm % 5 === 0 ? 0 : 1;
     const bCommon = b.widthMm % 5 === 0 ? 0 : 1;
     if (aCommon !== bCommon) return aCommon - bCommon;
-    // Then by width
-    return a.widthMm - b.widthMm;
+    // For cars: wider is better (descending), for trucks: narrower (ascending)
+    return vehicleClass === 'car' 
+      ? b.widthMm - a.widthMm  // Cars: wider first
+      : a.widthMm - b.widthMm; // Trucks/SUVs: narrower first
   });
   
   // Limit to reasonable number of suggestions
