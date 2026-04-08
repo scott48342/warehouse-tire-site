@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useMemo } from "react";
-import { VisualizerLabRenderer, VisualizerLabControls } from "@/components/visualizer-lab";
+import { VisualizerLabRenderer, VisualizerLabControls, WheelAnalysisTool } from "@/components/visualizer-lab";
 import {
   TemplateFamilyConfig,
   StanceMode,
@@ -190,7 +190,10 @@ export default function VisualizerLabPage() {
         </div>
 
         {/* Controls */}
-        <div className="xl:col-span-1">
+        <div className="xl:col-span-1 space-y-6">
+          {/* Wheel Analyzer - find compatible wheels */}
+          <WheelAnalysisTool onSelectImage={setWheelImageUrl} />
+
           <VisualizerLabControls
             stanceMode={stanceMode}
             wheelDiameter={wheelDiameter}
