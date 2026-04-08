@@ -330,6 +330,8 @@ export function WheelsStyleCard({
   isSelected = false,
   hasSelection = false,
   onSelect,
+  // Homepage intent: show offset in size display (for lifted builds)
+  showOffset = false,
 }: {
   brand: string;
   title: string;
