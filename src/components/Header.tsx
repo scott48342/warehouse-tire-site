@@ -318,6 +318,43 @@ export function Header() {
               </div>
             </details>
 
+            <details className="group relative">
+              <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
+                LEARN <span className="text-xs">▾</span>
+              </summary>
+              <div className="absolute left-0 top-full z-[80] mt-2 w-64 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
+                <Link
+                  href="/tire-tech"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Tire Tech & Tips
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
+                >
+                  Blog
+                </Link>
+                <div className="my-2 h-px bg-neutral-200" />
+                <Link
+                  href="/blog/how-to-read-tire-sizes"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left text-sm text-neutral-600 hover:bg-neutral-50"
+                >
+                  How to Read Tire Sizes
+                </Link>
+                <Link
+                  href="/blog/wheel-tire-packages-save-money"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left text-sm text-neutral-600 hover:bg-neutral-50"
+                >
+                  Wheel & Tire Packages Guide
+                </Link>
+              </div>
+            </details>
+
           </div>
 
           <button
