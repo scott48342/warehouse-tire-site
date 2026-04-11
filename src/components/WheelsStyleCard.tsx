@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FavoritesButton } from "@/components/FavoritesButton";
+import { AddToCompareButton } from "@/components/AddToCompareButton";
+import { normalizeWheelForCompare } from "@/context/CompareContext";
 import { useCart } from "@/lib/cart/CartContext";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
 import { 
@@ -577,8 +579,28 @@ export function WheelsStyleCard({
           )}
         </div>
         
-        {/* Favorites button overlay */}
-        <div className="absolute top-3 right-3">
+        {/* Action buttons overlay (Favorites + Compare) */}
+        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+          <AddToCompareButton
+            item={normalizeWheelForCompare({
+              sku: selectedSku || baseSku,
+              brand,
+              model: title,
+              finish: selectedFinish,
+              imageUrl: selectedImage,
+              price: selectedPrice,
+              diameter: selectedPair?.front?.diameter ?? sizeLabel?.diameter,
+              width: selectedPair?.front?.width ?? sizeLabel?.width,
+              offset: selectedPair?.front?.offset ?? specLabel?.offset,
+              boltPattern: specLabel?.boltPattern,
+              centerbore: String(wheelCenterBore || ""),
+              fitmentClass,
+              stockQty: selectedStockQty,
+              inventoryType: selectedInventoryType,
+            })}
+            variant="icon"
+            size="sm"
+          />
           <FavoritesButton
             type="wheel"
             sku={selectedSku || baseSku}

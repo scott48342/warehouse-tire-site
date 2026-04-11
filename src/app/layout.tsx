@@ -4,8 +4,11 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/lib/cart/CartContext";
+import { CompareProvider } from "@/context/CompareContext";
 import { CartSlideout } from "@/components/CartSlideout";
 import { CartTracker } from "@/components/CartTracker";
+import { CompareFloatingBadge } from "@/components/CompareFloatingBadge";
+import { ComparePanel } from "@/components/ComparePanel";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@/components/Analytics";
@@ -67,21 +70,25 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${oswald.variable} antialiased flex min-h-screen flex-col`}>
         <CartProvider>
-          <CartTracker />
-          <Suspense fallback={null}>
-            <Analytics />
-          </Suspense>
-          <Suspense fallback={<div className="h-16" />}>
-            <Header />
-          </Suspense>
-          <main className="flex-1">
-            {children}
-          </main>
-          <div className="relative z-20">
-            <Footer />
-          </div>
-          <CartSlideout />
-          <ExitIntentPopup />
+          <CompareProvider>
+            <CartTracker />
+            <Suspense fallback={null}>
+              <Analytics />
+            </Suspense>
+            <Suspense fallback={<div className="h-16" />}>
+              <Header />
+            </Suspense>
+            <main className="flex-1">
+              {children}
+            </main>
+            <div className="relative z-20">
+              <Footer />
+            </div>
+            <CartSlideout />
+            <ExitIntentPopup />
+            <CompareFloatingBadge />
+            <ComparePanel />
+          </CompareProvider>
         </CartProvider>
       </body>
     </html>

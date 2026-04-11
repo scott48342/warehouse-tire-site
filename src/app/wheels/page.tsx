@@ -942,12 +942,29 @@ export default async function WheelsPage({
   };
 
   // Apply build type filter (ranks matching wheels higher, optionally filters for stock mode)
-  const itemsFilteredBuildType = filterWheelsForBuildType(
+  // For trucks, we try strict filter first but fall back to non-strict if it returns 0 results
+  // (Heavy-duty trucks often have no "stock-friendly" aftermarket wheels)
+  let itemsFilteredBuildType = filterWheelsForBuildType(
     itemsFilteredPrice,
     buildTypeParam,
     oemEnvelope,
     { strictFilter: buildTypeParam === "stock" } // Stock mode uses strict filter
   );
+  
+  // Fallback: if strict stock filter returns 0 results but we have wheels, relax the filter
+  const stockFilterRelaxed = buildTypeParam === "stock" && 
+    itemsFilteredBuildType.length === 0 && 
+    itemsFilteredPrice.length > 0;
+  
+  if (stockFilterRelaxed) {
+    // Re-run without strict filter - just rank stock-friendly higher
+    itemsFilteredBuildType = filterWheelsForBuildType(
+      itemsFilteredPrice,
+      buildTypeParam,
+      oemEnvelope,
+      { strictFilter: false }
+    );
+  }
 
   // Use fast browse results if available, otherwise use processed WheelPros results
   const itemsFinal = useFastBrowse && fastItems.length > 0
@@ -1264,15 +1281,7 @@ export default async function WheelsPage({
 
   return (
     <>
-      {/* ═══════════════════════════════════════════════════════════════════════
-          DYNAMIC SEO META TAGS
-          ═══════════════════════════════════════════════════════════════════════ */}
-      <head>
-        <meta name="robots" content={robotsContent} />
-        {seoDecision.canonicalUrl && (
-          <link rel="canonical" href={`https://shop.warehousetiredirect.com${seoDecision.canonicalUrl}`} />
-        )}
-      </head>
+      {/* TODO: Move robots/canonical to generateMetadata export for proper SEO handling */}
       
       <main className="bg-neutral-50">
       {/* ═══════════════════════════════════════════════════════════════════════
