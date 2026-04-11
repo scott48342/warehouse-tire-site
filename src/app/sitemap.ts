@@ -1,19 +1,13 @@
 /**
  * Sitemap Generator
  * 
- * Generates comprehensive XML sitemap for search engines.
- * Includes all SEO landing pages for wheels, tires, and packages.
+ * Generates XML sitemap with ONLY indexable pages.
+ * Queries the database to include only vehicles with actual fitment data.
  * 
- * Expected output: 1000-5000+ URLs covering:
- * - Static pages (home, wheels, tires, etc.)
- * - /wheels/for/[vehicleSlug] pages
- * - /tires/for/[vehicleSlug] pages  
- * - /packages/for/[vehicleSlug] pages
+ * @updated 2026-04-11 - Switched from static vehicle list to DB-backed
  */
 
 import { MetadataRoute } from "next";
-import { ALL_VEHICLES, PREBUILD_VEHICLES } from "@/lib/seo/vehicleData";
-import { slugifyVehicle } from "@/lib/seo/slugifyVehicle";
 
 const BASE_URL = "https://shop.warehousetiredirect.com";
 
@@ -21,18 +15,104 @@ const BASE_URL = "https://shop.warehousetiredirect.com";
 const PRODUCT_TYPES = [
   { type: "wheels", priority: 0.8 },
   { type: "tires", priority: 0.8 },
-  { type: "packages", priority: 0.9 }, // Packages are highest priority for conversion
+  { type: "packages", priority: 0.9 },
 ] as const;
 
-// Static pages
+// Static pages (always indexed)
 const STATIC_PAGES = [
   { path: "/", priority: 1.0, changeFrequency: "daily" as const },
   { path: "/wheels", priority: 0.9, changeFrequency: "daily" as const },
   { path: "/tires", priority: 0.9, changeFrequency: "daily" as const },
   { path: "/package", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/schedule", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/lifted", priority: 0.7, changeFrequency: "weekly" as const },
+  // Note: /lifted is noindexed, excluded from sitemap
 ];
+
+// Fallback vehicles for build time when DB is unavailable
+const FALLBACK_VEHICLES = [
+  // Top trucks
+  { year: 2024, make: "ford", model: "f-150" },
+  { year: 2024, make: "chevrolet", model: "silverado-1500" },
+  { year: 2024, make: "ram", model: "1500" },
+  { year: 2024, make: "toyota", model: "tacoma" },
+  { year: 2024, make: "toyota", model: "tundra" },
+  { year: 2024, make: "gmc", model: "sierra-1500" },
+  // Top SUVs
+  { year: 2024, make: "jeep", model: "wrangler" },
+  { year: 2024, make: "jeep", model: "grand-cherokee" },
+  { year: 2024, make: "ford", model: "bronco" },
+  { year: 2024, make: "toyota", model: "4runner" },
+  { year: 2024, make: "ford", model: "explorer" },
+  { year: 2024, make: "chevrolet", model: "tahoe" },
+  // Sports
+  { year: 2024, make: "ford", model: "mustang" },
+  { year: 2024, make: "chevrolet", model: "camaro" },
+  { year: 2024, make: "dodge", model: "challenger" },
+  { year: 2024, make: "dodge", model: "charger" },
+  // Sedans
+  { year: 2024, make: "toyota", model: "camry" },
+  { year: 2024, make: "honda", model: "accord" },
+  { year: 2024, make: "honda", model: "civic" },
+];
+
+interface VehicleRow {
+  year: number;
+  make: string;
+  model: string;
+  trim_count: number;
+}
+
+/**
+ * Create URL-safe slug from vehicle info
+ */
+function slugify(year: number, make: string, model: string): string {
+  const cleanMake = make.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  const cleanModel = model.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  return `${year}-${cleanMake}-${cleanModel}`;
+}
+
+/**
+ * Get vehicles from database that have actual fitment data
+ */
+async function getIndexableVehicles(): Promise<VehicleRow[]> {
+  // Skip DB during Vercel build to avoid connection issues
+  const isBuildTime = process.env.VERCEL_ENV === "production" && 
+                      process.env.NEXT_PHASE === "phase-production-build";
+  
+  if (isBuildTime) {
+    console.log("[sitemap] Build time - using fallback vehicles");
+    return FALLBACK_VEHICLES.map(v => ({ ...v, trim_count: 1 }));
+  }
+  
+  try {
+    // Dynamic import to avoid build-time DB connection
+    const { db } = await import("@/lib/fitment-db/db");
+    const { sql } = await import("drizzle-orm");
+    
+    // Get vehicles with fitment data, grouped by year/make/model
+    // Only include vehicles with bolt_pattern (indicates real fitment data)
+    const result = await db.execute(sql`
+      SELECT 
+        year::int as year,
+        make,
+        model,
+        COUNT(*)::int as trim_count
+      FROM vehicle_fitments
+      WHERE bolt_pattern IS NOT NULL
+        AND year >= 2010
+      GROUP BY year, make, model
+      ORDER BY year DESC, make, model
+    `);
+    
+    const vehicles = result.rows as VehicleRow[];
+    console.log(`[sitemap] Found ${vehicles.length} indexable vehicles from DB`);
+    
+    return vehicles;
+  } catch (err) {
+    console.error("[sitemap] DB error, using fallback:", err);
+    return FALLBACK_VEHICLES.map(v => ({ ...v, trim_count: 1 }));
+  }
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
@@ -41,7 +121,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // ============================================================================
   // Static Pages
   // ============================================================================
-  
   for (const page of STATIC_PAGES) {
     entries.push({
       url: `${BASE_URL}${page.path}`,
@@ -52,66 +131,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   
   // ============================================================================
-  // SEO Vehicle Landing Pages
+  // Vehicle Pages (from database)
   // ============================================================================
-  
-  // Use ALL_VEHICLES for comprehensive sitemap coverage
-  // This includes 2000+ year/make/model combinations
-  const vehiclesToInclude = ALL_VEHICLES;
-  
-  // Track unique slugs to avoid duplicates
+  const vehicles = await getIndexableVehicles();
   const addedSlugs = new Set<string>();
   
-  for (const vehicle of vehiclesToInclude) {
-    const slug = slugifyVehicle(vehicle);
+  for (const vehicle of vehicles) {
+    const slug = slugify(vehicle.year, vehicle.make, vehicle.model);
     
-    // Skip if we've already added this slug
+    // Skip duplicates
     if (addedSlugs.has(slug)) continue;
     addedSlugs.add(slug);
     
-    // Determine priority based on year (recent years get higher priority)
-    const yearNum = parseInt(vehicle.year, 10);
-    const yearPriority = yearNum >= 2022 ? 1.0 : yearNum >= 2019 ? 0.8 : 0.6;
-    
-    // Check if this is a prebuild vehicle (higher priority)
-    const isPrebuild = PREBUILD_VEHICLES.some(
-      pv => pv.year === vehicle.year && 
-            pv.make.toLowerCase() === vehicle.make.toLowerCase() && 
-            pv.model.toLowerCase() === vehicle.model.toLowerCase()
-    );
+    // Priority based on year recency
+    const yearPriority = vehicle.year >= 2022 ? 1.0 : vehicle.year >= 2019 ? 0.8 : 0.6;
     
     // Add URL for each product type
     for (const { type, priority } of PRODUCT_TYPES) {
-      const url = `${BASE_URL}/${type}/for/${slug}`;
-      
       entries.push({
-        url,
+        url: `${BASE_URL}/${type}/for/${slug}`,
         lastModified: now,
         changeFrequency: "weekly",
-        priority: Math.min(1.0, priority * yearPriority * (isPrebuild ? 1.0 : 0.9)),
+        priority: Math.min(1.0, priority * yearPriority),
       });
     }
   }
   
-  // Log stats for debugging
+  // ============================================================================
+  // Stats
+  // ============================================================================
   console.log(`[sitemap] Generated ${entries.length} URLs:`);
   console.log(`  - Static pages: ${STATIC_PAGES.length}`);
   console.log(`  - Unique vehicles: ${addedSlugs.size}`);
   console.log(`  - Vehicle URLs: ${addedSlugs.size * PRODUCT_TYPES.length}`);
   
   return entries;
-}
-
-/**
- * Sitemap stats for debugging
- */
-export function getSitemapStats() {
-  const uniqueVehicles = new Set(ALL_VEHICLES.map(v => slugifyVehicle(v))).size;
-  return {
-    staticPages: STATIC_PAGES.length,
-    uniqueVehicles,
-    totalProductUrls: uniqueVehicles * PRODUCT_TYPES.length,
-    totalUrls: STATIC_PAGES.length + (uniqueVehicles * PRODUCT_TYPES.length),
-    prebuildVehicles: PREBUILD_VEHICLES.length,
-  };
 }
