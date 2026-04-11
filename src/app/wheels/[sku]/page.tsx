@@ -27,6 +27,8 @@ import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 // Customers also added (2026-04-06)
 import { CustomersAlsoAdded } from "@/components/CustomersAlsoAdded";
 import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
+// Financing badges (2026-04-11)
+import { FinancingBadge } from "@/components/FinancingBadge";
 
 type WheelProsBrand = {
   code?: string;
@@ -476,6 +478,11 @@ export default async function WheelDetailPage({
                 <div className="mt-1 text-sm text-neutral-600">
                   Set of 4: <span className="font-bold text-green-700">${(price * 4).toFixed(2)}</span>
                 </div>
+              )}
+              
+              {/* Financing option - shows for set of 4 ($50-$30k) */}
+              {typeof price === "number" && Number.isFinite(price) && price * 4 >= 50 && (
+                <FinancingBadge price={price * 4} className="mt-2" />
               )}
 
               <div className="mt-3 flex items-center gap-2 text-sm text-green-700 font-semibold">

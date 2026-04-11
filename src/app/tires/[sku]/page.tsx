@@ -32,6 +32,8 @@ import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 // Customers also added (2026-04-06)
 import { CustomersAlsoAdded } from "@/components/CustomersAlsoAdded";
 import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
+// Financing badges (2026-04-11)
+import { FinancingBadge } from "@/components/FinancingBadge";
 
 export const runtime = "nodejs";
 
@@ -513,6 +515,11 @@ export default async function TireDetailPage({
                         <div className="mt-1 text-sm text-neutral-600">
                           Set of 4: <span className="font-bold text-green-700">{fmtMoney(displayPrice * 4)}</span>
                         </div>
+                      )}
+                      
+                      {/* Financing option - shows for set of 4 ($50-$30k) */}
+                      {displayPrice != null && displayPrice * 4 >= 50 && (
+                        <FinancingBadge price={displayPrice * 4} className="mt-2" />
                       )}
 
                       <div className={`mt-3 flex items-center gap-2 text-sm ${delivery.color}`}>
