@@ -375,6 +375,25 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       return best;
     }, undefined as WheelVariantInput["fitmentClass"]);
     
+    // Determine best fitmentGuidance (most conservative: perfect > recommended > popular > aggressive)
+    const fitmentGuidancePriority = (fg: WheelVariantInput["fitmentGuidance"]) => {
+      if (!fg) return 999;
+      if (fg.level === "perfect") return 0;
+      if (fg.level === "recommended") return 1;
+      if (fg.level === "popular") return 2;
+      if (fg.level === "aggressive") return 3;
+      return 4;
+    };
+    
+    const bestFitmentGuidance = variants.reduce((best, v) => {
+      if (!v.fitmentGuidance) return best;
+      if (!best) return v.fitmentGuidance;
+      if (fitmentGuidancePriority(v.fitmentGuidance) < fitmentGuidancePriority(best)) {
+        return v.fitmentGuidance;
+      }
+      return best;
+    }, undefined as WheelVariantInput["fitmentGuidance"]);
+    
     result.push({
       sku: defaultFinish?.sku || representative.sku || "",
       brand: representative.brand,
@@ -392,7 +411,7 @@ export function groupWheelsBySpec(wheels: WheelVariantInput[]): GroupedWheel[] {
       styleKey: representative.styleKey,
       fitmentClass: bestFitmentClass,
       pair: defaultFinish?.pair || representative.pair,
-      fitmentGuidance: representative.fitmentGuidance,
+      fitmentGuidance: bestFitmentGuidance,
       selectedFinish: defaultFinish?.finish,
       finishOptions,
       finishThumbs: finishOptions, // Legacy compat
