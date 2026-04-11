@@ -168,13 +168,13 @@ export function PlusSizingCalculator() {
       {/* Original Size Input */}
       <div className="mt-6 rounded-xl bg-neutral-50 p-4">
         <h4 className="font-bold text-neutral-900">Your Current Tire Size</h4>
-        <div className="mt-3 grid grid-cols-3 gap-3">
+        <div className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
           <div>
-            <label className="block text-xs font-medium text-neutral-500">Width (mm)</label>
+            <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Width</label>
             <select
               value={width}
               onChange={(e) => setWidth(Number(e.target.value))}
-              className="mt-1 w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm"
+              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
             >
               {COMMON_WIDTHS.map((w) => (
                 <option key={w} value={w}>{w}</option>
@@ -182,11 +182,11 @@ export function PlusSizingCalculator() {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-medium text-neutral-500">Aspect %</label>
+            <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Aspect</label>
             <select
               value={aspect}
               onChange={(e) => setAspect(Number(e.target.value))}
-              className="mt-1 w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm"
+              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
             >
               {COMMON_ASPECTS.map((a) => (
                 <option key={a} value={a}>{a}</option>
@@ -194,11 +194,11 @@ export function PlusSizingCalculator() {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-medium text-neutral-500">Rim (in)</label>
+            <label className="block text-xs font-medium text-neutral-500 whitespace-nowrap">Rim</label>
             <select
               value={rim}
               onChange={(e) => setRim(Number(e.target.value))}
-              className="mt-1 w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm"
+              className="mt-1 w-full rounded-lg border border-neutral-200 px-2 py-2 text-sm"
             >
               {COMMON_RIMS.map((r) => (
                 <option key={r} value={r}>{r}</option>
