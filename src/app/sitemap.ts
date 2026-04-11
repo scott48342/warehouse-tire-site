@@ -104,7 +104,7 @@ async function getIndexableVehicles(): Promise<VehicleRow[]> {
       ORDER BY year DESC, make, model
     `);
     
-    const vehicles = result.rows as VehicleRow[];
+    const vehicles = result.rows as unknown as VehicleRow[];
     console.log(`[sitemap] Found ${vehicles.length} indexable vehicles from DB`);
     
     return vehicles;
