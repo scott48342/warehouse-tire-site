@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { SpeedometerCalculator, PlusSizingCalculator } from "@/components/tire-tools";
 
 export const metadata: Metadata = {
   title: "Tire Tech & Tips | Warehouse Tire Direct",
@@ -151,10 +152,10 @@ export default async function TireTechPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/tires"
+              href="#tools"
               className="inline-flex items-center rounded-full bg-[var(--brand-red)] px-6 py-3 font-bold text-white hover:bg-[var(--brand-red-700)]"
             >
-              Shop Tires
+              Use Calculators
             </Link>
             <Link
               href="#guides"
@@ -194,8 +195,25 @@ export default async function TireTechPage() {
         </div>
       </section>
 
+      {/* Interactive Tools */}
+      <section id="tools" className="bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-2xl font-extrabold text-neutral-900 sm:text-3xl">
+            Interactive Tools
+          </h2>
+          <p className="mt-2 text-neutral-600">
+            Calculate tire sizes, speedometer corrections, and plus sizing options
+          </p>
+
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <SpeedometerCalculator />
+            <PlusSizingCalculator />
+          </div>
+        </div>
+      </section>
+
       {/* Tire Types */}
-      <section className="bg-white py-16">
+      <section className="py-16">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl font-extrabold text-neutral-900 sm:text-3xl">
             Tire Types Explained
