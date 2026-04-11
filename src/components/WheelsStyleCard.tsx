@@ -532,9 +532,10 @@ export function WheelsStyleCard({
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
   const fitmentConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
   
-  // Hide legacy "Good Fit" banner when fitmentGuidance shows "aggressive"
-  // Aggressive fitment should NOT show the misleading "Good Fit" label
-  const showLegacyFitmentBanner = fitmentConfig && fitmentLevel !== "aggressive";
+  // Always show the legacy fitment banner if we have fitmentClass
+  // This ensures visual consistency across all cards
+  // The fitmentGuidance badges below provide additional detail (aggressive, lift requirements, etc.)
+  const showLegacyFitmentBanner = !!fitmentConfig;
 
   return (
     <div className="relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-shadow hover:shadow-lg">
