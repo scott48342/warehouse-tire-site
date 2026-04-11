@@ -77,12 +77,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Support Links */}
+          {/* Resources */}
           <div>
             <h3 className="text-sm font-bold text-white uppercase tracking-wider">
-              Support
+              Resources
             </h3>
             <ul className="mt-4 space-y-3">
+              <li>
+                <Link 
+                  href="/blog" 
+                  className="text-sm text-neutral-400 hover:text-white transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
               <li>
                 <Link 
                   href="/contact" 
