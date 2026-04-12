@@ -34,19 +34,28 @@ export const MODEL_ALIASES: Record<string, string[]> = {
 
   // ═══════════════════════════════════════════════════════════════════════════
   // CHEVROLET HD TRUCKS
-  // DB uses "silverado-XXXXhd" (no hyphen), URLs might use hyphenated
+  // DB has multiple formats: silverado-2500hd, silverado-2500-hd, silverado-2500
+  // Need bidirectional aliases for all common user inputs
   // ═══════════════════════════════════════════════════════════════════════════
   "silverado": ["silverado-1500"],
   "silverado-2500": ["silverado-2500hd", "silverado-2500-hd"],
+  "silverado-2500hd": ["silverado-2500", "silverado-2500-hd"],  // Reverse alias
+  "silverado-2500-hd": ["silverado-2500hd", "silverado-2500"],  // Reverse alias - fixes selector
   "silverado-3500": ["silverado-3500hd", "silverado-3500-hd"],
+  "silverado-3500hd": ["silverado-3500", "silverado-3500-hd"],  // Reverse alias
+  "silverado-3500-hd": ["silverado-3500hd", "silverado-3500"],  // Reverse alias - fixes selector
 
   // ═══════════════════════════════════════════════════════════════════════════
   // GMC HD TRUCKS  
-  // Same pattern as Chevrolet
+  // Same bidirectional pattern as Chevrolet
   // ═══════════════════════════════════════════════════════════════════════════
   "sierra": ["sierra-1500"],
   "sierra-2500": ["sierra-2500hd", "sierra-2500-hd"],
+  "sierra-2500hd": ["sierra-2500", "sierra-2500-hd"],  // Reverse alias
+  "sierra-2500-hd": ["sierra-2500hd", "sierra-2500"],  // Reverse alias - fixes selector
   "sierra-3500": ["sierra-3500hd", "sierra-3500-hd"],
+  "sierra-3500hd": ["sierra-3500", "sierra-3500-hd"],  // Reverse alias
+  "sierra-3500-hd": ["sierra-3500hd", "sierra-3500"],  // Reverse alias - fixes selector
 
   // ═══════════════════════════════════════════════════════════════════════════
   // RAM TRUCKS
