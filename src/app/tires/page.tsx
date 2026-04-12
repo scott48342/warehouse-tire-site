@@ -59,7 +59,8 @@ import {
 } from "@/lib/tires/normalization";
 import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
-import { WheelSizeGateSelector, needsWheelSizeSelection } from "@/components/WheelSizeGateSelector";
+import { WheelSizeGateSelector } from "@/components/WheelSizeGateSelector";
+import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
