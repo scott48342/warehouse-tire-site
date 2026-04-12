@@ -125,3 +125,130 @@ Starting at $422
 
 ✨ Done!
 [Sun 04/12/2026  9:00:23.20] Auto-post complete 
+[Sun 04/12/2026 18:00:02.52] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:12508) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Black Rhino Hard Alloys GLAMIS
+  Downloading image for Black Rhino Hard Alloys GLAMIS...
+  ✅ Generated: glamis_1776031204340
+  📝 Caption preview: New arrival alert! 🚨
+
+Black Rhino Hard Alloys GLAMIS
+📐 20x9
+🔩 5X150
+↔️ 12mm o...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - glamis_1776031204340.png
+  - glamis_1776031204340.json
+
+📱 Facebook/Instagram Poster
+
+Selected: glamis_1776031204340
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys GLAMIS
+Price: $434
+Image: glamis_1776031204340.png
+
+Caption:
+New arrival alert! 🚨
+
+Black Rhino Hard Alloys GLAMIS
+📐 20x9
+🔩 5X150
+↔️ 12mm offset
+✨ BR GLAMIS 20X9 5X150 +12 110 M-BLK
+
+$434/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/2090GLA125150M10
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1575321084596018
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:9960) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] American Racing Vintage VN215 CLASSIC TORQ THRUST II
+  Downloading image for American Racing Vintage VN215 CLASSIC TORQ THRUST II...
+  ✅ Generated: vn215_classic_torq_thrust_ii_1776031216626
+  📝 Caption preview: 🔥 American Racing Vintage VN215 CLASSIC TORQ THRUST II - Now in stock!
+
+📐 18x7...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - vn215_classic_torq_thrust_ii_1776031216626.png
+  - vn215_classic_torq_thrust_ii_1776031216626.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pa41_phaser_1775985986517
+
+--- Content Preview ---
+Wheel: Pro Comp Alloys PA41 PHASER
+Price: $275
+Image: pa41_phaser_1775985986517.png
+
+Caption:
+Weekend project? ✅
+
+Pro Comp Alloys PA41 PHASER
+📐 18x9
+🔩 6X135
+↔️ 12mm offset
+✨ PHASER 18X9 6X135 87 +12 S-BLK
+
+Only $275/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/PXA5041-893655
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #procompalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1721400649205932
+
+✨ Done!
+[Sun 04/12/2026 18:00:23.49] Auto-post complete 

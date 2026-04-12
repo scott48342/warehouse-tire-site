@@ -109,7 +109,7 @@ const GM_HD_GEN1: HdTemplate = {
       diameterMax: 20,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
       offsetMax: 140,
     },
   },
@@ -153,7 +153,7 @@ const GM_HD_GEN2: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
       offsetMax: 140,
     },
   },
@@ -199,7 +199,7 @@ const GM_HD_GEN3: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
       offsetMax: 145,
     },
   },
@@ -237,17 +237,23 @@ const GM_HD_GEN4: HdTemplate = {
   },
   
   drw: {
+    // DRW wheels have 3 positions with different offsets:
+    // - Front (DF): ~+105mm
+    // - Rear Outer (DR): ~-220mm (extreme negative to push wheel outward)
+    // - Rear Inner (DI): ~+97mm
     oemSizes: [
-      { diameter: 17, width: 6.5, offset: 102 },
-      { diameter: 20, width: 7.5, offset: 108 },
+      { diameter: 17, width: 6.5, offset: 102 },  // Inner
+      { diameter: 20, width: 7.5, offset: 108 },  // Inner
+      { diameter: 20, width: 8.25, offset: 105 }, // Front
+      { diameter: 20, width: 8.25, offset: -221 }, // Outer
     ],
     fitmentRange: {
       diameterMin: 17,
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
-      offsetMax: 150,
+      offsetMin: -225,  // Rear outer wheels
+      offsetMax: 150,   // Front/inner wheels
     },
   },
 };
@@ -293,7 +299,7 @@ const DODGE_RAM_HD_GEN3: HdTemplate = {
       diameterMax: 20,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
       offsetMax: 140,
     },
   },
@@ -337,7 +343,7 @@ const RAM_HD_GEN4: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
       offsetMax: 145,
     },
   },
@@ -382,7 +388,7 @@ const RAM_HD_GEN5: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 97,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
       offsetMax: 150,
     },
   },
@@ -429,7 +435,7 @@ const FORD_SD_GEN1: HdTemplate = {
       diameterMax: 20,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 110,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
       offsetMax: 145,
     },
   },
@@ -473,7 +479,7 @@ const FORD_SD_GEN2: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 110,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
       offsetMax: 150,
     },
   },
@@ -517,7 +523,7 @@ const FORD_SD_GEN3: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 110,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
       offsetMax: 150,
     },
   },
@@ -562,7 +568,7 @@ const FORD_SD_GEN4: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 110,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
       offsetMax: 155,
     },
   },
@@ -645,7 +651,7 @@ const FORD_F350_DRW_GEN4: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: 130,
+      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
       offsetMax: 165,
     },
   },
