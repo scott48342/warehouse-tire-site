@@ -5,7 +5,7 @@ import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
 import { AddToCompareButton } from "@/components/AddToCompareButton";
-import { normalizeTireForCompare } from "@/context/CompareContext";
+import { normalizeTireForCompare } from "@/lib/compare-utils";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
