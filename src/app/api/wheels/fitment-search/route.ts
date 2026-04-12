@@ -7,11 +7,17 @@ import {
 // DB-FIRST: External API imports blocked. Use admin/fitment for manual import.
 // import { importVehicleFitment } from "@/lib/fitmentImport";
 import { 
-  getFitmentProfile, 
+  getFitmentProfile,
+  getFitmentProfileWithHdSupport,
   type FitmentProfile as DBFitmentProfile,
   type ProfileResolutionPath,
   type ProfileLookupResult,
 } from "@/lib/fitment-db/profileService";
+import {
+  type RearWheelConfig,
+  isDRWCapable,
+  needsRearWheelConfigSelection,
+} from "@/lib/fitment/hdFitmentResolver";
 import { listLocalFitments } from "@/lib/fitment-db/getFitment";
 import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
@@ -418,6 +424,27 @@ export async function GET(req: Request) {
     console.warn(`[fitment-search] DEPRECATION: Using 'trim' param as modificationId. Migrate to 'modification=${trimParam}'`);
   }
   
+  // ═══════════════════════════════════════════════════════════════════════════
+  // REAR WHEEL CONFIG (SRW/DRW) - For HD Trucks (3500-class)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const rearWheelConfigParam = url.searchParams.get("rearWheelConfig");
+  const rearWheelConfig: RearWheelConfig | undefined = 
+    rearWheelConfigParam === "srw" || rearWheelConfigParam === "drw" 
+      ? rearWheelConfigParam 
+      : undefined;
+  
+  // Check if this vehicle needs rear wheel config but doesn't have it
+  const vehicleIsDRWCapable = isDRWCapable(make, model);
+  const vehicleNeedsRearWheelConfig = needsRearWheelConfigSelection(make, model, trimParam);
+  
+  if (vehicleIsDRWCapable) {
+    console.log(`[fitment-search] 🛻 HD TRUCK DETECTED: ${year} ${make} ${model}`, {
+      isDRWCapable: vehicleIsDRWCapable,
+      needsSelection: vehicleNeedsRearWheelConfig,
+      rearWheelConfig: rearWheelConfig || "(not specified)",
+    });
+  }
+  
   const modeParam = url.searchParams.get("mode");
 
   if (!year || !make || !model) {
@@ -446,9 +473,12 @@ export async function GET(req: Request) {
     let aliasUsed = false;
     
     // Primary path: Use modificationId-first lookup (DB → Alias → API)
+    // For HD trucks with rearWheelConfig, use the HD-aware function
     if (modificationId) {
       try {
-        profileResult = await getFitmentProfile(Number(year), make, model, modificationId);
+        profileResult = await getFitmentProfileWithHdSupport(Number(year), make, model, modificationId, {
+          rearWheelConfig,
+        });
         
         if (profileResult.profile) {
           dbProfile = profileResult.profile;
@@ -710,6 +740,14 @@ async function handleDbProfilePath(
   // Hard requirement for "in stock only" live validation
   const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
 
+  // HD Truck SRW/DRW configuration
+  const rearWheelConfigParam = url.searchParams.get("rearWheelConfig");
+  const rearWheelConfig: RearWheelConfig | undefined = 
+    rearWheelConfigParam === "srw" || rearWheelConfigParam === "drw" 
+      ? rearWheelConfigParam 
+      : undefined;
+  const vehicleIsDRWCapable = isDRWCapable(make, model);
+
   // Build OEM specs from dbProfile (wheel-size based)
   // Parse wheel sizes to handle both string formats ("8.5Jx18") and object formats
   const parsedWheelSizes = parseWheelSizes(dbProfile.oemWheelSizes);
@@ -831,6 +869,9 @@ async function handleDbProfilePath(
     // Classic vehicle info
     isClassicVehicle: isClassic,
     classicFitmentUsed,
+    // HD truck SRW/DRW configuration
+    rearWheelConfig,
+    isDRWCapable: vehicleIsDRWCapable,
     // Include dbProfile in response for accessory fitment calculation
     dbProfileForResponse: {
       modificationId: dbProfile.modificationId,
@@ -925,6 +966,9 @@ async function handleDbFirstWheelResults(opts: {
   // Classic vehicle info
   isClassicVehicle?: boolean;
   classicFitmentUsed?: boolean;
+  // HD truck SRW/DRW configuration
+  rearWheelConfig?: RearWheelConfig;
+  isDRWCapable?: boolean;
   // DB profile for accessory fitment calculation (threadSize, seatType, centerBoreMm)
   dbProfileForResponse?: {
     modificationId: string;
@@ -2094,6 +2138,9 @@ async function handleDbFirstWheelResults(opts: {
       // Classic vehicle detection - classic_fitments is source of truth for classics
       isClassicVehicle: Boolean(opts.isClassicVehicle),
       classicFitmentUsed: Boolean(opts.classicFitmentUsed),
+      // HD truck SRW/DRW configuration
+      rearWheelConfig: opts.rearWheelConfig || null,
+      isDRWCapable: Boolean(opts.isDRWCapable),
       // Staggered fitment detection
       staggered: opts.staggeredInfo || null,
       // Confidence information (SAFETY-FIRST)

@@ -28,6 +28,11 @@ import { getFitmentFromRules, matchFitmentRule } from "./vehicleFitmentRules";
 import { getCachedFitment, setCachedFitment, type CachedFitmentProfile } from "./fitmentCache";
 import { getModelVariants, wasAliasUsed } from "./modelAliases";
 import { fitmentLog } from "./logger";
+import {
+  getHdPlatform,
+  applyHdTemplate,
+  type RearWheelConfig,
+} from "@/lib/fitment/hdFitmentResolver";
 
 // ============================================================================
 // Types
@@ -551,6 +556,72 @@ async function getProfileByYMMFallback(
 }
 
 // ============================================================================
+// HD Fitment Override Helper
+// ============================================================================
+
+/**
+ * Apply HD template overrides to a fitment profile when rearWheelConfig is specified.
+ * This ensures SRW vs DRW vehicles get correct bolt patterns, offsets, and wheel sizes.
+ */
+function applyHdOverridesToProfile(
+  profile: FitmentProfile,
+  year: number,
+  make: string,
+  model: string,
+  rearWheelConfig: RearWheelConfig | undefined
+): FitmentProfile {
+  // Skip if no rearWheelConfig specified
+  if (!rearWheelConfig) return profile;
+  
+  // Try to get HD fitment override
+  const hdFitment = getHdPlatform(year, make, model, rearWheelConfig, profile.displayTrim);
+  if (!hdFitment) return profile;
+  
+  console.log(`[profileService] HD OVERRIDE: ${year} ${make} ${model} → ${rearWheelConfig.toUpperCase()} (template: ${hdFitment.templateId})`);
+  
+  // Apply HD template values, preserving non-HD fields
+  return {
+    ...profile,
+    boltPattern: hdFitment.boltPattern,
+    centerBoreMm: hdFitment.centerBoreMm,
+    threadSize: hdFitment.threadSize,
+    seatType: hdFitment.seatType,
+    offsetMinMm: hdFitment.offsetMinMm,
+    offsetMaxMm: hdFitment.offsetMaxMm,
+    oemWheelSizes: hdFitment.oemWheelSizes.map(ws => ({
+      diameter: ws.diameter,
+      width: ws.width,
+      offset: ws.offset ?? null,
+      tireSize: null,
+      axle: "both" as const,
+      isStock: true,
+    })),
+    // Keep display trim but mark HD type
+    displayTrim: profile.displayTrim 
+      ? `${profile.displayTrim} (${rearWheelConfig.toUpperCase()})`
+      : rearWheelConfig.toUpperCase(),
+  };
+}
+
+/**
+ * Apply HD overrides to a ProfileLookupResult
+ */
+function applyHdOverridesToResult(
+  result: ProfileLookupResult,
+  year: number,
+  make: string,
+  model: string,
+  rearWheelConfig: RearWheelConfig | undefined
+): ProfileLookupResult {
+  if (!result.profile || !rearWheelConfig) return result;
+  
+  return {
+    ...result,
+    profile: applyHdOverridesToProfile(result.profile, year, make, model, rearWheelConfig),
+  };
+}
+
+// ============================================================================
 // Main Profile Lookup (with Alias Resolution)
 // ============================================================================
 
@@ -562,6 +633,10 @@ async function getProfileByYMMFallback(
  * 2. Alias lookup (requested → canonical) → "canonicalAlias"  
  * 3. API fetch + import (stores alias if different) → "importedAlias"
  * 4. Failure → "not_found"
+ * 
+ * HD Override:
+ * When rearWheelConfig is provided for HD trucks (3500-class), the profile
+ * is overridden with SRW or DRW specific specs from HD templates.
  */
 export async function getFitmentProfile(
   year: number,
@@ -570,6 +645,8 @@ export async function getFitmentProfile(
   modificationId: string,
   options?: {
     forceRefresh?: boolean;
+    /** For HD trucks (3500-class), specify SRW or DRW to get correct fitment */
+    rearWheelConfig?: RearWheelConfig;
   }
 ): Promise<ProfileLookupResult> {
   const t0 = Date.now();
@@ -1321,4 +1398,78 @@ function dbRecordToProfile(record: VehicleFitment, source: "db" | "api"): Fitmen
     apiCalled: source === "api",
     overridesApplied: rulesApplied,
   };
+}
+
+// ============================================================================
+// HD-Aware Profile Lookup (Wrapper)
+// ============================================================================
+
+/**
+ * Get fitment profile with HD truck SRW/DRW support.
+ * 
+ * This is the preferred function to call from APIs. It wraps getFitmentProfile
+ * and applies HD template overrides when rearWheelConfig is specified.
+ * 
+ * @param year - Vehicle year
+ * @param make - Vehicle make  
+ * @param model - Vehicle model
+ * @param modificationId - Trim/modification identifier
+ * @param options.rearWheelConfig - For HD trucks: "srw" or "drw"
+ * @param options.forceRefresh - Skip cache
+ */
+export async function getFitmentProfileWithHdSupport(
+  year: number,
+  make: string,
+  model: string,
+  modificationId: string,
+  options?: {
+    forceRefresh?: boolean;
+    rearWheelConfig?: RearWheelConfig;
+  }
+): Promise<ProfileLookupResult> {
+  // Get base profile
+  const result = await getFitmentProfile(year, make, model, modificationId, {
+    forceRefresh: options?.forceRefresh,
+    rearWheelConfig: options?.rearWheelConfig,
+  });
+  
+  // Apply HD overrides if rearWheelConfig is specified and profile exists
+  if (result.profile && options?.rearWheelConfig) {
+    const hdFitment = getHdPlatform(year, make, model, options.rearWheelConfig, result.profile.displayTrim);
+    
+    if (hdFitment) {
+      console.log(`[getFitmentProfileWithHdSupport] HD OVERRIDE APPLIED: ${year} ${make} ${model} → ${options.rearWheelConfig.toUpperCase()}`);
+      console.log(`  Template: ${hdFitment.templateId}`);
+      console.log(`  Bolt Pattern: ${result.profile.boltPattern} → ${hdFitment.boltPattern}`);
+      console.log(`  Offset Range: ${hdFitment.offsetMinMm}mm to ${hdFitment.offsetMaxMm}mm`);
+      
+      return {
+        ...result,
+        profile: {
+          ...result.profile,
+          boltPattern: hdFitment.boltPattern,
+          centerBoreMm: hdFitment.centerBoreMm,
+          threadSize: hdFitment.threadSize,
+          seatType: hdFitment.seatType,
+          offsetMinMm: hdFitment.offsetMinMm,
+          offsetMaxMm: hdFitment.offsetMaxMm,
+          oemWheelSizes: hdFitment.oemWheelSizes.map(ws => ({
+            diameter: ws.diameter,
+            width: ws.width,
+            offset: ws.offset ?? null,
+            tireSize: null,
+            axle: "both" as const,
+            isStock: true,
+          })),
+          // Append wheel type to display trim for clarity
+          displayTrim: result.profile.displayTrim
+            ? `${result.profile.displayTrim} (${options.rearWheelConfig.toUpperCase()})`
+            : options.rearWheelConfig.toUpperCase(),
+        },
+        overridesApplied: true,
+      };
+    }
+  }
+  
+  return result;
 }
