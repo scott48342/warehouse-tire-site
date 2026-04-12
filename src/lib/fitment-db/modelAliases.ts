@@ -14,11 +14,16 @@
 export const MODEL_ALIASES: Record<string, string[]> = {
   // ═══════════════════════════════════════════════════════════════════════════
   // FORD SUPER DUTY
-  // DB stores "f-XXX-super-duty", URLs often omit "super-duty"
+  // DB stores "f-250", "f-350", "f-450" (short form)
+  // URLs/selectors often show "f-250-super-duty" (long form)
+  // Map BOTH directions to ensure coverage
   // ═══════════════════════════════════════════════════════════════════════════
   "f-250": ["f-250-super-duty"],
+  "f-250-super-duty": ["f-250"],  // Reverse alias - selector might send this
   "f-350": ["f-350-super-duty"],
+  "f-350-super-duty": ["f-350"],  // Reverse alias
   "f-450": ["f-450-super-duty"],
+  "f-450-super-duty": ["f-450"],  // Reverse alias
 
   // ═══════════════════════════════════════════════════════════════════════════
   // CHRYSLER 300
