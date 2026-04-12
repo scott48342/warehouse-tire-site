@@ -164,6 +164,52 @@ function RunFlatBadge({ compact = false }: { compact?: boolean }) {
 }
 
 // ============================================================================
+// REBATE BADGE
+// ============================================================================
+
+export interface RebateBadgeProps {
+  /** Rebate amount text (e.g., "$80", "Up to $100") */
+  amount?: string | null;
+  /** Compact mode for smaller cards */
+  compact?: boolean;
+  /** Click handler */
+  onClick?: () => void;
+}
+
+export function RebateBadge({ 
+  amount, 
+  compact = false,
+  onClick,
+}: RebateBadgeProps) {
+  // Format display text
+  let displayText = "Rebate Available";
+  if (amount) {
+    const trimmed = amount.trim();
+    if (trimmed.startsWith("$") || trimmed.toLowerCase().startsWith("up to")) {
+      displayText = `${trimmed} Rebate`;
+    } else {
+      displayText = trimmed;
+    }
+  }
+  
+  return (
+    <span 
+      className={`
+        inline-flex items-center gap-1 rounded-full font-bold 
+        bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-sm
+        ${compact ? 'px-2 py-0.5 text-[9px]' : 'px-2.5 py-1 text-[10px]'}
+        ${onClick ? 'cursor-pointer hover:from-emerald-600 hover:to-green-700 transition-colors' : ''}
+      `}
+      title="Manufacturer rebate available"
+      onClick={onClick}
+    >
+      <span className={compact ? 'text-[10px]' : 'text-xs'}>💰</span>
+      {displayText}
+    </span>
+  );
+}
+
+// ============================================================================
 // MAIN COMPONENT
 // ============================================================================
 

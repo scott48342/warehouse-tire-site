@@ -303,6 +303,14 @@ export function Header() {
               </div>
             </details>
 
+            <Link
+              href="/rebates"
+              className="inline-flex items-center gap-1.5 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-emerald-700 hover:border-emerald-200 hover:text-emerald-800"
+            >
+              <span>💰</span>
+              REBATES
+            </Link>
+
             <details className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
                 ACCESSORIES <span className="text-xs">▾</span>

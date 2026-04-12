@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo, useRef } from "react";
+import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useCart } from "@/lib/cart/CartContext";
 import { FavoritesButton } from "@/components/FavoritesButton";
@@ -8,6 +8,8 @@ import { StickyPackageBar } from "@/components/StickyPackageBar";
 import { calculateAccessoryFitment, type DBProfileForAccessories, type WheelForAccessories } from "@/hooks/useAccessoryFitment";
 import { getStockInfo } from "@/lib/tires/tireSpecs";
 import type { TreadCategory } from "@/lib/tires/normalization";
+import { RebateSRPBadge } from "@/components/RebateBlock";
+import { useRebateMatches, type RebateMatchData } from "@/hooks/useRebateMatch";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -201,6 +203,7 @@ function TireCard({
   onSelect,
   viewParams,
   isPackageFlow = false,
+  rebateMatch,
 }: {
   tire: TireItem;
   size: string;
@@ -209,6 +212,7 @@ function TireCard({
   onSelect: () => void;
   viewParams: ViewParams;
   isPackageFlow?: boolean;
+  rebateMatch?: RebateMatchData | null;
 }) {
   const brand = tire.brand || "Tire";
   const model = tire.displayName || tire.prettyName || tire.description || "";
@@ -407,8 +411,12 @@ function TireCard({
           2. CORE CONTENT BLOCK
           ══════════════════════════════════════════════════════════════════════ */}
       <div className="flex flex-1 flex-col p-4">
-        {/* Category + Mileage pills - clean row below image */}
+        {/* Category + Mileage + Rebate pills - clean row below image */}
         <div className="flex flex-wrap items-center gap-1.5 mb-2">
+          {/* Rebate badge - show first for maximum visibility */}
+          {rebateMatch && (
+            <RebateSRPBadge match={rebateMatch} compact />
+          )}
           <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold ${catStyle.bg} ${catStyle.text}`}>
             {catStyle.icon} {treadCategory}
           </span>
@@ -570,6 +578,7 @@ function CategorySection({
   viewParams,
   defaultExpanded = true,
   isPackageFlow = false,
+  rebateMatches,
 }: {
   title: string;
   subtitle: string;
@@ -581,6 +590,7 @@ function CategorySection({
   viewParams: ViewParams;
   defaultExpanded?: boolean;
   isPackageFlow?: boolean;
+  rebateMatches?: Record<string, RebateMatchData>;
 }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
   
@@ -624,6 +634,7 @@ function CategorySection({
               onSelect={() => onSelectTire(tire)}
               viewParams={viewParams}
               isPackageFlow={isPackageFlow}
+              rebateMatch={rebateMatches?.[tire.partNumber || ""]}
             />
           ))}
         </div>
@@ -779,6 +790,20 @@ export function TiresGridWithSelection({
     trim: viewParams.trim,
     modification: viewParams.modification,
   } : undefined;
+  
+  // Prepare tire data for rebate matching
+  const tiresForRebateMatch = useMemo(() => 
+    tires.slice(0, 50).map(t => ({
+      sku: t.partNumber || "",
+      brand: t.brand || "",
+      model: t.displayName || t.prettyName || t.description || "",
+      size: selectedSize,
+    })),
+    [tires, selectedSize]
+  );
+  
+  // Fetch rebate matches for displayed tires
+  const { matches: rebateMatches } = useRebateMatches(tiresForRebateMatch);
   
   // Categorize tires with minimum population enforcement
   // Each visible category should have at least MIN_PER_CATEGORY items to avoid
@@ -1012,6 +1037,7 @@ export function TiresGridWithSelection({
           viewParams={viewParams}
           defaultExpanded={true}
           isPackageFlow={!!selectedWheel}
+          rebateMatches={rebateMatches}
         />
         
         <CategorySection
@@ -1025,6 +1051,7 @@ export function TiresGridWithSelection({
           viewParams={viewParams}
           defaultExpanded={true}
           isPackageFlow={!!selectedWheel}
+          rebateMatches={rebateMatches}
         />
         
         <CategorySection
@@ -1038,6 +1065,7 @@ export function TiresGridWithSelection({
           viewParams={viewParams}
           defaultExpanded={categorized.bestValue.length === 0 && categorized.mostPopular.length === 0}
           isPackageFlow={!!selectedWheel}
+          rebateMatches={rebateMatches}
         />
         
         {/* Skip tires option */}

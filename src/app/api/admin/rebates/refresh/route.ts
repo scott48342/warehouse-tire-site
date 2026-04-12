@@ -23,6 +23,11 @@ function normBrand(headline: string): string | null {
     "Dunlop",
     "Vredestein",
     "Mickey Thompson",
+    "Michelin",
+    "Continental",
+    "Hankook",
+    "Yokohama",
+    "BFGoodrich",
   ];
 
   const upper = h.toUpperCase();
@@ -60,7 +65,10 @@ export async function POST(req: Request) {
       res = await fetch(u.url, {
         cache: "no-store",
         headers: {
-          "user-agent": "warehouse-tire-site/1.0 (rebate sync)",
+          // Use a more realistic user-agent to avoid bot detection
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+          "accept-language": "en-US,en;q=0.5",
         },
       });
       if (!res.ok) continue;
@@ -93,32 +101,41 @@ export async function POST(req: Request) {
         return `https://www.discounttire.com${u.startsWith("/") ? "" : "/"}${u}`;
       };
 
+      // Updated 2026-04: Discount Tire now uses h3 elements for rebate headlines
+      // Structure: h3 headline > sibling p (date) > sibling p (description with "Get details" link)
+      //            > sibling links for "Download Form" and "Submit Online"
       $("h1,h2,h3").each((_, el) => {
         const h = $(el);
         const headline = h.text().trim();
         if (!headline || !/rebate/i.test(headline)) return;
 
-        const box = h.closest("section, article, li, div");
+        // Find the containing box - try multiple selectors for different layouts
+        const box = h.closest("section, article, li, [class*='promo'], [class*='offer']") 
+          || h.parent().parent();
+        
         const linkEls = box.find("a").toArray();
         const links = linkEls
           .map((x) => {
             const a = $(x);
-            return { text: a.text().trim(), href: a.attr("href") || "" };
+            return { text: a.text().trim().toLowerCase(), href: a.attr("href") || "" };
           })
           .filter((l) => l.href);
 
-        const learnMore = links.find((l) => /get details|see details|view offer details/i.test(l.text))?.href || "";
-        const form = links.find((l) => /download form|rebate form|claim form/i.test(l.text))?.href || "";
-        const submit = links.find((l) => /submit online/i.test(l.text))?.href || "";
+        // More flexible pattern matching (case-insensitive, handle punctuation)
+        const learnMore = links.find((l) => /get\s*details|see\s*details|view\s*offer/i.test(l.text))?.href || "";
+        const form = links.find((l) => /download\s*form|rebate\s*form|claim\s*form/i.test(l.text))?.href || "";
+        const submit = links.find((l) => /submit\s*online|submit\s*rebate/i.test(l.text))?.href || "";
 
         // Prefer the explicit form/submission links.
         const formUrl = abs(form || submit);
         const learnMoreUrl = abs(learnMore);
 
+        // Extract date range - handle both en-dash (–) and hyphen (-)
         const endsText = (() => {
           const t = box.text();
-          const m = t.match(/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}\s*\u2013\s*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}/i);
-          return m ? m[0] : null;
+          // Match patterns like "March 1 – June 30" or "April 7 - April 20"
+          const m = t.match(/\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2}\s*[\u2013\-–]\s*(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2}/i);
+          return m ? m[0].replace(/[\u2013–]/g, "–") : null;
         })();
 
         const imgAlt = box.find("img").first().attr("alt") || "";

@@ -34,6 +34,9 @@ import { CustomersAlsoAdded } from "@/components/CustomersAlsoAdded";
 import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
 // Financing badges (2026-04-11)
 import { FinancingBadge } from "@/components/FinancingBadge";
+// Rebate display (2026-04-12)
+import { RebatePDPBlockStatic } from "@/components/RebateBlock";
+import { getPool as getRebatePool, listActiveRebates, getBestMatchingRebate, type SiteRebate } from "@/lib/rebates";
 
 export const runtime = "nodejs";
 
@@ -396,6 +399,31 @@ export default async function TireDetailPage({
           // Fetch co-add recommendations (non-blocking, cached)
           const coAddedProducts = await getCoAddedProductsForPDP(tire.partNumber || safeSku, "tire");
           
+          // Fetch rebate match (non-blocking, cached)
+          let rebateMatch: { amount: string | null; headline: string; formUrl: string | null; learnMoreUrl: string | null; requirements: string | null; endsText: string | null; brand: string | null } | null = null;
+          try {
+            const rebateDb = getRebatePool();
+            const activeRebates = await listActiveRebates(rebateDb);
+            const match = getBestMatchingRebate(
+              { sku: tire.partNumber || safeSku, brand: tire.brand || "", model: title, size: tire.size || size },
+              activeRebates
+            );
+            if (match) {
+              rebateMatch = {
+                amount: match.rebate.rebate_amount,
+                headline: match.rebate.headline,
+                formUrl: match.rebate.form_url,
+                learnMoreUrl: match.rebate.learn_more_url,
+                requirements: match.rebate.requirements,
+                endsText: match.rebate.ends_text,
+                brand: match.rebate.brand,
+              };
+            }
+          } catch (err) {
+            // Silent fail - no rebate is fine
+            console.error("[tire-pdp] Rebate fetch error:", err);
+          }
+          
           return (
             <main className="bg-neutral-50">
               <div className="mx-auto max-w-6xl px-4 py-8">
@@ -551,6 +579,11 @@ export default async function TireDetailPage({
 
                     {/* Real behavior-driven popularity signal */}
                     <PopularityBadge signal={popularitySignal} />
+
+                    {/* Manufacturer rebate block */}
+                    {rebateMatch && (
+                      <RebatePDPBlockStatic match={rebateMatch} />
+                    )}
 
                     {/* TPMS contextual upsell - only for 2007+ vehicles */}
                     <TPMSSuggestion
@@ -741,6 +774,33 @@ export default async function TireDetailPage({
   // Fetch co-add recommendations (non-blocking, cached)
   const coAddedProducts = await getCoAddedProductsForPDP(safeSku, "tire");
 
+  // Fetch rebate match (non-blocking, cached)
+  let rebateMatch: { amount: string | null; headline: string; formUrl: string | null; learnMoreUrl: string | null; requirements: string | null; endsText: string | null; brand: string | null } | null = null;
+  try {
+    const rebateDb = getRebatePool();
+    const activeRebates = await listActiveRebates(rebateDb);
+    const rawTitle = String(t.tire_description || t.tire_size || t.simple_size || t.sku);
+    const titleForMatch = cleanTireDisplayTitle(rawTitle, t.brand_desc);
+    const match = getBestMatchingRebate(
+      { sku: safeSku, brand: String(t.brand_desc || ""), model: titleForMatch, size: String(t.tire_size || t.simple_size || "") },
+      activeRebates
+    );
+    if (match) {
+      rebateMatch = {
+        amount: match.rebate.rebate_amount,
+        headline: match.rebate.headline,
+        formUrl: match.rebate.form_url,
+        learnMoreUrl: match.rebate.learn_more_url,
+        requirements: match.rebate.requirements,
+        endsText: match.rebate.ends_text,
+        brand: match.rebate.brand,
+      };
+    }
+  } catch (err) {
+    // Silent fail - no rebate is fine
+    console.error("[tire-pdp] Rebate fetch error:", err);
+  }
+
   // Enrich with tire asset image if needed
   let enrichedImageUrl: string | null = t.image_url || null;
   if (!enrichedImageUrl) {
@@ -910,6 +970,11 @@ export default async function TireDetailPage({
 
             {/* Real behavior-driven popularity signal */}
             <PopularityBadge signal={popularitySignal} />
+
+            {/* Manufacturer rebate block */}
+            {rebateMatch && (
+              <RebatePDPBlockStatic match={rebateMatch} />
+            )}
 
             {/* TPMS contextual upsell - only for 2007+ vehicles */}
             <TPMSSuggestion
