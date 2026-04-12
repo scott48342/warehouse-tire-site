@@ -59,6 +59,14 @@ import {
 } from "@/lib/tires/normalization";
 import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
+import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
+import {
+  type RearWheelConfig,
+  isDRWCapable,
+  needsRearWheelConfigSelection,
+  getEffectiveRearWheelConfig,
+  parseRearWheelConfigParam,
+} from "@/lib/fitment/rearWheelConfig";
 
 type Tire = {
   source?: "wp" | "km" | "tw";
@@ -922,8 +930,30 @@ export default async function TiresPage({
   const wheelDiaActive = axle === "rear" ? (wheelDiaRear || wheelDia) : (wheelDiaFront || wheelDia);
   const wheelWidthActive = axle === "rear" ? (wheelWidthRear || wheelWidth) : (wheelWidthFront || wheelWidth);
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // REAR WHEEL CONFIG (SRW/DRW) - For DRW-capable HD trucks (3500 class)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const rearWheelConfigRaw = safeString(Array.isArray((sp as any).rearWheelConfig) ? (sp as any).rearWheelConfig[0] : (sp as any).rearWheelConfig);
+  const rearWheelConfigParam = parseRearWheelConfigParam(rearWheelConfigRaw || null);
+
   const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
   const hasVehicle = Boolean(year && make && model);
+
+  // Rear wheel config evaluation (for DRW-capable vehicles)
+  const vehicleIsDRWCapable = make && model ? isDRWCapable(make, model) : false;
+  const vehicleNeedsRearWheelConfig = make && model ? needsRearWheelConfigSelection(make, model, trim) : false;
+  const effectiveRearWheelConfig = make && model 
+    ? getEffectiveRearWheelConfig(make, model, trim, rearWheelConfigParam)
+    : null;
+  
+  if (vehicleIsDRWCapable) {
+    console.log('[tires/page] 🛻 DRW-CAPABLE VEHICLE:', {
+      make, model, trim,
+      paramValue: rearWheelConfigParam,
+      needsSelection: vehicleNeedsRearWheelConfig,
+      effectiveConfig: effectiveRearWheelConfig,
+    });
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // SIZE SEARCH DETECTION - Allow direct tire size searches without YMM
@@ -2292,6 +2322,55 @@ export default async function TiresPage({
                 <div className="text-sm font-extrabold text-neutral-900">Expert Support</div>
                 <div className="mt-1 text-xs text-neutral-500">Call 248-332-4120</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // REAR WHEEL CONFIG GATE - For DRW-capable HD trucks
+  // Must select SRW or DRW before showing tire results
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (hasVehicle && vehicleNeedsRearWheelConfig && !effectiveRearWheelConfig) {
+    return (
+      <main className="bg-neutral-50">
+        {/* Package Journey Bar */}
+        {isPackageFlow ? (
+          <PackageJourneyBar
+            currentStep="tires"
+            vehicle={{ year, make, model }}
+          />
+        ) : null}
+        
+        <div className="mx-auto max-w-screen-2xl px-4 py-8">
+          <div className="max-w-2xl mx-auto">
+            {/* Vehicle header */}
+            <div className="mb-6">
+              <h1 className="text-2xl font-extrabold tracking-tight text-neutral-900">
+                {year} {make} {model}
+              </h1>
+              {displayTrim && (
+                <p className="mt-1 text-sm text-neutral-600">{displayTrim}</p>
+              )}
+            </div>
+            
+            {/* Rear Wheel Config Selector */}
+            <RearWheelConfigSelector
+              selectedConfig={rearWheelConfigParam}
+              inferredConfig={null}
+              vehicle={{ year, make, model, trim: displayTrim }}
+              basePath={basePath}
+            />
+            
+            {/* Info about why we're asking */}
+            <div className="mt-6 rounded-xl bg-neutral-100 p-4">
+              <h4 className="font-semibold text-neutral-800 text-sm">Why are we asking?</h4>
+              <p className="mt-1 text-xs text-neutral-600">
+                The {model} is available with both single rear wheel (SRW) and dual rear wheel (DRW/Dually) configurations. 
+                These have different wheel and tire sizes, so we need to know which setup you have to show the correct fitment.
+              </p>
             </div>
           </div>
         </div>

@@ -24,6 +24,15 @@ import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
 import { LiftLevelSelector } from "@/components/LiftLevelSelector";
+import { RearWheelConfigSelector, trackRearWheelConfigPromptShown } from "@/components/RearWheelConfigSelector";
+import {
+  type RearWheelConfig,
+  isDRWCapable,
+  needsRearWheelConfigSelection,
+  getEffectiveRearWheelConfig,
+  parseRearWheelConfigParam,
+  canShowResults as canShowRearWheelResults,
+} from "@/lib/fitment/rearWheelConfig";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -311,6 +320,28 @@ export default async function WheelsPage({
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // REAR WHEEL CONFIG (SRW/DRW) - For DRW-capable HD trucks (3500 class)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const rearWheelConfigRaw = safeString(Array.isArray(sp.rearWheelConfig) ? sp.rearWheelConfig[0] : sp.rearWheelConfig);
+  const rearWheelConfigParam = parseRearWheelConfigParam(rearWheelConfigRaw || null);
+  
+  // Check if this vehicle needs rear wheel config selection
+  const vehicleIsDRWCapable = make && model ? isDRWCapable(make, model) : false;
+  const vehicleNeedsRearWheelConfig = make && model ? needsRearWheelConfigSelection(make, model, trim) : false;
+  const effectiveRearWheelConfig = make && model 
+    ? getEffectiveRearWheelConfig(make, model, trim, rearWheelConfigParam)
+    : null;
+  
+  if (vehicleIsDRWCapable) {
+    console.log('[wheels/page] 🛻 DRW-CAPABLE VEHICLE:', {
+      make, model, trim,
+      paramValue: rearWheelConfigParam,
+      needsSelection: vehicleNeedsRearWheelConfig,
+      effectiveConfig: effectiveRearWheelConfig,
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // HOMEPAGE INTENT SYSTEM
   // Only activates when entry=homepage is present in URL params.
   // This provides specialized search flows for users entering from homepage blocks.
@@ -499,6 +530,8 @@ export default async function WheelsPage({
     trim: trim || undefined,
     // modificationId is the canonical fitment identity
     modification: modification || undefined,
+    // SRW/DRW selection for HD trucks
+    rearWheelConfig: effectiveRearWheelConfig || undefined,
 
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
@@ -1279,6 +1312,53 @@ export default async function WheelsPage({
     );
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // REAR WHEEL CONFIG GATE - For DRW-capable HD trucks
+  // Must select SRW or DRW before showing wheel results
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (vehicleNeedsRearWheelConfig && !effectiveRearWheelConfig) {
+    return (
+      <main className="bg-neutral-50">
+        {/* Package Journey Bar */}
+        <PackageJourneyBar
+          currentStep="wheels"
+          vehicle={{ year, make, model }}
+        />
+        
+        <div className="mx-auto max-w-screen-2xl px-4 py-8">
+          <div className="max-w-2xl mx-auto">
+            {/* Vehicle header */}
+            <div className="mb-6">
+              <h1 className="text-2xl font-extrabold tracking-tight text-neutral-900">
+                {year} {make} {model}
+              </h1>
+              {displayTrim && (
+                <p className="mt-1 text-sm text-neutral-600">{displayTrim}</p>
+              )}
+            </div>
+            
+            {/* Rear Wheel Config Selector */}
+            <RearWheelConfigSelector
+              selectedConfig={rearWheelConfigParam}
+              inferredConfig={null}
+              vehicle={{ year, make, model, trim: displayTrim }}
+              basePath="/wheels"
+            />
+            
+            {/* Info about why we're asking */}
+            <div className="mt-6 rounded-xl bg-neutral-100 p-4">
+              <h4 className="font-semibold text-neutral-800 text-sm">Why are we asking?</h4>
+              <p className="mt-1 text-xs text-neutral-600">
+                The {model} is available with both single rear wheel (SRW) and dual rear wheel (DRW/Dually) configurations. 
+                These have different wheel bolt patterns and sizes, so we need to know which setup you have to show the correct fitment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <>
       {/* TODO: Move robots/canonical to generateMetadata export for proper SEO handling */}
@@ -1380,6 +1460,11 @@ export default async function WheelsPage({
                   {vehicleCallsForStaggered ? (
                     <span className="rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-bold text-purple-700">
                       Staggered
+                    </span>
+                  ) : null}
+                  {effectiveRearWheelConfig ? (
+                    <span className="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-bold text-blue-700">
+                      {effectiveRearWheelConfig === 'drw' ? 'Dually (DRW)' : 'SRW'}
                     </span>
                   ) : null}
                   {primaryBoltPattern ? (

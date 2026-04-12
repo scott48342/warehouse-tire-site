@@ -1,0 +1,4206 @@
+{
+  "timestamp": "2026-04-12T13:04:04.617Z",
+  "mode": "live",
+  "summary": {
+    "filled": 117,
+    "skippedHasData": 0,
+    "skippedNoDonor": 32,
+    "blockedGenMismatch": 0,
+    "blockedSpecMismatch": 0,
+    "errors": 0,
+    "total": 149,
+    "byConfidence": {
+      "high": 116,
+      "medium": 1,
+      "low": 0
+    }
+  },
+  "byModel": {
+    "silverado-1500": 37,
+    "escalade-esv": 24,
+    "suburban": 21,
+    "yukon": 20,
+    "yukon-xl": 15
+  },
+  "results": [
+    {
+      "targetId": "26544bbe-5268-4150-8471-34c19b849b18",
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "7e2bd93a-4bf8-4e2e-9764-a23ef5d1942b",
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "9148757d-18a8-44c2-b1d7-2532c3699919",
+      "year": 1990,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "22b21b18-de69-415c-88eb-e8576e32dc69",
+      "year": 1991,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "de6b658f-7cff-41b2-98c0-a2b1ccf8abe6",
+      "year": 1992,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "44cba381-a2ef-4fa4-9c04-e23bf0b19ca0",
+      "year": 1993,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "0c23bd3f-c9ba-4acf-9e6f-ae7920b4acb0",
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "877f65bc-587e-40a5-9f77-dd53b922e724",
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "1fd08acf-ae47-41da-86be-ffda0ef8e395",
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "b0c04423-6a5d-46b4-9bc5-021a7c3e4b12",
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "ef8964a4-7066-4948-976d-a96a298addf6",
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "a9c7afbb-cd0c-415b-87d8-914d7b919e07",
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "82eee2b4-c958-4947-addb-2b37312fcd4a",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 1999,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "28df8dbf-eee8-4596-b2a1-d6d38e7833f6",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "84813767-b112-462f-8d84-a1bd8ec38151",
+      "donorModel": "silverado-1500",
+      "donorTrim": "LT",
+      "donorYear": 2000,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "4b956345-82e9-4f89-8577-304f38954229",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "72c0e9b1-1104-49fa-b317-bc426f831242",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2001,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "ec4a44ac-a92f-46a6-8972-8903ea77da2e",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "3d2ec08f-a568-440a-8d17-1e404e1d0423",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2002,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "c1574bf9-7f5f-4873-8347-0047a6ff66e1",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "c8beca32-c7f6-4a5e-aa30-847727070abe",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2003,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "fd38ccfc-42a2-4c83-a84f-36c9f3307ab6",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "3646bad4-a3b0-438d-b239-368f1d774710",
+      "donorModel": "silverado-1500",
+      "donorTrim": "LS",
+      "donorYear": 2004,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        },
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "e158469e-a495-4f26-ad18-43a971f4d2dc",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "14c7ecc2-7b40-4278-b239-66c753201d9d",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2005,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "241ce075-d3ac-433c-85b7-72fd5326494f",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "8b4f0f78-2d3b-4a1b-822e-bf87415388c8",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2006,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "c84202fb-9fb8-436e-9afe-bcfbaf2629e0",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "05df20b8-1ad2-4713-b113-78e4f0b94f21",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2007,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "d47f7836-960e-4bd8-a9a6-11ee8502370f",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "8b32bd03-6a71-489d-a3bf-036cf8639e46",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2008,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "d8856a84-2ce1-4c99-97d7-e8875a19b328",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "1539ff2e-2b91-419e-bdae-13717bc1009c",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2009,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "003b22f8-9c28-484d-917f-9d6622d8d48e",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "filled",
+      "donorId": "d8856a84-2ce1-4c99-97d7-e8875a19b328",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2009,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "84019f47-5002-42e0-a19d-9ed174938682",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "29557ba7-fecb-4d94-80c0-eb40db5ffeb7",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2010,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "582d99ba-8a64-4bec-82f3-97aa120062c0",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "6689427a-2111-4bfb-b132-720073e20216",
+      "donorModel": "silverado-1500",
+      "donorTrim": "LS",
+      "donorYear": 2011,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "b521c630-d676-42f9-ac95-c3248d348a64",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "74295293-1745-4636-ae83-6812eccae8e9",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2012,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "98b065e5-8056-4904-bd80-37d3f97e1bca",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "a0df02ee-8fc0-4d85-bb87-b2963f0d2ef7",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2013,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "bb0c8228-5ce4-4971-bbdd-de8f8e8886bd",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "filled",
+      "donorId": "98b065e5-8056-4904-bd80-37d3f97e1bca",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2013,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 7.5,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "3c5ff038-e226-4c33-a8bb-50f5bdcdd230",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "filled",
+      "donorId": "96fabdac-93db-4781-afa4-165e9431edd2",
+      "donorModel": "silverado-1500",
+      "donorTrim": "High Country",
+      "donorYear": 2014,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 9,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "f249cfa2-026d-4bc9-aa89-14b0ca8d7454",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "96fabdac-93db-4781-afa4-165e9431edd2",
+      "donorModel": "silverado-1500",
+      "donorTrim": "High Country",
+      "donorYear": 2014,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 9,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "38c8f025-064c-4940-af3d-49cc2e558ecb",
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "0efdea1c-eb17-4702-b00a-482b867d0c47",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2015,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "23b31555-7d09-492e-a8e4-cd077ada61ed",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "filled",
+      "donorId": "fac9706a-8c10-4873-87fd-9df5806ebea9",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2016,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "d2753fa8-b979-4ef1-bb6c-ce5c5ac87c0e",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "fac9706a-8c10-4873-87fd-9df5806ebea9",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2016,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "badbe240-17b3-43ab-bbf1-85b94e3e8fa1",
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ, High Country",
+      "status": "filled",
+      "donorId": "fac9706a-8c10-4873-87fd-9df5806ebea9",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2016,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "78b406a7-baab-4cca-8451-91e5116de3ce",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "c6951343-5d05-4f8e-ac5e-658129a98b6a",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2017,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 8,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "5da07dce-a007-44b8-bc4a-5773d018aea0",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "filled",
+      "donorId": "78b406a7-baab-4cca-8451-91e5116de3ce",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2017,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 8,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "072e8078-3bf1-4ee6-b7c1-512bb8bba358",
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ, High Country",
+      "status": "filled",
+      "donorId": "78b406a7-baab-4cca-8451-91e5116de3ce",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2017,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 8,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "d3bbeabf-ebd3-45eb-b9d8-c2ef2fcdcf41",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "ade1f650-7364-41e9-bf35-9c76d9b6a826",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2018,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "6936cd39-d0e1-4996-8128-d7db74817740",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "LTZ, High Country",
+      "status": "filled",
+      "donorId": "ade1f650-7364-41e9-bf35-9c76d9b6a826",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2018,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "8f1f64b1-a572-4378-8b29-03bb6c8d934b",
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "WT, LS, LT",
+      "status": "filled",
+      "donorId": "ade1f650-7364-41e9-bf35-9c76d9b6a826",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2018,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "0c5076ce-066a-458a-bfdc-468473716eed",
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "1e5d4311-d063-4244-8521-b3493392d93a",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2019,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "255/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 17,
+          "tireSize": "LT265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": false,
+          "diameter": 18,
+          "tireSize": "LT275/65R18"
+        }
+      ]
+    },
+    {
+      "targetId": "8068b381-8a81-456a-a6ca-63e7c8393a09",
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "9fef629c-66e8-48a9-b054-6eacea833b57",
+      "donorModel": "silverado-1500",
+      "donorTrim": "Base",
+      "donorYear": 2020,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "255/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 17,
+          "tireSize": "LT265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": false,
+          "diameter": 18,
+          "tireSize": "LT275/65R18"
+        }
+      ]
+    },
+    {
+      "targetId": "d0ecac03-7700-42f5-8fe1-c75c83610ba5",
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "77fb01e9-4c2e-4022-9173-5078185802e5",
+      "donorModel": "silverado-1500",
+      "donorTrim": "LT Trail Boss",
+      "donorYear": 2021,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 8.5,
+          "diameter": 18
+        }
+      ]
+    },
+    {
+      "targetId": "e6678d7a-04c1-4ccd-9508-f3c88c35bc3c",
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "fac0f2c0-94e8-478a-bc8c-fa1c1fc1309f",
+      "donorModel": "silverado-1500",
+      "donorTrim": "3.0 Duramax",
+      "donorYear": 2022,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "255/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 17,
+          "tireSize": "LT265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": false,
+          "diameter": 18,
+          "tireSize": "LT275/65R18"
+        }
+      ]
+    },
+    {
+      "targetId": "49a0de43-d319-47f9-acbf-dd4b2fcba2a7",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "7722644e-e7ee-47e2-80ff-0cbcbd1dae93",
+      "donorModel": "silverado-1500",
+      "donorTrim": "2.7 TurboMax",
+      "donorYear": 2023,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "255/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 17,
+          "tireSize": "LT265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": false,
+          "diameter": 18,
+          "tireSize": "LT275/65R18"
+        }
+      ]
+    },
+    {
+      "targetId": "63a3add6-e23a-475b-858a-c2a61dade303",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "036ce995-c390-4866-9a56-31f76aaa4cbb",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2024,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "255/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 17,
+          "tireSize": "265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 8,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 17,
+          "tireSize": "LT265/70R17"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": false,
+          "diameter": 18,
+          "tireSize": "LT275/65R18"
+        }
+      ]
+    },
+    {
+      "targetId": "3e981ab8-3c32-482d-953a-f63b070c0435",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "2eb018c2-ed5a-447a-81b1-10c0c5409950",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2025,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 8,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "01d74f53-15be-4217-8edf-4e22db11f949",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trim": "Base",
+      "status": "filled",
+      "donorId": "826eea99-f005-46aa-99eb-c3676820f485",
+      "donorModel": "silverado-1500",
+      "donorTrim": "WT",
+      "donorYear": 2026,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "width": 8,
+          "diameter": 17
+        }
+      ]
+    },
+    {
+      "targetId": "28e9fd47-f23d-488f-acf6-8f003f06569e",
+      "year": 2003,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "b65fa183-9130-4222-ae03-bd1dbb755408",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2003,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "ca1f3242-0c34-47d0-9b86-950950d16a29",
+      "year": 2004,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "ae75d0a6-f020-4066-810a-ff98b28dd795",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2004,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "ed6d3981-76cf-4260-96cc-650006bfacf5",
+      "year": 2005,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "550f7e80-129b-4a0b-af21-f80a04cab2f3",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2005,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "2f1fe842-abe8-4644-ac0e-9a2d241c0866",
+      "year": 2006,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "cb190ed2-3360-4988-87c8-3758a91e917c",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2006,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "27a9bad4-0f41-4f72-907e-c560598ac7b8",
+      "year": 2007,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "75828333-1bb1-4687-a7a0-57a2c02d1389",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2007,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "bfbd33f3-10de-4b3f-8c2e-cbbe5e5b0175",
+      "year": 2008,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "b21e8e9d-2886-4f5f-8364-778a8e26f6a2",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2008,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "86892672-85b9-4c3c-b049-b2a53c5549b3",
+      "year": 2009,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "f8fd8052-3a5d-409f-aa7f-29e119d4a115",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2009,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "4860680d-b5bc-44e0-989f-87615a2f298f",
+      "year": 2010,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "759843ec-e387-4b71-8e87-26f141c77a7e",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2010,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "633a7236-eca8-46ca-b452-dc92194e086c",
+      "year": 2011,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "7f86e16a-e950-424a-a62e-279a459800ec",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2011,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "fb70b0e9-fcf9-4205-b305-b88d4975210d",
+      "year": 2012,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "0c31c003-b4db-4d67-8a7c-fcca2bce9765",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2012,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "fac5fa72-0f7e-4b51-b65e-7406cf09f5a9",
+      "year": 2013,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "801ea82d-5be7-46a1-808a-1bda1062d120",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2013,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "0cad328d-2e6d-4123-a245-9675cf69abbc",
+      "year": 2014,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "3d8ba5b6-a37a-476c-848d-8e21787c701f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2014,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "9947939f-2f22-4e19-9ed7-86ae752fac3e",
+      "year": 2015,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "db6451ca-32de-436d-ac47-f161428e51e4",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2015,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "e37d5b33-d685-4348-956e-99f9c62ca2c8",
+      "year": 2016,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "4bf5418d-459a-45f1-884e-4cdd7afff55e",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2016,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "fea28c2c-bf01-48f1-8003-8ee4e7d2084f",
+      "year": 2017,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "8f5e5ce8-ee7b-4f1e-9e08-b7c8dc3ddd49",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2017,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "a1a8e166-db53-4359-9430-340747b9bc59",
+      "year": 2018,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "5e380d75-a37e-4196-825d-8a68f64868ba",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2018,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "889fe2f7-e3e2-4df2-a0d4-addfa40993a3",
+      "year": 2019,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "b194f6b5-fa8d-4e0f-ab34-968b9cd23ee1",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2019,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "c239a1fe-c9c2-42d1-af4d-a5496c1f4b45",
+      "year": 2020,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "ea257588-7bbf-479a-b68c-0fc1ab586446",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2020,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 27,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "3446d9c8-620d-455a-b38c-d8c4043d3b15",
+      "year": 2021,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "ef7617ba-0cf6-4cfc-9100-7547b4cd4cf8",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2021,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "e5b19e7a-5ed3-440c-a450-11e9fabcc73e",
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "6e519c85-5af8-409d-865d-e36009e8632f",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2022,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "329b6046-fcc5-4dd9-90d2-b99414bac579",
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "71c0ebac-ebef-4fde-9a3b-db140671321f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2023,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "c8feebf0-4205-46e5-a1b8-fc7deda7e504",
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "3a5450ab-b3cc-4b07-ac3f-e0a54f3901ba",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2024,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "7573c1b5-d66a-4092-989e-afcb3c2d116f",
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "1d12d0c1-de9e-4b52-83b8-38a3757a7a17",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2025,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "7abc4309-c4a4-447e-bedf-387c7b10815d",
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade-esv",
+      "trim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "status": "filled",
+      "donorId": "0292cb77-86b9-425c-a9e2-cf32e4f962b6",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2026,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "ebb01393-5dc9-4a06-aac9-e3aa9390db2d",
+      "year": 1992,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "da3f152a-c6f9-4b6d-91b1-78f6058d0981",
+      "year": 1993,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "3c14b201-e035-4f2c-9df1-30ba9f849d3b",
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "3d4fef0f-a821-40ba-be17-b7bdea75c9d1",
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "0c0d2210-7843-406a-88fd-4d98b6ea56cf",
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "80a719a6-39c2-4d51-8791-dbbbfcb406aa",
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "33538cca-2b88-4187-b59f-5d3df8d40ea9",
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "961cc312-9839-42a9-8e3c-e2bbb595a0e9",
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "6325449d-a4bb-4bfa-9923-63b0c40352f4",
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "ed188414-bf05-4435-8bc5-4c1ccb9acda1",
+      "donorModel": "yukon",
+      "donorTrim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "donorYear": 2002,
+      "confidence": "medium",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "3cc6f853-0e15-4d31-a576-337cc9c59062",
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "6325449d-a4bb-4bfa-9923-63b0c40352f4",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2000,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "97d8cedd-520a-4529-9319-444ad1e86cd2",
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "ed188414-bf05-4435-8bc5-4c1ccb9acda1",
+      "donorModel": "yukon",
+      "donorTrim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "donorYear": 2002,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "daf13562-b1ac-494b-8b9d-5c593825b973",
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "b65fa183-9130-4222-ae03-bd1dbb755408",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2003,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "76525d0a-3adb-4c96-94e6-0cb1a6f07526",
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "ae75d0a6-f020-4066-810a-ff98b28dd795",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2004,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "6ee84d66-f565-4f50-b345-5ff42165eb9e",
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "550f7e80-129b-4a0b-af21-f80a04cab2f3",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2005,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "d77b5e60-a06b-4394-b83b-904bdf0aa3c0",
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "cb190ed2-3360-4988-87c8-3758a91e917c",
+      "donorModel": "escalade",
+      "donorTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "donorYear": 2006,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "19025264-28ea-4808-8d84-c8f7f706138d",
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "75828333-1bb1-4687-a7a0-57a2c02d1389",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2007,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "8cc2556c-1841-474c-886e-c3cfd79e856e",
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "b21e8e9d-2886-4f5f-8364-778a8e26f6a2",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2008,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "99f4b53b-d7e8-4e67-b954-2af9e224a75c",
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "f8fd8052-3a5d-409f-aa7f-29e119d4a115",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2009,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "723943b0-1459-474a-a46e-826b7fd3cf80",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "759843ec-e387-4b71-8e87-26f141c77a7e",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2010,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "fc271453-6601-409f-8c87-0f43f74e3727",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "7f86e16a-e950-424a-a62e-279a459800ec",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2011,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "e713fa9b-b860-4f5c-97e6-859e06a1dc9a",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "0c31c003-b4db-4d67-8a7c-fcca2bce9765",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2012,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "74e4d5d2-f275-4590-9ffd-8e67a121883a",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "801ea82d-5be7-46a1-808a-1bda1062d120",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2013,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "c3912406-985b-4d75-b5e5-5cb2fe492ffd",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "3d8ba5b6-a37a-476c-848d-8e21787c701f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2014,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "ea37e540-6c66-4a0a-9952-268038f5c7f8",
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "ef7617ba-0cf6-4cfc-9100-7547b4cd4cf8",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2021,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "a3408845-7501-4810-a91a-a09d286ecc7c",
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "6e519c85-5af8-409d-865d-e36009e8632f",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2022,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "6ba97e52-d5fa-40bb-8e37-74634c7ea35b",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "71c0ebac-ebef-4fde-9a3b-db140671321f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2023,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "9dfe878a-cf9d-4c8a-9ca3-12fc04cff31b",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "3a5450ab-b3cc-4b07-ac3f-e0a54f3901ba",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2024,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "1a9ab21e-bfbd-46fa-a2f0-3ccaa5f01d94",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "1d12d0c1-de9e-4b52-83b8-38a3757a7a17",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2025,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "7bc8b2c6-0d48-4b10-b012-8fd82015980f",
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trim": "LS, LT, RST, Z71, Premier, High Country",
+      "status": "filled",
+      "donorId": "0292cb77-86b9-425c-a9e2-cf32e4f962b6",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2026,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "424ef5a2-7432-4136-8557-641deed326e1",
+      "year": 1992,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "61d39d72-6f8e-4d15-8c66-cb849823956e",
+      "year": 1993,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "acfa02d2-97b5-4a68-8dc2-8d77748a0c33",
+      "year": 1994,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "4cb3c763-150b-4e55-be82-a347b5487074",
+      "year": 1995,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "0bee1ad6-e680-440b-a993-b5536173e444",
+      "year": 1996,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "d4bc19ae-fba9-448f-a22f-67ed3abcffa5",
+      "year": 1997,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "afc18e25-a164-4c32-8c60-46615077924c",
+      "year": 1998,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "1b418c29-609e-4e95-9ec1-05326756ccc5",
+      "year": 1999,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "e8cbc1d9-0f15-487d-ae23-dc8cb29a4cd7",
+      "year": 2000,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "6325449d-a4bb-4bfa-9923-63b0c40352f4",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2000,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "7238f148-9e8f-465f-9882-d2759e4d2b55",
+      "year": 2001,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "3cc6f853-0e15-4d31-a576-337cc9c59062",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2001,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "0ea6327a-1e17-482e-8125-eb6d3510495a",
+      "year": 2003,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "daf13562-b1ac-494b-8b9d-5c593825b973",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2003,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "be1eff92-8e57-4f03-b575-cf11aa363079",
+      "year": 2004,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "76525d0a-3adb-4c96-94e6-0cb1a6f07526",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2004,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "bbc602c4-e247-4faa-a970-7f71bb33198c",
+      "year": 2005,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "6ee84d66-f565-4f50-b345-5ff42165eb9e",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2005,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "cead964e-090d-4d41-afac-4ad051537381",
+      "year": 2006,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "d77b5e60-a06b-4394-b83b-904bdf0aa3c0",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2006,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "3711b7fe-296f-4d28-926b-d67e92b9a6f3",
+      "year": 2007,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "75828333-1bb1-4687-a7a0-57a2c02d1389",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2007,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "cdc1b632-04b4-46e8-bc76-fcf7eec9a30a",
+      "year": 2008,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "b21e8e9d-2886-4f5f-8364-778a8e26f6a2",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2008,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "6d16c43d-0524-4492-81c0-7689a0ab8db8",
+      "year": 2009,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "f8fd8052-3a5d-409f-aa7f-29e119d4a115",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2009,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "168694af-c298-4460-a2b7-3c0eb32524b4",
+      "year": 2010,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "759843ec-e387-4b71-8e87-26f141c77a7e",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2010,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "4ae77ac7-e9d5-4c48-8c32-c8a65a063d82",
+      "year": 2011,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "7f86e16a-e950-424a-a62e-279a459800ec",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2011,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "ad0cfee2-41a2-4892-981b-831c6858a7e3",
+      "year": 2012,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "0c31c003-b4db-4d67-8a7c-fcca2bce9765",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2012,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "4f55cc31-7c2d-464f-9704-f9b36e5f5be2",
+      "year": 2013,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "801ea82d-5be7-46a1-808a-1bda1062d120",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2013,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "183099bd-3e6b-44bf-8204-700ef246b739",
+      "year": 2014,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "3d8ba5b6-a37a-476c-848d-8e21787c701f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2014,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "fb4f83ce-3a52-44d5-a8a0-269fe157dad4",
+      "year": 2021,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "ef7617ba-0cf6-4cfc-9100-7547b4cd4cf8",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2021,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "cf4666a9-c019-4bb0-903b-061a02ef102e",
+      "year": 2022,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "6e519c85-5af8-409d-865d-e36009e8632f",
+      "donorModel": "tahoe",
+      "donorTrim": "5.3 EcoTec3",
+      "donorYear": 2022,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "2088bc37-6c7d-4eb7-b46f-bc46f8bf7b07",
+      "year": 2023,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "71c0ebac-ebef-4fde-9a3b-db140671321f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2023,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "d658720b-030e-433e-8bc9-f87e80ef122e",
+      "year": 2024,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "3a5450ab-b3cc-4b07-ac3f-e0a54f3901ba",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2024,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "63089d8d-e9f3-4c83-9672-e4a796b98896",
+      "year": 2025,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "1d12d0c1-de9e-4b52-83b8-38a3757a7a17",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2025,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "806471a0-0c5e-44d4-a1ad-f09947ab726c",
+      "year": 2026,
+      "make": "gmc",
+      "model": "yukon",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "0292cb77-86b9-425c-a9e2-cf32e4f962b6",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2026,
+      "confidence": "high",
+      "wheelSizes": [
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 20,
+          "tireSize": "275/60R20"
+        },
+        {
+          "axle": "front",
+          "width": 8.5,
+          "offset": 26,
+          "isStock": true,
+          "diameter": 18,
+          "tireSize": "265/65R18"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": true,
+          "diameter": 22,
+          "tireSize": "275/50R22"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 28,
+          "isStock": false,
+          "diameter": 20,
+          "tireSize": "275/55R20"
+        },
+        {
+          "axle": "front",
+          "width": 9,
+          "offset": 24,
+          "isStock": false,
+          "diameter": 22,
+          "tireSize": "285/45R22"
+        }
+      ]
+    },
+    {
+      "targetId": "be9ad8dd-0243-4a00-b925-ee07417fb411",
+      "year": 1995,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "d185467b-aa17-46e7-963b-d8bf706bf1aa",
+      "year": 1996,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "072f79d2-53a7-4788-8f48-669cf0a17618",
+      "year": 1997,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "912ad5f9-2331-4b1c-96b5-4f8bed08a1ad",
+      "year": 1998,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "4e28154a-ec0d-4eaf-8bae-a252c22f476b",
+      "year": 1999,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "skipped",
+      "reason": "No generation defined",
+      "confidence": "low"
+    },
+    {
+      "targetId": "d112781e-d5f1-4cf7-89e4-1060cdc0fa6b",
+      "year": 2000,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "6325449d-a4bb-4bfa-9923-63b0c40352f4",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2000,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "6868e6be-a0e3-4006-8e93-c0ca60e8d5e2",
+      "year": 2001,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "3cc6f853-0e15-4d31-a576-337cc9c59062",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2001,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "fecd7bd8-6d86-4cba-a8b3-f4f0f7665442",
+      "year": 2002,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "97d8cedd-520a-4529-9319-444ad1e86cd2",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2002,
+      "confidence": "high",
+      "wheelSizes": [
+        "7Jx16",
+        "7.5Jx17",
+        "8Jx20",
+        {
+          "axle": "both",
+          "width": 6.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 16
+        }
+      ]
+    },
+    {
+      "targetId": "f0419470-8550-4e79-9245-00626916b13f",
+      "year": 2003,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "daf13562-b1ac-494b-8b9d-5c593825b973",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2003,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "dc3f1597-914d-4ec5-b653-ae30b413bbd9",
+      "year": 2004,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "76525d0a-3adb-4c96-94e6-0cb1a6f07526",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2004,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "5b29fccc-6ce2-41ac-ac50-b242430c35fe",
+      "year": 2005,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "6ee84d66-f565-4f50-b345-5ff42165eb9e",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2005,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "48aff32d-cda1-49b5-8aaf-a7282541cef2",
+      "year": 2006,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "d77b5e60-a06b-4394-b83b-904bdf0aa3c0",
+      "donorModel": "suburban",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2006,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8Jx20",
+        "9Jx22",
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 19
+        },
+        {
+          "axle": "both",
+          "width": 8.5,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 20
+        }
+      ]
+    },
+    {
+      "targetId": "8dc7d7fa-79cd-4896-ab92-ed526214ff69",
+      "year": 2007,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "75828333-1bb1-4687-a7a0-57a2c02d1389",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2007,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "b9369e84-b9e0-40ec-adf7-806776287add",
+      "year": 2008,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "b21e8e9d-2886-4f5f-8364-778a8e26f6a2",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2008,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "b18e2bc3-5ad4-4dd3-81bb-09dac09b5508",
+      "year": 2009,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "f8fd8052-3a5d-409f-aa7f-29e119d4a115",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2009,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "5d55ab6c-abd4-49c8-a542-fe34c1f59fc1",
+      "year": 2010,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "759843ec-e387-4b71-8e87-26f141c77a7e",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2010,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "e2ad954d-b2a5-4c16-a6e0-c7872b5e13de",
+      "year": 2011,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "7f86e16a-e950-424a-a62e-279a459800ec",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2011,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "b805259d-fd18-4e00-b544-75ab712cfc20",
+      "year": 2012,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "0c31c003-b4db-4d67-8a7c-fcca2bce9765",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2012,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "521ddfa0-b844-4ec5-a05c-9da84b7cd3cb",
+      "year": 2013,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "801ea82d-5be7-46a1-808a-1bda1062d120",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2013,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    },
+    {
+      "targetId": "b896450d-da61-4b52-9023-442bee72f403",
+      "year": 2014,
+      "make": "gmc",
+      "model": "yukon-xl",
+      "trim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "status": "filled",
+      "donorId": "3d8ba5b6-a37a-476c-848d-8e21787c701f",
+      "donorModel": "tahoe",
+      "donorTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "donorYear": 2014,
+      "confidence": "high",
+      "wheelSizes": [
+        "7.5Jx17",
+        "8Jx18",
+        "8.5Jx20",
+        {
+          "axle": "both",
+          "width": 9,
+          "offset": 31,
+          "isStock": false,
+          "diameter": 22
+        }
+      ]
+    }
+  ]
+}

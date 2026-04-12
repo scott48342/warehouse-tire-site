@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-04-12T12:17:50.391Z",
+  "dryRun": false,
+  "summary": {
+    "totalProcessed": 8,
+    "filled": 8,
+    "blocked": 0,
+    "skipped": 0
+  },
+  "results": [
+    {
+      "recordId": "3a15eb8d-efe2-41d5-b148-d5e81533b7a5",
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2025,
+      "donorTrim": "Stingray",
+      "donorSource": "cleanup_generation_template",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2025 Stingray"
+    },
+    {
+      "recordId": "258390ad-794d-4cf2-8761-b58c757ae709",
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2024,
+      "donorTrim": "Stingray",
+      "donorSource": "cleanup_generation_template",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2024 Stingray"
+    },
+    {
+      "recordId": "1367b99f-2a55-4094-b090-04d7daa2a0c0",
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "displayTrim": "GT Performance Pack",
+      "donorYear": 2024,
+      "donorTrim": "GT Performance Pack",
+      "donorSource": "tier-a-import",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 9,
+          "offset": 42,
+          "axle": "front",
+          "isStock": true
+        },
+        {
+          "diameter": 19,
+          "width": 9.5,
+          "offset": 40,
+          "axle": "rear",
+          "isStock": true
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2024 GT Performance Pack"
+    },
+    {
+      "recordId": "419c2dcd-64e2-4f7c-ba6a-30096140cb6b",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2024,
+      "donorTrim": "Stingray",
+      "donorSource": "wheel_fill_chevrolet_corvette_from_2024",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "medium",
+      "status": "filled",
+      "reason": "Inherited from 2024 Stingray"
+    },
+    {
+      "recordId": "a02403c2-924a-4265-b97f-c1329a82098f",
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2023,
+      "donorTrim": "Stingray",
+      "donorSource": "wheel_fill_chevrolet_corvette_from_2024",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2023 Stingray"
+    },
+    {
+      "recordId": "06f7c576-b3cd-4525-b92e-46d73fd63581",
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2022,
+      "donorTrim": "Stingray",
+      "donorSource": "cleanup_generation_template",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2022 Stingray"
+    },
+    {
+      "recordId": "7fd26b03-ee15-4f7a-a6a0-486b40544774",
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2021,
+      "donorTrim": "Stingray",
+      "donorSource": "cleanup_generation_template",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2021 Stingray"
+    },
+    {
+      "recordId": "e4e2b6f5-fbe2-4765-9085-147273f4de2c",
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Stingray",
+      "donorYear": 2020,
+      "donorTrim": "Stingray",
+      "donorSource": "cleanup_generation_template",
+      "wheelSizesBefore": [],
+      "wheelSizesAfter": [
+        {
+          "diameter": 19,
+          "width": 8.5
+        },
+        {
+          "diameter": 20,
+          "width": 11
+        }
+      ],
+      "confidence": "high",
+      "status": "filled",
+      "reason": "Inherited from 2020 Stingray"
+    }
+  ]
+}

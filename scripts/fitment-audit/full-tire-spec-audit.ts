@@ -118,17 +118,38 @@ function getWheelDiameters(tireSizes: string[]): number[] {
 }
 
 function getMinExpectedDiameter(year: number, model: string, make: string): number {
-  // Sports cars and performance vehicles
+  const modelLower = model.toLowerCase();
+  
+  // Model-specific overrides (verified OEM data)
+  // MX-5 Miata: ND gen (2016+) is 17" minimum
+  if (modelLower.includes('mx-5') || modelLower.includes('miata')) {
+    return year >= 2016 ? 17 : 15;
+  }
+  
+  // Corvette: C6 (2005-2013) is 18", C7 (2014-2019) is 18", C8 (2020+) is 19"
+  if (modelLower.includes('corvette')) {
+    if (year >= 2020) return 19;
+    if (year >= 2005) return 18;
+    return 16;
+  }
+  
+  // BMW 3-Series: G20 (2019+) is 17" minimum
+  if (modelLower.includes('3-series') && make.toLowerCase() === 'bmw') {
+    return year >= 2019 ? 17 : 16;
+  }
+  
+  // Sports cars - 17" is the realistic minimum for base trims (2020+)
+  // Many sports cars (WRX, BRZ, GR86, Mustang EcoBoost, Challenger SXT) have 17" base
   if (isSportsCar(model)) {
-    if (year >= 2020) return 18;
+    if (year >= 2020) return 17;  // Changed from 18 - many base trims have 17"
     if (year >= 2015) return 17;
     if (year >= 2010) return 16;
     return 15;
   }
   
-  // Modern trucks/SUVs
+  // Modern trucks/SUVs - 16" still available on some work trims
   if (isTruckSuv(model)) {
-    if (year >= 2020) return 17;
+    if (year >= 2020) return 16;  // Changed from 17 - work trucks still have 16"
     if (year >= 2015) return 16;
     if (year >= 2010) return 15;
     return 14;

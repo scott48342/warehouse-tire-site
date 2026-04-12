@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-04-12T12:04:44.025Z",
+  "dryRun": true,
+  "results": [
+    {
+      "rule": {
+        "make": "mazda",
+        "model": "mx-5-miata",
+        "minYear": 2016,
+        "removeBelow": 17,
+        "reason": "ND generation (2016+) minimum is 17\", 16\" sizes from NC gen"
+      },
+      "recordsFound": 56,
+      "recordsFixed": 0,
+      "sizesRemoved": []
+    },
+    {
+      "rule": {
+        "make": "bmw",
+        "model": "3-series",
+        "minYear": 2019,
+        "removeBelow": 17,
+        "reason": "G20 generation (2019+) minimum is 17\", 16\" sizes from F30 gen"
+      },
+      "recordsFound": 74,
+      "recordsFixed": 0,
+      "sizesRemoved": []
+    },
+    {
+      "rule": {
+        "make": "chevrolet",
+        "model": "corvette",
+        "minYear": 1997,
+        "maxYear": 2004,
+        "removeBelow": 17,
+        "reason": "C5 generation (1997-2004) minimum is 17\", 15\" sizes from C4 gen"
+      },
+      "recordsFound": 20,
+      "recordsFixed": 0,
+      "sizesRemoved": [
+        "P225/70R15",
+        "P255/60R15"
+      ]
+    },
+    {
+      "rule": {
+        "make": "chevrolet",
+        "model": "corvette",
+        "minYear": 2005,
+        "maxYear": 2013,
+        "removeBelow": 18,
+        "reason": "C6 generation (2005-2013) minimum is 18\""
+      },
+      "recordsFound": 36,
+      "recordsFixed": 0,
+      "sizesRemoved": []
+    },
+    {
+      "rule": {
+        "make": "chevrolet",
+        "model": "corvette",
+        "minYear": 2014,
+        "maxYear": 2019,
+        "removeBelow": 18,
+        "reason": "C7 generation (2014-2019) minimum is 18\""
+      },
+      "recordsFound": 31,
+      "recordsFixed": 0,
+      "sizesRemoved": []
+    },
+    {
+      "rule": {
+        "make": "chevrolet",
+        "model": "corvette",
+        "minYear": 2020,
+        "removeBelow": 19,
+        "reason": "C8 generation (2020+) minimum is 19\""
+      },
+      "recordsFound": 36,
+      "recordsFixed": 0,
+      "sizesRemoved": []
+    }
+  ],
+  "totalFixed": 0
+}

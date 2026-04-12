@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-04-12T12:22:34.714Z",
+  "summary": {
+    "total": 0,
+    "byClassification": {
+      "safe_inheritance_candidate": 0,
+      "missing_generation_def": 0,
+      "no_donor_in_generation": 0,
+      "needs_platform_template": 0,
+      "alias_naming_mismatch": 0,
+      "manual_override_case": 0
+    },
+    "priorityCounts": {
+      "safe_inheritance_candidate": 0,
+      "missing_generation_def": 0,
+      "needs_platform_template": 0
+    }
+  },
+  "safeInheritanceByModel": [],
+  "missingGenByModel": [],
+  "needsTemplateByModel": []
+}
