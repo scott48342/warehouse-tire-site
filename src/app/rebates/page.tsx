@@ -3,6 +3,7 @@ import { getPool, listActiveRebates, type SiteRebate } from "@/lib/rebates";
 import { BRAND } from "@/lib/brand";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic"; // Requires DB - can't prerender
 
 export const metadata = {
   title: `Tire Rebates & Offers | ${BRAND.name}`,
