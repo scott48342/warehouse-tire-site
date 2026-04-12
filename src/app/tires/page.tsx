@@ -57,6 +57,8 @@ import {
   meetsMinimumMileage,
   type MileageBand,
 } from "@/lib/tires/normalization";
+import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
+import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
 
 type Tire = {
   source?: "wp" | "km" | "tw";
@@ -1374,6 +1376,24 @@ export default async function TiresPage({
     });
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // WHEEL DIAMETER ANALYSIS
+  // When multiple OEM wheel diameters exist (e.g., 22" and 24"), user must
+  // select their wheel size so we only show correct tire sizes.
+  // CRITICAL: Prevents showing 24" tires to users with 22" wheels.
+  // ═══════════════════════════════════════════════════════════════════════════
+  const oemWheelDiameters = getAvailableWheelDiameters(tireSizesStrict);
+  const hasMultipleWheelDiameters = oemWheelDiameters.length > 1;
+  const needsWheelDiameterSelection = hasMultipleWheelDiameters && !wheelDia;
+  
+  if (hasVehicle && hasMultipleWheelDiameters) {
+    console.log('[tires/page] ⚠️ MULTIPLE WHEEL DIAMETERS:', {
+      diameters: oemWheelDiameters,
+      userSelected: wheelDia ? Number(wheelDia) : null,
+      needsSelection: needsWheelDiameterSelection,
+    });
+  }
+
   // Resolve modificationId to display label if trim looks like a hash ID
   let resolvedTrimLabel: string | undefined;
   if (trim && /^s_[a-f0-9]{8}$/.test(trim) && year && make && model) {
@@ -2315,6 +2335,8 @@ export default async function TiresPage({
             basePath={basePath}
             sort={sort}
             wheelSku={wheelSku}
+            availableWheelDiameters={oemWheelDiameters}
+            needsWheelDiameterSelection={needsWheelDiameterSelection}
             wheelName={wheelName}
             wheelImage={wheelImage}
             wheelPrice={wheelPrice}
@@ -2357,8 +2379,18 @@ export default async function TiresPage({
               ) : null}
             </div>
             
+            {/* Wheel Diameter Selector - CRITICAL: Show when multiple OEM wheel sizes exist */}
+            {hasMultipleWheelDiameters && !isLiftedBuild ? (
+              <WheelDiameterSelector
+                availableDiameters={oemWheelDiameters}
+                selectedDiameter={wheelDia ? Number(wheelDia) : null}
+                basePath={basePath}
+              />
+            ) : null}
+            
             {/* Tire Sizes - Recommended (Lifted or OEM depending on mode) */}
-            {tireSizesStrict.length > 0 ? (
+            {/* Only show tire sizes AFTER user selects wheel diameter (when multiple exist) */}
+            {tireSizesStrict.length > 0 && (!needsWheelDiameterSelection || isLiftedBuild) ? (
               <div className="mb-4">
                 <div className={`text-xs font-bold mb-2 flex items-center gap-2 ${isLiftedBuild ? "text-amber-700" : "text-green-700"}`}>
                   <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] text-white ${isLiftedBuild ? "bg-amber-500" : "bg-green-500"}`}>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
+import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
 
 type CompactHeaderProps = {
   // Vehicle info
@@ -21,6 +22,10 @@ type CompactHeaderProps = {
   basePath: string;
   sort: string;
   wheelSku?: string;
+  
+  // Wheel diameter options (for multi-diameter vehicles)
+  availableWheelDiameters?: number[];
+  needsWheelDiameterSelection?: boolean;
   
   // Wheel display info (from wheel selection)
   wheelName?: string;
@@ -61,6 +66,8 @@ export function TirePageCompactHeader({
   basePath,
   sort,
   wheelSku,
+  availableWheelDiameters = [],
+  needsWheelDiameterSelection = false,
   wheelName,
   wheelImage,
   wheelPrice,
@@ -227,9 +234,22 @@ export function TirePageCompactHeader({
       )}
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          ROW 3: Tire Size Chips (always visible, limited to common sizes)
+          WHEEL DIAMETER SELECTOR - Show when multiple OEM wheel sizes exist
+          CRITICAL: Prevents showing 24" tire sizes to users with 22" wheels
           ═══════════════════════════════════════════════════════════════════════ */}
-      {displaySizes.length > 0 && (() => {
+      {needsWheelDiameterSelection && availableWheelDiameters.length > 1 && !isLiftedBuild ? (
+        <WheelDiameterSelector
+          availableDiameters={availableWheelDiameters}
+          selectedDiameter={wheelDia ? Number(wheelDia) : null}
+          basePath={basePath}
+        />
+      ) : null}
+      
+      {/* ═══════════════════════════════════════════════════════════════════════
+          ROW 3: Tire Size Chips (always visible, limited to common sizes)
+          Only show after wheel diameter is selected (when multiple exist)
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {displaySizes.length > 0 && !needsWheelDiameterSelection && (() => {
         // Show up to 5 sizes by default, with "+N more" to expand
         const MAX_VISIBLE = 5;
         const visibleSizes = showSizeSelector ? displaySizes : displaySizes.slice(0, MAX_VISIBLE);

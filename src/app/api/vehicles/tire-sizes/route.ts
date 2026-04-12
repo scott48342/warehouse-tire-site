@@ -19,6 +19,7 @@ import {
   convertLegacyTireSize, 
   convertTireSizesForSearch,
 } from "@/lib/legacyTireConverter";
+import { analyzeTireSizeOptions } from "@/lib/tires/wheelDiameterFilter";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -197,6 +198,9 @@ export async function GET(req: Request) {
         };
       });
       
+      // Analyze wheel diameters - CRITICAL for correct tire size filtering
+      const wheelDiameterAnalysis = analyzeTireSizeOptions(dbFitment.tireSizes);
+      
       return NextResponse.json({
         tireSizes: dbFitment.tireSizes,
         tireSizesStrict: dbFitment.tireSizes,
@@ -207,6 +211,12 @@ export async function GET(req: Request) {
         fitment: {
           boltPattern: dbFitment.boltPattern,
           centerBore: dbFitment.centerBore,
+        },
+        // Wheel diameter analysis for trim-specific filtering
+        wheelDiameters: {
+          needsSelection: wheelDiameterAnalysis.needsSelection,
+          available: wheelDiameterAnalysis.availableDiameters,
+          default: wheelDiameterAnalysis.defaultDiameter,
         },
         source: dbFitment.source,
         cacheStats: getCacheStats(),
