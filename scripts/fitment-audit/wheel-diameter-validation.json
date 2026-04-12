@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-04-12T11:32:13.356Z",
+  "timestamp": "2026-04-12T11:42:47.589Z",
   "summary": {
     "totalSampled": 38,
-    "correct": 22,
+    "correct": 18,
     "falseMulti": 15,
-    "suspicious": 1,
-    "issueRate": "42.11%"
+    "suspicious": 5,
+    "issueRate": "52.63%"
   },
   "falseMultiCases": [
     {
@@ -40,18 +40,23 @@
       "displayTrim": "AT4",
       "modificationId": "gmc-sierra-1500-at4-29e11d81",
       "oemTireSizes": [
-        "225/75R15",
-        "235/75R15",
-        "245/75R16",
-        "265/75R16"
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
       ],
       "wheelDiameters": [
-        15,
-        16
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": true,
       "verdict": "FALSE_MULTI",
-      "notes": "Expected single diameter for \"AT4\" trim, got 2"
+      "notes": "Expected single diameter for \"AT4\" trim, got 4"
     },
     {
       "year": 2024,
@@ -60,18 +65,23 @@
       "displayTrim": "AT4X",
       "modificationId": "gmc-sierra-1500-at4x-f9c82880",
       "oemTireSizes": [
-        "225/75R15",
-        "235/75R15",
-        "245/75R16",
-        "265/75R16"
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
       ],
       "wheelDiameters": [
-        15,
-        16
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": true,
       "verdict": "FALSE_MULTI",
-      "notes": "Expected single diameter for \"AT4X\" trim, got 2"
+      "notes": "Expected single diameter for \"AT4X\" trim, got 4"
     },
     {
       "year": 2023,
@@ -222,18 +232,16 @@
         "LT285/70R17",
         "315/70R17",
         "LT315/70R17",
-        "255/70R16",
         "LT265/70R17",
         "255/70R18"
       ],
       "wheelDiameters": [
-        16,
         17,
         18
       ],
       "expectedSingleDiameter": true,
       "verdict": "FALSE_MULTI",
-      "notes": "Expected single diameter for \"Base\" trim, got 3"
+      "notes": "Expected single diameter for \"Base\" trim, got 2"
     },
     {
       "year": 2024,
@@ -392,6 +400,108 @@
       "expectedSingleDiameter": false,
       "verdict": "SUSPICIOUS",
       "notes": "Large spread (5\") between diameters - may be aggregated"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "Custom",
+      "modificationId": "chevrolet-silverado-1500-custom-fd9004a2",
+      "oemTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT275/65R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "High Country",
+      "modificationId": "chevrolet-silverado-1500-high-country-b0dec6ad",
+      "oemTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT275/65R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "King Ranch",
+      "modificationId": "ford-f-150-king-ranch-3b580186",
+      "oemTireSizes": [
+        "245/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Lariat",
+      "modificationId": "ford-f-150-lariat-67e66a5d",
+      "oemTireSizes": [
+        "245/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
     }
   ],
   "allSamples": [
@@ -452,18 +562,23 @@
       "displayTrim": "Custom",
       "modificationId": "chevrolet-silverado-1500-custom-fd9004a2",
       "oemTireSizes": [
-        "225/75R15",
-        "235/75R15",
-        "245/75R16",
-        "265/75R16"
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT275/65R18"
       ],
       "wheelDiameters": [
-        15,
-        16
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": false,
-      "verdict": "CORRECT",
-      "notes": "Multiple options within 1\" spread - typical for this segment"
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
     },
     {
       "year": 2024,
@@ -472,18 +587,23 @@
       "displayTrim": "High Country",
       "modificationId": "chevrolet-silverado-1500-high-country-b0dec6ad",
       "oemTireSizes": [
-        "225/75R15",
-        "235/75R15",
-        "245/75R16",
-        "265/75R16"
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT275/65R18"
       ],
       "wheelDiameters": [
-        15,
-        16
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": false,
-      "verdict": "CORRECT",
-      "notes": "Multiple options within 1\" spread - typical for this segment"
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
     },
     {
       "year": 2024,
@@ -492,18 +612,23 @@
       "displayTrim": "AT4",
       "modificationId": "gmc-sierra-1500-at4-29e11d81",
       "oemTireSizes": [
-        "225/75R15",
-        "235/75R15",
-        "245/75R16",
-        "265/75R16"
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
       ],
       "wheelDiameters": [
-        15,
-        16
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": true,
       "verdict": "FALSE_MULTI",
-      "notes": "Expected single diameter for \"AT4\" trim, got 2"
+      "notes": "Expected single diameter for \"AT4\" trim, got 4"
     },
     {
       "year": 2024,
@@ -512,18 +637,23 @@
       "displayTrim": "AT4X",
       "modificationId": "gmc-sierra-1500-at4x-f9c82880",
       "oemTireSizes": [
-        "225/75R15",
-        "235/75R15",
-        "245/75R16",
-        "265/75R16"
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
       ],
       "wheelDiameters": [
-        15,
-        16
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": true,
       "verdict": "FALSE_MULTI",
-      "notes": "Expected single diameter for \"AT4X\" trim, got 2"
+      "notes": "Expected single diameter for \"AT4X\" trim, got 4"
     },
     {
       "year": 2023,
@@ -655,18 +785,24 @@
       "displayTrim": "King Ranch",
       "modificationId": "ford-f-150-king-ranch-3b580186",
       "oemTireSizes": [
-        "245/75R16",
-        "265/75R16",
-        "255/70R17",
-        "265/70R17"
+        "245/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT265/70R18"
       ],
       "wheelDiameters": [
-        16,
-        17
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": false,
-      "verdict": "CORRECT",
-      "notes": "Multiple options within 1\" spread - typical for this segment"
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
     },
     {
       "year": 2024,
@@ -675,18 +811,24 @@
       "displayTrim": "Lariat",
       "modificationId": "ford-f-150-lariat-67e66a5d",
       "oemTireSizes": [
-        "245/75R16",
-        "265/75R16",
-        "255/70R17",
-        "265/70R17"
+        "245/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT265/70R18"
       ],
       "wheelDiameters": [
-        16,
-        17
+        17,
+        18,
+        20,
+        22
       ],
       "expectedSingleDiameter": false,
-      "verdict": "CORRECT",
-      "notes": "Multiple options within 1\" spread - typical for this segment"
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
     },
     {
       "year": 2024,
@@ -733,18 +875,16 @@
         "LT285/70R17",
         "315/70R17",
         "LT315/70R17",
-        "255/70R16",
         "LT265/70R17",
         "255/70R18"
       ],
       "wheelDiameters": [
-        16,
         17,
         18
       ],
       "expectedSingleDiameter": false,
       "verdict": "CORRECT",
-      "notes": "Multiple options within 2\" spread - typical for this segment"
+      "notes": "Multiple options within 1\" spread - typical for this segment"
     },
     {
       "year": 2024,
@@ -760,18 +900,16 @@
         "LT285/70R17",
         "315/70R17",
         "LT315/70R17",
-        "255/70R16",
         "LT265/70R17",
         "255/70R18"
       ],
       "wheelDiameters": [
-        16,
         17,
         18
       ],
       "expectedSingleDiameter": true,
       "verdict": "FALSE_MULTI",
-      "notes": "Expected single diameter for \"Base\" trim, got 3"
+      "notes": "Expected single diameter for \"Base\" trim, got 2"
     },
     {
       "year": 2024,
