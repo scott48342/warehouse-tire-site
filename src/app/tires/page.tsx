@@ -377,6 +377,10 @@ async function fetchTireWebTires(tireSize: string, brand?: string) {
     const params = new URLSearchParams({
       size: sizeQ,
       minQty: "4",
+      // Fetch 200 results to ensure all brands appear in the filter
+      // Without this, expensive brands (like Toyo, Michelin) get cut off
+      // because results are sorted by price ascending
+      pageSize: "200",
     });
     if (brand) {
       params.set("brand", brand);
