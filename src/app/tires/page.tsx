@@ -59,6 +59,7 @@ import {
 } from "@/lib/tires/normalization";
 import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
+import { WheelSizeGateSelector, needsWheelSizeSelection } from "@/components/WheelSizeGateSelector";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
@@ -2370,6 +2371,57 @@ export default async function TiresPage({
               <p className="mt-1 text-xs text-neutral-600">
                 The {model} is available with both single rear wheel (SRW) and dual rear wheel (DRW/Dually) configurations. 
                 These have different wheel and tire sizes, so we need to know which setup you have to show the correct fitment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // WHEEL SIZE GATE - For trims with multiple OEM wheel diameters
+  // Must select wheel size BEFORE showing tire results
+  // Order: SRW/DRW (above) → Wheel Size (here) → Results (below)
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Skip this gate for:
+  // - Lifted builds (they have their own tire size logic)
+  // - Package flow (wheel selection already determines diameter via wheelDia param)
+  // - Vehicles without multiple wheel diameters
+  const requiresWheelSizeGate = hasVehicle 
+    && !isLiftedBuild 
+    && !isPackageFlow  // Package flow already has wheelDia from wheel selection
+    && needsWheelSizeSelection(oemWheelDiameters, wheelDia ? Number(wheelDia) : null);
+  
+  if (requiresWheelSizeGate) {
+    return (
+      <main className="bg-neutral-50">
+        <div className="mx-auto max-w-screen-2xl px-4 py-8">
+          <div className="max-w-2xl mx-auto">
+            {/* Vehicle header */}
+            <div className="mb-6">
+              <h1 className="text-2xl font-extrabold tracking-tight text-neutral-900">
+                {year} {make} {model}
+              </h1>
+              {displayTrim && (
+                <p className="mt-1 text-sm text-neutral-600">{displayTrim}</p>
+              )}
+            </div>
+            
+            {/* Wheel Size Gate Selector */}
+            <WheelSizeGateSelector
+              availableDiameters={oemWheelDiameters}
+              selectedDiameter={wheelDia ? Number(wheelDia) : null}
+              basePath={basePath}
+              vehicle={{ year, make, model, trim: displayTrim }}
+            />
+            
+            {/* Info about why we're asking */}
+            <div className="mt-6 rounded-xl bg-neutral-100 p-4">
+              <h4 className="font-semibold text-neutral-800 text-sm">Why are we asking?</h4>
+              <p className="mt-1 text-xs text-neutral-600">
+                Your {displayTrim || model} is available with different wheel sizes ({oemWheelDiameters.map(d => `${d}"`).join(" or ")}).
+                Selecting your actual wheel size ensures we show only the correct tire sizes for your vehicle.
               </p>
             </div>
           </div>
