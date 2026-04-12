@@ -4,6 +4,8 @@ import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { BRAND } from "@/lib/brand";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { FavoritesButton } from "@/components/FavoritesButton";
+import { AddToCompareButton } from "@/components/AddToCompareButton";
+import { normalizeTireForCompare } from "@/context/CompareContext";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { SelectTireButton } from "@/components/SelectTireButton";
 import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
@@ -3299,15 +3301,41 @@ function TireCard({
 
       <div className="relative z-10 flex items-start justify-between gap-2">
         <div className="text-sm font-semibold text-neutral-600">{t.brand || "Tire"}</div>
-        {t.source === "wp" && t.mfgPartNumber ? (
-          <FavoritesButton
-            type="tire"
-            sku={t.mfgPartNumber}
-            label={`${t.brand || "Tire"} ${displayTitle}`}
-            href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
-            imageUrl={t.imageUrl}
+        <div className="flex items-center gap-1">
+          {/* Compare button */}
+          <AddToCompareButton
+            item={normalizeTireForCompare({
+              sku: tireSku,
+              partNumber: t.partNumber,
+              mfgPartNumber: t.mfgPartNumber,
+              brand: t.brand,
+              model: displayTitle,
+              imageUrl: t.imageUrl,
+              price: getDisplayPrice(t) ?? undefined,
+              size: selectedSize,
+              loadIndex: t.badges?.loadIndex ? String(t.badges.loadIndex) : undefined,
+              speedRating: t.badges?.speedRating ? String(t.badges.speedRating) : undefined,
+              category: (t.enrichment?.treadCategory || t.badges?.terrain) ?? undefined,
+              mileageWarranty: t.enrichment?.mileage ?? undefined,
+              is3PMSF: t.enrichment?.is3PMSF,
+              isRunFlat: t.enrichment?.isRunFlat,
+              stockQty: maxQty,
+              source: t.rawSource,
+            })}
+            variant="icon"
+            size="sm"
           />
-        ) : null}
+          {/* Favorites button */}
+          {t.source === "wp" && t.mfgPartNumber ? (
+            <FavoritesButton
+              type="tire"
+              sku={t.mfgPartNumber}
+              label={`${t.brand || "Tire"} ${displayTitle}`}
+              href={`/tires?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, wheelSku, wheelName, wheelUnit, wheelQty, wheelDia }).toString()}`}
+              imageUrl={t.imageUrl}
+            />
+          ) : null}
+        </div>
       </div>
 
       <h3 className="relative z-10 mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">

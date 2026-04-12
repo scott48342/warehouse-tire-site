@@ -3,7 +3,7 @@
 import { useEffect, useCallback, useState } from "react";
 import Link from "next/link";
 import { useCompare, type CompareItem } from "@/context/CompareContext";
-import { useCart, type CartWheelItem } from "@/lib/cart/CartContext";
+import { useCart, type CartWheelItem, type CartTireItem } from "@/lib/cart/CartContext";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -31,15 +31,20 @@ const WHEEL_SPECS: SpecRow[] = [
 ];
 
 const TIRE_SPECS: SpecRow[] = [
-  { label: "Width", key: "width" },
-  { label: "Aspect Ratio", key: "aspectRatio" },
-  { label: "Diameter", key: "diameter", format: (v) => v ? `${v}"` : "—" },
+  { label: "Size", key: "size" },
+  { label: "Category", key: "category" },
   { label: "Load Index", key: "loadIndex" },
   { label: "Speed Rating", key: "speedRating" },
-  { label: "Treadwear", key: "treadwear" },
-  { label: "Traction", key: "traction" },
-  { label: "Temperature", key: "temperature" },
-  { label: "Category", key: "category" },
+  { label: "Load Range", key: "loadRange" },
+  { label: "Mileage Warranty", key: "mileageWarranty" },
+  { label: "UTQG Treadwear", key: "treadwear" },
+  { label: "UTQG Traction", key: "traction" },
+  { label: "UTQG Temperature", key: "temperature" },
+  { label: "3-Peak Mountain", key: "is3PMSF", format: (v) => v === true ? "Yes" : "—" },
+  { label: "Extra Load (XL)", key: "isXL", format: (v) => v === true ? "Yes" : "—" },
+  { label: "Run-Flat", key: "isRunFlat", format: (v) => v === true ? "Yes" : "—" },
+  { label: "Overall Diameter", key: "overallDiameter" },
+  { label: "Section Width", key: "sectionWidth" },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -115,6 +120,34 @@ function compareItemToCartWheel(item: CompareItem, quantity: number): CartWheelI
   };
 }
 
+// Convert CompareItem to CartTireItem
+function compareItemToCartTire(item: CompareItem, quantity: number): CartTireItem | null {
+  if (!item.id || !item.brand || !item.model) return null;
+  
+  const unitPrice = item.priceEach;
+  if (typeof unitPrice !== "number" || unitPrice <= 0) return null;
+
+  // Build size string from available data
+  const size = item.compareData.size || 
+    (item.compareData.width && item.compareData.aspectRatio && item.compareData.diameter
+      ? `${item.compareData.width}/${item.compareData.aspectRatio}R${item.compareData.diameter}`
+      : "");
+
+  return {
+    type: "tire",
+    sku: item.id,
+    brand: item.brand,
+    model: item.model,
+    size,
+    loadIndex: item.compareData.loadIndex,
+    speedRating: item.compareData.speedRating,
+    imageUrl: item.imageUrl,
+    unitPrice,
+    quantity,
+    source: item.compareData.source,
+  };
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // PRODUCT CARD COMPONENT (Vertical Layout)
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -135,10 +168,18 @@ function ProductCard({
   const [isAdding, setIsAdding] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
 
-  const cartItem = compareItemToCartWheel(item, quantity);
+  // Get cart item based on type
+  const cartItem = activeType === "wheel" 
+    ? compareItemToCartWheel(item, quantity)
+    : compareItemToCartTire(item, quantity);
   const canAdd = cartItem !== null;
   const unitPrice = item.priceEach;
   const totalPrice = typeof unitPrice === "number" ? unitPrice * quantity : null;
+
+  // Build product link based on type
+  const productLink = activeType === "wheel"
+    ? `/wheels/${encodeURIComponent(item.id)}`
+    : `/tires/${encodeURIComponent(item.id)}`;
 
   const handleAddToCart = useCallback(() => {
     if (!cartItem) return;
@@ -193,14 +234,26 @@ function ProductCard({
             {item.brand}
           </div>
           <Link
-            href={`/wheels/${encodeURIComponent(item.id)}`}
+            href={productLink}
             onClick={onClose}
             className="text-base sm:text-lg font-bold text-neutral-900 hover:text-blue-600 transition-colors line-clamp-1"
           >
             {item.model}
           </Link>
-          {item.finish && (
+          {/* Wheel finish */}
+          {activeType === "wheel" && item.finish && (
             <div className="text-xs text-neutral-400 line-clamp-1">{item.finish}</div>
+          )}
+          {/* Tire size and category */}
+          {activeType === "tire" && (
+            <>
+              {item.compareData.size && (
+                <div className="text-sm font-medium text-neutral-700">{item.compareData.size}</div>
+              )}
+              {item.compareData.category && (
+                <div className="text-xs text-neutral-500">{item.compareData.category}</div>
+              )}
+            </>
           )}
         </div>
 
@@ -223,8 +276,8 @@ function ProductCard({
         </div>
       </div>
 
-      {/* Add to Cart Section */}
-      {activeType === "wheel" && canAdd && (
+      {/* Add to Cart Section - works for both wheels and tires */}
+      {canAdd && (
         <div className="px-4 pb-4">
           <div className="flex items-center gap-2">
             {/* Quantity Selector */}
@@ -285,7 +338,7 @@ function ProductCard({
       )}
 
       {/* Price unavailable state */}
-      {activeType === "wheel" && !canAdd && (
+      {!canAdd && (
         <div className="px-4 pb-4">
           <div className="py-2.5 px-4 text-sm font-medium text-neutral-400 bg-neutral-100 rounded-lg text-center">
             Price unavailable
