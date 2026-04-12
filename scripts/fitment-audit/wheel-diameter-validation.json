@@ -1,0 +1,1249 @@
+{
+  "timestamp": "2026-04-12T11:32:13.356Z",
+  "summary": {
+    "totalSampled": 38,
+    "correct": 22,
+    "falseMulti": 15,
+    "suspicious": 1,
+    "issueRate": "42.11%"
+  },
+  "falseMultiCases": [
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "Base",
+      "modificationId": "manual_852cdf81a68b",
+      "oemTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 4"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "AT4",
+      "modificationId": "gmc-sierra-1500-at4-29e11d81",
+      "oemTireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "wheelDiameters": [
+        15,
+        16
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"AT4\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "AT4X",
+      "modificationId": "gmc-sierra-1500-at4x-f9c82880",
+      "oemTireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "wheelDiameters": [
+        15,
+        16
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"AT4X\" trim, got 2"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "colorado",
+      "displayTrim": "WT, LT, Z71, ZR2, Trail Boss",
+      "modificationId": "manual_e8c5ba404116",
+      "oemTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18",
+        "265/70R16",
+        "265/65R17",
+        "265/55R19",
+        "255/55R20",
+        "275/55R19",
+        "265/50R20",
+        "275/50R20"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"WT, LT, Z71, ZR2, Trail Boss\" trim, got 5"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "displayTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "modificationId": "manual_0cf9f74d6d6b",
+      "oemTireSizes": [
+        "P265/65R18",
+        "P275/60R20",
+        "P285/45R22",
+        "275/60R20",
+        "265/65R18",
+        "275/50R22",
+        "275/55R20",
+        "285/45R22"
+      ],
+      "wheelDiameters": [
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"LS, LT, RST, Z71, Premier, High Country\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "yukon",
+      "displayTrim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "modificationId": "manual_8f33155b689a",
+      "oemTireSizes": [
+        "P265/65R18",
+        "P275/60R20",
+        "P285/45R22",
+        "265/65R18",
+        "275/55R20",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "wheelDiameters": [
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"SLE, SLT, AT4, Denali, Denali Ultimate\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "modificationId": "manual_30390782ce7c",
+      "oemTireSizes": [
+        "245/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "LT265/70R18",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 4"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "ranger",
+      "displayTrim": "XL, XLT, Lariat, Tremor, Raptor",
+      "modificationId": "manual_dad2f98f3971",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/70R17",
+        "265/60R18",
+        "265/70R18",
+        "255/70R17",
+        "255/65R18",
+        "255/70R16",
+        "255/55R20",
+        "LT285/70R17",
+        "255/60R19",
+        "275/45R21"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"XL, XLT, Lariat, Tremor, Raptor\" trim, got 6"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "bronco",
+      "displayTrim": "Base",
+      "modificationId": "ford-bronco-base-444f171b",
+      "oemTireSizes": [
+        "255/75R17",
+        "275/65R18",
+        "285/65R18",
+        "285/70R17",
+        "LT285/70R17",
+        "315/70R17",
+        "LT315/70R17",
+        "255/70R16",
+        "LT265/70R17",
+        "255/70R18"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500",
+      "displayTrim": "Base",
+      "modificationId": "ram-1500-base-47b2201e",
+      "oemTireSizes": [
+        "285/45R22",
+        "275/60R20",
+        "305/45R22"
+      ],
+      "wheelDiameters": [
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tacoma",
+      "displayTrim": "Limited",
+      "modificationId": "manual_84544d60f46a",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/60R18",
+        "245/70R17",
+        "265/70R17",
+        "265/65R18",
+        "265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Limited\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tacoma",
+      "displayTrim": "SR",
+      "modificationId": "manual_de7778062cb6",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/60R18",
+        "245/70R17",
+        "265/70R17",
+        "265/65R18",
+        "265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"SR\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "4runner",
+      "displayTrim": "Limited",
+      "modificationId": "manual_952aacd6bd06",
+      "oemTireSizes": [
+        "265/70R17",
+        "265/65R17",
+        "245/60R20"
+      ],
+      "wheelDiameters": [
+        17,
+        20
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Limited\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x5",
+      "displayTrim": "Base",
+      "modificationId": "manual_4da49614f9fc",
+      "oemTireSizes": [
+        "255/55R18",
+        "255/50R19",
+        "275/45R19",
+        "275/45R20",
+        "315/35R20",
+        "275/40R21",
+        "315/35R21",
+        "285/35R22",
+        "315/30R22"
+      ],
+      "wheelDiameters": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 5"
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-y",
+      "displayTrim": "Base",
+      "modificationId": "manual_ad2489f6e6dc",
+      "oemTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ],
+      "wheelDiameters": [
+        19,
+        20,
+        21
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 3"
+    }
+  ],
+  "suspiciousCases": [
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "2.7 TurboMax",
+      "modificationId": "railway_645",
+      "oemTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT275/65R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
+    }
+  ],
+  "allSamples": [
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "2.7 TurboMax",
+      "modificationId": "railway_645",
+      "oemTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "265/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT275/65R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "SUSPICIOUS",
+      "notes": "Large spread (5\") between diameters - may be aggregated"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "Base",
+      "modificationId": "manual_852cdf81a68b",
+      "oemTireSizes": [
+        "255/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/65R18",
+        "LT275/65R18",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 4"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "Custom",
+      "modificationId": "chevrolet-silverado-1500-custom-fd9004a2",
+      "oemTireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "wheelDiameters": [
+        15,
+        16
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 1\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "High Country",
+      "modificationId": "chevrolet-silverado-1500-high-country-b0dec6ad",
+      "oemTireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "wheelDiameters": [
+        15,
+        16
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 1\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "AT4",
+      "modificationId": "gmc-sierra-1500-at4-29e11d81",
+      "oemTireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "wheelDiameters": [
+        15,
+        16
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"AT4\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "AT4X",
+      "modificationId": "gmc-sierra-1500-at4x-f9c82880",
+      "oemTireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "wheelDiameters": [
+        15,
+        16
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"AT4X\" trim, got 2"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "colorado",
+      "displayTrim": "WT, LT, Z71, ZR2, Trail Boss",
+      "modificationId": "manual_e8c5ba404116",
+      "oemTireSizes": [
+        "245/75R16",
+        "255/65R17",
+        "265/60R18",
+        "265/70R16",
+        "265/65R17",
+        "265/55R19",
+        "255/55R20",
+        "275/55R19",
+        "265/50R20",
+        "275/50R20"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"WT, LT, Z71, ZR2, Trail Boss\" trim, got 5"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "displayTrim": "LS, LT, RST, Z71, Premier, High Country",
+      "modificationId": "manual_0cf9f74d6d6b",
+      "oemTireSizes": [
+        "P265/65R18",
+        "P275/60R20",
+        "P285/45R22",
+        "275/60R20",
+        "265/65R18",
+        "275/50R22",
+        "275/55R20",
+        "285/45R22"
+      ],
+      "wheelDiameters": [
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"LS, LT, RST, Z71, Premier, High Country\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade",
+      "displayTrim": "Luxury, Premium Luxury, Sport, Platinum, V",
+      "modificationId": "manual_f30e406ec6a0",
+      "oemTireSizes": [
+        "P275/50R22",
+        "P285/45R22",
+        "P285/40R24"
+      ],
+      "wheelDiameters": [
+        22,
+        24
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "yukon",
+      "displayTrim": "SLE, SLT, AT4, Denali, Denali Ultimate",
+      "modificationId": "manual_8f33155b689a",
+      "oemTireSizes": [
+        "P265/65R18",
+        "P275/60R20",
+        "P285/45R22",
+        "265/65R18",
+        "275/55R20",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "wheelDiameters": [
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"SLE, SLT, AT4, Denali, Denali Ultimate\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Base",
+      "modificationId": "manual_30390782ce7c",
+      "oemTireSizes": [
+        "245/70R17",
+        "265/70R17",
+        "LT265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "LT265/70R18",
+        "275/60R20",
+        "275/50R22"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 4"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "King Ranch",
+      "modificationId": "ford-f-150-king-ranch-3b580186",
+      "oemTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "wheelDiameters": [
+        16,
+        17
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 1\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Lariat",
+      "modificationId": "ford-f-150-lariat-67e66a5d",
+      "oemTireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "wheelDiameters": [
+        16,
+        17
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 1\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "ranger",
+      "displayTrim": "XL, XLT, Lariat, Tremor, Raptor",
+      "modificationId": "manual_dad2f98f3971",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/70R17",
+        "265/60R18",
+        "265/70R18",
+        "255/70R17",
+        "255/65R18",
+        "255/70R16",
+        "255/55R20",
+        "LT285/70R17",
+        "255/60R19",
+        "275/45R21"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"XL, XLT, Lariat, Tremor, Raptor\" trim, got 6"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "bronco",
+      "displayTrim": "Badlands",
+      "modificationId": "ford-bronco-badlands-012e3a1d",
+      "oemTireSizes": [
+        "255/75R17",
+        "275/65R18",
+        "285/65R18",
+        "285/70R17",
+        "LT285/70R17",
+        "315/70R17",
+        "LT315/70R17",
+        "255/70R16",
+        "LT265/70R17",
+        "255/70R18"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "bronco",
+      "displayTrim": "Base",
+      "modificationId": "ford-bronco-base-444f171b",
+      "oemTireSizes": [
+        "255/75R17",
+        "275/65R18",
+        "285/65R18",
+        "285/70R17",
+        "LT285/70R17",
+        "315/70R17",
+        "LT315/70R17",
+        "255/70R16",
+        "LT265/70R17",
+        "255/70R18"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "expedition",
+      "displayTrim": "XL, XLT, Limited, King Ranch, Platinum, Timberline",
+      "modificationId": "manual_ef6a31d33066",
+      "oemTireSizes": [
+        "265/70R18",
+        "275/65R18",
+        "275/55R20",
+        "285/55R20",
+        "285/45R22"
+      ],
+      "wheelDiameters": [
+        18,
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 4\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500",
+      "displayTrim": "Base",
+      "modificationId": "ram-1500-base-47b2201e",
+      "oemTireSizes": [
+        "285/45R22",
+        "275/60R20",
+        "305/45R22"
+      ],
+      "wheelDiameters": [
+        20,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500",
+      "displayTrim": "Big Horn",
+      "modificationId": "ram-1500-big-horn-36f4a15e",
+      "oemTireSizes": [
+        "285/45R22",
+        "275/60R20",
+        "305/45R22"
+      ],
+      "wheelDiameters": [
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "1500",
+      "displayTrim": "Big Horn",
+      "modificationId": "ram-1500-big-horn-b2e542d0",
+      "oemTireSizes": [
+        "285/45R22",
+        "275/60R20",
+        "305/45R22"
+      ],
+      "wheelDiameters": [
+        20,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "ram",
+      "model": "2500",
+      "displayTrim": "Big Horn",
+      "modificationId": "manual_9da4973e96ad",
+      "oemTireSizes": [
+        "LT245/70R17",
+        "LT275/70R18",
+        "LT285/60R20"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tundra",
+      "displayTrim": "1794 Edition",
+      "modificationId": "manual_75d34791104c",
+      "oemTireSizes": [
+        "265/70R18",
+        "275/60R20",
+        "285/55R20"
+      ],
+      "wheelDiameters": [
+        18,
+        20
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tundra",
+      "displayTrim": "Capstone",
+      "modificationId": "manual_1e3652b79b44",
+      "oemTireSizes": [
+        "265/70R18",
+        "275/60R20",
+        "285/55R20"
+      ],
+      "wheelDiameters": [
+        18,
+        20
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tacoma",
+      "displayTrim": "Limited",
+      "modificationId": "manual_84544d60f46a",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/60R18",
+        "245/70R17",
+        "265/70R17",
+        "265/65R18",
+        "265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Limited\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tacoma",
+      "displayTrim": "SR",
+      "modificationId": "manual_de7778062cb6",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/60R18",
+        "245/70R17",
+        "265/70R17",
+        "265/65R18",
+        "265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"SR\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "4runner",
+      "displayTrim": "Limited",
+      "modificationId": "manual_952aacd6bd06",
+      "oemTireSizes": [
+        "265/70R17",
+        "265/65R17",
+        "245/60R20"
+      ],
+      "wheelDiameters": [
+        17,
+        20
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Limited\" trim, got 2"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "4runner",
+      "displayTrim": "Nightshade",
+      "modificationId": "manual_08e3c2213353",
+      "oemTireSizes": [
+        "265/70R17",
+        "265/65R17",
+        "245/60R20"
+      ],
+      "wheelDiameters": [
+        17,
+        20
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan",
+      "displayTrim": "Platinum Reserve",
+      "modificationId": "nissan-titan-platinum-reserve-96f0d8bc",
+      "oemTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "titan",
+      "displayTrim": "Pro-4X",
+      "modificationId": "nissan-titan-pro-4x-fe57bb71",
+      "oemTireSizes": [
+        "265/70R17",
+        "275/70R17",
+        "265/70R18",
+        "275/65R18",
+        "275/60R20"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "frontier",
+      "displayTrim": "S, SV, PRO-4X, PRO-X",
+      "modificationId": "manual_d3d978baa1ed",
+      "oemTireSizes": [
+        "265/65R17",
+        "265/70R17",
+        "275/60R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 1\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x5",
+      "displayTrim": "Base",
+      "modificationId": "manual_4da49614f9fc",
+      "oemTireSizes": [
+        "255/55R18",
+        "255/50R19",
+        "275/45R19",
+        "275/45R20",
+        "315/35R20",
+        "275/40R21",
+        "315/35R21",
+        "285/35R22",
+        "315/30R22"
+      ],
+      "wheelDiameters": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 5"
+    },
+    {
+      "year": 2024,
+      "make": "bmw",
+      "model": "x5",
+      "displayTrim": "M50i",
+      "modificationId": "manual_26a4404fca63",
+      "oemTireSizes": [
+        "265/50R19",
+        "275/45R20",
+        "305/40R20",
+        "275/40R21",
+        "315/35R21",
+        "285/35R22",
+        "315/30R22"
+      ],
+      "wheelDiameters": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "porsche",
+      "model": "cayenne",
+      "displayTrim": "Base, S, E-Hybrid, GTS, Turbo, Turbo S",
+      "modificationId": "manual_b9862a0bcf65",
+      "oemTireSizes": [
+        "255/55R19",
+        "275/45R20",
+        "285/40R21",
+        "305/35R21",
+        "285/35R22",
+        "335/30R22",
+        "255/55ZR20",
+        "295/45ZR20",
+        "285/45ZR21",
+        "315/40ZR21",
+        "285/40ZR22",
+        "315/35ZR22"
+      ],
+      "wheelDiameters": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-y",
+      "displayTrim": "1st Gen",
+      "modificationId": "manual_269326aa0951",
+      "oemTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ],
+      "wheelDiameters": [
+        19,
+        20,
+        21
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "tesla",
+      "model": "model-y",
+      "displayTrim": "Base",
+      "modificationId": "manual_ad2489f6e6dc",
+      "oemTireSizes": [
+        "255/45R19",
+        "255/40R20",
+        "255/35R21",
+        "275/35R21"
+      ],
+      "wheelDiameters": [
+        19,
+        20,
+        21
+      ],
+      "expectedSingleDiameter": true,
+      "verdict": "FALSE_MULTI",
+      "notes": "Expected single diameter for \"Base\" trim, got 3"
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "accord",
+      "displayTrim": "LX, Sport, EX, EX-L, Touring",
+      "modificationId": "manual_2e207a090e59",
+      "oemTireSizes": [
+        "225/50R17",
+        "225/45R18",
+        "235/45R18",
+        "235/40R19"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        19
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 2\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "camry",
+      "displayTrim": "Hybrid LE",
+      "modificationId": "manual_c2966cddbb39",
+      "oemTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "235/40R19",
+        "205/65R16"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "camry",
+      "displayTrim": "Hybrid SE",
+      "modificationId": "manual_d3be8d197a2e",
+      "oemTireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "235/40R19",
+        "205/65R16"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "expectedSingleDiameter": false,
+      "verdict": "CORRECT",
+      "notes": "Multiple options within 3\" spread - typical for this segment"
+    }
+  ]
+}

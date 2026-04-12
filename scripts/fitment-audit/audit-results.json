@@ -1,0 +1,5923 @@
+{
+  "timestamp": "2026-04-12T10:51:40.046Z",
+  "summary": {
+    "totalYMM": 7063,
+    "zeroTrims": 0,
+    "lowTrims": 467,
+    "okTrims": 6596
+  },
+  "zeroTrims": [],
+  "lowTrims": [
+    {
+      "year": 1999,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "cadillac",
+      "model": "escalade",
+      "trimCount": 1,
+      "trims": [
+        "Luxury, Premium Luxury, Sport, Platinum, V"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "colorado",
+      "trimCount": 1,
+      "trims": [
+        "WT, LT, Z71, ZR2, Trail Boss"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1988,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1989,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1990,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1991,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1992,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1993,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "silverado-3500hd",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1992,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1993,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1992,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1993,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1994,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1995,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trimCount": 1,
+      "trims": [
+        "LS, LT, RST, Z71, Premier, High Country"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "SXT/Crew/R/T"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "dodge",
+      "model": "durango",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "expedition",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Limited, King Ranch, Platinum, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1991,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1992,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1993,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1994,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1995,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "explorer",
+      "trimCount": 1,
+      "trims": [
+        "Base, XLT, Limited, ST, Platinum, King Ranch, Timberline"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1993,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1994,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1995,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "2.2 TDCi"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "2.2 TDCi"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "2.2 TDCi"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "2.2 TDCi"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "2.0 TDCi"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "2.0 TDCi"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "ford",
+      "model": "ranger",
+      "trimCount": 1,
+      "trims": [
+        "XL, XLT, Lariat, Tremor, Raptor"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "gmc",
+      "model": "canyon",
+      "trimCount": 1,
+      "trims": [
+        "Elevation, AT4, AT4X, Denali"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1992,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1993,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1994,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1995,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "gmc",
+      "model": "yukon",
+      "trimCount": 1,
+      "trims": [
+        "SLE, SLT, AT4, Denali, Denali Ultimate"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "passport",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "passport",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "honda",
+      "model": "pilot",
+      "trimCount": 1,
+      "trims": [
+        "LX, EX, EX-L, Touring, Elite, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "honda",
+      "model": "ridgeline",
+      "trimCount": 1,
+      "trims": [
+        "Sport, RTL, RTL-E, Black Edition, TrailSport"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "armada",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "frontier",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, PRO-4X, PRO-X"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "truck",
+      "category": "low"
+    },
+    {
+      "year": 1996,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1997,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1998,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 1999,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trimCount": 1,
+      "trims": [
+        "S, SV, SL, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "2.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "2.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "2.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "2.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "2.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "2.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2025,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2026,
+      "make": "toyota",
+      "model": "highlander",
+      "trimCount": 1,
+      "trims": [
+        "L, LE, XLE, Limited, Platinum"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2000,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2001,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2002,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2003,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2004,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2005,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2006,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2007,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2008,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2009,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2010,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2011,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2012,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2013,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2014,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "5.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "5.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "5.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "5.7 VVT-i"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "Base"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "land-cruiser",
+      "trimCount": 1,
+      "trims": [
+        "2.4 T"
+      ],
+      "expectedMinTrims": 2,
+      "vehicleType": "suv",
+      "category": "low"
+    }
+  ],
+  "byMake": {
+    "acura": {
+      "total": 117,
+      "zero": 0,
+      "low": 0
+    },
+    "alfa-romeo": {
+      "total": 24,
+      "zero": 0,
+      "low": 0
+    },
+    "aston-martin": {
+      "total": 40,
+      "zero": 0,
+      "low": 0
+    },
+    "audi": {
+      "total": 194,
+      "zero": 0,
+      "low": 0
+    },
+    "bentley": {
+      "total": 31,
+      "zero": 0,
+      "low": 0
+    },
+    "bmw": {
+      "total": 281,
+      "zero": 0,
+      "low": 0
+    },
+    "buick": {
+      "total": 128,
+      "zero": 0,
+      "low": 0
+    },
+    "cadillac": {
+      "total": 99,
+      "zero": 0,
+      "low": 26
+    },
+    "chevrolet": {
+      "total": 643,
+      "zero": 0,
+      "low": 99
+    },
+    "chrysler": {
+      "total": 68,
+      "zero": 0,
+      "low": 0
+    },
+    "daewoo": {
+      "total": 12,
+      "zero": 0,
+      "low": 0
+    },
+    "datsun": {
+      "total": 19,
+      "zero": 0,
+      "low": 0
+    },
+    "delorean": {
+      "total": 3,
+      "zero": 0,
+      "low": 0
+    },
+    "dodge": {
+      "total": 250,
+      "zero": 0,
+      "low": 29
+    },
+    "eagle": {
+      "total": 27,
+      "zero": 0,
+      "low": 0
+    },
+    "ferrari": {
+      "total": 32,
+      "zero": 0,
+      "low": 0
+    },
+    "fiat": {
+      "total": 29,
+      "zero": 0,
+      "low": 0
+    },
+    "ford": {
+      "total": 393,
+      "zero": 0,
+      "low": 100
+    },
+    "genesis": {
+      "total": 39,
+      "zero": 0,
+      "low": 0
+    },
+    "geo": {
+      "total": 47,
+      "zero": 0,
+      "low": 0
+    },
+    "gmc": {
+      "total": 297,
+      "zero": 0,
+      "low": 50
+    },
+    "honda": {
+      "total": 211,
+      "zero": 0,
+      "low": 47
+    },
+    "hummer": {
+      "total": 27,
+      "zero": 0,
+      "low": 0
+    },
+    "hyundai": {
+      "total": 163,
+      "zero": 0,
+      "low": 0
+    },
+    "infiniti": {
+      "total": 109,
+      "zero": 0,
+      "low": 0
+    },
+    "isuzu": {
+      "total": 36,
+      "zero": 0,
+      "low": 0
+    },
+    "jaguar": {
+      "total": 79,
+      "zero": 0,
+      "low": 0
+    },
+    "jeep": {
+      "total": 151,
+      "zero": 0,
+      "low": 0
+    },
+    "kia": {
+      "total": 197,
+      "zero": 0,
+      "low": 0
+    },
+    "lamborghini": {
+      "total": 33,
+      "zero": 0,
+      "low": 0
+    },
+    "land-rover": {
+      "total": 65,
+      "zero": 0,
+      "low": 0
+    },
+    "lexus": {
+      "total": 237,
+      "zero": 0,
+      "low": 0
+    },
+    "lincoln": {
+      "total": 157,
+      "zero": 0,
+      "low": 0
+    },
+    "lotus": {
+      "total": 31,
+      "zero": 0,
+      "low": 0
+    },
+    "lucid": {
+      "total": 4,
+      "zero": 0,
+      "low": 0
+    },
+    "maserati": {
+      "total": 51,
+      "zero": 0,
+      "low": 0
+    },
+    "mazda": {
+      "total": 124,
+      "zero": 0,
+      "low": 0
+    },
+    "mclaren": {
+      "total": 29,
+      "zero": 0,
+      "low": 0
+    },
+    "mercedes": {
+      "total": 216,
+      "zero": 0,
+      "low": 0
+    },
+    "mercedes-benz": {
+      "total": 141,
+      "zero": 0,
+      "low": 0
+    },
+    "mercury": {
+      "total": 106,
+      "zero": 0,
+      "low": 0
+    },
+    "mini": {
+      "total": 60,
+      "zero": 0,
+      "low": 0
+    },
+    "mitsubishi": {
+      "total": 136,
+      "zero": 0,
+      "low": 0
+    },
+    "nissan": {
+      "total": 362,
+      "zero": 0,
+      "low": 75
+    },
+    "oldsmobile": {
+      "total": 63,
+      "zero": 0,
+      "low": 0
+    },
+    "plymouth": {
+      "total": 64,
+      "zero": 0,
+      "low": 0
+    },
+    "polestar": {
+      "total": 9,
+      "zero": 0,
+      "low": 0
+    },
+    "pontiac": {
+      "total": 134,
+      "zero": 0,
+      "low": 0
+    },
+    "porsche": {
+      "total": 117,
+      "zero": 0,
+      "low": 0
+    },
+    "ram": {
+      "total": 114,
+      "zero": 0,
+      "low": 0
+    },
+    "rivian": {
+      "total": 13,
+      "zero": 0,
+      "low": 0
+    },
+    "rolls-royce": {
+      "total": 29,
+      "zero": 0,
+      "low": 0
+    },
+    "saab": {
+      "total": 30,
+      "zero": 0,
+      "low": 0
+    },
+    "saturn": {
+      "total": 40,
+      "zero": 0,
+      "low": 0
+    },
+    "scion": {
+      "total": 28,
+      "zero": 0,
+      "low": 0
+    },
+    "subaru": {
+      "total": 182,
+      "zero": 0,
+      "low": 0
+    },
+    "suzuki": {
+      "total": 36,
+      "zero": 0,
+      "low": 0
+    },
+    "tesla": {
+      "total": 52,
+      "zero": 0,
+      "low": 0
+    },
+    "toyota": {
+      "total": 389,
+      "zero": 0,
+      "low": 41
+    },
+    "volkswagen": {
+      "total": 163,
+      "zero": 0,
+      "low": 0
+    },
+    "volvo": {
+      "total": 102,
+      "zero": 0,
+      "low": 0
+    }
+  }
+}
