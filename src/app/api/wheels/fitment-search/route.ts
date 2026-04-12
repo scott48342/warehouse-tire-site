@@ -746,7 +746,7 @@ async function handleDbProfilePath(
     rearWheelConfigParam === "srw" || rearWheelConfigParam === "drw" 
       ? rearWheelConfigParam 
       : undefined;
-  const vehicleIsDRWCapable = isDRWCapable(make, model);
+  const vehicleIsDRWCapable = make && model ? isDRWCapable(make, model) : false;
 
   // Build OEM specs from dbProfile (wheel-size based)
   // Parse wheel sizes to handle both string formats ("8.5Jx18") and object formats
