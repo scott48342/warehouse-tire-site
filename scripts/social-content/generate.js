@@ -24,25 +24,69 @@ require('dotenv').config({ path: path.join(__dirname, '../../.env.local') });
 const OUTPUT_DIR = path.join(__dirname, 'output');
 const SITE_URL = 'https://shop.warehousetiredirect.com';
 
-// Popular vehicles for showcasing wheels
+// Popular vehicles for showcasing wheels - WITH BOLT PATTERNS
+// Bolt patterns are normalized to match database format (e.g., "5X139.7" or "6X135")
 const SHOWCASE_VEHICLES = [
-  { year: 2024, make: 'Ford', model: 'F-150', type: 'truck' },
-  { year: 2024, make: 'Chevrolet', model: 'Silverado 1500', type: 'truck' },
-  { year: 2024, make: 'RAM', model: '1500', type: 'truck' },
-  { year: 2024, make: 'Toyota', model: 'Tacoma', type: 'truck' },
-  { year: 2024, make: 'Toyota', model: 'Tundra', type: 'truck' },
-  { year: 2024, make: 'Jeep', model: 'Wrangler', type: 'suv' },
-  { year: 2024, make: 'Jeep', model: 'Gladiator', type: 'truck' },
-  { year: 2024, make: 'Ford', model: 'Bronco', type: 'suv' },
-  { year: 2024, make: 'Toyota', model: '4Runner', type: 'suv' },
-  { year: 2024, make: 'Chevrolet', model: 'Tahoe', type: 'suv' },
-  { year: 2024, make: 'Ford', model: 'Mustang', type: 'muscle' },
-  { year: 2024, make: 'Chevrolet', model: 'Camaro', type: 'muscle' },
-  { year: 2024, make: 'Dodge', model: 'Challenger', type: 'muscle' },
-  { year: 2024, make: 'Dodge', model: 'Charger', type: 'muscle' },
-  { year: 2024, make: 'Tesla', model: 'Model Y', type: 'ev' },
-  { year: 2024, make: 'Tesla', model: 'Model 3', type: 'ev' },
+  { year: 2024, make: 'Ford', model: 'F-150', type: 'truck', boltPatterns: ['6X135'] },
+  { year: 2024, make: 'Chevrolet', model: 'Silverado 1500', type: 'truck', boltPatterns: ['6X139.7'] },
+  { year: 2024, make: 'RAM', model: '1500', type: 'truck', boltPatterns: ['5X139.7'] },
+  { year: 2024, make: 'Toyota', model: 'Tacoma', type: 'truck', boltPatterns: ['6X139.7'] },
+  { year: 2024, make: 'Toyota', model: 'Tundra', type: 'truck', boltPatterns: ['5X150'] },
+  { year: 2024, make: 'Jeep', model: 'Wrangler', type: 'suv', boltPatterns: ['5X127'] },
+  { year: 2024, make: 'Jeep', model: 'Gladiator', type: 'truck', boltPatterns: ['5X127'] },
+  { year: 2024, make: 'Ford', model: 'Bronco', type: 'suv', boltPatterns: ['6X139.7'] },
+  { year: 2024, make: 'Toyota', model: '4Runner', type: 'suv', boltPatterns: ['6X139.7'] },
+  { year: 2024, make: 'Chevrolet', model: 'Tahoe', type: 'suv', boltPatterns: ['6X139.7'] },
+  { year: 2024, make: 'Ford', model: 'Mustang', type: 'muscle', boltPatterns: ['5X114.3'] },
+  { year: 2024, make: 'Chevrolet', model: 'Camaro', type: 'muscle', boltPatterns: ['5X120'] },
+  { year: 2024, make: 'Dodge', model: 'Challenger', type: 'muscle', boltPatterns: ['5X115'] },
+  { year: 2024, make: 'Dodge', model: 'Charger', type: 'muscle', boltPatterns: ['5X115'] },
+  { year: 2024, make: 'Tesla', model: 'Model Y', type: 'ev', boltPatterns: ['5X114.3'] },
+  { year: 2024, make: 'Tesla', model: 'Model 3', type: 'ev', boltPatterns: ['5X114.3'] },
+  // Additional common patterns
+  { year: 2024, make: 'Honda', model: 'Civic', type: 'car', boltPatterns: ['5X114.3'] },
+  { year: 2024, make: 'Toyota', model: 'Camry', type: 'car', boltPatterns: ['5X114.3'] },
+  { year: 2024, make: 'BMW', model: '3 Series', type: 'luxury', boltPatterns: ['5X112'] },
+  { year: 2024, make: 'Mercedes', model: 'C-Class', type: 'luxury', boltPatterns: ['5X112'] },
+  { year: 2024, make: 'Audi', model: 'A4', type: 'luxury', boltPatterns: ['5X112'] },
+  { year: 2024, make: 'Volkswagen', model: 'GTI', type: 'car', boltPatterns: ['5X112'] },
 ];
+
+/**
+ * Normalize bolt pattern for comparison
+ * Handles variations like "5x114.3", "5X114.3", "5x4.5", etc.
+ */
+function normalizeBoltPattern(pattern) {
+  if (!pattern) return null;
+  // Uppercase, remove spaces
+  let normalized = pattern.toUpperCase().replace(/\s+/g, '');
+  
+  // Convert imperial to metric if needed
+  const imperialToMetric = {
+    '5X4.5': '5X114.3',
+    '5X4.75': '5X120.65',
+    '5X5': '5X127',
+    '5X5.5': '5X139.7',
+    '6X5.5': '6X139.7',
+    '6X135': '6X135',
+    '8X6.5': '8X165.1',
+    '8X170': '8X170',
+  };
+  
+  return imperialToMetric[normalized] || normalized;
+}
+
+/**
+ * Find vehicles that match a wheel's bolt pattern
+ */
+function findMatchingVehicles(wheelBoltPattern) {
+  const normalizedWheel = normalizeBoltPattern(wheelBoltPattern);
+  if (!normalizedWheel) return [];
+  
+  return SHOWCASE_VEHICLES.filter(v => 
+    v.boltPatterns.some(bp => normalizeBoltPattern(bp) === normalizedWheel)
+  );
+}
 
 // Hashtag sets by category
 const HASHTAGS = {
@@ -50,6 +94,8 @@ const HASHTAGS = {
   suv: ['#suv', '#suvlife', '#offroad', '#4x4', '#overlanding', '#adventure'],
   muscle: ['#musclecar', '#americanmuscle', '#v8', '#horsepower', '#carculture', '#carsofinstagram'],
   ev: ['#ev', '#electricvehicle', '#tesla', '#teslalife', '#zeroemissions', '#futureofdriving'],
+  car: ['#carsofinstagram', '#carlife', '#dailydriver', '#jdm', '#import', '#tuner'],
+  luxury: ['#luxurycars', '#eurocar', '#germanengineering', '#bmw', '#mercedes', '#audi'],
   general: ['#wheels', '#rims', '#customwheels', '#wheelgoals', '#wheelwednesday', '#newwheels', '#aftermarketwheels', '#wheelupgrade'],
 };
 
@@ -188,6 +234,40 @@ function formatSpecs(wheel) {
 }
 
 /**
+ * Infer vehicle type from bolt pattern when no matching vehicle found
+ */
+function inferVehicleType(boltPattern) {
+  const bp = normalizeBoltPattern(boltPattern);
+  if (!bp) return 'car';
+  
+  // 6-lug and 8-lug are trucks
+  if (bp.startsWith('6X') || bp.startsWith('8X')) return 'truck';
+  
+  // 5x139.7 (5x5.5) is also trucks (Ram)
+  if (bp === '5X139.7') return 'truck';
+  
+  // 5x150 is Tundra/Land Cruiser
+  if (bp === '5X150') return 'truck';
+  
+  // 5x127 (5x5) is Jeep
+  if (bp === '5X127') return 'suv';
+  
+  // 5x112 is European (BMW, Audi, VW, Mercedes)
+  if (bp === '5X112') return 'luxury';
+  
+  // 5x120 is BMW, Camaro
+  if (bp === '5X120') return 'muscle';
+  
+  // 5x115 is Dodge muscle cars
+  if (bp === '5X115') return 'muscle';
+  
+  // 5x114.3 is very common (Japanese, Mustang, Tesla, etc.)
+  if (bp === '5X114.3') return 'car';
+  
+  return 'car';
+}
+
+/**
  * Generate caption for a wheel post
  */
 function generateCaption(wheel, vehicle, sku) {
@@ -198,14 +278,12 @@ function generateCaption(wheel, vehicle, sku) {
   const price = wheel.sellPrice;
   const productUrl = `${SITE_URL}/wheels/${sku}`;
   
-  // Pick hashtags based on bolt pattern (truck vs car)
-  const boltPattern = wheel.bolt_pattern || '';
-  const isTruck = boltPattern.includes('6X') || boltPattern.includes('8X');
-  const vehicleType = isTruck ? 'truck' : (vehicle?.type || 'truck');
+  // Determine vehicle type - use actual vehicle or infer from bolt pattern
+  const vehicleType = vehicle?.type || inferVehicleType(wheel.bolt_pattern);
   
   const tags = [
     ...HASHTAGS.general.slice(0, 5),
-    ...HASHTAGS[vehicleType].slice(0, 3),
+    ...(HASHTAGS[vehicleType] || HASHTAGS.car).slice(0, 3),
     `#${wheel.brand.toLowerCase().replace(/\s+/g, '')}`,
     '#warehousetiredirect',
   ];
@@ -231,8 +309,17 @@ async function generateWheelContent(wheel, index) {
   const safeStyleName = wheel.style_name.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
   const baseName = `${safeStyleName}_${timestamp}`;
   
-  // Pick a random showcase vehicle
-  const vehicle = SHOWCASE_VEHICLES[Math.floor(Math.random() * SHOWCASE_VEHICLES.length)];
+  // Find vehicles that actually fit this wheel's bolt pattern
+  const matchingVehicles = findMatchingVehicles(wheel.bolt_pattern);
+  
+  // Pick a random matching vehicle, or null if none match
+  const vehicle = matchingVehicles.length > 0 
+    ? matchingVehicles[Math.floor(Math.random() * matchingVehicles.length)]
+    : null;
+  
+  if (!vehicle) {
+    console.log(`  ⚠️ No matching vehicle for bolt pattern ${wheel.bolt_pattern}, using generic caption`);
+  }
   
   // Download wheel image
   const imageExt = wheel.image_url.split('.').pop()?.split('?')[0] || 'jpg';
