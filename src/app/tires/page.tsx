@@ -65,6 +65,8 @@ type Tire = {
   partNumber?: string;
   mfgPartNumber?: string;
   brand?: string;
+  /** Model name (e.g., "OPEN COUNTRY A/T III") */
+  model?: string;
   description?: string;
   /** Supplier cost (what we pay) */
   cost?: number;
@@ -377,10 +379,9 @@ async function fetchTireWebTires(tireSize: string, brand?: string) {
     const params = new URLSearchParams({
       size: sizeQ,
       minQty: "4",
-      // Fetch 200 results to ensure all brands appear in the filter
-      // Without this, expensive brands (like Toyo, Michelin) get cut off
-      // because results are sorted by price ascending
-      pageSize: "200",
+      // Fetch all available results so every brand appears in the filter
+      // Server-side rendering makes this fast; no real performance concern
+      pageSize: "500",
     });
     if (brand) {
       params.set("brand", brand);
@@ -1739,6 +1740,7 @@ export default async function TiresPage({
       partNumber: t.partNumber,
       mfgPartNumber: t.mfgPartNumber,
       brand: t.brand,
+      model: t.model, // Model name (e.g., "OPEN COUNTRY A/T III")
       description: t.description || (t.brand && t.model ? `${t.brand} ${t.model}` : undefined),
       cost: t.cost,
       price: t.price, // Retail price / MAP from TireWeb

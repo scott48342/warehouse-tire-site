@@ -1125,8 +1125,9 @@ export async function GET(req: Request) {
     const wheelDiameter = i(url.searchParams.get("wheelDiameter"));
     
     // Pagination
+    // pageSize can be up to 500 for server-side rendering (brand filters need all results)
     const minQty = i(url.searchParams.get("minQty"));
-    const pageSize = Math.min(Math.max(i(url.searchParams.get("pageSize") || url.searchParams.get("limit")) || 50, 1), 200);
+    const pageSize = Math.min(Math.max(i(url.searchParams.get("pageSize") || url.searchParams.get("limit")) || 50, 1), 500);
     
     // Single-tire lookup by partNumber (for PDP detail pages)
     const partNumberFilter = url.searchParams.get("partNumber")?.trim();
