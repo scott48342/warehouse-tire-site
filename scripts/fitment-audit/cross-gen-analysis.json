@@ -1,0 +1,1705 @@
+{
+  "total": 56,
+  "byVehicle": {
+    "chevrolet/corvette": [
+      {
+        "id": "4e35a4a3-8211-4722-a3fe-f582367d8dc7",
+        "year": 2010,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z06",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "23749815-9299-4244-94e0-912de494e9c6",
+        "year": 2010,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "ZR1",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "d577d70c-4e32-4d77-bf9e-3d021ce5463e",
+        "year": 2010,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Grand Sport",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "75e1258c-a2ed-4c9d-96c8-eafe2c8ffc09",
+        "year": 2010,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z51",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "a5449a85-a435-4862-8102-211d00c83e4b",
+        "year": 2011,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z51",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "5b4b6afd-b7b0-49d7-9882-a1d123cbf5f1",
+        "year": 2011,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "ZR1",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "f4a14afc-191f-4557-ba4b-3b068957db5b",
+        "year": 2011,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Grand Sport",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "e55e2884-ba15-4e83-9fea-47e2a02e56f4",
+        "year": 2011,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z06",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "f74b33ff-94a6-466f-a828-0264a122b2e6",
+        "year": 2012,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "ZR1",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "1254e9cc-6b51-420d-8db4-ce3cdad17d20",
+        "year": 2012,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z51",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "435eca8b-1e25-4d08-9283-9f8e45874004",
+        "year": 2012,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z06",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "0e18a1a2-ba54-4619-91cc-2c5dd108e4f0",
+        "year": 2012,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Grand Sport",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "b4915155-0cf4-4ec8-af3b-dc9c0f09e95a",
+        "year": 2013,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z51",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "1e5d8673-a348-4f3c-b3ad-03c1be968304",
+        "year": 2013,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "ZR1",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "ff9f8435-a2f9-4f19-83ce-7bd392def40b",
+        "year": 2013,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Grand Sport",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "b5830ef4-1d49-47ef-b434-c06897a768dd",
+        "year": 2013,
+        "make": "chevrolet",
+        "model": "corvette",
+        "displayTrim": "Z06",
+        "tireSizes": [
+          "P225/70R15",
+          "P255/60R15"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      }
+    ],
+    "mercedes/s-class": [
+      {
+        "id": "8b1d7f27-a760-44ee-a5b1-594561460ee5",
+        "year": 2010,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S550",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "f6cbcb45-fd9d-4852-a7c7-beb03a97c96c",
+        "year": 2010,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S63 AMG",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "f13c79d9-797d-4704-9c6e-ee8e4be2737b",
+        "year": 2010,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S600",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "d146b7e9-110f-47f6-b1b9-b3deb3a86bac",
+        "year": 2010,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S450",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "fedb4d6f-f5d1-4b90-93a3-3d2014aaf925",
+        "year": 2011,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S600",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "8a607bfb-16b4-42eb-866a-9149094d8ae8",
+        "year": 2011,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S450",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "7471eca0-7e74-4070-814e-95733b7b3bf6",
+        "year": 2011,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S550",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "ccbaeae4-0ac0-44a0-b1be-14a967b7bfa6",
+        "year": 2011,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S63 AMG",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "6efb2922-64e9-4644-8f20-4e8b36cf8772",
+        "year": 2012,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S63 AMG",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "d07d4b78-920f-4cc0-864e-26b7d012203a",
+        "year": 2012,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S600",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "b74a2c0b-f1d5-4727-a1ac-dcd248a98ebe",
+        "year": 2012,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S550",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "464f4c3d-c7b1-4728-af8c-5a8006cd315c",
+        "year": 2012,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S450",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "97f68ca0-2cd0-426f-b6e4-6dd9fb9df953",
+        "year": 2013,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S550",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "47f7fbd8-1105-496d-866e-40be7dbb3d02",
+        "year": 2013,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S600",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "7ef147e6-24de-4ae8-bb41-5d1902c042ff",
+        "year": 2013,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S63 AMG",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "1f2943ee-fd8b-408e-82a9-cc46733ff341",
+        "year": 2013,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S450",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 16
+      },
+      {
+        "id": "aa67ce19-180c-49b3-b00d-2227d896e8a0",
+        "year": 2014,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S63 AMG",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "69a6b041-c126-44f7-85d4-455cd58793d5",
+        "year": 2014,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S560",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "37397b79-46a9-4df8-ab2a-f58c7bd35c58",
+        "year": 2014,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S450",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "7d62c9c9-c125-4798-949a-fc1629e8417d",
+        "year": 2014,
+        "make": "mercedes",
+        "model": "s-class",
+        "displayTrim": "S65 AMG",
+        "tireSizes": [
+          "205/65R15",
+          "215/65R15",
+          "225/55R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      }
+    ],
+    "chevrolet/silverado-1500": [
+      {
+        "id": "4bd8367b-bb36-47ff-905a-721112960c10",
+        "year": 2014,
+        "make": "chevrolet",
+        "model": "silverado-1500",
+        "displayTrim": "LS",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "0e33e3ec-b19d-4a17-80a2-f767cc0f1ed0",
+        "year": 2014,
+        "make": "chevrolet",
+        "model": "silverado-1500",
+        "displayTrim": "LT",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "c1d5bac9-9449-4df3-8e09-3129aa754ad2",
+        "year": 2014,
+        "make": "chevrolet",
+        "model": "silverado-1500",
+        "displayTrim": "LT Z71",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "b29f454c-0853-4d65-b1be-dfefc4797a1e",
+        "year": 2014,
+        "make": "chevrolet",
+        "model": "silverado-1500",
+        "displayTrim": "LTZ",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "96fabdac-93db-4781-afa4-165e9431edd2",
+        "year": 2014,
+        "make": "chevrolet",
+        "model": "silverado-1500",
+        "displayTrim": "High Country",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "424ad483-e965-4909-9c5d-e59ba6889624",
+        "year": 2014,
+        "make": "chevrolet",
+        "model": "silverado-1500",
+        "displayTrim": "WT",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      }
+    ],
+    "ford/f-150": [
+      {
+        "id": "6633af0a-87cc-42d8-bb9f-7f9aac332e9e",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "STX",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "49184349-a8e3-4830-bd6f-e66cbea061db",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "XL",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "c55613f4-5d2e-4af6-b6cd-3d9ebf53a6b0",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "XLT",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "f30e1d43-5f7e-4120-b6a1-7af3632f1fa3",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "FX2",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "8df51410-49f0-4664-b961-b8ee57a2649c",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "FX4",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "a7efbacf-ae8f-43f8-bd0a-c53aa39da54e",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "Lariat",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "45c41638-70d2-4c01-9bd5-fc0c786ce95d",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "King Ranch",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "7395a08c-573f-4f6d-bd94-47a0582a21ec",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "Platinum",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "fa2d71c4-9350-4b71-bde5-e06265da2f9a",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "Raptor",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "fa87df50-6941-4bd9-b2ae-39126c303dd7",
+        "year": 2014,
+        "make": "ford",
+        "model": "f-150",
+        "displayTrim": "Limited",
+        "tireSizes": [
+          "245/75R16",
+          "265/75R16",
+          "255/70R17",
+          "265/70R17"
+        ],
+        "minDiameter": 16,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      }
+    ],
+    "gmc/sierra-1500": [
+      {
+        "id": "bd17e7e0-4de9-4f8e-a781-f21d5407f788",
+        "year": 2014,
+        "make": "gmc",
+        "model": "sierra-1500",
+        "displayTrim": "Denali",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "cac39d4d-ae19-43b5-8613-0210dda036fe",
+        "year": 2014,
+        "make": "gmc",
+        "model": "sierra-1500",
+        "displayTrim": "SLT",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "ddf8304b-c317-4aa1-b3b4-bdaea37da03d",
+        "year": 2014,
+        "make": "gmc",
+        "model": "sierra-1500",
+        "displayTrim": "SLE",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      },
+      {
+        "id": "5fb3f20b-7b4f-4186-8f5c-773b5e6cbf23",
+        "year": 2014,
+        "make": "gmc",
+        "model": "sierra-1500",
+        "displayTrim": "All Terrain",
+        "tireSizes": [
+          "225/75R15",
+          "235/75R15",
+          "245/75R16",
+          "265/75R16"
+        ],
+        "minDiameter": 15,
+        "source": "generation_inherit",
+        "expectedMinDiameter": 17
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "4e35a4a3-8211-4722-a3fe-f582367d8dc7",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z06",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "23749815-9299-4244-94e0-912de494e9c6",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "ZR1",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "d577d70c-4e32-4d77-bf9e-3d021ce5463e",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Grand Sport",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "75e1258c-a2ed-4c9d-96c8-eafe2c8ffc09",
+      "year": 2010,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z51",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "8b1d7f27-a760-44ee-a5b1-594561460ee5",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S550",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "f6cbcb45-fd9d-4852-a7c7-beb03a97c96c",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S63 AMG",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "f13c79d9-797d-4704-9c6e-ee8e4be2737b",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S600",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "d146b7e9-110f-47f6-b1b9-b3deb3a86bac",
+      "year": 2010,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S450",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "a5449a85-a435-4862-8102-211d00c83e4b",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z51",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "5b4b6afd-b7b0-49d7-9882-a1d123cbf5f1",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "ZR1",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "f4a14afc-191f-4557-ba4b-3b068957db5b",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Grand Sport",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "e55e2884-ba15-4e83-9fea-47e2a02e56f4",
+      "year": 2011,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z06",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "fedb4d6f-f5d1-4b90-93a3-3d2014aaf925",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S600",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "8a607bfb-16b4-42eb-866a-9149094d8ae8",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S450",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "7471eca0-7e74-4070-814e-95733b7b3bf6",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S550",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "ccbaeae4-0ac0-44a0-b1be-14a967b7bfa6",
+      "year": 2011,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S63 AMG",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "f74b33ff-94a6-466f-a828-0264a122b2e6",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "ZR1",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "1254e9cc-6b51-420d-8db4-ce3cdad17d20",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z51",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "435eca8b-1e25-4d08-9283-9f8e45874004",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z06",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "0e18a1a2-ba54-4619-91cc-2c5dd108e4f0",
+      "year": 2012,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Grand Sport",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "6efb2922-64e9-4644-8f20-4e8b36cf8772",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S63 AMG",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "d07d4b78-920f-4cc0-864e-26b7d012203a",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S600",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "b74a2c0b-f1d5-4727-a1ac-dcd248a98ebe",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S550",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "464f4c3d-c7b1-4728-af8c-5a8006cd315c",
+      "year": 2012,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S450",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "b4915155-0cf4-4ec8-af3b-dc9c0f09e95a",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z51",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "1e5d8673-a348-4f3c-b3ad-03c1be968304",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "ZR1",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "ff9f8435-a2f9-4f19-83ce-7bd392def40b",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Grand Sport",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "b5830ef4-1d49-47ef-b434-c06897a768dd",
+      "year": 2013,
+      "make": "chevrolet",
+      "model": "corvette",
+      "displayTrim": "Z06",
+      "tireSizes": [
+        "P225/70R15",
+        "P255/60R15"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "97f68ca0-2cd0-426f-b6e4-6dd9fb9df953",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S550",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "47f7fbd8-1105-496d-866e-40be7dbb3d02",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S600",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "7ef147e6-24de-4ae8-bb41-5d1902c042ff",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S63 AMG",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "1f2943ee-fd8b-408e-82a9-cc46733ff341",
+      "year": 2013,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S450",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 16
+    },
+    {
+      "id": "4bd8367b-bb36-47ff-905a-721112960c10",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "LS",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "0e33e3ec-b19d-4a17-80a2-f767cc0f1ed0",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "LT",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "c1d5bac9-9449-4df3-8e09-3129aa754ad2",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "LT Z71",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "b29f454c-0853-4d65-b1be-dfefc4797a1e",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "LTZ",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "96fabdac-93db-4781-afa4-165e9431edd2",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "High Country",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "424ad483-e965-4909-9c5d-e59ba6889624",
+      "year": 2014,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "displayTrim": "WT",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "6633af0a-87cc-42d8-bb9f-7f9aac332e9e",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "STX",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "49184349-a8e3-4830-bd6f-e66cbea061db",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "XL",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "c55613f4-5d2e-4af6-b6cd-3d9ebf53a6b0",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "XLT",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "f30e1d43-5f7e-4120-b6a1-7af3632f1fa3",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "FX2",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "8df51410-49f0-4664-b961-b8ee57a2649c",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "FX4",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "a7efbacf-ae8f-43f8-bd0a-c53aa39da54e",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Lariat",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "45c41638-70d2-4c01-9bd5-fc0c786ce95d",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "King Ranch",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "7395a08c-573f-4f6d-bd94-47a0582a21ec",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Platinum",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "fa2d71c4-9350-4b71-bde5-e06265da2f9a",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Raptor",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "fa87df50-6941-4bd9-b2ae-39126c303dd7",
+      "year": 2014,
+      "make": "ford",
+      "model": "f-150",
+      "displayTrim": "Limited",
+      "tireSizes": [
+        "245/75R16",
+        "265/75R16",
+        "255/70R17",
+        "265/70R17"
+      ],
+      "minDiameter": 16,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "bd17e7e0-4de9-4f8e-a781-f21d5407f788",
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "Denali",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "cac39d4d-ae19-43b5-8613-0210dda036fe",
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "SLT",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "ddf8304b-c317-4aa1-b3b4-bdaea37da03d",
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "SLE",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "5fb3f20b-7b4f-4186-8f5c-773b5e6cbf23",
+      "year": 2014,
+      "make": "gmc",
+      "model": "sierra-1500",
+      "displayTrim": "All Terrain",
+      "tireSizes": [
+        "225/75R15",
+        "235/75R15",
+        "245/75R16",
+        "265/75R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "aa67ce19-180c-49b3-b00d-2227d896e8a0",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S63 AMG",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "69a6b041-c126-44f7-85d4-455cd58793d5",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S560",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "37397b79-46a9-4df8-ab2a-f58c7bd35c58",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S450",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    },
+    {
+      "id": "7d62c9c9-c125-4798-949a-fc1629e8417d",
+      "year": 2014,
+      "make": "mercedes",
+      "model": "s-class",
+      "displayTrim": "S65 AMG",
+      "tireSizes": [
+        "205/65R15",
+        "215/65R15",
+        "225/55R16"
+      ],
+      "minDiameter": 15,
+      "source": "generation_inherit",
+      "expectedMinDiameter": 17
+    }
+  ]
+}

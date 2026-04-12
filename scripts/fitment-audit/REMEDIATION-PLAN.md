@@ -1,213 +1,460 @@
-# Tire-Spec Integrity Audit: Remediation Plan
+# Tire Fitment Data Remediation Plan
 
-**Audit Date:** 2026-04-12  
-**Total Records:** 12,333 (2000-2026)
+**Generated:** 2026-04-12  
+**Audit Source:** `full-audit-results.json`  
+**Total Records:** 12,333
+
+---
 
 ## Executive Summary
 
-| Category | Count | % | Status |
-|----------|-------|---|--------|
-| ✅ Exact Safe | 762 | 6.2% | No action needed |
-| ✅ Plausible Multi-Diameter | 7,401 | 60.0% | No action needed |
-| ⚠️ Sibling Aggregation | 3,638 | 29.5% | Review needed |
-| ⚠️ Broad Diameter Spread | 299 | 2.4% | Review needed |
-| ⚠️ Legacy Contamination | 213 | 1.7% | Fix needed |
-| ⚠️ Cross-Gen Contamination | 20 | 0.2% | Fix needed |
-| ❌ Missing Specs | 0 | 0% | ✅ Complete |
-| ❌ Implausible Diameter | 0 | 0% | ✅ Complete |
+The audit reveals **4,170 records (33.8%)** with actionable issues requiring remediation. The remaining records are either completely safe (762, 6.2%) or have plausible multi-diameter configurations (7,401, 60.0%) which are acceptable for vehicles with multiple OEM wheel options.
 
-**Key Finding:** 66.2% of records are clean (exact_safe + plausible_multi). Main issues are:
-1. Sibling aggregation (29.5%) - grouped trims, handled by wheel diameter selector
-2. Broad diameter spread (2.4%) - mostly correct for modern trucks
-3. Legacy contamination (1.7%) - needs cleanup
-4. Cross-gen contamination (0.2%) - needs cleanup
+### Priority Order (by user impact & risk)
+1. 🔴 **Cross-Gen Contamination** - 20 records (0.2%) - **CRITICAL** - Wrong specs inherited
+2. 🟠 **Legacy Contamination** - 213 records (1.7%) - **HIGH** - Outdated diameters
+3. 🟡 **Broad Diameter Spread** - 299 records (2.4%) - **MEDIUM** - May indicate bad aggregation
+4. 🟢 **Sibling Aggregation** - 3,638 records (29.5%) - **LOW** - Acceptable but improvable
+5. ⚪ **Missing Specs** - 0 records - **NONE** - Already resolved!
 
 ---
 
-## Issue Classification & Remediation
+## 1. Issue Breakdown Report
 
-### 1. SIBLING AGGREGATION (3,638 records - 29.5%)
+### 1.1 Count by Issue Type
 
-**Description:** Multiple trims grouped in a single `display_trim` field (e.g., "LS, LT, RST, Z71, Premier, High Country")
+| Issue Type | Count | % of Total | Risk Level |
+|------------|-------|------------|------------|
+| `exact_safe` | 762 | 6.2% | ✅ None |
+| `plausible_multi` | 7,401 | 60.0% | ✅ None |
+| `sibling_aggregation` | 3,638 | 29.5% | 🟢 Low |
+| `broad_diameter_spread` | 299 | 2.4% | 🟡 Medium |
+| `legacy_contamination` | 213 | 1.7% | 🟠 High |
+| `cross_gen_contamination` | 20 | 0.2% | 🔴 Critical |
+| `missing_specs` | 0 | 0.0% | ✅ None |
+| `implausible_diameter` | 0 | 0.0% | ✅ None |
+
+### 1.2 Top 10 Affected Makes
+
+| Make | Issue Count | Total Records | % Affected |
+|------|-------------|---------------|------------|
+| Chevrolet | 366 | 1,048 | 34.9% |
+| Ford | 310 | 988 | 31.4% |
+| Nissan | 309 | 622 | 49.7% |
+| Toyota | 215 | 1,230 | 17.5% |
+| GMC | 213 | 631 | 33.8% |
+| Subaru | 209 | 315 | 66.3% |
+| Lexus | 197 | 204 | 96.6% |
+| Kia | 195 | 252 | 77.4% |
+| Honda | 162 | 213 | 76.1% |
+| Hyundai | 161 | 190 | 84.7% |
+
+**Note:** Lexus, Kia, Honda, Hyundai have high % due to sibling_aggregation (multiple trims grouped) rather than actual data quality issues.
+
+### 1.3 Top 10 Affected Models
+
+| Model | Issue Count | Total Records | % Affected |
+|-------|-------------|---------------|------------|
+| Chevrolet Silverado-1500 | 107 | 212 | 50.5% |
+| Ford F-150 | 104 | 233 | 44.6% |
+| GMC Sierra-1500 | 99 | 179 | 55.3% |
+| Mazda MX-5 Miata | 73 | 84 | 86.9% |
+| Subaru WRX | 55 | 127 | 43.3% |
+| Dodge Challenger | 50 | 126 | 39.7% |
+| Toyota Tacoma | 46 | 161 | 28.6% |
+| Toyota Avalon | 42 | 42 | 100.0% |
+| Dodge Charger | 38 | 151 | 25.2% |
+| Hyundai Sonata | 33 | 33 | 100.0% |
+
+---
+
+## 2. Issue Examples
+
+### 2.1 Legacy Contamination (213 records)
+
+Records showing outdated/smaller wheel diameters than expected for modern model years.
 
 **Examples:**
-- 2026 Acura MDX "Base, Technology, A-Spec, Advance, Type S" → 19"/20"/21"
-- 2026 Chevrolet Tahoe "LS, LT, RST, Z71, Premier, High Country" → 18"/20"/22"
+| Year | Make | Model | Diameters | Issue |
+|------|------|-------|-----------|-------|
+| 2026 | BMW | 3-Series | 16, 17, 18, 19 | Min 16" < expected 17" |
+| 2026 | Ford | Bronco | 16, 17, 18 | Min 16" < expected 17" |
+| 2026 | Ford | Mustang | 17, 18 | Min 17" < expected 18" |
+| 2026 | Mazda | MX-5 Miata | 16, 17 | Min 16" < expected 18" |
+| 2026 | Subaru | WRX | 17, 18 | Min 17" < expected 18" |
 
-**Impact:** Medium - Users see all wheel options, but Phase 1 selector lets them pick correctly
+**By Year:**
+- 2020-2026: 187 records (88%)
+- 2015-2019: 26 records (12%)
+
+**By Source:**
+- `generation_inherit`: 63 records
+- `generation-baseline`: 50 records
+- `generation_import`: 29 records
+- `cache-import`: 15 records
+
+### 2.2 Cross-Gen Contamination (20 records)
+
+**ALL 20 records are Chevrolet Corvette (2010-2014)** with inherited 15" diameters from older generations.
+
+| Year | Trim | Current Diameter | Expected |
+|------|------|------------------|----------|
+| 2014 | Grand Sport | 15" | 18-19" |
+| 2014 | Stingray | 15" | 18-19" |
+| 2014 | Stingray Z51 | 15" | 18-19" |
+| 2014 | Z06 | 15" | 18-20" |
+| 2013 | Grand Sport | 15" | 18-19" |
+| 2013 | Z06 | 15" | 18-20" |
+| 2013 | Z51 | 15" | 18-19" |
+| 2013 | ZR1 | 15" | 19-20" |
+| 2012 | Grand Sport | 15" | 18-19" |
+| 2012 | Z06 | 15" | 18-20" |
+| ... | ... | ... | ... |
+
+**Root Cause:** `generation_inherit` rules incorrectly pulled C4/C5 generation specs (1984-2004: 15-17") into C6 generation (2005-2013) and C7 (2014+).
+
+### 2.3 Sibling Aggregation (3,638 records)
+
+Multiple trims grouped together with combined wheel options.
+
+**By Trim Count:**
+| Trims Grouped | Records |
+|---------------|---------|
+| 1 trim | 536 |
+| 2 trims | 188 |
+| 3 trims | 481 |
+| 4 trims | 928 |
+| 5 trims | 1,038 |
+| 6 trims | 400 |
+| 7 trims | 67 |
+
+**Top Models Affected:**
+- Toyota Avalon: 42 records
+- Dodge Challenger: 40 records
+- Hyundai Sonata: 33 records
+- Dodge Charger: 30 records
+- Cadillac Escalade: 29 records
+- Ford Escape: 28 records
+
+**Examples:**
+```
+2026 Acura MDX
+  Trims: Base, Technology, A-Spec, Advance, Type S
+  Diameters: 19", 20", 21"
+
+2026 Audi Q5
+  Trims: Premium, Premium Plus, Prestige, SQ5, SQ5 Sportback
+  Diameters: 18", 19", 20", 21"
+```
+
+### 2.4 Broad Diameter Spread (299 records)
+
+**ALL 299 records have a 5" spread.** 100% are trucks/SUVs.
+
+**Affected Models:**
+| Model | Records |
+|-------|---------|
+| Chevrolet Silverado-1500 | 85 |
+| Ford F-150 | 68 |
+| GMC Sierra-1500 | 62 |
+| Toyota Tacoma | 24 |
+| Other trucks/SUVs | 60 |
+
+**Example:**
+```
+2026 Chevrolet Silverado-1500 (Base)
+  Diameters: 17", 18", 20", 22"
+  Spread: 5"
+```
+
+**Sources:**
+- `cleanup_generation_template`: 85 records
+- `cleanup_wheelsize`: 73 records
+- `cleanup_cache-import`: 56 records
+- `generation_template`: 40 records
+
+---
+
+## 3. Remediation Plan by Issue Type
+
+### 3.A) Missing Specs ✅ RESOLVED
+
+**Status:** 0 records with missing specs  
+**Action:** None needed
+
+---
+
+### 3.B) Legacy Contamination 🟠
+
+**Count:** 213 records (1.7%)  
+**Root Cause:** Generation inheritance pulled older spec data into newer model years.
+
+**Remediation Strategy:**
+
+1. **Automated Cleanup Script** (recommended)
+   - Target records where `minDiameter < expectedMinForYear`
+   - For sports cars (MX-5, WRX, etc.): min 17" for 2020+
+   - For sedans/SUVs: min 16" for 2015+, min 17" for 2020+
+   - For trucks: keep as-is (legitimate smaller options exist)
+
+2. **Generation Rule Update**
+   - Modify `generation_inherit` to NEVER inherit diameters smaller than:
+     - 17" for sports cars (2015+)
+     - 16" for sedans (2010+)
+     - 17" for luxury vehicles (2015+)
+
+3. **Priority Fixes:**
+   ```sql
+   -- Remove 16" from modern BMW 3-Series (min should be 17")
+   UPDATE vehicle_fitments 
+   SET tire_sizes = remove_sub_17_sizes(tire_sizes)
+   WHERE make = 'bmw' AND model = '3-series' AND year >= 2019;
+   
+   -- Fix Mazda MX-5 (min should be 16" pre-2019, 17" 2019+)
+   -- Fix Subaru WRX (min should be 17" for 2015+, 18" for STI)
+   ```
+
+**Recommendation:** Cleanup script + updated generation rules
+
+---
+
+### 3.C) Cross-Gen Contamination 🔴 CRITICAL
+
+**Count:** 20 records (0.2%)  
+**Root Cause:** All are Chevrolet Corvette 2010-2014 inheriting 15" from older gens.
+
+**Remediation Strategy:**
+
+1. **Immediate Manual Fix** (one-time)
+   ```javascript
+   // Fix Corvette C6 (2005-2013)
+   const c6Specs = {
+     'Base': { diameters: [18, 19] },
+     'Z51': { diameters: [18, 19] },
+     'Grand Sport': { diameters: [18, 19] },
+     'Z06': { diameters: [18, 19, 20] },
+     'ZR1': { diameters: [19, 20] }
+   };
+   
+   // Fix Corvette C7 (2014-2019)
+   const c7Specs = {
+     'Stingray': { diameters: [18, 19, 20] },
+     'Stingray Z51': { diameters: [19, 20] },
+     'Grand Sport': { diameters: [19, 20] },
+     'Z06': { diameters: [19, 20] }
+   };
+   ```
+
+2. **Generation Rule Tightening**
+   - Add generation boundary checks to `generation_inherit`
+   - Corvette generations: C4 (1984-1996), C5 (1997-2004), C6 (2005-2013), C7 (2014-2019), C8 (2020+)
+   - NEVER inherit across major generation boundaries for sports cars
+
+3. **Validation Rule**
+   - Any vehicle with min diameter <16" should be flagged for 2000+ year
+   - Any sports car with min diameter <17" should be flagged for 2010+
+
+**Recommendation:** Manual fix NOW (20 records), then rule update
+
+---
+
+### 3.D) Sibling Aggregation 🟢
+
+**Count:** 3,638 records (29.5%)  
+**Nature:** Multiple trims grouped together with combined tire sizes.
+
+**Is This a Problem?**
+- **For tire search:** ✅ OK - Shows all valid sizes for the vehicle
+- **For wheel search:** ⚠️ Suboptimal - May show wrong bolt patterns for specific trims
+- **For user experience:** ⚠️ Suboptimal - Can't narrow down to exact trim
 
 **Remediation Options:**
 
-| Option | Effort | Benefit | Recommendation |
-|--------|--------|---------|----------------|
-| A. Keep grouped + wheel selector | None | Selector handles UX | ✅ **Current approach** |
-| B. Split into individual records | High | Exact trim accuracy | Future enhancement |
-| C. Add trim-aware API filtering | Medium | Per-trim sizes | Consider for Tier-A |
+1. **Option A: Keep Grouped (Recommended for now)**
+   - Pros: Already working, covers all valid sizes
+   - Cons: Less precise
+   - Action: Add UI hint "Multiple trims - verify with your specific vehicle"
 
-**Recommended Action:** 
-- **Keep current approach** for most vehicles
-- **Consider splitting only for Tier-A performance vehicles** (Mustang, Camaro, Corvette, etc.) where trim-level precision matters most
+2. **Option B: Split by Trim**
+   - Pros: More accurate recommendations
+   - Cons: Massive data entry effort, 3,638+ records to split
+   - Action: Only for Tier A performance vehicles
 
----
+3. **Option C: Hybrid Approach**
+   - Split: Performance trims with different specs (Type S, RS, SS, etc.)
+   - Keep grouped: Standard trims with same specs
+   - Priority: Challenger, Charger, Mustang, Camaro, WRX, M-cars, AMG
 
-### 2. BROAD DIAMETER SPREAD (299 records - 2.4%)
-
-**Description:** Single trim shows >4" wheel diameter spread
-
-**Examples:**
-- 2026 Silverado-1500 "Base" → 17"/18"/20"/22" (5" spread)
-- 2026 F-150 "Lariat" → 17"/18"/20"/22" (5" spread)
-- 2024 BMW X5 "Base" → 18"/19"/20"/21"/22" (4" spread)
-
-**Analysis:**
-- **83% are trucks/SUVs** - This is actually CORRECT. Modern full-size trucks offer 4-5 wheel size options from factory
-- **12% are luxury vehicles** - Also correct, luxury brands offer extensive customization
-- **5% may be data issues** - Review case-by-case
-
-**Remediation:**
-
-| Action | Count | Notes |
-|--------|-------|-------|
-| No change (correct data) | ~250 | Trucks/SUVs with factory options |
-| Review individually | ~49 | May need trim-level split |
-
-**Recommended Action:** 
-- **No mass change needed** - Phase 1 wheel selector handles this correctly
-- **Document that trucks/SUVs legitimately have broad diameter options**
+**Recommendation:** Keep grouped + UI hint + selective split for Tier A
 
 ---
 
-### 3. LEGACY CONTAMINATION (213 records - 1.7%)
+### 3.E) Broad Diameter Spread 🟡
 
-**Description:** Modern vehicles (2015+) showing tire sizes with diameters below expected minimums
+**Count:** 299 records (2.4%)  
+**All have 5" spread.** All are trucks/SUVs.
 
-**Examples:**
-- 2026 BMW 3-Series "Base" → includes 16" (expected min 17")
-- 2026 Ford Bronco "Base" → includes 16" (expected min 17")
-- 2026 Mustang "EcoBoost" → includes 17" (expected min 18")
+**Is This Legitimate?**
+- **YES** for full-size trucks: Silverado/F-150/Sierra legitimately offer 17" (work truck) through 22" (high trim)
+- **MAYBE** for some records if aggregation was too aggressive
 
-**Root Cause Analysis:**
-- Some 16" options ARE valid for economy/base models
-- BMW/Mercedes do offer 16" for select markets
-- Bronco base has 16" option (Sasquatch package steel wheels)
-- Mustang EcoBoost does come with 17" base option
+**Remediation Strategy:**
 
-**Remediation:**
+1. **Validate Truck Spreads**
+   - 5" spread is NORMAL for: Silverado, F-150, Sierra, RAM 1500, Tacoma, Tundra
+   - Create vehicle class rules:
+     ```javascript
+     const maxSpreadByClass = {
+       'full-size-truck': 5,  // 17" to 22" is valid
+       'mid-size-truck': 4,   // 16" to 20" typical
+       'suv-full': 4,         // 18" to 22" typical
+       'suv-mid': 3,          // 17" to 20" typical
+       'sedan': 2,            // 16" to 18" typical
+       'sports': 2            // 18" to 20" typical
+     };
+     ```
 
-| Vehicle Class | Min Expected | Current Min | Action |
-|---------------|--------------|-------------|--------|
-| Sports Cars (2020+) | 18" | 17" | ⚠️ Review |
-| Trucks/SUVs (2020+) | 17" | 16" | ✅ Some valid |
-| Luxury (2020+) | 17" | 16" | ✅ Some valid |
-| Economy (2020+) | 15" | 15" | ✅ Correct |
+2. **Review Non-Truck Spreads**
+   - Any sedan/sports car with 5" spread = bad data
+   - Query: `issueType = 'broad_diameter_spread' AND isTruckSuv = false`
+   - (Results show 0 - all 299 are trucks ✅)
 
-**Recommended Action:**
-1. **Review the 213 flagged records manually** - many may be false positives
-2. **Adjust heuristics** - 16" is valid for some modern vehicles
-3. **Only fix clear errors** (e.g., 15" on 2024 Corvette)
+3. **Source Cleanup**
+   - `cleanup_*` sources account for 214/299 (72%)
+   - Review cleanup scripts that may be over-aggregating
+
+**Recommendation:** Accept as-is for trucks + add validation rules for non-trucks
 
 ---
 
-### 4. CROSS-GEN CONTAMINATION (20 records - 0.2%)
+## 4. Architecture Recommendations
 
-**Description:** Inherited sizes from wrong generation showing incorrect diameters
+### 4.1 What Can Be Fixed by Data Cleanup Scripts
 
-**Examples:**
-- 2014 Corvette "Grand Sport" → 15" (should be 18"/19")
-- 2014 Corvette "Stingray" → 15" (should be 19"/20")
-- 2014 Corvette "Stingray Z51" → 15" (should be 19"/20")
+| Issue | Script Action | Est. Records |
+|-------|---------------|--------------|
+| Cross-Gen Contamination | Delete/replace Corvette 2010-2014 records | 20 |
+| Legacy Contamination | Remove sub-17" diameters for modern sports cars | ~100 |
+| Legacy Contamination | Remove sub-16" diameters for modern sedans | ~50 |
 
-**Root Cause:** These are 2014 C7 Corvettes inheriting from C3/C4 era data
-
-**Remediation:**
-```sql
--- Fix 2014 Corvette records with wrong 15" sizes
-UPDATE vehicle_fitments 
-SET oem_tire_sizes = '["P245/35ZR19", "P285/30ZR20"]'::jsonb,
-    source = 'manual_fix_cross_gen'
-WHERE make = 'chevrolet' 
-  AND model = 'corvette' 
-  AND year = 2014
-  AND oem_tire_sizes::text LIKE '%R15%';
+**Script: `fix-legacy-diameters.ts`**
+```typescript
+// Remove outdated small diameters from modern vehicles
+const fixes = [
+  { where: { make: 'mazda', model: 'mx-5-miata', year: { gte: 2019 } }, 
+    action: 'remove_diameters_below', value: 16 },
+  { where: { make: 'subaru', model: 'wrx', year: { gte: 2015 } },
+    action: 'remove_diameters_below', value: 17 },
+  { where: { make: 'bmw', model: '3-series', year: { gte: 2019 } },
+    action: 'remove_diameters_below', value: 17 },
+];
 ```
 
-**Recommended Action:**
-1. **Fix the 20 cross-gen records immediately** - clear data errors
-2. **Add year validation to inheritance scripts** - prevent future contamination
+### 4.2 What Needs Generation Inherit Rule Changes
+
+| Change | Impact |
+|--------|--------|
+| Add generation boundary definitions | Prevents cross-gen inheritance |
+| Add minimum diameter floor by vehicle class | Prevents legacy contamination |
+| Add sports car flag for stricter rules | Better handling of performance vehicles |
+
+**Update: `generation-rules.ts`**
+```typescript
+const generationBoundaries = {
+  'chevrolet/corvette': [
+    { gen: 'C4', years: [1984, 1996], minDia: 16 },
+    { gen: 'C5', years: [1997, 2004], minDia: 17 },
+    { gen: 'C6', years: [2005, 2013], minDia: 18 },
+    { gen: 'C7', years: [2014, 2019], minDia: 18 },
+    { gen: 'C8', years: [2020, 2030], minDia: 19 },
+  ],
+  // ... other vehicles
+};
+```
+
+### 4.3 What Needs Trim-Level Filtering in the API
+
+| Feature | Benefit |
+|---------|---------|
+| Trim selector in search | Allows narrowing to specific trim |
+| Performance trim detection | Auto-detect Type S, SS, RS, M, AMG |
+| Staggered setup flag | Already implemented ✅ |
+
+**No immediate changes needed** - current aggregation works for tire recommendations.
+
+### 4.4 What Needs Manual Data Entry/Overrides
+
+| Item | Priority | Records |
+|------|----------|---------|
+| Corvette C6/C7 specs | 🔴 Critical | 20 |
+| Tier A performance splits | 🟡 Medium | ~50 |
+| MX-5 Miata modern specs | 🟡 Medium | ~60 |
 
 ---
 
-## Priority Matrix
+## 5. Priority Ranking
 
-| Issue | Records | Risk | Effort | Priority |
-|-------|---------|------|--------|----------|
-| Cross-Gen Contamination | 20 | HIGH | LOW | 🔴 **P0 - Fix Now** |
-| Legacy Contamination | 213 | MEDIUM | MEDIUM | 🟡 **P1 - Review & Fix** |
-| Broad Diameter Spread | 299 | LOW | LOW | 🟢 **P2 - Document** |
-| Sibling Aggregation | 3,638 | LOW | HIGH | 🟢 **P3 - Future Enhancement** |
+### 5.1 By User Impact
 
----
+| Rank | Issue | Est. Users Affected | Why |
+|------|-------|---------------------|-----|
+| 1 | Cross-Gen Contamination | Medium (Corvette owners) | Completely wrong specs |
+| 2 | Legacy Contamination | Low-Medium | May see outdated tire sizes |
+| 3 | Broad Diameter Spread | Low | Trucks users expect variety |
+| 4 | Sibling Aggregation | Very Low | Still shows valid sizes |
 
-## Recommended Implementation Order
+### 5.2 By Risk of Wrong Recommendations
 
-### Phase 1: Immediate Fixes (P0)
-1. Fix 20 cross-gen contamination records (Corvette 2014)
-2. Re-run quick validation
-
-### Phase 2: Review & Clean (P1)
-1. Review 213 legacy contamination records
-2. Identify true errors vs. valid options
-3. Fix ~50-100 actual errors
-4. Adjust detection heuristics
-
-### Phase 3: Documentation (P2)
-1. Document that broad diameter spread is expected for trucks/SUVs
-2. Update TOOLS.md with vehicle class expectations
-
-### Phase 4: Future Enhancement (P3)
-1. Consider trim-level split for Tier-A vehicles
-2. Add trim-aware filtering to API (optional)
+| Rank | Issue | Risk Level | Consequence |
+|------|-------|------------|-------------|
+| 1 | Cross-Gen Contamination | 🔴 CRITICAL | Shows 15" tires for 18"+ wheels |
+| 2 | Legacy Contamination | 🟠 HIGH | Shows smaller sizes that may not fit |
+| 3 | Broad Diameter Spread | 🟡 MEDIUM | Too many options, user confusion |
+| 4 | Sibling Aggregation | 🟢 LOW | Shows superset of valid options |
 
 ---
 
-## Architecture Recommendations
+## 6. Recommended Action Plan
 
-### What Can Be Fixed by Data Cleanup Scripts
-- ✅ Cross-gen contamination (20 records)
-- ✅ Clear legacy errors (~50-100 records)
+### Phase 1: Immediate (Week 1)
+- [ ] Manual fix: Corvette 2010-2014 specs (20 records)
+- [ ] Add generation boundary rules for Corvette
 
-### What Needs Generation Inherit Rule Changes
-- ⚠️ Add year-based validation to `fill-fitment-gaps.ts`
-- ⚠️ Prevent inheriting sizes with diameters < year-appropriate minimum
+### Phase 2: Short-term (Weeks 2-3)
+- [ ] Cleanup script: Remove legacy contamination from MX-5, WRX, BMW 3-Series
+- [ ] Update generation_inherit minimum diameter floors
+- [ ] Review cleanup_* sources for over-aggregation
 
-### What Needs Trim-Level Filtering in API
-- 🔄 Optional enhancement for Tier-A vehicles
-- 🔄 Not critical - Phase 1 selector handles UX
+### Phase 3: Medium-term (Weeks 4-6)
+- [ ] Add vehicle class validation rules
+- [ ] UI: Add "verify with your specific trim" hint for aggregated records
+- [ ] Consider Tier A trim splitting for Challenger/Charger/Mustang
 
-### What Needs Manual Data Entry/Overrides
-- 📝 ~20-50 specific vehicle corrections
-- 📝 Tier-A performance vehicle trim splits (future)
-
----
-
-## Files Generated
-
-| File | Description |
-|------|-------------|
-| `full-audit-results.json` | Complete audit data (12,333 records) |
-| `full-audit-results.csv` | Excel-compatible export |
-| `quick-scan-stats.json` | High-level statistics |
-| `REMEDIATION-PLAN.md` | This document |
+### Phase 4: Ongoing
+- [ ] Monitor audit results after each data import
+- [ ] Quarterly review of generation rules
+- [ ] User feedback integration for spec corrections
 
 ---
 
-## Conclusion
+## Appendix: Source Quality Analysis
 
-The fitment data is in **good shape overall**:
-- 0% missing specs ✅
-- 0% implausible diameters ✅
-- 66.2% clean records ✅
-- Only 0.2% clear cross-gen contamination ⚠️
+| Source | Total | Issues | % Issues | Assessment |
+|--------|-------|--------|----------|------------|
+| merge_consolidation | 119 | 0 | 0% | ✅ Excellent |
+| manual_backfill | 110 | 0 | 0% | ✅ Excellent |
+| platform_inheritance_ld | 29 | 0 | 0% | ✅ Excellent |
+| manual_fix | 8 | 0 | 0% | ✅ Excellent |
+| manual_import | 79 | 0 | 0% | ✅ Excellent |
+| tier-a-import | 412 | 47 | 11% | ✅ Good |
+| generation-baseline | 1,398 | 151 | 11% | ✅ Good |
+| railway_import | 336 | 51 | 15% | 🟡 Moderate |
+| cache-import | 2,140 | 1,545 | 72% | 🟠 Needs review |
+| batch7-subcompacts-final | 158 | 154 | 97% | 🔴 High issue rate |
+| luxury-gap-fill | 226 | 224 | 99% | 🔴 High issue rate |
 
-**Immediate action needed:** Fix 20 cross-gen contamination records.
-**Phase 1 wheel diameter selector** remains the correct UX solution for handling multi-diameter vehicles.
+**Note:** High issue rates in batch7/luxury-gap-fill are largely sibling_aggregation, not data quality problems.
+
+---
+
+*End of Remediation Plan*

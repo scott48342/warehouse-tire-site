@@ -201,6 +201,72 @@ function generateModificationId(year: number, make: string, model: string, trim:
   return `${year}-${trim.toLowerCase().replace(/[^a-z0-9]/g, "-")}-${hash}`;
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// TIRE SIZE VALIDATION (prevents cross-generation contamination)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// Minimum expected wheel diameter by vehicle class and year
+const MIN_WHEEL_DIAMETERS: Record<string, Record<string, number>> = {
+  // Sports cars
+  corvette: { "2020": 19, "2014": 18, "2005": 17, "1997": 16, "0": 15 },
+  camaro: { "2016": 18, "2010": 18, "0": 15 },
+  mustang: { "2015": 17, "0": 15 },
+  challenger: { "2015": 18, "0": 15 },
+  
+  // Full-size trucks
+  "silverado-1500": { "2019": 17, "2014": 17, "0": 15 },
+  "sierra-1500": { "2019": 17, "2014": 17, "0": 15 },
+  "f-150": { "2015": 17, "0": 15 },
+  "1500": { "2019": 17, "2014": 17, "0": 15 },
+  
+  // Luxury sedans
+  "s-class": { "2014": 18, "2006": 17, "0": 15 },
+  "7-series": { "2016": 18, "2009": 17, "0": 15 },
+};
+
+function extractRimDiameter(tireSize: string): number | null {
+  if (!tireSize) return null;
+  const match = String(tireSize).toUpperCase().match(/R(\d{2}(?:\.\d)?)/);
+  if (match) return Math.floor(parseFloat(match[1]));
+  return null;
+}
+
+function getMinExpectedDiameter(year: number, model: string): number {
+  const modelLower = model.toLowerCase();
+  const modelDiameters = MIN_WHEEL_DIAMETERS[modelLower];
+  
+  if (modelDiameters) {
+    const thresholds = Object.entries(modelDiameters)
+      .map(([y, d]) => [parseInt(y), d] as [number, number])
+      .sort((a, b) => b[0] - a[0]);
+    
+    for (const [threshold, diameter] of thresholds) {
+      if (year >= threshold) return diameter;
+    }
+  }
+  
+  // Default by year
+  if (year >= 2020) return 16;
+  if (year >= 2015) return 15;
+  return 14;
+}
+
+function validateTireSizesForYear(tireSizes: any[], targetYear: number, model: string): boolean {
+  if (!Array.isArray(tireSizes) || tireSizes.length === 0) return true; // No sizes to validate
+  
+  const minExpected = getMinExpectedDiameter(targetYear, model);
+  
+  for (const size of tireSizes) {
+    const diameter = extractRimDiameter(String(size));
+    if (diameter !== null && diameter < minExpected) {
+      console.log(`  ⚠️  BLOCKED: ${size} (${diameter}") too small for ${targetYear} ${model} (min: ${minExpected}")`);
+      return false;
+    }
+  }
+  
+  return true;
+}
+
 async function findGapsAndDonors(): Promise<GapToFill[]> {
   const gaps: GapToFill[] = [];
   
@@ -280,6 +346,7 @@ async function findGapsAndDonors(): Promise<GapToFill[]> {
 async function fillGaps(gaps: GapToFill[], dryRun: boolean = false): Promise<void> {
   let inserted = 0;
   let skipped = 0;
+  let blocked = 0;
   
   for (const gap of gaps) {
     for (const trim of gap.trims) {
@@ -295,6 +362,14 @@ async function fillGaps(gaps: GapToFill[], dryRun: boolean = false): Promise<voi
       
       if (existing.rows.length > 0) {
         skipped++;
+        continue;
+      }
+      
+      // CRITICAL: Validate tire sizes are appropriate for target year
+      // Prevents cross-generation contamination (e.g., 15" tires on 2020+ trucks)
+      if (!validateTireSizesForYear(trim.oemTireSizes, gap.targetYear, gap.model)) {
+        console.log(`  ❌ BLOCKED: ${gap.targetYear} ${gap.make} ${gap.model} "${trim.displayTrim}" - tire sizes too old`);
+        blocked++;
         continue;
       }
       
@@ -321,6 +396,7 @@ async function fillGaps(gaps: GapToFill[], dryRun: boolean = false): Promise<voi
   
   console.log(`\n${dryRun ? "[DRY RUN] Would insert" : "Inserted"}: ${inserted} records`);
   console.log(`Skipped (already exists): ${skipped} records`);
+  console.log(`Blocked (tire size validation): ${blocked} records`);
 }
 
 async function main() {
