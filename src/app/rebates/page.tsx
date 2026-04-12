@@ -69,6 +69,14 @@ function RebateCard({ rebate }: { rebate: SiteRebate }) {
             Rebate Details
           </a>
         )}
+        {rebate.brand && (
+          <Link
+            href={`/tires?brand=${encodeURIComponent(rebate.brand.toUpperCase())}`}
+            className="inline-flex items-center rounded-xl border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50 transition-colors"
+          >
+            Shop {rebate.brand} Tires →
+          </Link>
+        )}
       </div>
 
       {/* Fine print */}
