@@ -1920,19 +1920,38 @@ export default async function TiresPage({
     return { isRunFlat, isXL, speed, season, isAllWeather, isSnowRated };
   }
 
+  // Normalize brand names to consistent casing (uppercase key, title case display)
   const brandCounts = new Map<string, number>();
+  const brandDisplayNames = new Map<string, string>(); // key (uppercase) -> display name
   for (const t of itemsEnriched) {
-    const b = String(t.brand || "").trim();
-    if (!b) continue;
-    brandCounts.set(b, (brandCounts.get(b) || 0) + 1);
+    const raw = String(t.brand || "").trim();
+    if (!raw) continue;
+    const key = raw.toUpperCase();
+    brandCounts.set(key, (brandCounts.get(key) || 0) + 1);
+    // Keep the first seen display name (or prefer title case)
+    if (!brandDisplayNames.has(key)) {
+      // Convert to title case for display
+      const display = raw.split(' ').map(w => 
+        w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+      ).join(' ');
+      brandDisplayNames.set(key, display);
+    }
   }
 
   const brandsByCount = Array.from(brandCounts.entries())
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 
-  const topBrands = brandsByCount.slice(0, 6).map(([b]) => b);
-  const restBrands = brandsByCount.slice(6).map(([b]) => b).sort((a, b) => a.localeCompare(b));
+  // Use display names for the filter options
+  const topBrands = brandsByCount.slice(0, 6).map(([key]) => brandDisplayNames.get(key) || key);
+  const restBrands = brandsByCount.slice(6).map(([key]) => brandDisplayNames.get(key) || key).sort((a, b) => a.localeCompare(b));
   const allBrands = [...topBrands, ...restBrands];
+  
+  // Also need to map counts to display names
+  const brandCountsDisplay = new Map<string, number>();
+  for (const [key, count] of brandCounts) {
+    const display = brandDisplayNames.get(key) || key;
+    brandCountsDisplay.set(display, count);
+  }
 
   const speedCounts = new Map<string, number>();
   let runFlatCount = 0;
@@ -2575,7 +2594,7 @@ export default async function TiresPage({
                 overallDiameters,
                 
                 // Available options with counts
-                brandOptions: allBrands.map(b => ({ value: b, count: brandCounts.get(b) || 0 })),
+                brandOptions: allBrands.map(b => ({ value: b, count: brandCountsDisplay.get(b) || 0 })),
                 treadCategoryOptions: treadCategoriesAvailable.map(tc => ({ value: tc, count: treadCategoryCounts.get(tc) || 0 })),
                 speedOptions: speedsAvailable.map(s => ({ value: s, count: speedCounts.get(s) || 0 })),
                 loadRangeOptions: loadRangesAvailable.map(lr => ({ value: lr.value, count: loadRangeCounts.get(lr.value) || 0 })),
