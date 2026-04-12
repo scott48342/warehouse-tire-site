@@ -718,8 +718,10 @@ export function isDRW(model: string, trim?: string): boolean {
  */
 function normalizeModel(model: string): string {
   return model.toLowerCase()
-    .replace(/-hd$/i, 'hd')
-    .replace(/^ram-/, '');
+    .replace(/[\s_]+/g, '-')     // spaces/underscores → dashes
+    .replace(/-+/g, '-')          // collapse multiple dashes
+    .replace(/-hd$/i, 'hd')       // -hd → hd (no dash)
+    .replace(/^ram-/, '');        // ram- prefix removal
 }
 
 /**
