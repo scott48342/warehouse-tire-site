@@ -109,8 +109,8 @@ const GM_HD_GEN1: HdTemplate = {
       diameterMax: 20,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
-      offsetMax: 140,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMax: 240,
     },
   },
 };
@@ -153,8 +153,8 @@ const GM_HD_GEN2: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
-      offsetMax: 140,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMax: 240,
     },
   },
 };
@@ -199,8 +199,8 @@ const GM_HD_GEN3: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
-      offsetMax: 145,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMax: 240,
     },
   },
 };
@@ -252,8 +252,8 @@ const GM_HD_GEN4: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // Rear outer wheels
-      offsetMax: 150,   // Front/inner wheels
+      offsetMin: -270,  // Rear outer wheels
+      offsetMax: 240,   // Front/inner wheels
     },
   },
 };
@@ -299,8 +299,8 @@ const DODGE_RAM_HD_GEN3: HdTemplate = {
       diameterMax: 20,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
-      offsetMax: 140,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMax: 240,
     },
   },
 };
@@ -343,8 +343,8 @@ const RAM_HD_GEN4: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
-      offsetMax: 145,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMax: 240,
     },
   },
 };
@@ -388,8 +388,8 @@ const RAM_HD_GEN5: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
-      offsetMax: 150,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMax: 240,
     },
   },
 };
@@ -435,8 +435,8 @@ const FORD_SD_GEN1: HdTemplate = {
       diameterMax: 20,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
-      offsetMax: 145,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner
+      offsetMax: 240,
     },
   },
 };
@@ -479,8 +479,8 @@ const FORD_SD_GEN2: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
-      offsetMax: 150,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner
+      offsetMax: 240,
     },
   },
 };
@@ -523,8 +523,8 @@ const FORD_SD_GEN3: HdTemplate = {
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
-      offsetMax: 150,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner
+      offsetMax: 240,
     },
   },
 };
@@ -568,8 +568,8 @@ const FORD_SD_GEN4: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
-      offsetMax: 155,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner
+      offsetMax: 240,
     },
   },
 };
@@ -651,8 +651,8 @@ const FORD_F350_DRW_GEN4: HdTemplate = {
       diameterMax: 24,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -225,  // DRW includes rear outer (-220) + front/inner
-      offsetMax: 165,
+      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner
+      offsetMax: 240,
     },
   },
 };
