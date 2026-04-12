@@ -3216,11 +3216,25 @@ function TireCard({
   /** Real behavior-driven popularity signal (optional) */
   popularitySignal?: PopularitySignal | null;
 }) {
+  // Check rebate eligibility at MODEL level, not just brand level
   const brandKey = String(t.brand || "").trim().toLowerCase();
   const reb = brandKey ? rebatesByBrand.get(brandKey) : null;
-  const headline = reb?.headline ? String(reb.headline) : "";
+  const tireModel = String(t.displayName || t.prettyName || t.description || "").toLowerCase();
+  
+  // Only show rebate if: (1) brand_wide is true, OR (2) tire model matches eligible_models
+  const isRebateEligible = reb && (
+    reb.brand_wide === true || 
+    (Array.isArray(reb.eligible_models) && reb.eligible_models.length > 0 
+      ? reb.eligible_models.some((pattern: string) => 
+          tireModel.includes(String(pattern).toLowerCase().trim())
+        )
+      : reb.brand_wide !== false // Legacy: if no eligible_models and brand_wide not explicitly false
+    )
+  );
+  
+  const headline = isRebateEligible && reb?.headline ? String(reb.headline) : "";
   const amt = headline.match(/\$(\d{2,4})/);
-  const rebateLabel = amt ? `$${amt[1]} rebate` : (reb ? "Rebate" : "");
+  const rebateLabel = amt ? `$${amt[1]} rebate` : (isRebateEligible ? "Rebate" : "");
 
   const q = t.quantity || {};
   const primary = typeof q.primary === "number" ? q.primary : 0;
