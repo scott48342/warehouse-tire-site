@@ -66,15 +66,9 @@ function RebateCard({ rebate }: { rebate: SiteRebate }) {
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-xl border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50 transition-colors"
           >
-            Learn More
+            Rebate Details
           </a>
         )}
-        <Link
-          href={`/tires?brand=${encodeURIComponent(rebate.brand || "")}`}
-          className="inline-flex items-center rounded-xl border border-neutral-200 px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-50 transition-colors"
-        >
-          Shop {rebate.brand} Tires
-        </Link>
       </div>
 
       {/* Fine print */}
