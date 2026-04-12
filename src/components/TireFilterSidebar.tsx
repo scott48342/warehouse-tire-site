@@ -351,6 +351,20 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </AccordionSection>
       )}
       
+      {/* Rebates Callout */}
+      <div className="py-3 border-b border-neutral-100">
+        <Link 
+          href="/rebates"
+          className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 p-3 hover:from-emerald-100 hover:to-green-100 transition-colors"
+        >
+          <span className="text-lg">💰</span>
+          <div>
+            <div className="text-sm font-bold text-emerald-800">Rebates Available</div>
+            <div className="text-xs text-emerald-600">Save up to $100 on select brands</div>
+          </div>
+        </Link>
+      </div>
+      
       {/* Category Section */}
       <AccordionSection
         title="Category"
@@ -375,9 +389,10 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Brand Section */}
+      {/* Brand Section - keep open when brands selected for multi-select */}
       <AccordionSection
         title="Brand"
+        defaultOpen={data.brands.length > 0}
         selectedCount={data.brands.length}
         hidden={data.brandOptions.length === 0}
       >
