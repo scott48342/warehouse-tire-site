@@ -434,8 +434,8 @@ export async function GET(req: Request) {
       : undefined;
   
   // Check if this vehicle needs rear wheel config but doesn't have it
-  const vehicleIsDRWCapable = isDRWCapable(make, model);
-  const vehicleNeedsRearWheelConfig = needsRearWheelConfigSelection(make, model, trimParam);
+  const vehicleIsDRWCapable = make && model ? isDRWCapable(make, model) : false;
+  const vehicleNeedsRearWheelConfig = make && model ? needsRearWheelConfigSelection(make, model, trimParam) : false;
   
   if (vehicleIsDRWCapable) {
     console.log(`[fitment-search] 🛻 HD TRUCK DETECTED: ${year} ${make} ${model}`, {
@@ -837,6 +837,39 @@ async function handleDbProfilePath(
   }
 
   // ========================================================================
+  // HD TRUCK OFFSET OVERRIDE
+  // For HD trucks with explicit rearWheelConfig (SRW/DRW), the profile's
+  // offsetMinMm/offsetMaxMm are authoritative - they come from HD templates
+  // that define very different offset ranges for SRW vs DRW.
+  // 
+  // SRW typically: -44mm to +60mm (standard single rear wheel)
+  // DRW typically: +97mm to +165mm (dual rear wheel - different wheel design)
+  // 
+  // These ranges do NOT overlap, so this override is critical to prevent
+  // showing SRW wheels to DRW customers and vice versa.
+  // ========================================================================
+  if (rearWheelConfig && vehicleIsDRWCapable && 
+      dbProfile.offsetMinMm !== null && dbProfile.offsetMaxMm !== null) {
+    const hdOffsetMin = Number(dbProfile.offsetMinMm);
+    const hdOffsetMax = Number(dbProfile.offsetMaxMm);
+    
+    console.log(`[fitment-search] HD TRUCK OFFSET OVERRIDE: ${rearWheelConfig.toUpperCase()}`);
+    console.log(`  Before: offset [${envelope.allowedMinOffset}, ${envelope.allowedMaxOffset}]`);
+    
+    // Override envelope with HD-specific offset range
+    // Don't apply mode expansion - HD offset ranges are already tuned
+    envelope = {
+      ...envelope,
+      oemMinOffset: hdOffsetMin,
+      oemMaxOffset: hdOffsetMax,
+      allowedMinOffset: hdOffsetMin,
+      allowedMaxOffset: hdOffsetMax,
+    };
+    
+    console.log(`  After: offset [${envelope.allowedMinOffset}, ${envelope.allowedMaxOffset}]`);
+  }
+
+  // ========================================================================
   // Production path: DB-first candidate filtering + live availability validation
   // - No multi-page WheelPros scans
   // - Always enforces orderable + qty >= minQty
@@ -1120,6 +1153,34 @@ async function handleDbFirstWheelResults(opts: {
       if (Number.isFinite(wheelOffset)) {
         if (Number.isFinite(userOffsetMin) && wheelOffset < userOffsetMin!) continue;
         if (Number.isFinite(userOffsetMax) && wheelOffset > userOffsetMax!) continue;
+      }
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // ENVELOPE OFFSET FILTER (HD SRW/DRW Critical)
+    // 
+    // The envelope's allowedMinOffset/allowedMaxOffset define the SAFE offset
+    // range for this specific vehicle configuration. This is especially
+    // critical for HD trucks where:
+    //   - SRW: -44mm to +60mm (standard single rear wheel)
+    //   - DRW: +97mm to +165mm (dually - completely different wheel design)
+    // 
+    // Without this filter, SRW and DRW would show the same wheels, which
+    // is completely wrong - DRW requires special dual-mount wheels.
+    // ═══════════════════════════════════════════════════════════════════════
+    if (!hasUserOffsetFilter && wheelSpec.offset !== undefined) {
+      const wheelOffset = Number(wheelSpec.offset);
+      if (Number.isFinite(wheelOffset)) {
+        // Use envelope's allowed offset range (computed from OEM specs or HD templates)
+        const minOffset = envelope.allowedMinOffset;
+        const maxOffset = envelope.allowedMaxOffset;
+        
+        // Only filter if we have valid offset bounds
+        if (Number.isFinite(minOffset) && Number.isFinite(maxOffset)) {
+          if (wheelOffset < minOffset || wheelOffset > maxOffset) {
+            continue;
+          }
+        }
       }
     }
 
