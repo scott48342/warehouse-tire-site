@@ -60,7 +60,7 @@ import {
 import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
 import { WheelSizeGateSelector } from "@/components/WheelSizeGateSelector";
-import { WheelConfigurationSwitcher } from "@/components/WheelConfigurationSwitcher";
+import WheelConfigurationSwitcher from "@/components/WheelConfigurationSwitcher";
 import { WheelConfigAutoSelectTracker } from "@/components/WheelConfigAutoSelectTracker";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
