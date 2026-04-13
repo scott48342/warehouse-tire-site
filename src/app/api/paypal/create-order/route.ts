@@ -66,13 +66,9 @@ async function validateWheelAvailability(items: CartItem[]): Promise<{
         }
       } catch (e) {
         console.error(`[paypal-checkout] Availability check failed for ${sku}:`, e);
-        // On error, add to unavailable list (fail safe)
-        unavailable.push({
-          sku,
-          name,
-          requestedQty: qty,
-          availableQty: 0,
-        });
+        // FAIL-OPEN: On API error, allow checkout to proceed
+        // Only block when we're CERTAIN items are unavailable (not on network/API errors)
+        console.warn(`[paypal-checkout] Skipping availability block for ${sku} due to API error (fail-open)`);
       }
     })
   );

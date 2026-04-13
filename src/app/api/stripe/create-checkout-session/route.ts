@@ -71,13 +71,10 @@ async function validateWheelAvailability(items: CartItem[]): Promise<{
         }
       } catch (e) {
         console.error(`[checkout] Availability check failed for ${sku}:`, e);
-        // On error, add to unavailable list (fail safe)
-        unavailable.push({
-          sku,
-          name,
-          requestedQty: qty,
-          availableQty: 0,
-        });
+        // FAIL-OPEN: On API error, allow checkout to proceed
+        // Only block when we're CERTAIN items are unavailable (not on network/API errors)
+        // This prevents checkout blocking due to transient WheelPros API issues
+        console.warn(`[checkout] Skipping availability block for ${sku} due to API error (fail-open)`);
       }
     })
   );
@@ -210,10 +207,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "stripe_not_configured" }, { status: 400 });
     }
 
-    // Only allow TEST mode for now (safe verification)
-    if (stripeConn.mode !== "test") {
-      return NextResponse.json({ ok: false, error: "stripe_live_disabled" }, { status: 400 });
-    }
+    // Log Stripe mode for debugging
+    console.log(`[checkout] Stripe mode: ${stripeConn.mode}`);
 
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
