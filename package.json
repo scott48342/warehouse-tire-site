@@ -42,6 +42,7 @@
         "stripe": "^16.12.0"
     },
     "devDependencies": {
+        "@anthropic-ai/sdk": "^0.88.0",
         "@tailwindcss/postcss": "^4",
         "@types/jest": "^30.0.0",
         "@types/node": "^20",

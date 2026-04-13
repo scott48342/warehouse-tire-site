@@ -185,11 +185,13 @@ export async function GET(req: Request) {
   if (!forceRefresh) {
     try {
       const { getFitmentConfigurations } = await import("@/lib/fitment-db/getFitmentConfigurations");
+      // Pass trimParam to help prioritize matching when vehicle_fitments has comma-separated trims
       const configResult = await getFitmentConfigurations(
         parseInt(year, 10),
         make,
         model,
-        modification
+        modification,
+        trimParam || undefined // requestedTrim from URL
       );
       
       if (configResult.usedConfigTable && configResult.configurations.length > 0) {

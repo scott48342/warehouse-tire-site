@@ -252,3 +252,133 @@ Only $275/wheel
 
 ✨ Done!
 [Sun 04/12/2026 18:00:23.49] Auto-post complete 
+[Mon 04/13/2026  9:00:03.45] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:1528) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] American Racing Vintage VN516 G-FORCE
+  Downloading image for American Racing Vintage VN516 G-FORCE...
+  ✅ Generated: vn516_g_force_1776085204284
+  📝 Caption preview: Transform your ev with the American Racing Vintage VN516 G-FORCE 🛞
+
+📐 17x9
+🔩 ...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - vn516_g_force_1776085204284.png
+  - vn516_g_force_1776085204284.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pe002_p1e_1775998802524
+
+--- Content Preview ---
+Wheel: Petrol PE002 P1E
+Price: $314
+Image: pe002_p1e_1775998802524.png
+
+Caption:
+Weekend project? ✅
+
+Petrol PE002 P1E
+📐 19x8
+🔩 5X112
+↔️ 40mm offset
+✨ P1E 19X8 5X112 72 +40 G-SLV
+
+Only $314/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/PE002SX19805640
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #luxurycars #eurocar #germanengineering #petrol #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1575875777873882
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:7808) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] XD XD829 HOSS II
+  ⚠️ No matching vehicle for bolt pattern 5X5.0, using generic caption
+  Downloading image for XD XD829 HOSS II...
+  ✅ Generated: xd829_hoss_ii_1776085215651
+  📝 Caption preview: Weekend project? ✅
+
+XD XD829 HOSS II
+📐 17x9
+🔩 5X5.0
+↔️ -12mm offset
+✨ XD829 17...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - xd829_hoss_ii_1776085215651.png
+  - xd829_hoss_ii_1776085215651.json
+
+📱 Facebook/Instagram Poster
+
+Selected: rapid_1775897489844
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys RAPID
+Price: $400
+Image: rapid_1775897489844.png
+
+Caption:
+Weekend project? ✅
+
+Black Rhino Hard Alloys RAPID
+📐 17x8.5
+🔩 5X150
+↔️ 10mm offset
+✨ RAPID 17X8.5 5X150 110 +10 MN-BLUE
+
+Only $400/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/1785RPD105150U10A
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1721892105823453
+
+✨ Done!
+[Mon 04/13/2026  9:00:24.33] Auto-post complete 

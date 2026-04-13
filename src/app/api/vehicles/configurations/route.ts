@@ -20,7 +20,8 @@ export async function GET(req: NextRequest) {
   const year = sp.get("year");
   const make = sp.get("make");
   const model = sp.get("model");
-  const modification = sp.get("modification") || sp.get("trim");
+  const modification = sp.get("modification");
+  const trim = sp.get("trim");
 
   // Validate required params
   if (!year || !make || !model) {
@@ -39,11 +40,13 @@ export async function GET(req: NextRequest) {
   }
 
   try {
+    // Pass both modification (for DB lookup) and trim (to prioritize matching)
     const result = await getFitmentConfigurations(
       yearNum,
       make,
       model,
-      modification || undefined
+      modification || trim || undefined,
+      trim || undefined // requestedTrim helps prioritize comma-separated trim lists
     );
 
     // Extract unique diameters with their default status

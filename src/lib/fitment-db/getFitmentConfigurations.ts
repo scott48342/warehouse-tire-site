@@ -61,6 +61,7 @@ export interface FitmentConfigurationsResult {
  * @param make - Vehicle make (will be normalized)
  * @param model - Vehicle model (will be normalized)
  * @param modificationId - Optional specific trim/modification ID
+ * @param requestedTrim - Optional trim name from URL (used to prioritize matching in comma-separated lists)
  * 
  * @returns Configurations with source info and fallback indication
  */
@@ -68,7 +69,8 @@ export async function getFitmentConfigurations(
   year: number,
   make: string,
   model: string,
-  modificationId?: string
+  modificationId?: string,
+  requestedTrim?: string
 ): Promise<FitmentConfigurationsResult> {
   const makeKey = normalizeMake(make);
   const modelKey = normalizeModel(model);
@@ -120,11 +122,31 @@ export async function getFitmentConfigurations(
       if (fitmentRow.length > 0 && fitmentRow[0].displayTrim) {
         const displayTrimRaw = fitmentRow[0].displayTrim;
         
-        // Handle comma-separated trim lists (e.g., "LX, Sport, EX, EX-L, Touring")
-        // Try to find a config that matches ANY of the listed trims
-        const trimCandidates = displayTrimRaw.includes(',')
+        // Handle comma-separated trim lists (e.g., "SLE, SLT, AT4, Denali")
+        // Prioritize matching the requestedTrim from URL if provided
+        let trimCandidates = displayTrimRaw.includes(',')
           ? displayTrimRaw.split(',').map((t: string) => t.trim()).filter(Boolean)
           : [displayTrimRaw];
+        
+        // If requestedTrim is provided, prioritize it by moving to front of list
+        if (requestedTrim) {
+          const normalizedRequested = requestedTrim.trim();
+          // Find case-insensitive match in candidates
+          const matchIndex = trimCandidates.findIndex(
+            (t: string) => t.toLowerCase() === normalizedRequested.toLowerCase()
+          );
+          if (matchIndex > 0) {
+            // Move matched trim to front
+            trimCandidates = [
+              trimCandidates[matchIndex],
+              ...trimCandidates.slice(0, matchIndex),
+              ...trimCandidates.slice(matchIndex + 1)
+            ];
+          } else if (matchIndex === -1) {
+            // requestedTrim not in list - try it first anyway
+            trimCandidates = [normalizedRequested, ...trimCandidates];
+          }
+        }
         
         // Try each trim candidate until we find a match
         for (const trimCandidate of trimCandidates) {
