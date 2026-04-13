@@ -2366,6 +2366,8 @@ async function handleDbFirstWheelResults(opts: {
     dealerlineMode: false,
     // Package prioritization flag
     packagePriorityApplied,
+    // Sort applied flag (helps debug if sorting is working)
+    sortApplied: isPriceSorted ? sortParam : 'default',
   });
 }
 
