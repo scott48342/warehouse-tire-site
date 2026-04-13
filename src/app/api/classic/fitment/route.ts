@@ -1,20 +1,24 @@
 /**
  * GET /api/classic/fitment
  * 
- * Classic vehicle fitment lookup.
+ * Classic/Legacy vehicle fitment lookup (1990-1999 + pre-1985).
+ * DATA-DRIVEN: Only returns classic fitment if data exists for the vehicle.
  * ISOLATED from modern fitment endpoints.
  * 
  * Query params:
  * - year: Vehicle year (required)
  * - make: Vehicle make (required)
  * - model: Vehicle model (required)
+ * 
+ * Returns:
+ * - If classic data exists: full platform/fitment info
+ * - If no data: { isClassicVehicle: false, fitmentMode: "not_found" }
+ *   (caller should fall back to modern fitment system)
  */
 
 import { NextResponse } from "next/server";
 import {
-  isClassicVehicle,
   getClassicFitment,
-  type ClassicFitmentResponse,
 } from "@/lib/classic-fitment";
 
 export const runtime = "nodejs";
@@ -43,22 +47,19 @@ export async function GET(req: Request) {
   }
 
   try {
-    // Check if this is a classic vehicle
-    const isClassic = isClassicVehicle(year, make);
-    
-    if (!isClassic) {
-      return NextResponse.json({
-        isClassicVehicle: false,
-        fitmentMode: "not_classic",
-        message: `${year} ${make} ${model} is not classified as a classic vehicle. Use /api/wheels/fitment-search for modern vehicles.`,
-      });
-    }
-
-    // Look up classic fitment
+    // DATA-DRIVEN detection: try to get classic fitment
+    // If data exists → return it
+    // If no data → return "not_found" (caller falls back to modern)
     const result = await getClassicFitment(year, make, model);
 
     if (result.fitmentMode === "not_found") {
-      return NextResponse.json(result, { status: 404 });
+      // No classic data for this vehicle - caller should use modern fitment
+      return NextResponse.json({
+        isClassicVehicle: false,
+        fitmentMode: "not_found",
+        message: `No classic fitment data for ${year} ${make} ${model}. Use modern fitment system.`,
+        fallbackTo: "modern",
+      });
     }
 
     // Success - return classic fitment data
