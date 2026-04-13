@@ -263,8 +263,34 @@ export async function POST(req: Request) {
       });
     }
 
-    const sessionParams = {
+    // Calculate total for payment method eligibility
+    const totalCents = stripeLineItems.reduce((sum, li) => sum + (li.price_data.unit_amount * li.quantity), 0);
+    const totalUsd = totalCents / 100;
+
+    // Build payment method types based on order value and eligibility
+    // Note: Apple Pay and Google Pay are handled via "card" with Link enabled
+    const paymentMethodTypes: string[] = ["card"]; // Always include card
+    
+    // Klarna: Available for orders $10+
+    if (totalUsd >= 10) {
+      paymentMethodTypes.push("klarna");
+    }
+    
+    // Affirm: Available for orders $50+ (Affirm minimum)
+    if (totalUsd >= 50) {
+      paymentMethodTypes.push("affirm");
+    }
+    
+    // Afterpay/Clearpay: Available for orders $1-$4000
+    if (totalUsd >= 1 && totalUsd <= 4000) {
+      paymentMethodTypes.push("afterpay_clearpay");
+    }
+
+    console.log(`[checkout] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
+
+    const sessionParams: any = {
       mode: "payment" as const,
+      payment_method_types: paymentMethodTypes,
       customer_email: email || undefined,
       line_items: stripeLineItems,
       metadata: {
