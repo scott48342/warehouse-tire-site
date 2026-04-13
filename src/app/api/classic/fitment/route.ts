@@ -54,6 +54,7 @@ export async function GET(req: Request) {
 
     if (result.fitmentMode === "not_found") {
       // No classic data for this vehicle - caller should use modern fitment
+      console.log(`[classic/fitment] NO DATA: ${year} ${make} ${model} → fallback to modern`);
       return NextResponse.json({
         isClassicVehicle: false,
         fitmentMode: "not_found",
@@ -63,6 +64,7 @@ export async function GET(req: Request) {
     }
 
     // Success - return classic fitment data
+    console.log(`[classic/fitment] HIT: ${year} ${make} ${model} → ${result.platform?.code}`);
     return NextResponse.json(result);
 
   } catch (err: any) {
