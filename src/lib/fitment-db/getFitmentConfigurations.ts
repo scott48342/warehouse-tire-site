@@ -118,23 +118,37 @@ export async function getFitmentConfigurations(
         .limit(1);
       
       if (fitmentRow.length > 0 && fitmentRow[0].displayTrim) {
-        const displayTrim = fitmentRow[0].displayTrim;
-        // Try to match by display_trim in config table
-        configRows = await db
-          .select()
-          .from(vehicleFitmentConfigurations)
-          .where(
-            and(
-              eq(vehicleFitmentConfigurations.year, year),
-              eq(vehicleFitmentConfigurations.makeKey, makeKey),
-              eq(vehicleFitmentConfigurations.modelKey, modelKey),
-              eq(vehicleFitmentConfigurations.displayTrim, displayTrim)
+        const displayTrimRaw = fitmentRow[0].displayTrim;
+        
+        // Handle comma-separated trim lists (e.g., "LX, Sport, EX, EX-L, Touring")
+        // Try to find a config that matches ANY of the listed trims
+        const trimCandidates = displayTrimRaw.includes(',')
+          ? displayTrimRaw.split(',').map((t: string) => t.trim()).filter(Boolean)
+          : [displayTrimRaw];
+        
+        // Try each trim candidate until we find a match
+        for (const trimCandidate of trimCandidates) {
+          configRows = await db
+            .select()
+            .from(vehicleFitmentConfigurations)
+            .where(
+              and(
+                eq(vehicleFitmentConfigurations.year, year),
+                eq(vehicleFitmentConfigurations.makeKey, makeKey),
+                eq(vehicleFitmentConfigurations.modelKey, modelKey),
+                eq(vehicleFitmentConfigurations.displayTrim, trimCandidate)
+              )
             )
-          )
-          .orderBy(
-            asc(vehicleFitmentConfigurations.wheelDiameter),
-            asc(vehicleFitmentConfigurations.axlePosition)
-          );
+            .orderBy(
+              asc(vehicleFitmentConfigurations.wheelDiameter),
+              asc(vehicleFitmentConfigurations.axlePosition)
+            );
+          
+          if (configRows.length > 0) {
+            // Found a match for this trim
+            break;
+          }
+        }
       }
     }
     
