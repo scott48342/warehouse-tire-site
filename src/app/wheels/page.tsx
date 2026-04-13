@@ -532,6 +532,8 @@ export default async function WheelsPage({
     modification: modification || undefined,
     // SRW/DRW selection for HD trucks
     rearWheelConfig: effectiveRearWheelConfig || undefined,
+    // Sort order for results (price_asc, price_desc, or default relevance)
+    sort: sort || undefined,
 
     page: String(page),
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,

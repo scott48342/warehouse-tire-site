@@ -736,6 +736,9 @@ async function handleDbProfilePath(
   const finish = url.searchParams.get("finish");
   const diameter = url.searchParams.get("diameter");
   const width = url.searchParams.get("width");
+  
+  // Sort parameter: "price_asc" (low to high), "price_desc" (high to low), or default (relevance/score)
+  const sortParam = url.searchParams.get("sort") || url.searchParams.get("sortBy");
 
   // Hard requirement for "in stock only" live validation
   const minQty = Math.max(1, Number(url.searchParams.get("min_qty") || url.searchParams.get("minQty") || "4") || 4);
@@ -1472,19 +1475,42 @@ async function handleDbFirstWheelResults(opts: {
     };
   });
   
-  // Sort by availability tier FIRST (in_stock > limited > check_availability),
-  // then by score within each tier. This ensures in-stock wheels always appear first.
+  // Sort by user-selected sort option, or default relevance scoring
   const availabilityTierOrder: Record<string, number> = {
     "in_stock": 0,
     "limited": 1,
     "check_availability": 2,
   };
-  scoredCandidates.sort((a, b) => {
-    const tierA = availabilityTierOrder[a.availabilityLabel] ?? 2;
-    const tierB = availabilityTierOrder[b.availabilityLabel] ?? 2;
-    if (tierA !== tierB) return tierA - tierB; // Availability tier first
-    return b.score - a.score; // Then by score within tier
-  });
+  
+  // Helper to get price from candidate
+  const getCandidatePrice = (c: ScoredCandidate) => 
+    calculateWheelSellPrice({ map: Number(c.candidate.map_price) || null, msrp: Number(c.candidate.msrp) || null });
+  
+  if (sortParam === "price_asc" || sortParam === "price-low-to-high") {
+    // Price low to high - still respect availability tier
+    scoredCandidates.sort((a, b) => {
+      const tierA = availabilityTierOrder[a.availabilityLabel] ?? 2;
+      const tierB = availabilityTierOrder[b.availabilityLabel] ?? 2;
+      if (tierA !== tierB) return tierA - tierB;
+      return getCandidatePrice(a) - getCandidatePrice(b);
+    });
+  } else if (sortParam === "price_desc" || sortParam === "price-high-to-low") {
+    // Price high to low - still respect availability tier
+    scoredCandidates.sort((a, b) => {
+      const tierA = availabilityTierOrder[a.availabilityLabel] ?? 2;
+      const tierB = availabilityTierOrder[b.availabilityLabel] ?? 2;
+      if (tierA !== tierB) return tierA - tierB;
+      return getCandidatePrice(b) - getCandidatePrice(a);
+    });
+  } else {
+    // Default: availability tier first, then by relevance score
+    scoredCandidates.sort((a, b) => {
+      const tierA = availabilityTierOrder[a.availabilityLabel] ?? 2;
+      const tierB = availabilityTierOrder[b.availabilityLabel] ?? 2;
+      if (tierA !== tierB) return tierA - tierB;
+      return b.score - a.score;
+    });
+  }
   
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 4b: MERCHANDISING POST-PROCESSING
