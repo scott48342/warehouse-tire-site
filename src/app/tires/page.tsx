@@ -60,7 +60,9 @@ import {
 import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
 import { WheelSizeGateSelector } from "@/components/WheelSizeGateSelector";
+import { WheelConfigurationSwitcher } from "@/components/WheelConfigurationSwitcher";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
+import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
@@ -1437,6 +1439,76 @@ export default async function TiresPage({
       needsSelection: needsWheelDiameterSelection,
     });
   }
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CONFIGURATION TABLE LOOKUP (NEW)
+  // Check for HIGH confidence configuration data with is_default flag.
+  // If found AND no wheelDia param: auto-select default, show inline switcher
+  // If NOT found or LOW confidence: fall back to blocking gate behavior
+  // ═══════════════════════════════════════════════════════════════════════════
+  let configurationData: {
+    usedConfigTable: boolean;
+    confidence: string;
+    hasMultipleDiameters: boolean;
+    defaultDiameter: number | null;
+    configurations: Array<{
+      wheelDiameter: number;
+      isDefault: boolean;
+      configurationLabel: string | null;
+      tireSize: string;
+    }>;
+  } | null = null;
+  
+  // Auto-selected wheelDia from config (separate from staggered effectiveWheelDia computed later)
+  let configAutoWheelDia: string | null = null;
+  let wheelDiaWasAutoSelected = false;
+  
+  if (hasVehicle && hasMultipleWheelDiameters) {
+    try {
+      const configResult = await getFitmentConfigurations(
+        parseInt(year, 10),
+        make,
+        model,
+        modification || undefined
+      );
+      
+      // Compute defaultDiameter from configurations
+      const defaultConfig = configResult.configurations.find(c => c.isDefault);
+      const defaultDiameter = defaultConfig?.wheelDiameter ?? configResult.uniqueDiameters[0] ?? null;
+      
+      // Map to our expected shape
+      configurationData = {
+        usedConfigTable: configResult.usedConfigTable,
+        confidence: configResult.confidence,
+        hasMultipleDiameters: configResult.hasMultipleDiameters,
+        defaultDiameter,
+        configurations: configResult.configurations.map(c => ({
+          wheelDiameter: c.wheelDiameter,
+          isDefault: c.isDefault,
+          configurationLabel: c.configurationLabel,
+          tireSize: c.tireSize,
+        })),
+      };
+      
+      // HIGH CONFIDENCE: Auto-select default if no wheelDia in URL
+      if (
+        configurationData.usedConfigTable &&
+        configurationData.confidence === "high" &&
+        configurationData.hasMultipleDiameters &&
+        configurationData.defaultDiameter &&
+        !wheelDia
+      ) {
+        configAutoWheelDia = String(configurationData.defaultDiameter);
+        wheelDiaWasAutoSelected = true;
+        console.log('[tires/page] ✅ AUTO-SELECTED wheelDia from config:', configAutoWheelDia);
+      }
+    } catch (err) {
+      console.warn('[tires/page] Config lookup failed, using legacy gate:', err);
+    }
+  }
+  
+  // Use auto-selected wheelDia for filtering when no URL param provided
+  const wheelDiaFromConfigOrUrl = configAutoWheelDia || wheelDia;
 
   // Resolve modificationId to display label if trim looks like a hash ID
   let resolvedTrimLabel: string | undefined;
@@ -1485,9 +1557,10 @@ export default async function TiresPage({
 
   // For staggered vehicles, use effective wheel specs that consider fitment data
   // This handles the case where URL only has one wheel but fitment tells us about both axles
+  // Also handles auto-selected diameter from HIGH CONFIDENCE config table
   const wheelDiaForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelDia
     ? effectiveWheelDia
-    : wheelDiaActive;
+    : (wheelDiaFromConfigOrUrl || wheelDiaActive); // Include auto-selected from config
   const wheelWidthForTireSearch = isStaggeredVehicle && isPackageFlow && effectiveWheelWidth
     ? effectiveWheelWidth
     : wheelWidthActive;
@@ -2401,10 +2474,26 @@ export default async function TiresPage({
   // - Lifted builds (they have their own tire size logic)
   // - Package flow (wheel selection already determines diameter via wheelDia param)
   // - Vehicles without multiple wheel diameters
+  // - HIGH CONFIDENCE config data (uses inline switcher instead)
+  const hasHighConfidenceConfig = configurationData?.usedConfigTable && 
+    configurationData?.confidence === "high" &&
+    configurationData?.hasMultipleDiameters;
+  
   const requiresWheelSizeGate = hasVehicle 
     && !isLiftedBuild 
     && !isPackageFlow  // Package flow already has wheelDia from wheel selection
-    && needsWheelSizeSelection(oemWheelDiameters, wheelDia ? Number(wheelDia) : null);
+    && !hasHighConfidenceConfig  // HIGH CONFIDENCE uses inline switcher, not blocking gate
+    && needsWheelSizeSelection(oemWheelDiameters, wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null);
+  
+  // Show inline switcher when:
+  // - HIGH CONFIDENCE config data exists
+  // - Multiple diameters available
+  // - Not in package flow (wheel already selected there)
+  const showInlineWheelSwitcher = hasVehicle &&
+    !isLiftedBuild &&
+    !isPackageFlow &&
+    hasHighConfidenceConfig &&
+    configurationData!.configurations.length > 0;
   
   if (requiresWheelSizeGate) {
     return (
@@ -2424,7 +2513,7 @@ export default async function TiresPage({
             {/* Wheel Size Gate Selector */}
             <WheelSizeGateSelector
               availableDiameters={oemWheelDiameters}
-              selectedDiameter={wheelDia ? Number(wheelDia) : null}
+              selectedDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null}
               basePath={basePath}
               vehicle={{ year, make, model, trim: displayTrim }}
             />
@@ -2506,6 +2595,24 @@ export default async function TiresPage({
             <span className="font-semibold text-amber-800">{liftedInches}" {liftedPresetLabel} Lift</span>
             <span className="text-amber-700">— Showing recommended sizes</span>
           </div>
+        ) : null}
+        
+        {/* ═══════════════════════════════════════════════════════════════════════
+            INLINE WHEEL CONFIGURATION SWITCHER
+            Shows for HIGH CONFIDENCE config data (bypasses blocking gate)
+            Allows optional switching without interrupting flow
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {showInlineWheelSwitcher && configurationData ? (
+          <WheelConfigurationSwitcher
+            configurations={configurationData.configurations.map(c => ({
+              wheelDiameter: c.wheelDiameter,
+              isDefault: c.isDefault,
+              configurationLabel: c.configurationLabel,
+              tireSize: c.tireSize,
+            }))}
+            activeDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : (configurationData.defaultDiameter || oemWheelDiameters[0])}
+            vehicle={{ year, make, model, trim: displayTrim }}
+          />
         ) : null}
 
         {/* Legacy Size Selection - hidden when compact header is active (hasVehicle) */}

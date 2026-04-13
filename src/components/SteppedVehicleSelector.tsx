@@ -198,6 +198,7 @@ export function SteppedVehicleSelector({
   // ═══════════════════════════════════════════════════════════════════════════
   
   // Check wheel diameters after trim selection to determine if we need the wheelSize step
+  // NEW: First checks configuration table for HIGH confidence default, auto-selects if found
   async function checkWheelDiametersAndComplete(selection: { 
     year: string; 
     make: string; 
@@ -209,6 +210,54 @@ export function SteppedVehicleSelector({
     setWheelDiametersChecked(false);
     
     try {
+      // ═══════════════════════════════════════════════════════════════════════
+      // STEP 1: Check configuration table for HIGH confidence data with default
+      // If found, AUTO-SELECT the default and skip the wheel size step entirely
+      // ═══════════════════════════════════════════════════════════════════════
+      const configQs = new URLSearchParams({
+        year: selection.year,
+        make: selection.make,
+        model: selection.model,
+      });
+      if (selection.modification) configQs.set("modification", selection.modification);
+      
+      try {
+        const configData = await fetchJson<{
+          success?: boolean;
+          source?: string;
+          confidence?: string;
+          usedConfigTable?: boolean;
+          hasMultipleDiameters?: boolean;
+          defaultDiameter?: number | null;
+          diameterOptions?: Array<{ diameter: number; isDefault: boolean }>;
+        }>(`/api/vehicles/configurations?${configQs.toString()}`);
+        
+        // HIGH CONFIDENCE path: auto-select default and complete immediately
+        if (
+          configData?.usedConfigTable && 
+          configData?.confidence === "high" &&
+          configData?.hasMultipleDiameters &&
+          configData?.defaultDiameter
+        ) {
+          console.log(`[WheelSizeGate] AUTO-SELECT default from config table: ${configData.defaultDiameter}"`);
+          setWheelDiametersChecked(true);
+          setWheelDiametersLoading(false);
+          // Complete with the default wheel diameter auto-selected
+          onComplete({
+            ...selection,
+            wheelDia: configData.defaultDiameter,
+          });
+          return;
+        }
+      } catch (configErr) {
+        // Config API failed - fall through to legacy path
+        console.warn("[SteppedVehicleSelector] Config API failed, using legacy path:", configErr);
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // STEP 2: Legacy path - use tire-sizes API and heuristic gate logic
+      // This handles vehicles NOT in the configuration table
+      // ═══════════════════════════════════════════════════════════════════════
       const qs = new URLSearchParams({
         year: selection.year,
         make: selection.make,
@@ -240,7 +289,7 @@ export function SteppedVehicleSelector({
       });
       
       if (gateDecision.show && gateDecision.options.length > 1) {
-        // HIGH CONFIDENCE: Show wheel size step
+        // MEDIUM/LOW CONFIDENCE: Show wheel size step (blocking gate)
         console.log(`[WheelSizeGate] SHOW step - reason: ${gateDecision.reason}, options: ${gateDecision.options.join('/')}`);
         setWheelDiameters(gateDecision.options);
         setSelectedTrim(selection.trim && selection.modification 
