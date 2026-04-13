@@ -304,6 +304,20 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
   for (const result of results) {
     for (const tire of result.tires) {
       const unified = tireWebTireToUnified(tire, result.provider);
+      
+      // CRITICAL: Ensure price has margin over cost
+      // If sellPrice <= cost (or missing), apply $50 margin
+      const cost = unified.cost;
+      const rawPrice = unified.price;
+      let displayPrice: number | null = rawPrice;
+      
+      if (cost && cost > 0) {
+        if (!rawPrice || rawPrice <= cost) {
+          // No profitable sell price - apply $50 margin
+          displayPrice = cost + 50;
+        }
+      }
+      
       tires.push({
         partNumber: unified.partNumber,
         mfgPartNumber: unified.mfgPartNumber,
@@ -311,7 +325,7 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
         model: unified.model,
         description: unified.description,
         cost: unified.cost,
-        price: unified.price,
+        price: displayPrice,
         quantity: unified.quantity,
         imageUrl: unified.imageUrl,
         size: unified.size,
