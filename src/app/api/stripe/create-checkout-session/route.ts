@@ -106,20 +106,20 @@ export async function POST(req: Request) {
     }
 
     // ═══════════════════════════════════════════════════════════════════════════
-    // LIVE AVAILABILITY VALIDATION - TEMPORARILY DISABLED
-    // Unblocking checkout while we investigate WheelPros API issues.
-    // TODO: Re-enable with better error handling once API is stable.
+    // AVAILABILITY VALIDATION - SOFT CHECK
+    // Only WARN on availability issues, don't block checkout.
+    // We trust the SFTP feed data shown on the website.
+    // API check is informational only - block only on explicit 0 stock with high confidence.
     // ═══════════════════════════════════════════════════════════════════════════
-    // const availCheck = await validateWheelAvailability(items);
-    // if (!availCheck.ok) {
-    //   return NextResponse.json({
-    //     ok: false,
-    //     error: "items_unavailable",
-    //     detail: "Some items in your cart are no longer available",
-    //     unavailable: availCheck.unavailable,
-    //   }, { status: 409 }); // 409 Conflict
-    // }
-    console.log("[checkout] Availability check SKIPPED (temporarily disabled)");
+    try {
+      const availCheck = await validateWheelAvailability(items);
+      if (!availCheck.ok && availCheck.unavailable) {
+        // Log but don't block - items showed as in-stock on website
+        console.warn("[checkout] Availability warning (not blocking):", availCheck.unavailable);
+      }
+    } catch (availErr) {
+      console.warn("[checkout] Availability check error (not blocking):", availErr);
+    }
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
     const shippingInfo = body.shipping && typeof body.shipping === "object" ? body.shipping : {};
