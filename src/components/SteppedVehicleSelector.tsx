@@ -9,7 +9,7 @@ async function fetchJson<T>(url: string): Promise<T> {
   return (await res.json()) as T;
 }
 
-type Step = "year" | "make" | "model" | "trim";
+type Step = "year" | "make" | "model" | "trim" | "wheelSize";
 
 const THIS_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR - i));
@@ -59,6 +59,7 @@ export type VehicleSelection = {
   model: string;
   trim?: string;
   modification?: string;
+  wheelDia?: number; // OEM wheel diameter when multiple options exist
 };
 
 /**
@@ -74,6 +75,7 @@ export function SteppedVehicleSelector({
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
   const [model, setModel] = useState("");
+  const [selectedTrim, setSelectedTrim] = useState<{ value: string; label: string } | null>(null);
 
   const [makes, setMakes] = useState<string[]>([]);
   const [makesLoading, setMakesLoading] = useState(false);
@@ -81,6 +83,11 @@ export function SteppedVehicleSelector({
   const [modelsLoading, setModelsLoading] = useState(false);
   const [trims, setTrims] = useState<Array<{ value: string; label: string }>>([]);
   const [trimsLoading, setTrimsLoading] = useState(false);
+  
+  // Wheel diameter selection (for trims with multiple OEM wheel sizes)
+  const [wheelDiameters, setWheelDiameters] = useState<number[]>([]);
+  const [wheelDiametersLoading, setWheelDiametersLoading] = useState(false);
+  const [wheelDiametersChecked, setWheelDiametersChecked] = useState(false);
 
   // Load makes when year changes
   useEffect(() => {
@@ -180,10 +187,94 @@ export function SteppedVehicleSelector({
   // This prevents race condition where we skip before trims finish loading
   useEffect(() => {
     if (step === "trim" && !trimsLoading && trimsLoadedOnce && trims.length === 0 && year && make && model) {
-      // No trims available - auto-continue without showing the empty state
-      onComplete({ year, make, model });
+      // No trims available - need to check wheel diameters before completing
+      checkWheelDiametersAndComplete({ year, make, model });
     }
-  }, [step, trimsLoading, trimsLoadedOnce, trims.length, year, make, model, onComplete]);
+  }, [step, trimsLoading, trimsLoadedOnce, trims.length, year, make, model]);
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // WHEEL DIAMETER CHECK - For trims with multiple OEM wheel sizes
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  // Check wheel diameters after trim selection to determine if we need the wheelSize step
+  async function checkWheelDiametersAndComplete(selection: { 
+    year: string; 
+    make: string; 
+    model: string; 
+    trim?: string; 
+    modification?: string; 
+  }) {
+    setWheelDiametersLoading(true);
+    setWheelDiametersChecked(false);
+    
+    try {
+      const qs = new URLSearchParams({
+        year: selection.year,
+        make: selection.make,
+        model: selection.model,
+      });
+      if (selection.modification) qs.set("modification", selection.modification);
+      
+      const data = await fetchJson<{
+        wheelDiameters?: {
+          needsSelection: boolean;
+          available: number[];
+          default?: number;
+        };
+      }>(`/api/vehicles/tire-sizes?${qs.toString()}`);
+      
+      const needsSelection = data?.wheelDiameters?.needsSelection ?? false;
+      const available = data?.wheelDiameters?.available ?? [];
+      
+      if (needsSelection && available.length > 1) {
+        // Multiple wheel sizes - show wheelSize step
+        setWheelDiameters(available.sort((a, b) => a - b));
+        setSelectedTrim(selection.trim && selection.modification 
+          ? { value: selection.modification, label: selection.trim }
+          : null
+        );
+        setWheelDiametersChecked(true);
+        setWheelDiametersLoading(false);
+        setStep("wheelSize");
+      } else {
+        // Single wheel size or none - complete immediately
+        setWheelDiametersChecked(true);
+        setWheelDiametersLoading(false);
+        onComplete(selection);
+      }
+    } catch (err) {
+      console.error("[SteppedVehicleSelector] Failed to fetch wheel diameters:", err);
+      // On error, just complete without wheel size step
+      setWheelDiametersChecked(true);
+      setWheelDiametersLoading(false);
+      onComplete(selection);
+    }
+  }
+  
+  // Handle trim selection - check wheel diameters before proceeding
+  function handleTrimSelect(trim: { value: string; label: string }) {
+    const selection = {
+      year,
+      make,
+      model,
+      trim: trim.label,
+      modification: trim.value,
+    };
+    setSelectedTrim(trim);
+    checkWheelDiametersAndComplete(selection);
+  }
+  
+  // Handle wheel size selection - complete with selected diameter
+  function handleWheelSizeSelect(diameter: number) {
+    onComplete({
+      year,
+      make,
+      model,
+      trim: selectedTrim?.label,
+      modification: selectedTrim?.value,
+      wheelDia: diameter,
+    });
+  }
 
   function reset() {
     setStep("year");
@@ -194,11 +285,24 @@ export function SteppedVehicleSelector({
     setModels([]);
     setTrims([]);
     setTrimsLoadedOnce(false);
+    setSelectedTrim(null);
+    setWheelDiameters([]);
+    setWheelDiametersChecked(false);
   }
 
   function goBack() {
-    if (step === "trim") {
+    if (step === "wheelSize") {
+      // Go back to trim selection (or model if no trims)
+      setWheelDiameters([]);
+      setWheelDiametersChecked(false);
+      if (trims.length > 0) {
+        setStep("trim");
+      } else {
+        setStep("model");
+      }
+    } else if (step === "trim") {
       setStep("model");
+      setSelectedTrim(null);
     } else if (step === "model") {
       setStep("make");
       setModel("");
@@ -212,6 +316,8 @@ export function SteppedVehicleSelector({
     { label: "Year", value: year || undefined },
     { label: "Make", value: make || undefined },
     { label: "Model", value: model || undefined },
+    // Show trim in crumbs when on wheelSize step
+    ...(step === "wheelSize" && selectedTrim ? [{ label: "Trim", value: selectedTrim.label }] : []),
   ];
 
   return (
@@ -352,28 +458,25 @@ export function SteppedVehicleSelector({
               <button
                 key={t.value}
                 type="button"
-                onClick={() => {
-                  onComplete({
-                    year,
-                    make,
-                    model,
-                    trim: t.label,
-                    modification: t.value,
-                  });
-                }}
+                onClick={() => handleTrimSelect(t)}
                 className="rounded-2xl border border-neutral-200 bg-white p-3 text-left hover:bg-neutral-50"
               >
                 <div className="text-sm font-extrabold text-neutral-900">{t.label}</div>
               </button>
             ))}
-            {!trimsLoading && !trims.length && (
+            {wheelDiametersLoading && (
+              <div className="col-span-full flex items-center justify-center py-4">
+                <div className="text-sm text-neutral-500">Checking wheel options...</div>
+              </div>
+            )}
+            {!trimsLoading && !trims.length && !wheelDiametersLoading && (
               <div className="col-span-full rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-700">
                 <div className="font-extrabold text-neutral-900">No trim list available.</div>
                 <div className="mt-1">You can continue without a specific trim.</div>
                 <button
                   type="button"
                   onClick={() => {
-                    onComplete({ year, make, model });
+                    checkWheelDiametersAndComplete({ year, make, model });
                   }}
                   className="mt-3 h-10 rounded-xl bg-neutral-900 px-4 text-sm font-extrabold text-white"
                 >
@@ -381,6 +484,32 @@ export function SteppedVehicleSelector({
                 </button>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Wheel Size Step - shown when trim has multiple OEM wheel diameters */}
+      {step === "wheelSize" && (
+        <div>
+          <div className="text-xs font-extrabold text-neutral-900">Select Wheel Size</div>
+          <div className="mt-1 text-[11px] text-neutral-500">
+            Your selected trim came with multiple wheel size options. Choose your current wheel size to see the correct tire fitment.
+          </div>
+          <div className="mt-3 flex flex-wrap gap-3 rounded-2xl border border-neutral-200 bg-white p-4">
+            {wheelDiameters.map((dia) => (
+              <button
+                key={dia}
+                type="button"
+                onClick={() => handleWheelSizeSelect(dia)}
+                className="rounded-2xl border-2 border-neutral-200 bg-white px-6 py-4 text-center hover:border-[var(--brand-red)] hover:bg-red-50 transition-colors"
+              >
+                <div className="text-2xl font-extrabold text-neutral-900">{dia}&quot;</div>
+                <div className="text-xs text-neutral-500">wheels</div>
+              </button>
+            ))}
+          </div>
+          <div className="mt-3 text-xs text-neutral-500">
+            💡 Not sure? Check your current tires — the last number (e.g., R{wheelDiameters[0] || 20}) is your wheel diameter.
           </div>
         </div>
       )}

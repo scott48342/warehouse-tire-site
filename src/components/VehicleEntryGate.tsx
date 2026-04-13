@@ -39,7 +39,7 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
   const intentState = parseHomepageIntent(currentParams);
 
   function handleComplete(selection: VehicleSelection) {
-    const { year, make, model, modification, trim } = selection;
+    const { year, make, model, modification, trim, wheelDia } = selection;
     const slug = vehicleSlug(year, make, model);
     
     // Build URL with vehicle context
@@ -49,6 +49,7 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
     params.set("model", model);
     if (modification) params.set("modification", modification);
     if (trim && trim !== modification) params.set("trim", trim);
+    if (wheelDia) params.set("wheelDia", String(wheelDia)); // OEM wheel diameter when multiple options
     if (packageFlow) params.set("package", "1");
     
     // ═══════════════════════════════════════════════════════════════════════════
