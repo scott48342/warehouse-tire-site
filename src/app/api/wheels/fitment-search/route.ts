@@ -1617,7 +1617,10 @@ async function handleDbFirstWheelResults(opts: {
     return result;
   }
   
-  let rankedCandidates = applyMerchandisingRules(scoredCandidates);
+  // Skip merchandising rules when user explicitly sorts by price (preserve exact price order)
+  const isPriceSorted = sortParam === "price_asc" || sortParam === "price-low-to-high" || 
+                        sortParam === "price_desc" || sortParam === "price-high-to-low";
+  let rankedCandidates = isPriceSorted ? scoredCandidates : applyMerchandisingRules(scoredCandidates);
   
   timing.rankingMs = Date.now() - tRanking0;
 
@@ -1638,7 +1641,8 @@ async function handleDbFirstWheelResults(opts: {
   
   let packagePriorityApplied = false;
   
-  if (applyPackagePriority) {
+  // Skip package priority when user explicitly sorts by price
+  if (applyPackagePriority && !isPriceSorted) {
     const tPkgPriority0 = Date.now();
     
     // Re-sort by package priority tiers, then by price within each tier
