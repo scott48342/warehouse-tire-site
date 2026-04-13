@@ -874,7 +874,8 @@ export default async function WheelsPage({
     fitmentGuidance: g.fitmentGuidance,
   }));
 
-  // Sort by fitmentClass first (surefit > specfit > extended), then by user's sort preference
+  // Sort by user's preference, with fitmentClass as tiebreaker (not primary)
+  // When user sorts by price, they expect cheapest first regardless of fitment class
   const fitmentClassRank = (fc: Wheel["fitmentClass"]) => {
     if (fc === "surefit") return 0;
     if (fc === "specfit") return 1;
@@ -883,21 +884,36 @@ export default async function WheelsPage({
   };
 
   const items: Wheel[] = [...grouped].sort((a, b) => {
-    // Primary sort: fitmentClass (surefit first, then specfit, then extended)
-    const fitRankDiff = fitmentClassRank(a.fitmentClass) - fitmentClassRank(b.fitmentClass);
-    if (fitRankDiff !== 0) return fitRankDiff;
-
-    // Secondary sort: user's preference (price, brand, etc.)
     const aPrice = typeof a.price === "number" ? a.price : Number.POSITIVE_INFINITY;
     const bPrice = typeof b.price === "number" ? b.price : Number.POSITIVE_INFINITY;
 
+    // When user explicitly sorts by price, price is PRIMARY (fitmentClass is tiebreaker)
+    // For default/brand sorts, fitmentClass is PRIMARY
     switch (sort) {
-      case "price_desc":
-        return bPrice - aPrice;
-      case "brand_asc":
-        return String(a.brand || "").localeCompare(String(b.brand || ""));
-      case "price_asc":
+      case "price_asc": {
+        const priceDiff = aPrice - bPrice;
+        if (priceDiff !== 0) return priceDiff;
+        // Tiebreaker: prefer better fitment
+        return fitmentClassRank(a.fitmentClass) - fitmentClassRank(b.fitmentClass);
+      }
+      case "price_desc": {
+        const priceDiff = bPrice - aPrice;
+        if (priceDiff !== 0) return priceDiff;
+        // Tiebreaker: prefer better fitment
+        return fitmentClassRank(a.fitmentClass) - fitmentClassRank(b.fitmentClass);
+      }
+      case "brand_asc": {
+        const brandDiff = String(a.brand || "").localeCompare(String(b.brand || ""));
+        if (brandDiff !== 0) return brandDiff;
+        // Tiebreaker: fitmentClass then price
+        const fitDiff = fitmentClassRank(a.fitmentClass) - fitmentClassRank(b.fitmentClass);
+        if (fitDiff !== 0) return fitDiff;
+        return aPrice - bPrice;
+      }
       default:
+        // Default sort: fitmentClass PRIMARY, then price
+        const fitRankDiff = fitmentClassRank(a.fitmentClass) - fitmentClassRank(b.fitmentClass);
+        if (fitRankDiff !== 0) return fitRankDiff;
         return aPrice - bPrice;
     }
   });
