@@ -144,15 +144,23 @@ export default function PackageCustomizer() {
         const tireRes = await fetch(`/api/tires/search?size=${encodeURIComponent(tireSize)}&minQty=4`);
         const tireData = await tireRes.json();
         
-        const tires: TireOption[] = (tireData.results || []).map((t: any) => ({
-          partNumber: t.partNumber,
-          brand: t.brand || "Unknown",
-          model: t.model || t.description || "",
-          size: t.size,
-          price: t.cost || t.price || 0,
-          imageUrl: t.imageUrl,
-          inStock: (t.quantity?.national || 0) >= 4,
-        }));
+        const tires: TireOption[] = (tireData.results || []).map((t: any) => {
+          // CRITICAL: Use sell price (t.price) first, fallback to cost + $50 margin
+          // Bug fix: was showing dealer cost instead of retail price
+          const cost = typeof t.cost === "number" && t.cost > 0 ? t.cost : null;
+          const sellPrice = typeof t.price === "number" && t.price > 0 ? t.price : null;
+          const displayPrice = sellPrice || (cost ? cost + 50 : 0);
+          
+          return {
+            partNumber: t.partNumber,
+            brand: t.brand || "Unknown",
+            model: t.model || t.description || "",
+            size: t.size,
+            price: displayPrice,
+            imageUrl: t.imageUrl,
+            inStock: (t.quantity?.national || 0) >= 4,
+          };
+        });
 
         const defaultTire = tires[0] || null;
 
