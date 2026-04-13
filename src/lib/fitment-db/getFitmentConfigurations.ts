@@ -77,7 +77,8 @@ export async function getFitmentConfigurations(
   // STEP 1: Try to get configurations from new table
   // ═══════════════════════════════════════════════════════════════════════════
   try {
-    const configRows = await db
+    // First try exact modificationId match
+    let configRows = await db
       .select()
       .from(vehicleFitmentConfigurations)
       .where(
@@ -98,6 +99,44 @@ export async function getFitmentConfigurations(
         asc(vehicleFitmentConfigurations.wheelDiameter),
         asc(vehicleFitmentConfigurations.axlePosition)
       );
+    
+    // If no results and modificationId provided, try matching by display_trim
+    // This handles cases where config records have display_trim but no modificationId
+    if (configRows.length === 0 && modificationId) {
+      // Look up the display_trim for this modificationId from vehicle_fitments
+      const fitmentRow = await db
+        .select({ displayTrim: vehicleFitments.displayTrim })
+        .from(vehicleFitments)
+        .where(
+          and(
+            eq(vehicleFitments.year, year),
+            eq(vehicleFitments.make, makeKey),
+            eq(vehicleFitments.model, modelKey),
+            eq(vehicleFitments.modificationId, modificationId)
+          )
+        )
+        .limit(1);
+      
+      if (fitmentRow.length > 0 && fitmentRow[0].displayTrim) {
+        const displayTrim = fitmentRow[0].displayTrim;
+        // Try to match by display_trim in config table
+        configRows = await db
+          .select()
+          .from(vehicleFitmentConfigurations)
+          .where(
+            and(
+              eq(vehicleFitmentConfigurations.year, year),
+              eq(vehicleFitmentConfigurations.makeKey, makeKey),
+              eq(vehicleFitmentConfigurations.modelKey, modelKey),
+              eq(vehicleFitmentConfigurations.displayTrim, displayTrim)
+            )
+          )
+          .orderBy(
+            asc(vehicleFitmentConfigurations.wheelDiameter),
+            asc(vehicleFitmentConfigurations.axlePosition)
+          );
+      }
+    }
     
     if (configRows.length > 0) {
       // Found config rows - use them
