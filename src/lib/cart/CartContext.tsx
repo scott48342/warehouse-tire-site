@@ -191,6 +191,59 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setHydrated(true);
   }, []);
 
+  // Refresh tire prices on cart load to ensure current pricing
+  // This catches any items added with stale/incorrect prices
+  useEffect(() => {
+    if (!hydrated) return;
+    
+    const refreshTirePrices = async () => {
+      const tireItems = items.filter((i): i is CartTireItem => i.type === "tire");
+      if (tireItems.length === 0) return;
+
+      let hasUpdates = false;
+      const updatedItems = [...items];
+
+      for (const tire of tireItems) {
+        try {
+          // Fetch current price for this tire
+          const res = await fetch(
+            `/api/tires/search?partNumber=${encodeURIComponent(tire.sku)}&limit=1`
+          );
+          if (!res.ok) continue;
+          
+          const data = await res.json();
+          const result = data?.results?.[0];
+          if (!result) continue;
+
+          // Calculate correct display price (sell price, or cost + $50)
+          const cost = typeof result.cost === "number" && result.cost > 0 ? result.cost : null;
+          const sellPrice = typeof result.price === "number" && result.price > 0 ? result.price : null;
+          const currentPrice = sellPrice || (cost ? cost + 50 : null);
+
+          if (currentPrice && Math.abs(currentPrice - tire.unitPrice) > 0.01) {
+            // Price has changed - update it
+            console.log(`[Cart] Refreshing tire price: ${tire.sku} $${tire.unitPrice} → $${currentPrice}`);
+            const idx = updatedItems.findIndex(i => i.sku === tire.sku && i.type === "tire");
+            if (idx >= 0) {
+              updatedItems[idx] = { ...updatedItems[idx], unitPrice: currentPrice };
+              hasUpdates = true;
+            }
+          }
+        } catch (err) {
+          // Silent fail - don't break cart if price refresh fails
+          console.warn(`[Cart] Failed to refresh price for ${tire.sku}:`, err);
+        }
+      }
+
+      if (hasUpdates) {
+        setItems(updatedItems);
+      }
+    };
+
+    // Run price refresh (fire-and-forget, non-blocking)
+    refreshTirePrices();
+  }, [hydrated]); // Only run once after hydration, not on every items change
+
   // Save cart to localStorage whenever it changes
   useEffect(() => {
     if (hydrated) {
