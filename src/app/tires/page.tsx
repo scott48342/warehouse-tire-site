@@ -2718,8 +2718,12 @@ export default async function TiresPage({
           </div>
         ) : null}
 
-        {/* Tire Matching Banner - shows when coming from wheel selection */}
-        {(wheelSku || wheelDia) && !isPackageFlow ? (
+        {/* ═══════════════════════════════════════════════════════════════════════
+            TIRE FLOW UI - Different headers for different flows:
+            1. Package flow (wheelSku present): TireMatchingBanner with "Complete Your Wheel Package"
+            2. Tire-only flow (just wheelDia): Simple size context without package language
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {isPackageFlow && wheelSku ? (
           <TireMatchingBanner
             wheelDiameter={wheelDiaActive || wheelDia}
             wheelWidth={wheelWidthActive || wheelWidth}
@@ -2730,6 +2734,21 @@ export default async function TiresPage({
             vehicle={hasVehicle ? { year, make, model, trim, modification } : undefined}
             baseUrl={basePath}
           />
+        ) : wheelDia && !isPackageFlow && selectedSize ? (
+          /* Tire-only flow: Simple size context (no package language) */
+          <div className="mb-6 rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3">
+            <div className="flex items-center gap-3">
+              <span className="text-xl">🛞</span>
+              <div>
+                <div className="text-sm font-bold text-neutral-900">
+                  Showing results for {selectedSize}
+                </div>
+                <div className="text-xs text-neutral-600">
+                  Tires for {wheelDia}" wheels
+                </div>
+              </div>
+            </div>
+          </div>
         ) : null}
 
         <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
