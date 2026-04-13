@@ -279,23 +279,23 @@ export default function CheckoutPage() {
           </Link>
         </div>
 
-        {/* Incomplete package banner */}
+        {/* Optional tire upsell - soft suggestion, not a warning */}
         {isIncomplete && (
-          <div className="mb-6 rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-3">
-              <span className="text-xl">⚠️</span>
-              <div>
-                <h3 className="font-bold text-amber-900">Package incomplete</h3>
-                <p className="text-sm text-amber-800 mt-1">
-                  You have wheels but no tires. Add matching tires to complete your package.
+          <div className="mb-6 rounded-xl bg-blue-50 border border-blue-100 p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="text-lg">🛞</span>
+                <p className="text-sm text-blue-800">
+                  <span className="font-semibold">Need tires too?</span>{" "}
+                  <span className="text-blue-600">Save on shipping when you bundle.</span>
                 </p>
-                <Link
-                  href="/tires"
-                  className="mt-2 inline-flex text-sm font-bold text-amber-700 hover:underline"
-                >
-                  Add tires →
-                </Link>
               </div>
+              <Link
+                href="/tires"
+                className="text-sm font-semibold text-blue-700 hover:text-blue-800 hover:underline whitespace-nowrap"
+              >
+                Add tires →
+              </Link>
             </div>
           </div>
         )}
