@@ -57,6 +57,9 @@ export interface HdTemplate {
   drw?: {
     oemSizes: WheelSpec[];
     fitmentRange: WheelRange;
+    // Optional: DRW-specific bolt pattern (e.g., GM uses 8x210 for DRW, 8x180 for SRW)
+    boltPattern?: string;
+    centerBoreMm?: number;
   };
 }
 
@@ -168,7 +171,7 @@ const GM_HD_GEN3: HdTemplate = {
   yearStart: 2011,
   yearEnd: 2019,
   
-  // Bolt pattern changed to 8x180 in 2011
+  // SRW bolt pattern: 8x180 (2011+)
   boltPattern: '8x180',
   centerBoreMm: 124.1,
   threadSize: 'M14x1.5',
@@ -191,15 +194,18 @@ const GM_HD_GEN3: HdTemplate = {
   },
   
   drw: {
+    // GM DRW uses DIFFERENT bolt pattern: 8x210 (not 8x180!)
+    boltPattern: '8x210',
+    centerBoreMm: 154.2,
     oemSizes: [
-      { diameter: 17, width: 6.5, offset: 102 },
+      { diameter: 17, width: 6.5, offset: 143 },
     ],
     fitmentRange: {
       diameterMin: 17,
       diameterMax: 22,
       widthMin: 6,
       widthMax: 8.25,
-      offsetMin: -270,  // DRW includes rear outer (-220) + front/inner (+97 to +150)
+      offsetMin: -270,  // DRW includes rear outer + front/inner
       offsetMax: 240,
     },
   },
@@ -214,6 +220,7 @@ const GM_HD_GEN4: HdTemplate = {
   yearStart: 2020,
   yearEnd: 2030, // Future-proof
   
+  // SRW bolt pattern: 8x180
   boltPattern: '8x180',
   centerBoreMm: 124.1,
   threadSize: 'M14x1.5',
@@ -237,15 +244,17 @@ const GM_HD_GEN4: HdTemplate = {
   },
   
   drw: {
+    // GM DRW uses DIFFERENT bolt pattern: 8x210 (not 8x180!)
+    boltPattern: '8x210',
+    centerBoreMm: 154.2,
     // DRW wheels have 3 positions with different offsets:
     // - Front (DF): ~+105mm
     // - Rear Outer (DR): ~-220mm (extreme negative to push wheel outward)
     // - Rear Inner (DI): ~+97mm
     oemSizes: [
-      { diameter: 17, width: 6.5, offset: 102 },  // Inner
-      { diameter: 20, width: 7.5, offset: 108 },  // Inner
-      { diameter: 20, width: 8.25, offset: 105 }, // Front
-      { diameter: 20, width: 8.25, offset: -221 }, // Outer
+      { diameter: 17, width: 6.5, offset: 143 },  // Inner
+      { diameter: 20, width: 7.5, offset: 154 },  // Inner
+      { diameter: 20, width: 8.25, offset: 154 }, // Front
     ],
     fitmentRange: {
       diameterMin: 17,
@@ -828,9 +837,19 @@ export function applyHdTemplate(
   const { template, wheelType } = match;
   const specs = wheelType === 'drw' && template.drw ? template.drw : template.srw;
   
+  // Use DRW-specific bolt pattern if defined (e.g., GM uses 8x210 for DRW, 8x180 for SRW)
+  const boltPattern = (wheelType === 'drw' && template.drw?.boltPattern) 
+    ? template.drw.boltPattern 
+    : template.boltPattern;
+  
+  // Use DRW-specific center bore if defined
+  const centerBoreMm = (wheelType === 'drw' && template.drw?.centerBoreMm)
+    ? template.drw.centerBoreMm
+    : template.centerBoreMm;
+  
   return {
-    boltPattern: template.boltPattern,
-    centerBoreMm: template.centerBoreMm,
+    boltPattern,
+    centerBoreMm,
     threadSize: template.threadSize,
     seatType: template.seatType,
     oemWheelSizes: specs.oemSizes,

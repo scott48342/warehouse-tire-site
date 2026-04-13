@@ -839,14 +839,17 @@ async function handleDbProfilePath(
   // ========================================================================
   // HD TRUCK OFFSET OVERRIDE
   // For HD trucks with explicit rearWheelConfig (SRW/DRW), the profile's
-  // offsetMinMm/offsetMaxMm are authoritative - they come from HD templates
-  // that define very different offset ranges for SRW vs DRW.
+  // offsetMinMm/offsetMaxMm come from HD templates. However, DRW templates
+  // have VERY wide ranges (-270 to +240) to cover all 3 wheel positions.
   // 
-  // SRW typically: -44mm to +60mm (standard single rear wheel)
-  // DRW typically: +97mm to +165mm (dual rear wheel - different wheel design)
+  // SRW: -44mm to +60mm (standard single rear wheel)
+  // DRW: Two distinct ranges (NOT one continuous range):
+  //   - Front/Inner positions: +75mm to +165mm (high positive offset)
+  //   - Outer positions: -270mm to -150mm (extreme negative offset)
   // 
-  // These ranges do NOT overlap, so this override is critical to prevent
-  // showing SRW wheels to DRW customers and vice versa.
+  // IMPORTANT: The wide DRW template range (-270 to +240) INCLUDES SRW offsets!
+  // The actual filtering to exclude SRW-style offsets happens in the wheel
+  // validation loop via the "DRW dead zone" exclusion logic.
   // ========================================================================
   if (rearWheelConfig && vehicleIsDRWCapable && 
       dbProfile.offsetMinMm !== null && dbProfile.offsetMaxMm !== null) {
@@ -1047,8 +1050,14 @@ async function handleDbFirstWheelResults(opts: {
   // PHASE 1: Get candidates from Techfeed DB (local, fast)
   // ═══════════════════════════════════════════════════════════════════════════
   const tCandidates0 = Date.now();
+  
+  // Log the bolt pattern being searched (critical for debugging DRW issues)
+  console.log(`[fitment-search] 🔍 SEARCHING: boltPattern=${opts.boltPattern}, rearWheelConfig=${opts.rearWheelConfig || 'n/a'}`);
+  
   const candidates = await getTechfeedCandidatesByBoltPattern(opts.boltPattern);
   timing.candidatesDbMs = Date.now() - tCandidates0;
+  
+  console.log(`[fitment-search] 📦 Found ${candidates.length} candidates with bolt pattern ${opts.boltPattern}`);
 
   // Apply basic DB-level filters (cheap, no I/O)
   const filteredCandidates = candidates.filter((c) => {
@@ -1088,6 +1097,9 @@ async function handleDbFirstWheelResults(opts: {
     validation: FitmentValidation;
   };
   let fitmentValidCandidates: FitmentValidCandidate[] = [];
+  
+  // DRW dead-zone tracking (for logging)
+  let drwDeadZoneExcluded = 0;
 
   for (const c of diversifiedCandidates) {
     const wheelSpec: WheelSpec = {
@@ -1163,22 +1175,67 @@ async function handleDbFirstWheelResults(opts: {
     // range for this specific vehicle configuration. This is especially
     // critical for HD trucks where:
     //   - SRW: -44mm to +60mm (standard single rear wheel)
-    //   - DRW: +97mm to +165mm (dually - completely different wheel design)
+    //   - DRW: Two distinct ranges (NOT one big range):
+    //       - Front/Inner positions: +65mm to +165mm (high positive)
+    //       - Outer positions: -270mm to -65mm (negative)
     // 
-    // Without this filter, SRW and DRW would show the same wheels, which
-    // is completely wrong - DRW requires special dual-mount wheels.
+    // DRW wheels are a completely different category - they're designed for
+    // multi-wheel positions and have offsets that SRW wheels NEVER have.
+    // The SRW "dead zone" (-65mm to +65mm) should be EXCLUDED from DRW results.
     // ═══════════════════════════════════════════════════════════════════════
+    
+    // DRW REQUIRES valid offset data - reject wheels with NULL/undefined offset
+    // because we can't verify they're actually DRW wheels without it
+    if (opts.rearWheelConfig === "drw" && (wheelSpec.offset === undefined || wheelSpec.offset === null)) {
+      drwDeadZoneExcluded++;
+      continue; // Skip - can't verify DRW compatibility without offset data
+    }
+    
     if (!hasUserOffsetFilter && wheelSpec.offset !== undefined) {
       const wheelOffset = Number(wheelSpec.offset);
       if (Number.isFinite(wheelOffset)) {
-        // Use envelope's allowed offset range (computed from OEM specs or HD templates)
-        const minOffset = envelope.allowedMinOffset;
-        const maxOffset = envelope.allowedMaxOffset;
-        
-        // Only filter if we have valid offset bounds
-        if (Number.isFinite(minOffset) && Number.isFinite(maxOffset)) {
-          if (wheelOffset < minOffset || wheelOffset > maxOffset) {
-            continue;
+        // ═══════════════════════════════════════════════════════════════════
+        // DRW SPECIAL CASE: Exclude SRW "dead zone" offsets
+        // 
+        // DRW templates have wide offset ranges (-270 to +240) to cover all
+        // wheel positions. But this incorrectly includes SRW wheels.
+        // 
+        // True DRW wheels have either:
+        //   - High positive offset (≥+75mm) for front/inner positions
+        //   - Extreme negative offset (≤-150mm) for outer positions
+        // 
+        // Wheels with offset between -75 and +75 are SRW-style and should
+        // NOT appear in DRW results. This is the "dead zone" exclusion.
+        // ═══════════════════════════════════════════════════════════════════
+        if (opts.rearWheelConfig === "drw") {
+          // DRW wheels have TWO valid offset ranges (NOT one continuous range):
+          //   - Front/Inner positions: typically +76mm to +145mm
+          //   - Outer positions: typically -76mm to -140mm (aftermarket) or -220mm (OEM)
+          //
+          // SRW wheels typically: -44mm to +60mm
+          //
+          // Dead zone (SRW territory to exclude): -65mm to +65mm
+          // Using -65/+65 gives a buffer zone to avoid edge cases
+          const DRW_INNER_MIN_OFFSET = 65;   // Front/inner wheels start around here
+          const DRW_OUTER_MAX_OFFSET = -65;  // Outer wheels end around here
+          
+          // Reject if offset falls in the SRW "dead zone"
+          // Valid DRW offsets are: offset >= +65 OR offset <= -65
+          const isValidDrwOffset = wheelOffset >= DRW_INNER_MIN_OFFSET || wheelOffset <= DRW_OUTER_MAX_OFFSET;
+          if (!isValidDrwOffset) {
+            drwDeadZoneExcluded++;
+            continue; // Skip - this is an SRW-style offset, not a true DRW wheel
+          }
+        } else {
+          // Use envelope's allowed offset range (computed from OEM specs or HD templates)
+          const minOffset = envelope.allowedMinOffset;
+          const maxOffset = envelope.allowedMaxOffset;
+          
+          // Only filter if we have valid offset bounds
+          if (Number.isFinite(minOffset) && Number.isFinite(maxOffset)) {
+            if (wheelOffset < minOffset || wheelOffset > maxOffset) {
+              continue;
+            }
           }
         }
       }
@@ -1189,6 +1246,12 @@ async function handleDbFirstWheelResults(opts: {
 
   timing.fitmentValidationMs = Date.now() - tFitment0;
   timing.fitmentValidCount = fitmentValidCandidates.length;
+  
+  // Log DRW dead-zone exclusions if any
+  if (opts.rearWheelConfig === "drw" && drwDeadZoneExcluded > 0) {
+    console.log(`[fitment-search] 🚛 DRW FILTER: Excluded ${drwDeadZoneExcluded} wheels with SRW-style offsets (-65 to +65mm)`);
+    timing.drwDeadZoneExcluded = drwDeadZoneExcluded;
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // PHASE 3: Inventory lookup from SFTP feed (synced every 2 hours)
