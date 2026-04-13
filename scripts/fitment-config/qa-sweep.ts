@@ -124,8 +124,8 @@ async function testVehicle(
     };
   }
 
-  // Test tire-sizes API
-  const tireSizesUrl = `/api/vehicles/tire-sizes?year=${year}&make=${make}&model=${model}&modification=${modId}`;
+  // Test tire-sizes API - include trim parameter to help prioritize comma-separated trims
+  const tireSizesUrl = `/api/vehicles/tire-sizes?year=${year}&make=${make}&model=${model}&modification=${modId}&trim=${encodeURIComponent(trim)}`;
   let tireSizesData: any;
   try {
     tireSizesData = await fetchAPI(tireSizesUrl);
@@ -186,24 +186,35 @@ async function testVehicle(
   };
 }
 
-async function testDeepLink(year: number, make: string, model: string, wheelDia: number): Promise<{passed: boolean; issue?: string}> {
-  const modResult = await pool.query(`
-    SELECT modification_id FROM vehicle_fitments 
-    WHERE year = $1 AND make = $2 AND model = $3 LIMIT 1
-  `, [year, make, model]);
+async function testDeepLink(year: number, make: string, model: string, wheelDia: number, trim?: string): Promise<{passed: boolean; issue?: string}> {
+  // If trim provided, try to find that specific modification
+  let query = `SELECT modification_id, display_trim FROM vehicle_fitments WHERE year = $1 AND make = $2 AND model = $3`;
+  const params: (string | number)[] = [year, make, model];
+  
+  if (trim) {
+    query += ` AND (display_trim = $4 OR display_trim ILIKE $5)`;
+    params.push(trim, `${trim},%`);
+  }
+  query += ` LIMIT 1`;
+  
+  const modResult = await pool.query(query, params);
   
   if (modResult.rows.length === 0) {
-    return { passed: false, issue: "No modification_id found" };
+    return { passed: false, issue: `No modification_id found${trim ? ` for trim ${trim}` : ""}` };
   }
   
   const modId = modResult.rows[0].modification_id;
-  const url = `/api/vehicles/tire-sizes?year=${year}&make=${make}&model=${model}&modification=${modId}&wheelDia=${wheelDia}`;
+  const actualTrim = modResult.rows[0].display_trim;
+  let url = `/api/vehicles/tire-sizes?year=${year}&make=${make}&model=${model}&modification=${modId}&wheelDia=${wheelDia}`;
+  if (trim) {
+    url += `&trim=${encodeURIComponent(trim)}`;
+  }
   
   try {
     const data = await fetchAPI(url);
     // Deep link should still return config data
     if (data.source !== "config") {
-      return { passed: false, issue: `Deep link returned source=${data.source}, expected config` };
+      return { passed: false, issue: `Deep link returned source=${data.source}, expected config (trim: ${actualTrim})` };
     }
     return { passed: true };
   } catch (err) {
@@ -278,20 +289,22 @@ async function main() {
     }
   }
 
-  // Test deep links
+  // Test deep links - use specific trims that have config data
+  // Tests that deep links with wheelDia still use config table
   console.log("\nTesting deep links...\n");
   const deepLinkTests = [
-    { year: 2020, make: "toyota", model: "camry", wheelDia: 17 },
-    { year: 2022, make: "cadillac", model: "escalade", wheelDia: 22 },
-    { year: 2022, make: "cadillac", model: "escalade", wheelDia: 24 },
+    { year: 2020, make: "toyota", model: "camry", wheelDia: 17, trim: "LE" },
+    { year: 2022, make: "cadillac", model: "escalade", wheelDia: 22, trim: "Luxury" },
+    // Note: wheelDia=24 is optional/upgrade, not default - testing it still returns config
+    { year: 2022, make: "cadillac", model: "escalade", wheelDia: 24, trim: "Luxury" },
   ];
 
   for (const dl of deepLinkTests) {
-    const result = await testDeepLink(dl.year, dl.make, dl.model, dl.wheelDia);
+    const result = await testDeepLink(dl.year, dl.make, dl.model, dl.wheelDia, dl.trim);
     if (result.passed) {
-      console.log(`✅ Deep link: ${dl.year} ${dl.make} ${dl.model} wheelDia=${dl.wheelDia}`);
+      console.log(`✅ Deep link: ${dl.year} ${dl.make} ${dl.model} ${dl.trim} wheelDia=${dl.wheelDia}`);
     } else {
-      console.log(`❌ Deep link: ${dl.year} ${dl.make} ${dl.model} wheelDia=${dl.wheelDia}: ${result.issue}`);
+      console.log(`❌ Deep link: ${dl.year} ${dl.make} ${dl.model} ${dl.trim} wheelDia=${dl.wheelDia}: ${result.issue}`);
     }
   }
 

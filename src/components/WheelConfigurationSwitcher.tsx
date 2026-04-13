@@ -1,164 +1,135 @@
 "use client";
 
-/**
- * Wheel Configuration Switcher
- * 
- * INLINE (non-blocking) component for switching between OEM wheel configurations.
- * Used when we have HIGH CONFIDENCE configuration data with is_default.
- * 
- * Unlike WheelSizeGateSelector (blocking), this shows ABOVE results
- * and allows optional switching without interrupting the flow.
- * 
- * Design: Compact pill selector with "Recommended" badge on default option.
- */
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useCallback, useTransition } from "react";
 
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useCallback, useEffect, useRef } from "react";
-
-interface WheelConfiguration {
+interface ConfigurationOption {
   wheelDiameter: number;
   isDefault: boolean;
   configurationLabel?: string | null;
-  tireSize?: string;
+  tireSize: string;
 }
 
 interface WheelConfigurationSwitcherProps {
-  /** Available configurations (from config table) */
-  configurations: WheelConfiguration[];
-  /** Currently active diameter (from URL or auto-selected) */
+  configurations: ConfigurationOption[];
   activeDiameter: number;
-  /** Vehicle info for analytics */
-  vehicle?: {
-    year?: string;
-    make?: string;
-    model?: string;
-    trim?: string;
-  };
-  /** Optional callback when switched */
-  onSwitch?: (diameter: number) => void;
+  vehicle?: { year: string; make: string; model: string; trim?: string };
+  className?: string;
 }
 
-export function WheelConfigurationSwitcher({
+/**
+ * Inline wheel configuration switcher for multi-diameter vehicles.
+ * 
+ * Replaces the blocking "What size wheels do you have?" gate with a 
+ * confident default + optional switch pattern.
+ * 
+ * Only shown for vehicles with verified config data.
+ */
+export default function WheelConfigurationSwitcher({
   configurations,
   activeDiameter,
   vehicle,
-  onSwitch,
+  className = "",
 }: WheelConfigurationSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const hasTrackedView = useRef(false);
+  const [isPending, startTransition] = useTransition();
 
-  // Get unique diameters, sorted ascending
-  const uniqueDiameters = [...new Set(configurations.map(c => c.wheelDiameter))].sort((a, b) => a - b);
-  
-  // Find the default diameter
-  const defaultConfig = configurations.find(c => c.isDefault);
-  const defaultDiameter = defaultConfig?.wheelDiameter ?? uniqueDiameters[0];
+  const vehicleDescription = vehicle 
+    ? `${vehicle.year} ${vehicle.make} ${vehicle.model}${vehicle.trim ? ` ${vehicle.trim}` : ""}`
+    : "unknown";
 
-  // Track that the switcher was shown (once per mount)
-  useEffect(() => {
-    if (hasTrackedView.current) return;
-    hasTrackedView.current = true;
-    
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "wheel_config_auto_selected", {
-        event_category: "fitment",
-        wheel_diameter: activeDiameter,
-        is_default: activeDiameter === defaultDiameter,
-        vehicle_year: vehicle?.year,
-        vehicle_make: vehicle?.make,
-        vehicle_model: vehicle?.model,
-        vehicle_trim: vehicle?.trim,
-        available_sizes: uniqueDiameters.join(","),
-      });
-    }
-  }, [activeDiameter, defaultDiameter, vehicle, uniqueDiameters]);
+  const handleSwitch = useCallback((newDiameter: number) => {
+    if (newDiameter === activeDiameter) return;
 
-  const handleSwitch = useCallback((diameter: number) => {
-    if (diameter === activeDiameter) return;
-
-    // Track the switch
+    // Track analytics
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", "wheel_config_switch_clicked", {
-        event_category: "fitment",
-        event_label: `${diameter}"`,
-        wheel_diameter: diameter,
         from_diameter: activeDiameter,
-        vehicle_year: vehicle?.year,
-        vehicle_make: vehicle?.make,
-        vehicle_model: vehicle?.model,
+        to_diameter: newDiameter,
+        vehicle: vehicleDescription,
       });
     }
 
-    // Callback
-    onSwitch?.(diameter);
-
-    // Update URL with new selection
+    // Update URL with new wheelDia
     const params = new URLSearchParams(searchParams.toString());
-    params.set("wheelDia", String(diameter));
-    // Clear any conflicting params
-    params.delete("wheelDiaFront");
-    params.delete("wheelDiaRear");
-    
-    router.push(`${pathname}?${params.toString()}`);
-  }, [router, pathname, searchParams, activeDiameter, onSwitch, vehicle]);
+    params.set("wheelDia", newDiameter.toString());
 
-  // Don't render if only one option
+    startTransition(() => {
+      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+    });
+  }, [activeDiameter, pathname, router, searchParams, vehicleDescription]);
+
+  // Get unique diameters from configurations
+  const uniqueDiameters = [...new Set(configurations.map(c => c.wheelDiameter))].sort((a, b) => a - b);
+
+  // Don't show for single-diameter vehicles
   if (uniqueDiameters.length <= 1) {
     return null;
   }
 
-  return (
-    <div className="mb-4 rounded-xl border border-neutral-200 bg-white px-4 py-3">
-      <div className="flex flex-wrap items-center gap-3">
-        {/* Label */}
-        <div className="flex items-center gap-2 text-sm text-neutral-600">
-          <svg className="h-4 w-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <circle cx="12" cy="12" r="10" />
-            <circle cx="12" cy="12" r="3" />
-          </svg>
-          <span>Factory wheel options</span>
-        </div>
+  // Build options from unique diameters
+  const sortedOptions = uniqueDiameters.map(diameter => {
+    const config = configurations.find(c => c.wheelDiameter === diameter);
+    return {
+      diameter,
+      isDefault: config?.isDefault ?? false,
+      tireSize: config?.tireSize ?? "",
+    };
+  });
 
-        {/* Diameter pills */}
-        <div className="flex items-center gap-2">
-          {uniqueDiameters.map((diameter) => {
-            const isActive = diameter === activeDiameter;
-            const isDefault = diameter === defaultDiameter;
+  return (
+    <div className={`bg-blue-50 border border-blue-100 rounded-lg p-4 mb-4 ${className}`}>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="flex-1">
+          <p className="text-sm font-medium text-blue-900">
+            Your vehicle came with multiple factory wheel options
+          </p>
+          <p className="text-xs text-blue-700 mt-0.5">
+            Showing recommended setup. Switch if your vehicle has a different factory wheel size.
+          </p>
+        </div>
+        
+        <div className="flex gap-2">
+          {sortedOptions.map((option) => {
+            const isSelected = option.diameter === activeDiameter;
+            const isRecommended = option.isDefault;
             
             return (
               <button
-                key={diameter}
-                onClick={() => handleSwitch(diameter)}
+                key={option.diameter}
+                onClick={() => handleSwitch(option.diameter)}
+                disabled={isPending}
                 className={`
-                  relative flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold transition-all
-                  ${isActive 
-                    ? "bg-neutral-900 text-white shadow-sm" 
-                    : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
+                  relative px-4 py-2 rounded-lg font-medium text-sm transition-all
+                  ${isPending ? "opacity-50 cursor-wait" : ""}
+                  ${isSelected
+                    ? "bg-blue-600 text-white shadow-sm"
+                    : "bg-white text-blue-700 border border-blue-200 hover:border-blue-400 hover:bg-blue-50"
                   }
                 `}
               >
-                <span>{diameter}&quot;</span>
-                {isDefault && (
-                  <span className={`text-xs ${isActive ? 'text-neutral-300' : 'text-green-600'}`}>
-                    ✓
+                {option.diameter}"
+                {isRecommended && (
+                  <span className={`
+                    absolute -top-2 -right-2 text-[10px] px-1.5 py-0.5 rounded-full
+                    ${isSelected ? "bg-blue-500 text-white" : "bg-blue-100 text-blue-700"}
+                  `}>
+                    OEM
                   </span>
                 )}
               </button>
             );
           })}
         </div>
-
-        {/* Helper text */}
-        <span className="text-xs text-neutral-500">
-          {activeDiameter === defaultDiameter 
-            ? "Showing recommended setup" 
-            : "Switch if your wheels differ"}
-        </span>
       </div>
+      
+      {isPending && (
+        <div className="mt-2 text-xs text-blue-600">
+          Updating results...
+        </div>
+      )}
     </div>
   );
 }
-
-export default WheelConfigurationSwitcher;

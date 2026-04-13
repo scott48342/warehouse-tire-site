@@ -61,6 +61,7 @@ import { getAvailableWheelDiameters } from "@/lib/tires/wheelDiameterFilter";
 import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
 import { WheelSizeGateSelector } from "@/components/WheelSizeGateSelector";
 import { WheelConfigurationSwitcher } from "@/components/WheelConfigurationSwitcher";
+import { WheelConfigAutoSelectTracker } from "@/components/WheelConfigAutoSelectTracker";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
@@ -1490,17 +1491,18 @@ export default async function TiresPage({
         })),
       };
       
-      // HIGH CONFIDENCE: Auto-select default if no wheelDia in URL
+      // CONFIG-BACKED: Auto-select default if no wheelDia in URL
+      // Accept both 'high' and 'medium' confidence (both indicate verified config data)
       if (
         configurationData.usedConfigTable &&
-        configurationData.confidence === "high" &&
+        (configurationData.confidence === "high" || configurationData.confidence === "medium") &&
         configurationData.hasMultipleDiameters &&
         configurationData.defaultDiameter &&
         !wheelDia
       ) {
         configAutoWheelDia = String(configurationData.defaultDiameter);
         wheelDiaWasAutoSelected = true;
-        console.log('[tires/page] ✅ AUTO-SELECTED wheelDia from config:', configAutoWheelDia);
+        console.log('[tires/page] ✅ AUTO-SELECTED wheelDia from config:', configAutoWheelDia, `(${configurationData.confidence} confidence)`);
       }
     } catch (err) {
       console.warn('[tires/page] Config lookup failed, using legacy gate:', err);
@@ -2474,15 +2476,16 @@ export default async function TiresPage({
   // - Lifted builds (they have their own tire size logic)
   // - Package flow (wheel selection already determines diameter via wheelDia param)
   // - Vehicles without multiple wheel diameters
-  // - HIGH CONFIDENCE config data (uses inline switcher instead)
-  const hasHighConfidenceConfig = configurationData?.usedConfigTable && 
-    configurationData?.confidence === "high" &&
+  // - Config-backed vehicles (uses inline switcher instead)
+  // Accept 'high' OR 'medium' confidence - both indicate verified config data
+  const hasConfigBackedData = configurationData?.usedConfigTable && 
+    (configurationData?.confidence === "high" || configurationData?.confidence === "medium") &&
     configurationData?.hasMultipleDiameters;
   
   const requiresWheelSizeGate = hasVehicle 
     && !isLiftedBuild 
     && !isPackageFlow  // Package flow already has wheelDia from wheel selection
-    && !hasHighConfidenceConfig  // HIGH CONFIDENCE uses inline switcher, not blocking gate
+    && !hasConfigBackedData  // Config-backed vehicles use inline switcher, not blocking gate
     && needsWheelSizeSelection(oemWheelDiameters, wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : null);
   
   // Show inline switcher when:
@@ -2492,7 +2495,7 @@ export default async function TiresPage({
   const showInlineWheelSwitcher = hasVehicle &&
     !isLiftedBuild &&
     !isPackageFlow &&
-    hasHighConfidenceConfig &&
+    hasConfigBackedData &&
     configurationData!.configurations.length > 0;
   
   if (requiresWheelSizeGate) {
@@ -2598,8 +2601,21 @@ export default async function TiresPage({
         ) : null}
         
         {/* ═══════════════════════════════════════════════════════════════════════
+            WHEEL CONFIG AUTO-SELECT TRACKING
+            Fires analytics event when wheel diameter is auto-selected from config
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {wheelDiaWasAutoSelected && configurationData && (
+          <WheelConfigAutoSelectTracker
+            wasAutoSelected={wheelDiaWasAutoSelected}
+            diameter={Number(configAutoWheelDia)}
+            vehicle={`${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`}
+            confidence={configurationData.confidence}
+          />
+        )}
+        
+        {/* ═══════════════════════════════════════════════════════════════════════
             INLINE WHEEL CONFIGURATION SWITCHER
-            Shows for HIGH CONFIDENCE config data (bypasses blocking gate)
+            Shows for config-backed vehicles (bypasses blocking gate)
             Allows optional switching without interrupting flow
             ═══════════════════════════════════════════════════════════════════════ */}
         {showInlineWheelSwitcher && configurationData ? (

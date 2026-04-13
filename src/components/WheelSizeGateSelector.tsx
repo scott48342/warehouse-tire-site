@@ -98,21 +98,22 @@ export function WheelSizeGateSelector({
         </span>
         <div>
           <h3 className="text-lg font-extrabold text-blue-900">
-            What wheel size do you have?
+            Your vehicle came with multiple factory wheel options
           </h3>
           <p className="text-sm text-blue-700">
-            Your selected trim came with multiple wheel size options
+            Select your factory wheel size to see the correct tire fitment
           </p>
         </div>
       </div>
 
       {/* Helper text */}
       <p className="text-sm text-blue-800 mb-6">
-        Choose your current wheel size to see the correct tire fitment for your{" "}
+        Choose your current wheel size for your{" "}
         <span className="font-semibold">
           {vehicle?.year} {vehicle?.make} {vehicle?.model}
           {vehicle?.trim ? ` ${vehicle.trim}` : ""}
-        </span>.
+        </span>{" "}
+        to see matching tires.
       </p>
 
       {/* Wheel size options */}
