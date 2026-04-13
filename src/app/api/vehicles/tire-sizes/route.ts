@@ -179,7 +179,65 @@ export async function GET(req: Request) {
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // STEP 1: DB-FIRST - Check imported fitment database
+  // STEP 0: CONFIG TABLE - Check new fitment configurations table first
+  // This provides trim-specific tire sizes with high confidence
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!forceRefresh) {
+    try {
+      const { getFitmentConfigurations } = await import("@/lib/fitment-db/getFitmentConfigurations");
+      const configResult = await getFitmentConfigurations(
+        parseInt(year, 10),
+        make,
+        model,
+        modification
+      );
+      
+      if (configResult.usedConfigTable && configResult.configurations.length > 0) {
+        // Use config table data - this is trim-specific and verified
+        const tireSizes = [...new Set(configResult.configurations.map(c => c.tireSize))];
+        const diameters = configResult.uniqueDiameters;
+        
+        console.log(`[tire-sizes] CONFIG TABLE HIT: ${year} ${make} ${model} ${modification} → ${tireSizes.join(", ")} (${configResult.confidence})`);
+        
+        const { searchSizes } = convertTireSizesForSearch(tireSizes);
+        const configConversions = tireSizes.map(size => {
+          const conv = convertLegacyTireSize(size);
+          return {
+            originalSize: conv.original,
+            recommendedSize: conv.recommended,
+            alternatives: conv.alternatives,
+            conversionMethod: conv.conversionMethod,
+            isLegacy: conv.isLegacy,
+          };
+        });
+        
+        return NextResponse.json({
+          tireSizes,
+          tireSizesStrict: tireSizes,
+          tireSizesAgg: [],
+          searchableSizes: searchSizes.length > 0 ? searchSizes : tireSizes,
+          sizeConversions: configConversions,
+          hasLegacySizes: false,
+          fitment: {
+            // Config table doesn't store bolt pattern yet, could add later
+          },
+          wheelDiameters: {
+            needsSelection: configResult.hasMultipleDiameters,
+            available: diameters,
+            default: diameters[0] || null,
+          },
+          source: "config",
+          confidence: configResult.confidence,
+          cacheStats: getCacheStats(),
+        });
+      }
+    } catch (err) {
+      console.warn("[tire-sizes] Config table lookup failed, using legacy:", err);
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 1: DB-FIRST - Check imported fitment database (legacy)
   // ═══════════════════════════════════════════════════════════════════════════
   if (!forceRefresh) {
     const dbFitment = await getDbFitmentSizes(year, make, model, modification);
