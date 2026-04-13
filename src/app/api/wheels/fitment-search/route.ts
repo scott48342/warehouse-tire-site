@@ -1037,6 +1037,9 @@ async function handleDbFirstWheelResults(opts: {
   const diameter = url.searchParams.get("diameter");
   const width = url.searchParams.get("width");
   
+  // Sort parameter: "price_asc" (low to high), "price_desc" (high to low), or default (relevance/score)
+  const sortParam = url.searchParams.get("sort") || url.searchParams.get("sortBy");
+  
   // User-provided offset range (e.g., from lifted page: offsetMin=-18, offsetMax=0)
   // When provided, this HARD filters results to only show wheels within the specified range
   // This is critical for lifted trucks to avoid showing OEM +35mm offset wheels
