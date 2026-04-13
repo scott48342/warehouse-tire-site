@@ -16,6 +16,8 @@ import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { TiresGridWithSelection } from "@/components/TiresGridWithSelection";
 import { TirePageCompactHeader } from "@/components/TirePageCompactHeader";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
+import { ClassicFitmentCard, type ClassicFitmentData } from "@/components/ClassicFitmentCard";
+import { checkClassicFitment, toClassicCardData } from "@/lib/classic-fitment";
 import { TireSearchModeSwitcher, type TireSearchMode } from "@/components/TireSearchModeSwitcher";
 import { TireSizeSearchForm } from "@/components/TireSizeSearchForm";
 import {
@@ -952,6 +954,9 @@ export default async function TiresPage({
   // ═══════════════════════════════════════════════════════════════════════════
   const rearWheelConfigRaw = safeString(Array.isArray((sp as any).rearWheelConfig) ? (sp as any).rearWheelConfig[0] : (sp as any).rearWheelConfig);
   const rearWheelConfigParam = parseRearWheelConfigParam(rearWheelConfigRaw || null);
+
+  // Classic fitment - check if user is in classic shopping mode
+  const classicPlatformParam = safeString(Array.isArray((sp as any).classicPlatform) ? (sp as any).classicPlatform[0] : (sp as any).classicPlatform);
 
   const basePath = year && make && model ? `/tires/v/${vehicleSlug(year, make, model)}` : "/tires";
   const hasVehicle = Boolean(year && make && model);
@@ -2416,6 +2421,37 @@ export default async function TiresPage({
         </div>
       </main>
     );
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC FITMENT GATE - Platform-based fitment for 1990s classic vehicles
+  // Only activates when classic platform data EXISTS for this vehicle.
+  // Falls back to modern flow if no classic data (no dead ends).
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Only check for classic fitment if NOT already in classic shopping mode (has classicPlatform param)
+  // This prevents the card from showing repeatedly after clicking "Shop Tires"
+  if (!classicPlatformParam && hasVehicle && !hasSizeSearch && !hasBrandSearch) {
+    const classicCheck = await checkClassicFitment(year, make, model);
+    
+    if (classicCheck.isClassic && classicCheck.data) {
+      console.log(`[tires/page] CLASSIC VEHICLE: ${year} ${make} ${model} → ${classicCheck.data.platform?.code}`);
+      
+      const cardData = toClassicCardData(classicCheck.data);
+      
+      return (
+        <main className="bg-neutral-50">
+          {isPackageFlow ? (
+            <PackageJourneyBar
+              currentStep="tires"
+              vehicle={{ year, make, model }}
+            />
+          ) : null}
+          <div className="mx-auto max-w-screen-2xl px-4 py-8">
+            <ClassicFitmentCard data={cardData} productType="tires" />
+          </div>
+        </main>
+      );
+    }
   }
 
   // ═══════════════════════════════════════════════════════════════════════════

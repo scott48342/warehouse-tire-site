@@ -50,6 +50,13 @@ export {
   importClassicBatch,
 } from "./classicImport";
 
+// Server-side check (for page components)
+export {
+  checkClassicFitment,
+  toClassicCardData,
+  type ClassicFitmentCheck,
+} from "./checkClassicFitment";
+
 // Tire Upsize
 export {
   parseTireSize,

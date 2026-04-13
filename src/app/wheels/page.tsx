@@ -11,9 +11,10 @@ import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
+import { ClassicFitmentCard, type ClassicFitmentData } from "@/components/ClassicFitmentCard";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
-import { getClassicFitment } from "@/lib/classic-fitment/classicLookup";
+import { checkClassicFitment, toClassicCardData } from "@/lib/classic-fitment";
 import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diameterOptions";
 import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
 import { getIndexingDecision, buildPageIndexingData, getRobotsContent } from "@/lib/seo";
@@ -340,6 +341,11 @@ export default async function WheelsPage({
       effectiveConfig: effectiveRearWheelConfig,
     });
   }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC FITMENT - Check if user is in classic shopping mode
+  // ═══════════════════════════════════════════════════════════════════════════
+  const classicPlatformParam = safeString(Array.isArray(sp.classicPlatform) ? sp.classicPlatform[0] : sp.classicPlatform);
 
   // ═══════════════════════════════════════════════════════════════════════════
   // HOMEPAGE INTENT SYSTEM
@@ -1198,21 +1204,24 @@ export default async function WheelsPage({
   // FITMENT DIAMETER CHIPS - Classic vs Modern
   // ═══════════════════════════════════════════════════════════════════════════
   // Fetch classic fitment data to determine if this is a classic vehicle
+  // NOTE: Classic vehicles with classicPlatform param skip the gate above and 
+  // proceed to results, so we need to fetch the data here for filtering/display.
   let isClassicVehicle = false;
   let classicStockDiameter: number | null = null;
   let classicUpsizeRange: [number, number] = [15, 20];
 
-  if (hasVehicle) {
+  if (hasVehicle && classicPlatformParam) {
+    // Already in classic shopping mode - fetch data for filtering
     try {
-      const classicData = await getClassicFitment(Number(year), make, model);
-      if (classicData?.isClassicVehicle) {
+      const classicCheck = await checkClassicFitment(year, make, model);
+      if (classicCheck.isClassic && classicCheck.data) {
         isClassicVehicle = true;
-        classicStockDiameter = classicData.stockReference?.wheelDiameter ?? null;
-        const recRange = classicData.recommendedRange?.diameter;
+        classicStockDiameter = classicCheck.data.stockReference?.wheelDiameter ?? null;
+        const recRange = classicCheck.data.recommendedRange?.diameter;
         if (recRange) {
           classicUpsizeRange = [recRange.min ?? 15, Math.max(recRange.max ?? 18, 20)];
         }
-        console.log(`[wheels/page] 🏎️ CLASSIC VEHICLE: ${year} ${make} ${model}`);
+        console.log(`[wheels/page] 🏎️ CLASSIC SHOPPING MODE: ${year} ${make} ${model}`);
         console.log(`  Stock diameter: ${classicStockDiameter}"`);
         console.log(`  Upsize range: ${classicUpsizeRange[0]}" - ${classicUpsizeRange[1]}"`);
       }
@@ -1314,6 +1323,35 @@ export default async function WheelsPage({
         <VehicleEntryGate productType="wheels" packageFlow={isPackageFlow} />
       </main>
     );
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLASSIC FITMENT GATE - Platform-based fitment for 1990s classic vehicles
+  // Only activates when classic platform data EXISTS for this vehicle.
+  // Falls back to modern flow if no classic data (no dead ends).
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Only check for classic fitment if NOT already in classic shopping mode (has classicPlatform param)
+  // This prevents the card from showing repeatedly after clicking "Shop Wheels"
+  if (!classicPlatformParam && hasVehicle) {
+    const classicCheck = await checkClassicFitment(year, make, model);
+    
+    if (classicCheck.isClassic && classicCheck.data) {
+      console.log(`[wheels/page] CLASSIC VEHICLE: ${year} ${make} ${model} → ${classicCheck.data.platform?.code}`);
+      
+      const cardData = toClassicCardData(classicCheck.data);
+      
+      return (
+        <main className="bg-neutral-50">
+          <PackageJourneyBar
+            currentStep="wheels"
+            vehicle={{ year, make, model }}
+          />
+          <div className="mx-auto max-w-screen-2xl px-4 py-8">
+            <ClassicFitmentCard data={cardData} productType="wheels" />
+          </div>
+        </main>
+      );
+    }
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
