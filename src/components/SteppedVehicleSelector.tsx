@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
+import { getWheelSizeGateDecision } from "@/lib/tires/wheelSizeGateDecision";
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
@@ -223,12 +224,25 @@ export function SteppedVehicleSelector({
         };
       }>(`/api/vehicles/tire-sizes?${qs.toString()}`);
       
-      const needsSelection = data?.wheelDiameters?.needsSelection ?? false;
-      const available = data?.wheelDiameters?.available ?? [];
+      const apiNeedsSelection = data?.wheelDiameters?.needsSelection ?? false;
+      const apiDiameters = data?.wheelDiameters?.available ?? [];
       
-      if (needsSelection && available.length > 1) {
-        // Multiple wheel sizes - show wheelSize step
-        setWheelDiameters(available.sort((a, b) => a - b));
+      // Use confidence-aware gate decision instead of simple "multiple = ask"
+      // This prevents over-triggering on model-aggregated data
+      const gateDecision = getWheelSizeGateDecision({
+        year: parseInt(selection.year, 10),
+        make: selection.make,
+        model: selection.model,
+        trim: selection.trim,
+        modificationId: selection.modification,
+        apiDiameters,
+        apiNeedsSelection,
+      });
+      
+      if (gateDecision.show && gateDecision.options.length > 1) {
+        // HIGH CONFIDENCE: Show wheel size step
+        console.log(`[WheelSizeGate] SHOW step - reason: ${gateDecision.reason}, options: ${gateDecision.options.join('/')}`);
+        setWheelDiameters(gateDecision.options);
         setSelectedTrim(selection.trim && selection.modification 
           ? { value: selection.modification, label: selection.trim }
           : null
@@ -237,7 +251,10 @@ export function SteppedVehicleSelector({
         setWheelDiametersLoading(false);
         setStep("wheelSize");
       } else {
-        // Single wheel size or none - complete immediately
+        // SKIP: Low confidence or single size - complete immediately
+        if (gateDecision.reason !== 'single_size') {
+          console.log(`[WheelSizeGate] SKIP step - reason: ${gateDecision.reason}, confidence: ${gateDecision.confidence}`);
+        }
         setWheelDiametersChecked(true);
         setWheelDiametersLoading(false);
         onComplete(selection);

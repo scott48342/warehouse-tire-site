@@ -180,6 +180,99 @@ export const fitmentOverrides = pgTable(
 );
 
 // ============================================================================
+// vehicle_fitment_configurations - Exact OEM wheel+tire pairings per trim
+// ============================================================================
+// 
+// PURPOSE: Move from aggregated arrays (oemWheelSizes, oemTireSizes) toward
+// explicit configuration records that capture exact OEM wheel+tire pairings.
+//
+// EXAMPLE:
+//   Instead of: oemWheelSizes = [22x9, 24x10], oemTireSizes = [275/50R22, 285/40R24]
+//   We store:   config A = 22x9 + 275/50R22, config B = 24x10 + 285/40R24
+//
+// MIGRATION STRATEGY: Additive only. Legacy columns remain active.
+// This table is a shadow layer until confidence is high enough to rely on it.
+// ============================================================================
+
+export const vehicleFitmentConfigurations = pgTable(
+  "vehicle_fitment_configurations",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    
+    // Link to parent fitment record (nullable for direct lookups)
+    vehicleFitmentId: uuid("vehicle_fitment_id").references(() => vehicleFitments.id),
+    
+    // Denormalized vehicle identity (for direct lookups without join)
+    year: integer("year").notNull(),
+    makeKey: varchar("make_key", { length: 100 }).notNull(),  // Normalized lowercase
+    modelKey: varchar("model_key", { length: 100 }).notNull(), // Normalized lowercase
+    modificationId: varchar("modification_id", { length: 255 }),
+    displayTrim: varchar("display_trim", { length: 255 }),
+    
+    // Configuration identity
+    configurationKey: varchar("configuration_key", { length: 100 }).notNull(), // e.g., "22-standard", "24-premium"
+    configurationLabel: varchar("configuration_label", { length: 255 }),       // e.g., "22\" Standard", "24\" Premium Package"
+    
+    // Wheel specification
+    wheelDiameter: integer("wheel_diameter").notNull(),        // e.g., 22
+    wheelWidth: decimal("wheel_width", { precision: 4, scale: 1 }), // e.g., 9.0
+    wheelOffsetMm: decimal("wheel_offset_mm", { precision: 5, scale: 1 }), // e.g., 28.0
+    
+    // Tire specification
+    tireSize: varchar("tire_size", { length: 50 }).notNull(),  // e.g., "275/50R22"
+    
+    // Position (for staggered setups)
+    axlePosition: varchar("axle_position", { length: 10 }).notNull().default("square"), // "front", "rear", "square"
+    
+    // Configuration flags
+    isDefault: boolean("is_default").notNull().default(false), // True if this is the base/standard config
+    isOptional: boolean("is_optional").notNull().default(false), // True if this is an upgrade package
+    
+    // Source and confidence
+    source: varchar("source", { length: 50 }).notNull(),       // "manual", "import", "inferred"
+    sourceConfidence: varchar("source_confidence", { length: 20 }).notNull().default("low"), // "high", "medium", "low"
+    sourceNotes: text("source_notes"),
+    
+    // Metadata
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary lookup by fitment record
+    fitmentIdIdx: index("fitment_configs_fitment_id_idx").on(table.vehicleFitmentId),
+    
+    // Direct vehicle lookup (without join)
+    vehicleLookupIdx: index("fitment_configs_vehicle_lookup_idx").on(
+      table.year,
+      table.makeKey,
+      table.modelKey
+    ),
+    
+    // Wheel diameter lookup (for wheel-size gate decisions)
+    wheelDiaIdx: index("fitment_configs_wheel_dia_idx").on(
+      table.year,
+      table.makeKey,
+      table.modelKey,
+      table.wheelDiameter
+    ),
+    
+    // Dedupe: one config per vehicle + config key + axle position
+    uniqueConfigIdx: uniqueIndex("fitment_configs_unique_idx").on(
+      table.year,
+      table.makeKey,
+      table.modelKey,
+      table.modificationId,
+      table.configurationKey,
+      table.axlePosition
+    ),
+  })
+);
+
+// Type export for the new table
+export type VehicleFitmentConfiguration = typeof vehicleFitmentConfigurations.$inferSelect;
+export type NewVehicleFitmentConfiguration = typeof vehicleFitmentConfigurations.$inferInsert;
+
+// ============================================================================
 // fitment_import_jobs - Track batch imports
 // ============================================================================
 

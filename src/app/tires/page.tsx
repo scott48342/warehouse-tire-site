@@ -555,6 +555,16 @@ function selectRoleBasedPicks(
   const candidates = tires.filter(t => t.imageUrl && typeof t.cost === "number");
   if (candidates.length < 3) return []; // Need at least 3 candidates
   
+  // Calculate price percentiles for adaptive thresholds (works for any tire size)
+  const sortedPrices = candidates
+    .map(t => getDisplayPrice(t) || 0)
+    .filter(p => p > 0)
+    .sort((a, b) => a - b);
+  const p25 = sortedPrices[Math.floor(sortedPrices.length * 0.25)] || 0;
+  const p50 = sortedPrices[Math.floor(sortedPrices.length * 0.50)] || 0;
+  const p75 = sortedPrices[Math.floor(sortedPrices.length * 0.75)] || 0;
+  const pMax = sortedPrices[sortedPrices.length - 1] || 0;
+  
   const picks: RoleBasedPick[] = [];
   const usedSkus = new Set<string>();
   const usedBrands = new Set<string>();
@@ -595,9 +605,10 @@ function selectRoleBasedPicks(
       const brand = getBrand(t);
       const q = t.quantity || {};
       const stock = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
-      // Premium or mid-tier brand, reasonable price, in stock
+      // Premium or mid-tier brand, reasonable price (25th-90th percentile), in stock
+      // Using percentiles adapts to any tire size (24" tires cost more than 17")
       return (PREMIUM_BRANDS.includes(brand) || MID_TIER_BRANDS.includes(brand)) &&
-             price >= 80 && price <= 300 && stock >= 4;
+             price >= p25 && price <= pMax * 0.9 && stock >= 4;
     })
     .sort((a, b) => {
       // Prioritize: premium brand, then mid-tier, then by stock
@@ -657,8 +668,9 @@ function selectRoleBasedPicks(
       const price = getDisplayPrice(t) || 0;
       const q = t.quantity || {};
       const stock = (q.primary || 0) + (q.alternate || 0) + (q.national || 0);
-      // Budget-friendly but not bottom-barrel
-      return price >= 50 && price <= 150 && stock >= 4;
+      // Budget-friendly (bottom 60%) but not absolute cheapest (avoid low quality)
+      // Using percentiles adapts to any tire size
+      return price >= p25 * 0.8 && price <= p50 * 1.2 && stock >= 4;
     });
   
   // Calculate price range for normalization
