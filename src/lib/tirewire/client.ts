@@ -186,6 +186,7 @@ const DEFAULT_CONNECTIONS: TireWebConnection[] = [
   { provider: "tireweb_atd", connectionId: 488677, enabled: true },
   { provider: "tireweb_ntw", connectionId: 488546, enabled: true },
   { provider: "tireweb_usautoforce", connectionId: 488548, enabled: true },
+  { provider: "tireweb_km", connectionId: 490820, enabled: true }, // K&M via TireWeb (images!)
 ];
 
 export async function getEnabledConnections(): Promise<TireWebConnection[]> {

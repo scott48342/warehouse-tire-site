@@ -551,134 +551,18 @@ function findModelImage(
 }
 
 /**
- * Search K&M/Keystone tires by size and convert to TireResult format
+ * Search K&M/Keystone tires by size
+ * 
+ * DISABLED (2026-04-13): K&M is now queried through TireWeb (connection 490820)
+ * which provides better tire images via TireLibrary. The direct K&M API returned
+ * products without images. 
+ * 
+ * K&M products now come through searchTiresTireWeb() with source "tireweb:km".
  */
-async function searchTiresKM(size: string): Promise<TireResult[]> {
-  const apiKey = (
-    process.env.KM_API_KEY ||
-    process.env.KMTIRE_API_KEY ||
-    process.env.KM_TIRE_API_KEY ||
-    ""
-  ).trim();
-  
-  if (!apiKey) {
-    return [];
-  }
-  
-  // Convert size to K&M format (7-8 digit compact)
-  const tireSize = toKmSizeFormat(size);
-  if (!tireSize) {
-    console.warn("[tires/search] Could not convert size for K&M:", size);
-    return [];
-  }
-  
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<InventoryRequest>` +
-    `<Credentials><APIKey>${apiKey}</APIKey></Credentials>` +
-    `<Item>` +
-    `<TireSize>${tireSize}</TireSize>` +
-    `</Item>` +
-    `</InventoryRequest>`;
-  
-  try {
-    const res = await fetch("https://api.kmtire.com/v1/tiresizesearch", {
-      method: "POST",
-      headers: {
-        "content-type": "application/xml",
-        accept: "application/xml, text/xml, */*",
-      },
-      body: xml,
-      cache: "no-store",
-    });
-    
-    if (!res.ok) {
-      console.error("[tires/search] K&M API error:", res.status);
-      return [];
-    }
-    
-    const text = await res.text();
-    const parser = new XMLParser({
-      ignoreAttributes: false,
-      cdataPropName: "__cdata",
-    });
-    
-    const data = parser.parse(text) as any;
-    const resp = data?.InventoryResponse || data?.inventoryresponse || data;
-    const itemsRaw = resp?.Item;
-    const items = Array.isArray(itemsRaw) ? itemsRaw : itemsRaw ? [itemsRaw] : [];
-    
-    return items.map((it: any) => {
-      const qty = it?.Quantity || {};
-      const brand = pickKmField(it, ["BrandName", "VendorName", "Brand", "Vendor"]);
-      const desc = pickKmField(it, ["Description", "Desc"]);
-      const kmSize = it?.Size || tireSize;
-      const speedRating = pickKmField(it, ["SpeedRating", "Speed_Rating", "Speed"]);
-      const loadRange = pickKmField(it, ["LoadRange", "Load_Range", "LoadRangeCode"]);
-      const utqgTreadwear = pickKmField(it, ["UTQGTreadwear", "UTQG_Treadwear", "Treadwear"]);
-      const utqgTraction = pickKmField(it, ["UTQGTraction", "UTQG_Traction", "Traction"]);
-      const utqgTemperature = pickKmField(it, ["UTQGTemperature", "UTQG_Temperature", "Temperature"]);
-      
-      // Build UTQG string if components exist
-      let utqg: string | null = null;
-      if (utqgTreadwear || utqgTraction || utqgTemperature) {
-        utqg = [utqgTreadwear, utqgTraction, utqgTemperature].filter(Boolean).join(" ");
-      }
-      
-      // Extract rim diameter from size
-      const simpleSize = toSimpleSize(kmSize) || tireSize;
-      const rimDiameter = simpleSize.length >= 7 ? parseInt(simpleSize.slice(5), 10) : null;
-      
-      // Reconstruct display size from simple format
-      let displaySize = kmSize;
-      if (simpleSize && simpleSize.length === 7) {
-        const w = simpleSize.slice(0, 3);
-        const a = simpleSize.slice(3, 5);
-        const r = simpleSize.slice(5);
-        displaySize = `${w}/${a}R${r}`;
-      }
-      
-      const cost = it?.Cost != null ? Number(it.Cost) : null;
-      const qtyPrimary = qty?.Primary != null ? Number(qty.Primary) : 0;
-      const qtyAlternate = qty?.Alternate != null ? Number(qty.Alternate) : 0;
-      const qtyNational = qty?.National != null ? Number(qty.National) : 0;
-      
-      // Clean up K&M description - expand abbreviations and format nicely
-      const brandStr = brand ? String(brand).trim() : null;
-      const rawDesc = desc ? String(desc).trim() : displaySize;
-      const cleanDescription = expandKmDescription(rawDesc, brandStr);
-      const modelName = extractModelName(rawDesc);
-      
-      return {
-        partNumber: String(it?.PartNumber || ""),
-        mfgPartNumber: String(it?.MfgPartNumber || it?.PartNumber || ""),
-        brand: brandStr,
-        model: modelName,
-        description: cleanDescription,
-        cost: cost != null && Number.isFinite(cost) ? cost : null,
-        quantity: {
-          primary: qtyPrimary,
-          alternate: qtyAlternate,
-          national: qtyPrimary + qtyAlternate + qtyNational,
-        },
-        imageUrl: null, // K&M doesn't return images in size search
-        size: displaySize,
-        simpleSize,
-        rimDiameter,
-        source: "km",
-        badges: {
-          terrain: null,
-          construction: loadRange || null,
-          warrantyMiles: null,
-          loadIndex: null,
-          speedRating: speedRating ? String(speedRating).trim() : null,
-          utqg,
-        },
-      } as TireResult;
-    });
-  } catch (err) {
-    console.error("[tires/search] K&M error:", err);
-    return [];
-  }
+async function searchTiresKM(_size: string): Promise<TireResult[]> {
+  // K&M is now queried via TireWeb (tireweb_km connection) for better images
+  // Direct API disabled - return empty to avoid duplicates
+  return [];
 }
 
 function pickKmField(it: any, keys: string[]): string | null {
