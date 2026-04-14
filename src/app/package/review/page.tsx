@@ -325,18 +325,47 @@ function ActionButtons({
   onSchedule, 
   hasVehicle,
   isComplete,
+  hasWheels,
+  hasTires,
 }: { 
   onSchedule: () => void;
   hasVehicle: boolean;
   isComplete: boolean;
+  hasWheels?: boolean;
+  hasTires?: boolean;
 }) {
+  // Allow checkout for any non-empty cart (wheels-only, tires-only, or full package)
+  const canCheckout = hasWheels || hasTires;
+  const isWheelsOnly = hasWheels && !hasTires;
+  
   return (
     <div className="space-y-3">
-      {/* Primary CTA: Proceed to Checkout */}
+      {/* Soft warning for wheels-only purchase (not blocking) */}
+      {isWheelsOnly && (
+        <div className="rounded-xl bg-blue-50 border border-blue-100 p-4">
+          <div className="flex items-start gap-3">
+            <span className="text-xl">💡</span>
+            <div>
+              <p className="font-semibold text-blue-900">Purchasing wheels only</p>
+              <p className="text-sm text-blue-700 mt-1">
+                Make sure you have compatible tires or consider adding a matching set.
+              </p>
+              <Link 
+                href="/tires" 
+                className="inline-block mt-2 text-sm font-semibold text-blue-600 hover:underline"
+              >
+                Add Matching Tires →
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Primary CTA: Proceed to Checkout - ALWAYS enabled if cart has items */}
       <Link
         href="/checkout"
         className={`flex h-14 w-full items-center justify-center gap-2 rounded-xl px-6 text-base font-extrabold transition
-          ${isComplete 
+          ${canCheckout 
             ? "bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-600/25" 
             : "bg-neutral-200 text-neutral-500 cursor-not-allowed pointer-events-none"
           }
@@ -346,9 +375,9 @@ function ActionButtons({
         <span>Proceed to Checkout</span>
       </Link>
 
-      {!isComplete && (
+      {!canCheckout && (
         <p className="text-center text-sm text-amber-600 font-medium">
-          Add wheels and tires to complete your package
+          Add wheels or tires to your cart to checkout
         </p>
       )}
     </div>
@@ -536,8 +565,22 @@ function IncompletePackage({
               total={wheelSubtotal + accessorySubtotal}
             />
             
+            {/* CHECKOUT OPTION - Always available, not blocked */}
+            <div className="rounded-xl border border-neutral-200 bg-white p-4 space-y-3">
+              <Link
+                href="/checkout"
+                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-600 px-6 text-sm font-extrabold text-white hover:bg-green-700 shadow-lg shadow-green-600/25 transition"
+              >
+                <span className="text-lg">🛒</span>
+                <span>Checkout Wheels Only</span>
+              </Link>
+              <p className="text-center text-xs text-neutral-500">
+                Prefer to buy tires separately? You can checkout now.
+              </p>
+            </div>
+            
             <div className="text-center text-sm text-neutral-500">
-              Add tires to complete your package and unlock scheduling
+              Or add matching tires for a complete package
             </div>
           </div>
         </div>
@@ -718,6 +761,8 @@ export default function ReviewPackagePage() {
               onSchedule={handleScheduleInstall}
               hasVehicle={!!vehicle}
               isComplete={isComplete}
+              hasWheels={hasWheels()}
+              hasTires={hasTires()}
             />
 
             <TrustSection />
