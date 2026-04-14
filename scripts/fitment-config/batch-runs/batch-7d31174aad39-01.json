@@ -1,0 +1,2030 @@
+{
+  "batchId": "535ad0a8",
+  "batchNumber": 1,
+  "startedAt": "2026-04-14T14:24:43.923Z",
+  "completedAt": "2026-04-14T14:31:54.974Z",
+  "durationMs": 431051,
+  "totalTargeted": 200,
+  "totalResearched": 200,
+  "totalValidated": 178,
+  "totalHighConfidence": 31,
+  "totalPromoted": 272,
+  "totalConflicts": 0,
+  "totalSkipped": 0,
+  "totalErrors": 22,
+  "researchSuccessRate": 0.89,
+  "conflictRate": 0,
+  "promotionRate": 1,
+  "passedQualityGates": true,
+  "promotedRecords": [
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        "A-Spec Package",
+        "Advance Package",
+        "Base Model",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        "A-Spec Package",
+        "Advance Package",
+        "Base Model",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        "A-Spec Package",
+        "Advance Package",
+        "Base Model",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        "A-Spec Package",
+        "Advance Package",
+        "Base Model",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "mdx",
+      "trims": [
+        "A-Spec Package",
+        "Advance Package",
+        "Base Model",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "BASE AWD",
+        "BASE FWD",
+        "Technology Package AWD",
+        "Technology Package FWD"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "AWD",
+        "FWD"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "AWD",
+        "FWD"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "AWD",
+        "FWD"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "rdx",
+      "trims": [
+        "A-Spec Package",
+        "FWD",
+        "SH-AWD"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "4cyl FWD"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "4cyl FWD"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "4cyl FWD"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "4cyl FWD",
+        "A-Spec"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "4cyl FWD",
+        "A-Spec"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "4cyl FWD",
+        "A-Spec"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "A-Spec",
+        "Advance Package",
+        "Standard",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "A-Spec",
+        "Advance Package",
+        "Standard",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "A-Spec",
+        "Advance Package",
+        "Standard",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2024,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "A-Spec",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2025,
+      "make": "acura",
+      "model": "tlx",
+      "trims": [
+        "A-Spec",
+        "Technology Package",
+        "Type-S"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2015,
+      "make": "alfa-romeo",
+      "model": "4c",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "alfa-romeo",
+      "model": "4c",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "alfa-romeo",
+      "model": "4c",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "alfa-romeo",
+      "model": "4c",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "alfa-romeo",
+      "model": "4c",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "alfa-romeo",
+      "model": "4c",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Giulia Base Model"
+      ],
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Giulia Base Model"
+      ],
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Giulia Base Model"
+      ],
+      "tireSize": "225/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Giulia Performance Brakes"
+      ],
+      "tireSize": "225/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2022,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Giulia Competizione"
+      ],
+      "tireSize": "225/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2025,
+      "make": "alfa-romeo",
+      "model": "giulia",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Stelvio Performance Brakes"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Stelvio Estrema"
+      ],
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21
+    },
+    {
+      "year": 2024,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Stelvio Competizione"
+      ],
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21
+    },
+    {
+      "year": 2025,
+      "make": "alfa-romeo",
+      "model": "stelvio",
+      "trims": [
+        "Stelvio Base Model"
+      ],
+      "tireSize": "255/40R21",
+      "wheelDiameter": 21
+    },
+    {
+      "year": 2017,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "aston-martin",
+      "model": "db11",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "aston-martin",
+      "model": "dbx",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "aston-martin",
+      "model": "vantage",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Sedan S Line quattro Premium",
+        "Sedan S Line quattro Premium Plus"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a3",
+      "trims": [
+        "Premium"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "2.0T FWD Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "2.0T FWD Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "2.0T FWD Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "2.0T FWD Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Allroad Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Allroad Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Allroad Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Allroad Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a4",
+      "trims": [
+        "Allroad Premium",
+        "Allroad Premium Plus",
+        "Allroad Prestige",
+        "quattro Premium"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "2.0T FWD"
+      ],
+      "tireSize": "255/35R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a6",
+      "trims": [
+        "Allroad"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "L"
+      ],
+      "tireSize": "265/40R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "L"
+      ],
+      "tireSize": "265/40R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "a8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "e-tron",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "2.0T FWD Premium Plus",
+        "2.0T quattro Premium Plus"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "2.0T FWD Premium",
+        "2.0T FWD Premium Plus",
+        "2.0T quattro Premium",
+        "2.0T quattro Premium Plus"
+      ],
+      "tireSize": "235/50R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q3",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "2.0T Hybrid",
+        "2.0T Premium"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "q5",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "3.0 TDI Premium"
+      ],
+      "tireSize": "265/50R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "q7",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "q8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "q8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "q8",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Premium Plus"
+      ],
+      "tireSize": "255/35R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2016,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "s4",
+      "trims": [
+        "Premium",
+        "Premium Plus",
+        "Prestige"
+      ],
+      "tireSize": "255/35R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2016,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Hybrid"
+      ],
+      "tireSize": "285/40R22",
+      "wheelDiameter": 22
+    },
+    {
+      "year": 2022,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Hybrid",
+        "Speed"
+      ],
+      "tireSize": "285/40R22",
+      "wheelDiameter": 22
+    },
+    {
+      "year": 2023,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Azure",
+        "Base Model",
+        "Odyssean Edition",
+        "S",
+        "Speed"
+      ],
+      "tireSize": "285/40R22",
+      "wheelDiameter": 22
+    },
+    {
+      "year": 2024,
+      "make": "bentley",
+      "model": "bentayga",
+      "trims": [
+        "Azure",
+        "S"
+      ],
+      "tireSize": "285/40R22",
+      "wheelDiameter": 22
+    }
+  ],
+  "conflictRecords": [],
+  "errorRecords": [
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "integra",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "mdx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2026,
+      "make": "acura",
+      "model": "tlx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2016,
+      "make": "aston-martin",
+      "model": "db11",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2024,
+      "make": "aston-martin",
+      "model": "db11",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2027,
+      "make": "aston-martin",
+      "model": "dbx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2027,
+      "make": "aston-martin",
+      "model": "vantage",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "a3",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "a4",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "q8",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2018,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2019,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2020,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2021,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2022,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2023,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2024,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2025,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "rs-models",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2017,
+      "make": "audi",
+      "model": "s4",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2026,
+      "make": "audi",
+      "model": "s4",
+      "error": "HTTP 404"
+    }
+  ]
+}

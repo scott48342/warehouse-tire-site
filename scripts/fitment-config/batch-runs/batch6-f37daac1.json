@@ -1,0 +1,1068 @@
+{
+  "batchId": "f37daac1",
+  "batchNumber": 6,
+  "startedAt": "2026-04-14T15:48:40.748Z",
+  "totalTargeted": 100,
+  "totalResearched": 69,
+  "totalValidated": 69,
+  "totalHighConfidence": 61,
+  "totalPromoted": 334,
+  "totalConflicts": 3,
+  "totalSkipped": 0,
+  "totalErrors": 1,
+  "totalAlreadyCovered": 30,
+  "yearGuardSkips": 0,
+  "researchSuccessRate": 0.9857142857142858,
+  "conflictRate": 0.043478260869565216,
+  "promotionRate": 0.9565217391304348,
+  "configsPerVehicle": 5.0606060606060606,
+  "passedQualityGates": true,
+  "promotedRecords": [
+    {
+      "year": 2018,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "Denali",
+        "SL",
+        "SLE",
+        "SLT"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2019,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "Denali",
+        "SL",
+        "SLE",
+        "SLT"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2020,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "Denali",
+        "SL"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2021,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "Denali",
+        "Elevation Edition"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2022,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "AT4",
+        "Denali"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2023,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "AT4",
+        "Denali"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2024,
+      "make": "gmc",
+      "model": "terrain",
+      "trims": [
+        "AT4",
+        "Denali"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Terrain"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "3.6R",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring",
+        "3.6R Limited",
+        "3.6R Touring"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring",
+        "3.6R Limited",
+        "3.6R Touring"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring",
+        "3.6R Limited",
+        "3.6R Touring"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Onyx Edition XT",
+        "Premium",
+        "Touring",
+        "Touring XT"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Onyx Edition XT",
+        "Premium",
+        "Touring",
+        "Touring XT"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Onyx Edition",
+        "Onyx Edition XT",
+        "Premium",
+        "Touring",
+        "Touring XT"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Onyx Edition",
+        "Onyx Edition XT",
+        "Premium",
+        "Touring",
+        "Touring XT"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "outback",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Onyx Edition",
+        "Onyx Edition XT",
+        "Premium",
+        "Touring",
+        "Touring XT"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Outback"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "2.0XT Premium",
+        "2.0XT Touring",
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "2.0XT Premium",
+        "2.0XT Touring",
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "2.0XT Premium",
+        "2.0XT Touring",
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "2.0XT Premium",
+        "2.0XT Touring",
+        "2.5i",
+        "2.5i Black Edition",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Touring"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "forester",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Forester"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "2.0i",
+        "2.0i Limited",
+        "2.0i Premium",
+        "Hybrid",
+        "Hybrid Touring"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "2.0i",
+        "2.0i Limited",
+        "2.0i Premium"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "2.0i",
+        "2.0i Limited",
+        "2.0i Premium"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "2.0i",
+        "2.0i Limited",
+        "2.0i Premium",
+        "Hybrid"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "2.0i",
+        "2.0i Limited",
+        "2.0i Premium",
+        "Hybrid"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "Base",
+        "Hybrid",
+        "Limited",
+        "Premium",
+        "Sport"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "Base",
+        "Hybrid",
+        "Limited",
+        "Premium",
+        "Sport"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "Base",
+        "Hybrid",
+        "Limited",
+        "Premium",
+        "Sport"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "crosstrek",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Crosstrek"
+    },
+    {
+      "year": 2015,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2016,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2017,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Sport",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2018,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Sport",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2019,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "2.5i",
+        "2.5i Limited",
+        "2.5i Premium",
+        "2.5i Sport",
+        "3.6R Limited"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2020,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Premium",
+        "Sport",
+        "Touring XT"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2021,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Premium",
+        "Sport",
+        "Touring XT"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2022,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "Base",
+        "Limited",
+        "Limited XT",
+        "Premium",
+        "Sport",
+        "Touring XT"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2023,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring XT"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2024,
+      "make": "subaru",
+      "model": "legacy",
+      "trims": [
+        "Base",
+        "Limited",
+        "Premium",
+        "Sport",
+        "Touring XT"
+      ],
+      "tireSize": "225/55R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Legacy"
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Grand Touring AWD",
+        "Grand Touring FWD",
+        "Sport AWD",
+        "Sport FWD",
+        "Touring AWD",
+        "Touring FWD"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Grand Touring",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Grand Touring",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Grand Touring",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "Carbon Edition",
+        "Carbon Edition Turbo",
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "2.5 S",
+        "2.5 S Carbon Edition",
+        "2.5 S Preferred",
+        "2.5 S Premium",
+        "2.5 S Premium Plus",
+        "2.5 S Select",
+        "2.5 Turbo"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "2.5 S",
+        "2.5 S Carbon Edition",
+        "2.5 S Preferred",
+        "2.5 S Premium",
+        "2.5 S Premium Plus",
+        "2.5 S Select",
+        "2.5 Turbo"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "cx-5",
+      "trims": [
+        "2.5 S Carbon Edition",
+        "2.5 S Preferred",
+        "2.5 S Premium",
+        "2.5 S Premium Plus",
+        "2.5 S Select",
+        "2.5 Turbo"
+      ],
+      "tireSize": "225/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "CX-5"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Carbon Edition",
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Carbon Edition",
+        "Grand Touring",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "cx-9",
+      "trims": [
+        "Carbon Edition",
+        "Grand Touring",
+        "Signature",
+        "Touring",
+        "Touring Plus"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "CX-9"
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "4-Door i Sport",
+        "4-Door i SV",
+        "4-Door i Touring",
+        "4-Door s Grand Touring",
+        "4-Door s Touring",
+        "5-Door i Grand Touring",
+        "5-Door i Sport",
+        "5-Door i Touring",
+        "5-Door s Grand Touring",
+        "5-Door s Touring"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "4-Door i Sport",
+        "4-Door i SV",
+        "4-Door i Touring",
+        "4-Door s Grand Touring",
+        "4-Door s Touring",
+        "5-Door i Grand Touring",
+        "5-Door i Sport",
+        "5-Door i Touring",
+        "5-Door s Grand Touring",
+        "5-Door s Touring"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Mazda3"
+    }
+  ],
+  "conflictRecords": [
+    {
+      "year": 2015,
+      "make": "gmc",
+      "model": "terrain",
+      "conflict": "Base: multiple wheel sizes (18, 19)"
+    },
+    {
+      "year": 2016,
+      "make": "gmc",
+      "model": "terrain",
+      "conflict": "Base: multiple wheel sizes (18, 19)"
+    },
+    {
+      "year": 2017,
+      "make": "gmc",
+      "model": "terrain",
+      "conflict": "Base: multiple wheel sizes (18, 19)"
+    }
+  ],
+  "errorRecords": [
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "cx-9",
+      "error": "HTTP 404 (tried: CX-9, CX9)"
+    }
+  ],
+  "brandPerformance": {
+    "ram": {
+      "attempted": 20,
+      "success": 0,
+      "configs": 0
+    },
+    "gmc": {
+      "attempted": 20,
+      "success": 10,
+      "configs": 18
+    },
+    "subaru": {
+      "attempted": 39,
+      "success": 39,
+      "configs": 209
+    },
+    "mazda": {
+      "attempted": 21,
+      "success": 20,
+      "configs": 107
+    }
+  },
+  "completedAt": "2026-04-14T15:52:03.887Z",
+  "durationMs": 203139
+}

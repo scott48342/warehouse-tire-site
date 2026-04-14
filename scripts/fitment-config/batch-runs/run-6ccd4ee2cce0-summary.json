@@ -1,0 +1,115 @@
+{
+  "runId": "6ccd4ee2cce0",
+  "startedAt": "2026-04-14T14:01:04.783Z",
+  "completedAt": "2026-04-14T14:01:26.417Z",
+  "totalBatches": 1,
+  "completedBatches": 1,
+  "thresholds": {
+    "BATCH_SIZE": 200,
+    "MAX_BATCHES": 10,
+    "CONFLICT_THRESHOLD": 0.15,
+    "PROMOTION_THRESHOLD": 0.4,
+    "MIN_RESEARCH_SUCCESS": 0.7,
+    "RESEARCH_DELAY_MS": 1500,
+    "MAX_RESEARCH_ERRORS": 10,
+    "OUTPUT_DIR": "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\fitment-config\\batch-runs"
+  },
+  "totals": {
+    "targeted": 10,
+    "researched": 10,
+    "validated": 9,
+    "highConfidence": 9,
+    "promoted": 0,
+    "conflicts": 9,
+    "skipped": 0,
+    "errors": 1
+  },
+  "batches": [
+    {
+      "batchId": "83e32173",
+      "batchNumber": 1,
+      "startedAt": "2026-04-14T14:01:05.139Z",
+      "completedAt": "2026-04-14T14:01:26.408Z",
+      "durationMs": 21269,
+      "totalTargeted": 10,
+      "totalResearched": 10,
+      "totalValidated": 9,
+      "totalHighConfidence": 9,
+      "totalPromoted": 0,
+      "totalConflicts": 9,
+      "totalSkipped": 0,
+      "totalErrors": 1,
+      "researchSuccessRate": 0.9,
+      "conflictRate": 1,
+      "promotionRate": 0,
+      "passedQualityGates": false,
+      "promotedRecords": [],
+      "conflictRecords": [
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "ilx",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "integra",
+          "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+        }
+      ],
+      "errorRecords": [
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "integra",
+          "error": "HTTP 404"
+        }
+      ],
+      "gateFailureReason": "Promotion rate 0.0% below threshold 40%"
+    }
+  ],
+  "stoppedReason": "Promotion rate 0.0% below threshold 40%"
+}

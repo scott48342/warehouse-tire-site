@@ -1,0 +1,350 @@
+{
+  "batchId": "3695e70b",
+  "batchNumber": 5,
+  "startedAt": "2026-04-14T15:33:51.048Z",
+  "completedAt": "2026-04-14T15:34:53.768Z",
+  "durationMs": 62720,
+  "totalTargeted": 50,
+  "totalResearched": 30,
+  "totalValidated": 25,
+  "totalHighConfidence": 14,
+  "totalPromoted": 63,
+  "totalConflicts": 1,
+  "totalSkipped": 2,
+  "totalErrors": 3,
+  "yearGuardSkips": 20,
+  "researchSuccessRate": 0.8333333333333334,
+  "conflictRate": 0.04,
+  "promotionRate": 0.96,
+  "passedQualityGates": true,
+  "promotedRecords": [
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "1500 2wd Crew Cab",
+        "3500 HD 4wd Dual Rear Wheels"
+      ],
+      "tireSize": "235/80R17",
+      "aliasUsed": "Silverado"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "1500 2wd Crew Cab",
+        "3500 HD 4wd Dually"
+      ],
+      "tireSize": "235/80R17",
+      "aliasUsed": "Silverado"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "1500 2wd Crew Cab",
+        "3500 HD 2wd Dually",
+        "3500 HD 4wd",
+        "3500 HD 4wd Dually"
+      ],
+      "tireSize": "265/70R18",
+      "aliasUsed": "Silverado"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "trims": [
+        "1500 2wd Crew Cab",
+        "3500 HD 2wd Dually",
+        "3500 HD 4wd",
+        "3500 HD 4wd Duallly"
+      ],
+      "tireSize": "265/70R18",
+      "aliasUsed": "Silverado"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "trims": [
+        "2wd Regular Cab",
+        "2wd SuperCab",
+        "4wd Heavy-Duty SuperCrew"
+      ],
+      "tireSize": "245/70R17",
+      "aliasUsed": "F150"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "trims": [
+        "2wd Regular Cab",
+        "2wd SuperCab",
+        "4wd Heavy-Duty SuperCrew"
+      ],
+      "tireSize": "245/70R17",
+      "aliasUsed": "F150"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "trims": [
+        "2wd Regular Cab",
+        "2wd SuperCab",
+        "4wd Heavy-Duty SuperCrew",
+        "4wd Regular Cab"
+      ],
+      "tireSize": "245/70R17",
+      "aliasUsed": "F150"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "EcoBoost",
+        "GT"
+      ],
+      "tireSize": "255/40R19",
+      "aliasUsed": "Mustang"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "EcoBoost",
+        "GT"
+      ],
+      "tireSize": "255/40R19",
+      "aliasUsed": "Mustang"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "GT"
+      ],
+      "tireSize": "255/40R19",
+      "aliasUsed": "Mustang"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "EcoBoost",
+        "EcoBoost"
+      ],
+      "tireSize": "255/40R19",
+      "aliasUsed": "Mustang"
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "EcoBoost"
+      ],
+      "tireSize": "255/40R19",
+      "aliasUsed": "Mustang"
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "EcoBoost"
+      ],
+      "tireSize": "255/40R19",
+      "aliasUsed": "Mustang"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "2WD Access Cab"
+      ],
+      "tireSize": "265/70R16",
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "CrewMax 2wd",
+        "Regular Cab 4wd"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "2wd CrewMax",
+        "4wd CrewMax"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "2WD CrewMax",
+        "4WD CrewMax",
+        "TRD Pro"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "SR",
+        "SR5",
+        "TRD Pro",
+        "TRD Sport Package"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "SR",
+        "SR5",
+        "TRD Pro",
+        "TRD Sport Package"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "SR",
+        "SR5",
+        "TRD Pro",
+        "TRD Sport Package"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "SR",
+        "SR5",
+        "TRD Pro",
+        "TRD Sport Package"
+      ],
+      "tireSize": "255/70R18",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R20",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R20",
+      "aliasUsed": "Tundra"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tundra",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R20",
+      "aliasUsed": "Tundra"
+    }
+  ],
+  "conflictRecords": [
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "civic",
+      "conflict": "Type R: multiple wheel sizes (19, 20)"
+    }
+  ],
+  "errorRecords": [
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "maxima",
+      "error": "HTTP 404 (tried: Maxima)"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "maxima",
+      "error": "HTTP 404 (tried: Maxima)"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "pathfinder",
+      "error": "HTTP 404 (tried: Pathfinder)"
+    }
+  ],
+  "stats": {
+    "yearGuardSkips": 20,
+    "aliasAttempts": 30,
+    "aliasSuccesses": {
+      "silverado-1500 → Silverado": 4,
+      "f-150 → F150": 3,
+      "mustang → Mustang": 6,
+      "civic → Civic": 1,
+      "forte → Forte": 2,
+      "tacoma → Tacoma": 1,
+      "tundra → Tundra": 10
+    },
+    "falseAliasMatches": 0,
+    "mustangAttempts": 6,
+    "mustangSuccesses": 6,
+    "f150Attempts": 3,
+    "f150Successes": 3,
+    "chevyAttempts": 4,
+    "chevySuccesses": 4
+  }
+}

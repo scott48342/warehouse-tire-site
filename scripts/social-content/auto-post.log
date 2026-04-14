@@ -505,3 +505,132 @@ Starting at $366
 
 ✨ Done!
 [Mon 04/13/2026 18:00:23.43] Auto-post complete 
+[Tue 04/14/2026  9:00:03.96] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:17352) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Rotiform R134 FLG
+  Downloading image for Rotiform R134 FLG...
+  ✅ Generated: r134_flg_1776171604673
+  📝 Caption preview: Weekend project? ✅
+
+Rotiform R134 FLG
+📐 18x8.5
+🔩 5X112
+↔️ 45mm offset
+✨ FLG 18...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - r134_flg_1776171604673.png
+  - r134_flg_1776171604673.json
+
+📱 Facebook/Instagram Poster
+
+Selected: r134_flg_1776171604673
+
+--- Content Preview ---
+Wheel: Rotiform R134 FLG
+Price: $414
+Image: r134_flg_1776171604673.png
+
+Caption:
+Weekend project? ✅
+
+Rotiform R134 FLG
+📐 18x8.5
+🔩 5X112
+↔️ 45mm offset
+✨ FLG 18X8.5 5X112 66.56 BD 45MM
+
+Only $414/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/R1341885F8+45
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #carsofinstagram #carlife #dailydriver #rotiform #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1576788604449266
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:8312) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Black Rhino Hard Alloys RAPID
+  Downloading image for Black Rhino Hard Alloys RAPID...
+  ✅ Generated: rapid_1776171618137
+  📝 Caption preview: 🔥 Black Rhino Hard Alloys RAPID - Now in stock!
+
+📐 17x8.5
+🔩 5X150
+↔️ 10mm off...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - rapid_1776171618137.png
+  - rapid_1776171618137.json
+
+📱 Facebook/Instagram Poster
+
+Selected: rapid_1776171618137
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys RAPID
+Price: $400
+Image: rapid_1776171618137.png
+
+Caption:
+🔥 Black Rhino Hard Alloys RAPID - Now in stock!
+
+📐 17x8.5
+🔩 5X150
+↔️ 10mm offset
+✨ RAPID 17X8.5 5X150 110 +10 M-BRNZ
+
+💰 Starting at $400/wheel
+
+🛒 Shop now: https://shop.warehousetiredirect.com/wheels/1785RPD105150Z10A
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1722797312399599
+
+✨ Done!
+[Tue 04/14/2026  9:00:25.83] Auto-post complete 

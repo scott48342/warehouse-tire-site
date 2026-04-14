@@ -1,0 +1,1611 @@
+{
+  "batchId": "f2055a75",
+  "batchNumber": 7,
+  "startedAt": "2026-04-14T15:55:36.751Z",
+  "totalTargeted": 112,
+  "totalResearched": 109,
+  "totalValidated": 109,
+  "totalHighConfidence": 79,
+  "totalPromoted": 465,
+  "totalConflicts": 0,
+  "totalSkipped": 0,
+  "totalErrors": 1,
+  "totalAlreadyCovered": 2,
+  "yearGuardSkips": 0,
+  "researchSuccessRate": 0.990909090909091,
+  "conflictRate": 0,
+  "promotionRate": 1,
+  "configsPerVehicle": 4.26605504587156,
+  "passedQualityGates": true,
+  "earlyStopped": false,
+  "promotedRecords": [
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "4-Door Grand Touring",
+        "4-Door Sport",
+        "4-Door Touring",
+        "5-Door Grand Touring",
+        "5-Door Sport",
+        "5-Door Touring",
+        "5-Door Touring 2.5"
+      ],
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "4-Door Grand Touring",
+        "4-Door Sport",
+        "4-Door Touring",
+        "5-Door Grand Touring",
+        "5-Door Sport",
+        "5-Door Touring"
+      ],
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "Hatchback",
+        "Hatchback Preferred",
+        "Hatchback Premium",
+        "Sedan",
+        "Sedan Preferred",
+        "Sedan Premium",
+        "Sedan Select"
+      ],
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "Hatchback",
+        "Hatchback Preferred",
+        "Hatchback Premium",
+        "Sedan",
+        "Sedan Preferred",
+        "Sedan Premium",
+        "Sedan Select"
+      ],
+      "tireSize": "215/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "Hatchback 2.5 S",
+        "Hatchback 2.5 Turbo",
+        "Hatchback Preferred",
+        "Hatchback Premium",
+        "Hatchback Select",
+        "Sedan",
+        "Sedan 2.5 S",
+        "Sedan 2.5 Turbo",
+        "Sedan Preferred",
+        "Sedan Premium",
+        "Sedan Select"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2022,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "Hatchback 2.5 S",
+        "Hatchback 2.5 S Carbon Edition",
+        "Hatchback 2.5 S Preferred",
+        "Hatchback 2.5 S Premium",
+        "Hatchback 2.5 S Select",
+        "Hatchback 2.5 Turbo",
+        "Sedan 2.5 S",
+        "Sedan 2.5 S Carbon Edition",
+        "Sedan 2.5 S Preferred",
+        "Sedan 2.5 S Premium",
+        "Sedan 2.5 S Select",
+        "Sedan 2.5 Turbo"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2023,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "Hatchback 2.5 S",
+        "Hatchback 2.5 S Carbon Edition",
+        "Hatchback 2.5 S Preferred",
+        "Hatchback 2.5 S Premium",
+        "Hatchback 2.5 S Select",
+        "Hatchback 2.5 Turbo",
+        "Sedan 2.5 S",
+        "Sedan 2.5 S Carbon Edition",
+        "Sedan 2.5 S Preferred",
+        "Sedan 2.5 S Premium",
+        "Sedan 2.5 S Select",
+        "Sedan 2.5 Turbo"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2024,
+      "make": "mazda",
+      "model": "mazda3",
+      "trims": [
+        "Hatchback 2.5 S",
+        "Hatchback 2.5 S Carbon Edition",
+        "Hatchback 2.5 S Preferred",
+        "Hatchback 2.5 S Premium",
+        "Hatchback 2.5 S Select Sport",
+        "Hatchback 2.5 Turbo",
+        "Sedan 2.5 S",
+        "Sedan 2.5 S Carbon Edition",
+        "Sedan 2.5 S Preferred",
+        "Sedan 2.5 S Select Sport",
+        "Sedan 2.5 Turbo"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Mazda3"
+    },
+    {
+      "year": 2015,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Grand Touring",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2016,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Grand Touring",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2017,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Grand Touring",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2018,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2019,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2020,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2021,
+      "make": "mazda",
+      "model": "mazda6",
+      "trims": [
+        "Carbon Edition",
+        "Grand Touring",
+        "Grand Touring Reserve",
+        "Signature",
+        "Sport",
+        "Touring"
+      ],
+      "tireSize": "225/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Mazda6"
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Sahara"
+      ],
+      "tireSize": "255/70R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "75th Anniversary",
+        "Black Bear",
+        "Sahara",
+        "Sport",
+        "Willys Wheeler"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Sahara",
+        "Sport"
+      ],
+      "tireSize": "255/70R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Sport",
+        "Sport S"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Sport",
+        "Sport S"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Black and Tan",
+        "Freedom",
+        "Sport",
+        "Sport S",
+        "Willys"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "80th Anniversary Edition",
+        "Freedom",
+        "Islander",
+        "Sport",
+        "Sport S",
+        "Willys",
+        "Willys Sport"
+      ],
+      "tireSize": "255/70R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Sport",
+        "Sport S",
+        "Willys",
+        "Willys Sport"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Freedom",
+        "Sport",
+        "Sport S",
+        "Willys",
+        "Willys Sport"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "wrangler",
+      "trims": [
+        "Sport",
+        "Sport S",
+        "Willys",
+        "Xtreme Tire Package"
+      ],
+      "tireSize": "245/75R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Wrangler"
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Laredo"
+      ],
+      "tireSize": "295/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee 75th Anniversary",
+        "Cherokee Laredo"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Laredo",
+        "Cherokee Limited"
+      ],
+      "tireSize": "245/70R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Altitude",
+        "Cherokee Laredo",
+        "Cherokee Laredo E",
+        "Cherokee Sterling Edition",
+        "Cherokee Upland"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Altitude",
+        "Cherokee Laredo",
+        "Cherokee Laredo E",
+        "Cherokee Overland",
+        "Cherokee Upland"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Altitude",
+        "Cherokee Laredo",
+        "Cherokee Laredo E",
+        "Cherokee Overland",
+        "Cherokee Upland"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee 80th Anniversary Edition",
+        "Cherokee Freedom",
+        "Cherokee Laredo E",
+        "Cherokee Laredo X",
+        "Cherokee Overland"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Altitude",
+        "Cherokee Laredo"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Altitude",
+        "Cherokee Laredo"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "grand-cherokee",
+      "trims": [
+        "Cherokee Altitude"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Grand-Cherokee"
+    },
+    {
+      "year": 2015,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "4X4 Latitude",
+        "4X4 Limited",
+        "4X4 Sport",
+        "FWD Latitude",
+        "FWD Limited",
+        "FWD Sport"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2016,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "4X4 Altitude",
+        "4X4 Latitude",
+        "4X4 Limited",
+        "4X4 Sport",
+        "FWD Altitude",
+        "FWD Latitude",
+        "FWD Limited",
+        "FWD Sport"
+      ],
+      "tireSize": "225/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "4X4 75th Anniversary",
+        "4X4 Latitude",
+        "4X4 Limited",
+        "4X4 Overland",
+        "4X4 Sport",
+        "4X4 Sport Altitude",
+        "FWD 75th Anniversary",
+        "FWD Latitude",
+        "FWD Limited",
+        "FWD Overland",
+        "FWD Sport",
+        "FWD Sport Altitude"
+      ],
+      "tireSize": "225/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "4X4 Latitude",
+        "4X4 Limited",
+        "4X4 Overland",
+        "FWD Latitude",
+        "FWD Limited",
+        "FWD Overland"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "Altitude 4X4",
+        "Altitude FWD",
+        "Latitude 4X4",
+        "Latitude FWD",
+        "Latitude Plus 4X4",
+        "Latitude Plus FWD",
+        "Limited 4X4",
+        "Limited FWD",
+        "Overland"
+      ],
+      "tireSize": "225/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "Altitude 4X4",
+        "Altitude FWD",
+        "Latitude 4X4",
+        "Latitude FWD",
+        "Latitude Plus 4X4",
+        "Latitude Plus FWD",
+        "Limited 4X4",
+        "Limited FWD",
+        "Upland"
+      ],
+      "tireSize": "225/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "80th Anniversary Edition",
+        "Altitude 4X4",
+        "Altitude FWD",
+        "Freedom 4X4",
+        "Freedom FWD",
+        "Latitude 4X4",
+        "Latitude FWD",
+        "Latitude Lux 4X4",
+        "Latitude Lux FWD",
+        "Latitude Plus 4X4",
+        "Latitude Plus FWD",
+        "Limited 4X4",
+        "Limited FWD"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "Latitude Lux 4X4",
+        "Latitude Lux FWD",
+        "Limited",
+        "X"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "cherokee",
+      "trims": [
+        "Altitude Lux"
+      ],
+      "tireSize": "245/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Cherokee"
+    },
+    {
+      "year": 2017,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "75th Anniversary Edition",
+        "Sport SE"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2018,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "Altitude",
+        "Latitude"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2019,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "Altitude",
+        "Latitude",
+        "Upland"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2020,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "Altitude",
+        "Latitude",
+        "Sun and Wheel"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2021,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "80th Anniversary Edition",
+        "Altitude",
+        "Freedom",
+        "Latitude"
+      ],
+      "tireSize": "235/45R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2022,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "Altitude",
+        "Latitude",
+        "Latitude Lux",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2023,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "Altitude",
+        "Latitude",
+        "Latitude Lux",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "compass",
+      "trims": [
+        "Latitude",
+        "Limited"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Compass"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "SE TDI",
+        "SEL Premium Hybrid"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "Hybrid SEL Premium"
+      ],
+      "tireSize": "205/50R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SE Sport",
+        "SEL",
+        "Wolfsburg Edition"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL",
+        "SEL Premium"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "jetta",
+      "trims": [
+        "S",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Jetta"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "S 4Motion",
+        "SE",
+        "SEL 4Motion"
+      ],
+      "tireSize": "215/65R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "S 4Motion",
+        "SE",
+        "SEL 4Motion"
+      ],
+      "tireSize": "215/65R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "Limited",
+        "S 4Motion",
+        "SEL",
+        "SEL 4Motion",
+        "Sport",
+        "Sport 4Motion",
+        "Wolfsburg",
+        "Wolfsburg 4Motion"
+      ],
+      "tireSize": "215/65R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "Limited",
+        "S 4Motion",
+        "SE",
+        "SE 4Motion",
+        "SEL",
+        "SEL 4Motion",
+        "SEL Premium",
+        "SEL Premium 4Motion"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "S 4Motion",
+        "SE",
+        "SE 4Motion",
+        "SEL",
+        "SEL 4Motion",
+        "SEL Premium 4Motion"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "S 4Motion",
+        "SE",
+        "SE 4Motion",
+        "SEL",
+        "SEL 4Motion"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "S 4Motion",
+        "SE",
+        "SE 4Motion",
+        "SEL",
+        "SEL 4Motion"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "SE"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "SE"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "tiguan",
+      "trims": [
+        "S",
+        "SE",
+        "Wolfsburg Edition"
+      ],
+      "tireSize": "215/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Tiguan"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "Launch Edition",
+        "S",
+        "SE"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "S",
+        "SE",
+        "SE with Technology"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "S",
+        "SE",
+        "SE with Technology"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "S",
+        "SE",
+        "SE with Technology",
+        "SEL",
+        "SEL Premium"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "atlas",
+      "trims": [
+        "Peak Edition",
+        "SE",
+        "SE with Technology",
+        "SEL"
+      ],
+      "tireSize": "255/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Atlas"
+    },
+    {
+      "year": 2015,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "2-Door 1.8T Launch Edition",
+        "2-Door 1.8T S",
+        "4-Door 1.8T S",
+        "4-Door 1.8T SE",
+        "R",
+        "TDI S",
+        "TDI SE",
+        "TDI SEL"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2016,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "2-Door S",
+        "4-Door S",
+        "4-Door SEL"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2017,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "2-Door 1.8T"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2018,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "Alltrack",
+        "R",
+        "SE"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2019,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "Alltrack",
+        "R",
+        "SE"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2020,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "Value Edition"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2021,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "Value Edition"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2022,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "R"
+      ],
+      "tireSize": "235/35R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2023,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "R"
+      ],
+      "tireSize": "235/35R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2024,
+      "make": "volkswagen",
+      "model": "golf",
+      "trims": [
+        "R"
+      ],
+      "tireSize": "235/35R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Golf"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "Limited",
+        "SXT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "Limited",
+        "SXT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "R/T",
+        "SXT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "GT Plus",
+        "R/T",
+        "SXT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "GT Plus",
+        "R/T",
+        "SXT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2021,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "GT Plus",
+        "R/T",
+        "R/T AWD",
+        "SXT"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "GT Plus",
+        "R/T",
+        "R/T AWD"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "R/T",
+        "R/T AWD"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "durango",
+      "trims": [
+        "Citadel",
+        "GT",
+        "R/T",
+        "R/T AWD"
+      ],
+      "tireSize": "265/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Durango"
+    },
+    {
+      "year": 2015,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "AWD R/T Plus",
+        "AWD SXT",
+        "AWD SXT Plus",
+        "R/T",
+        "R/T Max",
+        "RWD R/T Plus"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2016,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "AWD SE",
+        "AWD SXT",
+        "R/T",
+        "RWD SE"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2017,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "AWD SE",
+        "AWD SXT",
+        "R/T",
+        "RWD SE"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2018,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "GT AWD",
+        "GT Plus AWD",
+        "R/T"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2019,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "GT",
+        "R/T",
+        "SXT"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2020,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "GT",
+        "R/T"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2021,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "GT",
+        "R/T"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2022,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "GT",
+        "R/T",
+        "SXT"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2023,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "GT",
+        "R/T",
+        "SXT"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Charger"
+    },
+    {
+      "year": 2024,
+      "make": "dodge",
+      "model": "charger",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Charger"
+    }
+  ],
+  "conflictRecords": [],
+  "errorRecords": [
+    {
+      "year": 2024,
+      "make": "jeep",
+      "model": "cherokee",
+      "error": "HTTP 404 (tried: Cherokee)"
+    }
+  ],
+  "brandPerformance": {
+    "mazda": {
+      "attempted": 17,
+      "success": 15,
+      "configs": 103
+    },
+    "jeep": {
+      "attempted": 38,
+      "success": 37,
+      "configs": 161
+    },
+    "volkswagen": {
+      "attempted": 37,
+      "success": 37,
+      "configs": 129
+    },
+    "dodge": {
+      "attempted": 20,
+      "success": 20,
+      "configs": 72
+    }
+  },
+  "completedAt": "2026-04-14T16:00:49.406Z",
+  "durationMs": 312655
+}

@@ -330,8 +330,15 @@ export function getVehicleDisplayLabel(input: VehicleDisplayInput): string {
  * 
  * Runs ALL candidate fields through extractDisplayTrim() to ensure mixed
  * values like "Z28 / 5.7i" are cleaned to just "Z28".
+ * 
+ * @param input Vehicle display input
+ * @param options Additional options
+ * @param options.skipBase If true, returns empty string for "Base" trim (premium UX mode)
  */
-export function getDisplayTrim(input: VehicleDisplayInput): string {
+export function getDisplayTrim(
+  input: VehicleDisplayInput,
+  options?: { skipBase?: boolean }
+): string {
   const candidates = [
     input.displayTrim,
     input.submodel,
@@ -340,7 +347,16 @@ export function getDisplayTrim(input: VehicleDisplayInput): string {
   
   for (const candidate of candidates) {
     const cleaned = extractDisplayTrim(candidate ?? "");
-    if (cleaned) return cleaned;
+    if (cleaned) {
+      // When skipBase is true, don't return "Base" or similar
+      if (options?.skipBase) {
+        const lower = cleaned.toLowerCase().trim();
+        if (lower === "base" || lower === "default" || lower === "standard") {
+          continue; // Skip this candidate, try next
+        }
+      }
+      return cleaned;
+    }
   }
   
   return "";

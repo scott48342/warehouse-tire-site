@@ -46,6 +46,8 @@ import {
   getClassicFitment,
 } from "@/lib/classic-fitment/classicLookup";
 
+import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
+
 import {
   getTechfeedCandidatesByBoltPattern,
   getTechfeedIndexBuiltAt,
@@ -630,12 +632,15 @@ export async function GET(req: Request) {
           // Construct a minimal DB profile from classic fitment
           const classicModificationId = `classic_${classicResult.platform.code}_${year}`;
           
+          // When premium UX is enabled, don't use "Base" - use null to hide trim
+          const premiumUx = isPremiumTrimUxEnabled();
+          
           dbProfile = {
             modificationId: classicModificationId,
             year: Number(year),
             make: make.toLowerCase(),
             model: model.toLowerCase(),
-            displayTrim: "Base",
+            displayTrim: premiumUx ? null : "Base",
             rawTrim: null,
             boltPattern: classicResult.specs.boltPattern,
             centerBoreMm: classicResult.specs.centerBore,

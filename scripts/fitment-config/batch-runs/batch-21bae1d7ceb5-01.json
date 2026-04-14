@@ -1,0 +1,82 @@
+{
+  "batchId": "c41afbbb",
+  "batchNumber": 1,
+  "startedAt": "2026-04-14T14:22:56.037Z",
+  "completedAt": "2026-04-14T14:23:06.916Z",
+  "durationMs": 10879,
+  "totalTargeted": 5,
+  "totalResearched": 5,
+  "totalValidated": 5,
+  "totalHighConfidence": 2,
+  "totalPromoted": 14,
+  "totalConflicts": 0,
+  "totalSkipped": 0,
+  "totalErrors": 0,
+  "researchSuccessRate": 1,
+  "conflictRate": 0,
+  "promotionRate": 1,
+  "passedQualityGates": true,
+  "promotedRecords": [
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        "2.0L",
+        "2.4L"
+      ],
+      "tireSize": "215/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        "A-Spec Package"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        "A-Spec Package"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        "A-Spec Package",
+        "AcuraWatch Plus",
+        "Base Model",
+        "Premium",
+        "Special Edition",
+        "Technology Plus"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "ilx",
+      "trims": [
+        "A-Spec Package",
+        "Premium",
+        "Standard",
+        "Technology"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    }
+  ],
+  "conflictRecords": [],
+  "errorRecords": []
+}

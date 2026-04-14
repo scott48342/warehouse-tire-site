@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fitmentLabel, type Fitment } from "@/lib/fitment";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
+import { isBaseTrim } from "@/lib/features/premiumTrimUx";
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
@@ -241,11 +242,11 @@ export function VisualFitmentLauncher({
           `/api/vehicles/trims?${qs.toString()}`
         );
         const dbResults = Array.isArray(data?.results) ? data.results : [];
-        // Use fitment DB if it has real trims (more than just "Base")
-        const hasRealTrims = dbResults.length > 1 || 
-          (dbResults.length === 1 && dbResults[0].label !== "Base");
-        if (hasRealTrims) {
-          if (!cancelled) setTrims(dbResults);
+        // Use fitment DB if it has real trims (more than just "Base" or other fallback labels)
+        // When premium UX is enabled, trims API won't return "Base" at all
+        const realTrims = dbResults.filter(t => !isBaseTrim(t.label));
+        if (realTrims.length > 0) {
+          if (!cancelled) setTrims(realTrims);
           if (!cancelled) setTrimsLoading(false);
           return;
         }

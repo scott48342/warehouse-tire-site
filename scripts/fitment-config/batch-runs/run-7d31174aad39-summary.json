@@ -1,0 +1,3656 @@
+{
+  "runId": "7d31174aad39",
+  "startedAt": "2026-04-14T14:24:43.622Z",
+  "completedAt": "2026-04-14T14:37:43.422Z",
+  "totalBatches": 5,
+  "completedBatches": 2,
+  "thresholds": {
+    "BATCH_SIZE": 200,
+    "MAX_BATCHES": 10,
+    "CONFLICT_THRESHOLD": 0.15,
+    "PROMOTION_THRESHOLD": 0.4,
+    "MIN_RESEARCH_SUCCESS": 0.7,
+    "RESEARCH_DELAY_MS": 1500,
+    "MAX_RESEARCH_ERRORS": 50,
+    "OUTPUT_DIR": "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\fitment-config\\batch-runs"
+  },
+  "totals": {
+    "targeted": 400,
+    "researched": 365,
+    "validated": 293,
+    "highConfidence": 64,
+    "promoted": 508,
+    "conflicts": 0,
+    "skipped": 0,
+    "errors": 72
+  },
+  "batches": [
+    {
+      "batchId": "535ad0a8",
+      "batchNumber": 1,
+      "startedAt": "2026-04-14T14:24:43.923Z",
+      "completedAt": "2026-04-14T14:31:54.974Z",
+      "durationMs": 431051,
+      "totalTargeted": 200,
+      "totalResearched": 200,
+      "totalValidated": 178,
+      "totalHighConfidence": 31,
+      "totalPromoted": 272,
+      "totalConflicts": 0,
+      "totalSkipped": 0,
+      "totalErrors": 22,
+      "researchSuccessRate": 0.89,
+      "conflictRate": 0,
+      "promotionRate": 1,
+      "passedQualityGates": true,
+      "promotedRecords": [
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "A-Spec Package",
+            "Advance Package",
+            "Base Model",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/50R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "A-Spec Package",
+            "Advance Package",
+            "Base Model",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/50R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "A-Spec Package",
+            "Advance Package",
+            "Base Model",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/50R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "A-Spec Package",
+            "Advance Package",
+            "Base Model",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/50R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "A-Spec Package",
+            "Advance Package",
+            "Base Model",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/50R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "BASE AWD",
+            "BASE FWD",
+            "Technology Package AWD",
+            "Technology Package FWD"
+          ],
+          "tireSize": "235/60R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "AWD",
+            "FWD"
+          ],
+          "tireSize": "235/60R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "AWD",
+            "FWD"
+          ],
+          "tireSize": "235/60R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "AWD",
+            "FWD"
+          ],
+          "tireSize": "235/60R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "A-Spec Package",
+            "FWD",
+            "SH-AWD"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "4cyl FWD"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "4cyl FWD"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "4cyl FWD"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "4cyl FWD",
+            "A-Spec"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "4cyl FWD",
+            "A-Spec"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "4cyl FWD",
+            "A-Spec"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "A-Spec",
+            "Advance Package",
+            "Standard",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "A-Spec",
+            "Advance Package",
+            "Standard",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "A-Spec",
+            "Advance Package",
+            "Standard",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "A-Spec",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "A-Spec",
+            "Technology Package",
+            "Type-S"
+          ],
+          "tireSize": "255/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2015,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Giulia Base Model"
+          ],
+          "tireSize": "225/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2019,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Giulia Base Model"
+          ],
+          "tireSize": "225/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2020,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Giulia Base Model"
+          ],
+          "tireSize": "225/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2021,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Giulia Performance Brakes"
+          ],
+          "tireSize": "225/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2022,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Giulia Competizione"
+          ],
+          "tireSize": "225/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2025,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Stelvio Performance Brakes"
+          ],
+          "tireSize": "255/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Stelvio Estrema"
+          ],
+          "tireSize": "255/40R21",
+          "wheelDiameter": 21
+        },
+        {
+          "year": 2024,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Stelvio Competizione"
+          ],
+          "tireSize": "255/40R21",
+          "wheelDiameter": 21
+        },
+        {
+          "year": 2025,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "Stelvio Base Model"
+          ],
+          "tireSize": "255/40R21",
+          "wheelDiameter": 21
+        },
+        {
+          "year": 2017,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Sedan S Line quattro Premium",
+            "Sedan S Line quattro Premium Plus"
+          ],
+          "tireSize": "225/40R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "Premium"
+          ],
+          "tireSize": "225/40R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "2.0T FWD Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "2.0T FWD Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "2.0T FWD Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "2.0T FWD Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Allroad Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Allroad Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Allroad Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Allroad Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "Allroad Premium",
+            "Allroad Premium Plus",
+            "Allroad Prestige",
+            "quattro Premium"
+          ],
+          "tireSize": "245/45R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "2.0T FWD"
+          ],
+          "tireSize": "255/35R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "Allroad"
+          ],
+          "tireSize": "245/45R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "265/40R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "265/40R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "e-tron",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "2.0T FWD Premium Plus",
+            "2.0T quattro Premium Plus"
+          ],
+          "tireSize": "255/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "2.0T FWD Premium",
+            "2.0T FWD Premium Plus",
+            "2.0T quattro Premium",
+            "2.0T quattro Premium Plus"
+          ],
+          "tireSize": "235/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "2.0T Hybrid",
+            "2.0T Premium"
+          ],
+          "tireSize": "235/60R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "3.0 TDI Premium"
+          ],
+          "tireSize": "265/50R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q8",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Premium Plus"
+          ],
+          "tireSize": "255/35R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "s4",
+          "trims": [
+            "Premium",
+            "Premium Plus",
+            "Prestige"
+          ],
+          "tireSize": "255/35R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2016,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Hybrid"
+          ],
+          "tireSize": "285/40R22",
+          "wheelDiameter": 22
+        },
+        {
+          "year": 2022,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Hybrid",
+            "Speed"
+          ],
+          "tireSize": "285/40R22",
+          "wheelDiameter": 22
+        },
+        {
+          "year": 2023,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Azure",
+            "Base Model",
+            "Odyssean Edition",
+            "S",
+            "Speed"
+          ],
+          "tireSize": "285/40R22",
+          "wheelDiameter": 22
+        },
+        {
+          "year": 2024,
+          "make": "bentley",
+          "model": "bentayga",
+          "trims": [
+            "Azure",
+            "S"
+          ],
+          "tireSize": "285/40R22",
+          "wheelDiameter": 22
+        }
+      ],
+      "conflictRecords": [],
+      "errorRecords": [
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "integra",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "mdx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "tlx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "aston-martin",
+          "model": "db11",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2024,
+          "make": "aston-martin",
+          "model": "db11",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2027,
+          "make": "aston-martin",
+          "model": "dbx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2027,
+          "make": "aston-martin",
+          "model": "vantage",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a3",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "a4",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q8",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "rs-models",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "s4",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "s4",
+          "error": "HTTP 404"
+        }
+      ]
+    },
+    {
+      "batchId": "a5f0a4f5",
+      "batchNumber": 2,
+      "startedAt": "2026-04-14T14:31:55.023Z",
+      "completedAt": "2026-04-14T14:37:43.417Z",
+      "durationMs": 348394,
+      "totalTargeted": 200,
+      "totalResearched": 165,
+      "totalValidated": 115,
+      "totalHighConfidence": 33,
+      "totalPromoted": 236,
+      "totalConflicts": 0,
+      "totalSkipped": 0,
+      "totalErrors": 50,
+      "researchSuccessRate": 0.696969696969697,
+      "conflictRate": 0,
+      "promotionRate": 1,
+      "passedQualityGates": false,
+      "promotedRecords": [
+        {
+          "year": 2020,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Luxury",
+            "Premium Luxury",
+            "Sport"
+          ],
+          "tireSize": "225/45R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2021,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Luxury",
+            "Premium Luxury",
+            "Sport"
+          ],
+          "tireSize": "225/45R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2022,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "cadillac",
+          "model": "ct4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "cadillac",
+          "model": "ct5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "cadillac",
+          "model": "ct5",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "cadillac",
+          "model": "cts",
+          "trims": [
+            "2.0L Turbo Luxury"
+          ],
+          "tireSize": "245/45R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2016,
+          "make": "cadillac",
+          "model": "cts",
+          "trims": [
+            "2.0L Turbo Luxury"
+          ],
+          "tireSize": "245/45R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2017,
+          "make": "cadillac",
+          "model": "cts",
+          "trims": [
+            "2.0L Turbo Luxury"
+          ],
+          "tireSize": "245/45R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2018,
+          "make": "cadillac",
+          "model": "cts",
+          "trims": [
+            "2.0L Turbo Luxury"
+          ],
+          "tireSize": "245/45R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2019,
+          "make": "cadillac",
+          "model": "cts",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "cadillac",
+          "model": "escalade",
+          "trims": [
+            "Base Model",
+            "ESV",
+            "ESV Luxury",
+            "ESV Platinum",
+            "ESV Premium",
+            "Luxury",
+            "Platinum",
+            "Premium"
+          ],
+          "tireSize": "275/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "cadillac",
+          "model": "escalade",
+          "trims": [
+            "Base Model",
+            "ESV",
+            "ESV Luxury",
+            "ESV Platinum",
+            "ESV Premium",
+            "Luxury",
+            "Platinum",
+            "Premium"
+          ],
+          "tireSize": "275/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "cadillac",
+          "model": "escalade",
+          "trims": [
+            "Base Model",
+            "ESV",
+            "ESV Luxury",
+            "ESV Platinum",
+            "ESV Premium Luxury",
+            "Luxury",
+            "Platinum",
+            "Premium Luxury"
+          ],
+          "tireSize": "275/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "cadillac",
+          "model": "escalade",
+          "trims": [
+            "Base Model",
+            "ESV Platinum",
+            "ESV Premium Luxury",
+            "Luxury",
+            "Platinum",
+            "Premium Luxury"
+          ],
+          "tireSize": "285/45R22",
+          "wheelDiameter": 22
+        },
+        {
+          "year": 2019,
+          "make": "cadillac",
+          "model": "escalade",
+          "trims": [
+            "Base Model",
+            "ESV Platinum",
+            "ESV Premium Luxury",
+            "Luxury",
+            "Platinum",
+            "Premium Luxury"
+          ],
+          "tireSize": "285/45R22",
+          "wheelDiameter": 22
+        },
+        {
+          "year": 2020,
+          "make": "cadillac",
+          "model": "escalade",
+          "trims": [
+            "Base Model",
+            "ESV Platinum",
+            "ESV Premium Luxury",
+            "Luxury",
+            "Platinum",
+            "Premium Luxury"
+          ],
+          "tireSize": "285/45R22",
+          "wheelDiameter": 22
+        },
+        {
+          "year": 2024,
+          "make": "cadillac",
+          "model": "lyriq",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "cadillac",
+          "model": "xt4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "cadillac",
+          "model": "xt4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "cadillac",
+          "model": "xt4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "cadillac",
+          "model": "xt4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "cadillac",
+          "model": "xt4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "cadillac",
+          "model": "xt4",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "cadillac",
+          "model": "xt5",
+          "trims": [
+            "Luxury",
+            "Premium Luxury",
+            "Standard"
+          ],
+          "tireSize": "235/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "cadillac",
+          "model": "xt5",
+          "trims": [
+            "Luxury",
+            "Premium Luxury",
+            "Standard"
+          ],
+          "tireSize": "235/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "cadillac",
+          "model": "xt5",
+          "trims": [
+            "Luxury"
+          ],
+          "tireSize": "235/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "cadillac",
+          "model": "xt5",
+          "trims": [
+            "Luxury"
+          ],
+          "tireSize": "235/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "cadillac",
+          "model": "xt5",
+          "trims": [
+            "Luxury"
+          ],
+          "tireSize": "235/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "cadillac",
+          "model": "xt5",
+          "trims": [
+            "Luxury"
+          ],
+          "tireSize": "235/55R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "cadillac",
+          "model": "xt6",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "blazer",
+          "trims": [
+            "Base Model"
+          ],
+          "tireSize": "235/65R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "blazer",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "235/65R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "blazer",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "235/65R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "blazer",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "blazer",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "blazer",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV LT",
+            "EV Premier"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV LT",
+            "EV Premier"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV LT",
+            "EV Premier"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV LT",
+            "EV Premier"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV LT",
+            "EV Premier"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV 1LT",
+            "EV 2LT"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "bolt-ev",
+          "trims": [
+            "EV 1LT",
+            "EV 2LT"
+          ],
+          "tireSize": "215/50R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "SS RS Package"
+          ],
+          "tireSize": "285/35R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "245/40R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "245/40R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "245/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT",
+            "LT1"
+          ],
+          "tireSize": "245/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT",
+            "LT1"
+          ],
+          "tireSize": "245/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT",
+            "LT1"
+          ],
+          "tireSize": "245/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT",
+            "LT1"
+          ],
+          "tireSize": "245/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "camaro",
+          "trims": [
+            "LS",
+            "LT",
+            "LT1"
+          ],
+          "tireSize": "245/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "Base Model",
+            "LT"
+          ],
+          "tireSize": "265/70R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "Base Model",
+            "LT"
+          ],
+          "tireSize": "265/70R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "Base Model",
+            "LT"
+          ],
+          "tireSize": "265/70R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "LT"
+          ],
+          "tireSize": "265/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "LT"
+          ],
+          "tireSize": "265/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "LT",
+            "Z71",
+            "ZR2 Bison Edition"
+          ],
+          "tireSize": "255/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "LT",
+            "Z71",
+            "ZR2 Bison Edition"
+          ],
+          "tireSize": "255/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "LT",
+            "ZR2 Bison Edition"
+          ],
+          "tireSize": "285/70R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2026,
+          "make": "chevrolet",
+          "model": "colorado",
+          "trims": [
+            "LT",
+            "ZR2 Bison Edition"
+          ],
+          "tireSize": "285/70R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2026,
+          "make": "chevrolet",
+          "model": "corvette",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "cruze",
+          "trims": [
+            "Eco",
+            "L",
+            "LS",
+            "LT",
+            "Turbo Diesel"
+          ],
+          "tireSize": "215/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "cruze",
+          "trims": [
+            "L",
+            "Limited Eco",
+            "Limited L",
+            "Limited LS",
+            "Limited LT"
+          ],
+          "tireSize": "195/65R15",
+          "wheelDiameter": 15
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "cruze",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "195/65R15",
+          "wheelDiameter": 15
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "cruze",
+          "trims": [
+            "Diesel",
+            "L"
+          ],
+          "tireSize": "205/55R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "cruze",
+          "trims": [
+            "Diesel",
+            "L"
+          ],
+          "tireSize": "205/55R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "L",
+            "LS"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "L",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "LS"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "L",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "L"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "225/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "ACTIV"
+          ],
+          "tireSize": "235/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2026,
+          "make": "chevrolet",
+          "model": "equinox",
+          "trims": [
+            "ACTIV"
+          ],
+          "tireSize": "235/65R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "impala",
+          "trims": [
+            "Limited LS",
+            "Limited LT",
+            "Limited Police",
+            "LS"
+          ],
+          "tireSize": "225/60R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "impala",
+          "trims": [
+            "Limited LS",
+            "Limited LT",
+            "Limited Police",
+            "LS"
+          ],
+          "tireSize": "225/60R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "impala",
+          "trims": [
+            "Base"
+          ],
+          "tireSize": "275/60R20",
+          "wheelDiameter": 20
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "impala",
+          "trims": [
+            "LS",
+            "LT"
+          ],
+          "tireSize": "235/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "impala",
+          "trims": [
+            "LS"
+          ],
+          "tireSize": "235/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "impala",
+          "trims": [
+            "LT"
+          ],
+          "tireSize": "235/50R18",
+          "wheelDiameter": 18
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "LS"
+          ],
+          "tireSize": "215/60R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "Hybrid",
+            "Limited LS",
+            "Limited LT",
+            "LS"
+          ],
+          "tireSize": "205/65R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "Hybrid",
+            "L",
+            "LS"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "Hybrid",
+            "L",
+            "LS"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "Hybrid",
+            "L",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "225/55R17",
+          "wheelDiameter": 17
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "L",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "205/65R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "L",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "205/65R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "LS",
+            "LT",
+            "RS"
+          ],
+          "tireSize": "205/65R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "2LT",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "245/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "2LT",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "245/40R19",
+          "wheelDiameter": 19
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "malibu",
+          "trims": [
+            "2LT",
+            "LS",
+            "LT"
+          ],
+          "tireSize": "245/40R19",
+          "wheelDiameter": 19
+        }
+      ],
+      "conflictRecords": [],
+      "errorRecords": [
+        {
+          "year": 2020,
+          "make": "buick",
+          "model": "regal",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "cadillac",
+          "model": "ct5",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2015,
+          "make": "cadillac",
+          "model": "escalade-esv",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "cadillac",
+          "model": "escalade-esv",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "cadillac",
+          "model": "escalade-esv",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "cadillac",
+          "model": "escalade-esv",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "cadillac",
+          "model": "escalade-esv",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2020,
+          "make": "cadillac",
+          "model": "escalade-esv",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "chevrolet",
+          "model": "malibu",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "silverado-1500",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "silverado-1500",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "silverado-1500",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "silverado-1500",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "silverado-1500",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "chevrolet",
+          "model": "silverado-1500",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "silverado-2500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "chevrolet",
+          "model": "silverado-2500hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2020,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2022,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2023,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2024,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2025,
+          "make": "chevrolet",
+          "model": "silverado-3500-hd",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2015,
+          "make": "chevrolet",
+          "model": "silverado-3500hd",
+          "error": "HTTP 404"
+        }
+      ],
+      "gateFailureReason": "Research success rate 69.7% below threshold 70%"
+    }
+  ],
+  "stoppedReason": "Research success rate 69.7% below threshold 70%"
+}

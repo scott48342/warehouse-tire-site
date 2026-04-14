@@ -14,6 +14,7 @@ import { VehicleEntryGate } from "@/components/VehicleEntryGate";
 import { ClassicFitmentCard, type ClassicFitmentData } from "@/components/ClassicFitmentCard";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
+import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
 import { checkClassicFitment, toClassicCardData } from "@/lib/classic-fitment";
 import { buildDiameterOptions, type DiameterOption } from "@/lib/fitment/diameterOptions";
 import { groupWheelsBySpec, type WheelVariantInput } from "@/lib/wheels";
@@ -441,11 +442,13 @@ export default async function WheelsPage({
   }
 
   // Build display-friendly trim label (never shows engine text like "5.7i")
+  // When premium UX is enabled, also skip "Base" labels
+  const premiumTrimUxEnabled = isPremiumTrimUxEnabled();
   const _submodelCandidate = fit?.vehicle?.trim || fit?.trim || (fitment as any)?.vehicle?.trim;
   const displayTrim = getDisplayTrim({
     trim: resolvedTrimLabel || trim, // Use resolved label if available
     submodel: _submodelCandidate,
-  });
+  }, { skipBase: premiumTrimUxEnabled });
 
   function rimDiaFromTireSize(s: string) {
     const m = String(s || "").toUpperCase().match(/R(\d{2})\b/);

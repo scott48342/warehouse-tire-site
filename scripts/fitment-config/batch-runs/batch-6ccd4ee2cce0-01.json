@@ -1,0 +1,85 @@
+{
+  "batchId": "83e32173",
+  "batchNumber": 1,
+  "startedAt": "2026-04-14T14:01:05.139Z",
+  "completedAt": "2026-04-14T14:01:26.408Z",
+  "durationMs": 21269,
+  "totalTargeted": 10,
+  "totalResearched": 10,
+  "totalValidated": 9,
+  "totalHighConfidence": 9,
+  "totalPromoted": 0,
+  "totalConflicts": 9,
+  "totalSkipped": 0,
+  "totalErrors": 1,
+  "researchSuccessRate": 0.9,
+  "conflictRate": 1,
+  "promotionRate": 0,
+  "passedQualityGates": false,
+  "promotedRecords": [],
+  "conflictRecords": [
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "ilx",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "integra",
+      "conflict": "Base: multiple wheel sizes (16, 17, 18, 20)"
+    }
+  ],
+  "errorRecords": [
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "integra",
+      "error": "HTTP 404"
+    }
+  ],
+  "gateFailureReason": "Promotion rate 0.0% below threshold 40%"
+}

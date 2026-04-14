@@ -1,0 +1,2388 @@
+{
+  "batchId": "fb300ca9",
+  "batchNumber": 3,
+  "startedAt": "2026-04-14T15:03:53.112Z",
+  "completedAt": "2026-04-14T15:11:45.350Z",
+  "durationMs": 472238,
+  "totalTargeted": 200,
+  "totalResearched": 200,
+  "totalValidated": 179,
+  "totalHighConfidence": 121,
+  "totalPromoted": 677,
+  "totalConflicts": 1,
+  "totalSkipped": 8,
+  "totalErrors": 13,
+  "researchSuccessRate": 0.895,
+  "conflictRate": 0.00558659217877095,
+  "promotionRate": 0.994413407821229,
+  "passedQualityGates": true,
+  "promotedRecords": [
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "suburban",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "tahoe",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "LS AWD",
+        "LS FWD",
+        "LT AWD"
+      ],
+      "tireSize": "245/70R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "LS AWD",
+        "LS FWD",
+        "LT AWD",
+        "LTZ FWD"
+      ],
+      "tireSize": "245/70R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "LS",
+        "LT"
+      ],
+      "tireSize": "245/70R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "L",
+        "LS",
+        "RS"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "L",
+        "LS",
+        "RS"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "L",
+        "LS",
+        "RS"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "L",
+        "LS",
+        "RS"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "LS",
+        "RS"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "LS",
+        "RS"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "chevrolet",
+      "model": "traverse",
+      "trims": [
+        "Limited"
+      ],
+      "tireSize": "275/45R22",
+      "wheelDiameter": 22
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL",
+        "ST"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "SEL",
+        "ST"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "ST"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "ST"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "edge",
+      "trims": [
+        "SE",
+        "ST"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "S"
+      ],
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "S"
+      ],
+      "tireSize": "235/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "S",
+        "SE",
+        "SE Sport Package",
+        "SEL"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "S",
+        "SE",
+        "SE Sport Package",
+        "SEL"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "S",
+        "SE",
+        "SE Sport Package",
+        "SEL"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "Active",
+        "Base"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "escape",
+      "trims": [
+        "Active",
+        "Base"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "Sport"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "ST"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "ST"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "ST"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "explorer",
+      "trims": [
+        "Base",
+        "Limited",
+        "ST"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "Bullitt"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "Bullitt"
+      ],
+      "tireSize": "255/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "EcoBoost"
+      ],
+      "tireSize": "265/40R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "mustang",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "ford",
+      "model": "ranger",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "ford",
+      "model": "ranger",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "ford",
+      "model": "ranger",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "ford",
+      "model": "ranger",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "ford",
+      "model": "ranger",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "ford",
+      "model": "ranger",
+      "trims": [
+        "Lariat",
+        "XL"
+      ],
+      "tireSize": "255/65R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "accord",
+      "trims": [
+        "Coupe EX",
+        "Coupe EX-L",
+        "Coupe EX-L V6"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "accord",
+      "trims": [
+        "Coupe EX",
+        "Coupe EX-L",
+        "Coupe EX-L V6"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "accord",
+      "trims": [
+        "Coupe EX",
+        "Coupe EX-L",
+        "Coupe EX-L V6",
+        "Hybrid",
+        "Hybrid EX-L"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "civic",
+      "trims": [
+        "Coupe EX",
+        "Coupe LX",
+        "Coupe Si",
+        "Type R"
+      ],
+      "tireSize": "215/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "civic",
+      "trims": [
+        "Coupe EX-L",
+        "Coupe EX-T",
+        "Coupe LX",
+        "Coupe LX-P",
+        "Type R"
+      ],
+      "tireSize": "215/50R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "civic",
+      "trims": [
+        "Coupe EX-L",
+        "Coupe EX-T",
+        "Coupe LX",
+        "Coupe LX-P",
+        "Hatchback EX",
+        "Hatchback EX-L",
+        "Hatchback LX",
+        "Hatchback Sport",
+        "Si Coupe",
+        "Type R"
+      ],
+      "tireSize": "215/50R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "cr-v",
+      "trims": [
+        "EX 2WD",
+        "EX AWD",
+        "EX-L 2WD",
+        "EX-L AWD",
+        "LX 2WD",
+        "LX AWD"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "cr-v",
+      "trims": [
+        "EX 2WD",
+        "EX AWD",
+        "EX-L 2WD",
+        "EX-L AWD",
+        "LX 2WD",
+        "LX AWD",
+        "SE 2WD",
+        "SE AWD"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "cr-v",
+      "trims": [
+        "EX 2WD",
+        "LX AWD"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX",
+        "EX AWD",
+        "EX-L",
+        "EX-L AWD",
+        "LX",
+        "LX AWD"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX",
+        "EX AWD",
+        "EX-L",
+        "EX-L AWD",
+        "LX",
+        "LX AWD"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX",
+        "EX AWD",
+        "EX-L",
+        "EX-L AWD",
+        "LX",
+        "LX AWD"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX"
+      ],
+      "tireSize": "225/50R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX"
+      ],
+      "tireSize": "225/50R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX",
+        "EX-L",
+        "LX",
+        "Sport"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX",
+        "EX-L",
+        "LX",
+        "Sport"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX-L",
+        "LX",
+        "Sport"
+      ],
+      "tireSize": "215/60R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "hr-v",
+      "trims": [
+        "EX-L",
+        "LX",
+        "Sport"
+      ],
+      "tireSize": "215/60R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "EX",
+        "EX-L",
+        "LX",
+        "SE"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "EX",
+        "EX-L",
+        "LX",
+        "SE"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "Sport"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "odyssey",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "Sport"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2015,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "EX",
+        "EX-L",
+        "LX",
+        "SE"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2018,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2019,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX",
+        "EX-L",
+        "LX"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2020,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX-L"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX-L",
+        "Sport",
+        "TrailSport"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "honda",
+      "model": "pilot",
+      "trims": [
+        "Elite",
+        "EX-L",
+        "Sport",
+        "TrailSport"
+      ],
+      "tireSize": "255/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "215/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "GT",
+        "SE"
+      ],
+      "tireSize": "215/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Eco",
+        "GT",
+        "SE"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Eco",
+        "GT",
+        "Limited",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Eco",
+        "GT",
+        "Limited",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Eco",
+        "GT",
+        "Limited",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "elantra",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric",
+        "Limited",
+        "SE",
+        "SEL",
+        "Ultimate"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric Limited",
+        "Electric SEL",
+        "Electric Ultimate",
+        "Limited",
+        "SE",
+        "SEL",
+        "Ultimate"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric Limited",
+        "Electric SEL",
+        "Electric Ultimate",
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus",
+        "Ultimate"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric Limited",
+        "Electric SEL",
+        "Electric Ultimate",
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus",
+        "Ultimate"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric Limited",
+        "Electric SEL",
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric Limited",
+        "Electric SE",
+        "Electric SEL",
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "kona",
+      "trims": [
+        "Electric Limited",
+        "Electric SE",
+        "Electric SEL",
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "215/60R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "palisade",
+      "trims": [
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "palisade",
+      "trims": [
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "palisade",
+      "trims": [
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "palisade",
+      "trims": [
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "palisade",
+      "trims": [
+        "Limited",
+        "SE",
+        "SEL"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe GLS",
+        "Fe Sport 2.0T"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Limited",
+        "Fe SE"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Limited",
+        "Fe SE",
+        "Fe Sport",
+        "Fe Sport 2.0T"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Limited Ultimate",
+        "Fe SE",
+        "Fe Sport",
+        "Fe Sport 2.0T"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Limited",
+        "Fe Limited 2.0T",
+        "Fe SE",
+        "Fe SEL",
+        "Fe SEL Plus",
+        "Fe Ultimate",
+        "Fe Ultimate 2.0T",
+        "Fe XL Limited Ultimate",
+        "Fe XL SE"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Limited",
+        "Fe Limited 2.0T",
+        "Fe SE",
+        "Fe SEL"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Hybrid Limited",
+        "Fe Hybrid SEL Premium",
+        "Fe Limited",
+        "Fe SE",
+        "Fe SEL"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Hybrid Blue",
+        "Fe Hybrid Limited",
+        "Fe Hybrid SEL Premium",
+        "Fe Limited",
+        "Fe SE",
+        "Fe SEL",
+        "Fe XRT"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Hybrid Blue",
+        "Fe Hybrid Limited",
+        "Fe Hybrid SEL Premium",
+        "Fe Limited",
+        "Fe SE",
+        "Fe SEL",
+        "Fe XRT"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "santa-fe",
+      "trims": [
+        "Fe Hybrid Limited",
+        "Fe Hybrid SEL",
+        "Fe Limited",
+        "Fe SE",
+        "Fe SEL",
+        "Fe XRT"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Eco",
+        "Hybrid",
+        "Hybrid Limited",
+        "Limited",
+        "Limited 2.0T",
+        "SE",
+        "Sport",
+        "Sport 2.0T"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Eco",
+        "Hybrid Limited",
+        "Hybrid SE",
+        "Limited",
+        "Limited 2.0T",
+        "SE",
+        "Sport",
+        "Sport 2.0T"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Eco",
+        "Hybrid Limited",
+        "Hybrid SE",
+        "Limited",
+        "Limited 2.0T",
+        "SE",
+        "Sport",
+        "Sport 2.0T"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Eco",
+        "Hybrid Limited",
+        "Hybrid SE",
+        "Limited",
+        "Limited 2.0T",
+        "SE",
+        "SEL",
+        "Sport",
+        "Sport 2.0T"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Hybrid Limited",
+        "Hybrid SE",
+        "Limited",
+        "Limited 2.0T",
+        "SE",
+        "SEL",
+        "Sport"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Hybrid SEL",
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Hybrid SEL",
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Hybrid SEL",
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Hybrid Blue",
+        "Hybrid Limited",
+        "Hybrid SEL",
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "sonata",
+      "trims": [
+        "Hybrid Limited",
+        "Hybrid SEL"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "GLS",
+        "Limited",
+        "SE"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Eco",
+        "Fuel Cell",
+        "Limited",
+        "SE",
+        "Sport"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Eco",
+        "Limited",
+        "SE",
+        "SE Plus",
+        "Sport"
+      ],
+      "tireSize": "225/60R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Limited",
+        "SE",
+        "SEL",
+        "SEL Plus",
+        "Value"
+      ],
+      "tireSize": "245/45R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2019,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Limited",
+        "SE",
+        "SEL",
+        "Sport",
+        "Ultimate",
+        "Value"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Limited",
+        "SE",
+        "SEL",
+        "Sport",
+        "Ultimate",
+        "Value"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2021,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Limited",
+        "SE",
+        "SEL",
+        "Sport",
+        "Ultimate",
+        "Value"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Blue Hybrid",
+        "Limited",
+        "Limited Hybrid",
+        "SE",
+        "SEL",
+        "XRT"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2023,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Blue Hybrid",
+        "Limited",
+        "Limited Hybrid",
+        "SE",
+        "SEL",
+        "XRT"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2024,
+      "make": "hyundai",
+      "model": "tucson",
+      "trims": [
+        "Blue Hybrid",
+        "Limited",
+        "Limited Hybrid",
+        "SE",
+        "SEL",
+        "XRT"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "Koup EX",
+        "Koup SX"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "Koup EX",
+        "Koup SX"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "EX",
+        "FE",
+        "LXS",
+        "S"
+      ],
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "EX",
+        "FE",
+        "GT",
+        "LXS"
+      ],
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "EX",
+        "FE",
+        "GT",
+        "LXS"
+      ],
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "FE",
+        "GT",
+        "LXS"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "GT",
+        "LX",
+        "LXS"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "forte",
+      "trims": [
+        "GT",
+        "LX",
+        "LXS"
+      ],
+      "tireSize": "225/40R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "optima",
+      "trims": [
+        "EX",
+        "Hybrid LX",
+        "LX",
+        "SX",
+        "SX Turbo"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "optima",
+      "trims": [
+        "EX",
+        "Hybrid",
+        "Hybrid LX",
+        "LX",
+        "SX",
+        "SX Limited"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "optima",
+      "trims": [
+        "EX",
+        "Hybrid EX",
+        "Hybrid Premium",
+        "LX",
+        "LX 1.6T",
+        "SX",
+        "SX Limited"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "optima",
+      "trims": [
+        "EX",
+        "Hybrid EX",
+        "Hybrid Premium",
+        "LX",
+        "S"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "optima",
+      "trims": [
+        "EX",
+        "Hybrid EX",
+        "S",
+        "SX"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "optima",
+      "trims": [
+        "EX",
+        "EX Premium",
+        "Hybrid EX",
+        "S",
+        "SX"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "seltos",
+      "trims": [
+        "EX",
+        "LX",
+        "S",
+        "SX Turbo"
+      ],
+      "tireSize": "215/55R17",
+      "wheelDiameter": 17
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "Limited",
+        "LX",
+        "LX V6",
+        "SX"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "EX V6",
+        "L",
+        "LX",
+        "LX V6",
+        "SX V6",
+        "SXL V6"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "EX V6",
+        "L",
+        "LX",
+        "LX V6",
+        "SX V6",
+        "SXL V6"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX 2.0T",
+        "EX V6",
+        "L",
+        "LX",
+        "LX V6",
+        "SX",
+        "SX Limited"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX V6",
+        "L",
+        "LX",
+        "LX V6",
+        "SX",
+        "SX Limited"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "L",
+        "LX",
+        "S V6",
+        "SX"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "EX Hybrid",
+        "LX",
+        "S",
+        "S Hybrid",
+        "SX",
+        "SX Prestige"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "EX Hybrid",
+        "LX",
+        "S",
+        "S Hybrid",
+        "SX",
+        "SX Prestige"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "EX Hybrid",
+        "LX",
+        "S",
+        "SX",
+        "SX Prestige",
+        "SX Prestige Hybrid"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "sorento",
+      "trims": [
+        "EX",
+        "EX Hybrid",
+        "LX",
+        "S",
+        "SX",
+        "SX Prestige Hybrid",
+        "SX Prestige X-Pro"
+      ],
+      "tireSize": "255/45R20",
+      "wheelDiameter": 20
+    },
+    {
+      "year": 2015,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "SX"
+      ],
+      "tireSize": "235/55R18",
+      "wheelDiameter": 18
+    }
+  ],
+  "conflictRecords": [
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "civic",
+      "conflict": "Type R: multiple wheel sizes (19, 20)"
+    }
+  ],
+  "errorRecords": [
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2016,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2017,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "silverado-1500",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "f-150",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "f-150",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "f-150",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2015,
+      "make": "ford",
+      "model": "ranger",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2016,
+      "make": "ford",
+      "model": "ranger",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2017,
+      "make": "ford",
+      "model": "ranger",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2018,
+      "make": "ford",
+      "model": "ranger",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2018,
+      "make": "hyundai",
+      "model": "palisade",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "seltos",
+      "error": "HTTP 404"
+    }
+  ]
+}

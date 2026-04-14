@@ -5,10 +5,15 @@
  * 
  * Returns ONLY trims that have actual fitment data in the database.
  * No fallback to "Base" or supplements - if no coverage exists, returns empty.
+ * 
+ * Premium Trim UX (when NEXT_PUBLIC_ENABLE_PREMIUM_TRIM_UX=true):
+ * - Never returns "Base" as a trim label
+ * - Returns empty if only "Base" would have been shown
  */
 
 import { NextResponse } from "next/server";
 import { getTrimsWithCoverage, hasYearCoverage } from "@/lib/fitment-db/coverage";
+import { isPremiumTrimUxEnabled, isBaseTrim } from "@/lib/features/premiumTrimUx";
 
 export const runtime = "nodejs";
 
@@ -62,6 +67,9 @@ export async function GET(req: Request) {
     });
   }
 
+  // Check if premium trim UX is enabled
+  const premiumUxEnabled = isPremiumTrimUxEnabled();
+  
   try {
     // Get trims with actual fitment coverage
     const coverage = await getTrimsWithCoverage(year, make, model);
@@ -73,12 +81,25 @@ export async function GET(req: Request) {
       // All split trims share the same modificationId since they have identical specs
       const results: TrimOption[] = [];
       for (const t of coverage.trims) {
-        const label = t.displayTrim || "Base";
+        // When premium UX is enabled, skip "Base" fallback - use empty displayTrim instead
+        const rawLabel = t.displayTrim || (premiumUxEnabled ? "" : "Base");
+        
+        // Skip empty labels entirely when premium UX is on
+        if (premiumUxEnabled && !rawLabel) {
+          continue;
+        }
+        
+        const label = rawLabel;
+        
         // Check if this is a grouped trim (contains comma or slash)
         if (label.includes(",") || label.includes("/")) {
           // Split on comma or slash
           const individualTrims = label.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
           for (const trimName of individualTrims) {
+            // Skip "Base" variants when premium UX is enabled
+            if (premiumUxEnabled && isBaseTrim(trimName)) {
+              continue;
+            }
             results.push({
               value: t.modificationId,
               label: trimName,
@@ -86,6 +107,10 @@ export async function GET(req: Request) {
             });
           }
         } else {
+          // Skip "Base" variants when premium UX is enabled
+          if (premiumUxEnabled && isBaseTrim(label)) {
+            continue;
+          }
           results.push({
             value: t.modificationId,
             label,
@@ -99,7 +124,8 @@ export async function GET(req: Request) {
         source: "fitment_db",
         count: results.length,
         hasCoverage: true,
-      }, {
+        premiumUx: premiumUxEnabled, // Include flag status for debugging
+      } as TrimResponse, {
         headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
       });
     }

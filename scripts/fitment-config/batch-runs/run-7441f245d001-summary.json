@@ -1,0 +1,167 @@
+{
+  "runId": "7441f245d001",
+  "startedAt": "2026-04-14T14:04:19.004Z",
+  "completedAt": "2026-04-14T14:04:44.130Z",
+  "totalBatches": 1,
+  "completedBatches": 1,
+  "thresholds": {
+    "BATCH_SIZE": 200,
+    "MAX_BATCHES": 10,
+    "CONFLICT_THRESHOLD": 0.15,
+    "PROMOTION_THRESHOLD": 0.4,
+    "MIN_RESEARCH_SUCCESS": 0.7,
+    "RESEARCH_DELAY_MS": 1500,
+    "MAX_RESEARCH_ERRORS": 10,
+    "OUTPUT_DIR": "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\fitment-config\\batch-runs"
+  },
+  "totals": {
+    "targeted": 10,
+    "researched": 10,
+    "validated": 9,
+    "highConfidence": 9,
+    "promoted": 27,
+    "conflicts": 0,
+    "skipped": 0,
+    "errors": 1
+  },
+  "batches": [
+    {
+      "batchId": "ce0a3773",
+      "batchNumber": 1,
+      "startedAt": "2026-04-14T14:04:19.937Z",
+      "completedAt": "2026-04-14T14:04:44.125Z",
+      "durationMs": 24188,
+      "totalTargeted": 10,
+      "totalResearched": 10,
+      "totalValidated": 9,
+      "totalHighConfidence": 9,
+      "totalPromoted": 27,
+      "totalConflicts": 0,
+      "totalSkipped": 0,
+      "totalErrors": 1,
+      "researchSuccessRate": 0.9,
+      "conflictRate": 0,
+      "promotionRate": 1,
+      "passedQualityGates": true,
+      "promotedRecords": [
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "ilx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "integra",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        }
+      ],
+      "conflictRecords": [],
+      "errorRecords": [
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "integra",
+          "error": "HTTP 404"
+        }
+      ]
+    }
+  ]
+}

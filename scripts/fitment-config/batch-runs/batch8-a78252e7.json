@@ -1,0 +1,522 @@
+{
+  "batchId": "a78252e7",
+  "batchNumber": 8,
+  "startedAt": "2026-04-14T16:04:38.312Z",
+  "totalTargeted": 94,
+  "totalResearched": 39,
+  "totalValidated": 39,
+  "totalHighConfidence": 10,
+  "totalPromoted": 79,
+  "totalConflicts": 3,
+  "totalSkipped": 0,
+  "totalErrors": 2,
+  "totalAlreadyCovered": 0,
+  "yearGuardSkips": 0,
+  "researchSuccessRate": 0.4148936170212766,
+  "conflictRate": 0.07692307692307693,
+  "promotionRate": 0.9230769230769231,
+  "configsPerVehicle": 2.1944444444444446,
+  "passedQualityGates": false,
+  "earlyStopped": true,
+  "promotedRecords": [
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Convenience"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Convenience",
+        "Sport Touring"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Essence",
+        "Preferred",
+        "Sport Touring"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Essence",
+        "Preferred",
+        "Preferred II",
+        "Sport Touring"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Essence",
+        "Preferred",
+        "Sport Touring"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Essence",
+        "Preferred",
+        "Sport Touring"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Preferred"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "encore",
+      "trims": [
+        "Base Model",
+        "Preferred"
+      ],
+      "tireSize": "215/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Encore"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Base Model"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Base Model"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Base Model"
+      ],
+      "tireSize": "235/50R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Base Model",
+        "Essence"
+      ],
+      "tireSize": "225/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Base Model",
+        "Essence"
+      ],
+      "tireSize": "225/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "envision",
+      "trims": [
+        "Avenir",
+        "Preferred",
+        "Sport Touring"
+      ],
+      "tireSize": "245/45R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Envision"
+    },
+    {
+      "year": 2018,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir",
+        "Base Model"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2019,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2020,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2021,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2022,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "enclave",
+      "trims": [
+        "Avenir"
+      ],
+      "tireSize": "255/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Enclave"
+    },
+    {
+      "year": 2017,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Limited",
+        "Touring",
+        "Touring Hybrid"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2018,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Limited",
+        "Limited"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2019,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Limited",
+        "Limited"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2020,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Limited"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2021,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Limited",
+        "Hybrid Touring L"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2022,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Limited",
+        "Hybrid Touring L"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2023,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Limited",
+        "Hybrid Touring L"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2024,
+      "make": "chrysler",
+      "model": "pacifica",
+      "trims": [
+        "Hybrid Pinnacle",
+        "Hybrid Road Tripper",
+        "Hybrid S",
+        "Hybrid Select",
+        "Limited",
+        "Touring"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pacifica"
+    },
+    {
+      "year": 2015,
+      "make": "chrysler",
+      "model": "300",
+      "trims": [
+        "Limited AWD",
+        "Limited RWD"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "300"
+    },
+    {
+      "year": 2016,
+      "make": "chrysler",
+      "model": "300",
+      "trims": [
+        "Anniversary Edition AWD",
+        "Anniversary Edition RWD",
+        "Limited AWD",
+        "Limited RWD"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "300"
+    },
+    {
+      "year": 2017,
+      "make": "chrysler",
+      "model": "300",
+      "trims": [
+        "Limited AWD",
+        "Limited RWD"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "300"
+    },
+    {
+      "year": 2018,
+      "make": "chrysler",
+      "model": "300",
+      "trims": [
+        "Limited AWD",
+        "Limited RWD",
+        "Touring AWD",
+        "Touring L AWD"
+      ],
+      "tireSize": "235/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "300"
+    }
+  ],
+  "conflictRecords": [
+    {
+      "year": 2015,
+      "make": "buick",
+      "model": "enclave",
+      "conflict": "Base: multiple wheel sizes (19, 20)"
+    },
+    {
+      "year": 2016,
+      "make": "buick",
+      "model": "enclave",
+      "conflict": "Base: multiple wheel sizes (19, 20)"
+    },
+    {
+      "year": 2017,
+      "make": "buick",
+      "model": "enclave",
+      "conflict": "Base: multiple wheel sizes (19, 20)"
+    }
+  ],
+  "errorRecords": [
+    {
+      "year": 2023,
+      "make": "buick",
+      "model": "encore",
+      "error": "HTTP 404 (tried: Encore)"
+    },
+    {
+      "year": 2024,
+      "make": "buick",
+      "model": "encore",
+      "error": "HTTP 404 (tried: Encore)"
+    }
+  ],
+  "brandPerformance": {
+    "buick": {
+      "attempted": 29,
+      "success": 27,
+      "configs": 47
+    },
+    "chrysler": {
+      "attempted": 12,
+      "success": 12,
+      "configs": 32
+    },
+    "mitsubishi": {
+      "attempted": 0,
+      "success": 0,
+      "configs": 0
+    },
+    "lexus": {
+      "attempted": 0,
+      "success": 0,
+      "configs": 0
+    }
+  },
+  "earlyStopReason": "Configs per vehicle dropped to 2.19",
+  "completedAt": "2026-04-14T16:06:31.341Z",
+  "durationMs": 113029,
+  "gateFailureReason": "Research success rate 41.5% below 90% threshold"
+}

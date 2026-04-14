@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { getWheelSizeGateDecision } from "@/lib/tires/wheelSizeGateDecision";
+import { isBaseTrim } from "@/lib/features/premiumTrimUx";
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
@@ -159,11 +160,11 @@ export function SteppedVehicleSelector({
           `/api/vehicles/trims?${qs.toString()}`
         );
         const dbResults = Array.isArray(data?.results) ? data.results : [];
-        // Use fitment DB if it has real trims (more than just "Base")
-        const hasRealTrims = dbResults.length > 1 || 
-          (dbResults.length === 1 && dbResults[0].label !== "Base");
-        if (hasRealTrims) {
-          if (!cancelled) setTrims(dbResults);
+        // Filter out "Base" and other fallback labels to get real trims
+        // When premium UX is enabled, trims API won't return "Base" at all
+        const realTrims = dbResults.filter(t => !isBaseTrim(t.label));
+        if (realTrims.length > 0) {
+          if (!cancelled) setTrims(realTrims);
           if (!cancelled) setTrimsLoading(false);
           if (!cancelled) setTrimsLoadedOnce(true);
           return;
@@ -232,22 +233,35 @@ export function SteppedVehicleSelector({
           diameterOptions?: Array<{ diameter: number; isDefault: boolean }>;
         }>(`/api/vehicles/configurations?${configQs.toString()}`);
         
-        // HIGH CONFIDENCE path: auto-select default and complete immediately
-        if (
-          configData?.usedConfigTable && 
-          configData?.confidence === "high" &&
-          configData?.hasMultipleDiameters &&
-          configData?.defaultDiameter
-        ) {
-          console.log(`[WheelSizeGate] AUTO-SELECT default from config table: ${configData.defaultDiameter}"`);
-          setWheelDiametersChecked(true);
-          setWheelDiametersLoading(false);
-          // Complete with the default wheel diameter auto-selected
-          onComplete({
-            ...selection,
-            wheelDia: configData.defaultDiameter,
-          });
-          return;
+        // AUTO-SELECT when we have config data and can determine the wheel size:
+        // Case 1: Single diameter (no choice needed) - always auto-select
+        // Case 2: Multiple diameters with HIGH confidence default - auto-select the default
+        if (configData?.usedConfigTable && configData?.defaultDiameter) {
+          const singleDiameter = !configData.hasMultipleDiameters;
+          const highConfidenceMultiple = configData.hasMultipleDiameters && configData.confidence === "high";
+          
+          if (singleDiameter || highConfidenceMultiple) {
+            console.log(`[WheelSizeGate] AUTO-SELECT from config: ${configData.defaultDiameter}" (single=${singleDiameter}, confidence=${configData.confidence})`);
+            setWheelDiametersChecked(true);
+            setWheelDiametersLoading(false);
+            // Complete with the wheel diameter auto-selected
+            onComplete({
+              ...selection,
+              wheelDia: configData.defaultDiameter,
+            });
+            return;
+          }
+          
+          // Multiple diameters with MEDIUM/LOW confidence - show selector
+          if (configData.hasMultipleDiameters && configData.diameterOptions?.length) {
+            console.log(`[WheelSizeGate] SHOW selector - multiple diameters, confidence=${configData.confidence}`);
+            const options = configData.diameterOptions.map(d => d.diameter);
+            setWheelDiameters(options);
+            setWheelDiametersChecked(true);
+            setWheelDiametersLoading(false);
+            setStep("wheelSize");
+            return;
+          }
         }
       } catch (configErr) {
         // Config API failed - fall through to legacy path

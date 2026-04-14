@@ -1,0 +1,2101 @@
+{
+  "batchId": "a7b131ad",
+  "batchNumber": 4,
+  "startedAt": "2026-04-14T15:21:24.189Z",
+  "completedAt": "2026-04-14T15:26:29.323Z",
+  "durationMs": 305134,
+  "totalTargeted": 172,
+  "totalResearched": 152,
+  "totalValidated": 140,
+  "totalHighConfidence": 121,
+  "totalPromoted": 632,
+  "totalConflicts": 1,
+  "totalSkipped": 9,
+  "totalErrors": 3,
+  "yearGuardSkips": 20,
+  "researchSuccessRate": 0.9210526315789473,
+  "conflictRate": 0.007142857142857143,
+  "promotionRate": 0.9928571428571429,
+  "passedQualityGates": true,
+  "promotedRecords": [
+    {
+      "year": 2015,
+      "make": "chevrolet",
+      "model": "trax",
+      "trims": [
+        "LS",
+        "LT",
+        "LTZ"
+      ],
+      "tireSize": "205/70R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Trax"
+    },
+    {
+      "year": 2018,
+      "make": "chevrolet",
+      "model": "trax",
+      "trims": [
+        "LS",
+        "LT"
+      ],
+      "tireSize": "205/70R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Trax"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "k5",
+      "trims": [
+        "EX",
+        "GT",
+        "LX",
+        "LXS"
+      ],
+      "tireSize": "235/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "K5"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "k5",
+      "trims": [
+        "EX",
+        "GT",
+        "LX",
+        "LXS",
+        "LXS AWD"
+      ],
+      "tireSize": "235/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "K5"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "k5",
+      "trims": [
+        "EX",
+        "GT",
+        "LXS"
+      ],
+      "tireSize": "235/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "K5"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "k5",
+      "trims": [
+        "EX",
+        "GT",
+        "LXS"
+      ],
+      "tireSize": "235/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "K5"
+    },
+    {
+      "year": 2016,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "SX"
+      ],
+      "tireSize": "235/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2017,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "SX Turbo"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2018,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "SX Turbo"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2019,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "SX Turbo"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "S",
+        "SX Turbo"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "S",
+        "SX Turbo"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "LX",
+        "SX Turbo"
+      ],
+      "tireSize": "225/55R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "EX Hybrid",
+        "LX",
+        "LX Hybrid",
+        "SX",
+        "SX Prestige",
+        "SX Prestige Hybrid",
+        "X-Pro",
+        "X-Pro Prestige"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "sportage",
+      "trims": [
+        "EX",
+        "EX Hybrid",
+        "LX",
+        "LX Hybrid",
+        "SX",
+        "SX Prestige",
+        "SX Prestige Hybrid",
+        "X-Pro",
+        "X-Pro Prestige"
+      ],
+      "tireSize": "235/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Sportage"
+    },
+    {
+      "year": 2020,
+      "make": "kia",
+      "model": "telluride",
+      "trims": [
+        "EX",
+        "S",
+        "SX"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Telluride"
+    },
+    {
+      "year": 2021,
+      "make": "kia",
+      "model": "telluride",
+      "trims": [
+        "EX",
+        "S",
+        "SX"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Telluride"
+    },
+    {
+      "year": 2022,
+      "make": "kia",
+      "model": "telluride",
+      "trims": [
+        "EX",
+        "S",
+        "SX"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Telluride"
+    },
+    {
+      "year": 2023,
+      "make": "kia",
+      "model": "telluride",
+      "trims": [
+        "EX",
+        "LX",
+        "S",
+        "SX",
+        "SX Prestige",
+        "SX Prestige X-Pro",
+        "SX X-Pro"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Telluride"
+    },
+    {
+      "year": 2024,
+      "make": "kia",
+      "model": "telluride",
+      "trims": [
+        "EX",
+        "LX",
+        "S",
+        "SX",
+        "SX Prestige",
+        "SX Prestige X-Pro",
+        "SX X-Pro"
+      ],
+      "tireSize": "245/50R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Telluride"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "2.5",
+        "2.5 S",
+        "2.5 SL",
+        "2.5 SV",
+        "3.5 S",
+        "3.5 SL",
+        "3.5 SV"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "2.5",
+        "2.5 S",
+        "2.5 SL",
+        "2.5 SR",
+        "2.5 SV",
+        "3.5 SL",
+        "3.5 SR"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "2.5",
+        "2.5 S",
+        "2.5 SL",
+        "2.5 SR",
+        "2.5 SV",
+        "3.5 SL",
+        "3.5 SR"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "2.5 S",
+        "2.5 SL",
+        "2.5 SR",
+        "2.5 SV",
+        "3.5 SL"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV",
+        "VC-Turbo"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV",
+        "VC-Turbo"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV",
+        "VC-Turbo"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV",
+        "VC-Turbo"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV",
+        "VC-Turbo"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "altima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV",
+        "VC-Turbo"
+      ],
+      "tireSize": "215/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Altima"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "frontier",
+      "trims": [
+        "PRO-4X",
+        "PRO-X",
+        "S"
+      ],
+      "tireSize": "265/70R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Frontier"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "frontier",
+      "trims": [
+        "PRO-4X",
+        "PRO-X",
+        "S"
+      ],
+      "tireSize": "265/70R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Frontier"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "frontier",
+      "trims": [
+        "PRO-4X",
+        "PRO-X",
+        "S",
+        "SL"
+      ],
+      "tireSize": "265/70R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Frontier"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/45R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/40R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "maxima",
+      "trims": [
+        "SR",
+        "SV"
+      ],
+      "tireSize": "245/40R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Maxima"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "Hybrid SL",
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "S",
+        "SL"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "murano",
+      "trims": [
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/55R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Murano"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "S",
+        "SL"
+      ],
+      "tireSize": "255/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "Rock Creek",
+        "S",
+        "SL"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "pathfinder",
+      "trims": [
+        "Rock Creek",
+        "S",
+        "SL"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Pathfinder"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SL Hybrid",
+        "SV",
+        "SV Hybrid"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SL Hybrid",
+        "SV",
+        "SV Hybrid"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SL Hybrid"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "rogue",
+      "trims": [
+        "S",
+        "SL",
+        "SV"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Rogue"
+    },
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "FE-S",
+        "FE-SV",
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2016,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "FE-S",
+        "S",
+        "SL",
+        "SR",
+        "SV"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2017,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SR Turbo",
+        "SV"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2018,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SR Turbo",
+        "SV"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2019,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SL",
+        "SR",
+        "SR Turbo",
+        "SV"
+      ],
+      "tireSize": "205/55R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2020,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SR"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SR"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2022,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SR"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2023,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SR"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "sentra",
+      "trims": [
+        "S",
+        "SR"
+      ],
+      "tireSize": "205/60R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Sentra"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "Trail"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "Trail"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "4runner",
+      "trims": [
+        "Limited",
+        "SR5",
+        "SR5 Premium"
+      ],
+      "tireSize": "245/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "4Runner"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "LE",
+        "SE",
+        "XLE",
+        "XLE V6",
+        "XSE",
+        "XSE V6"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Camry"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "LE",
+        "SE",
+        "XLE",
+        "XLE V6",
+        "XSE",
+        "XSE V6"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Camry"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "camry",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid SE",
+        "Hybrid XLE",
+        "LE",
+        "SE",
+        "XLE",
+        "XLE V6",
+        "XSE",
+        "XSE V6"
+      ],
+      "tireSize": "205/65R16",
+      "wheelDiameter": 16,
+      "aliasUsed": "Camry"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "corolla",
+      "trims": [
+        "L",
+        "LE"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Corolla"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "corolla",
+      "trims": [
+        "L",
+        "LE",
+        "LE Eco"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Corolla"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "corolla",
+      "trims": [
+        "iM",
+        "L",
+        "LE",
+        "LE Eco",
+        "XLE",
+        "XSE"
+      ],
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Corolla"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "corolla",
+      "trims": [
+        "iM",
+        "L",
+        "LE",
+        "LE Eco",
+        "XLE",
+        "XSE"
+      ],
+      "tireSize": "225/45R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Corolla"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid Limited",
+        "LE",
+        "LE Plus",
+        "Limited",
+        "XLE"
+      ],
+      "tireSize": "245/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid Limited",
+        "LE",
+        "LE Plus",
+        "Limited",
+        "XLE"
+      ],
+      "tireSize": "245/55R19",
+      "wheelDiameter": 19,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "LE",
+        "LE Plus",
+        "Limited",
+        "SE",
+        "XLE"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "LE",
+        "LE Plus",
+        "Limited",
+        "SE",
+        "XLE"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "LE",
+        "LE Plus",
+        "Limited",
+        "SE",
+        "XLE"
+      ],
+      "tireSize": "245/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "L",
+        "LE",
+        "Limited",
+        "XLE"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "L",
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "L",
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "L",
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "highlander",
+      "trims": [
+        "Hybrid LE",
+        "Hybrid Limited",
+        "Hybrid XLE",
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE"
+      ],
+      "tireSize": "235/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Highlander"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "c Four",
+        "c Three",
+        "c Two",
+        "Four",
+        "Three",
+        "Two",
+        "Two Eco",
+        "v Five",
+        "v Four",
+        "v Three",
+        "v Two"
+      ],
+      "tireSize": "175/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "c Four",
+        "c Three",
+        "c Two",
+        "Four",
+        "Prime Plus",
+        "Prime Premium",
+        "Three",
+        "Two",
+        "Two Eco",
+        "v Five",
+        "v Four",
+        "v Three",
+        "v Two"
+      ],
+      "tireSize": "175/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "c Four",
+        "c Three",
+        "c Two",
+        "Four",
+        "Prime Plus",
+        "Prime Premium",
+        "Three",
+        "Two",
+        "Two Eco"
+      ],
+      "tireSize": "175/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "c L",
+        "c LE",
+        "L Eco",
+        "LE",
+        "LE AWD-e",
+        "Limited",
+        "Prime Plus",
+        "Prime Premium",
+        "XLE"
+      ],
+      "tireSize": "175/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "L Eco",
+        "LE",
+        "LE AWD-e",
+        "Limited",
+        "Prime Limited",
+        "Prime XLE",
+        "XLE"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "L Eco",
+        "LE",
+        "LE AWD-e",
+        "Limited",
+        "Prime Limited",
+        "Prime XLE",
+        "XLE"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "L Eco",
+        "LE",
+        "LE AWD-e",
+        "Limited",
+        "Prime Limited",
+        "Prime XLE",
+        "XLE"
+      ],
+      "tireSize": "195/65R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "LE",
+        "Limited",
+        "Prime LE",
+        "Prime Limited",
+        "Prime XLE",
+        "XLE"
+      ],
+      "tireSize": "195/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "prius",
+      "trims": [
+        "LE",
+        "Limited",
+        "Prime SE",
+        "Prime XSE",
+        "Prime XSE Premium",
+        "XLE"
+      ],
+      "tireSize": "195/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Prius"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "rav4",
+      "trims": [
+        "LE",
+        "Limited",
+        "XLE"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "RAV4"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "rav4",
+      "trims": [
+        "LE",
+        "Limited",
+        "Limited Hybrid",
+        "SE",
+        "XLE",
+        "XLE Hybrid"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "RAV4"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "rav4",
+      "trims": [
+        "LE",
+        "Limited",
+        "Limited Hybrid",
+        "SE",
+        "SE Hybrid",
+        "XLE",
+        "XLE Hybrid"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "RAV4"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "rav4",
+      "trims": [
+        "LE",
+        "LE Hybrid",
+        "Limited",
+        "Limited Hybrid",
+        "SE",
+        "SE Hybrid",
+        "XLE",
+        "XLE Hybrid"
+      ],
+      "tireSize": "225/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "RAV4"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "L",
+        "LE AWD",
+        "LE FWD",
+        "Limited AWD",
+        "Limited FWD",
+        "SE",
+        "XLE AWD",
+        "XLE FWD"
+      ],
+      "tireSize": "235/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "L",
+        "LE AWD",
+        "LE FWD",
+        "Limited AWD",
+        "Limited FWD",
+        "SE",
+        "XLE AWD",
+        "XLE FWD"
+      ],
+      "tireSize": "235/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2017,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "L",
+        "LE AWD",
+        "LE FWD",
+        "Limited AWD",
+        "Limited FWD",
+        "SE",
+        "XLE AWD",
+        "XLE FWD"
+      ],
+      "tireSize": "235/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "L",
+        "LE AWD",
+        "LE FWD",
+        "Limited AWD",
+        "Limited FWD",
+        "SE",
+        "XLE AWD",
+        "XLE FWD"
+      ],
+      "tireSize": "235/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "L",
+        "LE AWD",
+        "LE FWD",
+        "Limited AWD",
+        "Limited FWD",
+        "SE AWD",
+        "SE FWD",
+        "XLE AWD",
+        "XLE FWD"
+      ],
+      "tireSize": "235/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "L",
+        "LE AWD",
+        "LE FWD",
+        "Limited AWD",
+        "Limited FWD",
+        "SE AWD",
+        "SE FWD",
+        "XLE AWD",
+        "XLE FWD"
+      ],
+      "tireSize": "235/60R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE AWD",
+        "XSE FWD"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE AWD",
+        "XSE FWD"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE AWD",
+        "XSE FWD"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "sienna",
+      "trims": [
+        "LE",
+        "Limited",
+        "XLE",
+        "XSE FWD"
+      ],
+      "tireSize": "235/65R17",
+      "wheelDiameter": 17,
+      "aliasUsed": "Sienna"
+    },
+    {
+      "year": 2015,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "2wd Double Cab"
+      ],
+      "tireSize": "215/70R15",
+      "wheelDiameter": 15,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2016,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Base"
+      ],
+      "tireSize": "275/60R20",
+      "wheelDiameter": 20,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2018,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2019,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2020,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2021,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2022,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2023,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/60R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    },
+    {
+      "year": 2024,
+      "make": "toyota",
+      "model": "tacoma",
+      "trims": [
+        "Limited",
+        "SR",
+        "SR5"
+      ],
+      "tireSize": "265/65R18",
+      "wheelDiameter": 18,
+      "aliasUsed": "Tacoma"
+    }
+  ],
+  "conflictRecords": [
+    {
+      "year": 2017,
+      "make": "honda",
+      "model": "civic",
+      "conflict": "Type R: multiple wheel sizes (19, 20)"
+    }
+  ],
+  "errorRecords": [
+    {
+      "year": 2015,
+      "make": "nissan",
+      "model": "maxima",
+      "error": "HTTP 404 (tried: Maxima)"
+    },
+    {
+      "year": 2024,
+      "make": "nissan",
+      "model": "maxima",
+      "error": "HTTP 404 (tried: Maxima)"
+    },
+    {
+      "year": 2021,
+      "make": "nissan",
+      "model": "pathfinder",
+      "error": "HTTP 404 (tried: Pathfinder)"
+    }
+  ],
+  "stats": {
+    "yearGuardSkips": 20,
+    "aliasAttempts": 152,
+    "aliasSuccesses": {
+      "trax → Trax": 2,
+      "mustang → Mustang": 6,
+      "civic → Civic": 1,
+      "forte → Forte": 2,
+      "k5 → K5": 4,
+      "sportage → Sportage": 9,
+      "telluride → Telluride": 5,
+      "altima → Altima": 10,
+      "frontier → Frontier": 3,
+      "maxima → Maxima": 8,
+      "murano → Murano": 10,
+      "pathfinder → Pathfinder": 9,
+      "rogue → Rogue": 10,
+      "sentra → Sentra": 10,
+      "4runner → 4Runner": 10,
+      "camry → Camry": 3,
+      "corolla → Corolla": 4,
+      "highlander → Highlander": 10,
+      "prius → Prius": 9,
+      "rav4 → RAV4": 4,
+      "sienna → Sienna": 10,
+      "tacoma → Tacoma": 10
+    },
+    "falseAliasMatches": 0
+  }
+}

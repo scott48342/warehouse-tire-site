@@ -1,0 +1,84 @@
+{
+  "batchId": "ce124ceb",
+  "batchNumber": 1,
+  "startedAt": "2026-04-14T13:59:47.856Z",
+  "completedAt": "2026-04-14T14:00:07.496Z",
+  "durationMs": 19640,
+  "totalTargeted": 200,
+  "totalResearched": 10,
+  "totalValidated": 0,
+  "totalHighConfidence": 0,
+  "totalPromoted": 0,
+  "totalConflicts": 0,
+  "totalSkipped": 0,
+  "totalErrors": 10,
+  "researchSuccessRate": 0,
+  "conflictRate": 0,
+  "promotionRate": 0,
+  "passedQualityGates": false,
+  "promotedRecords": [],
+  "conflictRecords": [],
+  "errorRecords": [
+    {
+      "year": 2015,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2016,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2017,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2018,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2019,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2020,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2021,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "ilx",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2022,
+      "make": "acura",
+      "model": "integra",
+      "error": "HTTP 404"
+    },
+    {
+      "year": 2023,
+      "make": "acura",
+      "model": "integra",
+      "error": "HTTP 404"
+    }
+  ],
+  "gateFailureReason": "Research success rate 0.0% below threshold 70%"
+}

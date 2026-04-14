@@ -26,6 +26,7 @@ import {
   type PlusSizeCandidate,
 } from "@/lib/tirePlusSizing";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
+import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { TireFilterSidebar } from "@/components/TireFilterSidebar";
 import { 
@@ -64,6 +65,7 @@ import { WheelDiameterSelector } from "@/components/WheelDiameterSelector";
 import { WheelSizeGateSelector } from "@/components/WheelSizeGateSelector";
 import WheelConfigurationSwitcher from "@/components/WheelConfigurationSwitcher";
 import { WheelConfigAutoSelectTracker } from "@/components/WheelConfigAutoSelectTracker";
+import { FitmentCoverageTracker } from "@/components/FitmentCoverageTracker";
 import { needsWheelSizeSelection } from "@/lib/tires/wheelSizeGate";
 import { getFitmentConfigurations } from "@/lib/fitment-db/getFitmentConfigurations";
 import { RearWheelConfigSelector } from "@/components/RearWheelConfigSelector";
@@ -1538,10 +1540,12 @@ export default async function TiresPage({
   }
 
   // Build display-friendly trim label (never shows engine text like "5.7i")
+  // When premium UX is enabled, also skip "Base" labels
+  const premiumTrimUxEnabled = isPremiumTrimUxEnabled();
   const displayTrim = getDisplayTrim({
     trim: resolvedTrimLabel || trim,
     submodel: (fitmentStrict as any)?.selectedModification?.name || (fitmentStrict as any)?.vehicle?.trim,
-  });
+  }, { skipBase: premiumTrimUxEnabled });
 
   function rimDiaFromSize(s: string) {
     const str = String(s || "").toUpperCase();
@@ -2646,6 +2650,26 @@ export default async function TiresPage({
             diameter={Number(configAutoWheelDia)}
             vehicle={`${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`}
             confidence={configurationData.confidence}
+          />
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            FITMENT COVERAGE TRACKING
+            Tracks config-backed vs fallback fitment for analytics
+            ═══════════════════════════════════════════════════════════════════════ */}
+        {hasVehicle && (
+          <FitmentCoverageTracker
+            year={year}
+            make={make}
+            model={model}
+            trim={displayTrim}
+            modification={modification}
+            hasConfig={configurationData?.usedConfigTable ?? false}
+            source={configurationData?.usedConfigTable ? "config" : (configurationData ? "legacy" : "none")}
+            confidence={configurationData?.confidence ?? "low"}
+            wheelDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : undefined}
+            autoSelected={wheelDiaWasAutoSelected}
+            productType="tires"
           />
         )}
         

@@ -1,0 +1,2095 @@
+{
+  "runId": "afdf631ac6bd",
+  "startedAt": "2026-04-14T14:04:50.438Z",
+  "completedAt": "2026-04-14T14:11:48.281Z",
+  "totalBatches": 5,
+  "completedBatches": 1,
+  "thresholds": {
+    "BATCH_SIZE": 200,
+    "MAX_BATCHES": 10,
+    "CONFLICT_THRESHOLD": 0.15,
+    "PROMOTION_THRESHOLD": 0.4,
+    "MIN_RESEARCH_SUCCESS": 0.7,
+    "RESEARCH_DELAY_MS": 1500,
+    "MAX_RESEARCH_ERRORS": 10,
+    "OUTPUT_DIR": "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\fitment-config\\batch-runs"
+  },
+  "totals": {
+    "targeted": 200,
+    "researched": 175,
+    "validated": 165,
+    "highConfidence": 165,
+    "promoted": 495,
+    "conflicts": 0,
+    "skipped": 0,
+    "errors": 10
+  },
+  "batches": [
+    {
+      "batchId": "15174a9d",
+      "batchNumber": 1,
+      "startedAt": "2026-04-14T14:04:50.801Z",
+      "completedAt": "2026-04-14T14:11:48.275Z",
+      "durationMs": 417474,
+      "totalTargeted": 200,
+      "totalResearched": 175,
+      "totalValidated": 165,
+      "totalHighConfidence": 165,
+      "totalPromoted": 495,
+      "totalConflicts": 0,
+      "totalSkipped": 0,
+      "totalErrors": 10,
+      "researchSuccessRate": 0.9428571428571428,
+      "conflictRate": 0,
+      "promotionRate": 1,
+      "passedQualityGates": false,
+      "promotedRecords": [
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "integra",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "integra",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "integra",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "mdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "rdx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "acura",
+          "model": "tlx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "alfa-romeo",
+          "model": "4c",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "alfa-romeo",
+          "model": "giulia",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "alfa-romeo",
+          "model": "stelvio",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "aston-martin",
+          "model": "db11",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "aston-martin",
+          "model": "dbx",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "aston-martin",
+          "model": "vantage",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "a3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "a4",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "a6",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "a8",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "e-tron",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "q3",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "q5",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2015,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2016,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2017,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2019,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2020,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2022,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2023,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2024,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2025,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "q7",
+          "trims": [
+            "37 Inch Tires",
+            "265/70R17",
+            "275/70R18"
+          ],
+          "tireSize": "285/75R16",
+          "wheelDiameter": 16
+        }
+      ],
+      "conflictRecords": [],
+      "errorRecords": [
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "integra",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "mdx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "acura",
+          "model": "tlx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "aston-martin",
+          "model": "db11",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2024,
+          "make": "aston-martin",
+          "model": "db11",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2027,
+          "make": "aston-martin",
+          "model": "dbx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2027,
+          "make": "aston-martin",
+          "model": "vantage",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "audi",
+          "model": "a3",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2026,
+          "make": "audi",
+          "model": "a4",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "audi",
+          "model": "q8",
+          "error": "HTTP 404"
+        }
+      ],
+      "gateFailureReason": "Too many errors: 10"
+    }
+  ],
+  "stoppedReason": "Too many errors: 10"
+}

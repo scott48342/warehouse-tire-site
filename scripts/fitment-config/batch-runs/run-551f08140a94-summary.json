@@ -1,0 +1,114 @@
+{
+  "runId": "551f08140a94",
+  "startedAt": "2026-04-14T13:59:47.540Z",
+  "completedAt": "2026-04-14T14:00:07.500Z",
+  "totalBatches": 1,
+  "completedBatches": 1,
+  "thresholds": {
+    "BATCH_SIZE": 200,
+    "MAX_BATCHES": 10,
+    "CONFLICT_THRESHOLD": 0.15,
+    "PROMOTION_THRESHOLD": 0.4,
+    "MIN_RESEARCH_SUCCESS": 0.7,
+    "RESEARCH_DELAY_MS": 1500,
+    "MAX_RESEARCH_ERRORS": 10,
+    "OUTPUT_DIR": "C:\\Users\\Scott-Pc\\backup clawd\\warehouse-tire-site\\scripts\\fitment-config\\batch-runs"
+  },
+  "totals": {
+    "targeted": 200,
+    "researched": 10,
+    "validated": 0,
+    "highConfidence": 0,
+    "promoted": 0,
+    "conflicts": 0,
+    "skipped": 0,
+    "errors": 10
+  },
+  "batches": [
+    {
+      "batchId": "ce124ceb",
+      "batchNumber": 1,
+      "startedAt": "2026-04-14T13:59:47.856Z",
+      "completedAt": "2026-04-14T14:00:07.496Z",
+      "durationMs": 19640,
+      "totalTargeted": 200,
+      "totalResearched": 10,
+      "totalValidated": 0,
+      "totalHighConfidence": 0,
+      "totalPromoted": 0,
+      "totalConflicts": 0,
+      "totalSkipped": 0,
+      "totalErrors": 10,
+      "researchSuccessRate": 0,
+      "conflictRate": 0,
+      "promotionRate": 0,
+      "passedQualityGates": false,
+      "promotedRecords": [],
+      "conflictRecords": [],
+      "errorRecords": [
+        {
+          "year": 2015,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2016,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2017,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2018,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2019,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2020,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2021,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "ilx",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2022,
+          "make": "acura",
+          "model": "integra",
+          "error": "HTTP 404"
+        },
+        {
+          "year": 2023,
+          "make": "acura",
+          "model": "integra",
+          "error": "HTTP 404"
+        }
+      ],
+      "gateFailureReason": "Research success rate 0.0% below threshold 70%"
+    }
+  ],
+  "stoppedReason": "Research success rate 0.0% below threshold 70%"
+}
