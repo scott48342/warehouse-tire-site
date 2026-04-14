@@ -634,3 +634,134 @@ Caption:
 
 ✨ Done!
 [Tue 04/14/2026  9:00:25.83] Auto-post complete 
+[Tue 04/14/2026 18:00:03.45] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:7584) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] KMC KM540 RECON
+  ⚠️ No matching vehicle for bolt pattern 6X120, using generic caption
+  Downloading image for KMC KM540 RECON...
+  ✅ Generated: km540_recon_1776204007375
+  📝 Caption preview: Transform your truck with the KMC KM540 RECON 🛞
+
+📐 17x8.5
+🔩 6X120
+↔️ 18mm off...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - km540_recon_1776204007375.png
+  - km540_recon_1776204007375.json
+
+📱 Facebook/Instagram Poster
+
+Selected: km540_recon_1776204007375
+
+--- Content Preview ---
+Wheel: KMC KM540 RECON
+Price: $385
+Image: km540_recon_1776204007375.png
+
+Caption:
+Transform your truck with the KMC KM540 RECON 🛞
+
+📐 17x8.5
+🔩 6X120
+↔️ 18mm offset
+✨ KM540 17X8.5 6X120 S-BLK 18MM
+
+$385/wheel
+
+🛒 https://shop.warehousetiredirect.com/wheels/KM54078577718
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #kmc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1577155624412564
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:17484) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Petrol PE002 P1E
+  ⚠️ No matching vehicle for bolt pattern 5X110, using generic caption
+  Downloading image for Petrol PE002 P1E...
+  ✅ Generated: pe002_p1e_1776204023233
+  📝 Caption preview: New arrival alert! 🚨
+
+Petrol PE002 P1E
+📐 18x8
+🔩 5X110
+↔️ 40mm offset
+✨ P1E 18...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pe002_p1e_1776204023233.png
+  - pe002_p1e_1776204023233.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pe002_p1e_1776204023233
+
+--- Content Preview ---
+Wheel: Petrol PE002 P1E
+Price: $280
+Image: pe002_p1e_1776204023233.png
+
+Caption:
+New arrival alert! 🚨
+
+Petrol PE002 P1E
+📐 18x8
+🔩 5X110
+↔️ 40mm offset
+✨ P1E 18X8 5X110 72 +40 G-BLK
+
+$280/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/PE002BX18804240
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #carsofinstagram #carlife #dailydriver #petrol #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1723155329030464
+
+✨ Done!
+[Tue 04/14/2026 18:00:29.94] Auto-post complete 

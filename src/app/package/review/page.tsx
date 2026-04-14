@@ -9,6 +9,7 @@ import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { CheckoutTrustStrip, ReviewsMini } from "@/components/StoreReviews";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
+import { SmartTireUpsell } from "@/components/SmartTireUpsell";
 
 /**
  * Review Package Page
@@ -565,22 +566,28 @@ function IncompletePackage({
               total={wheelSubtotal + accessorySubtotal}
             />
             
+            {/* Smart Tire Upsell - intelligent recommendation */}
+            <SmartTireUpsell wheel={wheels[0]} compact />
+            
+            {/* Divider */}
+            <div className="flex items-center gap-3 text-neutral-400 text-xs">
+              <div className="flex-1 h-px bg-neutral-200" />
+              <span>OR</span>
+              <div className="flex-1 h-px bg-neutral-200" />
+            </div>
+            
             {/* CHECKOUT OPTION - Always available, not blocked */}
             <div className="rounded-xl border border-neutral-200 bg-white p-4 space-y-3">
               <Link
                 href="/checkout"
-                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-600 px-6 text-sm font-extrabold text-white hover:bg-green-700 shadow-lg shadow-green-600/25 transition"
+                className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-neutral-800 px-6 text-sm font-extrabold text-white hover:bg-neutral-900 transition"
               >
                 <span className="text-lg">🛒</span>
                 <span>Checkout Wheels Only</span>
               </Link>
               <p className="text-center text-xs text-neutral-500">
-                Prefer to buy tires separately? You can checkout now.
+                Already have tires? You can checkout now.
               </p>
-            </div>
-            
-            <div className="text-center text-sm text-neutral-500">
-              Or add matching tires for a complete package
             </div>
           </div>
         </div>

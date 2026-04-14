@@ -15,6 +15,7 @@ import { ZipCodeInput, FreeShippingProgress } from "./ShippingEstimate";
 import { formatCurrency, FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { CartTPMSUpsell } from "./TPMSSuggestion";
 import { CartCoAdditions } from "./CartCoAdditions";
+import { CartSmartTireUpsell } from "./SmartTireUpsell";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -462,26 +463,10 @@ export function CartSlideout() {
           )}
         </div>
 
-        {/* Package Progress */}
+        {/* Smart Tire Upsell - intelligent recommendation when wheels added but no tires */}
         {hasWheels() && !hasTires() ? (
-          <div className="mx-5 mb-4 rounded-xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                <span className="text-xl">🛞</span>
-              </div>
-              <div className="flex-1">
-                <div className="font-bold text-amber-900">Step 2: Add Tires</div>
-                <div className="text-sm text-amber-800 mt-1">
-                  Select tires sized for your wheels to complete your package.
-                </div>
-                <div className="flex items-center gap-2 mt-2">
-                  <div className="flex-1 h-2 bg-amber-200 rounded-full overflow-hidden">
-                    <div className="h-full w-1/2 bg-green-500 rounded-full" />
-                  </div>
-                  <span className="text-xs font-bold text-amber-700">50%</span>
-                </div>
-              </div>
-            </div>
+          <div className="mx-5 mb-4">
+            <CartSmartTireUpsell />
           </div>
         ) : null}
 
