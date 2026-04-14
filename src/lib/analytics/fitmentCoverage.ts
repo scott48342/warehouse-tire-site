@@ -40,12 +40,7 @@ export interface FitmentCoverageStats {
 // Client-side tracking (fires from browser)
 // ============================================================================
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
-  }
-}
+// Window.gtag type is declared in @/lib/analytics.ts
 
 /**
  * Track fitment coverage event
