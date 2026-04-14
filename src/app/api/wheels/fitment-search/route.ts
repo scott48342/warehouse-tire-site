@@ -640,7 +640,7 @@ export async function GET(req: Request) {
             year: Number(year),
             make: make.toLowerCase(),
             model: model.toLowerCase(),
-            displayTrim: premiumUx ? null : "Base",
+            displayTrim: premiumUx ? "" : "Base",
             rawTrim: null,
             boltPattern: classicResult.specs.boltPattern,
             centerBoreMm: classicResult.specs.centerBore,
