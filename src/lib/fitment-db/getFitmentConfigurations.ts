@@ -18,6 +18,7 @@ import type { VehicleFitmentConfiguration } from "./schema";
 import { eq, and, asc } from "drizzle-orm";
 import { normalizeMake, normalizeModel } from "./keys";
 import { extractRimDiameter } from "@/lib/tires/wheelDiameterFilter";
+import { normalizeTrimForFitmentConfig } from "@/lib/fitment/trimNormalization";
 
 // ============================================================================
 // Types
@@ -170,6 +171,63 @@ export async function getFitmentConfigurations(
             // Found a match for this trim
             break;
           }
+          
+          // ═══════════════════════════════════════════════════════════════════
+          // TRIM NORMALIZATION: Try normalized trim if exact match fails
+          // e.g., "SE Nightshade" → "SE" for cosmetic packages
+          // ═══════════════════════════════════════════════════════════════════
+          const normResult = normalizeTrimForFitmentConfig(trimCandidate, year, make, model);
+          if (normResult.wasNormalized) {
+            configRows = await db
+              .select()
+              .from(vehicleFitmentConfigurations)
+              .where(
+                and(
+                  eq(vehicleFitmentConfigurations.year, year),
+                  eq(vehicleFitmentConfigurations.makeKey, makeKey),
+                  eq(vehicleFitmentConfigurations.modelKey, modelKey),
+                  eq(vehicleFitmentConfigurations.displayTrim, normResult.normalizedTrim)
+                )
+              )
+              .orderBy(
+                asc(vehicleFitmentConfigurations.wheelDiameter),
+                asc(vehicleFitmentConfigurations.axlePosition)
+              );
+            
+            if (configRows.length > 0) {
+              console.log(`[getFitmentConfigurations] NORMALIZED MATCH: "${trimCandidate}" → "${normResult.normalizedTrim}" (${normResult.reason})`);
+              break;
+            }
+          }
+        }
+      }
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // TRIM NORMALIZATION FALLBACK: Try normalizing requestedTrim directly
+    // This handles cases where we don't have a modificationId but have a trim
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (configRows.length === 0 && requestedTrim && !modificationId) {
+      const normResult = normalizeTrimForFitmentConfig(requestedTrim, year, make, model);
+      if (normResult.wasNormalized) {
+        configRows = await db
+          .select()
+          .from(vehicleFitmentConfigurations)
+          .where(
+            and(
+              eq(vehicleFitmentConfigurations.year, year),
+              eq(vehicleFitmentConfigurations.makeKey, makeKey),
+              eq(vehicleFitmentConfigurations.modelKey, modelKey),
+              eq(vehicleFitmentConfigurations.displayTrim, normResult.normalizedTrim)
+            )
+          )
+          .orderBy(
+            asc(vehicleFitmentConfigurations.wheelDiameter),
+            asc(vehicleFitmentConfigurations.axlePosition)
+          );
+        
+        if (configRows.length > 0) {
+          console.log(`[getFitmentConfigurations] NORMALIZED MATCH (direct): "${requestedTrim}" → "${normResult.normalizedTrim}" (${normResult.reason})`);
         }
       }
     }
