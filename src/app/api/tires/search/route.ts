@@ -154,6 +154,7 @@ interface TireResult {
     speedRating: string | null;
     utqg?: string | null;
     treadDepth?: number | null;
+    tireWeight?: number | null;
   };
   // Enriched fields for filtering and display
   enrichment?: {
@@ -340,6 +341,8 @@ function convertTireWebResults(results: TireWebSearchResult[]): TireResult[] {
           loadIndex: unified.badges.loadIndex,
           speedRating: unified.badges.speedRating,
           utqg: unified.badges.utqg,
+          treadDepth: unified.badges.treadDepth,
+          tireWeight: unified.badges.tireWeight,
         },
         enrichment: unified.enrichment,
       });

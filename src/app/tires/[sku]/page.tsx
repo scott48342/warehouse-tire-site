@@ -228,6 +228,9 @@ interface FullSpecsProps {
   loadIndex: string | null;
   speedRating: string | null;
   mileageWarranty: string | null;
+  utqg: string | null;
+  treadDepth: number | null;
+  tireWeight: number | null;
 }
 
 function FullSpecs(props: FullSpecsProps) {
@@ -236,12 +239,15 @@ function FullSpecs(props: FullSpecsProps) {
   if (props.tireSize) rows.push({ label: "Size", value: props.tireSize });
   if (props.loadIndex) rows.push({ label: "Load Index", value: props.loadIndex });
   if (props.speedRating) rows.push({ label: "Speed Rating", value: props.speedRating });
-  if (props.mileageWarranty) rows.push({ label: "Mileage Warranty", value: `${props.mileageWarranty} miles` });
+  if (props.utqg) rows.push({ label: "UTQG", value: props.utqg });
+  if (props.treadDepth) rows.push({ label: "Tread Depth", value: `${props.treadDepth}/32"` });
+  if (props.mileageWarranty) rows.push({ label: "Mileage Warranty", value: `${Number(props.mileageWarranty).toLocaleString()} miles` });
+  if (props.tireWeight) rows.push({ label: "Tire Weight", value: `${props.tireWeight} lbs` });
   if (props.rimDiameter) rows.push({ label: "Wheel Diameter", value: `${props.rimDiameter}"` });
   if (props.tireDiameter) rows.push({ label: "Overall Diameter", value: `${props.tireDiameter}"` });
   if (props.sectionWidth) rows.push({ label: "Section Width", value: `${props.sectionWidth}mm` });
   if (props.aspectRatio) rows.push({ label: "Aspect Ratio", value: `${props.aspectRatio}` });
-  if (props.construction) rows.push({ label: "Construction", value: props.construction });
+  if (props.construction) rows.push({ label: "Load Range", value: props.construction });
   
   if (rows.length === 0) return null;
   
@@ -632,10 +638,13 @@ export default async function TireDetailPage({
                     tireDiameter={null}
                     sectionWidth={null}
                     aspectRatio={null}
-                    construction={null}
+                    construction={tire.badges?.construction || null}
                     loadIndex={tire.badges?.loadIndex ? String(tire.badges.loadIndex) : null}
                     speedRating={tire.badges?.speedRating ? String(tire.badges.speedRating) : null}
                     mileageWarranty={tire.badges?.warrantyMiles ? String(tire.badges.warrantyMiles) : null}
+                    utqg={tire.badges?.utqg || null}
+                    treadDepth={tire.badges?.treadDepth ?? null}
+                    tireWeight={tire.badges?.tireWeight ?? null}
                   />
                 </div>
 
@@ -709,7 +718,14 @@ export default async function TireDetailPage({
         t.image_url,
         t.map_usd,
         t.msrp_usd,
-        coalesce(i.qoh, 0) as qoh
+        coalesce(i.qoh, 0) as qoh,
+        -- Additional specs from raw JSON
+        t.raw->>'utqg' as utqg,
+        t.raw->>'tread_depth' as tread_depth,
+        t.raw->>'treadwear' as treadwear,
+        t.raw->>'traction' as traction,
+        t.raw->>'temperature' as temperature,
+        t.raw->>'tire_weight' as tire_weight
       from wp_tires t
       left join wp_inventory i
         on i.sku = t.sku
@@ -752,6 +768,13 @@ export default async function TireDetailPage({
   }
 
   const displayPrice = priceFromRow(t);
+  
+  // Build UTQG from separate components if not available as single field
+  const utqgValue = t.utqg || (
+    t.treadwear && t.traction && t.temperature
+      ? `${t.treadwear} ${t.traction} ${t.temperature}`
+      : null
+  );
   
   const category = normalizeTreadCategory(t.terrain, t.tire_description);
   const isRunFlatTire = isRunFlat(null, t.tire_description, null);
@@ -1027,6 +1050,9 @@ export default async function TireDetailPage({
             loadIndex={t.load_index ? String(t.load_index) : null}
             speedRating={t.speed_rating ? String(t.speed_rating) : null}
             mileageWarranty={t.mileage_warranty ? String(t.mileage_warranty) : null}
+            utqg={utqgValue ? String(utqgValue) : null}
+            treadDepth={n(t.tread_depth)}
+            tireWeight={n(t.tire_weight)}
           />
         </div>
 

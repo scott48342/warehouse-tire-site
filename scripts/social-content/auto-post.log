@@ -382,3 +382,126 @@ Only $400/wheel
 
 ✨ Done!
 [Mon 04/13/2026  9:00:24.33] Auto-post complete 
+[Mon 04/13/2026 18:00:02.56] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:19412) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC894 CORE
+  Downloading image for Fuel 1PC FC894 CORE...
+  ✅ Generated: fc894_core_1776117604022
+  📝 Caption preview: Your 2024 Toyota 4Runner deserves these Fuel 1PC FC894 CORE wheels 💯
+
+📐 17x8.5...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc894_core_1776117604022.png
+  - fc894_core_1776117604022.json
+
+📱 Facebook/Instagram Poster
+
+Selected: fc894_core_1776117604022
+
+--- Content Preview ---
+Wheel: Fuel 1PC FC894 CORE
+Price: $327
+Image: fc894_core_1776117604022.png
+
+Caption:
+Your 2024 Toyota 4Runner deserves these Fuel 1PC FC894 CORE wheels 💯
+
+📐 17x8.5
+🔩 6X5.5
+↔️ -10mm offset
+✨ CORE 17X8.5 6X5.5 106 -10 G-BLK
+
+Starting at $327
+
+🛒 https://shop.warehousetiredirect.com/wheels/FC894BX17856810N
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #fuel1pc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1576221987839261
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:14188) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC892 GAMBIT
+  Downloading image for Fuel 1PC FC892 GAMBIT...
+  ✅ Generated: fc892_gambit_1776117617610
+  📝 Caption preview: Your 2024 Ford F-150 deserves these Fuel 1PC FC892 GAMBIT wheels 💯
+
+📐 17x8.5
+�...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc892_gambit_1776117617610.png
+  - fc892_gambit_1776117617610.json
+
+📱 Facebook/Instagram Poster
+
+Selected: fc892_gambit_1776117617610
+
+--- Content Preview ---
+Wheel: Fuel 1PC FC892 GAMBIT
+Price: $366
+Image: fc892_gambit_1776117617610.png
+
+Caption:
+Your 2024 Ford F-150 deserves these Fuel 1PC FC892 GAMBIT wheels 💯
+
+📐 17x8.5
+🔩 6X135
+↔️ 0mm offset
+✨ GAMBIT 17X8.5 6X135 87 +0 PLTNM
+
+Starting at $366
+
+🛒 https://shop.warehousetiredirect.com/wheels/FC892AX17856300
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #fuel1pc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1722326832446647
+
+✨ Done!
+[Mon 04/13/2026 18:00:23.43] Auto-post complete 

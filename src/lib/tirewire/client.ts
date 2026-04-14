@@ -466,6 +466,8 @@ export interface UnifiedTire {
     loadIndex: string | null;
     speedRating: string | null;
     utqg: string | null;
+    treadDepth: number | null;
+    tireWeight: number | null;
   };
   // Enriched fields
   enrichment?: {
@@ -534,6 +536,8 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
       loadIndex: tire.loadRating || null,
       speedRating: tire.speedRating || null,
       utqg: tire.utqg || null,
+      treadDepth: tire.treadDepth ? parseFloat(tire.treadDepth) : null,
+      tireWeight: tire.weight || null,
     },
     enrichment: {
       mileage,

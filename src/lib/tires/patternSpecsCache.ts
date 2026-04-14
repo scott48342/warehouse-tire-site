@@ -46,14 +46,19 @@ const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 /**
  * Build pattern key for lookup
  * Normalizes brand and pattern name for consistent matching
+ * 
+ * MUST match the normalization used by import-to-pattern-specs.ts!
  */
 export function buildPatternKey(brand: string, patternName: string): string {
   // Normalize: lowercase, remove special chars, trim
-  const normBrand = brand.toLowerCase().trim();
+  // Keep full model name (e.g., "ROADIAN GTX" → "roadiangtx")
+  const normBrand = brand.toLowerCase().trim().slice(0, 20);
   const normPattern = patternName
     .toLowerCase()
     .trim()
-    .split(/[\s\/\-]+/)[0]; // Take first word/segment
+    .replace(/[-_\s]+/g, '')   // Remove hyphens, underscores, spaces
+    .replace(/[^a-z0-9]/g, '') // Keep only alphanumeric
+    .slice(0, 50);
   
   return `${normBrand}:${normPattern}`;
 }
