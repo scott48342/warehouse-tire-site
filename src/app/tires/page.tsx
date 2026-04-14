@@ -2649,7 +2649,7 @@ export default async function TiresPage({
             wasAutoSelected={wheelDiaWasAutoSelected}
             diameter={Number(configAutoWheelDia)}
             vehicle={`${year} ${make} ${model}${displayTrim ? ` ${displayTrim}` : ""}`}
-            confidence={configurationData.confidence}
+            confidence={configurationData.confidence as "low" | "medium" | "high"}
           />
         )}
 
@@ -2666,7 +2666,7 @@ export default async function TiresPage({
             modification={modification}
             hasConfig={configurationData?.usedConfigTable ?? false}
             source={configurationData?.usedConfigTable ? "config" : (configurationData ? "legacy" : "none")}
-            confidence={configurationData?.confidence ?? "low"}
+            confidence={(configurationData?.confidence as "low" | "medium" | "high") ?? "low"}
             wheelDiameter={wheelDiaFromConfigOrUrl ? Number(wheelDiaFromConfigOrUrl) : undefined}
             autoSelected={wheelDiaWasAutoSelected}
             productType="tires"
