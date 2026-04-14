@@ -739,7 +739,7 @@ function selectRoleBasedPicks(
     let reason = 'Great performance at a lower price';
     if (pop?.addToCartCount && pop.addToCartCount >= 5) {
       reason = 'Customer favorite with excellent value';
-    } else if (pop?.isTrending) {
+    } else if (pop?.recentAdds24h && pop.recentAdds24h >= 2) {
       reason = 'Trending choice among drivers';
     } else if (/all-terrain/i.test(category)) {
       reason = 'Popular choice for trucks and SUVs';
