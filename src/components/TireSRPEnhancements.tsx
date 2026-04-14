@@ -15,6 +15,14 @@
  */
 
 import Link from "next/link";
+import { 
+  generateTireRecommendations, 
+  createRecommendationAnalyticsEvent,
+  type TireForRecommendation,
+  type VehicleContext,
+  type TireRecommendation,
+  type RecommendationSet,
+} from "@/lib/recommendations/tireRecommendations";
 
 // ============================================================================
 // TYPES
@@ -526,8 +534,162 @@ export function TireCardEnhancements({
 }
 
 // ============================================================================
+// 7. VEHICLE-AWARE RECOMMENDATIONS (Upgraded Top Picks)
+// ============================================================================
+
+interface VehicleAwareRecommendationsProps {
+  tires: TireForRecommendation[];
+  vehicle?: VehicleContext | null;
+  getHref: (tire: TireForRecommendation) => string;
+  title?: string;
+  maxRecommendations?: number;
+  onRecommendationClick?: (recommendation: TireRecommendation, position: number) => void;
+}
+
+const RECOMMENDATION_ICONS: Record<string, string> = {
+  "best-for-vehicle": "🏆",
+  "most-popular": "🔥",
+  "longest-lasting": "🛡️",
+  "all-weather-confidence": "❄️",
+};
+
+const RECOMMENDATION_COLORS: Record<string, { bg: string; border: string; text: string }> = {
+  "best-for-vehicle": { bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-700" },
+  "most-popular": { bg: "bg-violet-50", border: "border-violet-200", text: "text-violet-700" },
+  "longest-lasting": { bg: "bg-emerald-50", border: "border-emerald-200", text: "text-emerald-700" },
+  "all-weather-confidence": { bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-700" },
+};
+
+/**
+ * Vehicle-Aware Recommendations Strip
+ * 
+ * Upgraded from generic "Top Picks" to personalized, conversion-focused recommendations
+ * that understand the selected vehicle and guide users to confident decisions.
+ */
+export function VehicleAwareRecommendations({
+  tires,
+  vehicle,
+  getHref,
+  title,
+  maxRecommendations = 3,
+  onRecommendationClick,
+}: VehicleAwareRecommendationsProps) {
+  const { recommendations, vehicleLabel } = generateTireRecommendations(
+    tires,
+    vehicle,
+    maxRecommendations
+  );
+
+  if (recommendations.length === 0) return null;
+
+  const displayTitle = title || (vehicleLabel 
+    ? `Our Picks for Your ${vehicleLabel}` 
+    : "Our Top Recommendations");
+
+  return (
+    <div className="mb-6 rounded-2xl border border-neutral-200 bg-gradient-to-r from-neutral-50 to-white p-4 shadow-sm">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-lg">✨</span>
+        <h3 className="text-sm font-bold text-neutral-900">{displayTitle}</h3>
+      </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {recommendations.map((rec, index) => {
+          const colors = RECOMMENDATION_COLORS[rec.type] || RECOMMENDATION_COLORS["best-for-vehicle"];
+          const icon = RECOMMENDATION_ICONS[rec.type] || "⭐";
+          
+          return (
+            <Link
+              key={rec.tire.sku}
+              href={getHref(rec.tire)}
+              onClick={() => onRecommendationClick?.(rec, index)}
+              className={`relative flex flex-col rounded-xl ${colors.bg} border ${colors.border} p-4 hover:shadow-md transition-all group`}
+            >
+              {/* Recommendation Label */}
+              <div className={`flex items-center gap-1.5 text-xs font-bold ${colors.text} mb-2`}>
+                <span>{icon}</span>
+                <span>{rec.label}</span>
+              </div>
+              
+              {/* Tire Info */}
+              <div className="flex items-start gap-3 flex-1">
+                {rec.tire.imageUrl ? (
+                  <img 
+                    src={rec.tire.imageUrl} 
+                    alt={rec.tire.model || rec.tire.displayName || ''} 
+                    className="w-16 h-16 object-contain flex-shrink-0 bg-white rounded-lg p-1"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl opacity-50">🛞</span>
+                  </div>
+                )}
+                
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-bold text-neutral-900 group-hover:underline">
+                    {rec.tire.brand}
+                  </div>
+                  <div className="text-xs text-neutral-600 truncate">
+                    {rec.tire.model || rec.tire.displayName}
+                  </div>
+                  
+                  {/* Reason Line */}
+                  <div className="mt-1.5 text-[11px] text-neutral-500 line-clamp-2">
+                    {rec.reason}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Price */}
+              {rec.tire.price && rec.tire.price > 0 && (
+                <div className="mt-3 pt-3 border-t border-neutral-200/50">
+                  <div className="text-base font-extrabold text-neutral-900">
+                    ${(rec.tire.price * 4).toLocaleString()}
+                    <span className="text-[10px] text-neutral-400 font-normal ml-1">/set of 4</span>
+                  </div>
+                </div>
+              )}
+              
+              {/* Confidence indicator for high-confidence picks */}
+              {rec.confidence === "high" && (
+                <div className="absolute top-2 right-2">
+                  <span className="text-green-500 text-xs" title="High confidence recommendation">✓</span>
+                </div>
+              )}
+            </Link>
+          );
+        })}
+      </div>
+      
+      {/* Vehicle context note */}
+      {vehicle?.make && vehicle?.model && (
+        <p className="mt-4 text-[10px] text-neutral-400 text-center">
+          Personalized for your {vehicle.year} {vehicle.make} {vehicle.model}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Generate recommendations using the new vehicle-aware system
+ * (wrapper for backward compatibility)
+ */
+export function generateVehicleAwareRecommendations(
+  tires: TireForRecommendation[],
+  vehicle?: VehicleContext | null,
+  maxRecommendations: number = 3
+): RecommendationSet {
+  return generateTireRecommendations(tires, vehicle, maxRecommendations);
+}
+
+// ============================================================================
 // EXPORTS
 // ============================================================================
+
+// Re-export types for convenience
+export type { TireForRecommendation, VehicleContext, TireRecommendation, RecommendationSet };
 
 export default {
   CardReviewSummary,
@@ -538,4 +700,7 @@ export default {
   TopPicksStrip,
   generateTopPicks,
   TireCardEnhancements,
+  // New vehicle-aware system
+  VehicleAwareRecommendations,
+  generateVehicleAwareRecommendations,
 };

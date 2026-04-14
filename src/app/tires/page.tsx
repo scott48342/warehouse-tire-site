@@ -525,7 +525,7 @@ function scoreTireForPicks(tire: Tire): number {
 // ROLE-BASED TOP PICKS (Upgraded)
 // ============================================================================
 
-type TopPickRole = 'best-overall' | 'best-value' | 'longest-life';
+type TopPickRole = 'best-for-vehicle' | 'most-popular' | 'longest-lasting';
 
 interface RoleBasedPick {
   tire: Tire;
@@ -533,30 +533,49 @@ interface RoleBasedPick {
   label: string;
   reason: string;
   icon: string;
-  /** For Best Value: savings vs Best Overall */
+  /** For Most Popular: savings vs primary pick */
   savingsVsOverall?: number;
-  /** For Longest Life: mileage warranty in thousands */
+  /** For Longest Lasting: mileage warranty in thousands */
   mileageK?: number;
 }
 
-const ROLE_CONFIG: Record<TopPickRole, { label: string; icon: string }> = {
-  'best-overall': { label: 'Best Overall', icon: '🏆' },
-  'best-value': { label: 'Best Value', icon: '💰' },
-  'longest-life': { label: 'Longest Life', icon: '🛡️' },
+// Vehicle-aware label generator
+function getVehicleAwareLabel(role: TopPickRole, model?: string): string {
+  switch (role) {
+    case 'best-for-vehicle':
+      if (model && model.length <= 15) {
+        return `Best for Your ${model}`;
+      }
+      return 'Best for Your Vehicle';
+    case 'most-popular':
+      return 'Most Popular Choice';
+    case 'longest-lasting':
+      return 'Longest Lasting';
+    default:
+      return 'Recommended';
+  }
+}
+
+const ROLE_CONFIG: Record<TopPickRole, { icon: string }> = {
+  'best-for-vehicle': { icon: '🏆' },
+  'most-popular': { icon: '🔥' },
+  'longest-lasting': { icon: '🛡️' },
 };
 
 /**
- * Select role-based Top Picks
+ * Select role-based Top Picks with vehicle-aware labels
  * Uses EXISTING data only - no new queries
  * Ensures distinct products (no duplicates)
  * Now enhanced with real behavior data when available
  * 
  * @param tires - Filtered/sorted tire list
  * @param popularityData - Optional behavior data map (SKU → PopularityData)
+ * @param vehicleModel - Optional vehicle model for personalized labels
  */
 function selectRoleBasedPicks(
   tires: Tire[], 
-  popularityData?: Map<string, ProductPopularityData>
+  popularityData?: Map<string, ProductPopularityData>,
+  vehicleModel?: string
 ): RoleBasedPick[] {
   // Filter to only tires with images and pricing
   const candidates = tires.filter(t => t.imageUrl && typeof t.cost === "number");
@@ -645,21 +664,23 @@ function selectRoleBasedPicks(
     const mileage = bestOverall.enrichment?.mileage || bestOverall.badges?.warrantyMiles || 0;
     bestOverallPrice = getDisplayPrice(bestOverall) || 0;
     
-    // Build reason based on actual tire attributes
-    let reason = 'Balanced ride quality and reliable all-season grip';
+    // Build conversion-focused reason based on actual tire attributes
+    let reason = 'Smooth ride and great tread life for daily driving';
     if (mileage >= 60000) {
-      reason = `Strong tread life (${Math.round(mileage/1000)}K warranty) with dependable grip`;
+      reason = `Excellent durability with ${Math.round(mileage/1000)}K mile warranty`;
     } else if (/touring|highway/i.test(category)) {
-      reason = 'Smooth highway ride with reliable wet and dry traction';
+      reason = 'Quiet, comfortable ride perfect for commuting';
     } else if (/all-terrain/i.test(category)) {
-      reason = 'Versatile on and off-road with solid durability';
+      reason = 'Handles highway and light trails with confidence';
+    } else if (/performance/i.test(category)) {
+      reason = 'Responsive handling and dependable grip';
     }
     
     picks.push({
       tire: bestOverall,
-      role: 'best-overall',
-      label: ROLE_CONFIG['best-overall'].label,
-      icon: ROLE_CONFIG['best-overall'].icon,
+      role: 'best-for-vehicle',
+      label: getVehicleAwareLabel('best-for-vehicle', vehicleModel),
+      icon: ROLE_CONFIG['best-for-vehicle'].icon,
       reason,
     });
     markUsed(bestOverall);
@@ -709,23 +730,28 @@ function selectRoleBasedPicks(
   if (bestValue) {
     const valuePrice = getDisplayPrice(bestValue) || 0;
     const category = bestValue.enrichment?.treadCategory || bestValue.badges?.terrain || '';
+    const pop = getPopularity(bestValue);
     
     // Calculate savings vs Best Overall (set of 4)
     const savingsPerSet = bestOverallPrice > valuePrice ? Math.round((bestOverallPrice - valuePrice) * 4) : 0;
     
-    // Build reason based on category
-    let reason = 'Dependable all-season performance at a budget-friendly price';
-    if (/all-terrain/i.test(category)) {
-      reason = 'Affordable all-terrain capability for trucks and SUVs';
+    // Build conversion-focused reason
+    let reason = 'Great performance at a lower price';
+    if (pop?.addToCartCount && pop.addToCartCount >= 5) {
+      reason = 'Customer favorite with excellent value';
+    } else if (pop?.isTrending) {
+      reason = 'Trending choice among drivers';
+    } else if (/all-terrain/i.test(category)) {
+      reason = 'Popular choice for trucks and SUVs';
     } else if (/touring|highway/i.test(category)) {
-      reason = 'Quiet highway ride without the premium price tag';
+      reason = 'Smooth ride at a great price';
     }
     
     picks.push({
       tire: bestValue,
-      role: 'best-value',
-      label: ROLE_CONFIG['best-value'].label,
-      icon: ROLE_CONFIG['best-value'].icon,
+      role: 'most-popular',
+      label: getVehicleAwareLabel('most-popular'),
+      icon: ROLE_CONFIG['most-popular'].icon,
       reason,
       savingsVsOverall: savingsPerSet >= 50 ? savingsPerSet : undefined,
     });
@@ -764,19 +790,21 @@ function selectRoleBasedPicks(
     const mileage = longestLife.enrichment?.mileage || longestLife.badges?.warrantyMiles;
     const mileageK = mileage ? Math.round(mileage / 1000) : 0;
     
-    // Build decision-focused reason
-    let reason = 'Engineered for maximum tread life and long-term value';
+    // Build conversion-focused reason
+    let reason = 'Built to go the distance';
     if (mileageK >= 80) {
-      reason = `${mileageK}K mile warranty — built for drivers who keep their tires`;
+      reason = `Up to ${mileageK},000-mile warranty`;
     } else if (mileageK >= 60) {
-      reason = `${mileageK}K warranty with durable compound for extended life`;
+      reason = `${mileageK}K mile warranty for long-term value`;
+    } else {
+      reason = 'Durable compound for extended tread life';
     }
     
     picks.push({
       tire: longestLife,
-      role: 'longest-life',
-      label: ROLE_CONFIG['longest-life'].label,
-      icon: ROLE_CONFIG['longest-life'].icon,
+      role: 'longest-lasting',
+      label: getVehicleAwareLabel('longest-lasting'),
+      icon: ROLE_CONFIG['longest-lasting'].icon,
       reason,
       mileageK: mileageK >= 50 ? mileageK : undefined,
     });
@@ -2334,7 +2362,7 @@ export default async function TiresPage({
   // Now uses real behavior data when available
   const roleBasedPicks = (() => {
     if (!hasVehicle || items.length === 0) return [];
-    return selectRoleBasedPicks(items, popularityDataMap);
+    return selectRoleBasedPicks(items, popularityDataMap, model);
   })();
   
   // Legacy array for backwards compatibility (used by some card logic)
