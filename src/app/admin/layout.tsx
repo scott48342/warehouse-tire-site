@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { href: "/admin/email-campaigns", label: "Email Campaigns", icon: "📧" },
   { href: "/admin/fitment-api", label: "Fitment API", icon: "🔑" },
   { href: "/admin/fitment", label: "Fitment", icon: "🔧" },
+  { href: "/admin/fitment-coverage", label: "Fitment Coverage", icon: "📈" },
   { href: "/admin/fitment-audit", label: "Fitment Export", icon: "📤" },
   { href: "/admin/products", label: "Products", icon: "🛞" },
   { href: "/admin/tire-images", label: "Tire Images", icon: "🖼️" },
