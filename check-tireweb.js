@@ -30,10 +30,15 @@ async function main() {
       console.log('    Warranty:', tire.badges?.warrantyMiles);
       console.log('    TreadDepth:', tire.badges?.treadDepth);
       
-      // Check what key would be built
-      const normBrand = (tire.brand || '').toLowerCase().trim();
+      // Check what key would be built (with FIX: full model name)
+      const normBrand = (tire.brand || '').toLowerCase().trim().slice(0, 20);
       const patternName = tire.model || tire.pattern || '';
-      const normPattern = patternName.toLowerCase().trim().split(/[\s\/\-]+/)[0];
+      const normPattern = patternName
+        .toLowerCase()
+        .trim()
+        .replace(/[-_\s]+/g, '')   // Remove hyphens, underscores, spaces
+        .replace(/[^a-z0-9]/g, '') // Keep only alphanumeric
+        .slice(0, 50);
       const lookupKey = `${normBrand}:${normPattern}`;
       console.log('\n  Pattern lookup key:', lookupKey);
       

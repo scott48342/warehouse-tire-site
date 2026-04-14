@@ -240,9 +240,9 @@ function FullSpecs(props: FullSpecsProps) {
   if (props.loadIndex) rows.push({ label: "Load Index", value: props.loadIndex });
   if (props.speedRating) rows.push({ label: "Speed Rating", value: props.speedRating });
   if (props.utqg) rows.push({ label: "UTQG", value: props.utqg });
-  if (props.treadDepth) rows.push({ label: "Tread Depth", value: `${props.treadDepth}/32"` });
+  if (props.treadDepth && props.treadDepth > 0) rows.push({ label: "Tread Depth", value: `${props.treadDepth}/32"` });
   if (props.mileageWarranty) rows.push({ label: "Mileage Warranty", value: `${Number(props.mileageWarranty).toLocaleString()} miles` });
-  if (props.tireWeight) rows.push({ label: "Tire Weight", value: `${props.tireWeight} lbs` });
+  if (props.tireWeight && props.tireWeight > 0) rows.push({ label: "Tire Weight", value: `${props.tireWeight} lbs` });
   if (props.rimDiameter) rows.push({ label: "Wheel Diameter", value: `${props.rimDiameter}"` });
   if (props.tireDiameter) rows.push({ label: "Overall Diameter", value: `${props.tireDiameter}"` });
   if (props.sectionWidth) rows.push({ label: "Section Width", value: `${props.sectionWidth}mm` });
