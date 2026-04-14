@@ -13,11 +13,18 @@ import { Redis } from "@upstash/redis";
 
 export const dynamic = "force-dynamic";
 
-// Use Upstash Redis for event storage
-const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL || "",
-  token: process.env.UPSTASH_REDIS_REST_TOKEN || "",
-});
+// Check if Redis is configured
+const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL;
+const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+const isRedisConfigured = Boolean(REDIS_URL && REDIS_TOKEN);
+
+// Use Upstash Redis for event storage (only if configured)
+const redis = isRedisConfigured
+  ? new Redis({
+      url: REDIS_URL!,
+      token: REDIS_TOKEN!,
+    })
+  : null;
 
 const EVENTS_KEY = "fitment:coverage:events";
 const STATS_KEY = "fitment:coverage:stats";
@@ -43,6 +50,11 @@ interface FitmentCoverageEvent {
 // ============================================================================
 
 export async function POST(req: NextRequest) {
+  // If Redis not configured, silently accept but don't store
+  if (!redis) {
+    return NextResponse.json({ success: true, stored: false });
+  }
+  
   try {
     const event: FitmentCoverageEvent = await req.json();
     
@@ -66,7 +78,7 @@ export async function POST(req: NextRequest) {
     // Update running stats
     await updateRunningStats(event);
     
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, stored: true });
   } catch (err) {
     console.error("[fitment-coverage] Error recording event:", err);
     return NextResponse.json(
@@ -81,6 +93,22 @@ export async function POST(req: NextRequest) {
 // ============================================================================
 
 export async function GET(req: NextRequest) {
+  // If Redis not configured, return empty stats
+  if (!redis) {
+    return NextResponse.json({
+      totalSelections: 0,
+      configBacked: 0,
+      legacyFallback: 0,
+      noData: 0,
+      configCoveragePercent: 0,
+      fallbackPercent: 0,
+      byConfidence: { high: 0, medium: 0, low: 0 },
+      byProductType: { tires: 0, wheels: 0 },
+      redisConfigured: false,
+      message: "Redis not configured. Add UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN to enable tracking.",
+    });
+  }
+  
   try {
     const { searchParams } = req.nextUrl;
     const hours = parseInt(searchParams.get("hours") || "24", 10);
@@ -163,6 +191,8 @@ export async function GET(req: NextRequest) {
 // ============================================================================
 
 async function updateRunningStats(event: FitmentCoverageEvent): Promise<void> {
+  if (!redis) return;
+  
   try {
     // Get current stats
     const statsRaw = await redis.get(STATS_KEY);

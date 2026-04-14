@@ -17,6 +17,8 @@ interface CoverageStats {
     configBacked: number;
     configCoveragePercent: number;
   };
+  redisConfigured?: boolean;
+  message?: string;
 }
 
 export default function FitmentCoveragePage() {
@@ -76,6 +78,21 @@ export default function FitmentCoveragePage() {
       <p className="mt-2 text-neutral-600">
         Real-world tracking of config-backed vs fallback fitment
       </p>
+      
+      {/* Redis not configured warning */}
+      {stats.redisConfigured === false && (
+        <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+          <div className="flex items-start gap-3">
+            <span className="text-xl">⚠️</span>
+            <div>
+              <div className="font-semibold text-amber-800">Redis Not Configured</div>
+              <p className="mt-1 text-sm text-amber-700">
+                {stats.message || "Add UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN environment variables to enable tracking."}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Key Metrics */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
