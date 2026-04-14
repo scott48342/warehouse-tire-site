@@ -8,7 +8,7 @@ import { BackToTiresButton } from "@/components/BackToTiresButton";
 import { extractDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { normalizeTreadCategory, isRunFlat, type TreadCategory } from "@/lib/tires/normalization";
-import { derivePerformanceRatings, type PerformanceRatings } from "@/lib/tires/tireSpecs";
+import { derivePerformanceRatings, parseUTQG, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { PerformanceIndicators } from "@/components/PerformanceIndicators";
 import { PDPTrustBlock } from "@/components/StoreReviews";
 // PDP Conversion Enhancements - Phase 2 Layout Balanced (2026-04-06)
@@ -386,7 +386,9 @@ export default async function TireDetailPage({
           const isRunFlatTire = isRunFlat(null, tire.description, null);
           const has3PMSF = /3PMSF|3-PEAK|MOUNTAIN.*SNOWFLAKE/i.test(tire.description || '');
           
-          const ratings = derivePerformanceRatings(null, category, has3PMSF);
+          // Parse UTQG for performance ratings
+          const parsedUtqg = parseUTQG(tire.badges?.utqg);
+          const ratings = derivePerformanceRatings(parsedUtqg, category, has3PMSF);
           const whyPoints = getWhyThisTirePoints(category, tire.badges?.warrantyMiles ? String(tire.badges.warrantyMiles) : null, isRunFlatTire, has3PMSF);
           const categoryTagline = getCategoryTagline(category);
           
@@ -780,7 +782,9 @@ export default async function TireDetailPage({
   const isRunFlatTire = isRunFlat(null, t.tire_description, null);
   const has3PMSF = /3PMSF|3-PEAK|MOUNTAIN.*SNOWFLAKE/i.test(t.tire_description || '');
   
-  const ratings = derivePerformanceRatings(null, category, has3PMSF);
+  // Parse UTQG for performance ratings
+  const parsedUtqg = parseUTQG(utqgValue);
+  const ratings = derivePerformanceRatings(parsedUtqg, category, has3PMSF);
   const whyPoints = getWhyThisTirePoints(category, t.mileage_warranty ? String(t.mileage_warranty) : null, isRunFlatTire, has3PMSF);
   const categoryTagline = getCategoryTagline(category);
   const totalQty = Number(t.qoh) || 0;
