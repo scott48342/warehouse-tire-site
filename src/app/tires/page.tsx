@@ -38,6 +38,12 @@ import {
   type TopPickTire,
   type TireCategory as EnhancementCategory,
 } from "@/components/TireSRPEnhancements";
+import { 
+  getVehicleProfile, 
+  isCategoryAllowedForVehicle,
+  getVehicleAwareReason,
+  type VehicleProfile,
+} from "@/lib/recommendations/tireRecommendations";
 // Behavior-driven popularity signals (2026-04-06)
 import {
   getPopularitySignalsBatch,
@@ -571,12 +577,23 @@ const ROLE_CONFIG: Record<TopPickRole, { icon: string }> = {
  * @param tires - Filtered/sorted tire list
  * @param popularityData - Optional behavior data map (SKU → PopularityData)
  * @param vehicleModel - Optional vehicle model for personalized labels
+ * @param vehicleTrim - Optional vehicle trim for profile detection
  */
 function selectRoleBasedPicks(
   tires: Tire[], 
   popularityData?: Map<string, ProductPopularityData>,
-  vehicleModel?: string
+  vehicleModel?: string,
+  vehicleTrim?: string
 ): RoleBasedPick[] {
+  // Get vehicle profile for category filtering
+  const vehicleProfile = getVehicleProfile({ model: vehicleModel, trim: vehicleTrim });
+  
+  // Helper to check if tire category is appropriate for vehicle
+  const isCategoryAppropriate = (t: Tire): boolean => {
+    const category = t.enrichment?.treadCategory || t.badges?.terrain || '';
+    return isCategoryAllowedForVehicle(category, vehicleProfile);
+  };
+  
   // Filter to only tires with images and pricing
   const candidates = tires.filter(t => t.imageUrl && typeof t.cost === "number");
   if (candidates.length < 3) return []; // Need at least 3 candidates
@@ -621,11 +638,13 @@ function selectRoleBasedPicks(
   };
   
   // ─────────────────────────────────────────────────────────────────────────
-  // 1. BEST OVERALL: Premium brand, balanced price, good stock
-  //    Behavior data supports selection but isn't primary factor
+  // 1. BEST FOR VEHICLE: Premium brand, balanced price, good stock
+  //    NOW WITH VEHICLE-TYPE FILTERING to prevent wrong category recommendations
+  //    e.g., sedans won't get all-terrain tires
   // ─────────────────────────────────────────────────────────────────────────
   const bestOverall = candidates
     .filter(t => !isUsed(t))
+    .filter(t => isCategoryAppropriate(t)) // ← VEHICLE-TYPE GUARDRAIL
     .filter(t => {
       const price = getDisplayPrice(t) || 0;
       const brand = getBrand(t);
@@ -659,22 +678,25 @@ function selectRoleBasedPicks(
   let bestOverallPrice = 0;
   
   if (bestOverall) {
-    const brand = getBrand(bestOverall);
     const category = bestOverall.enrichment?.treadCategory || bestOverall.badges?.terrain || '';
     const mileage = bestOverall.enrichment?.mileage || bestOverall.badges?.warrantyMiles || 0;
     bestOverallPrice = getDisplayPrice(bestOverall) || 0;
     
-    // Build conversion-focused reason based on actual tire attributes
-    let reason = 'Smooth ride and great tread life for daily driving';
+    // Use vehicle-aware reason templates
+    let reasonType: "comfort" | "durability" | "allAround" | "performance" = "allAround";
     if (mileage >= 60000) {
-      reason = `Excellent durability with ${Math.round(mileage/1000)}K mile warranty`;
+      reasonType = "durability";
     } else if (/touring|highway/i.test(category)) {
-      reason = 'Quiet, comfortable ride perfect for commuting';
-    } else if (/all-terrain/i.test(category)) {
-      reason = 'Handles highway and light trails with confidence';
+      reasonType = "comfort";
     } else if (/performance/i.test(category)) {
-      reason = 'Responsive handling and dependable grip';
+      reasonType = "performance";
     }
+    
+    const reason = getVehicleAwareReason(vehicleProfile, reasonType, {
+      sku: getSku(bestOverall),
+      mileageWarranty: mileage,
+      category,
+    });
     
     picks.push({
       tire: bestOverall,
@@ -2362,7 +2384,7 @@ export default async function TiresPage({
   // Now uses real behavior data when available
   const roleBasedPicks = (() => {
     if (!hasVehicle || items.length === 0) return [];
-    return selectRoleBasedPicks(items, popularityDataMap, model);
+    return selectRoleBasedPicks(items, popularityDataMap, model, trim);
   })();
   
   // Legacy array for backwards compatibility (used by some card logic)

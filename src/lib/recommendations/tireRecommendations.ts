@@ -86,6 +86,398 @@ const MIN_LONGEVITY_WARRANTY = 60000;
 const STRONG_LONGEVITY_WARRANTY = 80000;
 
 // ============================================================================
+// VEHICLE TYPE CLASSIFICATION
+// ============================================================================
+
+export type VehicleType = 
+  | "sedan"
+  | "coupe" 
+  | "hatchback"
+  | "crossover"
+  | "suv"
+  | "truck"
+  | "offroad"
+  | "performance"
+  | "van"
+  | "unknown";
+
+export interface VehicleProfile {
+  type: VehicleType;
+  isPerformanceOriented: boolean;
+  isOffroadCapable: boolean;
+  allowedCategories: string[];
+  excludedCategories: string[];
+  preferredReasonStyle: "sedan" | "truck" | "suv" | "offroad" | "performance" | "default";
+}
+
+// Model patterns for vehicle classification
+const SEDAN_MODELS = [
+  'camry', 'accord', 'civic', 'corolla', 'altima', 'sentra', 'maxima',
+  'malibu', 'impala', 'cruze', 'sonata', 'elantra', 'optima', 'k5',
+  'mazda3', 'mazda6', 'jetta', 'passat', 'a3', 'a4', 'a6', 'a8',
+  '3 series', '320', '328', '330', '340', '5 series', '7 series',
+  'c-class', 'c300', 'e-class', 's-class', 'cts', 'ct4', 'ct5', 'ats',
+  'xts', 'dts', 'es', 'is', 'gs', 'ls', 'genesis', 'g70', 'g80', 'g90',
+  'giulia', 'ghibli', 'quattroporte', 'charger', '300', 'taurus', 'fusion',
+  'avalon', 'legacy', 'impreza', 'insight', 'clarity', 'prius',
+];
+
+const COUPE_MODELS = [
+  'mustang', 'camaro', 'challenger', 'corvette', '370z', '350z', 'nissan z',
+  'supra', 'brz', '86', 'gr86', 'miata', 'mx-5', 'tt', 'a5', 'rc',
+  'm2', 'm4', 'c63', 'amg gt', '911', 'cayman', 'boxster',
+];
+
+const PERFORMANCE_TRIMS = [
+  'gt', 'gt-line', 'sport', 'r/t', 'srt', 'ss', 'rs', 'si', 'type r', 'type s',
+  'sti', 'wrx', 'nismo', 'trd', 'n line', 'n', 'amg', 'm sport', 'm',
+  's-line', 'aspec', 'f sport', 'gt350', 'gt500', 'shelby', 'hellcat',
+  'scat pack', 'redeye', 'demon', 'zl1', 'z06', 'zr1', 'dark horse',
+];
+
+const CROSSOVER_MODELS = [
+  'rav4', 'cr-v', 'crv', 'cx-5', 'cx5', 'cx-30', 'cx30', 'cx-50', 'tucson',
+  'sportage', 'rogue', 'murano', 'pathfinder', 'escape', 'edge', 'bronco sport',
+  'equinox', 'terrain', 'blazer', 'trailblazer', 'trax', 'encore', 'envision',
+  'outback', 'forester', 'crosstrek', 'ascent', 'tiguan', 'atlas cross sport',
+  'q3', 'q5', 'x1', 'x3', 'glc', 'gla', 'nx', 'rx', 'ux', 'rdx', 'mdx',
+  'macan', 'e-pace', 'f-pace', 'xc40', 'xc60', 'santa fe', 'sorento',
+  'telluride', 'palisade', 'pilot', 'passport', 'highlander', 'venza',
+  'cherokee', 'grand cherokee l', 'compass', 'seltos', 'kona', 'venue',
+  'kicks', 'hr-v', 'hrv', 'ch-r', 'eclipse cross', 'outlander',
+];
+
+const SUV_MODELS = [
+  'tahoe', 'suburban', 'yukon', 'escalade', 'expedition', 'navigator',
+  'sequoia', 'land cruiser', 'armada', 'qx80', 'qx60', 'gx', 'lx',
+  'x5', 'x7', 'gle', 'gls', 'q7', 'q8', 'cayenne', 'range rover',
+  'defender', 'discovery', 'durango', 'grand cherokee', 'atlas', 'xc90',
+];
+
+const TRUCK_MODELS = [
+  'f-150', 'f150', 'f-250', 'f250', 'f-350', 'f350', 'f-450',
+  'silverado', 'sierra', 'ram 1500', 'ram 2500', 'ram 3500', 'ram',
+  'tundra', 'tacoma', 'titan', 'frontier', 'colorado', 'canyon',
+  'ranger', 'maverick', 'ridgeline', 'gladiator', 'santa cruz',
+];
+
+const OFFROAD_MODELS = [
+  'wrangler', '4runner', 'bronco', 'defender', 'land cruiser',
+  'fj cruiser', 'xterra', 'hummer',
+];
+
+const OFFROAD_TRIMS = [
+  'trd pro', 'trd off-road', 'trail', 'trailhawk', 'rubicon', 'mojave',
+  'raptor', 'tremor', 'at4', 'at4x', 'trail boss', 'zr2', 'bison',
+  'wildtrak', 'badlands', 'sasquatch', 'willys', 'wilderness',
+];
+
+const VAN_MODELS = [
+  'sienna', 'odyssey', 'pacifica', 'carnival', 'sedona', 'grand caravan',
+  'transit', 'sprinter', 'promaster', 'metris', 'nv', 'express', 'savana',
+];
+
+/**
+ * Determine the vehicle type/profile for recommendation filtering
+ */
+export function getVehicleProfile(vehicle?: VehicleContext | null): VehicleProfile {
+  const defaultProfile: VehicleProfile = {
+    type: "unknown",
+    isPerformanceOriented: false,
+    isOffroadCapable: false,
+    allowedCategories: [], // Empty = allow all
+    excludedCategories: [],
+    preferredReasonStyle: "default",
+  };
+
+  if (!vehicle?.model) return defaultProfile;
+
+  const modelLower = (vehicle.model || '').toLowerCase();
+  const trimLower = (vehicle.trim || '').toLowerCase();
+  const makeLower = (vehicle.make || '').toLowerCase();
+
+  // Check for performance trims first (affects any vehicle type)
+  const isPerformanceTrim = PERFORMANCE_TRIMS.some(t => 
+    trimLower.includes(t) || modelLower.includes(t)
+  );
+
+  // Check for off-road trims
+  const isOffroadTrim = OFFROAD_TRIMS.some(t => 
+    trimLower.includes(t) || modelLower.includes(t)
+  );
+
+  // Determine vehicle type
+  let type: VehicleType = "unknown";
+
+  // Check in order of specificity
+  if (VAN_MODELS.some(m => modelLower.includes(m))) {
+    type = "van";
+  } else if (OFFROAD_MODELS.some(m => modelLower.includes(m)) || isOffroadTrim) {
+    type = "offroad";
+  } else if (TRUCK_MODELS.some(m => modelLower.includes(m))) {
+    type = "truck";
+  } else if (COUPE_MODELS.some(m => modelLower.includes(m))) {
+    type = isPerformanceTrim ? "performance" : "coupe";
+  } else if (SUV_MODELS.some(m => modelLower.includes(m))) {
+    type = "suv";
+  } else if (CROSSOVER_MODELS.some(m => modelLower.includes(m))) {
+    type = "crossover";
+  } else if (SEDAN_MODELS.some(m => modelLower.includes(m))) {
+    type = isPerformanceTrim ? "performance" : "sedan";
+  }
+
+  // Build profile based on type
+  return buildProfileForType(type, isPerformanceTrim, isOffroadTrim);
+}
+
+function buildProfileForType(
+  type: VehicleType, 
+  isPerformanceTrim: boolean,
+  isOffroadTrim: boolean
+): VehicleProfile {
+  switch (type) {
+    case "sedan":
+    case "coupe":
+    case "hatchback":
+      return {
+        type,
+        isPerformanceOriented: isPerformanceTrim,
+        isOffroadCapable: false,
+        allowedCategories: [
+          'all-season', 'touring', 'highway', 'grand touring',
+          'performance', 'ultra high performance', 'summer',
+          'all-weather', 'winter',
+        ],
+        excludedCategories: [
+          'all-terrain', 'mud-terrain', 'rugged-terrain', 
+          'mud', 'off-road', 'a/t', 'm/t', 'r/t',
+        ],
+        preferredReasonStyle: isPerformanceTrim ? "performance" : "sedan",
+      };
+
+    case "performance":
+      return {
+        type,
+        isPerformanceOriented: true,
+        isOffroadCapable: false,
+        allowedCategories: [
+          'performance', 'ultra high performance', 'summer',
+          'max performance', 'extreme performance',
+          'all-season', 'high performance all-season',
+        ],
+        excludedCategories: [
+          'all-terrain', 'mud-terrain', 'rugged-terrain',
+          'mud', 'off-road', 'a/t', 'm/t', 'r/t',
+          'touring', // Performance cars shouldn't get touring as primary
+        ],
+        preferredReasonStyle: "performance",
+      };
+
+    case "crossover":
+      return {
+        type,
+        isPerformanceOriented: isPerformanceTrim,
+        isOffroadCapable: isOffroadTrim,
+        allowedCategories: [
+          'all-season', 'touring', 'highway', 'crossover/suv touring',
+          'all-weather', 'winter',
+          // Light all-terrain only if off-road trim
+          ...(isOffroadTrim ? ['all-terrain', 'crossover/suv'] : []),
+        ],
+        excludedCategories: isOffroadTrim ? [] : [
+          'mud-terrain', 'rugged-terrain', 'mud', 'm/t',
+          // Exclude aggressive all-terrain for non-offroad trims
+          ...(!isOffroadTrim ? ['all-terrain', 'a/t'] : []),
+        ],
+        preferredReasonStyle: "suv",
+      };
+
+    case "suv":
+      return {
+        type,
+        isPerformanceOriented: isPerformanceTrim,
+        isOffroadCapable: isOffroadTrim,
+        allowedCategories: [
+          'all-season', 'touring', 'highway', 'crossover/suv touring',
+          'all-weather', 'winter', 'all-terrain', 'crossover/suv',
+        ],
+        excludedCategories: isOffroadTrim ? [] : [
+          'mud-terrain', 'rugged-terrain', 'mud', 'm/t',
+        ],
+        preferredReasonStyle: "suv",
+      };
+
+    case "truck":
+      return {
+        type,
+        isPerformanceOriented: false,
+        isOffroadCapable: isOffroadTrim,
+        allowedCategories: [
+          'highway', 'all-season', 'all-terrain', 
+          'light truck', 'commercial', 'touring',
+          ...(isOffroadTrim ? ['mud-terrain', 'rugged-terrain'] : []),
+        ],
+        excludedCategories: isOffroadTrim ? [] : [
+          // Don't exclude all-terrain for trucks, but don't force it either
+          'mud-terrain', 'rugged-terrain', 'mud', 'm/t',
+        ],
+        preferredReasonStyle: "truck",
+      };
+
+    case "offroad":
+      return {
+        type,
+        isPerformanceOriented: false,
+        isOffroadCapable: true,
+        allowedCategories: [
+          'all-terrain', 'mud-terrain', 'rugged-terrain',
+          'all-season', 'highway', 'a/t', 'm/t', 'r/t',
+        ],
+        excludedCategories: [],
+        preferredReasonStyle: "offroad",
+      };
+
+    case "van":
+      return {
+        type,
+        isPerformanceOriented: false,
+        isOffroadCapable: false,
+        allowedCategories: [
+          'all-season', 'touring', 'highway', 'passenger',
+          'all-weather', 'winter',
+        ],
+        excludedCategories: [
+          'all-terrain', 'mud-terrain', 'rugged-terrain',
+          'performance', 'mud', 'off-road', 'a/t', 'm/t',
+        ],
+        preferredReasonStyle: "sedan",
+      };
+
+    default:
+      // Unknown - be conservative, allow road tires
+      return {
+        type: "unknown",
+        isPerformanceOriented: isPerformanceTrim,
+        isOffroadCapable: isOffroadTrim,
+        allowedCategories: [], // Allow all
+        excludedCategories: [], // Exclude none
+        preferredReasonStyle: "default",
+      };
+  }
+}
+
+/**
+ * Check if a tire category is appropriate for the vehicle profile
+ */
+export function isCategoryAllowedForVehicle(
+  category: string | null | undefined,
+  profile: VehicleProfile
+): boolean {
+  if (!category) return true; // No category = allow
+  
+  const categoryLower = category.toLowerCase();
+
+  // Check exclusions first (takes priority)
+  if (profile.excludedCategories.length > 0) {
+    for (const excluded of profile.excludedCategories) {
+      if (categoryLower.includes(excluded.toLowerCase())) {
+        return false;
+      }
+    }
+  }
+
+  // If no allowed list, everything not excluded is allowed
+  if (profile.allowedCategories.length === 0) {
+    return true;
+  }
+
+  // Check if category matches any allowed
+  for (const allowed of profile.allowedCategories) {
+    if (categoryLower.includes(allowed.toLowerCase())) {
+      return true;
+    }
+  }
+
+  // Default: if we have an allowed list and didn't match, exclude
+  // But be lenient - if category is vague, allow it
+  if (categoryLower.length < 5 || categoryLower === 'other') {
+    return true;
+  }
+
+  return false;
+}
+
+// ============================================================================
+// VEHICLE-AWARE REASON GENERATORS
+// ============================================================================
+
+const REASON_TEMPLATES: Record<VehicleProfile["preferredReasonStyle"], {
+  comfort: string;
+  durability: string;
+  allAround: string;
+  performance: string;
+}> = {
+  sedan: {
+    comfort: "Smooth, quiet ride for daily driving",
+    durability: "Excellent tread life for commuters",
+    allAround: "Balanced comfort and all-season confidence",
+    performance: "Responsive handling with everyday comfort",
+  },
+  truck: {
+    comfort: "Quiet highway ride with strong durability",
+    durability: "Built tough for work and daily driving",
+    allAround: "Dependable performance for any job",
+    performance: "Confident towing and hauling capability",
+  },
+  suv: {
+    comfort: "Comfortable ride with year-round confidence",
+    durability: "Long-lasting performance for family miles",
+    allAround: "Versatile grip in any weather",
+    performance: "Sure-footed handling for your adventures",
+  },
+  offroad: {
+    comfort: "Capable on trails with civilized road manners",
+    durability: "Rugged construction for tough terrain",
+    allAround: "Confident traction on and off the road",
+    performance: "Aggressive grip when you need it most",
+  },
+  performance: {
+    comfort: "Precision handling without sacrificing comfort",
+    durability: "Track-ready grip with street durability",
+    allAround: "Exhilarating performance, rain or shine",
+    performance: "Maximum grip for spirited driving",
+  },
+  default: {
+    comfort: "Smooth ride and great tread life",
+    durability: "Built for the long haul",
+    allAround: "Dependable all-season performance",
+    performance: "Responsive handling you can trust",
+  },
+};
+
+/**
+ * Get a vehicle-appropriate reason line
+ */
+export function getVehicleAwareReason(
+  profile: VehicleProfile,
+  reasonType: "comfort" | "durability" | "allAround" | "performance",
+  tire?: TireForRecommendation
+): string {
+  const templates = REASON_TEMPLATES[profile.preferredReasonStyle] || REASON_TEMPLATES.default;
+  let reason = templates[reasonType];
+
+  // Add warranty mention if notable
+  if (tire?.mileageWarranty && tire.mileageWarranty >= 60000) {
+    const k = Math.round(tire.mileageWarranty / 1000);
+    if (reasonType === "durability") {
+      reason = `Up to ${k},000-mile warranty`;
+    }
+  }
+
+  return reason;
+}
+
+// ============================================================================
 // MAIN RECOMMENDATION GENERATOR
 // ============================================================================
 
@@ -198,26 +590,60 @@ function findBestForVehicle(
   usedBrands: Set<string>,
   vehicle?: VehicleContext | null
 ): TireForRecommendation | null {
-  // Score tires for "best overall" recommendation
-  const scored = tires
-    .filter(t => !usedSkus.has(t.sku))
+  // Get vehicle profile for filtering
+  const profile = getVehicleProfile(vehicle);
+  
+  // First, filter to only vehicle-appropriate tires
+  const appropriateTires = tires.filter(t => {
+    if (usedSkus.has(t.sku)) return false;
+    // Apply vehicle-type guardrails
+    return isCategoryAllowedForVehicle(t.category, profile);
+  });
+
+  // Score appropriate tires
+  const scored = appropriateTires
     .map(t => ({
       tire: t,
-      score: calculateBestForVehicleScore(t, vehicle),
+      score: calculateBestForVehicleScore(t, vehicle, profile),
     }))
     .filter(s => s.score > 0)
     .sort((a, b) => b.score - a.score);
+
+  // If no appropriate tires found, fall back to any road-friendly tire
+  if (scored.length === 0) {
+    console.log(`[Recommendations] No appropriate tires for ${vehicle?.model}, falling back to road-friendly`);
+    const fallbackTires = tires
+      .filter(t => !usedSkus.has(t.sku))
+      .filter(t => {
+        const cat = (t.category || '').toLowerCase();
+        // Fall back to basic road-friendly categories
+        return cat.includes('all-season') || 
+               cat.includes('touring') || 
+               cat.includes('highway') ||
+               !cat; // No category = allow
+      })
+      .map(t => ({
+        tire: t,
+        score: calculateBestForVehicleScore(t, vehicle, profile),
+      }))
+      .filter(s => s.score > 0)
+      .sort((a, b) => b.score - a.score);
+    
+    return fallbackTires[0]?.tire || null;
+  }
 
   return scored[0]?.tire || null;
 }
 
 function calculateBestForVehicleScore(
   tire: TireForRecommendation,
-  vehicle?: VehicleContext | null
+  vehicle?: VehicleContext | null,
+  profile?: VehicleProfile
 ): number {
   let score = 0;
   const brandLower = (tire.brand || '').toLowerCase();
   const categoryLower = (tire.category || '').toLowerCase();
+  const vehicleProfile = profile || getVehicleProfile(vehicle);
 
   // Brand quality (premium > mid-tier > budget)
   if (PREMIUM_BRANDS.includes(brandLower)) score += 30;
@@ -243,19 +669,70 @@ function calculateBestForVehicleScore(
     else if (tire.price >= 40 && tire.price <= 300) score += 5;
   }
 
-  // Category match for vehicle type
-  if (vehicle?.model) {
-    const modelLower = vehicle.model.toLowerCase();
-    // Trucks/SUVs prefer all-terrain or highway
-    if (isTruckOrSUV(modelLower)) {
-      if (categoryLower.includes('all-terrain')) score += 10;
-      else if (categoryLower.includes('highway') || categoryLower.includes('touring')) score += 8;
-    }
-    // Sedans/cars prefer all-season or touring
-    else {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // VEHICLE-TYPE-AWARE CATEGORY SCORING
+  // ═══════════════════════════════════════════════════════════════════════════
+  
+  switch (vehicleProfile.type) {
+    case "sedan":
+    case "coupe":
+    case "hatchback":
+    case "van":
+      // Sedans prefer touring/all-season, penalize off-road categories
+      if (categoryLower.includes('touring') || categoryLower.includes('grand touring')) score += 15;
+      else if (categoryLower.includes('all-season')) score += 12;
+      else if (categoryLower.includes('highway')) score += 10;
+      // Penalize off-road categories (shouldn't reach here due to filter, but belt+suspenders)
+      if (categoryLower.includes('all-terrain') || categoryLower.includes('mud')) score -= 50;
+      break;
+
+    case "performance":
+      // Performance vehicles prefer performance categories
+      if (categoryLower.includes('performance') || categoryLower.includes('summer')) score += 20;
+      else if (categoryLower.includes('ultra high')) score += 18;
+      else if (categoryLower.includes('max performance')) score += 18;
+      // Penalize touring/comfort-focused
+      if (categoryLower.includes('touring')) score -= 5;
+      break;
+
+    case "crossover":
+      // Crossovers prefer versatile road tires
+      if (categoryLower.includes('crossover') || categoryLower.includes('suv touring')) score += 15;
+      else if (categoryLower.includes('all-season')) score += 12;
+      else if (categoryLower.includes('touring')) score += 10;
+      // Light penalty for aggressive off-road (unless off-road trim)
+      if (!vehicleProfile.isOffroadCapable && categoryLower.includes('all-terrain')) score -= 5;
+      break;
+
+    case "suv":
+      // SUVs can handle broader range
+      if (categoryLower.includes('suv') || categoryLower.includes('crossover')) score += 12;
+      else if (categoryLower.includes('all-season')) score += 10;
+      else if (categoryLower.includes('highway')) score += 10;
+      else if (categoryLower.includes('all-terrain')) score += 8;
+      break;
+
+    case "truck":
+      // Trucks prefer highway/all-terrain balance
+      if (categoryLower.includes('highway')) score += 15;
+      else if (categoryLower.includes('all-terrain')) score += 12;
+      else if (categoryLower.includes('all-season')) score += 10;
+      else if (categoryLower.includes('light truck')) score += 10;
+      // Only boost mud-terrain if off-road capable
+      if (vehicleProfile.isOffroadCapable && categoryLower.includes('mud')) score += 8;
+      break;
+
+    case "offroad":
+      // Off-road vehicles can prefer aggressive tires
+      if (categoryLower.includes('all-terrain')) score += 15;
+      else if (categoryLower.includes('mud-terrain') || categoryLower.includes('rugged')) score += 12;
+      else if (categoryLower.includes('highway')) score += 8;
+      break;
+
+    default:
+      // Unknown - use generic scoring
       if (categoryLower.includes('all-season')) score += 10;
       else if (categoryLower.includes('touring')) score += 8;
-    }
   }
 
   // Popularity boost (if available)
@@ -361,6 +838,33 @@ function findAllWeatherConfidence(
 // ============================================================================
 
 function generateBestForVehicleReason(
+  tire: TireForRecommendation,
+  vehicle?: VehicleContext | null
+): string {
+  const profile = getVehicleProfile(vehicle);
+  const categoryLower = (tire.category || '').toLowerCase();
+  const brandLower = (tire.brand || '').toLowerCase();
+
+  // Use vehicle-aware reason templates
+  if (tire.mileageWarranty && tire.mileageWarranty >= 60000) {
+    return getVehicleAwareReason(profile, "durability", tire);
+  }
+
+  // Category-based reason selection
+  if (categoryLower.includes('performance') || categoryLower.includes('summer')) {
+    return getVehicleAwareReason(profile, "performance", tire);
+  }
+  
+  if (categoryLower.includes('touring') || categoryLower.includes('highway')) {
+    return getVehicleAwareReason(profile, "comfort", tire);
+  }
+
+  // Default to all-around reason
+  return getVehicleAwareReason(profile, "allAround", tire);
+}
+
+// Legacy reason generator (keeping for reference but not used)
+function generateBestForVehicleReasonLegacy(
   tire: TireForRecommendation,
   vehicle?: VehicleContext | null
 ): string {
