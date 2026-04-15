@@ -146,7 +146,7 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
           year,
           make,
           model,
-          pageSize: "500",
+          pageSize: "800", // Larger to get plus-sizes (20", 22", etc.)
           fields: "inventory,price,images,properties",
         });
         
@@ -492,6 +492,38 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
                 <div className="mb-4 text-sm text-gray-600">
                   Showing {pagedWheels.length} of {filteredWheels.length} wheels
                 </div>
+                
+                {/* Quick diameter filter chips */}
+                {facets.diameters.length > 0 && (
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    <span className="text-sm font-medium text-gray-700 py-1">Size:</span>
+                    <Link
+                      href={`/pos/wheels?year=${year}&make=${make}&model=${model}${trim ? `&trim=${trim}` : ""}${brandCd ? `&brand_cd=${brandCd}` : ""}${finish ? `&finish=${finish}` : ""}&sort=${sort}`}
+                      className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                        !diameterParam 
+                          ? "bg-blue-600 text-white" 
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                      }`}
+                    >
+                      All
+                    </Link>
+                    {facets.diameters
+                      .sort((a, b) => parseFloat(a.value) - parseFloat(b.value))
+                      .map((d) => (
+                        <Link
+                          key={d.value}
+                          href={`/pos/wheels?year=${year}&make=${make}&model=${model}${trim ? `&trim=${trim}` : ""}&diameter=${d.value}${brandCd ? `&brand_cd=${brandCd}` : ""}${finish ? `&finish=${finish}` : ""}&sort=${sort}`}
+                          className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                            diameterParam === d.value 
+                              ? "bg-blue-600 text-white" 
+                              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                          }`}
+                        >
+                          {d.value}" <span className="text-xs opacity-70">({d.count})</span>
+                        </Link>
+                      ))}
+                  </div>
+                )}
                 
                 {/* Grid */}
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
