@@ -3074,8 +3074,8 @@ export default async function TiresPage({
         ) : null}
 
         <div className="mt-5 grid gap-6 md:grid-cols-[280px_1fr]">
-          {/* Filters Sidebar - Accordion style */}
-          <aside className="sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto rounded-2xl border border-neutral-200 bg-white p-4 md:block">
+          {/* Filters Sidebar - Compact utility panel */}
+          <aside className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto scroll-smooth rounded-xl border border-neutral-200 bg-white px-3 py-3 md:block">
             {/* Package Summary - shows when building a package */}
             <div className="mb-4">
               <PackageSummary variant="sidebar" showCheckout={true} />

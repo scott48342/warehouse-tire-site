@@ -69,13 +69,13 @@ type FilterData = {
 };
 
 /* =============================================================================
-   CHEVRON ICON
+   CHEVRON ICON (smaller)
 ============================================================================= */
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
     <svg
-      className={`h-4 w-4 text-neutral-500 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      className={`h-3.5 w-3.5 text-neutral-400 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -86,7 +86,7 @@ function ChevronIcon({ open }: { open: boolean }) {
 }
 
 /* =============================================================================
-   ACCORDION SECTION
+   ACCORDION SECTION (compact)
 ============================================================================= */
 
 function AccordionSection({
@@ -111,25 +111,25 @@ function AccordionSection({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between py-3 text-left"
+        className="flex w-full items-center justify-between py-2 text-left"
       >
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-extrabold text-neutral-900">{title}</span>
+        <div className="flex items-center gap-1.5">
+          <span className="text-[13px] font-semibold text-neutral-800">{title}</span>
           {selectedCount > 0 && (
-            <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-neutral-900 px-1.5 text-[10px] font-bold text-white">
+            <span className="flex h-4 min-w-[16px] items-center justify-center rounded-full bg-neutral-800 px-1 text-[9px] font-bold text-white">
               {selectedCount}
             </span>
           )}
         </div>
         <ChevronIcon open={open} />
       </button>
-      {open && <div className="pb-4">{children}</div>}
+      {open && <div className="pb-2.5">{children}</div>}
     </div>
   );
 }
 
 /* =============================================================================
-   FILTER CHECKBOX
+   FILTER CHECKBOX (tight rows)
 ============================================================================= */
 
 function FilterCheckbox({
@@ -147,33 +147,33 @@ function FilterCheckbox({
     <button
       type="button"
       onClick={() => onChange(!checked)}
-      className="flex w-full cursor-pointer items-center justify-between gap-2 py-1 hover:bg-neutral-50 -mx-2 px-2 rounded-lg transition-colors text-left"
+      className="flex w-full cursor-pointer items-center justify-between gap-2 py-[3px] hover:bg-neutral-50 -mx-1.5 px-1.5 rounded transition-colors text-left"
     >
-      <div className="flex items-center gap-2.5">
+      <div className="flex items-center gap-2">
         <div
-          className={`flex h-4 w-4 items-center justify-center rounded border transition-colors ${
+          className={`flex h-3.5 w-3.5 items-center justify-center rounded-sm border transition-colors ${
             checked
-              ? "border-neutral-900 bg-neutral-900"
+              ? "border-neutral-800 bg-neutral-800"
               : "border-neutral-300 bg-white"
           }`}
         >
           {checked && (
-            <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
             </svg>
           )}
         </div>
-        <span className="text-sm text-neutral-800">{label}</span>
+        <span className="text-[13px] text-neutral-700">{label}</span>
       </div>
       {typeof count === "number" && (
-        <span className="text-xs font-medium text-neutral-400">{count}</span>
+        <span className="text-[11px] text-neutral-400">{count}</span>
       )}
     </button>
   );
 }
 
 /* =============================================================================
-   PRICE INPUT WITH DEBOUNCE
+   PRICE INPUT (compact)
 ============================================================================= */
 
 function PriceInput({
@@ -196,19 +196,16 @@ function PriceInput({
     const newValue = e.target.value;
     setLocalValue(newValue);
     
-    // Clear existing timeout
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     
-    // Debounce 500ms
     timeoutRef.current = setTimeout(() => {
       onChange(newValue);
     }, 500);
   };
   
   const handleBlur = () => {
-    // Apply immediately on blur
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -222,7 +219,7 @@ function PriceInput({
       value={localValue}
       onChange={handleChange}
       onBlur={handleBlur}
-      className="h-10 w-full rounded-xl border border-neutral-200 bg-white px-3 text-sm font-medium placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none"
+      className="h-8 w-full rounded-lg border border-neutral-200 bg-white px-2.5 text-[13px] placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none"
     />
   );
 }
@@ -236,11 +233,9 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   
-  // Build URL with updated params
   const buildUrl = useCallback((updates: Record<string, string | string[] | null>) => {
     const params = new URLSearchParams(searchParams.toString());
     
-    // Always preserve base params
     if (data.year) params.set("year", data.year);
     if (data.make) params.set("make", data.make);
     if (data.model) params.set("model", data.model);
@@ -251,7 +246,6 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     if (data.wheelSku) params.set("wheelSku", data.wheelSku);
     if (data.wheelDia) params.set("wheelDia", data.wheelDia);
     
-    // Apply updates
     for (const [key, value] of Object.entries(updates)) {
       params.delete(key);
       if (value === null || value === "" || (Array.isArray(value) && value.length === 0)) {
@@ -265,13 +259,10 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
       }
     }
     
-    // Reset to page 1 when filters change
     params.delete("page");
-    
     return `${data.basePath}?${params.toString()}`;
   }, [searchParams, data]);
   
-  // Toggle a value in an array filter
   const toggleArrayFilter = useCallback((key: string, value: string, currentValues: string[]) => {
     const newValues = currentValues.includes(value)
       ? currentValues.filter(v => v !== value)
@@ -279,22 +270,18 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     router.push(buildUrl({ [key]: newValues }));
   }, [router, buildUrl]);
   
-  // Toggle a boolean filter
   const toggleBooleanFilter = useCallback((key: string, currentValue: boolean) => {
     router.push(buildUrl({ [key]: currentValue ? null : "1" }));
   }, [router, buildUrl]);
   
-  // Set a single-value filter
   const setSingleFilter = useCallback((key: string, value: string | null) => {
     router.push(buildUrl({ [key]: value }));
   }, [router, buildUrl]);
   
-  // Update price filter
   const updatePrice = useCallback((minOrMax: "priceMin" | "priceMax", value: string) => {
     router.push(buildUrl({ [minOrMax]: value || null }));
   }, [router, buildUrl]);
   
-  // Clear all filters URL
   const clearAllUrl = buildUrl({
     brand: null,
     priceMin: null,
@@ -313,7 +300,6 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     overallDia: null,
   });
   
-  // Count total active filters
   const activeFilterCount = 
     data.brands.length +
     (data.priceMin !== null ? 1 : 0) +
@@ -331,58 +317,52 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     data.overallDiameters.length;
 
   return (
-    <div>
-      {/* Header with Clear All */}
+    <div className="text-sm">
+      {/* Header */}
       <div className="flex items-center justify-between pb-2 border-b border-neutral-200">
-        <h2 className="text-base font-extrabold text-neutral-900">Filters</h2>
+        <h2 className="text-sm font-semibold text-neutral-900">Filters</h2>
         {activeFilterCount > 0 && (
           <Link
             href={clearAllUrl}
-            className="text-xs font-semibold text-neutral-500 hover:text-neutral-900 hover:underline transition-colors"
+            className="text-[11px] font-medium text-neutral-500 hover:text-neutral-800 hover:underline transition-colors"
           >
-            Clear all ({activeFilterCount})
+            Clear ({activeFilterCount})
           </Link>
         )}
       </div>
       
-      {/* Availability Section */}
+      {/* Availability - inline, not accordion */}
       {data.inStockCount !== undefined && (
-        <AccordionSection
-          title="Availability"
-          defaultOpen
-          selectedCount={0}
-        >
-          <div className="text-sm text-neutral-600">
-            <span className="font-semibold text-green-600">{data.inStockCount}</span> in stock
-            {data.totalCount !== undefined && data.totalCount > data.inStockCount && (
-              <span className="text-neutral-400"> of {data.totalCount}</span>
-            )}
-          </div>
-        </AccordionSection>
+        <div className="py-2 border-b border-neutral-100 text-[13px] text-neutral-600">
+          <span className="font-medium text-green-600">{data.inStockCount}</span> in stock
+          {data.totalCount !== undefined && data.totalCount > data.inStockCount && (
+            <span className="text-neutral-400"> of {data.totalCount}</span>
+          )}
+        </div>
       )}
       
-      {/* Rebates Callout */}
-      <div className="py-3 border-b border-neutral-100">
+      {/* Rebates - compact */}
+      <div className="py-2 border-b border-neutral-100">
         <Link 
           href="/rebates"
-          className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 p-3 hover:from-emerald-100 hover:to-green-100 transition-colors"
+          className="flex items-center gap-2 rounded-lg bg-emerald-50 border border-emerald-100 px-2.5 py-2 hover:bg-emerald-100 transition-colors"
         >
-          <span className="text-lg">💰</span>
-          <div>
-            <div className="text-sm font-bold text-emerald-800">Rebates Available</div>
-            <div className="text-xs text-emerald-600">Save up to $100 on select brands</div>
+          <span className="text-sm">💰</span>
+          <div className="text-[12px]">
+            <span className="font-semibold text-emerald-700">Rebates</span>
+            <span className="text-emerald-600"> · Save up to $100</span>
           </div>
         </Link>
       </div>
       
-      {/* Category Section */}
+      {/* Category */}
       <AccordionSection
         title="Category"
         defaultOpen
         selectedCount={data.treadCategories.length}
         hidden={data.treadCategoryOptions.length === 0}
       >
-        <div className="space-y-0.5">
+        <div>
           {data.treadCategoryOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
@@ -393,21 +373,20 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
             />
           ))}
         </div>
-        {/* Tire Types Guide - below filter options */}
-        <div className="mt-3 pt-3 border-t border-neutral-100">
+        <div className="mt-2 pt-2 border-t border-neutral-100">
           <TireTypesGuide variant="link" />
         </div>
       </AccordionSection>
       
-      {/* Brand Section - keep open when brands selected for multi-select */}
+      {/* Brand - show 5 initially */}
       <AccordionSection
         title="Brand"
         defaultOpen={data.brands.length > 0}
         selectedCount={data.brands.length}
         hidden={data.brandOptions.length === 0}
       >
-        <div className="space-y-0.5 max-h-64 overflow-y-auto">
-          {data.brandOptions.slice(0, 10).map(({ value, count }) => (
+        <div className="max-h-48 overflow-y-auto scroll-smooth">
+          {data.brandOptions.slice(0, 5).map(({ value, count }) => (
             <FilterCheckbox
               key={value}
               label={value}
@@ -416,13 +395,13 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               onChange={() => toggleArrayFilter("brand", value, data.brands)}
             />
           ))}
-          {data.brandOptions.length > 10 && (
-            <details className="mt-2">
-              <summary className="cursor-pointer text-xs font-semibold text-neutral-500 hover:text-neutral-900">
-                Show {data.brandOptions.length - 10} more brands
+          {data.brandOptions.length > 5 && (
+            <details className="mt-1">
+              <summary className="cursor-pointer text-[11px] font-medium text-neutral-500 hover:text-neutral-800 py-1">
+                +{data.brandOptions.length - 5} more
               </summary>
-              <div className="mt-2 space-y-0.5">
-                {data.brandOptions.slice(10).map(({ value, count }) => (
+              <div className="mt-1">
+                {data.brandOptions.slice(5).map(({ value, count }) => (
                   <FilterCheckbox
                     key={value}
                     label={value}
@@ -437,19 +416,19 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Price Section */}
+      {/* Price */}
       <AccordionSection
         title="Price"
         selectedCount={(data.priceMin !== null ? 1 : 0) + (data.priceMax !== null ? 1 : 0)}
       >
         <div className="grid grid-cols-2 gap-2">
           <PriceInput
-            placeholder="$ Min"
+            placeholder="Min"
             value={data.priceMin?.toString() ?? ""}
             onChange={(v) => updatePrice("priceMin", v)}
           />
           <PriceInput
-            placeholder="$ Max"
+            placeholder="Max"
             value={data.priceMax?.toString() ?? ""}
             onChange={(v) => updatePrice("priceMax", v)}
           />
@@ -458,20 +437,20 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
           <button
             type="button"
             onClick={() => router.push(buildUrl({ priceMin: null, priceMax: null }))}
-            className="mt-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 hover:underline"
+            className="mt-1.5 text-[11px] text-neutral-500 hover:text-neutral-800 hover:underline"
           >
-            Clear price filter
+            Clear
           </button>
         )}
       </AccordionSection>
       
-      {/* Mileage Warranty Section */}
+      {/* Mileage */}
       <AccordionSection
         title="Mileage Warranty"
         selectedCount={data.mileageBand ? 1 : 0}
         hidden={data.mileageOptions.every(o => o.count === 0)}
       >
-        <div className="space-y-0.5">
+        <div>
           {data.mileageOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
@@ -484,13 +463,13 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* UTQG Treadwear Section */}
+      {/* Treadwear */}
       <AccordionSection
-        title="Treadwear Rating"
+        title="Treadwear"
         selectedCount={data.treadwearRanges.length}
         hidden={!data.treadwearOptions || data.treadwearOptions.every(o => o.count === 0)}
       >
-        <div className="space-y-0.5">
+        <div>
           {data.treadwearOptions?.map(({ value, label, count }) => (
             <FilterCheckbox
               key={value}
@@ -501,22 +480,22 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
             />
           ))}
         </div>
-        <p className="mt-2 text-xs text-neutral-500">
-          Higher ratings = longer tread life
+        <p className="mt-1.5 text-[11px] text-neutral-400">
+          Higher = longer life
         </p>
       </AccordionSection>
       
-      {/* Rim Diameter Section (for mixed size searches) */}
+      {/* Wheel Size */}
       <AccordionSection
         title="Wheel Size"
         selectedCount={data.rimDiameters.length}
         hidden={data.rimDiameterOptions.length <= 1}
       >
-        <div className="space-y-0.5">
+        <div>
           {data.rimDiameterOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
-              label={`${value}" wheels`}
+              label={`${value}"`}
               checked={data.rimDiameters.includes(value)}
               count={count}
               onChange={() => toggleArrayFilter("rimDia", String(value), data.rimDiameters.map(String))}
@@ -525,13 +504,13 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Overall Diameter Section (for mixed size searches) */}
+      {/* Tire Height */}
       <AccordionSection
         title="Tire Height"
         selectedCount={data.overallDiameters.length}
         hidden={data.overallDiameterOptions.length <= 1}
       >
-        <div className="space-y-0.5">
+        <div>
           {data.overallDiameterOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
@@ -544,13 +523,13 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Speed Rating Section */}
+      {/* Speed Rating */}
       <AccordionSection
         title="Speed Rating"
         selectedCount={data.speeds.length}
         hidden={data.speedOptions.length === 0}
       >
-        <div className="space-y-0.5 max-h-48 overflow-y-auto">
+        <div className="max-h-36 overflow-y-auto scroll-smooth">
           {data.speedOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
@@ -563,17 +542,17 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Load Range Section */}
+      {/* Load Range */}
       <AccordionSection
         title="Load Range"
         selectedCount={data.loadRanges.length}
         hidden={data.loadRangeOptions.every(o => o.count === 0)}
       >
-        <div className="space-y-0.5">
+        <div>
           {data.loadRangeOptions.map(({ value, count }) => (
             <FilterCheckbox
               key={value}
-              label={`Load Range ${value}`}
+              label={`Range ${value}`}
               checked={data.loadRanges.includes(value)}
               count={count}
               onChange={() => toggleArrayFilter("loadRange", value, data.loadRanges)}
@@ -582,7 +561,7 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
-      {/* Features Section */}
+      {/* Features */}
       <AccordionSection
         title="Features"
         selectedCount={
@@ -598,7 +577,7 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
           data.studdableCount === 0
         }
       >
-        <div className="space-y-0.5">
+        <div>
           {data.runFlatCount > 0 && (
             <FilterCheckbox
               label="Run-Flat"
@@ -607,7 +586,6 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               onChange={() => toggleBooleanFilter("runFlat", data.runFlat)}
             />
           )}
-          {/* XL removed from Features - it's shown in Load Range filter instead */}
           {data.snowRatedCount > 0 && (
             <FilterCheckbox
               label="Snow Rated (3PMSF)"
