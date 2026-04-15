@@ -19,6 +19,13 @@ type WheelFinish = {
   price?: number;
   stockQty?: number;
   inventoryType?: string;
+  // Full specs for this finish variant
+  diameter?: string;
+  width?: string;
+  offset?: string;
+  boltPattern?: string;
+  centerbore?: string;
+  fitmentClass?: "surefit" | "specfit" | "extended";
 };
 
 type WheelItem = {
@@ -38,7 +45,7 @@ type WheelItem = {
   inventoryType?: string;
   styleKey?: string;
   fitmentClass?: "surefit" | "specfit" | "extended";
-  finishThumbs?: WheelFinishThumb[];
+  finishThumbs?: WheelFinish[];
 };
 
 type Facets = {
@@ -73,7 +80,9 @@ function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
   const grouped = new Map<string, WheelItem>();
   
   for (const item of items) {
-    const styleKey = `${item.brand}-${item.model}-${item.diameter}-${item.width}-${item.offset}-${item.boltPattern}`;
+    // Group by brand + model + diameter + width + boltPattern (NOT offset - can vary by finish)
+    // This groups the same wheel style together even if offsets differ slightly
+    const styleKey = `${item.brand}-${item.model}-${item.diameter}-${item.width}-${item.boltPattern}`;
     
     if (!grouped.has(styleKey)) {
       grouped.set(styleKey, { ...item, finishThumbs: [] });
@@ -82,8 +91,9 @@ function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
     const existing = grouped.get(styleKey)!;
     if (item.finish && item.sku) {
       existing.finishThumbs = existing.finishThumbs || [];
-      const alreadyHasFinish = existing.finishThumbs.some(f => f.finish === item.finish);
+      const alreadyHasFinish = existing.finishThumbs.some(f => f.sku === item.sku);
       if (!alreadyHasFinish) {
+        // Store FULL wheel data so clicking a finish has all the specs
         existing.finishThumbs.push({
           finish: item.finish,
           sku: item.sku,
@@ -91,6 +101,13 @@ function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
           price: item.price,
           stockQty: item.stockQty,
           inventoryType: item.inventoryType,
+          // Include full specs for this finish variant
+          diameter: item.diameter,
+          width: item.width,
+          offset: item.offset,
+          boltPattern: item.boltPattern,
+          centerbore: item.centerbore,
+          fitmentClass: item.fitmentClass,
         });
       }
     }
@@ -110,32 +127,46 @@ function POSWheelCard({
   wheel: WheelItem; 
   onSelect: (wheel: WheelItem) => void;
 }) {
-  // Track currently displayed finish
-  const [currentSku, setCurrentSku] = useState(wheel.sku);
-  const [currentImage, setCurrentImage] = useState(wheel.imageUrl);
-  const [currentFinish, setCurrentFinish] = useState(wheel.finish);
-  const [currentPrice, setCurrentPrice] = useState(wheel.price);
+  // Track currently selected finish (stores full finish data)
+  const [currentFinishData, setCurrentFinishData] = useState<WheelFinish | null>(null);
+  
+  // Derive current display values from selected finish or default wheel
+  const currentSku = currentFinishData?.sku || wheel.sku;
+  const currentImage = currentFinishData?.imageUrl || wheel.imageUrl;
+  const currentFinish = currentFinishData?.finish || wheel.finish;
+  const currentPrice = currentFinishData?.price ?? wheel.price;
+  const currentOffset = currentFinishData?.offset || wheel.offset;
+  const currentFitmentClass = currentFinishData?.fitmentClass || wheel.fitmentClass;
   
   const hasMultipleFinishes = wheel.finishThumbs && wheel.finishThumbs.length > 1;
   
-  // Handle finish thumbnail click
-  const handleFinishClick = (e: React.MouseEvent, finish: WheelFinishThumb) => {
+  // Handle finish thumbnail click - store FULL finish data
+  const handleFinishClick = (e: React.MouseEvent, finish: WheelFinish) => {
     e.stopPropagation(); // Prevent card selection
-    setCurrentSku(finish.sku);
-    setCurrentImage(finish.imageUrl);
-    setCurrentFinish(finish.finish);
-    setCurrentPrice(finish.price);
+    setCurrentFinishData(finish);
   };
   
-  // Handle card selection - uses current finish state
+  // Handle card selection - uses current finish data with all specs
   const handleSelect = () => {
-    onSelect({
-      ...wheel,
-      sku: currentSku,
-      imageUrl: currentImage,
-      finish: currentFinish,
-      price: currentPrice,
-    });
+    if (currentFinishData) {
+      // Use the selected finish's full data
+      onSelect({
+        ...wheel,
+        sku: currentFinishData.sku,
+        imageUrl: currentFinishData.imageUrl,
+        finish: currentFinishData.finish,
+        price: currentFinishData.price,
+        diameter: currentFinishData.diameter || wheel.diameter,
+        width: currentFinishData.width || wheel.width,
+        offset: currentFinishData.offset || wheel.offset,
+        boltPattern: currentFinishData.boltPattern || wheel.boltPattern,
+        centerbore: currentFinishData.centerbore || wheel.centerbore,
+        fitmentClass: currentFinishData.fitmentClass || wheel.fitmentClass,
+      });
+    } else {
+      // Use default wheel data
+      onSelect(wheel);
+    }
   };
   
   const setPrice = (currentPrice || 0) * 4;
@@ -160,14 +191,14 @@ function POSWheelCard({
           )}
           
           {/* Fitment badge */}
-          {wheel.fitmentClass && (
+          {currentFitmentClass && (
             <div className={`absolute top-2 right-2 rounded-full px-2 py-0.5 text-xs font-bold ${
-              wheel.fitmentClass === "surefit" ? "bg-green-100 text-green-800" :
-              wheel.fitmentClass === "specfit" ? "bg-blue-100 text-blue-800" :
+              currentFitmentClass === "surefit" ? "bg-green-100 text-green-800" :
+              currentFitmentClass === "specfit" ? "bg-blue-100 text-blue-800" :
               "bg-amber-100 text-amber-800"
             }`}>
-              {wheel.fitmentClass === "surefit" ? "✓ SureFit" :
-               wheel.fitmentClass === "specfit" ? "SpecFit" : "Extended"}
+              {currentFitmentClass === "surefit" ? "✓ SureFit" :
+               currentFitmentClass === "specfit" ? "SpecFit" : "Extended"}
             </div>
           )}
         </div>
@@ -179,7 +210,7 @@ function POSWheelCard({
         <div className="font-bold text-gray-900 truncate">{wheel.model}</div>
         <div className="text-sm text-gray-600">
           {wheel.diameter}" × {wheel.width}"
-          {wheel.offset && ` ET${wheel.offset}`}
+          {currentOffset && ` ET${currentOffset}`}
         </div>
         {currentFinish && (
           <div className="mt-1 text-xs text-gray-500 truncate">{currentFinish}</div>
