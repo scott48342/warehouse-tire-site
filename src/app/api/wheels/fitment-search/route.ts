@@ -735,7 +735,8 @@ async function handleDbProfilePath(
   const model = url.searchParams.get("model")!;
 
   const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
-  const requestedPageSize = Math.max(1, Math.min(200, Number(url.searchParams.get("pageSize") || "24") || 24));
+  // Allow larger page sizes for POS/admin use cases (up to 1000)
+  const requestedPageSize = Math.max(1, Math.min(1000, Number(url.searchParams.get("pageSize") || "24") || 24));
 
   const brandCd = url.searchParams.get("brand_cd");
   const finish = url.searchParams.get("finish");
@@ -1035,7 +1036,8 @@ async function handleDbFirstWheelResults(opts: {
   const timing: Record<string, number | string | null> = {};
 
   const requestedPage = Math.max(1, Number(url.searchParams.get("page") || "1") || 1);
-  const requestedPageSize = Math.max(1, Math.min(200, Number(url.searchParams.get("pageSize") || "24") || 24));
+  // Allow larger page sizes for POS/admin use cases (up to 1000)
+  const requestedPageSize = Math.max(1, Math.min(1000, Number(url.searchParams.get("pageSize") || "24") || 24));
 
   const brandCd = url.searchParams.get("brand_cd");
   const finish = url.searchParams.get("finish");
