@@ -765,3 +765,37 @@ $280/wheel - Ships free!
 
 ✨ Done!
 [Tue 04/14/2026 18:00:29.94] Auto-post complete 
+[Wed 04/15/2026  9:00:02.74] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:11648) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Pro Comp Alloys PA200 PULSE
+  ⚠️ No matching vehicle for bolt pattern 5X5.0, using generic caption
+  Downloading image for Pro Comp Alloys PA200 PULSE...
+  ✅ Generated: pa200_pulse_1776258003432
+  📝 Caption preview: Your ride deserves these Pro Comp Alloys PA200 PULSE wheels 💯
+
+📐 17x8.5
+🔩 5X5...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pa200_pulse_1776258003432.png
+  - pa200_pulse_1776258003432.json
