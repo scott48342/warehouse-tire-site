@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { POSProvider } from "@/components/pos";
+import { POSProvider, POSHeader, POSAdminPanel } from "@/components/pos";
 import { POSAuthGate } from "@/components/pos/POSAuthGate";
 
 export const metadata: Metadata = {
@@ -20,9 +20,14 @@ export default function POSLayout({
   // ConditionalLayout in root already hides Header/Footer for /pos routes
   // POSAuthGate requires PIN to access POS
   // POSProvider wraps all POS routes for shared state
+  // POSHeader shows vehicle badge, out-the-door price, and New Quote button on ALL POS pages
   return (
     <POSAuthGate>
-      <POSProvider>{children}</POSProvider>
+      <POSProvider>
+        <POSHeader />
+        {children}
+        <POSAdminPanel />
+      </POSProvider>
     </POSAuthGate>
   );
 }

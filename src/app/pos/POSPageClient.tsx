@@ -2,7 +2,8 @@
 
 import {
   usePOS,
-  POSLayout,
+  POSStepIndicator,
+  POSFooter,
   POSVehicleStep,
   POSPackageStep,
   POSPricingStep,
@@ -35,10 +36,15 @@ function StepRouter() {
 // ============================================================================
 
 export function POSPageClient() {
-  // POSProvider is now in the layout, wrapping all /pos/* routes
+  // POSProvider and POSHeader are in the app layout (shared across all /pos/* routes)
+  // This page has its own dark theme container
   return (
-    <POSLayout>
-      <StepRouter />
-    </POSLayout>
+    <div className="min-h-screen bg-neutral-950 text-white flex flex-col">
+      <POSStepIndicator />
+      <main className="flex-1">
+        <StepRouter />
+      </main>
+      <POSFooter />
+    </div>
   );
 }
