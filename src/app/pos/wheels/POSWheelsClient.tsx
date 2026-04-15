@@ -76,15 +76,38 @@ function safeString(val: unknown): string {
   return "";
 }
 
+// Extract wheel style code from SKU (e.g., "XD852" from "XD85229087700")
+function extractStyleFromSku(sku: string): string {
+  if (!sku) return "";
+  // WheelPros SKUs have various patterns - extract the style prefix
+  // Examples: 
+  //   XD85229087700 → XD852
+  //   KM54429087400 → KM544  
+  //   MO96229087318 → MO962
+  //   1069-7983MB → 1069
+  //   AR172785114 → AR172 (American Racing pattern)
+  
+  // Try pattern: 1-3 letters followed by 2-4 digits (XD852, KM544, AR172)
+  const alphaNumMatch = sku.match(/^([A-Z]{1,3}\d{2,4})/i);
+  if (alphaNumMatch) return alphaNumMatch[1].toUpperCase();
+  
+  // Try pattern: digits followed by dash (1069-7983MB → 1069)
+  const dashMatch = sku.match(/^(\d{3,5})-/);
+  if (dashMatch) return dashMatch[1];
+  
+  // Fallback: first 5-6 chars as style identifier
+  return sku.slice(0, 6).toUpperCase();
+}
+
 function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
   const grouped = new Map<string, WheelItem>();
   
   for (const item of items) {
-    // Group by brand + STYLE (not just model) + diameter + width + boltPattern
-    // styleKey is the actual wheel design name from techfeed (e.g., "Baja" vs "Classic")
+    // Group by brand + STYLE CODE + diameter + width + boltPattern
+    // Extract style from SKU (e.g., XD852) since techfeed.style is not available
     // This prevents different wheel designs from being grouped together
-    const styleName = item.styleKey || item.model || "unknown";
-    const groupKey = `${item.brand}-${styleName}-${item.diameter}-${item.width}-${item.boltPattern}`;
+    const styleCode = extractStyleFromSku(item.sku || "") || item.styleKey || item.model || "unknown";
+    const groupKey = `${item.brand}-${styleCode}-${item.diameter}-${item.width}-${item.boltPattern}`;
     
     if (!grouped.has(groupKey)) {
       grouped.set(groupKey, { ...item, finishThumbs: [] });
