@@ -16,6 +16,27 @@ export interface POSVehicle {
 // Build type for lifted/leveled/stock configurations
 export type POSBuildType = "stock" | "leveled" | "lifted";
 
+// Fitment setup: square (same front/rear) or staggered (different front/rear)
+export type POSFitmentSetup = "square" | "staggered";
+
+// Staggered fitment info from API
+export interface POSStaggeredInfo {
+  isStaggered: boolean;
+  reason: string;
+  frontSpec?: {
+    diameter: number;
+    width: number;
+    offset?: number;
+    boltPattern?: string;
+  };
+  rearSpec?: {
+    diameter: number;
+    width: number;
+    offset?: number;
+    boltPattern?: string;
+  };
+}
+
 // Lift configuration for leveled/lifted builds
 export interface POSLiftConfig {
   liftInches: number;           // e.g., 2, 3, 4, 6, 8
@@ -110,8 +131,21 @@ export interface POSState {
   buildType: POSBuildType;
   liftConfig: POSLiftConfig | null;
   
+  // Staggered fitment configuration
+  fitmentSetup: POSFitmentSetup;
+  staggeredInfo: POSStaggeredInfo | null;
+  isStaggeredCapable: boolean;  // Whether vehicle supports staggered
+  
+  // Square fitment (single wheel/tire for all 4)
   wheel: POSWheel | null;
   tire: POSTire | null;
+  
+  // Staggered fitment (separate front/rear)
+  frontWheel: POSWheel | null;
+  rearWheel: POSWheel | null;
+  frontTire: POSTire | null;
+  rearTire: POSTire | null;
+  
   fees: POSFees;
   discount: POSDiscount | null;
   taxRate: number; // Fixed at 6% (0.06)
@@ -185,8 +219,19 @@ const initialState: POSState = {
   vehicle: null,
   buildType: "stock",
   liftConfig: null,
+  // Staggered fitment
+  fitmentSetup: "square",
+  staggeredInfo: null,
+  isStaggeredCapable: false,
+  // Square fitment
   wheel: null,
   tire: null,
+  // Staggered fitment
+  frontWheel: null,
+  rearWheel: null,
+  frontTire: null,
+  rearTire: null,
+  // Fees and settings
   fees: DEFAULT_FEES,
   discount: null,
   taxRate: FIXED_TAX_RATE,
@@ -230,8 +275,14 @@ function saveAdminSettings(settings: POSAdminSettings): void {
 type POSAction =
   | { type: "SET_VEHICLE"; payload: POSVehicle }
   | { type: "SET_BUILD_TYPE"; payload: { buildType: POSBuildType; liftConfig?: POSLiftConfig } }
+  | { type: "SET_STAGGERED_INFO"; payload: { staggeredInfo: POSStaggeredInfo; isStaggeredCapable: boolean } }
+  | { type: "SET_FITMENT_SETUP"; payload: POSFitmentSetup }
   | { type: "SET_WHEEL"; payload: POSWheel }
   | { type: "SET_TIRE"; payload: POSTire }
+  | { type: "SET_FRONT_WHEEL"; payload: POSWheel }
+  | { type: "SET_REAR_WHEEL"; payload: POSWheel }
+  | { type: "SET_FRONT_TIRE"; payload: POSTire }
+  | { type: "SET_REAR_TIRE"; payload: POSTire }
   | { type: "SET_FEES"; payload: Partial<POSFees> }
   | { type: "SET_DISCOUNT"; payload: POSDiscount | null }
   | { type: "SET_CUSTOMER"; payload: { name?: string; phone?: string; email?: string } }
@@ -275,11 +326,43 @@ function posReducer(state: POSState, action: POSAction): POSState {
       };
     }
     
+    case "SET_STAGGERED_INFO":
+      return {
+        ...state,
+        staggeredInfo: action.payload.staggeredInfo,
+        isStaggeredCapable: action.payload.isStaggeredCapable,
+      };
+    
+    case "SET_FITMENT_SETUP":
+      return {
+        ...state,
+        fitmentSetup: action.payload,
+        // Clear selections when changing fitment setup
+        wheel: null,
+        tire: null,
+        frontWheel: null,
+        rearWheel: null,
+        frontTire: null,
+        rearTire: null,
+      };
+    
     case "SET_WHEEL":
       return { ...state, wheel: action.payload };
     
     case "SET_TIRE":
       return { ...state, tire: action.payload };
+    
+    case "SET_FRONT_WHEEL":
+      return { ...state, frontWheel: action.payload };
+    
+    case "SET_REAR_WHEEL":
+      return { ...state, rearWheel: action.payload };
+    
+    case "SET_FRONT_TIRE":
+      return { ...state, frontTire: action.payload };
+    
+    case "SET_REAR_TIRE":
+      return { ...state, rearTire: action.payload };
     
     case "SET_FEES":
       return { 
@@ -310,6 +393,13 @@ function posReducer(state: POSState, action: POSAction): POSState {
         adminSettings: state.adminSettings, // Preserve admin settings
         buildType: "stock",
         liftConfig: null,
+        fitmentSetup: "square",
+        staggeredInfo: null,
+        isStaggeredCapable: false,
+        frontWheel: null,
+        rearWheel: null,
+        frontTire: null,
+        rearTire: null,
         selectedAddOns: DEFAULT_SELECTED_ADDONS,
       };
     
@@ -346,8 +436,14 @@ interface POSContextValue {
   // Actions
   setVehicle: (vehicle: POSVehicle) => void;
   setBuildType: (buildType: POSBuildType, liftConfig?: POSLiftConfig) => void;
+  setStaggeredInfo: (staggeredInfo: POSStaggeredInfo, isStaggeredCapable: boolean) => void;
+  setFitmentSetup: (setup: POSFitmentSetup) => void;
   setWheel: (wheel: POSWheel) => void;
   setTire: (tire: POSTire) => void;
+  setFrontWheel: (wheel: POSWheel) => void;
+  setRearWheel: (wheel: POSWheel) => void;
+  setFrontTire: (tire: POSTire) => void;
+  setRearTire: (tire: POSTire) => void;
   setFees: (fees: Partial<POSFees>) => void;
   setDiscount: (discount: POSDiscount | null) => void;
   setCustomer: (info: { name?: string; phone?: string; email?: string }) => void;
@@ -362,6 +458,8 @@ interface POSContextValue {
   
   // Computed values
   subtotal: number;          // Wheels + Tires
+  wheelsTotal: number;       // Total for wheels only
+  tiresTotal: number;        // Total for tires only
   laborTotal: number;        // Labor fees (mount & balance)
   liftInstallTotal: number;  // Lift kit install labor
   addOnsTotal: number;       // All other add-ons
@@ -374,6 +472,7 @@ interface POSContextValue {
   // Helpers
   isComplete: boolean;
   canGenerateQuote: boolean;
+  isStaggered: boolean;      // Shorthand for state.fitmentSetup === "staggered"
 }
 
 const POSContext = createContext<POSContextValue | null>(null);
@@ -391,8 +490,21 @@ export function POSProvider({ children }: { children: ReactNode }) {
     dispatch({ type: "LOAD_ADMIN_SETTINGS", payload: settings });
   }, []);
   
+  // Computed: Is staggered
+  const isStaggered = state.fitmentSetup === "staggered";
+  
+  // Computed: Wheels total (handles both square and staggered)
+  const wheelsTotal = isStaggered
+    ? (state.frontWheel?.setPrice ?? 0) + (state.rearWheel?.setPrice ?? 0)
+    : (state.wheel?.setPrice ?? 0);
+  
+  // Computed: Tires total (handles both square and staggered)
+  const tiresTotal = isStaggered
+    ? (state.frontTire?.setPrice ?? 0) + (state.rearTire?.setPrice ?? 0)
+    : (state.tire?.setPrice ?? 0);
+  
   // Computed: Parts subtotal
-  const subtotal = (state.wheel?.setPrice ?? 0) + (state.tire?.setPrice ?? 0);
+  const subtotal = wheelsTotal + tiresTotal;
   
   // Computed: Labor total
   const laborTotal = state.selectedAddOns.labor 
@@ -466,7 +578,9 @@ export function POSProvider({ children }: { children: ReactNode }) {
   const outTheDoorPrice = subtotalAfterTax + creditCardFee;
   
   // Helpers
-  const isComplete = !!(state.vehicle && state.wheel && state.tire);
+  const isComplete = isStaggered
+    ? !!(state.vehicle && state.frontWheel && state.rearWheel && state.frontTire && state.rearTire)
+    : !!(state.vehicle && state.wheel && state.tire);
   const canGenerateQuote = isComplete;
   
   const value: POSContextValue = {
@@ -474,8 +588,14 @@ export function POSProvider({ children }: { children: ReactNode }) {
     
     setVehicle: (vehicle) => dispatch({ type: "SET_VEHICLE", payload: vehicle }),
     setBuildType: (buildType, liftConfig) => dispatch({ type: "SET_BUILD_TYPE", payload: { buildType, liftConfig } }),
+    setStaggeredInfo: (staggeredInfo, isStaggeredCapable) => dispatch({ type: "SET_STAGGERED_INFO", payload: { staggeredInfo, isStaggeredCapable } }),
+    setFitmentSetup: (setup) => dispatch({ type: "SET_FITMENT_SETUP", payload: setup }),
     setWheel: (wheel) => dispatch({ type: "SET_WHEEL", payload: wheel }),
     setTire: (tire) => dispatch({ type: "SET_TIRE", payload: tire }),
+    setFrontWheel: (wheel) => dispatch({ type: "SET_FRONT_WHEEL", payload: wheel }),
+    setRearWheel: (wheel) => dispatch({ type: "SET_REAR_WHEEL", payload: wheel }),
+    setFrontTire: (tire) => dispatch({ type: "SET_FRONT_TIRE", payload: tire }),
+    setRearTire: (tire) => dispatch({ type: "SET_REAR_TIRE", payload: tire }),
     setFees: (fees) => dispatch({ type: "SET_FEES", payload: fees }),
     setDiscount: (discount) => dispatch({ type: "SET_DISCOUNT", payload: discount }),
     setCustomer: (info) => dispatch({ type: "SET_CUSTOMER", payload: info }),
@@ -488,6 +608,8 @@ export function POSProvider({ children }: { children: ReactNode }) {
     setSelectedAddOns: (addons) => dispatch({ type: "SET_SELECTED_ADDONS", payload: addons }),
     
     subtotal,
+    wheelsTotal,
+    tiresTotal,
     laborTotal,
     liftInstallTotal,
     addOnsTotal,
@@ -499,6 +621,7 @@ export function POSProvider({ children }: { children: ReactNode }) {
     
     isComplete,
     canGenerateQuote,
+    isStaggered,
   };
   
   return <POSContext.Provider value={value}>{children}</POSContext.Provider>;
