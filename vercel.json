@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "pos.warehousetiredirect.com"
+        }
+      ],
+      "destination": "/pos",
+      "permanent": false
+    }
+  ],
   "crons": [
     {
       "path": "/api/cron/sync-inventory",
