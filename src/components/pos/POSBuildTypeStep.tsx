@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { usePOS, POSBuildType, POSLiftConfig } from "./POSContext";
 import { 
   getLiftProfile, 
@@ -103,6 +104,7 @@ const QUICK_PRESETS: QuickPreset[] = [
 // ============================================================================
 
 export function POSBuildTypeStep() {
+  const router = useRouter();
   const { state, setBuildType, goToStep } = usePOS();
   
   // Local state for configuration
@@ -110,6 +112,18 @@ export function POSBuildTypeStep() {
   const [liftHeight, setLiftHeight] = useState<number>(state.liftConfig?.liftInches || 4);
   const [targetTireSize, setTargetTireSize] = useState<number | undefined>(state.liftConfig?.targetTireSize);
   const [showAdvanced, setShowAdvanced] = useState(false);
+  
+  // Build URL params for wheels page
+  const buildWheelsUrl = () => {
+    if (!state.vehicle) return "/pos/wheels";
+    const params = new URLSearchParams({
+      year: state.vehicle.year,
+      make: state.vehicle.make,
+      model: state.vehicle.model,
+    });
+    if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
+    return `/pos/wheels?${params.toString()}`;
+  };
   
   // Get vehicle profile for recommendations
   const vehicleProfile = state.vehicle 
@@ -131,10 +145,13 @@ export function POSBuildTypeStep() {
   // Handle build type selection
   const handleBuildTypeSelect = (buildType: POSBuildType) => {
     setSelectedBuildType(buildType);
-    if (buildType === "stock") {
-      // For stock, proceed immediately
-      setBuildType("stock");
-    }
+    // Don't proceed immediately for stock - user will click continue button
+  };
+  
+  // Handle stock continue
+  const handleStockContinue = () => {
+    setBuildType("stock");
+    router.push(buildWheelsUrl());
   };
   
   // Handle quick preset selection
@@ -148,6 +165,7 @@ export function POSBuildTypeStep() {
       notes: recommendation?.notes,
     };
     setBuildType(preset.buildType, config);
+    router.push(buildWheelsUrl());
   };
   
   // Handle continue with custom configuration
@@ -166,6 +184,7 @@ export function POSBuildTypeStep() {
       };
       setBuildType(selectedBuildType, config);
     }
+    router.push(buildWheelsUrl());
   };
   
   // Vehicle info display
@@ -393,7 +412,7 @@ export function POSBuildTypeStep() {
       {selectedBuildType === "stock" && (
         <div className="text-center">
           <button
-            onClick={() => setBuildType("stock")}
+            onClick={handleStockContinue}
             className="rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
           >
             Continue with Stock Fitment

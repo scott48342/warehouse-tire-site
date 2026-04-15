@@ -103,22 +103,14 @@ export function POSVehicleStep() {
   const handleContinue = () => {
     if (!year || !make || !model) return;
     
+    // setVehicle will update context and transition to build-type step
     setVehicle({
       year,
       make,
       model,
       trim: trim || undefined,
     });
-    
-    // Navigate to full wheel browser with filters
-    const params = new URLSearchParams({
-      year,
-      make,
-      model,
-    });
-    if (trim) params.set("trim", trim);
-    
-    router.push(`/pos/wheels?${params.toString()}`);
+    // Don't navigate - let the step router handle it via context state
   };
 
   const canContinue = year && make && model;
