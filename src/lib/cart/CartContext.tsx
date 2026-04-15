@@ -284,8 +284,73 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  /**
+   * Remove an item from cart with dependency cleanup.
+   * 
+   * When removing a WHEEL:
+   * - Also removes wheel-dependent accessories (lug nuts, hub rings, etc.)
+   * - Accessories with `wheelSku` matching the removed wheel are cleaned up
+   * - Tires and unrelated accessories are preserved
+   * 
+   * When removing a TIRE or ACCESSORY:
+   * - Only that specific item is removed
+   */
   const removeItem = useCallback((sku: string, type: "wheel" | "tire" | "accessory") => {
-    setItems((prev) => prev.filter((i) => !(i.sku === sku && i.type === type)));
+    setItems((prev) => {
+      // If removing a wheel, also remove dependent accessories
+      if (type === "wheel") {
+        const wheelToRemove = prev.find(i => i.type === "wheel" && i.sku === sku) as CartWheelItem | undefined;
+        
+        if (wheelToRemove) {
+          console.log("[cart] Removing wheel:", sku);
+          
+          // Find and log dependent accessories that will be removed
+          const dependentAccessories = prev.filter(i => {
+            if (i.type !== "accessory") return false;
+            const acc = i as CartAccessoryItem;
+            // Remove if wheelSku matches OR if it's a wheel-dependent category with no other wheels
+            const isLinkedToThisWheel = acc.wheelSku === sku;
+            return isLinkedToThisWheel;
+          });
+          
+          if (dependentAccessories.length > 0) {
+            console.log("[cart] Removing dependent accessories:", dependentAccessories.map(a => a.sku));
+          }
+          
+          // Check if there are other wheels remaining
+          const otherWheels = prev.filter(i => i.type === "wheel" && i.sku !== sku);
+          const hasOtherWheels = otherWheels.length > 0;
+          
+          // Filter out the wheel and its dependent accessories
+          return prev.filter(i => {
+            // Always remove the target wheel
+            if (i.type === "wheel" && i.sku === sku) return false;
+            
+            // For accessories, check if they're dependent on this wheel
+            if (i.type === "accessory") {
+              const acc = i as CartAccessoryItem;
+              
+              // If accessory is explicitly linked to this wheel, remove it
+              if (acc.wheelSku === sku) return false;
+              
+              // If accessory is wheel-dependent category AND no other wheels remain, remove it
+              // (catches accessories that weren't explicitly linked but are wheel-dependent)
+              const wheelDependentCategories = ["lug_nut", "hub_ring", "lug_bolt", "valve_stem"];
+              if (!hasOtherWheels && wheelDependentCategories.includes(acc.category)) {
+                console.log("[cart] Removing orphaned wheel accessory:", acc.sku);
+                return false;
+              }
+            }
+            
+            // Keep everything else (tires, other accessories)
+            return true;
+          });
+        }
+      }
+      
+      // Standard removal for non-wheel items
+      return prev.filter((i) => !(i.sku === sku && i.type === type));
+    });
   }, []);
 
   const updateQuantity = useCallback(
