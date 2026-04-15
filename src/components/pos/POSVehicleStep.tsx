@@ -10,6 +10,12 @@ import { usePOS } from "./POSContext";
 const CURRENT_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 50 }, (_, i) => String(CURRENT_YEAR + 1 - i));
 
+interface TrimOption {
+  value: string;
+  label: string;
+  modificationId?: string;
+}
+
 // ============================================================================
 // POS Vehicle Step
 // ============================================================================
@@ -24,7 +30,7 @@ export function POSVehicleStep() {
   
   const [makes, setMakes] = useState<string[]>([]);
   const [models, setModels] = useState<string[]>([]);
-  const [trims, setTrims] = useState<string[]>([]);
+  const [trims, setTrims] = useState<TrimOption[]>([]);
   
   const [loadingMakes, setLoadingMakes] = useState(false);
   const [loadingModels, setLoadingModels] = useState(false);
@@ -174,7 +180,7 @@ export function POSVehicleStep() {
             >
               <option value="">{loadingTrims ? "Loading..." : "Any Trim"}</option>
               {trims.map((t) => (
-                <option key={t} value={t}>{t}</option>
+                <option key={t.value} value={t.label}>{t.label}</option>
               ))}
             </select>
           </div>
