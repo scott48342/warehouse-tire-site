@@ -1,13 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useBuild, type BuildVehicle } from "./BuildContext";
+
+// ============================================================================
+// Constants
+// ============================================================================
+
+const THIS_YEAR = new Date().getFullYear();
+// Generate years from current year back 70 years
+const YEARS = Array.from({ length: 70 }, (_, i) => String(THIS_YEAR + 1 - i));
 
 // ============================================================================
 // Types
 // ============================================================================
 
-type YearOption = { year: number };
 type MakeOption = { make: string; makeDisplay?: string };
 type ModelOption = { model: string; modelDisplay?: string };
 type TrimOption = { trim: string; trimDisplay?: string };
@@ -19,7 +26,6 @@ type TrimOption = { trim: string; trimDisplay?: string };
 export function VehicleSelector() {
   const { setVehicle } = useBuild();
   
-  const [years, setYears] = useState<YearOption[]>([]);
   const [makes, setMakes] = useState<MakeOption[]>([]);
   const [models, setModels] = useState<ModelOption[]>([]);
   const [trims, setTrims] = useState<TrimOption[]>([]);
@@ -29,24 +35,7 @@ export function VehicleSelector() {
   const [selectedModel, setSelectedModel] = useState<string>("");
   const [selectedTrim, setSelectedTrim] = useState<string>("");
   
-  const [loading, setLoading] = useState<"years" | "makes" | "models" | "trims" | null>("years");
-  
-  // Fetch years on mount
-  useEffect(() => {
-    const fetchYears = async () => {
-      setLoading("years");
-      try {
-        const res = await fetch("/api/vehicles/years");
-        const data = await res.json();
-        setYears(data.years || []);
-      } catch (err) {
-        console.error("[VehicleSelector] Failed to fetch years:", err);
-      } finally {
-        setLoading(null);
-      }
-    };
-    fetchYears();
-  }, []);
+  const [loading, setLoading] = useState<"makes" | "models" | "trims" | null>(null);
   
   // Fetch makes when year changes
   useEffect(() => {
@@ -59,11 +48,14 @@ export function VehicleSelector() {
     const fetchMakes = async () => {
       setLoading("makes");
       try {
-        const res = await fetch(`/api/vehicles/makes?year=${selectedYear}`);
+        const res = await fetch(`/api/vehicles/makes?year=${encodeURIComponent(selectedYear)}`);
         const data = await res.json();
-        setMakes(data.makes || []);
+        // API returns { results: string[] }
+        const makesList = data.results || data.makes || [];
+        setMakes(makesList.map((m: string) => ({ make: m })));
       } catch (err) {
         console.error("[VehicleSelector] Failed to fetch makes:", err);
+        setMakes([]);
       } finally {
         setLoading(null);
       }
@@ -82,11 +74,15 @@ export function VehicleSelector() {
     const fetchModels = async () => {
       setLoading("models");
       try {
-        const res = await fetch(`/api/vehicles/models?year=${selectedYear}&make=${encodeURIComponent(selectedMake)}`);
+        const params = new URLSearchParams({ year: selectedYear, make: selectedMake });
+        const res = await fetch(`/api/vehicles/models?${params.toString()}`);
         const data = await res.json();
-        setModels(data.models || []);
+        // API returns { results: string[] }
+        const modelsList = data.results || data.models || [];
+        setModels(modelsList.map((m: string) => ({ model: m })));
       } catch (err) {
         console.error("[VehicleSelector] Failed to fetch models:", err);
+        setModels([]);
       } finally {
         setLoading(null);
       }
@@ -105,11 +101,18 @@ export function VehicleSelector() {
     const fetchTrims = async () => {
       setLoading("trims");
       try {
-        const res = await fetch(`/api/vehicles/trims?year=${selectedYear}&make=${encodeURIComponent(selectedMake)}&model=${encodeURIComponent(selectedModel)}`);
+        const params = new URLSearchParams({ year: selectedYear, make: selectedMake, model: selectedModel });
+        const res = await fetch(`/api/vehicles/trims?${params.toString()}`);
         const data = await res.json();
-        setTrims(data.trims || []);
+        // API returns { results: Array<{value, label}> } or { trims: [] }
+        const trimsList = data.results || data.trims || [];
+        // Handle both string[] and {value, label}[] formats
+        setTrims(trimsList.map((t: string | { value: string; label?: string }) => 
+          typeof t === "string" ? { trim: t } : { trim: t.value, trimDisplay: t.label }
+        ));
       } catch (err) {
         console.error("[VehicleSelector] Failed to fetch trims:", err);
+        setTrims([]);
       } finally {
         setLoading(null);
       }
@@ -159,12 +162,11 @@ export function VehicleSelector() {
               setSelectedModel("");
               setSelectedTrim("");
             }}
-            disabled={loading === "years"}
-            className="w-full h-12 px-4 rounded-xl border border-neutral-300 bg-white text-neutral-900 text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-neutral-100"
+            className="w-full h-12 px-4 rounded-xl border border-neutral-300 bg-white text-neutral-900 text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="">Select year</option>
-            {years.map((y) => (
-              <option key={y.year} value={y.year}>{y.year}</option>
+            {YEARS.map((y) => (
+              <option key={y} value={y}>{y}</option>
             ))}
           </select>
         </div>
