@@ -11,14 +11,18 @@ export function POSQuoteStep() {
   const {
     state,
     subtotal,
-    feesTotal,
+    laborTotal,
+    addOnsTotal,
     discountAmount,
     taxAmount,
+    creditCardFee,
     outTheDoorPrice,
     setCustomer,
     setNotes,
     reset,
   } = usePOS();
+  
+  const { adminSettings, selectedAddOns } = state;
   
   const [copied, setCopied] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
@@ -266,36 +270,38 @@ export function POSQuoteStep() {
           
           {/* Labor & Fees */}
           <div className="py-4 space-y-2 text-sm">
-            {state.fees.labor > 0 && (
+            {selectedAddOns.labor && (
               <div className="flex justify-between">
-                <span className="text-neutral-600">Installation Labor</span>
-                <span className="text-neutral-900">${state.fees.labor.toFixed(2)}</span>
+                <span className="text-neutral-600">Mount & Balance</span>
+                <span className="text-neutral-900">${laborTotal.toFixed(2)}</span>
               </div>
             )}
-            {state.fees.tpms > 0 && (
+            {selectedAddOns.tpms && (
               <div className="flex justify-between">
-                <span className="text-neutral-600">TPMS Programming</span>
-                <span className="text-neutral-900">${state.fees.tpms.toFixed(2)}</span>
+                <span className="text-neutral-600">TPMS Sensors</span>
+                <span className="text-neutral-900">${(adminSettings.tpmsPerSensor * 4).toFixed(2)}</span>
               </div>
             )}
-            {state.fees.disposal > 0 && (
+            {selectedAddOns.disposal && (
               <div className="flex justify-between">
                 <span className="text-neutral-600">Tire Disposal</span>
-                <span className="text-neutral-900">${state.fees.disposal.toFixed(2)}</span>
+                <span className="text-neutral-900">${(adminSettings.disposalPerTire * 4).toFixed(2)}</span>
               </div>
             )}
-            {state.fees.alignment > 0 && (
+            {selectedAddOns.alignment && (
               <div className="flex justify-between">
                 <span className="text-neutral-600">Alignment</span>
-                <span className="text-neutral-900">${state.fees.alignment.toFixed(2)}</span>
+                <span className="text-neutral-900">${adminSettings.alignmentPrice.toFixed(2)}</span>
               </div>
             )}
-            {state.fees.custom.map((fee, idx) => (
-              <div key={idx} className="flex justify-between">
-                <span className="text-neutral-600">{fee.name}</span>
-                <span className="text-neutral-900">${fee.amount.toFixed(2)}</span>
-              </div>
-            ))}
+            {adminSettings.customAddOns
+              .filter((a) => selectedAddOns.customIds.includes(a.id))
+              .map((addon) => (
+                <div key={addon.id} className="flex justify-between">
+                  <span className="text-neutral-600">{addon.name}</span>
+                  <span className="text-neutral-900">${(addon.perUnit ? addon.price * 4 : addon.price).toFixed(2)}</span>
+                </div>
+              ))}
           </div>
           
           {/* Discount */}
@@ -311,9 +317,17 @@ export function POSQuoteStep() {
           
           {/* Tax */}
           <div className="py-2 flex justify-between text-sm">
-            <span className="text-neutral-600">Tax ({(state.taxRate * 100).toFixed(2)}%)</span>
+            <span className="text-neutral-600">Tax (6%)</span>
             <span className="text-neutral-900">${taxAmount.toFixed(2)}</span>
           </div>
+          
+          {/* Credit Card Fee */}
+          {creditCardFee > 0 && (
+            <div className="py-2 flex justify-between text-sm text-blue-600">
+              <span>Credit Card Fee ({adminSettings.creditCardFeePercent}%)</span>
+              <span>${creditCardFee.toFixed(2)}</span>
+            </div>
+          )}
         </div>
         
         {/* Total */}
