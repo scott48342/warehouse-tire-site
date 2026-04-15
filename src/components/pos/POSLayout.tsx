@@ -1,13 +1,14 @@
 "use client";
 
 import { usePOS } from "./POSContext";
+import { POSAdminPanel } from "./POSAdminPanel";
 
 // ============================================================================
 // POS Header - Minimal employee header
 // ============================================================================
 
 export function POSHeader() {
-  const { reset, state, outTheDoorPrice, isComplete } = usePOS();
+  const { reset, state, outTheDoorPrice, isComplete, toggleAdminPanel } = usePOS();
   
   return (
     <header className="sticky top-0 z-50 bg-neutral-900 border-b border-neutral-800">
@@ -46,6 +47,14 @@ export function POSHeader() {
                 </div>
               </div>
             )}
+            
+            <button
+              onClick={toggleAdminPanel}
+              className="px-3 py-2 rounded-lg bg-neutral-700 hover:bg-neutral-600 text-white font-semibold text-sm transition-colors"
+              title="Admin Settings"
+            >
+              ⚙️
+            </button>
             
             <button
               onClick={reset}
@@ -144,6 +153,9 @@ export function POSLayout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <POSFooter />
+      
+      {/* Admin Settings Modal */}
+      <POSAdminPanel />
     </div>
   );
 }

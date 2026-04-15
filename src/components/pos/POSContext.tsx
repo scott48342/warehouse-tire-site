@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useReducer, type ReactNode } from "react";
+import { createContext, useContext, useReducer, useEffect, type ReactNode } from "react";
 
 // ============================================================================
 // Types
@@ -43,7 +43,7 @@ export interface POSTire {
 }
 
 export interface POSFees {
-  labor: number;           // Installation labor
+  labor: number;           // Installation labor (mount & balance)
   tpms: number;            // TPMS programming/sensors
   disposal: number;        // Tire disposal fee
   alignment: number;       // Optional alignment
@@ -57,6 +57,25 @@ export interface POSDiscount {
   reason?: string;
 }
 
+// Admin settings - stored in localStorage
+export interface POSAdminSettings {
+  // Labor pricing (per wheel)
+  laborPerWheel: number;
+  
+  // Add-ons
+  tpmsPerSensor: number;
+  disposalPerTire: number;
+  alignmentPrice: number;
+  
+  // Custom add-ons that can be toggled
+  customAddOns: Array<{
+    id: string;
+    name: string;
+    price: number;
+    perUnit: boolean; // true = per wheel/tire, false = flat fee
+  }>;
+}
+
 export type POSStep = "vehicle" | "package" | "pricing" | "quote";
 
 export interface POSState {
@@ -66,16 +85,41 @@ export interface POSState {
   tire: POSTire | null;
   fees: POSFees;
   discount: POSDiscount | null;
-  taxRate: number; // e.g., 0.07 for 7%
+  taxRate: number; // Fixed at 6% (0.06)
   customerName?: string;
   customerPhone?: string;
   customerEmail?: string;
   notes?: string;
+  
+  // Admin settings
+  adminSettings: POSAdminSettings;
+  showAdminPanel: boolean;
+  
+  // Selected add-ons for current quote
+  selectedAddOns: {
+    labor: boolean;
+    tpms: boolean;
+    disposal: boolean;
+    alignment: boolean;
+    customIds: string[];
+  };
 }
 
 // ============================================================================
 // Default Values
 // ============================================================================
+
+const DEFAULT_ADMIN_SETTINGS: POSAdminSettings = {
+  laborPerWheel: 25,        // $25/wheel = $100 for set of 4
+  tpmsPerSensor: 15,        // $15/sensor = $60 for set of 4
+  disposalPerTire: 5,       // $5/tire = $20 for set of 4
+  alignmentPrice: 89,       // Flat $89 alignment
+  customAddOns: [
+    { id: "lugnuts", name: "Lug Nuts (set)", price: 40, perUnit: false },
+    { id: "hubcentric", name: "Hub Centric Rings", price: 30, perUnit: false },
+    { id: "valvestems", name: "Valve Stems", price: 20, perUnit: false },
+  ],
+};
 
 const DEFAULT_FEES: POSFees = {
   labor: 100,        // $100 default labor
@@ -86,7 +130,16 @@ const DEFAULT_FEES: POSFees = {
   custom: [],
 };
 
-const DEFAULT_TAX_RATE = 0.07; // 7% - configurable per location
+// Tax rate is FIXED at 6% per Scott's request
+const FIXED_TAX_RATE = 0.06;
+
+const DEFAULT_SELECTED_ADDONS = {
+  labor: true,      // Labor on by default
+  tpms: false,
+  disposal: true,   // Disposal on by default
+  alignment: false,
+  customIds: [],
+};
 
 const initialState: POSState = {
   step: "vehicle",
@@ -95,8 +148,39 @@ const initialState: POSState = {
   tire: null,
   fees: DEFAULT_FEES,
   discount: null,
-  taxRate: DEFAULT_TAX_RATE,
+  taxRate: FIXED_TAX_RATE,
+  adminSettings: DEFAULT_ADMIN_SETTINGS,
+  showAdminPanel: false,
+  selectedAddOns: DEFAULT_SELECTED_ADDONS,
 };
+
+// ============================================================================
+// LocalStorage Keys
+// ============================================================================
+
+const ADMIN_SETTINGS_KEY = "pos_admin_settings";
+
+function loadAdminSettings(): POSAdminSettings {
+  if (typeof window === "undefined") return DEFAULT_ADMIN_SETTINGS;
+  try {
+    const stored = localStorage.getItem(ADMIN_SETTINGS_KEY);
+    if (stored) {
+      return { ...DEFAULT_ADMIN_SETTINGS, ...JSON.parse(stored) };
+    }
+  } catch (e) {
+    console.warn("[POS] Failed to load admin settings:", e);
+  }
+  return DEFAULT_ADMIN_SETTINGS;
+}
+
+function saveAdminSettings(settings: POSAdminSettings): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(ADMIN_SETTINGS_KEY, JSON.stringify(settings));
+  } catch (e) {
+    console.warn("[POS] Failed to save admin settings:", e);
+  }
+}
 
 // ============================================================================
 // Actions
@@ -108,11 +192,14 @@ type POSAction =
   | { type: "SET_TIRE"; payload: POSTire }
   | { type: "SET_FEES"; payload: Partial<POSFees> }
   | { type: "SET_DISCOUNT"; payload: POSDiscount | null }
-  | { type: "SET_TAX_RATE"; payload: number }
   | { type: "SET_CUSTOMER"; payload: { name?: string; phone?: string; email?: string } }
   | { type: "SET_NOTES"; payload: string }
   | { type: "GO_TO_STEP"; payload: POSStep }
-  | { type: "RESET" };
+  | { type: "RESET" }
+  | { type: "SET_ADMIN_SETTINGS"; payload: Partial<POSAdminSettings> }
+  | { type: "TOGGLE_ADMIN_PANEL" }
+  | { type: "SET_SELECTED_ADDONS"; payload: Partial<POSState["selectedAddOns"]> }
+  | { type: "LOAD_ADMIN_SETTINGS"; payload: POSAdminSettings };
 
 function posReducer(state: POSState, action: POSAction): POSState {
   switch (action.type) {
@@ -120,8 +207,7 @@ function posReducer(state: POSState, action: POSAction): POSState {
       return { 
         ...state, 
         vehicle: action.payload,
-        step: "package", // Auto-advance
-        // Clear downstream selections when vehicle changes
+        step: "package",
         wheel: null,
         tire: null,
       };
@@ -130,11 +216,7 @@ function posReducer(state: POSState, action: POSAction): POSState {
       return { ...state, wheel: action.payload };
     
     case "SET_TIRE":
-      return { 
-        ...state, 
-        tire: action.payload,
-        // Don't auto-advance - let the component handle navigation
-      };
+      return { ...state, tire: action.payload };
     
     case "SET_FEES":
       return { 
@@ -144,9 +226,6 @@ function posReducer(state: POSState, action: POSAction): POSState {
     
     case "SET_DISCOUNT":
       return { ...state, discount: action.payload };
-    
-    case "SET_TAX_RATE":
-      return { ...state, taxRate: action.payload };
     
     case "SET_CUSTOMER":
       return {
@@ -163,7 +242,29 @@ function posReducer(state: POSState, action: POSAction): POSState {
       return { ...state, step: action.payload };
     
     case "RESET":
-      return initialState;
+      return {
+        ...initialState,
+        adminSettings: state.adminSettings, // Preserve admin settings
+        selectedAddOns: DEFAULT_SELECTED_ADDONS,
+      };
+    
+    case "SET_ADMIN_SETTINGS": {
+      const newSettings = { ...state.adminSettings, ...action.payload };
+      saveAdminSettings(newSettings);
+      return { ...state, adminSettings: newSettings };
+    }
+    
+    case "LOAD_ADMIN_SETTINGS":
+      return { ...state, adminSettings: action.payload };
+    
+    case "TOGGLE_ADMIN_PANEL":
+      return { ...state, showAdminPanel: !state.showAdminPanel };
+    
+    case "SET_SELECTED_ADDONS":
+      return {
+        ...state,
+        selectedAddOns: { ...state.selectedAddOns, ...action.payload },
+      };
     
     default:
       return state;
@@ -183,15 +284,20 @@ interface POSContextValue {
   setTire: (tire: POSTire) => void;
   setFees: (fees: Partial<POSFees>) => void;
   setDiscount: (discount: POSDiscount | null) => void;
-  setTaxRate: (rate: number) => void;
   setCustomer: (info: { name?: string; phone?: string; email?: string }) => void;
   setNotes: (notes: string) => void;
   goToStep: (step: POSStep) => void;
   reset: () => void;
   
+  // Admin
+  setAdminSettings: (settings: Partial<POSAdminSettings>) => void;
+  toggleAdminPanel: () => void;
+  setSelectedAddOns: (addons: Partial<POSState["selectedAddOns"]>) => void;
+  
   // Computed values
   subtotal: number;          // Wheels + Tires
-  feesTotal: number;         // All fees
+  laborTotal: number;        // Labor fees
+  addOnsTotal: number;       // All add-ons
   discountAmount: number;    // Discount value
   taxableAmount: number;     // What gets taxed
   taxAmount: number;         // Tax
@@ -211,17 +317,43 @@ const POSContext = createContext<POSContextValue | null>(null);
 export function POSProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(posReducer, initialState);
   
+  // Load admin settings from localStorage on mount
+  useEffect(() => {
+    const settings = loadAdminSettings();
+    dispatch({ type: "LOAD_ADMIN_SETTINGS", payload: settings });
+  }, []);
+  
   // Computed: Parts subtotal
   const subtotal = (state.wheel?.setPrice ?? 0) + (state.tire?.setPrice ?? 0);
   
-  // Computed: Total fees
-  const feesTotal = 
-    state.fees.labor +
-    state.fees.tpms +
-    state.fees.disposal +
-    state.fees.alignment +
-    state.fees.balancing +
-    state.fees.custom.reduce((sum, f) => sum + f.amount, 0);
+  // Computed: Labor total
+  const laborTotal = state.selectedAddOns.labor 
+    ? state.adminSettings.laborPerWheel * 4 
+    : 0;
+  
+  // Computed: Add-ons total
+  const addOnsTotal = (() => {
+    let total = 0;
+    
+    if (state.selectedAddOns.tpms) {
+      total += state.adminSettings.tpmsPerSensor * 4;
+    }
+    if (state.selectedAddOns.disposal) {
+      total += state.adminSettings.disposalPerTire * 4;
+    }
+    if (state.selectedAddOns.alignment) {
+      total += state.adminSettings.alignmentPrice;
+    }
+    
+    // Custom add-ons
+    for (const addon of state.adminSettings.customAddOns) {
+      if (state.selectedAddOns.customIds.includes(addon.id)) {
+        total += addon.perUnit ? addon.price * 4 : addon.price;
+      }
+    }
+    
+    return total;
+  })();
   
   // Computed: Discount amount
   const discountAmount = state.discount
@@ -230,15 +362,14 @@ export function POSProvider({ children }: { children: ReactNode }) {
       : state.discount.value
     : 0;
   
-  // Taxable = Parts - Discount (labor/fees may or may not be taxed depending on state)
-  // For simplicity, we'll tax parts only (most common)
+  // Taxable = Parts - Discount (labor/fees usually not taxed in MI)
   const taxableAmount = Math.max(0, subtotal - discountAmount);
   
-  // Tax amount
-  const taxAmount = taxableAmount * state.taxRate;
+  // Tax amount (fixed 6%)
+  const taxAmount = taxableAmount * FIXED_TAX_RATE;
   
-  // Out the door = Parts + Fees - Discount + Tax
-  const outTheDoorPrice = subtotal + feesTotal - discountAmount + taxAmount;
+  // Out the door = Parts + Labor + AddOns - Discount + Tax
+  const outTheDoorPrice = subtotal + laborTotal + addOnsTotal - discountAmount + taxAmount;
   
   // Helpers
   const isComplete = !!(state.vehicle && state.wheel && state.tire);
@@ -252,14 +383,18 @@ export function POSProvider({ children }: { children: ReactNode }) {
     setTire: (tire) => dispatch({ type: "SET_TIRE", payload: tire }),
     setFees: (fees) => dispatch({ type: "SET_FEES", payload: fees }),
     setDiscount: (discount) => dispatch({ type: "SET_DISCOUNT", payload: discount }),
-    setTaxRate: (rate) => dispatch({ type: "SET_TAX_RATE", payload: rate }),
     setCustomer: (info) => dispatch({ type: "SET_CUSTOMER", payload: info }),
     setNotes: (notes) => dispatch({ type: "SET_NOTES", payload: notes }),
     goToStep: (step) => dispatch({ type: "GO_TO_STEP", payload: step }),
     reset: () => dispatch({ type: "RESET" }),
     
+    setAdminSettings: (settings) => dispatch({ type: "SET_ADMIN_SETTINGS", payload: settings }),
+    toggleAdminPanel: () => dispatch({ type: "TOGGLE_ADMIN_PANEL" }),
+    setSelectedAddOns: (addons) => dispatch({ type: "SET_SELECTED_ADDONS", payload: addons }),
+    
     subtotal,
-    feesTotal,
+    laborTotal,
+    addOnsTotal,
     discountAmount,
     taxableAmount,
     taxAmount,
@@ -288,4 +423,4 @@ export function usePOS() {
 // Exports
 // ============================================================================
 
-export { DEFAULT_FEES, DEFAULT_TAX_RATE };
+export { DEFAULT_FEES, FIXED_TAX_RATE, DEFAULT_ADMIN_SETTINGS };

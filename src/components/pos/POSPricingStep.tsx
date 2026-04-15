@@ -1,57 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import { usePOS, DEFAULT_FEES } from "./POSContext";
+import { usePOS } from "./POSContext";
 
 // ============================================================================
-// POS Pricing Step
+// POS Pricing Step - Toggle-based add-ons with admin-configurable prices
 // ============================================================================
 
 export function POSPricingStep() {
   const {
     state,
-    setFees,
     setDiscount,
-    setTaxRate,
+    setSelectedAddOns,
     goToStep,
     subtotal,
-    feesTotal,
+    laborTotal,
+    addOnsTotal,
     discountAmount,
     taxableAmount,
     taxAmount,
     outTheDoorPrice,
   } = usePOS();
   
+  const { adminSettings, selectedAddOns } = state;
+  
   const [showDiscount, setShowDiscount] = useState(!!state.discount);
   const [discountType, setDiscountType] = useState<"percent" | "fixed">(state.discount?.type || "percent");
   const [discountValue, setDiscountValue] = useState(state.discount?.value || 0);
   const [discountReason, setDiscountReason] = useState(state.discount?.reason || "");
-  
-  const [customFeeName, setCustomFeeName] = useState("");
-  const [customFeeAmount, setCustomFeeAmount] = useState("");
-  
-  const handleFeeChange = (key: keyof typeof DEFAULT_FEES, value: number) => {
-    if (key !== "custom") {
-      setFees({ [key]: Math.max(0, value) });
-    }
-  };
-  
-  const handleAddCustomFee = () => {
-    if (!customFeeName.trim() || !customFeeAmount) return;
-    
-    const newCustomFees = [
-      ...state.fees.custom,
-      { name: customFeeName.trim(), amount: parseFloat(customFeeAmount) || 0 },
-    ];
-    setFees({ custom: newCustomFees });
-    setCustomFeeName("");
-    setCustomFeeAmount("");
-  };
-  
-  const handleRemoveCustomFee = (index: number) => {
-    const newCustomFees = state.fees.custom.filter((_, i) => i !== index);
-    setFees({ custom: newCustomFees });
-  };
   
   const handleApplyDiscount = () => {
     if (discountValue > 0) {
@@ -72,6 +48,19 @@ export function POSPricingStep() {
     setShowDiscount(false);
   };
   
+  const toggleAddon = (key: keyof typeof selectedAddOns) => {
+    if (key === "customIds") return;
+    setSelectedAddOns({ [key]: !selectedAddOns[key] });
+  };
+  
+  const toggleCustomAddon = (id: string) => {
+    const current = selectedAddOns.customIds;
+    const updated = current.includes(id)
+      ? current.filter((i) => i !== id)
+      : [...current, id];
+    setSelectedAddOns({ customIds: updated });
+  };
+  
   if (!state.vehicle || !state.wheel || !state.tire) {
     return (
       <div className="text-center py-12 text-neutral-400">
@@ -84,15 +73,15 @@ export function POSPricingStep() {
     <div className="mx-auto max-w-4xl px-4 py-8">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-white">Build the Quote</h2>
-        <p className="text-neutral-400 mt-2">Add labor, fees, and discounts</p>
+        <p className="text-neutral-400 mt-2">Toggle add-ons and apply discounts</p>
       </div>
       
       <div className="grid gap-6 lg:grid-cols-[1fr_380px]">
-        {/* Left: Fee Controls */}
+        {/* Left: Selections */}
         <div className="space-y-6">
           {/* Parts Summary */}
           <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Parts</h3>
+            <h3 className="text-lg font-bold text-white mb-4">🛞 Parts</h3>
             
             {/* Wheels */}
             <div className="flex items-center justify-between py-3 border-b border-neutral-800">
@@ -128,122 +117,132 @@ export function POSPricingStep() {
             </div>
           </div>
           
-          {/* Labor & Fees */}
+          {/* Labor */}
           <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Labor & Fees</h3>
+            <h3 className="text-lg font-bold text-white mb-4">💪 Labor</h3>
             
-            <div className="space-y-4">
-              {/* Installation Labor */}
-              <div className="flex items-center justify-between">
-                <label className="text-neutral-300">Installation Labor</label>
-                <div className="flex items-center gap-2">
-                  <span className="text-neutral-500">$</span>
-                  <input
-                    type="number"
-                    value={state.fees.labor}
-                    onChange={(e) => handleFeeChange("labor", parseFloat(e.target.value) || 0)}
-                    className="w-24 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3 font-semibold"
-                  />
-                </div>
-              </div>
-              
-              {/* TPMS */}
-              <div className="flex items-center justify-between">
-                <label className="text-neutral-300">TPMS Programming</label>
-                <div className="flex items-center gap-2">
-                  <span className="text-neutral-500">$</span>
-                  <input
-                    type="number"
-                    value={state.fees.tpms}
-                    onChange={(e) => handleFeeChange("tpms", parseFloat(e.target.value) || 0)}
-                    className="w-24 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3 font-semibold"
-                  />
-                </div>
-              </div>
-              
-              {/* Tire Disposal */}
-              <div className="flex items-center justify-between">
-                <label className="text-neutral-300">Tire Disposal (×4)</label>
-                <div className="flex items-center gap-2">
-                  <span className="text-neutral-500">$</span>
-                  <input
-                    type="number"
-                    value={state.fees.disposal}
-                    onChange={(e) => handleFeeChange("disposal", parseFloat(e.target.value) || 0)}
-                    className="w-24 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3 font-semibold"
-                  />
-                </div>
-              </div>
-              
-              {/* Alignment */}
-              <div className="flex items-center justify-between">
-                <label className="text-neutral-300">
-                  Alignment
-                  <span className="text-xs text-neutral-500 ml-2">(Optional)</span>
-                </label>
-                <div className="flex items-center gap-2">
-                  <span className="text-neutral-500">$</span>
-                  <input
-                    type="number"
-                    value={state.fees.alignment}
-                    onChange={(e) => handleFeeChange("alignment", parseFloat(e.target.value) || 0)}
-                    className="w-24 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3 font-semibold"
-                    placeholder="0"
-                  />
-                </div>
-              </div>
-              
-              {/* Custom Fees */}
-              {state.fees.custom.map((fee, idx) => (
-                <div key={idx} className="flex items-center justify-between">
-                  <label className="text-neutral-300">{fee.name}</label>
-                  <div className="flex items-center gap-2">
-                    <span className="text-white font-semibold">${fee.amount.toFixed(2)}</span>
-                    <button
-                      onClick={() => handleRemoveCustomFee(idx)}
-                      className="text-red-400 hover:text-red-300 text-sm"
-                    >
-                      ✕
-                    </button>
+            <label className="flex items-center justify-between p-4 rounded-xl bg-neutral-800 cursor-pointer hover:bg-neutral-750 transition-colors">
+              <div className="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  checked={selectedAddOns.labor}
+                  onChange={() => toggleAddon("labor")}
+                  className="w-5 h-5 rounded text-blue-600 bg-neutral-700 border-neutral-600"
+                />
+                <div>
+                  <div className="font-medium text-white">Mount & Balance</div>
+                  <div className="text-sm text-neutral-400">
+                    ${adminSettings.laborPerWheel}/wheel × 4
                   </div>
                 </div>
-              ))}
-              
-              {/* Add Custom Fee */}
-              <div className="pt-4 border-t border-neutral-800">
-                <div className="text-sm text-neutral-500 mb-2">Add Custom Fee</div>
-                <div className="flex items-center gap-2">
-                  <input
-                    type="text"
-                    value={customFeeName}
-                    onChange={(e) => setCustomFeeName(e.target.value)}
-                    placeholder="Fee name"
-                    className="flex-1 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white px-3"
-                  />
-                  <input
-                    type="number"
-                    value={customFeeAmount}
-                    onChange={(e) => setCustomFeeAmount(e.target.value)}
-                    placeholder="$0"
-                    className="w-24 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3"
-                  />
-                  <button
-                    onClick={handleAddCustomFee}
-                    disabled={!customFeeName.trim() || !customFeeAmount}
-                    className="h-10 px-4 rounded-lg bg-neutral-700 hover:bg-neutral-600 text-white font-medium disabled:opacity-50"
-                  >
-                    Add
-                  </button>
-                </div>
               </div>
+              <div className="text-lg font-bold text-white">
+                ${(adminSettings.laborPerWheel * 4).toFixed(2)}
+              </div>
+            </label>
+          </div>
+          
+          {/* Add-ons */}
+          <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
+            <h3 className="text-lg font-bold text-white mb-4">🔧 Add-ons</h3>
+            
+            <div className="space-y-3">
+              {/* TPMS */}
+              <label className="flex items-center justify-between p-4 rounded-xl bg-neutral-800 cursor-pointer hover:bg-neutral-750 transition-colors">
+                <div className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedAddOns.tpms}
+                    onChange={() => toggleAddon("tpms")}
+                    className="w-5 h-5 rounded text-blue-600 bg-neutral-700 border-neutral-600"
+                  />
+                  <div>
+                    <div className="font-medium text-white">TPMS Sensors</div>
+                    <div className="text-sm text-neutral-400">
+                      ${adminSettings.tpmsPerSensor}/sensor × 4
+                    </div>
+                  </div>
+                </div>
+                <div className="text-lg font-bold text-white">
+                  ${(adminSettings.tpmsPerSensor * 4).toFixed(2)}
+                </div>
+              </label>
+              
+              {/* Disposal */}
+              <label className="flex items-center justify-between p-4 rounded-xl bg-neutral-800 cursor-pointer hover:bg-neutral-750 transition-colors">
+                <div className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedAddOns.disposal}
+                    onChange={() => toggleAddon("disposal")}
+                    className="w-5 h-5 rounded text-blue-600 bg-neutral-700 border-neutral-600"
+                  />
+                  <div>
+                    <div className="font-medium text-white">Tire Disposal</div>
+                    <div className="text-sm text-neutral-400">
+                      ${adminSettings.disposalPerTire}/tire × 4
+                    </div>
+                  </div>
+                </div>
+                <div className="text-lg font-bold text-white">
+                  ${(adminSettings.disposalPerTire * 4).toFixed(2)}
+                </div>
+              </label>
+              
+              {/* Alignment */}
+              <label className="flex items-center justify-between p-4 rounded-xl bg-neutral-800 cursor-pointer hover:bg-neutral-750 transition-colors">
+                <div className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedAddOns.alignment}
+                    onChange={() => toggleAddon("alignment")}
+                    className="w-5 h-5 rounded text-blue-600 bg-neutral-700 border-neutral-600"
+                  />
+                  <div>
+                    <div className="font-medium text-white">Alignment</div>
+                    <div className="text-sm text-neutral-400">4-wheel alignment</div>
+                  </div>
+                </div>
+                <div className="text-lg font-bold text-white">
+                  ${adminSettings.alignmentPrice.toFixed(2)}
+                </div>
+              </label>
+              
+              {/* Custom Add-ons */}
+              {adminSettings.customAddOns.map((addon) => (
+                <label 
+                  key={addon.id}
+                  className="flex items-center justify-between p-4 rounded-xl bg-neutral-800 cursor-pointer hover:bg-neutral-750 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <input
+                      type="checkbox"
+                      checked={selectedAddOns.customIds.includes(addon.id)}
+                      onChange={() => toggleCustomAddon(addon.id)}
+                      className="w-5 h-5 rounded text-blue-600 bg-neutral-700 border-neutral-600"
+                    />
+                    <div>
+                      <div className="font-medium text-white">{addon.name}</div>
+                      {addon.perUnit && (
+                        <div className="text-sm text-neutral-400">
+                          ${addon.price} × 4
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="text-lg font-bold text-white">
+                    ${(addon.perUnit ? addon.price * 4 : addon.price).toFixed(2)}
+                  </div>
+                </label>
+              ))}
             </div>
           </div>
           
           {/* Discount */}
           <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-white">Discount</h3>
-              {!showDiscount && (
+              <h3 className="text-lg font-bold text-white">💸 Discount</h3>
+              {!showDiscount && !state.discount && (
                 <button
                   onClick={() => setShowDiscount(true)}
                   className="text-blue-400 hover:text-blue-300 text-sm font-medium"
@@ -253,7 +252,7 @@ export function POSPricingStep() {
               )}
             </div>
             
-            {showDiscount && (
+            {(showDiscount || state.discount) && (
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <label className="flex items-center gap-2">
@@ -280,12 +279,12 @@ export function POSPricingStep() {
                   <span className="text-neutral-500">{discountType === "percent" ? "%" : "$"}</span>
                   <input
                     type="number"
-                    value={discountValue}
+                    value={discountValue || ""}
                     onChange={(e) => setDiscountValue(parseFloat(e.target.value) || 0)}
                     className="w-32 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3 font-semibold"
                     placeholder="0"
                   />
-                  {discountType === "percent" && (
+                  {discountType === "percent" && discountValue > 0 && (
                     <span className="text-neutral-400 text-sm">
                       = ${((subtotal * discountValue) / 100).toFixed(2)} off
                     </span>
@@ -335,24 +334,6 @@ export function POSPricingStep() {
               </div>
             )}
           </div>
-          
-          {/* Tax Rate */}
-          <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Tax Rate</h3>
-            <div className="flex items-center gap-3">
-              <input
-                type="number"
-                value={(state.taxRate * 100).toFixed(2)}
-                onChange={(e) => setTaxRate((parseFloat(e.target.value) || 0) / 100)}
-                step="0.25"
-                className="w-24 h-10 rounded-lg bg-neutral-800 border border-neutral-700 text-white text-right px-3 font-semibold"
-              />
-              <span className="text-neutral-400">%</span>
-              <span className="text-neutral-500 text-sm">
-                (Applied to parts: ${taxableAmount.toLocaleString()})
-              </span>
-            </div>
-          </div>
         </div>
         
         {/* Right: Quote Summary */}
@@ -372,37 +353,43 @@ export function POSPricingStep() {
                 <span className="text-white font-medium">${subtotal.toLocaleString()}</span>
               </div>
               
-              {/* Fees breakdown */}
-              {state.fees.labor > 0 && (
+              {/* Labor */}
+              {laborTotal > 0 && (
                 <div className="flex justify-between">
-                  <span className="text-neutral-400">Installation</span>
-                  <span className="text-white font-medium">${state.fees.labor.toFixed(2)}</span>
+                  <span className="text-neutral-400">Mount & Balance</span>
+                  <span className="text-white font-medium">${laborTotal.toFixed(2)}</span>
                 </div>
               )}
-              {state.fees.tpms > 0 && (
+              
+              {/* Add-ons breakdown */}
+              {selectedAddOns.tpms && (
                 <div className="flex justify-between">
-                  <span className="text-neutral-400">TPMS</span>
-                  <span className="text-white font-medium">${state.fees.tpms.toFixed(2)}</span>
+                  <span className="text-neutral-400">TPMS Sensors</span>
+                  <span className="text-white font-medium">${(adminSettings.tpmsPerSensor * 4).toFixed(2)}</span>
                 </div>
               )}
-              {state.fees.disposal > 0 && (
+              {selectedAddOns.disposal && (
                 <div className="flex justify-between">
-                  <span className="text-neutral-400">Disposal</span>
-                  <span className="text-white font-medium">${state.fees.disposal.toFixed(2)}</span>
+                  <span className="text-neutral-400">Tire Disposal</span>
+                  <span className="text-white font-medium">${(adminSettings.disposalPerTire * 4).toFixed(2)}</span>
                 </div>
               )}
-              {state.fees.alignment > 0 && (
+              {selectedAddOns.alignment && (
                 <div className="flex justify-between">
                   <span className="text-neutral-400">Alignment</span>
-                  <span className="text-white font-medium">${state.fees.alignment.toFixed(2)}</span>
+                  <span className="text-white font-medium">${adminSettings.alignmentPrice.toFixed(2)}</span>
                 </div>
               )}
-              {state.fees.custom.map((fee, idx) => (
-                <div key={idx} className="flex justify-between">
-                  <span className="text-neutral-400">{fee.name}</span>
-                  <span className="text-white font-medium">${fee.amount.toFixed(2)}</span>
-                </div>
-              ))}
+              {adminSettings.customAddOns
+                .filter((a) => selectedAddOns.customIds.includes(a.id))
+                .map((addon) => (
+                  <div key={addon.id} className="flex justify-between">
+                    <span className="text-neutral-400">{addon.name}</span>
+                    <span className="text-white font-medium">
+                      ${(addon.perUnit ? addon.price * 4 : addon.price).toFixed(2)}
+                    </span>
+                  </div>
+                ))}
               
               {/* Discount */}
               {discountAmount > 0 && (
@@ -416,13 +403,13 @@ export function POSPricingStep() {
               <div className="pt-3 border-t border-neutral-700 flex justify-between">
                 <span className="text-neutral-400">Subtotal</span>
                 <span className="text-white font-medium">
-                  ${(subtotal + feesTotal - discountAmount).toFixed(2)}
+                  ${(subtotal + laborTotal + addOnsTotal - discountAmount).toFixed(2)}
                 </span>
               </div>
               
               {/* Tax */}
               <div className="flex justify-between">
-                <span className="text-neutral-400">Tax ({(state.taxRate * 100).toFixed(2)}%)</span>
+                <span className="text-neutral-400">Tax (6%)</span>
                 <span className="text-white font-medium">${taxAmount.toFixed(2)}</span>
               </div>
               
