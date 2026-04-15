@@ -50,6 +50,7 @@ import {
   getSearchCacheDiagnostics,
 } from "@/lib/tires/searchCache";
 import { enrichTireWebResultsWithSpecs } from "@/lib/tires/patternSpecsCache";
+import { getLiftProfile, getRecommendationForLiftHeight, getTireSizesForLift } from "@/lib/liftedRecommendations";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -1026,6 +1027,11 @@ export async function GET(req: Request) {
     // Accept both "wheelDiameter" and "wheelDia" (POS uses wheelDia)
     const wheelDiameter = i(url.searchParams.get("wheelDiameter") || url.searchParams.get("wheelDia"));
     
+    // Lift configuration params (for POS lifted/leveled builds)
+    const buildType = url.searchParams.get("buildType") as "stock" | "leveled" | "lifted" | null;
+    const liftInches = n(url.searchParams.get("liftInches"));
+    const targetTireSize = n(url.searchParams.get("targetTireSize")); // Target tire diameter in inches
+    
     // Pagination
     // pageSize can be up to 500 for server-side rendering (brand filters need all results)
     const minQty = i(url.searchParams.get("minQty"));
@@ -1482,16 +1488,50 @@ export async function GET(req: Request) {
       
     } else if (wheelDiameter && matchMode === "direct-search") {
       // Direct search by rim diameter when no OEM sizes match
-      // Use vehicle-appropriate tire sizes based on vehicle type
+      // Use vehicle-appropriate tire sizes based on vehicle type and lift configuration
       
       // Detect vehicle class from model name
       const modelLower = (model || "").toLowerCase();
       const isTruckOrSUV = /hummer|h1|h2|h3|f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick|wrangler|bronco|4runner|tahoe|suburban|expedition|explorer|highlander|pilot|pathfinder|telluride|palisade|defender|grand cherokee|durango|sequoia|armada|escalade|yukon|land cruiser|xterra|xj|cj|tj|jk|jl/i.test(modelLower);
       
-      // Choose appropriate tire sizes based on vehicle type
+      // Choose appropriate tire sizes based on vehicle type and lift configuration
       let commonSizes: string[];
-      if (isTruckOrSUV) {
-        // Truck/SUV: Use wider, higher-profile tires
+      
+      // Check if this is a lifted/leveled build with lift configuration
+      if ((buildType === "lifted" || buildType === "leveled") && liftInches && make && model) {
+        // Try to get lift profile for this vehicle
+        const liftProfile = getLiftProfile(make, model);
+        
+        if (liftProfile) {
+          // Get recommended tire sizes for this lift height
+          const liftSizes = getTireSizesForLift(liftProfile, liftInches, wheelDiameter);
+          
+          if (liftSizes.length > 0) {
+            commonSizes = liftSizes;
+            console.log(`[tires/search] LIFT PROFILE: ${make} ${model} with ${liftInches}" lift`);
+            console.log(`  Recommended sizes for ${wheelDiameter}" wheels: ${commonSizes.join(", ")}`);
+          } else {
+            // Lift profile exists but no sizes match this wheel diameter
+            // Get all recommended sizes and let the search find what's available
+            const allLiftSizes = getTireSizesForLift(liftProfile, liftInches);
+            commonSizes = allLiftSizes.length > 0 ? allLiftSizes : [];
+            console.log(`[tires/search] LIFT PROFILE: ${make} ${model} with ${liftInches}" lift`);
+            console.log(`  No exact matches for ${wheelDiameter}" wheels, searching all lift sizes: ${commonSizes.join(", ")}`);
+          }
+        } else {
+          // No lift profile - use generic flotation sizes based on target tire size or lift height
+          const targetDiameter = targetTireSize || (liftInches <= 2.5 ? 33 : liftInches <= 4 ? 35 : 37);
+          commonSizes = [
+            `${targetDiameter}x12.50R${wheelDiameter}`,
+            `${targetDiameter}x13.50R${wheelDiameter}`,
+            `${targetDiameter - 2}x12.50R${wheelDiameter}`,
+            `${targetDiameter + 2}x12.50R${wheelDiameter}`,
+          ];
+          console.log(`[tires/search] No lift profile for ${make} ${model}, using generic ${targetDiameter}" flotation sizes`);
+          console.log(`  Sizes: ${commonSizes.join(", ")}`);
+        }
+      } else if (isTruckOrSUV) {
+        // Stock truck/SUV: Use wider, higher-profile tires
         commonSizes = [
           `285/45R${wheelDiameter}`,
           `275/55R${wheelDiameter}`,

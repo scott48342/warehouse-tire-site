@@ -176,6 +176,15 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
         if (brand) params.set("brand", brand);
         if (size) params.set("size", size);
         
+        // Pass lift configuration to API for proper tire size search
+        if (state.buildType !== "stock" && state.liftConfig) {
+          params.set("buildType", state.buildType);
+          params.set("liftInches", String(state.liftConfig.liftInches));
+          if (state.liftConfig.targetTireSize) {
+            params.set("targetTireSize", String(state.liftConfig.targetTireSize));
+          }
+        }
+        
         const res = await fetch(`/api/tires/search?${params}`);
         if (!res.ok) throw new Error("Failed to fetch tires");
         
