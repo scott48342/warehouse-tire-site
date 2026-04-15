@@ -84,7 +84,6 @@ function extractStyleFromSku(sku: string): string {
   //   XD85229087700 → XD852
   //   KM54429087400 → KM544  
   //   MO96229087318 → MO962
-  //   1069-7983MB → 1069
   //   AR172785114 → AR172 (American Racing pattern)
   
   // Try pattern: 1-3 letters followed by 2-4 digits (XD852, KM544, AR172)
@@ -99,14 +98,32 @@ function extractStyleFromSku(sku: string): string {
   return sku.slice(0, 6).toUpperCase();
 }
 
+// Extract style name from wheel title (e.g., "HERITAGE" from "HERITAGE 17X8 8X170 125 +0 M-BLK")
+function extractStyleFromTitle(title: string): string {
+  if (!title) return "";
+  // Title format: "{STYLE_NAME} {SIZE} {BOLT_PATTERN} {HUB} {OFFSET} {FINISH}"
+  // The style name is the first word(s) before the size specification (e.g., "17X8" or "20X9")
+  const sizeMatch = title.match(/\b\d{2}X\d+/i);
+  if (sizeMatch && sizeMatch.index !== undefined && sizeMatch.index > 0) {
+    return title.slice(0, sizeMatch.index).trim().toUpperCase();
+  }
+  // Fallback: first word
+  const firstWord = title.split(/\s+/)[0];
+  return firstWord?.toUpperCase() || "";
+}
+
 function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
   const grouped = new Map<string, WheelItem>();
   
   for (const item of items) {
     // Group by brand + STYLE CODE + diameter + width + boltPattern
-    // Extract style from SKU (e.g., XD852) since techfeed.style is not available
-    // This prevents different wheel designs from being grouped together
-    const styleCode = extractStyleFromSku(item.sku || "") || item.styleKey || item.model || "unknown";
+    // Try multiple sources for style identification:
+    // 1. Title-based (e.g., "HERITAGE" from "HERITAGE 17X8...") - most reliable
+    // 2. SKU-based (e.g., "XD852" from "XD85229087700")
+    // 3. styleKey or model from data if available
+    const styleFromTitle = extractStyleFromTitle(item.title || "");
+    const styleFromSku = extractStyleFromSku(item.sku || "");
+    const styleCode = styleFromTitle || styleFromSku || item.styleKey || item.model || "unknown";
     const groupKey = `${item.brand}-${styleCode}-${item.diameter}-${item.width}-${item.boltPattern}`;
     
     if (!grouped.has(groupKey)) {
