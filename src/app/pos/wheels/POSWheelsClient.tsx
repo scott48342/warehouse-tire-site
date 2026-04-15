@@ -448,19 +448,43 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
         let filtered = grouped;
         if (state.buildType !== "stock" && state.liftConfig) {
           const liftProfile = getLiftProfile(make, model);
+          let minOffset: number;
+          let maxOffset: number;
+          
           if (liftProfile) {
             const rec = getRecommendationForLiftHeight(liftProfile, state.liftConfig.liftInches);
-            const minOffset = rec.offsetMin;
-            const maxOffset = rec.offsetMax;
-            
-            filtered = grouped.filter((w) => {
-              const offset = w.offset ? parseFloat(w.offset) : null;
-              if (offset === null) return true; // Include if no offset data
-              return offset >= minOffset && offset <= maxOffset;
-            });
-            
-            console.log(`[POS Wheels] Lift filter: ${state.liftConfig.liftInches}" lift, offset ${minOffset} to ${maxOffset}, ${filtered.length}/${grouped.length} wheels match`);
+            minOffset = rec.offsetMin;
+            maxOffset = rec.offsetMax;
+          } else {
+            // Generic fallback offset ranges for vehicles without profiles
+            const liftInches = state.liftConfig.liftInches;
+            if (liftInches <= 2.5) {
+              // Leveling kit: mild negative to slight positive
+              minOffset = -12;
+              maxOffset = 25;
+            } else if (liftInches <= 4) {
+              // 3-4" lift: moderate negative offset
+              minOffset = -25;
+              maxOffset = 0;
+            } else if (liftInches <= 6) {
+              // 5-6" lift: aggressive negative offset
+              minOffset = -44;
+              maxOffset = -12;
+            } else {
+              // 7"+ lift: extreme negative offset
+              minOffset = -76;
+              maxOffset = -24;
+            }
+            console.log(`[POS Wheels] No lift profile for ${make} ${model}, using generic offset range`);
           }
+          
+          filtered = grouped.filter((w) => {
+            const offset = w.offset ? parseFloat(w.offset) : null;
+            if (offset === null) return true; // Include if no offset data
+            return offset >= minOffset && offset <= maxOffset;
+          });
+          
+          console.log(`[POS Wheels] Lift filter: ${state.liftConfig.liftInches}" lift, offset ${minOffset} to ${maxOffset}, ${filtered.length}/${grouped.length} wheels match`);
         }
         
         // Sort
