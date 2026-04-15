@@ -13,6 +13,7 @@ import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
+import { RoadHazardProtection } from "@/components/RoadHazardProtection";
 
 /**
  * Checkout Page
@@ -409,6 +410,14 @@ export default function CheckoutPage() {
                   ))}
                 </div>
                 
+                {/* Road Hazard Protection - show if tires in cart */}
+                {tires.length > 0 && (
+                  <RoadHazardProtection 
+                    tireCount={tires.reduce((sum, t) => sum + t.quantity, 0)}
+                    context="checkout"
+                  />
+                )}
+
                 {/* TPMS Suggestion - show if applicable vehicle and not already in cart */}
                 <TPMSSuggestion 
                   vehicleYear={vehicle?.year}

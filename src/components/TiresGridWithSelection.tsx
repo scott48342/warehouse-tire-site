@@ -10,6 +10,8 @@ import { getStockInfo } from "@/lib/tires/tireSpecs";
 import type { TreadCategory } from "@/lib/tires/normalization";
 import { RebateSRPBadge } from "@/components/RebateBlock";
 import { useRebateMatches, type RebateMatchData } from "@/hooks/useRebateMatch";
+import { PerformanceIndicators } from "@/components/PerformanceIndicators";
+import { parseUTQG, derivePerformanceRatings } from "@/lib/tires/tireSpecs";
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -460,6 +462,25 @@ function TireCard({
             Speed Rating: {tire.badges.speedRating}
           </div>
         )}
+        
+        {/* ══════════════════════════════════════════════════════════════════════
+            COMPACT PERFORMANCE BARS (derived from UTQG + category)
+            ══════════════════════════════════════════════════════════════════════ */}
+        {tire.utqg && (() => {
+          const utqgParsed = parseUTQG(tire.utqg);
+          const ratings = derivePerformanceRatings(utqgParsed, tire.treadCategory || null, tire.has3PMSF);
+          return (
+            <div className="mt-3 space-y-1">
+              <PerformanceIndicators
+                ratings={ratings}
+                show={['treadLife', 'wetTraction', 'comfort']}
+                compact
+                showLabels
+                showValues={false}
+              />
+            </div>
+          );
+        })()}
         
         <div className="flex-1 min-h-3" />
         

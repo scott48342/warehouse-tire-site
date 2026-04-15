@@ -59,6 +59,9 @@ export interface TireWebTire {
   quantitySecondary: number;
   connectionId: number;
   supplierSystemId: number;
+  // Review data (if available from TireLibrary enrichment)
+  reviewRating: number | null;
+  reviewCount: number | null;
 }
 
 export interface TireWebSearchResult {
@@ -332,6 +335,13 @@ function parseGetTiresResponse(xml: string, connectionId: number, provider: stri
       quantitySecondary: extractInt(tireXml, "QuantitySecondary") || 0,
       connectionId,
       supplierSystemId: extractInt(tireXml, "SupplierSystemID") || 0,
+      // Review data - try multiple field names (TireWeb may use different names)
+      reviewRating: extractFloat(tireXml, "ReviewRating") 
+        ?? extractFloat(tireXml, "Rating") 
+        ?? extractFloat(tireXml, "ReviewAverage"),
+      reviewCount: extractInt(tireXml, "ReviewCount") 
+        ?? extractInt(tireXml, "Reviews") 
+        ?? extractInt(tireXml, "NumReviews"),
     };
     
     tires.push(tire);
@@ -480,6 +490,11 @@ export interface UnifiedTire {
     is3PMSF: boolean;
     isAllWeather: boolean;
   };
+  // Review data (when available from TireLibrary)
+  reviews?: {
+    rating: number | null;
+    count: number | null;
+  };
 }
 
 export function tireWebTireToUnified(tire: TireWebTire, provider: string): UnifiedTire {
@@ -549,6 +564,11 @@ export function tireWebTireToUnified(tire: TireWebTire, provider: string): Unifi
       is3PMSF: snowFlag,
       isAllWeather: allWeatherFlag,
     },
+    // Pass through review data if available
+    reviews: (tire.reviewRating || tire.reviewCount) ? {
+      rating: tire.reviewRating,
+      count: tire.reviewCount,
+    } : undefined,
   };
 }
 
