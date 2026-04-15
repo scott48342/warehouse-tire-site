@@ -1,18 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
-import "../globals.css";
-import { CartProvider } from "@/lib/cart/CartContext";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  variable: "--font-oswald",
-});
 
 export const metadata: Metadata = {
   title: "Warehouse Tire Direct | In-Store Sales",
@@ -28,18 +14,7 @@ export default function POSLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <head>
-        <GoogleAnalytics />
-      </head>
-      <body className={`${inter.variable} ${oswald.variable} antialiased flex min-h-screen flex-col bg-gray-50`}>
-        <CartProvider>
-          <main className="flex-1">
-            {children}
-          </main>
-        </CartProvider>
-      </body>
-    </html>
-  );
+  // No html/body here - root layout handles that
+  // ConditionalLayout in root already hides Header/Footer for /pos routes
+  return <>{children}</>;
 }

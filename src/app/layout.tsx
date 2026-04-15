@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CompareProvider } from "@/context/CompareContext";
-import { CartSlideout } from "@/components/CartSlideout";
 import { CartTracker } from "@/components/CartTracker";
-import { CompareFloatingBadge } from "@/components/CompareFloatingBadge";
-import { ComparePanel } from "@/components/ComparePanel";
-import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@/components/Analytics";
 import { Suspense } from "react";
@@ -75,19 +70,9 @@ export default function RootLayout({
             <Suspense fallback={null}>
               <Analytics />
             </Suspense>
-            <Suspense fallback={<div className="h-16" />}>
-              <Header />
-            </Suspense>
-            <main className="flex-1">
+            <ConditionalLayout>
               {children}
-            </main>
-            <div className="relative z-20">
-              <Footer />
-            </div>
-            <CartSlideout />
-            <ExitIntentPopup />
-            <CompareFloatingBadge />
-            <ComparePanel />
+            </ConditionalLayout>
           </CompareProvider>
         </CartProvider>
       </body>
