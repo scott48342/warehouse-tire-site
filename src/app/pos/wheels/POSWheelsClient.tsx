@@ -80,15 +80,17 @@ function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
   const grouped = new Map<string, WheelItem>();
   
   for (const item of items) {
-    // Group by brand + model + diameter + width + boltPattern (NOT offset - can vary by finish)
-    // This groups the same wheel style together even if offsets differ slightly
-    const styleKey = `${item.brand}-${item.model}-${item.diameter}-${item.width}-${item.boltPattern}`;
+    // Group by brand + STYLE (not just model) + diameter + width + boltPattern
+    // styleKey is the actual wheel design name from techfeed (e.g., "Baja" vs "Classic")
+    // This prevents different wheel designs from being grouped together
+    const styleName = item.styleKey || item.model || "unknown";
+    const groupKey = `${item.brand}-${styleName}-${item.diameter}-${item.width}-${item.boltPattern}`;
     
-    if (!grouped.has(styleKey)) {
-      grouped.set(styleKey, { ...item, finishThumbs: [] });
+    if (!grouped.has(groupKey)) {
+      grouped.set(groupKey, { ...item, finishThumbs: [] });
     }
     
-    const existing = grouped.get(styleKey)!;
+    const existing = grouped.get(groupKey)!;
     if (item.finish && item.sku) {
       existing.finishThumbs = existing.finishThumbs || [];
       const alreadyHasFinish = existing.finishThumbs.some(f => f.sku === item.sku);
