@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  POSProvider,
   usePOS,
   POSLayout,
   POSVehicleStep,
@@ -36,11 +35,10 @@ function StepRouter() {
 // ============================================================================
 
 export function POSPageClient() {
+  // POSProvider is now in the layout, wrapping all /pos/* routes
   return (
-    <POSProvider>
-      <POSLayout>
-        <StepRouter />
-      </POSLayout>
-    </POSProvider>
+    <POSLayout>
+      <StepRouter />
+    </POSLayout>
   );
 }
