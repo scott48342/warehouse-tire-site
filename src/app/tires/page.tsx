@@ -898,6 +898,17 @@ export default async function TiresPage({
   const snowRated = (Array.isArray(sp.snowRated) ? sp.snowRated[0] : sp.snowRated) === "1";
   const allWeather = (Array.isArray(sp.allWeather) ? sp.allWeather[0] : sp.allWeather) === "1";
   const xlOnly = (Array.isArray(sp.xl) ? sp.xl[0] : sp.xl) === "1";
+  const studdable = (Array.isArray(sp.studdable) ? sp.studdable[0] : sp.studdable) === "1";
+
+  // UTQG Treadwear filter (300-400, 400-500, 500-600, 600+)
+  const treadwearRangesRaw = (sp as any).treadwear;
+  const TREADWEAR_RANGES = ['300-400', '400-500', '500-600', '600+'] as const;
+  type TreadwearRange = typeof TREADWEAR_RANGES[number];
+  const treadwearRanges: TreadwearRange[] = Array.isArray(treadwearRangesRaw)
+    ? treadwearRangesRaw.filter((r): r is TreadwearRange => TREADWEAR_RANGES.includes(r as TreadwearRange))
+    : treadwearRangesRaw && TREADWEAR_RANGES.includes(treadwearRangesRaw as TreadwearRange)
+      ? [treadwearRangesRaw as TreadwearRange]
+      : [];
 
   const loadRangesRaw = (sp as any).loadRange;
   const loadRanges = Array.isArray(loadRangesRaw)
@@ -2166,7 +2177,14 @@ export default async function TiresPage({
   let snowRatedCount = 0;  // 3PMSF
   let allWeatherCount = 0;
   let xlCount = 0;
+  let studdableCount = 0;
   const loadRangeCounts = new Map<string, number>();
+  
+  // UTQG Treadwear counts
+  let treadwear300to400Count = 0;
+  let treadwear400to500Count = 0;
+  let treadwear500to600Count = 0;
+  let treadwear600plusCount = 0;
 
   for (const t of itemsEnriched) {
     // Extract speed rating from description
@@ -2179,6 +2197,24 @@ export default async function TiresPage({
     if (t.enrichment?.is3PMSF) snowRatedCount++;
     if (t.enrichment?.isAllWeather) allWeatherCount++;
     if (t.enrichment?.isXL) xlCount++;
+    
+    // Studdable detection (check description for studdable keywords)
+    if (d.includes('STUDDABLE') || d.includes('STUD-ABLE') || d.includes('PIN STUD')) {
+      studdableCount++;
+    }
+    
+    // UTQG Treadwear counting
+    const utqgRaw = t.badges?.utqg;
+    if (utqgRaw) {
+      const treadwearMatch = String(utqgRaw).match(/^(\d{2,3})/);
+      if (treadwearMatch) {
+        const tw = parseInt(treadwearMatch[1], 10);
+        if (tw >= 600) treadwear600plusCount++;
+        else if (tw >= 500) treadwear500to600Count++;
+        else if (tw >= 400) treadwear400to500Count++;
+        else if (tw >= 300) treadwear300to400Count++;
+      }
+    }
 
     // Load range from enrichment
     const lr = t.enrichment?.loadRange;
@@ -2300,6 +2336,31 @@ export default async function TiresPage({
     if (snowRated && !t.enrichment?.is3PMSF) return false;
     if (allWeather && !t.enrichment?.isAllWeather) return false;
     if (xlOnly && !t.enrichment?.isXL) return false;
+    
+    // Studdable filter
+    if (studdable) {
+      const desc = String(t.description || "").toUpperCase();
+      const isStuddable = desc.includes('STUDDABLE') || desc.includes('STUD-ABLE') || desc.includes('PIN STUD');
+      if (!isStuddable) return false;
+    }
+    
+    // UTQG Treadwear filter
+    if (treadwearRanges.length > 0) {
+      const utqgRaw = t.badges?.utqg;
+      if (!utqgRaw) return false;
+      const treadwearMatch = String(utqgRaw).match(/^(\d{2,3})/);
+      if (!treadwearMatch) return false;
+      const tw = parseInt(treadwearMatch[1], 10);
+      
+      const inRange = treadwearRanges.some(range => {
+        if (range === '600+') return tw >= 600;
+        if (range === '500-600') return tw >= 500 && tw < 600;
+        if (range === '400-500') return tw >= 400 && tw < 500;
+        if (range === '300-400') return tw >= 300 && tw < 400;
+        return false;
+      });
+      if (!inRange) return false;
+    }
 
     // Load range filter - use enrichment data
     if (loadRanges.length) {
@@ -3040,6 +3101,8 @@ export default async function TiresPage({
                 snowRated,
                 allWeather,
                 xlOnly,
+                studdable,
+                treadwearRanges,
                 rimDiameters,
                 overallDiameters,
                 
@@ -3053,6 +3116,12 @@ export default async function TiresPage({
                   { value: "60K+" as const, count: mileage60kCount },
                   { value: "80K+" as const, count: mileage80kCount },
                 ],
+                treadwearOptions: [
+                  { value: "300-400" as const, label: "300-400 (Performance)", count: treadwear300to400Count },
+                  { value: "400-500" as const, label: "400-500 (Standard)", count: treadwear400to500Count },
+                  { value: "500-600" as const, label: "500-600 (Long-wearing)", count: treadwear500to600Count },
+                  { value: "600+" as const, label: "600+ (Ultra long-wearing)", count: treadwear600plusCount },
+                ],
                 rimDiameterOptions: rimDiametersAvailable.map(rim => ({ value: rim, count: rimDiameterCounts.get(rim) || 0 })),
                 overallDiameterOptions: overallDiametersAvailable.map(dia => ({ value: dia, count: overallDiameterCounts.get(dia) || 0 })),
                 
@@ -3061,6 +3130,7 @@ export default async function TiresPage({
                 snowRatedCount,
                 allWeatherCount,
                 xlCount,
+                studdableCount,
                 
                 // Context for URL building
                 basePath,

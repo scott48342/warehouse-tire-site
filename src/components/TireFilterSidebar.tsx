@@ -10,6 +10,8 @@ import { TireTypesGuide } from "@/components/BuyingGuides";
    TYPES
 ============================================================================= */
 
+type TreadwearRange = '300-400' | '400-500' | '500-600' | '600+';
+
 type FilterData = {
   // URL state
   brands: string[];
@@ -23,6 +25,8 @@ type FilterData = {
   snowRated: boolean;
   allWeather: boolean;
   xlOnly: boolean;
+  studdable: boolean;
+  treadwearRanges: TreadwearRange[];
   
   // New size-based filters
   rimDiameters: number[];
@@ -34,6 +38,7 @@ type FilterData = {
   speedOptions: Array<{ value: string; count: number }>;
   loadRangeOptions: Array<{ value: string; count: number }>;
   mileageOptions: Array<{ value: MileageBand; count: number }>;
+  treadwearOptions: Array<{ value: TreadwearRange; label: string; count: number }>;
   
   // New size-based options
   rimDiameterOptions: Array<{ value: number; count: number }>;
@@ -44,6 +49,7 @@ type FilterData = {
   snowRatedCount: number;
   allWeatherCount: number;
   xlCount: number;
+  studdableCount: number;
   
   // Context
   basePath: string;
@@ -301,6 +307,8 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     snowRated: null,
     allWeather: null,
     xl: null,
+    studdable: null,
+    treadwear: null,
     rimDia: null,
     overallDia: null,
   });
@@ -317,6 +325,8 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
     (data.runFlat ? 1 : 0) +
     (data.snowRated ? 1 : 0) +
     (data.allWeather ? 1 : 0) +
+    (data.studdable ? 1 : 0) +
+    data.treadwearRanges.length +
     data.rimDiameters.length +
     data.overallDiameters.length;
 
@@ -474,6 +484,28 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         </div>
       </AccordionSection>
       
+      {/* UTQG Treadwear Section */}
+      <AccordionSection
+        title="Treadwear Rating"
+        selectedCount={data.treadwearRanges.length}
+        hidden={!data.treadwearOptions || data.treadwearOptions.every(o => o.count === 0)}
+      >
+        <div className="space-y-0.5">
+          {data.treadwearOptions?.map(({ value, label, count }) => (
+            <FilterCheckbox
+              key={value}
+              label={label}
+              checked={data.treadwearRanges.includes(value)}
+              count={count}
+              onChange={() => toggleArrayFilter("treadwear", value, data.treadwearRanges)}
+            />
+          ))}
+        </div>
+        <p className="mt-2 text-xs text-neutral-500">
+          Higher ratings = longer tread life
+        </p>
+      </AccordionSection>
+      
       {/* Rim Diameter Section (for mixed size searches) */}
       <AccordionSection
         title="Wheel Size"
@@ -556,12 +588,14 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
         selectedCount={
           (data.runFlat ? 1 : 0) +
           (data.snowRated ? 1 : 0) +
-          (data.allWeather ? 1 : 0)
+          (data.allWeather ? 1 : 0) +
+          (data.studdable ? 1 : 0)
         }
         hidden={
           data.runFlatCount === 0 &&
           data.snowRatedCount === 0 &&
-          data.allWeatherCount === 0
+          data.allWeatherCount === 0 &&
+          data.studdableCount === 0
         }
       >
         <div className="space-y-0.5">
@@ -588,6 +622,14 @@ export function TireFilterSidebar({ data }: { data: FilterData }) {
               checked={data.allWeather}
               count={data.allWeatherCount}
               onChange={() => toggleBooleanFilter("allWeather", data.allWeather)}
+            />
+          )}
+          {data.studdableCount > 0 && (
+            <FilterCheckbox
+              label="Studdable"
+              checked={data.studdable}
+              count={data.studdableCount}
+              onChange={() => toggleBooleanFilter("studdable", data.studdable)}
             />
           )}
         </div>
