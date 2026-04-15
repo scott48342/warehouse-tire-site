@@ -250,13 +250,18 @@ function POSWheelCard({
       {/* Info section */}
       <div className="p-4">
         <div className="text-xs font-medium text-gray-500">{wheel.brand}</div>
-        <div className="font-bold text-gray-900 truncate">{wheel.model}</div>
+        <div className="font-bold text-gray-900 truncate">
+          {extractStyleFromTitle(wheel.title || "") || wheel.model || "Wheel"}
+        </div>
         <div className="text-sm text-gray-600">
           {wheel.diameter}" × {wheel.width}"
           {currentOffset && ` ET${currentOffset}`}
         </div>
         {currentFinish && (
-          <div className="mt-1 text-xs text-gray-500 truncate">{currentFinish}</div>
+          <div className="mt-1 text-sm text-gray-600">{currentFinish}</div>
+        )}
+        {currentSku && (
+          <div className="mt-0.5 text-xs text-gray-400 font-mono">{currentSku}</div>
         )}
         
         {/* Finish options - clickable to switch */}
@@ -292,16 +297,18 @@ function POSWheelCard({
         )}
         
         {/* Price */}
-        <div className="mt-3 flex items-baseline justify-between">
-          <div>
-            <span className="text-xl font-bold text-gray-900">
-              ${setPrice.toLocaleString()}
+        {/* Pricing - clearer layout */}
+        <div className="mt-3 space-y-1">
+          <div className="flex items-baseline gap-2">
+            <span className="text-2xl font-bold text-gray-900">
+              ${(currentPrice || 0).toLocaleString()}
             </span>
-            <span className="ml-1 text-xs text-gray-500">set of 4</span>
+            <span className="text-sm text-gray-500">each</span>
           </div>
-          <span className="text-xs text-gray-400">
-            ${(currentPrice || 0).toLocaleString()}/ea
-          </span>
+          <div className="text-sm text-gray-600">
+            <span className="font-semibold">${setPrice.toLocaleString()}</span>
+            <span className="ml-1">set of 4</span>
+          </div>
         </div>
         
         {/* Select button */}
