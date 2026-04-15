@@ -7,6 +7,7 @@ import { WheelsStyleCard, type WheelFinishThumb } from "@/components/WheelsStyle
 import { WheelFilterSidebar } from "@/components/WheelFilterSidebar";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
 import { usePOS, type POSWheel } from "@/components/pos/POSContext";
+import { getLiftProfile, getRecommendationForLiftHeight } from "@/lib/liftedRecommendations";
 
 // ============================================================================
 // Types
@@ -443,8 +444,27 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
         // Group by style
         const grouped = groupWheelsByStyle(processed);
         
+        // Filter by lift-appropriate offsets if lifted/leveled build
+        let filtered = grouped;
+        if (state.buildType !== "stock" && state.liftConfig) {
+          const liftProfile = getLiftProfile(make, model);
+          if (liftProfile) {
+            const rec = getRecommendationForLiftHeight(liftProfile, state.liftConfig.liftInches);
+            const minOffset = rec.offsetMin;
+            const maxOffset = rec.offsetMax;
+            
+            filtered = grouped.filter((w) => {
+              const offset = w.offset ? parseFloat(w.offset) : null;
+              if (offset === null) return true; // Include if no offset data
+              return offset >= minOffset && offset <= maxOffset;
+            });
+            
+            console.log(`[POS Wheels] Lift filter: ${state.liftConfig.liftInches}" lift, offset ${minOffset} to ${maxOffset}, ${filtered.length}/${grouped.length} wheels match`);
+          }
+        }
+        
         // Sort
-        const sorted = [...grouped].sort((a, b) => {
+        const sorted = [...filtered].sort((a, b) => {
           const aPrice = a.price ?? Infinity;
           const bPrice = b.price ?? Infinity;
           switch (sort) {
@@ -505,7 +525,7 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
     };
     
     fetchWheels();
-  }, [year, make, model, trim, brandCd, finish, diameterParam, widthParam, sort, hasVehicle]);
+  }, [year, make, model, trim, brandCd, finish, diameterParam, widthParam, sort, hasVehicle, state.buildType, state.liftConfig]);
   
   // Client-side filtering for price
   const filteredWheels = useMemo(() => {
@@ -610,6 +630,16 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
             <p className="text-sm text-gray-600">
               {year} {make} {model} {trim}
               {vehicleBoltPattern && <span className="ml-2 text-gray-400">• {vehicleBoltPattern}</span>}
+              {state.buildType !== "stock" && state.liftConfig && (
+                <span className={`ml-2 px-2 py-0.5 rounded text-xs font-medium ${
+                  state.buildType === "lifted" 
+                    ? "bg-orange-100 text-orange-700" 
+                    : "bg-blue-100 text-blue-700"
+                }`}>
+                  {state.buildType === "leveled" ? "Leveled" : `${state.liftConfig.liftInches}" Lift`}
+                  {state.liftConfig.targetTireSize && ` • ${state.liftConfig.targetTireSize}" Tires`}
+                </span>
+              )}
             </p>
           </div>
           
