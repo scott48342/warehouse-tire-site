@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { usePOS, type POSTire } from "@/components/pos/POSContext";
 import { AutoSubmitSelect } from "@/components/AutoSubmitSelect";
+import { getLiftProfile, getRecommendationForLiftHeight, getTireSizesForLift } from "@/lib/liftedRecommendations";
 
 // ============================================================================
 // Types
@@ -29,6 +30,91 @@ type Facets = {
   sizes: Array<{ value: string; count: number }>;
   speedRatings: Array<{ value: string; count: number }>;
 };
+
+// ============================================================================
+// Tire Diameter Calculation
+// ============================================================================
+
+/**
+ * Calculate overall tire diameter from size string
+ * Handles both metric (285/70R17) and flotation (35x12.50R17) formats
+ * Returns diameter in inches, or null if unparseable
+ */
+function calculateTireDiameter(size: string): number | null {
+  if (!size) return null;
+  
+  // Flotation format: 35x12.50R17 or 33x12.5R15
+  const flotationMatch = size.match(/^(\d+(?:\.\d+)?)\s*x/i);
+  if (flotationMatch) {
+    return parseFloat(flotationMatch[1]);
+  }
+  
+  // Metric format: 285/70R17 or 285/70-17
+  const metricMatch = size.match(/^(\d+)\/(\d+)[R-](\d+)/i);
+  if (metricMatch) {
+    const widthMm = parseFloat(metricMatch[1]);
+    const aspectRatio = parseFloat(metricMatch[2]);
+    const rimDiameter = parseFloat(metricMatch[3]);
+    
+    // Sidewall height in mm, then convert to inches
+    const sidewallMm = widthMm * (aspectRatio / 100);
+    const sidewallInches = sidewallMm / 25.4;
+    
+    // Overall diameter = rim + 2 × sidewall
+    return rimDiameter + (2 * sidewallInches);
+  }
+  
+  // LT metric: LT285/70R17
+  const ltMetricMatch = size.match(/^LT\s*(\d+)\/(\d+)[R-](\d+)/i);
+  if (ltMetricMatch) {
+    const widthMm = parseFloat(ltMetricMatch[1]);
+    const aspectRatio = parseFloat(ltMetricMatch[2]);
+    const rimDiameter = parseFloat(ltMetricMatch[3]);
+    
+    const sidewallMm = widthMm * (aspectRatio / 100);
+    const sidewallInches = sidewallMm / 25.4;
+    
+    return rimDiameter + (2 * sidewallInches);
+  }
+  
+  return null;
+}
+
+/**
+ * Check if a tire size matches the lift profile recommendations
+ * Returns { matches, diameter, notes }
+ */
+function tireFitsLiftConfig(
+  size: string,
+  make: string,
+  model: string,
+  liftInches: number
+): { matches: boolean; diameter: number | null; reason?: string } {
+  const diameter = calculateTireDiameter(size);
+  if (diameter === null) {
+    return { matches: true, diameter: null, reason: "Could not parse size" };
+  }
+  
+  const profile = getLiftProfile(make, model);
+  if (!profile) {
+    // No profile - show all tires
+    return { matches: true, diameter };
+  }
+  
+  const rec = getRecommendationForLiftHeight(profile, liftInches);
+  
+  // Check if diameter is in range (with some tolerance for rounding)
+  const tolerance = 0.5; // Half inch tolerance
+  if (diameter >= rec.tireDiameterMin - tolerance && diameter <= rec.tireDiameterMax + tolerance) {
+    return { matches: true, diameter };
+  }
+  
+  return { 
+    matches: false, 
+    diameter,
+    reason: `Recommended: ${rec.tireDiameterMin}-${rec.tireDiameterMax}" tires`
+  };
+}
 
 type Props = {
   year: string;
@@ -110,8 +196,49 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
           warranty: t.warranty,
         }));
         
+        // Filter by lift config if applicable
+        let filtered = processed;
+        if (state.buildType !== "stock" && state.liftConfig) {
+          const liftProfile = getLiftProfile(make, model);
+          
+          if (liftProfile) {
+            const rec = getRecommendationForLiftHeight(liftProfile, state.liftConfig.liftInches);
+            const recommendedSizes = getTireSizesForLift(liftProfile, state.liftConfig.liftInches, state.wheel?.diameter ? parseInt(state.wheel.diameter) : undefined);
+            
+            filtered = processed.filter((t) => {
+              if (!t.size) return true; // Include if no size data
+              
+              // Check if it's an exact recommended size match
+              if (recommendedSizes.some(rs => t.size?.includes(rs) || rs.includes(t.size || ""))) {
+                return true;
+              }
+              
+              // Otherwise check diameter range
+              const result = tireFitsLiftConfig(t.size, make, model, state.liftConfig!.liftInches);
+              return result.matches;
+            });
+            
+            console.log(`[POS Tires] Lift filter: ${state.liftConfig.liftInches}" lift, ${rec.tireDiameterMin}-${rec.tireDiameterMax}" tires, ${filtered.length}/${processed.length} tires match`);
+          } else {
+            // No profile - use target tire size if specified
+            if (state.liftConfig.targetTireSize) {
+              const targetDiameter = state.liftConfig.targetTireSize;
+              const tolerance = 1; // 1 inch tolerance
+              
+              filtered = processed.filter((t) => {
+                if (!t.size) return true;
+                const diameter = calculateTireDiameter(t.size);
+                if (diameter === null) return true;
+                return diameter >= targetDiameter - tolerance && diameter <= targetDiameter + tolerance;
+              });
+              
+              console.log(`[POS Tires] No lift profile for ${make} ${model}, filtering by target size ${targetDiameter}": ${filtered.length}/${processed.length} tires match`);
+            }
+          }
+        }
+        
         // Sort
-        const sorted = [...processed].sort((a, b) => {
+        const sorted = [...filtered].sort((a, b) => {
           const aPrice = a.price ?? Infinity;
           const bPrice = b.price ?? Infinity;
           switch (sort) {
@@ -155,7 +282,7 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
     };
     
     fetchTires();
-  }, [year, make, model, trim, wheelDia, wheelWidth, brand, size, sort, hasVehicle, state.wheel?.diameter, state.wheel?.width]);
+  }, [year, make, model, trim, wheelDia, wheelWidth, brand, size, sort, hasVehicle, state.wheel?.diameter, state.wheel?.width, state.buildType, state.liftConfig]);
   
   // Handle tire selection
   const handleSelectTire = useCallback((tire: TireItem) => {
@@ -204,6 +331,16 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
             <h1 className="mt-1 text-2xl font-bold text-gray-900">Select Tires</h1>
             <p className="text-sm text-gray-600">
               {year} {make} {model} {trim}
+              {state.buildType !== "stock" && state.liftConfig && (
+                <span className={`ml-2 px-2 py-0.5 rounded text-xs font-medium ${
+                  state.buildType === "lifted" 
+                    ? "bg-orange-100 text-orange-700" 
+                    : "bg-blue-100 text-blue-700"
+                }`}>
+                  {state.buildType === "leveled" ? "Leveled" : `${state.liftConfig.liftInches}" Lift`}
+                  {state.liftConfig.targetTireSize && ` • ${state.liftConfig.targetTireSize}" Tires`}
+                </span>
+              )}
             </p>
           </div>
           
@@ -246,6 +383,44 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
             </div>
           </div>
         )}
+        
+        {/* Lift recommendation info */}
+        {state.buildType !== "stock" && state.liftConfig && (() => {
+          const liftProfile = getLiftProfile(make, model);
+          if (liftProfile) {
+            const rec = getRecommendationForLiftHeight(liftProfile, state.liftConfig.liftInches);
+            return (
+              <div className="mt-4 rounded-lg bg-amber-50 border border-amber-200 p-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-xl">🛞</span>
+                  <div className="flex-1">
+                    <div className="text-sm font-semibold text-amber-800">
+                      Recommended Tire Sizes for Your {state.liftConfig.liftInches}" {state.buildType === "leveled" ? "Level" : "Lift"}
+                    </div>
+                    <div className="mt-1 text-sm text-amber-700">
+                      {rec.tireDiameterMin}"-{rec.tireDiameterMax}" overall diameter • {rec.stanceDescription}
+                    </div>
+                    {rec.commonTireSizes.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {rec.commonTireSizes.slice(0, 6).map((ts) => (
+                          <span key={ts} className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-medium">
+                            {ts}
+                          </span>
+                        ))}
+                        {rec.commonTireSizes.length > 6 && (
+                          <span className="px-2 py-0.5 text-amber-600 text-xs">
+                            +{rec.commonTireSizes.length - 6} more
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          return null;
+        })()}
       </div>
       
       {/* Main content */}
@@ -354,7 +529,21 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
                       <div className="mt-3">
                         <div className="text-xs font-medium text-gray-500">{tire.brand}</div>
                         <div className="font-bold text-gray-900 truncate">{tire.model}</div>
-                        <div className="text-sm text-gray-600">{tire.size}</div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-gray-600">{tire.size}</span>
+                          {/* Show calculated diameter for lifted/leveled builds */}
+                          {state.buildType !== "stock" && tire.size && (() => {
+                            const diameter = calculateTireDiameter(tire.size);
+                            if (diameter) {
+                              return (
+                                <span className="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-medium">
+                                  {diameter.toFixed(1)}"
+                                </span>
+                              );
+                            }
+                            return null;
+                          })()}
+                        </div>
                         
                         {/* Specs */}
                         <div className="mt-2 flex flex-wrap gap-1">
