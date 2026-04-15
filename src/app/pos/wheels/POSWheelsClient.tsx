@@ -12,6 +12,15 @@ import { usePOS, type POSWheel } from "@/components/pos/POSContext";
 // Types
 // ============================================================================
 
+type WheelFinish = {
+  sku: string;
+  finish: string;
+  imageUrl?: string;
+  price?: number;
+  stockQty?: number;
+  inventoryType?: string;
+};
+
 type WheelItem = {
   sku?: string;
   brand?: string;
@@ -88,6 +97,149 @@ function groupWheelsByStyle(items: WheelItem[]): WheelItem[] {
   }
   
   return Array.from(grouped.values());
+}
+
+// ============================================================================
+// POS Wheel Card - With finish switching
+// ============================================================================
+
+function POSWheelCard({ 
+  wheel, 
+  onSelect 
+}: { 
+  wheel: WheelItem; 
+  onSelect: (wheel: WheelItem) => void;
+}) {
+  // Track currently displayed finish
+  const [currentSku, setCurrentSku] = useState(wheel.sku);
+  const [currentImage, setCurrentImage] = useState(wheel.imageUrl);
+  const [currentFinish, setCurrentFinish] = useState(wheel.finish);
+  const [currentPrice, setCurrentPrice] = useState(wheel.price);
+  
+  const hasMultipleFinishes = wheel.finishThumbs && wheel.finishThumbs.length > 1;
+  
+  // Handle finish thumbnail click
+  const handleFinishClick = (e: React.MouseEvent, finish: WheelFinishThumb) => {
+    e.stopPropagation(); // Prevent card selection
+    setCurrentSku(finish.sku);
+    setCurrentImage(finish.imageUrl);
+    setCurrentFinish(finish.finish);
+    setCurrentPrice(finish.price);
+  };
+  
+  // Handle card selection - uses current finish state
+  const handleSelect = () => {
+    onSelect({
+      ...wheel,
+      sku: currentSku,
+      imageUrl: currentImage,
+      finish: currentFinish,
+      price: currentPrice,
+    });
+  };
+  
+  const setPrice = (currentPrice || 0) * 4;
+  
+  return (
+    <div className="group rounded-xl border-2 border-gray-200 bg-white overflow-hidden transition-all hover:border-blue-500 hover:shadow-lg">
+      {/* Clickable image area */}
+      <button
+        onClick={handleSelect}
+        className="w-full text-left focus:outline-none"
+      >
+        {/* Image */}
+        <div className="relative aspect-square overflow-hidden bg-gray-100">
+          {currentImage ? (
+            <img 
+              src={currentImage} 
+              alt={`${wheel.brand} ${wheel.model}`}
+              className="h-full w-full object-contain transition-transform group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full items-center justify-center text-4xl text-gray-300">⚙️</div>
+          )}
+          
+          {/* Fitment badge */}
+          {wheel.fitmentClass && (
+            <div className={`absolute top-2 right-2 rounded-full px-2 py-0.5 text-xs font-bold ${
+              wheel.fitmentClass === "surefit" ? "bg-green-100 text-green-800" :
+              wheel.fitmentClass === "specfit" ? "bg-blue-100 text-blue-800" :
+              "bg-amber-100 text-amber-800"
+            }`}>
+              {wheel.fitmentClass === "surefit" ? "✓ SureFit" :
+               wheel.fitmentClass === "specfit" ? "SpecFit" : "Extended"}
+            </div>
+          )}
+        </div>
+      </button>
+      
+      {/* Info section */}
+      <div className="p-4">
+        <div className="text-xs font-medium text-gray-500">{wheel.brand}</div>
+        <div className="font-bold text-gray-900 truncate">{wheel.model}</div>
+        <div className="text-sm text-gray-600">
+          {wheel.diameter}" × {wheel.width}"
+          {wheel.offset && ` ET${wheel.offset}`}
+        </div>
+        {currentFinish && (
+          <div className="mt-1 text-xs text-gray-500 truncate">{currentFinish}</div>
+        )}
+        
+        {/* Finish options - clickable to switch */}
+        {hasMultipleFinishes && (
+          <div className="mt-3 flex gap-1.5">
+            {wheel.finishThumbs!.slice(0, 5).map((f, i) => {
+              const isActive = f.sku === currentSku;
+              return (
+                <button
+                  key={f.sku || i}
+                  onClick={(e) => handleFinishClick(e, f)}
+                  className={`h-8 w-8 rounded-full overflow-hidden border-2 transition-all ${
+                    isActive 
+                      ? "border-blue-500 ring-2 ring-blue-200" 
+                      : "border-gray-200 hover:border-gray-400"
+                  }`}
+                  title={f.finish}
+                >
+                  {f.imageUrl ? (
+                    <img src={f.imageUrl} alt={f.finish} className="h-full w-full object-cover" />
+                  ) : (
+                    <div className="h-full w-full bg-gray-200" />
+                  )}
+                </button>
+              );
+            })}
+            {wheel.finishThumbs!.length > 5 && (
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-xs text-gray-500 font-medium">
+                +{wheel.finishThumbs!.length - 5}
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* Price */}
+        <div className="mt-3 flex items-baseline justify-between">
+          <div>
+            <span className="text-xl font-bold text-gray-900">
+              ${setPrice.toLocaleString()}
+            </span>
+            <span className="ml-1 text-xs text-gray-500">set of 4</span>
+          </div>
+          <span className="text-xs text-gray-400">
+            ${(currentPrice || 0).toLocaleString()}/ea
+          </span>
+        </div>
+        
+        {/* Select button */}
+        <button
+          onClick={handleSelect}
+          className="mt-3 w-full rounded-lg bg-blue-600 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+        >
+          Select This Wheel
+        </button>
+      </div>
+    </div>
+  );
 }
 
 // ============================================================================
@@ -528,89 +680,11 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
                 {/* Grid */}
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {pagedWheels.map((wheel) => (
-                    <button
+                    <POSWheelCard
                       key={wheel.sku || `${wheel.brand}-${wheel.model}-${wheel.finish}`}
-                      onClick={() => handleSelectWheel(wheel)}
-                      className="group rounded-xl border-2 border-gray-200 bg-white p-4 text-left transition-all hover:border-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
-                      {/* Image */}
-                      <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100">
-                        {wheel.imageUrl ? (
-                          <img 
-                            src={wheel.imageUrl} 
-                            alt={`${wheel.brand} ${wheel.model}`}
-                            className="h-full w-full object-contain transition-transform group-hover:scale-105"
-                          />
-                        ) : (
-                          <div className="flex h-full items-center justify-center text-4xl text-gray-300">⚙️</div>
-                        )}
-                        
-                        {/* Fitment badge */}
-                        {wheel.fitmentClass && (
-                          <div className={`absolute top-2 right-2 rounded-full px-2 py-0.5 text-xs font-bold ${
-                            wheel.fitmentClass === "surefit" ? "bg-green-100 text-green-800" :
-                            wheel.fitmentClass === "specfit" ? "bg-blue-100 text-blue-800" :
-                            "bg-amber-100 text-amber-800"
-                          }`}>
-                            {wheel.fitmentClass === "surefit" ? "✓ SureFit" :
-                             wheel.fitmentClass === "specfit" ? "SpecFit" : "Extended"}
-                          </div>
-                        )}
-                      </div>
-                      
-                      {/* Info */}
-                      <div className="mt-3">
-                        <div className="text-xs font-medium text-gray-500">{wheel.brand}</div>
-                        <div className="font-bold text-gray-900 truncate">{wheel.model}</div>
-                        <div className="text-sm text-gray-600">
-                          {wheel.diameter}" × {wheel.width}"
-                          {wheel.offset && ` ET${wheel.offset}`}
-                        </div>
-                        {wheel.finish && (
-                          <div className="mt-1 text-xs text-gray-500 truncate">{wheel.finish}</div>
-                        )}
-                        
-                        {/* Finish options */}
-                        {wheel.finishThumbs && wheel.finishThumbs.length > 1 && (
-                          <div className="mt-2 flex gap-1">
-                            {wheel.finishThumbs.slice(0, 4).map((f, i) => (
-                              <div 
-                                key={f.sku || i} 
-                                className="h-6 w-6 rounded-full border border-gray-200 bg-gray-100 overflow-hidden"
-                                title={f.finish}
-                              >
-                                {f.imageUrl && (
-                                  <img src={f.imageUrl} alt="" className="h-full w-full object-cover" />
-                                )}
-                              </div>
-                            ))}
-                            {wheel.finishThumbs.length > 4 && (
-                              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 text-xs text-gray-500">
-                                +{wheel.finishThumbs.length - 4}
-                              </div>
-                            )}
-                          </div>
-                        )}
-                        
-                        {/* Price */}
-                        <div className="mt-3 flex items-baseline justify-between">
-                          <div>
-                            <span className="text-xl font-bold text-gray-900">
-                              ${((wheel.price || 0) * 4).toLocaleString()}
-                            </span>
-                            <span className="ml-1 text-xs text-gray-500">set of 4</span>
-                          </div>
-                          <span className="text-xs text-gray-400">
-                            ${(wheel.price || 0).toLocaleString()}/ea
-                          </span>
-                        </div>
-                      </div>
-                      
-                      {/* Select button */}
-                      <div className="mt-3 rounded-lg bg-blue-600 py-2 text-center text-sm font-semibold text-white transition-colors group-hover:bg-blue-700">
-                        Select This Wheel
-                      </div>
-                    </button>
+                      wheel={wheel}
+                      onSelect={handleSelectWheel}
+                    />
                   ))}
                 </div>
                 
