@@ -117,12 +117,11 @@ const DEFAULT_ADMIN_SETTINGS: POSAdminSettings = {
   laborPerWheel: 25,        // $25/wheel = $100 for set of 4
   tpmsPerSensor: 15,        // $15/sensor = $60 for set of 4
   disposalPerTire: 5,       // $5/tire = $20 for set of 4
-  alignmentPrice: 89,       // Flat $89 alignment
+  alignmentPrice: 0,        // Alignment removed - set to 0
   creditCardFeePercent: 3.99, // 3.99% credit card processing fee
   customAddOns: [
     { id: "lugnuts", name: "Lug Nuts (set)", price: 40, perUnit: false },
     { id: "hubcentric", name: "Hub Centric Rings", price: 30, perUnit: false },
-    { id: "valvestems", name: "Valve Stems", price: 20, perUnit: false },
   ],
 };
 

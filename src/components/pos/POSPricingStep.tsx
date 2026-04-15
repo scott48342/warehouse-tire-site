@@ -190,25 +190,6 @@ export function POSPricingStep() {
                 </div>
               </label>
               
-              {/* Alignment */}
-              <label className="flex items-center justify-between p-4 rounded-xl bg-neutral-800 cursor-pointer hover:bg-neutral-750 transition-colors">
-                <div className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked={selectedAddOns.alignment}
-                    onChange={() => toggleAddon("alignment")}
-                    className="w-5 h-5 rounded text-blue-600 bg-neutral-700 border-neutral-600"
-                  />
-                  <div>
-                    <div className="font-medium text-white">Alignment</div>
-                    <div className="text-sm text-neutral-400">4-wheel alignment</div>
-                  </div>
-                </div>
-                <div className="text-lg font-bold text-white">
-                  ${adminSettings.alignmentPrice.toFixed(2)}
-                </div>
-              </label>
-              
               {/* Custom Add-ons */}
               {adminSettings.customAddOns.map((addon) => (
                 <label 
@@ -415,12 +396,6 @@ export function POSPricingStep() {
                 <div className="flex justify-between">
                   <span className="text-neutral-400">Tire Disposal</span>
                   <span className="text-white font-medium">${(adminSettings.disposalPerTire * 4).toFixed(2)}</span>
-                </div>
-              )}
-              {selectedAddOns.alignment && (
-                <div className="flex justify-between">
-                  <span className="text-neutral-400">Alignment</span>
-                  <span className="text-white font-medium">${adminSettings.alignmentPrice.toFixed(2)}</span>
                 </div>
               )}
               {adminSettings.customAddOns

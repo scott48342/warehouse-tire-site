@@ -141,20 +141,6 @@ export function POSAdminPanel() {
                 </div>
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-neutral-300 mb-2">
-                  Alignment (flat fee)
-                </label>
-                <div className="flex items-center gap-3">
-                  <span className="text-neutral-400">$</span>
-                  <input
-                    type="number"
-                    value={adminSettings.alignmentPrice}
-                    onChange={(e) => handleUpdateSetting("alignmentPrice", parseFloat(e.target.value) || 0)}
-                    className="w-24 h-10 rounded-lg bg-neutral-700 border border-neutral-600 text-white px-3 text-right"
-                  />
-                </div>
-              </div>
             </div>
           </div>
           

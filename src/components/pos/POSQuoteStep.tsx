@@ -288,12 +288,6 @@ export function POSQuoteStep() {
                 <span className="text-neutral-900">${(adminSettings.disposalPerTire * 4).toFixed(2)}</span>
               </div>
             )}
-            {selectedAddOns.alignment && (
-              <div className="flex justify-between">
-                <span className="text-neutral-600">Alignment</span>
-                <span className="text-neutral-900">${adminSettings.alignmentPrice.toFixed(2)}</span>
-              </div>
-            )}
             {adminSettings.customAddOns
               .filter((a) => selectedAddOns.customIds.includes(a.id))
               .map((addon) => (
