@@ -100,77 +100,27 @@ export function TireMatchingBanner({
     return `${baseUrl}?${params.toString()}`;
   }
 
+  // Note: Wheel summary is now shown in TirePageCompactHeader
+  // This component focuses on tire size selection only to avoid duplication
+  
   return (
-    <div className="mb-6 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-blue-50 p-5">
-      {/* Header */}
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">🛞</span>
-            <h2 className="text-lg font-extrabold text-neutral-900">
-              Complete Your Wheel Package
-            </h2>
-          </div>
-          <p className="mt-1 text-sm text-neutral-600">
-            Add matching tires for your {effectiveWheel.diameter}" wheels
-          </p>
-        </div>
-
-        {/* Skip option */}
-        <Link
-          href="/cart"
-          className="text-xs font-semibold text-neutral-500 hover:text-neutral-700 hover:underline"
-        >
-          Skip for now →
-        </Link>
-      </div>
-
-      {/* Wheel Context Card */}
-      <div className="mt-4 flex items-center gap-4 rounded-xl border border-neutral-200 bg-white p-3">
-        {effectiveWheel.imageUrl ? (
-          <div className="w-16 h-16 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden flex-shrink-0">
-            <img
-              src={effectiveWheel.imageUrl}
-              alt="Selected wheel"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        ) : (
-          <div className="w-16 h-16 rounded-lg border border-neutral-100 bg-neutral-50 flex items-center justify-center text-neutral-400 text-xl flex-shrink-0">
-            ⚙️
-          </div>
-        )}
-        <div className="flex-1 min-w-0">
-          <div className="text-sm font-bold text-neutral-900 truncate">
-            {effectiveWheel.brand} {effectiveWheel.model}
-          </div>
-          <div className="text-xs text-neutral-600">
-            {effectiveWheel.diameter}" × {effectiveWheel.width}" • Set of {effectiveWheel.quantity}
-          </div>
-          {mounted && cartWheel && cartWheel.unitPrice > 0 ? (
-            <div className="text-sm font-bold text-green-700 mt-1">
-              ${(cartWheel.unitPrice * cartWheel.quantity).toFixed(2)} in cart
-            </div>
-          ) : null}
-        </div>
-        <div className="flex-shrink-0">
-          {wheelInCart ? (
-            <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-bold text-green-800">
-              ✓ In Cart
-            </span>
-          ) : (
-            <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-bold text-blue-800">
-              Selected
-            </span>
-          )}
-        </div>
-      </div>
-
-      {/* Size Selection */}
+    <div className="mb-4 rounded-xl border border-neutral-200 bg-white p-4">
+      {/* Size Selection - Primary Focus */}
       {recommendedSizes.length > 0 ? (
-        <div className="mt-4">
-          <div className="text-sm font-bold text-neutral-900 mb-2">
-            Choose your tire size:
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">🛞</span>
+              <span className="text-sm font-bold text-neutral-900">
+                Select tire size for your {effectiveWheel.diameter}" wheels
+              </span>
+            </div>
+            <Link
+              href="/cart"
+              className="text-xs text-neutral-500 hover:text-neutral-700 hover:underline"
+            >
+              Skip →
+            </Link>
           </div>
           <div className="flex flex-wrap gap-2">
             {recommendedSizes.map((ts) => {
@@ -179,7 +129,7 @@ export function TireMatchingBanner({
                 <Link
                   key={ts.size}
                   href={getSizeUrl(ts.size)}
-                  className={`rounded-xl px-4 py-2 text-sm font-semibold transition-all ${
+                  className={`rounded-lg px-4 py-2 text-sm font-semibold transition-all ${
                     isActive
                       ? "bg-neutral-900 text-white"
                       : ts.isOem
@@ -200,38 +150,24 @@ export function TireMatchingBanner({
 
       {/* Package Summary (when tires in cart) */}
       {mounted && hasTires() ? (
-        <div className="mt-4 rounded-xl bg-green-50 border border-green-200 p-3">
+        <div className="mt-3 rounded-lg bg-green-50 border border-green-200 p-3">
           <div className="flex items-center justify-between">
-            <div>
-              <div className="text-sm font-bold text-green-900">
-                ✓ Package Ready
-              </div>
-              <div className="text-xs text-green-700">
-                Wheels + Tires selected
-              </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✓</span>
+              <span className="text-sm font-bold text-green-900">Package Ready</span>
             </div>
-            <div className="text-right">
-              <div className="text-lg font-extrabold text-green-900">
+            <div className="flex items-center gap-3">
+              <span className="text-lg font-extrabold text-green-900">
                 ${cartTotal.toFixed(2)}
-              </div>
+              </span>
               <Link
-                href="/cart"
+                href="/package/review"
                 className="text-xs font-bold text-green-700 hover:underline"
               >
-                View package →
+                Review →
               </Link>
             </div>
           </div>
-        </div>
-      ) : null}
-
-      {/* Vehicle Fit Confirmation */}
-      {vehicle ? (
-        <div className="mt-3 flex items-center gap-2 text-xs text-neutral-600">
-          <span className="text-green-600">✓</span>
-          <span>
-            Showing tires that fit your {vehicle.year} {vehicle.make} {vehicle.model}
-          </span>
         </div>
       ) : null}
     </div>

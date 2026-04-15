@@ -12,6 +12,7 @@ import { US_STATES } from "@/lib/geo/usStates";
 import { useCartTracking, getCartId } from "@/lib/cart/useCartTracking";
 import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@/lib/shipping/shippingService";
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
+import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 
 /**
  * Checkout Page
@@ -37,6 +38,8 @@ export default function CheckoutPage() {
     hasWheels,
     hasTires,
     clearCart,
+    removeItem,
+    updateQuantity,
   } = useCart();
 
   // Validate package
@@ -374,19 +377,45 @@ export default function CheckoutPage() {
                 <div className="rounded-2xl border border-neutral-200 bg-white divide-y divide-neutral-100">
                   {/* Wheels */}
                   {wheels.map((wheel) => (
-                    <CheckoutItem key={wheel.sku} item={wheel} type="wheel" />
+                    <CheckoutItem 
+                      key={wheel.sku} 
+                      item={wheel} 
+                      type="wheel"
+                      onRemove={() => removeItem(wheel.sku, "wheel")}
+                      onQuantityChange={(qty) => updateQuantity(wheel.sku, "wheel", qty)}
+                    />
                   ))}
 
                   {/* Tires */}
                   {tires.map((tire) => (
-                    <CheckoutItem key={tire.sku} item={tire} type="tire" />
+                    <CheckoutItem 
+                      key={tire.sku} 
+                      item={tire} 
+                      type="tire"
+                      onRemove={() => removeItem(tire.sku, "tire")}
+                      onQuantityChange={(qty) => updateQuantity(tire.sku, "tire", qty)}
+                    />
                   ))}
 
                   {/* Accessories */}
                   {accessories.map((acc) => (
-                    <CheckoutItem key={acc.sku} item={acc} type="accessory" />
+                    <CheckoutItem 
+                      key={acc.sku} 
+                      item={acc} 
+                      type="accessory"
+                      onRemove={() => removeItem(acc.sku, "accessory")}
+                      onQuantityChange={(qty) => updateQuantity(acc.sku, "accessory", qty)}
+                    />
                   ))}
                 </div>
+                
+                {/* TPMS Suggestion - show if applicable vehicle and not already in cart */}
+                <TPMSSuggestion 
+                  vehicleYear={vehicle?.year}
+                  vehicleMake={vehicle?.make}
+                  vehicleModel={vehicle?.model}
+                  context="package"
+                />
 
                 {/* Warnings */}
                 {validation.warnings.length > 0 && (
@@ -737,19 +766,77 @@ export default function CheckoutPage() {
 
 // ===== Checkout Item Component =====
 
+/**
+ * Enhanced Checkout Item Component
+ * Features:
+ * - Remove button for all item types
+ * - Quantity controls (wheels/tires: 4-5, accessories: flexible)
+ * - Immediate total updates
+ * - Visual feedback
+ */
 function CheckoutItem({
   item,
   type,
+  onRemove,
+  onQuantityChange,
 }: {
   item: CartWheelItem | CartTireItem | CartAccessoryItem;
   type: "wheel" | "tire" | "accessory";
+  onRemove: () => void;
+  onQuantityChange: (newQty: number) => void;
 }) {
   const lineTotal = item.unitPrice * item.quantity;
+  
+  // Quantity constraints
+  // Wheels/tires: 4 (standard) or 5 (with spare), accessories: 1-99
+  const minQty = type === "accessory" ? 1 : 4;
+  const maxQty = type === "accessory" ? 99 : 5;
+  const canDecrement = item.quantity > minQty;
+  const canIncrement = item.quantity < maxQty;
+
+  const QuantityControls = () => (
+    <div className="flex items-center gap-1 mt-1">
+      <button
+        onClick={() => canDecrement && onQuantityChange(item.quantity - 1)}
+        disabled={!canDecrement}
+        className={`w-6 h-6 rounded flex items-center justify-center text-sm font-bold transition-colors ${
+          canDecrement
+            ? "bg-neutral-100 hover:bg-neutral-200 text-neutral-700"
+            : "bg-neutral-50 text-neutral-300 cursor-not-allowed"
+        }`}
+        aria-label="Decrease quantity"
+      >
+        −
+      </button>
+      <span className="w-8 text-center text-sm font-semibold">{item.quantity}</span>
+      <button
+        onClick={() => canIncrement && onQuantityChange(item.quantity + 1)}
+        disabled={!canIncrement}
+        className={`w-6 h-6 rounded flex items-center justify-center text-sm font-bold transition-colors ${
+          canIncrement
+            ? "bg-neutral-100 hover:bg-neutral-200 text-neutral-700"
+            : "bg-neutral-50 text-neutral-300 cursor-not-allowed"
+        }`}
+        aria-label="Increase quantity"
+      >
+        +
+      </button>
+    </div>
+  );
+
+  const RemoveButton = () => (
+    <button
+      onClick={onRemove}
+      className="text-xs text-red-500 hover:text-red-700 hover:underline transition-colors"
+    >
+      Remove
+    </button>
+  );
 
   if (type === "wheel") {
     const wheel = item as CartWheelItem;
     return (
-      <div className="flex gap-4 p-4">
+      <div className="flex gap-4 p-4 group">
         <div className="w-16 h-16 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
           {wheel.imageUrl ? (
             <img src={wheel.imageUrl} alt={wheel.model} className="w-full h-full object-contain" />
@@ -763,10 +850,12 @@ function CheckoutItem({
           <div className="text-sm text-neutral-600">
             {wheel.diameter}" × {wheel.width}" • {wheel.boltPattern}
           </div>
+          <QuantityControls />
         </div>
-        <div className="text-right">
-          <div className="text-xs text-neutral-500">×{wheel.quantity}</div>
+        <div className="text-right space-y-1">
           <div className="font-bold text-neutral-900">${lineTotal.toFixed(2)}</div>
+          <div className="text-xs text-neutral-500">${wheel.unitPrice.toFixed(2)} each</div>
+          <RemoveButton />
         </div>
       </div>
     );
@@ -775,7 +864,7 @@ function CheckoutItem({
   if (type === "tire") {
     const tire = item as CartTireItem;
     return (
-      <div className="flex gap-4 p-4">
+      <div className="flex gap-4 p-4 group">
         <div className="w-16 h-16 flex-shrink-0 rounded-lg border border-neutral-100 bg-neutral-50 overflow-hidden">
           {tire.imageUrl ? (
             <img src={tire.imageUrl} alt={tire.model} className="w-full h-full object-contain" />
@@ -787,10 +876,12 @@ function CheckoutItem({
           <div className="text-xs font-semibold text-neutral-500">{tire.brand}</div>
           <div className="font-bold text-neutral-900">{tire.model}</div>
           <div className="text-sm text-neutral-600">{normalizeTireSize(tire.size)}</div>
+          <QuantityControls />
         </div>
-        <div className="text-right">
-          <div className="text-xs text-neutral-500">×{tire.quantity}</div>
+        <div className="text-right space-y-1">
           <div className="font-bold text-neutral-900">${lineTotal.toFixed(2)}</div>
+          <div className="text-xs text-neutral-500">${tire.unitPrice.toFixed(2)} each</div>
+          <RemoveButton />
         </div>
       </div>
     );
@@ -798,25 +889,36 @@ function CheckoutItem({
 
   // Accessory
   const acc = item as CartAccessoryItem;
+  const isRequired = acc.required;
+  
   return (
-    <div className="flex gap-4 p-4 bg-neutral-50">
+    <div className="flex gap-4 p-4 bg-neutral-50 group">
       <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-neutral-200 flex items-center justify-center text-lg">
-        {acc.category === "lug_nut" ? "🔩" : acc.category === "hub_ring" ? "⭕" : "🔧"}
+        {acc.category === "lug_nut" ? "🔩" : acc.category === "hub_ring" ? "⭕" : acc.category === "tpms" ? "📡" : "🔧"}
       </div>
       <div className="flex-1 min-w-0">
         <div className="font-semibold text-neutral-900 flex items-center gap-2">
           {acc.name}
-          {acc.required && (
+          {isRequired && (
             <span className="text-[10px] uppercase bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">Required</span>
           )}
         </div>
         {acc.spec?.threadSize && (
           <div className="text-xs text-neutral-500">{acc.spec.threadSize}</div>
         )}
+        {!isRequired && <QuantityControls />}
+        {isRequired && (
+          <div className="text-xs text-neutral-400 mt-1">Qty: {acc.quantity} (required for fitment)</div>
+        )}
       </div>
-      <div className="text-right">
-        <div className="text-xs text-neutral-500">×{acc.quantity}</div>
-        <div className="font-semibold text-neutral-900">${lineTotal.toFixed(2)}</div>
+      <div className="text-right space-y-1">
+        <div className="font-semibold text-neutral-900">
+          {acc.unitPrice > 0 ? `$${lineTotal.toFixed(2)}` : "Included"}
+        </div>
+        {acc.unitPrice > 0 && (
+          <div className="text-xs text-neutral-500">${acc.unitPrice.toFixed(2)} each</div>
+        )}
+        {!isRequired && <RemoveButton />}
       </div>
     </div>
   );
