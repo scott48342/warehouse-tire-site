@@ -203,21 +203,26 @@ export function TireStep() {
         const data = await res.json();
         
         // Normalize tire data
-        const normalizedTires: TireResult[] = (data.tires || []).map((t: Record<string, unknown>) => ({
-          sku: t.partNumber || t.sku || "",
-          partNumber: t.partNumber,
-          brand: t.brand || "Unknown",
-          model: t.description || t.model || "",
-          displayName: t.displayName || t.prettyName,
-          size: t.size || "",
-          imageUrl: t.imageUrl,
-          price: typeof t.price === "number" ? t.price : (typeof t.cost === "number" ? t.cost + 50 : 0),
-          loadIndex: t.badges?.loadIndex || t.loadIndex,
-          speedRating: t.badges?.speedRating || t.speedRating,
-          warrantyMiles: t.badges?.warrantyMiles || t.warrantyMiles,
-          treadCategory: t.treadCategory || t.badges?.terrain,
-          stockQty: t.quantity?.primary || 0,
-        }));
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const normalizedTires: TireResult[] = (data.tires || []).map((t: any) => {
+          const badges = t.badges || {};
+          const quantity = t.quantity || {};
+          return {
+            sku: t.partNumber || t.sku || "",
+            partNumber: t.partNumber,
+            brand: t.brand || "Unknown",
+            model: t.description || t.model || "",
+            displayName: t.displayName || t.prettyName,
+            size: t.size || "",
+            imageUrl: t.imageUrl,
+            price: typeof t.price === "number" ? t.price : (typeof t.cost === "number" ? t.cost + 50 : 0),
+            loadIndex: badges.loadIndex || t.loadIndex,
+            speedRating: badges.speedRating || t.speedRating,
+            warrantyMiles: badges.warrantyMiles || t.warrantyMiles,
+            treadCategory: t.treadCategory || badges.terrain,
+            stockQty: quantity.primary || 0,
+          };
+        });
         
         setTires(normalizedTires);
       } catch (err) {
