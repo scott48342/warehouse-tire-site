@@ -47,3 +47,5 @@ deploy-staging.ps1
 test-staging.ps1
 .env.prod
 .env.production.local
+
+backups/
