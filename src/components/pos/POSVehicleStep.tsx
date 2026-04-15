@@ -41,7 +41,7 @@ export function POSVehicleStep() {
     setLoadingMakes(true);
     fetch(`/api/vehicles/makes?year=${year}`)
       .then((res) => res.json())
-      .then((data) => setMakes(data.makes || []))
+      .then((data) => setMakes(data.results || data.makes || []))
       .catch(() => setMakes([]))
       .finally(() => setLoadingMakes(false));
     
@@ -64,7 +64,7 @@ export function POSVehicleStep() {
     setLoadingModels(true);
     fetch(`/api/vehicles/models?year=${year}&make=${encodeURIComponent(make)}`)
       .then((res) => res.json())
-      .then((data) => setModels(data.models || []))
+      .then((data) => setModels(data.results || data.models || []))
       .catch(() => setModels([]))
       .finally(() => setLoadingModels(false));
     
@@ -85,7 +85,7 @@ export function POSVehicleStep() {
     setLoadingTrims(true);
     fetch(`/api/vehicles/trims?year=${year}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}`)
       .then((res) => res.json())
-      .then((data) => setTrims(data.trims || []))
+      .then((data) => setTrims(data.results || data.trims || []))
       .catch(() => setTrims([]))
       .finally(() => setLoadingTrims(false));
     
