@@ -1505,6 +1505,7 @@ export async function GET(req: Request) {
         if (liftProfile) {
           // Get recommended tire sizes for this lift height
           const liftSizes = getTireSizesForLift(liftProfile, liftInches, wheelDiameter);
+          const rec = getRecommendationForLiftHeight(liftProfile, liftInches);
           
           if (liftSizes.length > 0) {
             commonSizes = liftSizes;
@@ -1512,11 +1513,22 @@ export async function GET(req: Request) {
             console.log(`  Recommended sizes for ${wheelDiameter}" wheels: ${commonSizes.join(", ")}`);
           } else {
             // Lift profile exists but no sizes match this wheel diameter
-            // Get all recommended sizes and let the search find what's available
-            const allLiftSizes = getTireSizesForLift(liftProfile, liftInches);
-            commonSizes = allLiftSizes.length > 0 ? allLiftSizes : [];
+            // Generate flotation sizes for this wheel diameter using the recommended tire diameter range
+            const minDia = rec.tireDiameterMin;
+            const maxDia = rec.tireDiameterMax;
+            const midDia = Math.round((minDia + maxDia) / 2);
+            
+            // Generate common flotation sizes for this wheel diameter
+            commonSizes = [
+              `${midDia}x12.50R${wheelDiameter}`,
+              `${midDia}x13.50R${wheelDiameter}`,
+              `${minDia}x12.50R${wheelDiameter}`,
+              `${maxDia}x12.50R${wheelDiameter}`,
+              `${maxDia}x13.50R${wheelDiameter}`,
+            ];
             console.log(`[tires/search] LIFT PROFILE: ${make} ${model} with ${liftInches}" lift`);
-            console.log(`  No exact matches for ${wheelDiameter}" wheels, searching all lift sizes: ${commonSizes.join(", ")}`);
+            console.log(`  No R${wheelDiameter} sizes in profile, generating flotation sizes for ${minDia}-${maxDia}" tires`);
+            console.log(`  Generated sizes: ${commonSizes.join(", ")}`);
           }
         } else {
           // No lift profile - use generic flotation sizes based on target tire size or lift height

@@ -398,6 +398,24 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
           const liftProfile = getLiftProfile(make, model);
           if (liftProfile) {
             const rec = getRecommendationForLiftHeight(liftProfile, state.liftConfig.liftInches);
+            const wheelDia = state.wheel?.diameter ? parseInt(state.wheel.diameter) : null;
+            
+            // Get sizes that match the selected wheel diameter
+            let displaySizes = getTireSizesForLift(liftProfile, state.liftConfig.liftInches, wheelDia || undefined);
+            
+            // If no sizes match the wheel diameter, generate appropriate flotation sizes
+            if (displaySizes.length === 0 && wheelDia) {
+              const minDia = rec.tireDiameterMin;
+              const maxDia = rec.tireDiameterMax;
+              const midDia = Math.round((minDia + maxDia) / 2);
+              displaySizes = [
+                `${midDia}x12.50R${wheelDia}`,
+                `${midDia}x13.50R${wheelDia}`,
+                `${minDia}x12.50R${wheelDia}`,
+                `${maxDia}x12.50R${wheelDia}`,
+              ];
+            }
+            
             return (
               <div className="mt-4 rounded-lg bg-amber-50 border border-amber-200 p-4">
                 <div className="flex items-start gap-3">
@@ -409,16 +427,16 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
                     <div className="mt-1 text-sm text-amber-700">
                       {rec.tireDiameterMin}"-{rec.tireDiameterMax}" overall diameter • {rec.stanceDescription}
                     </div>
-                    {rec.commonTireSizes.length > 0 && (
+                    {displaySizes.length > 0 && (
                       <div className="mt-2 flex flex-wrap gap-1.5">
-                        {rec.commonTireSizes.slice(0, 6).map((ts) => (
+                        {displaySizes.slice(0, 6).map((ts) => (
                           <span key={ts} className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-medium">
                             {ts}
                           </span>
                         ))}
-                        {rec.commonTireSizes.length > 6 && (
+                        {displaySizes.length > 6 && (
                           <span className="px-2 py-0.5 text-amber-600 text-xs">
-                            +{rec.commonTireSizes.length - 6} more
+                            +{displaySizes.length - 6} more
                           </span>
                         )}
                       </div>
