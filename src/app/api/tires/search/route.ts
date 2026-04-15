@@ -1023,7 +1023,8 @@ export async function GET(req: Request) {
     const make = url.searchParams.get("make");
     const model = url.searchParams.get("model");
     const modification = url.searchParams.get("modification") || url.searchParams.get("trim");
-    const wheelDiameter = i(url.searchParams.get("wheelDiameter"));
+    // Accept both "wheelDiameter" and "wheelDia" (POS uses wheelDia)
+    const wheelDiameter = i(url.searchParams.get("wheelDiameter") || url.searchParams.get("wheelDia"));
     
     // Pagination
     // pageSize can be up to 500 for server-side rendering (brand filters need all results)
@@ -1481,8 +1482,36 @@ export async function GET(req: Request) {
       
     } else if (wheelDiameter && matchMode === "direct-search") {
       // Direct search by rim diameter when no OEM sizes match
-      // Search for common sizes with this rim diameter
-      const commonSizes = [`205/55R${wheelDiameter}`, `225/45R${wheelDiameter}`, `245/40R${wheelDiameter}`];
+      // Use vehicle-appropriate tire sizes based on vehicle type
+      
+      // Detect vehicle class from model name
+      const modelLower = (model || "").toLowerCase();
+      const isTruckOrSUV = /hummer|h1|h2|h3|f-\d{3}|silverado|sierra|ram|tundra|titan|tacoma|ranger|frontier|colorado|canyon|ridgeline|maverick|wrangler|bronco|4runner|tahoe|suburban|expedition|explorer|highlander|pilot|pathfinder|telluride|palisade|defender|grand cherokee|durango|sequoia|armada|escalade|yukon|land cruiser|xterra|xj|cj|tj|jk|jl/i.test(modelLower);
+      
+      // Choose appropriate tire sizes based on vehicle type
+      let commonSizes: string[];
+      if (isTruckOrSUV) {
+        // Truck/SUV: Use wider, higher-profile tires
+        commonSizes = [
+          `285/45R${wheelDiameter}`,
+          `275/55R${wheelDiameter}`,
+          `305/40R${wheelDiameter}`,
+          `265/50R${wheelDiameter}`,
+          `295/45R${wheelDiameter}`,
+        ];
+        console.log(`[tires/search] Direct search for TRUCK/SUV (${model}): ${commonSizes.join(", ")}`);
+      } else {
+        // Car: Use typical car sizes
+        commonSizes = [
+          `245/40R${wheelDiameter}`,
+          `225/45R${wheelDiameter}`,
+          `255/35R${wheelDiameter}`,
+          `235/40R${wheelDiameter}`,
+          `205/55R${wheelDiameter}`,
+        ];
+        console.log(`[tires/search] Direct search for CAR (${model}): ${commonSizes.join(", ")}`);
+      }
+      
       const directCacheKey = buildVehicleCacheKey(commonSizes, wheelDiameter);
       
       const cacheResult = await cachedTireSearch({
