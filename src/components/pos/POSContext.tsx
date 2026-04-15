@@ -13,6 +13,19 @@ export interface POSVehicle {
   trim?: string;
 }
 
+// Build type for lifted/leveled/stock configurations
+export type POSBuildType = "stock" | "leveled" | "lifted";
+
+// Lift configuration for leveled/lifted builds
+export interface POSLiftConfig {
+  liftInches: number;           // e.g., 2, 3, 4, 6, 8
+  targetTireSize?: number;      // Target tire diameter in inches (33, 35, 37)
+  presetId?: "daily" | "offroad" | "extreme";
+  offsetMin?: number;
+  offsetMax?: number;
+  notes?: string[];             // Fitment notes like "May require trimming"
+}
+
 export interface POSWheel {
   sku: string;
   brand: string;
@@ -67,6 +80,14 @@ export interface POSAdminSettings {
   disposalPerTire: number;
   alignmentPrice: number;
   
+  // Lift install labor (flat rate by lift height)
+  liftInstallLabor: {
+    level: number;     // Leveling kit install
+    lift2to3: number;  // 2-3" lift
+    lift4to6: number;  // 4-6" lift  
+    lift8plus: number; // 8"+ lift
+  };
+  
   // Credit card fee
   creditCardFeePercent: number; // e.g., 3.99 for 3.99%
   
@@ -79,11 +100,16 @@ export interface POSAdminSettings {
   }>;
 }
 
-export type POSStep = "vehicle" | "package" | "pricing" | "quote";
+export type POSStep = "vehicle" | "build-type" | "package" | "pricing" | "quote";
 
 export interface POSState {
   step: POSStep;
   vehicle: POSVehicle | null;
+  
+  // Build configuration (lifted/leveled/stock)
+  buildType: POSBuildType;
+  liftConfig: POSLiftConfig | null;
+  
   wheel: POSWheel | null;
   tire: POSTire | null;
   fees: POSFees;
@@ -104,7 +130,8 @@ export interface POSState {
     tpms: boolean;
     disposal: boolean;
     alignment: boolean;
-    creditCard: boolean; // Credit card processing fee
+    liftInstall: boolean;  // Lift/level kit install labor
+    creditCard: boolean;   // Credit card processing fee
     customIds: string[];
   };
 }
@@ -117,7 +144,13 @@ const DEFAULT_ADMIN_SETTINGS: POSAdminSettings = {
   laborPerWheel: 25,        // $25/wheel = $100 for set of 4
   tpmsPerSensor: 15,        // $15/sensor = $60 for set of 4
   disposalPerTire: 5,       // $5/tire = $20 for set of 4
-  alignmentPrice: 0,        // Alignment removed - set to 0
+  alignmentPrice: 89,       // Alignment price
+  liftInstallLabor: {
+    level: 150,      // Leveling kit install
+    lift2to3: 350,   // 2-3" lift install
+    lift4to6: 550,   // 4-6" lift install
+    lift8plus: 850,  // 8"+ lift install
+  },
   creditCardFeePercent: 3.99, // 3.99% credit card processing fee
   customAddOns: [
     { id: "lugnuts", name: "Lug Nuts (set)", price: 40, perUnit: false },
@@ -138,17 +171,20 @@ const DEFAULT_FEES: POSFees = {
 const FIXED_TAX_RATE = 0.06;
 
 const DEFAULT_SELECTED_ADDONS = {
-  labor: true,      // Labor on by default
+  labor: true,       // Labor on by default
   tpms: false,
-  disposal: true,   // Disposal on by default
+  disposal: true,    // Disposal on by default
   alignment: false,
-  creditCard: false, // Off by default (cash/check)
+  liftInstall: false, // Lift install labor (only relevant for lifted/leveled builds)
+  creditCard: false,  // Off by default (cash/check)
   customIds: [],
 };
 
 const initialState: POSState = {
   step: "vehicle",
   vehicle: null,
+  buildType: "stock",
+  liftConfig: null,
   wheel: null,
   tire: null,
   fees: DEFAULT_FEES,
@@ -193,6 +229,7 @@ function saveAdminSettings(settings: POSAdminSettings): void {
 
 type POSAction =
   | { type: "SET_VEHICLE"; payload: POSVehicle }
+  | { type: "SET_BUILD_TYPE"; payload: { buildType: POSBuildType; liftConfig?: POSLiftConfig } }
   | { type: "SET_WHEEL"; payload: POSWheel }
   | { type: "SET_TIRE"; payload: POSTire }
   | { type: "SET_FEES"; payload: Partial<POSFees> }
@@ -212,10 +249,31 @@ function posReducer(state: POSState, action: POSAction): POSState {
       return { 
         ...state, 
         vehicle: action.payload,
-        step: "package",
+        step: "build-type",  // Go to build type selection after vehicle
+        buildType: "stock",  // Reset to stock
+        liftConfig: null,
         wheel: null,
         tire: null,
       };
+    
+    case "SET_BUILD_TYPE": {
+      const { buildType, liftConfig } = action.payload;
+      // Auto-enable lift install labor for lifted/leveled builds
+      const shouldEnableLiftInstall = buildType !== "stock" && !!liftConfig;
+      return {
+        ...state,
+        buildType,
+        liftConfig: liftConfig || null,
+        step: "package",  // Proceed to wheel/tire selection
+        wheel: null,
+        tire: null,
+        selectedAddOns: {
+          ...state.selectedAddOns,
+          liftInstall: shouldEnableLiftInstall,
+          alignment: shouldEnableLiftInstall,  // Alignment usually needed for lifts
+        },
+      };
+    }
     
     case "SET_WHEEL":
       return { ...state, wheel: action.payload };
@@ -250,6 +308,8 @@ function posReducer(state: POSState, action: POSAction): POSState {
       return {
         ...initialState,
         adminSettings: state.adminSettings, // Preserve admin settings
+        buildType: "stock",
+        liftConfig: null,
         selectedAddOns: DEFAULT_SELECTED_ADDONS,
       };
     
@@ -285,6 +345,7 @@ interface POSContextValue {
   
   // Actions
   setVehicle: (vehicle: POSVehicle) => void;
+  setBuildType: (buildType: POSBuildType, liftConfig?: POSLiftConfig) => void;
   setWheel: (wheel: POSWheel) => void;
   setTire: (tire: POSTire) => void;
   setFees: (fees: Partial<POSFees>) => void;
@@ -301,8 +362,9 @@ interface POSContextValue {
   
   // Computed values
   subtotal: number;          // Wheels + Tires
-  laborTotal: number;        // Labor fees
-  addOnsTotal: number;       // All add-ons
+  laborTotal: number;        // Labor fees (mount & balance)
+  liftInstallTotal: number;  // Lift kit install labor
+  addOnsTotal: number;       // All other add-ons
   discountAmount: number;    // Discount value
   taxableAmount: number;     // What gets taxed
   taxAmount: number;         // Tax
@@ -337,7 +399,25 @@ export function POSProvider({ children }: { children: ReactNode }) {
     ? state.adminSettings.laborPerWheel * 4 
     : 0;
   
-  // Computed: Add-ons total
+  // Computed: Lift install labor (based on lift height)
+  const liftInstallTotal = (() => {
+    if (!state.selectedAddOns.liftInstall || !state.liftConfig) return 0;
+    
+    const { liftInches } = state.liftConfig;
+    const { liftInstallLabor } = state.adminSettings;
+    
+    if (state.buildType === "leveled" || liftInches <= 2) {
+      return liftInstallLabor.level;
+    } else if (liftInches <= 3) {
+      return liftInstallLabor.lift2to3;
+    } else if (liftInches <= 6) {
+      return liftInstallLabor.lift4to6;
+    } else {
+      return liftInstallLabor.lift8plus;
+    }
+  })();
+  
+  // Computed: Add-ons total (excluding lift install which is separate)
   const addOnsTotal = (() => {
     let total = 0;
     
@@ -375,14 +455,14 @@ export function POSProvider({ children }: { children: ReactNode }) {
   const taxAmount = taxableAmount * FIXED_TAX_RATE;
   
   // Subtotal after tax (before credit card fee)
-  const subtotalAfterTax = subtotal + laborTotal + addOnsTotal - discountAmount + taxAmount;
+  const subtotalAfterTax = subtotal + laborTotal + liftInstallTotal + addOnsTotal - discountAmount + taxAmount;
   
   // Credit card fee (applied to total if paying by card)
   const creditCardFee = state.selectedAddOns.creditCard
     ? subtotalAfterTax * (state.adminSettings.creditCardFeePercent / 100)
     : 0;
   
-  // Out the door = Parts + Labor + AddOns - Discount + Tax + CC Fee
+  // Out the door = Parts + Labor + Lift Install + AddOns - Discount + Tax + CC Fee
   const outTheDoorPrice = subtotalAfterTax + creditCardFee;
   
   // Helpers
@@ -393,6 +473,7 @@ export function POSProvider({ children }: { children: ReactNode }) {
     state,
     
     setVehicle: (vehicle) => dispatch({ type: "SET_VEHICLE", payload: vehicle }),
+    setBuildType: (buildType, liftConfig) => dispatch({ type: "SET_BUILD_TYPE", payload: { buildType, liftConfig } }),
     setWheel: (wheel) => dispatch({ type: "SET_WHEEL", payload: wheel }),
     setTire: (tire) => dispatch({ type: "SET_TIRE", payload: tire }),
     setFees: (fees) => dispatch({ type: "SET_FEES", payload: fees }),
@@ -408,6 +489,7 @@ export function POSProvider({ children }: { children: ReactNode }) {
     
     subtotal,
     laborTotal,
+    liftInstallTotal,
     addOnsTotal,
     discountAmount,
     taxableAmount,

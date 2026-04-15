@@ -1673,3 +1673,102 @@ export function formatOffsetRange(rec: LiftRecommendation): string {
   const maxStr = rec.offsetMax >= 0 ? `+${rec.offsetMax}` : `${rec.offsetMax}`;
   return `${minStr} to ${maxStr}mm`;
 }
+
+// ─────────────────────────────────────────────────────────────
+// POS-specific helpers
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Get lift profile for a vehicle (simplified for POS)
+ */
+export function getLiftProfile(
+  make: string,
+  model: string,
+  year?: number
+): VehicleLiftProfile | null {
+  return findLiftProfile(make, model, year) || null;
+}
+
+/**
+ * Get recommendation based on lift height (not preset ID)
+ * Maps lift inches to appropriate preset level
+ */
+export function getRecommendationForLiftHeight(
+  profile: VehicleLiftProfile,
+  liftInches: number
+): LiftRecommendation {
+  // Map lift height to preset level
+  let level: LiftLevel;
+  if (liftInches <= 2.5) {
+    level = "daily";
+  } else if (liftInches <= 4) {
+    level = "offroad";
+  } else {
+    level = "extreme";
+  }
+  
+  return profile.recommendations[level];
+}
+
+/**
+ * Check if a wheel fits the lift configuration
+ */
+export function wheelFitsLiftConfig(
+  wheelOffset: number,
+  wheelDiameter: number,
+  liftInches: number,
+  profile: VehicleLiftProfile | null
+): { fits: boolean; notes: string[] } {
+  if (!profile) {
+    return { fits: true, notes: ["Fitment profile not available - verify manually"] };
+  }
+  
+  const rec = getRecommendationForLiftHeight(profile, liftInches);
+  const notes: string[] = [];
+  
+  // Check diameter
+  if (wheelDiameter < rec.wheelDiameterMin || wheelDiameter > rec.wheelDiameterMax) {
+    notes.push(`Recommended wheel diameter: ${rec.wheelDiameterMin}-${rec.wheelDiameterMax}"`);
+  }
+  
+  // Check offset
+  if (wheelOffset < rec.offsetMin || wheelOffset > rec.offsetMax) {
+    notes.push(`Recommended offset: ${rec.offsetLabel}`);
+  }
+  
+  // Add general notes from recommendation
+  if (rec.notes.length > 0) {
+    notes.push(...rec.notes);
+  }
+  
+  return {
+    fits: notes.length === 0 || notes.every(n => rec.notes.includes(n)),
+    notes,
+  };
+}
+
+/**
+ * Get tire sizes recommended for a lift configuration
+ */
+export function getTireSizesForLift(
+  profile: VehicleLiftProfile | null,
+  liftInches: number,
+  wheelDiameter?: number
+): string[] {
+  if (!profile) return [];
+  
+  const rec = getRecommendationForLiftHeight(profile, liftInches);
+  
+  if (!wheelDiameter) {
+    return rec.commonTireSizes;
+  }
+  
+  // Filter to sizes matching the wheel diameter
+  return rec.commonTireSizes.filter((size) => {
+    const rimMatch = size.match(/R(\d+)$/i) || size.match(/(\d+)$/);
+    if (rimMatch) {
+      return parseInt(rimMatch[1], 10) === wheelDiameter;
+    }
+    return false;
+  });
+}

@@ -25,7 +25,7 @@ export function POSHeader() {
             </div>
           </div>
           
-          {/* Vehicle badge */}
+          {/* Vehicle + Build badge */}
           {state.vehicle && (
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-800 border border-neutral-700">
               <span className="text-sm text-neutral-300">
@@ -33,6 +33,15 @@ export function POSHeader() {
               </span>
               {state.vehicle.trim && (
                 <span className="text-xs text-neutral-500">{state.vehicle.trim}</span>
+              )}
+              {state.buildType !== "stock" && state.liftConfig && (
+                <span className={`ml-2 px-2 py-0.5 rounded text-xs font-medium ${
+                  state.buildType === "lifted" 
+                    ? "bg-orange-600/20 text-orange-400" 
+                    : "bg-blue-600/20 text-blue-400"
+                }`}>
+                  {state.buildType === "leveled" ? "Leveled" : `${state.liftConfig.liftInches}" Lift`}
+                </span>
               )}
             </div>
           )}
@@ -75,6 +84,7 @@ export function POSHeader() {
 
 const STEPS = [
   { key: "vehicle", label: "Vehicle", icon: "🚗" },
+  { key: "build-type", label: "Build", icon: "🛠️" },
   { key: "package", label: "Package", icon: "📦" },
   { key: "pricing", label: "Pricing", icon: "💰" },
   { key: "quote", label: "Quote", icon: "📄" },
@@ -94,14 +104,15 @@ export function POSStepIndicator() {
             const isCompleted = idx < currentIndex;
             const isClickable = 
               step.key === "vehicle" ||
-              (step.key === "package" && state.vehicle) ||
+              (step.key === "build-type" && state.vehicle) ||
+              (step.key === "package" && state.vehicle && state.buildType) ||
               (step.key === "pricing" && state.wheel && state.tire) ||
               (step.key === "quote" && isComplete);
             
             return (
               <button
                 key={step.key}
-                onClick={() => isClickable && goToStep(step.key)}
+                onClick={() => isClickable && goToStep(step.key as any)}
                 disabled={!isClickable}
                 className={`
                   flex items-center gap-2 px-4 py-2 rounded-lg transition-all

@@ -5,6 +5,7 @@ import {
   POSStepIndicator,
   POSFooter,
   POSVehicleStep,
+  POSBuildTypeStep,
   POSPackageStep,
   POSPricingStep,
   POSQuoteStep,
@@ -20,6 +21,8 @@ function StepRouter() {
   switch (state.step) {
     case "vehicle":
       return <POSVehicleStep />;
+    case "build-type":
+      return <POSBuildTypeStep />;
     case "package":
       return <POSPackageStep />;
     case "pricing":
