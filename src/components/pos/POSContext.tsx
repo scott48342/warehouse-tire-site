@@ -67,6 +67,9 @@ export interface POSAdminSettings {
   disposalPerTire: number;
   alignmentPrice: number;
   
+  // Credit card fee
+  creditCardFeePercent: number; // e.g., 3.99 for 3.99%
+  
   // Custom add-ons that can be toggled
   customAddOns: Array<{
     id: string;
@@ -101,6 +104,7 @@ export interface POSState {
     tpms: boolean;
     disposal: boolean;
     alignment: boolean;
+    creditCard: boolean; // Credit card processing fee
     customIds: string[];
   };
 }
@@ -114,6 +118,7 @@ const DEFAULT_ADMIN_SETTINGS: POSAdminSettings = {
   tpmsPerSensor: 15,        // $15/sensor = $60 for set of 4
   disposalPerTire: 5,       // $5/tire = $20 for set of 4
   alignmentPrice: 89,       // Flat $89 alignment
+  creditCardFeePercent: 3.99, // 3.99% credit card processing fee
   customAddOns: [
     { id: "lugnuts", name: "Lug Nuts (set)", price: 40, perUnit: false },
     { id: "hubcentric", name: "Hub Centric Rings", price: 30, perUnit: false },
@@ -138,6 +143,7 @@ const DEFAULT_SELECTED_ADDONS = {
   tpms: false,
   disposal: true,   // Disposal on by default
   alignment: false,
+  creditCard: false, // Off by default (cash/check)
   customIds: [],
 };
 
@@ -301,6 +307,7 @@ interface POSContextValue {
   discountAmount: number;    // Discount value
   taxableAmount: number;     // What gets taxed
   taxAmount: number;         // Tax
+  creditCardFee: number;     // Credit card processing fee
   outTheDoorPrice: number;   // Final total
   
   // Helpers
@@ -368,8 +375,16 @@ export function POSProvider({ children }: { children: ReactNode }) {
   // Tax amount (fixed 6%)
   const taxAmount = taxableAmount * FIXED_TAX_RATE;
   
-  // Out the door = Parts + Labor + AddOns - Discount + Tax
-  const outTheDoorPrice = subtotal + laborTotal + addOnsTotal - discountAmount + taxAmount;
+  // Subtotal after tax (before credit card fee)
+  const subtotalAfterTax = subtotal + laborTotal + addOnsTotal - discountAmount + taxAmount;
+  
+  // Credit card fee (applied to total if paying by card)
+  const creditCardFee = state.selectedAddOns.creditCard
+    ? subtotalAfterTax * (state.adminSettings.creditCardFeePercent / 100)
+    : 0;
+  
+  // Out the door = Parts + Labor + AddOns - Discount + Tax + CC Fee
+  const outTheDoorPrice = subtotalAfterTax + creditCardFee;
   
   // Helpers
   const isComplete = !!(state.vehicle && state.wheel && state.tire);
@@ -398,6 +413,7 @@ export function POSProvider({ children }: { children: ReactNode }) {
     discountAmount,
     taxableAmount,
     taxAmount,
+    creditCardFee,
     outTheDoorPrice,
     
     isComplete,

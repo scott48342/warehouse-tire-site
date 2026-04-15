@@ -158,6 +158,28 @@ export function POSAdminPanel() {
             </div>
           </div>
           
+          {/* Credit Card Fee */}
+          <div className="rounded-xl bg-neutral-800 border border-neutral-700 p-4">
+            <h3 className="text-lg font-semibold text-white mb-4">💳 Credit Card Fee</h3>
+            
+            <div>
+              <label className="block text-sm font-medium text-neutral-300 mb-2">
+                Processing Fee (% of total)
+              </label>
+              <div className="flex items-center gap-3">
+                <input
+                  type="number"
+                  step="0.01"
+                  value={adminSettings.creditCardFeePercent}
+                  onChange={(e) => handleUpdateSetting("creditCardFeePercent", parseFloat(e.target.value) || 0)}
+                  className="w-24 h-10 rounded-lg bg-neutral-700 border border-neutral-600 text-white px-3 text-right"
+                />
+                <span className="text-neutral-400">%</span>
+                <span className="text-sm text-neutral-500">Applied when customer pays with card</span>
+              </div>
+            </div>
+          </div>
+          
           {/* Custom Add-ons */}
           <div className="rounded-xl bg-neutral-800 border border-neutral-700 p-4">
             <h3 className="text-lg font-semibold text-white mb-4">✨ Custom Add-ons</h3>

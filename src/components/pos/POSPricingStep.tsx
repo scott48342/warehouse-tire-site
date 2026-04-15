@@ -19,6 +19,7 @@ export function POSPricingStep() {
     discountAmount,
     taxableAmount,
     taxAmount,
+    creditCardFee,
     outTheDoorPrice,
   } = usePOS();
   
@@ -238,6 +239,48 @@ export function POSPricingStep() {
             </div>
           </div>
           
+          {/* Payment Method */}
+          <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
+            <h3 className="text-lg font-bold text-white mb-4">💳 Payment Method</h3>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                onClick={() => setSelectedAddOns({ creditCard: false })}
+                className={`p-4 rounded-xl border-2 transition-all ${
+                  !selectedAddOns.creditCard
+                    ? "border-green-500 bg-green-500/10"
+                    : "border-neutral-700 bg-neutral-800 hover:border-neutral-600"
+                }`}
+              >
+                <div className="text-2xl mb-1">💵</div>
+                <div className="font-medium text-white">Cash / Check</div>
+                <div className="text-sm text-neutral-400">No fee</div>
+              </button>
+              
+              <button
+                onClick={() => setSelectedAddOns({ creditCard: true })}
+                className={`p-4 rounded-xl border-2 transition-all ${
+                  selectedAddOns.creditCard
+                    ? "border-blue-500 bg-blue-500/10"
+                    : "border-neutral-700 bg-neutral-800 hover:border-neutral-600"
+                }`}
+              >
+                <div className="text-2xl mb-1">💳</div>
+                <div className="font-medium text-white">Credit Card</div>
+                <div className="text-sm text-neutral-400">+{adminSettings.creditCardFeePercent}% fee</div>
+              </button>
+            </div>
+            
+            {selectedAddOns.creditCard && (
+              <div className="mt-3 p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-blue-300">Credit card processing fee</span>
+                  <span className="text-blue-300 font-bold">+${creditCardFee.toFixed(2)}</span>
+                </div>
+              </div>
+            )}
+          </div>
+          
           {/* Discount */}
           <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
             <div className="flex items-center justify-between mb-4">
@@ -412,6 +455,14 @@ export function POSPricingStep() {
                 <span className="text-neutral-400">Tax (6%)</span>
                 <span className="text-white font-medium">${taxAmount.toFixed(2)}</span>
               </div>
+              
+              {/* Credit Card Fee */}
+              {creditCardFee > 0 && (
+                <div className="flex justify-between text-blue-400">
+                  <span>CC Fee ({adminSettings.creditCardFeePercent}%)</span>
+                  <span>+${creditCardFee.toFixed(2)}</span>
+                </div>
+              )}
               
               {/* Out the Door */}
               <div className="pt-4 border-t border-neutral-700">
