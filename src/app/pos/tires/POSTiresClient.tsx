@@ -431,14 +431,30 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
                     {displaySizes.length > 0 && (
                       <div className="mt-2 flex flex-wrap gap-1.5">
                         {displaySizes.slice(0, 6).map((ts) => (
-                          <span key={ts} className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-medium">
+                          <Link
+                            key={ts}
+                            href={`/pos/tires?year=${year}&make=${make}&model=${model}${trim ? `&trim=${trim}` : ""}&wheelDia=${wheelDia}&wheelWidth=${wheelWidth}${brand ? `&brand=${encodeURIComponent(brand)}` : ""}&size=${encodeURIComponent(ts)}&sort=${sort}`}
+                            className={`px-2 py-0.5 rounded text-xs font-medium transition-colors cursor-pointer ${
+                              size === ts 
+                                ? "bg-amber-500 text-white" 
+                                : "bg-amber-100 text-amber-800 hover:bg-amber-200"
+                            }`}
+                          >
                             {ts}
-                          </span>
+                          </Link>
                         ))}
                         {displaySizes.length > 6 && (
                           <span className="px-2 py-0.5 text-amber-600 text-xs">
                             +{displaySizes.length - 6} more
                           </span>
+                        )}
+                        {size && (
+                          <Link
+                            href={`/pos/tires?year=${year}&make=${make}&model=${model}${trim ? `&trim=${trim}` : ""}&wheelDia=${wheelDia}&wheelWidth=${wheelWidth}${brand ? `&brand=${encodeURIComponent(brand)}` : ""}&sort=${sort}`}
+                            className="px-2 py-0.5 rounded bg-gray-200 text-gray-600 text-xs font-medium hover:bg-gray-300 transition-colors"
+                          >
+                            Clear filter ✕
+                          </Link>
                         )}
                       </div>
                     )}
