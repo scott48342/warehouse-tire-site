@@ -207,16 +207,16 @@ export function MiniRatings({ ratings, category }: MiniRatingsProps) {
       break;
   }
   
-  // Get bar color based on value
+  // Get bar color based on value - premium gradients
   const getBarColor = (value: number) => {
-    if (value >= 8) return 'bg-green-500';
-    if (value >= 6) return 'bg-blue-500';
-    if (value >= 4) return 'bg-amber-500';
-    return 'bg-red-400';
+    if (value >= 8) return 'bg-gradient-to-r from-green-500 to-emerald-400';
+    if (value >= 6) return 'bg-gradient-to-r from-blue-500 to-sky-400';
+    if (value >= 4) return 'bg-gradient-to-r from-amber-500 to-yellow-400';
+    return 'bg-gradient-to-r from-red-400 to-orange-400';
   };
   
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1.5">
       {keys.map((key) => {
         const value = ratings[key as keyof PerformanceRatings];
         if (typeof value !== 'number') return null;
@@ -230,13 +230,14 @@ export function MiniRatings({ ratings, category }: MiniRatingsProps) {
             className="flex items-center gap-2"
             title={`${RATING_LABELS[key as string]}: ${value}/10`}
           >
-            <span className="text-[10px] font-medium text-neutral-500 w-12 truncate">{label}</span>
-            <div className="flex-1 h-1.5 bg-neutral-200 rounded-full overflow-hidden">
+            <span className="text-[10px] font-medium text-neutral-500 w-14">{label}</span>
+            <div className="flex-1 h-1 bg-neutral-100 rounded-full overflow-hidden">
               <div 
-                className={`h-full rounded-full ${getBarColor(value)}`}
+                className={`h-full rounded-full transition-all duration-300 ${getBarColor(value)}`}
                 style={{ width: `${percentage}%` }}
               />
             </div>
+            <span className="text-[9px] font-semibold text-neutral-400 w-4 text-right">{value}</span>
           </div>
         );
       })}

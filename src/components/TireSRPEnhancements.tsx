@@ -196,25 +196,21 @@ interface TrustMicroLineProps {
 
 /**
  * Compact trust signals for product cards
- * Single line with key confidence builders
+ * Premium trust indicators with icons
  */
 export function TrustMicroLine({ hasVehicle = false, inStock = true, hasWarranty = true }: TrustMicroLineProps) {
-  const signals: string[] = [];
+  const signals: { icon: string; text: string; highlight?: boolean }[] = [];
   
-  if (hasVehicle) signals.push("Verified fit");
-  if (inStock) signals.push("Ships fast");
-  if (hasWarranty) signals.push("Warranty");
-  
-  if (signals.length === 0) {
-    signals.push("Free shipping", "Expert support");
-  }
+  if (hasVehicle) signals.push({ icon: "✓", text: "Guaranteed fit", highlight: true });
+  signals.push({ icon: "🚚", text: "Free shipping" });
+  if (hasWarranty) signals.push({ icon: "🛡️", text: "Warranty" });
   
   return (
-    <div className="text-[10px] text-neutral-500">
-      {signals.map((signal, i) => (
-        <span key={signal}>
-          {i > 0 && " • "}
-          <span className="text-green-600">✓</span> {signal}
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[10px] text-neutral-500">
+      {signals.map((signal) => (
+        <span key={signal.text} className="inline-flex items-center gap-1">
+          <span className={signal.highlight ? "text-green-600" : "opacity-70"}>{signal.icon}</span>
+          <span>{signal.text}</span>
         </span>
       ))}
     </div>

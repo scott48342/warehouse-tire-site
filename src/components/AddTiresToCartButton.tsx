@@ -82,8 +82,8 @@ export function AddTiresToCartButton({
   const total = unitPrice * quantity;
 
   const baseStyles = {
-    primary: "flex h-12 items-center justify-center rounded-xl px-4 text-sm font-extrabold bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] transition-all shadow-lg shadow-red-600/30 hover:shadow-xl hover:shadow-red-600/40",
-    secondary: "flex h-11 items-center justify-center rounded-xl px-4 text-sm font-bold border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 transition-all",
+    primary: "flex h-12 items-center justify-center rounded-xl px-4 text-sm font-extrabold bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-700 hover:to-red-600 active:scale-[0.98] transition-all duration-200 shadow-md shadow-red-600/25 hover:shadow-lg hover:shadow-red-600/30 hover:scale-[1.01]",
+    secondary: "flex h-11 items-center justify-center rounded-xl px-4 text-sm font-bold border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300 transition-all",
     compact: "flex h-9 items-center justify-center rounded-lg px-3 text-xs font-bold border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-all",
   };
 

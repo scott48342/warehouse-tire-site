@@ -3740,14 +3740,28 @@ function TireCard({
     return null;
   })();
 
+  // Generate "Why This Tire" tagline for Top Picks
+  const whyThisTire = isTopPick ? (() => {
+    const mileage = t.enrichment?.mileage;
+    const category = t.enrichment?.treadCategory || t.badges?.terrain;
+    const price = getDisplayPrice(t);
+    
+    if (mileage && mileage >= 70000) return "Designed for maximum tread life";
+    if (category === 'Performance') return "Superior handling and grip";
+    if (category === 'All-Terrain') return "Built for on and off-road versatility";
+    if (t.enrichment?.is3PMSF) return "All-season with winter confidence";
+    if (price && price < 120) return "Great performance at a great value";
+    return "Top choice for your vehicle";
+  })() : null;
+
   return (
-    <article className={`tire-card group relative overflow-hidden rounded-2xl border bg-white p-5 transition-all duration-200 ${
+    <article className={`tire-card group relative overflow-hidden rounded-2xl bg-white transition-all duration-200 ${
       isTopPick 
-        ? "border-green-200 ring-1 ring-green-100 shadow-sm" 
-        : "border-neutral-200 hover:border-neutral-300 hover:shadow-lg hover:-translate-y-0.5"
-    }`}>
-      {/* Left accent bar - matching wheels card */}
-      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${isTopPick ? "bg-green-500" : "bg-neutral-800"}`} />
+        ? "border-2 border-amber-200 shadow-md shadow-amber-100/50" 
+        : "border border-neutral-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5"
+    }`} style={{ padding: '1.5rem' }}>
+      {/* Left accent bar - premium feel */}
+      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${isTopPick ? "bg-gradient-to-b from-amber-400 to-amber-500" : "bg-neutral-200"}`} />
       
       {/* Highlight label - top right corner */}
       {highlightLabel && (
@@ -3783,7 +3797,7 @@ function TireCard({
       ) : null}
 
       <div className="relative z-10 flex items-start justify-between gap-2">
-        <div className="text-sm font-semibold text-neutral-600">{t.brand || "Tire"}</div>
+        <div className="text-sm font-bold text-neutral-800 uppercase tracking-wide">{t.brand || "Tire"}</div>
         <div className="flex items-center gap-1">
           {/* Compare button */}
           <AddToCompareButton
@@ -3821,9 +3835,16 @@ function TireCard({
         </div>
       </div>
 
-      <h3 className="relative z-10 mt-1 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
+      <h3 className="relative z-10 mt-1.5 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
         {displayTitle}
       </h3>
+
+      {/* "Why This Tire" - Top Picks only */}
+      {whyThisTire && (
+        <div className="relative z-10 mt-1 text-[11px] italic text-amber-700">
+          "{whyThisTire}"
+        </div>
+      )}
 
       {/* Mileage warranty - text line under title */}
       {t.enrichment?.mileage && t.enrichment.mileage >= 40000 ? (
@@ -3870,13 +3891,14 @@ function TireCard({
       ) : null}
 
       {/* Product image with badge stack overlay */}
-      <div className="tire-card-image-container relative z-10 mt-3">
+      <div className="tire-card-image-container relative z-10 mt-3 overflow-hidden">
         {t.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={t.imageUrl}
             alt={displayTitle}
             loading="lazy"
+            className="transition-transform duration-300 ease-out group-hover:scale-[1.03]"
           />
         ) : (
           <div className="tire-card-image-placeholder">
@@ -3992,19 +4014,22 @@ function TireCard({
         );
       })()}
 
-      {/* Price block - set of 4 primary */}
-      <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">
+      {/* Price block - set of 4 primary with improved clarity */}
+      <div className="relative z-10 mt-4 pt-4 border-t border-neutral-100">
         <div className="flex items-end justify-between">
           <div>
             {(() => {
               const unitPrice = getDisplayPrice(t);
               return unitPrice != null ? (
                 <>
-                  <div className="text-2xl font-extrabold text-neutral-900">
-                    ${(unitPrice * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-2xl font-extrabold text-neutral-900">
+                      ${(unitPrice * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                    </span>
+                    <span className="text-xs font-semibold text-neutral-500">set of 4</span>
                   </div>
-                  <div className="text-xs text-neutral-500">
-                    ${unitPrice.toFixed(2)}/ea × 4 tires
+                  <div className="text-[11px] text-neutral-400 mt-0.5">
+                    ${unitPrice.toFixed(2)} per tire
                   </div>
                 </>
               ) : (
@@ -4012,12 +4037,14 @@ function TireCard({
               );
             })()}
           </div>
-          {/* Stock indicator dot */}
-          <div className="flex items-center gap-1.5 text-xs font-semibold">
-            <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
-            <span className={inStock ? "text-green-700" : "text-amber-700"}>
-              {inStock ? (maxQty >= 100 ? "100+" : maxQty) : "Order"}
-            </span>
+          {/* Stock indicator */}
+          <div className="flex flex-col items-end gap-0.5">
+            <div className="flex items-center gap-1.5 text-xs font-semibold">
+              <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
+              <span className={inStock ? "text-green-700" : "text-amber-700"}>
+                {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
+              </span>
+            </div>
           </div>
         </div>
       </div>
