@@ -3755,13 +3755,13 @@ function TireCard({
   })() : null;
 
   return (
-    <article className={`tire-card group relative overflow-hidden rounded-2xl bg-white transition-all duration-200 ${
+    <article className={`tire-card group relative overflow-hidden rounded-2xl transition-all duration-250 ease-out ${
       isTopPick 
-        ? "border-2 border-amber-200 shadow-md shadow-amber-100/50" 
-        : "border border-neutral-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5"
+        ? "border border-amber-200/70 bg-gradient-to-br from-amber-50/40 to-white shadow-md" 
+        : "border border-neutral-200 bg-white shadow-sm hover:shadow-lg hover:-translate-y-0.5"
     }`} style={{ padding: '1.5rem' }}>
       {/* Left accent bar - premium feel */}
-      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 ${isTopPick ? "bg-gradient-to-b from-amber-400 to-amber-500" : "bg-neutral-200"}`} />
+      <div className={`pointer-events-none absolute left-0 top-0 h-full w-1 rounded-l-2xl ${isTopPick ? "bg-gradient-to-b from-amber-300 to-amber-400" : "bg-neutral-100"}`} />
       
       {/* Highlight label - top right corner */}
       {highlightLabel && (
@@ -3835,13 +3835,13 @@ function TireCard({
         </div>
       </div>
 
-      <h3 className="relative z-10 mt-1.5 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
+      <h3 className="relative z-10 mt-2 text-base font-extrabold tracking-tight text-neutral-900 group-hover:underline">
         {displayTitle}
       </h3>
 
       {/* "Why This Tire" - Top Picks only */}
       {whyThisTire && (
-        <div className="relative z-10 mt-1 text-[11px] italic text-amber-700">
+        <div className="relative z-10 mt-1.5 text-[11px] italic text-amber-600/80">
           "{whyThisTire}"
         </div>
       )}
@@ -3891,14 +3891,14 @@ function TireCard({
       ) : null}
 
       {/* Product image with badge stack overlay */}
-      <div className="tire-card-image-container relative z-10 mt-3 overflow-hidden">
+      <div className="tire-card-image-container relative z-10 mt-4 overflow-hidden rounded-lg">
         {t.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={t.imageUrl}
             alt={displayTitle}
             loading="lazy"
-            className="transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+            className="transition-transform duration-300 ease-out group-hover:scale-[1.02]"
           />
         ) : (
           <div className="tire-card-image-placeholder">
@@ -3966,7 +3966,7 @@ function TireCard({
 
       {/* Fitment confirmation - single line */}
       {hasVehicle ? (
-        <div className="relative z-10 mt-2 text-[11px] font-medium text-green-700">
+        <div className="relative z-10 mt-3 text-[11px] font-medium text-green-700">
           <span className="text-green-600">✓</span> Fits {year} {make} {model}
           {(() => {
             const wheelDiaN = wheelDia ? Number(String(wheelDia).replace(/[^0-9.]/g, "")) : NaN;
@@ -4008,7 +4008,7 @@ function TireCard({
         const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
         if (!ratings) return null;
         return (
-          <div className="relative z-10 mt-2">
+          <div className="relative z-10 mt-4">
             <MiniRatings ratings={ratings} category={category} />
           </div>
         );
@@ -4052,8 +4052,8 @@ function TireCard({
         </div>
       </div>
       
-      {/* Trust row - enhanced with vehicle verification */}
-      <div className="relative z-10 mt-2">
+      {/* Trust row - prominent before CTA */}
+      <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">
         <TrustMicroLine 
           hasVehicle={hasVehicle}
           inStock={inStock}
@@ -4061,8 +4061,8 @@ function TireCard({
         />
       </div>
 
-      {/* CTA buttons - matching wheels card structure */}
-      <div className="tire-card-cta relative z-10 grid gap-2">
+      {/* CTA buttons */}
+      <div className="tire-card-cta relative z-10 mt-3 grid gap-2">
         {typeof t.cost === "number" && wheelSku && tireSku ? (
           isStaggered ? (
             <SelectTireButtonAxle

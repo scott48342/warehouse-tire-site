@@ -82,9 +82,9 @@ export function AddTiresToCartButton({
   const total = unitPrice * quantity;
 
   const baseStyles = {
-    primary: "flex h-12 items-center justify-center rounded-xl px-4 text-sm font-extrabold bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-700 hover:to-red-600 active:scale-[0.98] transition-all duration-200 shadow-md shadow-red-600/25 hover:shadow-lg hover:shadow-red-600/30 hover:scale-[1.01]",
-    secondary: "flex h-11 items-center justify-center rounded-xl px-4 text-sm font-bold border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300 transition-all",
-    compact: "flex h-9 items-center justify-center rounded-lg px-3 text-xs font-bold border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-all",
+    primary: "flex h-12 items-center justify-center rounded-2xl px-5 text-sm font-extrabold bg-gradient-to-b from-red-500 to-red-600 text-white hover:from-red-500 hover:to-red-700 hover:brightness-105 active:scale-[0.98] transition-all duration-250 ease-out shadow-md shadow-red-600/20 hover:shadow-lg hover:shadow-red-600/30 hover:scale-[1.015]",
+    secondary: "flex h-11 items-center justify-center rounded-xl px-4 text-sm font-bold border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300 transition-all duration-200",
+    compact: "flex h-9 items-center justify-center rounded-lg px-3 text-xs font-bold border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-all duration-200",
   };
 
   return (
