@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { usePOS } from "./POSContext";
 
 // ============================================================================
@@ -21,6 +22,7 @@ interface TrimOption {
 // ============================================================================
 
 export function POSVehicleStep() {
+  const router = useRouter();
   const { setVehicle } = usePOS();
   
   const [year, setYear] = useState("");
@@ -107,6 +109,16 @@ export function POSVehicleStep() {
       model,
       trim: trim || undefined,
     });
+    
+    // Navigate to full wheel browser with filters
+    const params = new URLSearchParams({
+      year,
+      make,
+      model,
+    });
+    if (trim) params.set("trim", trim);
+    
+    router.push(`/pos/wheels?${params.toString()}`);
   };
 
   const canContinue = year && make && model;
