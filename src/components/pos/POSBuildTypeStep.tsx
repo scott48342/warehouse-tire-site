@@ -145,7 +145,6 @@ export function POSBuildTypeStep() {
   // Handle build type selection
   const handleBuildTypeSelect = (buildType: POSBuildType) => {
     setSelectedBuildType(buildType);
-    // Don't proceed immediately for stock - user will click continue button
   };
   
   // Handle stock continue
@@ -196,8 +195,8 @@ export function POSBuildTypeStep() {
     <div className="mx-auto max-w-4xl px-4 py-8">
       {/* Header */}
       <div className="mb-8 text-center">
-        <h1 className="text-2xl font-bold text-gray-900">Select Build Type</h1>
-        <p className="mt-2 text-gray-600">{vehicleDisplay}</p>
+        <h1 className="text-2xl font-bold text-white">Select Build Type</h1>
+        <p className="mt-2 text-neutral-400">{vehicleDisplay}</p>
       </div>
       
       {/* Build Type Cards */}
@@ -205,18 +204,18 @@ export function POSBuildTypeStep() {
         {/* Stock */}
         <button
           onClick={() => handleBuildTypeSelect("stock")}
-          className={`rounded-xl border-2 p-6 text-left transition-all hover:shadow-lg ${
+          className={`rounded-xl border-2 p-6 text-left transition-all ${
             selectedBuildType === "stock"
-              ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200"
-              : "border-gray-200 hover:border-gray-300"
+              ? "border-blue-500 bg-blue-500/10 ring-2 ring-blue-500/30"
+              : "border-neutral-700 bg-neutral-800 hover:border-neutral-600"
           }`}
         >
           <div className="mb-3 text-3xl">🚗</div>
-          <h3 className="text-lg font-bold text-gray-900">Stock</h3>
-          <p className="mt-1 text-sm text-gray-600">
+          <h3 className="text-lg font-bold text-white">Stock</h3>
+          <p className="mt-1 text-sm text-neutral-400">
             Factory height, OEM-friendly fitment
           </p>
-          <div className="mt-4 text-xs text-green-600 font-medium">
+          <div className="mt-4 text-xs text-green-400 font-medium">
             ✓ Ready for install
           </div>
         </button>
@@ -224,18 +223,18 @@ export function POSBuildTypeStep() {
         {/* Leveling Kit */}
         <button
           onClick={() => handleBuildTypeSelect("leveled")}
-          className={`rounded-xl border-2 p-6 text-left transition-all hover:shadow-lg ${
+          className={`rounded-xl border-2 p-6 text-left transition-all ${
             selectedBuildType === "leveled"
-              ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200"
-              : "border-gray-200 hover:border-gray-300"
+              ? "border-blue-500 bg-blue-500/10 ring-2 ring-blue-500/30"
+              : "border-neutral-700 bg-neutral-800 hover:border-neutral-600"
           }`}
         >
           <div className="mb-3 text-3xl">🛻</div>
-          <h3 className="text-lg font-bold text-gray-900">Leveling Kit</h3>
-          <p className="mt-1 text-sm text-gray-600">
+          <h3 className="text-lg font-bold text-white">Leveling Kit</h3>
+          <p className="mt-1 text-sm text-neutral-400">
             2-2.5" front lift, removes factory rake
           </p>
-          <div className="mt-4 text-xs text-blue-600 font-medium">
+          <div className="mt-4 text-xs text-blue-400 font-medium">
             + Fit 33-35" tires
           </div>
         </button>
@@ -243,18 +242,18 @@ export function POSBuildTypeStep() {
         {/* Lifted Truck */}
         <button
           onClick={() => handleBuildTypeSelect("lifted")}
-          className={`rounded-xl border-2 p-6 text-left transition-all hover:shadow-lg ${
+          className={`rounded-xl border-2 p-6 text-left transition-all ${
             selectedBuildType === "lifted"
-              ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200"
-              : "border-gray-200 hover:border-gray-300"
+              ? "border-blue-500 bg-blue-500/10 ring-2 ring-blue-500/30"
+              : "border-neutral-700 bg-neutral-800 hover:border-neutral-600"
           }`}
         >
           <div className="mb-3 text-3xl">🦎</div>
-          <h3 className="text-lg font-bold text-gray-900">Lifted Truck</h3>
-          <p className="mt-1 text-sm text-gray-600">
+          <h3 className="text-lg font-bold text-white">Lifted Truck</h3>
+          <p className="mt-1 text-sm text-neutral-400">
             Full suspension lift, 3-10"+
           </p>
-          <div className="mt-4 text-xs text-orange-600 font-medium">
+          <div className="mt-4 text-xs text-orange-400 font-medium">
             + Fit 35-40" tires
           </div>
         </button>
@@ -263,7 +262,7 @@ export function POSBuildTypeStep() {
       {/* Quick Presets (for non-stock) */}
       {selectedBuildType !== "stock" && (
         <div className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-gray-900">
+          <h2 className="mb-4 text-lg font-semibold text-white">
             Quick Setups
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -275,12 +274,12 @@ export function POSBuildTypeStep() {
               <button
                 key={preset.id}
                 onClick={() => handleQuickPreset(preset)}
-                className="flex items-center gap-3 rounded-lg border border-gray-200 p-4 text-left transition-all hover:border-blue-300 hover:bg-blue-50"
+                className="flex items-center gap-3 rounded-lg border border-neutral-700 bg-neutral-800 p-4 text-left transition-all hover:border-blue-500 hover:bg-neutral-700"
               >
                 <span className="text-2xl">{preset.icon}</span>
                 <div>
-                  <div className="font-semibold text-gray-900">{preset.name}</div>
-                  <div className="text-sm text-gray-500">{preset.description}</div>
+                  <div className="font-semibold text-white">{preset.name}</div>
+                  <div className="text-sm text-neutral-400">{preset.description}</div>
                 </div>
               </button>
             ))}
@@ -290,15 +289,15 @@ export function POSBuildTypeStep() {
       
       {/* Custom Configuration (for non-stock) */}
       {selectedBuildType !== "stock" && (
-        <div className="mb-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <div className="mb-8 rounded-xl border border-neutral-700 bg-neutral-800 p-6">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}
             className="flex w-full items-center justify-between text-left"
           >
-            <h2 className="text-lg font-semibold text-gray-900">
+            <h2 className="text-lg font-semibold text-white">
               Custom Configuration
             </h2>
-            <span className="text-gray-500">
+            <span className="text-neutral-400">
               {showAdvanced ? "▲" : "▼"}
             </span>
           </button>
@@ -307,7 +306,7 @@ export function POSBuildTypeStep() {
             <div className="mt-6 space-y-6">
               {/* Lift Height */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-700">
+                <label className="mb-2 block text-sm font-medium text-neutral-300">
                   Lift Height
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -321,8 +320,8 @@ export function POSBuildTypeStep() {
                       onClick={() => setLiftHeight(option.value)}
                       className={`rounded-lg border px-4 py-2 font-medium transition-all ${
                         liftHeight === option.value
-                          ? "border-blue-500 bg-blue-500 text-white"
-                          : "border-gray-300 bg-white text-gray-700 hover:border-blue-300"
+                          ? "border-blue-500 bg-blue-600 text-white"
+                          : "border-neutral-600 bg-neutral-700 text-neutral-300 hover:border-neutral-500"
                       }`}
                     >
                       {option.label}
@@ -333,7 +332,7 @@ export function POSBuildTypeStep() {
               
               {/* Target Tire Size */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-700">
+                <label className="mb-2 block text-sm font-medium text-neutral-300">
                   Target Tire Size (optional)
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -341,8 +340,8 @@ export function POSBuildTypeStep() {
                     onClick={() => setTargetTireSize(undefined)}
                     className={`rounded-lg border px-4 py-2 font-medium transition-all ${
                       targetTireSize === undefined
-                        ? "border-blue-500 bg-blue-500 text-white"
-                        : "border-gray-300 bg-white text-gray-700 hover:border-blue-300"
+                        ? "border-blue-500 bg-blue-600 text-white"
+                        : "border-neutral-600 bg-neutral-700 text-neutral-300 hover:border-neutral-500"
                     }`}
                   >
                     Any
@@ -359,8 +358,8 @@ export function POSBuildTypeStep() {
                       onClick={() => setTargetTireSize(size.value)}
                       className={`rounded-lg border px-4 py-2 font-medium transition-all ${
                         targetTireSize === size.value
-                          ? "border-blue-500 bg-blue-500 text-white"
-                          : "border-gray-300 bg-white text-gray-700 hover:border-blue-300"
+                          ? "border-blue-500 bg-blue-600 text-white"
+                          : "border-neutral-600 bg-neutral-700 text-neutral-300 hover:border-neutral-500"
                       }`}
                     >
                       {size.label}
@@ -371,11 +370,11 @@ export function POSBuildTypeStep() {
               
               {/* Recommendation Preview */}
               {recommendation && (
-                <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
-                  <h3 className="mb-2 font-semibold text-blue-900">
+                <div className="rounded-lg border border-blue-500/30 bg-blue-500/10 p-4">
+                  <h3 className="mb-2 font-semibold text-blue-300">
                     Fitment Guidance
                   </h3>
-                  <div className="grid gap-2 text-sm text-blue-800">
+                  <div className="grid gap-2 text-sm text-blue-200">
                     <div>
                       <span className="font-medium">Tire Range:</span>{" "}
                       {recommendation.tireDiameterMin}-{recommendation.tireDiameterMax}"
@@ -385,9 +384,9 @@ export function POSBuildTypeStep() {
                       {recommendation.offsetLabel}
                     </div>
                     {recommendation.notes.length > 0 && (
-                      <div className="mt-2 border-t border-blue-200 pt-2">
+                      <div className="mt-2 border-t border-blue-500/30 pt-2">
                         {recommendation.notes.map((note, i) => (
-                          <div key={i} className="text-xs">⚠️ {note}</div>
+                          <div key={i} className="text-xs text-blue-300">⚠️ {note}</div>
                         ))}
                       </div>
                     )}
@@ -398,7 +397,7 @@ export function POSBuildTypeStep() {
               {/* Continue Button */}
               <button
                 onClick={handleContinue}
-                className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+                className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
               >
                 Continue with {liftHeight}" {selectedBuildType === "leveled" ? "Level" : "Lift"}
                 {targetTireSize ? ` + ${targetTireSize}" Tires` : ""}
@@ -413,7 +412,7 @@ export function POSBuildTypeStep() {
         <div className="text-center">
           <button
             onClick={handleStockContinue}
-            className="rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+            className="rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
           >
             Continue with Stock Fitment
           </button>
@@ -424,22 +423,22 @@ export function POSBuildTypeStep() {
       <div className="mt-8 text-center">
         <button
           onClick={() => goToStep("vehicle")}
-          className="text-sm text-gray-500 hover:text-gray-700"
+          className="text-sm text-neutral-500 hover:text-neutral-300"
         >
           ← Change Vehicle
         </button>
       </div>
       
       {/* Trust Badges */}
-      <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs text-gray-500">
+      <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
         <span className="flex items-center gap-1">
-          <span className="text-green-500">✓</span> Installed in-store
+          <span className="text-green-400">✓</span> Installed in-store
         </span>
         <span className="flex items-center gap-1">
-          <span className="text-green-500">✓</span> Fitment verified
+          <span className="text-green-400">✓</span> Fitment verified
         </span>
         <span className="flex items-center gap-1">
-          <span className="text-green-500">✓</span> Ready same day
+          <span className="text-green-400">✓</span> Ready same day
         </span>
       </div>
     </div>
