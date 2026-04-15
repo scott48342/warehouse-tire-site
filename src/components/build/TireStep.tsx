@@ -202,9 +202,12 @@ export function TireStep() {
         
         const data = await res.json();
         
+        // API returns { results: [] } not { tires: [] }
+        const rawTires = data.results || data.tires || [];
+        
         // Normalize tire data
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const normalizedTires: TireResult[] = (data.tires || []).map((t: any) => {
+        const normalizedTires: TireResult[] = rawTires.map((t: any) => {
           const badges = t.badges || {};
           const quantity = t.quantity || {};
           return {
