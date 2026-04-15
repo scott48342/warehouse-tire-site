@@ -150,7 +150,7 @@ export function CompleteYourSetup({
     addAccessories(cartItems);
   };
 
-  // Compact view for cart
+  // Compact view for cart - FIX #6: Reframe as "Finish Your Build"
   if (context === "cart" && !expanded) {
     return (
       <div className={`rounded-lg border border-neutral-200 bg-neutral-50 p-4 ${className}`}>
@@ -159,9 +159,9 @@ export function CompleteYourSetup({
           className="w-full flex items-center justify-between text-left"
         >
           <div>
-            <p className="font-medium text-neutral-900">Complete Your Setup</p>
+            <p className="font-medium text-neutral-900">Finish Your Build</p>
             <p className="text-sm text-neutral-600">
-              Add TPMS sensors, lug kits, and more
+              Recommended for install readiness
             </p>
           </div>
           <span className="text-2xl">+</span>
@@ -175,10 +175,10 @@ export function CompleteYourSetup({
       <div className="flex items-center justify-between mb-4">
         <div>
           <h3 className="text-lg font-semibold text-neutral-900">
-            Complete Your Setup
+            {context === "cart" ? "Finish Your Build" : "Complete Your Setup"}
           </h3>
           <p className="text-sm text-neutral-600">
-            Add essential accessories for a perfect install
+            {context === "cart" ? "Recommended for install readiness" : "Add essential accessories for a perfect install"}
           </p>
         </div>
         {context === "cart" && (

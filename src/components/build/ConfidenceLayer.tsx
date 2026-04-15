@@ -181,7 +181,7 @@ export function ConfidenceLayer() {
           </div>
         </div>
         
-        {/* Price */}
+        {/* Price - FIX #3: Enhanced savings visibility */}
         <div className="bg-gradient-to-r from-neutral-800 to-neutral-900 px-6 py-5 text-white">
           <div className="flex items-center justify-between">
             <div>
@@ -194,15 +194,18 @@ export function ConfidenceLayer() {
             </div>
           </div>
           {savingsEstimate > 0 && (
-            <div className="text-right text-sm text-emerald-400 font-medium mt-1">
-              You save ${savingsEstimate.toLocaleString()}+
+            <div className="mt-3 pt-3 border-t border-neutral-700 flex items-center justify-between">
+              <span className="text-sm text-neutral-400">Your Savings</span>
+              <span className="text-lg font-bold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full">
+                You Save ${savingsEstimate.toLocaleString()}+
+              </span>
             </div>
           )}
         </div>
       </div>
       
       {/* Confidence checklist */}
-      <div className="rounded-xl bg-green-50 border border-green-200 p-5 mb-8">
+      <div className="rounded-xl bg-green-50 border border-green-200 p-5 mb-6">
         <h3 className="text-base font-bold text-green-800 mb-3">Ready for install</h3>
         <div className="space-y-2">
           <div className="flex items-center gap-2 text-sm text-green-700">
@@ -219,6 +222,11 @@ export function ConfidenceLayer() {
           </div>
         </div>
       </div>
+      
+      {/* FIX #4: Emotional payoff line */}
+      <p className="text-center text-neutral-600 mb-8">
+        This setup will give your <span className="font-semibold">{state.vehicle.model}</span> a clean, upgraded look with zero fitment issues.
+      </p>
       
       {/* CTA */}
       <button

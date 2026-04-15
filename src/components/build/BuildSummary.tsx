@@ -187,29 +187,39 @@ export function BuildSummary() {
           </div>
         </div>
         
-        {/* Price anchoring */}
-        {totalPrice > 0 && (
-          <div className="pt-3 border-t border-neutral-100">
-            <div className="flex items-center justify-between text-xs text-neutral-500">
-              <span>Typical installed price</span>
-              <span className="line-through">${typicalRetailPrice.toLocaleString()}</span>
+        {/* Price anchoring - FIX #1: Don't show real price before selection */}
+        <div className="pt-3 border-t border-neutral-100">
+          {!state.wheel ? (
+            // No selection yet - show placeholder
+            <div className="text-center py-2">
+              <div className="text-xs text-neutral-400 uppercase tracking-wide">Your Build Total</div>
+              <div className="text-2xl font-bold text-neutral-300 mt-1">—</div>
+              <div className="text-xs text-neutral-400 mt-1">Select wheels to start</div>
             </div>
-            <div className="flex items-center justify-between mt-1">
-              <span className="text-sm font-bold text-emerald-700">Your Price</span>
-              <span className="text-xl font-black text-emerald-700">${totalPrice.toLocaleString()}</span>
-            </div>
-            {savingsEstimate > 0 && (
-              <div className="text-right text-xs text-emerald-600 font-medium">
-                You save ${savingsEstimate.toLocaleString()}+
+          ) : (
+            // Selection made - show real pricing
+            <>
+              <div className="flex items-center justify-between text-xs text-neutral-500">
+                <span>Typical installed price</span>
+                <span className="line-through">${typicalRetailPrice.toLocaleString()}</span>
               </div>
-            )}
-            {monthlyPrice > 0 && (
-              <div className="text-right text-xs text-neutral-400 mt-1">
-                As low as ${monthlyPrice}/mo
+              <div className="flex items-center justify-between mt-1">
+                <span className="text-sm font-bold text-emerald-700">Your Price</span>
+                <span className="text-xl font-black text-emerald-700">${totalPrice.toLocaleString()}</span>
               </div>
-            )}
-          </div>
-        )}
+              {savingsEstimate > 0 && (
+                <div className="text-right text-xs text-emerald-600 font-medium">
+                  You save ${savingsEstimate.toLocaleString()}+
+                </div>
+              )}
+              {monthlyPrice > 0 && (
+                <div className="text-right text-xs text-neutral-400 mt-1">
+                  As low as ${monthlyPrice}/mo
+                </div>
+              )}
+            </>
+          )}
+        </div>
         
         {/* Trust signals */}
         <div className="pt-3 border-t border-neutral-100 space-y-1.5">

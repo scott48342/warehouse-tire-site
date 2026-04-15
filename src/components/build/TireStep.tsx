@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useBuild, type BuildTire } from "./BuildContext";
-import { InlineGuide } from "./GuideVoice";
 
 // ============================================================================
 // Types
@@ -326,11 +325,7 @@ export function TireStep() {
         </div>
       </div>
       
-      {/* Guide message */}
-      <InlineGuide 
-        message="These tires are matched specifically to your wheels and vehicle."
-        className="mb-6"
-      />
+      {/* FIX #2: Guide message removed - ContextualGuide in layout already shows this */}
       
       {/* Top Picks */}
       <div className="mb-8">

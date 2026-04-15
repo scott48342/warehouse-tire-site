@@ -338,6 +338,38 @@ export default function CartPage() {
           </button>
         </div>
 
+        {/* FIX #5: Your Build Summary - Preserve build identity in cart */}
+        {hasWheels() && hasTires() && vehicle && (
+          <div className="mb-6 rounded-2xl bg-gradient-to-r from-neutral-800 to-neutral-900 p-5 text-white">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <div className="text-xs text-neutral-400 uppercase tracking-wide mb-1">Your Build</div>
+                <h2 className="text-lg font-bold">
+                  {vehicle.year} {vehicle.make} {vehicle.model}
+                </h2>
+                <div className="mt-1 text-sm text-neutral-300">
+                  {wheels[0]?.diameter ? `${wheels[0].diameter}" ` : ""}
+                  {wheels[0]?.brand} Wheels
+                  {items.find(i => i.type === "tire") ? (
+                    <>
+                      {" • "}
+                      {(items.find(i => i.type === "tire") as CartTireItem)?.size} Tires
+                    </>
+                  ) : null}
+                </div>
+              </div>
+              <div className="flex items-center gap-4 text-xs">
+                <span className="flex items-center gap-1.5 text-green-400">
+                  <span>✓</span> Guaranteed Fit
+                </span>
+                <span className="flex items-center gap-1.5 text-green-400">
+                  <span>✓</span> Ready for Install
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Free Shipping Progress - Prominent placement */}
         <FreeShippingProgress subtotal={subtotal} className="mb-6" />
 
