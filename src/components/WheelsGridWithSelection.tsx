@@ -1247,10 +1247,25 @@ export function WheelsGridWithSelection({
   }, [selectedWheel]);
   
   // Render wheel card with selection state
+  // Determine Top Pick category based on position
+  const getTopPickCategory = (idx: number): "best-overall" | "most-popular" | "best-style" | "best-value" | undefined => {
+    switch (idx) {
+      case 0: return "best-overall";
+      case 1: return "most-popular";
+      case 2: return "best-style";
+      case 3: return "best-value";
+      default: return undefined;
+    }
+  };
+  
   const renderWheelCard = (w: WheelItem, idx: number, isRecommended = false) => {
     const isSelected = selectedWheel?.sku === w.sku;
     const brand = typeof w.brand === "string" ? w.brand : w.brand != null ? String(w.brand) : (w.brandCode || "Wheel");
     const model = typeof w.model === "string" ? w.model : w.model != null ? String(w.model) : w.sku || "Wheel";
+    
+    // Top Pick props (only for first 4 recommended wheels)
+    const topPickCategory = isRecommended && idx < 4 ? getTopPickCategory(idx) : undefined;
+    const isTopPick = isRecommended && idx < 4;
     
     return (
       <div 
@@ -1307,6 +1322,9 @@ export function WheelsGridWithSelection({
           // Selection props
           isSelected={isSelected}
           hasSelection={!!selectedWheel}
+          // NEW: Top Pick category props for guided selection
+          topPickCategory={topPickCategory}
+          isTopPick={isTopPick}
           onSelect={(wheelState) => {
             // Use current card state (may have changed if user selected a different finish)
             const effectivePrice = wheelState?.price ?? w.price;
@@ -1404,27 +1422,66 @@ export function WheelsGridWithSelection({
         </div>
       )}
       
-      {/* Recommended Wheels */}
+      {/* ═══════════════════════════════════════════════════════════════════════════
+          TOP PICKS MODULE - Editorial / Guided Selection Experience
+          REFINED: Softer background, reduced visual weight, improved legend
+          ═══════════════════════════════════════════════════════════════════════════ */}
       {showRecommended && filteredRecommended.length > 0 && (
-        <div className="mb-6 rounded-2xl bg-gradient-to-b from-slate-50/80 to-white border border-slate-200 p-4">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-2">
-              <span className="text-lg">⭐</span>
-              <div>
-                <h2 className="text-base font-extrabold text-neutral-900">
-                  Top Picks for Your {viewParams.year} {viewParams.make} {viewParams.model}
-                </h2>
-                <p className="text-xs text-neutral-500">
-                  {setupMode === "staggered" 
-                    ? "Staggered setups with matched front/rear wheels"
-                    : "Hand-picked based on fitment, popularity, and value"}
-                </p>
+        <div className="mb-8 rounded-2xl bg-gradient-to-b from-stone-50/60 via-white to-neutral-50/40 border border-neutral-200/80 shadow-sm overflow-hidden">
+          {/* Header - refined, less intense */}
+          <div className="bg-gradient-to-r from-stone-100/70 to-neutral-100/50 px-5 py-3.5 border-b border-neutral-200/60">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-amber-400/90 to-orange-400/90 text-white shadow-sm">
+                  <span className="text-base">⭐</span>
+                </div>
+                <div>
+                  <h2 className="text-base font-bold text-neutral-800">
+                    Top Picks for Your {viewParams.model}
+                  </h2>
+                  <p className="text-xs text-neutral-500">
+                    {setupMode === "staggered" 
+                      ? "Staggered setups, expertly matched"
+                      : "Hand-picked for fitment, style, and value"}
+                  </p>
+                </div>
+              </div>
+              {/* Quick decision helper - refined */}
+              <div className="hidden md:flex items-center gap-2 text-[11px] text-neutral-400">
+                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                  <span className="text-green-600">✓</span> Verified Fitment
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-white/90 border border-neutral-150">
+                  <span className="text-neutral-400">🔧</span> Hardware Included
+                </span>
               </div>
             </div>
           </div>
           
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {filteredRecommended.slice(0, 4).map((w, idx) => renderWheelCard(w, idx, true))}
+          {/* Cards - increased spacing */}
+          <div className="p-5 pt-6">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {filteredRecommended.slice(0, 4).map((w, idx) => renderWheelCard(w, idx, true))}
+            </div>
+            
+            {/* Legend row - refined, more intentional */}
+            <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-center gap-5 text-[11px] text-neutral-400 font-medium">
+              <span className="inline-flex items-center gap-1.5">
+                <span className="text-amber-400">⭐</span> Best Overall
+              </span>
+              <span className="text-neutral-200">•</span>
+              <span className="inline-flex items-center gap-1.5">
+                <span className="text-orange-400">🔥</span> Most Popular
+              </span>
+              <span className="text-neutral-200">•</span>
+              <span className="inline-flex items-center gap-1.5">
+                <span className="text-purple-400">💎</span> Best Style
+              </span>
+              <span className="text-neutral-200">•</span>
+              <span className="inline-flex items-center gap-1.5">
+                <span className="text-emerald-400">🛞</span> Best Value
+              </span>
+            </div>
           </div>
         </div>
       )}

@@ -59,6 +59,45 @@ const CTA_TEXT: Record<CTAVariant, string> = {
 export type SocialProofType = "rating" | "popular" | "bestseller" | "trending" | "staff-pick";
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// TOP PICK CATEGORY TYPES - For guided selection
+// ═══════════════════════════════════════════════════════════════════════════════
+export type TopPickCategory = "best-overall" | "most-popular" | "best-style" | "best-value";
+
+// REFINED: Softer, more cohesive color palette (less saturated, more premium)
+const TOP_PICK_CONFIG: Record<TopPickCategory, { icon: string; label: string; color: string }> = {
+  "best-overall": { icon: "⭐", label: "Best Overall", color: "bg-gradient-to-r from-amber-400/90 to-yellow-400/90 text-amber-950" },
+  "most-popular": { icon: "🔥", label: "Most Popular", color: "bg-gradient-to-r from-orange-400/90 to-amber-400/90 text-orange-950" },
+  "best-style": { icon: "💎", label: "Best Style Upgrade", color: "bg-gradient-to-r from-purple-400/90 to-violet-400/90 text-purple-950" },
+  "best-value": { icon: "🛞", label: "Best Value", color: "bg-gradient-to-r from-emerald-400/90 to-teal-400/90 text-emerald-950" },
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// WHEEL STYLE TAGS - For quick decision making
+// ═══════════════════════════════════════════════════════════════════════════════
+export type WheelStyleTag = 
+  | "clean-style" 
+  | "aggressive-look" 
+  | "luxury-finish" 
+  | "oem-plus" 
+  | "flush-fit"
+  | "deep-dish"
+  | "concave"
+  | "off-road"
+  | "classic";
+
+const STYLE_TAG_CONFIG: Record<WheelStyleTag, { label: string; className: string }> = {
+  "clean-style": { label: "Clean Style", className: "bg-slate-100 text-slate-700" },
+  "aggressive-look": { label: "Aggressive Look", className: "bg-orange-100 text-orange-700" },
+  "luxury-finish": { label: "Luxury Finish", className: "bg-purple-100 text-purple-700" },
+  "oem-plus": { label: "OEM+ Fit", className: "bg-blue-100 text-blue-700" },
+  "flush-fit": { label: "Flush Fit", className: "bg-green-100 text-green-700" },
+  "deep-dish": { label: "Deep Dish", className: "bg-amber-100 text-amber-700" },
+  "concave": { label: "Slight Concave", className: "bg-indigo-100 text-indigo-700" },
+  "off-road": { label: "Off-Road Ready", className: "bg-stone-200 text-stone-700" },
+  "classic": { label: "Classic Style", className: "bg-neutral-200 text-neutral-700" },
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // INVENTORY TYPE LABELS - Map WheelPros codes to friendly display
 // ═══════════════════════════════════════════════════════════════════════════════
 const INVENTORY_TYPE_LABELS: Record<string, { label: string; className: string; show: boolean }> = {
@@ -86,29 +125,23 @@ function fmtSizePart(v: string) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// FITMENT BADGE CONFIG - Conversion-optimized copy
+// FITMENT BADGE CONFIG - Slim, conversion-optimized design
 // ═══════════════════════════════════════════════════════════════════════════════
 const FITMENT_CONFIG = {
   surefit: {
     label: "Guaranteed Fit",
-    sublabel: "Verified for your vehicle • Hardware included",
-    bgClass: "bg-green-600",
-    textClass: "text-white",
     icon: "✓",
+    className: "bg-green-600 text-white",
   },
   specfit: {
     label: "Good Fit",
-    sublabel: "Works with your vehicle • Hardware included",
-    bgClass: "bg-blue-600",
-    textClass: "text-white",
     icon: "✓",
+    className: "bg-blue-600 text-white",
   },
   extended: {
     label: "Custom Fit",
-    sublabel: "May need modifications",
-    bgClass: "bg-amber-500",
-    textClass: "text-white",
     icon: "⚡",
+    className: "bg-amber-500 text-white",
   },
 } as const;
 
@@ -124,8 +157,23 @@ function generateWhyThisWheel(params: {
   vehicleModel?: string;
   fitmentClass?: string;
   isStockSize?: boolean;
+  topPickCategory?: TopPickCategory;
 }): string | null {
-  const { brand, style, width, diameter, finish, vehicleModel, fitmentClass, isStockSize } = params;
+  const { brand, style, width, diameter, finish, vehicleModel, fitmentClass, isStockSize, topPickCategory } = params;
+  
+  // Top Pick specific copy
+  if (topPickCategory) {
+    switch (topPickCategory) {
+      case "best-overall":
+        return "Perfect blend of style, fitment, and value";
+      case "most-popular":
+        return "Customer favorite for this vehicle";
+      case "best-style":
+        return "Bold upgrade for a head-turning look";
+      case "best-value":
+        return "Great look without breaking the bank";
+    }
+  }
   
   const hints: string[] = [];
   
@@ -184,6 +232,89 @@ function generateWhyThisWheel(params: {
   // Return top 2 hints joined
   if (hints.length === 0) return null;
   return hints.slice(0, 2).join(" • ");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// STYLE TAG INFERENCE - Determine visual tags based on wheel attributes
+// ═══════════════════════════════════════════════════════════════════════════════
+function inferStyleTags(params: {
+  style?: string;
+  finish?: string;
+  width?: string;
+  offset?: string;
+  brand?: string;
+}): WheelStyleTag[] {
+  const { style, finish, width, offset, brand } = params;
+  const tags: WheelStyleTag[] = [];
+  
+  const styleLower = (style || "").toLowerCase();
+  const finishLower = (finish || "").toLowerCase();
+  const brandLower = (brand || "").toLowerCase();
+  const numWidth = parseFloat(width || "0");
+  const numOffset = parseFloat(offset || "0");
+  
+  // Off-road indicators
+  if (
+    styleLower.includes("off-road") || 
+    styleLower.includes("offroad") ||
+    brandLower.includes("fuel") ||
+    brandLower.includes("method") ||
+    brandLower.includes("black rhino")
+  ) {
+    tags.push("off-road");
+  }
+  
+  // Aggressive look (wide width or negative offset)
+  if (numWidth >= 10 || numOffset < -10) {
+    tags.push("aggressive-look");
+  }
+  
+  // Deep dish (very negative offset)
+  if (numOffset < -20) {
+    tags.push("deep-dish");
+  }
+  
+  // Luxury finish
+  if (
+    finishLower.includes("chrome") || 
+    finishLower.includes("polished") ||
+    brandLower.includes("asanti") ||
+    brandLower.includes("lexani") ||
+    brandLower.includes("dub")
+  ) {
+    tags.push("luxury-finish");
+  }
+  
+  // Flush fit (moderate positive offset)
+  if (numOffset >= 30 && numOffset <= 50) {
+    tags.push("flush-fit");
+  }
+  
+  // Clean style (default for standard looks)
+  if (
+    tags.length === 0 &&
+    !finishLower.includes("milled") &&
+    numWidth < 9.5
+  ) {
+    tags.push("clean-style");
+  }
+  
+  // Concave styling
+  if (styleLower.includes("concave")) {
+    tags.push("concave");
+  }
+  
+  // Classic style
+  if (styleLower.includes("classic") || styleLower.includes("vintage") || styleLower.includes("retro")) {
+    tags.push("classic");
+  }
+  
+  // OEM+ fit (stock-like offset range)
+  if (numOffset >= 20 && numOffset <= 45 && numWidth <= 9) {
+    tags.push("oem-plus");
+  }
+  
+  return tags.slice(0, 2); // Max 2 tags
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -279,23 +410,80 @@ function SocialProofBadge({ config }: { config: SocialProofConfig }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// PRICE ANCHORING - Typical package range
+// PRICE ANCHORING - Typical package range with YOUR PRICE highlight
+// REFINED: Improved hierarchy - "Your Price" is clearer but doesn't overpower main price
 // ═══════════════════════════════════════════════════════════════════════════════
-function getPriceAnchor(wheelSetPrice: number | null): string | null {
+function PriceAnchorBlock({ wheelSetPrice }: { wheelSetPrice: number | null }) {
   if (wheelSetPrice === null) return null;
   
-  // Estimate typical package: wheels + tires + TPMS
-  // Tires: roughly $150-$300 each for truck/SUV = $600-$1200 for 4
-  // TPMS: $60-$100 for 4
-  // Installation: $80-$120
+  // Estimate typical package: wheels + tires + TPMS + installation
   const minPackage = wheelSetPrice + 600 + 60 + 80;
   const maxPackage = wheelSetPrice + 1200 + 100 + 120;
   
-  // Round to nearest $100
   const minRounded = Math.round(minPackage / 100) * 100;
   const maxRounded = Math.round(maxPackage / 100) * 100;
   
-  return `Typical package: $${minRounded.toLocaleString()}–$${maxRounded.toLocaleString()}`;
+  return (
+    <div className="mt-3 space-y-1.5">
+      <div className="text-[11px] text-neutral-400 font-medium">
+        Typical package: ${minRounded.toLocaleString()}–${maxRounded.toLocaleString()}
+      </div>
+      <div className="flex items-baseline gap-1.5">
+        <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wide">Your Price:</span>
+        <span className="text-base font-extrabold text-emerald-800">
+          ${wheelSetPrice.toLocaleString()}
+        </span>
+        <span className="text-[10px] text-neutral-400 font-medium">wheels only</span>
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// STYLE TAGS DISPLAY
+// ═══════════════════════════════════════════════════════════════════════════════
+function StyleTagsDisplay({ tags }: { tags: WheelStyleTag[] }) {
+  if (tags.length === 0) return null;
+  
+  return (
+    <div className="flex flex-wrap gap-1.5 mt-2.5">
+      {tags.map((tag) => {
+        const config = STYLE_TAG_CONFIG[tag];
+        return (
+          <span
+            key={tag}
+            className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-medium ${config.className}`}
+          >
+            {config.label}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// TRUST STRIP - Near CTA for conversion confidence (refined colors)
+// ═══════════════════════════════════════════════════════════════════════════════
+function TrustStrip({ showHardware = true }: { showHardware?: boolean }) {
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[10px] text-neutral-400 font-medium">
+      <span className="inline-flex items-center gap-1">
+        <span className="text-emerald-500">✓</span>
+        <span>Guaranteed Fit</span>
+      </span>
+      {showHardware && (
+        <span className="inline-flex items-center gap-1">
+          <span className="text-emerald-500">✓</span>
+          <span>Hardware Included</span>
+        </span>
+      )}
+      <span className="inline-flex items-center gap-1">
+        <span className="text-neutral-400">🚚</span>
+        <span>Free Shipping</span>
+      </span>
+    </div>
+  );
 }
 
 export function WheelsStyleCard({
@@ -334,6 +522,10 @@ export function WheelsStyleCard({
   onSelect,
   // Homepage intent: show offset in size display (for lifted builds)
   showOffset = false,
+  // NEW: Top Pick category for guided selection
+  topPickCategory,
+  // NEW: Is this card in the Top Picks section
+  isTopPick = false,
 }: {
   brand: string;
   title: string;
@@ -371,6 +563,10 @@ export function WheelsStyleCard({
   onSelect?: (wheelState: { imageUrl?: string; price?: number; finish?: string; sku: string }) => void;
   // Homepage intent: show offset in size display (for lifted builds)
   showOffset?: boolean;
+  // NEW: Top Pick category for guided selection
+  topPickCategory?: TopPickCategory;
+  // NEW: Is this card in the Top Picks section
+  isTopPick?: boolean;
 }) {
   const { addItem, addAccessories, setAccessoryState } = useCart();
   const thumbs = useMemo(() => (finishThumbs || []).filter((t) => t?.sku), [finishThumbs]);
@@ -401,6 +597,7 @@ export function WheelsStyleCard({
   // ═══════════════════════════════════════════════════════════════════════════
   const currentDiameter = selectedPair?.front?.diameter || sizeLabel?.diameter;
   const currentWidth = selectedPair?.front?.width || sizeLabel?.width;
+  const currentOffset = selectedPair?.front?.offset || specLabel?.offset;
   const vehicleModel = viewParams?.model;
   
   const whyThisWheel = useMemo(() => generateWhyThisWheel({
@@ -412,7 +609,16 @@ export function WheelsStyleCard({
     vehicleModel,
     fitmentClass,
     isStockSize,
-  }), [brand, style, currentWidth, currentDiameter, selectedFinish, vehicleModel, fitmentClass, isStockSize]);
+    topPickCategory,
+  }), [brand, style, currentWidth, currentDiameter, selectedFinish, vehicleModel, fitmentClass, isStockSize, topPickCategory]);
+  
+  const styleTags = useMemo(() => inferStyleTags({
+    style,
+    finish: selectedFinish,
+    width: currentWidth,
+    offset: currentOffset,
+    brand,
+  }), [style, selectedFinish, currentWidth, currentOffset, brand]);
   
   const sizeContext = useMemo(() => getSizeContext({
     isStockSize,
@@ -421,8 +627,6 @@ export function WheelsStyleCard({
     stockWidth,
     stockDiameter,
   }), [isStockSize, currentWidth, currentDiameter, stockWidth, stockDiameter]);
-  
-  const priceAnchor = useMemo(() => getPriceAnchor(setPrice), [setPrice]);
   
   // Derive social proof - use prop or fallback to isPopular
   const effectiveSocialProof: SocialProofConfig | undefined = socialProof || (isPopular ? { badge: "popular" } : undefined);
@@ -531,43 +735,61 @@ export function WheelsStyleCard({
 
   const bolt = specLabel?.boltPattern ? String(specLabel.boltPattern).trim() : "";
   const fitmentConfig = fitmentClass ? FITMENT_CONFIG[fitmentClass] : null;
-  
-  // Always show the legacy fitment banner if we have fitmentClass
-  // This ensures visual consistency across all cards
-  // The fitmentGuidance badges below provide additional detail (aggressive, lift requirements, etc.)
-  const showLegacyFitmentBanner = !!fitmentConfig;
+
+  // Top Pick category badge config
+  const topPickConfig = topPickCategory ? TOP_PICK_CONFIG[topPickCategory] : null;
 
   return (
-    <div className="relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-shadow hover:shadow-lg">
+    <div 
+      className={`
+        group relative flex flex-col overflow-hidden rounded-2xl border bg-white
+        transition-all duration-250 ease-out
+        ${isTopPick 
+          ? "border-amber-100/80 bg-gradient-to-b from-amber-50/30 to-white shadow-sm" 
+          : "border-neutral-200"
+        }
+        ${isSelected
+          ? "ring-2 ring-green-500 ring-offset-2 scale-[1.01]"
+          : "hover:shadow-md hover:border-neutral-300 hover:-translate-y-0.5"
+        }
+      `}
+    >
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          TOP: FITMENT BADGE (Full width, prominent)
-          Hidden for aggressive fitment - those get the fitmentGuidance badge instead
+          TOP PICK CATEGORY BADGE (Above title, refined styling)
           ═══════════════════════════════════════════════════════════════════════ */}
-      {showLegacyFitmentBanner ? (
-        <div className={`${fitmentConfig.bgClass} ${fitmentConfig.textClass} px-4 py-2.5`}>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-lg">{fitmentConfig.icon}</span>
-              <div>
-                <div className="text-sm font-extrabold">{fitmentConfig.label}</div>
-                <div className="text-xs opacity-90">{fitmentConfig.sublabel}</div>
-              </div>
-            </div>
+      {topPickConfig && (
+        <div className={`px-3 py-2 ${topPickConfig.color}`}>
+          <div className="flex items-center gap-1.5 text-xs font-bold">
+            <span className="text-sm">{topPickConfig.icon}</span>
+            <span>{topPickConfig.label}</span>
           </div>
         </div>
-      ) : null}
+      )}
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          IMAGE (Larger, more prominent)
+          SLIM FITMENT BADGE (Compact, not overwhelming)
           ═══════════════════════════════════════════════════════════════════════ */}
-      <Link href={viewHref} className="block relative">
+      {fitmentConfig && !topPickConfig && (
+        <div className="px-3 py-1.5 flex items-center gap-2">
+          <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold ${fitmentConfig.className}`}>
+            <span>{fitmentConfig.icon}</span>
+            {fitmentConfig.label}
+          </span>
+          <span className="text-[10px] text-neutral-400">Hardware included</span>
+        </div>
+      )}
+
+      {/* ═══════════════════════════════════════════════════════════════════════
+          IMAGE (With subtle hover zoom effect - refined to 1.03)
+          ═══════════════════════════════════════════════════════════════════════ */}
+      <Link href={viewHref} className="block relative overflow-hidden">
         <div className="aspect-square w-full overflow-hidden bg-neutral-50">
           {selectedImage ? (
             <img
               src={selectedImage}
               alt={title}
-              className="h-full w-full object-contain p-4 transition-transform hover:scale-105"
+              className="h-full w-full object-contain p-4 transition-transform duration-250 ease-out group-hover:scale-[1.03]"
               loading="lazy"
             />
           ) : (
@@ -581,7 +803,7 @@ export function WheelsStyleCard({
         </div>
         
         {/* Action buttons overlay (Favorites + Compare) */}
-        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+        <div className="absolute top-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
           <AddToCompareButton
             item={normalizeWheelForCompare({
               sku: selectedSku || baseSku,
@@ -613,28 +835,26 @@ export function WheelsStyleCard({
       </Link>
 
       {/* ═══════════════════════════════════════════════════════════════════════
-          CONTENT AREA
+          CONTENT AREA (Refined spacing for premium feel)
           ═══════════════════════════════════════════════════════════════════════ */}
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 flex-col p-4 pt-3.5">
         
         {/* ═══════════════════════════════════════════════════════════════════════
-            SIMPLIFIED TITLE STRUCTURE
-            Line 1: Brand + Model name
-            Line 2: Size + Finish (or Staggered specs)
+            TITLE STRUCTURE (Improved spacing: badge → brand → title)
             ═══════════════════════════════════════════════════════════════════════ */}
         <div>
-          <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{brand}</div>
+          <div className="text-[11px] font-semibold text-neutral-400 uppercase tracking-wide">{brand}</div>
           <Link href={viewHref}>
-            <h3 className="mt-0.5 text-lg font-extrabold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-1">
+            <h3 className="mt-1 text-base font-bold text-neutral-900 hover:text-neutral-700 transition-colors line-clamp-1">
               {title}
             </h3>
           </Link>
           
           {/* Show staggered badge + front/rear specs for staggered wheels */}
           {selectedPair?.staggered && selectedPair.rear ? (
-            <div className="mt-1.5">
+            <div className="mt-2">
               {/* Staggered badge */}
-              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800 mb-1.5">
+              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800 mb-2">
                 ⚡ Staggered Set
               </span>
               {/* Front/Rear specs */}
@@ -664,12 +884,12 @@ export function WheelsStyleCard({
               </div>
               {/* Finish below */}
               {selectedFinish && (
-                <div className="mt-1.5 text-xs text-neutral-600">{selectedFinish}</div>
+                <div className="mt-2 text-xs text-neutral-600">{selectedFinish}</div>
               )}
             </div>
           ) : (
             /* Standard square setup - Line 2: Size + Offset (if showOffset) + Finish */
-            <div className="mt-0.5 text-sm text-neutral-600">
+            <div className="mt-1 text-sm text-neutral-600">
               {(currentDiameter || currentWidth) && (
                 <span className="font-medium">
                   {currentDiameter && `${fmtSizePart(currentDiameter)}"`}
@@ -692,13 +912,18 @@ export function WheelsStyleCard({
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            "WHY THIS WHEEL" HELPER TEXT
+            "WHY THIS WHEEL" HELPER TEXT (Refined spacing)
             ═══════════════════════════════════════════════════════════════════════ */}
         {whyThisWheel && (
-          <div className="mt-2 text-xs text-neutral-500 italic">
-            {whyThisWheel}
+          <div className={`mt-2.5 text-[11px] leading-relaxed italic ${topPickCategory ? "text-neutral-600 font-medium" : "text-neutral-400"}`}>
+            "{whyThisWheel}"
           </div>
         )}
+
+        {/* ═══════════════════════════════════════════════════════════════════════
+            STYLE TAGS (Visual decision helpers)
+            ═══════════════════════════════════════════════════════════════════════ */}
+        <StyleTagsDisplay tags={styleTags} />
 
         {/* ═══════════════════════════════════════════════════════════════════════
             SIZE CONTEXT (Stock vs Upgraded) - Deprecated, replaced by Fitment Guidance
@@ -718,8 +943,6 @@ export function WheelsStyleCard({
 
         {/* ═══════════════════════════════════════════════════════════════════════
             FITMENT GUIDANCE BADGES (2026-04-07)
-            Shows: Perfect Fit / Recommended / Popular Upgrade / Aggressive Fitment
-            Plus: Works with Stock / Requires Level / Requires Lift / May Require Trimming
             ═══════════════════════════════════════════════════════════════════════ */}
         {fitmentLevel && (
           <div className="mt-2">
@@ -734,7 +957,7 @@ export function WheelsStyleCard({
         {/* ═══════════════════════════════════════════════════════════════════════
             SOCIAL PROOF (One badge per card)
             ═══════════════════════════════════════════════════════════════════════ */}
-        {effectiveSocialProof && (
+        {effectiveSocialProof && !topPickCategory && (
           <div className="mt-2">
             <SocialProofBadge config={effectiveSocialProof} />
           </div>
@@ -795,26 +1018,26 @@ export function WheelsStyleCard({
         ) : null}
 
         {/* Spacer */}
-        <div className="flex-1" />
+        <div className="flex-1 min-h-3" />
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            PRICING (Per wheel + Set of 4 - both clearly visible)
+            PRICING (Enhanced with package value perception)
             ═══════════════════════════════════════════════════════════════════════ */}
         <div className="mt-4 pt-4 border-t border-neutral-100">
           <div className="flex flex-col gap-1">
-            {/* Per wheel price - prominent */}
+            {/* Per wheel price - secondary */}
             {typeof selectedPrice === "number" ? (
-              <div className="flex items-baseline gap-1">
-                <span className="text-lg font-bold text-neutral-900">
+              <div className="flex items-baseline gap-1 text-neutral-500">
+                <span className="text-sm font-semibold">
                   ${selectedPrice.toFixed(0)}
                 </span>
-                <span className="text-sm text-neutral-600">per wheel</span>
+                <span className="text-xs">per wheel</span>
               </div>
             ) : null}
             
-            {/* Set of 4 total */}
-            <div className="flex items-baseline gap-1 px-2 py-1 bg-neutral-50 rounded-lg">
-              <span className="text-xl font-extrabold text-neutral-900">
+            {/* Set of 4 total - PRIMARY */}
+            <div className="flex items-baseline gap-2 px-3 py-2 bg-gradient-to-r from-neutral-50 to-neutral-100 rounded-xl">
+              <span className="text-2xl font-black text-neutral-900">
                 {setPrice !== null 
                   ? `$${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
                   : fromSetPrice !== null 
@@ -822,65 +1045,52 @@ export function WheelsStyleCard({
                     : "Call for price"
                 }
               </span>
-              <span className="text-xs font-medium text-neutral-500">
+              <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">
                 {selectedPair?.staggered && selectedPair.rear ? (
                   <>staggered set</>
                 ) : (
-                  <>for all 4</>
+                  <>set of 4</>
                 )}
               </span>
             </div>
           </div>
 
-          {/* Price anchoring */}
-          {priceAnchor && (
-            <div className="mt-2 text-[11px] text-neutral-400 font-medium">
-              {priceAnchor}
-            </div>
-          )}
+          {/* Price anchoring with YOUR PRICE highlight */}
+          <PriceAnchorBlock wheelSetPrice={setPrice} />
 
-          {/* Trust signals */}
-          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-neutral-500">
-            <span className="inline-flex items-center gap-1">
-              <span className="text-green-600">✓</span>
-              <span>Guaranteed fit</span>
-            </span>
-            <span className="inline-flex items-center gap-1">
-              <span className="opacity-70">🚚</span>
-              <span>Free shipping</span>
-            </span>
-          </div>
-
-          {/* Stock availability - show qty if available, otherwise inventory type */}
+          {/* Stock availability */}
           {typeof selectedStockQty === "number" && selectedStockQty > 0 ? (
-            <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-green-700">
+            <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-green-700">
               <span className="flex h-4 w-4 items-center justify-center rounded-full bg-green-100 text-[10px]">
                 ✓
               </span>
               {selectedStockQty >= 20 ? "20+ in stock" : `${selectedStockQty} in stock`}
             </div>
           ) : selectedInventoryType && INVENTORY_TYPE_LABELS[selectedInventoryType]?.show ? (
-            <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${INVENTORY_TYPE_LABELS[selectedInventoryType].className.split(" ")[0]}`}>
+            <div className={`mt-3 flex items-center gap-1.5 text-xs font-semibold ${INVENTORY_TYPE_LABELS[selectedInventoryType].className.split(" ")[0]}`}>
               <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] ${INVENTORY_TYPE_LABELS[selectedInventoryType].className.split(" ")[1]}`}>
                 ✓
               </span>
               {INVENTORY_TYPE_LABELS[selectedInventoryType].label}
             </div>
           ) : null}
+
+          {/* ═══════════════════════════════════════════════════════════════════
+              TRUST STRIP (Near CTA)
+              ═══════════════════════════════════════════════════════════════════ */}
+          <div className="mt-3">
+            <TrustStrip showHardware={!!fitmentClass} />
+          </div>
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            SINGLE PRIMARY CTA: Selection-aware states
-            - Not selected (no selection): "Add to Package"
-            - Selected: "Selected ✓" (green, disabled-looking)
-            - Not selected (has selection): "Compare or Switch"
+            PRIMARY CTA: Refined gradient & subtle shadow (premium feel)
             ═══════════════════════════════════════════════════════════════════════ */}
         <button
           type="button"
           onClick={() => {
-            if (isSelected) return; // Already selected, no action
+            if (isSelected) return;
             if (onSelect) {
-              // Pass current wheel state including selectedImage
               onSelect({
                 imageUrl: selectedImage,
                 price: selectedPrice,
@@ -895,15 +1105,15 @@ export function WheelsStyleCard({
           data-cta-variant={ctaVariant}
           data-selected={isSelected}
           className={`
-            mt-3 flex h-14 w-full items-center justify-center gap-2 rounded-xl 
-            text-base font-extrabold transition-all duration-200
+            mt-4 flex h-13 w-full items-center justify-center gap-2 rounded-xl 
+            text-sm font-bold transition-all duration-250
             ${isSelected
-              ? "bg-green-600 text-white cursor-default shadow-lg shadow-green-600/25"
+              ? "bg-gradient-to-r from-emerald-500 to-green-500 text-white cursor-default shadow-md shadow-emerald-500/25"
               : isAdding 
-                ? "bg-neutral-300 text-neutral-500 cursor-wait" 
+                ? "bg-neutral-200 text-neutral-400 cursor-wait" 
                 : hasSelection
-                  ? "bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-2 border-neutral-200 hover:border-neutral-300 active:scale-[0.98]"
-                  : "bg-red-600 text-white hover:bg-red-700 active:scale-[0.98] shadow-lg shadow-red-600/25"
+                  ? "bg-white text-neutral-600 hover:bg-neutral-50 border border-neutral-200 hover:border-neutral-300 active:scale-[0.99]"
+                  : "bg-gradient-to-r from-red-600 to-red-500 text-white hover:from-red-500 hover:to-red-600 active:scale-[0.99] shadow-md shadow-red-500/20 hover:shadow-lg hover:shadow-red-500/25"
             }
           `}
         >
@@ -931,10 +1141,10 @@ export function WheelsStyleCard({
             </>
           ) : (
             <>
-              {CTA_TEXT[ctaVariant]}
+              Add Full Set
               {setPrice !== null && (
-                <span className="opacity-90">
-                  — ${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+                <span className="opacity-90 font-bold">
+                  – ${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                 </span>
               )}
             </>
@@ -942,7 +1152,7 @@ export function WheelsStyleCard({
         </button>
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            SECONDARY: View Details link (small, de-emphasized)
+            SECONDARY: View Details link
             ═══════════════════════════════════════════════════════════════════════ */}
         <div className="mt-2 text-center">
           <Link
