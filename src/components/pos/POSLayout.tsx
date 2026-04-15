@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { usePOS } from "./POSContext";
 import { POSAdminPanel } from "./POSAdminPanel";
 
@@ -8,7 +9,13 @@ import { POSAdminPanel } from "./POSAdminPanel";
 // ============================================================================
 
 export function POSHeader() {
+  const router = useRouter();
   const { reset, state, outTheDoorPrice, isComplete, toggleAdminPanel } = usePOS();
+  
+  const handleNewQuote = () => {
+    reset();
+    router.push("/pos");
+  };
   
   return (
     <header className="sticky top-0 z-50 bg-neutral-900 border-b border-neutral-800">
@@ -66,7 +73,7 @@ export function POSHeader() {
             </button>
             
             <button
-              onClick={reset}
+              onClick={handleNewQuote}
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition-colors"
             >
               New Quote
