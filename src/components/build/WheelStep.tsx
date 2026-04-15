@@ -185,7 +185,27 @@ export function WheelStep() {
         if (!res.ok) throw new Error("Failed to fetch wheels");
         
         const data = await res.json();
-        setWheels(data.wheels || []);
+        // API returns { results: [] } with wheel objects
+        const rawWheels = data.results || data.wheels || [];
+        
+        // Normalize wheel data to expected format
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const normalizedWheels: WheelResult[] = rawWheels.map((w: any) => ({
+          sku: w.sku || w.partNumber || "",
+          brand: w.brand || w.brandCode || "Unknown",
+          model: w.model || w.styleName || "",
+          finish: w.finish || w.finishDescription || "",
+          diameter: String(w.diameter || ""),
+          width: String(w.width || ""),
+          offset: w.offset ? String(w.offset) : undefined,
+          boltPattern: w.boltPattern || "",
+          imageUrl: w.imageUrl || w.primaryImage || "",
+          price: typeof w.sellPrice === "number" ? w.sellPrice : (typeof w.price === "number" ? w.price : 0),
+          fitmentClass: w.fitmentClass || "specfit",
+          stockQty: w.stockQty || w.quantity || 0,
+        }));
+        
+        setWheels(normalizedWheels);
       } catch (err) {
         console.error("[WheelStep] Fetch error:", err);
         setError("Unable to load wheels. Please try again.");
