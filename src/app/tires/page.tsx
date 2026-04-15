@@ -4014,37 +4014,40 @@ function TireCard({
         );
       })()}
 
-      {/* Price block - set of 4 primary with improved clarity */}
+      {/* Price block - both prices clearly visible */}
       <div className="relative z-10 mt-4 pt-4 border-t border-neutral-100">
-        <div className="flex items-end justify-between">
+        <div className="flex items-start justify-between">
           <div>
             {(() => {
               const unitPrice = getDisplayPrice(t);
               return unitPrice != null ? (
-                <>
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-2xl font-extrabold text-neutral-900">
+                <div className="flex flex-col gap-1">
+                  {/* Per tire price - prominent */}
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-lg font-bold text-neutral-900">
+                      ${unitPrice.toFixed(2)}
+                    </span>
+                    <span className="text-sm text-neutral-600">per tire</span>
+                  </div>
+                  {/* Set of 4 total */}
+                  <div className="flex items-baseline gap-1 px-2 py-1 bg-neutral-50 rounded-lg">
+                    <span className="text-xl font-extrabold text-neutral-900">
                       ${(unitPrice * 4).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
                     </span>
-                    <span className="text-xs font-semibold text-neutral-500">set of 4</span>
+                    <span className="text-xs font-medium text-neutral-500">for all 4</span>
                   </div>
-                  <div className="text-[11px] text-neutral-400 mt-0.5">
-                    ${unitPrice.toFixed(2)} per tire
-                  </div>
-                </>
+                </div>
               ) : (
                 <div className="text-xl font-extrabold text-neutral-900">Call for price</div>
               );
             })()}
           </div>
           {/* Stock indicator */}
-          <div className="flex flex-col items-end gap-0.5">
-            <div className="flex items-center gap-1.5 text-xs font-semibold">
-              <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
-              <span className={inStock ? "text-green-700" : "text-amber-700"}>
-                {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
-              </span>
-            </div>
+          <div className="flex items-center gap-1.5 text-xs font-semibold mt-1">
+            <span className={"inline-block h-2 w-2 rounded-full " + (inStock ? "bg-green-500" : "bg-amber-500")} />
+            <span className={inStock ? "text-green-700" : "text-amber-700"}>
+              {inStock ? (maxQty >= 100 ? "100+" : `${maxQty} avail`) : "Order"}
+            </span>
           </div>
         </div>
       </div>
