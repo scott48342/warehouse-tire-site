@@ -1373,11 +1373,22 @@ export async function GET(req: Request) {
     
     // Filter by wheel diameter if specified
     // Use searchableSizes (modern P-metric) for actual searching
-    let matchMode: "exact" | "oem-fallback" | "direct-search" | "classic-upsize" = "exact";
+    let matchMode: "exact" | "oem-fallback" | "direct-search" | "classic-upsize" | "lifted" = "exact";
     let sizesToSearch = searchableSizes.length > 0 ? searchableSizes : tireSizes;
     
-    if (wheelDiameter) {
-      // First check: do we have OEM sizes matching this diameter?
+    // ═══════════════════════════════════════════════════════════════════════════
+    // LIFTED/LEVELED BUILD: Skip OEM sizes entirely, use lift-aware search
+    // This is the SINGLE SOURCE OF TRUTH for lifted tire queries
+    // ═══════════════════════════════════════════════════════════════════════════
+    const isLiftedBuild = (buildType === "lifted" || buildType === "leveled") && liftInches && liftInches > 0;
+    
+    if (isLiftedBuild && wheelDiameter && make && model) {
+      // Force lifted search mode - do NOT use OEM sizes
+      sizesToSearch = [];
+      matchMode = "lifted";
+      console.log(`[tires/search] LIFTED MODE: ${make} ${model} with ${liftInches}" lift, ${wheelDiameter}" wheels`);
+    } else if (wheelDiameter) {
+      // Stock build: check OEM sizes first
       const filtered = sizesToSearch.filter((size) => {
         const rim = extractRimDiameter(size);
         return rim === wheelDiameter;
@@ -1485,6 +1496,102 @@ export async function GET(req: Request) {
       kmResultsCount = cacheResult.sources.km;
       vehicleCacheHit = cacheResult.source === "cache";
       vehicleCacheStale = cacheResult.stale;
+      
+    } else if (matchMode === "lifted" && wheelDiameter && make && model) {
+      // ═══════════════════════════════════════════════════════════════════════════
+      // LIFTED MODE: Search for flotation/lifted tire sizes
+      // This is the SINGLE SOURCE OF TRUTH for lifted tire queries
+      // ═══════════════════════════════════════════════════════════════════════════
+      
+      let liftedSizes: string[];
+      const liftProfile = getLiftProfile(make, model);
+      
+      if (liftProfile && liftInches) {
+        // Get recommended tire sizes for this lift height
+        const profileSizes = getTireSizesForLift(liftProfile, liftInches, wheelDiameter);
+        const rec = getRecommendationForLiftHeight(liftProfile, liftInches);
+        
+        if (profileSizes.length > 0) {
+          liftedSizes = profileSizes;
+          console.log(`[tires/search] LIFTED: Using profile sizes for ${make} ${model}`);
+          console.log(`  Sizes: ${liftedSizes.join(", ")}`);
+        } else {
+          // Generate flotation sizes for this wheel diameter from the recommended tire diameter range
+          const minDia = rec.tireDiameterMin;
+          const maxDia = rec.tireDiameterMax;
+          const midDia = Math.round((minDia + maxDia) / 2);
+          
+          liftedSizes = [
+            `${midDia}x12.50R${wheelDiameter}`,
+            `${midDia}x13.50R${wheelDiameter}`,
+            `${minDia}x12.50R${wheelDiameter}`,
+            `${maxDia}x12.50R${wheelDiameter}`,
+            `${maxDia}x13.50R${wheelDiameter}`,
+            `${minDia}x13.50R${wheelDiameter}`,
+          ];
+          console.log(`[tires/search] LIFTED: Generated sizes for ${make} ${model} (${minDia}-${maxDia}" range)`);
+          console.log(`  Sizes: ${liftedSizes.join(", ")}`);
+        }
+      } else {
+        // No lift profile - use targetTireSize or estimate from liftInches
+        const targetDia = targetTireSize || (liftInches && liftInches <= 2.5 ? 33 : liftInches && liftInches <= 4 ? 35 : 37);
+        liftedSizes = [
+          `${targetDia}x12.50R${wheelDiameter}`,
+          `${targetDia}x13.50R${wheelDiameter}`,
+          `${targetDia - 2}x12.50R${wheelDiameter}`,
+          `${targetDia + 2}x12.50R${wheelDiameter}`,
+          `${targetDia - 2}x13.50R${wheelDiameter}`,
+          `${targetDia + 2}x13.50R${wheelDiameter}`,
+        ];
+        console.log(`[tires/search] LIFTED: No profile for ${make} ${model}, using ${targetDia}" generic sizes`);
+        console.log(`  Sizes: ${liftedSizes.join(", ")}`);
+      }
+      
+      const liftedCacheKey = buildVehicleCacheKey(liftedSizes, wheelDiameter);
+      
+      const cacheResult = await cachedTireSearch({
+        cacheKey: liftedCacheKey,
+        searchFn: async () => {
+          let wpResults: TireResult[] = [];
+          let twResults: TireResult[] = [];
+          let kmResults: TireResult[] = [];
+          
+          const searchPromises: Promise<void>[] = [];
+          for (const size of liftedSizes) {
+            searchPromises.push(
+              searchTiresBySize(db, size, minQty, Math.ceil(pageSize / 3))
+                .then((results) => { wpResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+            );
+            searchPromises.push(
+              searchTiresTireWebFormatted(size)
+                .then((results) => { twResults.push(...results.filter(t => t.rimDiameter === wheelDiameter)); })
+            );
+          }
+          await Promise.all(searchPromises);
+          
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const withCachedImages = await applyCachedImages(merged);
+          const withOverrides = await applyImageOverrides(db, withCachedImages);
+          
+          return {
+            results: withOverrides,
+            sources: {
+              wheelpros: wpResults.length,
+              tireweb: twResults.length,
+              km: kmResults.length,
+            },
+          };
+        },
+      });
+      
+      allResults = cacheResult.results;
+      wpResultsCount = cacheResult.sources.wheelpros;
+      twResultsCount = cacheResult.sources.tireweb;
+      kmResultsCount = cacheResult.sources.km;
+      vehicleCacheHit = cacheResult.source === "cache";
+      vehicleCacheStale = cacheResult.stale;
+      
+      console.log(`[tires/search] LIFTED RESULTS: ${allResults.length} tires found`);
       
     } else if (wheelDiameter && matchMode === "direct-search") {
       // Direct search by rim diameter when no OEM sizes match

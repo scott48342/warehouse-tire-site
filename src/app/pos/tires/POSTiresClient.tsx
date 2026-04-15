@@ -259,12 +259,13 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
         
         setTires(sorted);
         
-        // Build facets
+        // Build facets from FILTERED results (not raw API results)
+        // This ensures facets match the displayed tires
         const brandMap = new Map<string, number>();
         const sizeMap = new Map<string, number>();
         const speedMap = new Map<string, number>();
         
-        for (const t of processed) {
+        for (const t of sorted) {
           if (t.brand) brandMap.set(t.brand, (brandMap.get(t.brand) || 0) + 1);
           if (t.size) sizeMap.set(t.size, (sizeMap.get(t.size) || 0) + 1);
           if (t.speedRating) speedMap.set(t.speedRating, (speedMap.get(t.speedRating) || 0) + 1);
