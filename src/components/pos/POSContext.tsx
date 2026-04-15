@@ -133,7 +133,7 @@ function posReducer(state: POSState, action: POSAction): POSState {
       return { 
         ...state, 
         tire: action.payload,
-        step: "pricing", // Auto-advance when both selected
+        // Don't auto-advance - let the component handle navigation
       };
     
     case "SET_FEES":
