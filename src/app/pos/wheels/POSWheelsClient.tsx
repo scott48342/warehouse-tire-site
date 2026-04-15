@@ -30,6 +30,7 @@ type WheelFinish = {
 
 type WheelItem = {
   sku?: string;
+  title?: string;
   brand?: string;
   brandCode?: string;
   model?: string;
@@ -413,6 +414,7 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
           
           return {
             sku: it?.sku || it?.partNumber,
+            title: it?.title || "",
             brand,
             brandCode,
             model: props?.model || it?.techfeed?.style || "",
