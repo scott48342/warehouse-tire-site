@@ -29,6 +29,8 @@ import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { isPremiumTrimUxEnabled } from "@/lib/features/premiumTrimUx";
 import { cleanTireDisplayTitle, normalizeTireSize } from "@/lib/productFormat";
 import { TireFilterSidebar } from "@/components/TireFilterSidebar";
+import { MiniRatings, PerformanceIndicators } from "@/components/PerformanceIndicators";
+import { derivePerformanceRatings, parseUTQG, type PerformanceRatings } from "@/lib/tires/tireSpecs";
 import { 
   CardReviewSummary, 
   BestForLine, 
@@ -106,6 +108,8 @@ type Tire = {
     warrantyMiles?: number | null;
     loadIndex?: string | null;
     speedRating?: string | null;
+    utqg?: string | null;
+    treadDepth?: number | null;
   };
   prettyName?: string;
   tireLibraryId?: number;
@@ -2348,7 +2352,19 @@ export default async function TiresPage({
     const bBrand = (b.brand || "").toLowerCase();
     const aStock = (a.quantity?.primary ?? 0) + (a.quantity?.alternate ?? 0) + (a.quantity?.national ?? 0);
     const bStock = (b.quantity?.primary ?? 0) + (b.quantity?.alternate ?? 0) + (b.quantity?.national ?? 0);
+    
+    // AVAILABILITY FIRST: In-stock items (ships 1-2 days) before backorder items (ships 1-2 weeks)
+    // Threshold: MAX of (primary, alternate, national) >= 4 = in stock
+    // MUST match TireCard logic which uses Math.max(), not sum!
+    const aMaxQty = Math.max(a.quantity?.primary ?? 0, a.quantity?.alternate ?? 0, a.quantity?.national ?? 0);
+    const bMaxQty = Math.max(b.quantity?.primary ?? 0, b.quantity?.alternate ?? 0, b.quantity?.national ?? 0);
+    const aInStock = aMaxQty >= 4;
+    const bInStock = bMaxQty >= 4;
+    if (aInStock !== bInStock) {
+      return aInStock ? -1 : 1; // In-stock items come first
+    }
 
+    // Then apply the selected sort within each availability tier
     switch (sort) {
       case "price_asc": return aPrice - bPrice;
       case "price_desc": return bPrice - aPrice;
@@ -3826,6 +3842,19 @@ function TireCard({
           maxItems={2}
         />
       </div>
+
+      {/* Performance ratings - compact bars for SRP cards */}
+      {(() => {
+        const utqg = parseUTQG(t.badges?.utqg);
+        const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
+        const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
+        if (!ratings) return null;
+        return (
+          <div className="relative z-10 mt-2">
+            <MiniRatings ratings={ratings} category={category} />
+          </div>
+        );
+      })()}
 
       {/* Tire size - prominent display */}
       <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
