@@ -798,50 +798,56 @@ export function WheelsStyleCard({
         <div className="flex-1" />
 
         {/* ═══════════════════════════════════════════════════════════════════════
-            PRICING (Set of 4 prominent, per-wheel secondary, price anchor)
+            PRICING (Per wheel + Set of 4 - both clearly visible)
             ═══════════════════════════════════════════════════════════════════════ */}
-        <div className="mt-4 rounded-xl bg-neutral-50 p-3">
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-2xl font-extrabold text-neutral-900">
+        <div className="mt-4 pt-4 border-t border-neutral-100">
+          <div className="flex flex-col gap-1">
+            {/* Per wheel price - prominent */}
+            {typeof selectedPrice === "number" ? (
+              <div className="flex items-baseline gap-1">
+                <span className="text-lg font-bold text-neutral-900">
+                  ${selectedPrice.toFixed(0)}
+                </span>
+                <span className="text-sm text-neutral-600">per wheel</span>
+              </div>
+            ) : null}
+            
+            {/* Set of 4 total */}
+            <div className="flex items-baseline gap-1 px-2 py-1 bg-neutral-50 rounded-lg">
+              <span className="text-xl font-extrabold text-neutral-900">
                 {setPrice !== null 
                   ? `$${setPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
                   : fromSetPrice !== null 
                     ? `From $${fromSetPrice.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`
                     : "Call for price"
                 }
-              </div>
-              <div className="text-xs text-neutral-500">
+              </span>
+              <span className="text-xs font-medium text-neutral-500">
                 {selectedPair?.staggered && selectedPair.rear ? (
-                  <>for staggered set (2F + 2R)</>
+                  <>staggered set</>
                 ) : (
-                  <>for set of 4</>
+                  <>for all 4</>
                 )}
-                {typeof selectedPrice === "number" && (
-                  <span className="ml-1">
-                    (${selectedPrice.toFixed(0)} each)
-                  </span>
-                )}
-              </div>
+              </span>
             </div>
           </div>
 
           {/* Price anchoring */}
           {priceAnchor && (
-            <div className="mt-1.5 text-[11px] text-neutral-400 font-medium">
+            <div className="mt-2 text-[11px] text-neutral-400 font-medium">
               {priceAnchor}
             </div>
           )}
 
           {/* Trust signals */}
-          <div className="mt-2 flex items-center gap-3 text-[11px] text-neutral-600">
-            <span className="flex items-center gap-1">
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-neutral-500">
+            <span className="inline-flex items-center gap-1">
               <span className="text-green-600">✓</span>
-              Free Shipping
+              <span>Guaranteed fit</span>
             </span>
-            <span className="flex items-center gap-1">
-              <span className="text-green-600">✓</span>
-              Fitment Guarantee
+            <span className="inline-flex items-center gap-1">
+              <span className="opacity-70">🚚</span>
+              <span>Free shipping</span>
             </span>
           </div>
 
