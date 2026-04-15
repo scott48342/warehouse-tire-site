@@ -190,20 +190,38 @@ export function WheelStep() {
         
         // Normalize wheel data to expected format
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const normalizedWheels: WheelResult[] = rawWheels.map((w: any) => ({
-          sku: w.sku || w.partNumber || "",
-          brand: w.brand || w.brandCode || "Unknown",
-          model: w.model || w.styleName || "",
-          finish: w.finish || w.finishDescription || "",
-          diameter: String(w.diameter || ""),
-          width: String(w.width || ""),
-          offset: w.offset ? String(w.offset) : undefined,
-          boltPattern: w.boltPattern || "",
-          imageUrl: w.imageUrl || w.primaryImage || "",
-          price: typeof w.sellPrice === "number" ? w.sellPrice : (typeof w.price === "number" ? w.price : 0),
-          fitmentClass: w.fitmentClass || "specfit",
-          stockQty: w.stockQty || w.quantity || 0,
-        }));
+        const normalizedWheels: WheelResult[] = rawWheels.map((w: any) => {
+          // Extract brand - API returns { code, description } object
+          const brandObj = w.brand;
+          const brandName = typeof brandObj === "string" 
+            ? brandObj 
+            : (brandObj?.description || brandObj?.code || w.properties?.brand_desc || w.properties?.brand_cd || "Unknown");
+          
+          // Extract properties
+          const props = w.properties || {};
+          
+          // Extract price from prices array
+          const priceValue = w.prices?.msrp?.[0]?.currencyAmount;
+          const price = typeof priceValue === "string" ? parseFloat(priceValue) : (typeof priceValue === "number" ? priceValue : 0);
+          
+          // Extract image
+          const imageUrl = w.images?.[0]?.imageUrlLarge || w.images?.[0]?.imageUrlMedium || w.imageUrl || "";
+          
+          return {
+            sku: w.sku || "",
+            brand: brandName,
+            model: w.title || props.style_desc || "",
+            finish: props.abbreviated_finish_desc || props.fancy_finish_desc || "",
+            diameter: String(props.diameter || w.diameter || ""),
+            width: String(props.width || w.width || ""),
+            offset: props.offset ? String(props.offset) : undefined,
+            boltPattern: props.boltPattern || props.boltPatternMetric || "",
+            imageUrl,
+            price,
+            fitmentClass: w.fitmentValidation?.fitmentClass || "specfit",
+            stockQty: w.inventory?.localStock || 0,
+          };
+        });
         
         setWheels(normalizedWheels);
       } catch (err) {
