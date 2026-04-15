@@ -39,6 +39,17 @@ export function ExitIntentPopup({
     delayMs,
     oncePerSession: true,
   });
+  
+  // Disable on POS subdomain
+  const [isPOS, setIsPOS] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsPOS(window.location.hostname.startsWith("pos."));
+    }
+  }, []);
+  
+  // Don't show on POS
+  if (isPOS) return null;
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
