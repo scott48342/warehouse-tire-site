@@ -3,6 +3,7 @@ export type { POSVehicle, POSWheel, POSTire, POSFees, POSDiscount, POSStep, POSS
 
 export { POSLayout, POSHeader, POSStepIndicator, POSFooter } from "./POSLayout";
 export { POSAdminPanel } from "./POSAdminPanel";
+export { POSAuthGate } from "./POSAuthGate";
 export { POSVehicleStep } from "./POSVehicleStep";
 export { POSPackageStep } from "./POSPackageStep";
 export { POSPricingStep } from "./POSPricingStep";
