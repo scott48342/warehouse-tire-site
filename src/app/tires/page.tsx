@@ -3843,19 +3843,6 @@ function TireCard({
         />
       </div>
 
-      {/* Performance ratings - compact bars for SRP cards */}
-      {(() => {
-        const utqg = parseUTQG(t.badges?.utqg);
-        const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
-        const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
-        if (!ratings) return null;
-        return (
-          <div className="relative z-10 mt-2">
-            <MiniRatings ratings={ratings} category={category} />
-          </div>
-        );
-      })()}
-
       {/* Tire size - prominent display */}
       <div className="relative z-10 mt-1 text-sm font-medium text-neutral-700">
         {normalizeTireSize(selectedSize) || selectedSize}
@@ -3991,6 +3978,19 @@ function TireCard({
           </>
         )}
       </div>
+
+      {/* Performance ratings - mini bar charts */}
+      {(() => {
+        const utqg = parseUTQG(t.badges?.utqg);
+        const category = (t.enrichment?.treadCategory || t.badges?.terrain || 'All-Season') as any;
+        const ratings = derivePerformanceRatings(utqg, category, t.enrichment?.is3PMSF ?? false);
+        if (!ratings) return null;
+        return (
+          <div className="relative z-10 mt-2">
+            <MiniRatings ratings={ratings} category={category} />
+          </div>
+        );
+      })()}
 
       {/* Price block - set of 4 primary */}
       <div className="relative z-10 mt-3 pt-3 border-t border-neutral-100">

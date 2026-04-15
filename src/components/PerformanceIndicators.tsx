@@ -207,23 +207,36 @@ export function MiniRatings({ ratings, category }: MiniRatingsProps) {
       break;
   }
   
+  // Get bar color based on value
+  const getBarColor = (value: number) => {
+    if (value >= 8) return 'bg-green-500';
+    if (value >= 6) return 'bg-blue-500';
+    if (value >= 4) return 'bg-amber-500';
+    return 'bg-red-400';
+  };
+  
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col gap-1">
       {keys.map((key) => {
         const value = ratings[key as keyof PerformanceRatings];
         if (typeof value !== 'number') return null;
         
         const label = RATING_LABELS_SHORT[key as string] || key;
-        const color = value >= 8 ? 'text-green-600' : value >= 6 ? 'text-blue-600' : value >= 4 ? 'text-amber-600' : 'text-red-500';
+        const percentage = Math.max(0, Math.min(100, value * 10));
         
         return (
           <div 
             key={key as string} 
-            className="flex items-center gap-0.5"
+            className="flex items-center gap-2"
             title={`${RATING_LABELS[key as string]}: ${value}/10`}
           >
-            <span className={`text-[10px] font-bold ${color}`}>{value}</span>
-            <span className="text-[9px] text-neutral-400">{label}</span>
+            <span className="text-[10px] font-medium text-neutral-500 w-12 truncate">{label}</span>
+            <div className="flex-1 h-1.5 bg-neutral-200 rounded-full overflow-hidden">
+              <div 
+                className={`h-full rounded-full ${getBarColor(value)}`}
+                style={{ width: `${percentage}%` }}
+              />
+            </div>
           </div>
         );
       })}
