@@ -186,7 +186,7 @@ export function createSelectedTire(
   },
   setupMode: SetupMode = "square"
 ): SelectedTireWithStaggered {
-  const isStaggered = setupMode === "staggered" && rearTire;
+  const isStaggered = setupMode === "staggered" && !!rearTire;
   const unitPrice = tire.price || 0;
   const rearPrice = rearTire?.price || unitPrice;
   
