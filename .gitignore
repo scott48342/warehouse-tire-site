@@ -51,3 +51,6 @@ test-staging.ps1
 backups/
 
 scripts/neon-migration/*.sql
+
+src/backup-*
+*.backup
