@@ -33,6 +33,18 @@ type CompactHeaderProps = {
   wheelPrice?: number | null;
   wheelFinish?: string;
   
+  // Staggered wheel info (front/rear different specs)
+  isStaggered?: boolean;
+  wheelDiaFront?: string;
+  wheelWidthFront?: string;
+  wheelDiaRear?: string;
+  wheelWidthRear?: string;
+  wheelSkuRear?: string;
+  wheelNameRear?: string;
+  wheelImageRear?: string;
+  wheelPriceRear?: number | null;
+  wheelFinishRear?: string;
+  
   // Flow context
   isPackageFlow?: boolean;
   isLiftedBuild?: boolean;
@@ -72,6 +84,17 @@ export function TirePageCompactHeader({
   wheelImage,
   wheelPrice,
   wheelFinish,
+  // Staggered wheel props
+  isStaggered,
+  wheelDiaFront,
+  wheelWidthFront,
+  wheelDiaRear,
+  wheelWidthRear,
+  wheelSkuRear,
+  wheelNameRear,
+  wheelImageRear,
+  wheelPriceRear,
+  wheelFinishRear,
   isPackageFlow,
   isLiftedBuild,
   liftedInches,
@@ -85,12 +108,40 @@ export function TirePageCompactHeader({
   const wheelDiaNum = wheelDia ? parseFloat(wheelDia) : NaN;
   const wheelWidthNum = wheelWidth ? parseFloat(wheelWidth) : NaN;
   
-  // Build wheel size string (e.g., "20x9")
-  const wheelSizeDisplay = Number.isFinite(wheelDiaNum) && Number.isFinite(wheelWidthNum)
-    ? `${Math.round(wheelDiaNum)}x${wheelWidthNum}`
-    : Number.isFinite(wheelDiaNum)
-      ? `${Math.round(wheelDiaNum)}"`
+  // Staggered wheel sizes
+  const frontDiaNum = wheelDiaFront ? parseFloat(wheelDiaFront) : wheelDiaNum;
+  const frontWidthNum = wheelWidthFront ? parseFloat(wheelWidthFront) : wheelWidthNum;
+  const rearDiaNum = wheelDiaRear ? parseFloat(wheelDiaRear) : wheelDiaNum;
+  const rearWidthNum = wheelWidthRear ? parseFloat(wheelWidthRear) : wheelWidthNum;
+  
+  // Detect staggered setup (different front/rear specs)
+  const hasStaggeredSpecs = isStaggered || (
+    (wheelDiaFront && wheelDiaRear) || 
+    (wheelWidthFront && wheelWidthRear) ||
+    wheelSkuRear
+  );
+  
+  // Build wheel size strings
+  const frontSizeDisplay = Number.isFinite(frontDiaNum) && Number.isFinite(frontWidthNum)
+    ? `${Math.round(frontDiaNum)}x${frontWidthNum}`
+    : Number.isFinite(frontDiaNum)
+      ? `${Math.round(frontDiaNum)}"`
       : null;
+  
+  const rearSizeDisplay = Number.isFinite(rearDiaNum) && Number.isFinite(rearWidthNum)
+    ? `${Math.round(rearDiaNum)}x${rearWidthNum}`
+    : Number.isFinite(rearDiaNum)
+      ? `${Math.round(rearDiaNum)}"`
+      : null;
+  
+  // Combined display for staggered setups: "20x9 (F) / 20x11 (R)"
+  const wheelSizeDisplay = hasStaggeredSpecs && frontSizeDisplay && rearSizeDisplay && frontSizeDisplay !== rearSizeDisplay
+    ? `${frontSizeDisplay} (F) / ${rearSizeDisplay} (R)`
+    : frontSizeDisplay || (Number.isFinite(wheelDiaNum) && Number.isFinite(wheelWidthNum)
+        ? `${Math.round(wheelDiaNum)}x${wheelWidthNum}`
+        : Number.isFinite(wheelDiaNum)
+          ? `${Math.round(wheelDiaNum)}"`
+          : null);
   
   // Filter sizes to match wheel diameter if specified
   const filteredSizes = Number.isFinite(wheelDiaNum) 

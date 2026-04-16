@@ -2747,6 +2747,13 @@ export default async function TiresPage({
             wheelImage={wheelImage}
             wheelPrice={wheelPrice}
             wheelFinish={wheelFinish}
+            // Staggered wheel props
+            isStaggered={isStaggeredVehicle}
+            wheelDiaFront={wheelDiaFront}
+            wheelWidthFront={wheelWidthFront}
+            wheelDiaRear={wheelDiaRear}
+            wheelWidthRear={wheelWidthRear}
+            wheelSkuRear={wheelSkuRear}
             isPackageFlow={isPackageFlow}
             isLiftedBuild={isLiftedBuild}
             liftedInches={liftedInches}
