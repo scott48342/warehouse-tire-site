@@ -167,7 +167,7 @@ export function POSPackageStep() {
       unitPrice: wheel.price,
       setPrice: wheel.price * 4,
       quantity: 4,
-      fitmentClass: wheel.fitmentClass,
+      fitmentClass: wheel.fitmentClass as "extended" | "surefit" | "specfit" | undefined,
     };
     setWheel(posWheel);
     // Phase automatically switches to tires via useEffect
