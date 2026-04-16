@@ -1069,6 +1069,10 @@ export async function GET(req: Request) {
     const modification = url.searchParams.get("modification") || url.searchParams.get("trim");
     // Accept both "wheelDiameter" and "wheelDia" (POS uses wheelDia)
     const wheelDiameter = i(url.searchParams.get("wheelDiameter") || url.searchParams.get("wheelDia"));
+    // Rear wheel diameter for mixed-diameter stagger (e.g., Corvette 19F/20R)
+    const rearWheelDiameter = i(url.searchParams.get("rearWheelDiameter") || url.searchParams.get("rearWheelDia"));
+    // Flag: is this a mixed-diameter staggered search?
+    const isMixedDiameterStagger = wheelDiameter && rearWheelDiameter && wheelDiameter !== rearWheelDiameter;
     // Wheel width in inches - used to calculate appropriate tire width
     const wheelWidth = n(url.searchParams.get("wheelWidth"));
     
@@ -1432,6 +1436,33 @@ export async function GET(req: Request) {
       sizesToSearch = [];
       matchMode = "lifted";
       console.log(`[tires/search] LIFTED MODE: ${make} ${model} with ${liftInches}" lift, ${wheelDiameter}" wheels`);
+    } else if (isMixedDiameterStagger) {
+      // ═══════════════════════════════════════════════════════════════════════════
+      // MIXED-DIAMETER STAGGER: Different front/rear wheel diameters (e.g., Corvette 19F/20R)
+      // Must search for BOTH front and rear tire sizes independently
+      // ═══════════════════════════════════════════════════════════════════════════
+      const frontSizes = sizesToSearch.filter((size) => {
+        const rim = extractRimDiameter(size);
+        return rim === wheelDiameter;
+      });
+      const rearSizes = sizesToSearch.filter((size) => {
+        const rim = extractRimDiameter(size);
+        return rim === rearWheelDiameter;
+      });
+      
+      // Combine both front and rear sizes for search
+      // Tag which sizes are front vs rear for response
+      const frontDirect = frontSizes.length === 0 ? [`direct:R${wheelDiameter}`] : [];
+      const rearDirect = rearSizes.length === 0 ? [`direct:R${rearWheelDiameter}`] : [];
+      
+      sizesToSearch = [...frontSizes, ...rearSizes, ...frontDirect, ...rearDirect].filter(
+        (s, i, arr) => arr.indexOf(s) === i // dedupe
+      );
+      matchMode = frontSizes.length > 0 && rearSizes.length > 0 ? "exact" : "direct-search";
+      
+      console.log(`[tires/search] 🔀 MIXED-DIAMETER STAGGER: ${wheelDiameter}F/${rearWheelDiameter}R`);
+      console.log(`  Front sizes (R${wheelDiameter}): ${frontSizes.length > 0 ? frontSizes.join(", ") : `direct:R${wheelDiameter}`}`);
+      console.log(`  Rear sizes (R${rearWheelDiameter}): ${rearSizes.length > 0 ? rearSizes.join(", ") : `direct:R${rearWheelDiameter}`}`);
     } else if (wheelDiameter) {
       // Stock build: check OEM sizes first
       const filtered = sizesToSearch.filter((size) => {
@@ -1637,6 +1668,94 @@ export async function GET(req: Request) {
       vehicleCacheStale = cacheResult.stale;
       
       console.log(`[tires/search] LIFTED RESULTS: ${allResults.length} tires found`);
+      
+    } else if (isMixedDiameterStagger && matchMode === "direct-search") {
+      // ═══════════════════════════════════════════════════════════════════════════
+      // MIXED-DIAMETER STAGGER DIRECT SEARCH
+      // When no OEM sizes match either diameter, search for both independently
+      // ═══════════════════════════════════════════════════════════════════════════
+      const modelLower = (model || "").toLowerCase();
+      const isPerformance = /mustang|camaro|corvette|challenger|charger|m[2345]|amg|gt-r|supra|z|86|brz/i.test(modelLower);
+      
+      // Generate common sizes for BOTH diameters
+      const frontSizes = isPerformance ? [
+        `245/35R${wheelDiameter}`,
+        `255/35R${wheelDiameter}`,
+        `265/35R${wheelDiameter}`,
+        `245/40R${wheelDiameter}`,
+        `255/40R${wheelDiameter}`,
+      ] : [
+        `245/40R${wheelDiameter}`,
+        `225/45R${wheelDiameter}`,
+        `235/40R${wheelDiameter}`,
+        `255/35R${wheelDiameter}`,
+      ];
+      
+      const rearSizes = isPerformance ? [
+        `295/30R${rearWheelDiameter}`,
+        `305/30R${rearWheelDiameter}`,
+        `315/30R${rearWheelDiameter}`,
+        `285/35R${rearWheelDiameter}`,
+        `295/35R${rearWheelDiameter}`,
+      ] : [
+        `275/35R${rearWheelDiameter}`,
+        `285/30R${rearWheelDiameter}`,
+        `255/40R${rearWheelDiameter}`,
+        `265/35R${rearWheelDiameter}`,
+      ];
+      
+      console.log(`[tires/search] 🔀 MIXED STAGGER DIRECT SEARCH: ${wheelDiameter}F/${rearWheelDiameter}R`);
+      console.log(`  Front sizes: ${frontSizes.join(", ")}`);
+      console.log(`  Rear sizes: ${rearSizes.join(", ")}`);
+      
+      const combinedSizes = [...frontSizes, ...rearSizes];
+      const staggeredCacheKey = buildVehicleCacheKey(combinedSizes, wheelDiameter);
+      
+      const cacheResult = await cachedTireSearch({
+        cacheKey: staggeredCacheKey,
+        searchFn: async () => {
+          let wpResults: TireResult[] = [];
+          let twResults: TireResult[] = [];
+          let kmResults: TireResult[] = [];
+          
+          const searchPromises: Promise<void>[] = [];
+          for (const size of combinedSizes) {
+            searchPromises.push(
+              searchTiresBySize(db, size, minQty, Math.ceil(pageSize / combinedSizes.length))
+                .then((results) => { wpResults.push(...results); })
+            );
+            searchPromises.push(
+              searchTiresTireWebFormatted(size)
+                .then((results) => { twResults.push(...results); })
+            );
+          }
+          await Promise.all(searchPromises);
+          
+          const merged = await mergeTireResults(wpResults, twResults, kmResults, minQty);
+          const withCachedImages = await applyCachedImages(merged);
+          const withOverrides = await applyImageOverrides(db, withCachedImages);
+          
+          return {
+            results: withOverrides,
+            sources: {
+              wheelpros: wpResults.length,
+              tireweb: twResults.length,
+              km: kmResults.length,
+            },
+          };
+        },
+      });
+      
+      allResults = cacheResult.results;
+      wpResultsCount = cacheResult.sources.wheelpros;
+      twResultsCount = cacheResult.sources.tireweb;
+      kmResultsCount = cacheResult.sources.km;
+      vehicleCacheHit = cacheResult.source === "cache";
+      vehicleCacheStale = cacheResult.stale;
+      
+      // Tag results with front/rear based on diameter
+      sizesToSearch = [...frontSizes, ...rearSizes];
+      console.log(`[tires/search] MIXED STAGGER RESULTS: ${allResults.length} tires found`);
       
     } else if (wheelDiameter && matchMode === "direct-search") {
       // Direct search by rim diameter when no OEM sizes match
@@ -1908,12 +2027,39 @@ export async function GET(req: Request) {
       }
     }
     
+    // Build tireSizesSearched with front/rear breakdown for mixed stagger
+    let tireSizesSearchedResponse: string[] | { front: string[]; rear: string[] };
+    if (isMixedDiameterStagger && sizesToSearch.length > 0) {
+      // Split sizes by diameter for clear front/rear indication
+      const frontSearched = sizesToSearch.filter(s => {
+        const dia = extractRimDiameter(s);
+        return dia === wheelDiameter || s.includes(`R${wheelDiameter}`);
+      });
+      const rearSearched = sizesToSearch.filter(s => {
+        const dia = extractRimDiameter(s);
+        return dia === rearWheelDiameter || s.includes(`R${rearWheelDiameter}`);
+      });
+      tireSizesSearchedResponse = { front: frontSearched, rear: rearSearched };
+    } else {
+      tireSizesSearchedResponse = sizesToSearch.length > 0 ? sizesToSearch : [`direct:R${wheelDiameter}`];
+    }
+    
     return NextResponse.json({
       results: finalResults,
       mode: "vehicle",
       vehicle: { year, make, model, modification },
       wheelDiameter: wheelDiameter || null,
+      rearWheelDiameter: rearWheelDiameter || null,
       wheelWidth: wheelWidth || null,
+      
+      // Mixed-diameter stagger info (e.g., Corvette 19F/20R)
+      ...(isMixedDiameterStagger && {
+        staggeredSearch: {
+          isMixedDiameter: true,
+          frontWheelDiameter: wheelDiameter,
+          rearWheelDiameter: rearWheelDiameter,
+        },
+      }),
       
       // Wheel width filtering (for staggered setups)
       ...(wheelWidthFilterApplied && wheelWidth && {
@@ -1928,7 +2074,8 @@ export async function GET(req: Request) {
       oemTireSizes: tireSizes,
       
       // Sizes actually searched (modern P-metric)
-      tireSizesSearched: sizesToSearch.length > 0 ? sizesToSearch : [`direct:R${wheelDiameter}`],
+      // For mixed-diameter stagger, this is an object with front/rear arrays
+      tireSizesSearched: tireSizesSearchedResponse,
       
       // Legacy conversion info
       hasLegacySizes,

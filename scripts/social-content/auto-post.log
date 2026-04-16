@@ -1150,3 +1150,136 @@ Only $327/wheel
 
 ✨ Done!
 [Thu 04/16/2026  9:00:20.47] Auto-post complete 
+[Thu 04/16/2026 18:00:01.89] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:10136) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] KMC KM545 TREK
+  ⚠️ No matching vehicle for bolt pattern 6X120, using generic caption
+  Downloading image for KMC KM545 TREK...
+  ✅ Generated: km545_trek_1776376803428
+  📝 Caption preview: Weekend project? ✅
+
+KMC KM545 TREK
+📐 17x8
+🔩 6X120
+↔️ 20mm offset
+✨ KM545 17X8 ...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - km545_trek_1776376803428.png
+  - km545_trek_1776376803428.json
+
+📱 Facebook/Instagram Poster
+
+Selected: km545_trek_1776376803428
+
+--- Content Preview ---
+Wheel: KMC KM545 TREK
+Price: $358
+Image: km545_trek_1776376803428.png
+
+Caption:
+Weekend project? ✅
+
+KMC KM545 TREK
+📐 17x8
+🔩 6X120
+↔️ 20mm offset
+✨ KM545 17X8 6X120 S-BLK 20MM
+
+Only $358/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/KM54578077720
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #kmc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1579025237558936
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:17920) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC892 GAMBIT
+  Downloading image for Fuel 1PC FC892 GAMBIT...
+  ✅ Generated: fc892_gambit_1776376816714
+  📝 Caption preview: Weekend project? ✅
+
+Fuel 1PC FC892 GAMBIT
+📐 17x9
+🔩 6X5.5
+↔️ 1mm offset
+✨ GAMBI...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc892_gambit_1776376816714.png
+  - fc892_gambit_1776376816714.json
+
+📱 Facebook/Instagram Poster
+
+Selected: fc892_gambit_1776376816714
+
+--- Content Preview ---
+Wheel: Fuel 1PC FC892 GAMBIT
+Price: $327
+Image: fc892_gambit_1776376816714.png
+
+Caption:
+Weekend project? ✅
+
+Fuel 1PC FC892 GAMBIT
+📐 17x9
+🔩 6X5.5
+↔️ 1mm offset
+✨ GAMBIT 17X9 6X5.5 106 +1 M-BLK
+
+Only $327/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/FC892MX17906801
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #fuel1pc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1724928962186434
+
+✨ Done!
+[Thu 04/16/2026 18:00:21.55] Auto-post complete 

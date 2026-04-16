@@ -1178,11 +1178,13 @@ export default async function TiresPage({
   const staggeredRearWidth = fitmentStaggered?.rearSpec?.width;
   
   // Effective wheel specs for tire search
-  // CRITICAL: For staggered vehicles, prioritize fitment spec over generic wheelDia URL param
-  // because wheelDia might be for one axle only (e.g., rear 20" in URL, but front is 19")
+  // CRITICAL: User-selected wheel diameter ALWAYS takes priority over OEM staggered specs
+  // If user has wheelDia without separate front/rear, they want that diameter for BOTH axles
+  // (e.g., user selected 20" wheels for Corvette which has OEM 19F/20R - use 20 for both)
+  const userSelectedSquareSetup = wheelDia && !wheelDiaFront && !wheelDiaRear;
   const effectiveWheelDia = axle === "front"
-    ? (wheelDiaFront || (isStaggeredFromFitment && staggeredFrontDia ? String(staggeredFrontDia) : wheelDia) || "")
-    : (wheelDiaRear || (isStaggeredFromFitment && staggeredRearDia ? String(staggeredRearDia) : wheelDia) || "");
+    ? (wheelDiaFront || (userSelectedSquareSetup ? wheelDia : (isStaggeredFromFitment && staggeredFrontDia ? String(staggeredFrontDia) : wheelDia)) || "")
+    : (wheelDiaRear || (userSelectedSquareSetup ? wheelDia : (isStaggeredFromFitment && staggeredRearDia ? String(staggeredRearDia) : wheelDia)) || "");
   const effectiveWheelWidth = axle === "front"
     ? (wheelWidthFront || (isStaggeredFromFitment && staggeredFrontWidth ? String(staggeredFrontWidth) : wheelWidth) || "")
     : (wheelWidthRear || (isStaggeredFromFitment && staggeredRearWidth ? String(staggeredRearWidth) : wheelWidth) || "");
@@ -1208,8 +1210,7 @@ export default async function TiresPage({
   let staggeredRearTireSize: string | null = null;
   
   // IMPORTANT: Check if user selected their own wheel sizes (override OEM staggered)
-  // If user has wheelDia without wheelDiaFront/wheelDiaRear, they chose a square setup
-  const userSelectedSquareSetup = wheelDia && !wheelDiaFront && !wheelDiaRear;
+  // userSelectedSquareSetup is defined above (before effectiveWheelDia calculation)
   // Staggered setup: explicit front/rear OR wheelDia+wheelDiaRear combo
   const userSelectedStaggeredSetup = (wheelDiaFront && wheelDiaRear) || (wheelDia && wheelDiaRear);
   

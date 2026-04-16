@@ -564,12 +564,106 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
 
       try {
         // ═══════════════════════════════════════════════════════════════════
-        // STAGGERED MODE: Use dedicated staggered-search API (same as retail)
-        // This API finds matched pairs (same brand/model in different sizes)
+        // STAGGERED MODE: Use wheel-diameter-based search (SAME AS RETAIL)
+        // When user selects wheel diameters, search tires matching those diameters
+        // NOT the OEM tire sizes - respect the user's wheel selection
         // ═══════════════════════════════════════════════════════════════════
         
-        // If staggered mode is active but we don't have tire sizes yet, wait for calculation
-        // This covers BOTH URL-based staggered AND context-based staggered
+        // Determine effective wheel diameters (user-selected or OEM)
+        const effectiveFrontDia = selectedFrontDiameter || (state.wheel?.diameter ? parseInt(state.wheel.diameter, 10) : null) || oemFrontDiameter;
+        const effectiveRearDia = selectedRearDiameter || (rearDiaParam ? parseInt(rearDiaParam, 10) : null) || oemRearDiameter;
+        
+        // Check if user has explicitly selected wheel diameters
+        const hasExplicitWheelSelection = Boolean(
+          (selectedFrontDiameter && selectedRearDiameter) ||
+          (state.wheel?.diameter && (state.wheel?.rearDiameter || rearDiaParam)) ||
+          staggeredUrlParam
+        );
+        
+        // CRITICAL FIX: When user selects aftermarket wheels, use retail-style tire search
+        // This ensures tire diameters match the selected wheel diameters
+        if (isStaggeredMode && hasExplicitWheelSelection && effectiveFrontDia && effectiveRearDia) {
+          console.log("[POSTiresClient] RETAIL-STYLE STAGGERED SEARCH:", {
+            frontWheelDia: effectiveFrontDia,
+            rearWheelDia: effectiveRearDia,
+            hasExplicitWheelSelection,
+            wheelDiametersChanged,
+          });
+          
+          // Use the same tire search API as retail with wheelDiameter + rearWheelDiameter
+          const params = new URLSearchParams({ year, make, model });
+          if (trim) params.set("modification", trim);
+          params.set("wheelDiameter", String(effectiveFrontDia));
+          params.set("rearWheelDiameter", String(effectiveRearDia));
+          params.set("pageSize", "100");
+          
+          const res = await fetch(`/api/tires/search?${params}`);
+          
+          if (res.ok) {
+            const data = await res.json();
+            const searched = data.tireSizesSearched;
+            
+            // Extract front and rear tire sizes from response
+            let searchedFrontSize: string | null = null;
+            let searchedRearSize: string | null = null;
+            
+            if (searched?.front && searched?.rear) {
+              // Mixed-diameter stagger response
+              searchedFrontSize = searched.front[0];
+              searchedRearSize = searched.rear[0];
+            } else if (Array.isArray(searched) && searched.length >= 2) {
+              // Same-diameter stagger - front is typically narrower
+              searchedFrontSize = searched[0];
+              searchedRearSize = searched[1];
+            } else if (Array.isArray(searched) && searched.length === 1) {
+              searchedFrontSize = searched[0];
+              searchedRearSize = searched[0];
+            }
+            
+            console.log("[POSTiresClient] Tire sizes from retail API:", {
+              front: searchedFrontSize,
+              rear: searchedRearSize,
+            });
+            
+            // Now search for matching staggered pairs with these tire sizes
+            if (searchedFrontSize && searchedRearSize) {
+              const staggeredUrl = `/api/tires/staggered-search?frontSize=${encodeURIComponent(searchedFrontSize)}&rearSize=${encodeURIComponent(searchedRearSize)}&minQty=2`;
+              const staggeredRes = await fetch(staggeredUrl);
+              
+              if (staggeredRes.ok) {
+                const staggeredData = await staggeredRes.json();
+                const pairs: Array<{ front: TireItem; rear: TireItem }> = (staggeredData.pairs || []).map((p: any) => ({
+                  front: normalizeTire(p.front),
+                  rear: normalizeTire(p.rear),
+                }));
+                
+                setStaggeredPairs(pairs);
+                setTires([]);
+                console.log(`[POSTiresClient] Staggered pairs: ${pairs.length} for ${searchedFrontSize} / ${searchedRearSize}`);
+              } else {
+                // Fallback: show individual tires from the search results
+                const tireResults: TireItem[] = (data.results || []).map(normalizeTire);
+                setTires(tireResults);
+                setStaggeredPairs([]);
+              }
+            } else {
+              // No tire sizes found, show whatever results we got
+              const tireResults: TireItem[] = (data.results || []).map(normalizeTire);
+              setTires(tireResults);
+              setStaggeredPairs([]);
+            }
+          } else {
+            console.error("[POSTiresClient] Retail-style tire search failed:", res.status);
+            setStaggeredPairs([]);
+            setTires([]);
+          }
+          
+          setLoading(false);
+          return;
+        }
+        
+        // FALLBACK: Use OEM tire sizes when no explicit wheel selection
+        // (This is the original behavior for pure OEM staggered setups)
         if (isStaggeredMode && (!frontTireSize || !rearTireSize)) {
           console.log("[POSTiresClient] Waiting for staggered tire sizes to be calculated...", {
             isStaggeredMode,
@@ -582,7 +676,7 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
           return; // Effect will re-run when calculated sizes are set
         }
         
-        if (isStaggeredMode && frontTireSize && rearTireSize) {
+        if (isStaggeredMode && frontTireSize && rearTireSize && !hasExplicitWheelSelection) {
           const staggeredUrl = `/api/tires/staggered-search?frontSize=${encodeURIComponent(frontTireSize)}&rearSize=${encodeURIComponent(rearTireSize)}&minQty=2`;
           const res = await fetch(staggeredUrl);
           
@@ -595,7 +689,7 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
             
             setStaggeredPairs(pairs);
             setTires([]);
-            console.log(`[POSTiresClient] Staggered search: ${pairs.length} pairs for ${frontTireSize} / ${rearTireSize}`);
+            console.log(`[POSTiresClient] OEM staggered search: ${pairs.length} pairs for ${frontTireSize} / ${rearTireSize}`);
           } else {
             console.error("[POSTiresClient] Staggered search failed:", res.status);
             setStaggeredPairs([]);
@@ -649,7 +743,7 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
     };
 
     fetchTires();
-  }, [year, make, model, trim, wheelDia, brand, selectedSize, hasVehicle, state.wheel?.diameter, state.buildType, state.liftConfig, isStaggeredMode, frontTireSize, rearTireSize, staggeredUrlParam, rearDiaParam]);
+  }, [year, make, model, trim, wheelDia, brand, selectedSize, hasVehicle, state.wheel?.diameter, state.wheel?.rearDiameter, state.buildType, state.liftConfig, isStaggeredMode, frontTireSize, rearTireSize, staggeredUrlParam, rearDiaParam, selectedFrontDiameter, selectedRearDiameter, oemFrontDiameter, oemRearDiameter, wheelDiametersChanged]);
 
   // Handle tire selection (square mode)
   const handleSelectTire = useCallback((tire: TireItem) => {

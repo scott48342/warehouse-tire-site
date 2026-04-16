@@ -1,0 +1,1022 @@
+[
+  {
+    "vehicle": "C8 Corvette Stingray",
+    "year": 2024,
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "trim": "Stingray",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": true,
+      "reason": "Different front/rear (inferred from width): width (F:8.5\" R:11\")",
+      "frontSpec": {
+        "diameter": 19,
+        "width": 8.5,
+        "offset": null,
+        "tireSize": null
+      },
+      "rearSpec": {
+        "diameter": 20,
+        "width": 11,
+        "offset": null,
+        "tireSize": null
+      },
+      "boltPattern": "5x120",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "P245/35ZR19",
+        "P305/30ZR20",
+        "P275/30ZR20",
+        "P345/25ZR21"
+      ],
+      "searchableSizes": [
+        "245/35ZR19",
+        "305/30ZR20",
+        "275/30ZR20",
+        "345/25ZR21"
+      ],
+      "wheelDiameters": [
+        19,
+        20,
+        21
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM (from fitment)",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "245/35ZR19",
+        "actualRearSize": "245/35ZR19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Mixed 19F/20R",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "245/35ZR19",
+        "actualRearSize": "245/35ZR19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Same 20/20",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "305/30ZR20",
+        "actualRearSize": "275/30ZR20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 20F/21R",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 21
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 21,
+        "actualFrontSize": "305/30ZR20",
+        "actualRearSize": "275/30ZR20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      }
+    ],
+    "issues": [
+      "Front tireSize is null in staggered spec",
+      "Rear tireSize is null in staggered spec",
+      "OEM (from fitment): Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 19F/20R: Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 20F/21R: Tire diameter mismatch (expected 20/21, got 20/20)"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "vehicle": "C7 Corvette Grand Sport",
+    "year": 2019,
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "trim": "Grand Sport",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": true,
+      "reason": "Different front/rear (inferred from width): width (F:10\" R:12\")",
+      "frontSpec": {
+        "diameter": 19,
+        "width": 10,
+        "offset": null,
+        "tireSize": null
+      },
+      "rearSpec": {
+        "diameter": 20,
+        "width": 12,
+        "offset": null,
+        "tireSize": null
+      },
+      "boltPattern": "5x120.65",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "P245/40ZR18",
+        "P245/35ZR19",
+        "P285/30ZR19",
+        "P285/30ZR20",
+        "P335/25ZR20",
+        "245/35ZR19",
+        "285/30ZR20",
+        "245/40ZR18",
+        "285/35ZR19",
+        "285/30ZR19",
+        "335/25ZR20"
+      ],
+      "searchableSizes": [
+        "245/40ZR18",
+        "245/35ZR19",
+        "285/30ZR19",
+        "285/30ZR20",
+        "335/25ZR20",
+        "285/35ZR19"
+      ],
+      "wheelDiameters": [
+        18,
+        19,
+        20
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM (from fitment)",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "245/35ZR19",
+        "actualRearSize": "285/30ZR19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Mixed 19F/20R",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "245/35ZR19",
+        "actualRearSize": "285/30ZR19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Same 20/20",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "285/30ZR20",
+        "actualRearSize": "335/25ZR20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 20F/21R",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 21
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 21,
+        "actualFrontSize": "285/30ZR20",
+        "actualRearSize": "335/25ZR20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      }
+    ],
+    "issues": [
+      "Front tireSize is null in staggered spec",
+      "Rear tireSize is null in staggered spec",
+      "OEM (from fitment): Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 19F/20R: Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 20F/21R: Tire diameter mismatch (expected 20/21, got 20/20)"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "vehicle": "Mustang GT Perf Pack",
+    "year": 2024,
+    "make": "Ford",
+    "model": "Mustang",
+    "trim": "GT Performance Pack",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": true,
+      "reason": "Different front/rear: width (F:9\" R:9.5\"), offset (F:42mm R:40mm), tire size (F:255/40R19 R:275/40R19)",
+      "frontSpec": {
+        "diameter": 19,
+        "width": 9,
+        "offset": 42,
+        "tireSize": "255/40R19"
+      },
+      "rearSpec": {
+        "diameter": 19,
+        "width": 9.5,
+        "offset": 40,
+        "tireSize": "275/40R19"
+      },
+      "boltPattern": "5x114.3",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ],
+      "searchableSizes": [
+        "255/40R19",
+        "275/40R19"
+      ],
+      "wheelDiameters": [
+        19
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM (from fitment)",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "255/40R19",
+        "actualRearSize": "275/40R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 19F/20R",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "255/40R19",
+        "actualRearSize": "275/40R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Same 20/20",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "direct:R20",
+        "actualRearSize": "direct:R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 20F/21R",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 21
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 21,
+        "actualFrontSize": "direct:R20",
+        "actualRearSize": "direct:R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      }
+    ],
+    "issues": [
+      "Mixed 19F/20R: Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 20F/21R: Tire diameter mismatch (expected 20/21, got 20/20)"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "vehicle": "Mustang Dark Horse",
+    "year": 2024,
+    "make": "Ford",
+    "model": "Mustang",
+    "trim": "Dark Horse",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": true,
+      "reason": "Different front/rear: width (F:9\" R:9.5\"), offset (F:42mm R:40mm), tire size (F:255/40R19 R:275/40R19)",
+      "frontSpec": {
+        "diameter": 19,
+        "width": 9,
+        "offset": 42,
+        "tireSize": "255/40R19"
+      },
+      "rearSpec": {
+        "diameter": 19,
+        "width": 9.5,
+        "offset": 40,
+        "tireSize": "275/40R19"
+      },
+      "boltPattern": "5x114.3",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "255/40R19",
+        "275/40R19"
+      ],
+      "searchableSizes": [
+        "255/40R19",
+        "275/40R19"
+      ],
+      "wheelDiameters": [
+        19
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM (from fitment)",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "255/40R19",
+        "actualRearSize": "275/40R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 19F/20R",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "255/40R19",
+        "actualRearSize": "275/40R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Same 20/20",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "direct:R20",
+        "actualRearSize": "direct:R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 20F/21R",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 21
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 21,
+        "actualFrontSize": "direct:R20",
+        "actualRearSize": "direct:R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      }
+    ],
+    "issues": [
+      "Mixed 19F/20R: Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 20F/21R: Tire diameter mismatch (expected 20/21, got 20/20)"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "vehicle": "BMW M3",
+    "year": 2024,
+    "make": "BMW",
+    "model": "M3",
+    "trim": "",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": false,
+      "reason": "Insufficient axle-specific data (defaulting to square fitment)",
+      "frontSpec": null,
+      "rearSpec": null,
+      "boltPattern": "5x112",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ],
+      "searchableSizes": [
+        "255/40R18",
+        "275/40R18",
+        "255/35R19",
+        "275/35R19",
+        "275/30R20",
+        "285/30R20"
+      ],
+      "wheelDiameters": [
+        18,
+        19,
+        20
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM",
+        "config": {
+          "dia": 18
+        },
+        "expectedFrontDia": 18,
+        "expectedRearDia": 18,
+        "actualFrontSize": "255/40R18",
+        "actualRearSize": "275/40R18",
+        "actualFrontDia": 18,
+        "actualRearDia": 18,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "19\"",
+        "config": {
+          "dia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "255/35R19",
+        "actualRearSize": "275/35R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "20\"",
+        "config": {
+          "dia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "275/30R20",
+        "actualRearSize": "285/30R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      }
+    ],
+    "issues": [
+      "Staggered mismatch: expected true, got false"
+    ],
+    "status": "PASS"
+  },
+  {
+    "vehicle": "BMW M4",
+    "year": 2024,
+    "make": "BMW",
+    "model": "M4",
+    "trim": "",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": false,
+      "reason": null,
+      "frontSpec": null,
+      "rearSpec": null,
+      "boltPattern": null,
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [],
+      "searchableSizes": [],
+      "wheelDiameters": [],
+      "source": "none"
+    },
+    "tests": [
+      {
+        "scenario": "OEM",
+        "config": {
+          "dia": 18
+        },
+        "expectedFrontDia": 18,
+        "expectedRearDia": 18,
+        "actualFrontSize": "direct:R18",
+        "actualRearSize": "direct:R18",
+        "actualFrontDia": 18,
+        "actualRearDia": 18,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "19\"",
+        "config": {
+          "dia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "direct:R19",
+        "actualRearSize": "direct:R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "20\"",
+        "config": {
+          "dia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "direct:R20",
+        "actualRearSize": "direct:R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      }
+    ],
+    "issues": [
+      "Staggered mismatch: expected true, got false"
+    ],
+    "status": "PASS"
+  },
+  {
+    "vehicle": "Charger Scat Pack WB",
+    "year": 2023,
+    "make": "Dodge",
+    "model": "Charger",
+    "trim": "Scat Pack Widebody",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": false,
+      "reason": "All wheel specs apply to both axles (square fitment)",
+      "frontSpec": {
+        "diameter": 20,
+        "width": 11,
+        "offset": 18,
+        "tireSize": "305/35R20"
+      },
+      "rearSpec": null,
+      "boltPattern": "5x115",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "305/35R20"
+      ],
+      "searchableSizes": [
+        "305/35R20"
+      ],
+      "wheelDiameters": [
+        20
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM",
+        "config": {
+          "dia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "305/35R20",
+        "actualRearSize": "305/35R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "19\"",
+        "config": {
+          "dia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "direct:R19",
+        "actualRearSize": "direct:R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "20\"",
+        "config": {
+          "dia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "305/35R20",
+        "actualRearSize": "305/35R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      }
+    ],
+    "issues": [
+      "Staggered mismatch: expected true, got false"
+    ],
+    "status": "PASS"
+  },
+  {
+    "vehicle": "Camaro SS 1LE",
+    "year": 2024,
+    "make": "Chevrolet",
+    "model": "Camaro",
+    "trim": "SS 1LE",
+    "expectStaggered": true,
+    "fitment": {
+      "isStaggered": true,
+      "reason": "Different front/rear: width (F:10\" R:11\"), tire size (F:285/30R20 R:305/30R20)",
+      "frontSpec": {
+        "diameter": 20,
+        "width": 10,
+        "offset": 30,
+        "tireSize": "285/30R20"
+      },
+      "rearSpec": {
+        "diameter": 20,
+        "width": 11,
+        "offset": 30,
+        "tireSize": "305/30R20"
+      },
+      "boltPattern": "5x120",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "285/30R20",
+        "305/30R20"
+      ],
+      "searchableSizes": [
+        "285/30R20",
+        "305/30R20"
+      ],
+      "wheelDiameters": [
+        20
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM (from fitment)",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "285/30R20",
+        "actualRearSize": "305/30R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 19F/20R",
+        "config": {
+          "frontDia": 19,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 20,
+        "actualFrontSize": "direct:R19",
+        "actualRearSize": "direct:R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      },
+      {
+        "scenario": "Same 20/20",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "285/30R20",
+        "actualRearSize": "305/30R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "Mixed 20F/21R",
+        "config": {
+          "frontDia": 20,
+          "rearDia": 21
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 21,
+        "actualFrontSize": "285/30R20",
+        "actualRearSize": "305/30R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": false,
+        "status": "FAIL"
+      }
+    ],
+    "issues": [
+      "Mixed 19F/20R: Tire diameter mismatch (expected 19/20, got 19/19)",
+      "Mixed 20F/21R: Tire diameter mismatch (expected 20/21, got 20/20)"
+    ],
+    "status": "FAIL"
+  },
+  {
+    "vehicle": "F-150 XLT",
+    "year": 2024,
+    "make": "Ford",
+    "model": "F-150",
+    "trim": "XLT",
+    "expectStaggered": false,
+    "fitment": {
+      "isStaggered": false,
+      "reason": "All wheel specs apply to both axles (square fitment)",
+      "frontSpec": {
+        "diameter": 18,
+        "width": 8,
+        "offset": null,
+        "tireSize": null
+      },
+      "rearSpec": null,
+      "boltPattern": "6x135",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "245/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT265/70R18"
+      ],
+      "searchableSizes": [
+        "245/70R17",
+        "265/70R17",
+        "265/60R18",
+        "275/65R18",
+        "275/60R20",
+        "275/50R22",
+        "LT265/70R17",
+        "LT265/70R18"
+      ],
+      "wheelDiameters": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM",
+        "config": {
+          "dia": 17
+        },
+        "expectedFrontDia": 17,
+        "expectedRearDia": 17,
+        "actualFrontSize": "245/70R17",
+        "actualRearSize": "265/70R17",
+        "actualFrontDia": 17,
+        "actualRearDia": 17,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "19\"",
+        "config": {
+          "dia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "direct:R19",
+        "actualRearSize": "direct:R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "20\"",
+        "config": {
+          "dia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "275/60R20",
+        "actualRearSize": "275/60R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      }
+    ],
+    "issues": [],
+    "status": "PASS"
+  },
+  {
+    "vehicle": "Camry XSE",
+    "year": 2024,
+    "make": "Toyota",
+    "model": "Camry",
+    "trim": "XSE",
+    "expectStaggered": false,
+    "fitment": {
+      "isStaggered": false,
+      "reason": "All wheel specs apply to both axles (square fitment)",
+      "frontSpec": {
+        "diameter": 16,
+        "width": 6.5,
+        "offset": 40,
+        "tireSize": null
+      },
+      "rearSpec": null,
+      "boltPattern": "5x114.3",
+      "error": null
+    },
+    "tireSizes": {
+      "tireSizes": [
+        "215/55R17",
+        "235/45R18",
+        "235/40R19",
+        "205/65R16"
+      ],
+      "searchableSizes": [
+        "215/55R17",
+        "235/45R18",
+        "235/40R19",
+        "205/65R16"
+      ],
+      "wheelDiameters": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "source": "db-first"
+    },
+    "tests": [
+      {
+        "scenario": "OEM",
+        "config": {
+          "dia": 16
+        },
+        "expectedFrontDia": 16,
+        "expectedRearDia": 16,
+        "actualFrontSize": "205/65R16",
+        "actualRearSize": "205/65R16",
+        "actualFrontDia": 16,
+        "actualRearDia": 16,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "19\"",
+        "config": {
+          "dia": 19
+        },
+        "expectedFrontDia": 19,
+        "expectedRearDia": 19,
+        "actualFrontSize": "235/40R19",
+        "actualRearSize": "235/40R19",
+        "actualFrontDia": 19,
+        "actualRearDia": 19,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      },
+      {
+        "scenario": "20\"",
+        "config": {
+          "dia": 20
+        },
+        "expectedFrontDia": 20,
+        "expectedRearDia": 20,
+        "actualFrontSize": "direct:R20",
+        "actualRearSize": "direct:R20",
+        "actualFrontDia": 20,
+        "actualRearDia": 20,
+        "frontMatch": true,
+        "rearMatch": true,
+        "status": "PASS"
+      }
+    ],
+    "issues": [],
+    "status": "PASS"
+  }
+]

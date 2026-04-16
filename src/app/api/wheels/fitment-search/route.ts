@@ -256,6 +256,76 @@ function detectStaggeredFromParsed(wheelSizes: ParsedWheelSize[]): StaggeredInfo
 }
 
 /**
+ * Infer staggered fitment from OEM tire sizes when wheel specs are incomplete.
+ * 
+ * Many performance vehicles (BMW M3, Audi RS, etc.) have staggered tire widths
+ * (e.g., 255/40R18 front, 275/40R18 rear) even if the wheel width data is incomplete.
+ * 
+ * This function checks if tire sizes indicate staggered (significant width difference).
+ */
+function inferStaggeredFromTireSizes(tireSizes: string[]): StaggeredInfo | null {
+  if (!tireSizes || tireSizes.length < 2) return null;
+  
+  // Parse tire widths (e.g., "255/40R18" → 255)
+  const parsedTires = tireSizes.map(size => {
+    const match = size.match(/^P?(\d{3})\//);
+    const diamMatch = size.match(/R(\d+)/i);
+    return match && diamMatch ? {
+      width: parseInt(match[1]),
+      diameter: parseInt(diamMatch[1]),
+      size,
+    } : null;
+  }).filter(Boolean) as { width: number; diameter: number; size: string }[];
+  
+  if (parsedTires.length < 2) return null;
+  
+  // Group by diameter to find pairs
+  const byDiameter = new Map<number, typeof parsedTires>();
+  for (const t of parsedTires) {
+    const existing = byDiameter.get(t.diameter) || [];
+    existing.push(t);
+    byDiameter.set(t.diameter, existing);
+  }
+  
+  // Check each diameter group for width variation
+  for (const [diameter, tires] of byDiameter) {
+    if (tires.length < 2) continue;
+    
+    const widths = tires.map(t => t.width).sort((a, b) => a - b);
+    const narrowest = widths[0];
+    const widest = widths[widths.length - 1];
+    const widthDiff = widest - narrowest;
+    
+    // 20mm+ width difference indicates staggered (e.g., 255 vs 275 = 20mm)
+    if (widthDiff >= 20) {
+      const frontTire = tires.find(t => t.width === narrowest)!;
+      const rearTire = tires.find(t => t.width === widest)!;
+      
+      console.log(`[inferStaggeredFromTireSizes] INFERRED STAGGERED from tire widths: ${narrowest}mm vs ${widest}mm on R${diameter}`);
+      
+      return {
+        isStaggered: true,
+        reason: `Different front/rear (inferred from tire widths): ${frontTire.size} / ${rearTire.size}`,
+        frontSpec: {
+          diameter,
+          width: narrowest / 25.4, // Approximate wheel width from tire width
+          offset: null,
+          tireSize: frontTire.size,
+        },
+        rearSpec: {
+          diameter,
+          width: widest / 25.4, // Approximate wheel width from tire width  
+          offset: null,
+          tireSize: rearTire.size,
+        },
+      };
+    }
+  }
+  
+  return null;
+}
+
+/**
  * Parse a wheel size from various formats:
  * - String: "8.5Jx18", "10Jx20", "8.5x18", "18x8.5"
  * - Object: {diameter: 18, width: 8.5, ...}
@@ -767,7 +837,109 @@ async function handleDbProfilePath(
   }));
   
   // Detect staggered fitment from parsed wheel sizes
-  const staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
+  let staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
+  
+  // If wheel specs are insufficient, try inferring staggered from tire sizes
+  // This catches cases like BMW M3 where tire sizes (255 vs 275) indicate staggered
+  // but wheel specs are incomplete or don't have axle labels
+  if (!staggeredInfo.isStaggered && staggeredInfo.reason.includes("Insufficient")) {
+    const tireSizeInference = inferStaggeredFromTireSizes(dbProfile.oemTireSizes || []);
+    if (tireSizeInference) {
+      staggeredInfo = tireSizeInference;
+      console.log(`[fitment-search] STAGGERED FITMENT (tire size inference): ${staggeredInfo.reason}`);
+    }
+  }
+  
+  // Populate missing tireSize in staggered specs from OEM tire sizes
+  // This handles cases like Corvette where wheel specs exist but tireSize is null
+  // Try dbProfile first, then fetch from tire-sizes API if needed
+  let tireSizesForStagger = dbProfile.oemTireSizes || [];
+  
+  // If no tire sizes in profile, look up from vehicle_fitments table directly
+  // (Avoids HTTP self-call which can timeout in dev)
+  if (staggeredInfo.isStaggered && tireSizesForStagger.length === 0) {
+    try {
+      // Direct DB query to get tire sizes for this vehicle
+      const db = getPool();
+      const modificationParam = url.searchParams.get("modification") || url.searchParams.get("trim") || "";
+      const tireSizesQuery = modificationParam
+        ? `SELECT oem_tire_sizes FROM vehicle_fitments 
+           WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3) 
+           AND (LOWER(modification_id) = LOWER($4) OR LOWER(display_trim) = LOWER($4))
+           LIMIT 1`
+        : `SELECT oem_tire_sizes FROM vehicle_fitments 
+           WHERE year = $1 AND LOWER(make) = LOWER($2) AND LOWER(model) = LOWER($3) 
+           LIMIT 10`;
+      const params = modificationParam 
+        ? [year, make, model, modificationParam]
+        : [year, make, model];
+      const tireSizesResult = await db.query(tireSizesQuery, params);
+      
+      // Collect all tire sizes from matching records
+      const allTireSizes = new Set<string>();
+      for (const row of tireSizesResult.rows) {
+        const sizes = row.oem_tire_sizes as string[] | null;
+        if (sizes && Array.isArray(sizes)) {
+          sizes.forEach(s => allTireSizes.add(s));
+        }
+      }
+      
+      if (allTireSizes.size > 0) {
+        tireSizesForStagger = Array.from(allTireSizes);
+        console.log(`[fitment-search] Found ${tireSizesForStagger.length} tire sizes from DB for staggered spec: ${tireSizesForStagger.slice(0, 4).join(", ")}`);
+      }
+    } catch (e) {
+      console.log(`[fitment-search] Could not fetch tire sizes for staggered spec: ${e}`);
+    }
+  }
+  
+  if (staggeredInfo.isStaggered && tireSizesForStagger.length > 0) {
+    const tireSizes = tireSizesForStagger;
+    
+    // Helper to find best matching tire size for a wheel diameter
+    const findTireSizeForDiameter = (diameter: number, preferredWidth: number | null): string | null => {
+      // Find tires that match this wheel diameter
+      const matching = tireSizes.filter(size => {
+        const match = size.match(/R(\d+)/i);
+        return match && parseInt(match[1]) === diameter;
+      });
+      
+      if (matching.length === 0) return null;
+      if (matching.length === 1) return matching[0];
+      
+      // If multiple matches, prefer one closest to wheel width
+      if (preferredWidth) {
+        const widthMm = preferredWidth * 25.4; // Convert wheel width to mm
+        const sorted = matching.sort((a, b) => {
+          const widthA = parseInt(a.match(/^P?(\d{3})\//)?.[1] || "0");
+          const widthB = parseInt(b.match(/^P?(\d{3})\//)?.[1] || "0");
+          return Math.abs(widthA - widthMm) - Math.abs(widthB - widthMm);
+        });
+        return sorted[0];
+      }
+      
+      return matching[0];
+    };
+    
+    // Populate front tireSize if missing
+    if (staggeredInfo.frontSpec && !staggeredInfo.frontSpec.tireSize) {
+      const frontTire = findTireSizeForDiameter(staggeredInfo.frontSpec.diameter, staggeredInfo.frontSpec.width);
+      if (frontTire) {
+        staggeredInfo.frontSpec.tireSize = frontTire;
+        console.log(`[fitment-search] Populated front tireSize: ${frontTire}`);
+      }
+    }
+    
+    // Populate rear tireSize if missing
+    if (staggeredInfo.rearSpec && !staggeredInfo.rearSpec.tireSize) {
+      const rearTire = findTireSizeForDiameter(staggeredInfo.rearSpec.diameter, staggeredInfo.rearSpec.width);
+      if (rearTire) {
+        staggeredInfo.rearSpec.tireSize = rearTire;
+        console.log(`[fitment-search] Populated rear tireSize: ${rearTire}`);
+      }
+    }
+  }
+  
   if (staggeredInfo.isStaggered) {
     console.log(`[fitment-search] STAGGERED FITMENT detected: ${staggeredInfo.reason}`);
   }
