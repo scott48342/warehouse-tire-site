@@ -134,8 +134,8 @@ function generatePlusSizeOptions(oemSize: string, targetRim: number, wheelWidth?
   const allWidths = [195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325, 335];
   const widths = allWidths.filter(w => w >= minTireWidth && w <= maxTireWidth);
   
-  // Common aspect ratios
-  const aspects = [25, 30, 35, 40, 45, 50];
+  // Common aspect ratios (including higher ratios for trucks/SUVs)
+  const aspects = [25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75];
   
   for (const width of widths) {
     for (const aspect of aspects) {
