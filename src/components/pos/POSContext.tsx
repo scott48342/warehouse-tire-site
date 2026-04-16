@@ -539,8 +539,4 @@ export function usePOS() {
   return context;
 }
 
-// ============================================================================
-// Exports
-// ============================================================================
-
-export { DEFAULT_FEES, FIXED_TAX_RATE, DEFAULT_ADMIN_SETTINGS };
+// DEFAULT_FEES, FIXED_TAX_RATE, DEFAULT_ADMIN_SETTINGS are exported inline above
