@@ -1,19 +1,20 @@
 /**
- * Vehicle Trims API (Coverage-Validated)
+ * Vehicle Trims API (Coverage-Validated + Cached)
  * 
  * GET /api/vehicles/trims?year=2022&make=Ford&model=F-150
  * 
  * Returns ONLY trims that have actual fitment data in the database.
- * No fallback to "Base" or supplements - if no coverage exists, returns empty.
- * 
- * Premium Trim UX (when NEXT_PUBLIC_ENABLE_PREMIUM_TRIM_UX=true):
- * - Never returns "Base" as a trim label
- * - Returns empty if only "Base" would have been shown
+ * Uses Redis cache to reduce DB load.
  */
 
 import { NextResponse } from "next/server";
-import { getTrimsWithCoverage, hasYearCoverage } from "@/lib/fitment-db/coverage";
+import { getTrimsWithCoverage } from "@/lib/fitment-db/coverage";
 import { isPremiumTrimUxEnabled, isBaseTrim } from "@/lib/features/premiumTrimUx";
+import {
+  getCachedTrims,
+  setCachedTrims,
+  type TrimEntry,
+} from "@/lib/fitment-db/ymmCache";
 
 export const runtime = "nodejs";
 
@@ -29,10 +30,12 @@ type TrimOption = {
 
 interface TrimResponse {
   results: TrimOption[];
-  source: "fitment_db" | "no_coverage" | "error";
+  source: "fitment_db" | "cache" | "no_coverage" | "error" | "fallback";
   count?: number;
   hasCoverage?: boolean;
   error?: string;
+  premiumUx?: boolean;
+  warning?: string;
 }
 
 // ============================================================================
@@ -41,8 +44,6 @@ interface TrimResponse {
 
 /**
  * GET /api/vehicles/trims?year=2022&make=Ford&model=F-150
- * 
- * Returns trims with actual fitment coverage. No fallbacks.
  */
 export async function GET(req: Request) {
   const url = new URL(req.url);
@@ -67,71 +68,55 @@ export async function GET(req: Request) {
     });
   }
 
-  // Check if premium trim UX is enabled
   const premiumUxEnabled = isPremiumTrimUxEnabled();
-  
+
+  // 1. Check cache first
   try {
-    // Get trims with actual fitment coverage
+    const cached = await getCachedTrims(year, make, model);
+    if (cached && cached.length > 0) {
+      console.log(`[trims] CACHE HIT: ${cached.length} trims for ${year} ${make} ${model}`);
+      
+      const results = processTrims(cached, premiumUxEnabled);
+      
+      return NextResponse.json<TrimResponse>({
+        results,
+        source: "cache",
+        count: results.length,
+        hasCoverage: true,
+        premiumUx: premiumUxEnabled,
+      }, {
+        headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
+      });
+    }
+  } catch (e) {
+    // Cache error - continue to DB
+  }
+
+  // 2. Try DB
+  try {
     const coverage = await getTrimsWithCoverage(year, make, model);
     
     if (coverage.hasCoverage) {
-      console.log(`[trims] COVERAGE: ${year} ${make} ${model} → ${coverage.trims.length} trim(s) with fitment data`);
+      console.log(`[trims] DB: ${coverage.trims.length} trims for ${year} ${make} ${model}`);
       
-      // Split grouped trim labels (e.g., "LS, LT, RST" or "SE/ZX3/ZX5") into individual options
-      // All split trims share the same modificationId since they have identical specs
-      const results: TrimOption[] = [];
-      for (const t of coverage.trims) {
-        // When premium UX is enabled, skip "Base" fallback - use empty displayTrim instead
-        const rawLabel = t.displayTrim || (premiumUxEnabled ? "" : "Base");
-        
-        // Skip empty labels entirely when premium UX is on
-        if (premiumUxEnabled && !rawLabel) {
-          continue;
-        }
-        
-        const label = rawLabel;
-        
-        // Check if this is a grouped trim (contains comma or slash)
-        if (label.includes(",") || label.includes("/")) {
-          // Split on comma or slash
-          const individualTrims = label.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
-          for (const trimName of individualTrims) {
-            // Skip "Base" variants when premium UX is enabled
-            if (premiumUxEnabled && isBaseTrim(trimName)) {
-              continue;
-            }
-            results.push({
-              value: t.modificationId,
-              label: trimName,
-              modificationId: t.modificationId,
-            });
-          }
-        } else {
-          // Skip "Base" variants when premium UX is enabled
-          if (premiumUxEnabled && isBaseTrim(label)) {
-            continue;
-          }
-          results.push({
-            value: t.modificationId,
-            label,
-            modificationId: t.modificationId,
-          });
-        }
-      }
+      // Cache the raw trims (fire and forget)
+      setCachedTrims(coverage.trims, year, make, model).catch(() => {});
+      
+      const results = processTrims(coverage.trims, premiumUxEnabled);
       
       return NextResponse.json<TrimResponse>({
         results,
         source: "fitment_db",
         count: results.length,
         hasCoverage: true,
-        premiumUx: premiumUxEnabled, // Include flag status for debugging
-      } as TrimResponse, {
+        premiumUx: premiumUxEnabled,
+      }, {
         headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
       });
     }
     
-    // No coverage - return empty (NOT a fallback Base trim)
-    console.warn(`[trims] NO COVERAGE: ${year} ${make} ${model} has no fitment data`);
+    // No coverage
+    console.warn(`[trims] NO COVERAGE: ${year} ${make} ${model}`);
     return NextResponse.json<TrimResponse>({ 
       results: [],
       source: "no_coverage",
@@ -140,10 +125,63 @@ export async function GET(req: Request) {
     
   } catch (err: any) {
     console.error(`[trims] DB error for ${year} ${make} ${model}:`, err?.message);
+    
+    // 3. Return empty with error (no fallback for trims - they're vehicle-specific)
     return NextResponse.json<TrimResponse>({ 
       results: [],
-      source: "error",
-      error: "Failed to check fitment coverage",
-    }, { status: 500 });
+      source: "fallback",
+      hasCoverage: false,
+      warning: "Unable to load trim data - please try again",
+    }, {
+      headers: { "Cache-Control": "public, max-age=30, s-maxage=30" },
+    });
   }
+}
+
+// ============================================================================
+// Helper Functions
+// ============================================================================
+
+/**
+ * Process raw trim entries into display format
+ */
+function processTrims(trims: TrimEntry[], premiumUxEnabled: boolean): TrimOption[] {
+  const results: TrimOption[] = [];
+  
+  for (const t of trims) {
+    const rawLabel = t.displayTrim || (premiumUxEnabled ? "" : "Base");
+    
+    // Skip empty labels when premium UX is on
+    if (premiumUxEnabled && !rawLabel) {
+      continue;
+    }
+    
+    const label = rawLabel;
+    
+    // Split grouped trims (comma or slash separated)
+    if (label.includes(",") || label.includes("/")) {
+      const individualTrims = label.split(/[,\/]/).map(s => s.trim()).filter(Boolean);
+      for (const trimName of individualTrims) {
+        if (premiumUxEnabled && isBaseTrim(trimName)) {
+          continue;
+        }
+        results.push({
+          value: t.modificationId,
+          label: trimName,
+          modificationId: t.modificationId,
+        });
+      }
+    } else {
+      if (premiumUxEnabled && isBaseTrim(label)) {
+        continue;
+      }
+      results.push({
+        value: t.modificationId,
+        label,
+        modificationId: t.modificationId,
+      });
+    }
+  }
+  
+  return results;
 }

@@ -1,103 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { usePOS, POSBuildType, POSLiftConfig } from "./POSContext";
-import { 
-  getLiftProfile, 
+import { usePOS, type POSBuildType, type POSLiftConfig, type SetupMode } from "./POSContext";
+import {
+  type StaggeredFitmentInfo,
+  supportsStaggeredFitment,
+  getDefaultSetupMode,
+} from "@/lib/fitment/staggeredFitment";
+import {
+  getLiftProfile,
   getRecommendationForLiftHeight,
-  type LiftLevel 
+  type LiftLevel,
 } from "@/lib/liftedRecommendations";
 
 // ============================================================================
-// Types
+// Quick Preset Type
 // ============================================================================
 
-interface QuickPreset {
-  id: string;
-  name: string;
-  description: string;
+type QuickPreset = {
   buildType: POSBuildType;
   liftInches: number;
-  presetId: LiftLevel;
-  targetTireSize?: number;
-  icon: string;
-}
-
-// ============================================================================
-// Constants
-// ============================================================================
-
-const LIFT_HEIGHT_OPTIONS = [
-  { value: 2, label: '2"', category: "level" },
-  { value: 2.5, label: '2.5"', category: "level" },
-  { value: 3, label: '3"', category: "small" },
-  { value: 4, label: '4"', category: "medium" },
-  { value: 5, label: '5"', category: "medium" },
-  { value: 6, label: '6"', category: "large" },
-  { value: 8, label: '8"', category: "extreme" },
-  { value: 10, label: '10"+', category: "extreme" },
-];
-
-const TIRE_SIZE_PRESETS = [
-  { value: 33, label: '33"', description: "Daily driver friendly" },
-  { value: 35, label: '35"', description: "Most popular upgrade" },
-  { value: 37, label: '37"', description: "Serious off-road" },
-  { value: 40, label: '40"+', description: "Extreme builds" },
-];
-
-const QUICK_PRESETS: QuickPreset[] = [
-  {
-    id: "daily-level",
-    name: "Leveled Daily",
-    description: "Clean look, daily-drivable",
-    buildType: "leveled",
-    liftInches: 2,
-    presetId: "daily",
-    targetTireSize: 33,
-    icon: "🛻",
-  },
-  {
-    id: "best-4inch",
-    name: 'Best 4" Setup',
-    description: "Popular lift + 35s",
-    buildType: "lifted",
-    liftInches: 4,
-    presetId: "offroad",
-    targetTireSize: 35,
-    icon: "🔥",
-  },
-  {
-    id: "best-6inch",
-    name: 'Best 6" Setup',
-    description: "Aggressive stance + 37s",
-    buildType: "lifted",
-    liftInches: 6,
-    presetId: "offroad",
-    targetTireSize: 37,
-    icon: "💪",
-  },
-  {
-    id: "daily-35s",
-    name: "Daily 35s",
-    description: "Practical off-road ready",
-    buildType: "lifted",
-    liftInches: 3,
-    presetId: "offroad",
-    targetTireSize: 35,
-    icon: "🏕️",
-  },
-  {
-    id: "aggressive-stance",
-    name: "Aggressive Stance",
-    description: "Deep offset, wide tires",
-    buildType: "lifted",
-    liftInches: 6,
-    presetId: "extreme",
-    targetTireSize: 37,
-    icon: "😤",
-  },
-];
+  targetTireSize: number;
+  presetId: "daily" | "offroad" | "extreme";
+  label: string;
+  description: string;
+};
 
 // ============================================================================
 // Component
@@ -105,54 +33,133 @@ const QUICK_PRESETS: QuickPreset[] = [
 
 export function POSBuildTypeStep() {
   const router = useRouter();
-  const { state, setBuildType, goToStep } = usePOS();
-  
-  // Local state for configuration
+  const { state, setBuildType, setStaggeredInfo, setSetupMode, goToStep } = usePOS();
+
+  // Local state
   const [selectedBuildType, setSelectedBuildType] = useState<POSBuildType>(state.buildType);
   const [liftHeight, setLiftHeight] = useState<number>(state.liftConfig?.liftInches || 4);
   const [targetTireSize, setTargetTireSize] = useState<number | undefined>(state.liftConfig?.targetTireSize);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  
-  // Build URL params for wheels page
-  const buildWheelsUrl = () => {
-    if (!state.vehicle) return "/pos/wheels";
-    const params = new URLSearchParams({
-      year: state.vehicle.year,
-      make: state.vehicle.make,
-      model: state.vehicle.model,
-    });
-    if (state.vehicle.trim) params.set("trim", state.vehicle.trim);
-    return `/pos/wheels?${params.toString()}`;
-  };
-  
-  // Get vehicle profile for recommendations
-  const vehicleProfile = state.vehicle 
+
+  // Staggered detection
+  const [staggeredLoading, setStaggeredLoading] = useState(false);
+  const [localStaggeredInfo, setLocalStaggeredInfo] = useState<StaggeredFitmentInfo | null>(state.staggeredInfo);
+  const [selectedSetupMode, setSelectedSetupMode] = useState<SetupMode>(state.setupMode);
+
+  // Fetch staggered info when component mounts
+  useEffect(() => {
+    if (!state.vehicle) return;
+
+    const fetchStaggeredInfo = async () => {
+      setStaggeredLoading(true);
+      try {
+        const params = new URLSearchParams({
+          year: state.vehicle!.year,
+          make: state.vehicle!.make,
+          model: state.vehicle!.model,
+        });
+        if (state.vehicle!.trim) params.set("trim", state.vehicle!.trim);
+
+        const res = await fetch(`/api/wheels/fitment-search?${params}&pageSize=1`);
+        if (res.ok) {
+          const data = await res.json();
+          // Staggered info is at data.fitment.staggered
+          const staggered = data.fitment?.staggered;
+          if (staggered) {
+            const info: StaggeredFitmentInfo = {
+              isStaggered: staggered.isStaggered,
+              reason: staggered.reason,
+              frontSpec: staggered.frontSpec,
+              rearSpec: staggered.rearSpec,
+            };
+            setLocalStaggeredInfo(info);
+            setStaggeredInfo(info);
+            // Default to staggered mode if vehicle supports it
+            if (supportsStaggeredFitment(info)) {
+              setSelectedSetupMode(getDefaultSetupMode(info));
+            }
+          }
+        }
+      } catch (err) {
+        console.error("[POSBuildTypeStep] Failed to fetch staggered info:", err);
+      } finally {
+        setStaggeredLoading(false);
+      }
+    };
+
+    fetchStaggeredInfo();
+  }, [state.vehicle, setStaggeredInfo]);
+
+  // Lift profile for vehicle
+  const liftProfile = state.vehicle
     ? getLiftProfile(state.vehicle.make, state.vehicle.model)
     : null;
-  
-  // Get recommendation based on current lift height
-  const recommendation = vehicleProfile && liftHeight
-    ? getRecommendationForLiftHeight(vehicleProfile, liftHeight)
+
+  // Recommendation based on current lift height
+  const recommendation = liftProfile
+    ? getRecommendationForLiftHeight(liftProfile, liftHeight)
     : null;
-  
-  // Determine preset ID based on lift height
-  const getPresetId = (height: number): LiftLevel => {
-    if (height <= 2.5) return "daily";
-    if (height <= 4) return "offroad";
+
+  // Get preset ID from lift height
+  const getPresetId = (inches: number): "daily" | "offroad" | "extreme" => {
+    if (inches <= 2) return "daily";
+    if (inches <= 4) return "offroad";
     return "extreme";
   };
-  
-  // Handle build type selection
-  const handleBuildTypeSelect = (buildType: POSBuildType) => {
-    setSelectedBuildType(buildType);
+
+  // Quick presets
+  const quickPresets: QuickPreset[] = liftProfile
+    ? [
+        {
+          buildType: "leveled",
+          liftInches: 2,
+          targetTireSize: 33,
+          presetId: "daily",
+          label: "Level Kit",
+          description: "2\" front lift • 33\" tires",
+        },
+        {
+          buildType: "lifted",
+          liftInches: 4,
+          targetTireSize: 35,
+          presetId: "offroad",
+          label: "Trail Ready",
+          description: "4\" lift • 35\" tires",
+        },
+        {
+          buildType: "lifted",
+          liftInches: 6,
+          targetTireSize: 37,
+          presetId: "extreme",
+          label: "Full Send",
+          description: "6\"+ lift • 37\" tires",
+        },
+      ]
+    : [];
+
+  // Build URL for wheels page
+  const buildWheelsUrl = () => {
+    const params = new URLSearchParams({
+      year: state.vehicle!.year,
+      make: state.vehicle!.make,
+      model: state.vehicle!.model,
+    });
+    if (state.vehicle!.trim) params.set("trim", state.vehicle!.trim);
+    return `/pos/wheels?${params.toString()}`;
   };
-  
+
+  // Handle build type card selection
+  const handleBuildTypeSelect = (type: POSBuildType) => {
+    setSelectedBuildType(type);
+  };
+
   // Handle stock continue
   const handleStockContinue = () => {
     setBuildType("stock");
+    setSetupMode(selectedSetupMode);
     router.push(buildWheelsUrl());
   };
-  
+
   // Handle quick preset selection
   const handleQuickPreset = (preset: QuickPreset) => {
     const config: POSLiftConfig = {
@@ -164,13 +171,16 @@ export function POSBuildTypeStep() {
       notes: recommendation?.notes,
     };
     setBuildType(preset.buildType, config);
+    // Lifted builds use square fitment
+    setSetupMode("square");
     router.push(buildWheelsUrl());
   };
-  
+
   // Handle continue with custom configuration
   const handleContinue = () => {
     if (selectedBuildType === "stock") {
       setBuildType("stock");
+      setSetupMode(selectedSetupMode);
     } else {
       const presetId = getPresetId(liftHeight);
       const config: POSLiftConfig = {
@@ -182,15 +192,20 @@ export function POSBuildTypeStep() {
         notes: recommendation?.notes,
       };
       setBuildType(selectedBuildType, config);
+      // Lifted builds use square fitment
+      setSetupMode("square");
     }
     router.push(buildWheelsUrl());
   };
-  
+
   // Vehicle info display
-  const vehicleDisplay = state.vehicle 
+  const vehicleDisplay = state.vehicle
     ? `${state.vehicle.year} ${state.vehicle.make} ${state.vehicle.model}${state.vehicle.trim ? ` ${state.vehicle.trim}` : ""}`
     : "";
-  
+
+  // Check if vehicle supports staggered
+  const isStaggeredCapable = supportsStaggeredFitment(localStaggeredInfo);
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
       {/* Header */}
@@ -198,7 +213,7 @@ export function POSBuildTypeStep() {
         <h1 className="text-2xl font-bold text-white">Select Build Type</h1>
         <p className="mt-2 text-neutral-400">{vehicleDisplay}</p>
       </div>
-      
+
       {/* Build Type Cards */}
       <div className="mb-8 grid gap-4 md:grid-cols-3">
         {/* Stock */}
@@ -212,14 +227,10 @@ export function POSBuildTypeStep() {
         >
           <div className="mb-3 text-3xl">🚗</div>
           <h3 className="text-lg font-bold text-white">Stock</h3>
-          <p className="mt-1 text-sm text-neutral-400">
-            Factory height, OEM-friendly fitment
-          </p>
-          <div className="mt-4 text-xs text-green-400 font-medium">
-            ✓ Ready for install
-          </div>
+          <p className="mt-1 text-sm text-neutral-400">Factory height, OEM-friendly fitment</p>
+          <div className="mt-4 text-xs font-medium text-green-400">✓ Ready for install</div>
         </button>
-        
+
         {/* Leveling Kit */}
         <button
           onClick={() => handleBuildTypeSelect("leveled")}
@@ -231,14 +242,10 @@ export function POSBuildTypeStep() {
         >
           <div className="mb-3 text-3xl">🛻</div>
           <h3 className="text-lg font-bold text-white">Leveling Kit</h3>
-          <p className="mt-1 text-sm text-neutral-400">
-            2-2.5" front lift, removes factory rake
-          </p>
-          <div className="mt-4 text-xs text-blue-400 font-medium">
-            + Fit 33-35" tires
-          </div>
+          <p className="mt-1 text-sm text-neutral-400">2-2.5" front lift, removes factory rake</p>
+          <div className="mt-4 text-xs font-medium text-blue-400">+ Fit 33-35" tires</div>
         </button>
-        
+
         {/* Lifted Truck */}
         <button
           onClick={() => handleBuildTypeSelect("lifted")}
@@ -250,196 +257,148 @@ export function POSBuildTypeStep() {
         >
           <div className="mb-3 text-3xl">🦎</div>
           <h3 className="text-lg font-bold text-white">Lifted Truck</h3>
-          <p className="mt-1 text-sm text-neutral-400">
-            Full suspension lift, 3-10"+
-          </p>
-          <div className="mt-4 text-xs text-orange-400 font-medium">
-            + Fit 35-40" tires
-          </div>
+          <p className="mt-1 text-sm text-neutral-400">Full suspension lift, 3-10"+</p>
+          <div className="mt-4 text-xs font-medium text-orange-400">+ Fit 35-40" tires</div>
         </button>
       </div>
-      
-      {/* Quick Presets (for non-stock) */}
-      {selectedBuildType !== "stock" && (
-        <div className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-white">
-            Quick Setups
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {QUICK_PRESETS.filter(p => 
-              selectedBuildType === "leveled" 
-                ? p.buildType === "leveled" 
-                : p.buildType === "lifted"
-            ).map((preset) => (
-              <button
-                key={preset.id}
-                onClick={() => handleQuickPreset(preset)}
-                className="flex items-center gap-3 rounded-lg border border-neutral-700 bg-neutral-800 p-4 text-left transition-all hover:border-blue-500 hover:bg-neutral-700"
-              >
-                <span className="text-2xl">{preset.icon}</span>
-                <div>
-                  <div className="font-semibold text-white">{preset.name}</div>
-                  <div className="text-sm text-neutral-400">{preset.description}</div>
+
+      {/* Staggered Fitment Choice (for performance vehicles) */}
+      {isStaggeredCapable && selectedBuildType === "stock" && (
+        <div className="mb-8 rounded-xl border-2 border-purple-500/30 bg-purple-500/5 p-6">
+          <div className="flex items-start gap-4">
+            <div className="text-3xl">🏎️</div>
+            <div className="flex-1">
+              <h2 className="text-lg font-bold text-white">Performance Vehicle Detected</h2>
+              <p className="mt-1 text-sm text-neutral-400">
+                This vehicle supports staggered fitment with wider rear wheels.
+              </p>
+
+              {localStaggeredInfo?.frontSpec && localStaggeredInfo?.rearSpec && (
+                <div className="mt-3 flex gap-4 text-xs text-neutral-400">
+                  <span>Front: {localStaggeredInfo.frontSpec.width}" wide</span>
+                  <span>Rear: {localStaggeredInfo.rearSpec.width}" wide</span>
                 </div>
+              )}
+
+              {/* Setup choice buttons */}
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <button
+                  onClick={() => setSelectedSetupMode("square")}
+                  className={`rounded-lg border-2 p-4 text-left transition-all ${
+                    selectedSetupMode === "square"
+                      ? "border-blue-500 bg-blue-500/20 ring-2 ring-blue-500/50"
+                      : "border-neutral-600 bg-neutral-800 hover:border-neutral-500"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    {selectedSetupMode === "square" && <span className="text-lg text-blue-400">✓</span>}
+                    <span className="text-xl">⬜</span>
+                    <span className="font-semibold text-white">Square Setup</span>
+                  </div>
+                  <p className="mt-1 text-xs text-neutral-400">Same size all around • Tires can rotate</p>
+                </button>
+
+                <button
+                  onClick={() => setSelectedSetupMode("staggered")}
+                  className={`rounded-lg border-2 p-4 text-left transition-all ${
+                    selectedSetupMode === "staggered"
+                      ? "border-purple-500 bg-purple-500/20 ring-2 ring-purple-500/50"
+                      : "border-neutral-600 bg-neutral-800 hover:border-neutral-500"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    {selectedSetupMode === "staggered" && <span className="text-lg text-purple-400">✓</span>}
+                    <span className="text-xl">🏁</span>
+                    <span className="font-semibold text-white">Performance Staggered</span>
+                  </div>
+                  <p className="mt-1 text-xs text-neutral-400">Wider rear • Better traction • OEM-style</p>
+                </button>
+              </div>
+
+              {selectedSetupMode === "staggered" && (
+                <div className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2">
+                  <p className="text-xs text-amber-300">
+                    ⚠️ Front/rear tires differ — cannot be rotated front-to-back
+                  </p>
+                </div>
+              )}
+
+              {selectedSetupMode === "square" && (
+                <div className="mt-3 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2">
+                  <p className="text-xs text-blue-300">
+                    ✓ Same wheels all around — full tire rotation possible
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quick Presets (for non-stock) */}
+      {selectedBuildType !== "stock" && quickPresets.length > 0 && (
+        <div className="mb-8">
+          <h2 className="mb-4 text-lg font-semibold text-white">Quick Setups</h2>
+          <div className="grid gap-3 md:grid-cols-3">
+            {quickPresets.map((preset) => (
+              <button
+                key={preset.presetId}
+                onClick={() => handleQuickPreset(preset)}
+                className="rounded-xl border border-neutral-700 bg-neutral-800 p-4 text-left transition-all hover:border-blue-500 hover:bg-neutral-750"
+              >
+                <div className="text-sm font-bold text-white">{preset.label}</div>
+                <div className="mt-1 text-xs text-neutral-400">{preset.description}</div>
               </button>
             ))}
           </div>
         </div>
       )}
+
+      {/* Continue Button */}
+      <button
+        onClick={selectedBuildType === "stock" ? handleStockContinue : handleContinue}
+        className="w-full rounded-xl bg-blue-600 py-4 text-lg font-bold text-white transition-colors hover:bg-blue-500"
+      >
+        {selectedBuildType === "stock" ? (
+          isStaggeredCapable ? (
+            <>Browse {selectedSetupMode === "staggered" ? "Staggered" : "Square"} Wheels →</>
+          ) : (
+            <>Browse Wheels →</>
+          )
+        ) : (
+          <>Continue with {selectedBuildType === "leveled" ? "Leveled" : "Lifted"} Fitment →</>
+        )}
+      </button>
       
-      {/* Custom Configuration (for non-stock) */}
-      {selectedBuildType !== "stock" && (
-        <div className="mb-8 rounded-xl border border-neutral-700 bg-neutral-800 p-6">
-          <button
-            onClick={() => setShowAdvanced(!showAdvanced)}
-            className="flex w-full items-center justify-between text-left"
-          >
-            <h2 className="text-lg font-semibold text-white">
-              Custom Configuration
-            </h2>
-            <span className="text-neutral-400">
-              {showAdvanced ? "▲" : "▼"}
-            </span>
-          </button>
-          
-          {showAdvanced && (
-            <div className="mt-6 space-y-6">
-              {/* Lift Height */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-neutral-300">
-                  Lift Height
-                </label>
-                <div className="flex flex-wrap gap-2">
-                  {LIFT_HEIGHT_OPTIONS.filter(opt => 
-                    selectedBuildType === "leveled" 
-                      ? opt.category === "level"
-                      : opt.category !== "level"
-                  ).map((option) => (
-                    <button
-                      key={option.value}
-                      onClick={() => setLiftHeight(option.value)}
-                      className={`rounded-lg border px-4 py-2 font-medium transition-all ${
-                        liftHeight === option.value
-                          ? "border-blue-500 bg-blue-600 text-white"
-                          : "border-neutral-600 bg-neutral-700 text-neutral-300 hover:border-neutral-500"
-                      }`}
-                    >
-                      {option.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Target Tire Size */}
-              <div>
-                <label className="mb-2 block text-sm font-medium text-neutral-300">
-                  Target Tire Size (optional)
-                </label>
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    onClick={() => setTargetTireSize(undefined)}
-                    className={`rounded-lg border px-4 py-2 font-medium transition-all ${
-                      targetTireSize === undefined
-                        ? "border-blue-500 bg-blue-600 text-white"
-                        : "border-neutral-600 bg-neutral-700 text-neutral-300 hover:border-neutral-500"
-                    }`}
-                  >
-                    Any
-                  </button>
-                  {TIRE_SIZE_PRESETS.filter(size => {
-                    // Filter based on what the lift can support
-                    if (selectedBuildType === "leveled") return size.value <= 35;
-                    if (liftHeight <= 3) return size.value <= 35;
-                    if (liftHeight <= 6) return size.value <= 37;
-                    return true;
-                  }).map((size) => (
-                    <button
-                      key={size.value}
-                      onClick={() => setTargetTireSize(size.value)}
-                      className={`rounded-lg border px-4 py-2 font-medium transition-all ${
-                        targetTireSize === size.value
-                          ? "border-blue-500 bg-blue-600 text-white"
-                          : "border-neutral-600 bg-neutral-700 text-neutral-300 hover:border-neutral-500"
-                      }`}
-                    >
-                      {size.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Recommendation Preview */}
-              {recommendation && (
-                <div className="rounded-lg border border-blue-500/30 bg-blue-500/10 p-4">
-                  <h3 className="mb-2 font-semibold text-blue-300">
-                    Fitment Guidance
-                  </h3>
-                  <div className="grid gap-2 text-sm text-blue-200">
-                    <div>
-                      <span className="font-medium">Tire Range:</span>{" "}
-                      {recommendation.tireDiameterMin}-{recommendation.tireDiameterMax}"
-                    </div>
-                    <div>
-                      <span className="font-medium">Offset Range:</span>{" "}
-                      {recommendation.offsetLabel}
-                    </div>
-                    {recommendation.notes.length > 0 && (
-                      <div className="mt-2 border-t border-blue-500/30 pt-2">
-                        {recommendation.notes.map((note, i) => (
-                          <div key={i} className="text-xs text-blue-300">⚠️ {note}</div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-              
-              {/* Continue Button */}
-              <button
-                onClick={handleContinue}
-                className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
-              >
-                Continue with {liftHeight}" {selectedBuildType === "leveled" ? "Level" : "Lift"}
-                {targetTireSize ? ` + ${targetTireSize}" Tires` : ""}
-              </button>
-            </div>
-          )}
-        </div>
+      {/* Helper text for staggered vehicles */}
+      {isStaggeredCapable && selectedBuildType === "stock" && (
+        <p className="mt-2 text-center text-xs text-neutral-500">
+          Click to see {selectedSetupMode === "staggered" ? "staggered wheel pairs (wider rear)" : "matching wheel sets"}
+        </p>
       )}
-      
-      {/* Stock Continue Button */}
-      {selectedBuildType === "stock" && (
-        <div className="text-center">
-          <button
-            onClick={handleStockContinue}
-            className="rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-500"
-          >
-            Continue with Stock Fitment
-          </button>
-        </div>
-      )}
-      
+
       {/* Back Button */}
-      <div className="mt-8 text-center">
-        <button
-          onClick={() => goToStep("vehicle")}
-          className="text-sm text-neutral-500 hover:text-neutral-300"
-        >
-          ← Change Vehicle
-        </button>
-      </div>
-      
-      {/* Trust Badges */}
-      <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
-        <span className="flex items-center gap-1">
-          <span className="text-green-400">✓</span> Installed in-store
-        </span>
-        <span className="flex items-center gap-1">
-          <span className="text-green-400">✓</span> Fitment verified
-        </span>
-        <span className="flex items-center gap-1">
-          <span className="text-green-400">✓</span> Ready same day
-        </span>
+      <button
+        onClick={() => goToStep("vehicle")}
+        className="mt-4 w-full text-center text-sm text-neutral-400 hover:text-white"
+      >
+        ← Change Vehicle
+      </button>
+
+      {/* Trust badges */}
+      <div className="mt-8 flex items-center justify-center gap-6 text-xs text-neutral-500">
+        <div className="flex items-center gap-1">
+          <span className="text-green-500">✓</span>
+          <span>Installed in-store</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span className="text-green-500">✓</span>
+          <span>Fitment verified</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span className="text-green-500">✓</span>
+          <span>Ready same day</span>
+        </div>
       </div>
     </div>
   );

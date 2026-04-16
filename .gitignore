@@ -49,3 +49,5 @@ test-staging.ps1
 .env.production.local
 
 backups/
+
+scripts/neon-migration/*.sql

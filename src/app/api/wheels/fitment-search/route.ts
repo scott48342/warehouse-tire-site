@@ -1832,8 +1832,8 @@ async function handleDbFirstWheelResults(opts: {
         }
       }
       
-      // Also try different-diameter pairs (front smaller dia, rear larger dia)
-      // e.g., 20" front / 22" rear
+      // Also allow different-diameter pairs (e.g., 18" front / 20" rear)
+      // Some show cars and custom builds use this configuration
       for (let i = 0; i < availableDiameters.length; i++) {
         for (let j = i + 1; j < availableDiameters.length; j++) {
           const frontDia = availableDiameters[i];
@@ -1877,7 +1877,6 @@ async function handleDbFirstWheelResults(opts: {
               const bestRearCandidate = rearCandidates[0];
               
               // Check if this pair already exists (same SKUs)
-              const pairKey = `${bestFrontCandidate.candidate.sku}:${bestRearCandidate.candidate.sku}`;
               const existingPair = staggeredPairs.find(p => 
                 p.frontSku === bestFrontCandidate.candidate.sku && 
                 p.rearSku === bestRearCandidate.candidate.sku

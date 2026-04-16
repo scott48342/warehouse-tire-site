@@ -21,15 +21,26 @@ export function POSHeader() {
     <header className="sticky top-0 z-50 bg-neutral-900 border-b border-neutral-800">
       <div className="mx-auto max-w-7xl px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo / Title */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
+          {/* Logo / Title + Home Button */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handleNewQuote}
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              title="Go to Start"
+            >
               <span className="text-2xl">🛞</span>
-              <div>
+              <div className="text-left">
                 <h1 className="text-lg font-bold text-white">Warehouse Tire Direct</h1>
                 <p className="text-xs text-neutral-400">In-Store Sales Mode</p>
               </div>
-            </div>
+            </button>
+            <button
+              onClick={handleNewQuote}
+              className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white transition-colors"
+              title="Start Over"
+            >
+              🏠
+            </button>
           </div>
           
           {/* Vehicle + Build badge */}

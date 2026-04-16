@@ -322,54 +322,18 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
   const frontTireSizeFromContext = state.staggeredInfo?.frontSpec?.tireSize;
   const rearTireSizeFromContext = state.staggeredInfo?.rearSpec?.tireSize;
   
-  // Get OEM wheel diameters from staggered info
-  const oemFrontDiameter = state.staggeredInfo?.frontSpec?.diameter;
-  const oemRearDiameter = state.staggeredInfo?.rearSpec?.diameter;
-  
-  // Get SELECTED wheel diameters (from wheel selection step)
-  const selectedFrontDiameter = state.wheel?.diameter ? parseInt(state.wheel.diameter, 10) : null;
-  const selectedRearDiameter = state.wheel?.rearDiameter ? parseInt(state.wheel.rearDiameter, 10) : null;
-  
-  // Detect if user selected different wheel diameters than OEM
-  // If so, we MUST recalculate tire sizes - can't use OEM tire sizes for different wheel diameters
-  const wheelDiametersChanged = (
-    (selectedFrontDiameter && oemFrontDiameter && selectedFrontDiameter !== oemFrontDiameter) ||
-    (selectedRearDiameter && oemRearDiameter && selectedRearDiameter !== oemRearDiameter)
-  );
-  
   // For URL-based staggered with different diameters, we need to calculate tire sizes
   // based on the wheel diameters and OEM overall diameter
   const [calculatedFrontSize, setCalculatedFrontSize] = useState<string | null>(null);
   const [calculatedRearSize, setCalculatedRearSize] = useState<string | null>(null);
   
-  // Effective tire sizes: 
-  // - If wheel diameters changed from OEM, MUST use calculated sizes (not OEM)
-  // - Otherwise, use OEM sizes from context as fallback
-  const frontTireSize = wheelDiametersChanged ? calculatedFrontSize : (frontTireSizeFromContext || calculatedFrontSize);
-  const rearTireSize = wheelDiametersChanged ? calculatedRearSize : (rearTireSizeFromContext || calculatedRearSize);
+  // Effective tire sizes: from context or calculated from wheel specs
+  const frontTireSize = frontTireSizeFromContext || calculatedFrontSize;
+  const rearTireSize = rearTireSizeFromContext || calculatedRearSize;
   
   // Staggered mode: from context OR from URL params
   const isStaggeredMode = (isStaggered && Boolean(frontTireSize) && Boolean(rearTireSize)) ||
                           (staggeredUrlParam && Boolean(rearDiaParam));
-  
-  // Debug logging for staggered tire resolution
-  useEffect(() => {
-    console.log("[POSTiresClient] Staggered resolution:", {
-      isStaggeredContext: isStaggered,
-      oemFrontDiameter,
-      oemRearDiameter,
-      selectedFrontDiameter,
-      selectedRearDiameter,
-      wheelDiametersChanged,
-      frontFromContext: frontTireSizeFromContext,
-      rearFromContext: rearTireSizeFromContext,
-      frontCalculated: calculatedFrontSize,
-      rearCalculated: calculatedRearSize,
-      effectiveFront: frontTireSize,
-      effectiveRear: rearTireSize,
-      isStaggeredMode,
-    });
-  }, [isStaggered, oemFrontDiameter, oemRearDiameter, selectedFrontDiameter, selectedRearDiameter, wheelDiametersChanged, frontTireSizeFromContext, rearTireSizeFromContext, calculatedFrontSize, calculatedRearSize, frontTireSize, rearTireSize, isStaggeredMode]);
 
   // Extract filter params
   const sort = safeString(searchParams.sort) || "price_asc";
@@ -384,21 +348,8 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
   const effectiveWheelDia = wheelDia || state.wheel?.diameter;
 
   // Calculate tire sizes for custom wheel setups (different front/rear diameters)
-  // This runs when:
-  // 1. URL-based staggered with custom diameters (staggeredUrlParam)
-  // 2. User selected wheels with different diameters than OEM (wheelDiametersChanged)
   useEffect(() => {
-    // Skip if no vehicle
-    if (!hasVehicle) return;
-    
-    // Need to recalculate if:
-    // a) URL params indicate staggered setup, OR
-    // b) Selected wheel diameters differ from OEM staggered specs
-    const needsRecalculation = staggeredUrlParam || wheelDiametersChanged;
-    if (!needsRecalculation) return;
-    
-    // If we have OEM sizes and wheels match OEM diameters, no need to recalculate
-    if (frontTireSizeFromContext && !wheelDiametersChanged) return;
+    if (!staggeredUrlParam || !hasVehicle || frontTireSizeFromContext) return;
     
     const calculateSizes = async () => {
       try {
@@ -406,77 +357,37 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
         const params = new URLSearchParams({ year, make, model });
         if (trim) params.set("modification", trim);
         const res = await fetch(`/api/vehicles/tire-sizes?${params}`);
-        if (!res.ok) {
-          console.error("[POSTiresClient] Failed to fetch OEM tire sizes:", res.status);
-          setError("Unable to calculate tire sizes. Please try again.");
-          return;
-        }
+        if (!res.ok) return;
         
         const data = await res.json();
         const oemSizes: string[] = data.tireSizes || [];
-        if (oemSizes.length === 0) {
-          console.error("[POSTiresClient] No OEM tire sizes found for vehicle");
-          setError("No tire size data available for this vehicle.");
-          return;
-        }
-        
-        // Determine front wheel specs - use selected wheel or URL param
-        const frontDia = selectedFrontDiameter || parseInt(wheelDia || "0", 10);
-        const frontWidth = state.wheel?.width ? parseFloat(state.wheel.width) : parseFloat(wheelWidth || "0");
-        
-        // Determine rear wheel specs - use selected wheel or URL param
-        const rearDia = selectedRearDiameter || parseInt(rearDiaParam || "0", 10);
-        const rearWidth = state.wheel?.rearWidth ? parseFloat(state.wheel.rearWidth) : parseFloat(rearWidthParam || "0");
-        
-        console.log("[POSTiresClient] Calculating tire sizes for wheels:", {
-          frontDia, frontWidth, rearDia, rearWidth,
-          wheelDiametersChanged,
-          selectedFront: selectedFrontDiameter,
-          selectedRear: selectedRearDiameter,
-        });
+        if (oemSizes.length === 0) return;
         
         // Use first OEM size as reference for overall diameter
         const refSize = oemSizes[0];
-        
-        let frontCalculated = false;
-        let rearCalculated = false;
+        const frontDia = parseInt(wheelDia || "0", 10);
+        const frontWidth = parseFloat(wheelWidth || "0");
+        const rearDia = parseInt(rearDiaParam || "0", 10);
+        const rearWidth = parseFloat(rearWidthParam || "0");
         
         if (frontDia > 0) {
           const frontOptions = generatePlusSizeOptions(refSize, frontDia, frontWidth || undefined);
-          if (frontOptions.length > 0) {
-            console.log(`[POSTiresClient] Calculated front tire size: ${frontOptions[0]} for ${frontDia}" wheel`);
-            setCalculatedFrontSize(frontOptions[0]);
-            frontCalculated = true;
-          } else {
-            console.warn(`[POSTiresClient] No valid front tire sizes for ${frontDia}" wheel`);
-          }
+          if (frontOptions.length > 0) setCalculatedFrontSize(frontOptions[0]);
         }
         
         if (rearDia > 0) {
           // For rear, use second OEM size if available (for staggered vehicles)
           const rearRefSize = oemSizes.length > 1 ? oemSizes[1] : oemSizes[0];
           const rearOptions = generatePlusSizeOptions(rearRefSize, rearDia, rearWidth || undefined);
-          if (rearOptions.length > 0) {
-            console.log(`[POSTiresClient] Calculated rear tire size: ${rearOptions[0]} for ${rearDia}" wheel`);
-            setCalculatedRearSize(rearOptions[0]);
-            rearCalculated = true;
-          } else {
-            console.warn(`[POSTiresClient] No valid rear tire sizes for ${rearDia}" wheel`);
-          }
-        }
-        
-        // If we couldn't calculate required sizes for staggered setup, show error
-        if (staggeredUrlParam && (!frontCalculated || !rearCalculated)) {
-          setError(`Unable to find compatible tire sizes for ${frontDia}"/${rearDia}" staggered wheels.`);
+          if (rearOptions.length > 0) setCalculatedRearSize(rearOptions[0]);
         }
       } catch (err) {
         console.error("[POSTiresClient] Failed to calculate tire sizes:", err);
-        setError("Unable to calculate tire sizes. Please try again.");
       }
     };
     
     calculateSizes();
-  }, [staggeredUrlParam, hasVehicle, year, make, model, trim, wheelDia, wheelWidth, rearDiaParam, rearWidthParam, frontTireSizeFromContext, wheelDiametersChanged, selectedFrontDiameter, selectedRearDiameter, state.wheel?.width, state.wheel?.rearWidth]);
+  }, [staggeredUrlParam, hasVehicle, year, make, model, trim, wheelDia, wheelWidth, rearDiaParam, rearWidthParam, frontTireSizeFromContext]);
 
   // Fetch available tire sizes for size chip selector
   useEffect(() => {
@@ -568,16 +479,9 @@ export function POSTiresClient({ year, make, model, trim, wheelDia, wheelWidth, 
         // This API finds matched pairs (same brand/model in different sizes)
         // ═══════════════════════════════════════════════════════════════════
         
-        // If staggered mode is active but we don't have tire sizes yet, wait for calculation
-        // This covers BOTH URL-based staggered AND context-based staggered
-        if (isStaggeredMode && (!frontTireSize || !rearTireSize)) {
-          console.log("[POSTiresClient] Waiting for staggered tire sizes to be calculated...", {
-            isStaggeredMode,
-            frontTireSize,
-            rearTireSize,
-            staggeredUrlParam,
-            rearDiaParam,
-          });
+        // If URL says staggered but we don't have tire sizes yet, wait for calculation
+        if (staggeredUrlParam && rearDiaParam && (!frontTireSize || !rearTireSize)) {
+          console.log("[POSTiresClient] Waiting for staggered tire sizes to be calculated...");
           setLoading(true);
           return; // Effect will re-run when calculated sizes are set
         }

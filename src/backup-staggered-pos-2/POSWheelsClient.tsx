@@ -324,7 +324,7 @@ function POSWheelCard({
 
 export function POSWheelsClient({ year, make, model, trim, searchParams }: Props) {
   const router = useRouter();
-  const { state, setWheel, setSetupMode, setStaggeredInfo, isStaggered: contextIsStaggered, supportsStaggered } = usePOS();
+  const { state, setWheel, setSetupMode, isStaggered: contextIsStaggered, supportsStaggered } = usePOS();
 
   // Local setup mode (synced with context but also works standalone)
   const [localSetupMode, setLocalSetupMode] = useState<SetupMode>(state.setupMode);
@@ -412,35 +412,14 @@ export function POSWheelsClient({ year, make, model, trim, searchParams }: Props
         if (data.fitment?.envelope?.boltPattern) {
           setVehicleBoltPattern(data.fitment.envelope.boltPattern);
         }
-        
-        // ═══════════════════════════════════════════════════════════════════
-        // CRITICAL: Store full staggered info in context (includes tire sizes)
-        // This is the SOURCE OF TRUTH from retail fitment API
-        // POSTiresClient reads staggeredInfo.frontSpec.tireSize / rearSpec.tireSize
-        // ═══════════════════════════════════════════════════════════════════
-        const staggeredInfo = data.fitment?.staggered;
-        if (staggeredInfo?.isStaggered) {
+        if (data.fitment?.staggered?.isStaggered) {
           setVehicleSupportsStaggered(true);
-          
-          // Store the FULL staggered info including tire sizes
-          setStaggeredInfo(staggeredInfo);
-          
-          console.log("[POSWheelsClient] Staggered info from API:", {
-            isStaggered: staggeredInfo.isStaggered,
-            reason: staggeredInfo.reason,
-            frontTireSize: staggeredInfo.frontSpec?.tireSize,
-            rearTireSize: staggeredInfo.rearSpec?.tireSize,
-          });
-          
           // Only set staggered mode once on initial load (prevent re-render loop)
           if (!hasInitializedStaggered) {
             setHasInitializedStaggered(true);
             setLocalSetupMode("staggered");
             setSetupMode("staggered");
           }
-        } else {
-          // Clear staggered info for non-staggered vehicles
-          setStaggeredInfo(null);
         }
 
         // Normalize wheel data

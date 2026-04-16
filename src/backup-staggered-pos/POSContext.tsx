@@ -1,14 +1,6 @@
 "use client";
 
 import { createContext, useContext, useReducer, useEffect, type ReactNode } from "react";
-import {
-  type StaggeredFitmentInfo,
-  type SetupMode,
-  type SelectedWheelWithStaggered,
-  type SelectedTireWithStaggered,
-  supportsStaggeredFitment,
-  getDefaultSetupMode,
-} from "@/lib/fitment/staggeredFitment";
 
 // ============================================================================
 // Types
@@ -24,39 +16,51 @@ export interface POSVehicle {
 // Build type for lifted/leveled/stock configurations
 export type POSBuildType = "stock" | "leveled" | "lifted";
 
-// Re-export shared types for convenience
-export type { StaggeredFitmentInfo, SetupMode };
-
 // Lift configuration for leveled/lifted builds
 export interface POSLiftConfig {
-  liftInches: number;
-  targetTireSize?: number;
+  liftInches: number;           // e.g., 2, 3, 4, 6, 8
+  targetTireSize?: number;      // Target tire diameter in inches (33, 35, 37)
   presetId?: "daily" | "offroad" | "extreme";
   offsetMin?: number;
   offsetMax?: number;
-  notes?: string[];
+  notes?: string[];             // Fitment notes like "May require trimming"
 }
 
-// POS Wheel - extends shared SelectedWheelWithStaggered with POS-specific fields
-export interface POSWheel extends SelectedWheelWithStaggered {
-  quantity: number;        // Always 4 (2 front + 2 rear, or 4 same)
+export interface POSWheel {
+  sku: string;
+  brand: string;
+  model: string;
+  finish?: string;
+  diameter: string;
+  width: string;
+  offset?: string;
+  boltPattern?: string;
+  imageUrl?: string;
+  unitPrice: number;
+  setPrice: number; // qty * unitPrice
+  quantity: number;
+  fitmentClass?: string;
   tier?: "good" | "better" | "best";
 }
 
-// POS Tire - extends shared SelectedTireWithStaggered with POS-specific fields
-export interface POSTire extends SelectedTireWithStaggered {
-  quantity: number;        // Always 4
+export interface POSTire {
+  sku: string;
+  brand: string;
+  model: string;
+  size: string;
+  imageUrl?: string;
+  unitPrice: number;
+  setPrice: number;
+  quantity: number;
   tier?: "good" | "better" | "best";
-  loadIndex?: string;
-  speedRating?: string;
 }
 
 export interface POSFees {
-  labor: number;
-  tpms: number;
-  disposal: number;
-  alignment: number;
-  balancing: number;
+  labor: number;           // Installation labor (mount & balance)
+  tpms: number;            // TPMS programming/sensors
+  disposal: number;        // Tire disposal fee
+  alignment: number;       // Optional alignment
+  balancing: number;       // Wheel balancing (usually included in labor)
   custom: { name: string; amount: number }[];
 }
 
@@ -68,22 +72,31 @@ export interface POSDiscount {
 
 // Admin settings - stored in localStorage
 export interface POSAdminSettings {
+  // Labor pricing (per wheel)
   laborPerWheel: number;
+  
+  // Add-ons
   tpmsPerSensor: number;
   disposalPerTire: number;
   alignmentPrice: number;
+  
+  // Lift install labor (flat rate by lift height)
   liftInstallLabor: {
-    level: number;
-    lift2to3: number;
-    lift4to6: number;
-    lift8plus: number;
+    level: number;     // Leveling kit install
+    lift2to3: number;  // 2-3" lift
+    lift4to6: number;  // 4-6" lift  
+    lift8plus: number; // 8"+ lift
   };
-  creditCardFeePercent: number;
+  
+  // Credit card fee
+  creditCardFeePercent: number; // e.g., 3.99 for 3.99%
+  
+  // Custom add-ons that can be toggled
   customAddOns: Array<{
     id: string;
     name: string;
     price: number;
-    perUnit: boolean;
+    perUnit: boolean; // true = per wheel/tire, false = flat fee
   }>;
 }
 
@@ -93,97 +106,97 @@ export interface POSState {
   step: POSStep;
   vehicle: POSVehicle | null;
   
-  // Build configuration
+  // Build configuration (lifted/leveled/stock)
   buildType: POSBuildType;
   liftConfig: POSLiftConfig | null;
   
-  // Staggered fitment - uses shared types
-  setupMode: SetupMode;
-  staggeredInfo: StaggeredFitmentInfo | null;
-  
-  // Wheel and Tire - single objects with optional rear fields (retail pattern)
   wheel: POSWheel | null;
   tire: POSTire | null;
-  
   fees: POSFees;
   discount: POSDiscount | null;
-  customerName: string;
-  customerPhone: string;
-  customerEmail: string;
-  notes: string;
+  taxRate: number; // Fixed at 6% (0.06)
+  customerName?: string;
+  customerPhone?: string;
+  customerEmail?: string;
+  notes?: string;
+  
+  // Admin settings
   adminSettings: POSAdminSettings;
   showAdminPanel: boolean;
+  
+  // Selected add-ons for current quote
   selectedAddOns: {
     labor: boolean;
     tpms: boolean;
     disposal: boolean;
     alignment: boolean;
-    liftInstall: boolean;
-    creditCard: boolean;
+    liftInstall: boolean;  // Lift/level kit install labor
+    creditCard: boolean;   // Credit card processing fee
     customIds: string[];
   };
 }
 
-type POSAction =
-  | { type: "SET_VEHICLE"; payload: POSVehicle | null }
-  | { type: "SET_BUILD_TYPE"; payload: { buildType: POSBuildType; liftConfig?: POSLiftConfig | null } }
-  | { type: "SET_STAGGERED_INFO"; payload: { staggeredInfo: StaggeredFitmentInfo | null } }
-  | { type: "SET_SETUP_MODE"; payload: SetupMode }
-  | { type: "SET_WHEEL"; payload: POSWheel | null }
-  | { type: "SET_TIRE"; payload: POSTire | null }
-  | { type: "SET_FEES"; payload: Partial<POSFees> }
-  | { type: "SET_DISCOUNT"; payload: POSDiscount | null }
-  | { type: "SET_CUSTOMER"; payload: { name?: string; phone?: string; email?: string } }
-  | { type: "SET_NOTES"; payload: string }
-  | { type: "GO_TO_STEP"; payload: POSStep }
-  | { type: "RESET" }
-  | { type: "LOAD_ADMIN_SETTINGS"; payload: POSAdminSettings }
-  | { type: "SET_ADMIN_SETTINGS"; payload: Partial<POSAdminSettings> }
-  | { type: "TOGGLE_ADMIN_PANEL" }
-  | { type: "SET_SELECTED_ADDONS"; payload: Partial<POSState["selectedAddOns"]> };
-
 // ============================================================================
-// Constants
+// Default Values
 // ============================================================================
 
-export const DEFAULT_FEES: POSFees = {
-  labor: 0,
-  tpms: 0,
-  disposal: 0,
-  alignment: 0,
-  balancing: 0,
+const DEFAULT_ADMIN_SETTINGS: POSAdminSettings = {
+  laborPerWheel: 25,        // $25/wheel = $100 for set of 4
+  tpmsPerSensor: 15,        // $15/sensor = $60 for set of 4
+  disposalPerTire: 5,       // $5/tire = $20 for set of 4
+  alignmentPrice: 89,       // Alignment price
+  liftInstallLabor: {
+    level: 150,      // Leveling kit install
+    lift2to3: 350,   // 2-3" lift install
+    lift4to6: 550,   // 4-6" lift install
+    lift8plus: 850,  // 8"+ lift install
+  },
+  creditCardFeePercent: 3.99, // 3.99% credit card processing fee
+  customAddOns: [
+    { id: "lugnuts", name: "Lug Nuts (set)", price: 40, perUnit: false },
+    { id: "hubcentric", name: "Hub Centric Rings", price: 30, perUnit: false },
+  ],
+};
+
+const DEFAULT_FEES: POSFees = {
+  labor: 100,        // $100 default labor
+  tpms: 0,           // Usually included or $0
+  disposal: 20,      // $5/tire = $20
+  alignment: 0,      // Optional, $89 typical
+  balancing: 0,      // Usually included in labor
   custom: [],
 };
 
-export const FIXED_TAX_RATE = 0.06; // 6% Michigan sales tax
-
-export const DEFAULT_ADMIN_SETTINGS: POSAdminSettings = {
-  laborPerWheel: 25,
-  tpmsPerSensor: 50,
-  disposalPerTire: 5,
-  alignmentPrice: 99,
-  liftInstallLabor: {
-    level: 150,
-    lift2to3: 350,
-    lift4to6: 650,
-    lift8plus: 1200,
-  },
-  creditCardFeePercent: 3.5,
-  customAddOns: [],
-};
+// Tax rate is FIXED at 6% per Scott's request
+const FIXED_TAX_RATE = 0.06;
 
 const DEFAULT_SELECTED_ADDONS = {
-  labor: true,
+  labor: true,       // Labor on by default
   tpms: false,
-  disposal: true,
+  disposal: true,    // Disposal on by default
   alignment: false,
-  liftInstall: false,
-  creditCard: false,
+  liftInstall: false, // Lift install labor (only relevant for lifted/leveled builds)
+  creditCard: false,  // Off by default (cash/check)
   customIds: [],
 };
 
+const initialState: POSState = {
+  step: "vehicle",
+  vehicle: null,
+  buildType: "stock",
+  liftConfig: null,
+  wheel: null,
+  tire: null,
+  fees: DEFAULT_FEES,
+  discount: null,
+  taxRate: FIXED_TAX_RATE,
+  adminSettings: DEFAULT_ADMIN_SETTINGS,
+  showAdminPanel: false,
+  selectedAddOns: DEFAULT_SELECTED_ADDONS,
+};
+
 // ============================================================================
-// LocalStorage Helpers
+// LocalStorage Keys
 // ============================================================================
 
 const ADMIN_SETTINGS_KEY = "pos_admin_settings";
@@ -191,13 +204,12 @@ const ADMIN_SETTINGS_KEY = "pos_admin_settings";
 function loadAdminSettings(): POSAdminSettings {
   if (typeof window === "undefined") return DEFAULT_ADMIN_SETTINGS;
   try {
-    const saved = localStorage.getItem(ADMIN_SETTINGS_KEY);
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      return { ...DEFAULT_ADMIN_SETTINGS, ...parsed };
+    const stored = localStorage.getItem(ADMIN_SETTINGS_KEY);
+    if (stored) {
+      return { ...DEFAULT_ADMIN_SETTINGS, ...JSON.parse(stored) };
     }
   } catch (e) {
-    console.error("Failed to load admin settings:", e);
+    console.warn("[POS] Failed to load admin settings:", e);
   }
   return DEFAULT_ADMIN_SETTINGS;
 }
@@ -207,98 +219,77 @@ function saveAdminSettings(settings: POSAdminSettings): void {
   try {
     localStorage.setItem(ADMIN_SETTINGS_KEY, JSON.stringify(settings));
   } catch (e) {
-    console.error("Failed to save admin settings:", e);
+    console.warn("[POS] Failed to save admin settings:", e);
   }
 }
 
 // ============================================================================
-// Initial State
+// Actions
 // ============================================================================
 
-const initialState: POSState = {
-  step: "vehicle",
-  vehicle: null,
-  buildType: "stock",
-  liftConfig: null,
-  setupMode: "square",
-  staggeredInfo: null,
-  wheel: null,
-  tire: null,
-  fees: DEFAULT_FEES,
-  discount: null,
-  customerName: "",
-  customerPhone: "",
-  customerEmail: "",
-  notes: "",
-  adminSettings: DEFAULT_ADMIN_SETTINGS,
-  showAdminPanel: false,
-  selectedAddOns: DEFAULT_SELECTED_ADDONS,
-};
-
-// ============================================================================
-// Reducer
-// ============================================================================
+type POSAction =
+  | { type: "SET_VEHICLE"; payload: POSVehicle }
+  | { type: "SET_BUILD_TYPE"; payload: { buildType: POSBuildType; liftConfig?: POSLiftConfig } }
+  | { type: "SET_WHEEL"; payload: POSWheel }
+  | { type: "SET_TIRE"; payload: POSTire }
+  | { type: "SET_FEES"; payload: Partial<POSFees> }
+  | { type: "SET_DISCOUNT"; payload: POSDiscount | null }
+  | { type: "SET_CUSTOMER"; payload: { name?: string; phone?: string; email?: string } }
+  | { type: "SET_NOTES"; payload: string }
+  | { type: "GO_TO_STEP"; payload: POSStep }
+  | { type: "RESET" }
+  | { type: "SET_ADMIN_SETTINGS"; payload: Partial<POSAdminSettings> }
+  | { type: "TOGGLE_ADMIN_PANEL" }
+  | { type: "SET_SELECTED_ADDONS"; payload: Partial<POSState["selectedAddOns"]> }
+  | { type: "LOAD_ADMIN_SETTINGS"; payload: POSAdminSettings };
 
 function posReducer(state: POSState, action: POSAction): POSState {
   switch (action.type) {
     case "SET_VEHICLE":
-      return {
-        ...state,
+      return { 
+        ...state, 
         vehicle: action.payload,
-        step: action.payload ? "build-type" : "vehicle",
-        // Reset downstream when vehicle changes
-        buildType: "stock",
+        step: "build-type",  // Go to build type selection after vehicle
+        buildType: "stock",  // Reset to stock
         liftConfig: null,
-        setupMode: "square",
-        staggeredInfo: null,
         wheel: null,
         tire: null,
       };
-
-    case "SET_BUILD_TYPE":
+    
+    case "SET_BUILD_TYPE": {
+      const { buildType, liftConfig } = action.payload;
+      // Auto-enable lift install labor for lifted/leveled builds
+      const shouldEnableLiftInstall = buildType !== "stock" && !!liftConfig;
       return {
         ...state,
-        buildType: action.payload.buildType,
-        liftConfig: action.payload.liftConfig ?? null,
-        // Enable lift install add-on for non-stock builds
+        buildType,
+        liftConfig: liftConfig || null,
+        step: "package",  // Proceed to wheel/tire selection
+        wheel: null,
+        tire: null,
         selectedAddOns: {
           ...state.selectedAddOns,
-          liftInstall: action.payload.buildType !== "stock",
+          liftInstall: shouldEnableLiftInstall,
+          alignment: shouldEnableLiftInstall,  // Alignment usually needed for lifts
         },
       };
-
-    case "SET_STAGGERED_INFO": {
-      const info = action.payload.staggeredInfo;
-      const supportsStaggered = supportsStaggeredFitment(info);
-      return {
-        ...state,
-        staggeredInfo: info,
-        // Default to staggered mode if vehicle supports it
-        setupMode: supportsStaggered ? getDefaultSetupMode(info) : "square",
-      };
     }
-
-    case "SET_SETUP_MODE":
-      return {
-        ...state,
-        setupMode: action.payload,
-        // Clear wheel/tire when mode changes (may need different selection)
-        wheel: null,
-        tire: null,
-      };
-
+    
     case "SET_WHEEL":
       return { ...state, wheel: action.payload };
-
+    
     case "SET_TIRE":
       return { ...state, tire: action.payload };
-
+    
     case "SET_FEES":
-      return { ...state, fees: { ...state.fees, ...action.payload } };
-
+      return { 
+        ...state, 
+        fees: { ...state.fees, ...action.payload } 
+      };
+    
     case "SET_DISCOUNT":
       return { ...state, discount: action.payload };
-
+    
     case "SET_CUSTOMER":
       return {
         ...state,
@@ -306,37 +297,40 @@ function posReducer(state: POSState, action: POSAction): POSState {
         customerPhone: action.payload.phone ?? state.customerPhone,
         customerEmail: action.payload.email ?? state.customerEmail,
       };
-
+    
     case "SET_NOTES":
       return { ...state, notes: action.payload };
-
+    
     case "GO_TO_STEP":
       return { ...state, step: action.payload };
-
+    
     case "RESET":
       return {
         ...initialState,
-        adminSettings: state.adminSettings,
+        adminSettings: state.adminSettings, // Preserve admin settings
+        buildType: "stock",
+        liftConfig: null,
+        selectedAddOns: DEFAULT_SELECTED_ADDONS,
       };
-
-    case "LOAD_ADMIN_SETTINGS":
-      return { ...state, adminSettings: action.payload };
-
+    
     case "SET_ADMIN_SETTINGS": {
       const newSettings = { ...state.adminSettings, ...action.payload };
       saveAdminSettings(newSettings);
       return { ...state, adminSettings: newSettings };
     }
-
+    
+    case "LOAD_ADMIN_SETTINGS":
+      return { ...state, adminSettings: action.payload };
+    
     case "TOGGLE_ADMIN_PANEL":
       return { ...state, showAdminPanel: !state.showAdminPanel };
-
+    
     case "SET_SELECTED_ADDONS":
       return {
         ...state,
         selectedAddOns: { ...state.selectedAddOns, ...action.payload },
       };
-
+    
     default:
       return state;
   }
@@ -349,29 +343,15 @@ function posReducer(state: POSState, action: POSAction): POSState {
 interface POSContextValue {
   state: POSState;
   
-  // Vehicle & Build
-  setVehicle: (vehicle: POSVehicle | null) => void;
-  setBuildType: (buildType: POSBuildType, liftConfig?: POSLiftConfig | null) => void;
-  
-  // Staggered Fitment - uses shared module
-  setStaggeredInfo: (staggeredInfo: StaggeredFitmentInfo | null) => void;
-  setSetupMode: (mode: SetupMode) => void;
-  isStaggered: boolean;  // Computed: setupMode === "staggered"
-  supportsStaggered: boolean;  // Computed: staggeredInfo?.isStaggered
-  
-  // Wheel & Tire - single objects with optional rear fields
-  setWheel: (wheel: POSWheel | null) => void;
-  setTire: (tire: POSTire | null) => void;
-  
-  // Fees & Discount
+  // Actions
+  setVehicle: (vehicle: POSVehicle) => void;
+  setBuildType: (buildType: POSBuildType, liftConfig?: POSLiftConfig) => void;
+  setWheel: (wheel: POSWheel) => void;
+  setTire: (tire: POSTire) => void;
   setFees: (fees: Partial<POSFees>) => void;
   setDiscount: (discount: POSDiscount | null) => void;
-  
-  // Customer & Notes
   setCustomer: (info: { name?: string; phone?: string; email?: string }) => void;
   setNotes: (notes: string) => void;
-  
-  // Navigation
   goToStep: (step: POSStep) => void;
   reset: () => void;
   
@@ -380,20 +360,18 @@ interface POSContextValue {
   toggleAdminPanel: () => void;
   setSelectedAddOns: (addons: Partial<POSState["selectedAddOns"]>) => void;
   
-  // Computed pricing
-  subtotal: number;
-  wheelsTotal: number;
-  tiresTotal: number;
-  laborTotal: number;
-  liftInstallTotal: number;
-  addOnsTotal: number;
-  discountAmount: number;
-  taxableAmount: number;
-  taxAmount: number;
-  creditCardFee: number;
-  outTheDoorPrice: number;
+  // Computed values
+  subtotal: number;          // Wheels + Tires
+  laborTotal: number;        // Labor fees (mount & balance)
+  liftInstallTotal: number;  // Lift kit install labor
+  addOnsTotal: number;       // All other add-ons
+  discountAmount: number;    // Discount value
+  taxableAmount: number;     // What gets taxed
+  taxAmount: number;         // Tax
+  creditCardFee: number;     // Credit card processing fee
+  outTheDoorPrice: number;   // Final total
   
-  // Computed state
+  // Helpers
   isComplete: boolean;
   canGenerateQuote: boolean;
 }
@@ -406,95 +384,96 @@ const POSContext = createContext<POSContextValue | null>(null);
 
 export function POSProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(posReducer, initialState);
-
+  
   // Load admin settings from localStorage on mount
   useEffect(() => {
     const settings = loadAdminSettings();
     dispatch({ type: "LOAD_ADMIN_SETTINGS", payload: settings });
   }, []);
-
-  // Computed: Is staggered mode active
-  const isStaggered = state.setupMode === "staggered";
   
-  // Computed: Does vehicle support staggered
-  const supportsStaggered = supportsStaggeredFitment(state.staggeredInfo);
-
-  // Computed: Wheels total (setPrice already includes all 4)
-  const wheelsTotal = state.wheel?.setPrice ?? 0;
-
-  // Computed: Tires total (setPrice already includes all 4)
-  const tiresTotal = state.tire?.setPrice ?? 0;
-
   // Computed: Parts subtotal
-  const subtotal = wheelsTotal + tiresTotal;
-
+  const subtotal = (state.wheel?.setPrice ?? 0) + (state.tire?.setPrice ?? 0);
+  
   // Computed: Labor total
-  const laborTotal = state.selectedAddOns.labor
-    ? state.adminSettings.laborPerWheel * 4
+  const laborTotal = state.selectedAddOns.labor 
+    ? state.adminSettings.laborPerWheel * 4 
     : 0;
-
-  // Computed: Lift install labor
+  
+  // Computed: Lift install labor (based on lift height)
   const liftInstallTotal = (() => {
     if (!state.selectedAddOns.liftInstall || !state.liftConfig) return 0;
+    
     const { liftInches } = state.liftConfig;
     const { liftInstallLabor } = state.adminSettings;
-    if (state.buildType === "leveled" || liftInches <= 2) return liftInstallLabor.level;
-    if (liftInches <= 3) return liftInstallLabor.lift2to3;
-    if (liftInches <= 6) return liftInstallLabor.lift4to6;
-    return liftInstallLabor.lift8plus;
+    
+    if (state.buildType === "leveled" || liftInches <= 2) {
+      return liftInstallLabor.level;
+    } else if (liftInches <= 3) {
+      return liftInstallLabor.lift2to3;
+    } else if (liftInches <= 6) {
+      return liftInstallLabor.lift4to6;
+    } else {
+      return liftInstallLabor.lift8plus;
+    }
   })();
-
-  // Computed: Add-ons total
+  
+  // Computed: Add-ons total (excluding lift install which is separate)
   const addOnsTotal = (() => {
     let total = 0;
-    if (state.selectedAddOns.tpms) total += state.adminSettings.tpmsPerSensor * 4;
-    if (state.selectedAddOns.disposal) total += state.adminSettings.disposalPerTire * 4;
-    if (state.selectedAddOns.alignment) total += state.adminSettings.alignmentPrice;
+    
+    if (state.selectedAddOns.tpms) {
+      total += state.adminSettings.tpmsPerSensor * 4;
+    }
+    if (state.selectedAddOns.disposal) {
+      total += state.adminSettings.disposalPerTire * 4;
+    }
+    if (state.selectedAddOns.alignment) {
+      total += state.adminSettings.alignmentPrice;
+    }
+    
+    // Custom add-ons
     for (const addon of state.adminSettings.customAddOns) {
       if (state.selectedAddOns.customIds.includes(addon.id)) {
         total += addon.perUnit ? addon.price * 4 : addon.price;
       }
     }
+    
     return total;
   })();
-
+  
   // Computed: Discount amount
   const discountAmount = state.discount
     ? state.discount.type === "percent"
       ? (subtotal * state.discount.value) / 100
       : state.discount.value
     : 0;
-
-  // Taxable = Parts - Discount
+  
+  // Taxable = Parts - Discount (labor/fees usually not taxed in MI)
   const taxableAmount = Math.max(0, subtotal - discountAmount);
-
+  
   // Tax amount (fixed 6%)
   const taxAmount = taxableAmount * FIXED_TAX_RATE;
-
-  // Subtotal after tax
+  
+  // Subtotal after tax (before credit card fee)
   const subtotalAfterTax = subtotal + laborTotal + liftInstallTotal + addOnsTotal - discountAmount + taxAmount;
-
-  // Credit card fee
+  
+  // Credit card fee (applied to total if paying by card)
   const creditCardFee = state.selectedAddOns.creditCard
     ? subtotalAfterTax * (state.adminSettings.creditCardFeePercent / 100)
     : 0;
-
-  // Out the door price
+  
+  // Out the door = Parts + Labor + Lift Install + AddOns - Discount + Tax + CC Fee
   const outTheDoorPrice = subtotalAfterTax + creditCardFee;
-
-  // Computed: Is package complete
+  
+  // Helpers
   const isComplete = !!(state.vehicle && state.wheel && state.tire);
   const canGenerateQuote = isComplete;
-
+  
   const value: POSContextValue = {
     state,
-
+    
     setVehicle: (vehicle) => dispatch({ type: "SET_VEHICLE", payload: vehicle }),
-    setBuildType: (buildType, liftConfig) =>
-      dispatch({ type: "SET_BUILD_TYPE", payload: { buildType, liftConfig } }),
-    setStaggeredInfo: (staggeredInfo) =>
-      dispatch({ type: "SET_STAGGERED_INFO", payload: { staggeredInfo } }),
-    setSetupMode: (mode) => dispatch({ type: "SET_SETUP_MODE", payload: mode }),
+    setBuildType: (buildType, liftConfig) => dispatch({ type: "SET_BUILD_TYPE", payload: { buildType, liftConfig } }),
     setWheel: (wheel) => dispatch({ type: "SET_WHEEL", payload: wheel }),
     setTire: (tire) => dispatch({ type: "SET_TIRE", payload: tire }),
     setFees: (fees) => dispatch({ type: "SET_FEES", payload: fees }),
@@ -503,15 +482,12 @@ export function POSProvider({ children }: { children: ReactNode }) {
     setNotes: (notes) => dispatch({ type: "SET_NOTES", payload: notes }),
     goToStep: (step) => dispatch({ type: "GO_TO_STEP", payload: step }),
     reset: () => dispatch({ type: "RESET" }),
+    
     setAdminSettings: (settings) => dispatch({ type: "SET_ADMIN_SETTINGS", payload: settings }),
     toggleAdminPanel: () => dispatch({ type: "TOGGLE_ADMIN_PANEL" }),
     setSelectedAddOns: (addons) => dispatch({ type: "SET_SELECTED_ADDONS", payload: addons }),
-
-    isStaggered,
-    supportsStaggered,
+    
     subtotal,
-    wheelsTotal,
-    tiresTotal,
     laborTotal,
     liftInstallTotal,
     addOnsTotal,
@@ -520,10 +496,11 @@ export function POSProvider({ children }: { children: ReactNode }) {
     taxAmount,
     creditCardFee,
     outTheDoorPrice,
+    
     isComplete,
     canGenerateQuote,
   };
-
+  
   return <POSContext.Provider value={value}>{children}</POSContext.Provider>;
 }
 
