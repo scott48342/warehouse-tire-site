@@ -1210,7 +1210,8 @@ export default async function TiresPage({
   // IMPORTANT: Check if user selected their own wheel sizes (override OEM staggered)
   // If user has wheelDia without wheelDiaFront/wheelDiaRear, they chose a square setup
   const userSelectedSquareSetup = wheelDia && !wheelDiaFront && !wheelDiaRear;
-  const userSelectedStaggeredSetup = wheelDiaFront && wheelDiaRear;
+  // Staggered setup: explicit front/rear OR wheelDia+wheelDiaRear combo
+  const userSelectedStaggeredSetup = (wheelDiaFront && wheelDiaRear) || (wheelDia && wheelDiaRear);
   
   // For staggered vehicles with single diameter selection, infer staggered widths from OEM DIFFERENCE
   // e.g., Corvette OEM is 8.5" front / 11" rear (difference 2.5"). 
@@ -1250,8 +1251,9 @@ export default async function TiresPage({
                                       inferredRearWidth && inferredRearWidth >= 8;
   
   // Determine actual wheel specs to use for tire generation
+  // CRITICAL: User-selected wheel sizes ALWAYS take priority over OEM
   const actualFrontDia = userSelectedStaggeredSetup 
-    ? Number(wheelDiaFront) 
+    ? Number(wheelDiaFront || wheelDia)  // Use wheelDia as front if wheelDiaFront not specified
     : userSelectedSquareSetup 
       ? Number(wheelDia) 
       : staggeredFrontDia;
@@ -1270,7 +1272,7 @@ export default async function TiresPage({
     (forceStaggered && isStaggeredFromFitment && inferredWidthsAreRealistic);
   
   const actualFrontWidth = userSelectedStaggeredSetup 
-    ? Number(wheelWidthFront) || staggeredFrontWidth 
+    ? Number(wheelWidthFront || wheelWidth) || staggeredFrontWidth  // Use wheelWidth as front if wheelWidthFront not specified
     : useStaggeredWidths
       ? inferredFrontWidth! // Use inferred width for staggered vehicle
       : userSelectedSquareSetup 
