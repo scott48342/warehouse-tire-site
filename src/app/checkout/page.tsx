@@ -144,7 +144,8 @@ export default function CheckoutPage() {
     });
   }, [items, shipping.zip, validation.totals.total]);
 
-  const shippingAmount = shippingEstimate.isFree ? 0 : shippingEstimate.amount;
+  // Local mode: no shipping charges (delivery to store included)
+  const shippingAmount = isLocal ? 0 : (shippingEstimate.isFree ? 0 : shippingEstimate.amount);
   const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
@@ -345,7 +346,7 @@ export default function CheckoutPage() {
                   step === "shipping" ? "bg-green-100 text-green-800 font-bold" : "text-neutral-500"
                 }`}
               >
-                2. Shipping
+                {isLocal ? "2. Details" : "2. Shipping"}
               </button>
               <span className="text-neutral-300">→</span>
               <span
@@ -455,7 +456,7 @@ export default function CheckoutPage() {
                       : "bg-green-600 hover:bg-green-700"
                   }`}
                 >
-                  Continue to Shipping
+                  {isLocal ? "Continue to Details" : "Continue to Shipping"}
                 </button>
               </div>
             )}
@@ -483,7 +484,14 @@ export default function CheckoutPage() {
                 </LocalOnly>
 
                 <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <h2 className="text-lg font-bold text-neutral-900 mb-4">Shipping Information</h2>
+                  <h2 className="text-lg font-bold text-neutral-900 mb-4">
+                    {isLocal ? "Contact & Billing Information" : "Shipping Information"}
+                  </h2>
+                  {isLocal && (
+                    <p className="text-sm text-neutral-600 mb-4">
+                      Your order will be delivered to <strong>{storeInfo?.name || "your selected store"}</strong> for professional installation.
+                    </p>
+                  )}
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <input
@@ -558,15 +566,17 @@ export default function CheckoutPage() {
                     </div>
                   </div>
 
-                  <label className="mt-4 flex items-center gap-2 text-sm text-neutral-700">
-                    <input
-                      type="checkbox"
-                      checked={sameAsBilling}
-                      onChange={(e) => setSameAsBilling(e.target.checked)}
-                      className="rounded border-neutral-300"
-                    />
-                    Billing address same as shipping
-                  </label>
+                  {!isLocal && (
+                    <label className="mt-4 flex items-center gap-2 text-sm text-neutral-700">
+                      <input
+                        type="checkbox"
+                        checked={sameAsBilling}
+                        onChange={(e) => setSameAsBilling(e.target.checked)}
+                        className="rounded border-neutral-300"
+                      />
+                      Billing address same as shipping
+                    </label>
+                  )}
                 </div>
 
                 <div className="flex gap-3">
@@ -700,6 +710,21 @@ export default function CheckoutPage() {
 
           {/* Order Summary Sidebar */}
           <div className="lg:sticky lg:top-24 h-fit space-y-4">
+            {/* Local Mode: Installation Location Card */}
+            {isLocal && storeInfo && (
+              <div className="rounded-2xl border-2 border-green-200 bg-green-50 p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-lg">🔧</span>
+                  <h3 className="font-bold text-green-900">Installation at {storeInfo.displayName}</h3>
+                </div>
+                <div className="text-sm text-green-800 space-y-1">
+                  <p>{storeInfo.address}</p>
+                  <p>{storeInfo.city}, {storeInfo.state} {storeInfo.zip}</p>
+                  <p className="font-medium">{storeInfo.phone}</p>
+                </div>
+              </div>
+            )}
+
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900 mb-4">Order Summary</h2>
 
@@ -725,8 +750,14 @@ export default function CheckoutPage() {
                   <span className="font-semibold">${validation.totals.subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-neutral-600">Shipping</span>
-                  {shippingEstimate.isFree ? (
+                  <span className="text-neutral-600">
+                    {isLocal ? "Store Delivery" : "Shipping"}
+                  </span>
+                  {isLocal ? (
+                    <div className="flex items-center gap-1.5">
+                      <span className="font-semibold text-green-700">INCLUDED</span>
+                    </div>
+                  ) : shippingEstimate.isFree ? (
                     <div className="flex items-center gap-1.5">
                       <span className="font-semibold text-green-700">FREE</span>
                       <span className="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-medium">
@@ -776,27 +807,49 @@ export default function CheckoutPage() {
             {/* Store Reviews Trust Strip */}
             <CheckoutTrustStrip />
             
-            {/* Trust badges */}
+            {/* Trust badges - different for local vs national */}
             <div className="rounded-xl bg-neutral-50 p-4 space-y-2 text-sm">
               <div className="flex items-center gap-2 text-neutral-700">
                 <span className="text-green-600">✓</span>
                 <span>Secure checkout</span>
               </div>
+              {isLocal ? (
+                <>
+                  <div className="flex items-center gap-2 text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Professional installation included</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Mount, balance & install at {storeInfo?.displayName || "store"}</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center gap-2 text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-neutral-700">
+                    <span className="text-green-600">✓</span>
+                    <span>30-day returns</span>
+                  </div>
+                </>
+              )}
               <div className="flex items-center gap-2 text-neutral-700">
                 <span className="text-green-600">✓</span>
-                <span>Free shipping over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
-              </div>
-              <div className="flex items-center gap-2 text-neutral-700">
-                <span className="text-green-600">✓</span>
-                <span>30-day returns</span>
+                <span>Guaranteed fitment</span>
               </div>
             </div>
 
             {/* Need help */}
             <div className="text-center text-sm text-neutral-600">
               Need help?{" "}
-              <a href={BRAND.links.tel} className="font-bold text-green-700 hover:underline">
-                {BRAND.phone.callDisplay}
+              <a 
+                href={isLocal && storeInfo ? `tel:${storeInfo.phone.replace(/\D/g, '')}` : BRAND.links.tel} 
+                className="font-bold text-green-700 hover:underline"
+              >
+                {isLocal && storeInfo ? storeInfo.phone : BRAND.phone.callDisplay}
               </a>
             </div>
           </div>
