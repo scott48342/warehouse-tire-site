@@ -1,31 +1,17 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+import tireSizes from "@/data/tire-sizes.json";
 
-// Common tire sizes for pill buttons
-const TIRE_WIDTHS = [
-  "155", "165", "175", "185", "195", "205", "215", "225", "235", "245", 
-  "255", "265", "275", "285", "295", "305", "315", "325", "335", "345"
-];
+function normalizeTireSize(width: number | null, aspect: number | null, rim: number | null) {
+  if (!width || !aspect || !rim) return "";
+  return `${width}/${aspect}R${rim}`;
+}
 
-const ASPECT_RATIOS = [
-  "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85"
-];
-
-const RIM_DIAMETERS = [
-  "14", "15", "16", "17", "18", "19", "20", "21", "22", "24", "26"
-];
-
-type Step = "width" | "aspect" | "diameter";
-
-function Crumb({ label, value, color }: { label: string; value?: string; color?: string }) {
-  return (
-    <div className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-700">
-      <span className="text-neutral-500">{label}: </span>
-      <span className={`font-extrabold ${color || "text-neutral-900"}`}>{value || "—"}</span>
-    </div>
-  );
+function normalizeFlotationSize(dia: number | null, width: number | null, rim: number | null) {
+  if (!dia || !width || !rim) return "";
+  return `${dia}x${Number(width).toFixed(2)}R${rim}`;
 }
 
 interface TireSizeSearchFormProps {
@@ -42,51 +28,97 @@ export function TireSizeSearchForm({
   initialDiameter = "",
 }: TireSizeSearchFormProps) {
   const router = useRouter();
-  const [step, setStep] = useState<Step>(initialWidth ? (initialAspectRatio ? "diameter" : "aspect") : "width");
-  const [width, setWidth] = useState(initialWidth);
-  const [aspectRatio, setAspectRatio] = useState(initialAspectRatio);
-  const [diameter, setDiameter] = useState(initialDiameter);
 
-  const handleSubmit = useCallback(() => {
-    if (!width || !aspectRatio || !diameter) return;
+  // Metric tire state
+  const [tireStep, setTireStep] = useState<"w" | "a" | "r">(
+    initialWidth ? (initialAspectRatio ? "r" : "a") : "w"
+  );
+  const [tireWidth, setTireWidth] = useState<number | null>(
+    initialWidth ? Number(initialWidth) : null
+  );
+  const [tireAspect, setTireAspect] = useState<number | null>(
+    initialAspectRatio ? Number(initialAspectRatio) : null
+  );
+  const [tireRim, setTireRim] = useState<number | null>(
+    initialDiameter ? Number(initialDiameter) : null
+  );
 
-    // Build the tire size string: 275/60R20
-    const sizeString = `${width}/${aspectRatio}R${diameter}`;
-    
-    // Navigate to results with size params
-    const params = new URLSearchParams({
-      searchMode: "size",
-      size: sizeString,
-      width,
-      aspectRatio,
-      diameter,
-    });
-    
-    router.push(`/tires?${params.toString()}`);
-  }, [width, aspectRatio, diameter, router]);
+  // Flotation tire state
+  const [floatStep, setFloatStep] = useState<"d" | "w" | "r">("d");
+  const [floatDia, setFloatDia] = useState<number | null>(null);
+  const [floatWidth, setFloatWidth] = useState<number | null>(null);
+  const [floatRim, setFloatRim] = useState<number | null>(null);
 
-  function reset() {
-    setStep("width");
-    setWidth("");
-    setAspectRatio("");
-    setDiameter("");
+  // Parse metric sizes from JSON
+  const metric = Array.isArray((tireSizes as any)?.metric)
+    ? ((tireSizes as any).metric as string[])
+    : [];
+  const parsedMetric = metric
+    .map((s) => {
+      const m = String(s).match(/^(\d{3})\/(\d{2})R(\d{2})$/);
+      if (!m) return null;
+      return { width: Number(m[1]), aspect: Number(m[2]), rim: Number(m[3]), label: s };
+    })
+    .filter(Boolean) as Array<{ width: number; aspect: number; rim: number; label: string }>;
+
+  // Parse flotation sizes from JSON
+  const flotationRows = Array.isArray((tireSizes as any)?.flotation)
+    ? ((tireSizes as any).flotation as any[])
+    : [];
+  const parsedFlotation = flotationRows
+    .map((x) => ({
+      dia: Number(x?.dia),
+      width: Number(x?.width),
+      rim: Number(x?.rim),
+    }))
+    .filter((x) => [x.dia, x.width, x.rim].every((n) => Number.isFinite(n) && n > 0));
+
+  // Compute available options based on selections
+  const metricWidths = Array.from(new Set(parsedMetric.map((x) => x.width))).sort((a, b) => a - b);
+  const metricAspects = Array.from(
+    new Set(parsedMetric.filter((x) => (tireWidth ? x.width === tireWidth : true)).map((x) => x.aspect))
+  ).sort((a, b) => a - b);
+  const metricRims = Array.from(
+    new Set(
+      parsedMetric
+        .filter((x) => (tireWidth ? x.width === tireWidth : true))
+        .filter((x) => (tireAspect ? x.aspect === tireAspect : true))
+        .map((x) => x.rim)
+    )
+  ).sort((a, b) => a - b);
+
+  const flotationDias = Array.from(new Set(parsedFlotation.map((x) => x.dia))).sort((a, b) => a - b);
+  const flotationWidths = Array.from(
+    new Set(parsedFlotation.filter((x) => (floatDia ? x.dia === floatDia : true)).map((x) => x.width))
+  ).sort((a, b) => a - b);
+  const flotationRims = Array.from(
+    new Set(
+      parsedFlotation
+        .filter((x) => (floatDia ? x.dia === floatDia : true))
+        .filter((x) => (floatWidth ? x.width === floatWidth : true))
+        .map((x) => x.rim)
+    )
+  ).sort((a, b) => a - b);
+
+  const metricSelected = normalizeTireSize(tireWidth, tireAspect, tireRim);
+  const flotationSelected = normalizeFlotationSize(floatDia, floatWidth, floatRim);
+
+  function Btn({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={
+          "rounded-full border px-3 py-1 text-xs font-extrabold transition-colors " +
+          (active
+            ? "border-[var(--brand-red)] bg-red-50 text-[var(--brand-red)]"
+            : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50")
+        }
+      >
+        {label}
+      </button>
+    );
   }
-
-  function goBack() {
-    if (step === "diameter") {
-      setStep("aspect");
-      setDiameter("");
-    } else if (step === "aspect") {
-      setStep("width");
-      setAspectRatio("");
-    }
-  }
-
-  const crumbs = [
-    { label: "Width", value: width || undefined, color: width ? "text-blue-600" : undefined },
-    { label: "Aspect", value: aspectRatio || undefined, color: aspectRatio ? "text-green-600" : undefined },
-    { label: "Diameter", value: diameter ? `${diameter}"` : undefined, color: diameter ? "text-amber-600" : undefined },
-  ];
 
   return (
     <div className={`bg-white rounded-3xl shadow-xl border border-neutral-200 p-6 sm:p-8 ${className}`}>
@@ -103,160 +135,265 @@ export function TireSizeSearchForm({
         </div>
       </div>
 
-      {/* Size diagram preview */}
-      <div className="mb-6 rounded-xl bg-neutral-50 border border-neutral-200 p-4">
-        <div className="flex items-center justify-center gap-1 text-lg font-mono font-bold text-neutral-800">
-          <span className={width ? "text-blue-600" : "text-neutral-400"}>
-            {width || "275"}
-          </span>
-          <span className="text-neutral-400">/</span>
-          <span className={aspectRatio ? "text-green-600" : "text-neutral-400"}>
-            {aspectRatio || "60"}
-          </span>
-          <span className="text-neutral-400">R</span>
-          <span className={diameter ? "text-amber-600" : "text-neutral-400"}>
-            {diameter || "20"}
-          </span>
-        </div>
-        <div className="mt-2 flex items-center justify-center gap-4 text-[10px] text-neutral-500">
-          <span className="flex items-center gap-1">
-            <span className="h-2 w-2 rounded-full bg-blue-600"></span>
-            Width (mm)
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="h-2 w-2 rounded-full bg-green-600"></span>
-            Aspect Ratio
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="h-2 w-2 rounded-full bg-amber-600"></span>
-            Rim Diameter
-          </span>
+      {/* ═══════════════════════════════════════════════════════════════════════════ */}
+      {/* METRIC SIZES */}
+      {/* ═══════════════════════════════════════════════════════════════════════════ */}
+      <div>
+        <div className="text-xs font-extrabold text-neutral-900">Metric sizes</div>
+        <div className="mt-3">
+          <div className="text-xs font-extrabold text-neutral-900">
+            {tireStep === "w" ? "Select Width" : tireStep === "a" ? "Select Aspect" : "Select Rim"}
+          </div>
+
+          {tireStep === "w" && (
+            <div className="mt-2 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+              {metricWidths.map((w) => (
+                <Btn
+                  key={w}
+                  label={String(w)}
+                  active={tireWidth === w}
+                  onClick={() => {
+                    setTireWidth(w);
+                    setTireAspect(null);
+                    setTireRim(null);
+                    setTireStep("a");
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          {tireStep === "a" && (
+            <div className="mt-2 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+              {metricAspects.map((a) => (
+                <Btn
+                  key={a}
+                  label={String(a)}
+                  active={tireAspect === a}
+                  onClick={() => {
+                    setTireAspect(a);
+                    setTireRim(null);
+                    setTireStep("r");
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          {tireStep === "r" && (
+            <div className="mt-2 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+              {metricRims.map((r) => (
+                <Btn
+                  key={r}
+                  label={String(r)}
+                  active={tireRim === r}
+                  onClick={() => {
+                    const nextSize = normalizeTireSize(tireWidth, tireAspect, r);
+                    if (!nextSize) {
+                      setTireRim(r);
+                      return;
+                    }
+                    const next = new URLSearchParams();
+                    next.set("size", nextSize);
+                    router.push(`/tires?${next.toString()}`);
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          <div className="mt-3 text-sm font-extrabold text-neutral-900">
+            {metricSelected || "Select size"}
+          </div>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            {tireStep !== "w" && (
+              <button
+                type="button"
+                onClick={() => {
+                  if (tireStep === "r") {
+                    setTireStep("a");
+                    setTireRim(null);
+                    return;
+                  }
+                  if (tireStep === "a") {
+                    setTireStep("w");
+                    setTireAspect(null);
+                  }
+                }}
+                className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+              >
+                Back
+              </button>
+            )}
+
+            <button
+              type="button"
+              onClick={() => {
+                setTireStep("w");
+                setTireWidth(null);
+                setTireAspect(null);
+                setTireRim(null);
+              }}
+              className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+            >
+              Reset
+            </button>
+
+            <button
+              type="button"
+              disabled={!metricSelected}
+              onClick={() => {
+                const next = new URLSearchParams();
+                next.set("size", metricSelected);
+                router.push(`/tires?${next.toString()}`);
+              }}
+              className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)] disabled:opacity-60"
+            >
+              Search tires
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Crumbs and navigation */}
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex flex-wrap items-center gap-2">
-          {crumbs.map((c) => (
-            <Crumb key={c.label} label={c.label} value={c.value} color={c.color} />
-          ))}
-        </div>
-        <div className="flex items-center gap-2">
-          {step !== "width" && (
+      <div className="mt-6 h-px bg-neutral-200" />
+
+      {/* ═══════════════════════════════════════════════════════════════════════════ */}
+      {/* FLOTATION SIZES */}
+      {/* ═══════════════════════════════════════════════════════════════════════════ */}
+      <div className="mt-4">
+        <div className="text-xs font-extrabold text-neutral-900">Flotation sizes</div>
+        <div className="mt-3">
+          <div className="text-xs font-extrabold text-neutral-900">
+            {floatStep === "d" ? "Select Diameter" : floatStep === "w" ? "Select Width" : "Select Rim"}
+          </div>
+
+          {floatStep === "d" && (
+            <div className="mt-2 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+              {flotationDias.map((d) => (
+                <Btn
+                  key={d}
+                  label={String(d)}
+                  active={floatDia === d}
+                  onClick={() => {
+                    setFloatDia(d);
+                    setFloatWidth(null);
+                    setFloatRim(null);
+                    setFloatStep("w");
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          {floatStep === "w" && (
+            <div className="mt-2 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+              {flotationWidths.map((w) => (
+                <Btn
+                  key={w}
+                  label={w.toFixed(2)}
+                  active={floatWidth === w}
+                  onClick={() => {
+                    setFloatWidth(w);
+                    setFloatRim(null);
+                    setFloatStep("r");
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          {floatStep === "r" && (
+            <div className="mt-2 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+              {flotationRims.map((r) => (
+                <Btn
+                  key={r}
+                  label={String(r)}
+                  active={floatRim === r}
+                  onClick={() => {
+                    const final = normalizeFlotationSize(floatDia, floatWidth, r);
+                    if (!final) {
+                      setFloatRim(r);
+                      return;
+                    }
+
+                    // Build rawSize digits (TireConnect style): 37x13.50R22 -> 37135022
+                    const rawSize = (() => {
+                      const m = final.match(/^(\d{2})x(\d{1,2}\.\d{2})R(\d{2}(?:\.5)?)$/i);
+                      if (!m) return "";
+                      const dia = m[1];
+                      const w = m[2].replace(".", "");
+                      const rim = m[3].replace(".", "");
+                      return `${dia}${w}${rim}`;
+                    })();
+
+                    const next = new URLSearchParams();
+                    next.set("flotation", final);
+                    if (rawSize) next.set("size", rawSize);
+                    router.push(`/tires?${next.toString()}`);
+                  }}
+                />
+              ))}
+            </div>
+          )}
+
+          <div className="mt-3 text-sm font-extrabold text-neutral-900">
+            {flotationSelected || "Select size"}
+          </div>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            {floatStep !== "d" && (
+              <button
+                type="button"
+                onClick={() => {
+                  if (floatStep === "r") {
+                    setFloatStep("w");
+                    setFloatRim(null);
+                    return;
+                  }
+                  if (floatStep === "w") {
+                    setFloatStep("d");
+                    setFloatWidth(null);
+                    setFloatDia(null);
+                  }
+                }}
+                className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
+              >
+                Back
+              </button>
+            )}
+
             <button
               type="button"
-              onClick={goBack}
-              className="text-xs font-semibold text-neutral-600 hover:underline"
+              onClick={() => {
+                setFloatStep("d");
+                setFloatDia(null);
+                setFloatWidth(null);
+                setFloatRim(null);
+              }}
+              className="h-11 rounded-xl border border-neutral-200 bg-white px-4 text-sm font-extrabold text-neutral-900 hover:bg-neutral-50"
             >
-              ← Back
+              Reset
             </button>
-          )}
-          {step !== "width" && (
+
             <button
               type="button"
-              onClick={reset}
-              className="text-xs font-semibold text-blue-600 hover:underline"
+              disabled={!flotationSelected}
+              onClick={() => {
+                const next = new URLSearchParams();
+                next.set("flotation", flotationSelected);
+                router.push(`/tires?${next.toString()}`);
+              }}
+              className="h-11 rounded-xl bg-[var(--brand-red)] px-4 text-sm font-extrabold text-white hover:bg-[var(--brand-red-700)] disabled:opacity-60"
             >
-              Start over
+              Search tires
             </button>
-          )}
+          </div>
         </div>
       </div>
-
-      {/* Width Step */}
-      {step === "width" && (
-        <div>
-          <div className="text-xs font-extrabold text-neutral-900">Select Width (mm)</div>
-          <div className="mt-3 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
-            {TIRE_WIDTHS.map((w) => (
-              <button
-                key={w}
-                type="button"
-                onClick={() => {
-                  setWidth(w);
-                  setStep("aspect");
-                }}
-                className={
-                  "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
-                  (width === w
-                    ? "border-blue-600 bg-blue-50 text-blue-600"
-                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300")
-                }
-              >
-                {w}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Aspect Ratio Step */}
-      {step === "aspect" && (
-        <div>
-          <div className="text-xs font-extrabold text-neutral-900">Select Aspect Ratio</div>
-          <div className="mt-3 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
-            {ASPECT_RATIOS.map((ar) => (
-              <button
-                key={ar}
-                type="button"
-                onClick={() => {
-                  setAspectRatio(ar);
-                  setStep("diameter");
-                }}
-                className={
-                  "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
-                  (aspectRatio === ar
-                    ? "border-green-600 bg-green-50 text-green-600"
-                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300")
-                }
-              >
-                {ar}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Diameter Step */}
-      {step === "diameter" && (
-        <div>
-          <div className="text-xs font-extrabold text-neutral-900">Select Rim Diameter</div>
-          <div className="mt-3 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
-            {RIM_DIAMETERS.map((d) => (
-              <button
-                key={d}
-                type="button"
-                onClick={() => {
-                  setDiameter(d);
-                  // Auto-submit after selecting diameter
-                  setTimeout(() => {
-                    const sizeString = `${width}/${aspectRatio}R${d}`;
-                    const params = new URLSearchParams({
-                      searchMode: "size",
-                      size: sizeString,
-                      width,
-                      aspectRatio,
-                      diameter: d,
-                    });
-                    router.push(`/tires?${params.toString()}`);
-                  }, 150);
-                }}
-                className={
-                  "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
-                  (diameter === d
-                    ? "border-amber-600 bg-amber-50 text-amber-600"
-                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300")
-                }
-              >
-                {d}"
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Help text */}
-      <p className="mt-4 text-center text-xs text-neutral-500">
+      <p className="mt-6 text-center text-xs text-neutral-500">
         Not sure of your size?{" "}
         <button 
           onClick={() => router.push("/tires")}
