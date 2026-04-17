@@ -13,7 +13,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-const BASE_URL = "https://warehousetiredirect.com";
+const BASE_URL = "https://shop.warehousetiredirect.com";
 const STORE_NAME = "Warehouse Tire Direct";
 const MIN_INVENTORY_QTY = 4;
 
