@@ -1283,3 +1283,130 @@ Only $327/wheel
 
 ✨ Done!
 [Thu 04/16/2026 18:00:21.55] Auto-post complete 
+[Fri 04/17/2026  9:00:02.21] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:13084) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Pro Comp Alloys PA206 SNARE
+  ⚠️ No matching vehicle for bolt pattern 5X5.0, using generic caption
+  Downloading image for Pro Comp Alloys PA206 SNARE...
+  ✅ Generated: pa206_snare_1776430804155
+  📝 Caption preview: Transform your car with the Pro Comp Alloys PA206 SNARE 🛞
+
+📐 17x8
+🔩 5X5.0
+↔️ ...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pa206_snare_1776430804155.png
+  - pa206_snare_1776430804155.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pa206_snare_1776430804155
+
+--- Content Preview ---
+Wheel: Pro Comp Alloys PA206 SNARE
+Price: $210
+Image: pa206_snare_1776430804155.png
+
+Caption:
+Transform your car with the Pro Comp Alloys PA206 SNARE 🛞
+
+📐 17x8
+🔩 5X5.0
+↔️ 0mm offset
+✨ SNARE 17X8 5X5 71 +0 G-SLV MCH-FC
+
+$210/wheel
+
+🛒 https://shop.warehousetiredirect.com/wheels/PA206SD17805000
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #carsofinstagram #carlife #dailydriver #procompalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1579578037503656
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:8316) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Black Rhino Hard Alloys SENTINEL
+  ⚠️ No matching vehicle for bolt pattern 6X4.5, using generic caption
+  Downloading image for Black Rhino Hard Alloys SENTINEL...
+  ✅ Generated: sentinel_1776430816649
+  📝 Caption preview: Transform your truck with the Black Rhino Hard Alloys SENTINEL 🛞
+
+📐 20x9.5
+🔩 ...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - sentinel_1776430816649.png
+  - sentinel_1776430816649.json
+
+📱 Facebook/Instagram Poster
+
+Selected: sentinel_1776430816649
+
+--- Content Preview ---
+Wheel: Black Rhino Hard Alloys SENTINEL
+Price: $292
+Image: sentinel_1776430816649.png
+
+Caption:
+Transform your truck with the Black Rhino Hard Alloys SENTINEL 🛞
+
+📐 20x9.5
+🔩 6X4.5
+↔️ 12mm offset
+✨ BR SENTINEL 20X9.5 6X114 +12 76 BLUE BLK
+
+$292/wheel
+
+🛒 https://shop.warehousetiredirect.com/wheels/2095STN126114U76
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #blackrhinohardalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1725413408804656
+
+✨ Done!
+[Fri 04/17/2026  9:00:21.77] Auto-post complete 

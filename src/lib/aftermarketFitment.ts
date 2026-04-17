@@ -277,7 +277,7 @@ export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
   aggressive: {
     // UPDATED (April 2026): Enthusiast fitment with wider range
     // For sport compacts, muscle cars, enthusiast builds
-    // NOTE: diameterPlusMin is ignored - we NEVER allow below OEM minimum
+    // Allows 1" downsizing with 15" safety floor
     diameterPlusMin: -1,   // allow 1" smaller
     diameterPlusMax: 6,    // allow up to +6" (26" on 20" OEM)
     widthPlusMin: -1,      // allow narrower
@@ -290,8 +290,8 @@ export const EXPANSION_PRESETS: Record<FitmentMode, ExpansionRules> = {
     // UPDATED (April 2026): Maximum flexibility for truck/SUV builds
     // Matches Wheel Pros YMM behavior - shows all compatible options
     // Safety maintained via bolt pattern, center bore, and load rating
-    // NOTE: diameterPlusMin is ignored - we NEVER allow below OEM minimum
-    diameterPlusMin: -1,   // allow 1" smaller (rare but valid)
+    // Allows downsizing to 17" floor (base trims use 17-18", same brakes as high trims)
+    diameterPlusMin: -5,   // allow down to 17" floor for trucks (High Country 22" -> 17" OK)
     diameterPlusMax: 8,    // allow up to +8" (28" on 20" OEM for lifted)
     widthPlusMin: -1,      // allow narrower
     widthPlusMax: 6,       // allow up to 15"+ wide wheels
@@ -362,12 +362,28 @@ export function buildFitmentEnvelope(
   }
 
   // Apply expansion rules
-  // SAFETY: Never allow diameter BELOW OEM minimum - downsizing can cause:
-  // - Brake caliper interference
-  // - Speedometer inaccuracy  
-  // - Suspension geometry issues
-  // Upsizing is allowed per mode rules, but downsizing below OEM is always blocked.
-  const allowedMinDiameter = Math.max(oemMinDiameter, oemMinDiameter + rules.diameterPlusMin);
+  // TRUCK MODE SPECIAL HANDLING:
+  // Half-ton trucks (6-lug) have the same brakes across all trims.
+  // High-trim packages (High Country, Denali, Limited) come with 20-22" wheels
+  // for aesthetics, but base trims use 17-18" with identical brakes.
+  // Allow downsizing to 17" floor for 6-lug trucks.
+  //
+  // For non-truck modes, allow modest downsizing per rules.diameterPlusMin
+  // but never below 15" (physical safety floor for modern vehicles).
+  
+  let allowedMinDiameter: number;
+  
+  if (mode === "truck") {
+    // 6-lug half-ton trucks: 17" floor (base trims use 17-18")
+    // 8-lug HD trucks: 17" floor as well (base trims use 17-18")
+    const truckFloor = studHoles === 8 ? 17 : 17;
+    allowedMinDiameter = Math.max(truckFloor, oemMinDiameter + rules.diameterPlusMin);
+  } else {
+    // Non-truck: allow downsizing per rules, with 15" absolute floor
+    const safetyFloor = 15;
+    allowedMinDiameter = Math.max(safetyFloor, oemMinDiameter + rules.diameterPlusMin);
+  }
+  
   const allowedMaxDiameter = oemMaxDiameter + rules.diameterPlusMax;
   
   // Width can expand both directions within mode limits
