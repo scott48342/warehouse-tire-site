@@ -320,17 +320,17 @@ export async function POST(req: Request) {
     const totalUsd = totalCents / 100;
 
     // Build payment method types based on order value and eligibility
-    // Using "link" enables Google Pay and Apple Pay alongside card payments
-    const paymentMethodTypes: string[] = ["card", "link"]; // Card + Link (enables Google/Apple Pay)
-    
-    // Klarna: Available for orders $10+
-    if (totalUsd >= 10) {
-      paymentMethodTypes.push("klarna");
-    }
+    // Card includes Apple Pay and Google Pay when customer has them set up
+    const paymentMethodTypes: string[] = ["card"];
     
     // Affirm: Available for orders $50+ (Affirm minimum)
     if (totalUsd >= 50) {
       paymentMethodTypes.push("affirm");
+    }
+    
+    // Klarna: Available for orders $10+
+    if (totalUsd >= 10) {
+      paymentMethodTypes.push("klarna");
     }
     
     // Afterpay/Clearpay: Available for orders $1-$4000
@@ -362,15 +362,9 @@ export async function POST(req: Request) {
       console.log(`[checkout] LOCAL MODE - Install at: ${installStore.name}`);
     }
 
-    // Use automatic_payment_methods to let Stripe show all enabled methods from Dashboard
-    // This includes Affirm, Afterpay, Klarna, Google Pay, Apple Pay, etc.
     const sessionParams: any = {
       mode: "payment" as const,
-      // automatic_payment_methods lets Stripe dynamically show all enabled payment methods
-      // from Dashboard settings (better than explicit payment_method_types)
-      automatic_payment_methods: {
-        enabled: true,
-      },
+      payment_method_types: paymentMethodTypes,
       customer_email: email || undefined,
       line_items: stripeLineItems,
       metadata: sessionMetadata,

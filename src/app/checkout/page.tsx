@@ -762,47 +762,17 @@ export default function CheckoutPage() {
                       </div>
                     </label>
 
-                    {/* PayPal */}
-                    <label
-                      className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
-                        selectedPayment === "paypal"
-                          ? "border-blue-600 bg-blue-50"
-                          : "border-neutral-200 hover:border-neutral-300"
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="payment"
-                        checked={selectedPayment === "paypal"}
-                        onChange={() => setSelectedPayment("paypal")}
-                        className="w-5 h-5 text-blue-600"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">🅿️</span>
-                          <span className="font-bold text-neutral-900">PayPal</span>
-                        </div>
-                        <p className="text-sm text-neutral-500 mt-0.5">
-                          Pay with your PayPal account or PayPal Credit
-                        </p>
-                      </div>
-                    </label>
                   </div>
 
                   {/* Error messages */}
-                  {stripeError && selectedPayment === "stripe" && (
+                  {stripeError && (
                     <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
                       {stripeError}
                     </div>
                   )}
-                  {paypalError && selectedPayment === "paypal" && (
-                    <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
-                      {paypalError}
-                    </div>
-                  )}
 
                   <p className="text-xs text-neutral-500 mt-4 text-center">
-                    You will be redirected to {selectedPayment === "stripe" ? "Stripe" : "PayPal"} to complete your purchase securely.
+                    You will be redirected to Stripe to complete your purchase securely.
                   </p>
                 </div>
 
@@ -814,21 +784,15 @@ export default function CheckoutPage() {
                     Back
                   </button>
                   <button
-                    onClick={selectedPayment === "stripe" ? startStripeCheckout : startPayPalCheckout}
+                    onClick={startStripeCheckout}
                     disabled={processing}
                     className={`flex-1 h-12 rounded-xl font-extrabold text-white flex items-center justify-center ${
                       processing
                         ? "bg-neutral-300 cursor-not-allowed"
-                        : selectedPayment === "stripe"
-                        ? "bg-green-600 hover:bg-green-700"
-                        : "bg-blue-600 hover:bg-blue-700"
+                        : "bg-green-600 hover:bg-green-700"
                     }`}
                   >
-                    {processing
-                      ? "Redirecting…"
-                      : selectedPayment === "stripe"
-                      ? "Pay with Card"
-                      : "Pay with PayPal"}
+                    {processing ? "Redirecting…" : "Continue to Payment"}
                   </button>
                 </div>
               </div>
