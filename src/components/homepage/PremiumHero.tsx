@@ -11,13 +11,8 @@ export function PremiumHero() {
     <section className="relative pt-12 pb-6">
       <div className="relative z-10 mx-auto max-w-6xl px-4">
         <div className="text-center">
-          {/* Subheadline */}
-          <p className="text-lg text-white/70">
-            Stock, leveled, or lifted — shop the setup that matches your build.
-          </p>
-
           {/* Primary CTAs */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/tires"
               className="group inline-flex items-center gap-2 rounded-lg bg-red-700 hover:bg-red-600 px-6 py-3 text-sm font-bold text-white transition-all hover:scale-105"
@@ -42,6 +37,11 @@ export function PremiumHero() {
               <span className="text-white/70">▼</span>
             </Link>
           </div>
+
+          {/* Subheadline - below buttons */}
+          <p className="mt-4 text-sm text-white/60">
+            Stock, leveled, or lifted — shop the setup that matches your build.
+          </p>
         </div>
       </div>
     </section>
