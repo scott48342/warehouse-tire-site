@@ -146,7 +146,36 @@ export default function CheckoutPage() {
 
   // Local mode: no shipping charges (delivery to store included)
   const shippingAmount = isLocal ? 0 : (shippingEstimate.isFree ? 0 : shippingEstimate.amount);
-  const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount;
+  
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LOCAL SERVICE FEES
+  // ═══════════════════════════════════════════════════════════════════════════
+  // Installation, disposal, and other local services
+  const LOCAL_FEES = {
+    installPerTire: 25,      // Mount, balance, install per tire
+    installPerWheel: 15,     // Wheel-only install (no tire)
+    disposalPerTire: 5,      // Tire disposal/recycling fee
+  };
+  
+  // Calculate local service fees
+  const tireCount = tires.reduce((sum, t) => sum + t.quantity, 0);
+  const wheelOnlyCount = hasWheels() && !hasTires() ? wheels.reduce((sum, w) => sum + w.quantity, 0) : 0;
+  
+  const localServiceFees = useMemo(() => {
+    if (!isLocal) return { install: 0, disposal: 0, total: 0 };
+    
+    // Tire install includes mounting on wheel
+    const installFee = (tireCount * LOCAL_FEES.installPerTire) + (wheelOnlyCount * LOCAL_FEES.installPerWheel);
+    const disposalFee = tireCount * LOCAL_FEES.disposalPerTire;
+    
+    return {
+      install: installFee,
+      disposal: disposalFee,
+      total: installFee + disposalFee,
+    };
+  }, [isLocal, tireCount, wheelOnlyCount]);
+
+  const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount + localServiceFees.total;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -710,18 +739,27 @@ export default function CheckoutPage() {
 
           {/* Order Summary Sidebar */}
           <div className="lg:sticky lg:top-24 h-fit space-y-4">
-            {/* Local Mode: Installation Location Card */}
-            {isLocal && storeInfo && (
+            {/* Local Mode: Store Selector */}
+            {isLocal && (
               <div className="rounded-2xl border-2 border-green-200 bg-green-50 p-4">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-3">
                   <span className="text-lg">🔧</span>
-                  <h3 className="font-bold text-green-900">Installation at {storeInfo.displayName}</h3>
+                  <h3 className="font-bold text-green-900">Installation Location</h3>
                 </div>
-                <div className="text-sm text-green-800 space-y-1">
-                  <p>{storeInfo.address}</p>
-                  <p>{storeInfo.city}, {storeInfo.state} {storeInfo.zip}</p>
-                  <p className="font-medium">{storeInfo.phone}</p>
-                </div>
+                <StoreSelector variant="minimal" className="mb-3" />
+                {storeInfo && (
+                  <div className="text-sm text-green-800 mt-3 pt-3 border-t border-green-200">
+                    <p className="font-medium">{storeInfo.name}</p>
+                    <p>{storeInfo.address}</p>
+                    <p>{storeInfo.city}, {storeInfo.state} {storeInfo.zip}</p>
+                    <p className="mt-1">{storeInfo.phone}</p>
+                  </div>
+                )}
+                {!selectedStore && (
+                  <p className="text-xs text-amber-700 mt-2">
+                    ⚠️ Please select a location
+                  </p>
+                )}
               </div>
             )}
 
@@ -768,6 +806,23 @@ export default function CheckoutPage() {
                     <span className="font-semibold">${shippingAmount.toFixed(2)}</span>
                   )}
                 </div>
+                {/* Local Service Fees */}
+                {isLocal && localServiceFees.install > 0 && (
+                  <div className="flex justify-between">
+                    <span className="text-neutral-600">
+                      Installation ({tireCount > 0 ? `${tireCount} tires` : `${wheelOnlyCount} wheels`})
+                    </span>
+                    <span className="font-semibold">${localServiceFees.install.toFixed(2)}</span>
+                  </div>
+                )}
+                {isLocal && localServiceFees.disposal > 0 && (
+                  <div className="flex justify-between">
+                    <span className="text-neutral-600">
+                      Tire Disposal ({tireCount})
+                    </span>
+                    <span className="font-semibold">${localServiceFees.disposal.toFixed(2)}</span>
+                  </div>
+                )}
                 <div className="flex justify-between">
                   <span className="text-neutral-600">
                     Tax {shipping.state ? `(${shipping.state})` : ""}
