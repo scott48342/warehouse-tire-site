@@ -11,6 +11,7 @@ import { ShippingEstimator, FreeShippingProgress } from "@/components/ShippingEs
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shippingService";
 import { useCartShipping } from "@/lib/shipping/useCartShipping";
 import { formatCurrency } from "@/lib/shipping/shippingService";
+import { useShopContext, LocalOnly, NationalOnly } from "@/contexts/ShopContextProvider";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -250,6 +251,40 @@ function AccessoryCartItem({
   );
 }
 
+// Local Installation Card - shown in local mode instead of shipping
+function LocalInstallationCard({ 
+  storeName, 
+  storeAddress, 
+  storePhone 
+}: { 
+  storeName: string; 
+  storeAddress: string; 
+  storePhone: string;
+}) {
+  return (
+    <div className="rounded-2xl border-2 border-green-200 bg-green-50 p-5">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🔧</span>
+        <div className="flex-1">
+          <h3 className="font-bold text-green-900">Professional Installation Included</h3>
+          <p className="mt-1 text-sm text-green-800">
+            Pick up your order at <strong>{storeName}</strong> — we'll mount, balance, 
+            and install at no extra charge.
+          </p>
+          <div className="mt-3 text-sm text-green-700">
+            <div className="font-semibold">{storeAddress}</div>
+            <div className="mt-1">
+              <a href={`tel:${storePhone.replace(/\D/g, '')}`} className="underline hover:no-underline">
+                {storePhone}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function CartPage() {
   const {
     items,
@@ -264,12 +299,15 @@ export default function CartPage() {
     getWheels,
   } = useCart();
 
+  // Shop mode context
+  const { isLocal, storeInfo } = useShopContext();
+
   const subtotal = getTotal();
   const itemCount = getItemCount();
   const wheels = getWheels();
   const vehicle = wheels[0]?.vehicle;
 
-  // Shipping estimation
+  // Shipping estimation (only used in national mode)
   const {
     zipCode,
     setZipCode,
@@ -370,8 +408,25 @@ export default function CartPage() {
           </div>
         )}
 
-        {/* Free Shipping Progress - Prominent placement */}
-        <FreeShippingProgress subtotal={subtotal} className="mb-6" />
+        {/* Free Shipping Progress - National mode only */}
+        <NationalOnly>
+          <FreeShippingProgress subtotal={subtotal} className="mb-6" />
+        </NationalOnly>
+        
+        {/* Local mode: Installation banner */}
+        <LocalOnly>
+          {storeInfo && (
+            <div className="mb-6 rounded-2xl bg-green-50 border-2 border-green-200 p-4">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">🔧</span>
+                <div>
+                  <span className="font-bold text-green-900">Installation Included</span>
+                  <span className="text-green-700 ml-2">at {storeInfo.displayName}</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </LocalOnly>
 
         <div className="grid gap-6 lg:grid-cols-[1fr_380px]">
           {/* Cart Items */}
@@ -436,7 +491,9 @@ export default function CartPage() {
                   <div className="flex-1">
                     <h3 className="font-bold text-amber-900">Complete your setup with tires</h3>
                     <p className="mt-1 text-sm text-amber-800">
-                      Add matching tires for your new wheels — ships together for faster delivery.
+                      {isLocal 
+                        ? "Add matching tires for your new wheels — we'll mount and install everything together."
+                        : "Add matching tires for your new wheels — ships together for faster delivery."}
                     </p>
                     <Link
                       href={tiresUrl}
@@ -457,12 +514,20 @@ export default function CartPage() {
 
           {/* Order Summary */}
           <div className="lg:sticky lg:top-24 h-fit space-y-4">
-            {/* Shipping Estimator */}
-            <ShippingEstimator
-              items={items.map(i => ({ type: i.type, quantity: i.quantity, unitPrice: i.unitPrice }))}
-              subtotal={subtotal}
-              variant="card"
-            />
+            {/* Shipping Estimator (National) or Installation Card (Local) */}
+            {isLocal && storeInfo ? (
+              <LocalInstallationCard
+                storeName={storeInfo.name}
+                storeAddress={`${storeInfo.address}, ${storeInfo.city}, ${storeInfo.state} ${storeInfo.zip}`}
+                storePhone={storeInfo.phone}
+              />
+            ) : (
+              <ShippingEstimator
+                items={items.map(i => ({ type: i.type, quantity: i.quantity, unitPrice: i.unitPrice }))}
+                subtotal={subtotal}
+                variant="card"
+              />
+            )}
 
             <div className="rounded-2xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-bold text-neutral-900">Order Summary</h2>
@@ -473,8 +538,10 @@ export default function CartPage() {
                   <span className="font-semibold text-neutral-900">${subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-neutral-600">Shipping</span>
-                  {isFreeShipping ? (
+                  <span className="text-neutral-600">{isLocal ? "Installation" : "Shipping"}</span>
+                  {isLocal ? (
+                    <span className="font-semibold text-green-700">INCLUDED</span>
+                  ) : isFreeShipping ? (
                     <span className="font-semibold text-green-700">FREE</span>
                   ) : isValidZip && shippingEstimate ? (
                     <span className="font-semibold text-neutral-900">{shippingEstimate.displayAmount} (est.)</span>
@@ -491,7 +558,7 @@ export default function CartPage() {
               <div className="mt-4 pt-4 border-t border-neutral-200 flex justify-between items-center">
                 <span className="text-lg font-bold text-neutral-900">Estimated Total</span>
                 <span className="text-2xl font-extrabold text-neutral-900">
-                  ${(isFreeShipping || !isValidZip ? subtotal : estimatedTotal).toFixed(2)}
+                  ${(isLocal || isFreeShipping || !isValidZip ? subtotal : estimatedTotal).toFixed(2)}
                 </span>
               </div>
 
@@ -513,12 +580,25 @@ export default function CartPage() {
                 ) : null}
               </div>
 
-              {/* Trust badges */}
+              {/* Trust badges - different for local vs national */}
               <div className="mt-5 pt-4 border-t border-neutral-100 space-y-2 text-xs text-neutral-600">
-                <div className="flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span>Free shipping on orders over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
-                </div>
+                {isLocal ? (
+                  <>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Free installation at {storeInfo?.displayName || "our shop"}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Mount, balance & install included</span>
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span>
+                    <span>Free shipping on orders over ${FREE_SHIPPING_THRESHOLD.toLocaleString()}</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2">
                   <span className="text-green-600">✓</span>
                   <span>Guaranteed fitment</span>
@@ -530,7 +610,7 @@ export default function CartPage() {
               </div>
 
               <div className="mt-4 text-center">
-                <a href={BRAND.links.tel} className="text-sm font-bold text-neutral-700 hover:underline">
+                <a href={isLocal && storeInfo ? `tel:${storeInfo.phone.replace(/\D/g, '')}` : BRAND.links.tel} className="text-sm font-bold text-neutral-700 hover:underline">
                   Questions? Call us
                 </a>
               </div>
