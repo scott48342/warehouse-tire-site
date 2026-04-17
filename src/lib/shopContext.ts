@@ -204,6 +204,21 @@ export function detectShopContextFromHostPath(
   // Development / preview / unknown hosts: check for ?mode=local query param
   // This is for testing only - production should use host/path detection
   if (normalizedHost.includes('localhost') || normalizedHost.includes('vercel.app')) {
+    // Check URL query params for local mode testing
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('mode') === 'local') {
+        const store = (params.get('store') as LocalStore) || 'pontiac';
+        return {
+          mode: 'local',
+          selectedStore: store,
+          storeInfo: STORES[store],
+          detectedFrom: 'query',
+          host: normalizedHost,
+          path: pathname,
+        };
+      }
+    }
     // In dev/preview, default to national unless explicitly testing local
     return {
       mode: 'national',

@@ -95,12 +95,19 @@ export default function CheckoutPage() {
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
   
-  // Tax rate based on shipping state
-  const [taxRate, setTaxRate] = useState<number>(0);
+  // Tax rate based on shipping state (local mode: auto-apply Michigan 6%)
+  const MICHIGAN_TAX_RATE = 0.06;
+  const [taxRate, setTaxRate] = useState<number>(isLocal ? MICHIGAN_TAX_RATE : 0);
   const [taxLoading, setTaxLoading] = useState(false);
 
-  // Fetch tax rate when shipping state changes
+  // For local mode, always use Michigan tax
+  // For national mode, fetch tax rate when shipping state changes
   useEffect(() => {
+    if (isLocal) {
+      setTaxRate(MICHIGAN_TAX_RATE);
+      return;
+    }
+    
     if (!shipping.state || shipping.state.length !== 2) {
       setTaxRate(0);
       return;
@@ -118,7 +125,7 @@ export default function CheckoutPage() {
       })
       .catch(() => setTaxRate(0))
       .finally(() => setTaxLoading(false));
-  }, [shipping.state]);
+  }, [isLocal, shipping.state]);
 
   // Calculate tax on taxable items (wheels + tires, not accessories)
   const taxableSubtotal = useMemo(() => {
@@ -150,12 +157,15 @@ export default function CheckoutPage() {
   // ═══════════════════════════════════════════════════════════════════════════
   // LOCAL SERVICE FEES
   // ═══════════════════════════════════════════════════════════════════════════
-  // Installation, disposal, and other local services
+  // Installation, disposal, and other local services (Warehouse Tire Pontiac)
   const LOCAL_FEES = {
-    installPerTire: 25,      // Mount, balance, install per tire
+    installPerTire: 20,      // Mount, balance, install per tire ($80/set of 4)
     installPerWheel: 15,     // Wheel-only install (no tire)
-    disposalPerTire: 5,      // Tire disposal/recycling fee
+    disposalPerTire: 5,      // Tire recycling fee ($20/set of 4)
   };
+  
+  // Card processing fee (shown as flat amount, not percentage)
+  const CARD_FEE_RATE = 0.0399; // 3.99%
   
   // Calculate local service fees
   const tireCount = tires.reduce((sum, t) => sum + t.quantity, 0);
@@ -175,7 +185,11 @@ export default function CheckoutPage() {
     };
   }, [isLocal, tireCount, wheelOnlyCount]);
 
-  const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount + localServiceFees.total;
+  // Calculate card processing fee (for local store orders)
+  const subtotalForCardFee = validation.totals.total + calculatedTax + localServiceFees.total;
+  const cardProcessingFee = isLocal ? subtotalForCardFee * CARD_FEE_RATE : 0;
+
+  const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -449,10 +463,11 @@ export default function CheckoutPage() {
                   ))}
                 </div>
                 
-                {/* Road Hazard Protection - show if tires in cart */}
-                {tires.length > 0 && (
+                {/* Road Hazard Protection - show if tires in cart (local store only) */}
+                {isLocal && tires.length > 0 && (
                   <RoadHazardProtection 
                     tireCount={tires.reduce((sum, t) => sum + t.quantity, 0)}
+                    tireSubtotal={validation.totals.tireSubtotal}
                     context="checkout"
                   />
                 )}
@@ -818,18 +833,26 @@ export default function CheckoutPage() {
                 {isLocal && localServiceFees.disposal > 0 && (
                   <div className="flex justify-between">
                     <span className="text-neutral-600">
-                      Tire Disposal ({tireCount})
+                      Tire Recycling ({tireCount})
                     </span>
                     <span className="font-semibold">${localServiceFees.disposal.toFixed(2)}</span>
                   </div>
                 )}
+                {isLocal && cardProcessingFee > 0 && (
+                  <div className="flex justify-between">
+                    <span className="text-neutral-600">
+                      Non-Cash Price
+                    </span>
+                    <span className="font-semibold">${cardProcessingFee.toFixed(2)}</span>
+                  </div>
+                )}
                 <div className="flex justify-between">
                   <span className="text-neutral-600">
-                    Tax {shipping.state ? `(${shipping.state})` : ""}
+                    Tax {isLocal ? "(MI)" : shipping.state ? `(${shipping.state})` : ""}
                   </span>
                   {taxLoading ? (
                     <span className="text-neutral-400 text-xs">Loading...</span>
-                  ) : shipping.state ? (
+                  ) : isLocal || shipping.state ? (
                     <span className="font-semibold">
                       {calculatedTax > 0 ? `$${calculatedTax.toFixed(2)}` : "$0.00"}
                     </span>

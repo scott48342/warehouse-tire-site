@@ -6,15 +6,18 @@ import { useCart, type CartAccessoryItem } from "@/lib/cart/CartContext";
 /**
  * Road Hazard Protection Component
  * 
- * Offers tire protection plan at checkout for $15/tire.
+ * Offers tire protection plan at checkout - 25% of tire price per tire.
  * Covers damage from road hazards (potholes, nails, debris) for 2 years.
  * 
  * @created 2026-04-15
+ * @updated 2026-04-17 - Changed to 25% of tire price per tire
  */
 
 interface RoadHazardProtectionProps {
   /** Number of tires in cart */
   tireCount: number;
+  /** Total tire subtotal (sum of all tire prices) for calculating 25% */
+  tireSubtotal?: number;
   /** Context for styling */
   context?: "checkout" | "cart" | "pdp";
   /** Custom class */
@@ -22,11 +25,13 @@ interface RoadHazardProtectionProps {
 }
 
 // Road hazard product configuration
-const ROAD_HAZARD_PRICE_PER_TIRE = 15;
+const ROAD_HAZARD_RATE = 0.25; // 25% of tire price
+const ROAD_HAZARD_MIN_PER_TIRE = 15; // Minimum $15 per tire
 const ROAD_HAZARD_SKU = "RH-PROTECT-2YR";
 
 export function RoadHazardProtection({
   tireCount,
+  tireSubtotal = 0,
   context = "checkout",
   className = "",
 }: RoadHazardProtectionProps) {
@@ -39,10 +44,15 @@ export function RoadHazardProtection({
   ) as CartAccessoryItem | undefined;
 
   const isAdded = !!existingRH;
-  const totalPrice = ROAD_HAZARD_PRICE_PER_TIRE * tireCount;
+  
+  // Calculate price: 25% of tire price per tire, minimum $15/tire
+  const avgTirePrice = tireCount > 0 ? tireSubtotal / tireCount : 0;
+  const calculatedPerTire = avgTirePrice * ROAD_HAZARD_RATE;
+  const pricePerTire = Math.round(Math.max(ROAD_HAZARD_MIN_PER_TIRE, calculatedPerTire) * 100) / 100;
+  const totalPrice = Math.round(pricePerTire * tireCount * 100) / 100;
 
-  // Don't show if no tires
-  if (tireCount <= 0) return null;
+  // Don't show if no tires or no tire price info
+  if (tireCount <= 0 || tireSubtotal <= 0) return null;
 
   const handleAdd = async () => {
     if (adding || isAdded) return;
@@ -54,13 +64,14 @@ export function RoadHazardProtection({
         category: "tpms", // Using tpms category for service add-ons
         sku: ROAD_HAZARD_SKU,
         name: "2-Year Road Hazard Protection",
-        unitPrice: ROAD_HAZARD_PRICE_PER_TIRE,
+        unitPrice: pricePerTire,
         quantity: tireCount,
         required: false,
         reason: "Covers tire damage from potholes, nails, and road debris",
         meta: {
           coverageYears: 2,
-          perTirePrice: ROAD_HAZARD_PRICE_PER_TIRE,
+          totalPrice: totalPrice,
+          rate: ROAD_HAZARD_RATE,
           serviceType: "road_hazard",
         },
       };
@@ -101,7 +112,7 @@ export function RoadHazardProtection({
             <span className="text-lg">🛡️</span>
             <div>
               <span className="text-sm font-semibold text-blue-900">Add Road Hazard Protection</span>
-              <span className="text-xs text-blue-700 ml-2">${totalPrice} ({tireCount} tires)</span>
+              <span className="text-xs text-blue-700 ml-2">${totalPrice.toFixed(2)} for {tireCount} tires</span>
             </div>
           </div>
           <button
@@ -166,10 +177,10 @@ export function RoadHazardProtection({
         <div className="flex items-center justify-between">
           <div>
             <span className={`text-lg font-extrabold ${isAdded ? "text-green-900" : "text-blue-900"}`}>
-              ${totalPrice}
+              ${totalPrice.toFixed(2)}
             </span>
             <span className="text-sm text-neutral-500 ml-2">
-              (${ROAD_HAZARD_PRICE_PER_TIRE}/tire × {tireCount} tires)
+              for {tireCount} tire{tireCount !== 1 ? "s" : ""}
             </span>
           </div>
           {isAdded ? (
@@ -210,8 +221,7 @@ export function RoadHazardBadge() {
   return (
     <div className="inline-flex items-center gap-1 px-2 py-1 bg-blue-50 border border-blue-200 rounded text-xs">
       <span>🛡️</span>
-      <span className="font-semibold text-blue-800">Road Hazard Available</span>
-      <span className="text-blue-600">$15/tire</span>
+      <span className="font-semibold text-blue-800">Road Hazard Protection Available</span>
     </div>
   );
 }
