@@ -362,9 +362,15 @@ export async function POST(req: Request) {
       console.log(`[checkout] LOCAL MODE - Install at: ${installStore.name}`);
     }
 
+    // Use automatic_payment_methods to let Stripe show all enabled methods from Dashboard
+    // This includes Affirm, Afterpay, Klarna, Google Pay, Apple Pay, etc.
     const sessionParams: any = {
       mode: "payment" as const,
-      payment_method_types: paymentMethodTypes,
+      // automatic_payment_methods lets Stripe dynamically show all enabled payment methods
+      // from Dashboard settings (better than explicit payment_method_types)
+      automatic_payment_methods: {
+        enabled: true,
+      },
       customer_email: email || undefined,
       line_items: stripeLineItems,
       metadata: sessionMetadata,
