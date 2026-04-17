@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { CompareProvider } from "@/context/CompareContext";
+import { ShopContextProvider } from "@/contexts/ShopContextProvider";
 import { CartTracker } from "@/components/CartTracker";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -64,17 +65,19 @@ export default function RootLayout({
         <GoogleAnalytics />
       </head>
       <body className={`${inter.variable} ${oswald.variable} antialiased flex min-h-screen flex-col`}>
-        <CartProvider>
-          <CompareProvider>
-            <CartTracker />
-            <Suspense fallback={null}>
-              <Analytics />
-            </Suspense>
-            <ConditionalLayout>
-              {children}
-            </ConditionalLayout>
-          </CompareProvider>
-        </CartProvider>
+        <ShopContextProvider>
+          <CartProvider>
+            <CompareProvider>
+              <CartTracker />
+              <Suspense fallback={null}>
+                <Analytics />
+              </Suspense>
+              <ConditionalLayout>
+                {children}
+              </ConditionalLayout>
+            </CompareProvider>
+          </CartProvider>
+        </ShopContextProvider>
       </body>
     </html>
   );

@@ -7,6 +7,34 @@ import {
   logHoneypotHit 
 } from "@/lib/bot-protection";
 
+// ═══════════════════════════════════════════════════════════════════════════
+// SHOP MODE DETECTION
+// ═══════════════════════════════════════════════════════════════════════════
+
+const NATIONAL_HOSTS = ['shop.warehousetiredirect.com', 'warehousetiredirect.com'];
+const LOCAL_HOSTS = ['shop.warehousetire.net', 'local.warehousetire.net'];
+const LOCAL_PATH_HOST = 'warehousetire.net';
+const LOCAL_PATH_PREFIX = '/shop';
+
+function detectShopMode(host: string, pathname: string): 'national' | 'local' {
+  const normalizedHost = host.toLowerCase().replace(/:\d+$/, '');
+  
+  if (NATIONAL_HOSTS.some(h => normalizedHost === h || normalizedHost === `www.${h}`)) {
+    return 'national';
+  }
+  
+  if (LOCAL_HOSTS.some(h => normalizedHost === h || normalizedHost === `www.${h}`)) {
+    return 'local';
+  }
+  
+  if ((normalizedHost === LOCAL_PATH_HOST || normalizedHost === `www.${LOCAL_PATH_HOST}`) 
+      && pathname.startsWith(LOCAL_PATH_PREFIX)) {
+    return 'local';
+  }
+  
+  return 'national'; // Default to national for safety
+}
+
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
@@ -44,7 +72,14 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  // 4. Shop mode detection - add header for SSR context
+  const host = req.headers.get("host") || req.headers.get("x-forwarded-host") || "";
+  const shopMode = detectShopMode(host, pathname);
+  
+  const response = NextResponse.next();
+  response.headers.set("x-shop-mode", shopMode);
+  
+  return response;
 }
 
 export const config = {
