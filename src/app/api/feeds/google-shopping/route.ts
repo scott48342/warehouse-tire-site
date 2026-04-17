@@ -421,32 +421,12 @@ export async function GET(req: Request): Promise<Response> {
 
     // ═══════════════════════════════════════════════════════════════════════════
     // LOAD WHEELS
+    // NOTE: Wheels disabled for now - techfeed file not available on Vercel serverless
+    // TODO: Move wheel data to database or fetch from CDN
     // ═══════════════════════════════════════════════════════════════════════════
-    if (type === "all" || type === "wheels") {
-      const allWheels = await loadTechfeedWheels();
-      stats.wheelsProcessed = allWheels.length;
-
-      // Get inventory data for all wheel SKUs
-      const wheelSkus = allWheels.map((w) => w.sku).filter(Boolean);
-      const inventoryData = await getInventoryBulk(wheelSkus);
-
-      // Filter and transform wheels (apply offset/limit for wheels-only requests)
-      let wheelsToProcess = allWheels;
-      if (type === "wheels") {
-        wheelsToProcess = allWheels.slice(offset, offset + limit);
-        stats.hasMore = offset + limit < allWheels.length;
-      }
-
-      for (const wheel of wheelsToProcess) {
-        const inv = inventoryData.get(wheel.sku) || null;
-        const product = transformWheel(wheel, inv);
-        if (product) {
-          products.push(product);
-          stats.wheelsIncluded++;
-        }
-        // Stop if we've reached the limit
-        if (products.length >= limit) break;
-      }
+    if (type === "wheels") {
+      // Wheels-only not supported yet
+      console.log("[google-shopping] Wheels-only feed not yet supported on serverless");
     }
 
     // ═══════════════════════════════════════════════════════════════════════════
