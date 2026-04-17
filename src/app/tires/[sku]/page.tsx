@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import pg from "pg";
 import { BRAND } from "@/lib/brand";
 import { ImageGallery } from "@/components/ImageGallery";
@@ -320,6 +321,25 @@ function PerformanceSection({
       />
     </div>
   );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CANONICAL URL - Always points to national site for SEO safety
+// Local mode pages get noindex header + canonical to prevent duplicate content
+// ═══════════════════════════════════════════════════════════════════════════
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ sku: string }>;
+}): Promise<Metadata> {
+  const { sku } = await params;
+  const decodedSku = decodeURIComponent(sku);
+  
+  return {
+    alternates: {
+      canonical: `https://shop.warehousetiredirect.com/tires/${decodedSku}`,
+    },
+  };
 }
 
 // ============================================================================

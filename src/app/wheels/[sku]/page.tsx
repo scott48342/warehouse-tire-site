@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { WheelVariantSelector, type WheelVariant } from "@/components/WheelVariantSelector";
 import { FinishThumbnailStrip } from "@/components/FinishThumbnailStrip";
 import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
@@ -198,6 +199,25 @@ function safeString(val: unknown): string {
     if (typeof obj.value === "string") return obj.value.trim();
   }
   return "";
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CANONICAL URL - Always points to national site for SEO safety
+// Local mode pages get noindex header + canonical to prevent duplicate content
+// ═══════════════════════════════════════════════════════════════════════════
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ sku: string }>;
+}): Promise<Metadata> {
+  const { sku } = await params;
+  const decodedSku = decodeURIComponent(sku);
+  
+  return {
+    alternates: {
+      canonical: `https://shop.warehousetiredirect.com/wheels/${decodedSku}`,
+    },
+  };
 }
 
 export default async function WheelDetailPage({

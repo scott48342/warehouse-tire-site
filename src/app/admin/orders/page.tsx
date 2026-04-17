@@ -193,6 +193,7 @@ export default async function OrdersPage({
                 <th className="px-4 py-3 font-medium">Status</th>
                 <th className="px-4 py-3 font-medium">Customer</th>
                 <th className="px-4 py-3 font-medium">Vehicle</th>
+                <th className="px-4 py-3 font-medium">Fulfillment</th>
                 <th className="px-4 py-3 font-medium">Amount</th>
                 <th className="px-4 py-3 font-medium">Date</th>
                 <th className="px-4 py-3 font-medium"></th>
@@ -203,6 +204,7 @@ export default async function OrdersPage({
                 const snapshot = order.snapshot_json || {};
                 const customer = snapshot.customer || {};
                 const vehicle = snapshot.vehicle;
+                const localMode = snapshot.localMode;
                 const vehicleLabel = vehicle 
                   ? [vehicle.year, vehicle.make, vehicle.model].filter(Boolean).join(" ")
                   : "—";
@@ -232,6 +234,18 @@ export default async function OrdersPage({
                     </td>
                     <td className="px-4 py-3 text-neutral-300 text-sm">
                       {vehicleLabel}
+                    </td>
+                    <td className="px-4 py-3">
+                      {localMode ? (
+                        <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-lg bg-blue-600/20 text-blue-400 text-xs font-semibold">
+                          <span>🔧</span>
+                          <span>{localMode.installStore === 'pontiac' ? 'Pontiac' : 'Waterford'}</span>
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center px-2 py-1 rounded-lg bg-neutral-700 text-neutral-400 text-xs font-medium">
+                          📦 Ship
+                        </span>
+                      )}
                     </td>
                     <td className="px-4 py-3">
                       <span className="text-white font-semibold">

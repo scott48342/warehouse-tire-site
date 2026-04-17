@@ -155,6 +155,7 @@ export default async function OrderDetailPage({
   const snapshot = order.snapshot_json;
   const customer = snapshot.customer;
   const vehicle = snapshot.vehicle;
+  const localMode = (snapshot as any).localMode;
   const lines = snapshot.lines || [];
   const totals = snapshot.totals;
   const statusConfig = STATUS_CONFIG[order.status] || STATUS_CONFIG.received;
@@ -237,6 +238,42 @@ export default async function OrderDetailPage({
               <div className="text-neutral-500">No vehicle specified</div>
             )}
           </Section>
+
+          {/* Local Installation Order - Prominent Display */}
+          {localMode && (
+            <div className="bg-blue-900/30 border-2 border-blue-500 rounded-xl p-5">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">🔧</span>
+                <div>
+                  <h3 className="text-lg font-bold text-blue-300">Installation Order</h3>
+                  <p className="text-sm text-blue-400">This order requires in-store installation</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 gap-3 text-sm">
+                <div className="flex items-start gap-3 bg-blue-900/40 rounded-lg p-3">
+                  <span className="text-blue-400 font-semibold min-w-[100px]">Install Store:</span>
+                  <span className="text-white font-bold text-base">{localMode.installStoreName}</span>
+                </div>
+                <div className="flex items-start gap-3 bg-blue-900/40 rounded-lg p-3">
+                  <span className="text-blue-400 font-semibold min-w-[100px]">Address:</span>
+                  <span className="text-white">{localMode.installStoreAddress}</span>
+                </div>
+                <div className="flex items-start gap-3 bg-blue-900/40 rounded-lg p-3">
+                  <span className="text-blue-400 font-semibold min-w-[100px]">Phone:</span>
+                  <a href={`tel:${localMode.installStorePhone?.replace(/-/g, '')}`} className="text-blue-300 hover:text-blue-200 font-medium">
+                    {localMode.installStorePhone}
+                  </a>
+                </div>
+                <div className="flex items-start gap-3 bg-blue-900/40 rounded-lg p-3">
+                  <span className="text-blue-400 font-semibold min-w-[100px]">Channel:</span>
+                  <code className="text-xs bg-blue-800 px-2 py-1 rounded text-blue-200">{localMode.channel}</code>
+                  <span className="text-neutral-400 mx-1">|</span>
+                  <span className="text-blue-400 font-semibold">Fulfillment:</span>
+                  <code className="text-xs bg-blue-800 px-2 py-1 rounded text-blue-200">{localMode.fulfillmentMode}</code>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Wheels */}
           {wheelLines.length > 0 && (

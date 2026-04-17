@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { BRAND } from "@/lib/brand";
 import { getDisplayTrim } from "@/lib/vehicleDisplay";
 import { cleanTireDisplayTitle, normalizeTireSize, cleanTireProductTitle } from "@/lib/productFormat";
@@ -181,6 +182,27 @@ function PerformanceSection({
       />
     </div>
   );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CANONICAL URL - Always points to national site for SEO safety
+// ═══════════════════════════════════════════════════════════════════════════
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ partNumber: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const { partNumber } = await params;
+  const sp = (await searchParams) || {};
+  const size = String((sp as any).size || "").trim();
+  
+  return {
+    alternates: {
+      canonical: `https://shop.warehousetiredirect.com/tires/km/${partNumber}${size ? `?size=${encodeURIComponent(size)}` : ''}`,
+    },
+  };
 }
 
 // ============================================================================

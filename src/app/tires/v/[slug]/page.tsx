@@ -1,9 +1,24 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import TiresPage from "@/app/tires/page";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 
 export const runtime = "nodejs";
+
+// Canonical URL - Always points to national site
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  return {
+    alternates: {
+      canonical: `https://shop.warehousetiredirect.com/tires/v/${slug}`,
+    },
+  };
+}
 
 export default async function TiresVehicleSlugPage({
   params,
