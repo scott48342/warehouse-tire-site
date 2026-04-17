@@ -319,14 +319,13 @@ export async function POST(req: Request) {
     const totalCents = stripeLineItems.reduce((sum, li) => sum + (li.price_data.unit_amount * li.quantity), 0);
     const totalUsd = totalCents / 100;
 
-    // Build payment method types - explicitly list all BNPL options
-    // Stripe should show all of these as options on checkout
-    const paymentMethodTypes: string[] = [
-      "card",
-      "affirm",           // BNPL - 4 payments
-      "afterpay_clearpay", // BNPL - 4 payments  
-      "klarna",           // BNPL - 4 payments
-    ];
+    // Payment methods: Card + Affirm (most recognized BNPL in US)
+    // Affirm minimum is $50, so only include if order qualifies
+    const paymentMethodTypes: string[] = ["card"];
+    
+    if (totalUsd >= 50) {
+      paymentMethodTypes.push("affirm");
+    }
 
     console.log(`[checkout] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
 

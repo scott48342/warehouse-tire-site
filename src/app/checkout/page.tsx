@@ -510,22 +510,19 @@ export default function CheckoutPage() {
                   </div>
                 )}
 
-                {/* Buy Now Pay Later Teaser */}
-                <div className="rounded-xl bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 p-4">
+                {/* Affirm Pay Over Time Teaser */}
+                <div className="rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">💳</span>
+                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-7" />
                       <div>
-                        <p className="font-bold text-neutral-900">Pay over time available</p>
+                        <p className="font-bold text-neutral-900">Pay over time with Affirm</p>
                         <p className="text-sm text-neutral-600">
-                          As low as <span className="font-bold text-purple-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</span> with Affirm
+                          As low as <span className="font-bold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</span> at 0% APR
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-5" />
-                      <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" alt="Klarna" className="h-5" />
-                    </div>
+                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">4 payments</span>
                   </div>
                 </div>
 
@@ -686,47 +683,34 @@ export default function CheckoutPage() {
             {/* Step: Payment */}
             {step === "payment" && (
               <div className="space-y-4">
-                {/* Buy Now Pay Later - Prominent Section */}
-                <div className="rounded-2xl border-2 border-purple-300 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xl">✨</span>
-                    <h2 className="text-lg font-bold text-purple-900">Buy Now, Pay Later</h2>
-                    <span className="px-2 py-0.5 bg-purple-200 text-purple-800 text-xs font-bold rounded-full">0% APR Available</span>
-                  </div>
-                  <p className="text-sm text-purple-700 mb-4">
-                    Split your ${totalWithTaxAndShipping.toFixed(2)} purchase into easy payments — check out with card and choose your plan.
-                  </p>
-                  
-                  <div className="grid grid-cols-3 gap-3">
-                    {/* Affirm */}
-                    <div className="bg-white rounded-xl p-3 border border-purple-200 text-center">
-                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-6 mx-auto mb-2" />
-                      <p className="text-xs text-neutral-600">Pay in</p>
-                      <p className="font-bold text-neutral-900">4 payments</p>
-                      <p className="text-sm font-bold text-purple-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
-                    </div>
-                    
-                    {/* Klarna */}
-                    <div className="bg-white rounded-xl p-3 border border-pink-200 text-center">
-                      <img src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg" alt="Klarna" className="h-6 mx-auto mb-2" />
-                      <p className="text-xs text-neutral-600">Pay in</p>
-                      <p className="font-bold text-neutral-900">4 payments</p>
-                      <p className="text-sm font-bold text-pink-600">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
-                    </div>
-                    
-                    {/* Afterpay */}
-                    <div className="bg-white rounded-xl p-3 border border-teal-200 text-center">
-                      <div className="h-6 flex items-center justify-center mb-2">
-                        <span className="font-bold text-teal-600 text-sm">afterpay</span>
+                {/* Affirm Pay Over Time - Prominent Section */}
+                <div className="rounded-2xl border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-indigo-50 p-5">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-8" />
+                      <div>
+                        <h2 className="text-lg font-bold text-blue-900">Pay Over Time</h2>
+                        <p className="text-sm text-blue-700">Split into 4 easy payments</p>
                       </div>
-                      <p className="text-xs text-neutral-600">Pay in</p>
-                      <p className="font-bold text-neutral-900">4 payments</p>
-                      <p className="text-sm font-bold text-teal-600">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
+                    </div>
+                    <span className="px-3 py-1 bg-blue-200 text-blue-800 text-sm font-bold rounded-full">0% APR</span>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl p-4 border border-blue-200">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm text-neutral-600">4 interest-free payments of</p>
+                        <p className="text-2xl font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm text-neutral-600">Total</p>
+                        <p className="text-lg font-bold text-neutral-900">${totalWithTaxAndShipping.toFixed(2)}</p>
+                      </div>
                     </div>
                   </div>
                   
-                  <p className="text-xs text-purple-600 mt-3 text-center">
-                    Select "Credit / Debit Card" below → Choose your plan on the next screen
+                  <p className="text-xs text-blue-600 mt-3 text-center">
+                    Select "Continue to Payment" → Choose Affirm on the next screen
                   </p>
                 </div>
 
@@ -753,11 +737,10 @@ export default function CheckoutPage() {
                       <div className="flex-1">
                         <div className="flex items-center gap-2">
                           <span className="text-lg">💳</span>
-                          <span className="font-bold text-neutral-900">Credit / Debit Card</span>
-                          <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">+ BNPL Options</span>
+                          <span className="font-bold text-neutral-900">Credit / Debit Card or Affirm</span>
                         </div>
                         <p className="text-sm text-neutral-500 mt-0.5">
-                          Visa, Mastercard, Amex, Discover • Google Pay • Apple Pay • Affirm • Klarna
+                          Visa, Mastercard, Amex, Discover • Apple Pay • Google Pay • Affirm (Pay in 4)
                         </p>
                       </div>
                     </label>
