@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
-// Common tire sizes for dropdowns
+// Common tire sizes for pill buttons
 const TIRE_WIDTHS = [
   "155", "165", "175", "185", "195", "205", "215", "225", "235", "245", 
   "255", "265", "275", "285", "295", "305", "315", "325", "335", "345"
@@ -16,6 +16,17 @@ const ASPECT_RATIOS = [
 const RIM_DIAMETERS = [
   "14", "15", "16", "17", "18", "19", "20", "21", "22", "24", "26"
 ];
+
+type Step = "width" | "aspect" | "diameter";
+
+function Crumb({ label, value, color }: { label: string; value?: string; color?: string }) {
+  return (
+    <div className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-semibold text-neutral-700">
+      <span className="text-neutral-500">{label}: </span>
+      <span className={`font-extrabold ${color || "text-neutral-900"}`}>{value || "—"}</span>
+    </div>
+  );
+}
 
 interface TireSizeSearchFormProps {
   className?: string;
@@ -31,15 +42,13 @@ export function TireSizeSearchForm({
   initialDiameter = "",
 }: TireSizeSearchFormProps) {
   const router = useRouter();
+  const [step, setStep] = useState<Step>(initialWidth ? (initialAspectRatio ? "diameter" : "aspect") : "width");
   const [width, setWidth] = useState(initialWidth);
   const [aspectRatio, setAspectRatio] = useState(initialAspectRatio);
   const [diameter, setDiameter] = useState(initialDiameter);
 
-  const isValid = width && aspectRatio && diameter;
-
-  const handleSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    if (!isValid) return;
+  const handleSubmit = useCallback(() => {
+    if (!width || !aspectRatio || !diameter) return;
 
     // Build the tire size string: 275/60R20
     const sizeString = `${width}/${aspectRatio}R${diameter}`;
@@ -54,7 +63,30 @@ export function TireSizeSearchForm({
     });
     
     router.push(`/tires?${params.toString()}`);
-  }, [width, aspectRatio, diameter, isValid, router]);
+  }, [width, aspectRatio, diameter, router]);
+
+  function reset() {
+    setStep("width");
+    setWidth("");
+    setAspectRatio("");
+    setDiameter("");
+  }
+
+  function goBack() {
+    if (step === "diameter") {
+      setStep("aspect");
+      setDiameter("");
+    } else if (step === "aspect") {
+      setStep("width");
+      setAspectRatio("");
+    }
+  }
+
+  const crumbs = [
+    { label: "Width", value: width || undefined, color: width ? "text-blue-600" : undefined },
+    { label: "Aspect", value: aspectRatio || undefined, color: aspectRatio ? "text-green-600" : undefined },
+    { label: "Diameter", value: diameter ? `${diameter}"` : undefined, color: diameter ? "text-amber-600" : undefined },
+  ];
 
   return (
     <div className={`bg-white rounded-3xl shadow-xl border border-neutral-200 p-6 sm:p-8 ${className}`}>
@@ -71,7 +103,7 @@ export function TireSizeSearchForm({
         </div>
       </div>
 
-      {/* Size diagram hint */}
+      {/* Size diagram preview */}
       <div className="mb-6 rounded-xl bg-neutral-50 border border-neutral-200 p-4">
         <div className="flex items-center justify-center gap-1 text-lg font-mono font-bold text-neutral-800">
           <span className={width ? "text-blue-600" : "text-neutral-400"}>
@@ -102,76 +134,126 @@ export function TireSizeSearchForm({
         </div>
       </div>
 
-      {/* Form */}
-      <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-3 gap-3">
-          {/* Width */}
-          <div>
-            <label className="block text-xs font-semibold text-neutral-700 mb-1.5">
-              Width
-            </label>
-            <select
-              value={width}
-              onChange={(e) => setWidth(e.target.value)}
-              className="w-full h-12 rounded-xl border border-neutral-300 bg-white px-3 text-sm font-semibold text-neutral-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+      {/* Crumbs and navigation */}
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex flex-wrap items-center gap-2">
+          {crumbs.map((c) => (
+            <Crumb key={c.label} label={c.label} value={c.value} color={c.color} />
+          ))}
+        </div>
+        <div className="flex items-center gap-2">
+          {step !== "width" && (
+            <button
+              type="button"
+              onClick={goBack}
+              className="text-xs font-semibold text-neutral-600 hover:underline"
             >
-              <option value="">Select</option>
-              {TIRE_WIDTHS.map((w) => (
-                <option key={w} value={w}>{w}</option>
-              ))}
-            </select>
-          </div>
+              ← Back
+            </button>
+          )}
+          {step !== "width" && (
+            <button
+              type="button"
+              onClick={reset}
+              className="text-xs font-semibold text-blue-600 hover:underline"
+            >
+              Start over
+            </button>
+          )}
+        </div>
+      </div>
 
-          {/* Aspect Ratio */}
-          <div>
-            <label className="block text-xs font-semibold text-neutral-700 mb-1.5">
-              Aspect
-            </label>
-            <select
-              value={aspectRatio}
-              onChange={(e) => setAspectRatio(e.target.value)}
-              className="w-full h-12 rounded-xl border border-neutral-300 bg-white px-3 text-sm font-semibold text-neutral-900 focus:border-green-500 focus:ring-2 focus:ring-green-500/20"
-            >
-              <option value="">Select</option>
-              {ASPECT_RATIOS.map((ar) => (
-                <option key={ar} value={ar}>{ar}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Diameter */}
-          <div>
-            <label className="block text-xs font-semibold text-neutral-700 mb-1.5">
-              Diameter
-            </label>
-            <select
-              value={diameter}
-              onChange={(e) => setDiameter(e.target.value)}
-              className="w-full h-12 rounded-xl border border-neutral-300 bg-white px-3 text-sm font-semibold text-neutral-900 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
-            >
-              <option value="">Select</option>
-              {RIM_DIAMETERS.map((d) => (
-                <option key={d} value={d}>{d}"</option>
-              ))}
-            </select>
+      {/* Width Step */}
+      {step === "width" && (
+        <div>
+          <div className="text-xs font-extrabold text-neutral-900">Select Width (mm)</div>
+          <div className="mt-3 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+            {TIRE_WIDTHS.map((w) => (
+              <button
+                key={w}
+                type="button"
+                onClick={() => {
+                  setWidth(w);
+                  setStep("aspect");
+                }}
+                className={
+                  "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
+                  (width === w
+                    ? "border-blue-600 bg-blue-50 text-blue-600"
+                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300")
+                }
+              >
+                {w}
+              </button>
+            ))}
           </div>
         </div>
+      )}
 
-        {/* Submit button */}
-        <button
-          type="submit"
-          disabled={!isValid}
-          className={`
-            mt-6 w-full h-14 rounded-xl font-extrabold text-base transition-all duration-200
-            ${isValid 
-              ? "bg-[var(--brand-red)] text-white hover:bg-red-700 shadow-lg hover:shadow-xl" 
-              : "bg-neutral-200 text-neutral-400 cursor-not-allowed"
-            }
-          `}
-        >
-          {isValid ? `Find ${width}/${aspectRatio}R${diameter} Tires` : "Select Size to Continue"}
-        </button>
-      </form>
+      {/* Aspect Ratio Step */}
+      {step === "aspect" && (
+        <div>
+          <div className="text-xs font-extrabold text-neutral-900">Select Aspect Ratio</div>
+          <div className="mt-3 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+            {ASPECT_RATIOS.map((ar) => (
+              <button
+                key={ar}
+                type="button"
+                onClick={() => {
+                  setAspectRatio(ar);
+                  setStep("diameter");
+                }}
+                className={
+                  "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
+                  (aspectRatio === ar
+                    ? "border-green-600 bg-green-50 text-green-600"
+                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300")
+                }
+              >
+                {ar}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Diameter Step */}
+      {step === "diameter" && (
+        <div>
+          <div className="text-xs font-extrabold text-neutral-900">Select Rim Diameter</div>
+          <div className="mt-3 flex max-h-[280px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-200 bg-white p-3">
+            {RIM_DIAMETERS.map((d) => (
+              <button
+                key={d}
+                type="button"
+                onClick={() => {
+                  setDiameter(d);
+                  // Auto-submit after selecting diameter
+                  setTimeout(() => {
+                    const sizeString = `${width}/${aspectRatio}R${d}`;
+                    const params = new URLSearchParams({
+                      searchMode: "size",
+                      size: sizeString,
+                      width,
+                      aspectRatio,
+                      diameter: d,
+                    });
+                    router.push(`/tires?${params.toString()}`);
+                  }, 150);
+                }}
+                className={
+                  "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
+                  (diameter === d
+                    ? "border-amber-600 bg-amber-50 text-amber-600"
+                    : "border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 hover:border-neutral-300")
+                }
+              >
+                {d}"
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Help text */}
       <p className="mt-4 text-center text-xs text-neutral-500">
