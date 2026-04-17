@@ -315,7 +315,7 @@ export async function GET(req: Request): Promise<Response> {
   const type = url.searchParams.get("type") || "all"; // "all", "wheels", "tires"
   const format = url.searchParams.get("format") || "xml";
   const offset = Math.max(0, parseInt(url.searchParams.get("offset") || "0", 10));
-  const limit = Math.min(5000, Math.max(1, parseInt(url.searchParams.get("limit") || "1000", 10)));
+  const limit = Math.min(50000, Math.max(1, parseInt(url.searchParams.get("limit") || "10000", 10)));
 
   const products: GoogleProduct[] = [];
   const stats = { wheels: 0, tires: 0, total: 0, offset, limit };
