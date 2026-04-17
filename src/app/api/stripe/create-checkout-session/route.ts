@@ -191,6 +191,7 @@ export async function POST(req: Request) {
 
     // Add tax as a quote line if applicable
     if (taxAmount > 0) {
+      console.log(`[checkout] Adding tax line: $${taxAmount} (${taxState})`);
       linesAll.push({
         kind: "product",
         name: `Sales Tax${taxState ? ` (${taxState})` : ""}`,
@@ -200,6 +201,58 @@ export async function POST(req: Request) {
         taxable: false,
         meta: { type: "tax", state: taxState },
       });
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // LOCAL MODE SERVICE FEES - Installation, recycling, card processing
+    // ═══════════════════════════════════════════════════════════════════════════
+    const localFees = body.localFees && typeof body.localFees === "object" ? body.localFees : null;
+    
+    console.log(`[checkout] isLocalMode=${isLocalMode}, localFees=`, localFees);
+    
+    if (isLocalMode && localFees) {
+      const installAmount = Number(localFees.installation) || 0;
+      const recyclingAmount = Number(localFees.recycling) || 0;
+      const cardFeeAmount = Number(localFees.cardProcessing) || 0;
+      const tireCount = Number(localFees.tireCount) || 0;
+      
+      if (installAmount > 0) {
+        linesAll.push({
+          kind: "product",
+          name: `Installation (${tireCount} tires)`,
+          sku: undefined,
+          unitPriceUsd: installAmount,
+          qty: 1,
+          taxable: false,
+          meta: { type: "service", serviceType: "installation", tireCount },
+        });
+      }
+      
+      if (recyclingAmount > 0) {
+        linesAll.push({
+          kind: "product",
+          name: `Tire Recycling (${tireCount})`,
+          sku: undefined,
+          unitPriceUsd: recyclingAmount,
+          qty: 1,
+          taxable: false,
+          meta: { type: "service", serviceType: "recycling", tireCount },
+        });
+      }
+      
+      if (cardFeeAmount > 0) {
+        linesAll.push({
+          kind: "product",
+          name: "Non-Cash Price",
+          sku: undefined,
+          unitPriceUsd: cardFeeAmount,
+          qty: 1,
+          taxable: false,
+          meta: { type: "fee", feeType: "card_processing" },
+        });
+      }
+      
+      console.log(`[checkout] LOCAL FEES - Install: $${installAmount}, Recycling: $${recyclingAmount}, Card Fee: $${cardFeeAmount}`);
     }
 
     // Stripe line items: exclude $0 lines (Stripe doesn't allow meaningful $0 charges).
@@ -244,7 +297,9 @@ export async function POST(req: Request) {
 
     const origin = new URL(req.url).origin;
 
-    // Build Stripe line items
+    // Build Stripe line items from stripeLines (which already includes shipping + tax from linesAll)
+    console.log(`[checkout] stripeLines (${stripeLines.length} items):`, stripeLines.map(l => ({ name: l.name, price: l.unitPriceUsd, qty: l.qty })));
+    
     const stripeLineItems = stripeLines.map((l) => ({
       quantity: l.qty,
       price_data: {
@@ -256,44 +311,17 @@ export async function POST(req: Request) {
         },
       },
     }));
-
-    // Add shipping as a line item if not free
-    if (shippingAmount > 0 && !shippingIsFree) {
-      stripeLineItems.push({
-        quantity: 1,
-        price_data: {
-          currency: "usd",
-          unit_amount: moneyToCents(shippingAmount),
-          product_data: {
-            name: "Shipping & Handling",
-            metadata: undefined,
-          },
-        },
-      });
-    }
-
-    // Add tax as a line item if applicable
-    if (taxAmount > 0) {
-      stripeLineItems.push({
-        quantity: 1,
-        price_data: {
-          currency: "usd",
-          unit_amount: moneyToCents(taxAmount),
-          product_data: {
-            name: `Sales Tax${taxState ? ` (${taxState})` : ""}`,
-            metadata: undefined, // No SKU for tax line
-          },
-        },
-      });
-    }
+    
+    // NOTE: Shipping and tax are already included in linesAll/stripeLines above
+    // Do NOT add them again here (was causing double-charging)
 
     // Calculate total for payment method eligibility
     const totalCents = stripeLineItems.reduce((sum, li) => sum + (li.price_data.unit_amount * li.quantity), 0);
     const totalUsd = totalCents / 100;
 
     // Build payment method types based on order value and eligibility
-    // Note: Apple Pay and Google Pay are handled via "card" with Link enabled
-    const paymentMethodTypes: string[] = ["card"]; // Always include card
+    // Using "link" enables Google Pay and Apple Pay alongside card payments
+    const paymentMethodTypes: string[] = ["card", "link"]; // Card + Link (enables Google/Apple Pay)
     
     // Klarna: Available for orders $10+
     if (totalUsd >= 10) {

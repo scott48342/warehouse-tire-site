@@ -53,17 +53,18 @@ export default function CheckoutPage() {
   const cartTotal = getTotal();
 
   // Verify totals match (important for integrity)
-  const totalCheck = verifyTotalMatch(cartTotal, validation.totals.total);
+  // Compare against subtotal since we calculate shipping/tax/fees separately
+  const totalCheck = verifyTotalMatch(cartTotal, validation.totals.subtotal);
   
   useEffect(() => {
     if (!totalCheck.matches) {
       console.warn("[Checkout] Total mismatch!", {
         cart: cartTotal,
-        calculated: validation.totals.total,
+        calculated: validation.totals.subtotal,
         diff: totalCheck.difference,
       });
     }
-  }, [cartTotal, validation.totals.total, totalCheck]);
+  }, [cartTotal, validation.totals.subtotal, totalCheck]);
 
   // Get items
   const wheels = getWheels();
@@ -91,6 +92,13 @@ export default function CheckoutPage() {
   });
   const [sameAsBilling, setSameAsBilling] = useState(true);
   const [processing, setProcessing] = useState(false);
+  
+  // Default state to Michigan for local mode
+  useEffect(() => {
+    if (isLocal && !shipping.state) {
+      setShipping((p) => ({ ...p, state: "MI" }));
+    }
+  }, [isLocal, shipping.state]);
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
@@ -186,10 +194,12 @@ export default function CheckoutPage() {
   }, [isLocal, tireCount, wheelOnlyCount]);
 
   // Calculate card processing fee (for local store orders)
-  const subtotalForCardFee = validation.totals.total + calculatedTax + localServiceFees.total;
+  // Use subtotal (not total) because validation.totals.total includes default shipping which we handle separately
+  const subtotalForCardFee = validation.totals.subtotal + calculatedTax + localServiceFees.total;
   const cardProcessingFee = isLocal ? subtotalForCardFee * CARD_FEE_RATE : 0;
 
-  const totalWithTaxAndShipping = validation.totals.total + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
+  // Use subtotal + our own shipping/tax/fees calculation (validation.totals.total has shipping baked in)
+  const totalWithTaxAndShipping = validation.totals.subtotal + calculatedTax + shippingAmount + localServiceFees.total + cardProcessingFee;
 
   // Prepare customer info for tracking (memoized to avoid re-renders)
   const customerInfo = useMemo(() => ({
@@ -280,6 +290,15 @@ export default function CheckoutPage() {
             amount: calculatedTax,
             state: shipping.state,
           },
+          // Local mode service fees
+          ...(isLocal ? {
+            localFees: {
+              installation: localServiceFees.install,
+              recycling: localServiceFees.disposal,
+              cardProcessing: cardProcessingFee,
+              tireCount,
+            },
+          } : {}),
         }),
       });
 
