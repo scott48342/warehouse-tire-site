@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { usePOS } from "./POSContext";
 
 // ============================================================================
@@ -17,14 +16,62 @@ interface TrimOption {
   modificationId?: string;
 }
 
+type Step = "year" | "make" | "model" | "trim";
+
 // ============================================================================
-// POS Vehicle Step
+// Crumb Component (shows current selections)
+// ============================================================================
+
+function Crumb({ label, value }: { label: string; value?: string }) {
+  return (
+    <div className="rounded-full border border-neutral-700 bg-neutral-800 px-3 py-1 text-xs font-semibold text-neutral-300">
+      <span className="text-neutral-500">{label}: </span>
+      <span className="font-extrabold text-white">{value || "—"}</span>
+    </div>
+  );
+}
+
+// ============================================================================
+// Make Badge (colored icon with initials)
+// ============================================================================
+
+function makeInitials(make: string) {
+  const cleaned = String(make || "").trim();
+  if (!cleaned) return "";
+  const parts = cleaned.split(/\s+/g).filter(Boolean);
+  const letters = parts.slice(0, 2).map((p) => p[0]?.toUpperCase() || "");
+  return letters.join("") || cleaned.slice(0, 2).toUpperCase();
+}
+
+function makeHue(make: string) {
+  let h = 0;
+  for (let i = 0; i < make.length; i++) h = (h * 31 + make.charCodeAt(i)) >>> 0;
+  return h % 360;
+}
+
+function MakeBadge({ make }: { make: string }) {
+  const initials = makeInitials(make);
+  const hue = makeHue(make);
+  return (
+    <div
+      aria-hidden
+      className="grid h-10 w-10 place-items-center rounded-2xl border border-neutral-700 text-xs font-extrabold text-white"
+      style={{ background: `hsla(${hue}, 50%, 30%, 1)` }}
+      title={make}
+    >
+      {initials}
+    </div>
+  );
+}
+
+// ============================================================================
+// POS Vehicle Step (Pill-style stepped selector)
 // ============================================================================
 
 export function POSVehicleStep() {
-  const router = useRouter();
   const { setVehicle } = usePOS();
   
+  const [step, setStep] = useState<Step>("year");
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
   const [model, setModel] = useState("");
@@ -38,11 +85,10 @@ export function POSVehicleStep() {
   const [loadingModels, setLoadingModels] = useState(false);
   const [loadingTrims, setLoadingTrims] = useState(false);
 
-  // Fetch makes when year changes
+  // Fetch makes when year is selected
   useEffect(() => {
     if (!year) {
       setMakes([]);
-      setMake("");
       return;
     }
     
@@ -52,20 +98,12 @@ export function POSVehicleStep() {
       .then((data) => setMakes(data.results || data.makes || []))
       .catch(() => setMakes([]))
       .finally(() => setLoadingMakes(false));
-    
-    // Reset downstream
-    setMake("");
-    setModel("");
-    setTrim("");
-    setModels([]);
-    setTrims([]);
   }, [year]);
 
-  // Fetch models when make changes
+  // Fetch models when make is selected
   useEffect(() => {
     if (!year || !make) {
       setModels([]);
-      setModel("");
       return;
     }
     
@@ -75,18 +113,12 @@ export function POSVehicleStep() {
       .then((data) => setModels(data.results || data.models || []))
       .catch(() => setModels([]))
       .finally(() => setLoadingModels(false));
-    
-    // Reset downstream
-    setModel("");
-    setTrim("");
-    setTrims([]);
   }, [year, make]);
 
-  // Fetch trims when model changes
+  // Fetch trims when model is selected
   useEffect(() => {
     if (!year || !make || !model) {
       setTrims([]);
-      setTrim("");
       return;
     }
     
@@ -96,24 +128,53 @@ export function POSVehicleStep() {
       .then((data) => setTrims(data.results || data.trims || []))
       .catch(() => setTrims([]))
       .finally(() => setLoadingTrims(false));
-    
-    setTrim("");
   }, [year, make, model]);
 
-  const handleContinue = () => {
+  const handleComplete = (selectedTrim?: string) => {
     if (!year || !make || !model) return;
     
-    // setVehicle will update context and transition to build-type step
     setVehicle({
       year,
       make,
       model,
-      trim: trim || undefined,
+      trim: selectedTrim || trim || undefined,
     });
-    // Don't navigate - let the step router handle it via context state
   };
 
-  const canContinue = year && make && model;
+  const reset = () => {
+    setStep("year");
+    setYear("");
+    setMake("");
+    setModel("");
+    setTrim("");
+    setMakes([]);
+    setModels([]);
+    setTrims([]);
+  };
+
+  const goBack = () => {
+    if (step === "trim") {
+      setStep("model");
+      setTrim("");
+    } else if (step === "model") {
+      setStep("make");
+      setModel("");
+      setModels([]);
+      setTrims([]);
+    } else if (step === "make") {
+      setStep("year");
+      setMake("");
+      setModels([]);
+      setTrims([]);
+    }
+  };
+
+  const crumbs = [
+    { label: "Year", value: year || undefined },
+    { label: "Make", value: make || undefined },
+    { label: "Model", value: model || undefined },
+    ...(step === "trim" && trim ? [{ label: "Trim", value: trim }] : []),
+  ];
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
@@ -122,88 +183,193 @@ export function POSVehicleStep() {
         <p className="text-neutral-400 mt-2">Select the customer's vehicle to see what fits</p>
       </div>
       
-      <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6 space-y-4">
-        {/* Year */}
-        <div>
-          <label className="block text-sm font-medium text-neutral-300 mb-2">Year</label>
-          <select
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            className="w-full h-12 rounded-xl bg-neutral-800 border border-neutral-700 text-white px-4 text-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="">Select Year</option>
-            {YEARS.map((y) => (
-              <option key={y} value={y}>{y}</option>
+      <div className="bg-neutral-900 rounded-2xl border border-neutral-800 p-6">
+        {/* Crumbs and navigation */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-wrap items-center gap-2">
+            {crumbs.map((c) => (
+              <Crumb key={c.label} label={c.label} value={c.value} />
             ))}
-          </select>
+          </div>
+          <div className="flex items-center gap-2">
+            {step !== "year" && (
+              <button
+                type="button"
+                onClick={goBack}
+                className="text-xs font-semibold text-neutral-400 hover:text-white hover:underline"
+              >
+                ← Back
+              </button>
+            )}
+            {step !== "year" && (
+              <button
+                type="button"
+                onClick={reset}
+                className="text-xs font-semibold text-blue-400 hover:text-blue-300 hover:underline"
+              >
+                Start over
+              </button>
+            )}
+          </div>
         </div>
-        
-        {/* Make */}
-        <div>
-          <label className="block text-sm font-medium text-neutral-300 mb-2">Make</label>
-          <select
-            value={make}
-            onChange={(e) => setMake(e.target.value)}
-            disabled={!year || loadingMakes}
-            className="w-full h-12 rounded-xl bg-neutral-800 border border-neutral-700 text-white px-4 text-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
-          >
-            <option value="">{loadingMakes ? "Loading..." : "Select Make"}</option>
-            {makes.map((m) => (
-              <option key={m} value={m}>{m}</option>
-            ))}
-          </select>
-        </div>
-        
-        {/* Model */}
-        <div>
-          <label className="block text-sm font-medium text-neutral-300 mb-2">Model</label>
-          <select
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-            disabled={!make || loadingModels}
-            className="w-full h-12 rounded-xl bg-neutral-800 border border-neutral-700 text-white px-4 text-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
-          >
-            <option value="">{loadingModels ? "Loading..." : "Select Model"}</option>
-            {models.map((m) => (
-              <option key={m} value={m}>{m}</option>
-            ))}
-          </select>
-        </div>
-        
-        {/* Trim (Optional) */}
-        {trims.length > 0 && (
+
+        {/* Year Step */}
+        {step === "year" && (
           <div>
-            <label className="block text-sm font-medium text-neutral-300 mb-2">
-              Trim <span className="text-neutral-500">(Optional)</span>
-            </label>
-            <select
-              value={trim}
-              onChange={(e) => setTrim(e.target.value)}
-              disabled={loadingTrims}
-              className="w-full h-12 rounded-xl bg-neutral-800 border border-neutral-700 text-white px-4 text-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
-            >
-              <option value="">{loadingTrims ? "Loading..." : "Any Trim"}</option>
-              {trims.map((t) => (
-                <option key={t.value} value={t.label}>{t.label}</option>
+            <div className="text-sm font-extrabold text-white mb-3">Select Year</div>
+            <div className="flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-800 bg-neutral-950 p-3">
+              {YEARS.map((y) => (
+                <button
+                  key={y}
+                  type="button"
+                  onClick={() => {
+                    setYear(y);
+                    setMake("");
+                    setModel("");
+                    setTrim("");
+                    setStep("make");
+                  }}
+                  className={
+                    "rounded-full border px-3 py-1.5 text-sm font-extrabold transition-colors " +
+                    (year === y
+                      ? "border-blue-500 bg-blue-500/20 text-blue-400"
+                      : "border-neutral-700 bg-neutral-800 text-white hover:bg-neutral-700 hover:border-neutral-600")
+                  }
+                >
+                  {y}
+                </button>
               ))}
-            </select>
+            </div>
           </div>
         )}
-        
-        {/* Continue Button */}
-        <button
-          onClick={handleContinue}
-          disabled={!canContinue}
-          className={`
-            w-full mt-4 h-14 rounded-xl font-bold text-lg transition-all
-            ${canContinue
-              ? "bg-blue-600 hover:bg-blue-500 text-white"
-              : "bg-neutral-800 text-neutral-600 cursor-not-allowed"
-            }
-          `}
-        >
-          Continue to Packages →
-        </button>
+
+        {/* Make Step */}
+        {step === "make" && (
+          <div>
+            <div className="text-sm font-extrabold text-white mb-1">Select Make</div>
+            <div className="text-xs text-neutral-500 mb-3">
+              {loadingMakes ? "Loading makes…" : makes.length ? `${makes.length} makes found` : "No makes found"}
+            </div>
+            <div className="grid max-h-[360px] grid-cols-2 gap-2 overflow-auto rounded-2xl border border-neutral-800 bg-neutral-950 p-3 sm:grid-cols-3">
+              {makes.map((m) => (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => {
+                    setMake(m);
+                    setModel("");
+                    setTrim("");
+                    setStep("model");
+                  }}
+                  className={
+                    "rounded-2xl border p-3 text-left transition-colors " +
+                    (make === m
+                      ? "border-blue-500 bg-blue-500/20"
+                      : "border-neutral-800 bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-700")
+                  }
+                >
+                  <div className="flex items-center gap-3">
+                    <MakeBadge make={m} />
+                    <div className="min-w-0">
+                      <div className="truncate text-sm font-extrabold text-white">{m}</div>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Model Step */}
+        {step === "model" && (
+          <div>
+            <div className="text-sm font-extrabold text-white mb-1">Select Model</div>
+            <div className="text-xs text-neutral-500 mb-3">
+              {loadingModels ? "Loading models…" : models.length ? `${models.length} models found` : "No models found"}
+            </div>
+            <div className="flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-800 bg-neutral-950 p-3">
+              {models.map((m) => (
+                <button
+                  key={m}
+                  type="button"
+                  onClick={() => {
+                    setModel(m);
+                    setTrim("");
+                    // Check if we need to show trims or go directly to complete
+                    // We'll check after trims load
+                    setStep("trim");
+                  }}
+                  className={
+                    "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
+                    (model === m
+                      ? "border-blue-500 bg-blue-500/20 text-blue-400"
+                      : "border-neutral-700 bg-neutral-800 text-white hover:bg-neutral-700 hover:border-neutral-600")
+                  }
+                >
+                  {m}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Trim Step */}
+        {step === "trim" && (
+          <div>
+            <div className="text-sm font-extrabold text-white mb-1">Select Trim</div>
+            <div className="text-xs text-neutral-500 mb-3">
+              {loadingTrims 
+                ? "Loading trims…" 
+                : trims.length 
+                  ? `${trims.length} trims found (or skip for any trim)` 
+                  : "No specific trims - continue with any configuration"}
+            </div>
+            
+            {trims.length > 0 ? (
+              <div className="flex max-h-[360px] flex-wrap gap-2 overflow-auto rounded-2xl border border-neutral-800 bg-neutral-950 p-3">
+                {trims.map((t) => (
+                  <button
+                    key={t.value}
+                    type="button"
+                    onClick={() => {
+                      setTrim(t.label);
+                      handleComplete(t.label);
+                    }}
+                    className={
+                      "rounded-full border px-4 py-2 text-sm font-extrabold transition-colors " +
+                      (trim === t.label
+                        ? "border-blue-500 bg-blue-500/20 text-blue-400"
+                        : "border-neutral-700 bg-neutral-800 text-white hover:bg-neutral-700 hover:border-neutral-600")
+                    }
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+            ) : !loadingTrims ? (
+              <div className="rounded-2xl border border-neutral-800 bg-neutral-950 p-6 text-center">
+                <div className="text-neutral-400 text-sm">
+                  No trim differentiation needed for this vehicle.
+                </div>
+              </div>
+            ) : null}
+            
+            {/* Continue button (skip trim or after trim loaded with no options) */}
+            <button
+              onClick={() => handleComplete()}
+              disabled={loadingTrims}
+              className={`
+                w-full mt-4 h-14 rounded-xl font-bold text-lg transition-all
+                ${!loadingTrims
+                  ? "bg-blue-600 hover:bg-blue-500 text-white"
+                  : "bg-neutral-800 text-neutral-600 cursor-not-allowed"
+                }
+              `}
+            >
+              {trims.length > 0 ? "Skip Trim Selection →" : "Continue to Packages →"}
+            </button>
+          </div>
+        )}
       </div>
       
       {/* Quick vehicle lookup hint */}
