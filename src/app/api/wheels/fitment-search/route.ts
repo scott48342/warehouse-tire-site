@@ -90,6 +90,46 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// PRICING HELPER - DATA QUALITY FIX (2025-07-18)
+// ═══════════════════════════════════════════════════════════════════════════════
+// The techfeed/SFTP has corrupted MSRP values when MAP is empty.
+// Wheels WITH MAP have correct MSRP (~$450-490).
+// Wheels WITHOUT MAP have garbage MSRP (~$210-280, likely dealer cost).
+// 
+// FIX: Only trust MSRP if MAP is also present as a data quality signal.
+// This prevents selling wheels at ~50% off due to bad data.
+// ═══════════════════════════════════════════════════════════════════════════════
+
+interface TechfeedPricingInput {
+  map_price?: string | number | null;
+  msrp?: string | number | null;
+}
+
+interface InventoryPricingInput {
+  mapPrice?: number | null;
+  msrp?: number | null;
+}
+
+/**
+ * Calculate wheel sell price with data quality validation.
+ * Only trusts MSRP if MAP is also present (corrupted data fix).
+ */
+function getSafeWheelPrice(
+  techfeed: TechfeedPricingInput,
+  inventory?: InventoryPricingInput | null
+): number {
+  // Prefer inventory cache (SFTP feed, 2hr sync) over techfeed (stale CSV)
+  const mapValue = inventory?.mapPrice ?? (Number(techfeed.map_price) || null);
+  const msrpValue = inventory?.msrp ?? (Number(techfeed.msrp) || null);
+  
+  // DATA QUALITY FIX: Only trust MSRP if MAP is also present.
+  // When MAP is missing, MSRP is often corrupted (shows dealer cost, not retail).
+  const trustedMsrp = mapValue ? msrpValue : null;
+  
+  return calculateWheelSellPrice({ map: mapValue, msrp: trustedMsrp });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // WHEEL SIZE STRING PARSER
 // ═══════════════════════════════════════════════════════════════════════════════
 // Parses wheel size strings like "8.5Jx18" or "10Jx20" into {width, diameter}
@@ -1255,8 +1295,8 @@ async function handleDbFirstWheelResults(opts: {
     if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
     if (width && c.width && Number(c.width) !== Number(width)) return false;
 
-    // valid pricing fields (required) - use pricing service
-    const p = calculateWheelSellPrice({ map: Number(c.map_price) || null, msrp: Number(c.msrp) || null });
+    // valid pricing fields (required) - use safe pricing with data quality fix
+    const p = getSafeWheelPrice(c);
     if (p <= 0) return false;
 
     // best-effort: skip obviously discontinued items if present in text
@@ -1482,12 +1522,9 @@ async function handleDbFirstWheelResults(opts: {
   const oemMidDiameter = (envelope.oemMinDiameter + envelope.oemMaxDiameter) / 2;
   const oemMidOffset = (envelope.oemMinOffset + envelope.oemMaxOffset) / 2;
   
-  // Calculate price statistics for tiered pricing (using pricing service)
+  // Calculate price statistics for tiered pricing (using safe pricing with data quality fix)
   const allPrices = fitmentValidCandidates
-    .map(item => calculateWheelSellPrice({ 
-      map: Number(item.candidate.map_price) || null, 
-      msrp: Number(item.candidate.msrp) || null 
-    }))
+    .map(item => getSafeWheelPrice(item.candidate))
     .filter(p => p > 0)
     .sort((a, b) => a - b);
   const priceP25 = allPrices.length > 0 ? allPrices[Math.floor(allPrices.length * 0.25)] : 200;
@@ -1595,7 +1632,7 @@ async function handleDbFirstWheelResults(opts: {
     
     // 5. Price Range Score (0-100, weight: 15%)
     // All price tiers are viable, slight preference for mid-range
-    const price = calculateWheelSellPrice({ map: Number(c.map_price) || null, msrp: Number(c.msrp) || null });
+    const price = getSafeWheelPrice(c);
     let priceRangeScore = 50;
     let priceTier: "value" | "mid" | "premium" = "mid";
     
@@ -1664,9 +1701,8 @@ async function handleDbFirstWheelResults(opts: {
     "check_availability": 2,
   };
   
-  // Helper to get price from candidate
-  const getCandidatePrice = (c: ScoredCandidate) => 
-    calculateWheelSellPrice({ map: Number(c.candidate.map_price) || null, msrp: Number(c.candidate.msrp) || null });
+  // Helper to get price from candidate (uses safe pricing with data quality fix)
+  const getCandidatePrice = (c: ScoredCandidate) => getSafeWheelPrice(c.candidate);
   
   if (sortParam === "price_asc" || sortParam === "price-low-to-high") {
     // Price low to high - still respect availability tier
@@ -1834,8 +1870,8 @@ async function handleDbFirstWheelResults(opts: {
       const bHasImage = (b.candidate.images || []).length > 0;
       const aStock = inventoryData.get(a.candidate.sku)?.totalQty || 0;
       const bStock = inventoryData.get(b.candidate.sku)?.totalQty || 0;
-      const aPrice = calculateWheelSellPrice({ map: Number(a.candidate.map_price) || null, msrp: Number(a.candidate.msrp) || null }) || Infinity;
-      const bPrice = calculateWheelSellPrice({ map: Number(b.candidate.map_price) || null, msrp: Number(b.candidate.msrp) || null }) || Infinity;
+      const aPrice = getSafeWheelPrice(a.candidate) || Infinity;
+      const bPrice = getSafeWheelPrice(b.candidate) || Infinity;
       
       // All wheels from our DB are WheelPros, so supplier is always "wheelpros"
       const aIsWheelPros = true;
@@ -2153,11 +2189,8 @@ async function handleDbFirstWheelResults(opts: {
       prices: {
         msrp: [
           {
-            // Use pricing service - prefer inventory cache pricing (2hr sync) over techfeed (stale CSV)
-            currencyAmount: String(calculateWheelSellPrice({ 
-              map: inv?.mapPrice ?? (Number(c.map_price) || null), 
-              msrp: inv?.msrp ?? (Number(c.msrp) || null) 
-            })),
+            // Use safe pricing with data quality fix - only trusts MSRP when MAP is present
+            currencyAmount: String(getSafeWheelPrice(c, inv)),
             currencyCode: "USD",
           },
         ],
