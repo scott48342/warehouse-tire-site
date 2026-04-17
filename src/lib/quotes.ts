@@ -53,6 +53,15 @@ export type QuoteSnapshot = {
     tax: number;
     total: number;
   };
+  // Local mode metadata (only present for local/install orders)
+  localMode?: {
+    channel: 'local';
+    fulfillmentMode: 'install';
+    installStore: string; // 'pontiac' | 'waterford'
+    installStoreName: string;
+    installStorePhone: string;
+    installStoreAddress: string;
+  };
 };
 
 export type QuoteRecord = {
@@ -127,10 +136,12 @@ export async function createQuote(
     customer,
     vehicle,
     lines,
+    localMode,
   }: {
     customer: QuoteSnapshot["customer"];
     vehicle?: QuoteSnapshot["vehicle"];
     lines: QuoteLine[];
+    localMode?: QuoteSnapshot["localMode"];
   }
 ) {
   await ensureQuoteSystem(db);
@@ -138,7 +149,7 @@ export async function createQuote(
   const taxRate = await getTaxRate(db);
   const totals = computeTotals(lines, taxRate);
 
-  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals };
+  const snap: QuoteSnapshot = { customer, vehicle, lines, taxRate, totals, localMode };
   const id = newId();
   const vlabel = vehicleLabel(vehicle) || null;
 

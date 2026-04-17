@@ -260,6 +260,27 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
     </div>
   ` : "";
 
+  // Local mode installation banner (shows for both admin and customer)
+  const localModeBanner = snapshot.localMode ? `
+    <div style="background: #dbeafe; border: 1px solid #3b82f6; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+      <div style="font-size: 18px; font-weight: 600; color: #1e40af; margin-bottom: 8px;">🔧 Installation Order</div>
+      <div style="font-size: 14px; color: #1e3a8a;">
+        <strong>Install Location:</strong> ${snapshot.localMode.installStoreName}<br>
+        <strong>Address:</strong> ${snapshot.localMode.installStoreAddress}<br>
+        <strong>Phone:</strong> ${snapshot.localMode.installStorePhone}
+      </div>
+      ${isAdmin ? `
+        <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #93c5fd; font-size: 12px; color: #1e40af;">
+          <strong>Channel:</strong> local | <strong>Fulfillment:</strong> ${snapshot.localMode.fulfillmentMode}
+        </div>
+      ` : `
+        <div style="margin-top: 10px; font-size: 13px; color: #1e3a8a;">
+          We'll contact you to schedule your installation appointment.
+        </div>
+      `}
+    </div>
+  ` : "";
+
   return `
 <!DOCTYPE html>
 <html>
@@ -275,6 +296,7 @@ function buildOrderConfirmationHtml(orderId: string, snapshot: QuoteSnapshot, is
   </div>
 
   ${adminBanner}
+  ${localModeBanner}
 
   <div style="padding: 30px 0;">
     <h2 style="margin: 0 0 10px; color: #16a34a;">✓ Order Confirmed</h2>

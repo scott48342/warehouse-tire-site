@@ -4,6 +4,7 @@ import { getPayPalClient } from "@/lib/payments/paypalClient";
 import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
+import { detectShopContext, type LocalStore, STORES } from "@/lib/shopContext";
 
 export const runtime = "nodejs";
 
@@ -117,6 +118,20 @@ export async function POST(req: Request) {
 
     const vehicle = body.vehicle && typeof body.vehicle === "object" ? body.vehicle : undefined;
 
+    // ═══════════════════════════════════════════════════════════════════════════
+    // LOCAL MODE DETECTION - Install store tagging for local orders
+    // ═══════════════════════════════════════════════════════════════════════════
+    const shopContext = detectShopContext(new Headers(req.headers));
+    const isLocalMode = shopContext.mode === 'local';
+    const installStoreId = isLocalMode && body.installStore 
+      ? (body.installStore as LocalStore) 
+      : undefined;
+    const installStore = installStoreId ? STORES[installStoreId] : undefined;
+    
+    if (isLocalMode && installStore) {
+      console.log(`[paypal-checkout] LOCAL MODE - Install at: ${installStore.name}`);
+    }
+
     // Convert cart items to quote lines
     const linesAll: QuoteLine[] = items
       .map((i: any) => {
@@ -163,11 +178,22 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "paypal_not_configured" }, { status: 400 });
     }
 
+    // Build local mode metadata for quote (if applicable)
+    const localModeData = isLocalMode && installStore ? {
+      channel: 'local' as const,
+      fulfillmentMode: 'install' as const,
+      installStore: installStoreId!,
+      installStoreName: installStore.name,
+      installStorePhone: installStore.phone,
+      installStoreAddress: `${installStore.address}, ${installStore.city}, ${installStore.state} ${installStore.zip}`,
+    } : undefined;
+
     // Create quote first
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
       lines: linesAll,
+      localMode: localModeData,
     });
 
     // Create PayPal order

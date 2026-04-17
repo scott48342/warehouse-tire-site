@@ -4,6 +4,7 @@ import { getStripeClient } from "@/lib/payments/stripeClient";
 import { fetchAvailability, ORDERABLE_TYPES } from "@/lib/availabilityCache";
 import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
 import type { CartItem } from "@/lib/cart/CartContext";
+import { detectShopContext, buildLocalOrderMetadata, type LocalStore, STORES } from "@/lib/shopContext";
 
 export const runtime = "nodejs";
 
@@ -129,6 +130,18 @@ export async function POST(req: Request) {
     // Cart ID for linking add-to-cart events to purchases
     const cartId = typeof body.cartId === "string" ? body.cartId.trim() : undefined;
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // LOCAL MODE DETECTION - Install store tagging for local orders
+    // ═══════════════════════════════════════════════════════════════════════════
+    const shopContext = detectShopContext(new Headers(req.headers));
+    const isLocalMode = shopContext.mode === 'local';
+    
+    // Accept install store from body (passed by checkout page in local mode)
+    const installStoreId = isLocalMode && body.installStore 
+      ? (body.installStore as LocalStore) 
+      : undefined;
+    const installStore = installStoreId ? STORES[installStoreId] : undefined;
+    
     const taxInfo = body.tax && typeof body.tax === "object" ? body.tax : {};
     const taxAmount = Number(taxInfo.amount) || 0;
     const taxState = String(taxInfo.state || "").toUpperCase();
@@ -212,10 +225,21 @@ export async function POST(req: Request) {
     // Log Stripe mode for debugging
     console.log(`[checkout] Stripe mode: ${stripeConn.mode}`);
 
+    // Build local mode metadata for quote (if applicable)
+    const localModeData = isLocalMode && installStore ? {
+      channel: 'local' as const,
+      fulfillmentMode: 'install' as const,
+      installStore: installStoreId!,
+      installStoreName: installStore.name,
+      installStorePhone: installStore.phone,
+      installStoreAddress: `${installStore.address}, ${installStore.city}, ${installStore.state} ${installStore.zip}`,
+    } : undefined;
+
     const { id: quoteId } = await createQuote(db, {
       customer: { firstName, lastName, email: email || undefined, phone: phone || undefined },
       vehicle,
       lines: linesAll,
+      localMode: localModeData,
     });
 
     const origin = new URL(req.url).origin;
@@ -288,19 +312,34 @@ export async function POST(req: Request) {
 
     console.log(`[checkout] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
 
+    // Build metadata - include local install info if in local mode
+    const sessionMetadata: Record<string, string | undefined> = {
+      quoteId,
+      cartId: cartId || undefined,
+      taxState: taxState || undefined,
+      taxAmount: taxAmount > 0 ? String(taxAmount.toFixed(2)) : undefined,
+      shippingAmount: shippingAmount > 0 ? String(shippingAmount.toFixed(2)) : undefined,
+      shippingZip: shippingInfo.zip || undefined,
+    };
+    
+    // Add local mode metadata - ONLY when in local mode with valid store
+    if (isLocalMode && installStore) {
+      sessionMetadata.channel = 'local';
+      sessionMetadata.fulfillment_mode = 'install';
+      sessionMetadata.install_store = installStoreId;
+      sessionMetadata.install_store_name = installStore.name;
+      sessionMetadata.install_store_phone = installStore.phone;
+      sessionMetadata.install_store_address = `${installStore.address}, ${installStore.city}, ${installStore.state} ${installStore.zip}`;
+      
+      console.log(`[checkout] LOCAL MODE - Install at: ${installStore.name}`);
+    }
+
     const sessionParams: any = {
       mode: "payment" as const,
       payment_method_types: paymentMethodTypes,
       customer_email: email || undefined,
       line_items: stripeLineItems,
-      metadata: {
-        quoteId,
-        cartId: cartId || undefined,
-        taxState: taxState || undefined,
-        taxAmount: taxAmount > 0 ? String(taxAmount.toFixed(2)) : undefined,
-        shippingAmount: shippingAmount > 0 ? String(shippingAmount.toFixed(2)) : undefined,
-        shippingZip: shippingInfo.zip || undefined,
-      },
+      metadata: sessionMetadata,
       shipping_address_collection: {
         allowed_countries: ["US"] as const,
       },

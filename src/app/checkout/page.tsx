@@ -14,6 +14,8 @@ import { calculateShipping, FREE_SHIPPING_THRESHOLD, type ShippingItem } from "@
 import { CheckoutTrustStrip } from "@/components/StoreReviews";
 import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 import { RoadHazardProtection } from "@/components/RoadHazardProtection";
+import { useShopContext, LocalOnly } from "@/contexts/ShopContextProvider";
+import { StoreSelector, StoreInfoCard } from "@/components/local";
 
 /**
  * Checkout Page
@@ -42,6 +44,9 @@ export default function CheckoutPage() {
     removeItem,
     updateQuantity,
   } = useCart();
+  
+  // Shop context for local mode detection
+  const { isLocal, selectedStore, storeInfo } = useShopContext();
 
   // Validate package
   const validation = validatePackage(items);
@@ -175,6 +180,8 @@ export default function CheckoutPage() {
           items,
           customer,
           vehicle,
+          // Local mode: include install store for order routing
+          ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
         }),
       });
 
@@ -213,6 +220,8 @@ export default function CheckoutPage() {
           customer,
           vehicle,
           cartId: getCartId(), // For linking add-to-cart events to purchases
+          // Local mode: include install store for order routing
+          ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
           shipping: {
             address: shipping.address,
             address2: shipping.address2,
@@ -454,6 +463,25 @@ export default function CheckoutPage() {
             {/* Step: Shipping */}
             {step === "shipping" && (
               <div className="space-y-4">
+                {/* Local Mode: Installation Location Selector */}
+                <LocalOnly>
+                  <div className="rounded-2xl border-2 border-blue-200 bg-blue-50 p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xl">🔧</span>
+                      <h2 className="text-lg font-bold text-blue-900">Installation Location</h2>
+                    </div>
+                    <p className="text-sm text-blue-700 mb-4">
+                      Choose where you'd like your tires and wheels installed.
+                    </p>
+                    <StoreSelector variant="cards" showHours={true} showPhone={true} />
+                    {!selectedStore && (
+                      <p className="text-sm text-red-600 mt-3 font-medium">
+                        ⚠️ Please select an installation location to continue.
+                      </p>
+                    )}
+                  </div>
+                </LocalOnly>
+
                 <div className="rounded-2xl border border-neutral-200 bg-white p-5">
                   <h2 className="text-lg font-bold text-neutral-900 mb-4">Shipping Information</h2>
 
@@ -550,9 +578,14 @@ export default function CheckoutPage() {
                   </button>
                   <button
                     onClick={() => setStep("payment")}
-                    className="flex-1 h-12 rounded-xl bg-green-600 font-extrabold text-white hover:bg-green-700"
+                    disabled={isLocal && !selectedStore}
+                    className={`flex-1 h-12 rounded-xl font-extrabold text-white ${
+                      isLocal && !selectedStore
+                        ? "bg-neutral-300 cursor-not-allowed"
+                        : "bg-green-600 hover:bg-green-700"
+                    }`}
                   >
-                    Continue to Payment
+                    {isLocal && !selectedStore ? "Select Install Location" : "Continue to Payment"}
                   </button>
                 </div>
               </div>
