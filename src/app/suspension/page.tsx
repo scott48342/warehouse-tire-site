@@ -246,7 +246,14 @@ function LiftKitCard({ kit, vehicle }: { kit: LiftKit; vehicle?: { year: string;
   const price = kit.msrp || kit.mapPrice;
   const formatPrice = (p: number) => `$${p.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
-  const handleAddToCart = () => {
+  // Build PDP URL with vehicle context
+  const pdpUrl = vehicle
+    ? `/suspension/${kit.sku}?year=${vehicle.year}&make=${encodeURIComponent(vehicle.make)}&model=${encodeURIComponent(vehicle.model)}`
+    : `/suspension/${kit.sku}`;
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (!price) return;
     
     const item: CartAccessoryItem = {
@@ -277,7 +284,7 @@ function LiftKitCard({ kit, vehicle }: { kit: LiftKit; vehicle?: { year: string;
   };
 
   return (
-    <div className="group rounded-2xl border border-neutral-200 bg-white overflow-hidden hover:border-amber-300 hover:shadow-lg transition-all">
+    <Link href={pdpUrl} className="group rounded-2xl border border-neutral-200 bg-white overflow-hidden hover:border-amber-300 hover:shadow-lg transition-all block">
       {/* Image */}
       <div className="aspect-[4/3] bg-neutral-100 relative overflow-hidden">
         {kit.imageUrl ? (
@@ -301,7 +308,7 @@ function LiftKitCard({ kit, vehicle }: { kit: LiftKit; vehicle?: { year: string;
       {/* Content */}
       <div className="p-4">
         <div className="text-xs font-semibold text-neutral-500">{kit.brand}</div>
-        <h3 className="mt-1 text-sm font-bold text-neutral-900 line-clamp-2">{kit.name}</h3>
+        <h3 className="mt-1 text-sm font-bold text-neutral-900 line-clamp-2 group-hover:text-purple-700 transition-colors">{kit.name}</h3>
         
         <div className="mt-2 flex items-center gap-2 flex-wrap">
           {kit.liftHeight && (
@@ -343,7 +350,7 @@ function LiftKitCard({ kit, vehicle }: { kit: LiftKit; vehicle?: { year: string;
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 }
 
