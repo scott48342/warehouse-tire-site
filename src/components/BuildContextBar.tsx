@@ -97,16 +97,55 @@ export function StickyBuildBar() {
             </div>
           </div>
           
-          {/* Right: Popularity + Change */}
-          <div className="flex items-center gap-3">
-            <span className="hidden md:inline text-xs text-amber-100">
-              🔥 Popular setup for this vehicle
+          {/* Right: Quick Actions + Change */}
+          <div className="flex items-center gap-2">
+            <span className="hidden lg:inline text-xs text-amber-100">
+              🔥 Popular setup
             </span>
+            
+            {/* Quick Change Buttons */}
+            <div className="hidden sm:flex items-center gap-1">
+              {(Object.keys(LIFT_LEVELS) as LiftLevel[]).map((level) => {
+                const config = LIFT_LEVELS[level];
+                const isActive = liftLevel === level;
+                // Build URL with new lift level
+                const newParams = new URLSearchParams();
+                newParams.set("buildType", buildType || "lifted");
+                newParams.set("liftLevel", level);
+                newParams.set("liftedInches", String(config.inches));
+                newParams.set("offsetMin", String(config.offsetMin));
+                newParams.set("offsetMax", String(config.offsetMax));
+                // Preserve other params
+                const year = searchParams.get("year");
+                const make = searchParams.get("make");
+                const model = searchParams.get("model");
+                const modification = searchParams.get("modification");
+                if (year) newParams.set("year", year);
+                if (make) newParams.set("make", make);
+                if (model) newParams.set("model", model);
+                if (modification) newParams.set("modification", modification);
+                
+                return (
+                  <Link
+                    key={level}
+                    href={`/wheels/v/${make?.toLowerCase()}-${model?.toLowerCase().replace(/\s+/g, "-")}?${newParams.toString()}`}
+                    className={`rounded-full px-2 py-0.5 text-xs font-semibold transition-colors ${
+                      isActive 
+                        ? "bg-white text-amber-600" 
+                        : "bg-white/20 text-white hover:bg-white/30"
+                    }`}
+                  >
+                    {config.label}
+                  </Link>
+                );
+              })}
+            </div>
+            
             <Link
               href="/wheels"
               className="text-xs font-semibold text-white/80 hover:text-white underline"
             >
-              Change
+              Start Over
             </Link>
           </div>
         </div>
@@ -271,16 +310,28 @@ export function PackageBridgeCTA({
             </svg>
           </Link>
           
+          {/* Confidence Copy */}
+          <p className="mt-3 text-sm text-neutral-700 font-medium">
+            Everything shown will fit your exact setup — no guesswork.
+          </p>
+          
           {/* Trust signals */}
-          <div className="mt-3 flex flex-wrap items-center gap-4 text-xs text-neutral-500">
+          <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-neutral-500">
             <span className="flex items-center gap-1">
               <span className="text-green-500">✓</span> Fitment guaranteed
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> Free shipping $599+
+              <span className="text-green-500">✓</span> Free shipping over $1,500
             </span>
             <span className="flex items-center gap-1">
               <span className="text-green-500">✓</span> Expert support
+            </span>
+          </div>
+          
+          {/* Install Messaging */}
+          <div className="mt-4 rounded-lg bg-blue-50 border border-blue-200 px-4 py-2">
+            <span className="text-sm text-blue-800">
+              🔧 <strong>Install available</strong> at our Pontiac &amp; Waterford locations
             </span>
           </div>
         </div>

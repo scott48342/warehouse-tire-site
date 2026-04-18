@@ -706,7 +706,7 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
               </div>
               <div className="text-right">
                 <div className="text-xs text-green-600 font-semibold">Free Shipping</div>
-                <div className="text-xs text-neutral-500">Orders $599+</div>
+                <div className="text-xs text-neutral-500">Orders over $1,500</div>
               </div>
             </div>
           </div>
@@ -719,13 +719,17 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
             Shop Wheels for This Build →
           </button>
           
-          <p className="mt-2 text-sm text-neutral-600 text-center">
-            We'll show <strong>only wheels that fit</strong> your exact setup.
-            {selectedLiftKit && " Your lift kit will be added to cart."}
+          {/* Confidence Copy */}
+          <p className="mt-3 text-sm text-neutral-700 text-center font-medium">
+            Everything shown will fit your exact setup — no guesswork.
+          </p>
+          <p className="mt-1 text-xs text-neutral-500 text-center">
+            {selectedLiftKit && "Your lift kit will be added to cart. "}
+            We filter to only show compatible products.
           </p>
           
           {/* Trust Micro-Strip */}
-          <div className="mt-4 flex items-center justify-center gap-4 text-xs text-neutral-500">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs text-neutral-500">
             <span className="flex items-center gap-1">
               <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -736,13 +740,20 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
               <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              Free Shipping $599+
+              Free Shipping over $1,500
             </span>
             <span className="flex items-center gap-1">
               <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               Expert Support
+            </span>
+          </div>
+          
+          {/* Install Messaging */}
+          <div className="mt-4 rounded-lg bg-blue-50 border border-blue-200 px-4 py-3 text-center">
+            <span className="text-sm text-blue-800">
+              🔧 <strong>Install available</strong> at our Pontiac &amp; Waterford locations
             </span>
           </div>
         </div>
