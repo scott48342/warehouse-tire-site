@@ -41,6 +41,7 @@ type AccessoryItem = {
   map?: number;
   inStock: boolean;
   category: string;
+  imageUrl?: string;
 };
 
 function extractPrice(result: WheelProsAccessoryResult): { price: number; msrp?: number; map?: number } {
@@ -101,6 +102,11 @@ export async function GET(req: Request) {
 
         const { price, msrp, map } = extractPrice(r);
         const inStock = r.inventory?.some(i => i.type === "stocked") ?? false;
+        
+        // Extract image URL - check both media and images arrays
+        const images = r.media || r.images || [];
+        const primaryImage = images.find(img => img.type === "primary") || images[0];
+        const imageUrl = primaryImage?.url;
 
         allResults.push({
           sku: r.sku,
@@ -112,6 +118,7 @@ export async function GET(req: Request) {
           map,
           inStock,
           category: category || "search",
+          imageUrl,
         });
       }
     }

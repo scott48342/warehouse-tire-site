@@ -10,6 +10,7 @@ type AccessoryItem = {
   price: number;
   msrp?: number;
   inStock: boolean;
+  imageUrl?: string;
 };
 
 type Props = {
@@ -101,9 +102,18 @@ export function AccessoryGrid({ category, title, description, icon }: Props) {
                 key={item.sku}
                 className="bg-white border border-neutral-200 rounded-xl p-4 hover:shadow-lg transition-shadow"
               >
-                {/* Placeholder image */}
-                <div className="aspect-square bg-neutral-100 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-4xl text-neutral-400">📦</span>
+                {/* Product image */}
+                <div className="aspect-square bg-neutral-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  {item.imageUrl ? (
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-4xl text-neutral-400">📦</span>
+                  )}
                 </div>
                 
                 {/* Brand */}

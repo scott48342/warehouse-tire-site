@@ -16,6 +16,11 @@ export type WheelProsAccessoryPrice = {
   currencyCode?: string;
 };
 
+export type WheelProsAccessoryImage = {
+  url?: string;
+  type?: string; // "primary", "alternate", etc.
+};
+
 export type WheelProsAccessoryResult = {
   sku?: string;
   title?: string;
@@ -26,6 +31,8 @@ export type WheelProsAccessoryResult = {
     nip?: WheelProsAccessoryPrice[];
   };
   inventory?: { type?: string }[];
+  media?: WheelProsAccessoryImage[];
+  images?: WheelProsAccessoryImage[]; // Some endpoints use "images" instead of "media"
 };
 
 export type WheelProsAccessorySearchResponse = {
@@ -48,7 +55,7 @@ export async function searchAccessories(params: {
 
   const url = new URL("search/accessory", baseUrl());
   url.searchParams.set("filter", params.filter);
-  url.searchParams.set("fields", params.fields || "inventory,price");
+  url.searchParams.set("fields", params.fields || "inventory,price,media");
   url.searchParams.set("priceType", params.priceType || "msrp,map,nip");
   url.searchParams.set("company", params.company || "1500"); // default USD
   if (params.customer) url.searchParams.set("customer", params.customer);
