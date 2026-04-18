@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db, sql } from "@/lib/db";
+import pg from "pg";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+const { Pool } = pg;
 
 /**
  * GET /api/suspension/[sku]
@@ -17,9 +22,11 @@ export async function GET(
     return NextResponse.json({ error: "SKU required" }, { status: 400 });
   }
 
+  const pool = new Pool({ connectionString: process.env.POSTGRES_URL });
+
   try {
     // Fetch product from database
-    const result = await db.execute(sql`
+    const result = await pool.query(`
       SELECT 
         sku,
         product_desc,
@@ -44,11 +51,12 @@ export async function GET(
         map_price,
         image_url
       FROM suspension_fitments
-      WHERE sku = ${sku}
+      WHERE sku = $1
       LIMIT 1
-    `);
+    `, [sku]);
 
     if (result.rows.length === 0) {
+      await pool.end();
       return NextResponse.json({ error: "Product not found" }, { status: 404 });
     }
 
@@ -74,9 +82,11 @@ export async function GET(
       inventory: 1,
     };
 
+    await pool.end();
     return NextResponse.json({ ok: true, product });
   } catch (error) {
     console.error("[suspension/sku] Error:", error);
+    await pool.end();
     return NextResponse.json({ error: "Failed to fetch product" }, { status: 500 });
   }
 }
