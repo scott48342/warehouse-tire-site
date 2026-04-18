@@ -5,11 +5,14 @@
  * Returns currently active visitors on the site
  * 
  * @created 2026-04-18
+ * @updated 2026-04-18 - Added cart data for visitors
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { analyticsDb, schema } from "@/lib/analytics/db";
-import { sql, gte, and, eq, desc } from "drizzle-orm";
+import { db } from "@/lib/fitment-db/db";
+import { abandonedCarts } from "@/lib/fitment-db/schema";
+import { sql, gte, and, eq, desc, inArray } from "drizzle-orm";
 import { ensureAnalyticsTables } from "@/lib/analytics/track";
 
 export const dynamic = "force-dynamic";
@@ -73,8 +76,47 @@ export async function GET(request: NextRequest) {
       .orderBy(desc(schema.analyticsSessions.lastSeenAt))
       .limit(100);
 
+    // Get cart data for these sessions
+    const sessionIds = visitors.map(v => v.sessionId).filter(Boolean);
+    let cartsBySession: Map<string, any> = new Map();
+    
+    if (sessionIds.length > 0) {
+      try {
+        const carts = await db
+          .select({
+            sessionId: abandonedCarts.sessionId,
+            cartId: abandonedCarts.cartId,
+            items: abandonedCarts.items,
+            itemCount: abandonedCarts.itemCount,
+            estimatedTotal: abandonedCarts.estimatedTotal,
+            vehicleYear: abandonedCarts.vehicleYear,
+            vehicleMake: abandonedCarts.vehicleMake,
+            vehicleModel: abandonedCarts.vehicleModel,
+            status: abandonedCarts.status,
+            customerEmail: abandonedCarts.customerEmail,
+          })
+          .from(abandonedCarts)
+          .where(
+            and(
+              inArray(abandonedCarts.sessionId, sessionIds),
+              // Only active/abandoned carts, not recovered
+              sql`${abandonedCarts.status} IN ('active', 'abandoned')`
+            )
+          );
+        
+        for (const cart of carts) {
+          if (cart.sessionId) {
+            cartsBySession.set(cart.sessionId, cart);
+          }
+        }
+      } catch (e) {
+        console.error("[Live Visitors] Failed to fetch cart data:", e);
+      }
+    }
+
     // Format visitors with computed fields
     const formattedVisitors = visitors.map(v => {
+      const cart = cartsBySession.get(v.sessionId);
       const now = Date.now();
       const lastSeenMs = new Date(v.lastSeenAt).getTime();
       const firstSeenMs = new Date(v.firstSeenAt).getTime();
@@ -108,8 +150,38 @@ export async function GET(request: NextRequest) {
         }
       }
 
+      // Format cart data if available
+      let cartData = null;
+      if (cart) {
+        const items = Array.isArray(cart.items) ? cart.items : [];
+        const wheels = items.filter((i: any) => i.type === "wheel");
+        const tires = items.filter((i: any) => i.type === "tire");
+        
+        cartData = {
+          cartId: cart.cartId,
+          itemCount: cart.itemCount || items.length,
+          total: Number(cart.estimatedTotal) || 0,
+          vehicle: cart.vehicleYear && cart.vehicleMake
+            ? `${cart.vehicleYear} ${cart.vehicleMake} ${cart.vehicleModel || ""}`.trim()
+            : null,
+          hasEmail: !!cart.customerEmail,
+          summary: [
+            wheels.length > 0 ? `${wheels.length} wheel${wheels.length > 1 ? "s" : ""}` : null,
+            tires.length > 0 ? `${tires.length} tire${tires.length > 1 ? "s" : ""}` : null,
+          ].filter(Boolean).join(", ") || "Empty",
+          items: items.slice(0, 4).map((i: any) => ({
+            type: i.type,
+            brand: i.brand,
+            model: i.model,
+            qty: i.quantity,
+            price: i.unitPrice,
+          })),
+        };
+      }
+
       return {
         id: v.sessionId.slice(0, 8), // Short ID for display
+        sessionId: v.sessionId,
         currentPage: v.currentPage || v.landingPage,
         landingPage: v.landingPage,
         pageViews: v.pageViewCount,
@@ -123,6 +195,7 @@ export async function GET(request: NextRequest) {
         lastSeenAgo: formatTimeAgo(secondsAgo),
         sessionDuration: formatDuration(sessionDurationSec),
         hostname: v.hostname,
+        cart: cartData,
       };
     });
 

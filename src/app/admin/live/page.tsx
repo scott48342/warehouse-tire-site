@@ -10,8 +10,19 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
+interface CartData {
+  cartId: string;
+  itemCount: number;
+  total: number;
+  vehicle: string | null;
+  hasEmail: boolean;
+  summary: string;
+  items: { type: string; brand: string; model: string; qty: number; price: number }[];
+}
+
 interface Visitor {
   id: string;
+  sessionId: string;
   currentPage: string;
   landingPage: string;
   pageViews: number;
@@ -23,6 +34,7 @@ interface Visitor {
   secondsAgo: number;
   lastSeenAgo: string;
   sessionDuration: string;
+  cart: CartData | null;
 }
 
 interface LiveData {
@@ -228,6 +240,9 @@ export default function LiveVisitorsPage() {
                         <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                           Duration
                         </th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                          Cart
+                        </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-700">
@@ -274,6 +289,39 @@ export default function LiveVisitorsPage() {
                           </td>
                           <td className="px-4 py-3">
                             <span className="text-sm text-gray-300">{visitor.sessionDuration}</span>
+                          </td>
+                          <td className="px-4 py-3">
+                            {visitor.cart ? (
+                              <div className="text-sm">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-green-400 font-medium">
+                                    ${visitor.cart.total.toLocaleString()}
+                                  </span>
+                                  <span className="text-gray-500">
+                                    ({visitor.cart.itemCount} items)
+                                  </span>
+                                </div>
+                                {visitor.cart.vehicle && (
+                                  <div className="text-xs text-gray-400 truncate max-w-[200px]">
+                                    🚗 {visitor.cart.vehicle}
+                                  </div>
+                                )}
+                                <div className="text-xs text-gray-500">
+                                  {visitor.cart.summary}
+                                </div>
+                                {visitor.cart.hasEmail && (
+                                  <span className="text-xs text-blue-400">📧 Has email</span>
+                                )}
+                                <Link 
+                                  href={`/admin/abandoned-carts/${visitor.cart.cartId}`}
+                                  className="text-xs text-blue-400 hover:underline ml-2"
+                                >
+                                  View →
+                                </Link>
+                              </div>
+                            ) : (
+                              <span className="text-gray-500 text-sm">—</span>
+                            )}
                           </td>
                         </tr>
                       ))}
