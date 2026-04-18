@@ -30,23 +30,133 @@ const LIFT_KIT_TIRE_SIZES: Record<number, string[]> = {
   6: ["37x12.50R20", "35x12.50R22", "37x13.50R18", "38x13.50R20"],
 };
 
-// Lift Kit Suggestion Component - contextual upsell for lift kits
+// Types for lift kit data from API
+interface LiftKitData {
+  sku: string;
+  name: string;
+  brand: string;
+  productType: string;
+  liftHeight: number | null;
+  liftLevel: string | null;
+  yearRange: string;
+  msrp: number | null;
+  mapPrice: number | null;
+  imageUrl: string | null;
+  inStock: boolean;
+  inventory: number;
+}
+
+interface LiftKitsByLevel {
+  liftLevel: string;
+  label: string;
+  inches: number;
+  kits: LiftKitData[];
+  count: number;
+}
+
+// Lift Kit Suggestion Component - shows available lift kits for the vehicle
 function LiftKitSuggestion({ 
   liftInches, 
   make, 
-  model 
+  model,
+  year,
 }: { 
   liftInches: number; 
   make: string; 
   model: string;
+  year: string;
 }) {
+  const [loading, setLoading] = useState(true);
+  const [kits, setKits] = useState<LiftKitData[]>([]);
+  const [byLevel, setByLevel] = useState<LiftKitsByLevel[]>([]);
+  const [hasKits, setHasKits] = useState(false);
+
+  // Map lift inches to level ID
+  const liftLevel = liftInches <= 2 ? "leveled" : liftInches <= 4 ? "4in" : liftInches <= 6 ? "6in" : "8in";
+
+  useEffect(() => {
+    const fetchKits = async () => {
+      setLoading(true);
+      try {
+        const params = new URLSearchParams({
+          year,
+          make,
+          model,
+          liftLevel,
+          inStockOnly: "true",
+          pageSize: "6",
+        });
+        const res = await fetch(`/api/suspension/search?${params}`);
+        if (res.ok) {
+          const data = await res.json();
+          setKits(data.results || []);
+          setByLevel(data.byLevel || []);
+          setHasKits((data.results?.length || 0) > 0 || (data.byLevel?.length || 0) > 0);
+        }
+      } catch {
+        setHasKits(false);
+      }
+      setLoading(false);
+    };
+
+    if (year && make && model) {
+      fetchKits();
+    }
+  }, [year, make, model, liftLevel]);
+
   const tireSizes = LIFT_KIT_TIRE_SIZES[liftInches] || LIFT_KIT_TIRE_SIZES[4];
   const displaySizes = tireSizes.slice(0, 2);
 
-  // Future: link to actual lift kit category filtered by vehicle + lift height
-  // For now, placeholder link that can be activated when category exists
-  const liftKitUrl = "#lift-kits-coming-soon";
-  const isEnabled = false; // Set to true when lift kit category is ready
+  // Build URL to lift kit search
+  const liftKitSearchUrl = `/suspension?year=${encodeURIComponent(year)}&make=${encodeURIComponent(make)}&model=${encodeURIComponent(model)}&liftLevel=${liftLevel}`;
+
+  if (loading) {
+    return (
+      <div className="rounded-xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-4">
+        <div className="flex items-center gap-3">
+          <div className="h-5 w-5 animate-spin rounded-full border-2 border-purple-300 border-t-purple-600" />
+          <span className="text-sm text-purple-700">Checking for lift kits...</span>
+        </div>
+      </div>
+    );
+  }
+
+  // No kits available - show informational message
+  if (!hasKits) {
+    return (
+      <div className="rounded-xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-4">
+        <div className="flex items-start gap-3">
+          <div className="flex-shrink-0 mt-0.5">
+            <span className="text-2xl">🔧</span>
+          </div>
+          <div className="flex-1">
+            <h4 className="font-bold text-neutral-900">Need a lift kit?</h4>
+            <p className="mt-1 text-sm text-neutral-700">
+              A <span className="font-semibold text-purple-700">{liftInches}" lift</span> supports larger tire sizes like:
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {displaySizes.map((size) => (
+                <span
+                  key={size}
+                  className="inline-flex items-center rounded-lg bg-white border border-purple-200 px-2.5 py-1 text-sm font-semibold text-purple-800"
+                >
+                  • {size}
+                </span>
+              ))}
+            </div>
+            <div className="mt-3 flex items-center gap-2 text-sm text-purple-700">
+              <span>Call us for lift kit recommendations</span>
+              <a href="tel:+12483324120" className="font-bold underline">248-332-4120</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show available lift kits
+  const displayKits = kits.slice(0, 3);
+  const formatPrice = (price: number | null) => price ? `$${price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : null;
 
   return (
     <div className="rounded-xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-4">
@@ -55,45 +165,66 @@ function LiftKitSuggestion({
           <span className="text-2xl">🔧</span>
         </div>
         <div className="flex-1">
-          <h4 className="font-bold text-neutral-900">Running a lift?</h4>
+          <div className="flex items-center justify-between">
+            <h4 className="font-bold text-neutral-900">Add a Lift Kit</h4>
+            <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">
+              {kits.length} Available
+            </span>
+          </div>
           <p className="mt-1 text-sm text-neutral-700">
-            A <span className="font-semibold text-purple-700">{liftInches}" lift</span> supports larger tire sizes like:
+            Complete your {liftInches}" lifted build with one of these kits:
           </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {displaySizes.map((size) => (
-              <span
-                key={size}
-                className="inline-flex items-center rounded-lg bg-white border border-purple-200 px-2.5 py-1 text-sm font-semibold text-purple-800"
+          
+          {/* Lift Kit Cards */}
+          <div className="mt-3 space-y-2">
+            {displayKits.map((kit) => (
+              <div 
+                key={kit.sku}
+                className="flex items-center gap-3 rounded-lg bg-white border border-purple-200 p-3"
               >
-                • {size}
-              </span>
+                {kit.imageUrl && (
+                  <img 
+                    src={kit.imageUrl} 
+                    alt={kit.name}
+                    className="h-14 w-14 rounded object-cover bg-neutral-100"
+                  />
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold text-neutral-900 truncate">{kit.name}</div>
+                  <div className="text-xs text-neutral-600">{kit.brand}</div>
+                  {kit.liftHeight && (
+                    <div className="text-xs text-purple-600 font-medium">{kit.liftHeight}" Lift</div>
+                  )}
+                </div>
+                <div className="text-right">
+                  {kit.msrp && (
+                    <div className="text-sm font-bold text-neutral-900">{formatPrice(kit.msrp)}</div>
+                  )}
+                  {kit.inStock && (
+                    <span className="text-xs text-green-600 font-medium">In Stock</span>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
-          {isEnabled ? (
-            <Link
-              href={liftKitUrl}
-              onClick={() => {
-                trackLiftKitSuggestionClick({
-                  liftInches,
-                  make,
-                  model,
-                });
-              }}
-              className="mt-3 inline-flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-purple-700 transition-colors"
-            >
-              <span>View Compatible Lift Kits</span>
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          ) : (
-            <div className="mt-3 flex items-center gap-2 text-sm text-purple-700">
-              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-xs font-semibold">
-                Coming Soon
-              </span>
-              <span>Lift kits available soon — call for recommendations</span>
-            </div>
-          )}
+
+          {/* View All Link */}
+          <Link
+            href={liftKitSearchUrl}
+            onClick={() => {
+              trackLiftKitSuggestionClick({
+                liftInches,
+                make,
+                model,
+              });
+            }}
+            className="mt-3 inline-flex items-center gap-2 rounded-xl bg-purple-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-purple-700 transition-colors"
+          >
+            <span>View All {kits.length} Lift Kits</span>
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>
@@ -663,8 +794,9 @@ function RecommendationPanel({
         {/* Lift Kit Suggestion - contextual upsell */}
         <LiftKitSuggestion
           liftInches={liftPreset.liftInches}
-          make={profile.make}
-          model={profile.model}
+          make={vehicle.make}
+          model={vehicle.model}
+          year={vehicle.year}
         />
 
         {/* Category Link */}
