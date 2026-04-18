@@ -41,7 +41,7 @@ const INTERNAL_EMAIL_PATTERNS = [
 const INTERNAL_IPS = [
   "127.0.0.1",
   "::1",
-  // Add office/home IPs here as needed
+  "76.112.89.59", // Scott's home IP (added 2026-04-18)
 ];
 
 /** Test mode cookie name */

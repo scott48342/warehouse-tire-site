@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { trackPageView, shouldTrack } from "@/lib/analytics/track";
 import { cookies } from "next/headers";
+import { isInternalIP } from "@/lib/testData";
 
 const SESSION_COOKIE = "_wtd_sid";
 const SESSION_MAX_AGE = 60 * 30; // 30 minutes
@@ -27,6 +28,17 @@ export async function POST(request: NextRequest) {
     // Check if we should track this path
     if (!shouldTrack(path)) {
       return NextResponse.json({ tracked: false, reason: "excluded" });
+    }
+
+    // Get IP address from headers
+    const forwardedFor = request.headers.get("x-forwarded-for");
+    const ipAddress = forwardedFor?.split(",")[0]?.trim() || 
+                      request.headers.get("x-real-ip") || 
+                      null;
+
+    // Skip tracking for internal IPs (owner testing)
+    if (ipAddress && isInternalIP(ipAddress)) {
+      return NextResponse.json({ tracked: false, reason: "internal_ip" });
     }
 
     // Get or create session
