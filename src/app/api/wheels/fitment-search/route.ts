@@ -879,16 +879,22 @@ async function handleDbProfilePath(
   // Detect staggered fitment from parsed wheel sizes
   let staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
   
-  // If wheel specs are insufficient, try inferring staggered from tire sizes
-  // This catches cases like BMW M3 where tire sizes (255 vs 275) indicate staggered
-  // but wheel specs are incomplete or don't have axle labels
-  if (!staggeredInfo.isStaggered && staggeredInfo.reason.includes("Insufficient")) {
-    const tireSizeInference = inferStaggeredFromTireSizes(dbProfile.oemTireSizes || []);
-    if (tireSizeInference) {
-      staggeredInfo = tireSizeInference;
-      console.log(`[fitment-search] STAGGERED FITMENT (tire size inference): ${staggeredInfo.reason}`);
-    }
-  }
+  // NOTE: Tire-size-based staggered inference DISABLED (2025-07-27)
+  // Problem: Multiple tire widths (e.g., 225/65R17 + 245/65R17) are often just OPTIONS
+  // for different trims/packages, NOT actual staggered fitment (front/rear difference).
+  // This was causing false positives on vehicles like Cherokee that have tire OPTIONS.
+  // 
+  // If a vehicle is truly staggered (Corvette, Mustang GT, BMW M cars), the wheel specs
+  // should have explicit front/rear axle assignments in oemWheelSizes.
+  // 
+  // Keeping inferStaggeredFromTireSizes() for reference but not calling it.
+  // if (!staggeredInfo.isStaggered && staggeredInfo.reason.includes("Insufficient")) {
+  //   const tireSizeInference = inferStaggeredFromTireSizes(dbProfile.oemTireSizes || []);
+  //   if (tireSizeInference) {
+  //     staggeredInfo = tireSizeInference;
+  //     console.log(`[fitment-search] STAGGERED FITMENT (tire size inference): ${staggeredInfo.reason}`);
+  //   }
+  // }
   
   // Populate missing tireSize in staggered specs from OEM tire sizes
   // This handles cases like Corvette where wheel specs exist but tireSize is null

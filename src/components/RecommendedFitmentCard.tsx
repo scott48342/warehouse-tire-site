@@ -19,8 +19,13 @@ type AxleFitment = {
 
 function fmtRange(a?: number, b?: number, unit?: string) {
   if (a == null || b == null) return "";
-  if (a === b) return `${a}${unit ?? ""}`;
-  return `${a}–${b}${unit ?? ""}`;
+  // Round to nearest 0.5 for wheel widths (values like 8.858... → 9)
+  // Round to whole number for diameters
+  const isWidth = unit === '"' && a < 15 && b < 15;
+  const roundedA = isWidth ? Math.round(a * 2) / 2 : Math.round(a);
+  const roundedB = isWidth ? Math.round(b * 2) / 2 : Math.round(b);
+  if (roundedA === roundedB) return `${roundedA}${unit ?? ""}`;
+  return `${roundedA}–${roundedB}${unit ?? ""}`;
 }
 
 function minMax(vals: number[]): [number, number] | undefined {
