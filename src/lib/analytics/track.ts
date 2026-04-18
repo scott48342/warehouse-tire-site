@@ -16,6 +16,8 @@ interface TrackPageViewParams {
   referrer?: string | null;
   userAgent?: string | null;
   country?: string | null;
+  city?: string | null;
+  region?: string | null;
   isNewSession: boolean;
   // Test detection context
   cookies?: Record<string, string>;
@@ -90,6 +92,25 @@ export async function ensureAnalyticsTables() {
     await analyticsDb.execute(sql`
       CREATE INDEX IF NOT EXISTS analytics_pageviews_hostname_idx 
       ON analytics_pageviews(hostname)
+    `);
+
+    // Add live tracking columns (migration 2026-04-18)
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ADD COLUMN IF NOT EXISTS current_page VARCHAR(500)
+    `);
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ADD COLUMN IF NOT EXISTS city VARCHAR(100)
+    `);
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ADD COLUMN IF NOT EXISTS region VARCHAR(100)
+    `);
+    // Index for live visitors query (active in last N minutes)
+    await analyticsDb.execute(sql`
+      CREATE INDEX IF NOT EXISTS analytics_sessions_last_seen_idx 
+      ON analytics_sessions(last_seen_at)
     `);
 
     await analyticsDb.execute(sql`
@@ -177,7 +198,7 @@ function detectTestSession(params: {
  * Track a page view
  */
 export async function trackPageView(params: TrackPageViewParams) {
-  const { sessionId, path, fullUrl, referrer, userAgent, country, isNewSession, cookies, headers, hostname } = params;
+  const { sessionId, path, fullUrl, referrer, userAgent, country, city, region, isNewSession, cookies, headers, hostname } = params;
   
   const botFlag = isBot(userAgent);
   const deviceType = getDeviceType(userAgent);
@@ -196,11 +217,14 @@ export async function trackPageView(params: TrackPageViewParams) {
         .values({
           sessionId,
           landingPage: path,
+          currentPage: path,
           referrer: referrer || null,
           userAgent: userAgent || null,
           deviceType,
           isBot: botFlag,
           country: country || null,
+          city: city || null,
+          region: region || null,
           isTest: testDetection.isTest,
           testReason: testDetection.reason,
           hostname: hostname || null,
@@ -213,7 +237,12 @@ export async function trackPageView(params: TrackPageViewParams) {
         .update(schema.analyticsSessions)
         .set({
           lastSeenAt: new Date(),
+          currentPage: path,
           pageViewCount: sql`page_view_count + 1`,
+          // Update location if available (might change on mobile)
+          ...(city && { city }),
+          ...(region && { region }),
+          ...(country && { country }),
           // If test mode detected mid-session, mark it (only upgrade, never downgrade)
           ...(testDetection.isTest && {
             isTest: true,

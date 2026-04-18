@@ -38,6 +38,10 @@ export const analyticsSessions = pgTable(
     testReason: varchar("test_reason", { length: 100 }),
     // Site/hostname tracking (added 2026-04-18)
     hostname: varchar("hostname", { length: 100 }),
+    // Live tracking (added 2026-04-18)
+    currentPage: varchar("current_page", { length: 500 }),
+    city: varchar("city", { length: 100 }),
+    region: varchar("region", { length: 100 }),
   },
   (table) => ({
     sessionIdx: index("analytics_sessions_session_id_idx").on(table.sessionId),

@@ -53,6 +53,8 @@ export async function POST(request: NextRequest) {
     // Get metadata from headers
     const userAgent = request.headers.get("user-agent");
     const country = request.headers.get("x-vercel-ip-country");
+    const city = request.headers.get("x-vercel-ip-city");
+    const region = request.headers.get("x-vercel-ip-country-region");
     const fullUrl = request.headers.get("referer") || `https://shop.warehousetiredirect.com${path}`;
     
     // Get hostname from request (for multi-site tracking)
@@ -66,6 +68,8 @@ export async function POST(request: NextRequest) {
       referrer: referrer || request.headers.get("referer"),
       userAgent,
       country,
+      city,
+      region,
       isNewSession,
       hostname,
     });
