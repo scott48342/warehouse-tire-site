@@ -72,10 +72,17 @@ export async function GET(req: Request) {
     }, { status: 400 });
   }
 
-  // Get supplier credentials
-  const wpCreds = await getSupplierCredentials("wheelpros");
+  let wpCreds: { customerNumber?: string } = {};
+  let customer = "1022165"; // fallback
+  
+  try {
+    wpCreds = await getSupplierCredentials("wheelpros");
+    customer = wpCreds.customerNumber || "1022165";
+  } catch (credErr: any) {
+    console.warn("[accessories/search] Failed to get supplier credentials, using fallback:", credErr?.message);
+  }
+  
   const company = "1500"; // USD
-  const customer = wpCreds.customerNumber || "1022165";
 
   try {
     // Build filters from category or use direct query
@@ -142,9 +149,11 @@ export async function GET(req: Request) {
 
   } catch (err: any) {
     console.error("[accessories/search] Error:", err?.message || err);
+    console.error("[accessories/search] Stack:", err?.stack);
     return NextResponse.json({ 
       error: "Failed to search accessories",
       detail: err?.message,
+      stack: process.env.NODE_ENV === "development" ? err?.stack : undefined,
     }, { status: 500 });
   }
 }
