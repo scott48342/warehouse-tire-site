@@ -196,7 +196,7 @@ export function Header() {
 
         {/* Mobile: use tap-based modals via the action bar / simple buttons below */}
         <div className="w-full md:hidden">
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-3 gap-2">
             <button
               type="button"
               onClick={() => openLauncher("tires")}
@@ -211,6 +211,12 @@ export function Header() {
             >
               Wheels
             </button>
+            <Link
+              href="/wheels"
+              className="flex h-11 items-center justify-center rounded-xl border border-amber-300 bg-amber-50 px-3 text-sm font-extrabold text-amber-700"
+            >
+              Lifted
+            </Link>
           </div>
         </div>
 
@@ -310,6 +316,39 @@ export function Header() {
               <span>💰</span>
               REBATES
             </Link>
+
+            <details className="group relative">
+              <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-amber-700 hover:border-amber-200">
+                LIFTED <span className="text-xs">▾</span>
+              </summary>
+              <div className="absolute left-0 top-full z-[80] mt-2 w-72 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
+                <Link
+                  href="/wheels"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left hover:bg-amber-50"
+                >
+                  <div className="text-sm font-semibold text-neutral-900">Build Your Lifted Truck</div>
+                  <div className="text-xs text-neutral-500">Pick your lift, then shop wheels & tires</div>
+                </Link>
+                <Link
+                  href="/suspension"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left hover:bg-amber-50"
+                >
+                  <div className="text-sm font-semibold text-neutral-900">Shop Lift Kits</div>
+                  <div className="text-xs text-neutral-500">Browse by vehicle & lift height</div>
+                </Link>
+                <div className="my-2 h-px bg-neutral-200" />
+                <Link
+                  href="/lifted"
+                  onClick={() => closeMenus()}
+                  className="block rounded-xl px-3 py-2 text-left hover:bg-amber-50"
+                >
+                  <div className="text-sm font-semibold text-neutral-900">Lifted Tire Guide</div>
+                  <div className="text-xs text-neutral-500">Recommendations by lift level</div>
+                </Link>
+              </div>
+            </details>
 
             <details className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
