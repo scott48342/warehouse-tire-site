@@ -206,6 +206,8 @@ export async function GET(request: NextRequest) {
     
     // Group by level if requested
     let byLevel: any[] | undefined;
+    let ungroupedKits: typeof mappedResults = [];
+    
     if (groupByLevel) {
       const levelOrder: LiftLevel[] = ["leveled", "4in", "6in", "8in"];
       const levelMap = new Map<LiftLevel, typeof mappedResults>();
@@ -215,6 +217,9 @@ export async function GET(request: NextRequest) {
         if (level) {
           if (!levelMap.has(level)) levelMap.set(level, []);
           levelMap.get(level)!.push(kit);
+        } else {
+          // Products without lift_height go to ungrouped
+          ungroupedKits.push(kit);
         }
       }
       
@@ -233,6 +238,20 @@ export async function GET(request: NextRequest) {
             count: (levelMap.get(level) || []).length,
           };
         });
+      
+      // Add ungrouped section if there are products without lift_height
+      if (ungroupedKits.length > 0) {
+        byLevel.push({
+          liftLevel: "other",
+          label: "Other Suspension Parts",
+          inches: null,
+          offsetMin: null,
+          offsetMax: null,
+          targetTireSizes: [],
+          kits: ungroupedKits,
+          count: ungroupedKits.length,
+        });
+      }
     }
     
     return NextResponse.json({
