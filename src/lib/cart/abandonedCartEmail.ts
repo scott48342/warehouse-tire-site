@@ -10,7 +10,8 @@
  * @updated 2026-04-03 - Full 3-email sequence with subscriber consent check
  */
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
+import pg from "pg";
 import { BRAND } from "@/lib/brand";
 import { db } from "@/lib/fitment-db/db";
 import { abandonedCarts, emailSubscribers, type AbandonedCart } from "@/lib/fitment-db/schema";
@@ -38,9 +39,6 @@ const EMAIL_COOLDOWN_HOURS = 6;
 
 /** Base URL for recovery links */
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://shop.warehousetiredirect.com";
-
-/** From email address */
-const FROM_EMAIL = process.env.EMAIL_FROM || "orders@warehousetiredirect.com";
 
 // ============================================================================
 // Types
@@ -81,16 +79,75 @@ export interface CartEmailStatus {
 }
 
 // ============================================================================
-// Resend Client
+// SMTP Client (Office 365 via admin_settings)
 // ============================================================================
 
-function getResendClient(): Resend | null {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.warn("[abandonedCartEmail] RESEND_API_KEY not configured");
+const { Pool } = pg;
+
+type EmailSettings = {
+  enabled: boolean;
+  smtpHost: string;
+  smtpPort: number;
+  smtpUser: string;
+  smtpPass: string;
+  fromEmail: string;
+  fromName: string;
+  notifyEmail: string;
+};
+
+async function getEmailSettings(): Promise<EmailSettings | null> {
+  const url = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!url) return null;
+  
+  const pool = new Pool({
+    connectionString: url,
+    ssl: { rejectUnauthorized: false },
+    max: 2,
+  });
+  
+  try {
+    const { rows } = await pool.query(
+      `SELECT value FROM admin_settings WHERE key = 'email'`
+    );
+
+    if (rows.length === 0) return null;
+
+    const val = rows[0].value;
+    if (!val || !val.enabled) return null;
+
+    return {
+      enabled: !!val.enabled,
+      smtpHost: val.smtpHost || "",
+      smtpPort: parseInt(val.smtpPort, 10) || 587,
+      smtpUser: val.smtpUser || "",
+      smtpPass: val.smtpPass || "",
+      fromEmail: val.fromEmail || "",
+      fromName: val.fromName || BRAND.name,
+      notifyEmail: val.notifyEmail || "",
+    };
+  } catch (err) {
+    console.error("[abandonedCartEmail] Failed to get email settings:", err);
     return null;
+  } finally {
+    await pool.end();
   }
-  return new Resend(apiKey);
+}
+
+async function getTransporter(settings: EmailSettings) {
+  return nodemailer.createTransport({
+    host: settings.smtpHost,
+    port: settings.smtpPort,
+    secure: settings.smtpPort === 465,
+    auth: {
+      user: settings.smtpUser,
+      pass: settings.smtpPass,
+    },
+    requireTLS: settings.smtpPort === 587,
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false,
+    },
+  });
 }
 
 // ============================================================================
@@ -451,30 +508,34 @@ export async function sendRecoveryEmail(
     return { success: true, cartId, step, action: "logged", reason: "safe_mode" };
   }
 
-  const resend = getResendClient();
-  if (!resend) {
-    return { success: false, cartId, step, action: "skipped", reason: "resend_not_configured" };
+  // Get SMTP settings from admin_settings (Office 365)
+  const settings = await getEmailSettings();
+  if (!settings) {
+    console.warn("[abandonedCartEmail] Email not configured in admin settings");
+    return { success: false, cartId, step, action: "skipped", reason: "smtp_not_configured" };
+  }
+
+  if (!settings.smtpHost || !settings.smtpUser || !settings.smtpPass) {
+    console.warn("[abandonedCartEmail] SMTP settings incomplete");
+    return { success: false, cartId, step, action: "skipped", reason: "smtp_incomplete" };
   }
 
   try {
-    const { data, error } = await resend.emails.send({
-      from: `${BRAND.name} <${FROM_EMAIL}>`,
+    const transporter = await getTransporter(settings);
+    const fromAddress = `"${settings.fromName}" <${settings.fromEmail}>`;
+
+    const result = await transporter.sendMail({
+      from: fromAddress,
       to: cart.customerEmail,
       subject,
       html,
       replyTo: BRAND.email,
     });
 
-    if (error) {
-      console.error(`[abandonedCartEmail] Resend error:`, error);
-      await updateEmailTracking(cartId, step, "failed");
-      return { success: false, cartId, step, action: "skipped", reason: error.message };
-    }
-
-    console.log(`[abandonedCartEmail] Sent ${step} to ${cart.customerEmail}, id: ${data?.id}`);
+    console.log(`[abandonedCartEmail] Sent ${step} to ${cart.customerEmail}, id: ${result.messageId}`);
     await updateEmailTracking(cartId, step, "sent");
 
-    return { success: true, cartId, step, action: "sent", messageId: data?.id };
+    return { success: true, cartId, step, action: "sent", messageId: result.messageId };
   } catch (err: any) {
     console.error(`[abandonedCartEmail] Failed:`, err.message);
     await updateEmailTracking(cartId, step, "failed");
