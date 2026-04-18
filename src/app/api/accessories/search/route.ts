@@ -95,8 +95,7 @@ export async function GET(req: Request) {
     for (const filter of filters) {
       const response = await searchAccessories({
         filter,
-        // NOTE: Don't request "media" yet - test if basic API works first
-        fields: "inventory,price",
+        fields: "inventory,price,media",
         priceType: "msrp,map,nip",
         company,
         customer,
