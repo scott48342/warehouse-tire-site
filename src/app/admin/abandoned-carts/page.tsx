@@ -38,6 +38,8 @@ interface AbandonedCart {
   hasWheels: boolean;
   hasTires: boolean;
   hasAccessories: boolean;
+  // Site/hostname
+  hostname: string | null;
 }
 
 interface Stats {
@@ -316,6 +318,7 @@ export default function AbandonedCartsPage() {
   const [error, setError] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<string>("default"); // default = active + abandoned
   const [engagementFilter, setEngagementFilter] = useState<string>(""); // "", opened, clicked, high-intent
+  const [siteFilter, setSiteFilter] = useState<string>(""); // "", national, local, pos
   const [processing, setProcessing] = useState(false);
   const [showLifecyclePanel, setShowLifecyclePanel] = useState(false);
 
@@ -330,6 +333,9 @@ export default function AbandonedCartsPage() {
       if (engagementFilter) {
         params.set("engagement", engagementFilter);
       }
+      if (siteFilter) {
+        params.set("site", siteFilter);
+      }
 
       const res = await fetch(`/api/admin/abandoned-carts?${params}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -343,7 +349,7 @@ export default function AbandonedCartsPage() {
     } finally {
       setLoading(false);
     }
-  }, [statusFilter, engagementFilter]);
+  }, [statusFilter, engagementFilter, siteFilter]);
 
   const fetchLifecycleCounts = useCallback(async () => {
     try {
@@ -878,6 +884,39 @@ export default function AbandonedCartsPage() {
             <span>🖱️ {stats.engagement.clicked} clicked</span>
             <span className="text-orange-400">🎯 {stats.engagement.highIntent} high-intent</span>
           </div>
+        )}
+      </div>
+
+      {/* Site Filter */}
+      <div className="flex items-center gap-4 mb-4">
+        <span className="text-sm text-neutral-400">Site:</span>
+        <div className="flex gap-2">
+          {[
+            { key: "", label: "All Sites", icon: "🌐" },
+            { key: "national", label: "National", icon: "🏪" },
+            { key: "local", label: "Local", icon: "📍" },
+            { key: "pos", label: "POS", icon: "💳" },
+          ].map((filter) => (
+            <button
+              key={filter.key}
+              onClick={() => setSiteFilter(filter.key)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center gap-1.5 ${
+                siteFilter === filter.key
+                  ? "bg-blue-600 text-white"
+                  : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+              }`}
+            >
+              <span>{filter.icon}</span>
+              <span>{filter.label}</span>
+            </button>
+          ))}
+        </div>
+        {siteFilter && (
+          <span className="text-xs text-blue-400 ml-2">
+            Filtering by {siteFilter === "national" ? "shop.warehousetiredirect.com" : 
+                         siteFilter === "local" ? "shop.warehousetire.net" : 
+                         "pos.warehousetiredirect.com"}
+          </span>
         )}
       </div>
 

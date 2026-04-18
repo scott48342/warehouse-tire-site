@@ -557,6 +557,9 @@ export const abandonedCarts = pgTable(
     // Test data exclusion
     isTest: boolean("is_test").notNull().default(false),
     testReason: varchar("test_reason", { length: 100 }), // internal_email, test_mode, admin_marked, stripe_test, internal_ip
+    
+    // Site/hostname tracking (added 2025-07-25)
+    hostname: varchar("hostname", { length: 100 }),
   },
   (table) => ({
     // Unique cart id
@@ -572,6 +575,8 @@ export const abandonedCarts = pgTable(
     isTestIdx: index("abandoned_carts_is_test_idx").on(table.isTest),
     // Email engagement (high-intent users who opened/clicked but didn't convert)
     emailEngagementIdx: index("abandoned_carts_email_engagement_idx").on(table.emailOpenedAt, table.emailClickedAt),
+    // Site/hostname filtering
+    hostnameIdx: index("abandoned_carts_hostname_idx").on(table.hostname),
   })
 );
 

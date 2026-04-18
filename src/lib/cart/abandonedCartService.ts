@@ -26,6 +26,40 @@ import { detectTestData, type TestDetectionContext } from "@/lib/testData";
 /** Time after last activity before cart is considered abandoned (30 minutes) */
 export const ABANDONMENT_THRESHOLD_MS = 30 * 60 * 1000;
 
+// ============================================================================
+// Migrations (run once on startup)
+// ============================================================================
+
+let migrationRan = false;
+
+/**
+ * Ensure hostname column exists in abandoned_carts table
+ * Added 2025-07-25 for site filtering
+ */
+export async function ensureHostnameColumn(): Promise<void> {
+  if (migrationRan) return;
+  
+  try {
+    // Add hostname column if missing
+    await db.execute(sql`
+      ALTER TABLE abandoned_carts 
+      ADD COLUMN IF NOT EXISTS hostname VARCHAR(100)
+    `);
+    
+    // Create index for hostname filtering
+    await db.execute(sql`
+      CREATE INDEX IF NOT EXISTS abandoned_carts_hostname_idx 
+      ON abandoned_carts(hostname)
+    `);
+    
+    migrationRan = true;
+    console.log("[AbandonedCart] Hostname column migration complete");
+  } catch (err) {
+    // Column might already exist with different syntax, ignore
+    migrationRan = true;
+  }
+}
+
 /** Days before cart expires (7 days) */
 export const EXPIRY_DAYS = 7;
 
@@ -59,6 +93,8 @@ export interface CartTrackingData {
   source?: string;
   userAgent?: string;
   ipAddress?: string;
+  // Site/hostname tracking (added 2025-07-25)
+  hostname?: string;
   // Test data detection context
   testContext?: Partial<TestDetectionContext>;
   // Explicit test marking
@@ -103,6 +139,9 @@ export interface AbandonedCartStats {
  * Track or update a cart snapshot
  */
 export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> {
+  // Ensure hostname column exists (runs once)
+  await ensureHostnameColumn();
+  
   const {
     cartId,
     sessionId,
@@ -114,6 +153,7 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
     source,
     userAgent,
     ipAddress,
+    hostname,
   } = data;
 
   // Skip tracking for empty or very low value carts
@@ -228,6 +268,8 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
         source: source || existing.source,
         userAgent: userAgent || existing.userAgent,
         ipAddress: ipAddress || existing.ipAddress,
+        // Hostname - only set if not already captured
+        hostname: hostname || existing.hostname,
         // Test data - only upgrade to test, never downgrade
         isTest: isTest || existing.isTest,
         testReason: testReason || existing.testReason,
@@ -254,6 +296,7 @@ export async function trackCart(data: CartTrackingData): Promise<AbandonedCart> 
       vehicleTrim: vehicle?.trim,
       items,
       itemCount,
+      hostname,
       subtotal: String(subtotal),
       estimatedTotal: String(estimatedTotal),
       status: "active",
@@ -372,6 +415,15 @@ export async function getCart(cartId: string): Promise<AbandonedCart | null> {
  */
 export type EngagementFilter = "any" | "opened" | "clicked" | "opened-not-clicked" | "high-intent";
 
+// Site hostname mappings (matches analytics)
+export const SITE_HOSTNAMES: Record<string, string[]> = {
+  national: ["shop.warehousetiredirect.com"],
+  local: ["shop.warehousetire.net", "warehousetire.net"],
+  pos: ["pos.warehousetiredirect.com"],
+};
+
+export type SiteFilter = "national" | "local" | "pos";
+
 export async function listCarts(options: {
   status?: CartStatus | CartStatus[];
   limit?: number;
@@ -381,8 +433,10 @@ export async function listCarts(options: {
   includeTest?: boolean;
   /** Filter by email engagement level */
   engagement?: EngagementFilter;
+  /** Filter by site (national, local, pos) */
+  site?: SiteFilter;
 }): Promise<{ carts: AbandonedCart[]; total: number }> {
-  const { status, limit = 50, offset = 0, orderBy = "priority", includeTest = false, engagement } = options;
+  const { status, limit = 50, offset = 0, orderBy = "priority", includeTest = false, engagement, site } = options;
 
   // Build where conditions
   const conditions: any[] = [];
@@ -422,6 +476,19 @@ export async function listCarts(options: {
         conditions.push(isNotNull(abandonedCarts.emailClickedAt));
         conditions.push(eq(abandonedCarts.status, "abandoned"));
         break;
+    }
+  }
+
+  // Site/hostname filter
+  if (site && SITE_HOSTNAMES[site]) {
+    const hostnames = SITE_HOSTNAMES[site];
+    if (hostnames.length === 1) {
+      conditions.push(eq(abandonedCarts.hostname, hostnames[0]));
+    } else {
+      // Multiple hostnames for one site (e.g., local has both warehousetire.net variants)
+      conditions.push(
+        or(...hostnames.map(h => eq(abandonedCarts.hostname, h)))
+      );
     }
   }
 

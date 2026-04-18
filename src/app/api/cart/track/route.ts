@@ -90,6 +90,9 @@ export async function POST(req: Request) {
     const forwardedFor = hdrs.get("x-forwarded-for");
     const ipAddress = forwardedFor?.split(",")[0]?.trim() || hdrs.get("x-real-ip") || undefined;
     
+    // Extract hostname for site tracking (national vs local vs POS)
+    const hostname = hdrs.get("host") || hdrs.get("x-forwarded-host") || undefined;
+    
     // Build test detection context from request
     const cookieHeader = hdrs.get("cookie");
     const cookieRecord = parseCookies(cookieHeader);
@@ -131,6 +134,8 @@ export async function POST(req: Request) {
       source,
       userAgent,
       ipAddress,
+      // Site/hostname tracking for national vs local vs POS
+      hostname,
       // Pass test context for additional detection (email pattern, etc.)
       testContext: {
         cookies: cookieRecord,

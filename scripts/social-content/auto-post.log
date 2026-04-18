@@ -1539,3 +1539,132 @@ $237/wheel
 
 ✨ Done!
 [Fri 04/17/2026 18:00:30.10] Auto-post complete 
+[Sat 04/18/2026  9:00:01.82] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:8552) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Pro Comp Alloys PA202 BASECAMP
+  ⚠️ No matching vehicle for bolt pattern 6X120, using generic caption
+  Downloading image for Pro Comp Alloys PA202 BASECAMP...
+  ✅ Generated: pa202_basecamp_1776517203790
+  📝 Caption preview: Transform your truck with the Pro Comp Alloys PA202 BASECAMP 🛞
+
+📐 17x8
+🔩 6X12...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pa202_basecamp_1776517203790.png
+  - pa202_basecamp_1776517203790.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pa202_basecamp_1776517203790
+
+--- Content Preview ---
+Wheel: Pro Comp Alloys PA202 BASECAMP
+Price: $262
+Image: pa202_basecamp_1776517203790.png
+
+Caption:
+Transform your truck with the Pro Comp Alloys PA202 BASECAMP 🛞
+
+📐 17x8
+🔩 6X120
+↔️ 20mm offset
+✨ BASECAMP 17X8 6X120 66 +20 M-BLK
+
+$262/wheel
+
+🛒 https://shop.warehousetiredirect.com/wheels/PA202MX17807720
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #procompalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1580458714082255
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:6820) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC D665 SHOK
+  Downloading image for Fuel 1PC D665 SHOK...
+  ✅ Generated: d665_shok_1776517215636
+  📝 Caption preview: New arrival alert! 🚨
+
+Fuel 1PC D665 SHOK
+📐 17x9
+🔩 6X5.5
+↔️ -12mm offset
+✨ SHO...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - d665_shok_1776517215636.png
+  - d665_shok_1776517215636.json
+
+📱 Facebook/Instagram Poster
+
+Selected: d665_shok_1776517215636
+
+--- Content Preview ---
+Wheel: Fuel 1PC D665 SHOK
+Price: $312
+Image: d665_shok_1776517215636.png
+
+Caption:
+New arrival alert! 🚨
+
+Fuel 1PC D665 SHOK
+📐 17x9
+🔩 6X5.5
+↔️ -12mm offset
+✨ SHOK 17X9 6X5.5 106 GD -12
+
+$312/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/D66517908445
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #suv #suvlife #offroad #fuel1pc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1726225725390091
+
+✨ Done!
+[Sat 04/18/2026  9:00:23.62] Auto-post complete 

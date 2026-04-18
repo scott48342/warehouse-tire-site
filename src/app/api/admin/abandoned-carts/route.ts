@@ -26,8 +26,10 @@ import {
   archiveExpiredCarts,
   deleteOldTestCarts,
   getLifecycleCounts,
+  SITE_HOSTNAMES,
   type CartStatus,
   type EngagementFilter,
+  type SiteFilter,
 } from "@/lib/cart/abandonedCartService";
 import {
   sendRecoveryEmail,
@@ -64,6 +66,7 @@ export async function GET(req: Request) {
   const cartId = url.searchParams.get("cartId");
   const recoverableOnly = url.searchParams.get("recoverable") === "1";
   const engagementParam = url.searchParams.get("engagement") as EngagementFilter | null;
+  const siteParam = url.searchParams.get("site") as SiteFilter | null;
 
   try {
     // Single cart lookup with email status
@@ -110,6 +113,7 @@ export async function GET(req: Request) {
       offset,
       includeTest,
       engagement: engagementParam || undefined,
+      site: siteParam || undefined,
     });
 
     // Format carts with full email tracking
@@ -187,6 +191,8 @@ export async function GET(req: Request) {
         hasWheels,
         hasTires,
         hasAccessories,
+        // Site/hostname
+        hostname: cart.hostname || null,
       };
     }));
 
@@ -209,6 +215,12 @@ export async function GET(req: Request) {
     response.testDataFilter = {
       includeTest,
       hint: includeTest ? "Showing all data including test" : "Test data hidden (add includeTest=1 to show)",
+    };
+
+    // Include site filter state
+    response.siteFilter = {
+      current: siteParam || "all",
+      hostnames: SITE_HOSTNAMES,
     };
 
     return NextResponse.json(response);
