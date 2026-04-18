@@ -675,9 +675,12 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
             Back
           </button>
 
-          <h2 className="text-xl font-extrabold text-neutral-900 mb-4">
-            Ready to shop?
+          <h2 className="text-xl font-extrabold text-neutral-900 mb-1">
+            Your build is ready
           </h2>
+          <p className="text-sm text-neutral-600 mb-4">
+            We've configured everything for your {selectedLiftLevel ? LIFT_LEVELS[selectedLiftLevel].label.toLowerCase() : "leveled"} setup.
+          </p>
 
           <RecommendedSetupSummary
             buildType={selectedBuildType}
@@ -686,17 +689,62 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
             onChangeLiftKit={currentLevelKits.length > 0 ? () => setStep("liftKit") : undefined}
           />
 
+          {/* Price Anchor */}
+          <div className="mt-4 rounded-xl bg-neutral-100 p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-xs font-semibold text-neutral-500">Complete Build Range</div>
+                <div className="text-lg font-extrabold text-neutral-900">
+                  {selectedLiftKit 
+                    ? `$${((selectedLiftKit.msrp || selectedLiftKit.mapPrice || 0) + 1200).toLocaleString()} – $${((selectedLiftKit.msrp || selectedLiftKit.mapPrice || 0) + 4500).toLocaleString()}`
+                    : "$1,800 – $5,500"
+                  }
+                </div>
+                <div className="text-xs text-neutral-500">
+                  {selectedLiftKit ? "Lift kit + wheels + tires" : "Wheels + tires (lift kit not included)"}
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-xs text-green-600 font-semibold">Free Shipping</div>
+                <div className="text-xs text-neutral-500">Orders $599+</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Primary CTA */}
           <button
             onClick={handleFinalContinue}
-            className="mt-6 w-full rounded-xl bg-amber-500 px-6 py-4 text-base font-bold text-white hover:bg-amber-600 transition-colors"
+            className="mt-6 w-full rounded-xl bg-amber-500 px-6 py-5 text-lg font-extrabold text-white hover:bg-amber-600 transition-colors shadow-lg shadow-amber-500/25"
           >
             Shop Wheels for This Build →
           </button>
           
-          <p className="mt-3 text-xs text-neutral-500 text-center">
-            We'll show wheels that fit your {selectedLiftLevel ? LIFT_LEVELS[selectedLiftLevel].label.toLowerCase() : "leveled"} setup perfectly.
+          <p className="mt-2 text-sm text-neutral-600 text-center">
+            We'll show <strong>only wheels that fit</strong> your exact setup.
             {selectedLiftKit && " Your lift kit will be added to cart."}
           </p>
+          
+          {/* Trust Micro-Strip */}
+          <div className="mt-4 flex items-center justify-center gap-4 text-xs text-neutral-500">
+            <span className="flex items-center gap-1">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              Guaranteed Fit
+            </span>
+            <span className="flex items-center gap-1">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              Free Shipping $599+
+            </span>
+            <span className="flex items-center gap-1">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              Expert Support
+            </span>
+          </div>
         </div>
       )}
     </div>

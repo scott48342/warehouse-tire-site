@@ -26,6 +26,7 @@ import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
 import { LiftLevelSelector } from "@/components/LiftLevelSelector";
+import { PackageBridgeCTA } from "@/components/BuildContextBar";
 import { RearWheelConfigSelector, trackRearWheelConfigPromptShown } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
@@ -1975,6 +1976,18 @@ export default async function WheelsPage({
             model={model}
             type="wheels"
             productCount={itemsFinal.length}
+          />
+        </div>
+      )}
+      
+      {/* Package Bridge CTA - Encourage adding tires */}
+      {hasVehicle && itemsFinal.length > 0 && (
+        <div className="mx-auto max-w-screen-2xl px-4 pb-12">
+          <PackageBridgeCTA
+            vehicleYear={year}
+            vehicleMake={make}
+            vehicleModel={model}
+            modification={modification || undefined}
           />
         </div>
       )}
