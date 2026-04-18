@@ -509,6 +509,22 @@ function SuspensionSearchContent() {
             <LiftLevelSection key={group.liftLevel} group={group} vehicle={vehicle} />
           ))}
         </div>
+      ) : results.length > 0 ? (
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-extrabold text-neutral-900">
+              Lift Kits for {vehicle.year} {vehicle.make} {vehicle.model}
+            </h2>
+            <span className="rounded-full bg-amber-100 px-4 py-1.5 text-sm font-bold text-amber-800">
+              {total} results
+            </span>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {results.map(kit => (
+              <LiftKitCard key={kit.sku} kit={kit} vehicle={vehicle} />
+            ))}
+          </div>
+        </div>
       ) : !searched ? (
         <div className="mt-8 rounded-2xl border border-neutral-200 bg-neutral-50 p-8 text-center">
           <span className="text-4xl">🛻</span>

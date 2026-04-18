@@ -259,8 +259,8 @@ export async function GET(request: NextRequest) {
       },
       // Grouped results (when groupByLevel=true)
       ...(byLevel ? { byLevel } : {}),
-      // Flat results (always included for backwards compatibility)
-      results: groupByLevel ? [] : mappedResults,
+      // Flat results - include even with groupByLevel if byLevel is empty (products without lift_height)
+      results: (groupByLevel && byLevel && byLevel.length > 0) ? [] : mappedResults,
     });
     
   } catch (error: any) {
