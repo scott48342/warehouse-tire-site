@@ -4,6 +4,53 @@ import { useState, useEffect, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// PWA setup for admin
+function usePWASetup() {
+  useEffect(() => {
+    // Add manifest link
+    const manifest = document.querySelector('link[rel="manifest"]');
+    if (!manifest) {
+      const link = document.createElement('link');
+      link.rel = 'manifest';
+      link.href = '/admin-manifest.json';
+      document.head.appendChild(link);
+    }
+
+    // Add theme color
+    let themeColor = document.querySelector('meta[name="theme-color"]');
+    if (!themeColor) {
+      themeColor = document.createElement('meta');
+      themeColor.setAttribute('name', 'theme-color');
+      themeColor.setAttribute('content', '#dc2626');
+      document.head.appendChild(themeColor);
+    }
+
+    // Add apple-mobile-web-app tags
+    const appleMeta = [
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      { name: 'apple-mobile-web-app-title', content: 'WT Admin' },
+    ];
+    
+    appleMeta.forEach(({ name, content }) => {
+      if (!document.querySelector(`meta[name="${name}"]`)) {
+        const meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        meta.setAttribute('content', content);
+        document.head.appendChild(meta);
+      }
+    });
+
+    // Add apple touch icon
+    if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+      const icon = document.createElement('link');
+      icon.rel = 'apple-touch-icon';
+      icon.href = '/admin-icon-192.png';
+      document.head.appendChild(icon);
+    }
+  }, []);
+}
+
 const NAV_ITEMS = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
   { href: "/admin/live", label: "Live Visitors", icon: "🟢" },
@@ -182,6 +229,9 @@ function AdminHeader() {
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   const [authed, setAuthed] = useState<boolean | null>(null);
+  
+  // Setup PWA for mobile app install
+  usePWASetup();
 
   useEffect(() => {
     // Check if already authenticated
