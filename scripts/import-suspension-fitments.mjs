@@ -71,12 +71,19 @@ const JEEP_CODES = {
 // ============================================================================
 
 const MODEL_PATTERNS = [
-  // GM trucks - HD patterns (must come before generic patterns)
+  // RAM/Dodge HD trucks - MUST come BEFORE generic 2500/3500 patterns
+  { pattern: /RAM\s*2500/i, make: 'Ram', model: () => '2500' },
+  { pattern: /RAM\s*3500/i, make: 'Ram', model: () => '3500' },
+  
+  // GM trucks - HD patterns (explicit GM prefix required for most)
   { pattern: /GM\s*2500\s*[\/&]\s*3500/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
-  { pattern: /2500\s*HD\s*3500\s*HD/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /(?:GM|CHEVY|GMC|CHEVY\s*\/\s*GMC)\s*2500\s*HD/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /(?:GM|CHEVY|GMC|CHEVY\s*\/\s*GMC)\s*3500\s*HD/i, make: 'Chevrolet', model: () => 'Silverado 3500 HD', altMake: 'GMC', altModel: 'Sierra 3500 HD' },
   { pattern: /(?:GM|CHEVY|GMC|CHEVY\s*\/\s*GMC)\s+HD(?!\w)/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
-  { pattern: /\b2500\s*HD\b/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
-  { pattern: /\b3500\s*HD\b/i, make: 'Chevrolet', model: () => 'Silverado 3500 HD', altMake: 'GMC', altModel: 'Sierra 3500 HD' },
+  { pattern: /SILVERADO\s*2500/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD' },
+  { pattern: /SILVERADO\s*3500/i, make: 'Chevrolet', model: () => 'Silverado 3500 HD' },
+  { pattern: /SIERRA\s*2500/i, make: 'GMC', model: () => 'Sierra 2500 HD' },
+  { pattern: /SIERRA\s*3500/i, make: 'GMC', model: () => 'Sierra 3500 HD' },
   // GM trucks - standard patterns
   { pattern: /SILVERADO\s*(\d+)/i, make: 'Chevrolet', model: m => `Silverado ${m[1]}` },
   { pattern: /SIERRA\s*(\d+)/i, make: 'GMC', model: m => `Sierra ${m[1]}` },
