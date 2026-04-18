@@ -2,17 +2,35 @@
  * Suspension/Lift Kit Search API
  * 
  * GET /api/suspension/search?year=2022&make=Chevrolet&model=Silverado 1500
+ * GET /api/suspension/search?year=2022&make=Chevrolet&model=Silverado 1500&liftLevel=4in
+ * GET /api/suspension/search?year=2022&make=Chevrolet&model=Silverado 1500&groupByLevel=true
  * 
  * Returns lift kits that fit the specified vehicle with pricing and inventory.
+ * Supports filtering by lift level (leveled, 4in, 6in, 8in) and grouping.
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
+import { LIFT_LEVELS, type LiftLevel } from "@/lib/homepage-intent/config";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const { Pool } = pg;
+
+/**
+ * Map lift height (inches) to our standard lift levels
+ */
+function liftHeightToLevel(inches: number | null): LiftLevel | null {
+  if (inches === null) return null;
+  
+  if (inches <= 2.5) return "leveled";
+  if (inches <= 4.5) return "4in";
+  if (inches <= 7) return "6in";
+  if (inches > 7) return "8in";
+  
+  return null;
+}
 
 function getPool() {
   return new Pool({
@@ -31,6 +49,9 @@ export async function GET(request: NextRequest) {
   const minLift = searchParams.get("minLift");
   const maxLift = searchParams.get("maxLift");
   const brand = searchParams.get("brand");
+  const liftLevel = searchParams.get("liftLevel") as LiftLevel | null;
+  const groupByLevel = searchParams.get("groupByLevel") === "true";
+  const inStockOnly = searchParams.get("inStockOnly") === "true";
   const page = parseInt(searchParams.get("page") || "1");
   const pageSize = Math.min(parseInt(searchParams.get("pageSize") || "20"), 100);
   
@@ -63,6 +84,19 @@ export async function GET(request: NextRequest) {
     const params: (string | number)[] = [make, `%${model}%`, yearNum];
     let paramIdx = 4;
     
+    // Filter by lift level if specified
+    if (liftLevel && liftLevel in LIFT_LEVELS) {
+      if (liftLevel === "leveled") {
+        conditions.push(`(sf.lift_height IS NULL OR sf.lift_height <= 2.5)`);
+      } else if (liftLevel === "4in") {
+        conditions.push(`sf.lift_height > 2.5 AND sf.lift_height <= 4.5`);
+      } else if (liftLevel === "6in") {
+        conditions.push(`sf.lift_height > 4.5 AND sf.lift_height <= 7`);
+      } else if (liftLevel === "8in") {
+        conditions.push(`sf.lift_height > 7`);
+      }
+    }
+    
     if (minLift) {
       conditions.push(`sf.lift_height >= $${paramIdx}`);
       params.push(parseFloat(minLift));
@@ -81,11 +115,23 @@ export async function GET(request: NextRequest) {
       paramIdx++;
     }
     
+    // Filter by in stock only
+    if (inStockOnly) {
+      // Note: Applied in the query join, not here
+    }
+    
     const whereClause = "WHERE " + conditions.join(" AND ");
     
-    // Count total
+    // Build inventory filter for inStockOnly
+    const inventoryJoin = `LEFT JOIN wp_inventory inv ON inv.sku = sf.sku AND inv.product_type = 'accessory'`;
+    const inventoryFilter = inStockOnly ? "AND COALESCE(inv.qoh, 0) > 0" : "";
+    
+    // Count total (need to join for inStockOnly filter)
     const countResult = await pool.query(
-      `SELECT COUNT(*) as total FROM suspension_fitments sf ${whereClause}`,
+      `SELECT COUNT(DISTINCT sf.sku) as total 
+       FROM suspension_fitments sf 
+       ${inventoryJoin}
+       ${whereClause} ${inventoryFilter}`,
       params
     );
     const total = parseInt(countResult.rows[0]?.total || "0");
@@ -93,7 +139,7 @@ export async function GET(request: NextRequest) {
     // Get results with inventory join
     const offset = (page - 1) * pageSize;
     const resultsQuery = `
-      SELECT 
+      SELECT DISTINCT ON (sf.sku)
         sf.sku,
         sf.product_desc,
         sf.brand,
@@ -108,16 +154,18 @@ export async function GET(request: NextRequest) {
         sf.image_url,
         COALESCE(inv.qoh, 0) as inventory
       FROM suspension_fitments sf
-      LEFT JOIN wp_inventory inv ON inv.sku = sf.sku AND inv.product_type = 'accessory'
-      ${whereClause}
-      ORDER BY 
-        sf.lift_height ASC NULLS LAST,
-        sf.msrp ASC NULLS LAST
-      LIMIT $${paramIdx} OFFSET $${paramIdx + 1}
+      ${inventoryJoin}
+      ${whereClause} ${inventoryFilter}
+      ORDER BY sf.sku, sf.lift_height ASC NULLS LAST, sf.msrp ASC NULLS LAST
     `;
     
-    const resultsParams = [...params, pageSize, offset];
-    const results = await pool.query(resultsQuery, resultsParams);
+    // Note: For groupByLevel we need all results, otherwise paginate
+    const paginatedQuery = groupByLevel
+      ? resultsQuery
+      : `${resultsQuery} LIMIT $${paramIdx} OFFSET $${paramIdx + 1}`;
+    
+    const resultsParams = groupByLevel ? params : [...params, pageSize, offset];
+    const results = await pool.query(paginatedQuery, resultsParams);
     
     // Get available brands for filters
     const brandsResult = await pool.query(
@@ -139,13 +187,60 @@ export async function GET(request: NextRequest) {
     
     await pool.end();
     
+    // Map results to clean objects
+    const mappedResults = results.rows.map((r: any) => ({
+      sku: r.sku,
+      name: r.product_desc,
+      brand: r.brand,
+      productType: r.product_type,
+      liftHeight: r.lift_height ? parseFloat(r.lift_height) : null,
+      liftLevel: liftHeightToLevel(r.lift_height ? parseFloat(r.lift_height) : null),
+      yearRange: `${r.year_start}-${r.year_end}`,
+      msrp: r.msrp ? parseFloat(r.msrp) : null,
+      mapPrice: r.map_price ? parseFloat(r.map_price) : null,
+      imageUrl: r.image_url,
+      inStock: parseInt(r.inventory) > 0,
+      inventory: parseInt(r.inventory),
+    }));
+    
+    // Group by level if requested
+    let byLevel: any[] | undefined;
+    if (groupByLevel) {
+      const levelOrder: LiftLevel[] = ["leveled", "4in", "6in", "8in"];
+      const levelMap = new Map<LiftLevel, typeof mappedResults>();
+      
+      for (const kit of mappedResults) {
+        const level = kit.liftLevel;
+        if (level) {
+          if (!levelMap.has(level)) levelMap.set(level, []);
+          levelMap.get(level)!.push(kit);
+        }
+      }
+      
+      byLevel = levelOrder
+        .filter(l => levelMap.has(l))
+        .map(level => {
+          const config = LIFT_LEVELS[level];
+          return {
+            liftLevel: level,
+            label: config.label,
+            inches: config.inches,
+            offsetMin: config.offsetMin,
+            offsetMax: config.offsetMax,
+            targetTireSizes: config.targetTireSizes,
+            kits: levelMap.get(level) || [],
+            count: (levelMap.get(level) || []).length,
+          };
+        });
+    }
+    
     return NextResponse.json({
       ok: true,
       vehicle: { year: yearNum, make, model },
       total,
-      page,
-      pageSize,
-      totalPages: Math.ceil(total / pageSize),
+      page: groupByLevel ? 1 : page,
+      pageSize: groupByLevel ? total : pageSize,
+      totalPages: groupByLevel ? 1 : Math.ceil(total / pageSize),
       filters: {
         brands: brandsResult.rows.map((b: any) => ({ 
           name: b.brand, 
@@ -155,20 +250,16 @@ export async function GET(request: NextRequest) {
           min: rangeResult.rows[0]?.min_lift ? parseFloat(rangeResult.rows[0].min_lift) : null,
           max: rangeResult.rows[0]?.max_lift ? parseFloat(rangeResult.rows[0].max_lift) : null,
         },
+        liftLevels: Object.entries(LIFT_LEVELS).map(([id, config]) => ({
+          id,
+          label: config.label,
+          inches: config.inches,
+        })),
       },
-      results: results.rows.map((r: any) => ({
-        sku: r.sku,
-        name: r.product_desc,
-        brand: r.brand,
-        productType: r.product_type,
-        liftHeight: r.lift_height ? parseFloat(r.lift_height) : null,
-        yearRange: `${r.year_start}-${r.year_end}`,
-        msrp: r.msrp ? parseFloat(r.msrp) : null,
-        mapPrice: r.map_price ? parseFloat(r.map_price) : null,
-        imageUrl: r.image_url,
-        inStock: parseInt(r.inventory) > 0,
-        inventory: parseInt(r.inventory),
-      })),
+      // Grouped results (when groupByLevel=true)
+      ...(byLevel ? { byLevel } : {}),
+      // Flat results (always included for backwards compatibility)
+      results: groupByLevel ? [] : mappedResults,
     });
     
   } catch (error: any) {
