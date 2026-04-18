@@ -36,11 +36,14 @@ export const analyticsSessions = pgTable(
     // Test data exclusion (added 2026-04-05)
     isTest: boolean("is_test").notNull().default(false),
     testReason: varchar("test_reason", { length: 100 }),
+    // Site/hostname tracking (added 2026-04-18)
+    hostname: varchar("hostname", { length: 100 }),
   },
   (table) => ({
     sessionIdx: index("analytics_sessions_session_id_idx").on(table.sessionId),
     firstSeenIdx: index("analytics_sessions_first_seen_idx").on(table.firstSeenAt),
     isTestIdx: index("analytics_sessions_is_test_idx").on(table.isTest),
+    hostnameIdx: index("analytics_sessions_hostname_idx").on(table.hostname),
   })
 );
 
@@ -51,11 +54,14 @@ export const analyticsPageviews = pgTable(
     sessionId: varchar("session_id", { length: 64 }).notNull(),
     path: varchar("path", { length: 500 }).notNull(),
     timestamp: timestamp("timestamp").notNull().defaultNow(),
+    // Site/hostname tracking (added 2026-04-18)
+    hostname: varchar("hostname", { length: 100 }),
   },
   (table) => ({
     sessionIdx: index("analytics_pageviews_session_idx").on(table.sessionId),
     pathIdx: index("analytics_pageviews_path_idx").on(table.path),
     timestampIdx: index("analytics_pageviews_timestamp_idx").on(table.timestamp),
+    hostnameIdx: index("analytics_pageviews_hostname_idx").on(table.hostname),
   })
 );
 

@@ -2,12 +2,20 @@
  * Admin Analytics Dashboard API
  * 
  * @updated 2026-04-05 - Added test data exclusion
+ * @updated 2026-04-18 - Added hostname/site filtering
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { analyticsDb, schema } from "@/lib/analytics/db";
-import { sql, eq, gte, and, desc, count, countDistinct } from "drizzle-orm";
+import { sql, eq, gte, and, desc, count, countDistinct, like } from "drizzle-orm";
 import { ensureAnalyticsTables } from "@/lib/analytics/track";
+
+// Site hostname mappings
+const SITE_HOSTNAMES: Record<string, string[]> = {
+  national: ["shop.warehousetiredirect.com"],
+  local: ["shop.warehousetire.net", "warehousetire.net"],
+  pos: ["pos.warehousetiredirect.com"],
+};
 
 export async function GET(request: NextRequest) {
   try {
@@ -15,12 +23,13 @@ export async function GET(request: NextRequest) {
 
     const excludeBots = request.nextUrl.searchParams.get("bots") !== "include";
     const includeTest = request.nextUrl.searchParams.get("includeTest") === "1";
+    const siteFilter = request.nextUrl.searchParams.get("site"); // "national", "local", "pos", or null for all
     
     const now = new Date();
     const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const weekAgo = new Date(todayStart.getTime() - 7 * 24 * 60 * 60 * 1000);
 
-    // Build exclusion filters: bots + test data
+    // Build exclusion filters: bots + test data + site
     // Note: is_test column is NOT NULL with default false (backfilled + enforced)
     const exclusionFilters: any[] = [];
     if (excludeBots) {
@@ -28,6 +37,19 @@ export async function GET(request: NextRequest) {
     }
     if (!includeTest) {
       exclusionFilters.push(eq(schema.analyticsSessions.isTest, false));
+    }
+    
+    // Site/hostname filtering
+    if (siteFilter && SITE_HOSTNAMES[siteFilter]) {
+      const hostnames = SITE_HOSTNAMES[siteFilter];
+      if (hostnames.length === 1) {
+        exclusionFilters.push(eq(schema.analyticsSessions.hostname, hostnames[0]));
+      } else {
+        // Multiple hostnames for one site (e.g., local has both warehousetire.net variants)
+        exclusionFilters.push(
+          sql`${schema.analyticsSessions.hostname} IN (${sql.join(hostnames.map(h => sql`${h}`), sql`, `)})`
+        );
+      }
     }
     
     // Combined filter for sessions
@@ -183,6 +205,8 @@ export async function GET(request: NextRequest) {
       generated: new Date().toISOString(),
       excludingBots: excludeBots,
       excludingTest: !includeTest,
+      siteFilter: siteFilter || "all",
+      availableSites: ["all", "national", "local", "pos"],
       summary: {
         visitsToday: visitsToday[0]?.count || 0,
         visitsWeek: visitsWeek[0]?.count || 0,

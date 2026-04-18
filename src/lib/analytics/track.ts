@@ -20,6 +20,8 @@ interface TrackPageViewParams {
   // Test detection context
   cookies?: Record<string, string>;
   headers?: Record<string, string>;
+  // Site/hostname tracking (added 2026-04-18)
+  hostname?: string | null;
 }
 
 /**
@@ -70,6 +72,25 @@ export async function ensureAnalyticsTables() {
       ALTER TABLE analytics_sessions 
       ALTER COLUMN is_test SET NOT NULL
     `).catch(() => { /* Already NOT NULL */ });
+
+    // Add hostname column if missing (migration 2026-04-18)
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_sessions 
+      ADD COLUMN IF NOT EXISTS hostname VARCHAR(100)
+    `);
+    await analyticsDb.execute(sql`
+      ALTER TABLE analytics_pageviews 
+      ADD COLUMN IF NOT EXISTS hostname VARCHAR(100)
+    `);
+    // Create indexes for hostname filtering
+    await analyticsDb.execute(sql`
+      CREATE INDEX IF NOT EXISTS analytics_sessions_hostname_idx 
+      ON analytics_sessions(hostname)
+    `);
+    await analyticsDb.execute(sql`
+      CREATE INDEX IF NOT EXISTS analytics_pageviews_hostname_idx 
+      ON analytics_pageviews(hostname)
+    `);
 
     await analyticsDb.execute(sql`
       CREATE TABLE IF NOT EXISTS analytics_pageviews (
@@ -156,7 +177,7 @@ function detectTestSession(params: {
  * Track a page view
  */
 export async function trackPageView(params: TrackPageViewParams) {
-  const { sessionId, path, fullUrl, referrer, userAgent, country, isNewSession, cookies, headers } = params;
+  const { sessionId, path, fullUrl, referrer, userAgent, country, isNewSession, cookies, headers, hostname } = params;
   
   const botFlag = isBot(userAgent);
   const deviceType = getDeviceType(userAgent);
@@ -182,6 +203,7 @@ export async function trackPageView(params: TrackPageViewParams) {
           country: country || null,
           isTest: testDetection.isTest,
           testReason: testDetection.reason,
+          hostname: hostname || null,
           ...utmParams,
         })
         .onConflictDoNothing();
@@ -205,6 +227,7 @@ export async function trackPageView(params: TrackPageViewParams) {
     await analyticsDb.insert(schema.analyticsPageviews).values({
       sessionId,
       path,
+      hostname: hostname || null,
     });
 
     return { success: true, isBot: botFlag, isTest: testDetection.isTest };

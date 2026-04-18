@@ -42,6 +42,9 @@ export async function POST(request: NextRequest) {
     const userAgent = request.headers.get("user-agent");
     const country = request.headers.get("x-vercel-ip-country");
     const fullUrl = request.headers.get("referer") || `https://shop.warehousetiredirect.com${path}`;
+    
+    // Get hostname from request (for multi-site tracking)
+    const hostname = request.headers.get("host") || request.headers.get("x-forwarded-host") || null;
 
     // Track the page view
     const result = await trackPageView({
@@ -52,6 +55,7 @@ export async function POST(request: NextRequest) {
       userAgent,
       country,
       isNewSession,
+      hostname,
     });
 
     // Set/refresh session cookie

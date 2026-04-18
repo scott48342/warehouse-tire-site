@@ -6,6 +6,8 @@ import Link from "next/link";
 interface AnalyticsData {
   generated: string;
   excludingBots: boolean;
+  siteFilter: string;
+  availableSites: string[];
   summary: {
     visitsToday: number;
     visitsWeek: number;
@@ -24,6 +26,13 @@ interface AnalyticsData {
   }>;
   deviceBreakdown: Array<{ device: string; count: number }>;
 }
+
+const SITE_LABELS: Record<string, { label: string; icon: string }> = {
+  all: { label: "All Sites", icon: "🌐" },
+  national: { label: "National", icon: "🏪" },
+  local: { label: "Local Shop", icon: "🔧" },
+  pos: { label: "POS", icon: "💳" },
+};
 
 function StatCard({
   label,
@@ -99,17 +108,19 @@ export default function AnalyticsDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [includeBots, setIncludeBots] = useState(false);
+  const [siteFilter, setSiteFilter] = useState<string>("all");
 
   useEffect(() => {
     loadData();
-  }, [includeBots]);
+  }, [includeBots, siteFilter]);
 
   const loadData = async () => {
     setLoading(true);
     try {
-      const url = includeBots
-        ? "/api/admin/analytics?bots=include"
-        : "/api/admin/analytics";
+      const params = new URLSearchParams();
+      if (includeBots) params.set("bots", "include");
+      if (siteFilter && siteFilter !== "all") params.set("site", siteFilter);
+      const url = `/api/admin/analytics${params.toString() ? `?${params}` : ""}`;
       const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to load analytics");
       const json = await res.json();
@@ -152,9 +163,29 @@ export default function AnalyticsDashboard() {
             </h1>
             <p className="text-neutral-500 mt-1">
               Last updated: {data?.generated ? new Date(data.generated).toLocaleString() : "-"}
+              {siteFilter !== "all" && (
+                <span className="ml-2 px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">
+                  {SITE_LABELS[siteFilter]?.icon} {SITE_LABELS[siteFilter]?.label}
+                </span>
+              )}
             </p>
           </div>
           <div className="flex items-center gap-4">
+            {/* Site Filter */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-neutral-500">Site:</span>
+              <select
+                value={siteFilter}
+                onChange={(e) => setSiteFilter(e.target.value)}
+                className="px-3 py-1.5 border border-neutral-300 rounded-lg text-sm bg-white focus:ring-2 focus:ring-red-500 focus:border-red-500"
+              >
+                {Object.entries(SITE_LABELS).map(([key, { label, icon }]) => (
+                  <option key={key} value={key}>
+                    {icon} {label}
+                  </option>
+                ))}
+              </select>
+            </div>
             <label className="flex items-center gap-2 text-sm">
               <input
                 type="checkbox"
@@ -202,6 +233,14 @@ export default function AnalyticsDashboard() {
                 value={data.summary.pageViewsWeek}
               />
             </div>
+
+            {/* Site filter notice */}
+            {siteFilter !== "all" && (
+              <div className="mb-6 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
+                📍 Showing data for <strong>{SITE_LABELS[siteFilter]?.label}</strong> only.
+                {" "}Site tracking started April 18, 2026 — older visits won't have site data.
+              </div>
+            )}
 
             {/* Bot count info */}
             {data.summary.botsWeek > 0 && !includeBots && (

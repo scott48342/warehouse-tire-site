@@ -1410,3 +1410,132 @@ $292/wheel
 
 ✨ Done!
 [Fri 04/17/2026  9:00:21.77] Auto-post complete 
+[Fri 04/17/2026 18:00:01.64] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:9632) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Pro Comp Alloys PA69 VINTAGE
+  ⚠️ No matching vehicle for bolt pattern 8X170, using generic caption
+  Downloading image for Pro Comp Alloys PA69 VINTAGE...
+  ✅ Generated: pa69_vintage_1776463207036
+  📝 Caption preview: New arrival alert! 🚨
+
+Pro Comp Alloys PA69 VINTAGE
+📐 17x9
+🔩 8X170
+↔️ -6mm off...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pa69_vintage_1776463207036.png
+  - pa69_vintage_1776463207036.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pa69_vintage_1776463207036
+
+--- Content Preview ---
+Wheel: Pro Comp Alloys PA69 VINTAGE
+Price: $256
+Image: pa69_vintage_1776463207036.png
+
+Caption:
+New arrival alert! 🚨
+
+Pro Comp Alloys PA69 VINTAGE
+📐 17x9
+🔩 8X170
+↔️ -6mm offset
+✨ VINTAGE 17X9 8X170 130 -6 POL
+
+$256/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/PXA1069-7970
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #procompalloys #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1579945850800208
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:1092) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Niche 1PC M257 FLASH
+  Downloading image for Niche 1PC M257 FLASH...
+  ✅ Generated: m257_flash_1776463220589
+  📝 Caption preview: Transform your luxury with the Niche 1PC M257 FLASH 🛞
+
+📐 20x10.5
+🔩 5X112
+↔️ 4...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - m257_flash_1776463220589.png
+  - m257_flash_1776463220589.json
+
+📱 Facebook/Instagram Poster
+
+Selected: m257_flash_1776463220589
+
+--- Content Preview ---
+Wheel: Niche 1PC M257 FLASH
+Price: $237
+Image: m257_flash_1776463220589.png
+
+Caption:
+Transform your luxury with the Niche 1PC M257 FLASH 🛞
+
+📐 20x10.5
+🔩 5X112
+↔️ 40mm offset
+✨ FLASH 20X10.5 5X112 66.56 GWB 40MM
+
+$237/wheel
+
+🛒 https://shop.warehousetiredirect.com/wheels/M2572005F8+40
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #luxurycars #eurocar #germanengineering #niche1pc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1725756618770335
+
+✨ Done!
+[Fri 04/17/2026 18:00:30.10] Auto-post complete 
