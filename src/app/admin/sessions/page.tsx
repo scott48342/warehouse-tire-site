@@ -275,13 +275,25 @@ export default function SessionsPage() {
                         {getSiteBadge(session.site)}
                       </td>
                       <td className="px-4 py-3">
-                        <div className="text-sm text-white truncate max-w-[200px]">
+                        <a 
+                          href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${session.landingPage}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-400 hover:underline truncate max-w-[200px] block"
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           {session.landingPage === "/" ? "Homepage" : session.landingPage}
-                        </div>
+                        </a>
                         {session.lastPage !== session.landingPage && (
-                          <div className="text-xs text-neutral-500 truncate max-w-[200px]">
+                          <a 
+                            href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${session.lastPage}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-neutral-400 hover:text-blue-400 truncate max-w-[200px] block"
+                            onClick={(e) => e.stopPropagation()}
+                          >
                             → {session.lastPage === "/" ? "Homepage" : session.lastPage}
-                          </div>
+                          </a>
                         )}
                       </td>
                       <td className="px-4 py-3">
@@ -341,12 +353,18 @@ export default function SessionsPage() {
                               <div className="flex flex-wrap gap-2 items-center">
                                 {timeline.map((page, idx) => (
                                   <div key={idx} className="flex items-center gap-1">
-                                    <div className="bg-neutral-800 px-2 py-1 rounded text-xs">
+                                    <a
+                                      href={`https://${session.hostname || 'shop.warehousetiredirect.com'}${page.path}`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="bg-neutral-800 px-2 py-1 rounded text-xs hover:bg-neutral-700"
+                                      onClick={(e) => e.stopPropagation()}
+                                    >
                                       <span className="text-neutral-400">{page.timeDisplay}</span>
-                                      <span className="text-white ml-2">
+                                      <span className="text-blue-400 ml-2 hover:underline">
                                         {page.path === "/" ? "Homepage" : page.path}
                                       </span>
-                                    </div>
+                                    </a>
                                     {idx < timeline.length - 1 && (
                                       <span className="text-neutral-600">→</span>
                                     )}
