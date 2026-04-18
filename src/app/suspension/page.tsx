@@ -37,12 +37,28 @@ interface SearchFilters {
 }
 
 const THIS_YEAR = new Date().getFullYear();
-const YEARS = Array.from({ length: 20 }, (_, i) => String(THIS_YEAR - i));
+const YEARS = Array.from({ length: 30 }, (_, i) => String(THIS_YEAR - i));
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return (await res.json()) as T;
+}
+
+type VehicleSelectorStep = "year" | "make" | "model";
+
+function makeInitials(make: string) {
+  const cleaned = String(make || "").trim();
+  if (!cleaned) return "";
+  const parts = cleaned.split(/\s+/g).filter(Boolean);
+  const letters = parts.slice(0, 2).map((p) => p[0]?.toUpperCase() || "");
+  return letters.join("") || cleaned.slice(0, 2).toUpperCase();
+}
+
+function makeHue(make: string) {
+  let h = 0;
+  for (let i = 0; i < make.length; i++) h = (h * 31 + make.charCodeAt(i)) >>> 0;
+  return h % 360;
 }
 
 function VehicleSelector({
@@ -56,6 +72,9 @@ function VehicleSelector({
   initialModel?: string;
   onSelect: (v: { year: string; make: string; model: string }) => void;
 }) {
+  const [step, setStep] = useState<VehicleSelectorStep>(
+    initialModel ? "model" : initialMake ? "make" : initialYear ? "year" : "year"
+  );
   const [year, setYear] = useState(initialYear || "");
   const [make, setMake] = useState(initialMake || "");
   const [model, setModel] = useState(initialModel || "");
@@ -63,9 +82,9 @@ function VehicleSelector({
   const [models, setModels] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Load makes when year changes
+  // Load makes when year is selected
   useEffect(() => {
-    if (!year) return;
+    if (!year) { setMakes([]); return; }
     setLoading(true);
     fetchJson<{ results?: string[] }>(`/api/vehicles/makes?year=${year}`)
       .then(data => setMakes(data.results || []))
@@ -73,9 +92,9 @@ function VehicleSelector({
       .finally(() => setLoading(false));
   }, [year]);
 
-  // Load models when make changes
+  // Load models when make is selected
   useEffect(() => {
-    if (!year || !make) return;
+    if (!year || !make) { setModels([]); return; }
     setLoading(true);
     fetchJson<{ results?: string[] }>(`/api/vehicles/models?year=${year}&make=${make}`)
       .then(data => setModels(data.results || []))
@@ -83,61 +102,139 @@ function VehicleSelector({
       .finally(() => setLoading(false));
   }, [year, make]);
 
-  const handleSearch = () => {
-    if (year && make && model) {
-      onSelect({ year, make, model });
-    }
+  const selectYear = (y: string) => {
+    setYear(y);
+    setMake("");
+    setModel("");
+    setStep("make");
+  };
+
+  const selectMake = (m: string) => {
+    setMake(m);
+    setModel("");
+    setStep("model");
+  };
+
+  const selectModel = (m: string) => {
+    setModel(m);
+    onSelect({ year, make, model: m });
+  };
+
+  const reset = () => {
+    setStep("year");
+    setYear("");
+    setMake("");
+    setModel("");
   };
 
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-      <h2 className="text-lg font-extrabold text-neutral-900">Find Lift Kits for Your Vehicle</h2>
-      <div className="mt-4 grid gap-4 sm:grid-cols-4">
-        <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-1">Year</label>
-          <select
-            value={year}
-            onChange={(e) => { setYear(e.target.value); setMake(""); setModel(""); }}
-            className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm font-semibold text-neutral-900"
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-extrabold text-neutral-900">Find Lift Kits for Your Vehicle</h2>
+        {(year || make || model) && (
+          <button 
+            type="button" 
+            onClick={reset} 
+            className="text-sm font-semibold text-amber-600 hover:text-amber-700"
           >
-            <option value="">Select Year</option>
-            {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-1">Make</label>
-          <select
-            value={make}
-            onChange={(e) => { setMake(e.target.value); setModel(""); }}
-            disabled={!year || makes.length === 0}
-            className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm font-semibold text-neutral-900 disabled:opacity-50"
-          >
-            <option value="">Select Make</option>
-            {makes.map(m => <option key={m} value={m}>{m}</option>)}
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-1">Model</label>
-          <select
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-            disabled={!make || models.length === 0}
-            className="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-sm font-semibold text-neutral-900 disabled:opacity-50"
-          >
-            <option value="">Select Model</option>
-            {models.map(m => <option key={m} value={m}>{m}</option>)}
-          </select>
-        </div>
-        <div className="flex items-end">
-          <button
-            onClick={handleSearch}
-            disabled={!year || !make || !model || loading}
-            className="w-full rounded-xl bg-amber-500 px-4 py-2.5 text-sm font-bold text-white hover:bg-amber-600 disabled:bg-neutral-200 disabled:text-neutral-500 transition-colors"
-          >
-            {loading ? "Loading..." : "Search"}
+            Start over
           </button>
-        </div>
+        )}
       </div>
+
+      {/* Breadcrumbs */}
+      {(year || make) && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {year && (
+            <button
+              type="button"
+              onClick={() => { setStep("year"); setMake(""); setModel(""); }}
+              className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-semibold text-neutral-700 hover:bg-amber-50 hover:border-amber-200"
+            >
+              {year} ✕
+            </button>
+          )}
+          {make && (
+            <button
+              type="button"
+              onClick={() => { setStep("make"); setModel(""); }}
+              className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-semibold text-neutral-700 hover:bg-amber-50 hover:border-amber-200"
+            >
+              {make} ✕
+            </button>
+          )}
+        </div>
+      )}
+
+      {loading && (
+        <div className="mt-4 flex items-center gap-2 text-sm text-neutral-600">
+          <div className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-300 border-t-amber-500" />
+          Loading...
+        </div>
+      )}
+
+      {/* Year Selection */}
+      {!loading && step === "year" && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-500 mb-2">SELECT YEAR</div>
+          <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2 max-h-48 overflow-y-auto">
+            {YEARS.map((y) => (
+              <button
+                key={y}
+                type="button"
+                onClick={() => selectYear(y)}
+                className="rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-900 hover:border-amber-400 hover:bg-amber-50 transition-colors"
+              >
+                {y}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Make Selection */}
+      {!loading && step === "make" && makes.length > 0 && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-500 mb-2">SELECT MAKE</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 max-h-64 overflow-y-auto">
+            {makes.map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => selectMake(m)}
+                className="flex items-center gap-3 rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 text-left text-sm font-semibold text-neutral-900 hover:border-amber-400 hover:bg-amber-50 transition-colors"
+              >
+                <div
+                  className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-lg border border-neutral-200 text-xs font-extrabold"
+                  style={{ background: `hsla(${makeHue(m)}, 70%, 92%, 1)` }}
+                >
+                  {makeInitials(m)}
+                </div>
+                <span className="truncate">{m}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Model Selection */}
+      {!loading && step === "model" && models.length > 0 && (
+        <div className="mt-4">
+          <div className="text-xs font-semibold text-neutral-500 mb-2">SELECT MODEL</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-64 overflow-y-auto">
+            {models.map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => selectModel(m)}
+                className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-left text-sm font-semibold text-neutral-900 hover:border-amber-400 hover:bg-amber-50 transition-colors"
+              >
+                {m}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
