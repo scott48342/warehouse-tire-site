@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getToken, refreshToken, getCredentialsConfigured, USER_AGENT } from "@/lib/wheelprosProxyAuth";
+import { getWheelProsToken } from "@/lib/wheelprosAuth";
 
 const PRODUCTS_BASE_URL = process.env.WHEELPROS_PRODUCTS_BASE_URL || "https://api.wheelpros.com/products";
+const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 async function doSearch(searchParams: URLSearchParams, retry = true): Promise<Response> {
-  const token = await getToken();
+  const token = await getWheelProsToken();
 
   // Set defaults
   if (!searchParams.has("page")) searchParams.set("page", "1");
@@ -33,8 +34,7 @@ async function doSearch(searchParams: URLSearchParams, retry = true): Promise<Re
 
   // Retry once on 401/403
   if ((res.status === 401 || res.status === 403) && retry) {
-    console.log("[WheelPros Suspension] Got 401/403, refreshing token...");
-    await refreshToken();
+    console.log("[WheelPros Suspension] Got 401/403, retrying with fresh token...");
     return doSearch(searchParams, false);
   }
 
@@ -42,12 +42,6 @@ async function doSearch(searchParams: URLSearchParams, retry = true): Promise<Re
 }
 
 export async function GET(request: NextRequest) {
-  if (!getCredentialsConfigured()) {
-    return NextResponse.json(
-      { error: "WheelPros credentials not configured" },
-      { status: 500 }
-    );
-  }
 
   try {
     const searchParams = new URLSearchParams(request.nextUrl.searchParams);
