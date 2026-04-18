@@ -50,6 +50,19 @@ interface LiveData {
   visitors: Visitor[];
 }
 
+interface PageTimeline {
+  path: string;
+  time: string;
+  timeDisplay: string;
+  durationOnPage: number | null;
+}
+
+interface SessionDetail {
+  sessionId: string;
+  timeline: PageTimeline[];
+  pageCount: number;
+}
+
 export default function LiveVisitorsPage() {
   const [data, setData] = useState<LiveData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -57,6 +70,31 @@ export default function LiveVisitorsPage() {
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [refreshInterval, setRefreshInterval] = useState(10); // seconds
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
+  const [expandedSession, setExpandedSession] = useState<string | null>(null);
+  const [sessionDetail, setSessionDetail] = useState<SessionDetail | null>(null);
+  const [loadingDetail, setLoadingDetail] = useState(false);
+
+  const fetchSessionDetail = async (sessionId: string) => {
+    if (expandedSession === sessionId) {
+      setExpandedSession(null);
+      setSessionDetail(null);
+      return;
+    }
+    
+    setExpandedSession(sessionId);
+    setLoadingDetail(true);
+    try {
+      const res = await fetch(`/api/admin/live-visitors/${sessionId}`);
+      if (res.ok) {
+        const detail = await res.json();
+        setSessionDetail(detail);
+      }
+    } catch (e) {
+      console.error("Failed to fetch session detail:", e);
+    } finally {
+      setLoadingDetail(false);
+    }
+  };
 
   const fetchData = useCallback(async () => {
     try {
@@ -251,7 +289,12 @@ export default function LiveVisitorsPage() {
                     </thead>
                     <tbody className="divide-y divide-gray-700">
                       {data.visitors.map((visitor) => (
-                        <tr key={visitor.id} className="hover:bg-gray-700/50">
+                        <>
+                        <tr 
+                          key={visitor.id} 
+                          className="hover:bg-gray-700/50 cursor-pointer"
+                          onClick={() => fetchSessionDetail(visitor.sessionId)}
+                        >
                           <td className="px-4 py-3">
                             <div className="flex items-center gap-2">
                               <div 
@@ -259,6 +302,9 @@ export default function LiveVisitorsPage() {
                                 title={visitor.lastSeenAgo}
                               />
                               <span className="text-xs text-gray-500">{visitor.lastSeenAgo}</span>
+                              <span className="text-xs text-gray-600">
+                                {expandedSession === visitor.sessionId ? "▼" : "▶"}
+                              </span>
                             </div>
                           </td>
                           <td className="px-4 py-3">
@@ -328,6 +374,7 @@ export default function LiveVisitorsPage() {
                                 <Link 
                                   href={`/admin/abandoned-carts/${visitor.cart.cartId}`}
                                   className="text-xs text-blue-400 hover:underline ml-2"
+                                  onClick={(e) => e.stopPropagation()}
                                 >
                                   View →
                                 </Link>
@@ -337,6 +384,43 @@ export default function LiveVisitorsPage() {
                             )}
                           </td>
                         </tr>
+                        {/* Expanded row showing page journey */}
+                        {expandedSession === visitor.sessionId && (
+                          <tr key={`${visitor.id}-detail`}>
+                            <td colSpan={9} className="px-4 py-4 bg-gray-900">
+                              {loadingDetail ? (
+                                <div className="text-gray-400 text-sm">Loading page history...</div>
+                              ) : sessionDetail ? (
+                                <div>
+                                  <div className="text-sm font-medium text-white mb-3">
+                                    📍 Page Journey ({sessionDetail.pageCount} pages)
+                                  </div>
+                                  <div className="flex flex-wrap gap-2">
+                                    {sessionDetail.timeline.map((page, idx) => (
+                                      <div 
+                                        key={idx}
+                                        className="flex items-center gap-1 text-xs"
+                                      >
+                                        <span className="bg-gray-800 px-2 py-1 rounded text-gray-300">
+                                          {page.path === "/" ? "Homepage" : page.path}
+                                        </span>
+                                        {idx < sessionDetail.timeline.length - 1 && (
+                                          <span className="text-gray-600">→</span>
+                                        )}
+                                      </div>
+                                    ))}
+                                  </div>
+                                  <div className="mt-2 text-xs text-gray-500">
+                                    Click row again to collapse
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="text-gray-500 text-sm">No page history available</div>
+                              )}
+                            </td>
+                          </tr>
+                        )}
+                        </>
                       ))}
                     </tbody>
                   </table>
