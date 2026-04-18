@@ -75,15 +75,49 @@ export async function GET(request: NextRequest) {
   const pool = getPool();
   
   try {
+    // Build model matching condition with aliases for HD trucks
+    // Super Duty = F-250, F-350, F-450 (Ford)
+    // Silverado/Sierra HD = 2500 HD, 3500 HD (GM)
+    let modelCondition = "sf.model ILIKE $2";
+    const modelPatterns: string[] = [`%${model}%`];
+    
+    // Ford Super Duty aliases
+    if (make.toLowerCase() === 'ford') {
+      if (model.toLowerCase().includes('f-250') || model.toLowerCase().includes('f250')) {
+        modelPatterns.push('%Super Duty%');
+      } else if (model.toLowerCase().includes('f-350') || model.toLowerCase().includes('f350')) {
+        modelPatterns.push('%Super Duty%');
+      } else if (model.toLowerCase().includes('f-450') || model.toLowerCase().includes('f450')) {
+        modelPatterns.push('%Super Duty%');
+      } else if (model.toLowerCase().includes('super duty')) {
+        // Searching for Super Duty should also find specific F-250/350/450
+        modelPatterns.push('%F-250%', '%F-350%', '%F-450%');
+      }
+    }
+    
+    // GM HD aliases (Silverado 2500 HD = Sierra 2500 HD, etc.)
+    if (make.toLowerCase() === 'chevrolet' || make.toLowerCase() === 'gmc') {
+      if (model.toLowerCase().includes('2500') || model.toLowerCase().includes('3500')) {
+        // Already handled by ILIKE %model%, but ensure we catch "HD" variants
+        // No alias needed as patterns are included in description parsing
+      }
+    }
+    
+    // Build OR condition for multiple model patterns
+    if (modelPatterns.length > 1) {
+      const orClauses = modelPatterns.map((_, i) => `sf.model ILIKE $${2 + i}`).join(' OR ');
+      modelCondition = `(${orClauses})`;
+    }
+    
     // Build dynamic WHERE clause
     const conditions = [
       "sf.make ILIKE $1",
-      "sf.model ILIKE $2", 
-      "sf.year_start <= $3",
-      "sf.year_end >= $3",
+      modelCondition, 
+      `sf.year_start <= $${2 + modelPatterns.length}`,
+      `sf.year_end >= $${2 + modelPatterns.length}`,
     ];
-    const params: (string | number)[] = [make, `%${model}%`, yearNum];
-    let paramIdx = 4;
+    const params: (string | number)[] = [make, ...modelPatterns, yearNum];
+    let paramIdx = 3 + modelPatterns.length;
     
     // Filter by lift level if specified
     if (liftLevel && liftLevel in LIFT_LEVELS) {
