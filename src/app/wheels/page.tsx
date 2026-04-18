@@ -26,7 +26,7 @@ import { BuildStyleToggle } from "@/components/BuildStyleToggle";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { HomepageIntentBar } from "@/components/HomepageIntentBar";
 import { LiftLevelSelector } from "@/components/LiftLevelSelector";
-import { PackageBridgeCTA } from "@/components/BuildContextBar";
+import { PackageBridgeCTA, StickyBuildBar } from "@/components/BuildContextBar";
 import { RearWheelConfigSelector, trackRearWheelConfigPromptShown } from "@/components/RearWheelConfigSelector";
 import {
   type RearWheelConfig,
@@ -1410,6 +1410,11 @@ export default async function WheelsPage({
       {/* TODO: Move robots/canonical to generateMetadata export for proper SEO handling */}
       
       <main className="bg-neutral-50">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          STICKY BUILD BAR - Shows lift/tire/offset context at top (lifted builds only)
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle && <StickyBuildBar />}
+      
       {/* ═══════════════════════════════════════════════════════════════════════
           PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
           ═══════════════════════════════════════════════════════════════════════ */}
