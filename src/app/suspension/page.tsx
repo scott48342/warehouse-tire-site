@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import { useCart } from "@/lib/cart/CartContext";
+import type { CartAccessoryItem } from "@/lib/cart/accessoryTypes";
 
 // Types
 interface LiftKit {
@@ -140,9 +142,42 @@ function VehicleSelector({
   );
 }
 
-function LiftKitCard({ kit }: { kit: LiftKit }) {
+function LiftKitCard({ kit, vehicle }: { kit: LiftKit; vehicle?: { year: string; make: string; model: string } }) {
+  const { addAccessory, setIsOpen } = useCart();
+  const [added, setAdded] = useState(false);
+  
   const price = kit.msrp || kit.mapPrice;
   const formatPrice = (p: number) => `$${p.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
+  const handleAddToCart = () => {
+    if (!price) return;
+    
+    const item: CartAccessoryItem = {
+      type: "accessory",
+      category: "suspension",
+      sku: kit.sku,
+      name: kit.name,
+      brand: kit.brand,
+      imageUrl: kit.imageUrl || undefined,
+      unitPrice: price,
+      quantity: 1,
+      required: false,
+      reason: kit.liftHeight ? `${kit.liftHeight}" lift kit` : "Suspension kit",
+      spec: {
+        liftHeight: kit.liftHeight || undefined,
+        liftLevel: kit.liftLevel || undefined,
+        productType: kit.productType,
+      },
+      vehicle,
+    };
+    
+    addAccessory(item);
+    setAdded(true);
+    setIsOpen(true);
+    
+    // Reset "added" state after 2 seconds
+    setTimeout(() => setAdded(false), 2000);
+  };
 
   return (
     <div className="group rounded-2xl border border-neutral-200 bg-white overflow-hidden hover:border-amber-300 hover:shadow-lg transition-all">
@@ -180,24 +215,42 @@ function LiftKitCard({ kit }: { kit: LiftKit }) {
           <span className="text-xs text-neutral-500">{kit.yearRange}</span>
         </div>
         
-        {price && (
-          <div className="mt-3 flex items-baseline justify-between">
-            <span className="text-lg font-extrabold text-neutral-900">{formatPrice(price)}</span>
-            <span className="text-xs text-neutral-500">each</span>
+        {price ? (
+          <>
+            <div className="mt-3 flex items-baseline justify-between">
+              <span className="text-lg font-extrabold text-neutral-900">{formatPrice(price)}</span>
+              <span className="text-xs text-neutral-500">each</span>
+            </div>
+
+            <button 
+              onClick={handleAddToCart}
+              disabled={added}
+              className={`mt-3 w-full rounded-xl px-4 py-2 text-sm font-bold transition-colors ${
+                added 
+                  ? "bg-green-500 text-white cursor-default"
+                  : "bg-neutral-900 text-white hover:bg-neutral-800"
+              }`}
+            >
+              {added ? "✓ Added to Cart" : "Add to Cart"}
+            </button>
+          </>
+        ) : (
+          <div className="mt-3">
+            <span className="text-sm text-neutral-500">Call for pricing</span>
+            <a 
+              href="tel:+12483324120"
+              className="mt-2 block w-full rounded-xl bg-amber-500 px-4 py-2 text-sm font-bold text-white text-center hover:bg-amber-600 transition-colors"
+            >
+              Call 248-332-4120
+            </a>
           </div>
         )}
-
-        <button 
-          className="mt-3 w-full rounded-xl bg-neutral-900 px-4 py-2 text-sm font-bold text-white hover:bg-neutral-800 transition-colors"
-        >
-          View Details
-        </button>
       </div>
     </div>
   );
 }
 
-function LiftLevelSection({ group }: { group: LiftLevelGroup }) {
+function LiftLevelSection({ group, vehicle }: { group: LiftLevelGroup; vehicle?: { year: string; make: string; model: string } }) {
   return (
     <div className="mb-8">
       <div className="flex items-center gap-3 mb-4">
@@ -208,7 +261,7 @@ function LiftLevelSection({ group }: { group: LiftLevelGroup }) {
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {group.kits.map(kit => (
-          <LiftKitCard key={kit.sku} kit={kit} />
+          <LiftKitCard key={kit.sku} kit={kit} vehicle={vehicle} />
         ))}
       </div>
     </div>
@@ -349,7 +402,7 @@ function SuspensionSearchContent() {
             </span>
           </div>
           {byLevel.map(group => (
-            <LiftLevelSection key={group.liftLevel} group={group} />
+            <LiftLevelSection key={group.liftLevel} group={group} vehicle={vehicle} />
           ))}
         </div>
       ) : !searched ? (

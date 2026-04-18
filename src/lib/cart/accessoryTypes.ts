@@ -1,14 +1,24 @@
 /**
  * Accessory Cart Types
  * 
- * Extends cart with lug nuts, hub rings, and other accessories
+ * Extends cart with lug nuts, hub rings, suspension, and other accessories
  */
+
+export type AccessoryCategory = 
+  | "lug_nut" 
+  | "hub_ring" 
+  | "lug_bolt" 
+  | "valve_stem" 
+  | "tpms"
+  | "suspension"  // lift kits, leveling kits, shocks
+  | "other";
 
 export type CartAccessoryItem = {
   type: "accessory";
-  category: "lug_nut" | "hub_ring" | "lug_bolt" | "valve_stem" | "tpms";
+  category: AccessoryCategory;
   sku: string;
   name: string;
+  brand?: string;
   imageUrl?: string;
   unitPrice: number;
   quantity: number;
@@ -24,6 +34,10 @@ export type CartAccessoryItem = {
     seatType?: string;
     outerDiameter?: number;
     innerDiameter?: number;
+    // Suspension-specific
+    liftHeight?: number;
+    liftLevel?: string;
+    productType?: string;
   };
   vehicle?: {
     year: string;
