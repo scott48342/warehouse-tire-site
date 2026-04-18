@@ -1668,3 +1668,128 @@ $312/wheel - Ships free!
 
 ✨ Done!
 [Sat 04/18/2026  9:00:23.62] Auto-post complete 
+[Sat 04/18/2026 18:00:01.98] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:5776) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] MSA Offroad Wheels M43 FANG UTV
+  ⚠️ No matching vehicle for bolt pattern 4X137, using generic caption
+  Downloading image for MSA Offroad Wheels M43 FANG UTV...
+  ✅ Generated: m43_fang_utv_1776549602814
+  📝 Caption preview: Transform your car with the MSA Offroad Wheels M43 FANG UTV 🛞
+
+📐 20x7
+🔩 4X137...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - m43_fang_utv_1776549602814.png
+  - m43_fang_utv_1776549602814.json
+
+📱 Facebook/Instagram Poster
+
+Selected: m43_fang_utv_1776549602814
+
+--- Content Preview ---
+Wheel: MSA Offroad Wheels M43 FANG UTV
+Price: $365
+Image: m43_fang_utv_1776549602814.png
+
+Caption:
+Transform your car with the MSA Offroad Wheels M43 FANG UTV 🛞
+
+📐 20x7
+🔩 4X137
+↔️ 10mm offset
+✨ FANG UTV 20X7 4X137 S-BLK TTCC 10MM
+
+$365/wheel
+
+🛒 https://shop.warehousetiredirect.com/wheels/M43-020737
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #carsofinstagram #carlife #dailydriver #msaoffroadwheels #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1580799087381551
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:3292) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] American Racing AR943
+  Downloading image for American Racing AR943...
+  ✅ Generated: ar943_1776549618638
+  📝 Caption preview: Your 2024 Ford Mustang deserves these American Racing AR943 wheels 💯
+
+📐 20x9
+�...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - ar943_1776549618638.png
+  - ar943_1776549618638.json
+
+📱 Facebook/Instagram Poster
+
+Selected: ar943_1776549618638
+
+--- Content Preview ---
+Wheel: American Racing AR943
+Price: $346
+Image: ar943_1776549618638.png
+
+Caption:
+Your 2024 Ford Mustang deserves these American Racing AR943 wheels 💯
+
+📐 20x9
+🔩 5X4.5
+↔️ 35mm offset
+✨ AR943 20X9 5X4.5 G-BLK 35MM
+
+Starting at $346
+
+🛒 https://shop.warehousetiredirect.com/wheels/AR943BX20901235
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #musclecar #americanmuscle #v8 #americanracing #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1726541662025164
+
+✨ Done!
+[Sat 04/18/2026 18:00:24.16] Auto-post complete 

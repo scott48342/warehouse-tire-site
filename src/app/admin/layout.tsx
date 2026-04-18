@@ -54,6 +54,7 @@ function usePWASetup() {
 const NAV_ITEMS = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
   { href: "/admin/live", label: "Live Visitors", icon: "🟢" },
+  { href: "/admin/sessions", label: "Session History", icon: "🕐" },
   { href: "/admin/orders", label: "Orders", icon: "📦" },
   { href: "/admin/abandoned-carts", label: "Abandoned Carts", icon: "🛒" },
   { href: "/admin/email-campaigns", label: "Email Campaigns", icon: "📧" },
