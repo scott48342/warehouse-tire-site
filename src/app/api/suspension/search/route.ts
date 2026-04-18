@@ -81,7 +81,7 @@ export async function GET(request: NextRequest) {
     let modelCondition = "sf.model ILIKE $2";
     const modelPatterns: string[] = [`%${model}%`];
     
-    // Ford Super Duty aliases
+    // Ford Super Duty aliases (F-250, F-350, F-450 are all "Super Duty")
     if (make.toLowerCase() === 'ford') {
       if (model.toLowerCase().includes('f-250') || model.toLowerCase().includes('f250')) {
         modelPatterns.push('%Super Duty%');
@@ -90,17 +90,77 @@ export async function GET(request: NextRequest) {
       } else if (model.toLowerCase().includes('f-450') || model.toLowerCase().includes('f450')) {
         modelPatterns.push('%Super Duty%');
       } else if (model.toLowerCase().includes('super duty')) {
-        // Searching for Super Duty should also find specific F-250/350/450
         modelPatterns.push('%F-250%', '%F-350%', '%F-450%');
       }
     }
     
-    // GM HD aliases (Silverado 2500 HD = Sierra 2500 HD, etc.)
-    if (make.toLowerCase() === 'chevrolet' || make.toLowerCase() === 'gmc') {
-      if (model.toLowerCase().includes('2500') || model.toLowerCase().includes('3500')) {
-        // Already handled by ILIKE %model%, but ensure we catch "HD" variants
-        // No alias needed as patterns are included in description parsing
+    // Jeep Wrangler aliases (JK, JL, TJ, 2-Door, 4-Door, Diesel are all "Wrangler")
+    if (make.toLowerCase() === 'jeep') {
+      const modelLower = model.toLowerCase();
+      if (modelLower.includes('wrangler')) {
+        // When searching for any Wrangler variant, include all Wrangler models
+        // But respect generation (JK vs JL vs TJ) if specified
+        if (modelLower.includes('jl')) {
+          // JL generation (2018+): include 2-door, 4-door, diesel variants
+          modelPatterns.push('%Wrangler JL%', '%Wrangler JL 2-Door%', '%Wrangler JL 4-Door%', '%Wrangler JL Diesel%');
+        } else if (modelLower.includes('jk')) {
+          // JK generation (2007-2018): include 2-door, 4-door variants
+          modelPatterns.push('%Wrangler JK%', '%Wrangler JK 2-Door%', '%Wrangler JK 4-Door%');
+        } else if (modelLower.includes('tj')) {
+          // TJ generation (1997-2006): include LJ (Unlimited) variant
+          modelPatterns.push('%Wrangler TJ%', '%Wrangler LJ%');
+        } else if (modelLower === 'wrangler' || modelLower.includes('wrangler ')) {
+          // Generic "Wrangler" search - include ALL variants
+          modelPatterns.push('%Wrangler JK%', '%Wrangler JL%', '%Wrangler TJ%', '%Wrangler LJ%');
+        }
+      } else if (modelLower.includes('gladiator')) {
+        // Gladiator: include diesel variant
+        modelPatterns.push('%Gladiator%', '%Gladiator Diesel%');
+      } else if (modelLower.includes('cherokee') && !modelLower.includes('grand')) {
+        // Cherokee: include XJ, KL variants
+        modelPatterns.push('%Cherokee XJ%', '%Cherokee KL%');
+      } else if (modelLower.includes('grand cherokee')) {
+        // Grand Cherokee: include ZJ, WJ, WK variants
+        modelPatterns.push('%Grand Cherokee ZJ%', '%Grand Cherokee WJ%', '%Grand Cherokee WK%');
       }
+    }
+    
+    // GM Silverado ↔ Sierra cross-reference (same platform)
+    // For cross-make references, we need to expand the make filter too
+    const makeLower = make.toLowerCase();
+    const modelLower = model.toLowerCase();
+    let makeCondition = "sf.make ILIKE $1";
+    const makes: string[] = [make];
+    
+    if (makeLower === 'chevrolet' && modelLower.includes('silverado')) {
+      // Also search GMC Sierra (same truck, different badge)
+      makes.push('GMC');
+      if (modelLower.includes('1500')) {
+        modelPatterns.push('%Sierra 1500%');
+      } else if (modelLower.includes('2500')) {
+        modelPatterns.push('%Sierra 2500%');
+      } else if (modelLower.includes('3500')) {
+        modelPatterns.push('%Sierra 3500%');
+      }
+    } else if (makeLower === 'gmc' && modelLower.includes('sierra')) {
+      // Also search Chevrolet Silverado (same truck, different badge)
+      makes.push('Chevrolet');
+      if (modelLower.includes('1500')) {
+        modelPatterns.push('%Silverado 1500%');
+      } else if (modelLower.includes('2500')) {
+        modelPatterns.push('%Silverado 2500%');
+      } else if (modelLower.includes('3500')) {
+        modelPatterns.push('%Silverado 3500%');
+      }
+    }
+    
+    // GM Colorado ↔ Canyon cross-reference (same platform)
+    if (makeLower === 'chevrolet' && modelLower.includes('colorado')) {
+      makes.push('GMC');
+      modelPatterns.push('%Canyon%');
+    } else if (makeLower === 'gmc' && modelLower.includes('canyon')) {
+      makes.push('Chevrolet');
+      modelPatterns.push('%Colorado%');
     }
     
     // Build OR condition for multiple model patterns
@@ -109,15 +169,32 @@ export async function GET(request: NextRequest) {
       modelCondition = `(${orClauses})`;
     }
     
+    // Build make condition (may include multiple makes for cross-references)
+    if (makes.length > 1) {
+      const makeOrClauses = makes.map((_, i) => `sf.make ILIKE $${1 + i}`).join(' OR ');
+      makeCondition = `(${makeOrClauses})`;
+    }
+    
     // Build dynamic WHERE clause
+    // Adjust parameter indices based on number of makes
+    const modelStartIdx = 1 + makes.length;
+    const yearIdx = modelStartIdx + modelPatterns.length;
+    
+    if (modelPatterns.length > 1) {
+      const orClauses = modelPatterns.map((_, i) => `sf.model ILIKE $${modelStartIdx + i}`).join(' OR ');
+      modelCondition = `(${orClauses})`;
+    } else {
+      modelCondition = `sf.model ILIKE $${modelStartIdx}`;
+    }
+    
     const conditions = [
-      "sf.make ILIKE $1",
+      makeCondition,
       modelCondition, 
-      `sf.year_start <= $${2 + modelPatterns.length}`,
-      `sf.year_end >= $${2 + modelPatterns.length}`,
+      `sf.year_start <= $${yearIdx}`,
+      `sf.year_end >= $${yearIdx}`,
     ];
-    const params: (string | number)[] = [make, ...modelPatterns, yearNum];
-    let paramIdx = 3 + modelPatterns.length;
+    const params: (string | number)[] = [...makes, ...modelPatterns, yearNum];
+    let paramIdx = yearIdx + 1;
     
     // Filter by lift level if specified
     if (liftLevel && liftLevel in LIFT_LEVELS) {
