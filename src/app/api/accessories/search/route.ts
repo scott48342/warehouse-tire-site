@@ -109,7 +109,9 @@ export async function GET(req: Request) {
         seenSkus.add(r.sku);
 
         const { price, msrp, map } = extractPrice(r);
-        const inStock = r.inventory?.some(i => i.type === "stocked") ?? false;
+        // inventory can be array or object - handle both
+        const inventoryArr = Array.isArray(r.inventory) ? r.inventory : [];
+        const inStock = inventoryArr.some(i => i.type === "stocked") || false;
         
         // Extract image URL - check both media and images arrays
         const images = r.media || r.images || [];
