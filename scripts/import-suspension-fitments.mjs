@@ -71,12 +71,18 @@ const JEEP_CODES = {
 // ============================================================================
 
 const MODEL_PATTERNS = [
-  // GM trucks
+  // GM trucks - HD patterns (must come before generic patterns)
+  { pattern: /GM\s*2500\s*[\/&]\s*3500/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /2500\s*HD\s*3500\s*HD/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /(?:GM|CHEVY|GMC|CHEVY\s*\/\s*GMC)\s+HD(?!\w)/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /\b2500\s*HD\b/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /\b3500\s*HD\b/i, make: 'Chevrolet', model: () => 'Silverado 3500 HD', altMake: 'GMC', altModel: 'Sierra 3500 HD' },
+  // GM trucks - standard patterns
   { pattern: /SILVERADO\s*(\d+)/i, make: 'Chevrolet', model: m => `Silverado ${m[1]}` },
   { pattern: /SIERRA\s*(\d+)/i, make: 'GMC', model: m => `Sierra ${m[1]}` },
   { pattern: /GM\s*1500/i, make: 'Chevrolet', model: () => 'Silverado 1500', altMake: 'GMC', altModel: 'Sierra 1500' },
-  { pattern: /GM\s*2500/i, make: 'Chevrolet', model: () => 'Silverado 2500HD', altMake: 'GMC', altModel: 'Sierra 2500HD' },
-  { pattern: /GM\s*3500/i, make: 'Chevrolet', model: () => 'Silverado 3500HD', altMake: 'GMC', altModel: 'Sierra 3500HD' },
+  { pattern: /GM\s*2500/i, make: 'Chevrolet', model: () => 'Silverado 2500 HD', altMake: 'GMC', altModel: 'Sierra 2500 HD' },
+  { pattern: /GM\s*3500/i, make: 'Chevrolet', model: () => 'Silverado 3500 HD', altMake: 'GMC', altModel: 'Sierra 3500 HD' },
   { pattern: /CHEVY\s*(?:\/\s*)?GMC/i, make: 'Chevrolet', model: () => 'Silverado 1500', altMake: 'GMC', altModel: 'Sierra 1500' },
   { pattern: /GMC\s*DENALI/i, make: 'GMC', model: () => 'Sierra 1500 Denali' },
   { pattern: /DENALI/i, make: 'GMC', model: () => 'Sierra Denali' },
@@ -169,7 +175,13 @@ const MODEL_PATTERNS = [
 
 // Year range patterns
 const YEAR_PATTERNS = [
+  // 2-digit patterns (most common in WheelPros data like "20-25", "19-22")
+  { re: /\b(\d{2})\s*[-–]\s*(\d{2})\b/g, type: '2digit-range' },
+  { re: /\b(\d{2})\s*\+\b/g, type: '2digit-plus' },
+  { re: /\b(\d{2})\s*[-–]\s*(?:UP|CURRENT|PRESENT|NEWER)\b/gi, type: '2digit-open' },
+  // Quoted 2-digit (like '19-'22)
   { re: /[''](\d{2})\s*[-–]\s*['']?(\d{2})(?!\d)/g, type: '2digit' },
+  // 4-digit patterns
   { re: /(\d{4})\s*[-–]\s*(\d{4})/g, type: '4digit' },
   { re: /(\d{4})\s*[-–]\s*(\d{2})(?!\d)/g, type: 'mixed' },
   { re: /(\d{4})\s*[-–]\s*(?:CURRENT|PRESENT|NEWER|NEW)/gi, type: 'open' },
@@ -228,13 +240,20 @@ function parseDescription(desc) {
     re.lastIndex = 0;
     const match = re.exec(desc);
     if (match) {
-      if (type === '2digit') {
+      if (type === '2digit-range' || type === '2digit') {
+        // 2-digit year range like "20-25" or "19-22"
         let y1 = parseInt(match[1]);
         let y2 = parseInt(match[2]);
         y1 = y1 >= 50 ? 1900 + y1 : 2000 + y1;
         y2 = y2 >= 50 ? 1900 + y2 : 2000 + y2;
         result.yearStart = y1;
         result.yearEnd = y2;
+      } else if (type === '2digit-plus' || type === '2digit-open') {
+        // 2-digit open range like "20+" or "20-UP"
+        let y1 = parseInt(match[1]);
+        y1 = y1 >= 50 ? 1900 + y1 : 2000 + y1;
+        result.yearStart = y1;
+        result.yearEnd = 2026;
       } else if (type === 'mixed') {
         const y1 = parseInt(match[1]);
         let y2 = parseInt(match[2]);
@@ -297,18 +316,67 @@ async function main() {
   console.log('📡 Connecting to SFTP...');
   await sftp.connect(SFTP_CONFIG);
   
-  // Download techfeed
+  // Download techfeed (product attributes)
   console.log('📥 Downloading Accessory_TechGuide.csv...');
-  const csv = await sftp.get('/TechFeed/ACCESSORIES/Accessory_TechGuide.csv');
+  const techCsv = await sftp.get('/TechFeed/ACCESSORIES/Accessory_TechGuide.csv');
+  
+  // Download CommonFeed (inventory/pricing - has more SKUs!)
+  console.log('📥 Downloading accessoriesInvPriceData.csv (CommonFeed)...');
+  const commonCsv = await sftp.get('/CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv');
   await sftp.end();
   
-  // Parse CSV
-  const rows = parse(csv, { columns: true, skip_empty_lines: true });
-  console.log(`📄 Total rows: ${rows.length}`);
+  // Parse TechGuide
+  const techRows = parse(techCsv, { columns: true, skip_empty_lines: true });
+  console.log(`📄 TechGuide rows: ${techRows.length}`);
+  
+  // Parse CommonFeed
+  const commonRows = parse(commonCsv, { columns: true, skip_empty_lines: true });
+  console.log(`📄 CommonFeed rows: ${commonRows.length}`);
+  
+  // Create lookup from TechGuide for additional fields
+  const techLookup = new Map();
+  for (const row of techRows) {
+    techLookup.set(row.sku, row);
+  }
+  
+  // Merge: prefer TechGuide data, supplement with CommonFeed
+  const allRows = [];
+  const seenSkus = new Set();
+  
+  // First add all TechGuide rows
+  for (const row of techRows) {
+    seenSkus.add(row.sku);
+    allRows.push({
+      sku: row.sku,
+      product_desc: row.product_desc,
+      brand_desc: row.brand_desc,
+      product_sub_type: row.product_sub_type,
+      msrp: row.msrp,
+      map_price: row.map_price,
+      image_url: row.image_url,
+    });
+  }
+  
+  // Add CommonFeed rows that aren't in TechGuide
+  for (const row of commonRows) {
+    if (seenSkus.has(row.PartNumber)) continue;
+    seenSkus.add(row.PartNumber);
+    allRows.push({
+      sku: row.PartNumber,
+      product_desc: row.PartDescription,
+      brand_desc: row.Brand,
+      product_sub_type: null,
+      msrp: row.MSRP_USD,
+      map_price: row.MAP_USD,
+      image_url: row.ImageURL,
+    });
+  }
+  
+  console.log(`📄 Combined unique SKUs: ${allRows.length}`);
   
   // Filter to suspension parts
-  const suspensionParts = rows.filter(r => {
-    const str = JSON.stringify(r).toLowerCase();
+  const suspensionParts = allRows.filter(r => {
+    const str = `${r.product_desc || ''} ${r.brand_desc || ''}`.toLowerCase();
     return str.includes('lift') || str.includes('suspension') || str.includes('leveling');
   });
   console.log(`🔩 Suspension parts: ${suspensionParts.length}`);
