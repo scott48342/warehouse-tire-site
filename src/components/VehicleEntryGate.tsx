@@ -1,15 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SteppedVehicleSelector, type VehicleSelection } from "./SteppedVehicleSelector";
+import { BuildTypeSelector, type BuildTypeSelection } from "./BuildTypeSelector";
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
+import { useCart } from "@/lib/cart/CartContext";
+import type { CartAccessoryItem } from "@/lib/cart/accessoryTypes";
 
 interface VehicleEntryGateProps {
   /** "tires" or "wheels" - determines the redirect path */
   productType: "tires" | "wheels";
   /** Optional: show package flow after selection */
   packageFlow?: boolean;
+  /** Enable build type selection after vehicle (Stock/Level/Lifted) */
+  showBuildTypeStep?: boolean;
 }
 
 /**
@@ -27,9 +33,14 @@ interface VehicleEntryGateProps {
  * - Preserves entry=homepage and intent=xxx params through YMM selection
  * - Applies intent-specific defaults (offset ranges, build type) after selection
  */
-export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateProps) {
+export function VehicleEntryGate({ productType, packageFlow, showBuildTypeStep }: VehicleEntryGateProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { addAccessory, setIsOpen } = useCart();
+  
+  // Step tracking for build type flow
+  const [step, setStep] = useState<"vehicle" | "buildType">("vehicle");
+  const [vehicleSelection, setVehicleSelection] = useState<VehicleSelection | null>(null);
 
   // Parse homepage intent from current URL
   const currentParams: Record<string, string> = {};
@@ -37,8 +48,62 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
     currentParams[key] = value;
   });
   const intentState = parseHomepageIntent(currentParams);
+  
+  // Check if build type step should be shown
+  // - Skip if intent already specifies a build type
+  // - Skip if showBuildTypeStep is false
+  const shouldShowBuildTypeStep = showBuildTypeStep && !intentState.resolved?.buildType;
 
-  function handleComplete(selection: VehicleSelection) {
+  function handleVehicleComplete(selection: VehicleSelection) {
+    if (shouldShowBuildTypeStep) {
+      // Save vehicle and show build type step
+      setVehicleSelection(selection);
+      setStep("buildType");
+      return;
+    }
+    
+    // Otherwise, proceed directly
+    navigateToResults(selection);
+  }
+  
+  function handleBuildTypeComplete(buildSelection: BuildTypeSelection) {
+    if (!vehicleSelection) return;
+    
+    // If a lift kit was selected, add it to cart
+    if (buildSelection.liftKit) {
+      const kit = buildSelection.liftKit;
+      const price = kit.msrp || kit.mapPrice;
+      if (price) {
+        const item: CartAccessoryItem = {
+          type: "accessory",
+          category: "suspension",
+          sku: kit.sku,
+          name: kit.name,
+          brand: kit.brand,
+          imageUrl: kit.imageUrl || undefined,
+          unitPrice: price,
+          quantity: 1,
+          required: false,
+          reason: kit.liftHeight ? `${kit.liftHeight}" lift kit` : "Lift kit",
+          spec: {
+            liftHeight: kit.liftHeight || undefined,
+            liftLevel: kit.liftLevel || undefined,
+          },
+          vehicle: {
+            year: vehicleSelection.year,
+            make: vehicleSelection.make,
+            model: vehicleSelection.model,
+          },
+        };
+        addAccessory(item);
+        // Don't open cart drawer - let them continue shopping
+      }
+    }
+    
+    navigateToResults(vehicleSelection, buildSelection);
+  }
+  
+  function navigateToResults(selection: VehicleSelection, buildSelection?: BuildTypeSelection) {
     const { year, make, model, modification, trim, wheelDia } = selection;
     const slug = vehicleSlug(year, make, model);
     
@@ -79,6 +144,35 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
           params.set("liftedSource", "homepage-intent");
           params.set("liftedInches", String(liftConfig.inches));
         }
+      }
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // BUILD TYPE SELECTION: Apply params from build type step
+    // ═══════════════════════════════════════════════════════════════════════════
+    if (buildSelection) {
+      params.set("buildType", buildSelection.buildType);
+      
+      if (buildSelection.liftLevel) {
+        params.set("liftLevel", buildSelection.liftLevel);
+        params.set("liftedSource", "build-flow");
+        
+        // Get inches from lift level config
+        const inches = buildSelection.liftLevel === "leveled" ? 2 :
+          buildSelection.liftLevel === "4in" ? 4 :
+          buildSelection.liftLevel === "6in" ? 6 : 8;
+        params.set("liftedInches", String(inches));
+      }
+      
+      if (buildSelection.offsetMin !== undefined) {
+        params.set("offsetMin", String(buildSelection.offsetMin));
+      }
+      if (buildSelection.offsetMax !== undefined) {
+        params.set("offsetMax", String(buildSelection.offsetMax));
+      }
+      
+      if (buildSelection.liftKit) {
+        params.set("liftKitSku", buildSelection.liftKit.sku);
       }
     }
     
@@ -166,21 +260,50 @@ export function VehicleEntryGate({ productType, packageFlow }: VehicleEntryGateP
           </p>
         </div>
 
-        {/* Vehicle Selector Card */}
+        {/* Selector Card */}
         <div className="bg-white rounded-3xl shadow-xl border border-neutral-200 p-6 sm:p-8">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-red)] text-white">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <div className="text-sm font-extrabold text-neutral-900">Select Your Vehicle</div>
-              <div className="text-xs text-neutral-500">We'll show only {productType} that fit</div>
-            </div>
-          </div>
+          {step === "vehicle" ? (
+            <>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--brand-red)] text-white">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm font-extrabold text-neutral-900">Select Your Vehicle</div>
+                  <div className="text-xs text-neutral-500">We'll show only {productType} that fit</div>
+                </div>
+              </div>
 
-          <SteppedVehicleSelector onComplete={handleComplete} />
+              <SteppedVehicleSelector onComplete={handleVehicleComplete} />
+            </>
+          ) : (
+            <>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-white">
+                  <span className="text-lg">🔧</span>
+                </div>
+                <div>
+                  <div className="text-sm font-extrabold text-neutral-900">Choose Your Build</div>
+                  <div className="text-xs text-neutral-500">Stock, leveled, or lifted?</div>
+                </div>
+              </div>
+
+              {vehicleSelection && (
+                <BuildTypeSelector
+                  vehicle={{
+                    year: vehicleSelection.year,
+                    make: vehicleSelection.make,
+                    model: vehicleSelection.model,
+                    trim: vehicleSelection.trim,
+                  }}
+                  onComplete={handleBuildTypeComplete}
+                  onBack={() => setStep("vehicle")}
+                />
+              )}
+            </>
+          )}
         </div>
 
         {/* Trust Signals */}
