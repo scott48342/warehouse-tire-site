@@ -41,6 +41,13 @@ import {
   type TireCategory as EnhancementCategory,
 } from "@/components/TireSRPEnhancements";
 import { 
+  LiftedTireRecommendations, 
+  TireTrustBar, 
+  StoreReviewsSnippet,
+  type RecommendedTire,
+} from "@/components/LiftedTireRecommendations";
+import { StickyBuildBar } from "@/components/BuildContextBar";
+import { 
   getVehicleProfile, 
   isCategoryAllowedForVehicle,
   getVehicleAwareReason,
@@ -2708,6 +2715,11 @@ export default async function TiresPage({
   return (
     <main className="bg-neutral-50">
       {/* ═══════════════════════════════════════════════════════════════════════
+          STICKY BUILD BAR - Shows lift/tire/offset context (lifted builds only)
+          ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle && <StickyBuildBar />}
+      
+      {/* ═══════════════════════════════════════════════════════════════════════
           PACKAGE JOURNEY BAR - Only shows when user is building a package
           (came from wheel selection with wheelSku in URL)
           ═══════════════════════════════════════════════════════════════════════ */}
@@ -3163,6 +3175,41 @@ export default async function TiresPage({
           </aside>
 
           <section>
+            {/* ═══════════════════════════════════════════════════════════════════════
+                LIFTED BUILD RECOMMENDATIONS - Show top picks for lifted builds
+                ═══════════════════════════════════════════════════════════════════════ */}
+            {hasVehicle && isLiftedBuild && items.length > 0 && (
+              <LiftedTireRecommendations
+                tires={items.slice(0, 20).map(t => {
+                  // Handle quantity which might be an object or number
+                  const qty = typeof t.quantity === 'number' ? t.quantity : 
+                    (t.quantity?.primary || t.quantity?.national || 0);
+                  return {
+                    sku: t.partNumber || t.mfgPartNumber || '',
+                    brand: t.brand || '',
+                    model: t.displayName || t.prettyName || '',
+                    size: selectedSize || '',
+                    price: t.price || 0,
+                    imageUrl: t.imageUrl,
+                    category: (t as any).treadCategory || (t as any).category,
+                    mileageWarranty: (t as any).mileageWarranty,
+                    inStock: qty >= 4,
+                    stockQty: qty,
+                  };
+                })}
+                vehicleYear={year}
+                vehicleMake={make}
+                vehicleModel={model}
+                modification={modification || undefined}
+                className="mb-6"
+              />
+            )}
+            
+            {/* Trust Bar */}
+            {hasVehicle && items.length > 0 && (
+              <TireTrustBar className="mb-4" />
+            )}
+            
             {/* ═══════════════════════════════════════════════════════════════════════
                 PACKAGE FLOW: Enhanced tire selection with grouping
                 When user came from wheel selection, show conversion-optimized grid
