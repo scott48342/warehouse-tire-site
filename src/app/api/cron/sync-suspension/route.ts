@@ -216,8 +216,14 @@ export async function GET(req: Request) {
     await sftp.connect(SFTP_CONFIG);
     
     // Download techfeed
-    const csv = await sftp.get("/TechFeed/ACCESSORIES/Accessory_TechGuide.csv");
+    const csvData = await sftp.get("/TechFeed/ACCESSORIES/Accessory_TechGuide.csv");
     await sftp.end();
+    
+    // Ensure we have a string or Buffer (not WritableStream)
+    if (typeof csvData !== 'string' && !Buffer.isBuffer(csvData)) {
+      throw new Error('SFTP get returned unexpected type (expected string or Buffer)');
+    }
+    const csv = csvData as string | Buffer;
     
     // Parse CSV
     const rows = parse(csv, { columns: true, skip_empty_lines: true }) as any[];

@@ -11,7 +11,8 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import pg from "pg";
-import { LIFT_LEVELS, type LiftLevel } from "@/lib/homepage-intent/config";
+import { LIFT_LEVELS } from "@/lib/homepage-intent/config";
+import type { LiftLevel } from "@/lib/homepage-intent/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";

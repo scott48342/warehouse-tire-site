@@ -6,7 +6,8 @@
  */
 
 import pg from "pg";
-import { LIFT_LEVELS, type LiftLevel } from "@/lib/homepage-intent/config";
+import { LIFT_LEVELS } from "@/lib/homepage-intent/config";
+import type { LiftLevel } from "@/lib/homepage-intent/types";
 
 const { Pool } = pg;
 
