@@ -33,6 +33,7 @@ interface Visitor {
   source: string;
   secondsAgo: number;
   lastSeenAgo: string;
+  hostname: string | null;
   sessionDuration: string;
   cart: CartData | null;
 }
@@ -223,6 +224,9 @@ export default function LiveVisitorsPage() {
                           Status
                         </th>
                         <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                          Site
+                        </th>
+                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                           Current Page
                         </th>
                         <th className="px-4 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
@@ -256,6 +260,15 @@ export default function LiveVisitorsPage() {
                               />
                               <span className="text-xs text-gray-500">{visitor.lastSeenAgo}</span>
                             </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            {visitor.hostname?.includes("warehousetire.net") ? (
+                              <span className="text-xs px-2 py-1 rounded bg-blue-900 text-blue-300">Local</span>
+                            ) : visitor.hostname?.includes("pos.") ? (
+                              <span className="text-xs px-2 py-1 rounded bg-purple-900 text-purple-300">POS</span>
+                            ) : (
+                              <span className="text-xs px-2 py-1 rounded bg-green-900 text-green-300">National</span>
+                            )}
                           </td>
                           <td className="px-4 py-3">
                             <div className="text-sm font-medium text-white truncate max-w-xs" title={visitor.currentPage}>
