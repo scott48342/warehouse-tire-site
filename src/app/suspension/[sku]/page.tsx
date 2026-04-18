@@ -203,6 +203,37 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
               </div>
             </div>
 
+            {/* Generated Description */}
+            <div className="rounded-xl border border-neutral-200 bg-white p-5">
+              <h2 className="text-lg font-extrabold text-neutral-900 mb-3">Description</h2>
+              <div className="space-y-3 text-sm text-neutral-700 leading-relaxed">
+                <p>
+                  Upgrade your {yearRange} {product.make} {product.model} with this {product.brand} 
+                  {product.liftHeight ? ` ${product.liftHeight}" lift kit` : ' suspension system'}. 
+                  {product.productType?.toLowerCase().includes('level') 
+                    ? ' This leveling kit raises the front of your truck to match the rear, giving you a more aggressive stance and allowing for larger tire fitment.'
+                    : product.liftHeight && product.liftHeight >= 6
+                      ? ' This complete lift system provides maximum ground clearance for serious off-road capability while maintaining a smooth on-road ride quality.'
+                      : product.liftHeight && product.liftHeight >= 4
+                        ? ' This lift system offers the perfect balance of increased ground clearance for off-road adventures while keeping a comfortable daily driving experience.'
+                        : ' Engineered for a precise fit and optimal performance.'}
+                </p>
+                {product.brand && (
+                  <p>
+                    <strong>{product.brand}</strong> is known for quality suspension components 
+                    that are designed to OEM specifications for bolt-on installation. Each kit is 
+                    engineered specifically for your vehicle's suspension geometry.
+                  </p>
+                )}
+                <p className="text-neutral-600">
+                  {product.liftHeight && product.liftHeight >= 4 
+                    ? 'After installation, you\'ll have room for larger tires to complete the look and improve off-road traction. '
+                    : ''}
+                  Professional installation is recommended to ensure proper alignment and ride quality.
+                </p>
+              </div>
+            </div>
+
             {/* Price & Add to Cart */}
             <div className="rounded-2xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-white p-6">
               {price ? (
@@ -234,6 +265,41 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
               )}
             </div>
 
+            {/* Key Features */}
+            <div className="rounded-xl border border-neutral-200 bg-white p-5">
+              <h2 className="text-lg font-extrabold text-neutral-900 mb-3">Key Features</h2>
+              <ul className="space-y-2 text-sm text-neutral-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span>Direct bolt-on installation — no permanent modifications required</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span>Engineered specifically for {product.yearStart === product.yearEnd ? product.yearStart : `${product.yearStart}-${product.yearEnd}`} {product.make} {product.model}</span>
+                </li>
+                {product.liftHeight && product.liftHeight >= 2 && (
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span>Allows fitment of larger tires for improved ground clearance</span>
+                  </li>
+                )}
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span>Maintains factory ride quality and handling characteristics</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5">✓</span>
+                  <span>Compatible with factory wheels and aftermarket upgrades</span>
+                </li>
+                {product.brand?.toLowerCase().includes('readylift') && (
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span>ReadyLift limited lifetime warranty included</span>
+                  </li>
+                )}
+              </ul>
+            </div>
+
             {/* Specs */}
             <div className="rounded-xl border border-neutral-200 bg-white p-5">
               <h2 className="text-lg font-extrabold text-neutral-900 mb-4">Specifications</h2>
@@ -261,20 +327,65 @@ export default async function SuspensionPDPPage({ params, searchParams }: PagePr
               </dl>
             </div>
 
-            {/* What's Included - placeholder for future enhancement */}
+            {/* Tire Fitment Guide */}
+            {product.liftHeight && product.liftHeight >= 2 && (
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-5">
+                <h2 className="text-lg font-extrabold text-neutral-900 mb-2">🛞 Recommended Tire Sizes</h2>
+                <p className="text-sm text-neutral-700 mb-3">
+                  With a {product.liftHeight}" lift, your {product.make} {product.model} can typically accommodate:
+                </p>
+                <ul className="text-sm text-neutral-700 space-y-1">
+                  {product.liftHeight <= 2.5 && (
+                    <>
+                      <li>• 33" tires (275/70R18 or 285/65R18)</li>
+                      <li>• 20" wheels with aggressive +18 to 0 offset</li>
+                    </>
+                  )}
+                  {product.liftHeight > 2.5 && product.liftHeight <= 4.5 && (
+                    <>
+                      <li>• 33-35" tires (35x12.50R20 or 305/55R20)</li>
+                      <li>• 20" wheels with -12 to -24 offset</li>
+                    </>
+                  )}
+                  {product.liftHeight > 4.5 && product.liftHeight <= 7 && (
+                    <>
+                      <li>• 35-37" tires (37x12.50R20 or 35x12.50R22)</li>
+                      <li>• 20-22" wheels with -18 to -44 offset</li>
+                    </>
+                  )}
+                  {product.liftHeight > 7 && (
+                    <>
+                      <li>• 37-40" tires (37x13.50R20 or larger)</li>
+                      <li>• 20-24" wheels with aggressive offset</li>
+                    </>
+                  )}
+                </ul>
+                <p className="text-xs text-neutral-500 mt-2">
+                  *Actual fitment depends on wheel offset and may require trimming. Contact us for personalized recommendations.
+                </p>
+              </div>
+            )}
+
+            {/* Professional Installation */}
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
-              <h2 className="text-lg font-extrabold text-neutral-900 mb-2">💡 Professional Installation Recommended</h2>
+              <h2 className="text-lg font-extrabold text-neutral-900 mb-2">🔧 Professional Installation Available</h2>
               <p className="text-sm text-neutral-700">
-                Lift kit installation requires specialized tools and expertise. We offer professional 
-                installation at our Pontiac and Waterford locations.
+                Lift kit installation requires specialized tools, alignment equipment, and expertise. 
+                Our certified technicians at Pontiac and Waterford can install your lift kit and 
+                ensure proper alignment for the best ride quality.
               </p>
-              <a
-                href="tel:+12483324120"
-                className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-amber-700 hover:underline"
-              >
-                <span>📞</span>
-                <span>Call to schedule: 248-332-4120</span>
-              </a>
+              <div className="mt-3 flex flex-wrap gap-3">
+                <a
+                  href="tel:+12483324120"
+                  className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-bold text-white hover:bg-amber-600 transition-colors"
+                >
+                  <span>📞</span>
+                  <span>Call 248-332-4120</span>
+                </a>
+                <span className="inline-flex items-center text-sm text-neutral-600">
+                  or visit us in Pontiac or Waterford
+                </span>
+              </div>
             </div>
           </div>
         </div>
