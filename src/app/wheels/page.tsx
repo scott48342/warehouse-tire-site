@@ -1323,7 +1323,7 @@ export default async function WheelsPage({
   if (!hasVehicle) {
     return (
       <main className="bg-neutral-50">
-        <VehicleEntryGate productType="wheels" packageFlow={isPackageFlow} />
+        <VehicleEntryGate productType="wheels" packageFlow={isPackageFlow} showBuildTypeStep={true} />
       </main>
     );
   }
