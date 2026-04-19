@@ -276,19 +276,41 @@ export default async function AccessoryPage({
   params: Promise<{ sku: string }>;
 }) {
   const { sku } = await params;
-  const acc = await getAccessory(sku);
+  
+  let acc: Accessory | null = null;
+  try {
+    acc = await getAccessory(sku);
+  } catch (e) {
+    console.error("[accessories/sku] getAccessory error:", e);
+    notFound();
+  }
 
   if (!acc) {
     notFound();
   }
 
+  // Parse all numeric values safely
+  const price = parseFloat(String(acc.sell_price || acc.msrp || 0)) || 0;
+  const msrp = parseFloat(String(acc.msrp || 0)) || 0;
   const categoryName = CATEGORY_NAMES[acc.category] || "Accessories";
   const imageUrl = acc.image_url || CATEGORY_IMAGES[acc.category] || CATEGORY_IMAGES.other;
+  
   // Use database description if available, otherwise generate one
-  const description = acc.description || generateDescription(acc);
-  const features = generateFeatures(acc);
-  // Parse prices safely (PostgreSQL returns numeric as string)
-  const price = parseFloat(String(acc.sell_price || acc.msrp || 0)) || 0;
+  let description = "";
+  try {
+    description = acc.description || generateDescription(acc);
+  } catch (e) {
+    console.error("[accessories/sku] generateDescription error:", e);
+    description = `${acc.brand || "Quality"} ${categoryName.toLowerCase()} for your vehicle.`;
+  }
+  
+  let features: string[] = [];
+  try {
+    features = generateFeatures(acc);
+  } catch (e) {
+    console.error("[accessories/sku] generateFeatures error:", e);
+    features = acc.brand ? [`Brand: ${acc.brand}`] : [];
+  }
   
   // Collect all available images
   const images = [acc.image_url, acc.image_url_2, acc.image_url_3].filter(Boolean) as string[];
@@ -397,14 +419,11 @@ export default async function AccessoryPage({
                 <span className="text-3xl font-bold text-gray-900">
                   ${price.toFixed(2)}
                 </span>
-                {(() => {
-                  const msrp = parseFloat(String(acc.msrp || 0)) || 0;
-                  return msrp > price ? (
-                    <span className="text-lg text-gray-400 line-through">
-                      ${msrp.toFixed(2)}
-                    </span>
-                  ) : null;
-                })()}
+                {msrp > price && (
+                  <span className="text-lg text-gray-400 line-through">
+                    ${msrp.toFixed(2)}
+                  </span>
+                )}
               </div>
             ) : (
               <p className="text-lg text-gray-500">Contact for pricing</p>
