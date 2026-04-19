@@ -4,31 +4,36 @@
  * GET /api/accessories/search?category=hub-ring&pageSize=50
  * 
  * Categories:
- * - lug-nut: Lug nuts and wheel locks
- * - hub-ring: Hub centric rings
- * - center-cap: Center caps
+ * - lug-nut / lug_nut: Lug nuts and wheel locks
+ * - hub-ring / hub_ring: Hub centric rings
+ * - center-cap / center_cap: Center caps
  * - lighting: LED lights, light bars
  * - tpms: TPMS sensors and kits
- * - valve-stem: Valve stems and caps
+ * - valve-stem / valve_stem: Valve stems and caps
  * - spacer: Wheel spacers
+ * 
+ * Now reads from our local database (imported from TechFeed)
  */
 
 import { NextResponse } from "next/server";
-import { searchAccessories, type WheelProsAccessoryResult } from "@/lib/wheelprosAccessory";
-import { getSupplierCredentials } from "@/lib/supplierCredentialsSecure";
-import { calculateWheelSellPrice } from "@/lib/pricing";
+import { getDbPool } from "@/lib/db/pool";
 
 export const runtime = "nodejs";
 
-// Category to WheelPros filter mapping
-const CATEGORY_FILTERS: Record<string, string[]> = {
-  "lug-nut": ["lug nut", "wheel lock"],
-  "hub-ring": ["hub ring", "hub centric"],
-  "center-cap": ["center cap"],
-  "lighting": ["LED", "light bar", "rock light", "pod light"],
-  "tpms": ["TPMS", "tire pressure"],
-  "valve-stem": ["valve stem"],
-  "spacer": ["wheel spacer", "adapter"],
+// Map URL-friendly category names to database category values
+const CATEGORY_MAP: Record<string, string> = {
+  "lug-nut": "lug_nut",
+  "lug_nut": "lug_nut",
+  "hub-ring": "hub_ring",
+  "hub_ring": "hub_ring",
+  "center-cap": "center_cap",
+  "center_cap": "center_cap",
+  "lighting": "lighting",
+  "tpms": "tpms",
+  "valve-stem": "valve_stem",
+  "valve_stem": "valve_stem",
+  "spacer": "spacer",
+  "other": "other",
 };
 
 type AccessoryItem = {
@@ -44,130 +49,113 @@ type AccessoryItem = {
   imageUrl?: string;
 };
 
-function extractPrice(result: WheelProsAccessoryResult): { price: number; msrp?: number; map?: number } {
-  const msrp = result.prices?.msrp?.[0]?.currencyAmount;
-  const map = result.prices?.map?.[0]?.currencyAmount;
-  const nip = result.prices?.nip?.[0]?.currencyAmount;
-  
-  // Use our standard pricing: prefer calculated price from msrp/map
-  const price = calculateWheelSellPrice({ msrp: msrp || null, map: map || null });
-  
-  // Fallback to NIP if no MSRP/MAP
-  const finalPrice = price > 0 ? price : (nip || 0);
-  
-  return { price: finalPrice, msrp, map };
-}
-
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const category = url.searchParams.get("category");
   const query = url.searchParams.get("q");
-  const debug = url.searchParams.get("debug") === "1";
   const pageSize = Math.min(100, Math.max(1, Number(url.searchParams.get("pageSize") || "50")));
   const page = Math.max(1, Number(url.searchParams.get("page") || "1"));
+  const offset = (page - 1) * pageSize;
 
   if (!category && !query) {
     return NextResponse.json({ 
       error: "Missing category or q parameter",
-      validCategories: Object.keys(CATEGORY_FILTERS),
+      validCategories: Object.keys(CATEGORY_MAP),
     }, { status: 400 });
   }
 
-  let wpCreds: { customerNumber?: string } = {};
-  let customer = "1022165"; // fallback
-  
-  try {
-    wpCreds = await getSupplierCredentials("wheelpros");
-    customer = wpCreds.customerNumber || "1022165";
-  } catch (credErr: any) {
-    console.warn("[accessories/search] Failed to get supplier credentials, using fallback:", credErr?.message);
+  const pool = getDbPool();
+  if (!pool) {
+    return NextResponse.json({ error: "Database not available" }, { status: 500 });
   }
-  
-  const company = "1500"; // USD
 
   try {
-    // Build filters from category or use direct query
-    const filters = category ? (CATEGORY_FILTERS[category] || [category]) : [query!];
-    
-    // Search all filters and combine results
-    const allResults: AccessoryItem[] = [];
-    const seenSkus = new Set<string>();
-    let rawSample: any = null; // For debug mode
+    let sql: string;
+    let params: any[];
+    let countSql: string;
+    let countParams: any[];
 
-    for (const filter of filters) {
-      const response = await searchAccessories({
-        filter,
-        fields: "inventory,price,media",
-        priceType: "msrp,map,nip",
-        company,
-        customer,
-        page,
-        pageSize,
-      });
-
-      for (const r of response.results || []) {
-        if (!r.sku || seenSkus.has(r.sku)) continue;
-        seenSkus.add(r.sku);
-        
-        // Capture first raw result for debug
-        if (debug && !rawSample) rawSample = r;
-
-        const { price, msrp, map } = extractPrice(r);
-        // inventory can be array or object - handle both
-        const inventoryArr = Array.isArray(r.inventory) ? r.inventory : [];
-        const inStock = inventoryArr.some(i => i.type === "stocked") || false;
-        
-        // Extract image URL - check both media and images arrays
-        const images = r.media || r.images || [];
-        const primaryImage = images.find(img => img.type === "primary") || images[0];
-        const imageUrl = primaryImage?.url;
-
-        allResults.push({
-          sku: r.sku,
-          title: r.title || r.sku,
-          brand: r.brand?.description,
-          brandCode: r.brand?.code,
-          price,
-          msrp,
-          map,
-          inStock,
-          category: category || "search",
-          imageUrl,
-        });
-      }
+    if (category) {
+      // Category-based search
+      const dbCategory = CATEGORY_MAP[category] || category;
+      
+      sql = `
+        SELECT sku, title, brand, brand_code, sell_price, msrp, map_price, 
+               in_stock, category, image_url
+        FROM accessories
+        WHERE category = $1
+        ORDER BY 
+          CASE WHEN sell_price > 0 THEN 0 ELSE 1 END,
+          sell_price ASC NULLS LAST
+        LIMIT $2 OFFSET $3
+      `;
+      params = [dbCategory, pageSize, offset];
+      
+      countSql = `SELECT COUNT(*) as total FROM accessories WHERE category = $1`;
+      countParams = [dbCategory];
+      
+    } else {
+      // Full-text search
+      sql = `
+        SELECT sku, title, brand, brand_code, sell_price, msrp, map_price,
+               in_stock, category, image_url
+        FROM accessories
+        WHERE search_text @@ plainto_tsquery('english', $1)
+           OR title ILIKE $2
+           OR sku ILIKE $2
+        ORDER BY 
+          CASE WHEN sell_price > 0 THEN 0 ELSE 1 END,
+          ts_rank(search_text, plainto_tsquery('english', $1)) DESC
+        LIMIT $3 OFFSET $4
+      `;
+      params = [query!, `%${query}%`, pageSize, offset];
+      
+      countSql = `
+        SELECT COUNT(*) as total FROM accessories 
+        WHERE search_text @@ plainto_tsquery('english', $1)
+           OR title ILIKE $2
+           OR sku ILIKE $2
+      `;
+      countParams = [query!, `%${query}%`];
     }
 
-    // Sort by price (lowest first), then by in-stock
-    allResults.sort((a, b) => {
-      if (a.inStock !== b.inStock) return b.inStock ? 1 : -1;
-      return a.price - b.price;
-    });
+    const [result, countResult] = await Promise.all([
+      pool.query(sql, params),
+      pool.query(countSql, countParams),
+    ]);
 
-    // Debug mode: include raw first result from WheelPros
-    const debugInfo = debug ? {
-      rawSampleCount: allResults.length,
-      rawWheelProsResponse: rawSample,
-    } : undefined;
+    const items: AccessoryItem[] = result.rows.map(row => ({
+      sku: row.sku,
+      title: row.title || row.sku,
+      brand: row.brand || undefined,
+      brandCode: row.brand_code || undefined,
+      price: parseFloat(row.sell_price) || 0,
+      msrp: row.msrp ? parseFloat(row.msrp) : undefined,
+      map: row.map_price ? parseFloat(row.map_price) : undefined,
+      inStock: row.in_stock ?? true, // Default to true if not set
+      category: row.category || "other",
+      imageUrl: row.image_url || undefined,
+    }));
+
+    const total = parseInt(countResult.rows[0]?.total || "0");
 
     return NextResponse.json({
-      results: allResults.slice(0, pageSize),
-      total: allResults.length,
+      results: items,
+      total,
       category,
       query,
       page,
       pageSize,
-      debug: debugInfo,
+      totalPages: Math.ceil(total / pageSize),
     }, {
-      headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
+      headers: { "Cache-Control": "public, max-age=60, s-maxage=300" },
     });
 
   } catch (err: any) {
     console.error("[accessories/search] Error:", err?.message || err);
-    console.error("[accessories/search] Stack:", err?.stack);
     return NextResponse.json({ 
       error: "Failed to search accessories",
       detail: err?.message,
-      stack: process.env.NODE_ENV === "development" ? err?.stack : undefined,
     }, { status: 500 });
   }
 }
