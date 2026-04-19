@@ -125,8 +125,8 @@ export default function TpmsAccessoriesPage() {
                   </div>
 
                   <div className="text-right">
-                    {typeof it.price === "number" ? (
-                      <div className="text-lg font-extrabold text-neutral-900">${it.price.toFixed(2)}</div>
+                    {it.price ? (
+                      <div className="text-lg font-extrabold text-neutral-900">${Number(it.price).toFixed(2)}</div>
                     ) : null}
                     <div className="text-sm font-extrabold text-green-800">
                       {it.inStock === false ? "Out of stock" : "In stock"}

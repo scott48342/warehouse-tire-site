@@ -17,6 +17,9 @@ import {
   buildAccessoryUrl 
 } from "@/lib/accessories/categories";
 
+// Force dynamic rendering - queries DB
+export const dynamic = "force-dynamic";
+
 type PageProps = {
   params: Promise<{ category: string; subcategory: string }>;
   searchParams: Promise<{ page?: string; brand?: string }>;
@@ -314,11 +317,11 @@ export default async function AccessorySubcategoryPage({ params, searchParams }:
                     <div className="mt-2">
                       {item.sell_price ? (
                         <div className="text-lg font-bold text-gray-900">
-                          ${item.sell_price.toFixed(2)}
+                          ${Number(item.sell_price).toFixed(2)}
                         </div>
                       ) : item.msrp ? (
                         <div className="text-lg font-bold text-gray-900">
-                          ${item.msrp.toFixed(2)}
+                          ${Number(item.msrp).toFixed(2)}
                         </div>
                       ) : (
                         <div className="text-sm text-gray-500">Call for price</div>
