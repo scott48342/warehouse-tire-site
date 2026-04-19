@@ -1,24 +1,25 @@
 /**
- * Import Accessories from WheelPros
+ * Import Accessories from WheelPros TechFeed
  * 
- * Sources (in order of preference):
- * 1. Local TechFeed CSV (if available)
- * 2. WheelPros SFTP TechFeed
- * 3. WheelPros API (limited, fallback)
+ * 1. Fetches available images from S3 bucket
+ * 2. Downloads fresh TechFeed from SFTP (or uses local CSV)
+ * 3. Imports with validated image URLs only
  * 
  * Usage:
- *   node scripts/import-accessories.mjs [--source=api|sftp|csv] [--csv-path=path]
+ *   node scripts/import-accessories.mjs [--source=sftp|csv] [--csv-path=path] [--skip-s3]
  */
 
 import dotenv from 'dotenv';
 import pg from 'pg';
 import Client from 'ssh2-sftp-client';
 import fs from 'fs';
-import path from 'path';
 
 dotenv.config({ path: '.env.local' });
 
 const { Pool } = pg;
+
+const S3_BUCKET = 'https://wp-media-assets.s3-us-west-2.amazonaws.com';
+const S3_PREFIX = 'Accessories/';
 
 // Category mapping from sub_type codes
 const CATEGORY_MAP = {
@@ -36,122 +37,146 @@ const CATEGORY_MAP = {
   'SPACER': 'spacer',
 };
 
-// Sub-type refinement
-const SUB_TYPE_MAP = {
-  'wheel lock': 'wheel_lock',
-  'lug kit': 'lug_kit',
-  'lug nut': 'lug_nut',
-  'led pod': 'led_pod',
-  'light bar': 'light_bar',
-  'rock light': 'rock_light',
-  'hub centric': 'hub_centric_ring',
-  'center cap': 'center_cap',
-};
-
 // Brand code to full name
 const BRAND_NAMES = {
   'GO': 'Gorilla Automotive',
+  'GOR': 'Gorilla Automotive',
   'MO': 'Moto Metal',
+  'MTO': 'Moto Metal',
   'FU': 'Fuel',
+  'FUE': 'Fuel',
   'KM': 'KMC',
+  'KMC': 'KMC',
   'XD': 'XD',
+  'XDS': 'XD',
   'HE': 'Helo',
+  'HLO': 'Helo',
   'AS': 'Asanti',
-  'BA': 'Baja Boss',
   'AR': 'American Racing',
-  'AT': 'ATX',
-  'BF': 'Baja Boss',
+  'ARV': 'American Racing Vintage',
+  'ATX': 'ATX',
+  'AX': 'ATX',
+  'DUB': 'DUB',
+  'NIC': 'Niche',
+  'MSA': 'Misc Accessories',
 };
 
 /**
- * Parse thread size from title
- * Examples: "14-1.5", "M14x1.5", "12-1.25", "1/2-20"
+ * List all keys from S3 bucket with pagination
  */
-function parseThreadSize(title) {
-  const t = title.toUpperCase();
+async function listAllS3Keys() {
+  const keys = new Map(); // sku -> full URL
+  let marker = '';
+  let pageCount = 0;
   
-  // Metric: 14-1.5, M14x1.5, 14X1.5
-  const metric = t.match(/[M ]?(\d{2})[X-](\d\.\d+)/);
-  if (metric) {
-    return `M${metric[1]}x${metric[2]}`;
+  console.log('Fetching S3 image listing...');
+  
+  while (true) {
+    const url = `${S3_BUCKET}/?prefix=${S3_PREFIX}&max-keys=1000${marker ? `&marker=${marker}` : ''}`;
+    
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`S3 list failed: ${res.status}`);
+    }
+    
+    const xml = await res.text();
+    const keyMatches = [...xml.matchAll(/<Key>([^<]+)<\/Key>/g)];
+    
+    if (keyMatches.length === 0) break;
+    
+    for (const match of keyMatches) {
+      const key = match[1]; // e.g., "Accessories/70028S.png"
+      const filename = key.replace(S3_PREFIX, '');
+      const sku = filename.replace(/\.(png|jpg|jpeg)$/i, '');
+      
+      // Prefer PNG over JPG
+      if (!keys.has(sku) || filename.endsWith('.png')) {
+        keys.set(sku, `${S3_BUCKET}/${key}`);
+      }
+    }
+    
+    if (!xml.includes('<IsTruncated>true</IsTruncated>')) break;
+    
+    marker = encodeURIComponent(keyMatches[keyMatches.length - 1][1]);
+    pageCount++;
+    
+    if (pageCount % 10 === 0) {
+      console.log(`  ... fetched ${keys.size} images (page ${pageCount})`);
+    }
   }
   
-  // SAE: 1/2-20, 7/16-20
-  const sae = t.match(/(\d\/\d+)[- ]?(\d+)/);
-  if (sae) {
-    return `${sae[1]}-${sae[2]}`;
+  console.log(`Found ${keys.size} total images in S3`);
+  return keys;
+}
+
+/**
+ * Validate image URL - returns valid URL or null
+ */
+function validateImageUrl(url, s3Images) {
+  if (!url || typeof url !== 'string') return null;
+  const trimmed = url.trim();
+  
+  // Check if SKU has an S3 image (preferred)
+  // Extract SKU from URL
+  const skuMatch = trimmed.match(/\/([^\/]+)\.(png|jpg|jpeg)$/i);
+  if (skuMatch) {
+    const sku = skuMatch[1];
+    if (s3Images.has(sku)) {
+      return s3Images.get(sku);
+    }
+  }
+  
+  // Accept assets.wheelpros.com URLs (new CDN)
+  if (trimmed.includes('assets.wheelpros.com')) {
+    return trimmed;
+  }
+  
+  // Reject images.wheelpros.com URLs (all 404)
+  if (trimmed.includes('images.wheelpros.com')) {
+    return null;
+  }
+  
+  // Keep other URLs
+  if (trimmed.startsWith('http')) {
+    return trimmed;
   }
   
   return null;
 }
 
 /**
- * Parse seat type from title
+ * Calculate sell price (30% margin on cost, capped at MSRP)
  */
-function parseSeatType(title) {
-  const t = title.toUpperCase();
-  
-  if (t.includes('BALL') || t.includes('RADIUS') || t.includes('SPHERICAL')) return 'ball';
-  if (t.includes('MAG') || t.includes('SHANK')) return 'mag';
-  if (t.includes('FLAT') || t.includes('WASHER')) return 'flat';
-  if (t.includes('ACORN') || t.includes('BULGE') || t.includes('CONICAL') || t.includes('TAPER')) return 'conical';
-  
+function calculateSellPrice(cost, msrp, map) {
+  if (cost && cost > 0) {
+    const target = cost * 1.30;
+    return msrp && msrp > 0 ? Math.min(target, msrp) : target;
+  }
+  if (map && map > 0) return map;
+  if (msrp && msrp > 0) return msrp * 0.975;
   return null;
 }
 
 /**
- * Parse hub ring dimensions from title
- * Example: "70 OD-54.06 ID", "73.1-56.1", "HUB RING 73.1/64.1"
+ * Parse CSV line handling quotes
  */
-function parseHubRing(title) {
-  const t = title.toUpperCase();
+function parseCSVLine(line) {
+  const result = [];
+  let current = '';
+  let inQuotes = false;
   
-  // Pattern: "70 OD-54.06 ID" or "73.1OD 56.1ID"
-  const odId = t.match(/(\d+(?:\.\d+)?)\s*OD[- ]?(\d+(?:\.\d+)?)\s*ID/);
-  if (odId) {
-    return { outer: parseFloat(odId[1]), inner: parseFloat(odId[2]) };
+  for (const char of line) {
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      result.push(current.trim());
+      current = '';
+    } else {
+      current += char;
+    }
   }
-  
-  // Pattern: "73.1-56.1" or "73.1/64.1"
-  const simple = t.match(/(\d{2,3}(?:\.\d+)?)[\/\-](\d{2,3}(?:\.\d+)?)/);
-  if (simple && parseFloat(simple[1]) > parseFloat(simple[2])) {
-    return { outer: parseFloat(simple[1]), inner: parseFloat(simple[2]) };
-  }
-  
-  return null;
-}
-
-/**
- * Parse bolt pattern from title
- * Example: "8X170", "6x139.7", "5-127"
- */
-function parseBoltPattern(title) {
-  const t = title.toUpperCase();
-  
-  const bp = t.match(/(\d)[X-](\d{3}(?:\.\d)?)/);
-  if (bp) {
-    return `${bp[1]}x${bp[2]}`;
-  }
-  
-  return null;
-}
-
-/**
- * Parse wheel brand from title
- * Example: "MOTO CAP" -> "Moto Metal", "FUEL CAP" -> "Fuel"
- */
-function parseWheelBrand(title, brandCode) {
-  const t = title.toUpperCase();
-  
-  if (t.includes('MOTO') || brandCode === 'MO') return 'Moto Metal';
-  if (t.includes('FUEL') || brandCode === 'FU') return 'Fuel';
-  if (t.includes('XD') || brandCode === 'XD') return 'XD';
-  if (t.includes('KMC') || brandCode === 'KM') return 'KMC';
-  if (t.includes('HELO') || brandCode === 'HE') return 'Helo';
-  if (t.includes('ASANTI') || brandCode === 'AS') return 'Asanti';
-  if (t.includes('AMERICAN RACING') || brandCode === 'AR') return 'American Racing';
-  
-  return null;
+  result.push(current.trim());
+  return result;
 }
 
 /**
@@ -161,14 +186,12 @@ function categorize(subType, title) {
   const st = (subType || '').toUpperCase();
   const t = (title || '').toUpperCase();
   
-  // Check sub_type first
   for (const [key, cat] of Object.entries(CATEGORY_MAP)) {
     if (st.includes(key)) {
-      return { category: cat, subType: SUB_TYPE_MAP[key.toLowerCase()] || st.toLowerCase() };
+      return { category: cat, subType: st.toLowerCase() };
     }
   }
   
-  // Fall back to title analysis
   if (t.includes('CAP') && (t.includes('CENTER') || t.includes('WHEEL'))) {
     return { category: 'center_cap', subType: 'center_cap' };
   }
@@ -202,130 +225,134 @@ function categorize(subType, title) {
 }
 
 /**
- * Calculate sell price (30% margin on cost, capped at MSRP)
+ * Parse specs from title
  */
-function calculateSellPrice(cost, msrp, map) {
-  if (cost && cost > 0) {
-    const target = cost * 1.30;
-    return msrp && msrp > 0 ? Math.min(target, msrp) : target;
+function parseThreadSize(title) {
+  const t = title.toUpperCase();
+  const metric = t.match(/[M ]?(\d{2})[X-](\d\.\d+)/);
+  if (metric) return `M${metric[1]}x${metric[2]}`;
+  const sae = t.match(/(\d\/\d+)[- ]?(\d+)/);
+  if (sae) return `${sae[1]}-${sae[2]}`;
+  return null;
+}
+
+function parseSeatType(title) {
+  const t = title.toUpperCase();
+  if (t.includes('BALL') || t.includes('RADIUS')) return 'ball';
+  if (t.includes('MAG') || t.includes('SHANK')) return 'mag';
+  if (t.includes('FLAT') || t.includes('WASHER')) return 'flat';
+  if (t.includes('ACORN') || t.includes('BULGE') || t.includes('CONICAL')) return 'conical';
+  return null;
+}
+
+function parseHubRing(title) {
+  const t = title.toUpperCase();
+  const odId = t.match(/(\d+(?:\.\d+)?)\s*OD[- ]?(\d+(?:\.\d+)?)\s*ID/);
+  if (odId) return { outer: parseFloat(odId[1]), inner: parseFloat(odId[2]) };
+  const simple = t.match(/(\d{2,3}(?:\.\d+)?)[\/\-](\d{2,3}(?:\.\d+)?)/);
+  if (simple && parseFloat(simple[1]) > parseFloat(simple[2])) {
+    return { outer: parseFloat(simple[1]), inner: parseFloat(simple[2]) };
   }
-  if (map && map > 0) return map;
-  if (msrp && msrp > 0) return msrp * 0.975; // Fallback
+  return null;
+}
+
+function parseBoltPattern(title) {
+  const t = title.toUpperCase();
+  const bp = t.match(/(\d)[X-](\d{3}(?:\.\d)?)/);
+  if (bp) return `${bp[1]}x${bp[2]}`;
+  return null;
+}
+
+function parseWheelBrand(title, brandCode) {
+  const t = title.toUpperCase();
+  if (t.includes('MOTO') || brandCode === 'MO' || brandCode === 'MTO') return 'Moto Metal';
+  if (t.includes('FUEL') || brandCode === 'FU' || brandCode === 'FUE') return 'Fuel';
+  if (t.includes('XD') || brandCode === 'XD' || brandCode === 'XDS') return 'XD';
+  if (t.includes('KMC') || brandCode === 'KM' || brandCode === 'KMC') return 'KMC';
+  if (t.includes('HELO') || brandCode === 'HE' || brandCode === 'HLO') return 'Helo';
+  if (t.includes('AMERICAN RACING') || brandCode === 'AR' || brandCode === 'ARV') return 'American Racing';
   return null;
 }
 
 /**
- * Parse CSV line handling quotes
+ * Parse additional lug nut filter attributes
  */
-function parseCSVLine(line) {
-  const result = [];
-  let current = '';
-  let inQuotes = false;
-  
-  for (const char of line) {
-    if (char === '"') {
-      inQuotes = !inQuotes;
-    } else if (char === ',' && !inQuotes) {
-      result.push(current.trim());
-      current = '';
-    } else {
-      current += char;
-    }
-  }
-  result.push(current.trim());
-  return result;
+function parseMaterial(title) {
+  const t = title.toUpperCase();
+  if (t.includes('BLACK CHROME')) return 'Black Chrome';
+  if (t.includes('CHROME')) return 'Chrome';
+  if (t.includes('ZINC')) return 'Zinc';
+  if (t.includes('STAINLESS') || t.includes('SS ')) return 'Stainless Steel';
+  if (t.includes('GUNMETAL')) return 'Gunmetal';
+  if (t.includes('BLACK')) return 'Black';
+  if (t.includes('RED')) return 'Red';
+  if (t.includes('BLUE')) return 'Blue';
+  return null;
+}
+
+function parseClosedEnd(title) {
+  const t = title.toUpperCase();
+  if (t.includes('CLOSED') || t.includes('CL END')) return true;
+  if (t.includes('OPEN') || t.includes('OP END') || t.includes('OPEN END')) return false;
+  return null;
+}
+
+function parseIsBolt(title) {
+  const t = title.toUpperCase();
+  if (t.includes(' BOLT') || t.includes('BOLTS')) return true;
+  if (t.includes(' NUT') || t.includes('NUTS')) return false;
+  return null;
+}
+
+function parseLugStyle(title) {
+  const t = title.toUpperCase();
+  if (t.includes('SPLINE')) return 'Spline';
+  if (t.includes('TUNER')) return 'Tuner';
+  if (t.includes('BULGE')) return 'Bulge';
+  if (t.includes('ACORN')) return 'Acorn';
+  if (t.includes('ET')) return 'ET';
+  if (t.includes('SHANK')) return 'Mag Shank';
+  if (t.includes('6 POINT') || t.includes('6-POINT')) return '6-Point';
+  return null;
+}
+
+function parsePackageType(title) {
+  const t = title.toUpperCase();
+  if (t.includes('KIT') || t.includes('SET')) return 'Kit';
+  if (t.includes('BULK')) return 'Bulk';
+  if (t.includes('CARDED')) return 'Carded';
+  if (t.includes('BAG')) return 'Bag';
+  if (t.includes('PKG') || t.includes('PACK')) return 'Pack';
+  return null;
+}
+
+function parsePieceCount(title) {
+  const t = title.toUpperCase();
+  // Match patterns like "20 PC", "24PC", "(4PK)", "6PK"
+  const pcMatch = t.match(/(\d+)\s*(?:PC|PK|PIECE|PACK|CT)/);
+  if (pcMatch) return parseInt(pcMatch[1]);
+  // Match "SET OF X"
+  const setMatch = t.match(/SET\s*(?:OF\s*)?(\d+)/);
+  if (setMatch) return parseInt(setMatch[1]);
+  return null;
+}
+
+function parseHexSize(title) {
+  const t = title.toUpperCase();
+  // Metric hex: 17MM, 19MM, 21MM
+  const mm = t.match(/(\d{2})\s*MM/);
+  if (mm) return `${mm[1]}mm`;
+  // SAE hex: 3/4", 13/16"
+  const sae = t.match(/(\d+\/\d+)"/);
+  if (sae) return `${sae[1]}"`;
+  return null;
 }
 
 /**
- * Import from local CSV file
+ * Download fresh TechFeed from SFTP
  */
-async function importFromCSV(pool, csvPath) {
-  console.log('Importing from CSV:', csvPath);
-  
-  if (!fs.existsSync(csvPath)) {
-    throw new Error(`CSV file not found: ${csvPath}`);
-  }
-  
-  const content = fs.readFileSync(csvPath, 'utf8');
-  const lines = content.split('\n').filter(l => l.trim());
-  
-  const header = parseCSVLine(lines[0]);
-  console.log('CSV columns:', header.join(', '));
-  
-  const accessories = [];
-  
-  for (let i = 1; i < lines.length; i++) {
-    const cols = parseCSVLine(lines[i]);
-    const row = {};
-    header.forEach((h, j) => row[h.toLowerCase().replace(/ /g, '_')] = cols[j]);
-    
-    // Map CSV columns to our schema
-    const sku = row.sku || row.part_number;
-    const title = row.product_desc || row.title || row.description;
-    const brandCode = row.brand_code_3 || row.brand_code;
-    const subTypeRaw = row.sub_type || row.category;
-    const msrp = parseFloat(row.msrp) || null;
-    const map = parseFloat(row.map_price || row.map) || null;
-    const imageUrl = row.image_url || row.image_url1;
-    const upc = row.upc;
-    
-    if (!sku || !title) continue;
-    
-    const { category, subType } = categorize(subTypeRaw, title);
-    const brand = BRAND_NAMES[brandCode] || row.brand_desc || brandCode;
-    
-    // Parse specs from title
-    const threadSize = parseThreadSize(title);
-    const seatType = parseSeatType(title);
-    const hubRing = parseHubRing(title);
-    const boltPattern = parseBoltPattern(title);
-    const wheelBrand = parseWheelBrand(title, brandCode);
-    
-    // Estimate cost as MSRP * 0.75 if not provided
-    const cost = msrp ? msrp * 0.75 : null;
-    const sellPrice = calculateSellPrice(cost, msrp, map);
-    
-    accessories.push({
-      sku,
-      title,
-      brand,
-      brandCode,
-      category,
-      subType,
-      msrp,
-      map,
-      cost,
-      sellPrice,
-      imageUrl,
-      imageUrl2: row.image_url2,
-      imageUrl3: row.image_url3,
-      upc,
-      threadSize,
-      seatType,
-      outerDiameter: hubRing?.outer,
-      innerDiameter: hubRing?.inner,
-      boltPattern,
-      wheelBrand,
-    });
-  }
-  
-  console.log(`Parsed ${accessories.length} accessories`);
-  
-  // Insert into database
-  await insertAccessories(pool, accessories);
-  
-  return accessories.length;
-}
-
-/**
- * Import from SFTP TechFeed
- * 
- * Downloads from:
- * - /TechFeed/ACCESSORIES/Accessory_TechGuide.csv (primary - has images)
- * - /CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv (supplement - more SKUs)
- */
-async function importFromSFTP(pool) {
-  console.log('Connecting to WheelPros SFTP...');
+async function downloadFromSFTP() {
+  console.log('\nConnecting to WheelPros SFTP...');
   
   const sftp = new Client();
   await sftp.connect({
@@ -340,12 +367,10 @@ async function importFromSFTP(pool) {
   
   if (!fs.existsSync('./data')) fs.mkdirSync('./data');
   
-  // Download TechGuide (has images!)
   console.log('Downloading TechFeed/ACCESSORIES/Accessory_TechGuide.csv...');
   const techPath = './data/Accessory_TechGuide.csv';
   await sftp.get('/TechFeed/ACCESSORIES/Accessory_TechGuide.csv', techPath);
   
-  // Download CommonFeed (more SKUs, inventory data)
   console.log('Downloading CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv...');
   const commonPath = './data/accessoriesInvPriceData.csv';
   await sftp.get('/CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv', commonPath);
@@ -353,23 +378,22 @@ async function importFromSFTP(pool) {
   await sftp.end();
   console.log('Downloaded!');
   
-  // Parse TechGuide first (has images, product details)
-  const techContent = fs.readFileSync(techPath, 'utf8');
-  const techLines = techContent.split('\n').filter(l => l.trim());
-  const techHeader = parseCSVLine(techLines[0]);
-  console.log('TechGuide rows:', techLines.length - 1);
-  
-  // Parse CommonFeed (more SKUs, inventory)
-  const commonContent = fs.readFileSync(commonPath, 'utf8');
-  const commonLines = commonContent.split('\n').filter(l => l.trim());
-  const commonHeader = parseCSVLine(commonLines[0]);
-  console.log('CommonFeed rows:', commonLines.length - 1);
-  
-  // Build accessory list
+  return { techPath, commonPath };
+}
+
+/**
+ * Parse accessories from CSV files
+ */
+function parseAccessories(techPath, commonPath, s3Images) {
   const accessories = [];
   const seenSkus = new Set();
   
-  // First: TechGuide (has images)
+  // Parse TechGuide (primary - has product details)
+  console.log('\nParsing TechGuide...');
+  const techContent = fs.readFileSync(techPath, 'utf8');
+  const techLines = techContent.split('\n').filter(l => l.trim());
+  const techHeader = parseCSVLine(techLines[0]);
+  
   for (let i = 1; i < techLines.length; i++) {
     const cols = parseCSVLine(techLines[i]);
     const row = {};
@@ -380,19 +404,19 @@ async function importFromSFTP(pool) {
     seenSkus.add(sku);
     
     const title = row.product_desc || '';
-    const brandCode = row.brand_code_3 || row.brand_code || '';
+    const brandCode = row.brand_code_3 || row.brand_code || row.brand_cd || '';
     const subTypeRaw = row.product_sub_type || row.sub_type || '';
     const msrp = parseFloat(row.msrp) || null;
     const map = parseFloat(row.map_price) || null;
-    const imageUrl = row.image_url || row.image_url1 || '';
+    const rawImageUrl = row.image_url || row.image_url1 || '';
     
     const { category, subType } = categorize(subTypeRaw, title);
     const brand = BRAND_NAMES[brandCode] || row.brand_desc || brandCode;
     const cost = msrp ? msrp * 0.75 : null;
     const sellPrice = calculateSellPrice(cost, msrp, map);
     
-    // Generate image URL if not provided (TechFeed pattern)
-    const generatedImageUrl = `https://images.wheelpros.com/Accessories/${sku}.png`;
+    // Check S3 first for image, then validate TechFeed URL
+    let imageUrl = s3Images.get(sku) || validateImageUrl(rawImageUrl, s3Images);
     
     accessories.push({
       sku,
@@ -405,9 +429,9 @@ async function importFromSFTP(pool) {
       map,
       cost,
       sellPrice,
-      imageUrl: imageUrl || generatedImageUrl,
-      imageUrl2: row.image_url2 || null,
-      imageUrl3: row.image_url3 || null,
+      imageUrl,
+      imageUrl2: validateImageUrl(row.image_url2, s3Images),
+      imageUrl3: validateImageUrl(row.image_url3, s3Images),
       upc: row.upc,
       threadSize: parseThreadSize(title),
       seatType: parseSeatType(title),
@@ -415,142 +439,86 @@ async function importFromSFTP(pool) {
       innerDiameter: parseHubRing(title)?.inner,
       boltPattern: parseBoltPattern(title),
       wheelBrand: parseWheelBrand(title, brandCode),
+      // New filter attributes
+      material: parseMaterial(title),
+      closedEnd: parseClosedEnd(title),
+      isBolt: parseIsBolt(title),
+      style: parseLugStyle(title),
+      packageType: parsePackageType(title),
+      pieceCount: parsePieceCount(title),
+      hexSize: parseHexSize(title),
     });
   }
   
-  // Second: CommonFeed (fills gaps, has inventory)
-  for (let i = 1; i < commonLines.length; i++) {
-    const cols = parseCSVLine(commonLines[i]);
-    const row = {};
-    commonHeader.forEach((h, j) => row[h.toLowerCase().replace(/ /g, '_')] = cols[j]);
+  console.log(`  Parsed ${seenSkus.size} from TechGuide`);
+  
+  // Parse CommonFeed (fills gaps)
+  if (fs.existsSync(commonPath)) {
+    console.log('Parsing CommonFeed...');
+    const commonContent = fs.readFileSync(commonPath, 'utf8');
+    const commonLines = commonContent.split('\n').filter(l => l.trim());
+    const commonHeader = parseCSVLine(commonLines[0]);
+    let added = 0;
     
-    const sku = row.partnumber || row.sku;
-    if (!sku || seenSkus.has(sku)) continue;
-    seenSkus.add(sku);
-    
-    const title = row.partdescription || row.product_desc || '';
-    const brandCode = row.brand || '';
-    const msrp = parseFloat(row.msrp_usd || row.msrp) || null;
-    const map = parseFloat(row.map_usd || row.map_price) || null;
-    const imageUrl = row.imageurl || row.image_url || '';
-    
-    const { category, subType } = categorize('', title);
-    const brand = BRAND_NAMES[brandCode] || brandCode;
-    const cost = msrp ? msrp * 0.75 : null;
-    const sellPrice = calculateSellPrice(cost, msrp, map);
-    
-    // Generate image URL if not provided (TechFeed pattern)
-    const generatedImageUrl = `https://images.wheelpros.com/Accessories/${sku}.png`;
-    
-    accessories.push({
-      sku,
-      title,
-      brand,
-      brandCode,
-      category,
-      subType,
-      msrp,
-      map,
-      cost,
-      sellPrice,
-      imageUrl: imageUrl || generatedImageUrl,
-      threadSize: parseThreadSize(title),
-      seatType: parseSeatType(title),
-      outerDiameter: parseHubRing(title)?.outer,
-      innerDiameter: parseHubRing(title)?.inner,
-      boltPattern: parseBoltPattern(title),
-      wheelBrand: parseWheelBrand(title, brandCode),
-    });
-  }
-  
-  console.log(`Total unique accessories: ${accessories.length}`);
-  console.log(`With explicit images: ${accessories.filter(a => a.imageUrl && !a.imageUrl.includes('images.wheelpros.com/Accessories')).length}`);
-  console.log(`With generated images: ${accessories.filter(a => a.imageUrl?.includes('images.wheelpros.com/Accessories')).length}`);
-  
-  // Insert into database
-  await insertAccessories(pool, accessories);
-  
-  return accessories.length;
-}
-
-/**
- * Import from WheelPros API (limited fallback)
- */
-async function importFromAPI(pool) {
-  console.log('Importing from WheelPros API (limited)...');
-  
-  const baseUrl = process.env.WHEELPROS_WRAPPER_URL || 'https://shop.warehousetiredirect.com/api/wheelpros-proxy';
-  
-  const categories = [
-    { filter: 'lug nut', category: 'lug_nut' },
-    { filter: 'hub ring', category: 'hub_ring' },
-    { filter: 'center cap', category: 'center_cap' },
-    { filter: 'LED', category: 'lighting' },
-    { filter: 'light bar', category: 'lighting' },
-    { filter: 'TPMS', category: 'tpms' },
-    { filter: 'valve stem', category: 'valve_stem' },
-    { filter: 'wheel spacer', category: 'spacer' },
-  ];
-  
-  const accessories = [];
-  
-  for (const cat of categories) {
-    try {
-      // Use the local search endpoint which wraps WheelPros
-      const url = `https://shop.warehousetiredirect.com/api/accessories/search?q=${encodeURIComponent(cat.filter)}&pageSize=100`;
-      const res = await fetch(url);
-      const data = await res.json();
+    for (let i = 1; i < commonLines.length; i++) {
+      const cols = parseCSVLine(commonLines[i]);
+      const row = {};
+      commonHeader.forEach((h, j) => row[h.toLowerCase().replace(/ /g, '_')] = cols[j]);
       
-      for (const item of (data.results || [])) {
-        const { category, subType } = categorize(cat.filter, item.title);
-        const threadSize = parseThreadSize(item.title);
-        const seatType = parseSeatType(item.title);
-        const hubRing = parseHubRing(item.title);
-        const boltPattern = parseBoltPattern(item.title);
-        const wheelBrand = parseWheelBrand(item.title, item.brandCode);
-        
-        accessories.push({
-          sku: item.sku,
-          title: item.title,
-          brand: item.brand,
-          brandCode: item.brandCode,
-          category,
-          subType,
-          msrp: item.msrp,
-          map: item.map,
-          cost: item.msrp ? item.msrp * 0.75 : null,
-          sellPrice: item.price || calculateSellPrice(item.msrp * 0.75, item.msrp, item.map),
-          imageUrl: item.imageUrl,
-          inStock: item.inStock,
-          threadSize,
-          seatType,
-          outerDiameter: hubRing?.outer,
-          innerDiameter: hubRing?.inner,
-          boltPattern,
-          wheelBrand,
-        });
-      }
+      const sku = row.partnumber || row.sku;
+      if (!sku || seenSkus.has(sku)) continue;
+      seenSkus.add(sku);
       
-      console.log(`  ${cat.filter}: ${data.results?.length || 0} items`);
-    } catch (err) {
-      console.warn(`  ${cat.filter}: ERROR - ${err.message}`);
+      const title = row.partdescription || row.product_desc || '';
+      const brandCode = row.brand || '';
+      const msrp = parseFloat(row.msrp_usd || row.msrp) || null;
+      const map = parseFloat(row.map_usd || row.map_price) || null;
+      const rawImageUrl = row.imageurl || row.image_url || '';
+      
+      const { category, subType } = categorize('', title);
+      const brand = BRAND_NAMES[brandCode] || brandCode;
+      const cost = msrp ? msrp * 0.75 : null;
+      const sellPrice = calculateSellPrice(cost, msrp, map);
+      
+      let imageUrl = s3Images.get(sku) || validateImageUrl(rawImageUrl, s3Images);
+      
+      accessories.push({
+        sku,
+        title,
+        brand,
+        brandCode,
+        category,
+        subType,
+        msrp,
+        map,
+        cost,
+        sellPrice,
+        imageUrl,
+        threadSize: parseThreadSize(title),
+        seatType: parseSeatType(title),
+        outerDiameter: parseHubRing(title)?.outer,
+        innerDiameter: parseHubRing(title)?.inner,
+        boltPattern: parseBoltPattern(title),
+        wheelBrand: parseWheelBrand(title, brandCode),
+        // New filter attributes
+        material: parseMaterial(title),
+        closedEnd: parseClosedEnd(title),
+        isBolt: parseIsBolt(title),
+        style: parseLugStyle(title),
+        packageType: parsePackageType(title),
+        pieceCount: parsePieceCount(title),
+        hexSize: parseHexSize(title),
+      });
+      added++;
     }
+    
+    console.log(`  Added ${added} from CommonFeed`);
   }
   
-  // Dedupe by SKU
-  const uniqueSkus = new Map();
-  for (const acc of accessories) {
-    if (acc.sku && !uniqueSkus.has(acc.sku)) {
-      uniqueSkus.set(acc.sku, acc);
-    }
-  }
+  const withImages = accessories.filter(a => a.imageUrl).length;
+  console.log(`\nTotal: ${accessories.length} accessories (${withImages} with images)`);
   
-  const deduped = Array.from(uniqueSkus.values());
-  console.log(`Total unique accessories: ${deduped.length}`);
-  
-  await insertAccessories(pool, deduped);
-  
-  return deduped.length;
+  return accessories;
 }
 
 /**
@@ -562,25 +530,29 @@ async function insertAccessories(pool, accessories) {
     return;
   }
   
+  console.log('\nInserting into database...');
   const client = await pool.connect();
   
   try {
     await client.query('BEGIN');
     
-    // Upsert each accessory
     let inserted = 0, updated = 0;
+    const BATCH_SIZE = 100;
     
-    for (const acc of accessories) {
+    for (let i = 0; i < accessories.length; i++) {
+      const acc = accessories[i];
+      
       const result = await client.query(`
         INSERT INTO accessories (
           sku, title, brand, brand_code, category, sub_type,
           msrp, map_price, sell_price, cost,
           image_url, image_url_2, image_url_3,
           in_stock, upc,
-          thread_size, seat_type,
+          thread_size, seat_type, hex_size,
           outer_diameter, inner_diameter,
-          bolt_pattern, wheel_brand
-        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)
+          bolt_pattern, wheel_brand,
+          material, closed_end, is_bolt, style, package_type, piece_count
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28)
         ON CONFLICT (sku) DO UPDATE SET
           title = EXCLUDED.title,
           brand = EXCLUDED.brand,
@@ -594,9 +566,15 @@ async function insertAccessories(pool, accessories) {
           image_url = EXCLUDED.image_url,
           image_url_2 = EXCLUDED.image_url_2,
           image_url_3 = EXCLUDED.image_url_3,
-          in_stock = COALESCE(EXCLUDED.in_stock, accessories.in_stock),
           thread_size = COALESCE(EXCLUDED.thread_size, accessories.thread_size),
           seat_type = COALESCE(EXCLUDED.seat_type, accessories.seat_type),
+          hex_size = COALESCE(EXCLUDED.hex_size, accessories.hex_size),
+          material = COALESCE(EXCLUDED.material, accessories.material),
+          closed_end = COALESCE(EXCLUDED.closed_end, accessories.closed_end),
+          is_bolt = COALESCE(EXCLUDED.is_bolt, accessories.is_bolt),
+          style = COALESCE(EXCLUDED.style, accessories.style),
+          package_type = COALESCE(EXCLUDED.package_type, accessories.package_type),
+          piece_count = COALESCE(EXCLUDED.piece_count, accessories.piece_count),
           outer_diameter = COALESCE(EXCLUDED.outer_diameter, accessories.outer_diameter),
           inner_diameter = COALESCE(EXCLUDED.inner_diameter, accessories.inner_diameter),
           bolt_pattern = COALESCE(EXCLUDED.bolt_pattern, accessories.bolt_pattern),
@@ -617,14 +595,21 @@ async function insertAccessories(pool, accessories) {
         acc.imageUrl,
         acc.imageUrl2,
         acc.imageUrl3,
-        acc.inStock || false,
+        false, // in_stock - updated by inventory sync
         acc.upc,
         acc.threadSize,
         acc.seatType,
+        acc.hexSize,
         acc.outerDiameter,
         acc.innerDiameter,
         acc.boltPattern,
         acc.wheelBrand,
+        acc.material,
+        acc.closedEnd,
+        acc.isBolt,
+        acc.style,
+        acc.packageType,
+        acc.pieceCount,
       ]);
       
       if (result.rows[0]?.inserted) {
@@ -632,10 +617,14 @@ async function insertAccessories(pool, accessories) {
       } else {
         updated++;
       }
+      
+      if ((i + 1) % 1000 === 0) {
+        console.log(`  ... processed ${i + 1}/${accessories.length}`);
+      }
     }
     
     await client.query('COMMIT');
-    console.log(`Inserted: ${inserted}, Updated: ${updated}`);
+    console.log(`\nInserted: ${inserted}, Updated: ${updated}`);
     
   } catch (err) {
     await client.query('ROLLBACK');
@@ -647,8 +636,9 @@ async function insertAccessories(pool, accessories) {
 
 async function main() {
   const args = process.argv.slice(2);
-  const sourceArg = args.find(a => a.startsWith('--source='))?.split('=')[1] || 'auto';
+  const sourceArg = args.find(a => a.startsWith('--source='))?.split('=')[1] || 'sftp';
   const csvPath = args.find(a => a.startsWith('--csv-path='))?.split('=')[1];
+  const skipS3 = args.includes('--skip-s3');
   
   const connStr = process.env.POSTGRES_URL || process.env.DATABASE_URL;
   const pool = new Pool({
@@ -657,43 +647,57 @@ async function main() {
   });
   
   try {
-    // Create table if needed
-    const schema = fs.readFileSync('./src/lib/db/schema/accessories.sql', 'utf8');
-    await pool.query(schema);
-    console.log('Schema ready');
+    // Step 1: Fetch S3 image listing
+    let s3Images = new Map();
+    if (!skipS3) {
+      s3Images = await listAllS3Keys();
+    }
     
-    let count = 0;
+    // Step 2: Get TechFeed data
+    let techPath, commonPath;
     
     if (sourceArg === 'csv' && csvPath) {
-      count = await importFromCSV(pool, csvPath);
+      techPath = csvPath;
+      commonPath = csvPath.replace('TechGuide', 'InvPriceData');
     } else if (sourceArg === 'sftp') {
-      count = await importFromSFTP(pool);
-    } else if (sourceArg === 'api') {
-      count = await importFromAPI(pool);
+      const paths = await downloadFromSFTP();
+      techPath = paths.techPath;
+      commonPath = paths.commonPath;
     } else {
-      // Auto: try SFTP first, fall back to API
-      try {
-        count = await importFromSFTP(pool);
-      } catch (sftpErr) {
-        console.warn('SFTP failed:', sftpErr.message);
-        console.log('Falling back to API...');
-        count = await importFromAPI(pool);
+      // Default to local files if they exist
+      techPath = './data/Accessory_TechGuide.csv';
+      commonPath = './data/accessoriesInvPriceData.csv';
+      if (!fs.existsSync(techPath)) {
+        console.log('No local CSV found, downloading from SFTP...');
+        const paths = await downloadFromSFTP();
+        techPath = paths.techPath;
+        commonPath = paths.commonPath;
       }
     }
     
-    console.log(`\nImport complete! ${count} accessories processed.`);
+    // Step 3: Parse accessories
+    const accessories = parseAccessories(techPath, commonPath, s3Images);
     
-    // Show category counts
+    // Step 4: Insert into database
+    await insertAccessories(pool, accessories);
+    
+    // Step 5: Show stats
     const stats = await pool.query(`
-      SELECT category, COUNT(*) as count 
+      SELECT 
+        category, 
+        COUNT(*) as count,
+        COUNT(*) FILTER (WHERE image_url IS NOT NULL) as with_images
       FROM accessories 
       GROUP BY category 
       ORDER BY count DESC
     `);
+    
     console.log('\nCategory breakdown:');
     for (const row of stats.rows) {
-      console.log(`  ${row.category}: ${row.count}`);
+      console.log(`  ${row.category}: ${row.count} (${row.with_images} with images)`);
     }
+    
+    console.log('\nDone!');
     
   } catch (err) {
     console.error('Import failed:', err);

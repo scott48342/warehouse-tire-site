@@ -42,7 +42,7 @@ const CATEGORIES = [
     id: "lighting",
     name: "LED Lighting",
     icon: "💡",
-    description: "Light bars, pods, and rock lights",
+    description: "LED pods, fog lights, headlights & more",
   },
   {
     id: "tpms",
@@ -64,6 +64,16 @@ const CATEGORIES = [
   },
 ];
 
+// Lighting subcategories
+const LIGHTING_SUBCATEGORIES = [
+  { id: "led_pod", name: "LED Pods", icon: "🔦" },
+  { id: "fog_light", name: "Fog Lights", icon: "🌫️" },
+  { id: "headlight", name: "Headlights", icon: "🔆" },
+  { id: "tail_light", name: "Tail Lights", icon: "🚨" },
+  { id: "rock_light", name: "Rock Lights", icon: "🪨" },
+  { id: "light_bar", name: "Light Bars", icon: "📏" },
+];
+
 type AccessoryRow = {
   sku: string;
   title: string;
@@ -75,9 +85,18 @@ type AccessoryRow = {
   in_stock: boolean;
 };
 
+type FilterParams = {
+  brand?: string;
+  thread_size?: string;
+  material?: string;
+  style?: string;
+};
+
 async function getAccessories(
   category?: string,
+  subType?: string,
   query?: string,
+  filters?: FilterParams,
   page = 1,
   pageSize = 24
 ): Promise<{ items: AccessoryRow[]; total: number }> {
@@ -94,6 +113,11 @@ async function getAccessories(
       conditions.push(`category = $${paramIndex++}`);
       params.push(category);
     }
+    
+    if (subType) {
+      conditions.push(`sub_type = $${paramIndex++}`);
+      params.push(subType);
+    }
 
     if (query) {
       conditions.push(
@@ -101,6 +125,24 @@ async function getAccessories(
       );
       params.push(`%${query}%`);
       paramIndex++;
+    }
+    
+    // Apply filters
+    if (filters?.brand) {
+      conditions.push(`brand = $${paramIndex++}`);
+      params.push(filters.brand);
+    }
+    if (filters?.thread_size) {
+      conditions.push(`thread_size = $${paramIndex++}`);
+      params.push(filters.thread_size);
+    }
+    if (filters?.material) {
+      conditions.push(`material = $${paramIndex++}`);
+      params.push(filters.material);
+    }
+    if (filters?.style) {
+      conditions.push(`style = $${paramIndex++}`);
+      params.push(filters.style);
     }
 
     const where = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
@@ -126,6 +168,88 @@ async function getAccessories(
   } catch (e) {
     console.error("[accessories] Error:", e);
     return { items: [], total: 0 };
+  }
+}
+
+async function getFilters(category: string): Promise<Record<string, { value: string; count: number }[]>> {
+  const pool = getDbPool();
+  if (!pool) return {};
+
+  const filters: Record<string, { value: string; count: number }[]> = {};
+  
+  try {
+    // Always get brands
+    const brandResult = await pool.query(`
+      SELECT brand as value, COUNT(*) as count 
+      FROM accessories 
+      WHERE category = $1 AND brand IS NOT NULL
+      GROUP BY brand 
+      ORDER BY count DESC
+      LIMIT 30
+    `, [category]);
+    
+    if (brandResult.rows.length > 0) {
+      filters.brand = brandResult.rows.map(r => ({ value: r.value, count: parseInt(r.count) }));
+    }
+    
+    // Category-specific filters
+    if (category === 'lug_nut') {
+      // Thread size
+      const threadResult = await pool.query(`
+        SELECT thread_size as value, COUNT(*) as count 
+        FROM accessories 
+        WHERE category = $1 AND thread_size IS NOT NULL
+        GROUP BY thread_size 
+        ORDER BY count DESC
+        LIMIT 20
+      `, [category]);
+      if (threadResult.rows.length > 0) {
+        filters.thread_size = threadResult.rows.map(r => ({ value: r.value, count: parseInt(r.count) }));
+      }
+      
+      // Material
+      const materialResult = await pool.query(`
+        SELECT material as value, COUNT(*) as count 
+        FROM accessories 
+        WHERE category = $1 AND material IS NOT NULL
+        GROUP BY material 
+        ORDER BY count DESC
+      `, [category]);
+      if (materialResult.rows.length > 0) {
+        filters.material = materialResult.rows.map(r => ({ value: r.value, count: parseInt(r.count) }));
+      }
+      
+      // Style
+      const styleResult = await pool.query(`
+        SELECT style as value, COUNT(*) as count 
+        FROM accessories 
+        WHERE category = $1 AND style IS NOT NULL
+        GROUP BY style 
+        ORDER BY count DESC
+      `, [category]);
+      if (styleResult.rows.length > 0) {
+        filters.style = styleResult.rows.map(r => ({ value: r.value, count: parseInt(r.count) }));
+      }
+    }
+    
+    // Lighting subcategories
+    if (category === 'lighting') {
+      const subTypeResult = await pool.query(`
+        SELECT sub_type as value, COUNT(*) as count 
+        FROM accessories 
+        WHERE category = $1 AND sub_type IS NOT NULL
+        GROUP BY sub_type 
+        ORDER BY count DESC
+      `, [category]);
+      if (subTypeResult.rows.length > 0) {
+        filters.sub_type = subTypeResult.rows.map(r => ({ value: r.value, count: parseInt(r.count) }));
+      }
+    }
+    
+    return filters;
+  } catch (e) {
+    console.error("[accessories/filters] Error:", e);
+    return {};
   }
 }
 
@@ -208,16 +332,36 @@ function AccessoryCard({ item }: { item: AccessoryRow }) {
 export default async function AccessoriesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string; q?: string; page?: string }>;
+  searchParams: Promise<{ 
+    category?: string; 
+    subtype?: string; 
+    q?: string; 
+    page?: string;
+    brand?: string;
+    thread_size?: string;
+    material?: string;
+    style?: string;
+  }>;
 }) {
   const params = await searchParams;
   const category = params.category;
+  const subType = params.subtype;
   const query = params.q;
   const page = parseInt(params.page || "1");
+  
+  // Extract filters
+  const filters: FilterParams = {
+    brand: params.brand,
+    thread_size: params.thread_size,
+    material: params.material,
+    style: params.style,
+  };
+  const hasFilters = Object.values(filters).some(v => v);
 
-  const [{ items, total }, categoryCounts] = await Promise.all([
-    getAccessories(category, query, page),
+  const [{ items, total }, categoryCounts, categoryFilters] = await Promise.all([
+    getAccessories(category, subType, query, filters, page),
     getCategoryCounts(),
+    category ? getFilters(category) : Promise.resolve({}),
   ]);
 
   const totalPages = Math.ceil(total / 24);
@@ -258,23 +402,46 @@ export default async function AccessoriesPage({
               </Link>
 
               {CATEGORIES.map((cat) => (
-                <Link
-                  key={cat.id}
-                  href={`/accessories?category=${cat.id}`}
-                  className={`flex items-center justify-between px-3 py-2 rounded-lg transition-colors ${
-                    category === cat.id
-                      ? "bg-orange-100 text-orange-700"
-                      : "hover:bg-gray-100"
-                  }`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span>{cat.icon}</span>
-                    <span>{cat.name}</span>
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    {categoryCounts[cat.id] || 0}
-                  </span>
-                </Link>
+                <div key={cat.id}>
+                  <Link
+                    href={`/accessories?category=${cat.id}`}
+                    className={`flex items-center justify-between px-3 py-2 rounded-lg transition-colors ${
+                      category === cat.id && !subType
+                        ? "bg-orange-100 text-orange-700"
+                        : category === cat.id
+                        ? "bg-orange-50 text-orange-600"
+                        : "hover:bg-gray-100"
+                    }`}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span>{cat.icon}</span>
+                      <span>{cat.name}</span>
+                    </span>
+                    <span className="text-sm text-gray-500">
+                      {categoryCounts[cat.id] || 0}
+                    </span>
+                  </Link>
+                  
+                  {/* Lighting subcategories */}
+                  {cat.id === "lighting" && category === "lighting" && (
+                    <div className="ml-6 mt-1 space-y-1">
+                      {LIGHTING_SUBCATEGORIES.map((sub) => (
+                        <Link
+                          key={sub.id}
+                          href={`/accessories?category=lighting&subtype=${sub.id}`}
+                          className={`flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                            subType === sub.id
+                              ? "bg-orange-100 text-orange-700"
+                              : "hover:bg-gray-100 text-gray-600"
+                          }`}
+                        >
+                          <span>{sub.icon}</span>
+                          <span>{sub.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </nav>
 
@@ -294,11 +461,185 @@ export default async function AccessoriesPage({
                 />
               </form>
             </div>
+            
+            {/* Filters */}
+            {category && Object.keys(categoryFilters).length > 0 && (
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center justify-between">
+                  <h2 className="font-semibold text-gray-900">Filters</h2>
+                  {hasFilters && (
+                    <Link 
+                      href={`/accessories?category=${category}`}
+                      className="text-xs text-orange-600 hover:underline"
+                    >
+                      Clear All
+                    </Link>
+                  )}
+                </div>
+                
+                {/* Brand Filter */}
+                {categoryFilters.brand && categoryFilters.brand.length > 0 && (
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-700 mb-2">Brand</h3>
+                    <div className="space-y-1 max-h-48 overflow-y-auto">
+                      {categoryFilters.brand.slice(0, 10).map((f) => (
+                        <Link
+                          key={f.value}
+                          href={`/accessories?category=${category}&brand=${encodeURIComponent(f.value)}`}
+                          className={`flex items-center justify-between px-2 py-1 text-sm rounded transition-colors ${
+                            filters.brand === f.value
+                              ? "bg-orange-100 text-orange-700"
+                              : "hover:bg-gray-100 text-gray-600"
+                          }`}
+                        >
+                          <span className="truncate">{f.value}</span>
+                          <span className="text-xs text-gray-400">{f.count}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Thread Size Filter (Lug Nuts) */}
+                {categoryFilters.thread_size && categoryFilters.thread_size.length > 0 && (
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-700 mb-2">Thread Size</h3>
+                    <div className="space-y-1 max-h-48 overflow-y-auto">
+                      {categoryFilters.thread_size.slice(0, 12).map((f) => (
+                        <Link
+                          key={f.value}
+                          href={`/accessories?category=${category}&thread_size=${encodeURIComponent(f.value)}`}
+                          className={`flex items-center justify-between px-2 py-1 text-sm rounded transition-colors ${
+                            filters.thread_size === f.value
+                              ? "bg-orange-100 text-orange-700"
+                              : "hover:bg-gray-100 text-gray-600"
+                          }`}
+                        >
+                          <span>{f.value}</span>
+                          <span className="text-xs text-gray-400">{f.count}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Material Filter */}
+                {categoryFilters.material && categoryFilters.material.length > 0 && (
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-700 mb-2">Material</h3>
+                    <div className="space-y-1">
+                      {categoryFilters.material.map((f) => (
+                        <Link
+                          key={f.value}
+                          href={`/accessories?category=${category}&material=${encodeURIComponent(f.value)}`}
+                          className={`flex items-center justify-between px-2 py-1 text-sm rounded transition-colors ${
+                            filters.material === f.value
+                              ? "bg-orange-100 text-orange-700"
+                              : "hover:bg-gray-100 text-gray-600"
+                          }`}
+                        >
+                          <span>{f.value}</span>
+                          <span className="text-xs text-gray-400">{f.count}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Style Filter */}
+                {categoryFilters.style && categoryFilters.style.length > 0 && (
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-700 mb-2">Style</h3>
+                    <div className="space-y-1">
+                      {categoryFilters.style.map((f) => (
+                        <Link
+                          key={f.value}
+                          href={`/accessories?category=${category}&style=${encodeURIComponent(f.value)}`}
+                          className={`flex items-center justify-between px-2 py-1 text-sm rounded transition-colors ${
+                            filters.style === f.value
+                              ? "bg-orange-100 text-orange-700"
+                              : "hover:bg-gray-100 text-gray-600"
+                          }`}
+                        >
+                          <span>{f.value}</span>
+                          <span className="text-xs text-gray-400">{f.count}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Lighting Sub-type Filter */}
+                {categoryFilters.sub_type && categoryFilters.sub_type.length > 0 && (
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-700 mb-2">Type</h3>
+                    <div className="space-y-1">
+                      {categoryFilters.sub_type.map((f) => (
+                        <Link
+                          key={f.value}
+                          href={`/accessories?category=${category}&subtype=${encodeURIComponent(f.value)}`}
+                          className={`flex items-center justify-between px-2 py-1 text-sm rounded transition-colors ${
+                            subType === f.value
+                              ? "bg-orange-100 text-orange-700"
+                              : "hover:bg-gray-100 text-gray-600"
+                          }`}
+                        >
+                          <span className="capitalize">{f.value.replace(/_/g, ' ')}</span>
+                          <span className="text-xs text-gray-400">{f.count}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </aside>
 
         {/* Main content */}
         <div className="flex-1">
+          {/* Active filters */}
+          {hasFilters && (
+            <div className="flex flex-wrap gap-2 mb-4">
+              {filters.brand && (
+                <Link
+                  href={`/accessories?category=${category}${filters.thread_size ? `&thread_size=${filters.thread_size}` : ''}${filters.material ? `&material=${filters.material}` : ''}${filters.style ? `&style=${filters.style}` : ''}`}
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full hover:bg-orange-200"
+                >
+                  Brand: {filters.brand}
+                  <span className="text-orange-500">×</span>
+                </Link>
+              )}
+              {filters.thread_size && (
+                <Link
+                  href={`/accessories?category=${category}${filters.brand ? `&brand=${filters.brand}` : ''}${filters.material ? `&material=${filters.material}` : ''}${filters.style ? `&style=${filters.style}` : ''}`}
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full hover:bg-orange-200"
+                >
+                  Thread: {filters.thread_size}
+                  <span className="text-orange-500">×</span>
+                </Link>
+              )}
+              {filters.material && (
+                <Link
+                  href={`/accessories?category=${category}${filters.brand ? `&brand=${filters.brand}` : ''}${filters.thread_size ? `&thread_size=${filters.thread_size}` : ''}${filters.style ? `&style=${filters.style}` : ''}`}
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full hover:bg-orange-200"
+                >
+                  {filters.material}
+                  <span className="text-orange-500">×</span>
+                </Link>
+              )}
+              {filters.style && (
+                <Link
+                  href={`/accessories?category=${category}${filters.brand ? `&brand=${filters.brand}` : ''}${filters.thread_size ? `&thread_size=${filters.thread_size}` : ''}${filters.material ? `&material=${filters.material}` : ''}`}
+                  className="inline-flex items-center gap-1 px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full hover:bg-orange-200"
+                >
+                  {filters.style}
+                  <span className="text-orange-500">×</span>
+                </Link>
+              )}
+            </div>
+          )}
+          
           {/* Results count */}
           <div className="flex items-center justify-between mb-6">
             <p className="text-gray-600">
