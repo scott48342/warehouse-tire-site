@@ -48,6 +48,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '31inc.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.schradertpms.com',
+      },
     ],
   },
 };
