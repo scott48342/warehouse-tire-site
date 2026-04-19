@@ -995,33 +995,15 @@ export default async function WheelsPage({
   // Classic/vintage vehicles (pre-1985) skip strict filtering entirely - the fitment guidance
   // system marks most aftermarket wheels as "aggressive" when they actually fit fine in classic
   // car wheel wells. Better to show all options and let the customer decide.
-  const yearNum = parseInt(year || "0", 10);
-  const isVintageYear = yearNum > 0 && yearNum < 1985;
-  const useStrictFilter = buildTypeParam === "stock" && !isVintageYear;
-  
+  // Apply build type filter - NEVER use strict filtering on SRP
+  // Stock mode now just RANKS stock-friendly wheels higher, shows everything
+  // User can then filter by size chips or sidebar filters
   let itemsFilteredBuildType = filterWheelsForBuildType(
     itemsFilteredPrice,
     buildTypeParam,
     oemEnvelope,
-    { strictFilter: useStrictFilter }
+    { strictFilter: false } // Always soft filter - rank don't hide
   );
-  
-  // Fallback: if strict stock filter returns too few results, relax the filter
-  // "Too few" = less than 20% of original count OR zero results
-  const strictFilterTooAggressive = useStrictFilter && 
-    itemsFilteredPrice.length > 0 &&
-    (itemsFilteredBuildType.length === 0 || 
-     itemsFilteredBuildType.length < itemsFilteredPrice.length * 0.2);
-  
-  if (strictFilterTooAggressive) {
-    // Re-run without strict filter - just rank stock-friendly higher
-    itemsFilteredBuildType = filterWheelsForBuildType(
-      itemsFilteredPrice,
-      buildTypeParam,
-      oemEnvelope,
-      { strictFilter: false }
-    );
-  }
 
   // Use fast browse results if available, otherwise use processed WheelPros results
   const itemsFinal = useFastBrowse && fastItems.length > 0
