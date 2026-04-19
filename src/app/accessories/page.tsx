@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     "Shop lug nuts, center caps, hub rings, LED lights, TPMS sensors, and more. Quality accessories for your wheel and tire installation.",
 };
 
+// Force dynamic - this page queries DB and uses searchParams
+export const dynamic = "force-dynamic";
+
 // Category config
 const CATEGORIES = [
   {
@@ -272,7 +275,8 @@ async function getCategoryCounts(): Promise<Record<string, number>> {
 }
 
 function AccessoryCard({ item }: { item: AccessoryRow }) {
-  const price = item.sell_price || item.msrp || 0;
+  const rawPrice = item.sell_price ?? item.msrp ?? 0;
+  const price = Number(rawPrice) || 0;
   const categoryInfo = CATEGORIES.find((c) => c.id === item.category);
 
   return (

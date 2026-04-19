@@ -1793,3 +1793,129 @@ Starting at $346
 
 ✨ Done!
 [Sat 04/18/2026 18:00:24.16] Auto-post complete 
+[Sun 04/19/2026  9:00:02.60] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:13380) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC FC874 CELSIUS
+  Downloading image for Fuel 1PC FC874 CELSIUS...
+  ✅ Generated: fc874_celsius_1776603604633
+  📝 Caption preview: Weekend project? ✅
+
+Fuel 1PC FC874 CELSIUS
+📐 20x9
+🔩 6X135
+↔️ 1mm offset
+✨ CELS...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - fc874_celsius_1776603604633.png
+  - fc874_celsius_1776603604633.json
+
+📱 Facebook/Instagram Poster
+
+Selected: fc874_celsius_1776603604633
+
+--- Content Preview ---
+Wheel: Fuel 1PC FC874 CELSIUS
+Price: $424
+Image: fc874_celsius_1776603604633.png
+
+Caption:
+Weekend project? ✅
+
+Fuel 1PC FC874 CELSIUS
+📐 20x9
+🔩 6X135
+↔️ 1mm offset
+✨ CELSIUS 20X9 6X135 87 +1 M-BRNZ BLK-LP
+
+Only $424/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/FC874ZB20906301
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #fuel1pc #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1581305307330929
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:5876) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] American Racing Vintage VN215 CLASSIC TORQ THRUST II
+  Downloading image for American Racing Vintage VN215 CLASSIC TORQ THRUST II...
+  ✅ Generated: vn215_classic_torq_thrust_ii_1776603617674
+  📝 Caption preview: Transform your car with the American Racing Vintage VN215 CLASSIC TORQ THRUST II...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - vn215_classic_torq_thrust_ii_1776603617674.png
+  - vn215_classic_torq_thrust_ii_1776603617674.json
+
+📱 Facebook/Instagram Poster
+
+Selected: tw004_canard_1775897490968
+
+--- Content Preview ---
+Wheel: TSW TW004 CANARD
+Price: $390
+Image: tw004_canard_1775897490968.png
+
+Caption:
+Weekend project? ✅
+
+TSW TW004 CANARD
+📐 19x10.5
+🔩 5X4.5
+↔️ 25mm offset
+✨ CANARD 19X10.5 5X4.5 72 +25 M-BLK
+
+Only $390/wheel
+
+🛒 Get yours: https://shop.warehousetiredirect.com/wheels/TW004MX19051225
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #tsw #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1727012631978067
+
+✨ Done!
+[Sun 04/19/2026  9:00:23.73] Auto-post complete 
