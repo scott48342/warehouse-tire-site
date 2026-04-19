@@ -254,86 +254,54 @@ export function PackageBridgeCTA({
             )}
           </p>
           
-          {/* "Most Customers Choose" Block */}
+          {/* "Most Customers Choose" Block - Only for lifted builds with real data */}
           {hasLiftedBuildContext && (
-            <div className="mt-4 rounded-xl bg-white border-2 border-amber-200 p-4">
-              <div className="flex items-center gap-2 text-amber-700 mb-3">
-                <span className="text-lg">⭐</span>
-                <span className="text-sm font-bold">Most customers choose</span>
+            <div className="mt-4 inline-flex items-center gap-6 rounded-xl bg-white border border-neutral-200 px-4 py-3">
+              <div className="flex items-center gap-2 text-amber-600">
+                <span className="text-base">⭐</span>
+                <span className="text-sm font-semibold">Most customers choose</span>
               </div>
-              <div className="grid gap-2 sm:grid-cols-3 text-sm">
+              <div className="flex items-center gap-6 text-sm">
                 <div>
-                  <div className="text-xs text-neutral-500">Tire Size</div>
-                  <div className="font-bold text-neutral-900">{tireSizes[tireSizes.length - 1] || "35"}"</div>
+                  <span className="text-neutral-500">Tire: </span>
+                  <span className="font-bold text-neutral-900">{tireSizes[tireSizes.length - 1]}"</span>
                 </div>
                 <div>
-                  <div className="text-xs text-neutral-500">Wheel Offset</div>
-                  <div className="font-bold text-neutral-900">{liftConfig?.offsetMin || -24}mm</div>
+                  <span className="text-neutral-500">Offset: </span>
+                  <span className="font-bold text-neutral-900">{liftConfig?.offsetMin}mm</span>
                 </div>
                 <div>
-                  <div className="text-xs text-neutral-500">Build Style</div>
-                  <div className="font-bold text-neutral-900">{useCaseLabel}</div>
+                  <span className="text-neutral-500">Style: </span>
+                  <span className="font-bold text-neutral-900">{useCaseLabel}</span>
                 </div>
               </div>
             </div>
           )}
           
-          {/* Package Tiers */}
-          <div className="mt-4 grid gap-2 sm:grid-cols-3">
-            <div className="rounded-lg bg-white border border-green-100 p-3">
-              <div className="text-xs font-semibold text-neutral-500">Budget Build</div>
-              <div className="text-sm font-bold text-neutral-900">From $800</div>
-              <div className="text-xs text-neutral-500">Solid value</div>
+          {/* CTA + Trust signals row */}
+          <div className="mt-5 flex flex-wrap items-center gap-4">
+            <Link
+              href={buildTireUrl()}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-bold text-white hover:bg-green-700 transition-colors shadow-lg shadow-green-600/25"
+            >
+              <span>Complete My Build with Tires</span>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            
+            {/* Trust signals - inline with CTA */}
+            <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-600">
+              <span className="flex items-center gap-1">
+                <span className="text-green-500">✓</span> Fitment guaranteed
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="text-green-500">✓</span> Free shipping over $1,500
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="text-blue-500">🔧</span> Install at Pontiac &amp; Waterford
+              </span>
             </div>
-            <div className="rounded-lg bg-white border-2 border-green-300 p-3 relative">
-              <div className="absolute -top-2 left-3 rounded-full bg-green-500 px-2 py-0.5 text-[10px] font-bold text-white">
-                POPULAR
-              </div>
-              <div className="text-xs font-semibold text-green-600 mt-1">Premium Package</div>
-              <div className="text-sm font-bold text-neutral-900">From $1,400</div>
-              <div className="text-xs text-neutral-500">Best balance</div>
-            </div>
-            <div className="rounded-lg bg-white border border-green-100 p-3">
-              <div className="text-xs font-semibold text-neutral-500">Show Build</div>
-              <div className="text-sm font-bold text-neutral-900">From $2,200</div>
-              <div className="text-xs text-neutral-500">Top brands</div>
-            </div>
-          </div>
-          
-          {/* CTA */}
-          <Link
-            href={buildTireUrl()}
-            className="mt-5 w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-8 py-4 text-base font-bold text-white hover:bg-green-700 transition-colors shadow-lg shadow-green-600/25"
-          >
-            <span>Complete My Build with Tires</span>
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-          
-          {/* Confidence Copy */}
-          <p className="mt-3 text-sm text-neutral-700 font-medium">
-            Everything shown will fit your exact setup — no guesswork.
-          </p>
-          
-          {/* Trust signals */}
-          <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-neutral-500">
-            <span className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> Fitment guaranteed
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> Free shipping over $1,500
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> Expert support
-            </span>
-          </div>
-          
-          {/* Install Messaging */}
-          <div className="mt-4 rounded-lg bg-blue-50 border border-blue-200 px-4 py-2">
-            <span className="text-sm text-blue-800">
-              🔧 <strong>Install available</strong> at our Pontiac &amp; Waterford locations
-            </span>
           </div>
         </div>
       </div>
