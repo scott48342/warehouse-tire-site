@@ -343,7 +343,14 @@ export default async function AccessoriesPage({
     style?: string;
   }>;
 }) {
-  const params = await searchParams;
+  let params;
+  try {
+    params = await searchParams;
+  } catch (e) {
+    console.error("[accessories] Error parsing searchParams:", e);
+    params = {};
+  }
+  
   const category = params.category;
   const subType = params.subtype;
   const query = params.q;
@@ -358,11 +365,24 @@ export default async function AccessoriesPage({
   };
   const hasFilters = Object.values(filters).some(v => v);
 
-  const [{ items, total }, categoryCounts, categoryFilters] = await Promise.all([
-    getAccessories(category, subType, query, filters, page),
-    getCategoryCounts(),
-    category ? getFilters(category) : Promise.resolve({} as Record<string, { value: string; count: number }[]>),
-  ]);
+  let items: AccessoryRow[] = [];
+  let total = 0;
+  let categoryCounts: Record<string, number> = {};
+  let categoryFilters: Record<string, { value: string; count: number }[]> = {};
+  
+  try {
+    const results = await Promise.all([
+      getAccessories(category, subType, query, filters, page),
+      getCategoryCounts(),
+      category ? getFilters(category) : Promise.resolve({} as Record<string, { value: string; count: number }[]>),
+    ]);
+    items = results[0].items;
+    total = results[0].total;
+    categoryCounts = results[1];
+    categoryFilters = results[2];
+  } catch (e) {
+    console.error("[accessories] Error fetching data:", e);
+  }
 
   const totalPages = Math.ceil(total / 24);
   const selectedCategory = CATEGORIES.find((c) => c.id === category);
