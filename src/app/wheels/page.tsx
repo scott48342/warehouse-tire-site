@@ -7,7 +7,7 @@ import { WheelFilterSidebar } from "@/components/WheelFilterSidebar";
 import { GarageWidget } from "@/components/GarageWidget";
 import { RecommendedFitmentCard } from "@/components/RecommendedFitmentCard";
 import { PackageSummary } from "@/components/PackageSummary";
-import { PackageJourneyBar } from "@/components/PackageJourneyBar";
+// PackageJourneyBar removed 2026-04-19 - using StickyBuildBar instead
 import { FitmentUnavailable, FitmentMediumConfidenceWarning } from "@/components/FitmentUnavailable";
 import { type FitmentConfidenceLevel } from "@/components/FitmentConfidenceBadge";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
@@ -1338,10 +1338,7 @@ export default async function WheelsPage({
       
       return (
         <main className="bg-neutral-50">
-          <PackageJourneyBar
-            currentStep="wheels"
-            vehicle={{ year, make, model }}
-          />
+          <StickyBuildBar />
           <div className="mx-auto max-w-screen-2xl px-4 py-8">
             <ClassicFitmentCard data={cardData} productType="wheels" />
           </div>
@@ -1357,11 +1354,8 @@ export default async function WheelsPage({
   if (vehicleNeedsRearWheelConfig && !effectiveRearWheelConfig) {
     return (
       <main className="bg-neutral-50">
-        {/* Package Journey Bar */}
-        <PackageJourneyBar
-          currentStep="wheels"
-          vehicle={{ year, make, model }}
-        />
+        {/* Green Build Bar */}
+        <StickyBuildBar />
         
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
           <div className="max-w-2xl mx-auto">
@@ -1408,18 +1402,10 @@ export default async function WheelsPage({
       {hasVehicle && <StickyBuildBar />}
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          PACKAGE JOURNEY BAR - Guides user through wheel + tire flow
+          PACKAGE JOURNEY BAR - REMOVED (2026-04-19)
+          Green StickyBuildBar above is now the only top contextual bar.
+          Old black "BUILD YOUR PACKAGE" bar was causing duplicate UI.
           ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle ? (
-        <PackageJourneyBar
-          currentStep="wheels"
-          vehicle={{
-            year,
-            make,
-            model,
-          }}
-        />
-      ) : null}
 
       {/* ═══════════════════════════════════════════════════════════════════════
           HOMEPAGE INTENT BAR - Shows intent-specific chips/toggles
