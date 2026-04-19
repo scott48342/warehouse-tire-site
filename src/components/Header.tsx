@@ -6,6 +6,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { BRAND } from "@/lib/brand";
+import { AccessoriesMegaMenu } from "@/components/AccessoriesMegaMenu";
 
 type LauncherMode = "vehicles" | "tires" | "wheels" | "packages";
 import { VisualFitmentLauncher } from "@/components/VisualFitmentLauncher";
@@ -350,48 +351,8 @@ export function Header() {
               </div>
             </details>
 
-            <details className="group relative">
-              <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
-                ACCESSORIES <span className="text-xs">▾</span>
-              </summary>
-              <div className="absolute left-0 top-full z-[80] mt-2 w-64 rounded-2xl border border-neutral-200 bg-white p-2 shadow-xl">
-                <Link
-                  href="/accessories/lug-nuts"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  🔩 Lug Nuts & Locks
-                </Link>
-                <Link
-                  href="/accessories/hub-rings"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  ⭕ Hub Centric Rings
-                </Link>
-                <Link
-                  href="/accessories/tpms"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  📡 TPMS Sensors
-                </Link>
-                <Link
-                  href="/accessories/lighting"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  💡 LED Lighting
-                </Link>
-                <Link
-                  href="/accessories/center-caps"
-                  onClick={() => closeMenus()}
-                  className="block rounded-xl px-3 py-2 text-left text-sm font-semibold text-neutral-900 hover:bg-neutral-50"
-                >
-                  🎯 Center Caps
-                </Link>
-              </div>
-            </details>
+            {/* Accessories Mega Menu with subcategory hover */}
+            <AccessoriesMegaMenu />
 
             <details className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
