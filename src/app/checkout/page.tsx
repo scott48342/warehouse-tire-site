@@ -261,7 +261,7 @@ export default function CheckoutPage() {
     }
   }
 
-  async function startStripeCheckout() {
+  async function startStripeCheckout(options?: { forceAffirm?: boolean }) {
     try {
       setStripeError(null);
       setProcessing(true);
@@ -280,7 +280,9 @@ export default function CheckoutPage() {
           items,
           customer,
           vehicle,
-          cartId: getCartId(), // For linking add-to-cart events to purchases
+          cartId: getCartId(),
+          // Force Affirm-only checkout
+          ...(options?.forceAffirm ? { paymentMethod: "affirm" } : {}),
           // Local mode: include install store for order routing
           ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
           shipping: {
@@ -785,110 +787,89 @@ export default function CheckoutPage() {
             {step === "payment" && (
               <div className="space-y-4">
                 {/* Affirm Pay Over Time - Info Banner */}
-                {totalWithTaxAndShipping >= 50 && (
-                  <div className="rounded-2xl border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-indigo-50 p-5">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-7" />
-                        <div>
-                          <h2 className="text-base font-bold text-blue-900">Pay Over Time Available</h2>
-                          <p className="text-sm text-blue-700">Select Affirm below to split into 4 payments</p>
-                        </div>
-                      </div>
-                      <span className="px-3 py-1 bg-blue-200 text-blue-800 text-sm font-bold rounded-full">0% APR</span>
-                    </div>
-                    
-                    <div className="bg-white rounded-xl p-3 border border-blue-200">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-neutral-600">4 interest-free payments of</span>
-                        <span className="text-lg font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</span>
-                      </div>
-                    </div>
+                {/* Error state */}
+                {stripeError && (
+                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
+                    <p>{stripeError}</p>
                   </div>
                 )}
 
-                {/* Payment Form */}
-                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <h2 className="text-lg font-bold text-neutral-900 mb-4">Payment Method</h2>
+                {/* Pay with Affirm - Prominent CTA */}
+                {totalWithTaxAndShipping >= 50 && (
+                  <button
+                    onClick={() => startStripeCheckout({ forceAffirm: true })}
+                    disabled={processing}
+                    className={`w-full rounded-2xl border-2 border-blue-400 bg-gradient-to-br from-blue-50 to-indigo-50 p-5 text-left transition-all hover:border-blue-500 hover:shadow-lg ${
+                      processing ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-3">
+                        <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-8" />
+                        <div>
+                          <h2 className="text-lg font-bold text-blue-900">Pay Over Time with Affirm</h2>
+                          <p className="text-sm text-blue-700">Split into 4 interest-free payments</p>
+                        </div>
+                      </div>
+                      <span className="px-3 py-1 bg-blue-600 text-white text-sm font-bold rounded-full">0% APR</span>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-4 border border-blue-200">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm text-neutral-600">4 interest-free payments of</p>
+                          <p className="text-2xl font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
+                        </div>
+                        <div className="flex items-center gap-2 text-blue-600 font-bold">
+                          {processing ? "Redirecting..." : "Select Affirm →"}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-xs text-blue-600 mt-3 text-center">
+                      No credit impact to check eligibility • Instant decision
+                    </p>
+                  </button>
+                )}
 
-                  {/* Loading state */}
-                  {paymentLoading && (
-                    <div className="flex items-center justify-center py-12">
-                      <svg className="animate-spin h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                {/* Divider */}
+                <div className="flex items-center gap-4 my-2">
+                  <div className="flex-1 border-t border-neutral-200"></div>
+                  <span className="text-sm text-neutral-400 font-medium">or</span>
+                  <div className="flex-1 border-t border-neutral-200"></div>
+                </div>
+
+                {/* Pay with Card */}
+                <button
+                  onClick={() => startStripeCheckout()}
+                  disabled={processing}
+                  className={`w-full h-14 rounded-xl font-extrabold text-white text-lg flex items-center justify-center gap-3 ${
+                    processing ? "bg-neutral-300 cursor-not-allowed" : "bg-green-600 hover:bg-green-700"
+                  }`}
+                >
+                  {processing ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      <span className="ml-3 text-neutral-600">Initializing secure payment...</span>
-                    </div>
+                      Redirecting to Checkout...
+                    </>
+                  ) : (
+                    <>
+                      💳 Pay with Card — ${totalWithTaxAndShipping.toFixed(2)}
+                    </>
                   )}
+                </button>
 
-                  {/* Error state (before payment element loads) */}
-                  {stripeError && !clientSecret && (
-                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
-                      <p>{stripeError}</p>
-                      <div className="mt-2 flex gap-2">
-                        <button 
-                          onClick={() => {
-                            setStripeError(null);
-                            setClientSecret(null);
-                            createPaymentIntent();
-                          }}
-                          className="underline hover:no-underline"
-                        >
-                          Try again
-                        </button>
-                        <span className="text-red-400">|</span>
-                        <button 
-                          onClick={startStripeCheckout}
-                          className="underline hover:no-underline"
-                        >
-                          Use standard checkout
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Fallback: Show redirect option if Payment Element is slow to load */}
-                  {!clientSecret && !paymentLoading && !stripeError && (
-                    <div className="text-center py-8">
-                      <p className="text-neutral-600 mb-4">Payment form not loading?</p>
-                      <button
-                        onClick={startStripeCheckout}
-                        disabled={processing}
-                        className={`h-12 px-6 rounded-xl font-bold text-white ${
-                          processing ? "bg-neutral-300" : "bg-green-600 hover:bg-green-700"
-                        }`}
-                      >
-                        {processing ? "Redirecting..." : "Continue to Secure Checkout →"}
-                      </button>
-                      <p className="text-xs text-neutral-500 mt-2">
-                        You'll be redirected to Stripe to complete payment
-                      </p>
-                    </div>
-                  )}
-
-                  {/* Stripe Payment Element */}
-                  {clientSecret && (
-                    <StripePaymentElement
-                      clientSecret={clientSecret}
-                      onSuccess={handlePaymentSuccess}
-                      onError={handlePaymentError}
-                      onProcessing={handlePaymentProcessing}
-                      totalAmount={totalWithTaxAndShipping}
-                      returnUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/checkout/success?payment_intent=${paymentIntentId}&quote_id=${quoteId}`}
-                    />
-                  )}
-
-                  {/* Accepted payment methods */}
-                  <div className="mt-4 pt-4 border-t border-neutral-100">
-                    <p className="text-xs text-neutral-500 text-center mb-2">Accepted payment methods</p>
-                    <div className="flex items-center justify-center gap-3">
-                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-6 object-contain" />
-                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-6 object-contain" />
-                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-6 object-contain" />
-                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-5 object-contain" />
-                    </div>
+                {/* Accepted payment methods */}
+                <div className="pt-4">
+                  <div className="flex items-center justify-center gap-3">
+                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-5 object-contain opacity-60" />
+                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-5 object-contain opacity-60" />
+                    <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-5 object-contain opacity-60" />
                   </div>
+                  <p className="text-xs text-neutral-400 text-center mt-2">Secure checkout powered by Stripe</p>
                 </div>
 
                 {/* Back button */}

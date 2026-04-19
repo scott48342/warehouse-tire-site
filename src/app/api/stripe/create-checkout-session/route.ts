@@ -319,15 +319,32 @@ export async function POST(req: Request) {
     const totalCents = stripeLineItems.reduce((sum, li) => sum + (li.price_data.unit_amount * li.quantity), 0);
     const totalUsd = totalCents / 100;
 
+    // Check if specific payment method requested (e.g., Affirm-only checkout)
+    const requestedPaymentMethod = body.paymentMethod;
+    
     // Payment methods: Card + Affirm (most recognized BNPL in US)
     // Affirm minimum is $50, so only include if order qualifies
-    const paymentMethodTypes: string[] = ["card"];
+    let paymentMethodTypes: string[];
     
-    if (totalUsd >= 50) {
-      paymentMethodTypes.push("affirm");
+    if (requestedPaymentMethod === "affirm") {
+      // Affirm-only checkout (direct "Pay with Affirm" button)
+      if (totalUsd < 50) {
+        return NextResponse.json({ 
+          ok: false, 
+          error: "affirm_minimum_not_met",
+          detail: "Affirm requires a minimum order of $50"
+        }, { status: 400 });
+      }
+      paymentMethodTypes = ["affirm"];
+      console.log(`[checkout] AFFIRM-ONLY checkout for $${totalUsd.toFixed(2)}`);
+    } else {
+      // Standard checkout: Card + Affirm if eligible
+      paymentMethodTypes = ["card"];
+      if (totalUsd >= 50) {
+        paymentMethodTypes.push("affirm");
+      }
+      console.log(`[checkout] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
     }
-
-    console.log(`[checkout] Payment methods for $${totalUsd.toFixed(2)}:`, paymentMethodTypes);
 
     // Build metadata - include local install info if in local mode
     const sessionMetadata: Record<string, string | undefined> = {
