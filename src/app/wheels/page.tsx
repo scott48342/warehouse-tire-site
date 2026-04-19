@@ -1402,10 +1402,18 @@ export default async function WheelsPage({
       {hasVehicle && <StickyBuildBar />}
       
       {/* ═══════════════════════════════════════════════════════════════════════
-          PACKAGE JOURNEY BAR - REMOVED (2026-04-19)
-          Green StickyBuildBar above is now the only top contextual bar.
-          Old black "BUILD YOUR PACKAGE" bar was causing duplicate UI.
+          PACKAGE BRIDGE CTA - Green bar to encourage adding tires (moved to top 2026-04-19)
           ═══════════════════════════════════════════════════════════════════════ */}
+      {hasVehicle && (
+        <div className="mx-auto max-w-screen-2xl px-4 pt-4">
+          <PackageBridgeCTA
+            vehicleYear={year}
+            vehicleMake={make}
+            vehicleModel={model}
+            modification={modification || undefined}
+          />
+        </div>
+      )}
 
       {/* ═══════════════════════════════════════════════════════════════════════
           HOMEPAGE INTENT BAR - Shows intent-specific chips/toggles
@@ -1959,18 +1967,6 @@ export default async function WheelsPage({
             model={model}
             type="wheels"
             productCount={itemsFinal.length}
-          />
-        </div>
-      )}
-      
-      {/* Package Bridge CTA - Encourage adding tires */}
-      {hasVehicle && itemsFinal.length > 0 && (
-        <div className="mx-auto max-w-screen-2xl px-4 pb-12">
-          <PackageBridgeCTA
-            vehicleYear={year}
-            vehicleMake={make}
-            vehicleModel={model}
-            modification={modification || undefined}
           />
         </div>
       )}
