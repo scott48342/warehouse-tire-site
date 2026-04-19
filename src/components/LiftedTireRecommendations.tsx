@@ -200,9 +200,6 @@ export function LiftedTireRecommendations({
               Free shipping over $1,500
             </span>
           </div>
-          <span className="text-xs text-blue-700 font-medium">
-            🔧 Install available at local shops near you
-          </span>
         </div>
       </div>
     </div>
@@ -326,9 +323,6 @@ export function TireTrustBar({ className = "" }: { className?: string }) {
         <span className="flex items-center gap-2 text-green-800">
           <span className="text-green-600">✓</span>
           Free Shipping over $1,500
-        </span>
-        <span className="flex items-center gap-2 text-blue-700">
-          🔧 Install available at local shops
         </span>
       </div>
     </div>
