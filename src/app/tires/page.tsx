@@ -12,7 +12,8 @@ import { SelectTireButtonAxle } from "@/components/SelectTireButtonAxle";
 import { TireMatchingBanner } from "@/components/TireMatchingBanner";
 import { QuickAddTireButton } from "@/components/AddTiresToCartButton";
 import { PackageSummary } from "@/components/PackageSummary";
-import { PackageJourneyBar } from "@/components/PackageJourneyBar";
+// PackageJourneyBar removed - not wanted
+// import { PackageJourneyBar } from "@/components/PackageJourneyBar";
 import { TiresGridWithSelection } from "@/components/TiresGridWithSelection";
 import { TirePageCompactHeader } from "@/components/TirePageCompactHeader";
 import { VehicleEntryGate } from "@/components/VehicleEntryGate";
@@ -2581,12 +2582,6 @@ export default async function TiresPage({
       
       return (
         <main className="bg-neutral-50">
-          {isPackageFlow ? (
-            <PackageJourneyBar
-              currentStep="tires"
-              vehicle={{ year, make, model }}
-            />
-          ) : null}
           <div className="mx-auto max-w-screen-2xl px-4 py-8">
             <ClassicFitmentCard data={cardData} productType="tires" />
           </div>
@@ -2602,14 +2597,6 @@ export default async function TiresPage({
   if (hasVehicle && vehicleNeedsRearWheelConfig && !effectiveRearWheelConfig) {
     return (
       <main className="bg-neutral-50">
-        {/* Package Journey Bar */}
-        {isPackageFlow ? (
-          <PackageJourneyBar
-            currentStep="tires"
-            vehicle={{ year, make, model }}
-          />
-        ) : null}
-        
         <div className="mx-auto max-w-screen-2xl px-4 py-8">
           <div className="max-w-2xl mx-auto">
             {/* Vehicle header */}
@@ -2718,21 +2705,6 @@ export default async function TiresPage({
           STICKY BUILD BAR - Shows lift/tire/offset context (lifted builds only)
           ═══════════════════════════════════════════════════════════════════════ */}
       {hasVehicle && <StickyBuildBar />}
-      
-      {/* ═══════════════════════════════════════════════════════════════════════
-          PACKAGE JOURNEY BAR - Only shows when user is building a package
-          (came from wheel selection with wheelSku in URL)
-          ═══════════════════════════════════════════════════════════════════════ */}
-      {hasVehicle && isPackageFlow ? (
-        <PackageJourneyBar
-          currentStep="tires"
-          vehicle={{
-            year,
-            make,
-            model,
-          }}
-        />
-      ) : null}
 
       <div className="mx-auto max-w-screen-2xl px-4 py-4">
         {/* ═══════════════════════════════════════════════════════════════════════
