@@ -7,6 +7,7 @@ import { BuildTypeSelector, type BuildTypeSelection } from "./BuildTypeSelector"
 import { vehicleSlug } from "@/lib/vehicleSlug";
 import { parseHomepageIntent, getLiftLevelConfig } from "@/lib/homepage-intent";
 import { useCart } from "@/lib/cart/CartContext";
+import { detectVehicleType } from "@/lib/aftermarketFitment";
 import type { CartAccessoryItem } from "@/lib/cart/accessoryTypes";
 
 interface VehicleEntryGateProps {
@@ -55,14 +56,18 @@ export function VehicleEntryGate({ productType, packageFlow, showBuildTypeStep }
   const shouldShowBuildTypeStep = showBuildTypeStep && !intentState.resolved?.buildType;
 
   function handleVehicleComplete(selection: VehicleSelection) {
-    if (shouldShowBuildTypeStep) {
-      // Save vehicle and show build type step
+    // Check if vehicle is a truck/SUV that can be lifted
+    const vehicleType = detectVehicleType(selection.model);
+    const isLiftableVehicle = vehicleType === "truck" || vehicleType === "suv";
+    
+    if (shouldShowBuildTypeStep && isLiftableVehicle) {
+      // Save vehicle and show build type step (only for trucks/SUVs)
       setVehicleSelection(selection);
       setStep("buildType");
       return;
     }
     
-    // Otherwise, proceed directly
+    // For cars, skip build type selection and proceed directly
     navigateToResults(selection);
   }
   
