@@ -1,62 +1,58 @@
+/**
+ * Check accessory image status by brand
+ */
 import pg from 'pg';
-import dotenv from 'dotenv';
-dotenv.config({ path: '.env.local' });
+import { readFileSync } from 'fs';
+const { Pool } = pg;
 
-const pool = new pg.Pool({
-  connectionString: process.env.POSTGRES_URL,
-  ssl: { rejectUnauthorized: false }
-});
+const envFile = readFileSync('.env.local', 'utf-8');
+const pgUrl = envFile.split('\n').find(l => l.startsWith('POSTGRES_URL='))?.replace('POSTGRES_URL=', '').replace(/^["']|["']$/g, '').trim();
+const pool = new Pool({ connectionString: pgUrl });
 
-async function check() {
-  // Check image coverage
-  const stats = await pool.query(`
-    SELECT 
-      category,
-      COUNT(*) as total,
-      COUNT(image_url) as with_images,
-      COUNT(msrp) as with_msrp,
-      COUNT(sell_price) as with_price
-    FROM accessories 
-    GROUP BY category
-    ORDER BY total DESC
+async function main() {
+  // Get counts by brand
+  const counts = await pool.query(`
+    SELECT brand, 
+           COUNT(*) FILTER (WHERE image_url IS NULL) as needs_image,
+           COUNT(*) FILTER (WHERE image_url IS NOT NULL) as has_image,
+           COUNT(*) as total
+    FROM accessories
+    WHERE brand IN ('Morimoto Offroad', 'Gorilla Automotive', 'GTR Lighting', 'Teraflex', 'Fox Shocks', 'Bilstein')
+    GROUP BY brand
+    ORDER BY needs_image DESC
   `);
   
-  console.log('=== IMAGE & PRICE COVERAGE ===');
-  for (const row of stats.rows) {
-    const imgPct = Math.round((row.with_images / row.total) * 100);
-    const pricePct = Math.round((row.with_price / row.total) * 100);
-    console.log(`${row.category}: ${row.with_images}/${row.total} images (${imgPct}%), ${row.with_price}/${row.total} prices (${pricePct}%)`);
+  console.log('=== Accessory Image Status by Brand ===\n');
+  for (const row of counts.rows) {
+    console.log(`${row.brand}:`);
+    console.log(`  Needs image: ${row.needs_image}`);
+    console.log(`  Has image: ${row.has_image}`);
+    console.log(`  Total: ${row.total}\n`);
   }
   
-  // Sample some WITH images
-  const withImages = await pool.query(`
-    SELECT sku, title, category, image_url, sell_price, brand
-    FROM accessories 
-    WHERE image_url IS NOT NULL AND image_url != ''
-    LIMIT 5
+  // Sample SKUs from Morimoto that need images
+  console.log('\n=== Sample Morimoto SKUs (no images) ===\n');
+  const morimoto = await pool.query(`
+    SELECT sku, title, sub_type FROM accessories 
+    WHERE brand = 'Morimoto Offroad' AND image_url IS NULL 
+    ORDER BY title LIMIT 20
   `);
-  
-  console.log('\n=== SAMPLES WITH IMAGES ===');
-  for (const row of withImages.rows) {
-    console.log(`${row.category} | ${row.sku}: $${row.sell_price || 'N/A'}`);
-    console.log(`  ${row.title}`);
-    console.log(`  ${row.image_url}`);
+  for (const row of morimoto.rows) {
+    console.log(`${row.sku}: ${row.title} [${row.sub_type || 'no type'}]`);
   }
   
-  // Sample some WITHOUT images
-  const withoutImages = await pool.query(`
-    SELECT sku, title, category, brand, brand_code
-    FROM accessories 
-    WHERE image_url IS NULL OR image_url = ''
-    LIMIT 5
+  // Get sub_types breakdown for Morimoto
+  console.log('\n=== Morimoto Sub-Types (no images) ===\n');
+  const subtypes = await pool.query(`
+    SELECT sub_type, COUNT(*) as cnt FROM accessories 
+    WHERE brand = 'Morimoto Offroad' AND image_url IS NULL 
+    GROUP BY sub_type ORDER BY cnt DESC
   `);
-  
-  console.log('\n=== SAMPLES WITHOUT IMAGES ===');
-  for (const row of withoutImages.rows) {
-    console.log(`${row.category} | ${row.sku}: ${row.title} (${row.brand || row.brand_code})`);
+  for (const row of subtypes.rows) {
+    console.log(`${row.sub_type || 'NULL'}: ${row.cnt}`);
   }
   
   await pool.end();
 }
 
-check().catch(e => console.error(e));
+main().catch(console.error);

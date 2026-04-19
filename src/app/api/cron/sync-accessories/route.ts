@@ -123,9 +123,10 @@ function categorize(subType: string, title: string): { category: string; subType
   return { category: 'other', subType: null };
 }
 
-async function downloadFromSFTP(): Promise<string | null> {
+async function downloadFromSFTP(): Promise<{ techPath: string; invPath: string } | null> {
   const sftp = new Client();
-  const tempPath = path.join(os.tmpdir(), 'Accessory_TechGuide.csv');
+  const techPath = path.join(os.tmpdir(), 'Accessory_TechGuide.csv');
+  const invPath = path.join(os.tmpdir(), 'accessoriesInvPriceData.csv');
   
   try {
     await sftp.connect({
@@ -138,10 +139,11 @@ async function downloadFromSFTP(): Promise<string | null> {
       retry_minTimeout: 2000,
     });
     
-    await sftp.get('/TechFeed/Accessory_TechGuide.csv', tempPath);
+    await sftp.get('/TechFeed/Accessory_TechGuide.csv', techPath);
+    await sftp.get('/CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv', invPath);
     await sftp.end();
     
-    return tempPath;
+    return { techPath, invPath };
   } catch (err: any) {
     console.warn('[sync-accessories] SFTP failed:', err.message);
     await sftp.end().catch(() => {});
@@ -229,6 +231,63 @@ async function importCSV(pool: any, csvPath: string): Promise<number> {
   }
 }
 
+async function syncInventory(pool: any, invPath: string): Promise<{ inStock: number; outOfStock: number }> {
+  const content = fs.readFileSync(invPath, 'utf8');
+  const lines = content.split('\n').filter(l => l.trim());
+  const header = parseCSVLine(lines[0]).map(h => h.toLowerCase().replace(/ /g, '_'));
+  
+  // Find column indexes
+  const skuIdx = header.findIndex(h => h === 'partnumber' || h === 'part_number' || h === 'sku');
+  const qtyIdx = header.findIndex(h => h === 'totalqoh' || h === 'total_qoh' || h === 'qty');
+  
+  if (skuIdx === -1 || qtyIdx === -1) {
+    console.warn('[sync-accessories] Missing inventory columns');
+    return { inStock: 0, outOfStock: 0 };
+  }
+  
+  // Build SKU -> quantity map
+  const inventory = new Map<string, number>();
+  for (let i = 1; i < lines.length; i++) {
+    const cols = parseCSVLine(lines[i]);
+    const sku = cols[skuIdx]?.trim();
+    const qty = parseInt(cols[qtyIdx]) || 0;
+    if (sku) inventory.set(sku, qty);
+  }
+  
+  console.log(`[sync-accessories] Parsed ${inventory.size} SKUs from inventory feed`);
+  
+  // Get all accessory SKUs and update in_stock
+  const result = await pool.query('SELECT sku FROM accessories');
+  const allSkus = result.rows.map((r: any) => r.sku);
+  
+  const inStockSkus: string[] = [];
+  const outOfStockSkus: string[] = [];
+  
+  for (const sku of allSkus) {
+    if ((inventory.get(sku) || 0) > 0) {
+      inStockSkus.push(sku);
+    } else {
+      outOfStockSkus.push(sku);
+    }
+  }
+  
+  // Batch update
+  if (inStockSkus.length > 0) {
+    await pool.query(
+      'UPDATE accessories SET in_stock = true, updated_at = NOW() WHERE sku = ANY($1)',
+      [inStockSkus]
+    );
+  }
+  if (outOfStockSkus.length > 0) {
+    await pool.query(
+      'UPDATE accessories SET in_stock = false, updated_at = NOW() WHERE sku = ANY($1)',
+      [outOfStockSkus]
+    );
+  }
+  
+  return { inStock: inStockSkus.length, outOfStock: outOfStockSkus.length };
+}
+
 export async function GET(req: Request) {
   // Verify cron secret
   const authHeader = req.headers.get('authorization');
@@ -242,7 +301,7 @@ export async function GET(req: Request) {
   }
   
   const startTime = Date.now();
-  let result = { source: '', count: 0, duration: 0 };
+  let result: any = { source: '', count: 0, inStock: 0, outOfStock: 0, duration: 0 };
   
   try {
     // Ensure table exists
@@ -252,24 +311,30 @@ export async function GET(req: Request) {
     );
     await pool.query(schema);
     
-    // Try SFTP first
-    const csvPath = await downloadFromSFTP();
+    // Download both TechGuide and inventory from SFTP
+    const files = await downloadFromSFTP();
     
-    if (csvPath) {
+    if (files) {
       result.source = 'sftp';
-      result.count = await importCSV(pool, csvPath);
       
-      // Cleanup temp file
-      try { fs.unlinkSync(csvPath); } catch {}
+      // Import product data from TechGuide
+      result.count = await importCSV(pool, files.techPath);
+      
+      // Sync inventory from CommonFeed
+      const invResult = await syncInventory(pool, files.invPath);
+      result.inStock = invResult.inStock;
+      result.outOfStock = invResult.outOfStock;
+      
+      // Cleanup temp files
+      try { fs.unlinkSync(files.techPath); } catch {}
+      try { fs.unlinkSync(files.invPath); } catch {}
     } else {
-      // Fallback: API import not implemented in cron (too slow)
       result.source = 'skipped';
-      result.count = 0;
     }
     
     result.duration = Date.now() - startTime;
     
-    console.log(`[sync-accessories] Complete: ${result.count} items from ${result.source} in ${result.duration}ms`);
+    console.log(`[sync-accessories] Complete: ${result.count} products, ${result.inStock} in stock in ${result.duration}ms`);
     
     return NextResponse.json({
       ok: true,

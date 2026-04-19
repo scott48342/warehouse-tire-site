@@ -62,6 +62,7 @@ export const ACCESSORY_CATEGORIES: Category[] = [
       { id: "headlight", name: "Headlights", icon: "🔆", subTypes: ["headlight"] },
       { id: "tail_light", name: "Tail Lights", icon: "🚨", subTypes: ["tail_light"] },
       { id: "rock_light", name: "Rock Lights", icon: "🪨", subTypes: ["rock_light"] },
+      { id: "lighting_parts", name: "Parts & Bulbs", icon: "💡", subTypes: ["lighting_parts", "lighting"] },
     ],
   },
 ];
@@ -103,6 +104,7 @@ export function getDbCategoryForId(categoryId: string): string | null {
     "headlight": "lighting",
     "tail_light": "lighting",
     "rock_light": "lighting",
+    "lighting_parts": "lighting",
   };
   return categoryMap[categoryId] || null;
 }

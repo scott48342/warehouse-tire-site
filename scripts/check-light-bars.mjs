@@ -1,24 +1,24 @@
-import dotenv from 'dotenv';
 import pg from 'pg';
-dotenv.config({ path: '.env.local' });
-
+import { readFileSync } from 'fs';
 const { Pool } = pg;
-const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL,
-  ssl: { rejectUnauthorized: false }
-});
+
+// Load .env.local
+const envFile = readFileSync('.env.local', 'utf-8');
+const pgUrl = envFile.split('\n').find(l => l.startsWith('POSTGRES_URL='))?.replace('POSTGRES_URL=', '').replace(/^["']|["']$/g, '').trim();
+
+const pool = new Pool({ connectionString: pgUrl });
 
 const result = await pool.query(`
-  SELECT sku, title, sub_type, image_url 
+  SELECT sku, title, brand, image_url 
   FROM accessories 
-  WHERE sub_type = 'light bar' 
-     OR sub_type = 'light_bar'
-     OR title ILIKE '%light bar%' 
-     OR sku LIKE '%BBAR%' 
-  LIMIT 20
+  WHERE sub_type = 'light_bar' OR title ILIKE '%light bar%' OR title ILIKE '%bangerbar%' OR title ILIKE '%banger bar%'
+  ORDER BY title
 `);
 
-console.log('Light bar products:');
-console.table(result.rows);
+console.log('Total light bars:', result.rows.length);
+console.log('With images:', result.rows.filter(x => x.image_url).length);
+console.log('Without images:', result.rows.filter(x => !x.image_url).length);
+console.log('\nProducts without images:');
+result.rows.filter(x => !x.image_url).forEach(x => console.log(`${x.sku} | ${x.brand} | ${x.title}`));
 
 await pool.end();
