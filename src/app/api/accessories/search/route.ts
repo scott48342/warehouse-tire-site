@@ -62,6 +62,7 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const category = url.searchParams.get("category");
   const query = url.searchParams.get("q");
+  const debug = url.searchParams.get("debug") === "1";
   const pageSize = Math.min(100, Math.max(1, Number(url.searchParams.get("pageSize") || "50")));
   const page = Math.max(1, Number(url.searchParams.get("page") || "1"));
 
@@ -91,6 +92,7 @@ export async function GET(req: Request) {
     // Search all filters and combine results
     const allResults: AccessoryItem[] = [];
     const seenSkus = new Set<string>();
+    let rawSample: any = null; // For debug mode
 
     for (const filter of filters) {
       const response = await searchAccessories({
@@ -106,6 +108,9 @@ export async function GET(req: Request) {
       for (const r of response.results || []) {
         if (!r.sku || seenSkus.has(r.sku)) continue;
         seenSkus.add(r.sku);
+        
+        // Capture first raw result for debug
+        if (debug && !rawSample) rawSample = r;
 
         const { price, msrp, map } = extractPrice(r);
         // inventory can be array or object - handle both
@@ -138,6 +143,12 @@ export async function GET(req: Request) {
       return a.price - b.price;
     });
 
+    // Debug mode: include raw first result from WheelPros
+    const debugInfo = debug ? {
+      rawSampleCount: allResults.length,
+      rawWheelProsResponse: rawSample,
+    } : undefined;
+
     return NextResponse.json({
       results: allResults.slice(0, pageSize),
       total: allResults.length,
@@ -145,6 +156,7 @@ export async function GET(req: Request) {
       query,
       page,
       pageSize,
+      debug: debugInfo,
     }, {
       headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
     });
