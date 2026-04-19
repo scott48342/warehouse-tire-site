@@ -621,11 +621,11 @@ export default function CheckoutPage() {
                       <div>
                         <p className="font-bold text-neutral-900">Pay over time with Affirm</p>
                         <p className="text-sm text-neutral-600">
-                          As low as <span className="font-bold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</span> at 0% APR
+                          As low as <span className="font-bold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 12)}/mo</span> with 0% APR available
                         </p>
                       </div>
                     </div>
-                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">4 payments</span>
+                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">3-12 months</span>
                   </div>
                 </div>
 
@@ -808,7 +808,7 @@ export default function CheckoutPage() {
                         <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-8" />
                         <div>
                           <h2 className="text-lg font-bold text-blue-900">Pay Over Time with Affirm</h2>
-                          <p className="text-sm text-blue-700">Split into 4 interest-free payments</p>
+                          <p className="text-sm text-blue-700">Flexible monthly payments, 0% APR available</p>
                         </div>
                       </div>
                       <span className="px-3 py-1 bg-blue-600 text-white text-sm font-bold rounded-full">0% APR</span>
@@ -817,8 +817,9 @@ export default function CheckoutPage() {
                     <div className="bg-white rounded-xl p-4 border border-blue-200">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-sm text-neutral-600">4 interest-free payments of</p>
-                          <p className="text-2xl font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
+                          <p className="text-sm text-neutral-600">As low as</p>
+                          <p className="text-2xl font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 12)}/mo</p>
+                          <p className="text-xs text-neutral-500">0% APR available • 3-12 month terms</p>
                         </div>
                         <div className="flex items-center gap-2 text-blue-600 font-bold">
                           {processing ? "Redirecting..." : "Select Affirm →"}
