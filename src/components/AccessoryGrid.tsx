@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type AccessoryItem = {
   sku: string;
@@ -98,9 +99,10 @@ export function AccessoryGrid({ category, title, description, icon }: Props) {
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {items.map((item) => (
-              <div
+              <Link
                 key={item.sku}
-                className="bg-white border border-neutral-200 rounded-xl p-4 hover:shadow-lg transition-shadow"
+                href={`/accessories/${encodeURIComponent(item.sku)}`}
+                className="bg-white border border-neutral-200 rounded-xl p-4 hover:shadow-lg hover:border-orange-300 transition-all group"
               >
                 {/* Product image */}
                 <div className="aspect-square bg-neutral-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
@@ -108,7 +110,7 @@ export function AccessoryGrid({ category, title, description, icon }: Props) {
                     <img
                       src={item.imageUrl}
                       alt={item.title}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform"
                       loading="lazy"
                     />
                   ) : (
@@ -118,13 +120,13 @@ export function AccessoryGrid({ category, title, description, icon }: Props) {
                 
                 {/* Brand */}
                 {item.brand && (
-                  <p className="text-xs font-semibold text-neutral-500 uppercase mb-1">
+                  <p className="text-xs font-semibold text-orange-600 uppercase mb-1">
                     {item.brand}
                   </p>
                 )}
                 
                 {/* Title */}
-                <h3 className="text-sm font-semibold text-neutral-900 line-clamp-2 mb-2">
+                <h3 className="text-sm font-semibold text-neutral-900 line-clamp-2 mb-2 group-hover:text-orange-600 transition-colors">
                   {item.title}
                 </h3>
                 
@@ -133,13 +135,19 @@ export function AccessoryGrid({ category, title, description, icon }: Props) {
                 
                 {/* Price */}
                 <div className="flex items-baseline gap-2">
-                  <span className="text-lg font-bold text-neutral-900">
-                    {formatPrice(item.price)}
-                  </span>
-                  {item.msrp && item.msrp > item.price && (
-                    <span className="text-sm text-neutral-400 line-through">
-                      {formatPrice(item.msrp)}
-                    </span>
+                  {item.price > 0 ? (
+                    <>
+                      <span className="text-lg font-bold text-neutral-900">
+                        {formatPrice(item.price)}
+                      </span>
+                      {item.msrp && item.msrp > item.price && (
+                        <span className="text-sm text-neutral-400 line-through">
+                          {formatPrice(item.msrp)}
+                        </span>
+                      )}
+                    </>
+                  ) : (
+                    <span className="text-sm text-neutral-500">Contact for pricing</span>
                   )}
                 </div>
                 
@@ -148,11 +156,11 @@ export function AccessoryGrid({ category, title, description, icon }: Props) {
                   {item.inStock ? "✓ In Stock" : "⏳ Ships in 2-5 days"}
                 </p>
                 
-                {/* Add to cart button - placeholder */}
-                <button className="mt-4 w-full py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-colors">
-                  Add to Cart
-                </button>
-              </div>
+                {/* View Details button */}
+                <span className="mt-4 block w-full py-2 bg-orange-600 text-white text-sm font-semibold rounded-lg text-center group-hover:bg-orange-700 transition-colors">
+                  View Details
+                </span>
+              </Link>
             ))}
           </div>
         )}
