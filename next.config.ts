@@ -44,6 +44,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.morimotohid.com',
       },
+      {
+        protocol: 'https',
+        hostname: '31inc.com',
+      },
     ],
   },
 };
