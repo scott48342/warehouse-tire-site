@@ -11,7 +11,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getDbPool } from "@/lib/db/pool";
-import { AddToCartButton } from "@/components/AddToCartButton";
+import { AccessoryAddToCartButton } from "@/components/AccessoryAddToCartButton";
+import type { AccessoryCategory } from "@/lib/cart/accessoryTypes";
 
 // Placeholder images by category
 const CATEGORY_IMAGES: Record<string, string> = {
@@ -421,20 +422,14 @@ export default async function AccessoryPage({
 
           {/* Add to Cart */}
           <div className="mb-8">
-            <AddToCartButton
-              item={{
-                type: "accessory",
-                sku: acc.sku,
-                name: acc.title,
-                brand: acc.brand || undefined,
-                imageUrl: acc.image_url || undefined,
-                unitPrice: price,
-                quantity: 1,
-                category: acc.category as any,
-                required: false,
-                reason: "Added from PDP",
-              }}
-              className="w-full md:w-auto px-8 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+            <AccessoryAddToCartButton
+              sku={acc.sku}
+              name={acc.title}
+              brand={acc.brand || undefined}
+              category={acc.category as AccessoryCategory}
+              imageUrl={acc.image_url || undefined}
+              unitPrice={price}
+              className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700"
             />
           </div>
 
