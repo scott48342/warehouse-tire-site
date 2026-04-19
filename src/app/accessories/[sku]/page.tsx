@@ -49,6 +49,8 @@ type Accessory = {
   sell_price: number | null;
   cost: number | null;
   image_url: string | null;
+  image_url_2: string | null;
+  image_url_3: string | null;
   in_stock: boolean;
   thread_size: string | null;
   seat_type: string | null;
@@ -56,6 +58,7 @@ type Accessory = {
   inner_diameter: number | null;
   bolt_pattern: string | null;
   wheel_brand: string | null;
+  description: string | null;
 };
 
 async function getAccessory(sku: string): Promise<Accessory | null> {
@@ -280,9 +283,13 @@ export default async function AccessoryPage({
 
   const categoryName = CATEGORY_NAMES[acc.category] || "Accessories";
   const imageUrl = acc.image_url || CATEGORY_IMAGES[acc.category] || CATEGORY_IMAGES.other;
-  const description = generateDescription(acc);
+  // Use database description if available, otherwise generate one
+  const description = acc.description || generateDescription(acc);
   const features = generateFeatures(acc);
   const price = acc.sell_price || acc.msrp || 0;
+  
+  // Collect all available images
+  const images = [acc.image_url, acc.image_url_2, acc.image_url_3].filter(Boolean) as string[];
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -307,34 +314,56 @@ export default async function AccessoryPage({
       </nav>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Image */}
-        <div className="bg-gray-100 rounded-lg overflow-hidden aspect-square relative">
-          {acc.image_url ? (
-            <Image
-              src={imageUrl}
-              alt={acc.title}
-              fill
-              className="object-contain p-4"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-400">
-              <div className="text-center">
-                <svg
-                  className="w-24 h-24 mx-auto mb-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <p className="text-sm">Image coming soon</p>
+        {/* Image Gallery */}
+        <div className="space-y-4">
+          <div className="bg-gray-100 rounded-lg overflow-hidden aspect-square relative">
+            {acc.image_url ? (
+              <Image
+                src={imageUrl}
+                alt={acc.title}
+                fill
+                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-gray-400">
+                <div className="text-center">
+                  <svg
+                    className="w-24 h-24 mx-auto mb-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <p className="text-sm">Image coming soon</p>
+                </div>
               </div>
+            )}
+          </div>
+          
+          {/* Thumbnail Gallery */}
+          {images.length > 1 && (
+            <div className="flex gap-2">
+              {images.map((img, i) => (
+                <div 
+                  key={i} 
+                  className="w-20 h-20 bg-gray-100 rounded border-2 border-gray-200 overflow-hidden relative cursor-pointer hover:border-orange-500 transition-colors"
+                >
+                  <Image
+                    src={img}
+                    alt={`${acc.title} - Image ${i + 1}`}
+                    fill
+                    className="object-contain p-1"
+                    sizes="80px"
+                  />
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -412,7 +441,7 @@ export default async function AccessoryPage({
           {/* Description */}
           <div className="prose prose-gray max-w-none mb-8">
             <h2 className="text-lg font-semibold mb-2">Description</h2>
-            <p>{description}</p>
+            <div className="whitespace-pre-line">{description}</div>
           </div>
 
           {/* Features */}
