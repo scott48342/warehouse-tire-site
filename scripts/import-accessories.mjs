@@ -319,6 +319,10 @@ async function importFromCSV(pool, csvPath) {
 
 /**
  * Import from SFTP TechFeed
+ * 
+ * Downloads from:
+ * - /TechFeed/ACCESSORIES/Accessory_TechGuide.csv (primary - has images)
+ * - /CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv (supplement - more SKUs)
  */
 async function importFromSFTP(pool) {
   console.log('Connecting to WheelPros SFTP...');
@@ -334,17 +338,132 @@ async function importFromSFTP(pool) {
     retry_minTimeout: 2000,
   });
   
-  console.log('Downloading Accessory_TechGuide.csv...');
-  
-  // Download to temp file
-  const tempPath = './data/Accessory_TechGuide.csv';
   if (!fs.existsSync('./data')) fs.mkdirSync('./data');
-  await sftp.get('/TechFeed/Accessory_TechGuide.csv', tempPath);
+  
+  // Download TechGuide (has images!)
+  console.log('Downloading TechFeed/ACCESSORIES/Accessory_TechGuide.csv...');
+  const techPath = './data/Accessory_TechGuide.csv';
+  await sftp.get('/TechFeed/ACCESSORIES/Accessory_TechGuide.csv', techPath);
+  
+  // Download CommonFeed (more SKUs, inventory data)
+  console.log('Downloading CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv...');
+  const commonPath = './data/accessoriesInvPriceData.csv';
+  await sftp.get('/CommonFeed/USD/ACCESSORIES/accessoriesInvPriceData.csv', commonPath);
   
   await sftp.end();
-  console.log('Downloaded! Importing...');
+  console.log('Downloaded!');
   
-  return importFromCSV(pool, tempPath);
+  // Parse TechGuide first (has images, product details)
+  const techContent = fs.readFileSync(techPath, 'utf8');
+  const techLines = techContent.split('\n').filter(l => l.trim());
+  const techHeader = parseCSVLine(techLines[0]);
+  console.log('TechGuide rows:', techLines.length - 1);
+  
+  // Parse CommonFeed (more SKUs, inventory)
+  const commonContent = fs.readFileSync(commonPath, 'utf8');
+  const commonLines = commonContent.split('\n').filter(l => l.trim());
+  const commonHeader = parseCSVLine(commonLines[0]);
+  console.log('CommonFeed rows:', commonLines.length - 1);
+  
+  // Build accessory list
+  const accessories = [];
+  const seenSkus = new Set();
+  
+  // First: TechGuide (has images)
+  for (let i = 1; i < techLines.length; i++) {
+    const cols = parseCSVLine(techLines[i]);
+    const row = {};
+    techHeader.forEach((h, j) => row[h.toLowerCase().replace(/ /g, '_')] = cols[j]);
+    
+    const sku = row.sku;
+    if (!sku || seenSkus.has(sku)) continue;
+    seenSkus.add(sku);
+    
+    const title = row.product_desc || '';
+    const brandCode = row.brand_code_3 || row.brand_code || '';
+    const subTypeRaw = row.product_sub_type || row.sub_type || '';
+    const msrp = parseFloat(row.msrp) || null;
+    const map = parseFloat(row.map_price) || null;
+    const imageUrl = row.image_url || row.image_url1 || '';
+    
+    const { category, subType } = categorize(subTypeRaw, title);
+    const brand = BRAND_NAMES[brandCode] || row.brand_desc || brandCode;
+    const cost = msrp ? msrp * 0.75 : null;
+    const sellPrice = calculateSellPrice(cost, msrp, map);
+    
+    accessories.push({
+      sku,
+      title,
+      brand,
+      brandCode,
+      category,
+      subType,
+      msrp,
+      map,
+      cost,
+      sellPrice,
+      imageUrl: imageUrl || null,
+      imageUrl2: row.image_url2 || null,
+      imageUrl3: row.image_url3 || null,
+      upc: row.upc,
+      threadSize: parseThreadSize(title),
+      seatType: parseSeatType(title),
+      outerDiameter: parseHubRing(title)?.outer,
+      innerDiameter: parseHubRing(title)?.inner,
+      boltPattern: parseBoltPattern(title),
+      wheelBrand: parseWheelBrand(title, brandCode),
+    });
+  }
+  
+  // Second: CommonFeed (fills gaps, has inventory)
+  for (let i = 1; i < commonLines.length; i++) {
+    const cols = parseCSVLine(commonLines[i]);
+    const row = {};
+    commonHeader.forEach((h, j) => row[h.toLowerCase().replace(/ /g, '_')] = cols[j]);
+    
+    const sku = row.partnumber || row.sku;
+    if (!sku || seenSkus.has(sku)) continue;
+    seenSkus.add(sku);
+    
+    const title = row.partdescription || row.product_desc || '';
+    const brandCode = row.brand || '';
+    const msrp = parseFloat(row.msrp_usd || row.msrp) || null;
+    const map = parseFloat(row.map_usd || row.map_price) || null;
+    const imageUrl = row.imageurl || row.image_url || '';
+    
+    const { category, subType } = categorize('', title);
+    const brand = BRAND_NAMES[brandCode] || brandCode;
+    const cost = msrp ? msrp * 0.75 : null;
+    const sellPrice = calculateSellPrice(cost, msrp, map);
+    
+    accessories.push({
+      sku,
+      title,
+      brand,
+      brandCode,
+      category,
+      subType,
+      msrp,
+      map,
+      cost,
+      sellPrice,
+      imageUrl: imageUrl || null,
+      threadSize: parseThreadSize(title),
+      seatType: parseSeatType(title),
+      outerDiameter: parseHubRing(title)?.outer,
+      innerDiameter: parseHubRing(title)?.inner,
+      boltPattern: parseBoltPattern(title),
+      wheelBrand: parseWheelBrand(title, brandCode),
+    });
+  }
+  
+  console.log(`Total unique accessories: ${accessories.length}`);
+  console.log(`With images: ${accessories.filter(a => a.imageUrl).length}`);
+  
+  // Insert into database
+  await insertAccessories(pool, accessories);
+  
+  return accessories.length;
 }
 
 /**
