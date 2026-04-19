@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'wpassets.wheelpros.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '5129608.app.netsuite.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'images.unsplash.com',
       },
     ],
