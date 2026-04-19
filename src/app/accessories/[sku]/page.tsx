@@ -397,11 +397,14 @@ export default async function AccessoryPage({
                 <span className="text-3xl font-bold text-gray-900">
                   ${price.toFixed(2)}
                 </span>
-                {acc.msrp && acc.sell_price && acc.sell_price < acc.msrp && (
-                  <span className="text-lg text-gray-400 line-through">
-                    ${acc.msrp.toFixed(2)}
-                  </span>
-                )}
+                {(() => {
+                  const msrp = parseFloat(String(acc.msrp || 0)) || 0;
+                  return msrp > price ? (
+                    <span className="text-lg text-gray-400 line-through">
+                      ${msrp.toFixed(2)}
+                    </span>
+                  ) : null;
+                })()}
               </div>
             ) : (
               <p className="text-lg text-gray-500">Contact for pricing</p>
