@@ -287,7 +287,8 @@ export default async function AccessoryPage({
   // Use database description if available, otherwise generate one
   const description = acc.description || generateDescription(acc);
   const features = generateFeatures(acc);
-  const price = acc.sell_price || acc.msrp || 0;
+  // Parse prices safely (PostgreSQL returns numeric as string)
+  const price = parseFloat(String(acc.sell_price || acc.msrp || 0)) || 0;
   
   // Collect all available images
   const images = [acc.image_url, acc.image_url_2, acc.image_url_3].filter(Boolean) as string[];

@@ -10,6 +10,9 @@ export type AccessoryCategory =
   | "lug_bolt" 
   | "valve_stem" 
   | "tpms"
+  | "center_cap"
+  | "lighting"
+  | "spacer"
   | "suspension"  // lift kits, leveling kits, shocks
   | "other";
 
