@@ -9,7 +9,7 @@ interface FinancingBadgeProps {
 /**
  * Shows "As low as $X/mo with Affirm" messaging for products
  * Affirm supports purchases from $50 to $30,000
- * Shows estimated monthly payment based on 12-month term
+ * Shows estimated payment based on Affirm's "Pay in 4" (4 bi-weekly payments)
  * 
  * Variants:
  * - inline: Standard text link (default)
@@ -22,9 +22,8 @@ export function FinancingBadge({ price, className = "", variant = "inline" }: Fi
     return null;
   }
 
-  // Estimate monthly payment (12 months, simplified)
-  // Actual rates vary - this is just for display purposes
-  const monthlyPayment = Math.ceil(price / 12);
+  // Affirm "Pay in 4" = 4 bi-weekly payments at 0% APR
+  const monthlyPayment = Math.ceil(price / 4);
 
   if (variant === "block") {
     return (
