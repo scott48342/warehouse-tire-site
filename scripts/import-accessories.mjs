@@ -391,6 +391,9 @@ async function importFromSFTP(pool) {
     const cost = msrp ? msrp * 0.75 : null;
     const sellPrice = calculateSellPrice(cost, msrp, map);
     
+    // Generate image URL if not provided (TechFeed pattern)
+    const generatedImageUrl = `https://images.wheelpros.com/Accessories/${sku}.png`;
+    
     accessories.push({
       sku,
       title,
@@ -402,7 +405,7 @@ async function importFromSFTP(pool) {
       map,
       cost,
       sellPrice,
-      imageUrl: imageUrl || null,
+      imageUrl: imageUrl || generatedImageUrl,
       imageUrl2: row.image_url2 || null,
       imageUrl3: row.image_url3 || null,
       upc: row.upc,
@@ -436,6 +439,9 @@ async function importFromSFTP(pool) {
     const cost = msrp ? msrp * 0.75 : null;
     const sellPrice = calculateSellPrice(cost, msrp, map);
     
+    // Generate image URL if not provided (TechFeed pattern)
+    const generatedImageUrl = `https://images.wheelpros.com/Accessories/${sku}.png`;
+    
     accessories.push({
       sku,
       title,
@@ -447,7 +453,7 @@ async function importFromSFTP(pool) {
       map,
       cost,
       sellPrice,
-      imageUrl: imageUrl || null,
+      imageUrl: imageUrl || generatedImageUrl,
       threadSize: parseThreadSize(title),
       seatType: parseSeatType(title),
       outerDiameter: parseHubRing(title)?.outer,
@@ -458,7 +464,8 @@ async function importFromSFTP(pool) {
   }
   
   console.log(`Total unique accessories: ${accessories.length}`);
-  console.log(`With images: ${accessories.filter(a => a.imageUrl).length}`);
+  console.log(`With explicit images: ${accessories.filter(a => a.imageUrl && !a.imageUrl.includes('images.wheelpros.com/Accessories')).length}`);
+  console.log(`With generated images: ${accessories.filter(a => a.imageUrl?.includes('images.wheelpros.com/Accessories')).length}`);
   
   // Insert into database
   await insertAccessories(pool, accessories);
