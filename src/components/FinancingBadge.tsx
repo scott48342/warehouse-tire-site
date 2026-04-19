@@ -46,12 +46,19 @@ export function FinancingBadge({ price, className = "", variant = "inline" }: Fi
     );
   }
 
-  // Compact variant for product cards - minimal, doesn't clutter
+  // Compact variant for product cards - visible but not overwhelming
   if (variant === "compact") {
     return (
-      <p className={`text-[11px] text-blue-600 ${className}`}>
-        or <span className="font-semibold">${monthlyPayment}/mo</span> with <span className="font-bold">affirm</span>
-      </p>
+      <div className={`flex items-center gap-1.5 mt-1 ${className}`}>
+        <img 
+          src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" 
+          alt="Affirm" 
+          className="h-4"
+        />
+        <span className="text-xs text-neutral-600">
+          as low as <span className="font-bold text-blue-700">${monthlyPayment}/mo</span>
+        </span>
+      </div>
     );
   }
 

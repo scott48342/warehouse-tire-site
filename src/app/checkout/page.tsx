@@ -825,17 +825,45 @@ export default function CheckoutPage() {
                   {/* Error state (before payment element loads) */}
                   {stripeError && !clientSecret && (
                     <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
-                      {stripeError}
-                      <button 
-                        onClick={() => {
-                          setStripeError(null);
-                          setClientSecret(null);
-                          createPaymentIntent();
-                        }}
-                        className="ml-2 underline hover:no-underline"
+                      <p>{stripeError}</p>
+                      <div className="mt-2 flex gap-2">
+                        <button 
+                          onClick={() => {
+                            setStripeError(null);
+                            setClientSecret(null);
+                            createPaymentIntent();
+                          }}
+                          className="underline hover:no-underline"
+                        >
+                          Try again
+                        </button>
+                        <span className="text-red-400">|</span>
+                        <button 
+                          onClick={startStripeCheckout}
+                          className="underline hover:no-underline"
+                        >
+                          Use standard checkout
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Fallback: Show redirect option if Payment Element is slow to load */}
+                  {!clientSecret && !paymentLoading && !stripeError && (
+                    <div className="text-center py-8">
+                      <p className="text-neutral-600 mb-4">Payment form not loading?</p>
+                      <button
+                        onClick={startStripeCheckout}
+                        disabled={processing}
+                        className={`h-12 px-6 rounded-xl font-bold text-white ${
+                          processing ? "bg-neutral-300" : "bg-green-600 hover:bg-green-700"
+                        }`}
                       >
-                        Try again
+                        {processing ? "Redirecting..." : "Continue to Secure Checkout →"}
                       </button>
+                      <p className="text-xs text-neutral-500 mt-2">
+                        You'll be redirected to Stripe to complete payment
+                      </p>
                     </div>
                   )}
 
