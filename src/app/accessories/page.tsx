@@ -361,7 +361,7 @@ export default async function AccessoriesPage({
   const [{ items, total }, categoryCounts, categoryFilters] = await Promise.all([
     getAccessories(category, subType, query, filters, page),
     getCategoryCounts(),
-    category ? getFilters(category) : Promise.resolve({}),
+    category ? getFilters(category) : Promise.resolve({} as Record<string, { value: string; count: number }[]>),
   ]);
 
   const totalPages = Math.ceil(total / 24);
