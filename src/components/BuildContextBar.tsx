@@ -207,14 +207,15 @@ export function PackageBridgeCTA({
     return `/tires?${params.toString()}`;
   };
   
-  const hasBuildContext = buildType || liftLevel;
+  // Only show lifted build context when we have actual lifted data, not stock builds
+  const hasLiftedBuildContext = (buildType === "lifted" || buildType === "level") && (liftLevel || inches > 0);
   
   return (
     <div className={`rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-6 ${className}`}>
       <div className="flex flex-col lg:flex-row lg:items-start gap-6">
         
         {/* Left: Visual Preview */}
-        {hasBuildContext && inches > 0 && (
+        {hasLiftedBuildContext && inches > 0 && (
           <div className="flex-shrink-0 flex flex-col items-center">
             <div className="rounded-xl bg-white border border-green-200 p-4">
               <TruckStancePreview liftInches={inches} tireSize={tireSizes[tireSizes.length - 1]} />
@@ -236,7 +237,7 @@ export function PackageBridgeCTA({
           </div>
           
           {/* Popularity Messaging */}
-          {hasBuildContext && (
+          {hasLiftedBuildContext && (
             <div className="mt-2 flex items-center gap-2">
               <span className="text-amber-500">🔥</span>
               <span className="text-sm font-semibold text-amber-700">
@@ -246,7 +247,7 @@ export function PackageBridgeCTA({
           )}
           
           <p className="mt-2 text-sm text-neutral-600">
-            {hasBuildContext && tireSizes.length > 0 ? (
+            {hasLiftedBuildContext && tireSizes.length > 0 ? (
               <>We'll show you <strong>{tireSizes.join("-")}" tires</strong> that match your {liftConfig?.label.toLowerCase() || "lifted"} setup.</>
             ) : (
               <>Find the perfect tires to complete your wheel and tire package.</>
@@ -254,7 +255,7 @@ export function PackageBridgeCTA({
           </p>
           
           {/* "Most Customers Choose" Block */}
-          {hasBuildContext && (
+          {hasLiftedBuildContext && (
             <div className="mt-4 rounded-xl bg-white border-2 border-amber-200 p-4">
               <div className="flex items-center gap-2 text-amber-700 mb-3">
                 <span className="text-lg">⭐</span>
