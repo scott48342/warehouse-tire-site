@@ -35,8 +35,18 @@ export const ACCESSORY_CATEGORIES: Category[] = [
       { id: "lug_nut", name: "Lug Kits", icon: "🔩", subTypes: ["lug_nut", "lug nut"] },
       { id: "hub_ring", name: "Hub Rings", icon: "⭕", subTypes: ["hub_ring", "hub ring"] },
       { id: "wheel_lock", name: "Wheel Locks", icon: "🔒", subTypes: ["wheel_lock"] },
-      { id: "tpms", name: "TPMS Sensors", icon: "📊", subTypes: ["tpms"] },
       { id: "valve_stem", name: "Valve Stems", icon: "🎈", subTypes: ["valve_stem", "valve stem"] },
+    ],
+  },
+  {
+    id: "tpms",
+    name: "TPMS",
+    icon: "📊",
+    description: "Tire pressure monitoring sensors, kits & tools",
+    children: [
+      { id: "tpms_sensor", name: "Sensors & Valves", icon: "📡", subTypes: ["tpms_sensor"] },
+      { id: "tpms_kit", name: "Service Kits", icon: "🧰", subTypes: ["tpms_kit"] },
+      { id: "tpms_tool", name: "Tools", icon: "🔧", subTypes: ["tpms_tool"] },
     ],
   },
   {
@@ -93,7 +103,6 @@ export function getDbCategoryForId(categoryId: string): string | null {
     "lug_nut": "lug_nut",
     "hub_ring": "hub_ring", 
     "wheel_lock": "lug_nut",
-    "tpms": "tpms",
     "valve_stem": "valve_stem",
     "center_cap": "center_cap",
     "spacer": "spacer",
@@ -105,6 +114,9 @@ export function getDbCategoryForId(categoryId: string): string | null {
     "tail_light": "lighting",
     "rock_light": "lighting",
     "lighting_parts": "lighting",
+    "tpms_sensor": "tpms",
+    "tpms_kit": "tpms",
+    "tpms_tool": "tpms",
   };
   return categoryMap[categoryId] || null;
 }
@@ -128,7 +140,7 @@ export const FLAT_CATEGORIES = [
   { id: "lug_nut", name: "Lug Nuts & Locks", icon: "🔩", description: "Secure your wheels properly" },
   { id: "hub_ring", name: "Hub Centric Rings", icon: "⭕", description: "Eliminate wheel vibration" },
   { id: "lighting", name: "LED Lighting", icon: "💡", description: "LED pods, fog lights, headlights & more" },
-  { id: "tpms", name: "TPMS Sensors", icon: "📊", description: "Tire pressure monitoring" },
+  { id: "tpms", name: "TPMS", icon: "📊", description: "Sensors, service kits & tools" },
   { id: "valve_stem", name: "Valve Stems", icon: "🎈", description: "Standard and chrome stems" },
   { id: "spacer", name: "Wheel Spacers", icon: "📏", description: "Wider stance and clearance" },
 ];
