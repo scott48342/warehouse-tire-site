@@ -88,6 +88,9 @@ async function getAccessories(
       params.push(dbCategory);
     }
 
+    // Only show in-stock items
+    conditions.push(`in_stock = true`);
+
     // Brand filter
     if (brand) {
       conditions.push(`brand = $${paramIndex++}`);
@@ -139,6 +142,8 @@ async function getBrands(subTypes: string[], dbCategory: string | null): Promise
       params.push(dbCategory);
     }
 
+    // Only count in-stock items
+    conditions.push(`in_stock = true`);
     conditions.push("brand IS NOT NULL");
 
     const result = await pool.query(`

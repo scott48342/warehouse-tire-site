@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-// Get counts for each subcategory
+// Get counts for each subcategory (only in-stock items)
 async function getSubcategoryCounts(parentId: string) {
   const parent = ACCESSORY_CATEGORIES.find(c => c.id === parentId);
   if (!parent?.children) return {};
@@ -54,7 +54,7 @@ async function getSubcategoryCounts(parentId: string) {
     const placeholders = child.subTypes.map((_, i) => `$${i + 1}`).join(", ");
     try {
       const result = await pool.query(
-        `SELECT COUNT(*) as count FROM accessories WHERE sub_type IN (${placeholders})`,
+        `SELECT COUNT(*) as count FROM accessories WHERE sub_type IN (${placeholders}) AND in_stock = true`,
         child.subTypes
       );
       counts[child.id] = parseInt(result.rows[0].count);
@@ -66,7 +66,7 @@ async function getSubcategoryCounts(parentId: string) {
   return counts;
 }
 
-// Get a sample image for each subcategory
+// Get a sample image for each subcategory (from in-stock items)
 async function getSampleImages(parentId: string) {
   const parent = ACCESSORY_CATEGORIES.find(c => c.id === parentId);
   if (!parent?.children) return {};
@@ -83,7 +83,7 @@ async function getSampleImages(parentId: string) {
     try {
       const result = await pool.query(
         `SELECT image_url FROM accessories 
-         WHERE sub_type IN (${placeholders}) AND image_url IS NOT NULL 
+         WHERE sub_type IN (${placeholders}) AND image_url IS NOT NULL AND in_stock = true
          LIMIT 1`,
         child.subTypes
       );

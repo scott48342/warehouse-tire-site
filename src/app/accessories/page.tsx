@@ -148,6 +148,9 @@ async function getAccessories(
       params.push(filters.style);
     }
 
+    // Only show in-stock items
+    conditions.push(`in_stock = true`);
+
     const where = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
 
     // Get total count
@@ -181,11 +184,11 @@ async function getFilters(category: string): Promise<Record<string, { value: str
   const filters: Record<string, { value: string; count: number }[]> = {};
   
   try {
-    // Always get brands
+    // Always get brands (only in-stock items)
     const brandResult = await pool.query(`
       SELECT brand as value, COUNT(*) as count 
       FROM accessories 
-      WHERE category = $1 AND brand IS NOT NULL
+      WHERE category = $1 AND brand IS NOT NULL AND in_stock = true
       GROUP BY brand 
       ORDER BY count DESC
       LIMIT 30
@@ -195,13 +198,13 @@ async function getFilters(category: string): Promise<Record<string, { value: str
       filters.brand = brandResult.rows.map(r => ({ value: r.value, count: parseInt(r.count) }));
     }
     
-    // Category-specific filters
+    // Category-specific filters (only in-stock items)
     if (category === 'lug_nut') {
       // Thread size
       const threadResult = await pool.query(`
         SELECT thread_size as value, COUNT(*) as count 
         FROM accessories 
-        WHERE category = $1 AND thread_size IS NOT NULL
+        WHERE category = $1 AND thread_size IS NOT NULL AND in_stock = true
         GROUP BY thread_size 
         ORDER BY count DESC
         LIMIT 20
@@ -214,7 +217,7 @@ async function getFilters(category: string): Promise<Record<string, { value: str
       const materialResult = await pool.query(`
         SELECT material as value, COUNT(*) as count 
         FROM accessories 
-        WHERE category = $1 AND material IS NOT NULL
+        WHERE category = $1 AND material IS NOT NULL AND in_stock = true
         GROUP BY material 
         ORDER BY count DESC
       `, [category]);
@@ -226,7 +229,7 @@ async function getFilters(category: string): Promise<Record<string, { value: str
       const styleResult = await pool.query(`
         SELECT style as value, COUNT(*) as count 
         FROM accessories 
-        WHERE category = $1 AND style IS NOT NULL
+        WHERE category = $1 AND style IS NOT NULL AND in_stock = true
         GROUP BY style 
         ORDER BY count DESC
       `, [category]);
@@ -235,12 +238,12 @@ async function getFilters(category: string): Promise<Record<string, { value: str
       }
     }
     
-    // Lighting subcategories
+    // Lighting subcategories (only in-stock items)
     if (category === 'lighting') {
       const subTypeResult = await pool.query(`
         SELECT sub_type as value, COUNT(*) as count 
         FROM accessories 
-        WHERE category = $1 AND sub_type IS NOT NULL
+        WHERE category = $1 AND sub_type IS NOT NULL AND in_stock = true
         GROUP BY sub_type 
         ORDER BY count DESC
       `, [category]);
@@ -262,7 +265,7 @@ async function getCategoryCounts(): Promise<Record<string, number>> {
 
   try {
     const result = await pool.query(
-      `SELECT category, COUNT(*) as count FROM accessories GROUP BY category`
+      `SELECT category, COUNT(*) as count FROM accessories WHERE in_stock = true GROUP BY category`
     );
     const counts: Record<string, number> = {};
     for (const row of result.rows) {
