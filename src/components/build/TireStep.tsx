@@ -149,6 +149,11 @@ function TireCard({
             </span>
             <span className="text-xs text-neutral-400">set of 4</span>
           </div>
+          {setPrice >= 50 && (
+            <div className="text-xs text-neutral-400 mt-1">
+              As low as ${Math.ceil(setPrice / 12)}/mo with Affirm
+            </div>
+          )}
         </div>
         
         {/* Select button */}

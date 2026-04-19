@@ -1,0 +1,344 @@
+[
+  {
+    "filename": "gallery-001.jpg",
+    "index": 1,
+    "year": 2023,
+    "make": "Chevrolet",
+    "model": "Silverado Trail Boss",
+    "lift": "6\"",
+    "wheels": "20x10",
+    "offset": -18,
+    "tires": "35x12.50R20",
+    "style": "offroad",
+    "scene": "desert",
+    "cropRegion": {
+      "left": 4,
+      "top": 46,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-002.jpg",
+    "index": 2,
+    "year": 2022,
+    "make": "RAM",
+    "model": "1500 Rebel",
+    "lift": "Leveled",
+    "wheels": "20x10",
+    "offset": -18,
+    "tires": null,
+    "style": "daily",
+    "scene": "suburban",
+    "cropRegion": {
+      "left": 345,
+      "top": 46,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-003.jpg",
+    "index": 3,
+    "year": 2023,
+    "make": "Ford",
+    "model": "F-150 Raptor",
+    "lift": "4\"",
+    "wheels": "17x10",
+    "offset": null,
+    "tires": "33x12.50R17",
+    "style": "offroad",
+    "scene": "forest",
+    "cropRegion": {
+      "left": 686,
+      "top": 46,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-004.jpg",
+    "index": 4,
+    "year": 2021,
+    "make": "Toyota",
+    "model": "Tacoma TRD Pro",
+    "lift": "2\"",
+    "wheels": "17x9",
+    "offset": null,
+    "tires": "33x12.50R17",
+    "style": "offroad",
+    "scene": "trail",
+    "cropRegion": {
+      "left": 4,
+      "top": 359,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-005.jpg",
+    "index": 5,
+    "year": 2024,
+    "make": "Chevrolet",
+    "model": "Silverado 2500 HD ZR2",
+    "lift": "6\"",
+    "wheels": "20x10",
+    "offset": -18,
+    "tires": "37x13.50R17",
+    "style": "aggressive",
+    "scene": "dirt",
+    "cropRegion": {
+      "left": 345,
+      "top": 359,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-006.jpg",
+    "index": 6,
+    "year": 2023,
+    "make": "RAM",
+    "model": "1500 Laramie",
+    "lift": "Leveled",
+    "wheels": "20x12",
+    "offset": -1,
+    "tires": "35x12.50R20",
+    "style": "daily",
+    "scene": "city",
+    "cropRegion": {
+      "left": 686,
+      "top": 359,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-007.jpg",
+    "index": 7,
+    "year": 2023,
+    "make": "Ford",
+    "model": "F-150 Stock",
+    "lift": "Stock",
+    "wheels": "20\"",
+    "offset": null,
+    "tires": "275/50R20",
+    "style": "daily",
+    "scene": "gas station",
+    "cropRegion": {
+      "left": 4,
+      "top": 672,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-008.jpg",
+    "index": 8,
+    "year": 2023,
+    "make": "RAM",
+    "model": "2500",
+    "lift": "Leveled",
+    "wheels": "20x10",
+    "offset": null,
+    "tires": "275/50R20",
+    "style": "aggressive",
+    "scene": "desert",
+    "cropRegion": {
+      "left": 345,
+      "top": 672,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-009.jpg",
+    "index": 9,
+    "year": 2023,
+    "make": "RAM",
+    "model": "1500 Laramie",
+    "lift": "Leveled",
+    "wheels": "20x9",
+    "offset": -1,
+    "tires": "33x12.50R20",
+    "style": "daily",
+    "scene": "city",
+    "cropRegion": {
+      "left": 686,
+      "top": 672,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-010.jpg",
+    "index": 10,
+    "year": 2023,
+    "make": "Ford",
+    "model": "F-150 Stock",
+    "lift": "Stock",
+    "wheels": "20\"",
+    "offset": null,
+    "tires": "285/50R20",
+    "style": "daily",
+    "scene": "gas station",
+    "cropRegion": {
+      "left": 4,
+      "top": 979,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-011.jpg",
+    "index": 11,
+    "year": 2022,
+    "make": "RAM",
+    "model": "2500",
+    "lift": "6\"",
+    "wheels": "20x10",
+    "offset": -18,
+    "tires": "35x12.50R20",
+    "style": "aggressive",
+    "scene": "desert",
+    "cropRegion": {
+      "left": 345,
+      "top": 979,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-012.jpg",
+    "index": 12,
+    "year": 2023,
+    "make": "RAM",
+    "model": "1500",
+    "lift": "Leveled",
+    "wheels": "20x9",
+    "offset": -1,
+    "tires": "33x12.50R20",
+    "style": "daily",
+    "scene": "city",
+    "cropRegion": {
+      "left": 686,
+      "top": 979,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-013.jpg",
+    "index": 13,
+    "year": 2023,
+    "make": "Ford",
+    "model": "F-150",
+    "lift": "Stock",
+    "wheels": "20\"",
+    "offset": null,
+    "tires": null,
+    "style": "daily",
+    "scene": "parking",
+    "cropRegion": {
+      "left": 4,
+      "top": 1284,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-014.jpg",
+    "index": 14,
+    "year": 2023,
+    "make": "RAM",
+    "model": "1500",
+    "lift": "Leveled",
+    "wheels": "20x9",
+    "offset": null,
+    "tires": null,
+    "style": "daily",
+    "scene": "driveway",
+    "cropRegion": {
+      "left": 345,
+      "top": 1284,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-015.jpg",
+    "index": 15,
+    "year": 2023,
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "lift": "Leveled",
+    "wheels": "20x9",
+    "offset": null,
+    "tires": null,
+    "style": "daily",
+    "scene": "parking",
+    "cropRegion": {
+      "left": 686,
+      "top": 1284,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-016.jpg",
+    "index": 16,
+    "year": 2023,
+    "make": "RAM",
+    "model": "1500",
+    "lift": "Stock",
+    "wheels": "20\"",
+    "offset": null,
+    "tires": null,
+    "style": "daily",
+    "scene": "street",
+    "cropRegion": {
+      "left": 4,
+      "top": 1444,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-017.jpg",
+    "index": 17,
+    "year": 2023,
+    "make": "Ford",
+    "model": "F-150",
+    "lift": "Stock",
+    "wheels": "20\"",
+    "offset": null,
+    "tires": null,
+    "style": "daily",
+    "scene": "street",
+    "cropRegion": {
+      "left": 345,
+      "top": 1444,
+      "width": 333,
+      "height": 85
+    }
+  },
+  {
+    "filename": "gallery-018.jpg",
+    "index": 18,
+    "year": 2023,
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "lift": "Stock",
+    "wheels": "20\"",
+    "offset": null,
+    "tires": null,
+    "style": "daily",
+    "scene": "street",
+    "cropRegion": {
+      "left": 686,
+      "top": 1444,
+      "width": 333,
+      "height": 85
+    }
+  }
+]

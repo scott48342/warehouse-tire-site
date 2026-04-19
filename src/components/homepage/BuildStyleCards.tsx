@@ -19,6 +19,7 @@ const BUILD_STYLES = [
     id: "stock",
     title: "Factory Build",
     subtitle: "No modifications at all",
+    monthlyHint: "From ~$79/mo",
     image: "/images/homepage/truck-stock.png",
     buttonText: "Shop Factory Fit",
     buttonColor: "bg-green-700 hover:bg-green-600",
@@ -30,6 +31,7 @@ const BUILD_STYLES = [
     id: "level",
     title: "Leveling Kit Build",
     subtitle: "Better stance, mild upgrades",
+    monthlyHint: "From ~$99/mo",
     image: "/images/homepage/truck-leveled.png",
     buttonText: "Shop Leveled",
     buttonColor: "bg-blue-700 hover:bg-blue-600",
@@ -41,6 +43,7 @@ const BUILD_STYLES = [
     id: "lifted",
     title: "Lifted Truck Build",
     subtitle: "Big wheels, wide stance",
+    monthlyHint: "From ~$129/mo",
     image: "/images/homepage/truck-lifted.png",
     buttonText: "Shop Lifted",
     buttonColor: "bg-orange-600 hover:bg-orange-500",
@@ -54,6 +57,7 @@ interface BuildCardProps {
   id: string;
   title: string;
   subtitle: string;
+  monthlyHint: string;
   image: string;
   buttonText: string;
   buttonColor: string;
@@ -64,6 +68,7 @@ interface BuildCardProps {
 function BuildCard({
   title,
   subtitle,
+  monthlyHint,
   image,
   buttonText,
   buttonColor,
@@ -111,6 +116,9 @@ function BuildCard({
           </h3>
           <p className="mt-1 text-sm text-white/60">
             {subtitle}
+          </p>
+          <p className="mt-1 text-xs text-white/40">
+            {monthlyHint}
           </p>
 
           {/* CTA Button */}

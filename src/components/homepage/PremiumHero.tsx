@@ -52,6 +52,11 @@ export function PremiumHero() {
           <p className="mt-4 text-sm text-white/60">
             Stock, leveled, or lifted — shop the setup that matches your build.
           </p>
+          
+          {/* Affirm financing hint - subtle */}
+          <p className="mt-2 text-xs text-white/40">
+            or finance from ~$99/mo with Affirm
+          </p>
         </div>
       </div>
     </section>

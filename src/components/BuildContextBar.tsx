@@ -298,6 +298,9 @@ export function PackageBridgeCTA({
               <span className="flex items-center gap-1">
                 <span className="text-green-500">✓</span> Free shipping over $1,500
               </span>
+              <span className="flex items-center gap-1">
+                <span className="text-green-500">✓</span> As low as $99/mo with Affirm
+              </span>
             </div>
           </div>
         </div>

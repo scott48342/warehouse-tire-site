@@ -214,7 +214,7 @@ export function BuildSummary() {
               )}
               {monthlyPrice > 0 && (
                 <div className="text-right text-xs text-neutral-400 mt-1">
-                  As low as ${monthlyPrice}/mo
+                  As low as ${monthlyPrice}/mo with Affirm
                 </div>
               )}
             </>
