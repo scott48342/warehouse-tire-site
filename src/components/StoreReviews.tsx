@@ -161,7 +161,7 @@ export function ReviewsSection({
             Trusted by Local Customers
           </h2>
           <p className="mt-1 text-sm text-neutral-500">
-            {meta.totalReviews} reviews from our Pontiac & Waterford locations
+            {meta.totalReviews} verified customer reviews
           </p>
           <p className="mt-1 text-[10px] text-neutral-400 uppercase tracking-wide">
             Real Customer Reviews from Our Stores

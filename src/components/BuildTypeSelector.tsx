@@ -753,7 +753,7 @@ export function BuildTypeSelector({ vehicle, onComplete, onBack }: BuildTypeSele
           {/* Install Messaging */}
           <div className="mt-4 rounded-lg bg-blue-50 border border-blue-200 px-4 py-3 text-center">
             <span className="text-sm text-blue-800">
-              🔧 <strong>Install available</strong> at our Pontiac &amp; Waterford locations
+              🔧 <strong>Install available</strong> at local shops near you
             </span>
           </div>
         </div>

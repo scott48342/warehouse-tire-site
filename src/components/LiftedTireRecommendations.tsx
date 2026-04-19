@@ -201,7 +201,7 @@ export function LiftedTireRecommendations({
             </span>
           </div>
           <span className="text-xs text-blue-700 font-medium">
-            🔧 Install available in Pontiac &amp; Waterford
+            🔧 Install available at local shops near you
           </span>
         </div>
       </div>
@@ -328,7 +328,7 @@ export function TireTrustBar({ className = "" }: { className?: string }) {
           Free Shipping over $1,500
         </span>
         <span className="flex items-center gap-2 text-blue-700">
-          🔧 Install at Pontiac &amp; Waterford
+          🔧 Install available at local shops
         </span>
       </div>
     </div>

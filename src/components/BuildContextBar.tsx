@@ -299,7 +299,7 @@ export function PackageBridgeCTA({
                 <span className="text-green-500">✓</span> Free shipping over $1,500
               </span>
               <span className="flex items-center gap-1">
-                <span className="text-blue-500">🔧</span> Install at Pontiac &amp; Waterford
+                <span className="text-blue-500">🔧</span> Install available at local shops
               </span>
             </div>
           </div>
