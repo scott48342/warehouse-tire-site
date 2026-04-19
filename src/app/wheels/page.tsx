@@ -991,19 +991,29 @@ export default async function WheelsPage({
   // Apply build type filter (ranks matching wheels higher, optionally filters for stock mode)
   // For trucks, we try strict filter first but fall back to non-strict if it returns 0 results
   // (Heavy-duty trucks often have no "stock-friendly" aftermarket wheels)
+  // 
+  // Classic/vintage vehicles (pre-1985) skip strict filtering entirely - the fitment guidance
+  // system marks most aftermarket wheels as "aggressive" when they actually fit fine in classic
+  // car wheel wells. Better to show all options and let the customer decide.
+  const yearNum = parseInt(year || "0", 10);
+  const isClassicVehicle = yearNum > 0 && yearNum < 1985;
+  const useStrictFilter = buildTypeParam === "stock" && !isClassicVehicle;
+  
   let itemsFilteredBuildType = filterWheelsForBuildType(
     itemsFilteredPrice,
     buildTypeParam,
     oemEnvelope,
-    { strictFilter: buildTypeParam === "stock" } // Stock mode uses strict filter
+    { strictFilter: useStrictFilter }
   );
   
-  // Fallback: if strict stock filter returns 0 results but we have wheels, relax the filter
-  const stockFilterRelaxed = buildTypeParam === "stock" && 
-    itemsFilteredBuildType.length === 0 && 
-    itemsFilteredPrice.length > 0;
+  // Fallback: if strict stock filter returns too few results, relax the filter
+  // "Too few" = less than 20% of original count OR zero results
+  const strictFilterTooAggressive = useStrictFilter && 
+    itemsFilteredPrice.length > 0 &&
+    (itemsFilteredBuildType.length === 0 || 
+     itemsFilteredBuildType.length < itemsFilteredPrice.length * 0.2);
   
-  if (stockFilterRelaxed) {
+  if (strictFilterTooAggressive) {
     // Re-run without strict filter - just rank stock-friendly higher
     itemsFilteredBuildType = filterWheelsForBuildType(
       itemsFilteredPrice,
