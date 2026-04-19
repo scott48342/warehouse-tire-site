@@ -16,6 +16,7 @@ import { formatCurrency, FREE_SHIPPING_THRESHOLD } from "@/lib/shipping/shipping
 import { CartTPMSUpsell } from "./TPMSSuggestion";
 import { CartCoAdditions } from "./CartCoAdditions";
 import { CartSmartTireUpsell } from "./SmartTireUpsell";
+import { FinancingBadge } from "./FinancingBadge";
 
 const FITMENT_LABELS = {
   surefit: { label: "Best Fit", color: "text-green-700", bg: "bg-green-100" },
@@ -547,6 +548,13 @@ export function CartSlideout() {
                 ${isValidZip ? estimatedTotal.toFixed(2) : subtotal.toFixed(2)}
               </span>
             </div>
+            
+            {/* Affirm financing messaging */}
+            {subtotal >= 50 && (
+              <div className="pt-2">
+                <FinancingBadge price={subtotal} variant="inline" />
+              </div>
+            )}
           </div>
 
           {/* Primary CTA - changes based on cart contents */}

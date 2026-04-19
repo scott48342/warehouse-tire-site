@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useCart, type CartWheelItem, type CartTireItem, type CartAccessoryItem } from "@/lib/cart/CartContext";
 import { validatePackage, verifyTotalMatch } from "@/lib/package/validation";
@@ -16,6 +16,7 @@ import { TPMSSuggestion } from "@/components/TPMSSuggestion";
 import { RoadHazardProtection } from "@/components/RoadHazardProtection";
 import { useShopContext, LocalOnly } from "@/contexts/ShopContextProvider";
 import { StoreSelector, StoreInfoCard } from "@/components/local";
+import { StripePaymentElement } from "@/components/StripePaymentElement";
 
 /**
  * Checkout Page
@@ -102,6 +103,12 @@ export default function CheckoutPage() {
   const [stripeError, setStripeError] = useState<string | null>(null);
   const [paypalError, setPaypalError] = useState<string | null>(null);
   const [selectedPayment, setSelectedPayment] = useState<"stripe" | "paypal">("stripe");
+  
+  // Embedded Payment Element state
+  const [clientSecret, setClientSecret] = useState<string | null>(null);
+  const [paymentIntentId, setPaymentIntentId] = useState<string | null>(null);
+  const [quoteId, setQuoteId] = useState<string | null>(null);
+  const [paymentLoading, setPaymentLoading] = useState(false);
   
   // Tax rate based on shipping state (local mode: auto-apply Michigan 6%)
   const MICHIGAN_TAX_RATE = 0.06;
@@ -316,6 +323,100 @@ export default function CheckoutPage() {
       setProcessing(false);
     }
   }
+
+  // Create PaymentIntent for embedded Payment Element
+  const createPaymentIntent = useCallback(async () => {
+    // Skip if already created or loading
+    if (clientSecret || paymentLoading) return;
+    
+    try {
+      setPaymentLoading(true);
+      setStripeError(null);
+
+      const customer = {
+        firstName: shipping.firstName,
+        lastName: shipping.lastName,
+        email: shipping.email,
+        phone: shipping.phone,
+      };
+
+      const res = await fetch("/api/stripe/create-payment-intent", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          items,
+          customer,
+          vehicle,
+          cartId: getCartId(),
+          ...(isLocal && selectedStore ? { installStore: selectedStore } : {}),
+          shipping: {
+            address: shipping.address,
+            address2: shipping.address2,
+            city: shipping.city,
+            state: shipping.state,
+            zip: shipping.zip,
+            amount: shippingAmount,
+            isFree: shippingEstimate.isFree,
+          },
+          tax: {
+            rate: taxRate,
+            amount: calculatedTax,
+            state: shipping.state,
+          },
+          ...(isLocal ? {
+            localFees: {
+              installation: localServiceFees.install,
+              recycling: localServiceFees.disposal,
+              cardProcessing: cardProcessingFee,
+              tireCount,
+            },
+          } : {}),
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.ok || !data?.clientSecret) {
+        setStripeError(String(data?.error || data?.detail || "Failed to initialize payment"));
+        return;
+      }
+
+      setClientSecret(data.clientSecret);
+      setPaymentIntentId(data.paymentIntentId);
+      setQuoteId(data.quoteId);
+    } catch (e: any) {
+      setStripeError(e?.message || String(e));
+    } finally {
+      setPaymentLoading(false);
+    }
+  }, [
+    clientSecret, paymentLoading, shipping, items, vehicle, isLocal, selectedStore,
+    shippingAmount, shippingEstimate.isFree, taxRate, calculatedTax, 
+    localServiceFees, cardProcessingFee, tireCount
+  ]);
+
+  // Create PaymentIntent when entering payment step
+  useEffect(() => {
+    if (step === "payment" && !clientSecret && !paymentLoading) {
+      createPaymentIntent();
+    }
+  }, [step, clientSecret, paymentLoading, createPaymentIntent]);
+
+  // Handle successful payment
+  const handlePaymentSuccess = useCallback((paymentIntentId: string) => {
+    // Clear cart and redirect to success page
+    clearCart();
+    router.push(`/checkout/success?payment_intent=${paymentIntentId}&quote_id=${quoteId}`);
+  }, [clearCart, router, quoteId]);
+
+  // Handle payment error
+  const handlePaymentError = useCallback((error: string) => {
+    setStripeError(error);
+  }, []);
+
+  // Handle processing state
+  const handlePaymentProcessing = useCallback((isProcessing: boolean) => {
+    setProcessing(isProcessing);
+  }, []);
 
   // Empty cart state
   if (items.length === 0) {
@@ -683,101 +784,100 @@ export default function CheckoutPage() {
             {/* Step: Payment */}
             {step === "payment" && (
               <div className="space-y-4">
-                {/* Affirm Pay Over Time - Prominent Section */}
-                <div className="rounded-2xl border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-indigo-50 p-5">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-8" />
-                      <div>
-                        <h2 className="text-lg font-bold text-blue-900">Pay Over Time</h2>
-                        <p className="text-sm text-blue-700">Split into 4 easy payments</p>
-                      </div>
-                    </div>
-                    <span className="px-3 py-1 bg-blue-200 text-blue-800 text-sm font-bold rounded-full">0% APR</span>
-                  </div>
-                  
-                  <div className="bg-white rounded-xl p-4 border border-blue-200">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-sm text-neutral-600">4 interest-free payments of</p>
-                        <p className="text-2xl font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm text-neutral-600">Total</p>
-                        <p className="text-lg font-bold text-neutral-900">${totalWithTaxAndShipping.toFixed(2)}</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-xs text-blue-600 mt-3 text-center">
-                    Select "Continue to Payment" → Choose Affirm on the next screen
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-                  <h2 className="text-lg font-bold text-neutral-900 mb-4">Select Payment Method</h2>
-
-                  {/* Payment method selection */}
-                  <div className="space-y-3">
-                    {/* Credit Card (Stripe) */}
-                    <label
-                      className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${
-                        selectedPayment === "stripe"
-                          ? "border-green-600 bg-green-50"
-                          : "border-neutral-200 hover:border-neutral-300"
-                      }`}
-                    >
-                      <input
-                        type="radio"
-                        name="payment"
-                        checked={selectedPayment === "stripe"}
-                        onChange={() => setSelectedPayment("stripe")}
-                        className="w-5 h-5 text-green-600"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">💳</span>
-                          <span className="font-bold text-neutral-900">Credit / Debit Card or Affirm</span>
+                {/* Affirm Pay Over Time - Info Banner */}
+                {totalWithTaxAndShipping >= 50 && (
+                  <div className="rounded-2xl border-2 border-blue-300 bg-gradient-to-br from-blue-50 to-indigo-50 p-5">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-3">
+                        <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-7" />
+                        <div>
+                          <h2 className="text-base font-bold text-blue-900">Pay Over Time Available</h2>
+                          <p className="text-sm text-blue-700">Select Affirm below to split into 4 payments</p>
                         </div>
-                        <p className="text-sm text-neutral-500 mt-0.5">
-                          Visa, Mastercard, Amex, Discover • Apple Pay • Google Pay • Affirm (Pay in 4)
-                        </p>
                       </div>
-                    </label>
-
+                      <span className="px-3 py-1 bg-blue-200 text-blue-800 text-sm font-bold rounded-full">0% APR</span>
+                    </div>
+                    
+                    <div className="bg-white rounded-xl p-3 border border-blue-200">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-neutral-600">4 interest-free payments of</span>
+                        <span className="text-lg font-extrabold text-blue-700">${Math.ceil(totalWithTaxAndShipping / 4)}/mo</span>
+                      </div>
+                    </div>
                   </div>
+                )}
 
-                  {/* Error messages */}
-                  {stripeError && (
-                    <div className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
-                      {stripeError}
+                {/* Payment Form */}
+                <div className="rounded-2xl border border-neutral-200 bg-white p-5">
+                  <h2 className="text-lg font-bold text-neutral-900 mb-4">Payment Method</h2>
+
+                  {/* Loading state */}
+                  {paymentLoading && (
+                    <div className="flex items-center justify-center py-12">
+                      <svg className="animate-spin h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      <span className="ml-3 text-neutral-600">Initializing secure payment...</span>
                     </div>
                   )}
 
-                  <p className="text-xs text-neutral-500 mt-4 text-center">
-                    You will be redirected to Stripe to complete your purchase securely.
-                  </p>
+                  {/* Error state (before payment element loads) */}
+                  {stripeError && !clientSecret && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 mb-4">
+                      {stripeError}
+                      <button 
+                        onClick={() => {
+                          setStripeError(null);
+                          setClientSecret(null);
+                          createPaymentIntent();
+                        }}
+                        className="ml-2 underline hover:no-underline"
+                      >
+                        Try again
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Stripe Payment Element */}
+                  {clientSecret && (
+                    <StripePaymentElement
+                      clientSecret={clientSecret}
+                      onSuccess={handlePaymentSuccess}
+                      onError={handlePaymentError}
+                      onProcessing={handlePaymentProcessing}
+                      totalAmount={totalWithTaxAndShipping}
+                      returnUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/checkout/success?payment_intent=${paymentIntentId}&quote_id=${quoteId}`}
+                    />
+                  )}
+
+                  {/* Accepted payment methods */}
+                  <div className="mt-4 pt-4 border-t border-neutral-100">
+                    <p className="text-xs text-neutral-500 text-center mb-2">Accepted payment methods</p>
+                    <div className="flex items-center justify-center gap-3">
+                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/8vbr8k4mr5xp93j54ghmqmpv/Visa-logo.png" alt="Visa" className="h-6 object-contain" />
+                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/rvgw5pc69nhq9wkbp7v3qv/mc_symbol.svg" alt="Mastercard" className="h-6 object-contain" />
+                      <img src="https://cdn.brandfolder.io/KGT2DTA4/at/pkvk6k9c47hqmxqn7q45qkq/Amex-logo.svg" alt="Amex" className="h-6 object-contain" />
+                      <img src="https://cdn.affirm.com/brand/buttons/checkout/affirm-logo.svg" alt="Affirm" className="h-5 object-contain" />
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setStep("shipping")}
-                    className="h-12 px-6 rounded-xl border border-neutral-200 bg-white font-bold text-neutral-900 hover:bg-neutral-50"
-                  >
-                    Back
-                  </button>
-                  <button
-                    onClick={startStripeCheckout}
-                    disabled={processing}
-                    className={`flex-1 h-12 rounded-xl font-extrabold text-white flex items-center justify-center ${
-                      processing
-                        ? "bg-neutral-300 cursor-not-allowed"
-                        : "bg-green-600 hover:bg-green-700"
-                    }`}
-                  >
-                    {processing ? "Redirecting…" : "Continue to Payment"}
-                  </button>
-                </div>
+                {/* Back button */}
+                <button
+                  onClick={() => {
+                    setStep("shipping");
+                    // Reset payment state when going back
+                    setClientSecret(null);
+                    setPaymentIntentId(null);
+                    setQuoteId(null);
+                    setStripeError(null);
+                  }}
+                  disabled={processing}
+                  className="w-full h-12 rounded-xl border border-neutral-200 bg-white font-bold text-neutral-900 hover:bg-neutral-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  ← Back to {isLocal ? "Details" : "Shipping"}
+                </button>
               </div>
             )}
           </div>

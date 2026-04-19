@@ -48,6 +48,7 @@ import {
   type RecommendedTire,
 } from "@/components/LiftedTireRecommendations";
 import { StickyBuildBar } from "@/components/BuildContextBar";
+import { FinancingBadge } from "@/components/FinancingBadge";
 import { 
   getVehicleProfile, 
   isCategoryAllowedForVehicle,
@@ -4135,6 +4136,10 @@ function TireCard({
                     </span>
                     <span className="text-xs font-medium text-neutral-500">for all 4</span>
                   </div>
+                  {/* Affirm financing - compact */}
+                  {unitPrice * 4 >= 50 && (
+                    <FinancingBadge price={unitPrice * 4} variant="compact" />
+                  )}
                 </div>
               ) : (
                 <div className="text-xl font-extrabold text-neutral-900">Call for price</div>

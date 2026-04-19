@@ -3,13 +3,18 @@
 interface FinancingBadgeProps {
   price: number;
   className?: string;
-  variant?: "inline" | "block";
+  variant?: "inline" | "block" | "compact";
 }
 
 /**
  * Shows "As low as $X/mo with Affirm" messaging for products
  * Affirm supports purchases from $50 to $30,000
  * Shows estimated monthly payment based on 12-month term
+ * 
+ * Variants:
+ * - inline: Standard text link (default)
+ * - block: Full card with benefits
+ * - compact: Minimal for product cards (smaller font, single line)
  */
 export function FinancingBadge({ price, className = "", variant = "inline" }: FinancingBadgeProps) {
   // Affirm minimum is $50, max is $30,000
@@ -38,6 +43,15 @@ export function FinancingBadge({ price, className = "", variant = "inline" }: Fi
           </div>
         </div>
       </div>
+    );
+  }
+
+  // Compact variant for product cards - minimal, doesn't clutter
+  if (variant === "compact") {
+    return (
+      <p className={`text-[11px] text-blue-600 ${className}`}>
+        or <span className="font-semibold">${monthlyPayment}/mo</span> with <span className="font-bold">affirm</span>
+      </p>
     );
   }
 

@@ -7,6 +7,7 @@ import { AddToCompareButton } from "@/components/AddToCompareButton";
 import { normalizeWheelForCompare } from "@/context/CompareContext";
 import { useCart } from "@/lib/cart/CartContext";
 import { calculateAccessoryFitment, type DBProfileForAccessories } from "@/hooks/useAccessoryFitment";
+import { FinancingBadge } from "@/components/FinancingBadge";
 import { 
   isAccessoryAutoAddEnabled, 
   safeAutoAddAccessories, 
@@ -1053,6 +1054,11 @@ export function WheelsStyleCard({
                 )}
               </span>
             </div>
+            
+            {/* Affirm financing - compact under set price */}
+            {setPrice !== null && setPrice >= 50 && (
+              <FinancingBadge price={setPrice} variant="compact" />
+            )}
           </div>
 
           {/* Price anchoring with YOUR PRICE highlight */}

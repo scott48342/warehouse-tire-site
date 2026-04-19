@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getDbPool } from "@/lib/db/pool";
 import { AccessoryAddToCartButton } from "@/components/AccessoryAddToCartButton";
+import { FinancingBadge } from "@/components/FinancingBadge";
 import type { AccessoryCategory } from "@/lib/cart/accessoryTypes";
 
 // Placeholder images by category
@@ -415,16 +416,24 @@ export default async function AccessoryPage({
           {/* Price */}
           <div className="mb-6">
             {price > 0 ? (
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-gray-900">
-                  ${price.toFixed(2)}
-                </span>
-                {msrp > price && (
-                  <span className="text-lg text-gray-400 line-through">
-                    ${msrp.toFixed(2)}
+              <>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-gray-900">
+                    ${price.toFixed(2)}
                   </span>
+                  {msrp > price && (
+                    <span className="text-lg text-gray-400 line-through">
+                      ${msrp.toFixed(2)}
+                    </span>
+                  )}
+                </div>
+                {/* Affirm financing - only shows for items $50+ */}
+                {price >= 50 && (
+                  <div className="mt-2">
+                    <FinancingBadge price={price} variant="inline" />
+                  </div>
                 )}
-              </div>
+              </>
             ) : (
               <p className="text-lg text-gray-500">Contact for pricing</p>
             )}

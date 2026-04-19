@@ -46,6 +46,7 @@ export async function ensureOrdersTable(db: pg.Pool) {
     CREATE INDEX IF NOT EXISTS orders_status_idx ON orders (status);
     CREATE INDEX IF NOT EXISTS orders_created_at_idx ON orders (created_at DESC);
     CREATE INDEX IF NOT EXISTS orders_stripe_session_id_idx ON orders (stripe_session_id);
+    CREATE INDEX IF NOT EXISTS orders_stripe_pi_idx ON orders (stripe_payment_intent_id);
   `);
 }
 
@@ -187,6 +188,40 @@ export async function getOrderByQuote(db: pg.Pool, quoteId: string): Promise<Ord
       LIMIT 1
     `,
     values: [quoteId],
+  });
+
+  const r = rows[0];
+  if (!r) return null;
+
+  return {
+    id: r.id,
+    quoteId: r.quote_id,
+    status: r.status as OrderStatus,
+    stripeSessionId: r.stripe_session_id,
+    stripePaymentIntentId: r.stripe_payment_intent_id,
+    amountPaidCents: r.amount_paid_cents,
+    paidAt: r.paid_at,
+    customerEmail: r.customer_email,
+    customerPhone: r.customer_phone,
+    snapshot: r.snapshot_json as QuoteSnapshot,
+    createdAt: r.created_at,
+    updatedAt: r.updated_at,
+  };
+}
+
+export async function getOrderByPaymentIntent(db: pg.Pool, paymentIntentId: string): Promise<OrderRecord | null> {
+  await ensureOrdersTable(db);
+  
+  const { rows } = await db.query({
+    text: `
+      SELECT id, quote_id, status, stripe_session_id, stripe_payment_intent_id,
+             amount_paid_cents, paid_at, customer_email, customer_phone,
+             snapshot_json, email_sent_at, created_at, updated_at
+      FROM orders
+      WHERE stripe_payment_intent_id = $1
+      LIMIT 1
+    `,
+    values: [paymentIntentId],
   });
 
   const r = rows[0];

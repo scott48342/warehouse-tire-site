@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BRAND } from "@/lib/brand";
 import { getPool, getQuote } from "@/lib/quotes";
 import { getStripeClient } from "@/lib/payments/stripeClient";
-import { getOrderByStripeSession, getOrderByQuote, createOrder, markOrderEmailSent, type OrderRecord } from "@/lib/orders";
+import { getOrderByStripeSession, getOrderByQuote, getOrderByPaymentIntent, createOrder, markOrderEmailSent, type OrderRecord } from "@/lib/orders";
 import { sendOrderConfirmationEmail } from "@/lib/email";
 import { CartRecoveryHandler } from "@/components/CartRecoveryHandler";
 import { GoogleAdsConversion } from "@/components/GoogleAdsConversion";
@@ -20,55 +20,66 @@ export default async function CheckoutSuccessPage({
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sp = (await searchParams) || {};
+  
+  // Support multiple lookup methods:
+  // - session_id: Legacy Stripe Checkout Session redirect
+  // - payment_intent: Embedded Payment Element flow
+  // - quote_id: Direct quote lookup (fallback)
   const sessionIdRaw = Array.isArray((sp as any).session_id) ? (sp as any).session_id[0] : (sp as any).session_id;
   const sessionId = String(sessionIdRaw || "").trim();
+  
+  const paymentIntentRaw = Array.isArray((sp as any).payment_intent) ? (sp as any).payment_intent[0] : (sp as any).payment_intent;
+  const paymentIntentId = String(paymentIntentRaw || "").trim();
+  
+  const quoteIdRaw = Array.isArray((sp as any).quote_id) ? (sp as any).quote_id[0] : (sp as any).quote_id;
+  const quoteIdParam = String(quoteIdRaw || "").trim();
 
   let order: OrderRecord | null = null;
   let errorMessage: string | null = null;
 
-  if (sessionId) {
+  const db = getPool();
+  const stripeConn = await getStripeClient(db);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TRY PAYMENT INTENT LOOKUP (embedded Payment Element flow)
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!order && paymentIntentId) {
     try {
-      const db = getPool();
+      // First, check if order exists by payment intent
+      order = await getOrderByPaymentIntent(db, paymentIntentId);
       
-      // First, try to find existing order
-      order = await getOrderByStripeSession(db, sessionId);
-      
-      // If no order exists, create it (fallback for webhook race condition)
-      if (!order) {
-        const stripeConn = await getStripeClient(db);
-        if (stripeConn?.stripe) {
-          const session = await stripeConn.stripe.checkout.sessions.retrieve(sessionId);
-          const quoteId = session?.metadata?.quoteId;
+      // If no order yet (webhook race), try to create it
+      if (!order && stripeConn?.stripe) {
+        const pi = await stripeConn.stripe.paymentIntents.retrieve(paymentIntentId);
+        const quoteId = pi?.metadata?.quoteId;
+        
+        if (quoteId && pi.status === "succeeded") {
+          // Double-check by quote
+          order = await getOrderByQuote(db, quoteId);
           
-          if (quoteId) {
-            // Check if order exists by quote (another fallback)
-            order = await getOrderByQuote(db, quoteId);
-            
-            if (!order) {
-              // Create order now (webhook might be delayed)
-              const quote = await getQuote(db, quoteId);
-              if (quote) {
-                const { id: orderId } = await createOrder(db, {
-                  quoteId,
-                  stripeSessionId: sessionId,
-                  stripePaymentIntentId: session.payment_intent as string,
-                  amountPaidCents: session.amount_total || 0,
-                  customerEmail: session.customer_email || quote.snapshot.customer.email,
-                  customerPhone: quote.snapshot.customer.phone,
-                  snapshot: quote.snapshot,
-                });
-                
-                order = await getOrderByStripeSession(db, sessionId);
-                
-                // Send email if not sent yet
-                const emailTo = session.customer_email || quote.snapshot.customer.email;
-                if (order && emailTo) {
-                  try {
-                    await sendOrderConfirmationEmail(orderId, emailTo, quote.snapshot);
-                    await markOrderEmailSent(db, orderId);
-                  } catch {
-                    // Email failure is not critical
-                  }
+          if (!order) {
+            // Create order now
+            const quote = await getQuote(db, quoteId);
+            if (quote) {
+              const { id: orderId } = await createOrder(db, {
+                quoteId,
+                stripePaymentIntentId: paymentIntentId,
+                amountPaidCents: pi.amount || 0,
+                customerEmail: pi.receipt_email || quote.snapshot.customer.email,
+                customerPhone: quote.snapshot.customer.phone,
+                snapshot: quote.snapshot,
+              });
+              
+              order = await getOrderByPaymentIntent(db, paymentIntentId);
+              
+              // Send email
+              const emailTo = pi.receipt_email || quote.snapshot.customer.email;
+              if (order && emailTo) {
+                try {
+                  await sendOrderConfirmationEmail(orderId, emailTo, quote.snapshot);
+                  await markOrderEmailSent(db, orderId);
+                } catch {
+                  // Email failure is not critical
                 }
               }
             }
@@ -76,12 +87,72 @@ export default async function CheckoutSuccessPage({
         }
       }
     } catch (err: any) {
-      console.error("[checkout/success] Error:", err.message);
+      console.error("[checkout/success] PaymentIntent lookup error:", err.message);
       errorMessage = "Unable to load order details. Your order was still placed successfully.";
     }
   }
 
-  if (!sessionId) {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TRY SESSION ID LOOKUP (legacy Stripe Checkout redirect)
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!order && sessionId) {
+    try {
+      order = await getOrderByStripeSession(db, sessionId);
+      
+      if (!order && stripeConn?.stripe) {
+        const session = await stripeConn.stripe.checkout.sessions.retrieve(sessionId);
+        const quoteId = session?.metadata?.quoteId;
+        
+        if (quoteId) {
+          order = await getOrderByQuote(db, quoteId);
+          
+          if (!order) {
+            const quote = await getQuote(db, quoteId);
+            if (quote) {
+              const { id: orderId } = await createOrder(db, {
+                quoteId,
+                stripeSessionId: sessionId,
+                stripePaymentIntentId: session.payment_intent as string,
+                amountPaidCents: session.amount_total || 0,
+                customerEmail: session.customer_email || quote.snapshot.customer.email,
+                customerPhone: quote.snapshot.customer.phone,
+                snapshot: quote.snapshot,
+              });
+              
+              order = await getOrderByStripeSession(db, sessionId);
+              
+              const emailTo = session.customer_email || quote.snapshot.customer.email;
+              if (order && emailTo) {
+                try {
+                  await sendOrderConfirmationEmail(orderId, emailTo, quote.snapshot);
+                  await markOrderEmailSent(db, orderId);
+                } catch {
+                  // Email failure is not critical
+                }
+              }
+            }
+          }
+        }
+      }
+    } catch (err: any) {
+      console.error("[checkout/success] Session lookup error:", err.message);
+      errorMessage = "Unable to load order details. Your order was still placed successfully.";
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TRY QUOTE ID LOOKUP (direct fallback)
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!order && quoteIdParam) {
+    try {
+      order = await getOrderByQuote(db, quoteIdParam);
+    } catch (err: any) {
+      console.error("[checkout/success] Quote lookup error:", err.message);
+    }
+  }
+
+  // No identifiers provided
+  if (!sessionId && !paymentIntentId && !quoteIdParam) {
     return (
       <main className="bg-neutral-50 min-h-screen">
         <div className="mx-auto max-w-3xl px-4 py-12">

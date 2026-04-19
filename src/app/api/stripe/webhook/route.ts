@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { getPool, getQuote } from "@/lib/quotes";
 import { getStripeClient } from "@/lib/payments/stripeClient";
-import { createOrder, getOrderByStripeSession, markOrderEmailSent } from "@/lib/orders";
+import { createOrder, getOrderByStripeSession, getOrderByPaymentIntent, getOrderByQuote, markOrderEmailSent } from "@/lib/orders";
 import { sendOrderConfirmationEmail } from "@/lib/email";
 import { markCartEventsPurchased } from "@/lib/cart/cartAddEventService";
 
@@ -11,9 +11,11 @@ export const runtime = "nodejs";
 /**
  * Stripe webhook handler
  * 
- * Handles checkout.session.completed event to:
- * 1. Create order record
- * 2. Send confirmation email
+ * Handles:
+ * - checkout.session.completed (legacy hosted checkout flow)
+ * - payment_intent.succeeded (embedded Payment Element flow)
+ * 
+ * Both create an order and send confirmation email.
  */
 export async function POST(req: Request) {
   const body = await req.text();
@@ -49,7 +51,87 @@ export async function POST(req: Request) {
 
   console.log(`[stripe/webhook] Received event: ${event.type}`);
 
-  // Handle checkout.session.completed
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PAYMENT_INTENT.SUCCEEDED - Embedded Payment Element flow
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (event.type === "payment_intent.succeeded") {
+    const paymentIntent = event.data.object as any;
+    const paymentIntentId = paymentIntent.id;
+    const quoteId = paymentIntent.metadata?.quoteId;
+    const cartId = paymentIntent.metadata?.cartId;
+    const amountTotal = paymentIntent.amount || 0;
+    const customerEmail = paymentIntent.receipt_email || paymentIntent.metadata?.customerEmail;
+
+    console.log(`[stripe/webhook] payment_intent.succeeded: pi=${paymentIntentId}, quote=${quoteId}, cart=${cartId || "none"}, amount=${amountTotal}`);
+
+    if (!quoteId) {
+      console.error("[stripe/webhook] No quoteId in PaymentIntent metadata");
+      return NextResponse.json({ error: "no_quote_id" }, { status: 400 });
+    }
+
+    // Check if order already exists (idempotency)
+    const existing = await getOrderByPaymentIntent(db, paymentIntentId);
+    if (existing) {
+      console.log(`[stripe/webhook] Order already exists for PaymentIntent: ${existing.id}`);
+      return NextResponse.json({ received: true, orderId: existing.id });
+    }
+
+    // Also check by quote (in case of race condition)
+    const existingByQuote = await getOrderByQuote(db, quoteId);
+    if (existingByQuote) {
+      console.log(`[stripe/webhook] Order already exists for quote: ${existingByQuote.id}`);
+      return NextResponse.json({ received: true, orderId: existingByQuote.id });
+    }
+
+    // Get quote data
+    const quote = await getQuote(db, quoteId);
+    if (!quote) {
+      console.error(`[stripe/webhook] Quote not found: ${quoteId}`);
+      return NextResponse.json({ error: "quote_not_found" }, { status: 400 });
+    }
+
+    // Create order (note: no stripeSessionId for PaymentIntent flow)
+    const { id: orderId } = await createOrder(db, {
+      quoteId,
+      stripePaymentIntentId: paymentIntentId,
+      amountPaidCents: amountTotal,
+      customerEmail: customerEmail || quote.snapshot.customer.email,
+      customerPhone: quote.snapshot.customer.phone,
+      snapshot: quote.snapshot,
+    });
+
+    console.log(`[stripe/webhook] Created order from PaymentIntent: ${orderId}`);
+
+    // Mark cart add events as purchased
+    if (cartId) {
+      try {
+        const markedCount = await markCartEventsPurchased(cartId, orderId);
+        if (markedCount > 0) {
+          console.log(`[stripe/webhook] Marked ${markedCount} cart add events as purchased`);
+        }
+      } catch (err: any) {
+        console.warn(`[stripe/webhook] Failed to mark cart events purchased:`, err.message);
+      }
+    }
+
+    // Send confirmation email
+    const emailTo = customerEmail || quote.snapshot.customer.email;
+    if (emailTo) {
+      try {
+        await sendOrderConfirmationEmail(orderId, emailTo, quote.snapshot);
+        await markOrderEmailSent(db, orderId);
+        console.log(`[stripe/webhook] Confirmation email sent to ${emailTo}`);
+      } catch (emailErr: any) {
+        console.error(`[stripe/webhook] Failed to send email:`, emailErr.message);
+      }
+    }
+
+    return NextResponse.json({ received: true, orderId });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CHECKOUT.SESSION.COMPLETED - Legacy hosted checkout flow
+  // ═══════════════════════════════════════════════════════════════════════════
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as any;
     const quoteId = session.metadata?.quoteId;
@@ -73,6 +155,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ received: true, orderId: existing.id });
     }
 
+    // Also check by payment intent (might be created by payment_intent.succeeded first)
+    if (paymentIntentId) {
+      const existingByPi = await getOrderByPaymentIntent(db, paymentIntentId);
+      if (existingByPi) {
+        console.log(`[stripe/webhook] Order already exists for PaymentIntent: ${existingByPi.id}`);
+        return NextResponse.json({ received: true, orderId: existingByPi.id });
+      }
+    }
+
     // Get quote data
     const quote = await getQuote(db, quoteId);
     if (!quote) {
@@ -93,7 +184,7 @@ export async function POST(req: Request) {
 
     console.log(`[stripe/webhook] Created order: ${orderId}`);
 
-    // Mark cart add events as purchased (for product popularity analytics)
+    // Mark cart add events as purchased
     if (cartId) {
       try {
         const markedCount = await markCartEventsPurchased(cartId, orderId);
@@ -101,7 +192,6 @@ export async function POST(req: Request) {
           console.log(`[stripe/webhook] Marked ${markedCount} cart add events as purchased`);
         }
       } catch (err: any) {
-        // Don't fail the webhook for analytics tracking issues
         console.warn(`[stripe/webhook] Failed to mark cart events purchased:`, err.message);
       }
     }
@@ -115,7 +205,6 @@ export async function POST(req: Request) {
         console.log(`[stripe/webhook] Confirmation email sent to ${emailTo}`);
       } catch (emailErr: any) {
         console.error(`[stripe/webhook] Failed to send email:`, emailErr.message);
-        // Don't fail the webhook - order is still created
       }
     }
 

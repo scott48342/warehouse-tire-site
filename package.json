@@ -21,6 +21,8 @@
         "ymm-audit": "tsx scripts/ymm-result-guarantee-audit.ts"
     },
     "dependencies": {
+        "@stripe/react-stripe-js": "^6.2.0",
+        "@stripe/stripe-js": "^9.2.0",
         "@upstash/redis": "^1.37.0",
         "@vercel/blob": "^2.3.2",
         "@vercel/postgres": "^0.10.0",
