@@ -996,8 +996,8 @@ export default async function WheelsPage({
   // system marks most aftermarket wheels as "aggressive" when they actually fit fine in classic
   // car wheel wells. Better to show all options and let the customer decide.
   const yearNum = parseInt(year || "0", 10);
-  const isClassicVehicle = yearNum > 0 && yearNum < 1985;
-  const useStrictFilter = buildTypeParam === "stock" && !isClassicVehicle;
+  const isVintageYear = yearNum > 0 && yearNum < 1985;
+  const useStrictFilter = buildTypeParam === "stock" && !isVintageYear;
   
   let itemsFilteredBuildType = filterWheelsForBuildType(
     itemsFilteredPrice,
