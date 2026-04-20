@@ -177,9 +177,23 @@ function ProductCard({
   const totalPrice = typeof unitPrice === "number" ? unitPrice * quantity : null;
 
   // Build product link based on type
-  const productLink = activeType === "wheel"
-    ? `/wheels/${encodeURIComponent(item.id)}`
-    : `/tires/${encodeURIComponent(item.id)}`;
+  const productLink = (() => {
+    if (activeType === "wheel") {
+      return `/wheels/${encodeURIComponent(item.id)}`;
+    }
+    // For tires, include source and size params if available
+    const params = new URLSearchParams();
+    const source = item.compareData?.source;
+    const size = item.compareData?.size;
+    if (source?.startsWith("tireweb") || source === "tw") {
+      params.set("source", "tireweb");
+    }
+    if (size) {
+      params.set("size", size);
+    }
+    const queryString = params.toString();
+    return `/tires/${encodeURIComponent(item.id)}${queryString ? `?${queryString}` : ""}`;
+  })();
 
   const handleAddToCart = useCallback(() => {
     if (!cartItem) return;
