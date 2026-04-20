@@ -75,6 +75,46 @@ function getPool() {
   return pool;
 }
 
+/**
+ * Cache TireWeb SKUs for direct URL lookups.
+ * This allows /tires/{sku} to work without source/size params.
+ */
+async function cacheTireWebSkus(
+  db: pg.Pool,
+  tires: TireResult[],
+  size: string
+): Promise<void> {
+  if (tires.length === 0) return;
+  
+  // Build upsert values
+  const values: string[] = [];
+  const params: any[] = [];
+  let paramIndex = 1;
+  
+  for (const tire of tires) {
+    const partNumber = tire.partNumber || tire.mfgPartNumber;
+    if (!partNumber) continue;
+    
+    values.push(`($${paramIndex}, $${paramIndex + 1}, $${paramIndex + 2}, $${paramIndex + 3})`);
+    params.push(partNumber, size, tire.brand || null, tire.source || "tireweb");
+    paramIndex += 4;
+  }
+  
+  if (values.length === 0) return;
+  
+  const query = `
+    INSERT INTO tireweb_sku_cache (part_number, size, brand, source)
+    VALUES ${values.join(", ")}
+    ON CONFLICT (part_number) DO UPDATE SET
+      size = EXCLUDED.size,
+      brand = EXCLUDED.brand,
+      source = EXCLUDED.source,
+      last_seen_at = NOW()
+  `;
+  
+  await db.query(query, params);
+}
+
 function n(v: any): number | null {
   const x = Number(v);
   return Number.isFinite(x) ? x : null;
@@ -1208,6 +1248,20 @@ export async function GET(req: Request) {
       
       timing.totalMs = Date.now() - t0;
       
+      // ═══════════════════════════════════════════════════════════════════════
+      // CACHE TIREWEB SKUS: Store partNumber → size mapping for direct URL lookups
+      // Non-blocking background operation to avoid slowing down search response
+      // ═══════════════════════════════════════════════════════════════════════
+      const tirewebResults = finalResults.filter(t => 
+        t.source?.startsWith("tireweb") || t.source === "tw"
+      );
+      if (tirewebResults.length > 0 && sizeRaw) {
+        // Fire and forget - don't await
+        cacheTireWebSkus(db, tirewebResults, sizeRaw).catch(err => {
+          console.error("[tires/search] TireWeb SKU cache write failed:", err);
+        });
+      }
+      
       return NextResponse.json({
         results: finalResults.slice(0, pageSize),
         mode: "size",
@@ -2011,6 +2065,30 @@ export async function GET(req: Request) {
     }
     
     timing.totalMs = Date.now() - t0;
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // CACHE TIREWEB SKUS: Store partNumber → size mapping for direct URL lookups
+    // Non-blocking background operation
+    // ═══════════════════════════════════════════════════════════════════════
+    const vehicleTirewebResults = finalResults.filter(t => 
+      t.source?.startsWith("tireweb") || t.source === "tw"
+    );
+    if (vehicleTirewebResults.length > 0 && sizesToSearch.length > 0) {
+      // Use first searched size for caching (good enough for lookup)
+      const primarySize = sizesToSearch[0];
+      // Group by actual tire size and cache each
+      const sizeGroups = new Map<string, TireResult[]>();
+      for (const tire of vehicleTirewebResults) {
+        const tireSize = tire.size || primarySize;
+        if (!sizeGroups.has(tireSize)) sizeGroups.set(tireSize, []);
+        sizeGroups.get(tireSize)!.push(tire);
+      }
+      for (const [tireSize, tires] of sizeGroups) {
+        cacheTireWebSkus(db, tires, tireSize).catch(err => {
+          console.error("[tires/search:vehicle] TireWeb SKU cache write failed:", err);
+        });
+      }
+    }
     
     // Build fallback message if no results
     let fallbackMessage: string | undefined;

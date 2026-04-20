@@ -761,6 +761,29 @@ export default async function TireDetailPage({
 
   const t = rows[0] || null;
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TIREWEB FALLBACK: If not found in WheelPros, check TireWeb SKU cache
+  // This handles bare URLs like /tires/IHR0144K without source/size params
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (!t) {
+    try {
+      const cacheResult = await db.query({
+        text: `SELECT size, source FROM tireweb_sku_cache WHERE part_number = $1 LIMIT 1`,
+        values: [safeSku],
+      });
+      if (cacheResult.rows[0]) {
+        const { size: cachedSize, source: cachedSource } = cacheResult.rows[0];
+        // Redirect to the proper URL with params
+        const redirectUrl = `/tires/${encodeURIComponent(safeSku)}?source=tireweb&size=${encodeURIComponent(cachedSize)}`;
+        const { redirect } = await import("next/navigation");
+        redirect(redirectUrl);
+      }
+    } catch (err) {
+      // Cache lookup failed, continue to "not found" page
+      console.error("[tire-pdp] TireWeb cache lookup failed:", err);
+    }
+  }
+
   // Related tires
   const related = t
     ? await db.query({
