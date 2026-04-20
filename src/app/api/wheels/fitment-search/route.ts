@@ -1262,6 +1262,7 @@ async function handleDbFirstWheelResults(opts: {
   const finish = url.searchParams.get("finish");
   const diameter = url.searchParams.get("diameter");
   const width = url.searchParams.get("width");
+  const styleFilter = url.searchParams.get("style"); // Wheel model/style filter (e.g., "KM235")
   
   // Sort parameter: "price_asc" (low to high), "price_desc" (high to low), or default (relevance/score)
   const sortParam = url.searchParams.get("sort") || url.searchParams.get("sortBy");
