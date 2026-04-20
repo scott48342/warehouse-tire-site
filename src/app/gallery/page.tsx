@@ -516,15 +516,22 @@ function GalleryPageInner() {
       const qs = params.toString();
       router.push(`/wheels/${item.wheelSku}${qs ? `?${qs}` : ""}`);
     } else {
-      // Search for this wheel
-      const params = new URLSearchParams();
-      params.set("wheelBrand", item.wheelBrand);
-      params.set("wheelModel", item.wheelModel);
-      if (ymm) {
-        params.set("year", ymm.year);
-        params.set("make", ymm.make);
-        params.set("model", ymm.model);
+      // No SKU - need YMM to search fitment
+      if (!ymm) {
+        setPendingAction({ item, action: "view" });
+        setYmmModalOpen(true);
+        return;
       }
+      
+      // Search for this wheel style with YMM
+      const params = new URLSearchParams();
+      params.set("year", ymm.year);
+      params.set("make", ymm.make);
+      params.set("model", ymm.model);
+      // Use brand param (will be picked up by brand filter)
+      params.set("brand", item.wheelBrand);
+      // Add style to search query for filtering
+      params.set("style", item.wheelModel);
       router.push(`/wheels?${params.toString()}`);
     }
   }, [router, getYmmContext]);

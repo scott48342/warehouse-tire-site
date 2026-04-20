@@ -257,8 +257,12 @@ export default async function WheelsPage({
   const diameterParam = (Array.isArray(sp.diameter) ? sp.diameter[0] : sp.diameter) || "";
   const widthParam = (Array.isArray(sp.width) ? sp.width[0] : sp.width) || "";
   const boltPatternParam = (Array.isArray(sp.boltPattern) ? sp.boltPattern[0] : sp.boltPattern) || "";
-  const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || "";
+  // Support both brand_cd (internal) and brand (from gallery links)
+  const brandCd = (Array.isArray(sp.brand_cd) ? sp.brand_cd[0] : sp.brand_cd) || 
+                  (Array.isArray(sp.brand) ? sp.brand[0] : sp.brand) || "";
   const finish = (Array.isArray(sp.finish) ? sp.finish[0] : sp.finish) || "";
+  // Style filter (wheel model like "KM235") - from gallery links
+  const styleParam = (Array.isArray(sp.style) ? sp.style[0] : sp.style) || "";
   
   // Offset filter - supports multiple values via checkbox selection
   const offsetParamRaw = sp.offset;
@@ -570,6 +574,8 @@ export default async function WheelsPage({
     // Facet filters (WheelPros taxonomy)
     brand_cd: brandCd || undefined,
     abbreviated_finish_desc: finish || undefined,
+    // Style filter (wheel model like "KM235") - from gallery links
+    style: styleParam || undefined,
 
     // For fitment-search endpoint (we'll filter offsets server-side so facets match)
     offsetMin: minOffsetFinal,

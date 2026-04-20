@@ -852,6 +852,7 @@ async function handleDbProfilePath(
   const finish = url.searchParams.get("finish");
   const diameter = url.searchParams.get("diameter");
   const width = url.searchParams.get("width");
+  const styleFilter = url.searchParams.get("style"); // Wheel model/style filter (e.g., "KM235")
   
   // Sort parameter: "price_asc" (low to high), "price_desc" (high to low), or default (relevance/score)
   const sortParam = url.searchParams.get("sort") || url.searchParams.get("sortBy");
@@ -1300,6 +1301,13 @@ async function handleDbFirstWheelResults(opts: {
     }
     if (diameter && c.diameter && Number(c.diameter) !== Number(diameter)) return false;
     if (width && c.width && Number(c.width) !== Number(width)) return false;
+    // Style filter - match wheel model name (e.g., "KM235", "ARCHER")
+    if (styleFilter) {
+      const wheelStyle = (c.style || c.display_style_no || "").toUpperCase();
+      const filterUpper = styleFilter.toUpperCase();
+      // Match if style contains filter or vice versa (handles "KM235" matching "KM235 GRENADE")
+      if (!wheelStyle.includes(filterUpper) && !filterUpper.includes(wheelStyle)) return false;
+    }
 
     // valid pricing fields (required) - use safe pricing with data quality fix
     const p = getSafeWheelPrice(c);
