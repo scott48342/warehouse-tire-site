@@ -30,8 +30,11 @@ export async function GET(req: Request) {
   const centerbore = url.searchParams.get("centerbore");
   if (centerbore) filters.centerbore = centerbore;
 
-  const brandCode = url.searchParams.get("brand_cd");
+  const brandCode = url.searchParams.get("brand_cd") || url.searchParams.get("brand");
   if (brandCode) filters.brandCode = brandCode;
+
+  const style = url.searchParams.get("style");
+  if (style) filters.style = style;
 
   const finish = url.searchParams.get("finish");
   if (finish) filters.finish = finish;

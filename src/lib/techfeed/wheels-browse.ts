@@ -164,6 +164,7 @@ export type BrowseFilters = {
   offsetMax?: number;
   centerbore?: string;
   brandCode?: string;
+  style?: string; // Wheel model name filter (e.g., "KM553", "TORX")
   finish?: string;
   priceMin?: number;
   priceMax?: number;
@@ -272,6 +273,15 @@ export async function browseWheels(
   
   if (filters.brandCode) {
     filtered = filtered.filter(s => s.brandCode === filters.brandCode);
+  }
+  
+  if (filters.style) {
+    const styleUpper = filters.style.toUpperCase();
+    filtered = filtered.filter(s => {
+      const modelUpper = s.model.toUpperCase();
+      // Match if model contains filter or filter contains model (handles "KM553" matching "KM553 TORX")
+      return modelUpper.includes(styleUpper) || styleUpper.includes(modelUpper);
+    });
   }
   
   if (filters.finish) {

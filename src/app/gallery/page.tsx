@@ -516,21 +516,16 @@ function GalleryPageInner() {
       const qs = params.toString();
       router.push(`/wheels/${item.wheelSku}${qs ? `?${qs}` : ""}`);
     } else {
-      // No SKU - need YMM to search fitment
-      if (!ymm) {
-        setPendingAction({ item, action: "view" });
-        setYmmModalOpen(true);
-        return;
-      }
-      
-      // Search for this wheel style with YMM
+      // No SKU - browse/search for this wheel style
+      // Works with or without YMM (without = browse mode, with = fitment mode)
       const params = new URLSearchParams();
-      params.set("year", ymm.year);
-      params.set("make", ymm.make);
-      params.set("model", ymm.model);
-      // Use brand param (will be picked up by brand filter)
+      if (ymm) {
+        params.set("year", ymm.year);
+        params.set("make", ymm.make);
+        params.set("model", ymm.model);
+      }
+      // Filter by brand and style (model name like "KM553")
       params.set("brand", item.wheelBrand);
-      // Add style to search query for filtering
       params.set("style", item.wheelModel);
       router.push(`/wheels?${params.toString()}`);
     }
