@@ -57,6 +57,11 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cdn.schradertpms.com',
       },
+      {
+        // WheelPros gallery images via CloudFront
+        protocol: 'https',
+        hostname: 'd3opzdukpbxlns.cloudfront.net',
+      },
     ],
   },
 };
