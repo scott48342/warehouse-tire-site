@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
+import { SteppedVehicleSelector, VehicleSelection } from "@/components/SteppedVehicleSelector";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // TYPES
@@ -52,80 +53,51 @@ interface Pagination {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// YMM CONTEXT MODAL
+// YMM CONTEXT MODAL (with proper stepped selector)
 // ═══════════════════════════════════════════════════════════════════════════
 
 interface YmmModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (year: string, make: string, model: string) => void;
+  onSubmit: (year: string, make: string, model: string, trim?: string) => void;
   wheelBrand: string;
   wheelModel: string;
 }
 
 function YmmModal({ isOpen, onClose, onSubmit, wheelBrand, wheelModel }: YmmModalProps) {
-  const [year, setYear] = useState("");
-  const [make, setMake] = useState("");
-  const [model, setModel] = useState("");
-
   if (!isOpen) return null;
+
+  const handleComplete = (selection: VehicleSelection) => {
+    onSubmit(selection.year, selection.make, selection.model, selection.trim);
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4" onClick={onClose}>
       <div 
-        className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl"
+        className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-xl max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <h3 className="text-lg font-bold text-neutral-900 mb-2">
-          What&apos;s your vehicle?
-        </h3>
-        <p className="text-sm text-neutral-600 mb-4">
-          Enter your vehicle to see if {wheelBrand} {wheelModel} fits
-        </p>
-        
-        <div className="space-y-3 mb-4">
-          <input
-            type="number"
-            placeholder="Year (e.g., 2024)"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            className="w-full rounded-xl border border-neutral-200 px-4 py-2.5 text-sm"
-          />
-          <input
-            type="text"
-            placeholder="Make (e.g., Ford)"
-            value={make}
-            onChange={(e) => setMake(e.target.value)}
-            className="w-full rounded-xl border border-neutral-200 px-4 py-2.5 text-sm"
-          />
-          <input
-            type="text"
-            placeholder="Model (e.g., F-150)"
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-            className="w-full rounded-xl border border-neutral-200 px-4 py-2.5 text-sm"
-          />
-        </div>
-        
-        <div className="flex gap-3">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-lg font-bold text-neutral-900">
+              What&apos;s your vehicle?
+            </h3>
+            <p className="text-sm text-neutral-600">
+              Select your vehicle to shop {wheelBrand} {wheelModel}
+            </p>
+          </div>
           <button
             onClick={onClose}
-            className="flex-1 rounded-xl border border-neutral-200 px-4 py-2.5 text-sm font-medium text-neutral-700 hover:bg-neutral-50"
+            className="rounded-full p-2 hover:bg-neutral-100 text-neutral-500"
+            aria-label="Close"
           >
-            Cancel
-          </button>
-          <button
-            onClick={() => {
-              if (year && make && model) {
-                onSubmit(year, make, model);
-              }
-            }}
-            disabled={!year || !make || !model}
-            className="flex-1 rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-bold text-white hover:bg-neutral-800 disabled:opacity-50"
-          >
-            Find Wheels
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
+        
+        <SteppedVehicleSelector onComplete={handleComplete} />
       </div>
     </div>
   );
@@ -503,33 +475,17 @@ function GalleryPageInner() {
   // ═══════════════════════════════════════════════════════════════════════════
 
   const handleViewWheel = useCallback((item: GalleryItem) => {
-    const ymm = getYmmContext();
-    
     if (item.wheelSku) {
-      // Direct to PDP with YMM if available
-      const params = new URLSearchParams();
-      if (ymm) {
-        params.set("year", ymm.year);
-        params.set("make", ymm.make);
-        params.set("model", ymm.model);
-      }
-      const qs = params.toString();
-      router.push(`/wheels/${item.wheelSku}${qs ? `?${qs}` : ""}`);
+      // Direct to PDP - no vehicle context needed, just show the wheel
+      router.push(`/wheels/${item.wheelSku}`);
     } else {
-      // No SKU - browse/search for this wheel style
-      // Works with or without YMM (without = browse mode, with = fitment mode)
+      // No SKU - browse/search for this wheel style (brand + model filter)
       const params = new URLSearchParams();
-      if (ymm) {
-        params.set("year", ymm.year);
-        params.set("make", ymm.make);
-        params.set("model", ymm.model);
-      }
-      // Filter by brand and style (model name like "KM553")
       params.set("brand", item.wheelBrand);
       params.set("style", item.wheelModel);
       router.push(`/wheels?${params.toString()}`);
     }
-  }, [router, getYmmContext]);
+  }, [router]);
 
   const handleShopStyle = useCallback((item: GalleryItem) => {
     const ymm = getYmmContext();
@@ -575,10 +531,10 @@ function GalleryPageInner() {
     router.push(`/wheels?${params.toString()}`);
   }, [router, getYmmContext]);
 
-  const handleYmmSubmit = useCallback((year: string, make: string, model: string) => {
+  const handleYmmSubmit = useCallback((year: string, make: string, model: string, trim?: string) => {
     // Save to localStorage
     try {
-      localStorage.setItem("wtd_vehicle_context", JSON.stringify({ year, make, model }));
+      localStorage.setItem("wtd_vehicle_context", JSON.stringify({ year, make, model, trim }));
     } catch {
       // ignore
     }
@@ -592,6 +548,7 @@ function GalleryPageInner() {
       params.set("year", year);
       params.set("make", make);
       params.set("model", model);
+      if (trim) params.set("trim", trim);
       
       if (action === "style") {
         params.set("brand", item.wheelBrand);
