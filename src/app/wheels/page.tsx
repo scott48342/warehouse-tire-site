@@ -1793,7 +1793,7 @@ export default async function WheelsPage({
                   vehicleType={fitmentVehicleType}
                   vehicleMake={make}
                   vehicleModel={model}
-                  buildType={isLiftedBuild ? "lifted" : isHomepageIntentLiftedBuild ? "lifted" : buildTypeParam}
+                  buildType={isLiftedBuild ? "lifted" : isHomepageIntentLiftedBuild ? "lifted" : buildTypeParam ?? undefined}
                   liftedInches={liftedInches || (homepageIntentState.resolved?.liftLevel ? parseInt(homepageIntentState.resolved.liftLevel) : undefined)}
                   liftedPreset={liftedPreset || homepageIntentState.resolved?.liftLevel}
                 />
