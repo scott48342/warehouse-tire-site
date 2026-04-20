@@ -37,7 +37,7 @@ const faqs = [
       },
       {
         q: 'Do you offer free shipping?',
-        a: 'Yes! We offer free standard shipping on most orders over $599. Some oversized items or remote locations may have additional shipping fees.'
+        a: 'Yes! We offer free standard shipping on orders over $1,500. Some oversized items or remote locations may have additional shipping fees.'
       },
       {
         q: 'Do you ship to Alaska, Hawaii, or Puerto Rico?',
