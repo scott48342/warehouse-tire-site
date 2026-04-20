@@ -50,23 +50,30 @@ interface BuildMatch {
   matchLevel: "exact_lift" | "same_type_lifted" | "same_type" | "any_lifted" | "fallback";
 }
 
+// Vehicle type classification
+export type VehicleTypeSegment = "truck" | "suv" | "jeep" | "car" | null;
+
 // Infer vehicle type from make/model
-function inferVehicleType(make?: string, model?: string): string | null {
+function inferVehicleType(make?: string, model?: string): VehicleTypeSegment {
   if (!model) return null;
   const m = model.toLowerCase();
+  const mk = make?.toLowerCase() || "";
   
-  // Trucks
+  // Trucks (check first - most specific)
   if (m.includes("f-150") || m.includes("f150") || m.includes("f-250") || m.includes("f-350") ||
       m.includes("silverado") || m.includes("sierra") ||
       m.includes("ram") || m.includes("1500") || m.includes("2500") || m.includes("3500") ||
       m.includes("tundra") || m.includes("tacoma") || m.includes("ranger") ||
       m.includes("colorado") || m.includes("gladiator") ||
-      m.includes("titan") || m.includes("frontier")) {
+      m.includes("titan") || m.includes("frontier") || m.includes("canyon") ||
+      m.includes("ridgeline") || m.includes("maverick") || m.includes("santa cruz")) {
     return "truck";
   }
   
   // Jeeps
-  if (make?.toLowerCase() === "jeep" || m.includes("wrangler") || m.includes("rubicon")) {
+  if (mk === "jeep" || m.includes("wrangler") || m.includes("rubicon") ||
+      m.includes("gladiator") || m.includes("cherokee") || m.includes("compass") ||
+      m.includes("renegade") || m.includes("grand cherokee")) {
     return "jeep";
   }
   
@@ -76,11 +83,62 @@ function inferVehicleType(make?: string, model?: string): string | null {
       m.includes("yukon") || m.includes("escalade") ||
       m.includes("sequoia") || m.includes("land cruiser") ||
       m.includes("gx") || m.includes("expedition") ||
-      m.includes("durango") || m.includes("armada")) {
+      m.includes("durango") || m.includes("armada") ||
+      m.includes("pilot") || m.includes("highlander") ||
+      m.includes("explorer") || m.includes("telluride") ||
+      m.includes("palisade") || m.includes("pathfinder")) {
     return "suv";
   }
   
+  // Cars (performance, muscle, sports, sedans, coupes)
+  // Performance / Muscle
+  if (m.includes("mustang") || m.includes("camaro") || m.includes("challenger") ||
+      m.includes("charger") || m.includes("corvette") || m.includes("viper") ||
+      m.includes("gt500") || m.includes("gt350") || m.includes("hellcat") ||
+      m.includes("demon") || m.includes("scat pack") || m.includes("dark horse")) {
+    return "car";
+  }
+  
+  // Sports / Luxury
+  if (m.includes("911") || m.includes("cayman") || m.includes("boxster") ||
+      m.includes("supra") || m.includes("z4") || m.includes("86") || m.includes("brz") ||
+      m.includes("miata") || m.includes("mx-5") || m.includes("370z") || m.includes("400z") ||
+      m.includes("gtr") || m.includes("gt-r") || m.includes("nsx") ||
+      m.includes("m3") || m.includes("m4") || m.includes("m5") || m.includes("m2") ||
+      m.includes("amg") || m.includes("rs3") || m.includes("rs5") || m.includes("rs6") ||
+      m.includes("rs7") || m.includes("c63") || m.includes("e63")) {
+    return "car";
+  }
+  
+  // Sedans / Coupes
+  if (m.includes("accord") || m.includes("camry") || m.includes("civic") ||
+      m.includes("corolla") || m.includes("altima") || m.includes("maxima") ||
+      m.includes("3 series") || m.includes("5 series") || m.includes("7 series") ||
+      m.includes("a4") || m.includes("a6") || m.includes("s4") || m.includes("s5") ||
+      m.includes("c-class") || m.includes("e-class") || m.includes("s-class") ||
+      m.includes("is") || m.includes("es") || m.includes("gs") || m.includes("ls") ||
+      m.includes("genesis") || m.includes("g70") || m.includes("g80") || m.includes("g90") ||
+      m.includes("ct4") || m.includes("ct5") || m.includes("ats") || m.includes("cts") ||
+      m.includes("ss") || m.includes("impala") || m.includes("malibu") ||
+      m.includes("fusion") || m.includes("taurus") ||
+      m.includes("wrx") || m.includes("sti") || m.includes("type r") ||
+      m.includes("veloster") || m.includes("elantra n") || m.includes("forte")) {
+    return "car";
+  }
+  
+  // Hot hatches / Compacts
+  if (m.includes("golf") || m.includes("gti") || m.includes("golf r") ||
+      m.includes("focus") || m.includes("fiesta") || m.includes("st ") ||
+      m.includes(" si") || m.includes("sport hatch")) {
+    return "car";
+  }
+  
   return null;
+}
+
+// Check if vehicle type is a "off-road" type (uses build/lift levels)
+function isOffRoadVehicleType(vehicleType: VehicleTypeSegment): boolean {
+  return vehicleType === "truck" || vehicleType === "suv" || vehicleType === "jeep";
 }
 
 // Normalize build type to match our data
@@ -122,8 +180,19 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get("limit") || "6", 10), 10);
   
   // Infer vehicle type if not provided
-  const effectiveVehicleType = vehicleType || inferVehicleType(vehicleMake, vehicleModel);
+  const effectiveVehicleType = (vehicleType || inferVehicleType(vehicleMake, vehicleModel)) as VehicleTypeSegment;
   const { isLifted, liftRange } = normalizeBuildType(buildType, liftedInches);
+  
+  // Cars don't have "builds" (lifted/leveled) - use WheelGalleryBlock instead
+  // This prevents cross-contamination of truck images into car flows
+  if (effectiveVehicleType === "car") {
+    return NextResponse.json({
+      results: [],
+      matchQuality: "none",
+      reason: "Car vehicle - use wheel gallery instead of build gallery",
+      vehicleType: "car",
+    });
+  }
   
   // Don't show gallery for stock builds (no build inspiration needed)
   if (!isLifted) {
@@ -148,6 +217,7 @@ export async function GET(request: NextRequest) {
   
   try {
     // Level 1: Same vehicle type + matching lift range (if we have lift data)
+    // PRIORITY for all queries: Customer submissions (verified) > Brand assets (high) > Auto-parsed
     if (effectiveVehicleType && liftRange) {
       const exactLiftQuery = `
         SELECT * FROM gallery_assets
@@ -155,7 +225,10 @@ export async function GET(request: NextRequest) {
           AND lift_level = $2
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           RANDOM()
         LIMIT $3
       `;
@@ -181,7 +254,10 @@ export async function GET(request: NextRequest) {
           AND lift_level IS NOT NULL
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           RANDOM()
         LIMIT $2
       `;
@@ -205,7 +281,10 @@ export async function GET(request: NextRequest) {
         WHERE vehicle_type = $1
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           RANDOM()
         LIMIT $2
       `;
@@ -229,7 +308,10 @@ export async function GET(request: NextRequest) {
         WHERE lift_level IS NOT NULL
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           RANDOM()
         LIMIT $1
       `;
@@ -252,7 +334,10 @@ export async function GET(request: NextRequest) {
         WHERE vehicle_type IN ('truck', 'suv', 'jeep')
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           RANDOM()
         LIMIT $1
       `;

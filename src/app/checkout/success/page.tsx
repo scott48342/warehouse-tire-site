@@ -6,6 +6,7 @@ import { getOrderByStripeSession, getOrderByQuote, getOrderByPaymentIntent, crea
 import { sendOrderConfirmationEmail } from "@/lib/email";
 import { CartRecoveryHandler } from "@/components/CartRecoveryHandler";
 import { GoogleAdsConversion } from "@/components/GoogleAdsConversion";
+import { AddYourBuildCTA } from "@/components/AddYourBuildCTA";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -211,6 +212,24 @@ export default async function CheckoutSuccessPage({
   const tires = lines.filter(l => l.meta?.cartType === "tire");
   const accessories = lines.filter(l => l.meta?.cartType === "accessory");
 
+  // Extract first wheel/tire info for build submission prefill
+  const firstWheel = wheels[0];
+  const firstTire = tires[0];
+  
+  // Parse wheel info from name/meta (e.g., "Fuel Rebel D679 20x10")
+  const wheelMeta = firstWheel?.meta || {};
+  const wheelName = firstWheel?.name || "";
+  const wheelBrand = wheelMeta.brand || wheelName.split(" ")[0] || "";
+  const wheelModel = wheelMeta.model || wheelName.split(" ").slice(1, 3).join(" ") || "";
+  const wheelDiameter = wheelMeta.diameter || "";
+  
+  // Parse tire info
+  const tireMeta = firstTire?.meta || {};
+  const tireName = firstTire?.name || "";
+  const tireBrand = tireMeta.brand || tireName.split(" ")[0] || "";
+  const tireModel = tireMeta.model || tireName.split(" ").slice(1, 3).join(" ") || "";
+  const tireSize = tireMeta.size || "";
+
   return (
     <main className="bg-neutral-50 min-h-screen">
       {/* Mark cart as recovered */}
@@ -354,6 +373,35 @@ export default async function CheckoutSuccessPage({
             </div>
           </div>
         </div>
+
+        {/* ═══════════════════════════════════════════════════════════════════════════
+            ADD YOUR BUILD CTA - Encourage customer photo submissions
+            Shows after wheels/tires are ordered, prefills with order details
+            ═══════════════════════════════════════════════════════════════════════════ */}
+        {(wheels.length > 0 || tires.length > 0) && (
+          <div className="mb-6">
+            <AddYourBuildCTA
+              orderId={String(order.id)}
+              vehicle={vehicle ? {
+                year: vehicle.year?.toString(),
+                make: vehicle.make,
+                model: vehicle.model,
+                trim: vehicle.trim,
+              } : undefined}
+              products={{
+                wheelBrand,
+                wheelModel,
+                wheelDiameter,
+                tireBrand,
+                tireModel,
+                tireSize,
+              }}
+              variant="card"
+              dismissible={true}
+              incentive="Featured builds get 10% off next order!"
+            />
+          </div>
+        )}
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-3">

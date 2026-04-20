@@ -64,23 +64,31 @@ const BRAND_MAP: Record<string, string> = {
   // Add more as needed
 };
 
+// Vehicle type classification
+type VehicleTypeSegment = "truck" | "suv" | "jeep" | "car" | null;
+
 // Map vehicle models to broader types for fallback matching
-function inferVehicleType(make?: string, model?: string): string | null {
+function inferVehicleType(make?: string, model?: string): VehicleTypeSegment {
   if (!model) return null;
   const m = model.toLowerCase();
+  const mk = make?.toLowerCase() || "";
   
-  // Trucks
+  // Trucks (check first - most specific)
   if (m.includes("f-150") || m.includes("f150") || m.includes("f-250") || m.includes("f-350") ||
       m.includes("silverado") || m.includes("sierra") ||
       m.includes("ram") || m.includes("1500") || m.includes("2500") || m.includes("3500") ||
       m.includes("tundra") || m.includes("tacoma") || m.includes("ranger") ||
       m.includes("colorado") || m.includes("gladiator") ||
-      m.includes("titan") || m.includes("frontier")) {
+      m.includes("titan") || m.includes("frontier") || m.includes("canyon") ||
+      m.includes("ridgeline") || m.includes("maverick") || m.includes("santa cruz")) {
     return "truck";
   }
   
   // Jeeps
-  if (make?.toLowerCase() === "jeep" || m.includes("wrangler") || m.includes("rubicon")) {
+  if (mk === "jeep" || m.includes("wrangler") || m.includes("rubicon") ||
+      m.includes("cherokee") || m.includes("compass") ||
+      m.includes("renegade") || m.includes("grand cherokee")) {
+    // Note: gladiator is already caught by trucks above
     return "jeep";
   }
   
@@ -90,19 +98,78 @@ function inferVehicleType(make?: string, model?: string): string | null {
       m.includes("yukon") || m.includes("escalade") ||
       m.includes("sequoia") || m.includes("land cruiser") ||
       m.includes("gx") || m.includes("expedition") ||
-      m.includes("durango") || m.includes("armada")) {
+      m.includes("durango") || m.includes("armada") ||
+      m.includes("pilot") || m.includes("highlander") ||
+      m.includes("explorer") || m.includes("telluride") ||
+      m.includes("palisade") || m.includes("pathfinder")) {
     return "suv";
   }
   
+  // Cars (performance, muscle, sports, sedans, coupes)
+  // Performance / Muscle
+  if (m.includes("mustang") || m.includes("camaro") || m.includes("challenger") ||
+      m.includes("charger") || m.includes("corvette") || m.includes("viper") ||
+      m.includes("gt500") || m.includes("gt350") || m.includes("hellcat") ||
+      m.includes("demon") || m.includes("scat pack") || m.includes("dark horse")) {
+    return "car";
+  }
+  
+  // Sports / Luxury
+  if (m.includes("911") || m.includes("cayman") || m.includes("boxster") ||
+      m.includes("supra") || m.includes("z4") || m.includes("86") || m.includes("brz") ||
+      m.includes("miata") || m.includes("mx-5") || m.includes("370z") || m.includes("400z") ||
+      m.includes("gtr") || m.includes("gt-r") || m.includes("nsx") ||
+      m.includes("m3") || m.includes("m4") || m.includes("m5") || m.includes("m2") ||
+      m.includes("amg") || m.includes("rs3") || m.includes("rs5") || m.includes("rs6") ||
+      m.includes("rs7") || m.includes("c63") || m.includes("e63")) {
+    return "car";
+  }
+  
+  // Sedans / Coupes
+  if (m.includes("accord") || m.includes("camry") || m.includes("civic") ||
+      m.includes("corolla") || m.includes("altima") || m.includes("maxima") ||
+      m.includes("3 series") || m.includes("5 series") || m.includes("7 series") ||
+      m.includes("a4") || m.includes("a6") || m.includes("s4") || m.includes("s5") ||
+      m.includes("c-class") || m.includes("e-class") || m.includes("s-class") ||
+      m.includes("is") || m.includes("es") || m.includes("gs") || m.includes("ls") ||
+      m.includes("genesis") || m.includes("g70") || m.includes("g80") || m.includes("g90") ||
+      m.includes("ct4") || m.includes("ct5") || m.includes("ats") || m.includes("cts") ||
+      m.includes("ss") || m.includes("impala") || m.includes("malibu") ||
+      m.includes("fusion") || m.includes("taurus") ||
+      m.includes("wrx") || m.includes("sti") || m.includes("type r") ||
+      m.includes("veloster") || m.includes("elantra n") || m.includes("forte")) {
+    return "car";
+  }
+  
+  // Hot hatches / Compacts
+  if (m.includes("golf") || m.includes("gti") || m.includes("golf r") ||
+      m.includes("focus") || m.includes("fiesta") || m.includes("st ") ||
+      m.includes(" si") || m.includes("sport hatch")) {
+    return "car";
+  }
+  
   return null;
+}
+
+// Check if vehicle type is a "off-road" type (trucks/SUVs/Jeeps)
+function isOffRoadVehicleType(vehicleType: VehicleTypeSegment): boolean {
+  return vehicleType === "truck" || vehicleType === "suv" || vehicleType === "jeep";
 }
 
 // Extract clean wheel model name from title/sku string
 // e.g., "SURGE 18X9 6X135 87 +20 M-BLK GB-LP" → "Surge"
 // e.g., "Fuel Surge" → "Surge"  
 // e.g., "Rebel D679" → "Rebel"
+// e.g., "KM447" → "KM447" (KMC model codes are the actual model names)
 function normalizeWheelModel(model: string): string {
   if (!model) return "";
+  
+  // KMC, XD, and Moto Metal use alphanumeric codes as model names
+  // e.g., KM447, KM235, XD820, MO970 - these ARE the model names
+  const kmcStyleMatch = model.match(/^(KM\d{3}|XD\d{3}|MO\d{3})/i);
+  if (kmcStyleMatch) {
+    return kmcStyleMatch[1].toUpperCase();
+  }
   
   // Remove common brand prefixes
   let cleaned = model
@@ -139,7 +206,7 @@ function normalizeWheelModel(model: string): string {
     // Stop at finish codes like "M-BLK", "GB-LP", etc.
     if (/^[A-Z]{1,2}-[A-Z]{2,}$/i.test(w)) break;
     
-    // Skip product codes like "D679", "FC881"
+    // Skip product codes like "D679", "FC881" (but NOT KMC/XD/MO codes - handled above)
     if (/^[A-Z]{1,2}\d{2,}$/i.test(w)) continue;
     
     modelWords.push(word);
@@ -170,7 +237,8 @@ export async function GET(request: NextRequest) {
   // Normalize inputs
   const normalizedBrand = BRAND_MAP[wheelBrand.toLowerCase()] || wheelBrand || "Fuel";
   const normalizedWheelModel = normalizeWheelModel(wheelModel);
-  const inferredType = vehicleType || inferVehicleType(vehicleMake, vehicleModel);
+  // Type-safe vehicle type inference - ensures proper segmentation
+  const inferredType: VehicleTypeSegment = (vehicleType as VehicleTypeSegment) || inferVehicleType(vehicleMake, vehicleModel);
   
   // No wheel model = no useful results
   if (!normalizedWheelModel) {
@@ -195,6 +263,7 @@ export async function GET(request: NextRequest) {
   
   try {
     // Level 1: Exact wheel model + same make/model
+    // PRIORITY: Customer submissions (verified) > Brand assets (high) > Auto-parsed
     if (vehicleMake && vehicleModel) {
       const exactQuery = `
         SELECT * FROM gallery_assets
@@ -207,7 +276,10 @@ export async function GET(request: NextRequest) {
           )
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           vehicle_year DESC NULLS LAST
         LIMIT $6
       `;
@@ -229,6 +301,7 @@ export async function GET(request: NextRequest) {
     }
     
     // Level 2: Exact wheel model + same vehicle type
+    // PRIORITY: Customer submissions first
     if (results.length < limit && inferredType) {
       const wheelTypeQuery = `
         SELECT * FROM gallery_assets
@@ -237,7 +310,10 @@ export async function GET(request: NextRequest) {
           AND vehicle_type = $3
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           vehicle_year DESC NULLS LAST
         LIMIT $4
       `;
@@ -257,6 +333,7 @@ export async function GET(request: NextRequest) {
     }
     
     // Level 3: Same wheel brand + same vehicle type (any wheel model)
+    // PRIORITY: Customer submissions first
     if (results.length < limit && inferredType) {
       const brandTypeQuery = `
         SELECT * FROM gallery_assets
@@ -264,7 +341,10 @@ export async function GET(request: NextRequest) {
           AND vehicle_type = $2
           AND thumbnail_url IS NOT NULL
         ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
+          CASE WHEN parse_confidence = 'verified' THEN 0 
+               WHEN parse_confidence = 'high' THEN 1 
+               WHEN parse_confidence = 'medium' THEN 2 
+               ELSE 3 END,
           RANDOM()
         LIMIT $3
       `;
@@ -282,21 +362,70 @@ export async function GET(request: NextRequest) {
       }
     }
     
-    // Level 4: Same wheel brand + any vehicle (fallback)
+    // Level 4: Same wheel brand + segmented fallback (prevents cross-contamination)
+    // Cars only get car images, trucks/SUVs/jeeps only get off-road images
     if (results.length < limit) {
-      const fallbackQuery = `
-        SELECT * FROM gallery_assets
-        WHERE wheel_brand = $1
-          AND thumbnail_url IS NOT NULL
-        ORDER BY 
-          CASE WHEN parse_confidence = 'high' THEN 1 WHEN parse_confidence = 'medium' THEN 2 ELSE 3 END,
-          RANDOM()
-        LIMIT $2
-      `;
-      const fallbackResult = await pool.query<GalleryAsset>(fallbackQuery, [
-        normalizedBrand,
-        limit - results.length
-      ]);
+      // Determine vehicle type segment for filtering
+      const isCarContext = inferredType === "car";
+      const isOffRoadContext = isOffRoadVehicleType(inferredType);
+      
+      let fallbackQuery: string;
+      let fallbackParams: (string | number)[];
+      
+      if (isCarContext) {
+        // Car context: only show car images
+        // PRIORITY: Customer submissions first
+        fallbackQuery = `
+          SELECT * FROM gallery_assets
+          WHERE wheel_brand = $1
+            AND vehicle_type = 'car'
+            AND thumbnail_url IS NOT NULL
+          ORDER BY 
+            CASE WHEN parse_confidence = 'verified' THEN 0 
+                 WHEN parse_confidence = 'high' THEN 1 
+                 WHEN parse_confidence = 'medium' THEN 2 
+                 ELSE 3 END,
+            RANDOM()
+          LIMIT $2
+        `;
+        fallbackParams = [normalizedBrand, limit - results.length];
+      } else if (isOffRoadContext) {
+        // Truck/SUV/Jeep context: only show off-road images (never cars)
+        // PRIORITY: Customer submissions first
+        fallbackQuery = `
+          SELECT * FROM gallery_assets
+          WHERE wheel_brand = $1
+            AND vehicle_type IN ('truck', 'suv', 'jeep')
+            AND thumbnail_url IS NOT NULL
+          ORDER BY 
+            CASE WHEN parse_confidence = 'verified' THEN 0 
+                 WHEN parse_confidence = 'high' THEN 1 
+                 WHEN parse_confidence = 'medium' THEN 2 
+                 ELSE 3 END,
+            RANDOM()
+          LIMIT $2
+        `;
+        fallbackParams = [normalizedBrand, limit - results.length];
+      } else {
+        // Unknown context: prefer off-road images (most of our gallery is trucks/SUVs)
+        // PRIORITY: Customer submissions first, then by vehicle type
+        fallbackQuery = `
+          SELECT * FROM gallery_assets
+          WHERE wheel_brand = $1
+            AND thumbnail_url IS NOT NULL
+          ORDER BY 
+            CASE WHEN parse_confidence = 'verified' THEN 0 
+                 WHEN parse_confidence = 'high' THEN 1 
+                 WHEN parse_confidence = 'medium' THEN 2 
+                 ELSE 3 END,
+            CASE WHEN vehicle_type IN ('truck', 'suv', 'jeep') THEN 1 ELSE 2 END,
+            RANDOM()
+          LIMIT $2
+        `;
+        fallbackParams = [normalizedBrand, limit - results.length];
+      }
+      
+      const fallbackResult = await pool.query<GalleryAsset>(fallbackQuery, fallbackParams);
       
       for (const row of fallbackResult.rows) {
         if (!seenIds.has(row.id)) {
@@ -315,8 +444,11 @@ export async function GET(request: NextRequest) {
           ? "partial"
           : "fallback";
     
+    // Apply diversity filter: max 2 images per album/vehicle combo
+    const diversifiedResults = diversifyResults(results, limit);
+    
     return NextResponse.json({
-      results: results.slice(0, limit),
+      results: diversifiedResults,
       matchQuality,
       matchedOn: {
         wheelBrand: normalizedBrand,
@@ -336,6 +468,40 @@ export async function GET(request: NextRequest) {
       error: error instanceof Error ? error.message : "Unknown error"
     }, { status: 500 });
   }
+}
+
+// Diversify results to avoid showing too many images from the same album/vehicle
+// Max 2 images per unique vehicle (make+model combo)
+function diversifyResults(results: MatchResult[], limit: number): MatchResult[] {
+  const vehicleCounts = new Map<string, number>();
+  const diversified: MatchResult[] = [];
+  
+  const MAX_PER_VEHICLE = 2;
+  
+  for (const result of results) {
+    if (diversified.length >= limit) break;
+    
+    // Create a key for this vehicle (make + model, ignoring year/trim variations)
+    const vehicleKey = `${(result.vehicleMake || '').toLowerCase()}_${(result.vehicleModel || '').toLowerCase()}`;
+    const currentCount = vehicleCounts.get(vehicleKey) || 0;
+    
+    if (currentCount < MAX_PER_VEHICLE) {
+      diversified.push(result);
+      vehicleCounts.set(vehicleKey, currentCount + 1);
+    }
+  }
+  
+  // If we didn't reach the limit, fill with remaining results
+  if (diversified.length < limit) {
+    for (const result of results) {
+      if (diversified.length >= limit) break;
+      if (!diversified.some(r => r.id === result.id)) {
+        diversified.push(result);
+      }
+    }
+  }
+  
+  return diversified;
 }
 
 function mapToResult(row: GalleryAsset, matchLevel: MatchResult["matchLevel"]): MatchResult {

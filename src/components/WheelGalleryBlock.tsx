@@ -37,7 +37,65 @@ interface WheelGalleryBlockProps {
   vehicleYear?: string;
   vehicleMake?: string;
   vehicleModel?: string;
-  vehicleType?: string;
+  vehicleType?: string; // "truck" | "suv" | "jeep" | "car"
+}
+
+// Client-side vehicle type inference (mirrors API logic)
+function inferVehicleTypeClient(make?: string, model?: string): "truck" | "suv" | "jeep" | "car" | null {
+  if (!model) return null;
+  const m = model.toLowerCase();
+  const mk = make?.toLowerCase() || "";
+  
+  // Trucks
+  if (m.includes("f-150") || m.includes("f150") || m.includes("f-250") || m.includes("f-350") ||
+      m.includes("silverado") || m.includes("sierra") ||
+      m.includes("ram") || m.includes("1500") || m.includes("2500") || m.includes("3500") ||
+      m.includes("tundra") || m.includes("tacoma") || m.includes("ranger") ||
+      m.includes("colorado") || m.includes("gladiator") ||
+      m.includes("titan") || m.includes("frontier") || m.includes("canyon") ||
+      m.includes("ridgeline") || m.includes("maverick") || m.includes("santa cruz")) {
+    return "truck";
+  }
+  
+  // Jeeps
+  if (mk === "jeep" || m.includes("wrangler") || m.includes("rubicon") ||
+      m.includes("cherokee") || m.includes("compass") || m.includes("renegade")) {
+    return "jeep";
+  }
+  
+  // SUVs
+  if (m.includes("bronco") || m.includes("4runner") ||
+      m.includes("tahoe") || m.includes("suburban") ||
+      m.includes("yukon") || m.includes("escalade") ||
+      m.includes("sequoia") || m.includes("land cruiser") ||
+      m.includes("gx") || m.includes("expedition") ||
+      m.includes("durango") || m.includes("armada") ||
+      m.includes("pilot") || m.includes("highlander") ||
+      m.includes("explorer") || m.includes("telluride") ||
+      m.includes("palisade") || m.includes("pathfinder")) {
+    return "suv";
+  }
+  
+  // Cars (performance/muscle/sports/sedans)
+  if (m.includes("mustang") || m.includes("camaro") || m.includes("challenger") ||
+      m.includes("charger") || m.includes("corvette") || m.includes("viper") ||
+      m.includes("gt500") || m.includes("gt350") || m.includes("hellcat") ||
+      m.includes("911") || m.includes("cayman") || m.includes("boxster") ||
+      m.includes("supra") || m.includes("z4") || m.includes("86") || m.includes("brz") ||
+      m.includes("miata") || m.includes("mx-5") || m.includes("370z") || m.includes("400z") ||
+      m.includes("m3") || m.includes("m4") || m.includes("m5") || m.includes("m2") ||
+      m.includes("accord") || m.includes("camry") || m.includes("civic") ||
+      m.includes("corolla") || m.includes("altima") || m.includes("maxima") ||
+      m.includes("3 series") || m.includes("5 series") ||
+      m.includes("a4") || m.includes("a6") || m.includes("s4") || m.includes("s5") ||
+      m.includes("c-class") || m.includes("e-class") || m.includes("s-class") ||
+      m.includes("is") || m.includes("es") || m.includes("gs") || m.includes("ls") ||
+      m.includes("wrx") || m.includes("sti") || m.includes("type r") ||
+      m.includes("golf") || m.includes("gti")) {
+    return "car";
+  }
+  
+  return null;
 }
 
 export function WheelGalleryBlock({
@@ -53,9 +111,13 @@ export function WheelGalleryBlock({
   const [lightboxImage, setLightboxImage] = useState<GalleryMatch | null>(null);
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
+  // Infer vehicle type if not provided - ensures proper segmentation
+  const effectiveVehicleType = vehicleType || inferVehicleTypeClient(vehicleMake, vehicleModel);
+
   // Fetch gallery matches
   useEffect(() => {
-    if (!wheelModel) {
+    // Skip if no wheel model AND no vehicle context
+    if (!wheelModel && !vehicleMake && !vehicleModel) {
       setLoading(false);
       return;
     }
@@ -66,7 +128,8 @@ export function WheelGalleryBlock({
     if (vehicleYear) params.set("year", vehicleYear);
     if (vehicleMake) params.set("make", vehicleMake);
     if (vehicleModel) params.set("model", vehicleModel);
-    if (vehicleType) params.set("vehicleType", vehicleType);
+    // Always pass vehicle type to API for proper segmentation (prevents cross-contamination)
+    if (effectiveVehicleType) params.set("vehicleType", effectiveVehicleType);
     params.set("limit", "6");
 
     fetch(`/api/gallery/match?${params.toString()}`)
@@ -79,7 +142,7 @@ export function WheelGalleryBlock({
         setGallery([]);
         setLoading(false);
       });
-  }, [wheelBrand, wheelModel, vehicleYear, vehicleMake, vehicleModel, vehicleType]);
+  }, [wheelBrand, wheelModel, vehicleYear, vehicleMake, vehicleModel, effectiveVehicleType]);
 
   // Handle image error
   const handleImageError = useCallback((id: number) => {

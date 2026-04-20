@@ -28,8 +28,11 @@ import { HomepageIntentBar } from "@/components/HomepageIntentBar";
 import { LiftLevelSelector } from "@/components/LiftLevelSelector";
 import { PackageBridgeCTA, StickyBuildBar } from "@/components/BuildContextBar";
 import { RearWheelConfigSelector, trackRearWheelConfigPromptShown } from "@/components/RearWheelConfigSelector";
-// Build inspiration gallery (2026-04-20)
+// Vehicle inspiration galleries (2026-04-20)
+// BuildGalleryBlock: For trucks/SUVs/Jeeps - shows lifted/leveled builds ("See builds like this")
+// WheelGalleryBlock: For cars - shows wheel on real vehicles ("See this wheel on real vehicles")
 import { BuildGalleryBlock } from "@/components/BuildGalleryBlock";
+import { WheelGalleryBlock } from "@/components/WheelGalleryBlock";
 import {
   type RearWheelConfig,
   isDRWCapable,
@@ -1782,12 +1785,22 @@ export default async function WheelsPage({
             )}
 
             {/* ═══════════════════════════════════════════════════════════════════════
-                BUILD INSPIRATION GALLERY - "See builds like this"
-                Shows real vehicle builds when user is in lifted/leveled flow
-                Helps inspire confidence and showcase what's possible
-                Hidden for stock builds to avoid confusion
+                VEHICLE GALLERY - Segmented by vehicle type
+                
+                FOR TRUCKS/SUVS/JEEPS: BuildGalleryBlock
+                - Shows "See builds like this"
+                - Shows lifted/leveled build inspiration
+                - Only visible when in lifted/leveled flow
+                
+                FOR CARS: WheelGalleryBlock  
+                - Shows "See this wheel on real vehicles"
+                - Matches by wheel model/brand
+                - Always visible when wheel is selected
+                
+                CRITICAL: Never mix truck images into car context or vice versa
                 ═══════════════════════════════════════════════════════════════════════ */}
-            {hasVehicle && (isLiftedBuild || isHomepageIntentLiftedBuild || buildTypeParam === "level" || buildTypeParam === "lifted") && (
+            {/* Truck/SUV/Jeep: Show build inspiration (lifted/leveled) */}
+            {hasVehicle && fitmentVehicleType !== "car" && (isLiftedBuild || isHomepageIntentLiftedBuild || buildTypeParam === "level" || buildTypeParam === "lifted") && (
               <div className="mt-3">
                 <BuildGalleryBlock
                   vehicleType={fitmentVehicleType}
@@ -1796,6 +1809,17 @@ export default async function WheelsPage({
                   buildType={isLiftedBuild ? "lifted" : isHomepageIntentLiftedBuild ? "lifted" : buildTypeParam ?? undefined}
                   liftedInches={liftedInches || (homepageIntentState.resolved?.liftLevel ? parseInt(homepageIntentState.resolved.liftLevel) : undefined)}
                   liftedPreset={liftedPreset || homepageIntentState.resolved?.liftLevel}
+                />
+              </div>
+            )}
+            
+            {/* Cars: Show wheel-on-vehicle gallery (no build types for cars) */}
+            {hasVehicle && fitmentVehicleType === "car" && (
+              <div className="mt-3">
+                <WheelGalleryBlock
+                  vehicleMake={make}
+                  vehicleModel={model}
+                  vehicleType="car"
                 />
               </div>
             )}
