@@ -1919,3 +1919,134 @@ Only $390/wheel
 
 ✨ Done!
 [Sun 04/19/2026  9:00:23.73] Auto-post complete 
+[Sun 04/19/2026 18:00:03.48] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:11104) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Black Rhino Hard Alloys WARLORD
+  ⚠️ No matching vehicle for bolt pattern 8X170, using generic caption
+  Downloading image for Black Rhino Hard Alloys WARLORD...
+  ✅ Generated: warlord_1776636004638
+  📝 Caption preview: Weekend project? ✅
+
+Black Rhino Hard Alloys WARLORD
+📐 18x9
+🔩 8X170
+↔️ -12mm of...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - warlord_1776636004638.png
+  - warlord_1776636004638.json
+
+📱 Facebook/Instagram Poster
+
+Selected: vn215_classic_torq_thrust_ii_1776031216626
+
+--- Content Preview ---
+Wheel: American Racing Vintage VN215 CLASSIC TORQ THRUST II
+Price: $266
+Image: vn215_classic_torq_thrust_ii_1776031216626.png
+
+Caption:
+🔥 American Racing Vintage VN215 CLASSIC TORQ THRUST II - Now in stock!
+
+📐 18x7
+🔩 5X4.5
+↔️ 6mm offset
+✨ VN215 TT-II 1PC 18X7 5X4.5 GRAY 4.25BS
+
+💰 Starting at $266/wheel
+
+🛒 Shop now: https://shop.warehousetiredirect.com/wheels/VN2158765
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #ev #electricvehicle #tesla #americanracingvintage #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1581663357295124
+
+✨ Done!
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:13244) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Performance Replicas PR239
+  ⚠️ No matching vehicle for bolt pattern 8X6.5, using generic caption
+  Downloading image for Performance Replicas PR239...
+  ✅ Generated: pr239_1776636017770
+  📝 Caption preview: New arrival alert! 🚨
+
+Performance Replicas PR239
+📐 20x9
+🔩 8X6.5
+↔️ 35mm offse...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - pr239_1776636017770.png
+  - pr239_1776636017770.json
+
+📱 Facebook/Instagram Poster
+
+Selected: pr239_1776636017770
+
+--- Content Preview ---
+Wheel: Performance Replicas PR239
+Price: $351
+Image: pr239_1776636017770.png
+
+Caption:
+New arrival alert! 🚨
+
+Performance Replicas PR239
+📐 20x9
+🔩 8X6.5
+↔️ 35mm offset
+✨ PR239 20X9 8X6.5 117 +35 G-BLK
+
+$351/wheel - Ships free!
+
+🛒 Order here: https://shop.warehousetiredirect.com/wheels/PR239BX20908135
+
+#wheels #rims #customwheels #wheelgoals #wheelwednesday #trucks #trucksofinstagram #trucklife #performancereplicas #warehousetiredirect
+--- End Preview ---
+
+  Uploading to Facebook...
+  ✅ Facebook post ID: 1727336498612347
+
+✨ Done!
+[Sun 04/19/2026 18:00:23.31] Auto-post complete 
