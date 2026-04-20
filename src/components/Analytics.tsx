@@ -31,7 +31,7 @@ export function Analytics() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            path: pathname,
+            path: fullPath,  // Include query params for debugging session journeys
             referrer: document.referrer || null,
           }),
           // Don't block navigation
