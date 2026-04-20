@@ -197,24 +197,30 @@ export function Header() {
 
         {/* Mobile: use tap-based modals via the action bar / simple buttons below */}
         <div className="w-full md:hidden">
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-4 gap-2">
             <button
               type="button"
               onClick={() => openLauncher("tires")}
-              className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900"
+              className="h-11 rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
             >
               Tires
             </button>
             <button
               type="button"
               onClick={() => openLauncher("wheels")}
-              className="h-11 rounded-xl border border-neutral-200 bg-white px-3 text-sm font-extrabold text-neutral-900"
+              className="h-11 rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
             >
               Wheels
             </button>
             <Link
-              href="/wheels"
-              className="flex h-11 items-center justify-center rounded-xl border border-amber-300 bg-amber-50 px-3 text-sm font-extrabold text-amber-700"
+              href="/gallery"
+              className="flex h-11 items-center justify-center rounded-xl border border-neutral-200 bg-white px-2 text-sm font-extrabold text-neutral-900"
+            >
+              📸
+            </Link>
+            <Link
+              href="/lifted"
+              className="flex h-11 items-center justify-center rounded-xl border border-amber-300 bg-amber-50 px-2 text-sm font-extrabold text-amber-700"
             >
               Lifted
             </Link>
@@ -353,6 +359,14 @@ export function Header() {
 
             {/* Accessories Mega Menu with subcategory hover */}
             <AccessoriesMegaMenu />
+
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-1.5 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200"
+            >
+              <span>📸</span>
+              GALLERY
+            </Link>
 
             <details className="group relative">
               <summary className="list-none cursor-pointer inline-flex items-center gap-1 border-b-2 border-transparent px-2 py-2 text-sm font-extrabold text-neutral-900 hover:border-neutral-200">
