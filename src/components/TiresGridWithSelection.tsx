@@ -31,6 +31,8 @@ export type TireItem = {
   price?: number;
   quantity?: { primary?: number; alternate?: number; national?: number };
   imageUrl?: string;
+  /** Tire size (e.g., "275/60R20") */
+  size?: string;
   badges?: {
     terrain?: string | null;
     construction?: string | null;

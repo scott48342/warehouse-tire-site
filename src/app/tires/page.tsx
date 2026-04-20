@@ -111,6 +111,8 @@ type Tire = {
   quantity?: { primary?: number; alternate?: number; national?: number };
   imageUrl?: string;
   displayName?: string;
+  /** Tire size (e.g., "275/60R20") */
+  size?: string;
   badges?: {
     terrain?: string | null;
     construction?: string | null;
