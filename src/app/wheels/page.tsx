@@ -1323,8 +1323,10 @@ export default async function WheelsPage({
   // ═══════════════════════════════════════════════════════════════════════════
   // VEHICLE ENTRY GATE - Show YMM selector when no vehicle context
   // Prevents showing empty product grids and guides users into vehicle selection
+  // EXCEPTION: When brand+style params exist (from gallery), skip gate and show browse
   // ═══════════════════════════════════════════════════════════════════════════
-  if (!hasVehicle) {
+  const isBrowseFromGallery = Boolean(brandCd && styleParam);
+  if (!hasVehicle && !isBrowseFromGallery) {
     return (
       <main className="bg-neutral-50">
         <VehicleEntryGate productType="wheels" packageFlow={isPackageFlow} showBuildTypeStep={true} />
