@@ -33,6 +33,11 @@ const nextConfig: NextConfig = {
         hostname: 'wpassets.wheelpros.com',
       },
       {
+        // WheelPros Canto DAM - real vehicle gallery images
+        protocol: 'https',
+        hostname: 'wheelpros.canto.com',
+      },
+      {
         protocol: 'https',
         hostname: '5129608.app.netsuite.com',
       },

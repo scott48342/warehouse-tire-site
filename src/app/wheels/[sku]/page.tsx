@@ -30,6 +30,8 @@ import { CustomersAlsoAdded } from "@/components/CustomersAlsoAdded";
 import { getCoAddedProductsForPDP } from "@/lib/analytics/coPurchaseServer";
 // Financing badges (2026-04-11)
 import { FinancingBadge } from "@/components/FinancingBadge";
+// Real vehicle gallery from WheelPros Canto (2026-04-20)
+import { WheelGalleryBlock } from "@/components/WheelGalleryBlock";
 
 type WheelProsBrand = {
   code?: string;
@@ -670,6 +672,20 @@ export default async function WheelDetailPage({
               </div>
             </div>
           </div>
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════════════
+            ROW 3.5: Real Vehicle Gallery (WheelPros Canto Assets)
+            Shows this wheel on actual customer vehicles
+            ═══════════════════════════════════════════════════════════════════ */}
+        <div className="mt-8">
+          <WheelGalleryBlock
+            wheelBrand={brand || undefined}
+            wheelModel={modelToken || it?.properties?.model || undefined}
+            vehicleYear={year || undefined}
+            vehicleMake={make || undefined}
+            vehicleModel={model || undefined}
+          />
         </div>
 
         {/* ═══════════════════════════════════════════════════════════════════

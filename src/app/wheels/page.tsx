@@ -28,6 +28,8 @@ import { HomepageIntentBar } from "@/components/HomepageIntentBar";
 import { LiftLevelSelector } from "@/components/LiftLevelSelector";
 import { PackageBridgeCTA, StickyBuildBar } from "@/components/BuildContextBar";
 import { RearWheelConfigSelector, trackRearWheelConfigPromptShown } from "@/components/RearWheelConfigSelector";
+// Build inspiration gallery (2026-04-20)
+import { BuildGalleryBlock } from "@/components/BuildGalleryBlock";
 import {
   type RearWheelConfig,
   isDRWCapable,
@@ -1775,6 +1777,25 @@ export default async function WheelsPage({
                 <BuildStyleToggle 
                   currentBuildType={buildTypeParam} 
                   vehicleType={fitmentVehicleType}
+                />
+              </div>
+            )}
+
+            {/* ═══════════════════════════════════════════════════════════════════════
+                BUILD INSPIRATION GALLERY - "See builds like this"
+                Shows real vehicle builds when user is in lifted/leveled flow
+                Helps inspire confidence and showcase what's possible
+                Hidden for stock builds to avoid confusion
+                ═══════════════════════════════════════════════════════════════════════ */}
+            {hasVehicle && (isLiftedBuild || isHomepageIntentLiftedBuild || buildTypeParam === "level" || buildTypeParam === "lifted") && (
+              <div className="mt-3">
+                <BuildGalleryBlock
+                  vehicleType={fitmentVehicleType}
+                  vehicleMake={make}
+                  vehicleModel={model}
+                  buildType={isLiftedBuild ? "lifted" : isHomepageIntentLiftedBuild ? "lifted" : buildTypeParam}
+                  liftedInches={liftedInches || (homepageIntentState.resolved?.liftLevel ? parseInt(homepageIntentState.resolved.liftLevel) : undefined)}
+                  liftedPreset={liftedPreset || homepageIntentState.resolved?.liftLevel}
                 />
               </div>
             )}
