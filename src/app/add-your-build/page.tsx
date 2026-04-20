@@ -1,10 +1,13 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { Suspense, useState, useCallback, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { BRAND } from "@/lib/brand";
+
+// Force dynamic rendering - useSearchParams requires it
+export const dynamic = "force-dynamic";
 
 type Step = "photos" | "vehicle" | "products" | "details" | "review";
 
