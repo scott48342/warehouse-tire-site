@@ -228,14 +228,15 @@ function TireCard({
     if (!sku) return "#";
     
     const params = new URLSearchParams();
-    params.set("size", size);
+    // For TireWeb tires, use the tire's actual size; for others use the selected size
+    const source = tire.rawSource || tire.source;
+    params.set("size", source?.startsWith("tireweb") ? (tire.size || size) : size);
     if (viewParams.year) params.set("year", viewParams.year);
     if (viewParams.make) params.set("make", viewParams.make);
     if (viewParams.model) params.set("model", viewParams.model);
     if (viewParams.trim) params.set("trim", viewParams.trim);
     
     // Route based on source
-    const source = tire.rawSource || tire.source;
     if (source === "km") {
       return `/tires/km/${encodeURIComponent(sku)}?${params.toString()}`;
     }

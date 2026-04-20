@@ -3889,7 +3889,7 @@ function TireCard({
       ) : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber ? (
         <Link
           href={`/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({
-            year, make, model, trim, modification, size: selectedSize, sort, source: "tireweb",
+            year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb",
           }).toString()}`}
           className="absolute inset-0 z-0"
           aria-label={`View ${displayTitle}`}
@@ -4230,7 +4230,7 @@ function TireCard({
             : t.source === "km" && t.partNumber
               ? `/tires/km/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort }).toString()}`
               : (t.source === "tw" || t.rawSource?.startsWith("tireweb")) && t.partNumber
-                ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: selectedSize, sort, source: "tireweb" }).toString()}`
+                ? `/tires/${encodeURIComponent(String(t.partNumber))}?${new URLSearchParams({ year, make, model, trim, modification, size: t.size || selectedSize, sort, source: "tireweb" }).toString()}`
                 : "#"
           }
           className="rounded-xl border border-neutral-300 bg-white px-4 py-2 text-center text-sm font-extrabold text-neutral-900 hover:bg-neutral-50 hover:border-neutral-400 transition-colors"
