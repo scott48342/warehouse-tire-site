@@ -58,9 +58,14 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.schradertpms.com',
       },
       {
-        // WheelPros gallery images via CloudFront
+        // WheelPros gallery images via CloudFront (legacy, being migrated)
         protocol: 'https',
         hostname: 'd3opzdukpbxlns.cloudfront.net',
+      },
+      {
+        // Vercel Blob storage for gallery images
+        protocol: 'https',
+        hostname: '**.public.blob.vercel-storage.com',
       },
     ],
   },
