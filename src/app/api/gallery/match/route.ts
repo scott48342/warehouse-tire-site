@@ -262,6 +262,9 @@ export async function GET(request: NextRequest) {
   }
   
   try {
+    // Only return images with working Vercel Blob URLs
+    const blobFilter = "(thumbnail_url LIKE '%blob.vercel%' OR source_url LIKE '%blob.vercel%')";
+    
     // Level 1: Exact wheel model + same make/model
     // PRIORITY: Customer submissions (verified) > Brand assets (high) > Auto-parsed
     if (vehicleMake && vehicleModel) {
@@ -275,6 +278,7 @@ export async function GET(request: NextRequest) {
             OR LOWER($5) LIKE '%' || LOWER(vehicle_model) || '%'
           )
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -309,6 +313,7 @@ export async function GET(request: NextRequest) {
           AND LOWER(wheel_model) = LOWER($2)
           AND vehicle_type = $3
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -340,6 +345,7 @@ export async function GET(request: NextRequest) {
         WHERE wheel_brand = $1
           AND vehicle_type = $2
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -380,6 +386,7 @@ export async function GET(request: NextRequest) {
           WHERE wheel_brand = $1
             AND vehicle_type = 'car'
             AND thumbnail_url IS NOT NULL
+            AND ${blobFilter}
           ORDER BY 
             CASE WHEN parse_confidence = 'verified' THEN 0 
                  WHEN parse_confidence = 'high' THEN 1 
@@ -397,6 +404,7 @@ export async function GET(request: NextRequest) {
           WHERE wheel_brand = $1
             AND vehicle_type IN ('truck', 'suv', 'jeep')
             AND thumbnail_url IS NOT NULL
+            AND ${blobFilter}
           ORDER BY 
             CASE WHEN parse_confidence = 'verified' THEN 0 
                  WHEN parse_confidence = 'high' THEN 1 
@@ -413,6 +421,7 @@ export async function GET(request: NextRequest) {
           SELECT * FROM gallery_assets
           WHERE wheel_brand = $1
             AND thumbnail_url IS NOT NULL
+            AND ${blobFilter}
           ORDER BY 
             CASE WHEN parse_confidence = 'verified' THEN 0 
                  WHEN parse_confidence = 'high' THEN 1 
@@ -521,3 +530,4 @@ function mapToResult(row: GalleryAsset, matchLevel: MatchResult["matchLevel"]): 
     matchConfidence: row.parse_confidence === "high" ? "high" : row.parse_confidence === "medium" ? "medium" : "low",
   };
 }
+

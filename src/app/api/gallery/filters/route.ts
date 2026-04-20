@@ -20,11 +20,14 @@ export async function GET() {
   }
   
   try {
+    // Only count images with working Vercel Blob URLs
+    const blobFilter = "(thumbnail_url LIKE '%blob.vercel%' OR source_url LIKE '%blob.vercel%')";
+    
     // Get vehicle makes
     const makesResult = await pool.query<{ vehicle_make: string; count: string }>(`
       SELECT vehicle_make, COUNT(*) as count 
       FROM gallery_assets 
-      WHERE vehicle_make IS NOT NULL AND thumbnail_url IS NOT NULL
+      WHERE vehicle_make IS NOT NULL AND thumbnail_url IS NOT NULL AND ${blobFilter}
       GROUP BY vehicle_make 
       ORDER BY count DESC
       LIMIT 30
@@ -34,7 +37,7 @@ export async function GET() {
     const brandsResult = await pool.query<{ wheel_brand: string; count: string }>(`
       SELECT wheel_brand, COUNT(*) as count 
       FROM gallery_assets 
-      WHERE wheel_brand IS NOT NULL AND thumbnail_url IS NOT NULL
+      WHERE wheel_brand IS NOT NULL AND thumbnail_url IS NOT NULL AND ${blobFilter}
       GROUP BY wheel_brand 
       ORDER BY count DESC
       LIMIT 30
@@ -44,7 +47,7 @@ export async function GET() {
     const typesResult = await pool.query<{ vehicle_type: string; count: string }>(`
       SELECT vehicle_type, COUNT(*) as count 
       FROM gallery_assets 
-      WHERE vehicle_type IS NOT NULL AND thumbnail_url IS NOT NULL
+      WHERE vehicle_type IS NOT NULL AND thumbnail_url IS NOT NULL AND ${blobFilter}
       GROUP BY vehicle_type 
       ORDER BY count DESC
     `);
@@ -59,7 +62,7 @@ export async function GET() {
         END as build_type,
         COUNT(*) as count
       FROM gallery_assets 
-      WHERE thumbnail_url IS NOT NULL
+      WHERE thumbnail_url IS NOT NULL AND ${blobFilter}
       GROUP BY build_type
       ORDER BY count DESC
     `);
@@ -70,7 +73,7 @@ export async function GET() {
         COUNT(*) as total,
         COUNT(*) FILTER (WHERE parse_confidence = 'verified') as customer_builds
       FROM gallery_assets 
-      WHERE thumbnail_url IS NOT NULL
+      WHERE thumbnail_url IS NOT NULL AND ${blobFilter}
     `);
     
     return NextResponse.json({

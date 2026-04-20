@@ -77,7 +77,11 @@ export async function GET(request: NextRequest) {
   
   try {
     // Build WHERE clause dynamically
-    const conditions: string[] = ["thumbnail_url IS NOT NULL"];
+    // Only show images with working Vercel Blob URLs (CloudFront requires signed URLs that we can't serve)
+    const conditions: string[] = [
+      "thumbnail_url IS NOT NULL",
+      "(thumbnail_url LIKE '%blob.vercel%' OR source_url LIKE '%blob.vercel%')"
+    ];
     const params: (string | number | boolean)[] = [];
     let paramIndex = 1;
     

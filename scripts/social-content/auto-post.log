@@ -2175,3 +2175,90 @@ Starting at $295
 
 ✨ Done!
 [Mon 04/20/2026  9:00:24.77] Auto-post complete 
+[Mon 04/20/2026 18:00:02.24] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:19148) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Motegi MR158 TSUBAKI
+  Downloading image for Motegi MR158 TSUBAKI...
+  ✅ Generated: mr158_tsubaki_1776722404135
+  📝 Caption preview: New arrival alert! 🚨
+
+Motegi MR158 TSUBAKI
+📐 18x10.5
+🔩 5X112
+↔️ 35mm offset
+✨...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - mr158_tsubaki_1776722404135.png
+  - mr158_tsubaki_1776722404135.json
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:19164) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC D700 AMMO
+  Downloading image for Fuel 1PC D700 AMMO...
+  ✅ Generated: d700_ammo_1776722410808
+  📝 Caption preview: 🔥 Fuel 1PC D700 AMMO - Now in stock!
+
+📐 17x9
+🔩 6X5.5
+↔️ -12mm offset
+✨ AMMO 1...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - d700_ammo_1776722410808.png
+  - d700_ammo_1776722410808.json
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Mon 04/20/2026 18:00:11.59] Auto-post complete 

@@ -216,6 +216,9 @@ export async function GET(request: NextRequest) {
   const seenIds = new Set<number>();
   
   try {
+    // Only return images with working Vercel Blob URLs
+    const blobFilter = "(thumbnail_url LIKE '%blob.vercel%' OR source_url LIKE '%blob.vercel%')";
+    
     // Level 1: Same vehicle type + matching lift range (if we have lift data)
     // PRIORITY for all queries: Customer submissions (verified) > Brand assets (high) > Auto-parsed
     if (effectiveVehicleType && liftRange) {
@@ -224,6 +227,7 @@ export async function GET(request: NextRequest) {
         WHERE vehicle_type = $1
           AND lift_level = $2
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -253,6 +257,7 @@ export async function GET(request: NextRequest) {
         WHERE vehicle_type = $1
           AND lift_level IS NOT NULL
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -280,6 +285,7 @@ export async function GET(request: NextRequest) {
         SELECT * FROM gallery_assets
         WHERE vehicle_type = $1
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -307,6 +313,7 @@ export async function GET(request: NextRequest) {
         SELECT * FROM gallery_assets
         WHERE lift_level IS NOT NULL
           AND thumbnail_url IS NOT NULL
+          AND ${blobFilter}
         ORDER BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
@@ -333,7 +340,8 @@ export async function GET(request: NextRequest) {
         SELECT * FROM gallery_assets
         WHERE vehicle_type IN ('truck', 'suv', 'jeep')
           AND thumbnail_url IS NOT NULL
-        ORDER BY 
+          AND ${blobFilter}
+        Order BY 
           CASE WHEN parse_confidence = 'verified' THEN 0 
                WHEN parse_confidence = 'high' THEN 1 
                WHEN parse_confidence = 'medium' THEN 2 

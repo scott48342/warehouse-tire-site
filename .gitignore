@@ -54,3 +54,4 @@ scripts/neon-migration/*.sql
 
 src/backup-*
 *.backup
+.env*.local
