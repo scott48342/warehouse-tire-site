@@ -52,7 +52,6 @@ export async function GET(req: Request) {
       // Cache error - continue to DB
     }
   }
-  }
 
   // 2. Try DB
   try {
