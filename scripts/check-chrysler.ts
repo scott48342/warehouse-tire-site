@@ -1,44 +1,39 @@
-import * as dotenv from "dotenv";
-dotenv.config({ path: ".env.local" });
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { Pool } from 'pg';
+import { sql } from 'drizzle-orm';
 
-import { db } from "../src/lib/fitment-db/db";
-import { sql } from "drizzle-orm";
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+  ssl: process.env.POSTGRES_URL?.includes('sslmode=require') ? { rejectUnauthorized: false } : undefined,
+});
+const db = drizzle(pool);
 
-async function check() {
-  // Check all 2008 Chrysler records
-  const results = await db.execute(sql`
-    SELECT model, display_trim, trim, bolt_pattern, center_bore
-    FROM vehicle_fitments
-    WHERE year = 2008 AND LOWER(make) LIKE '%chrysler%'
-    ORDER BY model, display_trim
+async function main() {
+  // What Chrysler models are in catalog?
+  const catalog = await db.execute(sql`
+    SELECT name, years FROM catalog_models WHERE make_slug = 'chrysler' ORDER BY name
   `);
-  
-  console.log('2008 Chrysler records in DB:', results.rows.length);
-  for (const r of results.rows as any[]) {
-    console.log(`  - ${r.model} | ${r.display_trim || r.trim} | ${r.bolt_pattern} | ${r.center_bore}mm`);
-  }
-  
-  // Check all Chrysler 300 records by year
-  const all300 = await db.execute(sql`
-    SELECT year, model, display_trim, COUNT(*) as trim_count
-    FROM vehicle_fitments
-    WHERE LOWER(make) LIKE '%chrysler%' AND LOWER(model) LIKE '%300%'
-    GROUP BY year, model, display_trim
-    ORDER BY year, model
+  console.log('Chrysler in CATALOG:');
+  catalog.rows.forEach((r: any) => console.log('  ', r.name));
+
+  // What Chrysler models are in fitment DB for 2005?
+  const fitment = await db.execute(sql`
+    SELECT DISTINCT model FROM vehicle_fitments WHERE make = 'chrysler' AND year = 2005 ORDER BY model
   `);
-  
-  console.log('\nAll Chrysler 300 records by year:');
-  const byYear: Record<number, string[]> = {};
-  for (const r of all300.rows as any[]) {
-    if (!byYear[r.year]) byYear[r.year] = [];
-    byYear[r.year].push(`${r.model} ${r.display_trim || ''}`);
-  }
-  
-  Object.keys(byYear).sort().forEach(year => {
-    console.log(`  ${year}: ${byYear[Number(year)].length} trims - ${byYear[Number(year)].join(', ')}`);
-  });
-  
-  process.exit(0);
+  console.log('\nChrysler 2005 in FITMENT DB:');
+  fitment.rows.forEach((r: any) => console.log('  ', r.model));
+
+  // Check if Pacifica and Sebring exist anywhere
+  const pacifica = await db.execute(sql`
+    SELECT year, make, model FROM vehicle_fitments 
+    WHERE model ILIKE '%pacifica%' OR model ILIKE '%sebring%'
+    ORDER BY year LIMIT 10
+  `);
+  console.log('\nPacifica/Sebring anywhere in DB:');
+  pacifica.rows.forEach((r: any) => console.log('  ', r.year, r.make, r.model));
+
+  await pool.end();
 }
-
-check();
+main();

@@ -53,23 +53,26 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const yearStr = url.searchParams.get("year");
   const year = yearStr ? parseInt(yearStr, 10) : undefined;
+  const noCache = url.searchParams.get("nocache") === "1";
 
-  // 1. Check cache first
-  try {
-    const cached = await getCachedMakes(year);
-    if (cached && cached.length > 0) {
-      console.log(`[makes] CACHE HIT: ${cached.length} makes (year=${year || "all"})`);
-      return NextResponse.json({
-        results: cached,
-        source: "cache",
-        count: cached.length,
-        yearFiltered: !!year,
-      }, {
-        headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
-      });
+  // 1. Check cache first (skip if nocache=1)
+  if (!noCache) {
+    try {
+      const cached = await getCachedMakes(year);
+      if (cached && cached.length > 0) {
+        console.log(`[makes] CACHE HIT: ${cached.length} makes (year=${year || "all"})`);
+        return NextResponse.json({
+          results: cached,
+          source: "cache",
+          count: cached.length,
+          yearFiltered: !!year,
+        }, {
+          headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+        });
+      }
+    } catch (e) {
+      // Cache error - continue to DB
     }
-  } catch (e) {
-    // Cache error - continue to DB
   }
 
   // 2. Try DB

@@ -24,6 +24,7 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
+  const noCache = url.searchParams.get("nocache") === "1";
 
   if (!make || !model) {
     return NextResponse.json({ 
@@ -33,21 +34,24 @@ export async function GET(req: Request) {
     });
   }
 
-  // 1. Check cache first
-  try {
-    const cached = await getCachedYears(make, model);
-    if (cached && cached.length > 0) {
-      console.log(`[years] CACHE HIT: ${cached.length} years for ${make} ${model}`);
-      return NextResponse.json({ 
-        results: cached.map(String),
-        source: "cache",
-        count: cached.length,
-      }, {
-        headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
-      });
+  // 1. Check cache first (skip if nocache=1)
+  if (!noCache) {
+    try {
+      const cached = await getCachedYears(make, model);
+      if (cached && cached.length > 0) {
+        console.log(`[years] CACHE HIT: ${cached.length} years for ${make} ${model}`);
+        return NextResponse.json({ 
+          results: cached.map(String),
+          source: "cache",
+          count: cached.length,
+        }, {
+          headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+        });
+      }
+    } catch (e) {
+      // Cache error - continue to DB
     }
-  } catch (e) {
-    // Cache error - continue to DB
+  }
   }
 
   // 2. Try DB

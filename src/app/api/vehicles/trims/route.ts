@@ -50,6 +50,7 @@ export async function GET(req: Request) {
   const yearStr = url.searchParams.get("year");
   const make = url.searchParams.get("make");
   const model = url.searchParams.get("model");
+  const noCache = url.searchParams.get("nocache") === "1";
 
   if (!yearStr || !make || !model) {
     return NextResponse.json<TrimResponse>({ 
@@ -70,26 +71,28 @@ export async function GET(req: Request) {
 
   const premiumUxEnabled = isPremiumTrimUxEnabled();
 
-  // 1. Check cache first
-  try {
-    const cached = await getCachedTrims(year, make, model);
-    if (cached && cached.length > 0) {
-      console.log(`[trims] CACHE HIT: ${cached.length} trims for ${year} ${make} ${model}`);
-      
-      const results = processTrims(cached, premiumUxEnabled);
-      
-      return NextResponse.json<TrimResponse>({
-        results,
-        source: "cache",
-        count: results.length,
-        hasCoverage: true,
-        premiumUx: premiumUxEnabled,
-      }, {
-        headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
-      });
+  // 1. Check cache first (skip if nocache=1)
+  if (!noCache) {
+    try {
+      const cached = await getCachedTrims(year, make, model);
+      if (cached && cached.length > 0) {
+        console.log(`[trims] CACHE HIT: ${cached.length} trims for ${year} ${make} ${model}`);
+        
+        const results = processTrims(cached, premiumUxEnabled);
+        
+        return NextResponse.json<TrimResponse>({
+          results,
+          source: "cache",
+          count: results.length,
+          hasCoverage: true,
+          premiumUx: premiumUxEnabled,
+        }, {
+          headers: { "Cache-Control": "public, max-age=300, s-maxage=600" },
+        });
+      }
+    } catch (e) {
+      // Cache error - continue to DB
     }
-  } catch (e) {
-    // Cache error - continue to DB
   }
 
   // 2. Try DB
