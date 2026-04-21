@@ -132,14 +132,50 @@ export function FeaturedBuilds() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch best builds from gallery API
-    // API already orders by: verified (customer) > featured > high confidence
-    // So we just need to get the top 5
-    fetch("/api/gallery/discover?limit=5")
+    // Fetch more builds from gallery API, then select diverse set
+    // API orders by: verified (customer) > featured > high confidence
+    fetch("/api/gallery/discover?limit=30")
       .then((res) => res.json())
       .then((data) => {
-        const results = data.results || [];
-        setBuilds(results.slice(0, 5));
+        const results: GalleryBuild[] = data.results || [];
+        
+        // Select diverse builds - max one per vehicle make
+        const seenMakes = new Set<string>();
+        const seenBrands = new Set<string>();
+        const diverse: GalleryBuild[] = [];
+        
+        for (const build of results) {
+          const make = build.vehicleMake?.toLowerCase() || "";
+          const brand = build.wheelBrand?.toLowerCase() || "";
+          
+          // Skip if we already have this make (unless we need more variety)
+          if (make && seenMakes.has(make) && diverse.length < 10) {
+            continue;
+          }
+          
+          // Also try to vary wheel brands
+          if (brand && seenBrands.has(brand) && diverse.length < 3) {
+            continue;
+          }
+          
+          diverse.push(build);
+          if (make) seenMakes.add(make);
+          if (brand) seenBrands.add(brand);
+          
+          if (diverse.length >= 5) break;
+        }
+        
+        // If we don't have enough diverse results, fill with remaining
+        if (diverse.length < 5) {
+          for (const build of results) {
+            if (!diverse.includes(build)) {
+              diverse.push(build);
+              if (diverse.length >= 5) break;
+            }
+          }
+        }
+        
+        setBuilds(diverse.slice(0, 5));
         setLoading(false);
       })
       .catch(() => {

@@ -2262,3 +2262,91 @@ Files:
 
 Add these to .env.local
 [Mon 04/20/2026 18:00:11.59] Auto-post complete 
+[Tue 04/21/2026  9:00:01.52] Starting auto-post... 
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:9568) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Rotiform RC209 RPS
+  Downloading image for Rotiform RC209 RPS...
+  ✅ Generated: rc209_rps_1776776402221
+  📝 Caption preview: Weekend project? ✅
+
+Rotiform RC209 RPS
+📐 19x9.5
+🔩 5X120
+↔️ 22mm offset
+✨ RPS 1...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - rc209_rps_1776776402221.png
+  - rc209_rps_1776776402221.json
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+
+🎨 Social Content Generator
+
+Generating 1 wheel posts...
+
+Fetching wheels from inventory...
+(node:3116) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Found 1 candidate wheels
+
+[1/1] Fuel 1PC D674 BLITZ
+  Downloading image for Fuel 1PC D674 BLITZ...
+  ✅ Generated: d674_blitz_1776776407612
+  📝 Caption preview: New arrival alert! 🚨
+
+Fuel 1PC D674 BLITZ
+📐 20x9
+🔩 6X135
+↔️ 20mm offset
+✨ BLI...
+
+
+✨ Generated 1 posts
+📁 Output: C:\Users\Scott-Pc\backup clawd\warehouse-tire-site\scripts\social-content\output
+
+Files:
+  - d674_blitz_1776776407612.png
+  - d674_blitz_1776776407612.json
+
+📱 Facebook/Instagram Poster
+
+❌ Missing required env vars:
+   - FACEBOOK_PAGE_ID
+   - FACEBOOK_ACCESS_TOKEN
+
+Add these to .env.local
+[Tue 04/21/2026  9:00:07.99] Auto-post complete 
