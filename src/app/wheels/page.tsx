@@ -589,7 +589,9 @@ export default async function WheelsPage({
 
   // Use WheelPros API for accurate fitment and full inventory
   // (Local techfeed browse was showing wrong bolt patterns in facets)
-  const useFastBrowse = false;
+  // EXCEPTION: When browsing from gallery (brand+style, no vehicle), use fast browse
+  // because WheelPros API requires vehicle context for proper results
+  const useFastBrowse = isBrowseFromGallery;
 
   let data: any;
   let fastBrowseData: any = null;
