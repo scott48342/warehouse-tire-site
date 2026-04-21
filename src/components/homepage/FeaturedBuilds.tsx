@@ -132,50 +132,14 @@ export function FeaturedBuilds() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch more builds from gallery API, then select diverse set
-    // API orders by: verified (customer) > featured > high confidence
-    fetch("/api/gallery/discover?limit=30")
+    // Fetch unique vehicles with randomization from API
+    // uniqueVehicles=true ensures one image per vehicle (year/make/model combo)
+    // random=true shuffles results for variety on each page load
+    fetch("/api/gallery/discover?limit=5&uniqueVehicles=true&random=true")
       .then((res) => res.json())
       .then((data) => {
         const results: GalleryBuild[] = data.results || [];
-        
-        // Select diverse builds - max one per vehicle make
-        const seenMakes = new Set<string>();
-        const seenBrands = new Set<string>();
-        const diverse: GalleryBuild[] = [];
-        
-        for (const build of results) {
-          const make = build.vehicleMake?.toLowerCase() || "";
-          const brand = build.wheelBrand?.toLowerCase() || "";
-          
-          // Skip if we already have this make (unless we need more variety)
-          if (make && seenMakes.has(make) && diverse.length < 10) {
-            continue;
-          }
-          
-          // Also try to vary wheel brands
-          if (brand && seenBrands.has(brand) && diverse.length < 3) {
-            continue;
-          }
-          
-          diverse.push(build);
-          if (make) seenMakes.add(make);
-          if (brand) seenBrands.add(brand);
-          
-          if (diverse.length >= 5) break;
-        }
-        
-        // If we don't have enough diverse results, fill with remaining
-        if (diverse.length < 5) {
-          for (const build of results) {
-            if (!diverse.includes(build)) {
-              diverse.push(build);
-              if (diverse.length >= 5) break;
-            }
-          }
-        }
-        
-        setBuilds(diverse.slice(0, 5));
+        setBuilds(results);
         setLoading(false);
       })
       .catch(() => {

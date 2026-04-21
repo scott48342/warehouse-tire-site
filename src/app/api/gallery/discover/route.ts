@@ -64,6 +64,8 @@ export async function GET(request: NextRequest) {
   const buildType = searchParams.get("buildType") || ""; // stock | leveled | lifted
   const featured = searchParams.get("featured") === "true";
   const customerOnly = searchParams.get("customerOnly") === "true";
+  const uniqueVehicles = searchParams.get("uniqueVehicles") === "true"; // One image per vehicle
+  const randomize = searchParams.get("random") === "true"; // Random order for homepage
   
   // Pagination
   const page = Math.max(1, parseInt(searchParams.get("page") || "1"));
@@ -131,34 +133,112 @@ export async function GET(request: NextRequest) {
     const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
     
     // Main query with priority ordering: customer builds first, then featured, then by confidence
-    const query = `
-      SELECT 
-        id,
-        source_album_name,
-        thumbnail_url,
-        source_url,
-        wheel_brand,
-        wheel_model,
-        wheel_sku,
-        vehicle_year,
-        vehicle_make,
-        vehicle_model,
-        vehicle_trim,
-        vehicle_type,
-        lift_level,
-        build_style,
-        parse_confidence,
-        is_featured
-      FROM gallery_assets
-      ${whereClause}
-      ORDER BY 
-        CASE WHEN parse_confidence = 'verified' THEN 0 ELSE 1 END,
-        is_featured DESC,
-        CASE WHEN parse_confidence = 'high' THEN 0 WHEN parse_confidence = 'medium' THEN 1 ELSE 2 END,
-        vehicle_year DESC NULLS LAST,
-        id DESC
-      LIMIT $${paramIndex++} OFFSET $${paramIndex++}
-    `;
+    // When uniqueVehicles=true, use subquery to get one image per vehicle
+    // When random=true, randomize the results (for homepage variety)
+    let query: string;
+    
+    if (uniqueVehicles) {
+      // Get one random image per unique vehicle
+      query = `
+        SELECT DISTINCT ON (vehicle_year, vehicle_make, vehicle_model)
+          id,
+          source_album_name,
+          thumbnail_url,
+          source_url,
+          wheel_brand,
+          wheel_model,
+          wheel_sku,
+          vehicle_year,
+          vehicle_make,
+          vehicle_model,
+          vehicle_trim,
+          vehicle_type,
+          lift_level,
+          build_style,
+          parse_confidence,
+          is_featured
+        FROM gallery_assets
+        ${whereClause}
+        ORDER BY 
+          vehicle_year, vehicle_make, vehicle_model,
+          CASE WHEN parse_confidence = 'verified' THEN 0 ELSE 1 END,
+          is_featured DESC,
+          CASE WHEN parse_confidence = 'high' THEN 0 WHEN parse_confidence = 'medium' THEN 1 ELSE 2 END
+      `;
+      
+      // Wrap in outer query for randomization and pagination
+      if (randomize) {
+        query = `
+          SELECT * FROM (${query}) AS unique_builds
+          ORDER BY RANDOM()
+          LIMIT $${paramIndex++} OFFSET $${paramIndex++}
+        `;
+      } else {
+        query = `
+          SELECT * FROM (${query}) AS unique_builds
+          ORDER BY 
+            CASE WHEN parse_confidence = 'verified' THEN 0 ELSE 1 END,
+            is_featured DESC,
+            vehicle_year DESC NULLS LAST
+          LIMIT $${paramIndex++} OFFSET $${paramIndex++}
+        `;
+      }
+    } else if (randomize) {
+      // Random without unique vehicles
+      query = `
+        SELECT 
+          id,
+          source_album_name,
+          thumbnail_url,
+          source_url,
+          wheel_brand,
+          wheel_model,
+          wheel_sku,
+          vehicle_year,
+          vehicle_make,
+          vehicle_model,
+          vehicle_trim,
+          vehicle_type,
+          lift_level,
+          build_style,
+          parse_confidence,
+          is_featured
+        FROM gallery_assets
+        ${whereClause}
+        ORDER BY RANDOM()
+        LIMIT $${paramIndex++} OFFSET $${paramIndex++}
+      `;
+    } else {
+      // Standard query - original behavior
+      query = `
+        SELECT 
+          id,
+          source_album_name,
+          thumbnail_url,
+          source_url,
+          wheel_brand,
+          wheel_model,
+          wheel_sku,
+          vehicle_year,
+          vehicle_make,
+          vehicle_model,
+          vehicle_trim,
+          vehicle_type,
+          lift_level,
+          build_style,
+          parse_confidence,
+          is_featured
+        FROM gallery_assets
+        ${whereClause}
+        ORDER BY 
+          CASE WHEN parse_confidence = 'verified' THEN 0 ELSE 1 END,
+          is_featured DESC,
+          CASE WHEN parse_confidence = 'high' THEN 0 WHEN parse_confidence = 'medium' THEN 1 ELSE 2 END,
+          vehicle_year DESC NULLS LAST,
+          id DESC
+        LIMIT $${paramIndex++} OFFSET $${paramIndex++}
+      `;
+    }
     
     params.push(limit, offset);
     
@@ -208,6 +288,8 @@ export async function GET(request: NextRequest) {
         buildType: buildType || null,
         featured,
         customerOnly,
+        uniqueVehicles,
+        randomize,
       },
     });
     
