@@ -591,6 +591,7 @@ export default async function WheelsPage({
   // (Local techfeed browse was showing wrong bolt patterns in facets)
   // EXCEPTION: When browsing from gallery (brand+style, no vehicle), use fast browse
   // because WheelPros API requires vehicle context for proper results
+  const isBrowseFromGallery = Boolean(brandCd && styleParam && !hasVehicle);
   const useFastBrowse = isBrowseFromGallery;
 
   let data: any;
@@ -1326,8 +1327,8 @@ export default async function WheelsPage({
   // VEHICLE ENTRY GATE - Show YMM selector when no vehicle context
   // Prevents showing empty product grids and guides users into vehicle selection
   // EXCEPTION: When brand+style params exist (from gallery), skip gate and show browse
+  // (isBrowseFromGallery is defined earlier near useFastBrowse)
   // ═══════════════════════════════════════════════════════════════════════════
-  const isBrowseFromGallery = Boolean(brandCd && styleParam);
   if (!hasVehicle && !isBrowseFromGallery) {
     return (
       <main className="bg-neutral-50">
