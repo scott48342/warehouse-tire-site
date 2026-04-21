@@ -41,6 +41,7 @@ import {
   parseRearWheelConfigParam,
   canShowResults as canShowRearWheelResults,
 } from "@/lib/fitment/rearWheelConfig";
+import { matchesBrandFilter } from "@/lib/brandCodes";
 import type { Metadata } from "next";
 
 type Wheel = {
@@ -936,7 +937,8 @@ export default async function WheelsPage({
 
   // Client-side filters (WheelPros wrapper does not reliably support facet filtering).
   const itemsFilteredBasic = itemsFinal0.filter((w) => {
-    if (brandCd && String(w.brandCode || "") !== String(brandCd)) return false;
+    // Brand filter: supports both codes (FC) and names (Fuel)
+    if (brandCd && !matchesBrandFilter(w.brandCode || "", brandCd)) return false;
 
     if (finish) {
       const f = String(w.finish || "").toLowerCase();

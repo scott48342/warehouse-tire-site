@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import zlib from "node:zlib";
 import { calculateWheelSellPrice } from "@/lib/pricing";
+import { matchesBrandFilter } from "@/lib/brandCodes";
 
 export type TechfeedWheel = {
   sku: string;
@@ -272,17 +273,8 @@ export async function browseWheels(
   }
   
   if (filters.brandCode) {
-    const brandUpper = filters.brandCode.toUpperCase();
-    filtered = filtered.filter(s => {
-      const codeUpper = s.brandCode.toUpperCase();
-      const nameUpper = s.brand.toUpperCase();
-      // Match brand code, brand name, or if one contains the other
-      return codeUpper === brandUpper || 
-             nameUpper === brandUpper ||
-             codeUpper.includes(brandUpper) ||
-             brandUpper.includes(codeUpper) ||
-             nameUpper.includes(brandUpper);
-    });
+    // Use shared brand matching that handles both codes (FC) and names (Fuel)
+    filtered = filtered.filter(s => matchesBrandFilter(s.brandCode, filters.brandCode!));
   }
   
   if (filters.style) {

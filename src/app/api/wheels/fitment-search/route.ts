@@ -71,6 +71,8 @@ import {
   type ConfidenceResult,
 } from "@/lib/fitmentConfidence";
 
+import { matchesBrandFilter } from "@/lib/brandCodes";
+
 import { logUnresolvedFitment } from "@/lib/fitment-db/unresolvedFitmentTracker";
 
 import { calculateWheelSellPrice } from "@/lib/pricing";
@@ -1294,7 +1296,8 @@ async function handleDbFirstWheelResults(opts: {
 
   // Apply basic DB-level filters (cheap, no I/O)
   const filteredCandidates = candidates.filter((c) => {
-    if (brandCd && c.brand_cd && c.brand_cd !== brandCd) return false;
+    // Brand filter: supports both codes (FC) and names (Fuel)
+    if (brandCd && !matchesBrandFilter(c.brand_cd || "", brandCd)) return false;
     // Normalize candidate finish and compare with filter value
     if (finish) {
       const candidateFinish = normalizeFinish(c.fancy_finish_desc, c.abbreviated_finish_desc);
