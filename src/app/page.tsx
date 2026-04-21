@@ -3,6 +3,7 @@ import {
   PremiumHero,
   BuildStyleCards,
   TrustStrip,
+  FeaturedBuilds,
   FeaturedPackages,
   ShopByCategory,
   WhyUs,
@@ -19,10 +20,11 @@ export const runtime = "nodejs";
    1. Hero Section (CTAs + tagline)
    2. Build Style Cards (Factory / Leveling Kit / Lifted)
    3. Trust Strip (slim horizontal)
-   4. Featured Packages (3 packages)
-   5. Shop by Category (5 circular images)
-   6. Why Us (guarantee + 3 value props)
-   7. Final CTA (conversion close)
+   4. Featured Builds (gallery social proof strip)
+   5. Featured Packages (3 packages)
+   6. Shop by Category (5 circular images)
+   7. Why Us (guarantee + 3 value props)
+   8. Final CTA (conversion close)
    
    Background: Continuous dark scenic image throughout
 ============================================================================= */
@@ -40,16 +42,19 @@ export default async function Home() {
         {/* 3. TRUST STRIP */}
         <TrustStrip />
 
-        {/* 4. FEATURED PACKAGES */}
+        {/* 4. FEATURED BUILDS - Gallery social proof */}
+        <FeaturedBuilds />
+
+        {/* 5. FEATURED PACKAGES */}
         <FeaturedPackages />
 
-        {/* 5. SHOP BY CATEGORY */}
+        {/* 6. SHOP BY CATEGORY */}
         <ShopByCategory />
 
-        {/* 6. WHY US */}
+        {/* 7. WHY US */}
         <WhyUs />
 
-        {/* 7. FINAL CTA */}
+        {/* 8. FINAL CTA */}
         <FinalCTA />
       </main>
     </HomepageBackground>

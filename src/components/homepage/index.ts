@@ -7,6 +7,7 @@ export { HomepageBackground } from "./HomepageBackground";
 export { PremiumHero } from "./PremiumHero";
 export { BuildStyleCards } from "./BuildStyleCards";
 export { TrustStrip } from "./TrustStrip";
+export { FeaturedBuilds } from "./FeaturedBuilds";
 export { FeaturedPackages } from "./FeaturedPackages";
 export { ShopByCategory } from "./ShopByCategory";
 export { WhyUs } from "./WhyUs";
