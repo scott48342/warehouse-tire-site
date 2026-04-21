@@ -36,7 +36,7 @@ export function FinalCTA() {
           </Link>
 
           <Link
-            href="/packages"
+            href="/wheels?package=1"
             className="group inline-flex items-center gap-2 rounded-lg bg-orange-600 hover:bg-orange-500 px-8 py-4 text-base font-bold text-white transition-all hover:scale-105"
           >
             <span>Shop Packages</span>

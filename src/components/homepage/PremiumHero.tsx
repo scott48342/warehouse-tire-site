@@ -40,7 +40,7 @@ export function PremiumHero() {
             </Link>
 
             <Link
-              href="/packages"
+              href="/wheels?package=1"
               className={`group inline-flex items-center gap-2 rounded-lg bg-orange-600 hover:bg-orange-500 ${buttonSize} font-bold text-white transition-all hover:scale-105`}
             >
               <span>Shop Packages</span>
