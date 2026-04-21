@@ -30,9 +30,9 @@ export async function GET(req: Request) {
       1  // just need one result
     );
 
-    if (result.styles.length > 0 && result.styles[0].variants.length > 0) {
-      // Return the first variant's SKU
-      const firstSku = result.styles[0].variants[0].sku;
+    if (result.styles.length > 0 && result.styles[0].skus.length > 0) {
+      // Return the first SKU from this style
+      const firstSku = result.styles[0].skus[0].sku;
       return NextResponse.json({ sku: firstSku });
     }
 
