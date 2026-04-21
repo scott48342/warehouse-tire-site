@@ -507,29 +507,11 @@ function GalleryPageInner() {
   }, [router, getYmmContext]);
 
   const handleBuildLikeThis = useCallback((item: GalleryItem) => {
-    const ymm = getYmmContext();
-    
-    // If no YMM, prompt for it
-    if (!ymm) {
-      setPendingAction({ item, action: "build" });
-      setYmmModalOpen(true);
-      return;
-    }
-    
-    // Go to wheels page with similar build parameters
-    const params = new URLSearchParams();
-    params.set("year", ymm.year);
-    params.set("make", ymm.make);
-    params.set("model", ymm.model);
-    
-    // Add build context
-    if (item.liftLevel && item.liftLevel !== "stock") {
-      params.set("buildType", item.liftLevel.includes("level") ? "leveled" : "lifted");
-    }
-    if (item.wheelBrand) params.set("brand", item.wheelBrand);
-    
-    router.push(`/wheels?${params.toString()}`);
-  }, [router, getYmmContext]);
+    // Always prompt for vehicle selection - don't use stale localStorage
+    // User needs to confirm which vehicle they want to shop for
+    setPendingAction({ item, action: "build" });
+    setYmmModalOpen(true);
+  }, []);
 
   const handleYmmSubmit = useCallback((year: string, make: string, model: string, trim?: string) => {
     // Save to localStorage
