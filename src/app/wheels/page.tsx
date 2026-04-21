@@ -555,7 +555,9 @@ export default async function WheelsPage({
     // Sort order for results (price_asc, price_desc, or default relevance)
     sort: sort || undefined,
 
-    page: String(page),
+    // Always fetch from page 1 - we paginate client-side after grouping by style
+    // (User's page number is only used for client-side slicing, not API calls)
+    page: "1",
     // Fetch enough SKUs that grouping by style doesn't collapse to only a couple cards,
     // but keep it reasonable for performance.
     pageSize: String(upstreamPageSize),
