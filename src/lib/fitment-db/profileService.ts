@@ -109,7 +109,10 @@ export function parseWheelSizeEntry(input: unknown): WheelSize | null {
         width,
         offset: obj.offset != null ? Number(obj.offset) : null,
         tireSize: typeof obj.tireSize === "string" ? obj.tireSize : null,
-        axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle : "both",
+        // Handle both "axle" (API format) and "position" (DB format)
+        axle: (obj.axle === "front" || obj.axle === "rear") ? obj.axle 
+            : (obj.position === "front" || obj.position === "rear") ? (obj.position as "front" | "rear")
+            : "both",
         isStock: obj.isStock !== false,
       };
     }
