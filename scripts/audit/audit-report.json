@@ -1,0 +1,597 @@
+{
+  "generatedAt": "2026-04-21T19:44:19.885Z",
+  "overall": {
+    "total": "17917",
+    "has_tires": "13641",
+    "has_wheels": "13298",
+    "has_bolt": "17917",
+    "has_hub": "17917",
+    "complete": "13298"
+  },
+  "byYear": [
+    {
+      "year": 2026,
+      "total": "630",
+      "has_tires": "533",
+      "has_wheels": "503",
+      "complete": "503"
+    },
+    {
+      "year": 2025,
+      "total": "813",
+      "has_tires": "641",
+      "has_wheels": "615",
+      "complete": "615"
+    },
+    {
+      "year": 2024,
+      "total": "871",
+      "has_tires": "678",
+      "has_wheels": "661",
+      "complete": "661"
+    },
+    {
+      "year": 2023,
+      "total": "882",
+      "has_tires": "706",
+      "has_wheels": "686",
+      "complete": "686"
+    },
+    {
+      "year": 2022,
+      "total": "872",
+      "has_tires": "709",
+      "has_wheels": "692",
+      "complete": "692"
+    },
+    {
+      "year": 2021,
+      "total": "863",
+      "has_tires": "692",
+      "has_wheels": "679",
+      "complete": "679"
+    },
+    {
+      "year": 2020,
+      "total": "871",
+      "has_tires": "695",
+      "has_wheels": "682",
+      "complete": "682"
+    },
+    {
+      "year": 2019,
+      "total": "842",
+      "has_tires": "668",
+      "has_wheels": "659",
+      "complete": "659"
+    },
+    {
+      "year": 2018,
+      "total": "826",
+      "has_tires": "650",
+      "has_wheels": "639",
+      "complete": "639"
+    },
+    {
+      "year": 2017,
+      "total": "805",
+      "has_tires": "628",
+      "has_wheels": "616",
+      "complete": "616"
+    },
+    {
+      "year": 2016,
+      "total": "763",
+      "has_tires": "591",
+      "has_wheels": "578",
+      "complete": "578"
+    },
+    {
+      "year": 2015,
+      "total": "700",
+      "has_tires": "548",
+      "has_wheels": "540",
+      "complete": "540"
+    },
+    {
+      "year": 2014,
+      "total": "669",
+      "has_tires": "526",
+      "has_wheels": "517",
+      "complete": "517"
+    },
+    {
+      "year": 2013,
+      "total": "640",
+      "has_tires": "502",
+      "has_wheels": "490",
+      "complete": "490"
+    },
+    {
+      "year": 2012,
+      "total": "618",
+      "has_tires": "487",
+      "has_wheels": "477",
+      "complete": "477"
+    },
+    {
+      "year": 2011,
+      "total": "586",
+      "has_tires": "465",
+      "has_wheels": "455",
+      "complete": "455"
+    },
+    {
+      "year": 2010,
+      "total": "575",
+      "has_tires": "449",
+      "has_wheels": "439",
+      "complete": "439"
+    },
+    {
+      "year": 2009,
+      "total": "571",
+      "has_tires": "432",
+      "has_wheels": "423",
+      "complete": "423"
+    },
+    {
+      "year": 2008,
+      "total": "557",
+      "has_tires": "415",
+      "has_wheels": "404",
+      "complete": "404"
+    },
+    {
+      "year": 2007,
+      "total": "533",
+      "has_tires": "379",
+      "has_wheels": "371",
+      "complete": "371"
+    },
+    {
+      "year": 2006,
+      "total": "529",
+      "has_tires": "373",
+      "has_wheels": "362",
+      "complete": "362"
+    },
+    {
+      "year": 2005,
+      "total": "511",
+      "has_tires": "357",
+      "has_wheels": "346",
+      "complete": "346"
+    },
+    {
+      "year": 2004,
+      "total": "491",
+      "has_tires": "334",
+      "has_wheels": "324",
+      "complete": "324"
+    },
+    {
+      "year": 2003,
+      "total": "483",
+      "has_tires": "315",
+      "has_wheels": "301",
+      "complete": "301"
+    },
+    {
+      "year": 2002,
+      "total": "478",
+      "has_tires": "305",
+      "has_wheels": "295",
+      "complete": "295"
+    },
+    {
+      "year": 2001,
+      "total": "477",
+      "has_tires": "293",
+      "has_wheels": "283",
+      "complete": "283"
+    },
+    {
+      "year": 2000,
+      "total": "461",
+      "has_tires": "270",
+      "has_wheels": "261",
+      "complete": "261"
+    }
+  ],
+  "byMake": [
+    {
+      "make": "toyota",
+      "total": "1760",
+      "has_tires": "1311",
+      "has_wheels": "1308",
+      "complete": "1308"
+    },
+    {
+      "make": "mercedes",
+      "total": "1610",
+      "has_tires": "1314",
+      "has_wheels": "1314",
+      "complete": "1314"
+    },
+    {
+      "make": "chevrolet",
+      "total": "1430",
+      "has_tires": "1181",
+      "has_wheels": "1156",
+      "complete": "1156"
+    },
+    {
+      "make": "ford",
+      "total": "1298",
+      "has_tires": "1073",
+      "has_wheels": "1009",
+      "complete": "1009"
+    },
+    {
+      "make": "bmw",
+      "total": "1022",
+      "has_tires": "821",
+      "has_wheels": "819",
+      "complete": "819"
+    },
+    {
+      "make": "nissan",
+      "total": "846",
+      "has_tires": "603",
+      "has_wheels": "603",
+      "complete": "603"
+    },
+    {
+      "make": "audi",
+      "total": "776",
+      "has_tires": "633",
+      "has_wheels": "549",
+      "complete": "549"
+    },
+    {
+      "make": "ram",
+      "total": "735",
+      "has_tires": "680",
+      "has_wheels": "675",
+      "complete": "675"
+    },
+    {
+      "make": "mazda",
+      "total": "725",
+      "has_tires": "534",
+      "has_wheels": "530",
+      "complete": "530"
+    },
+    {
+      "make": "gmc",
+      "total": "674",
+      "has_tires": "591",
+      "has_wheels": "591",
+      "complete": "591"
+    },
+    {
+      "make": "dodge",
+      "total": "558",
+      "has_tires": "494",
+      "has_wheels": "479",
+      "complete": "479"
+    },
+    {
+      "make": "jeep",
+      "total": "496",
+      "has_tires": "478",
+      "has_wheels": "470",
+      "complete": "470"
+    },
+    {
+      "make": "subaru",
+      "total": "476",
+      "has_tires": "333",
+      "has_wheels": "330",
+      "complete": "330"
+    },
+    {
+      "make": "volkswagen",
+      "total": "473",
+      "has_tires": "221",
+      "has_wheels": "220",
+      "complete": "220"
+    },
+    {
+      "make": "kia",
+      "total": "467",
+      "has_tires": "216",
+      "has_wheels": "211",
+      "complete": "211"
+    },
+    {
+      "make": "honda",
+      "total": "445",
+      "has_tires": "269",
+      "has_wheels": "235",
+      "complete": "235"
+    },
+    {
+      "make": "hyundai",
+      "total": "437",
+      "has_tires": "181",
+      "has_wheels": "181",
+      "complete": "181"
+    },
+    {
+      "make": "chrysler",
+      "total": "391",
+      "has_tires": "305",
+      "has_wheels": "299",
+      "complete": "299"
+    },
+    {
+      "make": "mitsubishi",
+      "total": "287",
+      "has_tires": "127",
+      "has_wheels": "127",
+      "complete": "127"
+    },
+    {
+      "make": "lexus",
+      "total": "270",
+      "has_tires": "225",
+      "has_wheels": "224",
+      "complete": "224"
+    },
+    {
+      "make": "buick",
+      "total": "247",
+      "has_tires": "122",
+      "has_wheels": "122",
+      "complete": "122"
+    },
+    {
+      "make": "cadillac",
+      "total": "239",
+      "has_tires": "117",
+      "has_wheels": "117",
+      "complete": "117"
+    },
+    {
+      "make": "volvo",
+      "total": "209",
+      "has_tires": "113",
+      "has_wheels": "102",
+      "complete": "102"
+    },
+    {
+      "make": "land-rover",
+      "total": "202",
+      "has_tires": "131",
+      "has_wheels": "131",
+      "complete": "131"
+    },
+    {
+      "make": "infiniti",
+      "total": "179",
+      "has_tires": "95",
+      "has_wheels": "93",
+      "complete": "93"
+    },
+    {
+      "make": "acura",
+      "total": "154",
+      "has_tires": "154",
+      "has_wheels": "95",
+      "complete": "95"
+    },
+    {
+      "make": "lincoln",
+      "total": "152",
+      "has_tires": "124",
+      "has_wheels": "124",
+      "complete": "124"
+    },
+    {
+      "make": "mini",
+      "total": "146",
+      "has_tires": "60",
+      "has_wheels": "60",
+      "complete": "60"
+    },
+    {
+      "make": "porsche",
+      "total": "142",
+      "has_tires": "127",
+      "has_wheels": "125",
+      "complete": "125"
+    },
+    {
+      "make": "jaguar",
+      "total": "142",
+      "has_tires": "95",
+      "has_wheels": "93",
+      "complete": "93"
+    },
+    {
+      "make": "mercedes-benz",
+      "total": "135",
+      "has_tires": "135",
+      "has_wheels": "135",
+      "complete": "135"
+    },
+    {
+      "make": "tesla",
+      "total": "119",
+      "has_tires": "107",
+      "has_wheels": "107",
+      "complete": "107"
+    },
+    {
+      "make": "maserati",
+      "total": "50",
+      "has_tires": "50",
+      "has_wheels": "50",
+      "complete": "50"
+    },
+    {
+      "make": "genesis",
+      "total": "50",
+      "has_tires": "46",
+      "has_wheels": "39",
+      "complete": "39"
+    },
+    {
+      "make": "mercury",
+      "total": "47",
+      "has_tires": "47",
+      "has_wheels": "47",
+      "complete": "47"
+    },
+    {
+      "make": "pontiac",
+      "total": "40",
+      "has_tires": "40",
+      "has_wheels": "40",
+      "complete": "40"
+    },
+    {
+      "make": "aston-martin",
+      "total": "38",
+      "has_tires": "38",
+      "has_wheels": "38",
+      "complete": "38"
+    },
+    {
+      "make": "lamborghini",
+      "total": "32",
+      "has_tires": "32",
+      "has_wheels": "32",
+      "complete": "32"
+    },
+    {
+      "make": "lotus",
+      "total": "30",
+      "has_tires": "30",
+      "has_wheels": "30",
+      "complete": "30"
+    },
+    {
+      "make": "ferrari",
+      "total": "30",
+      "has_tires": "30",
+      "has_wheels": "30",
+      "complete": "30"
+    },
+    {
+      "make": "fiat",
+      "total": "29",
+      "has_tires": "29",
+      "has_wheels": "29",
+      "complete": "29"
+    },
+    {
+      "make": "bentley",
+      "total": "28",
+      "has_tires": "28",
+      "has_wheels": "28",
+      "complete": "28"
+    },
+    {
+      "make": "scion",
+      "total": "28",
+      "has_tires": "28",
+      "has_wheels": "28",
+      "complete": "28"
+    },
+    {
+      "make": "saturn",
+      "total": "27",
+      "has_tires": "27",
+      "has_wheels": "27",
+      "complete": "27"
+    },
+    {
+      "make": "mclaren",
+      "total": "27",
+      "has_tires": "27",
+      "has_wheels": "27",
+      "complete": "27"
+    },
+    {
+      "make": "rolls-royce",
+      "total": "26",
+      "has_tires": "26",
+      "has_wheels": "26",
+      "complete": "26"
+    },
+    {
+      "make": "saab",
+      "total": "26",
+      "has_tires": "26",
+      "has_wheels": "26",
+      "complete": "26"
+    },
+    {
+      "make": "suzuki",
+      "total": "25",
+      "has_tires": "25",
+      "has_wheels": "25",
+      "complete": "25"
+    },
+    {
+      "make": "alfa-romeo",
+      "total": "24",
+      "has_tires": "24",
+      "has_wheels": "24",
+      "complete": "24"
+    },
+    {
+      "make": "Mazda",
+      "total": "19",
+      "has_tires": "19",
+      "has_wheels": "19",
+      "complete": "19"
+    }
+  ],
+  "missingTires": [],
+  "missingWheels": [],
+  "caseVariants": [
+    [
+      "dodge",
+      [
+        {
+          "make": "Dodge",
+          "count": "12"
+        },
+        {
+          "make": "dodge",
+          "count": "558"
+        }
+      ]
+    ],
+    [
+      "mazda",
+      [
+        {
+          "make": "Mazda",
+          "count": "19"
+        },
+        {
+          "make": "mazda",
+          "count": "725"
+        }
+      ]
+    ],
+    [
+      "nissan",
+      [
+        {
+          "make": "Nissan",
+          "count": "1"
+        },
+        {
+          "make": "nissan",
+          "count": "846"
+        }
+      ]
+    ]
+  ]
+}
