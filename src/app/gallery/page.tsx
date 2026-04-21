@@ -543,7 +543,10 @@ function GalleryPageInner() {
     setYmmModalOpen(true);
   }, []);
 
-  const handleYmmSubmit = useCallback((year: string, make: string, model: string, trim?: string) => {
+  const [fitmentError, setFitmentError] = useState<{ vehicle: string; wheel: string } | null>(null);
+  const [isCheckingFitment, setIsCheckingFitment] = useState(false);
+
+  const handleYmmSubmit = useCallback(async (year: string, make: string, model: string, trim?: string) => {
     // Save to localStorage
     try {
       localStorage.setItem("wtd_vehicle_context", JSON.stringify({ year, make, model, trim }));
@@ -556,21 +559,79 @@ function GalleryPageInner() {
     // Continue with pending action
     if (pendingAction) {
       const { item, action } = pendingAction;
-      const params = new URLSearchParams();
-      params.set("year", year);
-      params.set("make", make);
-      params.set("model", model);
-      if (trim) params.set("trim", trim);
+      const vehicleParams = new URLSearchParams();
+      vehicleParams.set("year", year);
+      vehicleParams.set("make", make);
+      vehicleParams.set("model", model);
+      if (trim) vehicleParams.set("trim", trim);
       
       if (action === "style") {
-        params.set("brand", item.wheelBrand);
-        router.push(`/wheels?${params.toString()}`);
-      } else if (action === "build") {
-        if (item.liftLevel && item.liftLevel !== "stock") {
-          params.set("buildType", item.liftLevel.includes("level") ? "leveled" : "lifted");
+        vehicleParams.set("brand", item.wheelBrand);
+        router.push(`/wheels?${vehicleParams.toString()}`);
+        setPendingAction(null);
+        return;
+      }
+      
+      if (action === "build") {
+        setIsCheckingFitment(true);
+        
+        try {
+          // Step 1: Resolve SKU if we don't have one
+          let sku = item.wheelSku;
+          if (!sku) {
+            const resolveParams = new URLSearchParams();
+            if (item.wheelBrand) resolveParams.set("brand", item.wheelBrand);
+            if (item.wheelModel) resolveParams.set("style", item.wheelModel);
+            const resolveRes = await fetch(`/api/wheels/resolve-sku?${resolveParams.toString()}`);
+            const resolveData = await resolveRes.json();
+            sku = resolveData.sku;
+          }
+          
+          if (!sku) {
+            // No SKU found - go to SRP with brand filter
+            if (item.wheelBrand) vehicleParams.set("brand", item.wheelBrand);
+            router.push(`/wheels?${vehicleParams.toString()}`);
+            setPendingAction(null);
+            setIsCheckingFitment(false);
+            return;
+          }
+          
+          // Step 2: Check if this wheel fits the vehicle
+          const fitCheckParams = new URLSearchParams(vehicleParams);
+          fitCheckParams.set("sku", sku);
+          const fitRes = await fetch(`/api/wheels/check-fitment?${fitCheckParams.toString()}`);
+          const fitData = await fitRes.json();
+          
+          if (fitData.fits) {
+            // Wheel fits! Go to PDP with vehicle context
+            router.push(`/wheels/${sku}?${vehicleParams.toString()}`);
+          } else {
+            // Wheel doesn't fit - show error and go to SRP
+            const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
+            setFitmentError({
+              vehicle: vehicleLabel,
+              wheel: `${item.wheelBrand} ${item.wheelModel}`,
+            });
+            
+            // After a short delay, redirect to SRP with wheels that fit
+            setTimeout(() => {
+              if (item.liftLevel && item.liftLevel !== "stock") {
+                vehicleParams.set("buildType", item.liftLevel.includes("level") ? "leveled" : "lifted");
+              }
+              router.push(`/wheels?${vehicleParams.toString()}`);
+              setFitmentError(null);
+            }, 3000);
+          }
+        } catch (err) {
+          console.error("[gallery] Fitment check failed:", err);
+          // Fallback: go to SRP
+          if (item.wheelBrand) vehicleParams.set("brand", item.wheelBrand);
+          router.push(`/wheels?${vehicleParams.toString()}`);
         }
-        if (item.wheelBrand) params.set("brand", item.wheelBrand);
-        router.push(`/wheels?${params.toString()}`);
+        
+        setPendingAction(null);
+        setIsCheckingFitment(false);
+        return;
       }
       
       setPendingAction(null);
@@ -790,6 +851,48 @@ function GalleryPageInner() {
         wheelBrand={pendingAction?.item.wheelBrand || ""}
         wheelModel={pendingAction?.item.wheelModel || ""}
       />
+
+      {/* Fitment Check Loading */}
+      {isCheckingFitment && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 shadow-xl text-center max-w-sm">
+            <div className="animate-spin rounded-full h-10 w-10 border-4 border-neutral-200 border-t-neutral-900 mx-auto mb-4" />
+            <p className="text-sm font-semibold text-neutral-900">Checking fitment...</p>
+          </div>
+        </div>
+      )}
+
+      {/* Fitment Error Toast */}
+      {fitmentError && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 shadow-xl max-w-md text-center">
+            <div className="text-4xl mb-4">😕</div>
+            <h3 className="text-lg font-bold text-neutral-900 mb-2">
+              Doesn&apos;t Fit Your Vehicle
+            </h3>
+            <p className="text-sm text-neutral-600 mb-4">
+              The <span className="font-semibold">{fitmentError.wheel}</span> wheel 
+              doesn&apos;t fit the <span className="font-semibold">{fitmentError.vehicle}</span>.
+            </p>
+            <p className="text-xs text-neutral-500 mb-4">
+              Redirecting you to wheels that fit...
+            </p>
+            <div className="h-1 bg-neutral-200 rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-neutral-900 rounded-full animate-pulse"
+                style={{ animation: "progress 3s linear forwards" }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes progress {
+          from { width: 0%; }
+          to { width: 100%; }
+        }
+      `}</style>
     </main>
   );
 }
