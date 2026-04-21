@@ -124,8 +124,8 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName),
+          ilike(vehicleFitments.make, normalizedMake),
+          ilike(vehicleFitments.model, modelName),
           eq(vehicleFitments.modificationId, normalizedModId)
         )
       )
@@ -163,8 +163,8 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName),
+          ilike(vehicleFitments.make, normalizedMake),
+          ilike(vehicleFitments.model, modelName),
           eq(vehicleFitments.displayTrim, modificationId)
         )
       )
@@ -202,8 +202,8 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName),
+          ilike(vehicleFitments.make, normalizedMake),
+          ilike(vehicleFitments.model, modelName),
           ilike(vehicleFitments.displayTrim, modificationId)
         )
       )
@@ -242,8 +242,8 @@ export async function safeResolveFitment(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName)
+          ilike(vehicleFitments.make, normalizedMake),
+          ilike(vehicleFitments.model, modelName)
         )
       )
       .limit(50);

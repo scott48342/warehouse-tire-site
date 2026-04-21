@@ -1,42 +1,26 @@
-import pg from "pg";
-import fs from "fs";
+import pg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 
-const envContent = fs.readFileSync(".env.local", "utf-8");
-const dbMatch = envContent.match(/DATABASE_URL=(.+)/);
-const dbUrl = dbMatch ? dbMatch[1].trim() : null;
+const pool = new pg.Pool({ connectionString: process.env.POSTGRES_URL, ssl: { rejectUnauthorized: false } });
 
-const { Pool } = pg;
-const pool = new Pool({
-  connectionString: dbUrl,
-  ssl: { rejectUnauthorized: false },
-});
+const make = process.argv[2] || 'Mazda';
 
-try {
-  // Check model values for Ford
-  const { rows } = await pool.query(`
-    SELECT DISTINCT model FROM vehicle_fitments WHERE make = 'ford'
-  `);
-  console.log("Ford models in DB:");
-  rows.forEach(r => console.log(`  "${r.model}"`));
-  
-  // Check if there's a case mismatch for Mustang
-  console.log("\nMustang variants:");
-  const { rows: r2 } = await pool.query(`
-    SELECT model, COUNT(*) as cnt FROM vehicle_fitments 
-    WHERE make = 'ford' AND model ILIKE 'mustang'
-    GROUP BY model
-  `);
-  r2.forEach(r => console.log(`  "${r.model}": ${r.cnt} records`));
-  
-  // Test exact query that listLocalFitments uses
-  console.log("\nExact match (make='ford', model='mustang'):");
-  const { rows: r3 } = await pool.query(`
-    SELECT year, model, bolt_pattern FROM vehicle_fitments 
-    WHERE make = 'ford' AND model = 'mustang' AND bolt_pattern IS NOT NULL
-    LIMIT 5
-  `);
-  r3.forEach(r => console.log(`  ${r.year} ${r.model}: ${r.bolt_pattern}`));
-  
-} finally {
-  await pool.end();
-}
+const result = await pool.query(
+  `SELECT DISTINCT model, COUNT(*) as count FROM vehicle_fitments WHERE make ILIKE $1 GROUP BY model ORDER BY model`,
+  [make]
+);
+
+console.log(`Models for ${make}:`);
+result.rows.forEach(row => console.log(`  ${row.model} (${row.count} records)`));
+
+// Also check a specific vehicle
+const check = await pool.query(
+  `SELECT year, make, model, oem_tire_sizes FROM vehicle_fitments 
+   WHERE make ILIKE $1 AND model ILIKE '%6%' LIMIT 5`,
+  [make]
+);
+console.log('\nSample Mazda6-like records:');
+check.rows.forEach(row => console.log(`  ${row.year} ${row.make} ${row.model}: ${JSON.stringify(row.oem_tire_sizes)}`));
+
+await pool.end();

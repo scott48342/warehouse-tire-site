@@ -16,7 +16,7 @@
 import { db } from "./db";
 import { vehicleFitments } from "./schema";
 import type { VehicleFitment } from "./schema";
-import { eq, and, asc, or } from "drizzle-orm";
+import { eq, and, asc, or, ilike } from "drizzle-orm";
 import { normalizeMake, normalizeModel, slugify } from "./keys";
 import { applyOverrides } from "./applyOverrides";
 import { getModelVariants } from "./modelAliases";
@@ -113,8 +113,8 @@ export async function listFitments(
       .where(
         and(
           eq(vehicleFitments.year, year),
-          eq(vehicleFitments.make, normalizedMake),
-          eq(vehicleFitments.model, modelName)
+          ilike(vehicleFitments.make, normalizedMake),
+          ilike(vehicleFitments.model, modelName)
         )
       )
       .orderBy(asc(vehicleFitments.displayTrim));
