@@ -14,6 +14,7 @@ import {
   getCachedModels,
   setCachedModels,
   getFallbackModels,
+  clearLocalCache,
 } from "@/lib/fitment-db/ymmCache";
 
 export const runtime = "nodejs";
@@ -37,6 +38,11 @@ export async function GET(req: Request) {
       source: "error",
       error: "make parameter is required",
     });
+  }
+
+  // Clear local cache if nocache=1 (forces fresh data on this instance)
+  if (noCache) {
+    clearLocalCache();
   }
 
   // 1. Check cache first (skip if nocache=1)

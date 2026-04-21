@@ -70,6 +70,20 @@ function getRedisClient(): Redis | null {
 
 const localCache = new Map<string, { data: any; expiresAt: number }>();
 
+/**
+ * Clear the local in-memory cache (for nocache requests)
+ */
+export function clearLocalCache(): void {
+  localCache.clear();
+}
+
+/**
+ * Clear a specific key from local cache
+ */
+export function clearLocalCacheKey(key: string): void {
+  localCache.delete(key);
+}
+
 function getLocal<T>(key: string): T | null {
   const entry = localCache.get(key);
   if (!entry) return null;
