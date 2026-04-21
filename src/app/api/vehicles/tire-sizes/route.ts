@@ -32,17 +32,28 @@ export const maxDuration = 30;
  * Look up OEM tire sizes from the fitment database.
  * This is the PRIMARY source for imported fitment data.
  */
+interface StaggeredTireInfo {
+  isStaggered: boolean;
+  frontTireSize?: string;
+  rearTireSize?: string;
+  frontDiameter?: number;
+  rearDiameter?: number;
+}
+
+interface DbFitmentResult {
+  tireSizes: string[];
+  boltPattern?: string;
+  centerBore?: number;
+  source: string;
+  staggered?: StaggeredTireInfo;
+}
+
 async function getDbFitmentSizes(
   year: string, 
   make: string, 
   model: string, 
   modification?: string
-): Promise<{
-  tireSizes: string[];
-  boltPattern?: string;
-  centerBore?: number;
-  source: string;
-} | null> {
+): Promise<DbFitmentResult | null> {
   try {
     const { listLocalFitments } = await import("@/lib/fitment-db/getFitment");
     
@@ -66,11 +77,61 @@ async function getDbFitmentSizes(
       if (match) selectedFitment = match;
     }
     
+    // Check wheel sizes for staggered configuration
+    const oemWheelSizes = selectedFitment.oemWheelSizes as Array<{
+      diameter?: number;
+      width?: number;
+      offset?: number;
+      position?: string;
+      axle?: string;
+      tireSize?: string;
+      tires?: string[];
+    }> | null;
+    
+    let staggeredInfo: StaggeredTireInfo | undefined;
+    
+    if (oemWheelSizes && oemWheelSizes.length > 0) {
+      // Check for staggered setup by looking for front/rear positions
+      const frontWheel = oemWheelSizes.find(ws => ws.position === 'front' || ws.axle === 'front');
+      const rearWheel = oemWheelSizes.find(ws => ws.position === 'rear' || ws.axle === 'rear');
+      
+      if (frontWheel && rearWheel) {
+        // Extract tire sizes for front and rear
+        const oemTireSizes = selectedFitment.oemTireSizes as string[] | null;
+        let frontTire: string | undefined;
+        let rearTire: string | undefined;
+        
+        if (oemTireSizes && oemTireSizes.length >= 2) {
+          // Match tire sizes by rim diameter
+          for (const size of oemTireSizes) {
+            const rimMatch = size.match(/R(\d+)$/);
+            if (rimMatch) {
+              const rimDiameter = parseInt(rimMatch[1], 10);
+              if (frontWheel.diameter && rimDiameter === frontWheel.diameter && !frontTire) {
+                frontTire = size;
+              } else if (rearWheel.diameter && rimDiameter === rearWheel.diameter && !rearTire) {
+                rearTire = size;
+              }
+            }
+          }
+        }
+        
+        staggeredInfo = {
+          isStaggered: true,
+          frontTireSize: frontTire,
+          rearTireSize: rearTire,
+          frontDiameter: frontWheel.diameter,
+          rearDiameter: rearWheel.diameter,
+        };
+        
+        console.log(`[tire-sizes] STAGGERED detected: F:${frontTire || 'unknown'} R:${rearTire || 'unknown'}`);
+      }
+    }
+    
     // Extract tire sizes from oem_tire_sizes JSON field
     const oemTireSizes = selectedFitment.oemTireSizes as string[] | null;
     if (!oemTireSizes || oemTireSizes.length === 0) {
       // Also check oemWheelSizes for tire info
-      const oemWheelSizes = selectedFitment.oemWheelSizes as Array<{ tires?: string[] }> | null;
       if (oemWheelSizes) {
         const extractedSizes = new Set<string>();
         for (const ws of oemWheelSizes) {
@@ -84,6 +145,7 @@ async function getDbFitmentSizes(
             boltPattern: selectedFitment.boltPattern ?? undefined,
             centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
             source: "db-first",
+            staggered: staggeredInfo,
           };
         }
       }
@@ -95,6 +157,7 @@ async function getDbFitmentSizes(
       boltPattern: selectedFitment.boltPattern ?? undefined,
       centerBore: selectedFitment.centerBoreMm ? Number(selectedFitment.centerBoreMm) : undefined,
       source: "db-first",
+      staggered: staggeredInfo,
     };
     
   } catch (err) {
@@ -261,6 +324,9 @@ export async function GET(req: Request) {
       // Analyze wheel diameters - CRITICAL for correct tire size filtering
       const wheelDiameterAnalysis = analyzeTireSizeOptions(dbFitment.tireSizes);
       
+      // For staggered vehicles, we don't need diameter selection - use both sizes
+      const isStaggered = dbFitment.staggered?.isStaggered ?? false;
+      
       return NextResponse.json({
         tireSizes: dbFitment.tireSizes,
         tireSizesStrict: dbFitment.tireSizes,
@@ -273,11 +339,14 @@ export async function GET(req: Request) {
           centerBore: dbFitment.centerBore,
         },
         // Wheel diameter analysis for trim-specific filtering
+        // For staggered: needsSelection=false because both sizes are needed
         wheelDiameters: {
-          needsSelection: wheelDiameterAnalysis.needsSelection,
+          needsSelection: isStaggered ? false : wheelDiameterAnalysis.needsSelection,
           available: wheelDiameterAnalysis.availableDiameters,
           default: wheelDiameterAnalysis.defaultDiameter,
         },
+        // Staggered fitment info (for vehicles like Crossfire, Mustang GT, etc.)
+        staggered: dbFitment.staggered,
         source: dbFitment.source,
         cacheStats: getCacheStats(),
       });
