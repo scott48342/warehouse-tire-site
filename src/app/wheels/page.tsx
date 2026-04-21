@@ -608,6 +608,7 @@ export default async function WheelsPage({
       offsetMin: minOffsetFinal,
       offsetMax: maxOffsetFinal,
       brand_cd: brandCd || undefined,
+      style: styleParam || undefined,  // For gallery browse (KM719)
       finish: finish || undefined,
       priceMin: priceMin != null ? String(priceMin) : undefined,
       priceMax: priceMax != null ? String(priceMax) : undefined,
@@ -621,6 +622,7 @@ export default async function WheelsPage({
         diameter: diameterParam || undefined,
         width: widthParam || undefined,
         brand_cd: brandCd || undefined,
+        style: styleParam || undefined,  // For gallery browse
         finish: finish || undefined,
         priceMin: priceMin != null ? String(priceMin) : undefined,
         priceMax: priceMax != null ? String(priceMax) : undefined,
