@@ -18,6 +18,9 @@ import {
 
 export const runtime = "nodejs";
 
+// Version indicator for deploy verification
+const API_VERSION = "2026-04-21-v2";
+
 /**
  * GET /api/vehicles/models?make=Ford&year=2024
  */
@@ -108,8 +111,9 @@ export async function GET(req: Request) {
       source: "fitment_db",
       count: results.length,
       yearFiltered: !!year,
+      v: API_VERSION,
     }, {
-      headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+      headers: { "Cache-Control": noCache ? "no-store" : "public, max-age=3600, s-maxage=86400" },
     });
     
   } catch (err: any) {
