@@ -272,7 +272,17 @@ export async function browseWheels(
   }
   
   if (filters.brandCode) {
-    filtered = filtered.filter(s => s.brandCode === filters.brandCode);
+    const brandUpper = filters.brandCode.toUpperCase();
+    filtered = filtered.filter(s => {
+      const codeUpper = s.brandCode.toUpperCase();
+      const nameUpper = s.brand.toUpperCase();
+      // Match brand code, brand name, or if one contains the other
+      return codeUpper === brandUpper || 
+             nameUpper === brandUpper ||
+             codeUpper.includes(brandUpper) ||
+             brandUpper.includes(codeUpper) ||
+             nameUpper.includes(brandUpper);
+    });
   }
   
   if (filters.style) {
