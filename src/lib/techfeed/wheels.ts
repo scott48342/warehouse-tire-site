@@ -90,6 +90,44 @@ export async function getTechfeedWheelsByStyle(style: string): Promise<TechfeedW
   return byStyleCache.byStyle[style] || null;
 }
 
+/**
+ * Fuzzy search for wheels by style name.
+ * Handles partial matches like "Rebel" finding "D679 REBEL".
+ * Also optionally filters by brand.
+ */
+export async function searchWheelsByStyleFuzzy(
+  styleName: string,
+  brandFilter?: string
+): Promise<TechfeedWheel[]> {
+  if (!styleName) return [];
+  if (!byStyleCache) {
+    byStyleCache = await loadGzJson<WheelsByStyleFile>("src/techfeed/wheels_by_style.json.gz");
+  }
+  if (!byStyleCache?.byStyle) return [];
+
+  const searchUpper = styleName.toUpperCase().trim();
+  const brandUpper = brandFilter?.toUpperCase().trim();
+  const results: TechfeedWheel[] = [];
+
+  for (const [styleKey, wheels] of Object.entries(byStyleCache.byStyle)) {
+    // Check if style key contains the search term (e.g., "D679 REBEL" contains "REBEL")
+    if (styleKey.toUpperCase().includes(searchUpper)) {
+      for (const w of wheels) {
+        // Optionally filter by brand
+        if (brandUpper) {
+          const wheelBrand = (w.brand_desc || w.brand_cd || "").toUpperCase();
+          if (!wheelBrand.includes(brandUpper) && !brandUpper.includes(wheelBrand)) {
+            continue;
+          }
+        }
+        results.push(w);
+      }
+    }
+  }
+
+  return results;
+}
+
 function normalizeBoltPatternKey(bp: string): string {
   return String(bp || "")
     .toLowerCase()

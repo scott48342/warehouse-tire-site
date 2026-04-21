@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getTechfeedWheelBySku, getTechfeedWheelsByStyle } from "@/lib/techfeed/wheels";
+import { getTechfeedWheelBySku, getTechfeedWheelsByStyle, searchWheelsByStyleFuzzy } from "@/lib/techfeed/wheels";
 
 export const runtime = "nodejs";
 
@@ -100,32 +100,41 @@ export async function GET(req: Request) {
     }
 
     // Check ALL variants of this style for any that fit
+    // First try exact match, then fuzzy match
+    let allVariants: Awaited<ReturnType<typeof getTechfeedWheelsByStyle>> = [];
+    
     if (styleKey) {
-      const allVariants = await getTechfeedWheelsByStyle(styleKey);
-      if (allVariants && allVariants.length > 0) {
-        for (const variant of allVariants) {
-          const variantBp = variant.bolt_pattern_metric || variant.bolt_pattern_standard || "";
-          if (variantBp && checkMatch(variantBp)) {
-            // Found a variant that fits!
-            return NextResponse.json({
-              fits: true,
-              matchingSku: variant.sku,
-              vehicleBoltPattern,
-              wheelBoltPattern: variantBp,
-              reason: "style_variant_match",
-              checkedVariants: allVariants.length,
-            });
-          }
+      allVariants = await getTechfeedWheelsByStyle(styleKey);
+    }
+    
+    // If no exact match, try fuzzy search (e.g., "Rebel" → "D679 REBEL")
+    if ((!allVariants || allVariants.length === 0) && style) {
+      allVariants = await searchWheelsByStyleFuzzy(style, brand || undefined);
+    }
+    
+    if (allVariants && allVariants.length > 0) {
+      for (const variant of allVariants) {
+        const variantBp = variant.bolt_pattern_metric || variant.bolt_pattern_standard || "";
+        if (variantBp && checkMatch(variantBp)) {
+          // Found a variant that fits!
+          return NextResponse.json({
+            fits: true,
+            matchingSku: variant.sku,
+            vehicleBoltPattern,
+            wheelBoltPattern: variantBp,
+            reason: "style_variant_match",
+            checkedVariants: allVariants.length,
+          });
         }
-        
-        // No variants fit
-        return NextResponse.json({
-          fits: false,
-          vehicleBoltPattern,
-          reason: "no_matching_bolt_pattern",
-          checkedVariants: allVariants.length,
-        });
       }
+      
+      // No variants fit
+      return NextResponse.json({
+        fits: false,
+        vehicleBoltPattern,
+        reason: "no_matching_bolt_pattern",
+        checkedVariants: allVariants.length,
+      });
     }
 
     // Fallback: if we can't find style variants, be permissive
