@@ -279,8 +279,12 @@ export async function browseWheels(
     const styleUpper = filters.style.toUpperCase();
     filtered = filtered.filter(s => {
       const modelUpper = s.model.toUpperCase();
-      // Match if model contains filter or filter contains model (handles "KM553" matching "KM553 TORX")
-      return modelUpper.includes(styleUpper) || styleUpper.includes(modelUpper);
+      const styleKeyUpper = s.styleKey.toUpperCase();
+      // Match against both style key (e.g., "KM719") and model name (e.g., "CANYON")
+      return modelUpper.includes(styleUpper) || 
+             styleUpper.includes(modelUpper) ||
+             styleKeyUpper.includes(styleUpper) ||
+             styleUpper.includes(styleKeyUpper);
     });
   }
   
