@@ -99,6 +99,12 @@ export const vehicleFitments = pgTable(
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
     lastVerifiedAt: timestamp("last_verified_at"),
+    
+    // Data quality tier (added 2025-07-18)
+    // - "complete": has wheel specs (diameter + width) AND tire sizes
+    // - "partial": has tire sizes but no wheel specs
+    // - "low_confidence": missing data OR from unreliable sources
+    qualityTier: varchar("quality_tier", { length: 20 }).default("unknown"),
   },
   (table) => ({
     // Primary lookup: year + make + model + modification

@@ -55,13 +55,18 @@ async function getDbFitmentSizes(
   modification?: string
 ): Promise<DbFitmentResult | null> {
   try {
-    const { listLocalFitments } = await import("@/lib/fitment-db/getFitment");
+    const { listFitmentsWithTierFilter } = await import("@/lib/fitment-db/getFitment");
+    const { canDetectStaggered } = await import("@/lib/fitment-db/qualityTier");
     
-    const fitments = await listLocalFitments(
+    // PHASE 2: Use tier-filtered query - tire search allows "complete" + "partial"
+    const result = await listFitmentsWithTierFilter(
       parseInt(year, 10),
       make,
-      model
+      model,
+      "tire" // allows complete + partial tiers
     );
+    
+    const fitments = result.fitments;
     
     if (!fitments || fitments.length === 0) {
       return null;
@@ -90,7 +95,11 @@ async function getDbFitmentSizes(
     
     let staggeredInfo: StaggeredTireInfo | undefined;
     
-    if (oemWheelSizes && oemWheelSizes.length > 0) {
+    // PHASE 3: Only detect staggered if quality tier allows it
+    const qualityTier = (selectedFitment as any).qualityTier;
+    const staggeredCheck = canDetectStaggered(qualityTier, oemWheelSizes);
+    
+    if (staggeredCheck.canDetect && oemWheelSizes && oemWheelSizes.length > 0) {
       // Check for staggered setup by looking for front/rear positions
       const frontWheel = oemWheelSizes.find(ws => ws.position === 'front' || ws.axle === 'front');
       const rearWheel = oemWheelSizes.find(ws => ws.position === 'rear' || ws.axle === 'rear');
@@ -126,6 +135,8 @@ async function getDbFitmentSizes(
         
         console.log(`[tire-sizes] STAGGERED detected: F:${frontTire || 'unknown'} R:${rearTire || 'unknown'}`);
       }
+    } else if (!staggeredCheck.canDetect) {
+      console.log(`[tire-sizes] Staggered detection BLOCKED: ${staggeredCheck.reason}`);
     }
     
     // Extract tire sizes from oem_tire_sizes JSON field

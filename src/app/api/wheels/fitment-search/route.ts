@@ -18,7 +18,8 @@ import {
   isDRWCapable,
   needsRearWheelConfigSelection,
 } from "@/lib/fitment/hdFitmentResolver";
-import { listLocalFitments } from "@/lib/fitment-db/getFitment";
+import { listLocalFitments, listFitmentsWithTierFilter } from "@/lib/fitment-db/getFitment";
+import { canDetectStaggered, type QualityTier } from "@/lib/fitment-db/qualityTier";
 import { getFitmentFromRules } from "@/lib/fitment-db/vehicleFitmentRules";
 import {
   buildFitmentEnvelope,
@@ -882,8 +883,33 @@ async function handleDbProfilePath(
     offset: ws.offset,
   }));
   
-  // Detect staggered fitment from parsed wheel sizes
-  let staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
+  // PHASE 3: Quality tier check for staggered detection
+  // Only detect staggered if we have "complete" quality tier with explicit position data
+  const qualityTier = (dbProfile as any).qualityTier as QualityTier | undefined;
+  const staggeredCheck = canDetectStaggered(qualityTier || "unknown", dbProfile.oemWheelSizes);
+  
+  let staggeredInfo: StaggeredInfo;
+  if (staggeredCheck.canDetect) {
+    // Safe to detect staggered - has complete data with position info
+    staggeredInfo = detectStaggeredFromParsed(parsedWheelSizes);
+  } else {
+    // Cannot reliably detect staggered - treat as square
+    staggeredInfo = {
+      isStaggered: false,
+      reason: staggeredCheck.reason,
+    };
+    if (parsedWheelSizes.length > 0) {
+      // Still provide specs for reference even if not staggered
+      const sample = parsedWheelSizes[0];
+      staggeredInfo.frontSpec = {
+        diameter: sample.diameter,
+        width: sample.width,
+        offset: sample.offset,
+        tireSize: sample.tireSize,
+      };
+    }
+    console.log(`[fitment-search] Staggered detection BLOCKED: ${staggeredCheck.reason}`);
+  }
   
   // NOTE: Tire-size-based staggered inference DISABLED (2025-07-27)
   // Problem: Multiple tire widths (e.g., 225/65R17 + 245/65R17) are often just OPTIONS
