@@ -576,35 +576,32 @@ function GalleryPageInner() {
         setIsCheckingFitment(true);
         
         try {
-          // Step 1: Resolve SKU if we don't have one
-          let sku = item.wheelSku;
-          if (!sku) {
-            const resolveParams = new URLSearchParams();
-            if (item.wheelBrand) resolveParams.set("brand", item.wheelBrand);
-            if (item.wheelModel) resolveParams.set("style", item.wheelModel);
-            const resolveRes = await fetch(`/api/wheels/resolve-sku?${resolveParams.toString()}`);
-            const resolveData = await resolveRes.json();
-            sku = resolveData.sku;
-          }
-          
-          if (!sku) {
-            // No SKU found - go to SRP with brand filter
-            if (item.wheelBrand) vehicleParams.set("brand", item.wheelBrand);
-            router.push(`/wheels?${vehicleParams.toString()}`);
-            setPendingAction(null);
-            setIsCheckingFitment(false);
-            return;
-          }
-          
-          // Step 2: Check if this wheel fits the vehicle
+          // Check if ANY variant of this wheel style fits the vehicle
+          // The API checks all bolt pattern variants, not just one SKU
           const fitCheckParams = new URLSearchParams(vehicleParams);
-          fitCheckParams.set("sku", sku);
+          if (item.wheelSku) {
+            fitCheckParams.set("sku", item.wheelSku);
+          } else {
+            // Pass brand+style so API can check all variants
+            if (item.wheelBrand) fitCheckParams.set("brand", item.wheelBrand);
+            if (item.wheelModel) fitCheckParams.set("style", item.wheelModel);
+          }
+          
           const fitRes = await fetch(`/api/wheels/check-fitment?${fitCheckParams.toString()}`);
           const fitData = await fitRes.json();
           
           if (fitData.fits) {
-            // Wheel fits! Go to PDP with vehicle context
-            router.push(`/wheels/${sku}?${vehicleParams.toString()}`);
+            // Wheel fits! Use the matching SKU (might be different from original)
+            const targetSku = fitData.matchingSku || item.wheelSku;
+            
+            if (targetSku) {
+              // Go to PDP with vehicle context
+              router.push(`/wheels/${targetSku}?${vehicleParams.toString()}`);
+            } else {
+              // No SKU but fits - go to SRP with brand filter
+              if (item.wheelBrand) vehicleParams.set("brand", item.wheelBrand);
+              router.push(`/wheels?${vehicleParams.toString()}`);
+            }
           } else {
             // Wheel doesn't fit - show error and go to SRP
             const vehicleLabel = [year, make, model, trim].filter(Boolean).join(" ");
