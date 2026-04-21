@@ -88,16 +88,12 @@ async function getDbFitmentSizes(
       tires?: string[];
     }> | null;
     
-    // DEBUG: Log wheel sizes for troubleshooting
-    console.log(`[tire-sizes] oemWheelSizes for ${year} ${make} ${model}:`, JSON.stringify(oemWheelSizes));
-    
     let staggeredInfo: StaggeredTireInfo | undefined;
     
     if (oemWheelSizes && oemWheelSizes.length > 0) {
       // Check for staggered setup by looking for front/rear positions
       const frontWheel = oemWheelSizes.find(ws => ws.position === 'front' || ws.axle === 'front');
       const rearWheel = oemWheelSizes.find(ws => ws.position === 'rear' || ws.axle === 'rear');
-      console.log(`[tire-sizes] frontWheel:`, frontWheel, `rearWheel:`, rearWheel);
       
       if (frontWheel && rearWheel) {
         // Extract tire sizes for front and rear
