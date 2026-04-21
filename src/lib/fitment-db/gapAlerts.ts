@@ -37,7 +37,8 @@ import { eq, and, gte, desc } from "drizzle-orm";
 
 export function getAlertConfig() {
   return {
-    enabled: process.env.FITMENT_GAP_ALERTS_ENABLED === "true",
+    // DISABLED - alerts were too noisy. Re-enable via env var when ready.
+    enabled: false, // process.env.FITMENT_GAP_ALERTS_ENABLED === "true",
     recipientEmail: process.env.FITMENT_GAP_ALERT_EMAIL || "",
     threshold: parseInt(process.env.FITMENT_GAP_THRESHOLD || "5", 10),
     cooldownHours: parseInt(process.env.FITMENT_GAP_COOLDOWN_HOURS || "24", 10),
