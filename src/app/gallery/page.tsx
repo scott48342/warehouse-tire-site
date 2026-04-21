@@ -109,7 +109,7 @@ function YmmModal({ isOpen, onClose, onSubmit, wheelBrand, wheelModel }: YmmModa
 
 interface GalleryCardProps {
   item: GalleryItem;
-  onViewWheel: (item: GalleryItem) => void;
+  onViewWheel: (item: GalleryItem) => Promise<void>;
   onShopStyle: (item: GalleryItem) => void;
   onBuildLikeThis: (item: GalleryItem) => void;
 }
@@ -117,6 +117,16 @@ interface GalleryCardProps {
 function GalleryCard({ item, onViewWheel, onShopStyle, onBuildLikeThis }: GalleryCardProps) {
   const [imageError, setImageError] = useState(false);
   const [showActions, setShowActions] = useState(false);
+  const [isLoadingWheel, setIsLoadingWheel] = useState(false);
+  
+  const handleViewWheelClick = async () => {
+    setIsLoadingWheel(true);
+    try {
+      await onViewWheel(item);
+    } finally {
+      setIsLoadingWheel(false);
+    }
+  };
 
   const vehicleLabel = [
     item.vehicleYear,
@@ -171,10 +181,11 @@ function GalleryCard({ item, onViewWheel, onShopStyle, onBuildLikeThis }: Galler
         <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 transition-opacity duration-200 ${showActions ? "opacity-100" : "opacity-0"}`}>
           <div className="flex flex-col gap-1.5">
             <button
-              onClick={() => onViewWheel(item)}
-              className="w-full rounded-lg bg-white px-3 py-2 text-xs font-bold text-neutral-900 hover:bg-neutral-100 transition-colors"
+              onClick={handleViewWheelClick}
+              disabled={isLoadingWheel}
+              className="w-full rounded-lg bg-white px-3 py-2 text-xs font-bold text-neutral-900 hover:bg-neutral-100 transition-colors disabled:opacity-70"
             >
-              View This Wheel →
+              {isLoadingWheel ? "Loading..." : "View This Wheel →"}
             </button>
             <button
               onClick={() => onShopStyle(item)}
@@ -474,17 +485,36 @@ function GalleryPageInner() {
   // CLICK-THROUGH LOGIC
   // ═══════════════════════════════════════════════════════════════════════════
 
-  const handleViewWheel = useCallback((item: GalleryItem) => {
+  const handleViewWheel = useCallback(async (item: GalleryItem) => {
     if (item.wheelSku) {
       // Direct to PDP - no vehicle context needed, just show the wheel
       router.push(`/wheels/${item.wheelSku}`);
-    } else {
-      // No SKU - browse/search for this wheel style (brand + model filter)
-      const params = new URLSearchParams();
-      params.set("brand", item.wheelBrand);
-      params.set("style", item.wheelModel);
-      router.push(`/wheels?${params.toString()}`);
+      return;
     }
+    
+    // No SKU stored - resolve one from brand + style
+    try {
+      const params = new URLSearchParams();
+      if (item.wheelBrand) params.set("brand", item.wheelBrand);
+      if (item.wheelModel) params.set("style", item.wheelModel);
+      
+      const res = await fetch(`/api/wheels/resolve-sku?${params.toString()}`);
+      const data = await res.json();
+      
+      if (data.sku) {
+        // Found a matching SKU - go to PDP
+        router.push(`/wheels/${data.sku}`);
+        return;
+      }
+    } catch (err) {
+      console.error("[gallery] Failed to resolve SKU:", err);
+    }
+    
+    // Fallback: browse page filtered by brand/style
+    const fallbackParams = new URLSearchParams();
+    if (item.wheelBrand) fallbackParams.set("brand", item.wheelBrand);
+    if (item.wheelModel) fallbackParams.set("style", item.wheelModel);
+    router.push(`/wheels?${fallbackParams.toString()}`);
   }, [router]);
 
   const handleShopStyle = useCallback((item: GalleryItem) => {
