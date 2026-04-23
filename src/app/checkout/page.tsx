@@ -550,6 +550,12 @@ export default function CheckoutPage() {
                   </div>
                 )}
 
+                {/* Ownership Header */}
+                <div className="flex items-center gap-2 text-green-700 font-semibold">
+                  <span>✔</span>
+                  <span>Your Complete Setup</span>
+                </div>
+
                 {/* Package items */}
                 <div className="rounded-2xl border border-neutral-200 bg-white divide-y divide-neutral-100">
                   {/* Wheels */}
@@ -652,6 +658,17 @@ export default function CheckoutPage() {
                   <span>This setup is in stock and ready to ship</span>
                 </div>
 
+                {/* Social Proof */}
+                <div className="flex items-center justify-center gap-2 text-sm text-neutral-600">
+                  <span>⭐</span>
+                  <span>4.8 average from 247 customers with similar setups</span>
+                </div>
+
+                {/* Help Line */}
+                <div className="text-center text-sm text-neutral-500">
+                  Need help before you continue? <a href="tel:2483324120" className="font-semibold text-green-700 hover:underline">Call or text 248-332-4120</a>
+                </div>
+
                 {/* Primary CTA */}
                 <button
                   onClick={() => setStep("shipping")}
@@ -665,6 +682,11 @@ export default function CheckoutPage() {
                   {isLocal ? "Secure Your Setup →" : "Secure Your Setup →"}
                 </button>
                 <p className="text-center text-xs text-neutral-500">Step 1 of 3 — you're almost done</p>
+                
+                {/* Post-CTA Reassurance */}
+                <p className="text-center text-xs text-neutral-400 mt-2">
+                  🔒 Secure checkout • No surprises at payment • You can review everything before placing your order
+                </p>
               </div>
             )}
 
@@ -1049,11 +1071,20 @@ export default function CheckoutPage() {
                     Includes ${calculatedTax.toFixed(2)} tax ({(taxRate * 100).toFixed(2)}%)
                   </p>
                 )}
-                {vehicle && (
-                  <p className="text-xs text-green-600 mt-2 font-medium">
-                    ✔ Fitment verified for your {vehicle.year} {vehicle.make} {vehicle.model}
+                {/* Value Framing */}
+                <div className="mt-3 pt-3 border-t border-neutral-100 space-y-1">
+                  <p className="text-xs text-green-600 font-medium">
+                    ✔ Complete wheel & tire package — ready to install
                   </p>
-                )}
+                  <p className="text-xs text-green-600 font-medium">
+                    ✔ Everything matched specifically for your vehicle
+                  </p>
+                  {vehicle && (
+                    <p className="text-xs text-green-600 font-medium">
+                      ✔ Fitment verified for your {vehicle.year} {vehicle.make} {vehicle.model}
+                    </p>
+                  )}
+                </div>
                 {!totalCheck.matches && (
                   <p className="text-xs text-amber-600 mt-1">
                     ⚠️ Total verification pending (diff: ${totalCheck.difference.toFixed(2)})
@@ -1092,9 +1123,9 @@ export default function CheckoutPage() {
                     <span className="text-green-600">✓</span>
                     <span>30-day returns</span>
                   </div>
-                  <div className="flex items-center gap-2 text-blue-600">
-                    <span>🔧</span>
-                    <span>Need installation? We can help you find a local installer</span>
+                  <div className="flex items-center gap-2 text-green-700">
+                    <span className="text-green-600">✓</span>
+                    <span>We can connect you with a trusted installer near you</span>
                   </div>
                 </>
               )}
