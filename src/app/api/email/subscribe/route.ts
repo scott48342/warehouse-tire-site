@@ -18,6 +18,7 @@ import { NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { subscribe, unsubscribe, isSubscribed, getByEmail, type EmailSource } from "@/lib/email/subscriberService";
 import { hasTestModeParam, hasTestModeCookie, hasTestModeHeader, TEST_MODE_HEADER } from "@/lib/testData";
+import { sendExitIntentImmediateEmail, EXIT_EMAIL_SAFE_MODE } from "@/lib/email/automation/exitIntentEmail";
 
 export const runtime = "nodejs";
 
@@ -141,6 +142,28 @@ export async function POST(req: Request) {
       testReason: testReason || undefined,
     });
 
+    // For exit_intent source, send immediate welcome/saved-setup email (async, non-blocking)
+    let emailSent = false;
+    if (source === "exit_intent" && !subscriber.isTest) {
+      // Fire and forget - don't block the response
+      sendExitIntentImmediateEmail({
+        id: subscriber.id,
+        email: subscriber.email,
+        vehicleYear: subscriber.vehicleYear,
+        vehicleMake: subscriber.vehicleMake,
+        vehicleModel: subscriber.vehicleModel,
+        vehicleTrim: subscriber.vehicleTrim,
+        cartId: subscriber.cartId,
+      }).then(result => {
+        if (result.action === "sent" || result.action === "logged") {
+          console.log(`[email/subscribe] Exit intent email ${result.action} for ${subscriber.email}`);
+        }
+      }).catch(err => {
+        console.error(`[email/subscribe] Exit intent email failed:`, err);
+      });
+      emailSent = true;
+    }
+
     return NextResponse.json({
       success: true,
       subscriber: {
@@ -156,6 +179,8 @@ export async function POST(req: Request) {
         createdAt: subscriber.createdAt,
         isTest: subscriber.isTest || false,
       },
+      emailQueued: emailSent,
+      safeMode: EXIT_EMAIL_SAFE_MODE,
     });
   } catch (err: any) {
     console.error("[email/subscribe] POST Error:", err);
