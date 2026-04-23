@@ -34,10 +34,29 @@ async function getStats() {
       };
     });
 
-    const [todayRes, weekRes, totalRes, flaggedRes, errorsRes, issuesRes] = await Promise.all([
-      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE`),
-      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE - INTERVAL '7 days'`),
-      pool.query(`SELECT COUNT(*) as count FROM quotes`),
+    // Exclude test emails from counts
+    const EXCLUDE_TEST_EMAILS = `
+      AND customer_email NOT ILIKE '%warehousetire%'
+      AND customer_email NOT ILIKE '%scott@%'
+    `;
+    
+    const [todayRes, weekRes, totalRes, flaggedRes, errorsRes, issuesRes, 
+           // Real orders (paid via Stripe)
+           ordersToday, ordersWeek, ordersTotal,
+           // Quotes (excluding test emails)
+           quotesToday, quotesWeek, quotesTotal] = await Promise.all([
+      // Legacy counts (for backwards compat, now excludes test emails)
+      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE ${EXCLUDE_TEST_EMAILS}`),
+      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE - INTERVAL '7 days' ${EXCLUDE_TEST_EMAILS}`),
+      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE 1=1 ${EXCLUDE_TEST_EMAILS}`),
+      // Real orders from orders table (paid)
+      pool.query(`SELECT COUNT(*) as count FROM orders WHERE created_at >= CURRENT_DATE`),
+      pool.query(`SELECT COUNT(*) as count FROM orders WHERE created_at >= CURRENT_DATE - INTERVAL '7 days'`),
+      pool.query(`SELECT COUNT(*) as count FROM orders`),
+      // Quotes (checkout attempts, excluding test emails)
+      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE ${EXCLUDE_TEST_EMAILS}`),
+      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE created_at >= CURRENT_DATE - INTERVAL '7 days' ${EXCLUDE_TEST_EMAILS}`),
+      pool.query(`SELECT COUNT(*) as count FROM quotes WHERE 1=1 ${EXCLUDE_TEST_EMAILS}`),
       pool.query(`SELECT COUNT(*) as count FROM admin_product_flags WHERE flagged = true`),
       pool.query(`SELECT COUNT(*) as count FROM admin_logs WHERE log_type = 'search_error' AND created_at >= CURRENT_DATE - INTERVAL '24 hours'`),
       pool.query(`
@@ -94,9 +113,14 @@ async function getStats() {
     const cartStats = await cartStatsPromise;
 
     return {
-      ordersToday: parseInt(todayRes.rows[0]?.count || "0", 10),
-      ordersWeek: parseInt(weekRes.rows[0]?.count || "0", 10),
-      ordersTotal: parseInt(totalRes.rows[0]?.count || "0", 10),
+      // Real paid orders
+      ordersToday: parseInt(ordersToday.rows[0]?.count || "0", 10),
+      ordersWeek: parseInt(ordersWeek.rows[0]?.count || "0", 10),
+      ordersTotal: parseInt(ordersTotal.rows[0]?.count || "0", 10),
+      // Quotes (checkout attempts, excluding test emails)
+      quotesToday: parseInt(quotesToday.rows[0]?.count || "0", 10),
+      quotesWeek: parseInt(quotesWeek.rows[0]?.count || "0", 10),
+      quotesTotal: parseInt(quotesTotal.rows[0]?.count || "0", 10),
       flaggedProducts: parseInt(flaggedRes.rows[0]?.count || "0", 10),
       recentErrors: parseInt(errorsRes.rows[0]?.count || "0", 10),
       issues: {
@@ -119,6 +143,9 @@ async function getStats() {
       ordersToday: 0,
       ordersWeek: 0,
       ordersTotal: 0,
+      quotesToday: 0,
+      quotesWeek: 0,
+      quotesTotal: 0,
       flaggedProducts: 0,
       recentErrors: 0,
       issues: { searchErrors: 0, warnings: 0, fitmentIssues: 0 },
@@ -144,32 +171,27 @@ export default async function AdminDashboard() {
         <p className="text-neutral-400 mt-1">Welcome to the admin portal</p>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      {/* Stats Grid - Orders (Paid) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          icon="📦"
-          label="Orders Today"
+          icon="💰"
+          label="Paid Orders Today"
           value={stats.ordersToday}
           href="/admin/orders?filter=today"
+          highlight={stats.ordersToday > 0}
         />
         <StatCard
-          icon="📅"
-          label="Orders This Week"
+          icon="📦"
+          label="Paid This Week"
           value={stats.ordersWeek}
           href="/admin/orders?filter=week"
+          highlight={stats.ordersWeek > 0}
         />
         <StatCard
           icon="📊"
-          label="Total Orders"
+          label="Total Paid Orders"
           value={stats.ordersTotal}
           href="/admin/orders"
-        />
-        <StatCard
-          icon="⚠️"
-          label="Flagged Products"
-          value={stats.flaggedProducts}
-          href="/admin/products?filter=flagged"
-          alert={stats.flaggedProducts > 0}
         />
         <StatCard
           icon="🚨"
@@ -177,6 +199,35 @@ export default async function AdminDashboard() {
           value={totalIssues}
           href="/admin/logs"
           alert={totalIssues > 0}
+        />
+      </div>
+
+      {/* Stats Grid - Quotes (Checkout Attempts) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <StatCard
+          icon="📝"
+          label="Quotes Today"
+          value={stats.quotesToday}
+          href="/admin/orders?type=quotes&filter=today"
+        />
+        <StatCard
+          icon="📋"
+          label="Quotes This Week"
+          value={stats.quotesWeek}
+          href="/admin/orders?type=quotes&filter=week"
+        />
+        <StatCard
+          icon="📑"
+          label="Total Quotes"
+          value={stats.quotesTotal}
+          href="/admin/orders?type=quotes"
+        />
+        <StatCard
+          icon="⚠️"
+          label="Flagged Products"
+          value={stats.flaggedProducts}
+          href="/admin/products?filter=flagged"
+          alert={stats.flaggedProducts > 0}
         />
       </div>
 
@@ -490,26 +541,29 @@ function StatCard({
   value,
   href,
   alert,
+  highlight,
 }: {
   icon: string;
   label: string;
   value: number;
   href: string;
   alert?: boolean;
+  highlight?: boolean;
 }) {
   return (
     <Link
       href={href}
       className={`bg-neutral-800 rounded-xl border p-5 hover:border-neutral-600 transition-colors ${
-        alert ? "border-amber-600" : "border-neutral-700"
+        alert ? "border-amber-600" : highlight ? "border-green-600 bg-green-900/20" : "border-neutral-700"
       }`}
     >
       <div className="flex items-start justify-between">
         <span className="text-2xl">{icon}</span>
         {alert && <span className="text-amber-500 text-xs font-bold">!</span>}
+        {highlight && <span className="text-green-500 text-xs font-bold">NEW</span>}
       </div>
       <div className="mt-3">
-        <div className="text-3xl font-bold text-white">{value}</div>
+        <div className={`text-3xl font-bold ${highlight ? "text-green-400" : "text-white"}`}>{value}</div>
         <div className="text-sm text-neutral-400 mt-1">{label}</div>
       </div>
     </Link>
