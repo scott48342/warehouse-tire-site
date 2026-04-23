@@ -57,6 +57,7 @@ const NAV_ITEMS = [
   { href: "/admin/sessions", label: "Session History", icon: "🕐" },
   { href: "/admin/orders", label: "Orders", icon: "📦" },
   { href: "/admin/abandoned-carts", label: "Abandoned Carts", icon: "🛒" },
+  { href: "/admin/email-automation", label: "Email Automation", icon: "🤖" },
   { href: "/admin/subscribers", label: "Subscribers", icon: "📬" },
   { href: "/admin/email-campaigns", label: "Email Campaigns", icon: "📧" },
   { href: "/admin/fitment-api", label: "Fitment API", icon: "🔑" },
